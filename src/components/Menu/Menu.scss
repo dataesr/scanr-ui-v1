@@ -1,0 +1,17 @@
+@import '../../style.scss';
+
+.sidebar{
+  padding: 2rem;
+  background-color: $grey-darker;
+  height: 100%;
+  li{
+    a{
+      color: $white-ter;
+    }
+  }
+
+}
+
+.active{
+  background-color: $turquoise;
+}

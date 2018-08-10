@@ -1,0 +1,30 @@
+@import '../../../style.scss';
+
+.link{
+  cursor: pointer;
+}
+
+.link:hover{
+  color: $turquoise;
+}
+
+.li_condensed{
+  padding: 0;
+}
+
+.structuresList_id{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-style: italic;
+  color: #777;
+}
+
+.structureList_ul{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.structureList_li{
+  border-bottom: 1px dashed #ddd;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

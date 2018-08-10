@@ -1,0 +1,60 @@
+@import './style.scss';
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+.padding_0{
+  padding: 0;
+}
+
+.Menu{
+  padding: 0;
+  padding-left:16px;
+}
+
+.li_condensed{
+  padding: 0;
+}
+
+.ul_condensed{
+  padding-left: 0;
+}
+
+.Logo{
+  background-color: #ddd;
+  height: 50px;
+}
+
+.Logo h1{
+  font-family: 'Montserrat', sans-serif;
+  color: #4b4b4b;
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+  letter-spacing: 5px;
+  font-size: 2em;
+}
+
+.data{
+  color: #00A6BC;
+  display: inline-block;
+  font-weight: 700;
+}
+.esr{
+  color: #00A6BC;
+  display: inline-block;
+  padding-right: 20px;
+  font-weight: 300;
+}
+
+.Logo .version{
+  color: #aaa;
+  display: inline-block;
+  padding-left: 10px;
+}
