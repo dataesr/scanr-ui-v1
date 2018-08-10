@@ -1,0 +1,22 @@
+.Header{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  background: #00D1B2; /* Old browsers */
+  background: -moz-linear-gradient(left, #00D1B2 0%, #99ffef 85%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #00D1B2 0%,#99ffef 85%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #00D1B2 0%,#99ffef 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00D1B2', endColorstr='#99ffef',GradientType=1 ); /* IE6-9 */
+
+}
+
+.text_nb{
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.text_nb h1{
+  font-size: 3.5em;
+}
+.text_nb span{
+  display: inline-block;
+  padding-bottom: 10px;
+}
