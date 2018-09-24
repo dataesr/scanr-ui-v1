@@ -1,70 +1,67 @@
-/*Composants externes*/
+/* Composants externes */
 import React, { Component } from 'react';
 import axios from 'axios';
 
-/*Composants internes*/
+/* Composants internes */
 import Predecessor from './Predecessor/Predecessor';
 
-/*Config*/
-  /*API*/
-  import {API_END_POINT} from '../../../../config/config';
+/* Config */
+/* API */
+import { API_END_POINT } from '../../../../config/config';
 
-/*CSS*/
-//import classes from '../Structure.css';
+/* CSS */
+// import classes from '../Structure.css';
 
-class Predecessors extends Component{
+class Predecessors extends Component {
   state = {
-      predecessors: this.props.predecessors,
-      structureId: this.props.structureId,
-      showAll: false,
-      addMode: false
+    predecessors: this.props.predecessors,
+    structureId: this.props.structureId,
+    showAll: false,
+    addMode: false,
   };
 
-  render(){
-
-
+  render() {
     return (
-        <ul>
-          {
-            this.state.predecessors.map((predecessor, index) => {
-              return (
-                <Predecessor key={index}
-                  index={index}
-                  showAll={this.state.showAll}
-                  predecessor={predecessor}
-                  add={this.state.addMode}
-                  n_predecessors={this.state.predecessors.length}
-                  deleteButton={this.deleteButtonHandler}
-                  saveButton={this.saveButtonHandler}
-                  addButton={this.addButtonHandler} />
-              )
-            })// /map
+      <ul>
+        {
+            this.state.predecessors.map((predecessor, index) => (
+              <Predecessor
+                key={index}
+                index={index}
+                showAll={this.state.showAll}
+                predecessor={predecessor}
+                add={this.state.addMode}
+                n_predecessors={this.state.predecessors.length}
+                deleteButton={this.deleteButtonHandler}
+                saveButton={this.saveButtonHandler}
+                addButton={this.addButtonHandler}
+              />
+            ))// /map
           }
-        </ul>
+      </ul>
     );// /return()
   }// /render
 
-  AxiosCall(data){
+  AxiosCall(data) {
     axios(
       {
-      method: 'POST',
-      url: `${API_END_POINT}structures/predecessors`,
-      responseType: 'json',
-      data: JSON.stringify(data)
-      }
+        method: 'POST',
+        url: `${API_END_POINT}structures/predecessors`,
+        responseType: 'json',
+        data: JSON.stringify(data),
+      },
     ).then(
       (response) => {
         console.log(response);
-        if(response.status === 200){
-          console.log("charger modal check OK");
+        if (response.status === 200) {
+          console.log('charger modal check OK');
 
-          let newState = {...this.state};
+          const newState = { ...this.state };
           newState.addMode = false;
           this.setState(newState);
         }
-      }
-    )
-
+      },
+    );
   }// /AxiosCall()
 
 
@@ -72,23 +69,23 @@ class Predecessors extends Component{
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        addresses: this.state.addresses
-      }]
+        addresses: this.state.addresses,
+      }],
     };
 
     this.AxiosCall(dataObject);
   }
 
   addButtonHandler = () => {
-    let newState = {...this.state};
+    const newState = { ...this.state };
     newState.addMode = true;
 
     // Ajout d'un objet "predecessor" vide à la liste des Predecessors
     const predecessor_empty = {
-                          source: '',
-                          status: 'new',
-                          value: ''
-                        };
+      source: '',
+      status: 'new',
+      value: '',
+    };
 
     newState.labels.push(predecessor_empty);
     this.setState(newState);
@@ -96,20 +93,18 @@ class Predecessors extends Component{
 
 
   deleteButtonHandler = (obj) => {
-    let predecessors = this.state.predecessors
+    const predecessors = this.state.predecessors;
     predecessors.splice(obj.index, 1);
 
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        predecessors: predecessors
-      }]
+        predecessors,
+      }],
     };
 
     this.AxiosCall(dataObject);
   }
-
-
 }// AddressesClass
 
 export default Predecessors;
