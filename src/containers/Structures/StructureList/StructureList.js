@@ -1,39 +1,42 @@
 import React from 'react';
 
-/*CSS*/
+/* CSS */
 import classes from './StructureList.scss';
-//import main_classes from '../../../App.css';
+// import main_classes from '../../../App.css';
 
-const StructureList = (props) => {
-  return (
-    <section className="container is-fluid">
-      <ul className={classes.structureList_ul}>
-        {
-          props.structuresList.map((structure) => {
-            return (
-              <li key={structure.id}
-                className={classes.structureList_li}>
+const StructureList = props => (
+  <section className="container is-fluid">
+    <ul className={classes.structureList_ul} role="menu">
+      {
+          props.structuresList.map((structure, index) => (
+            <li
+              key={structure.id}
+              className={classes.structureList_li}
+            >
 
-                <div className="columns">
-                  <div className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
-                    onClick={() => props.structureSelected({structure})}>
-                    <i className="fa fa-chevron-circle-right hvr-icon"></i>
+              <div className="columns">
+                <div
+                  role="menuitem"
+                  tabIndex={index}
+                  className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
+                  onClick={() => props.structureSelected({ structure })}
+                  onKeyPress={() => props.structureSelected({ structure })}
+                >
+                  <i className="fa fa-chevron-circle-right hvr-icon" />
                     &nbsp;
                     &nbsp;
-                    {structure.label[0].value}
-                  </div>
-                  <div className={`column ${classes.structuresList_id}`}>
-                    {structure.id}
-                  </div>
+                  {structure.label[0].value}
                 </div>
-              </li>
-            )
-          })// /map
+                <div className={`column ${classes.structuresList_id}`}>
+                  {structure.id}
+                </div>
+              </div>
+            </li>
+          ))// /map
         }
-      </ul>
-    </section>
+    </ul>
+  </section>
 
-  );
-};
+);
 
 export default StructureList;
