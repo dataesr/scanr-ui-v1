@@ -1,28 +1,26 @@
-/*Composants externes*/
+/* Composants externes */
 import React, { Component } from 'react';
 import axios from 'axios';
 
-/*Composants internes*/
+/* Composants internes */
 import Label from './Label/Label';
 
-/*Config*/
-  /*API*/
-  import {API_END_POINT} from '../../../../config/config';
+/* Config */
+/* API */
+import { API_END_POINT } from '../../../../config/config';
 
-/*CSS*/
-//import classes from '../Structure.css';
+/* CSS */
+// import classes from '../Structure.css';
 
-class Labels extends Component{
+class Labels extends Component {
   state = {
-      labels: this.props.labels,
-      structureId: this.props.structureId,
-      showAll: false,
-      addMode: false
+    labels: this.props.labels,
+    structureId: this.props.structureId,
+    showAll: false,
+    addMode: false,
   };
 
-  render(){
-
-
+  render() {
     return (
       <div className="columns">
         <div className="column is-narrow is-one-fifth">
@@ -32,20 +30,20 @@ class Labels extends Component{
         </div>
         <div className="column">
           {
-            this.state.labels.map((label, index) => {
-              return (
-                <Label key={index}
-                  index={index}
-                  showAll={this.state.showAll}
-                  label={label}
-                  add={this.state.addMode}
-                  n_labels={this.state.labels.length}
-                  deleteButton={this.deleteButtonHandler}
-                  saveButton={this.saveButtonHandler}
-                  addButton={this.addButtonHandler}
-                  toggleLabelsButton={this.toggleLabelsButtonHandler} />
-              )
-            })// /map
+            this.state.labels.map((label, index) => (
+              <Label
+                key={index}
+                index={index}
+                showAll={this.state.showAll}
+                label={label}
+                add={this.state.addMode}
+                n_labels={this.state.labels.length}
+                deleteButton={this.deleteButtonHandler}
+                saveButton={this.saveButtonHandler}
+                addButton={this.addButtonHandler}
+                toggleLabelsButton={this.toggleLabelsButtonHandler}
+              />
+            ))// /map
           }
         </div>
 
@@ -53,27 +51,26 @@ class Labels extends Component{
     );// /return()
   }// /render
 
-  AxiosCall(data){
+  AxiosCall(data) {
     axios(
       {
-      method: 'POST',
-      url: `${API_END_POINT}structures/label`,
-      responseType: 'json',
-      data: JSON.stringify(data)
-      }
+        method: 'POST',
+        url: `${API_END_POINT}structures/label`,
+        responseType: 'json',
+        data: JSON.stringify(data),
+      },
     ).then(
       (response) => {
         console.log(response);
-        if(response.status === 200){
-          console.log("charger modal check OK");
+        if (response.status === 200) {
+          console.log('charger modal check OK');
 
-          let newState = {...this.state};
+          const newState = { ...this.state };
           newState.addMode = false;
           this.setState(newState);
         }
-      }
-    )
-
+      },
+    );
   }// /AxiosCall()
 
 
@@ -81,23 +78,23 @@ class Labels extends Component{
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        label: this.state.labels
-      }]
+        label: this.state.labels,
+      }],
     };
 
     this.AxiosCall(dataObject);
   }
 
   addButtonHandler = () => {
-    let newState = {...this.state};
+    const newState = { ...this.state };
     newState.addMode = true;
 
     // Ajout d'un objet "label" vide à la liste des Labels
     const label_empty = {
-                          source: '',
-                          status: 'new',
-                          value: ''
-                        };
+      source: '',
+      status: 'new',
+      value: '',
+    };
 
     newState.labels.push(label_empty);
     this.setState(newState);
@@ -105,14 +102,14 @@ class Labels extends Component{
 
 
   deleteButtonHandler = (obj) => {
-    let labels = this.state.labels
+    const labels = this.state.labels;
     labels.splice(obj.index, 1);
 
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        label: labels
-      }]
+        label: labels,
+      }],
     };
 
     this.AxiosCall(dataObject);
@@ -120,12 +117,10 @@ class Labels extends Component{
 
 
   toggleLabelsButtonHandler = () => {
-    let newState = {...this.state};
+    const newState = { ...this.state };
     newState.showAll = !newState.showAll;
     this.setState(newState);
   }
-
-
 }// LabelsClass
 
 export default Labels;
