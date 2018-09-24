@@ -1,6 +1,6 @@
 /* Composants externes */
 import React, { Component } from 'react';
-
+import PropTypes from 'prop-types';
 /* Composants internes */
 import Aux from '../../../../../hoc/Aux';
 
@@ -26,16 +26,16 @@ class Label extends Component {
     let status = <span className="tag is-light is-medium is-rounded">{this.state.label.status}</span>;
     let visibility = '';
     let display = '';
-    let bt_show_all; let bt_add = null;
+    let btShowAll;
+    let btAdd = null;
     let buttons = (
-      <Aux>
-        <button
-          onClick={() => this.modifyButtonHandler()}
-          className={` button is-light  ${classes.space_5}`}
-        >
-          <i className="fas fa-pen" />
-        </button>
-      </Aux>
+      <button
+        type="button"
+        onClick={() => this.modifyButtonHandler()}
+        className={` button is-light  ${classes.space_5}`}
+      >
+        <i className="fas fa-pen" />
+      </button>
     );
 
     // Si 1 seul libellé, on ne permet pas la suppression
@@ -46,8 +46,9 @@ class Label extends Component {
     // On affiche un bouton de "dépliage" des libellés sur le premier libellé si plusieurs libellés disponibles
     if (this.state.index === 0) {
       if (this.props.n_labels > 1) {
-        bt_show_all = (
+        btShowAll = (
           <button
+            type="button"
             onClick={this.props.toggleLabelsButton}
             className={` button is-light  ${classes.space_5}`}
           >
@@ -56,7 +57,7 @@ class Label extends Component {
         );
       }
 
-      bt_add = (
+      btAdd = (
         <Aux>
           <button
             onClick={this.props.addButton}
@@ -75,7 +76,7 @@ class Label extends Component {
 
     // Transformation des libellés en champs modifiables + affichage des nouveaux boutons
     if (this.state.mode === 'modify') {
-      bt_show_all = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
+      btShowAll = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
 
       value = (
         <input
@@ -109,7 +110,7 @@ class Label extends Component {
           onChange={this.changeInputHandler}
         />
       );
-      bt_show_all = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
+      btShowAll = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
 
       status = this.getSetStatus(this.state.label.status);
       source = this.state.label.source;
@@ -138,8 +139,8 @@ class Label extends Component {
           </div>
 
           <div className="column is-one-fifth has-text-right">
-            {bt_show_all}
-            {bt_add}
+            {btShowAll}
+            {btAdd}
             {buttons}
           </div>
         </div>
@@ -193,3 +194,12 @@ class Label extends Component {
 }// /LabelClass
 
 export default Label;
+
+Label.propTypes = {
+  add: PropTypes.bool.isRequired,
+  label: PropTypes.object.isRequired,
+  n_labels: PropTypes.number.isRequired,
+  index: PropTypes.number.isRequired,
+  saveButton: PropTypes.func.isRequired,
+  toggleLabelsButton: PropTypes.func.isRequired,
+}
