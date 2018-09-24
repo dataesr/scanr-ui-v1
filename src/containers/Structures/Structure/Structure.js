@@ -5,9 +5,6 @@ import Aux from '../../../hoc/Aux';
 /* Composants internes */
 import Addresses from './Addresses/Addresses';
 import Main from './Main/Main';
-import Parents from './Parents/Parents';
-import Predecessors from './Predecessors/Predecessors';
-import Supervisors from './Supervisors/Supervisors';
 
 
 class Structure extends Component {
@@ -22,7 +19,6 @@ class Structure extends Component {
   }
 
   render() {
-    console.log('Structure: ', this.props.structure);
     const structure = this.props.structure;
     let content = null;
 
@@ -41,30 +37,6 @@ class Structure extends Component {
         content = (
           <Addresses
             addresses={structure.addresses}
-            structureId={structure.id}
-          />
-        );
-        break;
-      case 'supervisors':
-        content = (
-          <Supervisors
-            supervisors={structure.supervisors}
-            structureId={structure.id}
-          />
-        );
-        break;
-      case 'parents':
-        content = (
-          <Parents
-            parents={structure.parents}
-            structureId={structure.id}
-          />
-        );
-        break;
-      case 'predecessors':
-        content = (
-          <Predecessors
-            predecessors={structure.predecessors}
             structureId={structure.id}
           />
         );
@@ -93,27 +65,6 @@ class Structure extends Component {
                 Adresses
                 &nbsp;
                 <span className="tag is-light is-rounded">{structure.addresses.length}</span>
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'supervisors' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('supervisors')}>
-                Tutelles
-                &nbsp;
-                <span className="tag is-light is-rounded">{structure.supervisors.length}</span>
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'parents' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('parents')}>
-                Parents
-                &nbsp;
-                <span className="tag is-light is-rounded">{structure.parents.length}</span>
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'predecessors' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('predecessors')}>
-                Prédécesseurs
-                &nbsp;
-                <span className="tag is-light is-rounded">{structure.predecessors.length}</span>
               </a>
             </li>
           </ul>
