@@ -1,125 +1,76 @@
-/*Compoosants externes*/
+/* Compoosants externes */
 import React, { Component } from 'react';
 import Aux from '../../../hoc/Aux';
 
-/*Composants internes*/
-import Labels from './Labels/Labels';
-import SimpleField from './SimpleField/SimpleField';
+/* Composants internes */
 import Addresses from './Addresses/Addresses';
-import Supervisors from './Supervisors/Supervisors';
+import Main from './Main/Main';
 import Parents from './Parents/Parents';
 import Predecessors from './Predecessors/Predecessors';
+import Supervisors from './Supervisors/Supervisors';
 
-/*CSS*/
-//import main_classes from '../../../App.css';
-import classes from './Structure.css';
 
 class Structure extends Component {
-
   state = {
-    activeTab : 'main'
+    activeTab: 'main',
   }
 
   showTab = (tab) => {
-    let newState = {...this.state};
+    const newState = { ...this.state };
     newState.activeTab = tab;
     this.setState(newState);
   }
 
-  showMainTab (structure){
-    return(
-      <ul className={classes.list_fields}>
-        <li>
-          <Labels labels={structure.label}
-                  structureId={structure.id} />
-        </li>
-
-        <li>
-          <SimpleField fieldName="Id"
-                       fieldValue={structure.id}
-                       name="id"
-                       readOnly={true}
-                       structureId={structure.id} />
-        </li>
-
-        <li>
-          <SimpleField fieldName="Statut"
-                       fieldValue={structure.status}
-                       name="status"
-                       readOnly={true}
-                       structureId={structure.id} />
-        </li>
-
-        <li>
-          <SimpleField fieldName="Téléphone"
-                       fieldValue={structure.phone}
-                       name="phone"
-                       readOnly={false}
-                       structureId={structure.id} />
-        </li>
-
-        <li>
-          <SimpleField fieldName="Email"
-                       fieldValue={structure.mail}
-                       name="mail"
-                       readOnly={false}
-                       structureId={structure.id} />
-        </li>
-      </ul>
-    );
-  }
-
-  showAddressesTab (structure){
-    return (
-      <Addresses addresses={structure.addresses}
-                 structureId={structure.id} />
-    );
-  }
-
-  showSupervisorsTab (structure){
-    return (
-      <Supervisors supervisors={structure.supervisors}
-                   structureId={structure.id} />
-    );
-  }
-
-  showParentsTab (structure){
-    return (
-      <Parents parents={structure.parents}
-                   structureId={structure.id} />
-    );
-  }
-
-  showPredecessorsTab (structure){
-    return (
-      <Predecessors predecessors={structure.predecessors}
-                    structureId={structure.id} />
-    );
-  }
-
-  render (){
-console.log("Structure: ",this.props.structure);
+  render() {
+    console.log('Structure: ', this.props.structure);
     const structure = this.props.structure;
     let content = null;
 
     switch (this.state.activeTab) {
       case 'main':
-        content = this.showMainTab(structure);
+        content = (
+          <Main
+            id={structure.id}
+            label={structure.label}
+            mail={structure.mail}
+            phone={structure.phone}
+            status={structure.status}
+          />);
         break;
       case 'addresses':
-        content = this.showAddressesTab(structure);
+        content = (
+          <Addresses
+            addresses={structure.addresses}
+            structureId={structure.id}
+          />
+        );
         break;
       case 'supervisors':
-        content = this.showSupervisorsTab(structure);
+        content = (
+          <Supervisors
+            supervisors={structure.supervisors}
+            structureId={structure.id}
+          />
+        );
         break;
       case 'parents':
-        content = this.showParentsTab(structure);
+        content = (
+          <Parents
+            parents={structure.parents}
+            structureId={structure.id}
+          />
+        );
         break;
       case 'predecessors':
-        content = this.showPredecessorsTab(structure);
+        content = (
+          <Predecessors
+            predecessors={structure.predecessors}
+            structureId={structure.id}
+          />
+        );
         break;
       default:
-      content = this.showMainTab(structure);
+        content = this.showMainTab(structure);
     }// /switch
 
     return (
@@ -128,37 +79,37 @@ console.log("Structure: ",this.props.structure);
           <ul>
             <li>
               <a onClick={this.props.returnButton}>
-              <span className="icon"><i className="fas fa-angle-left" aria-hidden="true"></i></span>
-              <span>Retour</span>
+                <span className="icon"><i className="fas fa-angle-left" aria-hidden="true" /></span>
+                <span>Retour</span>
               </a>
             </li>
-            <li className={this.state.activeTab==='main'?'is-active':''}>
+            <li className={this.state.activeTab === 'main' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('main')}>
                 Général
               </a>
             </li>
-            <li className={this.state.activeTab==='addresses'?'is-active':''}>
+            <li className={this.state.activeTab === 'addresses' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('addresses')}>
                 Adresses
                 &nbsp;
                 <span className="tag is-light is-rounded">{structure.addresses.length}</span>
               </a>
             </li>
-            <li className={this.state.activeTab==='supervisors'?'is-active':''}>
+            <li className={this.state.activeTab === 'supervisors' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('supervisors')}>
                 Tutelles
                 &nbsp;
                 <span className="tag is-light is-rounded">{structure.supervisors.length}</span>
               </a>
             </li>
-            <li className={this.state.activeTab==='parents'?'is-active':''}>
+            <li className={this.state.activeTab === 'parents' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('parents')}>
                 Parents
                 &nbsp;
                 <span className="tag is-light is-rounded">{structure.parents.length}</span>
               </a>
             </li>
-            <li className={this.state.activeTab==='predecessors'?'is-active':''}>
+            <li className={this.state.activeTab === 'predecessors' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('predecessors')}>
                 Prédécesseurs
                 &nbsp;
