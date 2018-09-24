@@ -1,7 +1,7 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import PropTypes from 'prop-types';
 /* Composants internes */
 import Aux from '../../../../hoc/Aux';
 
@@ -12,13 +12,57 @@ import { API_END_POINT } from '../../../../config/config';
 /* Css */
 import classes from '../Structure.css';
 
-class Id extends Component {
+class SimpleField extends Component {
   state = {
     structureId: this.props.structureId,
     name: this.props.name,
     value: this.props.fieldValue,
     mode: 'readonly',
   };
+
+  changeInputHandler = (event) => {
+    const newState = { ...this.state };
+    newState.value = event.target.value;
+    this.setState(newState);
+  }
+
+  saveButtonHandler = () => {
+    const obj = {};
+    const key = this.state.name;
+
+    obj.scanr_id = this.state.structureId;
+    obj[key] = this.state.value;
+    const data = { data: [obj] };
+
+    axios(
+      {
+        method: 'POST',
+        url: `${API_END_POINT}structures/${key}`,
+        responseType: 'json',
+        data: JSON.stringify(data),
+      },
+    ).then(
+      (response) => {
+        if (response.status === 200) {
+          const newState = { ...this.state };
+          newState.mode = 'readonly';
+          this.setState(newState);
+        }
+      },
+    );
+  }
+
+  cancelButtonHandler() {
+    const newState = { ...this.state };
+    newState.mode = 'readonly';
+    this.setState(newState);
+  }
+
+  modifyButtonHandler() {
+    const newState = { ...this.state };
+    newState.mode = 'modify';
+    this.setState(newState);
+  }
 
   render() {
     let value = this.state.value;
@@ -27,6 +71,7 @@ class Id extends Component {
     if (!this.props.readOnly) {
       buttons = (
         <button
+          type="button"
           onClick={() => this.modifyButtonHandler()}
           className={`button is-light ${classes.space_5}`}
         >
@@ -52,12 +97,14 @@ class Id extends Component {
       buttons = (
         <Aux>
           <button
+            type="button"
             onClick={this.saveButtonHandler}
             className={`button is-light  ${classes.space_5}`}
           >
             <i className="fas fa-save" />
           </button>
           <button
+            type="button"
             onClick={() => this.cancelButtonHandler()}
             className={` button is-light  ${classes.space_5}`}
           >
@@ -86,55 +133,14 @@ class Id extends Component {
       </div>
     );
   }
-
-  modifyButtonHandler() {
-    const newState = { ...this.state };
-    newState.mode = 'modify';
-    this.setState(newState);
-  }
-
-  cancelButtonHandler() {
-    const newState = { ...this.state };
-    newState.mode = 'readonly';
-    this.setState(newState);
-  }
-
-  changeInputHandler = (event) => {
-    const newState = { ...this.state };
-    newState.value = event.target.value;
-    this.setState(newState);
-  }
-
-  saveButtonHandler = () => {
-    const obj = {};
-    const key = this.state.name;
-
-    obj.scanr_id = this.state.structureId;
-    obj[key] = this.state.value;
-    const data = { data: [obj] };
-
-    console.log('data: ', data);
-
-    axios(
-      {
-        method: 'POST',
-        url: `${API_END_POINT}structures/${key}`,
-        responseType: 'json',
-        data: JSON.stringify(data),
-      },
-    ).then(
-      (response) => {
-        console.log(response);
-        if (response.status === 200) {
-          console.log('charger modal check OK');
-
-          const newState = { ...this.state };
-          newState.mode = 'readonly';
-          this.setState(newState);
-        }
-      },
-    );
-  }
 }
 
-export default Id;
+SimpleField.propTypes = {
+  fieldName: PropTypes.string.isRequired,
+  fieldValue: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  readOnly: PropTypes.bool.isRequired,
+  structureId: PropTypes.string.isRequired,
+};
+
+export default SimpleField;
