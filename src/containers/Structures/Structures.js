@@ -18,6 +18,7 @@ import StructureList from './StructureList/StructureList';
 // import classes from './Structures.css';
 
 
+
 class Structures extends Component {
   state = {
     structureSelected: null,
@@ -55,7 +56,7 @@ class Structures extends Component {
             onClick={() => this.nextContentButtonHandler()}
             className="button is-dark is-medium is-fullwidth is-rounded"
           >
-Charger la suite
+            Charger la suite
           </a>
         );
       }
@@ -90,6 +91,7 @@ Charger la suite
 
     this.setState(newState);
   }
+
 
 
   structureSelectedHandler = (obj) => {
@@ -134,10 +136,11 @@ Charger la suite
       // MAJ du header
       this.props.nStructures(response.n_hits);
     } else {
+      // url: `${API_END_POINT}structures?query=${this.props.searchText}&from=${from}&to=${to}`,
       axios(
         {
           method: 'get',
-          url: `${API_END_POINT}structures/search?query=${this.props.searchText}&from=${from}&to=${to}`,
+          url: `${API_END_POINT}structures/?query=${this.props.searchText}`,
           responseType: 'json',
         },
       ).then(

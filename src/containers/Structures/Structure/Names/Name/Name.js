@@ -10,20 +10,20 @@ import Aux from '../../../../../hoc/Aux';
 import { STATUS_ARRAY } from '../../../../../config/config';
 
 /* CSS */
-import classes from './Label.css';
+import classes from './Name.css';
 // import main_classes from '../../../../../App.css';
 
-class Label extends Component {
+class Name extends Component {
   state = {
-    label: this.props.label,
+    name: this.props.name,
     index: this.props.index,
     mode: 'readonly',
     add: this.props.add,
   };
 
   render() {
-    let { value, source } = this.state.label;
-    let status = <span className="tag is-light is-medium is-rounded">{this.state.label.status}</span>;
+    let { value, source } = this.state.name;
+    let status = <span className="tag is-light is-medium is-rounded">{this.state.name.status}</span>;
     let visibility = '';
     let display = '';
     let btShowAll;
@@ -39,17 +39,17 @@ class Label extends Component {
     );
 
     // Si 1 seul libellé, on ne permet pas la suppression
-    if (this.props.n_labels === 1) {
+    if (this.props.n_names === 1) {
       visibility = ' visibility_false';
     }
 
     // On affiche un bouton de "dépliage" des libellés sur le premier libellé si plusieurs libellés disponibles
     if (this.state.index === 0) {
-      if (this.props.n_labels > 1) {
+      if (this.props.n_names > 1) {
         btShowAll = (
           <button
             type="button"
-            onClick={this.props.toggleLabelsButton}
+            onClick={this.props.toggleNamesButton}
             className={` button is-light  ${classes.space_5}`}
           >
             {this.props.showAll ? <i className="fas fa-eye-slash" /> : <i className="fas fa-eye" />}
@@ -87,9 +87,9 @@ class Label extends Component {
         />
       );
 
-      status = this.getSetStatus(this.state.label.status);
+      status = this.getSetStatus(this.state.name.status);
 
-      source = this.state.label.source;
+      source = this.state.name.source;
 
       buttons = (
         <Aux>
@@ -110,10 +110,10 @@ class Label extends Component {
           onChange={this.changeInputHandler}
         />
       );
-      btShowAll = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
+      btShowAll = null; // On masque le bouton de "dépliage" en modif car tous les libellés seront affichés
 
-      status = this.getSetStatus(this.state.label.status);
-      source = this.state.label.source;
+      status = this.getSetStatus(this.state.name.status);
+      source = this.state.name.source;
       buttons = (
         <Aux>
           <button onClick={this.props.saveButton} className={` button is-light  ${classes.space_5}`}><i className="fas fa-save" /></button>
@@ -159,7 +159,7 @@ class Label extends Component {
           {
         STATUS_ARRAY.map((status, index) => {
           let selected = '';
-          if (status === this.state.label.status) {
+          if (status === this.state.name.status) {
             selected = 'selected';
           }
           return (
@@ -188,18 +188,18 @@ class Label extends Component {
 
   changeInputHandler = (event) => {
     const newState = { ...this.state };
-    newState.label.value = event.target.value;
+    newState.name.value = event.target.value;
     this.setState(newState);
   }
 }// /LabelClass
 
-export default Label;
+export default Name;
 
-Label.propTypes = {
+Name.propTypes = {
   add: PropTypes.bool.isRequired,
-  label: PropTypes.object.isRequired,
-  n_labels: PropTypes.number.isRequired,
+  name: PropTypes.object.isRequired,
+  n_names: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
   saveButton: PropTypes.func.isRequired,
-  toggleLabelsButton: PropTypes.func.isRequired,
+  toggleNamesButton: PropTypes.func.isRequired,
 }

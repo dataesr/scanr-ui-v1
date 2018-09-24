@@ -25,7 +25,7 @@ const StructureList = props => (
                   <i className="fa fa-chevron-circle-right hvr-icon" />
                     &nbsp;
                     &nbsp;
-                  {structure.label[0].value}
+                  {structure.names[0].label}
                 </div>
                 <div className={`column ${classes.structuresList_id}`}>
                   {structure.id}
