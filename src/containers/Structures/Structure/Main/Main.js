@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import Labels from '../Labels/Labels';
+import Names from '../Names/Names';
 import SimpleField from '../SimpleField/SimpleField';
 
 import classes from './Main.css';
@@ -10,8 +10,8 @@ import classes from './Main.css';
 const main = props => (
   <ul className={classes.list_fields}>
     <li>
-      <Labels
-        labels={props.label}
+      <Names
+        names={props.names}
         structureId={props.id}
       />
     </li>

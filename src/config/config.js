@@ -12,8 +12,9 @@ export const STATUS_INVALID = 'invalid';
 export const STATUS_OLD = 'old';
 
 /* API */
-export const API_END_POINT = 'http://10.243.98.15:5000/rnsr/';
-export const API_BOUCHON = true;
+export const API_BOUCHON = false;
+// export const API_END_POINT = 'http://10.243.98.15:5000/rnsr/';
+export const API_END_POINT = 'http://10.243.98.15:5002/api/v0.1/datastore/';
 export const API_DATA = {
   n_hits: 123,
   data: [

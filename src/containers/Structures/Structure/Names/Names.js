@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 /* Composants internes */
-import Label from './Label/Label';
+import Name from './Name/Name';
 
 /* Config */
 /* API */
@@ -12,9 +12,9 @@ import { API_END_POINT } from '../../../../config/config';
 /* CSS */
 // import classes from '../Structure.css';
 
-class Labels extends Component {
+class Names extends Component {
   state = {
-    labels: this.props.labels,
+    names: this.props.names,
     structureId: this.props.structureId,
     showAll: false,
     addMode: false,
@@ -24,7 +24,7 @@ class Labels extends Component {
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        label: this.state.labels,
+        names: this.state.names,
       }],
     };
 
@@ -36,25 +36,25 @@ class Labels extends Component {
     newState.addMode = true;
 
     // Ajout d'un objet "label" vide à la liste des Labels
-    const label_empty = {
+    const namesEmpty = {
       source: '',
       status: 'new',
       value: '',
     };
 
-    newState.labels.push(label_empty);
+    newState.labels.push(namesEmpty);
     this.setState(newState);
   }
 
 
   deleteButtonHandler = (obj) => {
-    const labels = [...this.state.labels];
-    labels.splice(obj.index, 1);
+    const names = [...this.state.names];
+    names.splice(obj.index, 1);
 
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        label: labels,
+        names: names,
       }],
     };
 
@@ -62,7 +62,7 @@ class Labels extends Component {
   }
 
 
-  toggleLabelsButtonHandler = () => {
+  toggleNamesButtonHandler = () => {
     this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
 
@@ -93,18 +93,18 @@ class Labels extends Component {
         </div>
         <div className="column">
           {
-            this.state.labels.map((label, index) => (
-              <Label
+            this.state.names.map((name, index) => (
+              <Name
                 key={index}
                 index={index}
                 showAll={this.state.showAll}
-                label={label}
+                name={name}
                 add={this.state.addMode}
-                n_labels={this.state.labels.length}
+                n_names={this.state.labels.length}
                 deleteButton={this.deleteButtonHandler}
                 saveButton={this.saveButtonHandler}
                 addButton={this.addButtonHandler}
-                toggleLabelsButton={this.toggleLabelsButtonHandler}
+                toggleNamesButton={this.toggleNamesButtonHandler}
               />
             ))// /map
           }
@@ -115,9 +115,9 @@ class Labels extends Component {
   }
 }
 
-export default Labels;
+export default Names;
 
-Labels.propTypes = {
-  labels: PropTypes.array.isRequired,
+Names.propTypes = {
+  names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
 }

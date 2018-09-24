@@ -27,7 +27,7 @@ class Structure extends Component {
         content = (
           <Main
             id={structure.id}
-            label={structure.label}
+            names={structure.names}
             mail={structure.mail}
             phone={structure.phone}
             status={structure.status}
