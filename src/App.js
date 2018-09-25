@@ -22,7 +22,7 @@ class App extends Component {
     this.setState(newState);
   }
 
-  set_nStructures = (nb) => {
+  setNStructures = (nb) => {
     const newState = { ...this.state };
     newState.n_structures = nb;
     this.setState(newState);
@@ -43,7 +43,6 @@ class App extends Component {
           </div>
         </nav>
 
-
         <Columns gapless>
           <Columns.Column size="one-fifth">
             <Menu />
@@ -57,12 +56,11 @@ class App extends Component {
 
             <Structures
               searchText={this.state.searchText}
-              nStructures={this.set_nStructures}
+              nStructures={this.setNStructures}
             />
 
           </Columns.Column>
         </Columns>
-
 
       </div>
     );

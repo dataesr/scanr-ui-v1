@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import CountUp from 'react-countup';
+
 import SearchBar from './Search-bar/Search-bar';
 
 import classes from './Header.css';
@@ -58,3 +60,8 @@ const header = props => (
 // </div>
 
 export default header;
+
+header.propTypes = {
+  searchText: PropTypes.func.isRequired,
+  nStructures: PropTypes.number.isRequired,
+};

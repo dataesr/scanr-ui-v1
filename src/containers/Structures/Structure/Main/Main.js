@@ -61,7 +61,7 @@ export default main;
 
 main.propTypes = {
   id: PropTypes.string.isRequired,
-  label: PropTypes.array.isRequired,
+  names: PropTypes.array.isRequired,
   mail: PropTypes.string,
   phone: PropTypes.string,
   status: PropTypes.string.isRequired,

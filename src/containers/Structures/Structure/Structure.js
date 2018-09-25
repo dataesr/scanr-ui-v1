@@ -1,8 +1,9 @@
 /* Compoosants externes */
 import React, { Component } from 'react';
-import Aux from '../../../hoc/Aux';
+import PropTypes from 'prop-types';
 
 /* Composants internes */
+import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
 import Main from './Main/Main';
 
@@ -19,17 +20,18 @@ class Structure extends Component {
   }
 
   render() {
-    const structure = this.props.structure;
+    const { structure } = this.props;
     let content = null;
 
     switch (this.state.activeTab) {
       case 'main':
+        console.log('structure:', structure);
         content = (
           <Main
-            id={structure.id}
+            id={structure.esr_id}
             names={structure.names}
-            mail={structure.mail}
-            phone={structure.phone}
+            mail={structure.mail.value}
+            phone={structure.phone.value}
             status={structure.status}
           />);
         break;
@@ -37,10 +39,11 @@ class Structure extends Component {
         content = (
           <Addresses
             addresses={structure.addresses}
-            structureId={structure.id}
+            structureId={structure.esr_id}
           />
         );
         break;
+
       default:
         content = this.showMainTab(structure);
     }// /switch
@@ -67,6 +70,7 @@ class Structure extends Component {
                 <span className="tag is-light is-rounded">{structure.addresses.length}</span>
               </a>
             </li>
+
           </ul>
         </div>
         <div className="container is-fluid">
@@ -77,5 +81,8 @@ class Structure extends Component {
   }
 }
 
-
 export default Structure;
+
+Structure.propTypes = {
+  structure: PropTypes.object,
+};

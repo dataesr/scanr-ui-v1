@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /* CSS */
 import classes from './StructureList.scss';
-// import main_classes from '../../../App.css';
 
 const StructureList = props => (
   <section className="container is-fluid">
@@ -10,7 +10,7 @@ const StructureList = props => (
       {
           props.structuresList.map((structure, index) => (
             <li
-              key={structure.id}
+              key={structure.esr_id}
               className={classes.structureList_li}
             >
 
@@ -28,7 +28,7 @@ const StructureList = props => (
                   {structure.names[0].label}
                 </div>
                 <div className={`column ${classes.structuresList_id}`}>
-                  {structure.id}
+                  {structure.esr_id}
                 </div>
               </div>
             </li>
@@ -40,3 +40,8 @@ const StructureList = props => (
 );
 
 export default StructureList;
+
+StructureList.propTypes = {
+  structuresList: PropTypes.array.isRequired,
+  structureSelected: PropTypes.func.isRequired,
+};

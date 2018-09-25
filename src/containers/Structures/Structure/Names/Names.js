@@ -95,12 +95,12 @@ class Names extends Component {
           {
             this.state.names.map((name, index) => (
               <Name
-                key={index}
+                key={name.id}
                 index={index}
                 showAll={this.state.showAll}
                 name={name}
                 add={this.state.addMode}
-                n_names={this.state.labels.length}
+                n_names={this.state.names.length}
                 deleteButton={this.deleteButtonHandler}
                 saveButton={this.saveButtonHandler}
                 addButton={this.addButtonHandler}
@@ -120,4 +120,4 @@ export default Names;
 Names.propTypes = {
   names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
-}
+};

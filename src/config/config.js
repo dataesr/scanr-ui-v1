@@ -1,8 +1,8 @@
 export const version = '1.0';
 
 /* Pagination */
-export const PAGINATION_FROM = 0;
-export const PAGINATION_STEP = 20;
+export const PAGE = 1;
+export const PER_PAGE = 5;
 
 /* Statuts */
 export const STATUS_ARRAY = ['valid', 'invalid', 'old', 'main'];
