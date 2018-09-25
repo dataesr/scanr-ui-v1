@@ -121,7 +121,7 @@ class SimpleField extends Component {
           <span className="has-text-weight-semibold">
             {this.props.fieldName}
             {' '}
-:
+            :
           </span>
         </div>
         <div className="column">
@@ -137,7 +137,7 @@ class SimpleField extends Component {
 
 SimpleField.propTypes = {
   fieldName: PropTypes.string.isRequired,
-  fieldValue: PropTypes.string.isRequired,
+  fieldValue: PropTypes.string,
   name: PropTypes.string.isRequired,
   readOnly: PropTypes.bool.isRequired,
   structureId: PropTypes.string.isRequired,

@@ -49,7 +49,7 @@ class Address extends Component {
       <span>
         <i className="fa fa-chevron-circle-right hvr-icon" />
         {' '}
-        {this.state.address.value}
+        {this.state.address.address_1}
       </span>
     );
     let status = <span className="tag is-light is-medium is-rounded">{this.state.address.status}</span>;
@@ -80,7 +80,7 @@ class Address extends Component {
         <input
           type="text"
           className="input is-rounded"
-          value={value || ''}
+          value={this.state.address.address_1}
           onChange={this.changeInputHandler}
         />
       );
@@ -107,12 +107,12 @@ class Address extends Component {
     }
 
 
-    if (this.props.add === true) {
+    if (this.props.address.status === 'new') {
       value = (
         <input
           type="text"
           className="input is-rounded"
-          value={value || ''}
+          value={this.state.address.address_1}
           onChange={this.changeInputHandler}
         />
       );
@@ -170,11 +170,10 @@ class Address extends Component {
 export default Address;
 
 Address.propTypes = {
-  add: PropTypes.bool.isRequired,
   addButton: PropTypes.func.isRequired,
   address: PropTypes.object.isRequired,
   deleteButton: PropTypes.func.isRequired,
   index: PropTypes.number.isRequired,
   n_addresses: PropTypes.number.isRequired,
   saveButton: PropTypes.func.isRequired,
-}
+};

@@ -21,8 +21,48 @@ class Name extends Component {
     add: this.props.add,
   };
 
+  getSetStatus() {
+    // STATUS_ARRAY, SATUS_MAIN, SATUS_VALID, SATUS_INVALID, SATUS_OLD
+    return (
+      <div className="select is-rounded">
+        <select>
+          <option value="empty">- Empty -</option>
+          {
+        STATUS_ARRAY.map((status) => {
+          let selected = '';
+          if (status === this.state.name.status) {
+            selected = 'selected';
+          }
+          return (
+            <option key={status} value={status} selected={selected}>{status}</option>
+          );
+        })
+      }
+        </select>
+      </div>
+    );
+  }
+
+  changeInputHandler = (event) => {
+    const newState = { ...this.state };
+    newState.name.value = event.target.value;
+    this.setState(newState);
+  }
+
+  cancelButtonHandler() {
+    const newState = { ...this.state };
+    newState.mode = 'readonly';
+    this.setState(newState);
+  }
+
+  modifyButtonHandler() {
+    const newState = { ...this.state };
+    newState.mode = 'modify';
+    this.setState(newState);
+  }
+
   render() {
-    let { value, source } = this.state.name;
+    let { label, source } = this.state.name;
     let status = <span className="tag is-light is-medium is-rounded">{this.state.name.status}</span>;
     let visibility = '';
     let display = '';
@@ -60,6 +100,7 @@ class Name extends Component {
       btAdd = (
         <Aux>
           <button
+            type="button"
             onClick={this.props.addButton}
             className={` button is-light  ${classes.space_5}`}
           >
@@ -78,11 +119,11 @@ class Name extends Component {
     if (this.state.mode === 'modify') {
       btShowAll = null; // On masque le bouton de "dépliage" en modif car tous les  libellés seront affichés
 
-      value = (
+      label = (
         <input
           type="text"
           className="input is-rounded"
-          value={value || ''}
+          value={label || ''}
           onChange={this.changeInputHandler}
         />
       );
@@ -93,20 +134,37 @@ class Name extends Component {
 
       buttons = (
         <Aux>
-          <button onClick={this.props.saveButton} className={` button is-light  ${classes.space_5}`}><i className="fas fa-save" /></button>
-          <button onClick={() => this.props.deleteButton(this.state)} className={` button is-light  ${classes.space_5} ${visibility}`}><i className="fas fa-trash" /></button>
-          <button onClick={() => this.cancelButtonHandler()} className={` button is-light  ${classes.space_5}`}><i className="fas fa-undo-alt" /></button>
+          <button
+            type="button"
+            onClick={this.props.saveButton}
+            className={` button is-light  ${classes.space_5}`}
+          >
+            <i className="fas fa-save" />
+          </button>
+          <button
+            type="button"
+            onClick={() => this.props.deleteButton(this.state)}
+            className={` button is-light  ${classes.space_5} ${visibility}`}
+          >
+            <i className="fas fa-trash" />
+          </button>
+          <button
+            type="button"
+            onClick={() => this.cancelButtonHandler()}
+            className={` button is-light  ${classes.space_5}`}
+          >
+            <i className="fas fa-undo-alt" />
+          </button>
         </Aux>
       );
     }
 
-
     if (this.state.add === true) {
-      value = (
+      label = (
         <input
           type="text"
           className="input is-rounded"
-          value={value || ''}
+          value={label || ''}
           onChange={this.changeInputHandler}
         />
       );
@@ -116,7 +174,13 @@ class Name extends Component {
       source = this.state.name.source;
       buttons = (
         <Aux>
-          <button onClick={this.props.saveButton} className={` button is-light  ${classes.space_5}`}><i className="fas fa-save" /></button>
+          <button
+            type="button"
+            onClick={this.props.saveButton}
+            className={` button is-light  ${classes.space_5}`}
+          >
+            <i className="fas fa-save" />
+          </button>
         </Aux>
       );
 
@@ -127,7 +191,7 @@ class Name extends Component {
       <div className={display}>
         <div className="columns">
           <div className="column">
-            {value}
+            {label}
           </div>
 
           <div className="column is-narrow">
@@ -148,58 +212,19 @@ class Name extends Component {
       </div>
     );// return
   }// /render
-
-
-  getSetStatus() {
-    // STATUS_ARRAY, SATUS_MAIN, SATUS_VALID, SATUS_INVALID, SATUS_OLD
-    return (
-      <div className="select is-rounded">
-        <select>
-          <option value="empty">- Empty -</option>
-          {
-        STATUS_ARRAY.map((status, index) => {
-          let selected = '';
-          if (status === this.state.name.status) {
-            selected = 'selected';
-          }
-          return (
-            <option key={index} value={status} selected={selected}>{status}</option>
-          );
-        })
-      }
-        </select>
-      </div>
-    );
-  }
-
-  modifyButtonHandler() {
-    const newState = { ...this.state };
-    newState.mode = 'modify';
-    this.setState(newState);
-  }
-
-
-  cancelButtonHandler() {
-    const newState = { ...this.state };
-    newState.mode = 'readonly';
-    this.setState(newState);
-  }
-
-
-  changeInputHandler = (event) => {
-    const newState = { ...this.state };
-    newState.name.value = event.target.value;
-    this.setState(newState);
-  }
 }// /LabelClass
 
 export default Name;
 
+
 Name.propTypes = {
   add: PropTypes.bool.isRequired,
+  showAll: PropTypes.bool,
   name: PropTypes.object.isRequired,
   n_names: PropTypes.number.isRequired,
   index: PropTypes.number.isRequired,
   saveButton: PropTypes.func.isRequired,
   toggleNamesButton: PropTypes.func.isRequired,
-}
+  addButton: PropTypes.func.isRequired,
+  deleteButton: PropTypes.func.isRequired,
+};

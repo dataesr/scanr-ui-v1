@@ -87,11 +87,10 @@ class Addresses extends Component {
         {
           this.state.addresses.map((address, index) => (
             <Address
-              key={index}
+              key={address.id}
               index={index}
               showAll={this.state.showAll}
               address={address}
-              add={this.state.addMode}
               n_addresses={this.state.addresses.length}
               deleteButton={this.deleteButtonHandler}
               saveButton={this.saveButtonHandler}

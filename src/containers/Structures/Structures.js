@@ -1,23 +1,24 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 /* Config */
-/* Pagination */
-import { PAGINATION_FROM, PAGINATION_STEP } from '../../config/config';
-/* API */
-import { API_END_POINT, API_BOUCHON, API_DATA } from '../../config/config';
+import {
+  API_END_POINT,
+  API_BOUCHON,
+  API_DATA,
+  PAGE,
+  PER_PAGE,
+} from '../../config/config';
 
 /* Composants internes */
 import Aux from '../../hoc/Aux';
 import Structure from './Structure/Structure';
 import StructureList from './StructureList/StructureList';
-// import PaginationStructures from './PaginationStructures/PaginationStructures';
 
 /* CSS */
 // import classes from './Structures.css';
-
-
 
 class Structures extends Component {
   state = {
@@ -25,64 +26,30 @@ class Structures extends Component {
     structures: [],
     pagination:
     {
-      n_page: PAGINATION_FROM,
+      n_page: PAGE,
       n_hits: 0,
     },
   }
 
-  render() {
-    let content = 'Pas de structure !';
-    let bt_nextContent = null;
-
-    if (this.state.structureSelected) {
-      content = (
-        <Structure
-          structure={this.state.structureSelected}
-          returnButton={this.returnButtonHandler}
-        />
-      );
-    } else if (this.state.structures) {
-      content = (
-        <StructureList
-          structuresList={this.state.structures}
-          structureSelected={this.structureSelectedHandler}
-        />
-      );
-
-      const n_pages_max = Math.ceil(this.state.pagination.n_hits / PAGINATION_STEP);
-      if (this.state.pagination.n_page < n_pages_max) {
-        bt_nextContent = (
-          <a
-            onClick={() => this.nextContentButtonHandler()}
-            className="button is-dark is-medium is-fullwidth is-rounded"
-          >
-            Charger la suite
-          </a>
-        );
-      }
-    }
-
-    return (
-      <Aux>
-        {content}
-        <div className="container">
-          <div className="column is-half is-offset-one-quarter">
-            {bt_nextContent}
-          </div>
-        </div>
-      </Aux>
-    );
-  }// /render()
-
-
-  nextContentButtonHandler() {
+  componentDidMount() {
+    // Récupération des structures initiales (API)
     const p = {
-      init: false,
-      pagination: true,
+      init: true,
+      pagination: false,
     };
     this.axiosCall(p);
-  }
+  }// /componentDidMount()
 
+  componentDidUpdate(prevProps) {
+    // Récupération des structures sur MAJ searchBar (API)
+    if (this.props.searchText !== prevProps.searchText) {
+      const p = {
+        init: true,
+        pagination: false,
+      };
+      this.axiosCall(p);
+    }
+  }// /componentDidUpdate()
 
   returnButtonHandler = () => {
     // Suppression de la stucture sélectionnée du state
@@ -92,8 +59,6 @@ class Structures extends Component {
     this.setState(newState);
   }
 
-
-
   structureSelectedHandler = (obj) => {
     // Sauvegarde de la structure sélectionnée par click dans la liste
     const newState = { ...this.state };
@@ -102,16 +67,21 @@ class Structures extends Component {
     this.setState(newState);
   }
 
+  nextContentButtonHandler() {
+    const p = {
+      init: false,
+      pagination: true,
+    };
+    this.axiosCall(p);
+  }
 
   axiosCall(p) {
     // Appel de l'API
-    let from; let to;
+    let page;
     if (p.pagination) {
-      from = this.state.pagination.n_page * PAGINATION_STEP;
-      to = (this.state.pagination.n_page + 1) * PAGINATION_STEP;
+      page = this.state.pagination.n_page;
     } else {
-      from = PAGINATION_FROM;
-      to = PAGINATION_STEP;
+      page = PAGE;
     }
 
     if (API_BOUCHON) {
@@ -140,7 +110,7 @@ class Structures extends Component {
       axios(
         {
           method: 'get',
-          url: `${API_END_POINT}structures/?query=${this.props.searchText}`,
+          url: `${API_END_POINT}structures/?query=${this.props.searchText}&page=${page}&per_page=${PER_PAGE}`,
           responseType: 'json',
         },
       ).then(
@@ -171,27 +141,56 @@ class Structures extends Component {
   }// /axiosCall()
 
 
-  componentDidMount() {
-    // Récupération des structures initiales (API)
-    const p = {
-      init: true,
-      pagination: false,
-    };
-    this.axiosCall(p);
-  }// /componentDidMount()
+  render() {
+    let content = 'Pas de structure !';
+    let btNextContent = null;
 
+    if (this.state.structureSelected) {
+      content = (
+        <Structure
+          structure={this.state.structureSelected}
+          returnButton={this.returnButtonHandler}
+        />
+      );
+    } else if (this.state.structures) {
+      content = (
+        <StructureList
+          structuresList={this.state.structures}
+          structureSelected={this.structureSelectedHandler}
+        />
+      );
 
-  componentDidUpdate(prevProps, prevState) {
-    // Récupération des structures sur MAJ searchBar (API)
-    if (this.props.searchText !== prevProps.searchText) {
-      const p = {
-        init: true,
-        pagination: false,
-      };
-      this.axiosCall(p);
+      const nPagesMax = Math.ceil(this.state.pagination.n_hits / PER_PAGE);
+      if (this.state.pagination.n_page < nPagesMax) {
+        btNextContent = (
+          <button
+            type="button"
+            onClick={() => this.nextContentButtonHandler()}
+            className="button is-dark is-medium is-fullwidth is-rounded"
+          >
+            Charger la suite
+          </button>
+        );
+      }
     }
-  }// /componentDidUpdate()
+
+    return (
+      <Aux>
+        {content}
+        <div className="container">
+          <div className="column is-half is-offset-one-quarter">
+            {btNextContent}
+          </div>
+        </div>
+      </Aux>
+    );
+  }// /render()
 }
 
 
 export default Structures;
+
+Structures.propTypes = {
+  searchText: PropTypes.string.isRequired,
+  nStructures: PropTypes.func.isRequired,
+};
