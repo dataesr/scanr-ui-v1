@@ -1,8 +1,9 @@
 import React from 'react';
 import { Menu } from 'react-bulma-components';
+import { NavLink } from 'react-router-dom';
 import classes from './Menu.scss';
 
-const menu = props => (
+const menu = () => (
   <Menu className={classes.sidebar}>
     <Menu.List title="General">
       <Menu.List.Item>
@@ -17,14 +18,20 @@ const menu = props => (
 
       <Menu.List.Item>
         <Menu.List title="Organisations">
-          <Menu.List.Item className={classes.active}>
+          <Menu.List.Item>
+            <NavLink to="/structures" activeClassName={classes.active}>
               Structures
+            </NavLink>
           </Menu.List.Item>
           <Menu.List.Item>
+            <NavLink to="/entreprises" activeClassName={classes.active}>
               Entreprises
+            </NavLink>
           </Menu.List.Item>
           <Menu.List.Item>
-              Institutions
+            <NavLink to="/institutions" activeClassName={classes.active}>
+              institutions
+            </NavLink>
           </Menu.List.Item>
         </Menu.List>
       </Menu.List.Item>
