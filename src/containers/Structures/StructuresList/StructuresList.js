@@ -1,28 +1,25 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
 /* Config */
 import {
   API_BOUCHON,
   API_DATA,
   PAGE,
   PER_PAGE,
-} from '../../config/config';
+} from '../../../config/config';
 
 /* Composants internes */
-import axios from '../../axios';
-import Aux from '../../hoc/Aux';
-import Structure from './Structure/Structure';
-import StructureList from './StructureList/StructureList';
+import axios from '../../../axios';
+import Aux from '../../../hoc/Aux';
+import StructuresListItems from './StructuresListItems/StructuresListItems';
 
 /* CSS */
 // import classes from './Structures.css';
 
-class Structures extends Component {
+class StructuresList extends Component {
   state = {
     structures: [],
-    structureSelected: null,
     pagination:
     {
       n_page: PAGE,
@@ -50,15 +47,7 @@ class Structures extends Component {
     }
   }// /componentDidUpdate()
 
-  returnButtonHandler = () => {
-    // Suppression de la stucture sélectionnée du state
-    const newState = { ...this.state };
-    newState.structureSelected = null;
-
-    this.setState(newState);
-  }
-
-  nextContentButtonHandler() {
+  nextContentButtonHandler = () => {
     const p = {
       init: false,
       pagination: true,
@@ -111,16 +100,9 @@ class Structures extends Component {
             } else {
               newPagination.n_page = 1;
             }
-            let structureSelected = null;
-            console.log(this.props.match.params)
-            if (this.props.match.params.length > 0) {
-              const esrId = parseInt(this.props.match.params.number, 10);
-              structureSelected = newStructures.find(structure => structure.esr_id === esrId);
-            }
             this.setState({
               structures: newStructures,
               pagination: newPagination,
-              structureSelected
             });
 
             // MAJ du header
@@ -134,17 +116,9 @@ class Structures extends Component {
   render() {
     let content = 'Pas de structure !';
     let btNextContent = null;
-
-    if (this.state.structureSelected) {
+    if (this.state.structures) {
       content = (
-        <Structure
-          structure={this.state.structureSelected}
-          returnButton={this.returnButtonHandler}
-        />
-      );
-    } else if (this.state.structures) {
-      content = (
-        <StructureList
+        <StructuresListItems
           structuresList={this.state.structures}
         />
       );
@@ -154,7 +128,7 @@ class Structures extends Component {
         btNextContent = (
           <button
             type="button"
-            onClick={() => this.nextContentButtonHandler()}
+            onClick={this.nextContentButtonHandler}
             className="button is-dark is-medium is-fullwidth is-rounded"
           >
             Charger la suite
@@ -177,9 +151,9 @@ class Structures extends Component {
 }
 
 
-export default Structures;
+export default StructuresList;
 
-Structures.propTypes = {
+StructuresList.propTypes = {
   searchText: PropTypes.string.isRequired,
   nStructures: PropTypes.func.isRequired,
 };

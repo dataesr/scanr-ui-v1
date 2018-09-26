@@ -44,9 +44,9 @@ class Name extends Component {
   }
 
   changeInputHandler = (event) => {
-    const newState = { ...this.state };
-    newState.name.value = event.target.value;
-    this.setState(newState);
+    const newName = { ...this.state.name };
+    newName.value = event.target.value;
+    this.setState(newName);
   }
 
   cancelButtonHandler() {

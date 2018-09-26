@@ -1,8 +1,8 @@
 /* Compoosants externes */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
+import { NavLink } from 'react-router-dom';
 /* Composants internes */
+import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
 import Main from './Main/Main';
@@ -11,6 +11,14 @@ import Main from './Main/Main';
 class Structure extends Component {
   state = {
     activeTab: 'main',
+    structure: null
+  }
+
+  componentDidMount() {
+    const esrId = this.props.match.params.esr_id;
+    const url = `structures/${esrId}`;
+    axios.get(url)
+      .then(response => this.setState({ structure: response.data.data }));
   }
 
   showTab = (tab) => {
@@ -20,12 +28,14 @@ class Structure extends Component {
   }
 
   render() {
-    const { structure } = this.props;
+    const { structure } = this.state;
+    console.log('structure:', structure);
     let content = null;
-
+    if (!this.state.structure) {
+      return null;
+    }
     switch (this.state.activeTab) {
       case 'main':
-        console.log('structure:', structure);
         content = (
           <Main
             id={structure.esr_id}
@@ -53,10 +63,10 @@ class Structure extends Component {
         <div className="tabs">
           <ul>
             <li>
-              <a onClick={this.props.returnButton}>
+              <NavLink to="/">
                 <span className="icon"><i className="fas fa-angle-left" aria-hidden="true" /></span>
                 <span>Retour</span>
-              </a>
+              </NavLink>
             </li>
             <li className={this.state.activeTab === 'main' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('main')}>
@@ -82,7 +92,3 @@ class Structure extends Component {
 }
 
 export default Structure;
-
-Structure.propTypes = {
-  structure: PropTypes.object,
-};
