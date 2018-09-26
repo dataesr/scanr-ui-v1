@@ -11,7 +11,7 @@ import Main from './Main/Main';
 class Structure extends Component {
   state = {
     activeTab: 'main',
-    structure: null
+    structure: null,
   }
 
   componentDidMount() {
@@ -29,7 +29,6 @@ class Structure extends Component {
 
   render() {
     const { structure } = this.state;
-    console.log('structure:', structure);
     let content = null;
     if (!this.state.structure) {
       return null;
