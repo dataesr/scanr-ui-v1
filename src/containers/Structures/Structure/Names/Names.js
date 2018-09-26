@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 /* Composants internes */
-import Name from './Name/Name';
+import FieldsList from '../FieldsList/FieldsList';
 
 /* Config */
 /* API */
@@ -13,59 +13,57 @@ import { API_END_POINT } from '../../../../config/config';
 // import classes from '../Structure.css';
 
 class Names extends Component {
-  state = {
-    names: this.props.names,
-    structureId: this.props.structureId,
-    showAll: false,
-    addMode: false,
-  };
+  editName = (nameObject) => {
+    // find the name in the list
+    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
+    const editedName = this.props.names[editedNameIndex];
+    editedName.label = nameObject.fieldValue;
+    editedName.status = nameObject.status;
+    editedName.created_by = 'user';
+    const updatedNamesList = [...this.props.names];
+    updatedNamesList[editedNameIndex] = editedName;
+    const dataObject = {
+      data: [{
+        esr_id: this.state.structureId,
+        names: updatedNamesList,
+      }],
+    };
+    this.AxiosCall(dataObject);
+  }
 
-  saveButtonHandler = () => {
+  addName = (nameObject) => {
+    const newName = {
+      label: nameObject.fieldValue,
+      status: nameObject.status,
+      created_by: 'user',
+    }
+    const updatedNamesList = this.props.names.concat([newName]);
+    const dataObject = {
+      data: [{
+        esr_id: this.state.structureId,
+        names: updatedNamesList,
+      }],
+    };
+    this.AxiosCall(dataObject);
+  }
+
+  deleteName = (nameObject) => {
+    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
+    const updatedNamesList = [...this.props.names];
+    updatedNamesList.splice(editedNameIndex, 1);
+
     const dataObject = {
       data: [{
         scanr_id: this.state.structureId,
-        names: this.state.names,
+        names: updatedNamesList,
       }],
     };
 
     this.AxiosCall(dataObject);
   }
 
-  addButtonHandler = () => {
-    const newState = { ...this.state };
-    newState.addMode = true;
 
-    // Ajout d'un objet "label" vide à la liste des Labels
-    const namesEmpty = {
-      source: '',
-      status: 'new',
-      value: '',
-    };
-
-    newState.labels.push(namesEmpty);
-    this.setState(newState);
-  }
-
-
-  deleteButtonHandler = (obj) => {
-    const names = [...this.state.names];
-    names.splice(obj.index, 1);
-
-    const dataObject = {
-      data: [{
-        scanr_id: this.state.structureId,
-        names: names,
-      }],
-    };
-
-    this.AxiosCall(dataObject);
-  }
-
-
-  toggleNamesButtonHandler = () => {
-    this.setState(prevState => ({ showAll: !prevState.showAll }));
-  }
-
+  // move to Redux
   AxiosCall(data) {
     axios(
       {
@@ -77,41 +75,29 @@ class Names extends Component {
     ).then(
       (response) => {
         if (response.status === 200) {
-          this.setState({ addMode: false });
+          console.log(response)
         }
       },
     );
   }
 
   render() {
-    return (
-      <div className="columns">
-        <div className="column is-narrow is-one-fifth">
-          <span className="has-text-weight-semibold">
-            Libellés :
-          </span>
-        </div>
-        <div className="column">
-          {
-            this.state.names.map((name, index) => (
-              <Name
-                key={name.id}
-                index={index}
-                showAll={this.state.showAll}
-                name={name}
-                add={this.state.addMode}
-                n_names={this.state.names.length}
-                deleteButton={this.deleteButtonHandler}
-                saveButton={this.saveButtonHandler}
-                addButton={this.addButtonHandler}
-                toggleNamesButton={this.toggleNamesButtonHandler}
-              />
-            ))// /map
-          }
-        </div>
-
-      </div>
+    const names = this.props.names.reduce(
+      (nameArray, name) => nameArray.concat({
+        fieldValue: name.label,
+        id: name.id,
+        status: name.status,
+        source: name.source,
+      }), [],
     );
+    return (
+      <FieldsList
+        add={this.addName}
+        content={names}
+        delete={this.deleteName}
+        label="Libellés"
+        edit={this.editName}
+      />);
   }
 }
 

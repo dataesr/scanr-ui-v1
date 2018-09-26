@@ -25,28 +25,19 @@ class Name extends Component {
     // STATUS_ARRAY, SATUS_MAIN, SATUS_VALID, SATUS_INVALID, SATUS_OLD
     return (
       <div className="select is-rounded">
-        <select>
+        <select value={this.state.name.status}>
           <option value="empty">- Empty -</option>
-          {
-        STATUS_ARRAY.map((status) => {
-          let selected = '';
-          if (status === this.state.name.status) {
-            selected = 'selected';
-          }
-          return (
-            <option key={status} value={status} selected={selected}>{status}</option>
-          );
-        })
-      }
+          {STATUS_ARRAY.map(status => (
+            <option key={status} value={status}>{status}</option>))}
         </select>
       </div>
     );
   }
 
   changeInputHandler = (event) => {
-    const newName = { ...this.state.name };
-    newName.value = event.target.value;
-    this.setState(newName);
+    const name = { ...this.state.name };
+    name.label = event.target.value;
+    this.setState({ name });
   }
 
   cancelButtonHandler() {
@@ -123,7 +114,7 @@ class Name extends Component {
         <input
           type="text"
           className="input is-rounded"
-          value={label || ''}
+          value={this.state.name.label}
           onChange={this.changeInputHandler}
         />
       );
@@ -164,7 +155,7 @@ class Name extends Component {
         <input
           type="text"
           className="input is-rounded"
-          value={label || ''}
+          value={this.state.name}
           onChange={this.changeInputHandler}
         />
       );
