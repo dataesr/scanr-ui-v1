@@ -11,21 +11,22 @@ class FieldEditMode extends Component {
     status: this.props.status,
   };
 
-  changeSelectHandler = (event) => {
-    // implement two way binding for select
-    console.log(event);
+  onChange = (event) => {
+    this.setState({ [event.target.id]: event.target.value });
   }
 
-  changeInputHandler = (event) => {
-    this.setState({ fieldValue: event.target.id });
-  }
-
-  saveButtonHandler = () => {
-    // doit faire appel à la methode edit en reformattant en objet
+  editButtonHandler = () => {
+    this.props.edit({
+      fieldValue: this.state.fieldValue,
+      status: this.state.status,
+    });
   }
 
   deleteButtonHandler = () => {
-    // doit faire appel à la méthode delete en reformattant en objet
+    this.props.delete({
+      fieldValue: this.state.fieldValue,
+      status: this.state.status,
+    });
   }
 
   render() {
@@ -39,37 +40,39 @@ class FieldEditMode extends Component {
     }
 
     return (
-      <div className>
-        <div className="columns">
-          <div className="column">
-            <input
-              type="text"
-              className="input is-rounded"
-              value={this.state.fieldValue}
-              onChange={this.changeInputHandler}
-            />
+      <div className="columns">
+        <div className="column">
+          <input
+            id="fieldValue"
+            type="text"
+            className="input is-rounded"
+            value={this.state.fieldValue}
+            onChange={this.onChange}
+          />
+        </div>
+        <div className="column is-narrow">
+          <div className="select is-rounded">
+            <select
+              id="status"
+              value={this.state.status}
+              onChange={this.onChange}
+            >
+              <option value="empty">- Empty -</option>
+              {STATUS_ARRAY.map(status => <option key={status} value={status}>{status}</option>)}
+            </select>
           </div>
-          <div className="column is-narrow">
-            <div className="select is-rounded">
-              <select value={this.state.status} onChange={this.changeSelectHandler}>
-                <option value="empty">- Empty -</option>
-                {STATUS_ARRAY.map(status => (
-                  <option key={status} value={status}>{status}</option>))}
-              </select>
-            </div>
-          </div>
-          <div className="column is-narrow">
-            <span className="tag is-light is-medium is-rounded">{this.props.source}</span>
-          </div>
-          <div className="column is-one-fifth has-text-right">
-            <Button onClick={this.saveButtonHandler}>
-              <i className="fas fa-save" />
-            </Button>
-            {deleteButton}
-            <Button onClick={this.props.cancel}>
-              <i className="fas fa-undo-alt" />
-            </Button>
-          </div>
+        </div>
+        <div className="column is-narrow">
+          <span className="tag is-light is-medium is-rounded">{this.props.source}</span>
+        </div>
+        <div className="column is-one-fifth has-text-right">
+          <Button onClick={this.editButtonHandler}>
+            <i className="fas fa-save" />
+          </Button>
+          {deleteButton}
+          <Button onClick={this.props.cancel}>
+            <i className="fas fa-undo-alt" />
+          </Button>
         </div>
       </div>
     );
@@ -82,8 +85,13 @@ export default FieldEditMode;
 FieldEditMode.propTypes = {
   allowDelete: PropTypes.bool.isRequired,
   cancel: PropTypes.func.isRequired,
+  delete: PropTypes.func.isRequired,
+  edit: PropTypes.func.isRequired,
   fieldValue: PropTypes.string.isRequired,
-  save: PropTypes.func.isRequired,
   source: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  status: PropTypes.string,
+};
+
+FieldEditMode.defaultProps = {
+  status: 'empty',
 };
