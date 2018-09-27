@@ -1,0 +1,70 @@
+@import '../../../../style.scss';
+/*
+section {
+  -webkit-column-width: 400px;
+  -moz-column-width: 400px;
+  column-width: 400px;
+  padding-top: 20px;
+}
+*/
+
+.GridCard{
+  margin-bottom: 10px;
+  height: 150px;
+  width: 100%;
+}
+
+.Section{
+  padding: 0 20px;
+}
+
+.Complementary{
+  margin-top: 10px;
+  color: $text_secondary;
+}
+
+.Id{
+  font-weight: bold;
+}
+
+.Complementary span{
+  display: inline-block;
+  padding-left: 10px;
+}
+
+/*Ellipsis sur 1 ou 2 lignes*/
+.lineClamp{
+	display            : block;
+	display            : -webkit-box;
+	-webkit-box-orient : vertical;
+	position           : relative;
+
+	line-height        : 1.4;
+	overflow           : hidden;
+	text-overflow      : ellipsis;
+	padding            : 0 !important;
+}
+.lineClamp:after{
+	content    : '...';
+	text-align : right;
+	bottom     : 0;
+	right      : 0;
+	width      : 25%;
+	display    : block;
+	position   : absolute;
+	height     : calc(1em * 1.4);
+	background : linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+}
+@supports (-webkit-line-clamp: 1){
+	.lineClamp:after	{
+		display : none !important;
+	}
+}
+.lineClamp1{
+	-webkit-line-clamp : 1;
+	height             : calc(1em * 1.4 * 1);
+}
+.lineClamp2{
+	-webkit-line-clamp : 2;
+	height             : calc(1em * 1.4 * 2);
+}
