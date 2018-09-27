@@ -1,7 +1,6 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
 /* Config */
 import {
   API_BOUCHON,
@@ -14,7 +13,7 @@ import {
 import axios from '../../axios';
 import Aux from '../../hoc/Aux';
 import Structure from './Structure/Structure';
-import StructureList from './StructureList/StructureList';
+import StructuresList from './StructuresList/StructuresList';
 
 /* CSS */
 // import classes from './Structures.css';
@@ -144,7 +143,7 @@ class Structures extends Component {
       );
     } else if (this.state.structures) {
       content = (
-        <StructureList
+        <StructuresList
           structuresList={this.state.structures}
         />
       );

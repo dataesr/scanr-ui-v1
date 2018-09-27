@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../../../../UI/Button/Button';
-import FieldDispatcher from './Field/FieldDispatcher';
-import FieldAddMode from './Field/FieldAddMode';
+import Button from '../../../../../UI/Button/Button';
+import FieldModeDispatcher from '../FieldModeDispatcher/FieldModeDispatcher';
+import FieldAddMode from './FieldAddMode';
 
 class FieldsList extends Component {
   state = {
@@ -31,24 +31,28 @@ class FieldsList extends Component {
     }
     return (
       <div className="columns">
-        <div className="column is-narrow is-one-quarter">
-          <Button onClick={this.toggleAllFields}>
-            {this.state.showAll ? <i className="fas fa-eye-slash" /> : <i className="fas fa-eye" />}
-          </Button>
-          <Button onClick={() => this.toggleAddMode(true)}>
-            <i className="fas fa-plus" />
-          </Button>
+        <div className="column has-text-right is-narrow is-one-fifth">
           <span className="has-text-weight-semibold">{`${this.props.label} :`}</span>
+          <div className="column">
+            <Button onClick={this.toggleAllFields}>
+              {this.state.showAll ? <i className="fas fa-eye-slash" /> : <i className="fas fa-eye" />}
+            </Button>
+            <Button onClick={() => this.toggleAddMode(true)}>
+              <i className="fas fa-plus" />
+            </Button>
+          </div>
         </div>
         <div className="column">
           {content.map(field => (
-            <FieldDispatcher
+            <FieldModeDispatcher
               key={field.id}
               allowDelete={this.props.content.length > 0}
               delete={this.props.delete}
-              fieldValue={field.fieldValue}
-              id={field.id}
               edit={this.props.edit}
+              fullEdition
+              id={field.id}
+              fieldValue={field.fieldValue}
+              readOnly={false}
               source={field.source}
               status={field.status}
             />

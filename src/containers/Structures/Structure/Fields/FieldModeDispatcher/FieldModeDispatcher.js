@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import FieldReadMode from './FieldReadMode';
-import FieldEditMode from './FieldEditMode';
+import FieldReadMode from './FieldMode/FieldReadMode';
+import FieldEditMode from './FieldMode/FieldEditMode';
 
-class FieldDispatcher extends Component {
+class FieldModeDispatcher extends Component {
   state = {
     editMode: false,
   };
@@ -21,6 +21,7 @@ class FieldDispatcher extends Component {
         fieldValue={this.props.fieldValue}
         source={this.props.source}
         status={this.props.status}
+        readOnly={this.props.readOnly}
       />);
     if (this.state.editMode) {
       field = (
@@ -29,6 +30,8 @@ class FieldDispatcher extends Component {
           cancel={() => this.toggleEditMode(false)}
           delete={this.props.delete}
           fieldValue={this.props.fieldValue}
+          fullEdition={this.props.fullEdition}
+          id={this.props.id}
           edit={this.props.edit}
           source={this.props.source}
           status={this.props.status}
@@ -38,13 +41,16 @@ class FieldDispatcher extends Component {
   }
 }
 
-export default FieldDispatcher;
+export default FieldModeDispatcher;
 
-FieldDispatcher.propTypes = {
-  allowDelete: PropTypes.bool.isRequired,
-  delete: PropTypes.func.isRequired,
-  fieldValue: PropTypes.string.isRequired,
+FieldModeDispatcher.propTypes = {
+  allowDelete: PropTypes.bool,
+  delete: PropTypes.func,
   edit: PropTypes.func.isRequired,
+  fieldValue: PropTypes.string.isRequired,
+  fullEdition: PropTypes.bool.isRequired,
+  id: PropTypes.number,
+  readOnly: PropTypes.bool.isRequired,
   source: PropTypes.string.isRequired,
   status: PropTypes.string.isRequired,
 };
