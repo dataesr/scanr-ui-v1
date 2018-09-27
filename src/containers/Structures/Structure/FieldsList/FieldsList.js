@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from '../../../../UI/Button/Button';
 import FieldDispatcher from './Field/FieldDispatcher';
-import FieldAddMode from './Field/FieldEditMode';
+import FieldAddMode from './Field/FieldAddMode';
 
 class FieldsList extends Component {
   state = {
@@ -11,8 +11,8 @@ class FieldsList extends Component {
     showAll: false,
   };
 
-  addButtonHandler = () => {
-    this.setState({ addMode: true });
+  toggleAddMode = (bool) => {
+    this.setState({ addMode: bool });
   }
 
   toggleAllFields = () => {
@@ -27,20 +27,18 @@ class FieldsList extends Component {
     }
     let addField = null;
     if (this.state.addMode) {
-      addField = <FieldAddMode add={this.props.add} />;
+      addField = <FieldAddMode add={this.props.add} cancel={() => this.toggleAddMode(false)} />;
     }
     return (
       <div className="columns">
-        <div className="column is-narrow is-one-fifth">
-          <span className="has-text-weight-semibold">{`${this.props.label} :`}</span>
-          <Button
-            onClick={this.toggleAllFields}
-          >
+        <div className="column is-narrow is-one-quarter">
+          <Button onClick={this.toggleAllFields}>
             {this.state.showAll ? <i className="fas fa-eye-slash" /> : <i className="fas fa-eye" />}
           </Button>
-          <Button onClick={this.addButtonHandler}>
+          <Button onClick={() => this.toggleAddMode(true)}>
             <i className="fas fa-plus" />
           </Button>
+          <span className="has-text-weight-semibold">{`${this.props.label} :`}</span>
         </div>
         <div className="column">
           {content.map(field => (

@@ -1,26 +1,23 @@
 /* Composants externes */
 import React, { Component } from 'react';
-import axios from 'axios';
+import axios from '../../../../axios';
 import PropTypes from 'prop-types';
 /* Composants internes */
 import FieldsList from '../FieldsList/FieldsList';
 
-/* Config */
-/* API */
-import { API_END_POINT } from '../../../../config/config';
-
-/* CSS */
-// import classes from '../Structure.css';
-
 class Names extends Component {
+  state = {
+    names: this.props.names,
+  };
+
   editName = (nameObject) => {
     // find the name in the list
-    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
-    const editedName = this.props.names[editedNameIndex];
+    const editedNameIndex = this.state.names.findIndex(name => name.id === nameObject.id);
+    const editedName = this.state.names[editedNameIndex];
     editedName.label = nameObject.fieldValue;
     editedName.status = nameObject.status;
     editedName.created_by = 'user';
-    const updatedNamesList = [...this.props.names];
+    const updatedNamesList = [...this.state.names];
     updatedNamesList[editedNameIndex] = editedName;
     const dataObject = {
       data: [{
@@ -36,11 +33,11 @@ class Names extends Component {
       label: nameObject.fieldValue,
       status: nameObject.status,
       created_by: 'user',
-    }
-    const updatedNamesList = this.props.names.concat([newName]);
+    };
+    const updatedNamesList = this.state.names.concat([newName]);
     const dataObject = {
       data: [{
-        esr_id: this.state.structureId,
+        esr_id: this.props.structureId,
         names: updatedNamesList,
       }],
     };
@@ -48,13 +45,13 @@ class Names extends Component {
   }
 
   deleteName = (nameObject) => {
-    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
+    const editedNameIndex = this.state.names.findIndex(name => name.id === nameObject.id);
     const updatedNamesList = [...this.props.names];
     updatedNamesList.splice(editedNameIndex, 1);
 
     const dataObject = {
       data: [{
-        scanr_id: this.state.structureId,
+        scanr_id: this.props.structureId,
         names: updatedNamesList,
       }],
     };
@@ -65,29 +62,25 @@ class Names extends Component {
 
   // move to Redux
   AxiosCall(data) {
-    axios(
-      {
-        method: 'POST',
-        url: `${API_END_POINT}structures/label`,
-        responseType: 'json',
-        data: JSON.stringify(data),
-      },
-    ).then(
-      (response) => {
-        if (response.status === 200) {
-          console.log(response)
-        }
-      },
-    );
+    const url = `structures/${this.props.structureId}/label`;
+    axios.post(url, data) // sinon mettre JSON.stringify(data)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            this.setState({ names: data[0].names })
+            console.log(response);
+          }
+        },
+      );
   }
 
   render() {
-    const names = this.props.names.reduce(
+    const names = this.state.names.reduce(
       (nameArray, name) => nameArray.concat({
         fieldValue: name.label,
         id: name.id,
         status: name.status,
-        source: name.source,
+        source: name.created_by,
       }), [],
     );
     return (
