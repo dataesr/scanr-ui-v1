@@ -13,6 +13,7 @@ import {
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import StructuresListItems from './StructuresListItems/StructuresListItems';
+import StructuresGridItems from './StructuresGridItems/StructuresGridItems';
 
 /* CSS */
 // import classes from './Structures.css';
@@ -25,6 +26,7 @@ class StructuresList extends Component {
       n_page: PAGE,
       n_hits: 0,
     },
+    displayStyle: 'grid',
   }
 
   componentDidMount() {
@@ -117,11 +119,28 @@ class StructuresList extends Component {
     let content = 'Pas de structure !';
     let btNextContent = null;
     if (this.state.structures) {
-      content = (
-        <StructuresListItems
-          structuresList={this.state.structures}
-        />
-      );
+      switch (this.state.displayStyle) {
+        case 'list':
+          content = (
+            <StructuresListItems
+              structuresList={this.state.structures}
+            />
+          );
+          break;
+        case 'grid':
+          content = (
+            <StructuresGridItems
+              structuresList={this.state.structures}
+            />
+          );
+          break;
+        default:
+          content = (
+            <StructuresListItems
+              structuresList={this.state.structures}
+            />
+          );
+      }// /switch
 
       const nPagesMax = Math.ceil(this.state.pagination.n_hits / PER_PAGE);
       if (this.state.pagination.n_page < nPagesMax) {
@@ -139,6 +158,7 @@ class StructuresList extends Component {
 
     return (
       <Aux>
+        Sélecteur du mode d affichage
         {content}
         <div className="container">
           <div className="column is-half is-offset-one-quarter">

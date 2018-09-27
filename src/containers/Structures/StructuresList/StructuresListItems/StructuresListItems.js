@@ -14,20 +14,19 @@ const StructuresListItems = props => (
               key={structure.esr_id}
               className={classes.structureList_li}
             >
-
               <div className="columns">
-                  <div
-                    role="menuitem"
-                    tabIndex={index}
-                    className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
-                  >
-                    <i className="fa fa-chevron-circle-right hvr-icon" />
-                      <NavLink to={`structures/${structure.esr_id}`}>
-                        <span className={classes.link_item}>
-                          {structure.names[0].label}
-                        </span>
-                      </NavLink>
-                  </div>
+                <div
+                  role="menuitem"
+                  tabIndex={index}
+                  className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
+                >
+                  <i className="fa fa-chevron-circle-right hvr-icon" />
+                  <NavLink to={`structures/${structure.esr_id}`}>
+                    <span className={classes.link_item}>
+                      {structure.names[0].label}
+                    </span>
+                  </NavLink>
+                </div>
                 <div className={`column ${classes.structuresList_id}`}>
                   {structure.esr_id}
                 </div>
