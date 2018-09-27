@@ -114,7 +114,7 @@ class Names extends Component {
 
         <li>
           <SingleField
-            fieldValue={this.props.id}
+            fieldValue={this.props.structureId}
             label="Id"
             readOnly
           />
@@ -155,7 +155,6 @@ export default Names;
 
 Names.propTypes = {
   getStructures: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
   names: PropTypes.array.isRequired,
   mail: PropTypes.string,
   phone: PropTypes.string,
