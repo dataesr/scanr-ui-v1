@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import StructureStatus from '../../../../UI/StructureStatus/StructureStatus';
 
 /* CSS */
 import classes from './StructuresGridItems.scss';
@@ -22,11 +23,9 @@ const structuresGridItems = props => (
                     </NavLink>
                   </div>
                   <div className="column">
-                    {/*<StructureStatus status={structure.status} />*/}
+                    <StructureStatus status={structure.status} />
                   </div>
                 </div>
-
-
                 <div className={classes.Complementary}>
                   <div className={classes.Id}>
                     <i className="fas fa-fingerprint" />
