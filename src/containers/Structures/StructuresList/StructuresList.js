@@ -12,8 +12,10 @@ import {
 /* Composants internes */
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
+import Button from '../../../UI/Button/Button';
 import StructuresListItems from './StructuresListItems/StructuresListItems';
 import StructuresGridItems from './StructuresGridItems/StructuresGridItems';
+
 
 /* CSS */
 // import classes from './Structures.css';
@@ -55,6 +57,12 @@ class StructuresList extends Component {
       pagination: true,
     };
     this.axiosCall(p);
+  }
+
+  selectDisplayStyle = (newDisplayStyle) => {
+    const newState = { ...this.state };
+    newState.displayStyle = newDisplayStyle;
+    this.setState(newState);
   }
 
   axiosCall(p) {
@@ -158,7 +166,12 @@ class StructuresList extends Component {
 
     return (
       <Aux>
-        Sélecteur du mode d affichage
+        <Button onClick={() => this.selectDisplayStyle('grid')}>
+          <i className="fas fa-th" />
+        </Button>
+        <Button onClick={() => this.selectDisplayStyle('list')}>
+          <i className="fas fa-bars" />
+        </Button>
         {content}
         <div className="container">
           <div className="column is-half is-offset-one-quarter">
