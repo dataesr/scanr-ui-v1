@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
-import Main from './Main/Main';
+import Names from './Names/Names';
 
 
 class Structure extends Component {
@@ -15,6 +15,10 @@ class Structure extends Component {
   }
 
   componentDidMount() {
+    this.getStructures();
+  }
+
+  getStructures = () => {
     const esrId = this.props.match.params.esr_id;
     const url = `structures/${esrId}`;
     axios.get(url)
@@ -36,10 +40,11 @@ class Structure extends Component {
     switch (this.state.activeTab) {
       case 'main':
         content = (
-          <Main
+          <Names
             id={structure.esr_id}
-            names={structure.names}
+            getStructures={this.getStructures}
             mail={structure.mail.value}
+            names={structure.names}
             phone={structure.phone.value}
             status={structure.status}
           />);
