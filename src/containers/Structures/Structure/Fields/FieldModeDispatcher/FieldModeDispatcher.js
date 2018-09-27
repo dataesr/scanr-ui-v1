@@ -46,11 +46,11 @@ export default FieldModeDispatcher;
 FieldModeDispatcher.propTypes = {
   allowDelete: PropTypes.bool,
   delete: PropTypes.func,
-  edit: PropTypes.func.isRequired,
-  fieldValue: PropTypes.string.isRequired,
+  edit: PropTypes.func,
+  fieldValue: PropTypes.string,
   fullEdition: PropTypes.bool.isRequired,
-  id: PropTypes.number,
+  id: PropTypes.string,
   readOnly: PropTypes.bool.isRequired,
-  source: PropTypes.string.isRequired,
-  status: PropTypes.string.isRequired,
+  source: PropTypes.string,
+  status: PropTypes.string,
 };

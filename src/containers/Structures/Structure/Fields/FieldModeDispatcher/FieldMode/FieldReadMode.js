@@ -31,7 +31,7 @@ export default fieldReadMode;
 
 fieldReadMode.propTypes = {
   editButton: PropTypes.func.isRequired,
-  fieldValue: PropTypes.string.isRequired,
+  fieldValue: PropTypes.string,
   readOnly: PropTypes.bool.isRequired,
   source: PropTypes.string,
   status: PropTypes.string,

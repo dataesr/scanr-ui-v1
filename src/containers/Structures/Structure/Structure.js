@@ -1,12 +1,11 @@
 /* Compoosants externes */
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 /* Composants internes */
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
 import Names from './Names/Names';
-
 
 class Structure extends Component {
   state = {
@@ -41,7 +40,7 @@ class Structure extends Component {
       case 'main':
         content = (
           <Names
-            id={structure.esr_id}
+            structureId={structure.esr_id}
             getStructures={this.getStructures}
             mail={structure.mail.value}
             names={structure.names}
@@ -54,6 +53,7 @@ class Structure extends Component {
           <Addresses
             addresses={structure.addresses}
             structureId={structure.esr_id}
+            getStructures={this.getStructures}
           />
         );
         break;
@@ -67,10 +67,10 @@ class Structure extends Component {
         <div className="tabs">
           <ul>
             <li>
-              <NavLink to="/">
+              <Link to="/">
                 <span className="icon"><i className="fas fa-angle-left" aria-hidden="true" /></span>
                 <span>Retour</span>
-              </NavLink>
+              </Link>
             </li>
             <li className={this.state.activeTab === 'main' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('main')}>
