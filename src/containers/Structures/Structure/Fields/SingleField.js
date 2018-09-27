@@ -23,7 +23,7 @@ const singleField = props => (
 
 singleField.propTypes = {
   edit: PropTypes.func,
-  fieldValue: PropTypes.string.isRequired,
+  fieldValue: PropTypes.string,
   label: PropTypes.string.isRequired,
   readOnly: PropTypes.bool.isRequired,
   source: PropTypes.string,
