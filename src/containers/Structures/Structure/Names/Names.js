@@ -1,123 +1,165 @@
 /* Composants externes */
 import React, { Component } from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
+import axios from '../../../../axios';
 /* Composants internes */
-import Name from './Name/Name';
-
-/* Config */
-/* API */
-import { API_END_POINT } from '../../../../config/config';
-
-/* CSS */
-// import classes from '../Structure.css';
+import FieldsList from '../Fields/MultipleFields/FieldsList';
+import SingleField from '../Fields/SingleField';
+import classes from './Names.css';
 
 class Names extends Component {
-  state = {
-    names: this.props.names,
-    structureId: this.props.structureId,
-    showAll: false,
-    addMode: false,
-  };
 
-  saveButtonHandler = () => {
+  editName = (nameObject) => {
+    // find the name in the list
+    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
+    const editedName = this.props.names[editedNameIndex];
+    editedName.label = nameObject.fieldValue;
+    editedName.status = nameObject.status;
+    editedName.created_by = 'user';
+    const updatedNamesList = [...this.props.names];
+    updatedNamesList[editedNameIndex] = editedName;
     const dataObject = {
       data: [{
-        scanr_id: this.state.structureId,
-        names: this.state.names,
+        esr_id: this.state.structureId,
+        names: updatedNamesList,
+      }],
+    };
+    this.nameAxiosCall(dataObject);
+  }
+
+  addName = (nameObject) => {
+    const newName = {
+      label: nameObject.fieldValue,
+      status: nameObject.status,
+      created_by: 'user',
+    };
+    const updatedNamesList = this.props.names.concat([newName]);
+    const dataObject = {
+      data: [{
+        esr_id: this.props.structureId,
+        names: updatedNamesList,
+      }],
+    };
+    this.nameAxiosCall(dataObject);
+  }
+
+  deleteName = (nameObject) => {
+    const editedNameIndex = this.props.names.findIndex(name => name.id === nameObject.id);
+    const updatedNamesList = [...this.props.names];
+    updatedNamesList.splice(editedNameIndex, 1);
+
+    const dataObject = {
+      data: [{
+        scanr_id: this.props.structureId,
+        names: updatedNamesList,
       }],
     };
 
-    this.AxiosCall(dataObject);
-  }
-
-  addButtonHandler = () => {
-    const newState = { ...this.state };
-    newState.addMode = true;
-
-    // Ajout d'un objet "label" vide à la liste des Labels
-    const namesEmpty = {
-      source: '',
-      status: 'new',
-      value: '',
-    };
-
-    newState.labels.push(namesEmpty);
-    this.setState(newState);
+    this.nameAxiosCall(dataObject);
   }
 
 
-  deleteButtonHandler = (obj) => {
-    const names = [...this.state.names];
-    names.splice(obj.index, 1);
+  // move to Redux
+  nameAxiosCall(data) {
+    const url = `structures/${this.props.structureId}/label`;
+    axios.post(url, data) // sinon mettre JSON.stringify(data)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            this.props.getStructures();
+          }
+        },
+      );
+  }
 
+  editStructure(fieldValue, fieldName) {
+    const url = `structures/${this.props.structureId}`;
     const dataObject = {
       data: [{
-        scanr_id: this.state.structureId,
-        names: names,
+        scanr_id: this.props.structureId,
+        [fieldName]: fieldValue,
       }],
     };
-
-    this.AxiosCall(dataObject);
-  }
-
-
-  toggleNamesButtonHandler = () => {
-    this.setState(prevState => ({ showAll: !prevState.showAll }));
-  }
-
-  AxiosCall(data) {
-    axios(
-      {
-        method: 'POST',
-        url: `${API_END_POINT}structures/label`,
-        responseType: 'json',
-        data: JSON.stringify(data),
-      },
-    ).then(
-      (response) => {
-        if (response.status === 200) {
-          this.setState({ addMode: false });
-        }
-      },
-    );
+    axios.post(url, dataObject) // sinon mettre JSON.stringify(data)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            this.props.getStructures();
+          }
+        },
+      );
   }
 
   render() {
-    return (
-      <div className="columns">
-        <div className="column is-narrow is-one-fifth">
-          <span className="has-text-weight-semibold">
-            Libellés :
-          </span>
-        </div>
-        <div className="column">
-          {
-            this.state.names.map((name, index) => (
-              <Name
-                key={name.id}
-                index={index}
-                showAll={this.state.showAll}
-                name={name}
-                add={this.state.addMode}
-                n_names={this.state.names.length}
-                deleteButton={this.deleteButtonHandler}
-                saveButton={this.saveButtonHandler}
-                addButton={this.addButtonHandler}
-                toggleNamesButton={this.toggleNamesButtonHandler}
-              />
-            ))// /map
-          }
-        </div>
-
-      </div>
+    const names = this.props.names.reduce(
+      (nameArray, name) => nameArray.concat({
+        fieldValue: name.label,
+        id: name.id,
+        status: name.status,
+        source: name.created_by,
+      }), [],
     );
+    return (
+
+      <ul className={classes.list_fields}>
+        <li>
+          <FieldsList
+            add={this.addName}
+            content={names}
+            delete={this.deleteName}
+            label="Libellés"
+            edit={this.editName}
+          />
+        </li>
+
+        <li>
+          <SingleField
+            fieldValue={this.props.id}
+            label="Id"
+            readOnly
+          />
+        </li>
+
+        <li>
+          <SingleField
+            fieldValue={this.props.status}
+            label="Statut"
+            readOnly
+          />
+        </li>
+
+        <li>
+          <SingleField
+            allowDelete={false}
+            edit={fieldValue => this.editStructure(fieldValue, 'phone')}
+            fieldValue={this.props.phone}
+            label="Téléphone"
+            readOnly={false}
+          />
+        </li>
+
+        <li>
+          <SingleField
+            allowDelete={false}
+            edit={fieldValue => this.editStructure(fieldValue, 'email')}
+            fieldValue={this.props.mail}
+            label="Email"
+            readOnly={false}
+          />
+        </li>
+      </ul>);
   }
 }
 
 export default Names;
 
 Names.propTypes = {
+  getStructures: PropTypes.func.isRequired,
+  id: PropTypes.number.isRequired,
   names: PropTypes.array.isRequired,
+  mail: PropTypes.string,
+  phone: PropTypes.string,
+  status: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,
+
 };

@@ -44,5 +44,4 @@ export default StructuresListItems;
 
 StructuresListItems.propTypes = {
   structuresList: PropTypes.array.isRequired,
-  structureSelected: PropTypes.func.isRequired,
 };
