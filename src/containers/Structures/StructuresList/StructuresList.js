@@ -60,9 +60,7 @@ class StructuresList extends Component {
   }
 
   selectDisplayStyle = (newDisplayStyle) => {
-    const newState = { ...this.state };
-    newState.displayStyle = newDisplayStyle;
-    this.setState(newState);
+    this.setState({ displayStyle: newDisplayStyle });
   }
 
   axiosCall(p) {
