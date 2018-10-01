@@ -10,7 +10,7 @@ const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
         props.structuresList.map(structure => (
-          <div className="column is-one-third-desktop is-half-tablet">
+          <div key={structure.esr_id} className="column is-one-third-desktop is-half-tablet">
             <div className={`card ${classes.GridCard}`} key={structure.esr_id}>
               <div className="card-content">
 
