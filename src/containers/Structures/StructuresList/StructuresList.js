@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 /* Config */
 import {
-  API_BOUCHON,
-  API_DATA,
   PAGE,
   PER_PAGE,
 } from '../../../config/config';
@@ -72,52 +70,29 @@ class StructuresList extends Component {
       page = PAGE;
     }
 
-    if (API_BOUCHON) {
-      const response = API_DATA;
-      const newState = { ...this.state };
-      if (p.init) {
-        newState.structures = response.data;
-      } else {
-        Array.prototype.push.apply(newState.structures, response.data);
-      }
+    const url = `structures/?query=${this.props.searchText}&page=${page}&per_page=${PER_PAGE}`;
+    axios.get(url)
+      .then(
+        (response) => {
+          const newStructures = [...this.state.structures];
+          Array.prototype.push.apply(newStructures, response.data.data);
 
-      newState.pagination.n_hits = response.n_hits;
-      if (p.pagination) {
-        newState.pagination.n_page++;
-      } else {
-        newState.pagination.n_page = 1;
-      }
-      newState.structureSelected = null;
+          const newPagination = { ...this.state.pagination };
+          newPagination.n_hits = response.data.n_hits;
+          if (p.pagination) {
+            newPagination.n_page++;
+          } else {
+            newPagination.n_page = 1;
+          }
+          this.setState({
+            structures: newStructures,
+            pagination: newPagination,
+          });
 
-      this.setState(newState);
-
-      // MAJ du header
-      this.props.nStructures(response.n_hits);
-    } else {
-      const url = `structures/?query=${this.props.searchText}&page=${page}&per_page=${PER_PAGE}`;
-      axios.get(url)
-        .then(
-          (response) => {
-            const newStructures = [...this.state.structures];
-            Array.prototype.push.apply(newStructures, response.data.data);
-
-            const newPagination = { ...this.state.pagination };
-            newPagination.n_hits = response.data.n_hits;
-            if (p.pagination) {
-              newPagination.n_page++;
-            } else {
-              newPagination.n_page = 1;
-            }
-            this.setState({
-              structures: newStructures,
-              pagination: newPagination,
-            });
-
-            // MAJ du header
-            this.props.nStructures(response.data.n_hits);
-          },
-        );// /then
-    }
+          // MAJ du header
+          this.props.nStructures(response.data.n_hits);
+        },
+      );// /then
   }// /axiosCall()
 
 
