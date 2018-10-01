@@ -97,7 +97,7 @@ FieldEditMode.propTypes = {
   edit: PropTypes.func.isRequired,
   fieldValue: PropTypes.string.isRequired,
   fullEdition: PropTypes.bool.isRequired,
-  id: PropTypes.number,
+  id: PropTypes.string,
   source: PropTypes.string.isRequired,
   status: PropTypes.string,
 };

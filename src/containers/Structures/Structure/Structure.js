@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
-import Names from './Names/Names';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
+import Main from './Main/Main';
 
 class Structure extends Component {
   state = {
@@ -49,7 +49,7 @@ class Structure extends Component {
     switch (this.state.activeTab) {
       case 'main':
         content = (
-          <Names
+          <Main
             structureId={structure.esr_id}
             getStructures={this.getStructures}
             mail={structure.mail.value}

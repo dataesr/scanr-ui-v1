@@ -15,9 +15,6 @@ import StructuresListItems from './StructuresListItems/StructuresListItems';
 import StructuresGridItems from './StructuresGridItems/StructuresGridItems';
 
 
-/* CSS */
-// import classes from './Structures.css';
-
 class StructuresList extends Component {
   state = {
     structures: [],
