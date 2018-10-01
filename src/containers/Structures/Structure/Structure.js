@@ -6,6 +6,7 @@ import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 import Addresses from './Addresses/Addresses';
 import Names from './Names/Names';
+import TextTitle from '../../../UI/TextTitle/TextTitle';
 
 class Structure extends Component {
   state = {
@@ -30,12 +31,21 @@ class Structure extends Component {
     this.setState(newState);
   }
 
+  getMainName = (names) => {
+    // Recherche du nom principal
+    const mainName = names.filter(item => item.status === 'main');
+    return mainName[0].label;
+  }
+
   render() {
     const { structure } = this.state;
     let content = null;
-    if (!this.state.structure) {
+    if (!structure) {
       return null;
     }
+
+    const title = this.getMainName(structure.names);
+
     switch (this.state.activeTab) {
       case 'main':
         content = (
@@ -64,6 +74,7 @@ class Structure extends Component {
 
     return (
       <Aux>
+        <TextTitle>{title}</TextTitle>
         <div className="tabs">
           <ul>
             <li>
