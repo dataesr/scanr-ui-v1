@@ -9,7 +9,7 @@ import StructuresList from '../../containers/Structures/StructuresList/Structure
 import Structure from '../../containers/Structures/Structure/Structure';
 import Aux from '../Aux';
 
-import classes from './Layout.css';
+import classes from './Layout.scss';
 
 class Layout extends Component {
   state = {
@@ -38,13 +38,13 @@ class Layout extends Component {
               <span className={classes.data}>#data</span>
               <span className={classes.esr}>ESR</span>
               BO
-              <span className={classes.version}>{version}</span>
+              <span className={classes.Version}>{version}</span>
             </a>
           </div>
         </nav>
 
-        <Columns gapless>
-          <Columns.Column size="one-fifth">
+        <Columns gapless className={classes.Layout}>
+          <Columns.Column size="one-fifth" className={classes.Menu}>
             <Menu
               focusMenu={this.focusMenuHandler}
               activeItem={this.state.focus}

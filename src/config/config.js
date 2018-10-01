@@ -12,7 +12,5 @@ export const STATUS_INVALID = 'invalid';
 export const STATUS_OLD = 'old';
 
 /* API */
-export const API_BOUCHON = false;
-export const API_DATA = {};
 export const API_END_POINT = 'http://10.243.98.15:5002/api/v0.1/datastore/';
-export const API_END_POINT_LOCAL = 'http://0.0.0.0:5000/api/v0.1/datastore/';
+// export const API_END_POINT = 'http://0.0.0.0:5000/api/v0.1/datastore/';
