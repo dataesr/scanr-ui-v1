@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import StructureStatus from '../../../../UI/StructureStatus/StructureStatus';
 
 /* CSS */
 import classes from './StructuresGridItems.scss';
@@ -9,7 +10,7 @@ const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
         props.structuresList.map(structure => (
-          <div className="column is-one-third-desktop is-half-tablet">
+          <div key={structure.esr_id} className="column is-one-third-desktop is-half-tablet">
             <div className={`card ${classes.GridCard}`} key={structure.esr_id}>
               <div className="card-content">
 
@@ -22,11 +23,9 @@ const structuresGridItems = props => (
                     </NavLink>
                   </div>
                   <div className="column">
-                    {/*<StructureStatus status={structure.status} />*/}
+                    <StructureStatus status={structure.status} />
                   </div>
                 </div>
-
-
                 <div className={classes.Complementary}>
                   <div className={classes.Id}>
                     <i className="fas fa-fingerprint" />
