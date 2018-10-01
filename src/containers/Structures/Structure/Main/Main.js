@@ -5,9 +5,9 @@ import axios from '../../../../axios';
 /* Composants internes */
 import FieldsList from '../Fields/MultipleFields/FieldsList';
 import SingleField from '../Fields/SingleField';
-import classes from './Names.css';
+import classes from './Main.css';
 
-class Names extends Component {
+class Main extends Component {
 
   editName = (nameObject) => {
     // find the name in the list
@@ -151,9 +151,9 @@ class Names extends Component {
   }
 }
 
-export default Names;
+export default Main;
 
-Names.propTypes = {
+Main.propTypes = {
   getStructures: PropTypes.func.isRequired,
   names: PropTypes.array.isRequired,
   mail: PropTypes.string,
