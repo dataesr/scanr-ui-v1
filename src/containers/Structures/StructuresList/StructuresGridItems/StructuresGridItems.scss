@@ -32,6 +32,13 @@ section {
   padding-left: 10px;
 }
 
+.Address{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*Ellipsis sur 1 ou 2 lignes*/
 .lineClamp{
 	display            : block;

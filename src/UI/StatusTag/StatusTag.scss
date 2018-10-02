@@ -1,0 +1,39 @@
+@import '../../style.scss';
+
+.StatusTag{
+  border-radius: 2px;
+  margin-top: 4px;
+  margin-right: 16px;
+  
+  :first-child{
+    color: #333;
+    display: inline-block;
+    background-color:#bbb;
+    padding: 2px 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  :last-child{
+    color: #fff;
+    display: inline-block;
+    padding: 2px 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 50px;
+    text-align: center;
+  }
+}
+
+.undefined_bg_color{
+  background-color: $undefinedStatus;
+}
+.old_bg_color{
+  background-color: $oldStatus;
+}
+.active_bg_color{
+  background-color: $activeStatus;
+}
+.invalid_bg_color{
+  background-color: $invalidStatus;
+}

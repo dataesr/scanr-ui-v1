@@ -6,6 +6,7 @@ import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 
 import Addresses from './Addresses/Addresses';
+import StatusTag from '../../../UI/StatusTag/StatusTag';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import Main from './Main/Main';
 
@@ -75,7 +76,14 @@ class Structure extends Component {
 
     return (
       <Aux>
-        <TextTitle>{title}</TextTitle>
+        <div className="columns is-gapless">
+          <div className="column is-four-fifths">
+            <TextTitle>{title}</TextTitle>
+          </div>
+          <div className="column has-text-right has-background-grey-darker">
+            <StatusTag value={structure.status} />
+          </div>
+        </div>
         <div className="tabs">
           <ul>
             <li>

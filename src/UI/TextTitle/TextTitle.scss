@@ -1,8 +1,12 @@
 @import '../../style.scss';
 
 .TextTitle{
-  width: 100%;
   background-color: $background_menu;
   font-size: 1.5em;
   color: #fff;
+
+  i{
+    display: inline-block;
+    padding-right: 10px;
+  }
 }
