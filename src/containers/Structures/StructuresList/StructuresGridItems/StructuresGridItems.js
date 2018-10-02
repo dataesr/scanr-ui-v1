@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import StructureStatus from '../../../../UI/StructureStatus/StructureStatus';
+import StructureStatus from '../../../../UI/StatusTagMini/StatusTagMini';
 
 /* CSS */
 import classes from './StructuresGridItems.scss';

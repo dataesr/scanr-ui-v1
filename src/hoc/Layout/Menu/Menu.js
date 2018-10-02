@@ -7,6 +7,9 @@ const menu = () => (
   <Menu className={classes.sidebar}>
     <Menu.List title="General">
       <Menu.List.Item>
+        Documentation
+      </Menu.List.Item>
+      <Menu.List.Item>
           Dashboard
       </Menu.List.Item>
       <Menu.List.Item>
