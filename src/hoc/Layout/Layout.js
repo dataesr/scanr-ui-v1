@@ -3,11 +3,11 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Columns from 'react-bulma-components/lib/components/columns';
 import { version } from '../../config/config';
 
+import Aux from '../Aux';
 import Menu from './Menu/Menu';
 import Header from './Header/Header';
 import StructuresList from '../../containers/Structures/StructuresList/StructuresList';
 import Structure from '../../containers/Structures/Structure/Structure';
-import Aux from '../Aux';
 
 import classes from './Layout.scss';
 
@@ -32,25 +32,23 @@ class Layout extends Component {
   render() {
     return (
       <Aux>
-        <nav className="navbar is-light">
-          <div className="navbar-menu">
-            <a className="navbar-item">
-              <span className={classes.data}>#data</span>
-              <span className={classes.esr}>ESR</span>
-              BO
-              <span className={classes.Version}>{version}</span>
-            </a>
-          </div>
-        </nav>
+        <div className="is-light">
+          <a className="navbar-item">
+            <span className={classes.data}>#data</span>
+            <span className={classes.esr}>ESR</span>
+            BO
+            <span className={classes.Version}>{version}</span>
+          </a>
+        </div>
 
-        <Columns gapless className={classes.Layout}>
-          <Columns.Column size="one-fifth" className={classes.Menu}>
+        <div className={classes.Layout}>
+          <div className={classes.Menu}>
             <Menu
               focusMenu={this.focusMenuHandler}
               activeItem={this.state.focus}
             />
-          </Columns.Column>
-          <Columns.Column>
+          </div>
+          <div className={classes.Content}>
             <Header
               searchText={this.searchTextHandler}
               nStructures={this.state.n_structures}
@@ -71,8 +69,8 @@ class Layout extends Component {
               <Route path="/institutions" render={() => (<h3>Institutions</h3>)} />
               <Redirect from="/" to="structures" />
             </Switch>
-          </Columns.Column>
-        </Columns>
+          </div>
+        </div>
 
       </Aux>
     );
