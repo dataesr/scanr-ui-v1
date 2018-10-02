@@ -71,19 +71,20 @@ class StructuresList extends Component {
     axios.get(url)
       .then(
         (response) => {
-          const newStructures = [...this.state.structures];
-          Array.prototype.push.apply(newStructures, response.data.data);
-
-          const newPagination = { ...this.state.pagination };
-          newPagination.n_hits = response.data.n_hits;
-          if (p.pagination) {
-            newPagination.n_page++;
-          } else {
-            newPagination.n_page = 1;
-          }
-          this.setState({
-            structures: newStructures,
-            pagination: newPagination,
+          this.setState((prevState) => {
+            const newStructures = [...prevState.structures];
+            Array.prototype.push.apply(newStructures, response.data.data);
+            const newPagination = { ...prevState.pagination };
+            newPagination.n_hits = response.data.n_hits;
+            if (p.pagination) {
+              newPagination.n_page += 1;
+            } else {
+              newPagination.n_page = 1;
+            }
+            return {
+              structures: newStructures,
+              pagination: newPagination,
+            };
           });
 
           // MAJ du header
