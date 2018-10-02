@@ -5,8 +5,9 @@ export const PAGE = 1;
 export const PER_PAGE = 12;
 
 /* Statuts */
-export const STATUS_ARRAY = ['valid', 'invalid', 'old', 'main'];
+export const STATUS_ARRAY = ['active', 'old', 'main'];
 export const STATUS_MAIN = 'main';
+export const STATUS_ACTIVE = 'active';
 export const STATUS_VALID = 'valid';
 export const STATUS_INVALID = 'invalid';
 export const STATUS_OLD = 'old';

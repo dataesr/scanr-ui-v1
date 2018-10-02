@@ -16,22 +16,26 @@ class FieldAddMode extends Component {
   }
 
   addButtonHandler = () => {
+    const now = new Date();
     this.props.add({
       fieldValue: this.state.fieldValue,
       status: this.state.status,
+      source: 'user',
+      created_at: now.toISOString(),
     });
   }
 
   render() {
     return (
-      <div className="columns">
+      <div className="columns" onBlur={this.props.onBlur}>
         <div className="column">
           <input
-            id="fieldValue"
-            type="text"
+            autoFocus
             className="input is-rounded"
-            value={this.state.fieldValue}
+            id="fieldValue"
             onChange={this.onChange}
+            type="text"
+            value={this.state.fieldValue}
           />
         </div>
         <div className="column is-narrow">
@@ -50,11 +54,8 @@ class FieldAddMode extends Component {
           <span className="tag is-light is-medium is-rounded">user</span>
         </div>
         <div className="column is-one-fifth has-text-right">
-          <Button onClick={this.addButtonHandler}>
+          <Button id="save" onClick={this.addButtonHandler}>
             <i className="fas fa-save" />
-          </Button>
-          <Button onClick={this.props.cancel}>
-            <i className="fas fa-undo-alt" />
           </Button>
         </div>
       </div>
@@ -66,6 +67,6 @@ export default FieldAddMode;
 
 
 FieldAddMode.propTypes = {
-  cancel: PropTypes.func.isRequired,
   add: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
 };
