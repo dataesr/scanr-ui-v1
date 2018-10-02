@@ -33,8 +33,8 @@ class Structure extends Component {
 
   getMainName = (names) => {
     // Recherche du nom principal
-    const mainName = names.filter(item => item.status === 'main');
-    return mainName[0].label;
+    const mainName = names.find(item => item.status === 'main') || names[0];
+    return mainName.label;
   }
 
   render() {
@@ -107,3 +107,7 @@ class Structure extends Component {
 }
 
 export default Structure;
+
+Structure.propTypes = {
+  match: PropTypes.object.isRequired,
+};

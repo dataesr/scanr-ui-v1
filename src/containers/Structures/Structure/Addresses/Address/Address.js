@@ -31,9 +31,12 @@ class Address extends Component {
   }
 
   changeInputHandler = (event) => {
-    const address = { ...this.state.address };
-    address.value = event.target.value;
-    this.setState({ address });
+    event.persist();
+    this.setState((prevState) => {
+      const address = { ...prevState.address };
+      address.value = event.target.value;
+      return { address };
+    });
   }
 
   cancelButtonHandler = () => {
