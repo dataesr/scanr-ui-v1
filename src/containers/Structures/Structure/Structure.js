@@ -1,9 +1,10 @@
-/* Compoosants externes */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-/* Composants internes */
+import PropTypes from 'prop-types';
+
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
+
 import Addresses from './Addresses/Addresses';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import Main from './Main/Main';
