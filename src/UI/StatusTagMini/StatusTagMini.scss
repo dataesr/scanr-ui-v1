@@ -1,0 +1,14 @@
+@import '../../style.scss';
+
+.undefined_color{
+  color: $undefinedStatus;
+}
+.old_color{
+  color: $oldStatus;
+}
+.active_color{
+  color: $activeStatus;
+}
+.invalid_color{
+  color: $invalidStatus;
+}
