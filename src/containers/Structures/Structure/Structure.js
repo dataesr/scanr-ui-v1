@@ -1,12 +1,13 @@
-/* Compoosants externes */
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-/* Composants internes */
+import PropTypes from 'prop-types';
+
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
+
 import Addresses from './Addresses/Addresses';
-import Names from './Names/Names';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
+import Main from './Main/Main';
 
 class Structure extends Component {
   state = {
@@ -33,8 +34,8 @@ class Structure extends Component {
 
   getMainName = (names) => {
     // Recherche du nom principal
-    const mainName = names.filter(item => item.status === 'main');
-    return mainName[0].label;
+    const mainName = names.find(item => item.status === 'main') || names[0];
+    return mainName.label;
   }
 
   render() {
@@ -49,7 +50,7 @@ class Structure extends Component {
     switch (this.state.activeTab) {
       case 'main':
         content = (
-          <Names
+          <Main
             structureId={structure.esr_id}
             getStructures={this.getStructures}
             mail={structure.mail.value}
@@ -107,3 +108,7 @@ class Structure extends Component {
 }
 
 export default Structure;
+
+Structure.propTypes = {
+  match: PropTypes.object.isRequired,
+};

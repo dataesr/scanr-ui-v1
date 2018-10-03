@@ -4,9 +4,10 @@ import classes from './Button.css';
 
 const Button = props => (
   <button
-    type="button"
-    onClick={props.onClick}
     className={` button is-light  ${classes.space_5}`}
+    id={props.id}
+    onClick={props.onClick}
+    type="button"
   >
     {props.children}
   </button>
@@ -15,6 +16,6 @@ const Button = props => (
 export default Button;
 
 Button.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
   children: PropTypes.any,
 };
