@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 
 /* Composants internes */
 import Address from './Address/Address';
+import Button from '../../../../UI/Button/Button';
 
 /* Config */
 /* API */
 import { API_END_POINT } from '../../../../config/config';
 
 /* CSS */
-// import classes from '../Structure.css';
+import classes from './Addresses.scss';
 
 class Addresses extends Component {
   state = {
@@ -62,6 +63,10 @@ class Addresses extends Component {
     this.AxiosCall(dataObject);
   }
 
+  toggleShowAllHandler = () => {
+    this.setState(prevState => ({ showAll: !prevState.showAll }));
+  }
+
   AxiosCall(data) {
     axios(
       {
@@ -83,21 +88,50 @@ class Addresses extends Component {
 
   render() {
     return (
-      <div>
-        {
-          this.state.addresses.map((address, index) => (
-            <Address
-              key={address.id}
-              index={index}
-              showAll={this.state.showAll}
-              address={address}
-              n_addresses={this.state.addresses.length}
-              deleteButton={this.deleteButtonHandler}
-              saveButton={this.saveButtonHandler}
-              addButton={this.addButtonHandler}
-            />
-          ))// /map
-        }
+      <div className="columns">
+        <div className="column">
+          <div className={classes.bt_add}>
+            <button
+              className="button is-primary is-outlined is-small is-rounded"
+              type="button"
+            >
+              <i className="fa fa-plus" />
+              &nbsp;
+              Ajouter une nouvelle adresse
+            </button>
+          </div>
+          {
+            this.state.addresses.map((address, index) => {
+              if (address.status !== 'old' || this.state.showAll) {
+                return (
+                  <Address
+                    key={address.id}
+                    index={index}
+                    address={address}
+                    n_addresses={this.state.addresses.length}
+                    deleteButton={this.deleteButtonHandler}
+                    saveButton={this.saveButtonHandler}
+                    addButton={this.addButtonHandler}
+                  />
+                );
+              }
+            })// /map
+          }
+          <div className={classes.bt_showAll}>
+            <button
+              className="button is-light is-medium is-fullwidth is-rounded"
+              type="button"
+              onClick={this.toggleShowAllHandler}
+            >
+              <i className="fa fa-search" />
+              &nbsp;
+              {this.state.showAll ? 'Masquer' : 'Voir'} les aciennes adresses
+            </button>
+          </div>
+        </div>
+        <div className={`column ${classes.Map}`}>
+          map
+        </div>
       </div>
     );// /return()
   }// /render

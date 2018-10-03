@@ -1,0 +1,53 @@
+@import '../../../../../style.scss';
+
+.Address{
+  border: 1px solid #DBDBDB;
+  padding: 16px;
+  width: 100%;
+  height: 65%;
+}
+
+.Address:hover{
+  box-shadow: 1px 1px 8px #DBDBDB;
+}
+
+.Text1{
+  display: inline-block;
+  padding-left: 16px;
+}
+.Text2{
+  display: inline-block;
+  padding-left: 32px;
+}
+.ColumnLeft{
+  padding: 8px 0;
+  width: 90%;
+  float: left;
+}
+.ColumnRight{
+  float: right;
+  width: 10%;
+  text-align: right;
+}
+.Tags{
+  display: inline-block;
+  margin-right: 16px;
+  padding: 2px 8px;
+  color: #fff;
+  background-color: #ddd;
+  border-radius: 10px;
+  font-size: 0.8em;
+}
+
+.undefined_bg_color{
+  background-color: $undefinedStatus;
+}
+.old_bg_color{
+  background-color: $oldStatus;
+}
+.active_bg_color{
+  background-color: $activeStatus;
+}
+.main_bg_color{
+  background-color: $mainStatus;
+}
