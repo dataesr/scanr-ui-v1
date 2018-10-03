@@ -8,8 +8,8 @@ module.exports = {
     "rules": {
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
       "react/destructuring-assignment": ["always", { "ignoreClassFields": true }],
-      "react/require-default-props": [1, { forbidDefaultForRequired: true }],
-      "react/forbid-prop-types": [1],
+      "react/require-default-props": [0, { forbidDefaultForRequired: true }],
+      "react/forbid-prop-types": [0],
       "import/no-extraneous-dependencies": [
         "error", {
            "devDependencies": false,
