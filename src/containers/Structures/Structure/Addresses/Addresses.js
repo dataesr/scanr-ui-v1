@@ -5,8 +5,7 @@ import PropTypes from 'prop-types';
 
 /* Composants internes */
 import Address from './Address/Address';
-import Button from '../../../../UI/Button/Button';
-
+import LeafletMap from './LeafletMap';
 /* Config */
 /* API */
 import { API_END_POINT } from '../../../../config/config';
@@ -87,6 +86,7 @@ class Addresses extends Component {
   }// /AxiosCall()
 
   render() {
+    const mainAddress = this.state.addresses.find(address => address.status === 'main')
     return (
       <div className="columns">
         <div className="column">
@@ -130,7 +130,20 @@ class Addresses extends Component {
           </div>
         </div>
         <div className={`column ${classes.Map}`}>
-          map
+          <LeafletMap
+            formattedAddress={(
+              <p>
+                {mainAddress.address_1}
+                {mainAddress.address_2 ? <br /> : <span />}
+                {mainAddress.address_2}
+                <br />
+                {`${mainAddress.postal_code}, ${mainAddress.city}`}
+                <br />
+                {mainAddress.country}
+              </p>)}
+            longitude={2.333101}
+            latitude={48.853932}
+          />
         </div>
       </div>
     );// /return()
