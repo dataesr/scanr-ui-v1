@@ -14,9 +14,6 @@ const statusTag = (props) => {
     case 'active':
       color = 'active_bg_color';
       break;
-    case 'invalid':
-      color = 'invalid_bg_color';
-      break;
     default:
       color = 'undefined_bg_color';
   }

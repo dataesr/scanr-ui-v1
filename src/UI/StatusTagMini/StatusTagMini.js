@@ -16,10 +16,6 @@ const statusTagMini = (props) => {
       color = 'active_color';
       content = <i className={`fas fa-check-circle ${classes[color]}`} />;
       break;
-    case 'invalid':
-      color = 'invalid_color';
-      content = <i className={`fas fa-times-circle ${classes[color]}`} />;
-      break;
     default:
       content = <i className={`fas fa-times-circle ${classes[color]}`} />;
   }
