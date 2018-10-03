@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import mainValidation from '../../../../../Utils/mainValidation';
 import Button from '../../../../../UI/Button/Button';
+import ErrorMessage from '../../../../../UI/ErrorMessage';
+
 import FieldReadMode from '../FieldMode/FieldReadMode';
 import FieldEditMode from '../FieldMode/FieldEditMode';
 import FieldAddMode from './FieldAddMode';
@@ -9,9 +12,10 @@ import FieldAddMode from './FieldAddMode';
 class FieldsList extends Component {
   state = {
     addMode: false,
-    editMode: false,
-    showAll: false,
     content: this.props.content,
+    editMode: false,
+    mainError: '',
+    showAll: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -25,11 +29,11 @@ class FieldsList extends Component {
   }
 
   toggleEditMode = () => {
-    this.setState({ editMode: true });
+    this.setState({ editMode: true, showAll: true, mainError: '' });
   }
 
   toggleAddMode = (bool) => {
-    this.setState({ addMode: bool });
+    this.setState({ addMode: bool, mainError: '' });
   }
 
   toggleAllFields = () => {
@@ -54,17 +58,25 @@ class FieldsList extends Component {
   onBlurHandler = (event) => {
     if (!event.relatedTarget || !(event.relatedTarget.id === 'save'
       || event.relatedTarget.id === 'status' || event.relatedTarget.id === 'fieldValue')) {
-      this.setState({ editMode: false, addMode: false })
+      this.setState({ editMode: false, addMode: false });
     }
   }
 
   editButtonHandler = () => {
-    this.props.save(this.state.content);
+    if (mainValidation(this.state.content)) {
+      this.props.save(this.state.content);
+    } else {
+      this.setState({ mainError: "Un et un seul champ doit avoir le statut 'main'" });
+    }
   }
 
   addButtonHandler = (item) => {
     const updatedContent = this.state.content.concat([item]);
-    this.props.save(updatedContent);
+    if (mainValidation(updatedContent)) {
+      this.props.save(updatedContent);
+    } else {
+      this.setState({ mainError: "Un et un seul champ doit avoir le statut 'main'" });
+    }
   }
 
 
@@ -75,7 +87,12 @@ class FieldsList extends Component {
     }
     let addField = null;
     if (this.state.addMode) {
-      addField = <FieldAddMode add={this.addButtonHandler} onBlur={this.onBlurHandler} />;
+      addField = (
+        <FieldAddMode
+          add={this.addButtonHandler}
+          mainError={this.state.mainError}
+          onBlur={this.onBlurHandler}
+        />);
     }
     let fields = content.map(field => (
       <div key={field.id} className="columns">
@@ -91,6 +108,9 @@ class FieldsList extends Component {
     if (this.state.editMode) {
       saveButton = (
         <div className="column is-narrow has-text-right">
+          <ErrorMessage>
+            {this.state.mainError}
+          </ErrorMessage>
           <Button id="save" onClick={this.editButtonHandler}>
             <i className="fas fa-save" />
           </Button>
