@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import mainValidation from '../../../../../Utils/mainValidation';
 import Button from '../../../../../UI/Button/Button';
 import FieldReadMode from '../FieldMode/FieldReadMode';
 import FieldEditMode from '../FieldMode/FieldEditMode';
@@ -9,9 +10,10 @@ import FieldAddMode from './FieldAddMode';
 class FieldsList extends Component {
   state = {
     addMode: false,
-    editMode: false,
-    showAll: false,
     content: this.props.content,
+    editMode: false,
+    mainError: false,
+    showAll: false,
   };
 
   componentDidUpdate(prevProps) {
@@ -25,7 +27,7 @@ class FieldsList extends Component {
   }
 
   toggleEditMode = () => {
-    this.setState({ editMode: true });
+    this.setState({ editMode: true, showAll: true });
   }
 
   toggleAddMode = (bool) => {
@@ -54,12 +56,16 @@ class FieldsList extends Component {
   onBlurHandler = (event) => {
     if (!event.relatedTarget || !(event.relatedTarget.id === 'save'
       || event.relatedTarget.id === 'status' || event.relatedTarget.id === 'fieldValue')) {
-      this.setState({ editMode: false, addMode: false })
+      this.setState({ editMode: false, addMode: false });
     }
   }
 
   editButtonHandler = () => {
-    this.props.save(this.state.content);
+    if (mainValidation(this.state.content)) {
+      this.props.save(this.state.content);
+    } else {
+      this.setState({ mainError: true });
+    }
   }
 
   addButtonHandler = (item) => {
@@ -91,6 +97,9 @@ class FieldsList extends Component {
     if (this.state.editMode) {
       saveButton = (
         <div className="column is-narrow has-text-right">
+          {this.state.mainError
+            ? <span className="has-text-danger">Un et un seul champ doit avoir le statut 'main'</span>
+            : null}
           <Button id="save" onClick={this.editButtonHandler}>
             <i className="fas fa-save" />
           </Button>
