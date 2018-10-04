@@ -4,8 +4,9 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 /* Composants internes */
-import Address from './Address/Address';
 import LeafletMap from './LeafletMap';
+import AddressDispatcher from './Address/AddressDispatcher';
+
 /* Config */
 /* API */
 import { API_END_POINT } from '../../../../config/config';
@@ -86,7 +87,20 @@ class Addresses extends Component {
   }// /AxiosCall()
 
   render() {
-    const mainAddress = this.state.addresses.find(address => address.status === 'main')
+    const mainAddress = this.state.addresses.find(address => address.status === 'main');
+    const oldAddress = this.state.addresses.find(address => address.status === 'old');
+    const btOldAddresses = (
+      <button
+        className="button is-light is-medium is-fullwidth is-rounded"
+        type="button"
+        onClick={this.toggleShowAllHandler}
+      >
+        <i className="fa fa-search" />
+        &nbsp;
+        {this.state.showAll ? 'Masquer' : 'Voir'}
+        &nbsp;les anciennes adresses
+      </button>);
+
     return (
       <div className="columns">
         <div className="column">
@@ -104,7 +118,7 @@ class Addresses extends Component {
             this.state.addresses.map((address, index) => {
               if (address.status !== 'old' || this.state.showAll) {
                 return (
-                  <Address
+                  <AddressDispatcher
                     key={address.id}
                     index={index}
                     address={address}
@@ -118,15 +132,7 @@ class Addresses extends Component {
             })// /map
           }
           <div className={classes.bt_showAll}>
-            <button
-              className="button is-light is-medium is-fullwidth is-rounded"
-              type="button"
-              onClick={this.toggleShowAllHandler}
-            >
-              <i className="fa fa-search" />
-              &nbsp;
-              {this.state.showAll ? 'Masquer' : 'Voir'} les aciennes adresses
-            </button>
+            { oldAddress ? btOldAddresses : null }
           </div>
         </div>
         <div className={`column ${classes.Map}`}>

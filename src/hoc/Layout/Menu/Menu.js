@@ -33,7 +33,7 @@ const menu = () => (
           </Menu.List.Item>
           <Menu.List.Item>
             <NavLink to="/institutions" activeClassName={classes.active}>
-              institutions
+              Institutions
             </NavLink>
           </Menu.List.Item>
         </Menu.List>
