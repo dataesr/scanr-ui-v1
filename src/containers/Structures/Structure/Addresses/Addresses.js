@@ -87,7 +87,6 @@ class Addresses extends Component {
   }// /AxiosCall()
 
   render() {
-    const mainAddress = this.state.addresses.find(address => address.status === 'main');
     const oldAddress = this.state.addresses.find(address => address.status === 'old');
     const btOldAddresses = (
       <button
@@ -100,7 +99,10 @@ class Addresses extends Component {
         {this.state.showAll ? 'Masquer' : 'Voir'}
         &nbsp;les anciennes adresses
       </button>);
-
+    let displayedAddresses = this.state.addresses;
+    if (!this.state.showAll) {
+      displayedAddresses = this.state.addresses.filter(address => address.status !== 'old');
+    }
     return (
       <div className="columns">
         <div className="column">
@@ -114,41 +116,24 @@ class Addresses extends Component {
               Ajouter une nouvelle adresse
             </button>
           </div>
-          {
-            this.state.addresses.map((address, index) => {
-              if (address.status !== 'old' || this.state.showAll) {
-                return (
-                  <AddressDispatcher
-                    key={address.id}
-                    index={index}
-                    address={address}
-                    n_addresses={this.state.addresses.length}
-                    deleteButton={this.deleteButtonHandler}
-                    saveButton={this.saveButtonHandler}
-                    addButton={this.addButtonHandler}
-                  />
-                );
-              }
-            })// /map
-          }
+          {displayedAddresses.map((address, index) => (
+            <AddressDispatcher
+              key={address.id}
+              index={index}
+              address={address}
+              n_addresses={this.state.addresses.length}
+              deleteButton={this.deleteButtonHandler}
+              saveButton={this.saveButtonHandler}
+              addButton={this.addButtonHandler}
+            />
+          ))}
           <div className={classes.bt_showAll}>
             { oldAddress ? btOldAddresses : null }
           </div>
         </div>
         <div className={`column ${classes.Map}`}>
           <LeafletMap
-            formattedAddress={(
-              <p>
-                {mainAddress.address_1}
-                {mainAddress.address_2 ? <br /> : <span />}
-                {mainAddress.address_2}
-                <br />
-                {`${mainAddress.postal_code}, ${mainAddress.city}`}
-                <br />
-                {mainAddress.country}
-              </p>)}
-            longitude={2.333101}
-            latitude={48.853932}
+            displayedAddresses={displayedAddresses}
           />
         </div>
       </div>
