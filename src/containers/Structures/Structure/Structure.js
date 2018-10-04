@@ -81,7 +81,7 @@ class Structure extends Component {
             <TextTitle>{title}</TextTitle>
           </div>
           <div className="column has-text-right has-background-grey-darker">
-            <StatusTag value={structure.status} />
+            <StatusTag status={structure.status} />
           </div>
         </div>
         <div className="tabs">
