@@ -39,22 +39,27 @@ class LeafletMap extends Component {
   }
 
   renderMarker() {
-    return this.props.displayedAddresses.map(address => (
-      <Marker
-        key={address.id}
-        position={address.coordinates}
-        icon={getIconColor(address.status)}
-      >
-        <Popup>
-          <div>
-            {`${address.geocoder_address.house_number} ${address.geocoder_address.street}`}
-            <br />
-            {`${address.geocoder_address.post_code}, ${address.geocoder_address.city}`}
-            <br />
-            {address.geocoder_address.country}
-          </div>
-        </Popup>
-      </Marker>));
+    return this.props.displayedAddresses.map((address) => {
+      if (address.geocoded) {
+        return (
+          <Marker
+            key={address.id}
+            position={address.coordinates}
+            icon={getIconColor(address.status)}
+          >
+            <Popup>
+              <div>
+                {`${address.geocoder_address.house_number} ${address.geocoder_address.street}`}
+                <br />
+                {`${address.geocoder_address.post_code}, ${address.geocoder_address.city}`}
+                <br />
+                {address.geocoder_address.country}
+              </div>
+            </Popup>
+          </Marker>);
+      }
+      return null;
+    });
   }
 
   render() {
@@ -72,12 +77,18 @@ class LeafletMap extends Component {
     //   saveButton = <Button>Corriger les coordonnées gps</Button>;
     // }
 
+    let props = { bounds: this.state.bounds, boundsOptions: { padding: [50, 50] } };
+    if (this.props.displayedAddresses.length === 1) {
+      props = {
+        center: this.props.displayedAddresses[0].coordinates || [48.853932, 2.333101],
+        zoom: this.props.geocoded ? 16 : 5,
+      };
+    }
     return (
       <Aux>
         <Map
           onClick={this.onClick}
-          bounds={this.state.bounds}
-          boundsOptions={{ padding: [50, 50] }}
+          {...props}
         >
           <TileLayer
             attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"

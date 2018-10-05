@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import Columns from 'react-bulma-components/lib/components/columns';
 import { version } from '../../config/config';
 
 import Aux from '../Aux';
@@ -15,7 +14,22 @@ class Layout extends Component {
   state = {
     searchText: '',
     n_structures: 0,
+    height: '100%'
   };
+
+  componentDidMount() {
+    const height = document.getElementById('content').clientHeight
+    console.log(height);
+    this.setState({ height });
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const height = document.getElementById('content').clientHeight
+    console.log(height);
+    if (height !== prevState.height) {
+      this.setState({ height });
+    }
+  }
 
   searchTextHandler = (event) => {
     const newState = { ...this.state };
@@ -30,6 +44,7 @@ class Layout extends Component {
   }
 
   render() {
+    const minHeight = document.documentElement.clientHeight;
     return (
       <Aux>
         <div className="is-light">
@@ -42,13 +57,13 @@ class Layout extends Component {
         </div>
 
         <div className={classes.Layout}>
-          <div className={classes.Menu}>
+          <div className={classes.Menu} style={{ height: this.state.height, minHeight }}>
             <Menu
               focusMenu={this.focusMenuHandler}
               activeItem={this.state.focus}
             />
           </div>
-          <div className={classes.Content}>
+          <div id="content" className={classes.Content} style={{ minHeight }}>
             <Header
               searchText={this.searchTextHandler}
               nStructures={this.state.n_structures}

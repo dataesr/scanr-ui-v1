@@ -10,6 +10,8 @@ import StatusTag from '../../../UI/StatusTag/StatusTag';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import Main from './Main/Main';
 
+import classes from './Structure.css';
+
 class Structure extends Component {
   state = {
     activeTab: 'main',
@@ -73,6 +75,7 @@ class Structure extends Component {
       default:
         content = this.showMainTab(structure);
     }// /switch
+    const height = document.documentElement.clientHeight - 250;
 
     return (
       <Aux>
@@ -84,7 +87,7 @@ class Structure extends Component {
             <StatusTag status={structure.status} />
           </div>
         </div>
-        <div className="tabs">
+        <div style={{ marginBottom: '12px' }} className="tabs is-marginless">
           <ul>
             <li>
               <Link to="/">
@@ -107,7 +110,7 @@ class Structure extends Component {
 
           </ul>
         </div>
-        <div className="container is-fluid">
+        <div className={classes.Container} style={{ height }}>
           {content}
         </div>
       </Aux>
