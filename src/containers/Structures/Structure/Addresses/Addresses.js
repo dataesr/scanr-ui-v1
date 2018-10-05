@@ -104,7 +104,7 @@ class Addresses extends Component {
       displayedAddresses = this.state.addresses.filter(address => address.status !== 'old');
     }
     return (
-      <div className="columns">
+      <div className="columns" style={{ height: '100%', width: '100%' }}>
         <div className="column">
           <div className={classes.bt_add}>
             <button
