@@ -74,7 +74,7 @@ const main = (props) => {
   return (
     <ul className={classes.list_fields}>
       <div className="has-text-info has-text-centered">
-        <em>Cliquez directement sur un champs pour passer en mode édition</em>
+        <em>Cliquez directement sur un champ pour passer en mode édition</em>
       </div>
       <li>
         <FieldsList
