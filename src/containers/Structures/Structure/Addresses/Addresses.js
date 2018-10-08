@@ -4,8 +4,8 @@ import axios from 'axios';
 import PropTypes from 'prop-types';
 
 /* Composants internes */
-import Address from './Address/Address';
-import Button from '../../../../UI/Button/Button';
+import LeafletMap from './LeafletMap';
+import AddressDispatcher from './Address/AddressDispatcher';
 
 /* Config */
 /* API */
@@ -87,8 +87,24 @@ class Addresses extends Component {
   }// /AxiosCall()
 
   render() {
+    const oldAddress = this.state.addresses.find(address => address.status === 'old');
+    const btOldAddresses = (
+      <button
+        className="button is-light is-medium is-fullwidth is-rounded"
+        type="button"
+        onClick={this.toggleShowAllHandler}
+      >
+        <i className="fa fa-search" />
+        &nbsp;
+        {this.state.showAll ? 'Masquer' : 'Voir'}
+        &nbsp;les anciennes adresses
+      </button>);
+    let displayedAddresses = this.state.addresses;
+    if (!this.state.showAll) {
+      displayedAddresses = this.state.addresses.filter(address => address.status !== 'old');
+    }
     return (
-      <div className="columns">
+      <div className="columns" style={{ height: '100%', width: '100%' }}>
         <div className="column">
           <div className={classes.bt_add}>
             <button
@@ -100,37 +116,25 @@ class Addresses extends Component {
               Ajouter une nouvelle adresse
             </button>
           </div>
-          {
-            this.state.addresses.map((address, index) => {
-              if (address.status !== 'old' || this.state.showAll) {
-                return (
-                  <Address
-                    key={address.id}
-                    index={index}
-                    address={address}
-                    n_addresses={this.state.addresses.length}
-                    deleteButton={this.deleteButtonHandler}
-                    saveButton={this.saveButtonHandler}
-                    addButton={this.addButtonHandler}
-                  />
-                );
-              }
-            })// /map
-          }
+          {displayedAddresses.map((address, index) => (
+            <AddressDispatcher
+              key={address.id}
+              index={index}
+              address={address}
+              n_addresses={this.state.addresses.length}
+              deleteButton={this.deleteButtonHandler}
+              saveButton={this.saveButtonHandler}
+              addButton={this.addButtonHandler}
+            />
+          ))}
           <div className={classes.bt_showAll}>
-            <button
-              className="button is-light is-medium is-fullwidth is-rounded"
-              type="button"
-              onClick={this.toggleShowAllHandler}
-            >
-              <i className="fa fa-search" />
-              &nbsp;
-              {this.state.showAll ? 'Masquer' : 'Voir'} les aciennes adresses
-            </button>
+            { oldAddress ? btOldAddresses : null }
           </div>
         </div>
         <div className={`column ${classes.Map}`}>
-          map
+          <LeafletMap
+            displayedAddresses={displayedAddresses}
+          />
         </div>
       </div>
     );// /return()

@@ -1,22 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import getColorStatus from '../../Utils/colorStatus';
+
+
 import classes from './StatusTag.scss';
 
 const statusTag = (props) => {
-  const { value } = props;
-  let color = '';
-
-  switch (value) {
-    case 'old':
-      color = 'old_bg_color';
-      break;
-    case 'active':
-      color = 'active_bg_color';
-      break;
-    default:
-      color = 'undefined_bg_color';
-  }
+  const { status } = props;
+  const color = getColorStatus(status);
 
   return (
     <div className={classes.StatusTag}>
@@ -24,7 +16,7 @@ const statusTag = (props) => {
         Statut
       </div>
       <div className={classes[color]}>
-        {value}
+        {status}
       </div>
     </div>
   );
@@ -33,5 +25,5 @@ const statusTag = (props) => {
 export default statusTag;
 
 statusTag.propTypes = {
-  value: PropTypes.string.isRequired,
+  status: PropTypes.string.isRequired,
 };
