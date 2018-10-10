@@ -46,14 +46,15 @@ class Addresses extends Component {
         (response) => {
           if (response.status === 200) {
             this.props.getStructures();
+            this.setState({ editedAddress: null })
           }
         },
       )
-      .catch(
+      .catch(() => {
         this.setState({
           hasErrored: true,
-        }),
-      );
+        });
+      });
   };
 
   editAddress = (updatedAddress) => {
