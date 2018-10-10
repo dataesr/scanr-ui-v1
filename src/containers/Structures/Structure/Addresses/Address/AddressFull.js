@@ -135,7 +135,7 @@ class AddressFull extends Component {
           <StringField
             columnSize="3"
             editMode={false}
-            fieldValue={this.props.address.coordinates[1].toFixed(5) || '.'}
+            fieldValue={this.props.address.coordinates ? this.props.address.coordinates[1].toFixed(5) : '.'}
             label="Longitude"
             onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
@@ -143,7 +143,7 @@ class AddressFull extends Component {
           <StringField
             columnSize="3"
             editMode={false}
-            fieldValue={this.props.address.coordinates[0].toFixed(5) || '.'}
+            fieldValue={this.props.address.coordinates ? this.props.address.coordinates[0].toFixed(5) : '.'}
             label="Latitude"
             onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}

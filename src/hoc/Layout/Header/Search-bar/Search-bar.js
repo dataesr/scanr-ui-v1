@@ -12,7 +12,7 @@ const SearchBar = props => (
           className="input is-rounded is-medium"
           placeholder="Rechercher..."
           type="text"
-          onChange={props.searchText}
+          onChange={props.searchTextHandler}
         />
         <span className="icon is-small is-right">
           <i className="fas fa-search" />
@@ -28,5 +28,5 @@ const SearchBar = props => (
 export default SearchBar;
 
 SearchBar.propTypes = {
-  searchText: PropTypes.func.isRequired,
+  searchTextHandler: PropTypes.func.isRequired,
 };

@@ -1,6 +1,7 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import debounce from 'lodash/debounce';
 /* Config */
 import {
   PAGE,
@@ -16,14 +17,19 @@ import StructuresGridItems from './StructuresGridItems/StructuresGridItems';
 
 
 class StructuresList extends Component {
-  state = {
-    structures: [],
-    pagination:
-    {
-      n_page: PAGE,
-      n_hits: 0,
-    },
-    displayStyle: 'grid',
+  constructor(props) {
+    super(props);
+    this.state = {
+      structures: [],
+      pagination:
+      {
+        n_page: PAGE,
+        n_hits: 0,
+      },
+      displayStyle: 'grid',
+      noResultFound: false,
+    };
+    this.search = debounce(this.axiosCall, 1000);
   }
 
   componentDidMount() {
@@ -42,26 +48,25 @@ class StructuresList extends Component {
         init: true,
         pagination: false,
       };
-      this.axiosCall(p);
+      this.search(p, true);
     }
   }// /componentDidUpdate()
 
   nextContentButtonHandler = () => {
-    const p = {
+    const params = {
       init: false,
       pagination: true,
     };
-    this.axiosCall(p);
+    this.axiosCall(params);
   }
 
   selectDisplayStyle = (newDisplayStyle) => {
     this.setState({ displayStyle: newDisplayStyle });
   }
 
-  axiosCall(p) {
-    // Appel de l'API
+  axiosCall(params, search) {
     let page;
-    if (p.pagination) {
+    if (params.pagination) {
       page = this.state.pagination.n_page + 1;
     } else {
       page = PAGE;
@@ -72,11 +77,14 @@ class StructuresList extends Component {
       .then(
         (response) => {
           this.setState((prevState) => {
-            const newStructures = [...prevState.structures];
-            Array.prototype.push.apply(newStructures, response.data.data);
+            let newStructures = response.data.data;
+            if (!search) {
+              newStructures = [...prevState.structures];
+              Array.prototype.push.apply(newStructures, response.data.data);
+            }
             const newPagination = { ...prevState.pagination };
             newPagination.n_hits = response.data.n_hits;
-            if (p.pagination) {
+            if (params.pagination) {
               newPagination.n_page += 1;
             } else {
               newPagination.n_page = 1;
@@ -86,16 +94,21 @@ class StructuresList extends Component {
               pagination: newPagination,
             };
           });
-
-          // MAJ du header
           this.props.nStructures(response.data.n_hits);
         },
-      );// /then
-  }// /axiosCall()
+      )
+      .catch(() => this.setState({ noResultFound: true, structures: null }));
+  }
 
 
   render() {
-    let content = 'Pas de structure !';
+    let content = <div>Pas de structure !</div>;
+    if (this.state.noResultFound) {
+      content = (
+        <div>
+          Aucun résultat ne correspond à votre recherche. Vérfiez que vous avez bien entré un mot complet
+        </div>);
+    }
     let btNextContent = null;
     if (this.state.structures) {
       switch (this.state.displayStyle) {

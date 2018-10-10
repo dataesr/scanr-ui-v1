@@ -12,7 +12,7 @@ const header = props => (
 
     <div className="columns">
       <div className="column">
-        <SearchBar searchText={props.searchText} />
+        <SearchBar searchTextHandler={props.searchTextHandler} />
       </div>
       <div className="column">
         <nav className="level">
@@ -47,21 +47,9 @@ const header = props => (
   </div>
 );
 
-
-// <div className={`${classes.text_nb} col-md-4 text-center text-white`}>
-//   <h1>
-//
-//     <CountUp start={0} end={props.nStructures} />
-//   </h1>
-//   <span>structures</span>
-// </div>
-// <div className="col-md-2">
-//   Info user
-// </div>
-
 export default header;
 
 header.propTypes = {
-  searchText: PropTypes.func.isRequired,
+  searchTextHandler: PropTypes.func.isRequired,
   nStructures: PropTypes.number.isRequired,
 };
