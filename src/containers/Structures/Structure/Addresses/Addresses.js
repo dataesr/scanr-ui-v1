@@ -99,12 +99,12 @@ class Addresses extends Component {
         {this.state.showAll ? 'Masquer' : 'Voir'}
         &nbsp;les anciennes adresses
       </button>);
-    let displayedAddresses = this.state.addresses;
+    let displayedAddresses = [...this.props.addresses].sort(SortStatus);
     if (!this.state.showAll) {
-      displayedAddresses = this.state.addresses.filter(address => address.status !== 'old');
+      displayedAddresses = displayedAddresses.filter(address => address.status !== 'old');
     }
     return (
-      <div className="columns" style={{ height: '100%', width: '100%' }}>
+      <div className={`columns ${classes.FullDisplay}`}>
         <div className="column">
           <div className={classes.bt_add}>
             <button
