@@ -19,13 +19,11 @@ class Layout extends Component {
 
   componentDidMount() {
     const height = document.getElementById('content').clientHeight
-    console.log(height);
     this.setState({ height });
   }
 
   componentDidUpdate(prevProps, prevState) {
     const height = document.getElementById('content').clientHeight
-    console.log(height);
     if (height !== prevState.height) {
       this.setState({ height });
     }

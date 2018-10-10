@@ -1,0 +1,34 @@
+@import '../../style.scss';
+
+.Header{
+  display: inline-block;
+  height: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.LifeCycle{
+  display: block;
+  width: 100%;
+  margin: 0;
+  background-color: #dedede;
+  font-family: Courier New,Courier,Lucida Sans Typewriter;
+}
+
+.Text{
+  display: inline-block;
+  font-weight: bolder;
+  color: #777;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.Title{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: block;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+}
