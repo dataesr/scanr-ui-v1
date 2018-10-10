@@ -38,16 +38,15 @@ class LeafletMap extends Component {
   }
 
   onMapClick = (event) => {
-    console.log(event);
     if (this.props.editedAddress) {
       this.setState({
-        latlng: event.latlng,
+        latlng: [event.latlng.lat, event.latlng.lng],
       });
     }
   }
 
   onSaveButtonClick = () => {
-    const updatedAddress = [...this.props.editedAddress];
+    const updatedAddress = { ...this.props.editedAddress };
     updatedAddress.coordinates = this.state.latlng;
     this.props.editAddress(updatedAddress);
   }
@@ -108,8 +107,12 @@ class LeafletMap extends Component {
         center: displayedAddress.coordinates || [48.853932, 2.333101],
         zoom: displayedAddress.geocoded ? 16 : 5,
       };
-      if (!displayedAddress.geocoded) {
-        message = 'Aucune géolocalisation disponible pour cette adresse, cliquer sur la carte pour en ajouter une';
+      if (this.props.editedAddress) {
+        if (!displayedAddress.geocoded) {
+          message = 'Aucune géolocalisation disponible pour cette adresse, cliquer sur la carte pour en ajouter une';
+        } else {
+          message = 'Cliquer sur la carte pour ajuster la géolocalisation';
+        }
       }
     }
 
@@ -124,12 +127,12 @@ class LeafletMap extends Component {
         </Marker>);
       saveButton = <Button onClick={this.onSaveButtonClick}>Corriger les coordonnées gps</Button>;
     }
-
     return (
       <Aux>
         <InfoMessage>{message}</InfoMessage>
+        {saveButton}
         <Map
-          onClick={this.props.editedAddress ? this.onMapClick : null}
+          onClick={this.onMapClick}
           {...mapProps}
         >
           <TileLayer
@@ -139,7 +142,6 @@ class LeafletMap extends Component {
           {this.renderMarker()}
           {updatePositionMarker}
         </Map>
-        {saveButton}
       </Aux>
     );
   }
