@@ -1,93 +1,78 @@
 /* Composants externes */
 import React, { Component } from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 
+import axios from '../../../../axios';
+import SortStatus from '../../../../Utils/SortStatus';
 /* Composants internes */
-import LeafletMap from './LeafletMap';
 import AddressDispatcher from './Address/AddressDispatcher';
-
-/* Config */
-/* API */
-import { API_END_POINT } from '../../../../config/config';
+import LeafletMap from './LeafletMap';
 
 /* CSS */
 import classes from './Addresses.scss';
 
 class Addresses extends Component {
   state = {
-    addresses: this.props.addresses,
-    structureId: this.props.structureId,
+    editedAddress: null,
+    hasErrored: false,
+    hoveredAddress: null,
     showAll: false,
-    addMode: false,
   };
-
-  saveButtonHandler = () => {
-    const dataObject = {
-      data: [{
-        scanr_id: this.state.structureId,
-        addresses: this.state.addresses,
-      }],
-    };
-
-    this.AxiosCall(dataObject);
-  }
-
-  addButtonHandler = () => {
-    const newState = { ...this.state };
-    newState.addMode = true;
-
-    // Ajout d'un objet "address" vide à la liste des Labels
-    const addressEmpty = {
-      source: '',
-      status: 'new',
-      value: '',
-    };
-
-    newState.addresses.push(addressEmpty);
-    this.setState(newState);
-  }
-
-
-  deleteButtonHandler = (obj) => {
-    const addresses = [...this.state.addresses];
-    addresses.splice(obj.index, 1);
-
-    const dataObject = {
-      data: [{
-        scanr_id: this.state.structureId,
-        label: addresses,
-      }],
-    };
-
-    this.AxiosCall(dataObject);
-  }
 
   toggleShowAllHandler = () => {
     this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
 
-  AxiosCall(data) {
-    axios(
-      {
-        method: 'POST',
-        url: `${API_END_POINT}structures/addresses`,
-        responseType: 'json',
-        data: JSON.stringify(data),
-      },
-    ).then(
-      (response) => {
-        if (response.status === 200) {
-          const newState = { ...this.state };
-          newState.addMode = false;
-          this.setState(newState);
-        }
-      },
-    );
-  }// /AxiosCall()
+  mouseOut = () => {
+    this.setState({ hoveredAddress: null });
+  }
+
+  mouseOver = (addressId) => {
+    this.setState({ hoveredAddress: addressId });
+  }
+
+  setEditedAddress = (address) => {
+    this.setState({ editedAddress: address });
+  }
+
+  addressAxiosCall = (addresses) => {
+    const dataObject = {
+      addresses,
+    };
+    const url = `structures/${this.props.structureId}`;
+    this.setState({ hasErrored: false });
+    axios.put(url, dataObject)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            this.props.getStructures();
+            this.setState({ editedAddress: null })
+          }
+        },
+      )
+      .catch(() => {
+        this.setState({
+          hasErrored: true,
+        });
+      });
+  };
+
+  editAddress = (updatedAddress) => {
+    const updatedAddressesList = [...this.props.addresses];
+    const addressIndex = updatedAddressesList.findIndex(address => address.id === updatedAddress.id);
+    updatedAddressesList[addressIndex] = updatedAddress;
+    this.addressAxiosCall(updatedAddressesList);
+  }
+
+  deleteAddress = (addressId) => {
+    const editedAddressIndex = this.props.addresses.findIndex(name => name.id === addressId);
+    const updatedAddressesList = [...this.props.addresses];
+    updatedAddressesList.splice(editedAddressIndex, 1);
+    this.addressAxiosCall(updatedAddressesList);
+  };
 
   render() {
-    const oldAddress = this.state.addresses.find(address => address.status === 'old');
+    const oldAddress = this.props.addresses.find(address => address.status === 'old');
     const btOldAddresses = (
       <button
         className="button is-light is-medium is-fullwidth is-rounded"
@@ -99,12 +84,12 @@ class Addresses extends Component {
         {this.state.showAll ? 'Masquer' : 'Voir'}
         &nbsp;les anciennes adresses
       </button>);
-    let displayedAddresses = this.state.addresses;
+    let displayedAddresses = [...this.props.addresses].sort(SortStatus);
     if (!this.state.showAll) {
-      displayedAddresses = this.state.addresses.filter(address => address.status !== 'old');
+      displayedAddresses = displayedAddresses.filter(address => address.status !== 'old');
     }
     return (
-      <div className="columns" style={{ height: '100%', width: '100%' }}>
+      <div className={`columns ${classes.FullDisplay}`}>
         <div className="column">
           <div className={classes.bt_add}>
             <button
@@ -116,17 +101,18 @@ class Addresses extends Component {
               Ajouter une nouvelle adresse
             </button>
           </div>
-          {displayedAddresses.map((address, index) => (
+          {displayedAddresses.map(address => (
             <AddressDispatcher
               key={address.id}
-              index={index}
               address={address}
-              n_addresses={this.state.addresses.length}
-              deleteButton={this.deleteButtonHandler}
-              saveButton={this.saveButtonHandler}
-              addButton={this.addButtonHandler}
-            />
-          ))}
+              deleteButton={() => this.deleteAddress(address.id)}
+              editAddress={this.editAddress}
+              editedAddress={this.state.editedAddress}
+              hasErrored={this.state.hasErrored}
+              mouseOut={this.mouseOut}
+              mouseOver={() => this.mouseOver(address.id)}
+              setEditedAddress={this.setEditedAddress}
+            />))}
           <div className={classes.bt_showAll}>
             { oldAddress ? btOldAddresses : null }
           </div>
@@ -134,6 +120,9 @@ class Addresses extends Component {
         <div className={`column ${classes.Map}`}>
           <LeafletMap
             displayedAddresses={displayedAddresses}
+            editedAddress={this.state.editedAddress}
+            hoveredAddress={this.state.hoveredAddress}
+            editAddress={this.editAddress}
           />
         </div>
       </div>
@@ -146,4 +135,5 @@ export default Addresses;
 Addresses.propTypes = {
   addresses: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
+  getStructures: PropTypes.func.isRequired,
 };

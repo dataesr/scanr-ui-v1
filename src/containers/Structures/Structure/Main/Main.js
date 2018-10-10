@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from '../../../../axios';
-
+import InfoMessage from '../../../../UI/Messages/InfoMessage';
 import FieldsList from '../Fields/MultipleFields/FieldsList';
 import SingleField from '../Fields/SingleField';
 import classes from './Main.css';
@@ -12,7 +12,7 @@ const main = (props) => {
       names,
     };
     const url = `structures/${props.structureId}`;
-    axios.put(url, dataObject) // sinon mettre JSON.stringify(data)
+    axios.put(url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {
@@ -73,9 +73,7 @@ const main = (props) => {
   );
   return (
     <ul className={classes.list_fields}>
-      <div className="has-text-info has-text-centered">
-        <em>Cliquez directement sur un champ pour passer en mode édition</em>
-      </div>
+      <InfoMessage>Cliquez directement sur un champ pour passer en mode édition</InfoMessage>
       <li>
         <FieldsList
           content={names}

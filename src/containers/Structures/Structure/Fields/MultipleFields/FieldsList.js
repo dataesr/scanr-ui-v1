@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import mainValidation from '../../../../../Utils/mainValidation';
 import Button from '../../../../../UI/Button/Button';
-import ErrorMessage from '../../../../../UI/ErrorMessage';
+import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
 
 import FieldReadMode from '../FieldMode/FieldReadMode';
 import FieldEditMode from '../FieldMode/FieldEditMode';
