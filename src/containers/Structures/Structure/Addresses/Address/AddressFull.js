@@ -50,7 +50,7 @@ class AddressFull extends Component {
     if (this.state.editMode) {
       this.setState({ editMode: false });
     } else {
-      this.props.changeDisplayMode('mini');
+      this.props.changeDisplayMode();
     }
   }
 
@@ -158,6 +158,11 @@ class AddressFull extends Component {
             modified_by={this.props.address.modified_by}
           />
         </div>
+        <div className="column is-1">
+          <Button onClick={this.props.deleteButton}>
+            <i className="fas fa-trash-alt" />
+          </Button>
+        </div>
       </div>
     );
   }
@@ -169,6 +174,7 @@ export default AddressFull;
 AddressFull.propTypes = {
   address: PropTypes.object.isRequired,
   changeDisplayMode: PropTypes.func,
+  deleteButton: PropTypes.func.isRequired,
   editAddress: PropTypes.func.isRequired,
   hasErrored: PropTypes.bool.isRequired,
 };
