@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Aux from '../../../../../hoc/Aux';
 import Button from '../../../../../UI/Button/Button';
-import ErrorMessage from '../../../../../UI/ErrorMessage';
+import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
 import { STATUS_ARRAY } from '../../../../../config/config';
 
 
