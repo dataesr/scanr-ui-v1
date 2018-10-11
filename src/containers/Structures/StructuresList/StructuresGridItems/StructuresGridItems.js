@@ -6,6 +6,14 @@ import StructureStatus from '../../../../UI/StatusTagMini/StatusTagMini';
 /* CSS */
 import classes from './StructuresGridItems.scss';
 
+const getMainEntity = (entities) => {
+  let mainEntity = entities.find(entity => entity.status === 'main');
+  if (!mainEntity) {
+    mainEntity = entities[0];
+  }
+  return mainEntity;
+};
+
 const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
@@ -13,12 +21,11 @@ const structuresGridItems = props => (
           <div key={structure.esr_id} className="column is-one-third-desktop is-half-tablet">
             <div className={`card ${classes.GridCard}`} key={structure.esr_id}>
               <div className="card-content">
-
                 <div className="columns">
                   <div className="column is-11">
                     <NavLink to={`structures/${structure.esr_id}`}>
                       <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
-                        {structure.names[0].label}
+                        {getMainEntity(structure.names).label}
                       </span>
                     </NavLink>
                   </div>
@@ -36,7 +43,7 @@ const structuresGridItems = props => (
                   <div className={classes.Address}>
                     <i className="fas fa-map-marker-alt" />
                     <span>
-                      {structure.addresses[0].city}
+                      {getMainEntity(structure.addresses).city}
                     </span>
                   </div>
                 </div>

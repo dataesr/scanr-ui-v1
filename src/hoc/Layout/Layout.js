@@ -30,9 +30,7 @@ class Layout extends Component {
   }
 
   searchTextHandler = (event) => {
-    const newState = { ...this.state };
-    newState.searchText = event.target.value;
-    this.setState(newState);
+    this.setState({ searchText: event.target.value });
   }
 
   setNStructures = (nb) => {
@@ -63,7 +61,7 @@ class Layout extends Component {
           </div>
           <div id="content" className={classes.Content} style={{ minHeight }}>
             <Header
-              searchText={this.searchTextHandler}
+              searchTextHandler={this.searchTextHandler}
               nStructures={this.state.n_structures}
             />
             <Switch>
