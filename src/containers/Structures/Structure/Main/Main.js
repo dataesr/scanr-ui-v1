@@ -1,134 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import axios from '../../../../axios';
-import InfoMessage from '../../../../UI/Messages/InfoMessage';
-import FieldsList from '../Fields/MultipleFields/FieldsList';
-import SingleField from '../Fields/SingleField';
-import classes from './Main.css';
 
-const main = (props) => {
-  const nameAxiosCall = (names) => {
-    const dataObject = {
-      names,
-    };
-    const url = `structures/${props.structureId}`;
-    axios.put(url, dataObject)
-      .then(
-        (response) => {
-          if (response.status === 200) {
-            props.getStructures();
-          }
-        },
-      );
-  };
-  const editName = (updatedNamesList) => {
-    const names = updatedNamesList.reduce(
-      (nameArray, name) => {
-        const newName = {
-          ...name,
-          label: name.fieldValue,
-          created_by: name.source,
-        };
-        delete newName.fieldValue;
-        delete newName.source;
-        return nameArray.concat(newName);
-      }, [],
-    );
-    nameAxiosCall(names);
-  };
+// Descriptions
+import NameDescription from '../../../../config/descriptions/structure/names';
 
-  const deleteName = (nameId) => {
-    const editedNameIndex = props.names.findIndex(name => name.id === nameId);
-    const updatedNamesList = [...props.names];
-    updatedNamesList.splice(editedNameIndex, 1);
-    nameAxiosCall(updatedNamesList);
-  };
+// Composants UI
+import Aux from '../../../../hoc/Aux';
+import GridFields from '../Fields/GridFields/GridFields';
 
-  const editStructure = (fieldValue, fieldName) => {
-    const url = `structures/${props.structureId}`;
-    const now = new Date();
-    const dataObject = {
-      [fieldName]: {
-        value: fieldValue,
-        created_at: now.toISOString(),
-        created_by: 'user',
-      },
-    };
-    axios.put(url, dataObject) // sinon mettre JSON.stringify(data)
-      .then(
-        (response) => {
-          if (response.status === 200) {
-            props.getStructures();
-          }
-        },
-      );
-  };
+const Main = props => (
+  <Aux>
+    <GridFields
+      description={NameDescription}
+      data={props.names}
+      title="Liste des libellés"
+    />
+  </Aux>
+);
 
-  const names = props.names.reduce(
-    (nameArray, name) => nameArray.concat({
-      ...name,
-      fieldValue: name.label,
-      source: name.created_by,
-    }), [],
-  );
-  return (
-    <ul className={classes.list_fields}>
-      <InfoMessage>Cliquez directement sur un champ pour passer en mode édition</InfoMessage>
-      <li>
-        <FieldsList
-          content={names}
-          delete={deleteName}
-          label="Libellés"
-          save={editName}
-        />
-      </li>
+export default Main;
 
-      <li>
-        <SingleField
-          fieldValue={props.structureId}
-          label="Id"
-          readOnly
-        />
-      </li>
-
-      <li>
-        <SingleField
-          fieldValue={props.status}
-          label="Statut"
-          readOnly
-        />
-      </li>
-
-      <li>
-        <SingleField
-          allowDelete={false}
-          edit={fieldValue => editStructure(fieldValue, 'phone')}
-          fieldValue={props.phone}
-          label="Téléphone"
-          readOnly={false}
-        />
-      </li>
-
-      <li>
-        <SingleField
-          allowDelete={false}
-          edit={fieldValue => editStructure(fieldValue, 'mail')}
-          fieldValue={props.mail}
-          label="Email"
-          readOnly={false}
-        />
-      </li>
-    </ul>);
-};
-
-export default main;
-
-main.propTypes = {
-  getStructures: PropTypes.func.isRequired,
+Main.propTypes = {
   names: PropTypes.array.isRequired,
-  mail: PropTypes.string,
-  phone: PropTypes.string,
-  status: PropTypes.string.isRequired,
-  structureId: PropTypes.string.isRequired,
-
 };

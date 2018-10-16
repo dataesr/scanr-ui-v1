@@ -11,10 +11,30 @@ $background_menu: #363636;
 
 /*Status colors*/
 $oldStatus: #FF3860;
-$activeStatus: #3291EE;
+$activeStatus: #00A6BC;
 $mainStatus: #00D1B2;
 $undefinedStatus: #FFDD57;
 
 .Link_item{
   color: $link_primary;
+}
+
+.TextTitleInline{
+  padding-left: 16px;
+  padding-top: 10px;
+  display: inline-block;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+}
+
+.TextTitleBlock{
+  padding-left: 16px;
+  padding-top: 10px;
+  display: block;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
 }

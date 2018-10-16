@@ -9,6 +9,12 @@ import Addresses from './Addresses/Addresses';
 import StatusTag from '../../../UI/StatusTag/StatusTag';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import Main from './Main/Main';
+import Resume from './Resume/Resume';
+import Supervisors from './Supervisors/Supervisors';
+import Themes from './Themes/Themes';
+import Relationship from './Relationship/Relationship';
+import Leaders from './Leaders/Leaders';
+import Deals from './Deals/Deals';
 
 import classes from './Structure.css';
 
@@ -47,10 +53,21 @@ class Structure extends Component {
     if (!structure) {
       return null;
     }
-
+    console.log('structure', structure);
     const title = this.getMainName(structure.names);
 
     switch (this.state.activeTab) {
+      case 'resume':
+        content = (
+          <Resume
+            urlLogo={structure.logo.value}
+            esrId={structure.esr_id}
+            urlWebsite={structure.website.value}
+            entityType={structure.entity_type.value}
+            supervisionType={structure.supervision_type.value}
+          />
+        );
+        break;
       case 'main':
         content = (
           <Main
@@ -69,6 +86,31 @@ class Structure extends Component {
             structureId={structure.esr_id}
             getStructures={this.getStructures}
           />
+        );
+        break;
+      case 'supervisors':
+        content = (
+          <Supervisors />
+        );
+        break;
+      case 'themes':
+        content = (
+          <Themes />
+        );
+        break;
+      case 'relationship':
+        content = (
+          <Relationship />
+        );
+        break;
+      case 'leaders':
+        content = (
+          <Leaders />
+        );
+        break;
+      case 'deals':
+        content = (
+          <Deals />
         );
         break;
 
@@ -95,6 +137,11 @@ class Structure extends Component {
                 <span>Retour</span>
               </Link>
             </li>
+            <li className={this.state.activeTab === 'resume' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('resume')}>
+                Résumé
+              </a>
+            </li>
             <li className={this.state.activeTab === 'main' ? 'is-active' : ''}>
               <a onClick={() => this.showTab('main')}>
                 Général
@@ -105,6 +152,31 @@ class Structure extends Component {
                 Adresses
                 &nbsp;
                 <span className="tag is-light is-rounded">{structure.addresses.length}</span>
+              </a>
+            </li>
+            <li className={this.state.activeTab === 'supervisors' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('supervisors')}>
+                Tutelles
+              </a>
+            </li>
+            <li className={this.state.activeTab === 'themes' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('themes')}>
+                Thématiques
+              </a>
+            </li>
+            <li className={this.state.activeTab === 'relationship' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('relationship')}>
+                Relations
+              </a>
+            </li>
+            <li className={this.state.activeTab === 'leaders' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('leaders')}>
+                Dirigeants
+              </a>
+            </li>
+            <li className={this.state.activeTab === 'deals' ? 'is-active' : ''}>
+              <a onClick={() => this.showTab('deals')}>
+                Offres
               </a>
             </li>
 
