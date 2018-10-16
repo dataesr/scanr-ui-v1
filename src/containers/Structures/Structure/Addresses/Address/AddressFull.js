@@ -7,9 +7,10 @@ import Aux from '../../../../../hoc/Aux';
 import Button from '../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
 import FieldTitle from '../../../../../UI/Field/FieldTitle';
+import Input from '../../../../../UI/Field/Editable/Input/Input';
+import Status from '../../../../../UI/Field/Editable/Status/Status';
 import LifeCycle from '../../../../../UI/Field/LifeCycle';
-import StatusField from '../../../../../UI/Field/StatusField';
-import StringField from '../../../../../UI/Field/StringField';
+import AddressField from './AddressField/AddressField';
 /* CSS */
 import classes from './Address.scss';
 
@@ -82,81 +83,111 @@ class AddressFull extends Component {
               <i className="fas fa-undo" />
             </Button>
           </div>
-          <StatusField
-            editMode={this.state.editMode}
-            onChange={this.onChange}
+          <AddressField
+            label="Statut"
             onClick={() => this.setDisplayMode(true)}
-            status={this.state.address.status}
-          />
-          <StringField
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.housenumber}
-            id="housenumber"
+          >
+            <Status
+              editMode={this.state.editMode}
+              onChange={this.onChange}
+              onClick={() => this.setDisplayMode(true)}
+              status={this.state.address.status}
+            />
+          </AddressField>
+          <AddressField
             label="Numéro"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.street}
-            id="rue"
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.housenumber}
+              id="housenumber"
+              onChange={this.onChange}
+            />
+          </AddressField>
+          <AddressField
             label="Rue"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.street}
+              id="street"
+              onChange={this.onChange}
+              onClick={() => this.setDisplayMode(true)}
+            />
+          </AddressField>
+          <AddressField
             columnSize="3"
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.postcode}
-            id="postcode"
             label="Code postal"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.postcode}
+              id="postcode"
+              onChange={this.onChange}
+            />
+          </AddressField>
+          <AddressField
             columnSize="3"
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.citycode}
-            id="citycode"
             label="Code commune"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.city}
-            id="city"
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.citycode}
+              id="citycode"
+              onChange={this.onChange}
+            />
+          </AddressField>
+          <AddressField
             label="Ville"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
-            editMode={this.state.editMode}
-            fieldValue={this.state.address.country}
-            id="country"
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.city}
+              id="city"
+              onChange={this.onChange}
+            />
+          </AddressField>
+          <AddressField
             label="Pays"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
+          >
+            <Input
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.country}
+              id="country"
+              onChange={this.onChange}
+            />
+          </AddressField>
           <FieldTitle>
             Coordonnées GPS
           </FieldTitle>
-          <StringField
+          <AddressField
             columnSize="3"
-            editMode={false}
-            fieldValue={this.props.coordinates ? this.props.coordinates[1].toFixed(5) : '.'}
             label="Longitude"
-            onChange={this.onChange}
             onClick={() => this.setDisplayMode(true)}
-          />
-          <StringField
+          >
+            <Input
+              editMode={false}
+              fieldValue={this.props.coordinates ? this.props.coordinates[1].toFixed(5) : '.'}
+              onChange={this.onChange}
+            />
+          </AddressField>
+          <AddressField
             columnSize="3"
-            editMode={false}
-            fieldValue={this.props.coordinates ? this.props.coordinates[0].toFixed(5) : '.'}
             label="Latitude"
-            onChange={this.onChange}
+            editMode={false}
             onClick={() => this.setDisplayMode(true)}
-          />
+          >
+            <Input
+              fieldValue={this.props.coordinates ? this.props.coordinates[0].toFixed(5) : '.'}
+              onChange={this.onChange}
+            />
+          </AddressField>
           {this.props.lifecycle ? (
             <Aux>
               <FieldTitle>

@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Import de tous les composants à rendre
-import InputDate from './Editable/InputDate/InputDate';
-import Input from './Editable/Input/Input';
-import Status from './Editable/Status/Status';
+import InputDate from './Field/Editable/InputDate/InputDate';
+import Input from './Field/Editable/Input/Input';
+import Status from './Field/Editable/Status/Status';
 
 const SelectorComponentUi = (props) => {
   let component = null;
@@ -12,10 +12,9 @@ const SelectorComponentUi = (props) => {
     case 'InputDate':
       component = (
         <InputDate
-          isEditable={props.isEditable}
-          editMode={props.editMode}
+          editMode={props.isEditable ? props.editMode : false}
           canBeNull={props.canBeNull}
-          data={props.data}
+          fieldValue={props.data}
           onChange={props.onChange}
         />
       );
@@ -23,10 +22,9 @@ const SelectorComponentUi = (props) => {
     case 'Input':
       component = (
         <Input
-          isEditable={props.isEditable}
-          editMode={props.editMode}
+          editMode={props.isEditable ? props.editMode : false}
           canBeNull={props.canBeNull}
-          data={props.data}
+          fieldValue={props.data}
           onChange={props.onChange}
         />
       );
@@ -34,10 +32,9 @@ const SelectorComponentUi = (props) => {
     case 'Status':
       component = (
         <Status
-          isEditable={props.isEditable}
-          editMode={props.editMode}
+          editMode={props.isEditable ? props.editMode : false}
           canBeNull={props.canBeNull}
-          data={props.data}
+          fieldValue={props.data}
           onChange={props.onChange}
         />
       );

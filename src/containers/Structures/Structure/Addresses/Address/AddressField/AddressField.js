@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import Aux from '../../../../../../hoc/Aux';
 
-import Input from '../../../../../../UI/Editable/Input/Input';
 
 import classes from './AddressField.css';
 
@@ -15,13 +14,7 @@ const addressField = props => (
       </span>
     </div>
     <div className={`column is-${props.columnSize}`} onClick={props.onClick}>
-      <Input
-        editMode={props.editMode}
-        fieldValue={props.fieldValue}
-        id={props.id}
-        onChange={props.onChange}
-        onClick={props.onClick}
-      />
+      {props.children}
     </div>
   </Aux>);
 
@@ -29,15 +22,9 @@ export default addressField;
 
 addressField.propTypes = {
   columnSize: PropTypes.string,
-  editMode: PropTypes.bool.isRequired,
-  fieldValue: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.number,
-  ]),
-  id: PropTypes.string,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
-  onChange: PropTypes.func.isRequired,
+  children: PropTypes.any,
 };
 
 addressField.defaultProps = {
