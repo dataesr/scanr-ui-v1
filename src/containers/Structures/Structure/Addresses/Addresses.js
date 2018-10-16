@@ -8,8 +8,8 @@ import SortStatus from '../../../../Utils/SortStatus';
 import Button from '../../../../UI/Button/Button';
 /* Composants internes */
 import AddressDispatcher from './Address/AddressDispatcher';
-import LeafletMap from './LeafletMap';
-import NewAddressInput from './NewAddressInput';
+import LeafletMap from './Map/LeafletMap';
+import NewAddress from './NewAddress/NewAddress';
 
 /* CSS */
 import classes from './Addresses.scss';
@@ -99,7 +99,7 @@ class Addresses extends Component {
     return (
       <div className={`columns ${classes.FullDisplay}`}>
         <div className="column">
-          <NewAddressInput
+          <NewAddress
             addAddress={this.addAddress}
             hasErrored={this.state.hasErrored}
             setEditedAddress={this.setEditedAddress}
