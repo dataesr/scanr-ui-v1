@@ -14,16 +14,16 @@ class Layout extends Component {
   state = {
     searchText: '',
     n_structures: 0,
-    height: '100%'
+    height: '100%',
   };
 
   componentDidMount() {
-    const height = document.getElementById('content').clientHeight
+    const height = document.getElementById('content').clientHeight;
     this.setState({ height });
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const height = document.getElementById('content').clientHeight
+    const height = document.getElementById('content').clientHeight;
     if (height !== prevState.height) {
       this.setState({ height });
     }
