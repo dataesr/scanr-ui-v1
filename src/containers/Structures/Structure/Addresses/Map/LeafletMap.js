@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import {
   greenIcon, blueIcon, greyIcon, violetIcon,
 } from './Icons';
-import Aux from '../../../../hoc/Aux';
-import Button from '../../../../UI/Button/Button';
-import InfoMessage from '../../../../UI/Messages/InfoMessage';
+import Aux from '../../../../../hoc/Aux';
+import Button from '../../../../../UI/Button/Button';
+import InfoMessage from '../../../../../UI/Messages/InfoMessage';
 
 const getIconColor = (status) => {
   switch (status) {
