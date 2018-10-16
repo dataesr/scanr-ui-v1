@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import axios from '../../../../../axios';
+
 import Aux from '../../../../../hoc/Aux';
+import BtAdd from '../../../../../UI/Field/btAdd';
 import Button from '../../../../../UI/Button/Button';
 import SelectorComponentUi from '../../../../../UI/SelectorComponentUi';
 
@@ -14,7 +17,7 @@ class GridFields extends Component {
   }
 
   namesEditModeHandler = () => {
-    this.setState({ editMode: !this.state.editMode });// A REVOIR !
+    this.setState(prevState => ({ editMode: !prevState.editMode }));
   }
 
   namesNewHandler = () => {
@@ -25,6 +28,32 @@ class GridFields extends Component {
     }
     this.setState({ newRow: emptyRow });
   }
+
+  axiosCall = (dataObject) => {
+    const url = `structures/${this.props.structureId}`;
+    axios.put(url, dataObject)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            console.log('envoi axios ok');
+          }
+        },
+      );
+  };
+
+  edit = (updatedAddress) => {
+    const updatedAddressesList = [...this.props.addresses];
+    const addressIndex = updatedAddressesList.findIndex(address => address.id === updatedAddress.id);
+    updatedAddressesList[addressIndex] = updatedAddress;
+    this.addressAxiosCall(updatedAddressesList);
+  }
+
+  delete = (addressId) => {
+    const editedAddressIndex = this.props.addresses.findIndex(name => name.id === addressId);
+    const updatedAddressesList = [...this.props.addresses];
+    updatedAddressesList.splice(editedAddressIndex, 1);
+    this.addressAxiosCall(updatedAddressesList);
+  };
 
   createLine(row, forceEditable) {
     const tD = this.props.description.map((field) => {
@@ -75,9 +104,9 @@ class GridFields extends Component {
           <Button onClick={this.namesEditModeHandler}>
             {this.state.editMode ? <i className="fas fa-undo-alt" /> : <i className="fas fa-pen" />}
           </Button>
-          <Button onClick={this.namesNewHandler}>
-            <i className="fas fa-plus" />
-          </Button>
+          <BtAdd onClick={this.namesNewHandler}>
+            {this.props.addNewLabel}
+          </BtAdd>
         </div>
         <table className="table is-striped is-narrow is-hoverable is-fullwidth">
           {tHead}
@@ -92,6 +121,8 @@ class GridFields extends Component {
 export default GridFields;
 
 GridFields.propTypes = {
+  structureId: PropTypes.string,
+  addNewLabel: PropTypes.string,
   description: PropTypes.array,
   data: PropTypes.object,
 };

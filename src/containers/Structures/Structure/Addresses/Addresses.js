@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import globalAxios from 'axios';
 
-import Aux from '../../../../hoc/Aux';
 import axios from '../../../../axios';
 import SortStatus from '../../../../Utils/SortStatus';
+
 /* Composants internes */
+import Aux from '../../../../hoc/Aux';
 import AddressDispatcher from './Address/AddressDispatcher';
+import BtAdd from '../../../../UI/Field/btAdd';
 import LeafletMap from './LeafletMap';
 
 /* CSS */
@@ -139,17 +141,9 @@ class Addresses extends Component {
         </span>);
     }
     let addField = (
-      <div className={classes.bt_add}>
-        <button
-          className="button is-primary is-outlined is-small is-rounded"
-          type="button"
-          onClick={this.addButtonHandler}
-        >
-          <i className="fa fa-plus" />
-          &nbsp;
-          Ajouter une nouvelle adresse
-        </button>
-      </div>);
+      <BtAdd onClick={this.addButtonHandler}>
+        Ajouter une nouvelle adresse
+      </BtAdd>);
     if (this.state.addMode) {
       addField = (
         <p className="control has-icons-left has-icons-right">
