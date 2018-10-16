@@ -11,8 +11,9 @@ import GridFields from '../Fields/GridFields/GridFields';
 const Main = props => (
   <Aux>
     <GridFields
-      description={NameDescription}
+      addNewLabel="Ajouter un nouveau libellé"
       data={props.names}
+      description={NameDescription}
       title="Liste des libellés"
     />
   </Aux>
