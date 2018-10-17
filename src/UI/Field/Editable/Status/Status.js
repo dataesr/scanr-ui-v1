@@ -8,14 +8,14 @@ import classes from '../../Field.css';
 const Status = (props) => {
   let statusMode = (
     <span className={classes.Text}>
-      <StatusTagMedium status={props.status} />
+      <StatusTagMedium status={props.fieldValue} />
     </span>);
   if (props.editMode) {
     statusMode = (
       <div className="select is-rounded">
         <select
           id="status"
-          value={props.status}
+          value={props.fieldValue}
           onChange={props.onChange}
         >
           <option value="empty">- Empty -</option>
@@ -33,6 +33,6 @@ Status.propTypes = {
   isEditable: PropTypes.boolean,
   editMode: PropTypes.boolean,
   canBeNull: PropTypes.boolean,
-  status: PropTypes.string,
+  fieldValue: PropTypes.string,
   onChange: PropTypes.func,
 };

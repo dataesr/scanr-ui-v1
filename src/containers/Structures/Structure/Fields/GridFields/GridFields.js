@@ -6,7 +6,6 @@ import axios from '../../../../../axios';
 import Aux from '../../../../../hoc/Aux';
 import BtAdd from '../../../../../UI/Field/btAdd';
 import Button from '../../../../../UI/Button/Button';
-import SelectorComponentUi from '../../../../../UI/SelectorComponentUi';
 
 import classes from './GridFields.scss';
 
@@ -56,17 +55,16 @@ class GridFields extends Component {
   };
 
   createLine(row, forceEditable) {
+    let editMode = forceEditable ? true : this.state.editMode;
     const tD = this.props.description.map((field) => {
       if (field.isShown) {
+        editMode = field.isEditable ? editMode : false;
         return (
           <td>
-            <SelectorComponentUi
-              componentType={field.componentType}
-              isEditable={field.isEditable}
-              editMode={forceEditable ? true : this.state.editMode}
-              canBeNull={field.canBeNull}
-              data={row[field.key]}
-            />
+            {React.cloneElement(
+              field.component,
+              { editMode, fieldValue: row[field.key] },
+            )}
           </td>
         );
       }
@@ -124,5 +122,6 @@ GridFields.propTypes = {
   structureId: PropTypes.string,
   addNewLabel: PropTypes.string,
   description: PropTypes.array,
-  data: PropTypes.object,
+  data: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
 };

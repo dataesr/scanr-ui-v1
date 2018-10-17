@@ -91,7 +91,7 @@ class AddressFull extends Component {
               editMode={this.state.editMode}
               onChange={this.onChange}
               onClick={() => this.setDisplayMode(true)}
-              status={this.state.address.status}
+              fieldValue={this.state.address.status}
             />
           </AddressField>
           <AddressField
