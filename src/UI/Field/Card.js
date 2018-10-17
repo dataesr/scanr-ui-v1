@@ -5,15 +5,13 @@ import classes from './Field.css';
 
 const Card = props => (
   <div className={`${classes.Card} card`}>
-    <header className="card-header">
-      <p className="card-header-title">
-        RNSR ID
-      </p>
-    </header>
-    <div className="card-content">
-      <div className="content">
-        <h2>{props.children}</h2>
-      </div>
+    <div className={`${classes.CardTitle} has-text-centered`}>
+      <i className={props.iconCssClass} />
+      <br />
+      {props.title}
+    </div>
+    <div className="card-content has-text-centered">
+      {props.children ? <div className={classes.CardContent}>{props.children}</div> : <small><i>non renseigné</i></small>}
     </div>
   </div>
 );
@@ -21,5 +19,7 @@ const Card = props => (
 export default Card;
 
 Card.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  iconCssClass: PropTypes.string,
 };

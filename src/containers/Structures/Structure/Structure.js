@@ -20,7 +20,7 @@ import classes from './Structure.css';
 
 class Structure extends Component {
   state = {
-    activeTab: 'main',
+    activeTab: 'resume',
     structure: null,
   }
 
@@ -49,6 +49,7 @@ class Structure extends Component {
 
   render() {
     const { structure } = this.state;
+    console.log('structure:', structure);
     let content = null;
     if (!structure) {
       return null;
