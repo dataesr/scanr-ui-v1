@@ -55,6 +55,14 @@ class GridFields extends Component {
     this.addressAxiosCall(updatedAddressesList);
   };
 
+  save = () => {
+    //
+  }
+
+  onClickHandler = () => {
+    this.setState({ editMode: true });
+  }
+
   createLine(row, forceEditable) {
     const tD = this.props.description.map((field) => {
       if (field.isShown) {
@@ -66,6 +74,7 @@ class GridFields extends Component {
               editMode={forceEditable ? true : this.state.editMode}
               canBeNull={field.canBeNull}
               data={row[field.key]}
+              onClick={this.onClickHandler}
             />
           </td>
         );
@@ -97,16 +106,27 @@ class GridFields extends Component {
       newRow = this.createLine(this.state.newRow, true);
     }
 
+    let btSave = null;
+    if (this.state.editMode) {
+      btSave = (
+        <Button onClick={this.save}>
+          <i className="fas fa-save" />
+        </Button>
+      );
+    }
+
     return (
       <Aux className={classes.GridFields}>
         <div>
-          <div className={classes.TextTitleInline}>{this.props.title}</div>
-          <Button onClick={this.namesEditModeHandler}>
-            {this.state.editMode ? <i className="fas fa-undo-alt" /> : <i className="fas fa-pen" />}
-          </Button>
+          <div className={classes.TextTitleInline}>
+            {this.props.title}
+          </div>
+
           <BtAdd onClick={this.namesNewHandler}>
             {this.props.addNewLabel}
           </BtAdd>
+
+          {btSave}
         </div>
         <table className="table is-striped is-narrow is-hoverable is-fullwidth">
           {tHead}
@@ -121,6 +141,7 @@ class GridFields extends Component {
 export default GridFields;
 
 GridFields.propTypes = {
+  title: PropTypes.string,
   structureId: PropTypes.string,
   addNewLabel: PropTypes.string,
   description: PropTypes.array,
