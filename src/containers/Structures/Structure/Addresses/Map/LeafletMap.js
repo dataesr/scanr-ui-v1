@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import {
   greenIcon, blueIcon, greyIcon, violetIcon,
 } from './Icons';
-import Aux from '../../../../hoc/Aux';
-import Button from '../../../../UI/Button/Button';
-import InfoMessage from '../../../../UI/Messages/InfoMessage';
+import Aux from '../../../../../hoc/Aux';
+import Button from '../../../../../UI/Button/Button';
+import InfoMessage from '../../../../../UI/Messages/InfoMessage';
 
 const getIconColor = (status) => {
   switch (status) {
@@ -34,7 +34,9 @@ class LeafletMap extends Component {
     const markerArray = [];
     this.props.displayedAddresses.map(address => markerArray.push(address.coordinates));
     const bounds = L.latLngBounds(markerArray);
-    this.setState({ bounds });
+    if (markerArray.length > 1) {
+      this.setState({ bounds });
+    }
   }
 
   onMapClick = (event) => {
@@ -52,23 +54,13 @@ class LeafletMap extends Component {
   }
 
   renderMarker() {
-    if (this.props.editedAddress && this.props.editedAddress.geocoded) {
-      const { editedAddress } = this.props;
+    if (this.props.editedAddress && this.props.editedCoordinates) {
       return (
         <Marker
-          key={editedAddress.id}
-          position={editedAddress.coordinates}
+          key={this.props.editedAddress.id}
+          position={this.props.editedCoordinates}
           icon={violetIcon}
         >
-          <Popup>
-            <div>
-              {`${editedAddress.geocoder_address.house_number} ${editedAddress.geocoder_address.street}`}
-              <br />
-              {`${editedAddress.geocoder_address.post_code}, ${editedAddress.geocoder_address.city}`}
-              <br />
-              {editedAddress.geocoder_address.country}
-            </div>
-          </Popup>
         </Marker>);
     }
     return this.props.displayedAddresses.map((address) => {
@@ -99,21 +91,29 @@ class LeafletMap extends Component {
   }
 
   render() {
-    let mapProps = { bounds: this.state.bounds, boundsOptions: { padding: [50, 50] } };
+    let mapProps = { center: [48.853932, 2.333101], zoom: 5 };
     let message = null;
-    if (this.props.editedAddress || this.props.displayedAddresses.length === 1) {
-      const displayedAddress = this.props.editedAddress || this.props.displayedAddresses[0];
+
+    if (this.state.bounds) {
+      mapProps = { bounds: this.state.bounds, boundsOptions: { padding: [50, 50] } };
+    }
+    if (this.props.editedAddress) {
+      if (this.props.editedCoordinates) {
+        mapProps = {
+          center: this.props.editedCoordinates,
+          zoom: 16,
+        };
+        message = 'Cliquer sur la carte pour ajuster la géolocalisation';
+      } else {
+        message = 'Aucune géolocalisation disponible pour cette adresse, cliquer sur la carte pour en ajouter une';
+      }
+    }
+    if (this.props.displayedAddresses.length === 1) {
+      const [displayedAddress] = this.props.displayedAddresses;
       mapProps = {
         center: displayedAddress.coordinates || [48.853932, 2.333101],
         zoom: displayedAddress.geocoded ? 16 : 5,
       };
-      if (this.props.editedAddress) {
-        if (!displayedAddress.geocoded) {
-          message = 'Aucune géolocalisation disponible pour cette adresse, cliquer sur la carte pour en ajouter une';
-        } else {
-          message = 'Cliquer sur la carte pour ajuster la géolocalisation';
-        }
-      }
     }
 
     let updatePositionMarker = null;

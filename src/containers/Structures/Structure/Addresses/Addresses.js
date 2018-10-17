@@ -1,33 +1,27 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import debounce from 'lodash/debounce';
-import globalAxios from 'axios';
 
-import Aux from '../../../../hoc/Aux';
 import axios from '../../../../axios';
 import SortStatus from '../../../../Utils/SortStatus';
+
+import Button from '../../../../UI/Button/Button';
 /* Composants internes */
 import AddressDispatcher from './Address/AddressDispatcher';
-import LeafletMap from './LeafletMap';
+import LeafletMap from './Map/LeafletMap';
+import NewAddress from './NewAddress/NewAddress';
 
 /* CSS */
 import classes from './Addresses.scss';
 
 class Addresses extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      addMode: false,
-      editedAddress: null,
-      hasErrored: false,
-      hoveredAddress: null,
-      searchResults: null,
-      selectedAddress: null,
-      showAll: false,
-    };
-    this.addressGeocoding = debounce(this.addressGeocoding, 200);
-  }
+  state = {
+    editedAddress: null,
+    editedCoordinates: null,
+    hasErrored: false,
+    hoveredAddress: null,
+    showAll: false,
+  };
 
   toggleShowAllHandler = () => {
     this.setState(prevState => ({ showAll: !prevState.showAll }));
@@ -41,35 +35,8 @@ class Addresses extends Component {
     this.setState({ hoveredAddress: addressId });
   }
 
-  addButtonHandler = () => {
-    this.setState({ addMode: true });
-  }
-
-  addressGeocoding = () => {
-    const encodedSearchInput = encodeURIComponent(this.state.searchInput);
-    const url = `https://api-adresse.data.gouv.fr/search/?q=${encodedSearchInput}`;
-    globalAxios.get(url)
-      .then((response) => {
-        this.setState({ searchResults: response.data.features });
-      });
-  }
-
-  searchInputHandler = (event) => {
-    this.setState({ searchInput: event.target.value });
-    this.addressGeocoding();
-  }
-
-  selectAddress = (event) => {
-    event.persist();
-    this.setState(prevState => ({
-      selectedAddress: prevState.searchResults[event.target.id],
-      searchInput: event.target.value,
-      searchResults: null,
-    }));
-  }
-
-  setEditedAddress = (address) => {
-    this.setState({ editedAddress: address });
+  setEditedAddress = (address, coordinates) => {
+    this.setState({ editedAddress: address, editedCoordinates: coordinates });
   }
 
   addressAxiosCall = (addresses) => {
@@ -94,6 +61,12 @@ class Addresses extends Component {
       });
   };
 
+  addAddress = (newAddress) => {
+    const updatedAddressesList = [...this.props.addresses];
+    updatedAddressesList.push(newAddress);
+    this.addressAxiosCall(updatedAddressesList);
+  }
+
   editAddress = (updatedAddress) => {
     const updatedAddressesList = [...this.props.addresses];
     const addressIndex = updatedAddressesList.findIndex(address => address.id === updatedAddress.id);
@@ -111,94 +84,39 @@ class Addresses extends Component {
   render() {
     const oldAddress = this.props.addresses.find(address => address.status === 'old');
     const btOldAddresses = (
-      <button
-        className="button is-light is-medium is-fullwidth is-rounded"
-        type="button"
+      <Button
+        className="is-medium is-fullwidth"
         onClick={this.toggleShowAllHandler}
       >
         <i className="fa fa-search" />
-        &nbsp;
-        {this.state.showAll ? 'Masquer' : 'Voir'}
-        &nbsp;les anciennes adresses
-      </button>);
+        {this.state.showAll ? ' Masquer ' : ' Voir '}
+        les anciennes adresses
+      </Button>);
     let displayedAddresses = [...this.props.addresses].sort(SortStatus);
     if (!this.state.showAll) {
       displayedAddresses = displayedAddresses.filter(address => address.status !== 'old');
     }
-    let rightIcon = null;
-    if (this.state.searchInput) {
-      rightIcon = (
-        <span className="icon is-small is-right" onClick={this.cancelSearch}>
-          <i className="fas fa-times" />
-        </span>);
-    }
-    if (this.state.selectedAddress) {
-      rightIcon = (
-        <span className="icon is-small is-right has-text-primary" onClick={this.validateAddress}>
-          <i className="fas fa-check" />
-        </span>);
-    }
-    let addField = (
-      <div className={classes.bt_add}>
-        <button
-          className="button is-primary is-outlined is-small is-rounded"
-          type="button"
-          onClick={this.addButtonHandler}
-        >
-          <i className="fa fa-plus" />
-          &nbsp;
-          Ajouter une nouvelle adresse
-        </button>
-      </div>);
-    if (this.state.addMode) {
-      addField = (
-        <p className="control has-icons-left has-icons-right">
-          <input
-            value={this.state.searchInput}
-            className="input is-rounded"
-            onChange={this.searchInputHandler}
-            type="text"
-          />
-          <span className="icon is-small is-left">
-            <i className="fas fa-search" />
-          </span>
-          {rightIcon}
-        </p>);
-    }
-    let searchResults = null;
-    if (this.state.searchResults) {
-      searchResults = (
-        <Aux>
-          {this.state.searchResults.map((address, index) => (
-            <input
-              key={address.id}
-              className={`input ${classes.SearchResults}`}
-              id={index}
-              onClick={this.selectAddress}
-              readOnly
-              type="text"
-              value={address.properties.label}
-            />
-          ))}
-        </Aux>
-      );
-    }
     return (
       <div className={`columns ${classes.FullDisplay}`}>
         <div className="column">
-          {addField}
-          {searchResults}
+          <NewAddress
+            addAddress={this.addAddress}
+            hasErrored={this.state.hasErrored}
+            setEditedAddress={this.setEditedAddress}
+          />
           {displayedAddresses.map(address => (
             <AddressDispatcher
               key={address.id}
-              address={address}
+              address={address.geocoder_address}
+              coordinates={address.coordinates}
               deleteButton={() => this.deleteAddress(address.id)}
-              editAddress={this.editAddress}
+              saveAddress={this.editAddress}
               editedAddress={this.state.editedAddress}
               hasErrored={this.state.hasErrored}
               mouseOut={this.mouseOut}
               mouseOver={() => this.mouseOver(address.id)}
               setEditedAddress={this.setEditedAddress}
+              status={address.status}
             />))}
           <div className={classes.bt_showAll}>
             { oldAddress ? btOldAddresses : null }
@@ -208,6 +126,7 @@ class Addresses extends Component {
           <LeafletMap
             displayedAddresses={displayedAddresses}
             editedAddress={this.state.editedAddress}
+            editedCoordinates={this.state.editedCoordinates}
             hoveredAddress={this.state.hoveredAddress}
             editAddress={this.editAddress}
           />
