@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import axios from '../../../../../axios';
 
+import { ERREUR_STATUT } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
 import BtAdd from '../../../../../UI/Field/btAdd';
 import Button from '../../../../../UI/Button/Button';
-import SelectorComponentUi from '../../../../../UI/SelectorComponentUi';
+import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
+import mainValidation from '../../../../../Utils/mainValidation';
 
 import classes from './GridFields.scss';
 
@@ -14,77 +16,133 @@ class GridFields extends Component {
   state = {
     editMode: false,
     newRow: null,
+    data: this.props.data,
+    errorMessage: null,
   }
 
-  namesEditModeHandler = () => {
-    this.setState(prevState => ({ editMode: !prevState.editMode }));
-  }
-
-  namesNewHandler = () => {
+  newHandler = () => {
     // Ajout d'une ligne vide
-    let emptyRow = {};
-    for (let i = 0; i < this.props.description.length; i++) {
-      emptyRow[this.props.description[i]] = null;
+    const emptyRow = {};
+    for (let i = 0; i < this.props.description.length; i++) { // REDUCE ?
+      emptyRow[this.props.description[i].key] = null;
     }
-    this.setState({ newRow: emptyRow });
+    this.setState({ newRow: emptyRow, editMode: true });
   }
 
-  axiosCall = (dataObject) => {
+  axiosCall = (data) => {
+    const dataObject = {
+      [this.props.schemaName]: data,
+    };
     const url = `structures/${this.props.structureId}`;
     axios.put(url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {
-            console.log('envoi axios ok');
+            this.setState({
+              editMode: false,
+              errorMessage: null,
+              newRow: null,
+              data,
+            });
           }
         },
-      );
+      )
+      .catch(() => this.setState({ errorMessage: 'erreur' }));
   };
 
-  edit = (updatedAddress) => {
-    const updatedAddressesList = [...this.props.addresses];
-    const addressIndex = updatedAddressesList.findIndex(address => address.id === updatedAddress.id);
-    updatedAddressesList[addressIndex] = updatedAddress;
-    this.addressAxiosCall(updatedAddressesList);
-  }
-
-  delete = (addressId) => {
-    const editedAddressIndex = this.props.addresses.findIndex(name => name.id === addressId);
-    const updatedAddressesList = [...this.props.addresses];
-    updatedAddressesList.splice(editedAddressIndex, 1);
-    this.addressAxiosCall(updatedAddressesList);
+  delete = (itemId) => {
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    if (index < 0 || !itemId) {
+      this.setState({ newRow: null });
+    } else {
+      const updatedData = [...this.state.data];
+      updatedData.splice(index, 1);
+      this.axiosCall(updatedData);
+    }
   };
 
   save = () => {
-    //
+    const data = [...this.state.data];
+    if (this.state.newRow) {
+      data.push(this.state.newRow);
+    }
+    if (mainValidation(data)) {
+      this.axiosCall(data);
+    } else {
+      this.setState({ errorMessage: ERREUR_STATUT });
+    }
   }
 
   onClickHandler = () => {
     this.setState({ editMode: true });
   }
 
+  onChangeHandler = (event, id) => {
+    event.persist();
+    this.setState((prevState) => {
+      const now = new Date();
+      const data = [...prevState.data];
+      const index = data.findIndex(item => item.id === id);
+      if (index < 0) {
+        const itemToUpdate = { ...prevState.newRow };
+        itemToUpdate.created_by = 'user';
+        itemToUpdate.created_at = now.toISOString();
+        itemToUpdate[event.target.id] = event.target.value;
+        return { newRow: itemToUpdate };
+      }
+      const itemToUpdate = { ...data[index] };
+      itemToUpdate[event.target.id] = event.target.value;
+      itemToUpdate.modified_by = 'user';
+      itemToUpdate.modified_at = now.toISOString();
+      data[index] = itemToUpdate;
+      return { data };
+    });
+  }
+
   createLine(row, forceEditable) {
+    let tDDelete = null;
     const tD = this.props.description.map((field) => {
       if (field.isShown) {
+        let editMode = forceEditable ? true : this.state.editMode;
+        editMode = field.isEditable ? editMode : false;
         return (
           <td>
-            <SelectorComponentUi
-              componentType={field.componentType}
-              isEditable={field.isEditable}
-              editMode={forceEditable ? true : this.state.editMode}
-              canBeNull={field.canBeNull}
-              data={row[field.key]}
-              onClick={this.onClickHandler}
-            />
+            {React.cloneElement(
+              field.component,
+              {
+                editMode,
+                id: field.key,
+                fieldValue: row[field.key],
+                onChange: event => this.onChangeHandler(event, row.id),
+                onClick: this.onClickHandler
+              }
+            )}
           </td>
         );
       }
       return null;
     });
-    return <tr>{tD}</tr>;
+
+    if (this.state.editMode) {
+      tDDelete = (
+        <td>
+          <Button onClick={() => this.delete(row.id)}>
+            <i className="fas fa-trash" />
+          </Button>
+        </td>
+      );
+    }
+
+    return (
+      <tr>
+        {tD}
+        {tDDelete}
+      </tr>
+    );
   }
 
   render() {
+    let tHDelete = null;
     // Parcours de la description
     // Récupération des libellés d'entete pour le tHead
     const tH = this.props.description.map((field) => {
@@ -93,10 +151,19 @@ class GridFields extends Component {
       }
       return null;
     });
-    const tHead = <thead>{tH}</thead>;
+
+    if (this.state.editMode) {
+      tHDelete = <th />;
+    }
+    const tHead = (
+      <thead>
+        {tH}
+        {tHDelete}
+      </thead>
+    );
 
     // Pour chaque ligne de l'objet de données,
-    const tBody = this.props.data.map(row => (
+    const tBody = this.state.data.map(row => (
       this.createLine(row, false)
     ));
 
@@ -122,11 +189,12 @@ class GridFields extends Component {
             {this.props.title}
           </div>
 
-          <BtAdd onClick={this.namesNewHandler}>
+          <BtAdd onClick={this.newHandler}>
             {this.props.addNewLabel}
           </BtAdd>
 
           {btSave}
+          <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
         <table className="table is-striped is-narrow is-hoverable is-fullwidth">
           {tHead}
@@ -141,9 +209,10 @@ class GridFields extends Component {
 export default GridFields;
 
 GridFields.propTypes = {
-  title: PropTypes.string,
-  structureId: PropTypes.string,
   addNewLabel: PropTypes.string,
+  data: PropTypes.array.isRequired,
   description: PropTypes.array,
-  data: PropTypes.object,
+  schemaName: PropTypes.string.isRequired,
+  structureId: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };

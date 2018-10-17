@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import classes from '../../Field.css';
 
 const InputDate = (props) => {
-  if (!props.data) {
-    return '- vide -';
+  let fieldValue = '- vide -';
+
+  if (props.fieldValue) {
+    fieldValue = moment(props.fieldValue).format('LL');
   }
 
-  let component = <span>{moment(props.data).format('LL')}</span>;
-
-  if (props.isEditable && props.editMode) {
+  let component = <span className={classes.Text} onClick={props.onClick}>{fieldValue}</span>;
+  if (props.editMode) {
     component = (
       <input
+        id={props.id}
         className="input is-rounded"
-        type="text"
-        value={moment(props.data).format('LL')}
+        type="date"
+        value={props.fieldValue ? moment(props.fieldValue).format('YYYY-MM-DD') : ''}
         onChange={props.onChange}
       />
     );
@@ -26,9 +29,10 @@ const InputDate = (props) => {
 export default InputDate;
 
 InputDate.propTypes = {
-  isEditable: PropTypes.boolean,
-  editMode: PropTypes.boolean,
   canBeNull: PropTypes.boolean,
-  data: PropTypes.string,
+  editMode: PropTypes.boolean,
+  fieldValue: PropTypes.string,
+  id: PropTypes.string,
   onChange: PropTypes.func,
+  onClick: PropTypes.func,
 };
