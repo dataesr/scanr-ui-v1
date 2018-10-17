@@ -41,7 +41,28 @@
 .Card{
   margin: 16px;
 }
-.Card header{
+.Card .CardTitle{
   color: #777;
-  font-weight: lighter;
+  font-weight: bold;
+  padding-top: 16px;
+  font-style: italic;
+}
+.Card .CardContent{
+  font-size: 1.8vw;
+  color: #333;
+  font-weight: bold;
+}
+
+.LinkCard{
+  margin: 16px 55px 16px 16px;
+  background-color: #00D1B2;
+  color: #fff;
+  font-size: 1.8vw;
+}
+.LinkCard .LinkCardContent{
+  font-size: 16px;
+  padding-top: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
