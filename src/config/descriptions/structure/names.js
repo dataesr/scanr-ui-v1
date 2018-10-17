@@ -1,8 +1,13 @@
+import React from 'react';
+import Input from '../../../UI/Field/Editable/Input/Input';
+import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
+import Status from '../../../UI/Field/Editable/Status/Status';
+
 const NAMES_DESCRIPTION = [
   {
     key: 'label',
     displayLabel: 'Label',
-    componentType: 'Input',
+    component: <Input />,
     isEditable: true,
     isShown: true,
     canBeNull: true,
@@ -10,7 +15,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'acronym',
     displayLabel: 'Acronym',
-    componentType: 'Input',
+    component: <Input />,
     isEditable: true,
     isShown: true,
     canBeNull: true,
@@ -18,7 +23,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'created_at',
     displayLabel: 'Created_at',
-    componentType: 'InputDate',
+    component: <InputDate />,
     isEditable: false,
     isShown: false,
     canBeNull: false,
@@ -26,7 +31,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'created_by',
     displayLabel: 'created_by',
-    componentType: 'Input',
+    component: <Input />,
     isEditable: false,
     isShown: false,
     canBeNull: false,
@@ -34,7 +39,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'modified_at',
     displayLabel: 'modified_at',
-    componentType: 'InputDate',
+    component: <InputDate />,
     isEditable: false,
     isShown: false,
     canBeNull: true,
@@ -42,7 +47,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'modified_by',
     displayLabel: 'modified_by',
-    componentType: 'Input',
+    component: <Input />,
     isEditable: false,
     isShown: false,
     canBeNull: true,
@@ -50,7 +55,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'start_date',
     displayLabel: 'Date de début',
-    componentType: 'InputDate',
+    component: <InputDate />,
     isEditable: false,
     isShown: true,
     canBeNull: false,
@@ -58,7 +63,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'end_date',
     displayLabel: 'Date de fin',
-    componentType: 'InputDate',
+    component: <InputDate />,
     isEditable: false,
     isShown: true,
     canBeNull: true,
@@ -66,7 +71,7 @@ const NAMES_DESCRIPTION = [
   {
     key: 'status',
     displayLabel: 'Statut',
-    componentType: 'Status',
+    component: <Status />,
     isEditable: true,
     isShown: true,
     canBeNull: false,
