@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import classes from './Field.css';
+
 const Card = props => (
-  <div className="card">
+  <div className={`${classes.Card} card`}>
     <header className="card-header">
       <p className="card-header-title">
         RNSR ID

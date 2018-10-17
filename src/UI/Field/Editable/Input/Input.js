@@ -5,7 +5,7 @@ import classes from '../../Field.css';
 
 const Input = (props) => {
   let component = (
-    <span className={classes.Text}>
+    <span className={classes.Text} onClick={props.onClick}>
       {props.fieldValue || '.'}
     </span>);
   if (props.editMode) {
@@ -27,6 +27,7 @@ Input.propTypes = {
   canBeNull: PropTypes.boolean,
   editMode: PropTypes.boolean,
   fieldValue: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
   onChange: PropTypes.func,
+  onClick: PropTypes.func,
 };
