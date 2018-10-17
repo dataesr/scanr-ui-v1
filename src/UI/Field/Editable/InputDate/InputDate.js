@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 const InputDate = (props) => {
-  if (!props.data) {
+  if (!props.fieldValue) {
     return '- vide -';
   }
 
-  let component = <span>{moment(props.data).format('LL')}</span>;
+  let component = <span>{moment(props.fieldValue).format('LL')}</span>;
 
   if (props.isEditable && props.editMode) {
     component = (
@@ -29,6 +29,6 @@ InputDate.propTypes = {
   isEditable: PropTypes.boolean,
   editMode: PropTypes.boolean,
   canBeNull: PropTypes.boolean,
-  data: PropTypes.string,
+  fieldValue: PropTypes.string,
   onChange: PropTypes.func,
 };
