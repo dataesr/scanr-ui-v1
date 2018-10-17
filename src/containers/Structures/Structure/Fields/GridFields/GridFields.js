@@ -6,9 +6,11 @@ import axios from '../../../../../axios';
 import { ERREUR_STATUT } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
 import BtAdd from '../../../../../UI/Field/btAdd';
+import BtShowAll from '../../../../../UI/Field/BtShowAll';
 import Button from '../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
 import mainValidation from '../../../../../Utils/mainValidation';
+import SortStatus from '../../../../../Utils/SortStatus';
 
 import classes from './GridFields.scss';
 
@@ -18,12 +20,17 @@ class GridFields extends Component {
     newRow: null,
     data: this.props.data,
     errorMessage: null,
+    showAll: false,
   }
 
-  newHandler = () => {
+  toggleShowAllHandler = () => {
+    this.setState(prevState => ({ showAll: !prevState.showAll }));
+  }
+
+  BtAddHandler = () => {
     // Ajout d'une ligne vide
     const emptyRow = {};
-    for (let i = 0; i < this.props.description.length; i++) { // REDUCE ?
+    for (let i = 0; i < this.props.description.length; i += 1) {
       emptyRow[this.props.description[i].key] = null;
     }
     this.setState({ newRow: emptyRow, editMode: true });
@@ -73,8 +80,11 @@ class GridFields extends Component {
     }
   }
 
-  onClickHandler = () => {
-    this.setState({ editMode: true });
+  toggleEditMode = (bool) => {
+    if (!bool) {
+      this.setState({ data: this.props.data });
+    }
+    this.setState({ editMode: bool });
   }
 
   onChangeHandler = (event, id) => {
@@ -99,88 +109,92 @@ class GridFields extends Component {
     });
   }
 
-  createLine(row, forceEditable) {
-    let tDDelete = null;
-    const tD = this.props.description.map((field) => {
+  renderHeader() {
+    return this.props.description.map((field) => {
+      if (field.isShown) {
+        return <th key={field.key}>{field.displayLabel}</th>;
+      }
+      return null;
+    });
+  }
+
+  renderBody() {
+    let data = [...this.state.data].sort(SortStatus);
+    if (!this.state.showAll) {
+      data = data.filter(dataObject => dataObject.status !== 'old');
+    }
+    return data.map((dataObject) => {
+      let deleteButton = null;
+      if (this.state.editMode) {
+        deleteButton = (
+          <td>
+            <Button onClick={() => this.delete(dataObject.id)}>
+              <i className="fas fa-trash" />
+            </Button>
+          </td>
+        );
+      }
+      return (
+        <tr key={dataObject.id}>
+          {this.renderRow(dataObject, false)}
+          {deleteButton}
+        </tr>
+      );
+    });
+  }
+
+  renderRow(row, forceEditable) {
+    return this.props.description.map((field) => {
       if (field.isShown) {
         let editMode = forceEditable ? true : this.state.editMode;
         editMode = field.isEditable ? editMode : false;
         return (
-          <td>
+          <td key={`${field.key}-${row.id}`}>
             {React.cloneElement(
-              field.component,
-              {
+              field.component, {
                 editMode,
                 id: field.key,
                 fieldValue: row[field.key],
                 onChange: event => this.onChangeHandler(event, row.id),
-                onClick: this.onClickHandler
-              }
+                onClick: () => this.toggleEditMode(true),
+              },
             )}
           </td>
         );
       }
       return null;
     });
-
-    if (this.state.editMode) {
-      tDDelete = (
-        <td>
-          <Button onClick={() => this.delete(row.id)}>
-            <i className="fas fa-trash" />
-          </Button>
-        </td>
-      );
-    }
-
-    return (
-      <tr>
-        {tD}
-        {tDDelete}
-      </tr>
-    );
   }
 
   render() {
-    let tHDelete = null;
-    // Parcours de la description
-    // Récupération des libellés d'entete pour le tHead
-    const tH = this.props.description.map((field) => {
-      if (field.isShown) {
-        return <th key={field.key}>{field.displayLabel}</th>;
-      }
-      return null;
-    });
-
+    let deleteHeader = null;
     if (this.state.editMode) {
-      tHDelete = <th />;
+      deleteHeader = <th />;
     }
-    const tHead = (
-      <thead>
-        {tH}
-        {tHDelete}
-      </thead>
-    );
 
-    // Pour chaque ligne de l'objet de données,
-    const tBody = this.state.data.map(row => (
-      this.createLine(row, false)
-    ));
-
-    // Ajout de la nouvelle ligne si le bouton a été cliqué
     let newRow = null;
     if (this.state.newRow) {
-      newRow = this.createLine(this.state.newRow, true);
+      newRow = (
+        <tr>
+          {this.renderRow(this.state.newRow, true)}
+        </tr>);
     }
 
-    let btSave = null;
+    let saveAndCancelButtons = null;
     if (this.state.editMode) {
-      btSave = (
-        <Button onClick={this.save}>
-          <i className="fas fa-save" />
-        </Button>
+      saveAndCancelButtons = (
+        <Aux>
+          <Button onClick={this.save}>
+            <i className="fas fa-save" />
+          </Button>
+          <Button onClick={() => this.toggleEditMode(false)}>
+            <i className="fas fa-undo" />
+          </Button>
+        </Aux>
       );
     }
+
+    const oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
 
     return (
       <Aux className={classes.GridFields}>
@@ -189,18 +203,31 @@ class GridFields extends Component {
             {this.props.title}
           </div>
 
-          <BtAdd onClick={this.newHandler}>
-            {this.props.addNewLabel}
+          <BtAdd onClick={this.BtAddHandler}>
+            {`Ajouter un nouveau champ ${this.props.label}`}
           </BtAdd>
 
-          {btSave}
+          {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
         <table className="table is-striped is-narrow is-hoverable is-fullwidth">
-          {tHead}
-          {newRow}
-          {tBody}
+          <thead>
+            <tr>
+              {this.renderHeader()}
+              {deleteHeader}
+            </tr>
+          </thead>
+          <tbody>
+            {newRow}
+            {this.renderBody()}
+          </tbody>
         </table>
+        {oldStatusObject ? (
+          <BtShowAll
+            onClick={this.toggleShowAllHandler}
+            showAll={this.state.showAll}
+            label="anciens libellés"
+          />) : null}
       </Aux>
     );
   }
@@ -209,9 +236,9 @@ class GridFields extends Component {
 export default GridFields;
 
 GridFields.propTypes = {
-  addNewLabel: PropTypes.string,
   data: PropTypes.array.isRequired,
-  description: PropTypes.array,
+  description: PropTypes.array.isRequired,
+  label: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,

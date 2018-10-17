@@ -6,6 +6,7 @@ import axios from '../../../../axios';
 import SortStatus from '../../../../Utils/SortStatus';
 
 import Button from '../../../../UI/Button/Button';
+import BtShowAll from '../../../../UI/Field/BtShowAll';
 /* Composants internes */
 import AddressDispatcher from './Address/AddressDispatcher';
 import LeafletMap from './Map/LeafletMap';
@@ -84,14 +85,11 @@ class Addresses extends Component {
   render() {
     const oldAddress = this.props.addresses.find(address => address.status === 'old');
     const btOldAddresses = (
-      <Button
-        className="is-medium is-fullwidth"
+      <BtShowAll
         onClick={this.toggleShowAllHandler}
-      >
-        <i className="fa fa-search" />
-        {this.state.showAll ? ' Masquer ' : ' Voir '}
-        les anciennes adresses
-      </Button>);
+        showAll={this.state.showAll}
+        label="anciennes adresses"
+      />);
     let displayedAddresses = [...this.props.addresses].sort(SortStatus);
     if (!this.state.showAll) {
       displayedAddresses = displayedAddresses.filter(address => address.status !== 'old');
@@ -118,9 +116,7 @@ class Addresses extends Component {
               setEditedAddress={this.setEditedAddress}
               status={address.status}
             />))}
-          <div className={classes.bt_showAll}>
-            { oldAddress ? btOldAddresses : null }
-          </div>
+          { oldAddress ? btOldAddresses : null }
         </div>
         <div className={`column ${classes.Map}`}>
           <LeafletMap

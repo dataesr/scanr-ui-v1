@@ -11,20 +11,12 @@ import GridFields from '../Fields/GridFields/GridFields';
 const Main = props => (
   <Aux>
     <GridFields
-      addNewLabel="Ajouter un nouveau libellé"
       data={props.names}
-      schemaName="names"
       description={NameDescription}
-      title="Liste des libellés"
-      structureId={props.structureId}
-    />
-    <GridFields
-      addNewLabel="Ajouter un nouveau libellé2"
-      data={props.names}
+      label="libellé"
       schemaName="names"
-      description={NameDescription}
-      title="Liste des libellés"
       structureId={props.structureId}
+      title="Liste des libellés"
     />
   </Aux>
 );
