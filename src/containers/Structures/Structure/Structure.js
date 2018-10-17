@@ -53,7 +53,6 @@ class Structure extends Component {
     if (!structure) {
       return null;
     }
-    console.log('structure', structure);
     const title = this.getMainName(structure.names);
 
     switch (this.state.activeTab) {
