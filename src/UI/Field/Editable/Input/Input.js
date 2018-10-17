@@ -14,7 +14,7 @@ const Input = (props) => {
         id={props.id}
         className="input is-rounded"
         onChange={props.onChange}
-        value={props.fieldValue}
+        value={props.fieldValue || ''}
         type="text"
       />);
   }
@@ -24,10 +24,14 @@ const Input = (props) => {
 export default Input;
 
 Input.propTypes = {
-  canBeNull: PropTypes.boolean,
-  editMode: PropTypes.boolean,
+  editMode: PropTypes.bool,
   fieldValue: PropTypes.string,
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+};
+
+Input.defaultProps = {
+  fieldValue: '',
+  editMode: false,
 };
