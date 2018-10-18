@@ -251,6 +251,8 @@ class GridFields extends Component {
         <div>
           <div className={classes.TextTitleInline}>
             {this.props.title}
+            &nbsp;
+            <span className="tag is-light is-rounded">{this.state.data.length}</span>
           </div>
 
           <BtAdd onClick={this.BtAddHandler}>

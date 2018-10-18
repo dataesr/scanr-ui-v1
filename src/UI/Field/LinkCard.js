@@ -12,10 +12,12 @@ const LinkCard = props => (
             <i className={props.iconCssClass} />
           </div>
           <div className="column is-11">
-            {props.url ? <div className={classes.LinkCardContent}>{props.url}</div> : <small><i>non renseigné</i></small>}
+            {props.url
+              ? <div className={classes.LinkCardContent}>{props.url}</div>
+              : <small><i>non renseigné</i></small>
+            }
           </div>
         </div>
-
       </div>
     </div>
   </a>

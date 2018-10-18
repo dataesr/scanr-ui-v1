@@ -76,6 +76,7 @@ class StructuresList extends Component {
     axios.get(url)
       .then(
         (response) => {
+console.log('response', response.data);
           this.setState((prevState) => {
             let newStructures = response.data.data;
             if (!search) {
