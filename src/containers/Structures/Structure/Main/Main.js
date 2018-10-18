@@ -14,6 +14,7 @@ const Main = props => (
       data={props.names}
       description={NameDescription}
       getStructure={props.getStructure}
+      infoMessage="Aucun libellé actif"
       label="libellé"
       schemaName="names"
       structureId={props.structureId}
