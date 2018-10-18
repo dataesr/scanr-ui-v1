@@ -13,6 +13,7 @@ const Main = props => (
     <GridFields
       data={props.names}
       description={NameDescription}
+      getStructure={props.getStructure}
       label="libellé"
       schemaName="names"
       structureId={props.structureId}
@@ -26,4 +27,5 @@ export default Main;
 Main.propTypes = {
   names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
+  getStructure: PropTypes.func.isRequired,
 };

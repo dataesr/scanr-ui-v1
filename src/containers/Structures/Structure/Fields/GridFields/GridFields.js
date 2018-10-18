@@ -5,6 +5,7 @@ import axios from '../../../../../axios';
 
 import { ERREUR_STATUT, ERREUR_NULL } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
+import LifeCycle from '../../../../../UI/Field/LifeCycle';
 import BtAdd from '../../../../../UI/Field/btAdd';
 import BtShowAll from '../../../../../UI/Field/BtShowAll';
 import Button from '../../../../../UI/Button/Button';
@@ -51,6 +52,7 @@ class GridFields extends Component {
               newRow: null,
               data,
             });
+            this.props.getStructure()
           }
         },
       )
@@ -71,7 +73,7 @@ class GridFields extends Component {
 
   toggleEditMode = (bool) => {
     if (!bool) {
-      this.setState({ data: this.props.data });
+      this.setState({ data: this.props.data, newRow: null });
     }
     this.setState({ editMode: bool });
   }
@@ -163,6 +165,15 @@ class GridFields extends Component {
       return (
         <tr key={dataObject.id}>
           {this.renderRow(dataObject, false)}
+          <td>
+            <LifeCycle
+              created_at={dataObject.created_at}
+              created_by={dataObject.created_by}
+              modified_at={dataObject.modified_at}
+              modified_by={dataObject.modified_by}
+              size="x-small"
+            />
+          </td>
           {deleteButton}
         </tr>
       );
@@ -242,6 +253,7 @@ class GridFields extends Component {
             <tr>
               {this.renderHeader()}
               {deleteHeader}
+              <th />
             </tr>
           </thead>
           <tbody>
@@ -265,6 +277,7 @@ export default GridFields;
 GridFields.propTypes = {
   data: PropTypes.array.isRequired,
   description: PropTypes.array.isRequired,
+  getStructure: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,

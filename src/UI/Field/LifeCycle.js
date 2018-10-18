@@ -7,17 +7,44 @@ import classes from './Field.css';
 moment.locale('fr');
 
 const lifeCycle = props => (
-  <div className="column is-12">
-    <div className={classes.LifeCycle}>
-      Créée le&nbsp;
-      <span className={classes.Text}>{moment(props.created_at).format('LL')}</span>
-      {' par '}
-      <span className={classes.Text}>{props.created_by}</span>
-      <br />
-      {props.modified_at
-        ? `Modifiée le ${moment(props.modified_at).format('LL')} par ${props.modified_by}`
-        : <i>Pas encore modifié</i>}
-    </div>
+  <div className={classes.LifeCycle} style={{ fontSize: props.size }}>
+    {props.created_by || props.created_at ? 'Créé ' : ''}
+    {props.created_at
+      ? (
+        <span>
+          le&nbsp;
+          <strong>{moment(props.created_at).format('LL')}</strong>
+          &nbsp;
+        </span>)
+      : null
+    }
+    {props.created_by
+      ? (
+        <span>
+          par&nbsp;
+          <strong>{props.created_by}</strong>
+          <br />
+        </span>)
+      : null
+    }
+    {props.modified_by || props.modified_at ? 'Modifié ' : ''}
+    {props.modified_at
+      ? (
+        <span>
+          le&nbsp;
+          <strong>{moment(props.modified_at).format('LL')}</strong>
+          &nbsp;
+        </span>)
+      : null
+    }
+    {props.modified_by
+      ? (
+        <span>
+          par&nbsp;
+          <strong>{props.modified_by}</strong>
+        </span>)
+      : null
+    }
   </div>);
 
 export default lifeCycle;
@@ -27,4 +54,5 @@ lifeCycle.propTypes = {
   created_by: PropTypes.string.isRequired,
   modified_at: PropTypes.string,
   modified_by: PropTypes.string,
+  size: PropTypes.string,
 };
