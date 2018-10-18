@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 import axios from '../../../../axios';
 import SortStatus from '../../../../Utils/SortStatus';
-
-import Button from '../../../../UI/Button/Button';
+import InfoMessage from '../../../../UI/Messages/InfoMessage';
 import BtShowAll from '../../../../UI/Field/BtShowAll';
 /* Composants internes */
 import AddressDispatcher from './Address/AddressDispatcher';
@@ -90,9 +89,13 @@ class Addresses extends Component {
         showAll={this.state.showAll}
         label="anciennes adresses"
       />);
+    let infoMessage = null;
     let displayedAddresses = [...this.props.addresses].sort(SortStatus);
     if (!this.state.showAll) {
       displayedAddresses = displayedAddresses.filter(address => address.status !== 'old');
+      if (displayedAddresses.length === 0) {
+        infoMessage = 'Aucune adresse active';
+      }
     }
     return (
       <div className={`columns ${classes.FullDisplay}`}>
@@ -102,6 +105,9 @@ class Addresses extends Component {
             hasErrored={this.state.hasErrored}
             setEditedAddress={this.setEditedAddress}
           />
+          <div className="column">
+            <InfoMessage>{infoMessage}</InfoMessage>
+          </div>
           {displayedAddresses.map(address => (
             <AddressDispatcher
               key={address.id}

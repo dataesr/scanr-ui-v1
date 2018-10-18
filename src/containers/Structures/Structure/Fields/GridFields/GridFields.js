@@ -10,6 +10,7 @@ import BtAdd from '../../../../../UI/Field/btAdd';
 import BtShowAll from '../../../../../UI/Field/BtShowAll';
 import Button from '../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
+import InfoMessage from '../../../../../UI/Messages/InfoMessage';
 import mainValidation from '../../../../../Utils/mainValidation';
 import SortStatus from '../../../../../Utils/SortStatus';
 
@@ -22,6 +23,7 @@ class GridFields extends Component {
     data: this.props.data,
     errorMessage: null,
     showAll: false,
+    infoMessage: false,
   }
 
   toggleShowAllHandler = () => {
@@ -52,7 +54,7 @@ class GridFields extends Component {
               newRow: null,
               data,
             });
-            this.props.getStructure()
+            this.props.getStructure();
           }
         },
       )
@@ -89,14 +91,21 @@ class GridFields extends Component {
         itemToUpdate.created_by = 'user';
         itemToUpdate.created_at = now.toISOString();
         itemToUpdate[event.target.id] = event.target.value;
-        return { newRow: itemToUpdate };
+        return {
+          newRow: itemToUpdate,
+          showAll: event.target.value === 'old' ? true : prevState.showAll,
+        };
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.value;
       itemToUpdate.modified_by = 'user';
       itemToUpdate.modified_at = now.toISOString();
       data[index] = itemToUpdate;
-      return { data };
+
+      return {
+        data,
+        showAll: event.target.value === 'old' ? true : prevState.showAll,
+      };
     });
   }
 
@@ -146,11 +155,7 @@ class GridFields extends Component {
     });
   }
 
-  renderBody() {
-    let data = [...this.state.data].sort(SortStatus);
-    if (!this.state.showAll) {
-      data = data.filter(dataObject => dataObject.status !== 'old');
-    }
+  renderBody(data) {
     return data.map((dataObject) => {
       let deleteButton = null;
       if (this.state.editMode) {
@@ -218,6 +223,7 @@ class GridFields extends Component {
         </tr>);
     }
 
+
     let saveAndCancelButtons = null;
     if (this.state.editMode) {
       saveAndCancelButtons = (
@@ -233,7 +239,13 @@ class GridFields extends Component {
     }
 
     const oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
-
+    let data = [...this.state.data].sort(SortStatus);
+    if (!this.state.showAll) {
+      data = data.filter(dataObject => dataObject.status !== 'old');
+      if (data.length === 0) {
+        this.setState({ infoMessage: true });
+      }
+    }
     return (
       <Aux className={classes.GridFields}>
         <div>
@@ -248,19 +260,22 @@ class GridFields extends Component {
           {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
-        <table className="table is-striped is-narrow is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              {this.renderHeader()}
-              {deleteHeader}
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {newRow}
-            {this.renderBody()}
-          </tbody>
-        </table>
+        {this.state.infoMessage
+          ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
+          : (
+            <table className="table is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  {this.renderHeader()}
+                  {deleteHeader}
+                  <th />
+                </tr>
+              </thead>
+              <tbody>
+                {newRow}
+                {this.renderBody(data)}
+              </tbody>
+            </table>)}
         {oldStatusObject ? (
           <BtShowAll
             onClick={this.toggleShowAllHandler}
@@ -278,6 +293,7 @@ GridFields.propTypes = {
   data: PropTypes.array.isRequired,
   description: PropTypes.array.isRequired,
   getStructure: PropTypes.func.isRequired,
+  infoMessage: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,
