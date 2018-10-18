@@ -5,13 +5,21 @@ import { NavLink } from 'react-router-dom';
 /* CSS */
 import classes from './StructuresListItems.scss';
 
+const getMainEntity = (entities) => {
+  let mainEntity = entities.find(entity => entity.status === 'main');
+  if (!mainEntity) {
+    mainEntity = entities[0];
+  }
+  return mainEntity;
+};
+
 const StructuresListItems = props => (
   <section className="container is-fluid">
     <ul className={classes.structureList_ul} role="menu">
       {
           props.structuresList.map((structure, index) => (
             <li
-              key={structure.esr_id}
+              key={structure.id}
               className={classes.structureList_li}
             >
               <div className="columns">
@@ -23,12 +31,12 @@ const StructuresListItems = props => (
                   <i className="fa fa-chevron-circle-right hvr-icon" />
                   <NavLink to={`structures/${structure.esr_id}`}>
                     <span className={classes.link_item}>
-                      {structure.names[0].label}
+                      {getMainEntity(structure.names).name_fr}
                     </span>
                   </NavLink>
                 </div>
                 <div className={`column ${classes.structuresList_id}`}>
-                  {structure.esr_id}
+                  {structure.id}
                 </div>
               </div>
             </li>
