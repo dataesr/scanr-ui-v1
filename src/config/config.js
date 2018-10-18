@@ -13,6 +13,7 @@ export const STATUS_INVALID = 'invalid';
 export const STATUS_OLD = 'old';
 
 export const ERREUR_STATUT = 'Erreur statut';
+export const ERREUR_NULL = 'Champ vide';
 /* API */
 export const API_END_POINT = 'http://10.243.98.107:5002/api/v0.1/datastore/';
 //export const API_END_POINT = 'http://0.0.0.0:5000/api/v0.1/datastore/';

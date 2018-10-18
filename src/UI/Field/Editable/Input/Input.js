@@ -9,10 +9,14 @@ const Input = (props) => {
       {props.fieldValue || '.'}
     </span>);
   if (props.editMode) {
+    let inputColor = null;
+    if (!props.canBeNull) {
+      inputColor = props.fieldValue ? 'is-primary' : 'is-danger';
+    }
     component = (
       <input
         id={props.id}
-        className="input is-rounded"
+        className={`input is-rounded ${inputColor}`}
         onChange={props.onChange}
         value={props.fieldValue || ''}
         type="text"
@@ -24,6 +28,7 @@ const Input = (props) => {
 export default Input;
 
 Input.propTypes = {
+  canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
   fieldValue: PropTypes.string,
   id: PropTypes.string,
@@ -34,4 +39,5 @@ Input.propTypes = {
 Input.defaultProps = {
   fieldValue: '',
   editMode: false,
+  canBeNull: true,
 };
