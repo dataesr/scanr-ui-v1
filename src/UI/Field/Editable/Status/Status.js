@@ -13,8 +13,12 @@ const Status = (props) => {
         : '-vide-'}
     </span>);
   if (props.editMode) {
+    let inputColor = null;
+    if (!props.canBeNull) {
+      inputColor = props.fieldValue && props.fieldValue !== 'empty' ? 'is-primary' : 'is-danger';
+    }
     statusMode = (
-      <div className="select is-rounded">
+      <div className={`select is-rounded ${inputColor}`}>
         <select
           id="status"
           value={props.fieldValue || 'empty'}

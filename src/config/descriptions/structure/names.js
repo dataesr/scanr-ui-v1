@@ -10,7 +10,9 @@ const NAMES_DESCRIPTION = [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    canBeNull: true,
+    rules: {
+      canBeNull: false,
+    },
   },
   {
     key: 'acronym',
@@ -26,7 +28,9 @@ const NAMES_DESCRIPTION = [
     component: <InputDate />,
     isEditable: false,
     isShown: false,
-    canBeNull: false,
+    rules: {
+      canBeNull: false,
+    },
   },
   {
     key: 'created_by',
@@ -34,7 +38,9 @@ const NAMES_DESCRIPTION = [
     component: <Input />,
     isEditable: false,
     isShown: false,
-    canBeNull: false,
+    rules: {
+      canBeNull: false,
+    },
   },
   {
     key: 'modified_at',
@@ -42,7 +48,6 @@ const NAMES_DESCRIPTION = [
     component: <InputDate />,
     isEditable: false,
     isShown: false,
-    canBeNull: true,
   },
   {
     key: 'modified_by',
@@ -50,7 +55,6 @@ const NAMES_DESCRIPTION = [
     component: <Input />,
     isEditable: false,
     isShown: false,
-    canBeNull: true,
   },
   {
     key: 'start_date',
@@ -58,7 +62,6 @@ const NAMES_DESCRIPTION = [
     component: <InputDate />,
     isEditable: false,
     isShown: true,
-    canBeNull: false,
   },
   {
     key: 'end_date',
@@ -66,7 +69,6 @@ const NAMES_DESCRIPTION = [
     component: <InputDate />,
     isEditable: false,
     isShown: true,
-    canBeNull: true,
   },
   {
     key: 'status',
@@ -75,6 +77,10 @@ const NAMES_DESCRIPTION = [
     isEditable: true,
     isShown: true,
     canBeNull: false,
+    rules: {
+      canBeNull: false,
+      mainStatus: false,
+    },
   },
 ];
 
