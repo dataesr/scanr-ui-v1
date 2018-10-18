@@ -25,10 +25,10 @@ class Structure extends Component {
   }
 
   componentDidMount() {
-    this.getStructures();
+    this.getStructure();
   }
 
-  getStructures = () => {
+  getStructure = () => {
     const esrId = this.props.match.params.esr_id;
     const url = `structures/${esrId}`;
     axios.get(url)
@@ -49,7 +49,6 @@ class Structure extends Component {
 
   render() {
     const { structure } = this.state;
-    console.log('structure:', structure);
     let content = null;
     if (!structure) {
       return null;
@@ -72,7 +71,7 @@ class Structure extends Component {
         content = (
           <Main
             structureId={structure.esr_id}
-            getStructures={this.getStructures}
+            getStructure={this.getStructure}
             mail={structure.mail.value}
             names={structure.names}
             phone={structure.phone.value}
@@ -84,7 +83,7 @@ class Structure extends Component {
           <Addresses
             addresses={structure.addresses}
             structureId={structure.esr_id}
-            getStructures={this.getStructures}
+            getStructure={this.getStructure}
           />
         );
         break;

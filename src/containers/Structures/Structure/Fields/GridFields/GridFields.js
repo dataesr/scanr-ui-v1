@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import axios from '../../../../../axios';
 
-import { ERREUR_STATUT } from '../../../../../config/config';
+import { ERREUR_STATUT, ERREUR_NULL } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
+import LifeCycle from '../../../../../UI/Field/LifeCycle';
 import BtAdd from '../../../../../UI/Field/btAdd';
 import BtShowAll from '../../../../../UI/Field/BtShowAll';
 import Button from '../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
+import InfoMessage from '../../../../../UI/Messages/InfoMessage';
 import mainValidation from '../../../../../Utils/mainValidation';
 import SortStatus from '../../../../../Utils/SortStatus';
 
@@ -21,6 +23,7 @@ class GridFields extends Component {
     data: this.props.data,
     errorMessage: null,
     showAll: false,
+    infoMessage: false,
   }
 
   toggleShowAllHandler = () => {
@@ -51,6 +54,7 @@ class GridFields extends Component {
               newRow: null,
               data,
             });
+            this.props.getStructure();
           }
         },
       )
@@ -68,21 +72,10 @@ class GridFields extends Component {
     }
   };
 
-  save = () => {
-    const data = [...this.state.data];
-    if (this.state.newRow) {
-      data.push(this.state.newRow);
-    }
-    if (mainValidation(data)) {
-      this.axiosCall(data);
-    } else {
-      this.setState({ errorMessage: ERREUR_STATUT });
-    }
-  }
 
   toggleEditMode = (bool) => {
     if (!bool) {
-      this.setState({ data: this.props.data });
+      this.setState({ data: this.props.data, newRow: null });
     }
     this.setState({ editMode: bool });
   }
@@ -98,15 +91,59 @@ class GridFields extends Component {
         itemToUpdate.created_by = 'user';
         itemToUpdate.created_at = now.toISOString();
         itemToUpdate[event.target.id] = event.target.value;
-        return { newRow: itemToUpdate };
+        return {
+          newRow: itemToUpdate,
+          showAll: event.target.value === 'old' ? true : prevState.showAll,
+        };
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.value;
       itemToUpdate.modified_by = 'user';
       itemToUpdate.modified_at = now.toISOString();
       data[index] = itemToUpdate;
-      return { data };
+
+      return {
+        data,
+        showAll: event.target.value === 'old' ? true : prevState.showAll,
+      };
     });
+  }
+
+  save = () => {
+    const data = [...this.state.data];
+    if (this.state.newRow) {
+      data.push(this.state.newRow);
+    }
+    if (this.validate(data)) {
+      this.axiosCall(data);
+    }
+  }
+
+  validate(data) {
+    return this.props.description.filter(fieldDescription => fieldDescription.isShown && fieldDescription.rules)
+      .reduce((validation, rulesDescription) => {
+        let tempValidation = validation;
+        if ('canBeNull' in rulesDescription.rules) {
+          const nullValidation = data.reduce((tempNullValidation, dataRow) => {
+            if (rulesDescription.key in dataRow) {
+              return Boolean(dataRow[rulesDescription.key]) && tempNullValidation;
+            }
+            return tempNullValidation;
+          }, true);
+          if (!nullValidation) {
+            this.setState({ errorMessage: ERREUR_NULL });
+          }
+          tempValidation = tempValidation && nullValidation;
+        }
+        if ('mainStatus' in rulesDescription.rules) {
+          const mainStatusValidation = mainValidation(data);
+          if (!mainStatusValidation) {
+            this.setState({ errorMessage: ERREUR_STATUT });
+          }
+          tempValidation = tempValidation && mainStatusValidation;
+        }
+        return tempValidation;
+      }, true);
   }
 
   renderHeader() {
@@ -118,11 +155,7 @@ class GridFields extends Component {
     });
   }
 
-  renderBody() {
-    let data = [...this.state.data].sort(SortStatus);
-    if (!this.state.showAll) {
-      data = data.filter(dataObject => dataObject.status !== 'old');
-    }
+  renderBody(data) {
     return data.map((dataObject) => {
       let deleteButton = null;
       if (this.state.editMode) {
@@ -137,6 +170,15 @@ class GridFields extends Component {
       return (
         <tr key={dataObject.id}>
           {this.renderRow(dataObject, false)}
+          <td>
+            <LifeCycle
+              created_at={dataObject.created_at}
+              created_by={dataObject.created_by}
+              modified_at={dataObject.modified_at}
+              modified_by={dataObject.modified_by}
+              size="x-small"
+            />
+          </td>
           {deleteButton}
         </tr>
       );
@@ -152,6 +194,7 @@ class GridFields extends Component {
           <td key={`${field.key}-${row.id}`}>
             {React.cloneElement(
               field.component, {
+                canBeNull: field.rules ? field.rules.canBeNull : true,
                 editMode,
                 id: field.key,
                 fieldValue: row[field.key],
@@ -180,6 +223,7 @@ class GridFields extends Component {
         </tr>);
     }
 
+
     let saveAndCancelButtons = null;
     if (this.state.editMode) {
       saveAndCancelButtons = (
@@ -195,7 +239,13 @@ class GridFields extends Component {
     }
 
     const oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
-
+    let data = [...this.state.data].sort(SortStatus);
+    if (!this.state.showAll) {
+      data = data.filter(dataObject => dataObject.status !== 'old');
+      if (data.length === 0) {
+        this.setState({ infoMessage: true });
+      }
+    }
     return (
       <Aux className={classes.GridFields}>
         <div>
@@ -210,18 +260,22 @@ class GridFields extends Component {
           {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
-        <table className="table is-striped is-narrow is-hoverable is-fullwidth">
-          <thead>
-            <tr>
-              {this.renderHeader()}
-              {deleteHeader}
-            </tr>
-          </thead>
-          <tbody>
-            {newRow}
-            {this.renderBody()}
-          </tbody>
-        </table>
+        {this.state.infoMessage
+          ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
+          : (
+            <table className="table is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  {this.renderHeader()}
+                  {deleteHeader}
+                  <th />
+                </tr>
+              </thead>
+              <tbody>
+                {newRow}
+                {this.renderBody(data)}
+              </tbody>
+            </table>)}
         {oldStatusObject ? (
           <BtShowAll
             onClick={this.toggleShowAllHandler}
@@ -238,6 +292,8 @@ export default GridFields;
 GridFields.propTypes = {
   data: PropTypes.array.isRequired,
   description: PropTypes.array.isRequired,
+  getStructure: PropTypes.func.isRequired,
+  infoMessage: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,

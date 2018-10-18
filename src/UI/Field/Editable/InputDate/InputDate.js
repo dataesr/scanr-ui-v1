@@ -12,10 +12,14 @@ const InputDate = (props) => {
 
   let component = <span className={classes.Text} onClick={props.onClick}>{fieldValue}</span>;
   if (props.editMode) {
+    let inputColor = null;
+    if (!props.canBeNull) {
+      inputColor = props.fieldValue ? 'is-primary' : 'is-danger';
+    }
     component = (
       <input
         id={props.id}
-        className="input is-rounded"
+        className={`input is-rounded ${inputColor}`}
         type="date"
         value={props.fieldValue ? moment(props.fieldValue).format('YYYY-MM-DD') : ''}
         onChange={props.onChange}
@@ -29,6 +33,7 @@ const InputDate = (props) => {
 export default InputDate;
 
 InputDate.propTypes = {
+  canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
   fieldValue: PropTypes.string,
   id: PropTypes.string,
@@ -38,4 +43,5 @@ InputDate.propTypes = {
 
 InputDate.defaultProps = {
   editMode: false,
+  canBeNull: true,
 };
