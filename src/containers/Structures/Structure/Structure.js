@@ -49,7 +49,6 @@ class Structure extends Component {
 
   render() {
     const { structure } = this.state;
-    console.log('structure:', structure);
     let content = null;
     if (!structure) {
       return null;

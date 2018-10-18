@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import axios from '../../../../../axios';
 
-import { ERREUR_STATUT } from '../../../../../config/config';
+import { ERREUR_STATUT, ERREUR_NULL } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
 import BtAdd from '../../../../../UI/Field/btAdd';
 import BtShowAll from '../../../../../UI/Field/BtShowAll';
@@ -68,17 +68,6 @@ class GridFields extends Component {
     }
   };
 
-  save = () => {
-    const data = [...this.state.data];
-    if (this.state.newRow) {
-      data.push(this.state.newRow);
-    }
-    if (mainValidation(data)) {
-      this.axiosCall(data);
-    } else {
-      this.setState({ errorMessage: ERREUR_STATUT });
-    }
-  }
 
   toggleEditMode = (bool) => {
     if (!bool) {
@@ -107,6 +96,43 @@ class GridFields extends Component {
       data[index] = itemToUpdate;
       return { data };
     });
+  }
+
+  save = () => {
+    const data = [...this.state.data];
+    if (this.state.newRow) {
+      data.push(this.state.newRow);
+    }
+    if (this.validate(data)) {
+      this.axiosCall(data);
+    }
+  }
+
+  validate(data) {
+    return this.props.description.filter(fieldDescription => fieldDescription.isShown && fieldDescription.rules)
+      .reduce((validation, rulesDescription) => {
+        let tempValidation = validation;
+        if ('canBeNull' in rulesDescription.rules) {
+          const nullValidation = data.reduce((tempNullValidation, dataRow) => {
+            if (rulesDescription.key in dataRow) {
+              return Boolean(dataRow[rulesDescription.key]) && tempNullValidation;
+            }
+            return tempNullValidation;
+          }, true);
+          if (!nullValidation) {
+            this.setState({ errorMessage: ERREUR_NULL });
+          }
+          tempValidation = tempValidation && nullValidation;
+        }
+        if ('mainStatus' in rulesDescription.rules) {
+          const mainStatusValidation = mainValidation(data);
+          if (!mainStatusValidation) {
+            this.setState({ errorMessage: ERREUR_STATUT });
+          }
+          tempValidation = tempValidation && mainStatusValidation;
+        }
+        return tempValidation;
+      }, true);
   }
 
   renderHeader() {
@@ -152,6 +178,7 @@ class GridFields extends Component {
           <td key={`${field.key}-${row.id}`}>
             {React.cloneElement(
               field.component, {
+                canBeNull: field.rules ? field.rules.canBeNull : true,
                 editMode,
                 id: field.key,
                 fieldValue: row[field.key],
