@@ -193,12 +193,14 @@ class AddressFull extends Component {
               <FieldTitle>
                 Cycle de vie
               </FieldTitle>
-              <LifeCycle
-                created_at={this.props.lifecycle.created_at}
-                created_by={this.props.lifecycle.created_by}
-                modified_at={this.props.lifecycle.modified_at}
-                modified_by={this.props.lifecycle.modified_by}
-              />
+              <div className="column is-12">
+                <LifeCycle
+                  created_at={this.props.lifecycle.created_at}
+                  created_by={this.props.lifecycle.created_by}
+                  modified_at={this.props.lifecycle.modified_at}
+                  modified_by={this.props.lifecycle.modified_by}
+                />
+              </div>
             </Aux>) : null}
           <div className="column is-8" />
           <div className="column is-2 has-text-right">

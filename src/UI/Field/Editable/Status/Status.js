@@ -15,7 +15,7 @@ const Status = (props) => {
   if (props.editMode) {
     let inputColor = null;
     if (!props.canBeNull) {
-      inputColor = props.fieldValue ? 'is-primary' : 'is-danger';
+      inputColor = props.fieldValue && props.fieldValue !== 'empty' ? 'is-primary' : 'is-danger';
     }
     statusMode = (
       <div className={`select is-rounded ${inputColor}`}>
