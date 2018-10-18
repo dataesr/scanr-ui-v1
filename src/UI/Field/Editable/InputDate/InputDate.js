@@ -29,10 +29,13 @@ const InputDate = (props) => {
 export default InputDate;
 
 InputDate.propTypes = {
-  canBeNull: PropTypes.boolean,
-  editMode: PropTypes.boolean,
+  editMode: PropTypes.bool,
   fieldValue: PropTypes.string,
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+};
+
+InputDate.defaultProps = {
+  editMode: false,
 };
