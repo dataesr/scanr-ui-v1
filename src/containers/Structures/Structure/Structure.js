@@ -34,7 +34,6 @@ class Structure extends Component {
     axios.get(url)
       .then((response) => {
         this.setState({ structure: response.data });
-        localStorage.setItem('etag', response.data.etag);
       });
   }
 
