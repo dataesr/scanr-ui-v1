@@ -18,14 +18,14 @@ const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
         props.structuresList.map(structure => (
-          <div key={structure.esr_id} className="column is-one-third-desktop is-half-tablet">
-            <div className={`card ${classes.GridCard}`} key={structure.esr_id}>
+          <div key={structure.id} className="column is-one-third-desktop is-half-tablet">
+            <div className={`card ${classes.GridCard}`} key={structure.id}>
               <div className="card-content">
                 <div className="columns">
                   <div className="column is-11">
-                    <NavLink to={`structures/${structure.esr_id}`}>
+                    <NavLink to={`structures/${structure.id}`}>
                       <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
-                        {getMainEntity(structure.names).label}
+                        {getMainEntity(structure.names).name_fr}
                       </span>
                     </NavLink>
                   </div>
@@ -37,7 +37,7 @@ const structuresGridItems = props => (
                   <div className={classes.Id}>
                     <i className="fas fa-fingerprint" />
                     <span>
-                      {structure.esr_id}
+                      {structure.id}
                     </span>
                   </div>
                   <div className={classes.Address}>
