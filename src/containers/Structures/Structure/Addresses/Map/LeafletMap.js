@@ -32,7 +32,11 @@ class LeafletMap extends Component {
 
   componentDidMount() {
     const markerArray = [];
-    this.props.displayedAddresses.map(address => markerArray.push(address.coordinates));
+    this.props.displayedAddresses.map((address) => {
+      if (address.geocoded) {
+        markerArray.push(address.coordinates);
+      }
+    });
     const bounds = L.latLngBounds(markerArray);
     if (markerArray.length > 1) {
       this.setState({ bounds });

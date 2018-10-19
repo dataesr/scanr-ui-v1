@@ -17,13 +17,13 @@ import classes from './Address.scss';
 class AddressFull extends Component {
   state={
     address: {
-      housenumber: this.props.address.housenumber || this.props.address.house_number || '',
-      street: this.props.address.street || '',
-      postcode: this.props.address.postcode || this.props.address.post_code || '',
-      citycode: this.props.address.citycode || this.props.address.city_code || '',
+      housenumber: this.props.address.housenumber || '',
+      street: this.props.address.street || this.props.address.name || '',
+      postcode: this.props.address.postcode || '',
+      citycode: this.props.address.citycode || '',
       city: this.props.address.city || '',
       country: this.props.address.country || '',
-      status: this.props.status,
+      status: this.props.address.status,
     },
     editMode: this.props.editMode,
   }
@@ -59,6 +59,13 @@ class AddressFull extends Component {
 
   saveButton = () => {
     const newAddress = { ...this.props.address, ...this.state.address };
+    const now = new Date();
+    const date = now.toISOString().split('.')[0];
+    let meta = { created_by: 'user', created_at: date };
+    if (this.props.address.meta) {
+      meta = { modified_by: 'user', modified_at: date };
+    }
+    newAddress.meta = { ...newAddress.meta, ...meta };
     this.props.saveAddress(newAddress);
   }
 
@@ -71,6 +78,7 @@ class AddressFull extends Component {
           <i className="fas fa-save" />
         </Button>);
     }
+    const { coordinates } = this.props.address;
     return (
       <div className={classes.Address}>
         <ErrorMessage visible={this.props.hasErrored}>Erreur lors de l&#39;envoi du formulaire</ErrorMessage>
@@ -92,6 +100,15 @@ class AddressFull extends Component {
               onChange={this.onChange}
               onClick={() => this.setDisplayMode(true)}
               fieldValue={this.state.address.status}
+            />
+          </AddressField>
+          <AddressField
+            label="Adresse brute"
+            onClick={() => this.setDisplayMode(true)}
+          >
+            <Input
+              editMode={false}
+              fieldValue={this.props.address.input_address}
             />
           </AddressField>
           <AddressField
@@ -166,28 +183,31 @@ class AddressFull extends Component {
           <FieldTitle>
             Coordonnées GPS
           </FieldTitle>
-          <AddressField
-            columnSize="3"
-            label="Longitude"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={false}
-              fieldValue={this.props.coordinates ? this.props.coordinates[1].toFixed(5) : '.'}
-              onChange={this.onChange}
-            />
-          </AddressField>
-          <AddressField
-            columnSize="3"
-            label="Latitude"
-            editMode={false}
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              fieldValue={this.props.coordinates ? this.props.coordinates[0].toFixed(5) : '.'}
-              onChange={this.onChange}
-            />
-          </AddressField>
+          {coordinates ? (
+            <Aux>
+              <AddressField
+                columnSize="3"
+                label="Longitude"
+                onClick={() => this.setDisplayMode(true)}
+              >
+                <Input
+                  editMode={false}
+                  fieldValue={coordinates.coordinates[1].toFixed(5)}
+                  onChange={this.onChange}
+                />
+              </AddressField>
+              <AddressField
+                columnSize="3"
+                label="Latitude"
+                editMode={false}
+                onClick={() => this.setDisplayMode(true)}
+              >
+                <Input
+                  fieldValue={coordinates.coordinates[0].toFixed(5)}
+                  onChange={this.onChange}
+                />
+              </AddressField>
+            </Aux>) : 'Non géolocalisé'}
           {this.props.lifecycle ? (
             <Aux>
               <FieldTitle>
@@ -223,7 +243,6 @@ export default AddressFull;
 AddressFull.propTypes = {
   address: PropTypes.object.isRequired,
   changeDisplayMode: PropTypes.func,
-  coordinates: PropTypes.array,
   deleteButton: PropTypes.func.isRequired,
   editMode: PropTypes.bool.isRequired,
   hasErrored: PropTypes.bool.isRequired,

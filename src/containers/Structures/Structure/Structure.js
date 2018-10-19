@@ -32,7 +32,10 @@ class Structure extends Component {
     const esrId = this.props.match.params.esr_id;
     const url = `structures/${esrId}`;
     axios.get(url)
-      .then(response => this.setState({ structure: response.data.data }));
+      .then((response) => {
+        this.setState({ structure: response.data });
+        localStorage.setItem('etag', response.data.etag);
+      });
   }
 
   showTab = (tab) => {
@@ -44,7 +47,7 @@ class Structure extends Component {
   getMainName = (names) => {
     // Recherche du nom principal
     const mainName = names.find(item => item.status === 'main') || names[0];
-    return mainName.label;
+    return mainName.name_fr;
   }
 
   render() {
@@ -59,22 +62,22 @@ class Structure extends Component {
       case 'resume':
         content = (
           <Resume
-            urlLogo={structure.logo.value}
-            esrId={structure.esr_id}
-            urlWebsite={structure.website.value}
-            entityType={structure.entity_type.value}
-            supervisionType={structure.supervision_type.value}
+            urlLogo={structure.logo ? structure.logo.value : null}
+            esrId={structure.id}
+            urlWebsite={structure.website ? structure.website.value : null}
+            level={structure.level ? structure.level.value : null}
+            nature={structure.nature ? structure.nature.value : null}
           />
         );
         break;
       case 'main':
         content = (
           <Main
-            structureId={structure.esr_id}
+            structureId={structure.id}
             getStructure={this.getStructure}
-            mail={structure.mail.value}
+            mail={structure.mail ? structure.mail.value : null}
             names={structure.names}
-            phone={structure.phone.value}
+            phone={structure.phone ? structure.phone.value : null}
             status={structure.status}
           />);
         break;
@@ -82,8 +85,9 @@ class Structure extends Component {
         content = (
           <Addresses
             addresses={structure.addresses}
-            structureId={structure.esr_id}
+            structureId={structure.id}
             getStructure={this.getStructure}
+            etag={structure.etag}
           />
         );
         break;

@@ -4,47 +4,80 @@ import PropTypes from 'prop-types';
 
 /* Composants internes */
 import StatusTagMedium from '../../../../../UI/StatusTagMedium/StatusTagMedium';
-
+import Aux from '../../../../../hoc/Aux';
+import Tag from '../../../../../UI/Tag/Tag';
+import Button from '../../../../../UI/Button/Button';
 /* CSS */
 import classes from './Address.scss';
 
-const addressMini = props => (
-  <div
-    className={classes.Address}
-    onClick={props.changeDisplayMode}
-    onMouseOver={props.mouseOver}
-    onMouseOut={props.mouseOut}
-  >
-    <div className="columns is-gapless is-multiline is-marginless">
-      <div className="column is-11">
+const addressMini = (props) => {
+  let displayedAddress = (
+    <div className="columns" onClick={() => props.changeDisplayMode('full')}>
+      <div className="column is-narrow">
         <i className="fa fa-map-marker-alt hvr-icon" />
+      </div>
+      <div className="column">
         <span className={classes.Text1}>
-          {`${props.address.housenumber || props.address.house_number} ${props.address.street}`}
+          {props.address.input_address}
         </span>
       </div>
-      <div className="column is-11">
-        <span className={classes.Text2}>
-          {props.address.postcode || props.address.post_code}
-          -
-          {props.address.city}
-        </span>
+    </div>);
+  if (props.address.geocoded) {
+    displayedAddress = (
+      <Aux>
+        <div className="column is-11" onClick={() => props.changeDisplayMode('full')}>
+          <i className="fa fa-map-marker-alt hvr-icon" />
+          <span className={classes.Text1}>
+            {`${props.address.housenumber} ${props.address.street}`}
+          </span>
+        </div>
+        <div className="column is-11" onClick={() => props.changeDisplayMode('full')}>
+          <span className={classes.Text2}>
+            {props.address.postcode}
+            -
+            {props.address.city}
+          </span>
+        </div>
+      </Aux>);
+  }
+  return (
+    <div
+      className={classes.Address}
+      onMouseOver={props.mouseOver}
+      onMouseOut={props.mouseOut}
+    >
+      <div className="columns is-gapless is-multiline is-marginless">
+        {displayedAddress}
+        <div className="columns is-gapless">
+          <div className="column is-narrow">
+            <StatusTagMedium status={props.address.status} />
+          </div>
+          {props.address.geocoded
+            ? (
+              <div className="column is-narrow">
+                <Tag tagValue="Géocodé" color="has-background-info" />
+              </div>)
+            : (
+              <Aux>
+                <div className="column is-multiline">
+                  <Tag tagValue="Non géocodé" color="has-background-danger" />
+                </div>
+                <div className="column is-narrow">
+                  <Button onClick={() => props.changeDisplayMode('new')}>
+                    Chercher la localisation
+                  </Button>
+                </div>
+              </Aux>)}
+        </div>
       </div>
-      <div className="column is-11">
-        <StatusTagMedium status={props.status} />
-        {props.geocoded
-          ? <span className={`is-info ${classes.Tags}`}>Géocodé</span> : null}
-      </div>
-    </div>
-  </div>
-);
+    </div>);
+};
 
 export default addressMini;
 
 addressMini.propTypes = {
   address: PropTypes.object.isRequired,
-  status: PropTypes.string.isRequired,
   changeDisplayMode: PropTypes.func,
-  geocoded: PropTypes.bool.isRequired,
   mouseOut: PropTypes.func.isRequired,
   mouseOver: PropTypes.func.isRequired,
 };

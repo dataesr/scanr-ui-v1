@@ -5,8 +5,18 @@ import Status from '../../../UI/Field/Editable/Status/Status';
 
 const NAMES_DESCRIPTION = [
   {
-    key: 'label',
-    displayLabel: 'Label',
+    key: 'name_fr',
+    displayLabel: 'Nom français',
+    component: <Input />,
+    isEditable: true,
+    isShown: true,
+    rules: {
+      canBeNull: false,
+    },
+  },
+  {
+    key: 'name_en',
+    displayLabel: 'Nom anglais',
     component: <Input />,
     isEditable: true,
     isShown: true,
@@ -21,40 +31,6 @@ const NAMES_DESCRIPTION = [
     isEditable: true,
     isShown: true,
     canBeNull: true,
-  },
-  {
-    key: 'created_at',
-    displayLabel: 'Created_at',
-    component: <InputDate />,
-    isEditable: false,
-    isShown: false,
-    rules: {
-      canBeNull: false,
-    },
-  },
-  {
-    key: 'created_by',
-    displayLabel: 'created_by',
-    component: <Input />,
-    isEditable: false,
-    isShown: false,
-    rules: {
-      canBeNull: false,
-    },
-  },
-  {
-    key: 'modified_at',
-    displayLabel: 'modified_at',
-    component: <InputDate />,
-    isEditable: false,
-    isShown: false,
-  },
-  {
-    key: 'modified_by',
-    displayLabel: 'modified_by',
-    component: <Input />,
-    isEditable: false,
-    isShown: false,
   },
   {
     key: 'start_date',

@@ -9,7 +9,7 @@ import BtShowAll from '../../../../UI/Field/BtShowAll';
 /* Composants internes */
 import AddressDispatcher from './Address/AddressDispatcher';
 import LeafletMap from './Map/LeafletMap';
-import NewAddress from './NewAddress/NewAddress';
+import NewAddress from './Address/NewAddress';
 
 /* CSS */
 import classes from './Addresses.scss';
@@ -45,11 +45,11 @@ class Addresses extends Component {
     };
     const url = `structures/${this.props.structureId}`;
     this.setState({ hasErrored: false });
-    axios.put(url, dataObject)
+    axios.patch(url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {
-            this.props.getStructures();
+            this.props.getStructure();
             this.setState({ editedAddress: null });
           }
         },
@@ -69,13 +69,13 @@ class Addresses extends Component {
 
   editAddress = (updatedAddress) => {
     const updatedAddressesList = [...this.props.addresses];
-    const addressIndex = updatedAddressesList.findIndex(address => address.id === updatedAddress.id);
+    const addressIndex = updatedAddressesList.findIndex(address => address.meta.id === updatedAddress.id);
     updatedAddressesList[addressIndex] = updatedAddress;
     this.addressAxiosCall(updatedAddressesList);
   }
 
   deleteAddress = (addressId) => {
-    const editedAddressIndex = this.props.addresses.findIndex(name => name.id === addressId);
+    const editedAddressIndex = this.props.addresses.findIndex(address => address.meta.id === addressId);
     const updatedAddressesList = [...this.props.addresses];
     updatedAddressesList.splice(editedAddressIndex, 1);
     this.addressAxiosCall(updatedAddressesList);
@@ -102,6 +102,7 @@ class Addresses extends Component {
         <div className="column">
           <NewAddress
             addAddress={this.addAddress}
+            editedAddress={this.state.editedAddress}
             hasErrored={this.state.hasErrored}
             setEditedAddress={this.setEditedAddress}
           />
@@ -110,28 +111,22 @@ class Addresses extends Component {
           </div>
           {displayedAddresses.map(address => (
             <AddressDispatcher
-              key={address.id}
-              address={address.geocoder_address}
-              coordinates={address.coordinates}
-              deleteButton={() => this.deleteAddress(address.id)}
+              key={address.meta.id}
+              address={address}
+              meta={address.meta}
+              coordinates={address.coordinates ? address.coordinates.coordinates : null}
+              deleteButton={() => this.deleteAddress(address.meta.id)}
               saveAddress={this.editAddress}
               editedAddress={this.state.editedAddress}
               hasErrored={this.state.hasErrored}
               mouseOut={this.mouseOut}
-              mouseOver={() => this.mouseOver(address.id)}
+              mouseOver={() => this.mouseOver(address.meta.id)}
               setEditedAddress={this.setEditedAddress}
-              status={address.status}
             />))}
           { oldAddress ? btOldAddresses : null }
         </div>
         <div className={`column ${classes.Map}`}>
-          <LeafletMap
-            displayedAddresses={displayedAddresses}
-            editedAddress={this.state.editedAddress}
-            editedCoordinates={this.state.editedCoordinates}
-            hoveredAddress={this.state.hoveredAddress}
-            editAddress={this.editAddress}
-          />
+
         </div>
       </div>
     );// /return()
@@ -143,5 +138,5 @@ export default Addresses;
 Addresses.propTypes = {
   addresses: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
-  getStructures: PropTypes.func.isRequired,
+  getStructure: PropTypes.func.isRequired,
 };
