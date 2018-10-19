@@ -18,20 +18,20 @@ const Resume = props => (
 
     </div>
     <div className="column">
-
-      <Card
-        iconCssClass=""
-        title="Type entité"
-      >
-        {props.entityType}
-      </Card>
-
-      <Card
-        iconCssClass=""
-        title="Type supervision"
-      >
-        {props.supervisionType}
-      </Card>
+      {props.level ? (
+        <Card
+          iconCssClass=""
+          title="Type entité"
+        >
+          {props.level}
+        </Card>) : null }
+      {props.nature ? (
+        <Card
+          iconCssClass=""
+          title="Type supervision"
+        >
+          {props.nature}
+        </Card>) : null }
 
     </div>
     <div className="column">
@@ -49,6 +49,6 @@ Resume.propTypes = {
   urlLogo: PropTypes.string,
   esrId: PropTypes.string,
   urlWebsite: PropTypes.string,
-  entityType: PropTypes.string,
-  supervisionType: PropTypes.string,
+  level: PropTypes.string,
+  nature: PropTypes.string,
 };

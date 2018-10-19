@@ -161,21 +161,21 @@ class GridFields extends Component {
       if (this.state.editMode) {
         deleteButton = (
           <td>
-            <Button onClick={() => this.delete(dataObject.id)}>
+            <Button onClick={() => this.delete(dataObject.meta.id)}>
               <i className="fas fa-trash" />
             </Button>
           </td>
         );
       }
       return (
-        <tr key={dataObject.id}>
+        <tr key={dataObject.meta.id}>
           {this.renderRow(dataObject, false)}
           <td>
             <LifeCycle
-              created_at={dataObject.created_at}
-              created_by={dataObject.created_by}
-              modified_at={dataObject.modified_at}
-              modified_by={dataObject.modified_by}
+              created_at={dataObject.meta.created_at}
+              created_by={dataObject.meta.created_by}
+              modified_at={dataObject.meta.modified_at}
+              modified_by={dataObject.meta.modified_by}
               size="x-small"
             />
           </td>

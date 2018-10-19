@@ -50,8 +50,8 @@ const lifeCycle = props => (
 export default lifeCycle;
 
 lifeCycle.propTypes = {
-  created_at: PropTypes.string.isRequired,
-  created_by: PropTypes.string.isRequired,
+  created_at: PropTypes.string,
+  created_by: PropTypes.string,
   modified_at: PropTypes.string,
   modified_by: PropTypes.string,
   size: PropTypes.string,
