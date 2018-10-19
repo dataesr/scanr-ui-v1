@@ -29,7 +29,7 @@ const StructuresListItems = props => (
                   className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
                 >
                   <i className="fa fa-chevron-circle-right hvr-icon" />
-                  <NavLink to={`structures/${structure.esr_id}`}>
+                  <NavLink to={`structures/${structure.id}`}>
                     <span className={classes.link_item}>
                       {getMainEntity(structure.names).name_fr}
                     </span>

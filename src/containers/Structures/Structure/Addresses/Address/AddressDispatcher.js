@@ -23,7 +23,6 @@ class AddressDispatcher extends Component {
     if (prevProps.editedAddress && this.props.editedAddress
         && prevProps.editedAddress !== this.props.editedAddress
         && this.props.editedAddress.meta.id !== this.props.address.meta.id) {
-      console.log('coucou');
       this.setState({ displayMode: 'mini' });
     }
     if (prevProps.editedAddress && !this.props.editedAddress) {
