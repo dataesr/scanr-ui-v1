@@ -17,7 +17,6 @@ import classes from './Addresses.scss';
 class Addresses extends Component {
   state = {
     editedAddress: null,
-    editedCoordinates: null,
     hasErrored: false,
     hoveredAddress: null,
     showAll: false,
@@ -35,8 +34,8 @@ class Addresses extends Component {
     this.setState({ hoveredAddress: addressId });
   }
 
-  setEditedAddress = (address, coordinates) => {
-    this.setState({ editedAddress: address, editedCoordinates: coordinates });
+  setEditedAddress = (address) => {
+    this.setState({ editedAddress: address });
   }
 
   addressAxiosCall = (addresses) => {
@@ -50,7 +49,7 @@ class Addresses extends Component {
         (response) => {
           if (response.status === 200) {
             this.props.getStructure();
-            this.setState({ editedAddress: null });
+            this.setState({ editedAddress: null, hasErrored: false });
           }
         },
       )
@@ -69,16 +68,24 @@ class Addresses extends Component {
 
   editAddress = (updatedAddress) => {
     const updatedAddressesList = [...this.props.addresses];
-    const addressIndex = updatedAddressesList.findIndex(address => address.meta.id === updatedAddress.id);
-    updatedAddressesList[addressIndex] = updatedAddress;
-    this.addressAxiosCall(updatedAddressesList);
+    const addressIndex = updatedAddressesList.findIndex(address => address.meta.id === updatedAddress.meta.id);
+    if (addressIndex < 0) {
+      this.setState({ hasErrored: true });
+    } else {
+      updatedAddressesList[addressIndex] = updatedAddress;
+      this.addressAxiosCall(updatedAddressesList);
+    }
   }
 
   deleteAddress = (addressId) => {
-    const editedAddressIndex = this.props.addresses.findIndex(address => address.meta.id === addressId);
-    const updatedAddressesList = [...this.props.addresses];
-    updatedAddressesList.splice(editedAddressIndex, 1);
-    this.addressAxiosCall(updatedAddressesList);
+    const addressIndex = this.props.addresses.findIndex(address => address.meta.id === addressId);
+    if (addressIndex < 0) {
+      this.setState({ hasErrored: true });
+    } else {
+      const updatedAddressesList = [...this.props.addresses];
+      updatedAddressesList.splice(addressIndex, 1);
+      this.addressAxiosCall(updatedAddressesList);
+    }
   };
 
   render() {
@@ -126,7 +133,12 @@ class Addresses extends Component {
           { oldAddress ? btOldAddresses : null }
         </div>
         <div className={`column ${classes.Map}`}>
-
+          <LeafletMap
+            displayedAddresses={displayedAddresses}
+            editAddress={this.editAddress}
+            editedAddress={this.state.editedAddress}
+            hoveredAddress={this.state.hoveredAddress}
+          />
         </div>
       </div>
     );// /return()

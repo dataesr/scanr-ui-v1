@@ -7,17 +7,18 @@ import PropTypes from 'prop-types';
 import {
   greenIcon, blueIcon, greyIcon, violetIcon,
 } from './Icons';
+import { STATUS_MAIN, STATUS_ACTIVE, STATUS_OLD } from '../../../../../config/config';
 import Aux from '../../../../../hoc/Aux';
 import Button from '../../../../../UI/Button/Button';
 import InfoMessage from '../../../../../UI/Messages/InfoMessage';
 
 const getIconColor = (status) => {
   switch (status) {
-    case 'main':
+    case STATUS_MAIN:
       return greenIcon;
-    case 'valid':
+    case STATUS_ACTIVE:
       return blueIcon;
-    case 'old':
+    case STATUS_OLD:
       return greyIcon;
     default:
       return blueIcon;
@@ -31,14 +32,28 @@ class LeafletMap extends Component {
   };
 
   componentDidMount() {
-    const markerArray = [];
-    this.props.displayedAddresses.map((address) => {
+    this.setBounds();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.displayedAddresses.length !== this.props.displayedAddresses.length) {
+      this.setBounds();
+    }
+  }
+
+  setBounds() {
+    const markers = this.props.displayedAddresses.reduce((markerArray, address) => {
       if (address.geocoded) {
-        markerArray.push(address.coordinates);
+        const { coordinates } = address.coordinates;
+        const alreadyMarked = markerArray.find(marker => marker[0] === coordinates[0] && marker[1] === coordinates[1]);
+        if (!alreadyMarked) {
+          markerArray.push(address.coordinates.coordinates);
+        }
       }
-    });
-    const bounds = L.latLngBounds(markerArray);
-    if (markerArray.length > 1) {
+      return markerArray;
+    }, []);
+    const bounds = L.latLngBounds(markers);
+    if (markers.length > 1) {
       this.setState({ bounds });
     }
   }
@@ -53,39 +68,41 @@ class LeafletMap extends Component {
 
   onSaveButtonClick = () => {
     const updatedAddress = { ...this.props.editedAddress };
-    updatedAddress.coordinates = this.state.latlng;
+    updatedAddress.coordinates = {
+      coordinates: this.state.latlng,
+      type: 'Point',
+    };
     this.props.editAddress(updatedAddress);
   }
 
   renderMarker() {
-    if (this.props.editedAddress && this.props.editedCoordinates) {
+    if (this.props.editedAddress && this.props.editedAddress.geocoded) {
       return (
         <Marker
           key={this.props.editedAddress.id}
-          position={this.props.editedCoordinates}
+          position={this.props.editedAddress.coordinates.coordinates}
           icon={violetIcon}
-        >
-        </Marker>);
+        />);
     }
     return this.props.displayedAddresses.map((address) => {
       if (address.geocoded) {
         let colorIcon = getIconColor(address.status);
-        if (this.props.hoveredAddress === address.id) {
+        if (this.props.hoveredAddress === address.meta.id) {
           colorIcon = violetIcon;
         }
         return (
           <Marker
-            key={address.id}
-            position={address.coordinates}
+            key={address.meta.id}
+            position={address.coordinates.coordinates}
             icon={colorIcon}
           >
             <Popup>
               <div>
-                {`${address.geocoder_address.house_number} ${address.geocoder_address.street}`}
+                {`${address.housenumber} ${address.street}`}
                 <br />
-                {`${address.geocoder_address.post_code}, ${address.geocoder_address.city}`}
+                {`${address.postcode}, ${address.city}`}
                 <br />
-                {address.geocoder_address.country}
+                {address.country}
               </div>
             </Popup>
           </Marker>);
@@ -102,9 +119,9 @@ class LeafletMap extends Component {
       mapProps = { bounds: this.state.bounds, boundsOptions: { padding: [50, 50] } };
     }
     if (this.props.editedAddress) {
-      if (this.props.editedCoordinates) {
+      if (this.props.editedAddress.geocoded) {
         mapProps = {
-          center: this.props.editedCoordinates,
+          center: this.props.editedAddress.coordinates.coordinates,
           zoom: 16,
         };
         message = 'Cliquer sur la carte pour ajuster la géolocalisation';
@@ -115,7 +132,7 @@ class LeafletMap extends Component {
     if (this.props.displayedAddresses.length === 1) {
       const [displayedAddress] = this.props.displayedAddresses;
       mapProps = {
-        center: displayedAddress.coordinates || [48.853932, 2.333101],
+        center: displayedAddress.geocoded ? displayedAddress.coordinates.coordinates : [48.853932, 2.333101],
         zoom: displayedAddress.geocoded ? 16 : 5,
       };
     }

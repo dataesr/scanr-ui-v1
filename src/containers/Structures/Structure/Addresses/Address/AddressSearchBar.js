@@ -35,35 +35,22 @@ class AddressSearchBar extends Component {
 
   selectAddress = (event) => {
     event.persist();
-    const selectedAddress = this.state.searchResults[event.target.id]
+    const selectedAddress = this.state.searchResults[event.target.id];
+    const coordinates = selectedAddress.geometry.coordinates;
     const newAddress = {
       city: selectedAddress.properties.city,
       citycode: selectedAddress.properties.citycode,
       country: 'France',
-      coordinates: selectedAddress.geometry,
+      coordinates: {
+        type: 'Point',
+        coordinates: [coordinates[1], coordinates[0]],
+      },
       geocoded: true,
       housenumber: selectedAddress.properties.housenumber || null,
       input_address: this.props.searchInput || event.target.value,
       postcode: selectedAddress.properties.postcode,
       score: selectedAddress.properties.score,
       street: selectedAddress.properties.street || selectedAddress.properties.name,
-    };
-    this.props.validateAddress(newAddress);
-  }
-
-  createNewAddress = () => {
-    const address = this.state.selectedAddress.properties;
-    const newAddress = {
-      city: address.city,
-      citycode: address.citycode,
-      country: 'France',
-      coordinates: this.state.selectedAddress.geometry,
-      geocoded: true,
-      housenumber: address.housenumber || null,
-      input_address: this.props.searchInput || this.state.searchInput,
-      postcode: address.postcode,
-      score: address.score,
-      street: address.street || address.name,
     };
     this.props.validateAddress(newAddress);
   }
