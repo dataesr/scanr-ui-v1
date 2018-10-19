@@ -84,7 +84,7 @@ console.log('response', response.data);
               Array.prototype.push.apply(newStructures, response.data.data);
             }
             const newPagination = { ...prevState.pagination };
-            newPagination.n_hits = response.data.n_hits;
+            newPagination.n_hits = response.data.meta.total;
             if (params.pagination) {
               newPagination.n_page += 1;
             } else {
@@ -95,7 +95,7 @@ console.log('response', response.data);
               pagination: newPagination,
             };
           });
-          this.props.nStructures(response.data.n_hits);
+          this.props.nStructures(response.data.meta.total);
         },
       )
       .catch(() => this.setState({ noResultFound: true, structures: null }));
