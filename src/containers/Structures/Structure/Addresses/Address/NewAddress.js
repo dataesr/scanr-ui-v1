@@ -55,7 +55,6 @@ class NewAddress extends Component {
           deleteButton={this.deleteAddress}
           displayMode="full"
           editedAddress={this.props.editedAddress}
-          meta={newAddress.meta}
           saveAddress={this.props.addAddress}
           hasErrored={this.props.hasErrored}
           setEditedAddress={this.props.setEditedAddress}
