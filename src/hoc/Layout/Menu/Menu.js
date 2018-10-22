@@ -1,13 +1,16 @@
 import React from 'react';
 import { Menu } from 'react-bulma-components';
 import { NavLink } from 'react-router-dom';
+import { URL_DOC } from '../../../config/config';
 import classes from './Menu.scss';
 
 const menu = () => (
   <Menu className={classes.sidebar}>
     <Menu.List title="General">
       <Menu.List.Item>
-        Documentation
+        <a href={URL_DOC} target="_blank" rel="noopener noreferrer">
+          Documentation
+        </a>
       </Menu.List.Item>
       <Menu.List.Item>
           Dashboard

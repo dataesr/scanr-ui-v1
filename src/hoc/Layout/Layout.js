@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { version } from '../../config/config';
-
 import Aux from '../Aux';
 import Menu from './Menu/Menu';
 import Header from './Header/Header';
