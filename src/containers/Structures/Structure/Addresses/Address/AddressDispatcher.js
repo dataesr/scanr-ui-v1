@@ -7,6 +7,7 @@ import AddressSearchBar from './AddressSearchBar';
 
 class AddressDispatcher extends Component {
   state = {
+    address: this.props.address,
     displayMode: this.props.displayMode,
     editMode: this.props.displayMode === 'full',
   };
@@ -39,13 +40,17 @@ class AddressDispatcher extends Component {
     }
   }
 
+  geocodeAddress = (address) => {
+    this.setState({ address, displayMode: 'full', editMode: true });
+  }
+
   render() {
     let content = '';
     switch (this.state.displayMode) {
       case 'mini':
         content = (
           <AddressMini
-            address={this.props.address}
+            address={this.state.address}
             changeDisplayMode={this.changeDisplayModeHandler}
             mouseOut={this.props.mouseOut}
             mouseOver={this.props.mouseOver}
@@ -54,24 +59,23 @@ class AddressDispatcher extends Component {
       case 'full':
         content = (
           <AddressFull
-            address={this.props.address}
+            address={this.state.address}
+            inputAddress={this.props.address.input_address}
             changeDisplayMode={() => this.changeDisplayModeHandler('mini')}
             deleteButton={this.props.deleteButton}
             editMode={this.state.editMode}
             hasErrored={this.props.hasErrored}
             saveAddress={this.props.saveAddress}
-            lifecycle={this.props.meta}
+            status={this.props.status}
+            lifecycle={this.props.address.meta}
           />);
         break;
       case 'new':
         content = (
           <AddressSearchBar
-            addAddress={this.props.saveAddress}
-            baseInput={this.props.address.input_address}
-            changeDisplayMode={() => this.changeDisplayMode('mini')}
-            hasErrored={this.state.hasErrored}
-            setEditedAddress={this.props.setEditedAddress}
-            searchInput={this.props.address.input_address}
+            validateAddress={this.geocodeAddress}
+            cancel={() => this.changeDisplayMode('mini')}
+            searchInput={this.state.address.input_address}
           />);
         break;
       default:
@@ -92,12 +96,12 @@ AddressDispatcher.propTypes = {
   saveAddress: PropTypes.func.isRequired,
   editedAddress: PropTypes.object,
   hasErrored: PropTypes.bool.isRequired,
-  meta: PropTypes.object,
   mouseOut: PropTypes.func,
   mouseOver: PropTypes.func,
   setEditedAddress: PropTypes.func.isRequired,
+  status: PropTypes.string.isRequired,
 };
 
 AddressDispatcher.defaultProps = {
   displayMode: 'mini',
-  };
+};
