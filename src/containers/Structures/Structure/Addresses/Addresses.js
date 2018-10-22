@@ -120,7 +120,6 @@ class Addresses extends Component {
             <AddressDispatcher
               key={address.meta.id}
               address={address}
-              meta={address.meta}
               coordinates={address.coordinates ? address.coordinates.coordinates : null}
               deleteButton={() => this.deleteAddress(address.meta.id)}
               saveAddress={this.editAddress}
@@ -129,6 +128,7 @@ class Addresses extends Component {
               mouseOut={this.mouseOut}
               mouseOver={() => this.mouseOver(address.meta.id)}
               setEditedAddress={this.setEditedAddress}
+              status={address.status}
             />))}
           { oldAddress ? btOldAddresses : null }
         </div>

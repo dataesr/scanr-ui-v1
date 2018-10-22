@@ -72,7 +72,8 @@ class StructuresList extends Component {
       page = PAGE;
     }
 
-    const url = `structures/?query=${this.props.searchText}&page=${page}&per_page=${PER_PAGE}`;
+    const query = `{"$text":{"$search": ${this.props.searchText}}}`;
+    const url = `structures?${encodeURIComponent(query)}&page=${page}&max_results=${PER_PAGE}`;
     axios.get(url)
       .then(
         (response) => {
