@@ -61,11 +61,13 @@ class Structure extends Component {
       case 'resume':
         content = (
           <Resume
-            urlLogo={structure.logo ? structure.logo.value : null}
             esrId={structure.id}
-            urlWebsite={structure.website ? structure.website.value : null}
+            keywords_en={structure.keywords_en}
+            keywords_fr={structure.keywords_fr}
             level={structure.level ? structure.level.value : null}
             nature={structure.nature ? structure.nature.value : null}
+            urlLogo={structure.logo ? structure.logo.value : null}
+            urlWebsite={structure.website ? structure.website.value : null}
           />
         );
         break;
