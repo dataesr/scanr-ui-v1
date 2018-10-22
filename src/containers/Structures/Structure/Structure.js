@@ -20,7 +20,7 @@ import classes from './Structure.css';
 
 class Structure extends Component {
   state = {
-    activeTab: 'resume',
+    activeTab: 'main',
     structure: null,
   }
 
@@ -76,9 +76,11 @@ class Structure extends Component {
           <Main
             structureId={structure.id}
             getStructure={this.getStructure}
-            mail={structure.mail ? structure.mail.value : null}
+            alias={structure.alias}
+            codeNumbers={structure.code_numbers}
+            keywordsEn={structure.keywords_en}
+            keywordsFr={structure.keywords_fr}
             names={structure.names}
-            phone={structure.phone ? structure.phone.value : null}
             status={structure.status}
           />);
         break;
