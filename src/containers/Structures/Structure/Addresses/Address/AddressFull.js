@@ -23,7 +23,7 @@ class AddressFull extends Component {
       citycode: this.props.address.citycode || '',
       city: this.props.address.city || '',
       country: this.props.address.country || '',
-      status: this.props.address.status,
+      status: this.props.status,
     },
     editMode: this.props.editMode,
   }
@@ -58,14 +58,18 @@ class AddressFull extends Component {
   }
 
   saveButton = () => {
-    const newAddress = { ...this.props.address, ...this.state.address };
     const now = new Date();
     const date = now.toISOString().split('.')[0];
     let meta = { created_by: 'user', created_at: date };
-    if (this.props.address.meta) {
-      meta = { modified_by: 'user', modified_at: date };
+    if (this.props.lifecycle) {
+      meta = { ...this.props.lifecycle, modified_by: 'user', modified_at: date };
     }
-    newAddress.meta = { ...newAddress.meta, ...meta };
+    const newAddress = {
+      ...this.props.address,
+      ...this.state.address,
+      meta: { ...meta },
+      input_address: this.props.inputAddress || this.props.address.inputAddress,
+    };
     this.props.saveAddress(newAddress);
   }
 
@@ -246,6 +250,7 @@ AddressFull.propTypes = {
   deleteButton: PropTypes.func.isRequired,
   editMode: PropTypes.bool.isRequired,
   hasErrored: PropTypes.bool.isRequired,
+  inputAddress: PropTypes.string,
   lifecycle: PropTypes.object,
   saveAddress: PropTypes.func.isRequired,
   status: PropTypes.string,
