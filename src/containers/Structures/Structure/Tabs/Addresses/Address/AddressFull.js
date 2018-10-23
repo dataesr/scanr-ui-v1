@@ -113,6 +113,7 @@ class AddressFull extends Component {
             <Input
               editMode={false}
               fieldValue={this.props.address.input_address}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -124,6 +125,7 @@ class AddressFull extends Component {
               fieldValue={this.state.address.housenumber}
               id="housenumber"
               onChange={this.onChange}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -136,6 +138,7 @@ class AddressFull extends Component {
               id="street"
               onChange={this.onChange}
               onClick={() => this.setDisplayMode(true)}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -148,6 +151,7 @@ class AddressFull extends Component {
               fieldValue={this.state.address.postcode}
               id="postcode"
               onChange={this.onChange}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -160,6 +164,7 @@ class AddressFull extends Component {
               fieldValue={this.state.address.citycode}
               id="citycode"
               onChange={this.onChange}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -182,6 +187,7 @@ class AddressFull extends Component {
               fieldValue={this.state.address.country}
               id="country"
               onChange={this.onChange}
+              size="large"
             />
           </AddressField>
           <FieldTitle>
@@ -198,6 +204,7 @@ class AddressFull extends Component {
                   editMode={false}
                   fieldValue={coordinates.coordinates[1].toFixed(5)}
                   onChange={this.onChange}
+                  size="large"
                 />
               </AddressField>
               <AddressField
@@ -209,6 +216,7 @@ class AddressFull extends Component {
                 <Input
                   fieldValue={coordinates.coordinates[0].toFixed(5)}
                   onChange={this.onChange}
+                  size="large"
                 />
               </AddressField>
             </Aux>) : 'Non géolocalisé'}

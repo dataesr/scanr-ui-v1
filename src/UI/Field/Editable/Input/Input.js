@@ -5,7 +5,7 @@ import classes from '../../Field.css';
 
 const Input = (props) => {
   let component = (
-    <span className={classes.Text} onClick={props.onClick}>
+    <span className={props.size === 'large' ? classes.Text : ''} onClick={props.onClick}>
       {props.fieldValue || '.'}
     </span>);
   if (props.editMode) {
@@ -34,6 +34,7 @@ Input.propTypes = {
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+  size: PropTypes.string,
 };
 
 Input.defaultProps = {
