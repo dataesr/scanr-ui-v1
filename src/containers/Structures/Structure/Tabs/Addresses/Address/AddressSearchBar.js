@@ -75,7 +75,7 @@ class AddressSearchBar extends Component {
   render() {
     return (
       <div className="column">
-        <div className="columns">
+        <div className="columns is-marginless is-gapless">
           <div className="column">
             <p className="control has-icons-left has-icons-right">
               <input

@@ -10,7 +10,11 @@ const InputDate = (props) => {
     fieldValue = moment(props.fieldValue).format('LL');
   }
 
-  let component = <span className={classes.Text} onClick={props.onClick}>{fieldValue}</span>;
+  let component = (
+    <span
+      className={props.size === 'large' ? classes.Text : ''}
+      onClick={props.onClick}>{fieldValue}</span
+    >);
   if (props.editMode) {
     let inputColor = null;
     if (!props.canBeNull) {
@@ -39,6 +43,7 @@ InputDate.propTypes = {
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+  size: PropTypes.string,
 };
 
 InputDate.defaultProps = {

@@ -9,43 +9,43 @@ import Aux from '../../../../../hoc/Aux';
 import GridFields from '../../../../Fields/GridFields/GridFields';
 import TagField from '../../../../Fields/TagField/TagField';
 
-import classes from './Main.scss';
-
 const Main = props => (
   <Aux>
-    <GridFields
-      data={props.names}
-      description={NameDescription}
-      getStructure={props.getStructure}
-      infoMessage="Aucun libellé actif"
-      label="libellé"
-      schemaName="names"
-      structureId={props.structureId}
-      title="Liste des libellés"
-    />
-
-    <TagField
-      data={props.alias}
-      infoMessage="Ajouter un alias"
-      getStructure={props.getStructure}
-      schemaName="alias"
-      structureId={props.structureId}
-      title="Liste des Alias"
-    />
-
-    <TagField
-      data={props.codeNumbers}
-      infoMessage="Ajouter un code"
-      getStructure={props.getStructure}
-      schemaName="code_numbers"
-      structureId={props.structureId}
-      title="Liste des Codes"
-    />
-
-    <div className={classes.TextTitleInline}>
-      Mots clés
+    <div className="column">
+      <GridFields
+        data={props.names}
+        description={NameDescription}
+        getStructure={props.getStructure}
+        infoMessage="Aucun libellé actif"
+        label="libellé"
+        schemaName="names"
+        structureId={props.structureId}
+        title="Liste des libellés"
+      />
     </div>
-    <div className="columns">
+    <div className="columns is-marginless">
+      <div className="column">
+        <TagField
+          data={props.alias}
+          infoMessage="Ajouter un alias"
+          getStructure={props.getStructure}
+          schemaName="alias"
+          structureId={props.structureId}
+          title="Liste des Alias"
+        />
+      </div>
+      <div className="column">
+        <TagField
+          data={props.codeNumbers}
+          infoMessage="Ajouter un code"
+          getStructure={props.getStructure}
+          schemaName="code_numbers"
+          structureId={props.structureId}
+          title="Liste des Codes"
+        />
+      </div>
+    </div>
+    <div className="columns is-marginless">
       <div className="column">
         <TagField
           data={props.keywordsFr}
@@ -53,7 +53,7 @@ const Main = props => (
           getStructure={props.getStructure}
           schemaName="keywords_fr"
           structureId={props.structureId}
-          title="Français"
+          title="Mots clés français"
         />
       </div>
       <div className="column">
@@ -63,7 +63,7 @@ const Main = props => (
           getStructure={props.getStructure}
           schemaName="keywords_en"
           structureId={props.structureId}
-          title="Anglais"
+          title="Mots clés anglais"
         />
       </div>
     </div>

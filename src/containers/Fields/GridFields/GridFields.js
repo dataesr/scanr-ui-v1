@@ -265,12 +265,12 @@ class GridFields extends Component {
         {this.state.infoMessage
           ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
           : (
-            <table className="table is-striped is-narrow is-hoverable is-fullwidth">
+            <table className={`table is-striped is-narrow is-hoverable is-fullwidth ${classes.Table}`}>
               <thead>
-                <tr>
+                <tr className={classes.Th}>
                   {this.renderHeader()}
+                  <th>Cycle de vie </th>
                   {deleteHeader}
-                  <th />
                 </tr>
               </thead>
               <tbody>
