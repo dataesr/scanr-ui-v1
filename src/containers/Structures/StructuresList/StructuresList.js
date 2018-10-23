@@ -15,6 +15,7 @@ import Button from '../../../UI/Button/Button';
 import StructuresListItems from './StructuresListItems/StructuresListItems';
 import StructuresGridItems from './StructuresGridItems/StructuresGridItems';
 
+import classes from './StructuresList.scss';
 
 class StructuresList extends Component {
   constructor(props) {
@@ -151,12 +152,14 @@ class StructuresList extends Component {
 
     return (
       <Aux>
-        <Button onClick={() => this.selectDisplayStyle('grid')}>
-          <i className="fas fa-th" />
-        </Button>
-        <Button onClick={() => this.selectDisplayStyle('list')}>
-          <i className="fas fa-bars" />
-        </Button>
+        <div className={classes.Bg}>
+          <Button onClick={() => this.selectDisplayStyle('grid')}>
+            <i className="fas fa-th" />
+          </Button>
+          <Button onClick={() => this.selectDisplayStyle('list')}>
+            <i className="fas fa-bars" />
+          </Button>
+        </div>
         {content}
         <div className="container">
           <div className="column is-half is-offset-one-quarter">

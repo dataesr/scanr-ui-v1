@@ -78,8 +78,6 @@ class Structure extends Component {
             getStructure={this.getStructure}
             alias={structure.alias}
             codeNumbers={structure.code_numbers}
-            keywordsEn={structure.keywords_en}
-            keywordsFr={structure.keywords_fr}
             names={structure.names}
             status={structure.status}
           />);
@@ -90,7 +88,6 @@ class Structure extends Component {
             addresses={structure.addresses}
             structureId={structure.id}
             getStructure={this.getStructure}
-            etag={structure.etag}
           />
         );
         break;
@@ -101,7 +98,12 @@ class Structure extends Component {
         break;
       case 'themes':
         content = (
-          <Themes />
+          <Themes
+            structureId={structure.id}
+            getStructure={this.getStructure}
+            keywordsEn={structure.keywords_en}
+            keywordsFr={structure.keywords_fr}
+          />
         );
         break;
       case 'relationship':
