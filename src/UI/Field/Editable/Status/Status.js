@@ -7,7 +7,7 @@ import classes from '../../Field.css';
 
 const Status = (props) => {
   let statusMode = (
-    <span className={classes.Text} onClick={props.onClick}>
+    <span className={props.size === 'large' ? classes.Text : ''} onClick={props.onClick}>
       {props.fieldValue
         ? <StatusTagMedium status={props.fieldValue} />
         : '-vide-'}
@@ -40,6 +40,7 @@ Status.propTypes = {
   fieldValue: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+  size: PropTypes.string,
 };
 
 Status.defaultProps = {

@@ -5,22 +5,22 @@ import PropTypes from 'prop-types';
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
 
-import Addresses from './Addresses/Addresses';
+import Addresses from './Tabs/Addresses/Addresses';
 import StatusTag from '../../../UI/StatusTag/StatusTag';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
-import Main from './Main/Main';
-import Resume from './Resume/Resume';
-import Supervisors from './Supervisors/Supervisors';
-import Themes from './Themes/Themes';
-import Relationship from './Relationship/Relationship';
-import Leaders from './Leaders/Leaders';
-import Deals from './Deals/Deals';
+import Main from './Tabs/Main/Main';
+import Resume from './Tabs/Resume/Resume';
+import Supervisors from './Tabs/Supervisors/Supervisors';
+import Themes from './Tabs/Themes/Themes';
+import Relationship from './Tabs/Relationship/Relationship';
+import Leaders from './Tabs/Leaders/Leaders';
+import Deals from './Tabs/Deals/Deals';
 
 import classes from './Structure.css';
 
 class Structure extends Component {
   state = {
-    activeTab: 'resume',
+    activeTab: 'main',
     structure: null,
   }
 
@@ -76,9 +76,11 @@ class Structure extends Component {
           <Main
             structureId={structure.id}
             getStructure={this.getStructure}
-            mail={structure.mail ? structure.mail.value : null}
+            alias={structure.alias}
+            codeNumbers={structure.code_numbers}
+            keywordsEn={structure.keywords_en}
+            keywordsFr={structure.keywords_fr}
             names={structure.names}
-            phone={structure.phone ? structure.phone.value : null}
             status={structure.status}
           />);
         break;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import globalAxios from 'axios';
 
-import Button from '../../../../../UI/Button/Button';
+import Button from '../../../../../../UI/Button/Button';
 /* CSS */
 import classes from './Address.scss';
 
@@ -75,7 +75,7 @@ class AddressSearchBar extends Component {
   render() {
     return (
       <div className="column">
-        <div className="columns">
+        <div className="columns is-marginless is-gapless">
           <div className="column">
             <p className="control has-icons-left has-icons-right">
               <input

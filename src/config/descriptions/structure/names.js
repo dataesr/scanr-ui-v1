@@ -34,14 +34,14 @@ const NAMES_DESCRIPTION = [
   },
   {
     key: 'start_date',
-    displayLabel: 'Date de début',
+    displayLabel: 'Début',
     component: <InputDate />,
     isEditable: false,
     isShown: true,
   },
   {
     key: 'end_date',
-    displayLabel: 'Date de fin',
+    displayLabel: 'Fin',
     component: <InputDate />,
     isEditable: false,
     isShown: true,
