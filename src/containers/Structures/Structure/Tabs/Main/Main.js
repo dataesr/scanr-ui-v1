@@ -20,7 +20,7 @@ const Main = props => (
         label="libellé"
         schemaName="names"
         structureId={props.structureId}
-        title="Liste des libellés"
+        title="Libellés"
       />
     </div>
     <div className="columns is-marginless">
@@ -31,7 +31,7 @@ const Main = props => (
           getStructure={props.getStructure}
           schemaName="alias"
           structureId={props.structureId}
-          title="Liste des Alias"
+          title="Alias"
         />
       </div>
       <div className="column">
@@ -41,7 +41,7 @@ const Main = props => (
           getStructure={props.getStructure}
           schemaName="code_numbers"
           structureId={props.structureId}
-          title="Liste des Codes"
+          title="Codes"
         />
       </div>
     </div>
