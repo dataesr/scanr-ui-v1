@@ -14,7 +14,3 @@ fieldTitle.propTypes = {
   children: PropTypes.string.isRequired,
   columnSize: PropTypes.string,
 };
-
-fieldTitle.defaultProps = {
-  columnSize: '12',
-};
