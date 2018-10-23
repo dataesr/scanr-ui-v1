@@ -35,14 +35,58 @@
     <title>#dataESR BO</title>
 
     <style type="text/css">
-    .active{
-      background-color: #555 !important;
-    }
-    .leaflet-container {
-      height: 100%;
-      width: 100%;
-      margin: 0 auto;
-    }
+      .active{
+        background-color: #555 !important;
+      }
+      .leaflet-container {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .react-tagsinput {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        padding-left: 5px;
+        padding-top: 5px;
+      }
+      .react-tagsinput--focused {
+        border-color: #00D1B2;
+      }
+      .react-tagsinput-tag {
+        background-color: #ccc;
+        border-radius: 16px;
+        border: 1px solid #ccc;
+        color: #363636;
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        padding: 5px 8px;
+      }
+      .react-tagsinput-remove {
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .react-tagsinput-tag a::before {
+        content: " ×";
+        font-size: 15px;
+        color: #363636;
+      }
+      .react-tagsinput-input {
+        background: transparent;
+        border: 0;
+        color: #777;
+        font-size: 13px;
+        font-weight: 400;
+        margin-bottom: 6px;
+        margin-top: 1px;
+        outline: none;
+        padding: 5px;
+        width: 100%;
+      }
     </style>
   </head>
   <body>

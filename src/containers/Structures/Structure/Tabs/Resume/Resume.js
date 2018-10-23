@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Aux from '../../../../hoc/Aux';
-import Card from '../../../../UI/Field/Card';
-import LinkCard from '../../../../UI/Field/LinkCard';
-import WordCloud from '../../../../UI/Field/WordCloud';
+import Aux from '../../../../../hoc/Aux';
+import Card from '../../../../../UI/Field/Card';
+import LinkCard from '../../../../../UI/Field/LinkCard';
+import WordCloud from '../../../../../UI/Field/WordCloud';
 
 const Resume = props => (
   <Aux>
