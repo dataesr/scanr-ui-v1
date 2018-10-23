@@ -10,6 +10,14 @@ export const STATUS_ACTIVE = 'active';
 export const STATUS_OLD = 'old';
 export const STATUS_ARRAY = [STATUS_MAIN, STATUS_ACTIVE, STATUS_OLD];
 
+/* Réseaux sociaux */
+export const SOCIAL_MEDIAS_ARRAY = ['Facebook', 'Linkedin', 'Twitter', 'Viadeo', 'Youtube'];
+export const FACEBOOK_ICON = '<i className="fab fa-facebook"></i>';
+export const LINKEDIN_ICON = '<i className="fab fa-linkedin"></i>';
+export const TWITTER_ICON = '<i className="fab fa-twitter"></i>';
+export const VIADEO_ICON = '<i className="fab fa-viadeo"></i>';
+export const YOUTUBE_ICON = '<i className="fab fa-youtube"></i>';
+
 /* ERREURS */
 export const ERREUR_STATUT = 'Erreur statut';
 export const ERREUR_NULL = 'Champ vide';

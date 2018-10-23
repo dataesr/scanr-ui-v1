@@ -79,6 +79,7 @@ class Structure extends Component {
             alias={structure.alias}
             codeNumbers={structure.code_numbers}
             names={structure.names}
+            emails={structure.emails}
             status={structure.status}
           />);
         break;

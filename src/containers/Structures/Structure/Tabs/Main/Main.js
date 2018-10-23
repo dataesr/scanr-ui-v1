@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // Descriptions
 import NameDescription from '../../../../../config/descriptions/structure/names';
+import EmailsDescription from '../../../../../config/descriptions/structure/emails';
 
 // Composants UI
 import Aux from '../../../../../hoc/Aux';
@@ -45,15 +46,32 @@ const Main = props => (
         />
       </div>
     </div>
+    <div className="columns is-marginless">
+      <div className="column">
+        <GridFields
+          data={props.emails}
+          description={EmailsDescription}
+          getStructure={props.getStructure}
+          infoMessage="Aucun email actif"
+          label="email"
+          schemaName="emails"
+          structureId={props.structureId}
+          title="Liste des emails"
+        />
+      </div>
+      <div className="column">
+      </div>
+    </div>
   </Aux>
 );
 
 export default Main;
 
 Main.propTypes = {
-  names: PropTypes.array.isRequired,
   alias: PropTypes.array.isRequired,
   codeNumbers: PropTypes.array.isRequired,
+  emails: PropTypes.array.isRequired,
+  names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
   getStructure: PropTypes.func.isRequired,
 };
