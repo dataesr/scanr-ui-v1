@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import axios from '../../../../../axios';
+import axios from '../../../axios';
 
-import { ERREUR_STATUT, ERREUR_NULL } from '../../../../../config/config';
-import Aux from '../../../../../hoc/Aux';
-import LifeCycle from '../../../../../UI/Field/LifeCycle';
-import BtAdd from '../../../../../UI/Field/btAdd';
-import BtShowAll from '../../../../../UI/Field/BtShowAll';
-import Button from '../../../../../UI/Button/Button';
-import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
-import InfoMessage from '../../../../../UI/Messages/InfoMessage';
-import mainValidation from '../../../../../Utils/mainValidation';
-import SortStatus from '../../../../../Utils/SortStatus';
+import { ERREUR_STATUT, ERREUR_NULL, ERREUR_PATCH } from '../../../config/config';
+import Aux from '../../../hoc/Aux';
+import LifeCycle from '../../../UI/Field/LifeCycle';
+import BtAdd from '../../../UI/Field/btAdd';
+import BtShowAll from '../../../UI/Field/BtShowAll';
+import Button from '../../../UI/Button/Button';
+import ErrorMessage from '../../../UI/Messages/ErrorMessage';
+import InfoMessage from '../../../UI/Messages/InfoMessage';
+import mainValidation from '../../../Utils/mainValidation';
+import SortStatus from '../../../Utils/SortStatus';
 
 import classes from './GridFields.scss';
 
@@ -58,7 +58,7 @@ class GridFields extends Component {
           }
         },
       )
-      .catch(() => this.setState({ errorMessage: 'erreur' }));
+      .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
   delete = (itemId) => {

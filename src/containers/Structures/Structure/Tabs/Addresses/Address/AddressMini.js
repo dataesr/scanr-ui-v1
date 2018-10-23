@@ -3,10 +3,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 /* Composants internes */
-import StatusTagMedium from '../../../../../UI/StatusTagMedium/StatusTagMedium';
-import Aux from '../../../../../hoc/Aux';
-import Tag from '../../../../../UI/Tag/Tag';
-import Button from '../../../../../UI/Button/Button';
+import StatusTagMedium from '../../../../../../UI/StatusTagMedium/StatusTagMedium';
+import Aux from '../../../../../../hoc/Aux';
+import Tag from '../../../../../../UI/Tag/Tag';
+import Button from '../../../../../../UI/Button/Button';
 /* CSS */
 import classes from './Address.scss';
 

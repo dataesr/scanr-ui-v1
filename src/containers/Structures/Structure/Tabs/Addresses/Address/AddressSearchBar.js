@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import debounce from 'lodash/debounce';
 import globalAxios from 'axios';
 
-import Button from '../../../../../UI/Button/Button';
+import Button from '../../../../../../UI/Button/Button';
 /* CSS */
 import classes from './Address.scss';
 
