@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '../../../../../UI/Button/Button';
+import Button from '../../../../../../UI/Button/Button';
 import AddressDispatcher from './AddressDispatcher';
 import AddressSearchBar from './AddressSearchBar';
 /* CSS */

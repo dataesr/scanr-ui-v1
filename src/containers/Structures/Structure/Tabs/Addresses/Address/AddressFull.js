@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 /* Composants internes */
-import Aux from '../../../../../hoc/Aux';
-import Button from '../../../../../UI/Button/Button';
-import ErrorMessage from '../../../../../UI/Messages/ErrorMessage';
-import FieldTitle from '../../../../../UI/Field/FieldTitle';
-import Input from '../../../../../UI/Field/Editable/Input/Input';
-import Status from '../../../../../UI/Field/Editable/Status/Status';
-import LifeCycle from '../../../../../UI/Field/LifeCycle';
+import Aux from '../../../../../../hoc/Aux';
+import Button from '../../../../../../UI/Button/Button';
+import ErrorMessage from '../../../../../../UI/Messages/ErrorMessage';
+import FieldTitle from '../../../../../../UI/Field/FieldTitle';
+import Input from '../../../../../../UI/Field/Editable/Input/Input';
+import Status from '../../../../../../UI/Field/Editable/Status/Status';
+import LifeCycle from '../../../../../../UI/Field/LifeCycle';
 import AddressField from './AddressField/AddressField';
 /* CSS */
 import classes from './Address.scss';

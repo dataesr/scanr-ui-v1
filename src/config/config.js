@@ -13,7 +13,7 @@ export const STATUS_ARRAY = [STATUS_MAIN, STATUS_ACTIVE, STATUS_OLD];
 /* ERREURS */
 export const ERREUR_STATUT = 'Erreur statut';
 export const ERREUR_NULL = 'Champ vide';
-
+export const ERREUR_PATCH = "Erreur lors de l'envoi du formulaire";
 /* Doc */
 export const URL_DOC = 'http://10.243.98.74:3000';
 

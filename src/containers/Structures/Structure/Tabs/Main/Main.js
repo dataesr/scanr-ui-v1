@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Descriptions
-import NameDescription from '../../../../config/descriptions/structure/names';
+import NameDescription from '../../../../../config/descriptions/structure/names';
 
 // Composants UI
-import Aux from '../../../../hoc/Aux';
-import GridFields from '../Fields/GridFields/GridFields';
-import TagInput from '../../../../UI/Field/Editable/TagInput/TagInput';
+import Aux from '../../../../../hoc/Aux';
+import GridFields from '../../../../Fields/GridFields/GridFields';
+import TagField from '../../../../Fields/TagField/TagField';
 
 import classes from './Main.scss';
 
@@ -24,7 +24,7 @@ const Main = props => (
       title="Liste des libellés"
     />
 
-    <TagInput
+    <TagField
       data={props.alias}
       infoMessage="Ajouter un alias"
       getStructure={props.getStructure}
@@ -33,7 +33,7 @@ const Main = props => (
       title="Liste des Alias"
     />
 
-    <TagInput
+    <TagField
       data={props.codeNumbers}
       infoMessage="Ajouter un code"
       getStructure={props.getStructure}
@@ -47,7 +47,7 @@ const Main = props => (
     </div>
     <div className="columns">
       <div className="column">
-        <TagInput
+        <TagField
           data={props.keywordsFr}
           infoMessage="Ajouter un mot clé"
           getStructure={props.getStructure}
@@ -57,7 +57,7 @@ const Main = props => (
         />
       </div>
       <div className="column">
-        <TagInput
+        <TagField
           data={props.keywordsEn}
           infoMessage="Ajouter un mot clé"
           getStructure={props.getStructure}

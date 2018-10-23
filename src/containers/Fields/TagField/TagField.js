@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TagsInput from 'react-tagsinput';
-import axios from '../../../../axios';
+import axios from '../../../axios';
 
 // Composants UI
-import Aux from '../../../../hoc/Aux';
-import ErrorMessage from '../../../Messages/ErrorMessage';
-import classes from './TagInput.scss';
+import { ERREUR_PATCH } from '../../../config/config';
+import Aux from '../../../hoc/Aux';
+import ErrorMessage from '../../../UI/Messages/ErrorMessage';
+import classes from './TagField.scss';
 
-class TagInput extends Component {
+class TagField extends Component {
   state = {
     errorMessage: null,
     tags: this.props.data,
@@ -38,7 +39,7 @@ class TagInput extends Component {
           }
         },
       )
-      .catch(() => this.setState({ errorMessage: 'Erreur enregistrement' }));
+      .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
   render() {
@@ -58,9 +59,9 @@ class TagInput extends Component {
   }
 }
 
-export default TagInput;
+export default TagField;
 
-TagInput.propTypes = {
+TagField.propTypes = {
   data: PropTypes.array.isRequired,
   getStructure: PropTypes.func.isRequired,
   infoMessage: PropTypes.string.isRequired,
