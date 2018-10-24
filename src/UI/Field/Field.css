@@ -20,8 +20,6 @@
   display: inline-block;
   font-weight: bolder;
   color: #777;
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 
 .Title{
@@ -43,7 +41,9 @@
   margin-top: 16px;
   text-align: center;
 }
-
+.BoxSizing {
+  box-sizing: border-box;
+}
 .Card{
   margin: 16px;
 }

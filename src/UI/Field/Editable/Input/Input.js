@@ -16,7 +16,7 @@ const Input = (props) => {
     component = (
       <input
         id={props.id}
-        className={`input is-rounded ${inputColor}`}
+        className={`input is-rounded ${inputColor} ${classes.BoxSizing}`}
         onChange={props.onChange}
         value={props.fieldValue || ''}
         type="text"
