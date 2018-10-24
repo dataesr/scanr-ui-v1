@@ -7,7 +7,9 @@ import Aux from '../../../../../../hoc/Aux';
 import Button from '../../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../../UI/Messages/ErrorMessage';
 import FieldTitle from '../../../../../../UI/Field/FieldTitle';
+import Tag from '../../../../../../UI/Tag/Tag';
 import Input from '../../../../../../UI/Field/Editable/Input/Input';
+import InputDate from '../../../../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../../../../UI/Field/Editable/Status/Status';
 import LifeCycle from '../../../../../../UI/Field/LifeCycle';
 import AddressField from './AddressField/AddressField';
@@ -17,13 +19,15 @@ import classes from './Address.scss';
 class AddressFull extends Component {
   state={
     address: {
-      housenumber: this.props.address.housenumber || '',
-      street: this.props.address.street || this.props.address.name || '',
-      postcode: this.props.address.postcode || '',
-      citycode: this.props.address.citycode || '',
       city: this.props.address.city || '',
+      citycode: this.props.address.citycode || '',
       country: this.props.address.country || '',
+      end_date: this.props.address.end_date || '',
+      housenumber: this.props.address.housenumber || '',
+      postcode: this.props.address.postcode || '',
+      start_date: this.props.address.start_date || '',
       status: this.props.status,
+      street: this.props.address.street || this.props.address.name || '',
     },
     editMode: this.props.editMode,
   }
@@ -70,7 +74,8 @@ class AddressFull extends Component {
       meta: { ...meta },
       input_address: this.props.inputAddress || this.props.address.inputAddress,
     };
-    this.props.saveAddress(newAddress);
+    const address = Object.keys(newAddress).forEach(key => (newAddress[key] == null) && delete newAddress[key]);
+    this.props.saveAddress(address);
   }
 
   render() {
@@ -86,15 +91,15 @@ class AddressFull extends Component {
     return (
       <div className={classes.Address}>
         <ErrorMessage visible={this.props.hasErrored}>Erreur lors de l&#39;envoi du formulaire</ErrorMessage>
-        <div className={`columns is-multiline is-marginless ${this.state.editMode ? null : 'is-gapless'}`}>
-          <FieldTitle columnSize="10">
-            Informations générales
-          </FieldTitle>
-          <div className="column is-2 has-text-right">
+        <div className="columns">
+          <FieldTitle>Informations générales</FieldTitle>
+          <div className="column has-text-right">
             <Button onClick={this.cancelButton}>
               <i className="fas fa-undo" />
             </Button>
           </div>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
             label="Statut"
             onClick={() => this.setDisplayMode(true)}
@@ -106,6 +111,34 @@ class AddressFull extends Component {
               fieldValue={this.state.address.status}
             />
           </AddressField>
+        </div>
+        <div className="columns is-marginless">
+          <AddressField
+            label="Début"
+            onClick={() => this.setDisplayMode(true)}
+          >
+            <InputDate
+              editMode={this.state.editMode}
+              id="start_date"
+              fieldValue={this.state.address.start_date}
+              onChange={this.onChange}
+              size="large"
+            />
+          </AddressField>
+          <AddressField
+            label="Fin"
+            onClick={() => this.setDisplayMode(true)}
+          >
+            <InputDate
+              editMode={this.state.editMode}
+              fieldValue={this.state.address.end_date}
+              id="end_date"
+              onChange={this.onChange}
+              size="large"
+            />
+          </AddressField>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
             label="Adresse brute"
             onClick={() => this.setDisplayMode(true)}
@@ -116,6 +149,8 @@ class AddressFull extends Component {
               size="large"
             />
           </AddressField>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
             label="Numéro"
             onClick={() => this.setDisplayMode(true)}
@@ -128,6 +163,8 @@ class AddressFull extends Component {
               size="large"
             />
           </AddressField>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
             label="Rue"
             onClick={() => this.setDisplayMode(true)}
@@ -141,8 +178,9 @@ class AddressFull extends Component {
               size="large"
             />
           </AddressField>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
-            columnSize="3"
             label="Code postal"
             onClick={() => this.setDisplayMode(true)}
           >
@@ -155,7 +193,6 @@ class AddressFull extends Component {
             />
           </AddressField>
           <AddressField
-            columnSize="3"
             label="Code commune"
             onClick={() => this.setDisplayMode(true)}
           >
@@ -167,6 +204,8 @@ class AddressFull extends Component {
               size="large"
             />
           </AddressField>
+        </div>
+        <div className="columns is-marginless">
           <AddressField
             label="Ville"
             onClick={() => this.setDisplayMode(true)}
@@ -176,6 +215,7 @@ class AddressFull extends Component {
               fieldValue={this.state.address.city}
               id="city"
               onChange={this.onChange}
+              size="large"
             />
           </AddressField>
           <AddressField
@@ -190,57 +230,67 @@ class AddressFull extends Component {
               size="large"
             />
           </AddressField>
-          <FieldTitle>
-            Coordonnées GPS
-          </FieldTitle>
-          {coordinates ? (
-            <Aux>
-              <AddressField
-                columnSize="3"
-                label="Longitude"
-                onClick={() => this.setDisplayMode(true)}
-              >
-                <Input
-                  editMode={false}
-                  fieldValue={coordinates.coordinates[1].toFixed(5)}
-                  onChange={this.onChange}
-                  size="large"
-                />
-              </AddressField>
-              <AddressField
-                columnSize="3"
-                label="Latitude"
+        </div>
+        <FieldTitle>
+          Coordonnées GPS
+        </FieldTitle>
+        {coordinates ? (
+          <div className="columns is-marginless">
+            <AddressField
+              label="Longitude"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
                 editMode={false}
-                onClick={() => this.setDisplayMode(true)}
-              >
-                <Input
-                  fieldValue={coordinates.coordinates[0].toFixed(5)}
-                  onChange={this.onChange}
-                  size="large"
-                />
-              </AddressField>
-            </Aux>) : 'Non géolocalisé'}
-          {this.props.lifecycle ? (
-            <Aux>
-              <FieldTitle>
-                Cycle de vie
-              </FieldTitle>
-              <div className="column is-12">
-                <LifeCycle
-                  created_at={this.props.lifecycle.created_at}
-                  created_by={this.props.lifecycle.created_by}
-                  modified_at={this.props.lifecycle.modified_at}
-                  modified_by={this.props.lifecycle.modified_by}
-                />
-              </div>
-            </Aux>) : null}
-          <div className="column is-8" />
-          <div className="column is-2 has-text-right">
+                fieldValue={coordinates.coordinates[1].toFixed(5)}
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+            <AddressField
+              label="Latitude"
+              editMode={false}
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                fieldValue={coordinates.coordinates[0].toFixed(5)}
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+            <AddressField
+              label="Score"
+              editMode={false}
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Tag
+                color={this.props.address.score > 0.5 ? 'has-background-info' : 'has-background-warning'}
+                tagValue={this.props.address.score.toFixed(2)}
+              />
+            </AddressField>
+          </div>) : 'Non géolocalisé'}
+        {this.props.lifecycle ? (
+          <Aux>
+            <FieldTitle>
+              Cycle de vie
+            </FieldTitle>
+            <div className="column">
+              <LifeCycle
+                created_at={this.props.lifecycle.created_at}
+                created_by={this.props.lifecycle.created_by}
+                modified_at={this.props.lifecycle.modified_at}
+                modified_by={this.props.lifecycle.modified_by}
+              />
+            </div>
+          </Aux>) : null}
+        <div className="columns is-marginless">
+          <div className="column" />
+          <div className="column has-text-right">
             <Button onClick={this.props.deleteButton}>
               <i className="fas fa-trash-alt" />
             </Button>
           </div>
-          <div className="column is-2 has-text-right">
+          <div className="column has-text-right">
             {saveButton}
           </div>
         </div>

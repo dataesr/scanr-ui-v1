@@ -8,12 +8,12 @@ import classes from './AddressField.css';
 
 const addressField = props => (
   <Aux>
-    <div className="column is-3">
+    <div className="column is-narrow">
       <span className={classes.Header}>
         {props.label}
       </span>
     </div>
-    <div className={`column is-${props.columnSize}`} onClick={props.onClick}>
+    <div className="column" onClick={props.onClick}>
       {props.children}
     </div>
   </Aux>);
@@ -21,12 +21,7 @@ const addressField = props => (
 export default addressField;
 
 addressField.propTypes = {
-  columnSize: PropTypes.string,
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
   children: PropTypes.any,
-};
-
-addressField.defaultProps = {
-  columnSize: '9',
 };
