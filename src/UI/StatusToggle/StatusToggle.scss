@@ -1,0 +1,74 @@
+@import '../../style.scss';
+
+.switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  right: 16px;
+  top: 21px;
+  width: 130px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: 12px;
+  bottom: 0;
+  background-color: $activeStatus;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider span {
+  padding: 0 5px;
+  position: relative;
+  color: white;
+  font-size: 16px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "Statut";
+  color: #888;
+  height: 22px;
+  width: 67px;
+  left: 2px;
+  bottom: 1px;
+  border-radius: 34px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  text-align: center;
+
+}
+
+
+input:checked + .slider {
+  background-color: $oldStatus;
+  text-align: left;
+}
+
+input:checked + .slider:before span {
+  bottom: 5px;
+  left: 5px;
+  position: absolute;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(59px);
+  -ms-transform: translateX(59px);
+  transform: translateX(59px);
+}

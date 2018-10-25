@@ -45,7 +45,7 @@ class GridFields extends Component {
       [this.props.schemaName]: data,
     };
     const url = `structures/${this.props.structureId}`;
-    axios.put(url, dataObject)
+    axios.patch(url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {

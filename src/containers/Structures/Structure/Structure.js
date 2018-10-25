@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
+import { ERREUR_PATCH } from '../../../config/config';
 import axios from '../../../axios';
 import Aux from '../../../hoc/Aux';
-
 import Addresses from './Tabs/Addresses/Addresses';
-import StatusTag from '../../../UI/StatusTag/StatusTag';
+import StatusToggle from '../../../UI/StatusToggle/StatusToggle';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import Main from './Tabs/Main/Main';
 import Resume from './Tabs/Resume/Resume';
@@ -49,13 +49,36 @@ class Structure extends Component {
     return mainName.name_fr;
   }
 
+  toggleStatus = (status) => {
+    const dataObject = {
+      status,
+    };
+    this.axiosCall(dataObject);
+  }
+
+  axiosCall = (dataObject) => {
+    const url = `structures/${this.state.structure.id}`;
+    axios.patch(url, dataObject)
+      .then(
+        (response) => {
+          if (response.status === 200) {
+            this.setState({
+              errorMessage: null,
+            });
+            this.getStructure();
+          }
+        },
+      )
+      .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
+  };
+
   render() {
     const { structure } = this.state;
     let content = null;
     if (!structure) {
       return null;
     }
-    const title = this.getMainName(structure.names);
+    const title = structure.names ? this.getMainName(structure.names) : '';
 
     switch (this.state.activeTab) {
       case 'resume':
@@ -135,7 +158,7 @@ class Structure extends Component {
             <TextTitle>{title}</TextTitle>
           </div>
           <div className="column has-text-right has-background-grey-darker">
-            <StatusTag status={structure.status} />
+            <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
           </div>
         </div>
         <div style={{ marginBottom: '12px' }} className="tabs is-marginless">
@@ -160,7 +183,7 @@ class Structure extends Component {
               <a onClick={() => this.showTab('addresses')}>
                 Adresses
                 &nbsp;
-                <span className="tag is-light is-rounded">{structure.addresses.length}</span>
+                <span className="tag is-light is-rounded">{structure.addresses ? structure.addresses.length : ''}</span>
               </a>
             </li>
             <li className={this.state.activeTab === 'supervisors' ? 'is-active' : ''}>
