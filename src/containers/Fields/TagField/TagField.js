@@ -52,7 +52,7 @@ class TagField extends Component {
         <TagsInput
           inputProps={{ placeholder: this.props.infoMessage }}
           onChange={this.handleChange}
-          value={this.state.tags}
+          value={this.state.tags || []}
         />
       </Aux>
     );
