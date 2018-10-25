@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // Descriptions
 import NameDescription from '../../../../../config/descriptions/structure/names';
+import EmailsDescription from '../../../../../config/descriptions/structure/emails';
 
 // Composants UI
 import Aux from '../../../../../hoc/Aux';
@@ -47,24 +48,18 @@ const Main = props => (
     </div>
     <div className="columns is-marginless">
       <div className="column">
-        <TagField
-          data={props.keywordsFr}
-          infoMessage="Ajouter un mot clé"
+        <GridFields
+          data={props.emails}
+          description={EmailsDescription}
           getStructure={props.getStructure}
-          schemaName="keywords_fr"
+          infoMessage="Aucun email actif"
+          label="email"
+          schemaName="emails"
           structureId={props.structureId}
-          title="Mots clés français"
+          title="Liste des emails"
         />
       </div>
       <div className="column">
-        <TagField
-          data={props.keywordsEn}
-          infoMessage="Ajouter un mot clé"
-          getStructure={props.getStructure}
-          schemaName="keywords_en"
-          structureId={props.structureId}
-          title="Mots clés anglais"
-        />
       </div>
     </div>
   </Aux>
@@ -73,11 +68,10 @@ const Main = props => (
 export default Main;
 
 Main.propTypes = {
-  names: PropTypes.array.isRequired,
   alias: PropTypes.array.isRequired,
   codeNumbers: PropTypes.array.isRequired,
-  keywordsEn: PropTypes.array.isRequired,
-  keywordsFr: PropTypes.array.isRequired,
+  emails: PropTypes.array.isRequired,
+  names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
   getStructure: PropTypes.func.isRequired,
 };
