@@ -5,10 +5,11 @@ export const PAGE = 1;
 export const PER_PAGE = 12;
 
 /* Statuts */
-export const STATUS_MAIN = 'main';
 export const STATUS_ACTIVE = 'active';
+export const STATUS_CONFLICT = 'conflict';
+export const STATUS_MAIN = 'main';
 export const STATUS_OLD = 'old';
-export const STATUS_ARRAY = [STATUS_MAIN, STATUS_ACTIVE, STATUS_OLD];
+export const STATUS_ARRAY = [STATUS_ACTIVE, STATUS_CONFLICT, STATUS_MAIN, STATUS_OLD];
 
 /* Réseaux sociaux */
 export const SOCIAL_MEDIAS_ARRAY = ['Facebook', 'Linkedin', 'Twitter', 'Viadeo', 'Youtube'];

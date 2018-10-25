@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ReactTooltip from 'react-tooltip';
+import moment from 'moment';
 
 import axios from '../../../axios';
 
 import { ERREUR_STATUT, ERREUR_NULL, ERREUR_PATCH } from '../../../config/config';
 import Aux from '../../../hoc/Aux';
-import LifeCycle from '../../../UI/Field/LifeCycle';
+
 import BtAdd from '../../../UI/Field/btAdd';
 import BtShowAll from '../../../UI/Field/BtShowAll';
 import Button from '../../../UI/Button/Button';
@@ -40,12 +42,11 @@ class GridFields extends Component {
   }
 
   axiosCall = (data) => {
-    console.log('data:', data);
     const dataObject = {
       [this.props.schemaName]: data,
     };
     const url = `structures/${this.props.structureId}`;
-    axios.put(url, dataObject)
+    axios.patch(url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {
@@ -86,11 +87,13 @@ class GridFields extends Component {
     this.setState((prevState) => {
       const now = new Date();
       const data = [...prevState.data];
-      const index = data.findIndex(item => item.id === id);
+      const index = data.findIndex(item => item.meta.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
-        itemToUpdate.created_by = 'user';
-        itemToUpdate.created_at = now.toISOString();
+        itemToUpdate.meta = {
+          created_by: 'user',
+          created_at: now.toISOString().split('.')[0],
+        };
         itemToUpdate[event.target.id] = event.target.value;
         return {
           newRow: itemToUpdate,
@@ -99,8 +102,12 @@ class GridFields extends Component {
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.value;
-      itemToUpdate.modified_by = 'user';
-      itemToUpdate.modified_at = now.toISOString();
+      const meta = {
+        ...itemToUpdate.meta,
+        modified_by: 'user',
+        modified_at: now.toISOString().split('.')[0],
+      };
+      itemToUpdate.meta = meta;
       data[index] = itemToUpdate;
 
       return {
@@ -113,7 +120,9 @@ class GridFields extends Component {
   save = () => {
     const data = [...this.state.data];
     if (this.state.newRow) {
-      data.push(this.state.newRow);
+      const newRow = { ...this.state.newRow };
+      Object.keys(this.state.newRow).forEach(key => (newRow[key] === null) && delete newRow[key]);
+      data.push(newRow);
     }
     if (this.validate(data)) {
       this.axiosCall(data);
@@ -176,13 +185,11 @@ class GridFields extends Component {
         <tr key={dataObject.meta.id}>
           {this.renderRow(dataObject, false)}
           <td>
-            <LifeCycle
-              created_at={dataObject.meta.created_at}
-              created_by={dataObject.meta.created_by}
-              modified_at={dataObject.meta.modified_at}
-              modified_by={dataObject.meta.modified_by}
-              size="x-small"
-            />
+            <p
+              data-tip={`Créé le ${moment(dataObject.meta.created_at).format('LL')} par ${dataObject.meta.created_by} <br/> Modifié le ${moment(dataObject.meta.modified_at).format('LL')} par ${dataObject.meta.modified_by}`}
+            >
+              <i className="fas fa-info-circle"></i>
+            </p>
           </td>
           {deleteButton}
         </tr>
@@ -190,20 +197,25 @@ class GridFields extends Component {
     });
   }
 
-  renderRow(row, forceEditable) {
+  renderRow(row, isNew) {
     return this.props.description.map((field) => {
       if (field.isShown) {
-        let editMode = forceEditable ? true : this.state.editMode;
+        let editMode = true;
+        let id = null;
+        if (!isNew) {
+          editMode = this.state.editMode;
+          id = row.meta.id;
+        }
         editMode = field.isEditable ? editMode : false;
         return (
-          <td key={`${field.key}-${row.id}`}>
+          <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
                 canBeNull: field.rules ? field.rules.canBeNull : true,
                 editMode,
                 id: field.key,
                 fieldValue: row[field.key],
-                onChange: event => this.onChangeHandler(event, row.id),
+                onChange: event => this.onChangeHandler(event, id),
                 onClick: () => this.toggleEditMode(true),
               },
             )}
@@ -278,9 +290,9 @@ class GridFields extends Component {
           : (
             <table className={`table is-striped is-narrow is-hoverable is-fullwidth ${classes.Table}`}>
               <thead>
-                <tr className={classes.Th}>
+                <tr>
                   {this.renderHeader()}
-                  <th>Cycle de vie </th>
+                  <th />
                   {deleteHeader}
                 </tr>
               </thead>
@@ -295,6 +307,8 @@ class GridFields extends Component {
             showAll={this.state.showAll}
             label="anciens libellés"
           />) : null}
+
+        <ReactTooltip html />
       </Aux>
     );
   }
