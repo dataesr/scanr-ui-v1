@@ -64,7 +64,7 @@ class GridFields extends Component {
   };
 
   delete = (itemId) => {
-    const index = this.state.data.findIndex(item => item.id === itemId);
+    const index = this.state.data.findIndex(item => item.meta.id === itemId);
     if (index < 0 || !itemId) {
       this.setState({ newRow: null });
     } else {
@@ -101,7 +101,9 @@ class GridFields extends Component {
         };
       }
       const itemToUpdate = { ...data[index] };
-      itemToUpdate[event.target.id] = event.target.value;
+      itemToUpdate[event.target.id] = event.target.type === 'date'
+        ? moment(event.target.value).toISOString().split('.')[0]
+        : event.target.value;
       const meta = {
         ...itemToUpdate.meta,
         modified_by: 'user',
@@ -121,7 +123,7 @@ class GridFields extends Component {
     const data = [...this.state.data];
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
-      Object.keys(this.state.newRow).forEach(key => (newRow[key] === null) && delete newRow[key]);
+      Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);
       data.push(newRow);
     }
     if (this.validate(data)) {
@@ -317,7 +319,7 @@ class GridFields extends Component {
 export default GridFields;
 
 GridFields.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
   description: PropTypes.array.isRequired,
   getStructure: PropTypes.func.isRequired,
   infoMessage: PropTypes.string.isRequired,

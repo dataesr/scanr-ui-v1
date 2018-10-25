@@ -62,7 +62,7 @@ class TagField extends Component {
 export default TagField;
 
 TagField.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.array,
   getStructure: PropTypes.func.isRequired,
   infoMessage: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
