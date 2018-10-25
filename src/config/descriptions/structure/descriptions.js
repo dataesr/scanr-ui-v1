@@ -3,7 +3,7 @@ import Input from '../../../UI/Field/Editable/Input/Input';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
-const NAMES_DESCRIPTION = [
+export default [
   {
     key: 'description_fr',
     displayLabel: 'Fr',
@@ -51,5 +51,3 @@ const NAMES_DESCRIPTION = [
     },
   },
 ];
-
-export default NAMES_DESCRIPTION;

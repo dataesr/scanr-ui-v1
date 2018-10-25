@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { STATUS_ARRAY } from '../../../../config/config';
+import { STATUS_ARRAY, STATUS_CONFLICT } from '../../../../config/config';
 import StatusTagMedium from '../../../StatusTagMedium/StatusTagMedium';
 import classes from '../../Field.css';
 
@@ -15,7 +15,9 @@ const Status = (props) => {
   if (props.editMode) {
     let inputColor = null;
     if (!props.canBeNull) {
-      inputColor = props.fieldValue && props.fieldValue !== 'empty' ? 'is-primary' : 'is-danger';
+      inputColor = props.fieldValue && props.fieldValue !== 'empty' && props.fieldValue !== STATUS_CONFLICT
+        ? 'is-primary'
+        : 'is-danger';
     }
     statusMode = (
       <div className={`select is-rounded ${inputColor}`}>
@@ -25,7 +27,8 @@ const Status = (props) => {
           onChange={props.onChange}
         >
           <option value="empty">- Empty -</option>
-          {STATUS_ARRAY.map(status => <option key={status} value={status}>{status}</option>)}
+          {STATUS_ARRAY.map(status => (
+            <option key={status} value={status} disabled={status === STATUS_CONFLICT}>{status}</option>))}
         </select>
       </div>);
   }

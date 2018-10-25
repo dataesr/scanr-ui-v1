@@ -2,7 +2,7 @@ import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
 import SocialMedias from '../../../UI/Field/Editable/SocialMedias/SocialMedias';
 
-const NAMES_DESCRIPTION = [
+export default [
   {
     key: 'account',
     displayLabel: 'Compte',
@@ -34,5 +34,3 @@ const NAMES_DESCRIPTION = [
     },
   },
 ];
-
-export default NAMES_DESCRIPTION;

@@ -3,7 +3,7 @@ import Input from '../../../UI/Field/Editable/Input/Input';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
-const EMAIL_DESCRIPTION = [
+export default [
   {
     key: 'email',
     displayLabel: 'Email',
@@ -41,5 +41,3 @@ const EMAIL_DESCRIPTION = [
     },
   },
 ];
-
-export default EMAIL_DESCRIPTION;

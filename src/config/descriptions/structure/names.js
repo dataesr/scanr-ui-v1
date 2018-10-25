@@ -3,7 +3,7 @@ import Input from '../../../UI/Field/Editable/Input/Input';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
-const NAMES_DESCRIPTION = [
+export default [
   {
     key: 'name_fr',
     displayLabel: 'Nom français',
@@ -36,14 +36,14 @@ const NAMES_DESCRIPTION = [
     key: 'start_date',
     displayLabel: 'Début',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
   {
     key: 'end_date',
     displayLabel: 'Fin',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
   {
@@ -59,5 +59,3 @@ const NAMES_DESCRIPTION = [
     },
   },
 ];
-
-export default NAMES_DESCRIPTION;
