@@ -4,15 +4,16 @@ import PropTypes from 'prop-types';
 // Descriptions
 import NameDescription from '../../../../../config/descriptions/structure/names';
 import EmailsDescription from '../../../../../config/descriptions/structure/emails';
+import PhonesDescription from '../../../../../config/descriptions/structure/phones';
+import SocialMediasDescription from '../../../../../config/descriptions/structure/socialMedias';
 
 // Composants UI
-import Aux from '../../../../../hoc/Aux';
 import GridFields from '../../../../Fields/GridFields/GridFields';
 import TagField from '../../../../Fields/TagField/TagField';
 
 const Main = props => (
-  <Aux>
-    <div className="column">
+  <div className="columns is-multiline">
+    <div className="column is-12">
       <GridFields
         data={props.names}
         description={NameDescription}
@@ -24,45 +25,68 @@ const Main = props => (
         title="Libellés"
       />
     </div>
-    <div className="columns is-marginless">
-      <div className="column">
-        <TagField
-          data={props.alias}
-          infoMessage="Ajouter un alias"
-          getStructure={props.getStructure}
-          schemaName="alias"
-          structureId={props.structureId}
-          title="Alias"
-        />
-      </div>
-      <div className="column">
-        <TagField
-          data={props.codeNumbers}
-          infoMessage="Ajouter un code"
-          getStructure={props.getStructure}
-          schemaName="code_numbers"
-          structureId={props.structureId}
-          title="Codes"
-        />
-      </div>
+
+    <div className="column is-6">
+      <TagField
+        data={props.alias}
+        infoMessage="Ajouter un alias"
+        getStructure={props.getStructure}
+        schemaName="alias"
+        structureId={props.structureId}
+        title="Alias"
+      />
     </div>
-    <div className="columns is-marginless">
-      <div className="column">
-        <GridFields
-          data={props.emails}
-          description={EmailsDescription}
-          getStructure={props.getStructure}
-          infoMessage="Aucun email actif"
-          label="email"
-          schemaName="emails"
-          structureId={props.structureId}
-          title="Liste des emails"
-        />
-      </div>
-      <div className="column">
-      </div>
+
+    <div className="column is-6">
+      <TagField
+        data={props.codeNumbers}
+        infoMessage="Ajouter un code"
+        getStructure={props.getStructure}
+        schemaName="code_numbers"
+        structureId={props.structureId}
+        title="Codes"
+      />
     </div>
-  </Aux>
+
+    <div className="column  is-6">
+      <GridFields
+        data={props.emails}
+        description={EmailsDescription}
+        getStructure={props.getStructure}
+        infoMessage="Aucun email actif"
+        label="email"
+        schemaName="emails"
+        structureId={props.structureId}
+        title="Emails"
+      />
+    </div>
+
+    <div className="column is-6">
+      <GridFields
+        data={props.phones}
+        description={PhonesDescription}
+        getStructure={props.getStructure}
+        infoMessage="Aucun téléphone actif"
+        label="téléphone"
+        schemaName="phones"
+        structureId={props.structureId}
+        title="Téléphones"
+      />
+    </div>
+
+    <div className="column is-6">
+      <GridFields
+        data={props.social_medias}
+        description={SocialMediasDescription}
+        getStructure={props.getStructure}
+        infoMessage="Aucun réseau social"
+        label="réseau social"
+        schemaName="social_medias"
+        structureId={props.structureId}
+        title="Réseaux sociaux"
+      />
+    </div>
+  </div>
 );
 
 export default Main;
@@ -72,6 +96,8 @@ Main.propTypes = {
   codeNumbers: PropTypes.array.isRequired,
   emails: PropTypes.array.isRequired,
   names: PropTypes.array.isRequired,
+  phones: PropTypes.array.isRequired,
+  social_medias: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
   getStructure: PropTypes.func.isRequired,
 };
