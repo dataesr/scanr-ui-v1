@@ -6,7 +6,7 @@ import classes from '../../Field.css';
 const Input = (props) => {
   let component = (
     <span className={props.size === 'large' ? classes.Text : ''} onClick={props.onClick}>
-      {props.fieldValue || '.'}
+      {props.fieldValue || 'NA'}
     </span>);
   if (props.editMode) {
     let inputColor = null;

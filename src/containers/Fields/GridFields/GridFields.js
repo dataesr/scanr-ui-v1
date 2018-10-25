@@ -40,6 +40,7 @@ class GridFields extends Component {
   }
 
   axiosCall = (data) => {
+    console.log('data:', data);
     const dataObject = {
       [this.props.schemaName]: data,
     };
@@ -156,6 +157,10 @@ class GridFields extends Component {
   }
 
   renderBody(data) {
+    if (!data) {
+      return null;
+    }
+
     return data.map((dataObject) => {
       let deleteButton = null;
       if (this.state.editMode) {
@@ -238,13 +243,19 @@ class GridFields extends Component {
       );
     }
 
-    const oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
-    let data = [...this.state.data].sort(SortStatus);
-    if (!this.state.showAll) {
-      data = data.filter(dataObject => dataObject.status !== 'old');
-      if (data.length === 0) {
-        this.setState({ infoMessage: true });
+    let oldStatusObject = null;
+    let data = null;
+    let nbData = 0;
+    if (this.props.data) {
+      oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
+      data = [...this.state.data].sort(SortStatus);
+      if (!this.state.showAll) {
+        data = data.filter(dataObject => dataObject.status !== 'old');
+        if (data.length === 0) {
+          this.setState({ infoMessage: true });
+        }
       }
+      nbData = this.state.data.length;
     }
     return (
       <Aux className={classes.GridFields}>
@@ -252,7 +263,7 @@ class GridFields extends Component {
           <div className={classes.TextTitleInline}>
             {this.props.title}
             &nbsp;
-            <span className="tag is-light is-rounded">{this.state.data.length}</span>
+            <span className="tag is-light is-rounded">{nbData}</span>
           </div>
 
           <BtAdd onClick={this.BtAddHandler}>
