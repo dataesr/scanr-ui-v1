@@ -9,9 +9,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: {},
   },
   {
     key: 'social_media',

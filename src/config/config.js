@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const version = '1.0';
 
 /* Pagination */
@@ -12,12 +14,17 @@ export const STATUS_OLD = 'old';
 export const STATUS_ARRAY = [STATUS_ACTIVE, STATUS_CONFLICT, STATUS_MAIN, STATUS_OLD];
 
 /* Réseaux sociaux */
-export const SOCIAL_MEDIAS_ARRAY = ['Facebook', 'Linkedin', 'Twitter', 'Viadeo', 'Youtube'];
-export const FACEBOOK_ICON = '<i className="fab fa-facebook"></i>';
-export const LINKEDIN_ICON = '<i className="fab fa-linkedin"></i>';
-export const TWITTER_ICON = '<i className="fab fa-twitter"></i>';
-export const VIADEO_ICON = '<i className="fab fa-viadeo"></i>';
-export const YOUTUBE_ICON = '<i className="fab fa-youtube"></i>';
+export const FACEBOOK = 'facebook';
+export const LINKEDIN = 'linkedin';
+export const TWITTER = 'twitter';
+export const VIADEO = 'viadeo';
+export const YOUTUBE = 'youtube';
+export const SOCIAL_MEDIAS_ARRAY = ['facebook', 'linkedin', 'twitter', 'viadeo', 'youtube'];
+export const FACEBOOK_ICON = <i className="fab fa-facebook" />;
+export const LINKEDIN_ICON = <i className="fab fa-linkedin" />;
+export const TWITTER_ICON = <i className="fab fa-twitter" />;
+export const VIADEO_ICON = <i className="fab fa-viadeo" />;
+export const YOUTUBE_ICON = <i className="fab fa-youtube" />;
 
 /* ERREURS */
 export const ERREUR_STATUT = 'Erreur statut';

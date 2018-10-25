@@ -4,7 +4,7 @@ import moment from 'moment';
 import classes from '../../Field.css';
 
 const InputDate = (props) => {
-  let fieldValue = 'NA';
+  let fieldValue = <i className={classes.Na}>NA</i>;
 
   if (props.fieldValue) {
     fieldValue = moment(props.fieldValue).format('LL');
