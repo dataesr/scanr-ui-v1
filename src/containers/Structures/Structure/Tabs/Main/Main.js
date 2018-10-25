@@ -68,9 +68,9 @@ const Main = props => (
 export default Main;
 
 Main.propTypes = {
-  alias: PropTypes.array.isRequired,
+  alias: PropTypes.array,
   codeNumbers: PropTypes.array.isRequired,
-  emails: PropTypes.array.isRequired,
+  emails: PropTypes.array,
   names: PropTypes.array.isRequired,
   structureId: PropTypes.string.isRequired,
   getStructure: PropTypes.func.isRequired,
