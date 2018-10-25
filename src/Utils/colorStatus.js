@@ -10,6 +10,9 @@ export default function colorStatus(status) {
     case 'active':
       color = 'active_bg_color';
       break;
+    case 'conflict':
+      color = 'conflict_bg_color';
+      break;
     default:
       color = 'undefined_bg_color';
   }

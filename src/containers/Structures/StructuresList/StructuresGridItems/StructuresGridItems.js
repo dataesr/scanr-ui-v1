@@ -43,7 +43,7 @@ const structuresGridItems = props => (
                   <div className={classes.Address}>
                     <i className="fas fa-map-marker-alt" />
                     <span>
-                      {getMainEntity(structure.addresses).city}
+                      {getMainEntity(structure.addresses).city ? getMainEntity(structure.addresses).city : ''}
                     </span>
                   </div>
                 </div>

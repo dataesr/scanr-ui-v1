@@ -74,8 +74,8 @@ class AddressFull extends Component {
       meta: { ...meta },
       input_address: this.props.inputAddress || this.props.address.inputAddress,
     };
-    const address = Object.keys(newAddress).forEach(key => (newAddress[key] == null) && delete newAddress[key]);
-    this.props.saveAddress(address);
+    Object.keys(newAddress).forEach(key => (newAddress[key] == null) && delete newAddress[key]);
+    this.props.saveAddress(newAddress);
   }
 
   render() {
