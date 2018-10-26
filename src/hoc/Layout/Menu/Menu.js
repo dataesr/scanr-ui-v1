@@ -48,6 +48,14 @@ const menu = () => (
           Personnes
       </Menu.List.Item>
     </Menu.List>
+    <Menu.List title="Nomenclatures">
+      <Menu.List.Item>
+        Badges
+      </Menu.List.Item>
+      <Menu.List.Item>
+          Panels ERC
+      </Menu.List.Item>
+    </Menu.List>
     <Menu.List title="Paramètres">
       <Menu.List.Item>
           1
