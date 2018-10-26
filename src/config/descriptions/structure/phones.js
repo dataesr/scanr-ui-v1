@@ -18,14 +18,14 @@ export default [
     key: 'start_date',
     displayLabel: 'Début',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
   {
     key: 'end_date',
     displayLabel: 'Fin',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
   {

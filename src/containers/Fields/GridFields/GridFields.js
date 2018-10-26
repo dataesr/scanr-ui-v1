@@ -188,9 +188,12 @@ class GridFields extends Component {
           {this.renderRow(dataObject, false)}
           <td>
             <p
-              data-tip={`Créé le ${moment(dataObject.meta.created_at).format('LL')} par ${dataObject.meta.created_by} <br/> Modifié le ${moment(dataObject.meta.modified_at).format('LL')} par ${dataObject.meta.modified_by}`}
+              data-tip={`Créé le <b>${moment(dataObject.meta.created_at).format('LL')}</b>
+              par <b>${dataObject.meta.created_by}</b>
+              <br/> Modifié le <b>${moment(dataObject.meta.modified_at).format('LL')}</b>
+              par <b>${dataObject.meta.modified_by}</b>`}
             >
-              <i className="fas fa-info-circle"></i>
+              <i className="fas fa-info-circle" />
             </p>
           </td>
           {deleteButton}
