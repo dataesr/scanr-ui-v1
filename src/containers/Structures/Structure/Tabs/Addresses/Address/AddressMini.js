@@ -50,7 +50,7 @@ const addressMini = (props) => {
         {displayedAddress}
         <div className="columns is-gapless">
           <div className="column is-narrow">
-            <StatusTagMedium status={props.address.status} />
+            <StatusTagMedium status={props.status} />
           </div>
           {props.address.geocoded
             ? (
@@ -80,4 +80,5 @@ addressMini.propTypes = {
   changeDisplayMode: PropTypes.func,
   mouseOut: PropTypes.func.isRequired,
   mouseOver: PropTypes.func.isRequired,
+  status: PropTypes.string,
 };

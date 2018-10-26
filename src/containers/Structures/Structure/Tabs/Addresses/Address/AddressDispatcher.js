@@ -54,6 +54,7 @@ class AddressDispatcher extends Component {
             changeDisplayMode={this.changeDisplayModeHandler}
             mouseOut={this.props.mouseOut}
             mouseOver={this.props.mouseOver}
+            status={this.props.status}
           />);
         break;
       case 'full':
