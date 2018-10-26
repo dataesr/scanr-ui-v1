@@ -1,7 +1,7 @@
 /* Composants externes */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import moment from 'moment';
 /* Composants internes */
 import Aux from '../../../../../../hoc/Aux';
 import Button from '../../../../../../UI/Button/Button';
@@ -32,17 +32,13 @@ class AddressFull extends Component {
     editMode: this.props.editMode,
   }
 
-  componentDidUpdate(prevProps) {
-    if (JSON.stringify(prevProps.address) !== JSON.stringify(this.props.address)) {
-      this.setState({ editMode: false });
-    }
-  }
-
   onChange = (event) => {
     event.persist();
     this.setState((prevState) => {
       const address = { ...prevState.address };
-      address[event.target.id] = event.target.value;
+      address[event.target.id] = event.target.type === 'date'
+        ? moment(event.target.value).toISOString().split('.')[0]
+        : event.target.value;
       return { address };
     });
   }
@@ -72,10 +68,11 @@ class AddressFull extends Component {
       ...this.props.address,
       ...this.state.address,
       meta: { ...meta },
-      input_address: this.props.inputAddress || this.props.address.inputAddress,
+      input_address: this.props.inputAddress || this.prevPropsprops.address.inputAddress,
     };
-    Object.keys(newAddress).forEach(key => (newAddress[key] == null) && delete newAddress[key]);
+    Object.keys(newAddress).forEach(key => !newAddress[key] && delete newAddress[key]);
     this.props.saveAddress(newAddress);
+    this.setState({ editMode: false });
   }
 
   render() {
