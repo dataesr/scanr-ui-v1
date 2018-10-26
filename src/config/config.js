@@ -6,6 +6,9 @@ export const version = '1.0';
 export const PAGE = 1;
 export const PER_PAGE = 12;
 
+/* Format de la date pour enregistrement API */
+export const DATE_FORMAT_API = 'YYYY-MM-DDTHH:mm:ss';
+
 /* Statuts */
 export const STATUS_ACTIVE = 'active';
 export const STATUS_CONFLICT = 'conflict';

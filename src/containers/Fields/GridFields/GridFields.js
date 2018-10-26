@@ -5,7 +5,7 @@ import moment from 'moment';
 
 import axios from '../../../axios';
 
-import { ERREUR_STATUT, ERREUR_NULL, ERREUR_PATCH } from '../../../config/config';
+import { ERREUR_STATUT, ERREUR_NULL, ERREUR_PATCH, DATE_FORMAT_API } from '../../../config/config';
 import Aux from '../../../hoc/Aux';
 
 import BtAdd from '../../../UI/Field/btAdd';
@@ -85,14 +85,14 @@ class GridFields extends Component {
   onChangeHandler = (event, id) => {
     event.persist();
     this.setState((prevState) => {
-      const now = new Date();
+      const now = moment().format(DATE_FORMAT_API);
       const data = [...prevState.data];
       const index = data.findIndex(item => item.meta.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
         itemToUpdate.meta = {
           created_by: 'user',
-          created_at: now.toISOString().split('.')[0],
+          created_at: now,
         };
         itemToUpdate[event.target.id] = event.target.value;
         return {
@@ -102,12 +102,12 @@ class GridFields extends Component {
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.type === 'date'
-        ? moment(event.target.value).toISOString().split('.')[0]
+        ? moment(event.target.value).format(DATE_FORMAT_API)
         : event.target.value;
       const meta = {
         ...itemToUpdate.meta,
         modified_by: 'user',
-        modified_at: now.toISOString().split('.')[0],
+        modified_at: now,
       };
       itemToUpdate.meta = meta;
       data[index] = itemToUpdate;
