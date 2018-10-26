@@ -20,7 +20,7 @@ const Status = (props) => {
         : 'is-danger';
     }
     statusMode = (
-      <div className={`select is-rounded is-small ${inputColor}`}>
+      <div className={`select is-rounded is-small ${inputColor} ${classes.Status}`}>
         <select
           id="status"
           value={props.fieldValue || 'empty'}

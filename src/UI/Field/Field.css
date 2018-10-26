@@ -48,6 +48,9 @@
 .BoxSizing {
   box-sizing: border-box;
 }
+.BoxSizing:focus{
+  width: auto;
+}
 .Card{
   margin: 16px;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
@@ -63,7 +66,10 @@
   color: #333;
   font-weight: bold;
 }
-
+.InputDate{
+  max-width: 175px;
+  width: auto;
+}
 .LinkCard{
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
   margin: 16px 55px 16px 16px;
@@ -78,7 +84,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.Status{
+  max-width: 110px;
+}
 .TagCloud{
   flex: 1;
   height:200px;

@@ -10,7 +10,7 @@ const Resume = props => (
   <Aux>
     <div className="columns">
       <div className="column">
-        {props.urlLogo ? <img src={props.urlLogo} alt="" /> : null}
+        {props.urlLogo && <img src={props.urlLogo} alt="" />}
         <Card
           iconCssClass="fas fa-fingerprint"
           title="Rnsr ID"
@@ -19,20 +19,20 @@ const Resume = props => (
         </Card>
       </div>
       <div className="column">
-        {props.level ? (
+        {props.level && (
           <Card
             iconCssClass=""
             title="Type entité"
           >
             {props.level}
-          </Card>) : null }
-        {props.nature ? (
+          </Card>)}
+        {props.nature && (
           <Card
             iconCssClass=""
             title="Type supervision"
           >
             {props.nature}
-          </Card>) : null }
+          </Card>)}
       </div>
       <div className="column">
         <LinkCard
@@ -42,10 +42,10 @@ const Resume = props => (
       </div>
     </div>
     <div className="columns">
-      {props.keywords_fr ? (
+      {props.keywords_fr && (
         <WordCloud
           words={props.keywords_fr.concat(props.keywords_en)}
-        />) : null }
+        />)}
     </div>
   </Aux>
 );
@@ -59,5 +59,4 @@ Resume.propTypes = {
   level: PropTypes.string,
   nature: PropTypes.string,
   urlLogo: PropTypes.string,
-  urlWebsite: PropTypes.string,
 };
