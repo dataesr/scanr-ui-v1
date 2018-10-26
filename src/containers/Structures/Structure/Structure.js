@@ -103,6 +103,8 @@ class Structure extends Component {
             codeNumbers={structure.code_numbers}
             names={structure.names}
             emails={structure.emails}
+            phones={structure.phones}
+            social_medias={structure.social_medias}
             status={structure.status}
           />);
         break;
