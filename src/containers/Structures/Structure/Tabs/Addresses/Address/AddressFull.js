@@ -2,6 +2,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+
+import { DATE_FORMAT_API } from '../../../../../../config/config';
+
 /* Composants internes */
 import Aux from '../../../../../../hoc/Aux';
 import Button from '../../../../../../UI/Button/Button';
@@ -13,6 +16,7 @@ import InputDate from '../../../../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../../../../UI/Field/Editable/Status/Status';
 import LifeCycle from '../../../../../../UI/Field/LifeCycle';
 import AddressField from './AddressField/AddressField';
+
 /* CSS */
 import classes from './Address.scss';
 
@@ -37,7 +41,7 @@ class AddressFull extends Component {
     this.setState((prevState) => {
       const address = { ...prevState.address };
       address[event.target.id] = event.target.type === 'date'
-        ? moment(event.target.value).toISOString().split('.')[0]
+        ? moment(event.target.value).format(DATE_FORMAT_API)
         : event.target.value;
       return { address };
     });
@@ -58,11 +62,10 @@ class AddressFull extends Component {
   }
 
   saveButton = () => {
-    const now = new Date();
-    const date = now.toISOString().split('.')[0];
-    let meta = { created_by: 'user', created_at: date };
+    const now = moment().format(DATE_FORMAT_API);
+    let meta = { created_by: 'user', created_at: now };
     if (this.props.lifecycle) {
-      meta = { ...this.props.lifecycle, modified_by: 'user', modified_at: date };
+      meta = { ...this.props.lifecycle, modified_by: 'user', modified_at: now };
     }
     const newAddress = {
       ...this.props.address,
