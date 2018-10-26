@@ -87,10 +87,10 @@ class Structure extends Component {
             esrId={structure.id}
             keywords_en={structure.keywords_en}
             keywords_fr={structure.keywords_fr}
-            level={structure.level ? structure.level.value : null}
-            nature={structure.nature ? structure.nature.value : null}
-            urlLogo={structure.logo ? structure.logo.value : null}
-            urlWebsite={structure.website ? structure.website.value : null}
+            level={structure.level && structure.level.value}
+            nature={structure.nature && structure.nature.value}
+            urlLogo={structure.logo && structure.logo.value}
+            urlWebsite={structure.website && structure.website.value}
           />
         );
         break;

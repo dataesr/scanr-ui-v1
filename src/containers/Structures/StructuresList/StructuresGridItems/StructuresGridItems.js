@@ -30,7 +30,7 @@ const structuresGridItems = props => (
                     <div className={classes.Content}>
                       <NavLink to={`structures/${structure.id}`}>
                         <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
-                          {structure.names ? getMainEntity(structure.names).name_fr : null}
+                          {structure.names && getMainEntity(structure.names).name_fr}
                         </span>
                       </NavLink>
                     </div>
@@ -46,7 +46,7 @@ const structuresGridItems = props => (
                       <div className={classes.Address}>
                         <i className="fas fa-map-marker-alt" />
                         <span>
-                          {structure.addresses ? getMainEntity(structure.addresses).city : null}
+                          {structure.addresses && getMainEntity(structure.addresses).city}
                         </span>
                       </div>
 

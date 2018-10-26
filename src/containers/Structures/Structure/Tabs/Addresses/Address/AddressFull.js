@@ -274,8 +274,8 @@ class AddressFull extends Component {
                 />
               </AddressField>
             </div>) : 'Non géolocalisé'}
-          </div>
-        {this.props.lifecycle ? (
+        </div>
+        {this.props.lifecycle && (
           <Aux>
             <FieldTitle>
               Cycle de vie
@@ -288,7 +288,7 @@ class AddressFull extends Component {
                 modified_by={this.props.lifecycle.modified_by}
               />
             </div>
-          </Aux>) : null}
+          </Aux>)}
         <div className="columns is-marginless">
           <div className="column" />
           <div className="column has-text-right">
