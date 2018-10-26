@@ -23,7 +23,7 @@ const header = props => (
                 {/*
                   <CountUp start={0} end={props.nStructures} />
                   */}
-                {props.nStructures}
+                {props.nStructures.toLocaleString()}
               </p>
             </div>
           </div>

@@ -12,16 +12,17 @@ $main_color: #00A6BC;
 $text_secondary: #888;
 $link_primary: #3291EE;
 $background_menu: #363636;
+$conflictColor: #FF3860;
 
 /*Status colors*/
 $conflictStatus: #FF3860;
-$oldStatus: #FF3860;
+$oldStatus: #bbb;
 $activeStatus: #00A6BC;
 $mainStatus: #00D1B2;
 $undefinedStatus: #FFDD57;
 
 .Link_item{
-  color: $link_primary;
+  color: #333;
 }
 
 .TextTitleInline{
