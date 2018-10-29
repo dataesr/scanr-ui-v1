@@ -4,21 +4,21 @@
   color: #bbb;
   font-size: 0.8em;
 }
-
 .Header{
   display: inline-block;
   height: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
-
 .LifeCycle{
   display: block;
   padding: 10px;
   background-color: #dedede;
   font-family: Courier New,Courier,Lucida Sans Typewriter;
 }
-
+.SearchResults{
+  cursor: pointer;
+}
 .Text{
   display: inline-block;
   color: #333;
@@ -49,6 +49,9 @@
   box-sizing: border-box;
 }
 .BoxSizing:focus{
+  width: auto;
+}
+.AutoComplete{
   width: auto;
 }
 .Card{
