@@ -28,6 +28,12 @@ class GridFields extends Component {
     infoMessage: false,
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.data && prevProps.data.length > 0 && prevProps.data[0].code !== this.props.data[0].code) {
+      this.setState({ data: this.props.data })
+    }
+  }
+
   toggleShowAllHandler = () => {
     this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
@@ -121,6 +127,11 @@ class GridFields extends Component {
 
   save = () => {
     const data = [...this.state.data];
+    data.forEach((dataRow) => {
+      if (typeof dataRow.code === 'object') {
+        dataRow.code = dataRow.code.code;
+      }
+    });
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
       Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);

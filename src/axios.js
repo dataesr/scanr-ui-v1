@@ -7,7 +7,9 @@ instance.interceptors.request.use((request) => {
   return request;
 });
 instance.interceptors.response.use((response) => {
-  localStorage.setItem('etag', response.data.etag);
+  if (response.data.etag) {
+    localStorage.setItem('etag', response.data.etag);
+  }
   return response;
 });
 

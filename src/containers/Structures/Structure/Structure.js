@@ -30,7 +30,7 @@ class Structure extends Component {
 
   getStructure = () => {
     const esrId = this.props.match.params.esr_id;
-    const url = `structures/${esrId}`;
+    const url = `structures/${esrId}?embedded=${encodeURIComponent(`{"panels.code": 1}`)}`;
     axios.get(url)
       .then((response) => {
         this.setState({ structure: response.data });
@@ -57,7 +57,7 @@ class Structure extends Component {
   }
 
   axiosCall = (dataObject) => {
-    const url = `structures/${this.state.structure.id}`;
+    const url = `structures/${this.state.structure.id}?embedded=${encodeURIComponent(`{"panels.code": 1}`)}`;
     axios.patch(url, dataObject)
       .then(
         (response) => {
@@ -129,6 +129,7 @@ class Structure extends Component {
             getStructure={this.getStructure}
             keywordsEn={structure.keywords_en}
             keywordsFr={structure.keywords_fr}
+            panels={structure.panels}
           />
         );
         break;

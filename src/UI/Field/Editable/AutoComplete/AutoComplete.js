@@ -25,14 +25,11 @@ class AutoComplete extends Component {
   }
 
   selectCategory = (event) => {
-    console.log(event.target)
     event.persist()
     this.setState({ searchInput: event.target.value });
     const selectedCategory = this.state.categoryList.find(item => item.name_fr === event.target.value);
-    console.log(selectedCategory)
     event.target.value = selectedCategory.code
     this.props.onChange(event);
-    this.onFocus(false);
   }
 
   APICall(searchInput) {
@@ -77,10 +74,10 @@ class AutoComplete extends Component {
         <Aux>
           <input
             value={this.state.searchInput}
-            className={`input is-rounded ${inputColor}`}
+            className={`input is-rounded ${inputColor} ${classes.AutoComplete}`}
             onChange={this.onChange}
             type="text"
-            onFocus={event => this.onFocus(event, true)}
+            onFocus={() => this.onFocus(true)}
           />
           {this.state.onFocus && this.renderSearchResults()}
         </Aux>);
@@ -94,7 +91,10 @@ export default AutoComplete;
 AutoComplete.propTypes = {
   canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
-  fieldValue: PropTypes.object.isRequired,
+  fieldValue: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+  ]),
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
