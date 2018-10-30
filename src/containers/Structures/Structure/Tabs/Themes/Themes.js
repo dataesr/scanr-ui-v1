@@ -31,7 +31,7 @@ const themes = props => (
       </div>
     </div>
     <div className="columns is-marginless">
-      <div className="column">
+      <div className="column is-full">
         <GridFields
           data={props.panels}
           description={PanelsDescription}

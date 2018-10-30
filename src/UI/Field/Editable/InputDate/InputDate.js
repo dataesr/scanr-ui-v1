@@ -11,10 +11,9 @@ const InputDate = (props) => {
   }
 
   let component = (
-    <span
-      className={props.size === 'large' ? classes.Text : ''}
-      onClick={props.onClick}>{fieldValue}</span
-    >);
+    <span className={classes.Text} onClick={props.onClick} >
+      {fieldValue}
+    </span>);
   if (props.editMode) {
     let inputColor = null;
     if (!props.canBeNull) {
@@ -23,7 +22,7 @@ const InputDate = (props) => {
     component = (
       <input
         id={props.id}
-        className={`input is-rounded is-small${inputColor} ${classes.BoxSizing} ${classes.InputDate}`}
+        className={`input is-rounded is-small ${inputColor} ${classes.BoxSizing} ${classes.InputDate}`}
         type="date"
         value={props.fieldValue ? moment(props.fieldValue).format('YYYY-MM-DD') : ''}
         onChange={props.onChange}

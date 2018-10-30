@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { STATUS_ACTIVE, STATUS_OLD } from '../../config/config';
+import { STRUCTURE_STATUS_ACTIVE, STATUS_OLD } from '../../config/config';
 
 import classes from './StatusToggle.scss';
 
@@ -10,7 +10,9 @@ const statusToggle = props => (
     <input
       defaultChecked={props.status === STATUS_OLD}
       type="checkbox"
-      onChange={() => props.toggleStatus(props.status === STATUS_ACTIVE ? STATUS_OLD : STATUS_ACTIVE)}
+      onChange={() => props.toggleStatus(
+        props.status === STRUCTURE_STATUS_ACTIVE ? STATUS_OLD : STRUCTURE_STATUS_ACTIVE,
+      )}
     />
     <span className={classes.slider}>
       <span>{props.status}</span>
