@@ -105,16 +105,20 @@ class Addresses extends Component {
       }
     }
     return (
-      <div className={`columns ${classes.FullDisplay}`}>
-        <div className="column">
-          <NewAddress
-            addAddress={this.addAddress}
-            editedAddress={this.state.editedAddress}
-            hasErrored={this.state.hasErrored}
-            setEditedAddress={this.setEditedAddress}
-          />
-          <div className="column">
-            <InfoMessage>{infoMessage}</InfoMessage>
+      <div className={`columns is-marginless ${classes.Height}`}>
+        <div className={`column ${classes.Scroll}`}>
+          <div className="columns is-marginless is-gapless">
+            <div className="column">
+              <NewAddress
+                addAddress={this.addAddress}
+                editedAddress={this.state.editedAddress}
+                hasErrored={this.state.hasErrored}
+                setEditedAddress={this.setEditedAddress}
+              />
+            </div>
+            <div className="column">
+              <InfoMessage>{infoMessage}</InfoMessage>
+            </div>
           </div>
           {displayedAddresses.map(address => (
             <AddressDispatcher
@@ -141,6 +145,7 @@ class Addresses extends Component {
           />
         </div>
       </div>
+
     );// /return()
   }// /render
 }// AddressesClass

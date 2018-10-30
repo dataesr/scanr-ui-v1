@@ -4,34 +4,45 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-body{
-  background-color: #f5f5f5;
+html{
+  height: 100%;
 }
+
+body{
+  font-size: 0.9em;
+  height: 100%;
+}
+
+$menuWidth: 250px;
 
 $main_color: #00A6BC;
 $text_secondary: #888;
 $link_primary: #3291EE;
 $background_menu: #363636;
+$conflictColor: #FF3860;
 
 /*Status colors*/
 $conflictStatus: #FF3860;
-$oldStatus: #FF3860;
+$oldStatus: #bbb;
 $activeStatus: #00A6BC;
 $mainStatus: #00D1B2;
 $undefinedStatus: #FFDD57;
 
 .Link_item{
-  color: $link_primary;
+  color: #333;
 }
 
 .TextTitleInline{
   padding-left: 16px;
-  padding-top: 10px;
+  padding-top: 3px;
+  vertical-align: bottom;
+  height: 27px;
   display: inline-block;
   color: #4d4b4b;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .TextTitleBlock{

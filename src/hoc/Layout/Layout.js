@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { version } from '../../config/config';
 import Aux from '../Aux';
 import Menu from './Menu/Menu';
 import Header from './Header/Header';
@@ -13,20 +12,7 @@ class Layout extends Component {
   state = {
     searchText: '',
     n_structures: 0,
-    height: '100%',
   };
-
-  componentDidMount() {
-    const height = document.getElementById('content').clientHeight;
-    this.setState({ height });
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const height = document.getElementById('content').clientHeight;
-    if (height !== prevState.height) {
-      this.setState({ height });
-    }
-  }
 
   searchTextHandler = (event) => {
     this.setState({ searchText: event.target.value });
@@ -39,26 +25,16 @@ class Layout extends Component {
   }
 
   render() {
-    const minHeight = document.documentElement.clientHeight;
     return (
       <Aux>
-        <div className="is-light">
-          <a className="navbar-item">
-            <span className={classes.data}>#data</span>
-            <span className={classes.esr}>ESR</span>
-            BO
-            <span className={classes.Version}>{version}</span>
-          </a>
-        </div>
-
         <div className={classes.Layout}>
-          <div className={classes.Menu} style={{ height: this.state.height, minHeight }}>
+          <div className={classes.Menu}>
             <Menu
               focusMenu={this.focusMenuHandler}
               activeItem={this.state.focus}
             />
           </div>
-          <div id="content" className={classes.Content} style={{ minHeight }}>
+          <div id="content" className={classes.Content}>
             <Header
               searchTextHandler={this.searchTextHandler}
               nStructures={this.state.n_structures}

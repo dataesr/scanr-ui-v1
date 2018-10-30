@@ -33,7 +33,7 @@ class NewAddress extends Component {
 
   render() {
     let content = (
-      <div className="column">
+      <div>
         <Button className="is-primary is-outlined is-small" onClick={() => this.toggleSearchBar(true)}>
           <i className="fa fa-plus" />
           &nbsp;
