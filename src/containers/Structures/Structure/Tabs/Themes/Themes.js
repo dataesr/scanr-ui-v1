@@ -35,11 +35,11 @@ const themes = props => (
         <GridFields
           data={props.panels}
           description={PanelsDescription}
-          getStructure={props.getStructure}
+          refreshFunction={props.getStructure}
           infoMessage="Aucun panel actif"
           label="panel"
           schemaName="panels"
-          structureId={props.structureId}
+          url={`structures/${props.structureId}`}
           title="Panel"
         />
       </div>
