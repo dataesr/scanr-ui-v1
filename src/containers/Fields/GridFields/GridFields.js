@@ -280,7 +280,7 @@ class GridFields extends Component {
           <div className={classes.TextTitleInline}>
             {this.props.title}
             &nbsp;
-            <span className="tag is-light is-rounded">{nbData}</span>
+            <span className="tag is-white is-rounded">{nbData}</span>
           </div>
 
           <BtAdd onClick={this.BtAddHandler}>
@@ -293,7 +293,7 @@ class GridFields extends Component {
         {this.state.infoMessage
           ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
           : (
-            <table className={`table is-striped is-narrow is-hoverable is-fullwidth ${classes.Table}`}>
+            <table className={`table is-striped is-hoverable is-fullwidth ${classes.Table}`}>
               <thead>
                 <tr>
                   {this.renderHeader()}

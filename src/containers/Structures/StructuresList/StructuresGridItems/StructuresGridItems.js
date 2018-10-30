@@ -19,66 +19,58 @@ const getMainEntity = (entities) => {
 const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
-        props.structuresList.map((structure) => {
-          //
-          let style = '';
-          // if (structure.status === 'old') {
-          //   style = classes.Gray;
-          // }
+        props.structuresList.map(structure => (
+          <div key={structure.id} className="column is-one-third-desktop is-half-tablet">
+            <div className={`card ${classes.GridCard}`} key={structure.id}>
+              <div className={`card-content ${classes.CardContent}`}>
 
-          return (
-            <div key={structure.id} className="column is-one-third-desktop is-half-tablet">
-              <div className={`card ${classes.GridCard} ${style}`} key={structure.id}>
-                <div className={`card-content ${classes.CardContent}`}>
+                <div className="columns is-gapless is-marginless">
 
-                  <div className="columns is-gapless is-marginless">
-
-                    <div className="column is-10">
-                      <div className={classes.Content}>
-                        <NavLink to={`structures/${structure.id}`}>
-                          <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
-                            {structure.names ? getMainEntity(structure.names).name_fr : null}
-                          </span>
-                        </NavLink>
-                      </div>
-
-                      <div className={classes.Complementary}>
-                        <div className={classes.Id}>
-                          <i className="fas fa-fingerprint" />
-                          <span>
-                            {structure.id}
-                          </span>
-                        </div>
-
-                        <div className={classes.Address}>
-                          <i className="fas fa-map-marker-alt" />
-                          <span>
-                            {structure.addresses ? getMainEntity(structure.addresses).city : null}
-                          </span>
-                        </div>
-
-                      </div>
+                  <div className="column is-10">
+                    <div className={classes.Content}>
+                      <NavLink to={`structures/${structure.id}`}>
+                        <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
+                          {structure.names ? getMainEntity(structure.names).name_fr : null}
+                        </span>
+                      </NavLink>
                     </div>
 
-                    <div className="column is-2 has-text-centered">
-                      <div className={classes.Info}>
-                        <StructureStatus status={structure.status} />
+                    <div className={classes.Complementary}>
+                      <div className={classes.Id}>
+                        <i className="fas fa-fingerprint" />
+                        <span>
+                          {structure.id}
+                        </span>
                       </div>
-                      <div className={classes.Info}>
-                        <i className="far fa-star" />
-                      </div>
-                      <div className={classes.Info}>
-                        <StructureConflicts structure={structure} />
-                      </div>
-                    </div>
 
+                      <div className={classes.Address}>
+                        <i className="fas fa-map-marker-alt" />
+                        <span>
+                          {structure.addresses ? getMainEntity(structure.addresses).city : null}
+                        </span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="column is-2 has-text-centered">
+                    <div className={classes.Info}>
+                      <StructureStatus status={structure.status} />
+                    </div>
+                    <div className={classes.Info}>
+                      <i className="far fa-star" />
+                    </div>
+                    <div className={classes.Info}>
+                      <StructureConflicts structure={structure} />
+                    </div>
                   </div>
 
                 </div>
+
               </div>
             </div>
-          );
-        })// /map
+          </div>
+        ))// /map
       }
   </section>
 );

@@ -4,9 +4,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 
-body{
-  background-color: #f5f5f5;
+html{
+  height: 100%;
 }
+
+body{
+  font-size: 0.9em;
+  height: 100%;
+}
+
+$menuWidth: 250px;
 
 $main_color: #00A6BC;
 $text_secondary: #888;
@@ -27,12 +34,15 @@ $undefinedStatus: #FFDD57;
 
 .TextTitleInline{
   padding-left: 16px;
-  padding-top: 10px;
+  padding-top: 3px;
+  vertical-align: bottom;
+  height: 27px;
   display: inline-block;
   color: #4d4b4b;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.9em;
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .TextTitleBlock{
