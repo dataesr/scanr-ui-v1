@@ -103,141 +103,144 @@ class AddressFull extends Component {
           </div>
         </div>
 
-        <div className="columns is-marginless">
-          <AddressField
-            label="Statut"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Status
-              editMode={this.state.editMode}
-              onChange={this.onChange}
+        <div className={classes.ContentLines}>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Statut"
               onClick={() => this.setDisplayMode(true)}
-              fieldValue={this.state.address.status}
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Début"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <InputDate
-              editMode={this.state.editMode}
-              id="start_date"
-              fieldValue={this.state.address.start_date}
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-          <AddressField
-            label="Fin"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <InputDate
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.end_date}
-              id="end_date"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Adresse brute"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={false}
-              fieldValue={this.props.address.input_address}
-              size="large"
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Numéro"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.housenumber}
-              id="housenumber"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Rue"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.street}
-              id="street"
-              onChange={this.onChange}
+            >
+              <Status
+                editMode={this.state.editMode}
+                onChange={this.onChange}
+                onClick={() => this.setDisplayMode(true)}
+                fieldValue={this.state.address.status}
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Début"
               onClick={() => this.setDisplayMode(true)}
-              size="large"
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Code postal"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.postcode}
-              id="postcode"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-          <AddressField
-            label="Code commune"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.citycode}
-              id="citycode"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-        </div>
-        <div className="columns is-marginless">
-          <AddressField
-            label="Ville"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.city}
-              id="city"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
-          <AddressField
-            label="Pays"
-            onClick={() => this.setDisplayMode(true)}
-          >
-            <Input
-              editMode={this.state.editMode}
-              fieldValue={this.state.address.country}
-              id="country"
-              onChange={this.onChange}
-              size="large"
-            />
-          </AddressField>
+            >
+              <InputDate
+                editMode={this.state.editMode}
+                id="start_date"
+                fieldValue={this.state.address.start_date}
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+            <AddressField
+              label="Fin"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <InputDate
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.end_date}
+                id="end_date"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Adresse brute"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={false}
+                fieldValue={this.props.address.input_address}
+                size="large"
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Numéro"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.housenumber}
+                id="housenumber"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Rue"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.street}
+                id="street"
+                onChange={this.onChange}
+                onClick={() => this.setDisplayMode(true)}
+                size="large"
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Code postal"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.postcode}
+                id="postcode"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+            <AddressField
+              label="Code commune"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.citycode}
+                id="citycode"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+          </div>
+          <div className="columns is-marginless">
+            <AddressField
+              label="Ville"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.city}
+                id="city"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+            <AddressField
+              label="Pays"
+              onClick={() => this.setDisplayMode(true)}
+            >
+              <Input
+                editMode={this.state.editMode}
+                fieldValue={this.state.address.country}
+                id="country"
+                onChange={this.onChange}
+                size="large"
+              />
+            </AddressField>
+          </div>
         </div>
         <FieldTitle>
           Coordonnées GPS
         </FieldTitle>
+
         <div className={classes.ContentLines}>
           {coordinates ? (
             <div className="columns is-marginless">
@@ -290,15 +293,13 @@ class AddressFull extends Component {
             </div>
           </Aux>)}
         <div className="columns is-marginless">
-          <div className="column" />
-          <div className="column has-text-right">
+          <div className="column has-text-centered">
             <Button onClick={this.props.deleteButton}>
               <i className="fas fa-trash-alt" />
             </Button>
-          </div>
-          <div className="column has-text-right">
             {saveButton}
           </div>
+
         </div>
       </div>
     );
