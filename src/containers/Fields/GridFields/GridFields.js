@@ -76,9 +76,14 @@ class GridFields extends Component {
     } else {
       const updatedData = [...this.state.data];
       updatedData.splice(index, 1);
+      updatedData.forEach((dataRow) => {
+        if (typeof dataRow.code === 'object') {
+          dataRow.code = dataRow.code.id;
+        }
+      });
       this.axiosCall(updatedData);
     }
-  };
+  }
 
 
   toggleEditMode = (bool) => {
@@ -90,6 +95,7 @@ class GridFields extends Component {
 
   onChangeHandler = (event, id) => {
     event.persist();
+    const value = event.target.value || event.target.getAttribute('data-value');
     this.setState((prevState) => {
       const now = moment().format(DATE_FORMAT_API);
       const data = [...prevState.data];
@@ -100,16 +106,16 @@ class GridFields extends Component {
           created_by: 'user',
           created_at: now,
         };
-        itemToUpdate[event.target.id] = event.target.value;
+        itemToUpdate[event.target.id] = event.target.type === 'date'
+          ? moment(value).format(DATE_FORMAT_API) : value;
         return {
           newRow: itemToUpdate,
-          showAll: event.target.value === 'old' ? true : prevState.showAll,
+          showAll: value === 'old' ? true : prevState.showAll,
         };
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.type === 'date'
-        ? moment(event.target.value).format(DATE_FORMAT_API)
-        : event.target.value;
+        ? moment(value).format(DATE_FORMAT_API) : value;
       const meta = {
         ...itemToUpdate.meta,
         modified_by: 'user',
@@ -129,7 +135,7 @@ class GridFields extends Component {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
       if (typeof dataRow.code === 'object') {
-        dataRow.code = dataRow.code.code;
+        dataRow.code = dataRow.code.id;
       }
     });
     if (this.state.newRow) {
