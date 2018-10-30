@@ -10,7 +10,8 @@ export const PER_PAGE = 12;
 export const DATE_FORMAT_API = 'YYYY-MM-DDTHH:mm:ss';
 
 /* Statuts */
-export const STATUS_ACTIVE = 'active';
+export const STRUCTURE_STATUS_ACTIVE = 'active';
+export const STATUS_ACTIVE = 'valid';
 export const STATUS_CONFLICT = 'conflict';
 export const STATUS_MAIN = 'main';
 export const STATUS_OLD = 'old';

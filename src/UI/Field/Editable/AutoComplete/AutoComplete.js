@@ -8,7 +8,7 @@ class AutoComplete extends Component {
   state = {
     categoryList: [],
     onFocus: false,
-    searchInput: this.props.fieldValue.name_fr,
+    searchInput: this.props.fieldValue && this.props.fieldValue.name_fr,
   }
 
   componentDidMount() {
@@ -24,17 +24,16 @@ class AutoComplete extends Component {
     this.setState({ onFocus: bool });
   }
 
-  selectCategory = (event) => {
-    event.persist()
-    this.setState({ searchInput: event.target.value });
-    const selectedCategory = this.state.categoryList.find(item => item.name_fr === event.target.value);
-    event.target.value = selectedCategory.code
+  onSelectCategory = (event) => {
+    this.setState({ searchInput: event.target.textContent });
     this.props.onChange(event);
+    this.onFocus(false);
   }
 
   APICall(searchInput) {
+    const maxResults = '5';
     const query = `{"name_fr": { "$regex": "^(?i)${searchInput}.*"}}`;
-    const url = `${this.props.schemaName}?max_results=5&where=${query}`;
+    const url = `${this.props.schemaName}?max_results=${maxResults}&where=${query}`;
     axios.get(url)
       .then((response) => {
         this.setState({
@@ -46,15 +45,15 @@ class AutoComplete extends Component {
   renderSearchResults() {
     if (this.state.categoryList) {
       return this.state.categoryList.map(category => (
-        <input
+        <li
           id={this.props.id}
-          key={category.code}
-          className={`input ${classes.SearchResults}`}
-          onClick={this.selectCategory}
-          readOnly
-          type="text"
-          value={category.name_fr}
-        />
+          key={category.id}
+          className={`is-small ${classes.Li}`}
+          onClick={this.onSelectCategory}
+          data-value={category.id}
+        >
+        {category.name_fr}
+        </li>
       ));
     }
     return null;
@@ -62,8 +61,8 @@ class AutoComplete extends Component {
 
   render() {
     let component = (
-      <span className={this.props.size === 'large' ? classes.Text : ''} onClick={this.props.onClick}>
-        {this.props.fieldValue.name_fr}
+      <span className={classes.Text} onClick={this.props.onClick}>
+        {this.props.fieldValue ? this.props.fieldValue.name_fr : ''}
       </span>);
     if (this.props.editMode) {
       let inputColor = null;
@@ -74,12 +73,14 @@ class AutoComplete extends Component {
         <Aux>
           <input
             value={this.state.searchInput}
-            className={`input is-rounded ${inputColor} ${classes.AutoComplete}`}
+            className={`input is-rounded is-small ${inputColor} ${classes.BoxSizing}`}
             onChange={this.onChange}
             type="text"
             onFocus={() => this.onFocus(true)}
           />
-          {this.state.onFocus && this.renderSearchResults()}
+          <div className={classes.ListContainer}>
+            <ul>{this.state.onFocus && this.renderSearchResults()}</ul>
+          </div>
         </Aux>);
     }
     return component;
