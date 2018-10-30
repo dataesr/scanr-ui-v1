@@ -16,8 +16,20 @@
   background-color: #dedede;
   font-family: Courier New,Courier,Lucida Sans Typewriter;
 }
-.SearchResults{
+.ListContainer{
+  position:absolute;
+  z-index: 5;
+}
+.Li{
   cursor: pointer;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  padding: 2px 5px;
+}
+.Li:hover{
+  background-color: #f5f5f5;
 }
 .Text{
   display: inline-block;
@@ -49,9 +61,6 @@
   box-sizing: border-box;
 }
 .BoxSizing:focus{
-  width: auto;
-}
-.AutoComplete{
   width: auto;
 }
 .Card{
