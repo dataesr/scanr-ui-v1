@@ -9,23 +9,50 @@ section {
 */
 
 .GridCard{
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
   height: 150px;
   width: 100%;
+
+  .Info{
+    height: 50px;
+    border-left: 1px solid #dedede;
+    padding-top: 10px;
+    background-color: #eee;
+
+    &:first-child{
+      border-bottom: 1px solid #fff;
+    }
+
+    &:last-child{
+      border-top: 1px solid #fff;
+    }
+  }
+
+  .CardContent{
+    padding: 0 0 0 16px;
+  }
 }
+
 .GridCard:hover{
-  box-shadow: 1px 1px 8px #dedede;
-  border: 1px solid #dedede;
+  box-shadow: 1px 1px 8px #777;
 }
 
+.Content{
+    padding-top: 16px;
+}
 
+.Gray{
+  background: #ddd;
+}
 
 .Section{
   padding: 20px;
+  padding-bottom: 0;
 }
 
 .Complementary{
-  margin-top: 10px;
+  margin-top: 24px;
   color: $text_secondary;
 }
 

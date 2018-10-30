@@ -13,7 +13,7 @@ import classes from './Address.scss';
 const addressMini = (props) => {
   let displayedAddress = (
     <div className="columns" onClick={() => props.changeDisplayMode('full')}>
-      <div className="column is-narrow">
+      <div className="column">
         <i className="fa fa-map-marker-alt hvr-icon" />
       </div>
       <div className="column">
@@ -46,15 +46,15 @@ const addressMini = (props) => {
       onMouseOver={props.mouseOver}
       onMouseOut={props.mouseOut}
     >
-      <div className="columns is-gapless is-multiline is-marginless">
+      <div className="columns is-multiline is-marginless">
         {displayedAddress}
         <div className="columns is-gapless">
-          <div className="column is-narrow">
+          <div className="column ">
             <StatusTagMedium status={props.status} />
           </div>
           {props.address.geocoded
             ? (
-              <div className="column is-narrow">
+              <div className="column ">
                 <Tag tagValue="Géocodé" color="has-background-info" />
               </div>)
             : (
@@ -62,7 +62,7 @@ const addressMini = (props) => {
                 <div className="column is-multiline">
                   <Tag tagValue="Non géocodé" color="has-background-danger" />
                 </div>
-                <div className="column is-narrow">
+                <div className="column ">
                   <Button onClick={() => props.changeDisplayMode('new')}>
                     Chercher la localisation
                   </Button>

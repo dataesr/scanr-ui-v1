@@ -6,11 +6,15 @@
 }
 
 .Map{
-  padding: 0 0 0 22px;
+  padding: 0;
+  height: calc(100vh - 225px);
 }
 
-.FullDisplay{
+.Height{
   height: 100%;
-  width: 100%;
-  margin: 0;
+}
+
+.Scroll{
+  overflow-y: scroll;
+  height: calc(100vh - 205px);
 }
