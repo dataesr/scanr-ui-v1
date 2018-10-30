@@ -31,7 +31,7 @@ const StructuresListItems = props => (
                   <i className="fa fa-chevron-circle-right hvr-icon" />
                   <NavLink to={`structures/${structure.id}`}>
                     <span className={classes.link_item}>
-                      {structure.names ? getMainEntity(structure.names).name_fr : null}
+                      {structure.names && getMainEntity(structure.names).name_fr}
                     </span>
                   </NavLink>
                 </div>

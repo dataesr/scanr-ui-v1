@@ -73,8 +73,9 @@ class StructuresList extends Component {
       page = PAGE;
     }
 
-    const query = `{"$text":{"$search": ${this.props.searchText}}}`;
-    const url = `structures?${encodeURIComponent(query)}&page=${page}&max_results=${PER_PAGE}`;
+    const query = `{"$text":{"$search": "${this.props.searchText}"}}`;
+    const where = `where=${encodeURIComponent(query)}&`;
+    const url = `structures?${this.props.searchText ? where : ''}page=${page}&max_results=${PER_PAGE}`;
     axios.get(url)
       .then(
         (response) => {
@@ -93,6 +94,7 @@ class StructuresList extends Component {
             }
             return {
               structures: newStructures,
+              noResultFound: response.data.meta.total === 0,
               pagination: newPagination,
             };
           });
@@ -112,7 +114,7 @@ class StructuresList extends Component {
         </div>);
     }
     let btNextContent = null;
-    if (this.state.structures) {
+    if (this.state.structures.length > 0) {
       switch (this.state.displayStyle) {
         case 'list':
           content = (

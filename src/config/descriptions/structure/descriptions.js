@@ -25,6 +25,18 @@ export default [
     },
   },
   {
+    key: 'status',
+    displayLabel: 'Statut',
+    component: <Status />,
+    isEditable: true,
+    isShown: true,
+    canBeNull: false,
+    rules: {
+      canBeNull: false,
+      mainStatus: false,
+    },
+  },
+  {
     key: 'start_date',
     displayLabel: 'Début',
     component: <InputDate />,
@@ -37,17 +49,5 @@ export default [
     component: <InputDate />,
     isEditable: false,
     isShown: true,
-  },
-  {
-    key: 'status',
-    displayLabel: 'Statut',
-    component: <Status />,
-    isEditable: true,
-    isShown: true,
-    canBeNull: false,
-    rules: {
-      canBeNull: false,
-      mainStatus: false,
-    },
   },
 ];

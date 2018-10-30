@@ -4,21 +4,21 @@
   color: #bbb;
   font-size: 0.8em;
 }
-
 .Header{
   display: inline-block;
   height: 24px;
   padding-top: 8px;
   padding-bottom: 8px;
 }
-
 .LifeCycle{
   display: block;
   padding: 10px;
   background-color: #dedede;
   font-family: Courier New,Courier,Lucida Sans Typewriter;
 }
-
+.SearchResults{
+  cursor: pointer;
+}
 .Text{
   display: inline-block;
   color: #333;
@@ -48,6 +48,12 @@
 .BoxSizing {
   box-sizing: border-box;
 }
+.BoxSizing:focus{
+  width: auto;
+}
+.AutoComplete{
+  width: auto;
+}
 .Card{
   margin: 16px;
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
@@ -63,7 +69,10 @@
   color: #333;
   font-weight: bold;
 }
-
+.InputDate{
+  max-width: 175px;
+  width: auto;
+}
 .LinkCard{
   box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
   margin: 16px 55px 16px 16px;
@@ -78,7 +87,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
+.Status{
+  max-width: 110px;
+}
 .TagCloud{
   flex: 1;
   height:200px;

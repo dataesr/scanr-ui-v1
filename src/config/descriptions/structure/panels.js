@@ -1,13 +1,14 @@
 import React from 'react';
-import Input from '../../../UI/Field/Editable/Input/Input';
+import AutoComplete from '../../../UI/Field/Editable/AutoComplete/AutoComplete';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
 export default [
   {
-    key: 'url',
-    displayLabel: 'Url',
-    component: <Input />,
+    key: 'code',
+    displayLabel: 'Panel',
+    component: <AutoComplete />,
+    requireCategoryList: true,
     isEditable: true,
     isShown: true,
     rules: {
@@ -23,21 +24,21 @@ export default [
     canBeNull: false,
     rules: {
       canBeNull: false,
-      mainStatus: false,
+      noMain: true,
     },
   },
   {
     key: 'start_date',
     displayLabel: 'Début',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
   {
     key: 'end_date',
     displayLabel: 'Fin',
     component: <InputDate />,
-    isEditable: false,
+    isEditable: true,
     isShown: true,
   },
 ];

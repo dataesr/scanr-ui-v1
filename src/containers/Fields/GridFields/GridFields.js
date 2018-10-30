@@ -28,6 +28,12 @@ class GridFields extends Component {
     infoMessage: false,
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.data && prevProps.data.length > 0 && prevProps.data[0].code !== this.props.data[0].code) {
+      this.setState({ data: this.props.data })
+    }
+  }
+
   toggleShowAllHandler = () => {
     this.setState(prevState => ({ showAll: !prevState.showAll }));
   }
@@ -121,6 +127,11 @@ class GridFields extends Component {
 
   save = () => {
     const data = [...this.state.data];
+    data.forEach((dataRow) => {
+      if (typeof dataRow.code === 'object') {
+        dataRow.code = dataRow.code.code;
+      }
+    });
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
       Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);
@@ -176,27 +187,28 @@ class GridFields extends Component {
       let deleteButton = null;
       if (this.state.editMode) {
         deleteButton = (
-          <td>
-            <Button onClick={() => this.delete(dataObject.meta.id)}>
-              <i className="fas fa-trash" />
-            </Button>
-          </td>
+          <Button onClick={() => this.delete(dataObject.meta.id)}>
+            <i className="fas fa-trash" />
+          </Button>
         );
       }
       return (
         <tr key={dataObject.meta.id}>
           {this.renderRow(dataObject, false)}
           <td>
-            <p
-              data-tip={`Créé le <b>${moment(dataObject.meta.created_at).format('LL')}</b>
-              par <b>${dataObject.meta.created_by}</b>
-              <br/> Modifié le <b>${moment(dataObject.meta.modified_at).format('LL')}</b>
-              par <b>${dataObject.meta.modified_by}</b>`}
-            >
-              <i className="fas fa-info-circle" />
-            </p>
+            <div className={classes.LastTableColumn}>
+              <p
+                className={classes.P}
+                data-tip={`Créé le <b>${moment(dataObject.meta.created_at).format('LL')}</b>
+                par <b>${dataObject.meta.created_by}</b>
+                <br/> Modifié le <b>${moment(dataObject.meta.modified_at).format('LL')}</b>
+                par <b>${dataObject.meta.modified_by}</b>`}
+              >
+                <i className="fas fa-info-circle" />
+              </p>
+              {deleteButton}
+            </div>
           </td>
-          {deleteButton}
         </tr>
       );
     });
@@ -216,10 +228,12 @@ class GridFields extends Component {
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
-                canBeNull: field.rules ? field.rules.canBeNull : true,
+                canBeNull: field.rules && field.rules.canBeNull,
                 editMode,
                 id: field.key,
                 fieldValue: row[field.key],
+                noMain: field.rules && field.rules.noMain,
+                schemaName: this.props.schemaName,
                 onChange: event => this.onChangeHandler(event, id),
                 onClick: () => this.toggleEditMode(true),
               },
@@ -232,11 +246,6 @@ class GridFields extends Component {
   }
 
   render() {
-    let deleteHeader = null;
-    if (this.state.editMode) {
-      deleteHeader = <th />;
-    }
-
     let newRow = null;
     if (this.state.newRow) {
       newRow = (
@@ -244,8 +253,6 @@ class GridFields extends Component {
           {this.renderRow(this.state.newRow, true)}
         </tr>);
     }
-
-
     let saveAndCancelButtons = null;
     if (this.state.editMode) {
       saveAndCancelButtons = (
@@ -293,25 +300,26 @@ class GridFields extends Component {
         {this.state.infoMessage
           ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
           : (
-            <table className={`table is-striped is-hoverable is-fullwidth ${classes.Table}`}>
-              <thead>
-                <tr>
-                  {this.renderHeader()}
-                  <th />
-                  {deleteHeader}
-                </tr>
-              </thead>
-              <tbody>
-                {newRow}
-                {this.renderBody(data)}
-              </tbody>
-            </table>)}
-        {oldStatusObject ? (
+            <div className={classes.TableContainer}>
+              <table className={`table is-striped is-hoverable is-fullwidth ${classes.Table}`}>
+                <thead>
+                  <tr>
+                    {this.renderHeader()}
+                    <th />
+                  </tr>
+                </thead>
+                <tbody>
+                  {newRow}
+                  {this.renderBody(data)}
+                </tbody>
+              </table>
+            </div>)}
+        {oldStatusObject && (
           <BtShowAll
             onClick={this.toggleShowAllHandler}
             showAll={this.state.showAll}
             label="anciens libellés"
-          />) : null}
+          />)}
 
         <ReactTooltip html />
       </Aux>

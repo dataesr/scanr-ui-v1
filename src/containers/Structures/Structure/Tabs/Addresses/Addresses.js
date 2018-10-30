@@ -124,7 +124,7 @@ class Addresses extends Component {
             <AddressDispatcher
               key={address.meta.id}
               address={address}
-              coordinates={address.coordinates ? address.coordinates.coordinates : null}
+              coordinates={address.coordinates && address.coordinates.coordinates}
               deleteButton={() => this.deleteAddress(address.meta.id)}
               saveAddress={this.editAddress}
               editedAddress={this.state.editedAddress}
@@ -134,7 +134,7 @@ class Addresses extends Component {
               setEditedAddress={this.setEditedAddress}
               status={address.status}
             />))}
-          { oldAddress ? btOldAddresses : null }
+          { oldAddress && btOldAddresses}
         </div>
         <div className={`column ${classes.Map}`}>
           <LeafletMap

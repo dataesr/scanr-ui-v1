@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { STATUS_ARRAY, STATUS_CONFLICT } from '../../../../config/config';
+import { STATUS_ARRAY, STATUS_CONFLICT, STATUS_MAIN } from '../../../../config/config';
 import StatusTagMedium from '../../../StatusTagMedium/StatusTagMedium';
 import classes from '../../Field.css';
 
@@ -19,15 +19,22 @@ const Status = (props) => {
         ? 'is-primary'
         : 'is-danger';
     }
+    let statusArray = STATUS_ARRAY;
+    if (props.fieldValue !== STATUS_CONFLICT) {
+      statusArray = statusArray.filter(status => status !== STATUS_CONFLICT);
+    }
+    if (props.noMain) {
+      statusArray = statusArray.filter(status => status !== STATUS_MAIN);
+    }
     statusMode = (
-      <div className={`select is-rounded is-small ${inputColor}`}>
+      <div className={`select is-rounded is-small ${inputColor} ${classes.Status}`}>
         <select
           id="status"
           value={props.fieldValue || 'empty'}
           onChange={props.onChange}
         >
           <option value="empty">- Empty -</option>
-          {STATUS_ARRAY.map(status => (
+          {statusArray.map(status => (
             <option key={status} value={status} disabled={status === STATUS_CONFLICT}>{status}</option>))}
         </select>
       </div>);
@@ -43,6 +50,7 @@ Status.propTypes = {
   fieldValue: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+  noMain: PropTypes.bool,
   size: PropTypes.string,
 };
 
