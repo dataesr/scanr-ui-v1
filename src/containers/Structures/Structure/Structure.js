@@ -151,11 +151,10 @@ class Structure extends Component {
       default:
         content = this.showMainTab(structure);
     }// /switch
-    const height = document.documentElement.clientHeight - 250;
 
     return (
       <Aux>
-        <div className="columns is-gapless">
+        <div className="columns is-marginless is-gapless">
           <div className="column is-four-fifths">
             <TextTitle>{title}</TextTitle>
           </div>
@@ -163,7 +162,7 @@ class Structure extends Component {
             <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
           </div>
         </div>
-        <div style={{ marginBottom: '12px' }} className="tabs is-marginless">
+        <div className={`tabs is-marginless ${classes.Tabs}`}>
           <ul>
             <li>
               <Link to="/">
@@ -216,7 +215,7 @@ class Structure extends Component {
 
           </ul>
         </div>
-        <div className={classes.Container} style={{ height }}>
+        <div className={classes.Height}>
           {content}
         </div>
       </Aux>

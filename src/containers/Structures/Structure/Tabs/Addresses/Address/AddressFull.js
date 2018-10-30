@@ -91,14 +91,18 @@ class AddressFull extends Component {
     return (
       <div className={classes.Address}>
         <ErrorMessage visible={this.props.hasErrored}>Erreur lors de l&#39;envoi du formulaire</ErrorMessage>
-        <div className="columns">
-          <FieldTitle>Informations générales</FieldTitle>
+
+        <div className="columns is-marginless is-gapless">
+          <div className="column">
+            <FieldTitle>Informations générales</FieldTitle>
+          </div>
           <div className="column has-text-right">
             <Button onClick={this.cancelButton}>
               <i className="fas fa-undo" />
             </Button>
           </div>
         </div>
+
         <div className="columns is-marginless">
           <AddressField
             label="Statut"
@@ -234,41 +238,43 @@ class AddressFull extends Component {
         <FieldTitle>
           Coordonnées GPS
         </FieldTitle>
-        {coordinates ? (
-          <div className="columns is-marginless">
-            <AddressField
-              label="Longitude"
-              onClick={() => this.setDisplayMode(true)}
-            >
-              <Input
+        <div className={classes.ContentLines}>
+          {coordinates ? (
+            <div className="columns is-marginless">
+              <AddressField
+                label="Longitude"
+                onClick={() => this.setDisplayMode(true)}
+              >
+                <Input
+                  editMode={false}
+                  fieldValue={coordinates.coordinates[1].toFixed(5)}
+                  onChange={this.onChange}
+                  size="large"
+                />
+              </AddressField>
+              <AddressField
+                label="Latitude"
                 editMode={false}
-                fieldValue={coordinates.coordinates[1].toFixed(5)}
-                onChange={this.onChange}
-                size="large"
-              />
-            </AddressField>
-            <AddressField
-              label="Latitude"
-              editMode={false}
-              onClick={() => this.setDisplayMode(true)}
-            >
-              <Input
-                fieldValue={coordinates.coordinates[0].toFixed(5)}
-                onChange={this.onChange}
-                size="large"
-              />
-            </AddressField>
-            <AddressField
-              label="Score"
-              editMode={false}
-              onClick={() => this.setDisplayMode(true)}
-            >
-              <Tag
-                color={this.props.address.score > 0.5 ? 'has-background-info' : 'has-background-warning'}
-                tagValue={this.props.address.score.toFixed(2)}
-              />
-            </AddressField>
-          </div>) : 'Non géolocalisé'}
+                onClick={() => this.setDisplayMode(true)}
+              >
+                <Input
+                  fieldValue={coordinates.coordinates[0].toFixed(5)}
+                  onChange={this.onChange}
+                  size="large"
+                />
+              </AddressField>
+              <AddressField
+                label="Score"
+                editMode={false}
+                onClick={() => this.setDisplayMode(true)}
+              >
+                <Tag
+                  color={this.props.address.score > 0.5 ? 'has-background-info' : 'has-background-warning'}
+                  tagValue={this.props.address.score.toFixed(2)}
+                />
+              </AddressField>
+            </div>) : 'Non géolocalisé'}
+          </div>
         {this.props.lifecycle ? (
           <Aux>
             <FieldTitle>

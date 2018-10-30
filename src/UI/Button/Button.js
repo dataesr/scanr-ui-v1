@@ -4,7 +4,7 @@ import classes from './Button.css';
 
 const Button = props => (
   <button
-    className={`button is-light is-rounded ${classes.space_5} ${props.className}`}
+    className={`button is-light is-rounded is-small ${classes.space_5} ${props.className}`}
     id={props.id}
     onClick={props.onClick}
     type="button"

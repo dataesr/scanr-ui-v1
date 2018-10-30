@@ -5,7 +5,7 @@ import classes from '../../Field.css';
 
 const Input = (props) => {
   let component = (
-    <span className={props.size === 'large' ? classes.Text : ''} onClick={props.onClick}>
+    <span className={classes.Text} onClick={props.onClick}>
       {props.fieldValue || <i className={classes.Na}>NA</i>}
     </span>);
   if (props.editMode) {
@@ -16,7 +16,7 @@ const Input = (props) => {
     component = (
       <input
         id={props.id}
-        className={`input is-rounded ${inputColor} ${classes.BoxSizing}`}
+        className={`input is-rounded is-small ${inputColor} ${classes.BoxSizing}`}
         onChange={props.onChange}
         value={props.fieldValue || ''}
         type="text"

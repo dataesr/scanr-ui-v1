@@ -12,7 +12,7 @@ import GridFields from '../../../../Fields/GridFields/GridFields';
 import TagField from '../../../../Fields/TagField/TagField';
 
 const Main = props => (
-  <div className="columns is-multiline">
+  <div className="columns is-multiline is-marginless">
     <div className="column is-12">
       <GridFields
         data={props.names}

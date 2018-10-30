@@ -23,7 +23,7 @@ const InputDate = (props) => {
     component = (
       <input
         id={props.id}
-        className={`input is-rounded ${inputColor} ${classes.BoxSizing}`}
+        className={`input is-rounded is-small ${inputColor} ${classes.BoxSizing}`}
         type="date"
         value={props.fieldValue ? moment(props.fieldValue).format('YYYY-MM-DD') : ''}
         onChange={props.onChange}
