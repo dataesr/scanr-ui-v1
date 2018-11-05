@@ -15,7 +15,7 @@ const SearchBar = props => (
           onChange={props.searchTextHandler}
         />
         <span className="icon is-small is-right">
-          <i className="fas fa-search" />
+          {props.isLoading ? <i className="fas fa-spinner" /> : <i className="fas fa-search" />}
         </span>
       </Control>
       <Help>
@@ -28,5 +28,6 @@ const SearchBar = props => (
 export default SearchBar;
 
 SearchBar.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   searchTextHandler: PropTypes.func.isRequired,
 };
