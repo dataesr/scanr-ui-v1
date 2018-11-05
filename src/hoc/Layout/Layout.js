@@ -11,18 +11,22 @@ import classes from './Layout.scss';
 
 class Layout extends Component {
   state = {
+    isLoading: false,
     searchText: '',
-    n_structures: 0,
+    nStructures: 0,
+    renderList: false,
   };
 
   searchTextHandler = (event) => {
-    this.setState({ searchText: event.target.value });
+    this.setState({ searchText: event.target.value, renderList: true });
   }
 
   setNStructures = (nb) => {
-    const newState = { ...this.state };
-    newState.n_structures = nb;
-    this.setState(newState);
+    this.setState({ nStructures: nb });
+  }
+
+  setIsLoading = (bool) => {
+    this.setState({ isLoading: bool });
   }
 
   render() {
@@ -30,19 +34,20 @@ class Layout extends Component {
       <Aux>
         <div className={classes.Layout}>
           <div className={classes.Menu}>
-            <Menu
-              focusMenu={this.focusMenuHandler}
-              activeItem={this.state.focus}
-            />
+            <Menu />
           </div>
           <div id="content" className={classes.Content}>
             <Header
+              isLoading={this.state.isLoading}
+              nStructures={this.state.nStructures}
               searchTextHandler={this.searchTextHandler}
-              nStructures={this.state.n_structures}
             />
             <Switch>
               <Route path="/panelsERC" component={PanelsERC} />
-              <Route path="/structures/:esr_id" component={Structure} />
+              <Route
+                path="/structures/:esr_id"
+                render={props => (<Structure {...props} renderList={this.state.renderList} />)}
+              />
               <Route
                 exact
                 path="/structures"
@@ -51,6 +56,7 @@ class Layout extends Component {
                     {...props}
                     searchText={this.state.searchText}
                     nStructures={this.setNStructures}
+                    setIsLoading={this.setIsLoading}
                   />)}
               />
               <Route path="/entreprises" render={() => (<h3>Entreprises</h3>)} />

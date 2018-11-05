@@ -12,7 +12,7 @@ const header = props => (
 
     <div className="columns">
       <div className="column">
-        <SearchBar searchTextHandler={props.searchTextHandler} />
+        <SearchBar searchTextHandler={props.searchTextHandler} isLoading={props.isLoading} />
       </div>
       <div className="column">
         <nav className="level">
@@ -50,6 +50,7 @@ const header = props => (
 export default header;
 
 header.propTypes = {
-  searchTextHandler: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
   nStructures: PropTypes.number.isRequired,
+  searchTextHandler: PropTypes.func.isRequired,
 };

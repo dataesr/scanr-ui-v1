@@ -40,7 +40,7 @@ class StructuresList extends Component {
       pagination: false,
     };
     this.axiosCall(p);
-  }// /componentDidMount()
+  }
 
   componentDidUpdate(prevProps) {
     // Récupération des structures sur MAJ searchBar (API)
@@ -51,7 +51,7 @@ class StructuresList extends Component {
       };
       this.search(p, true);
     }
-  }// /componentDidUpdate()
+  }
 
   nextContentButtonHandler = () => {
     const params = {
@@ -76,6 +76,7 @@ class StructuresList extends Component {
     const query = `{"$text":{"$search": "${this.props.searchText}"}}`;
     const where = `where=${encodeURIComponent(query)}&`;
     const url = `structures?${this.props.searchText ? where : ''}page=${page}&max_results=${PER_PAGE}`;
+    this.props.setIsLoading(true);
     axios.get(url)
       .then(
         (response) => {
@@ -99,6 +100,8 @@ class StructuresList extends Component {
             };
           });
           this.props.nStructures(response.data.meta.total);
+          this.props.setIsLoading(false);
+          this.props.history.push('/structures');
         },
       )
       .catch(() => this.setState({ noResultFound: true, structures: null }));
@@ -180,6 +183,7 @@ class StructuresList extends Component {
 export default StructuresList;
 
 StructuresList.propTypes = {
-  searchText: PropTypes.string.isRequired,
   nStructures: PropTypes.func.isRequired,
+  searchText: PropTypes.string.isRequired,
+  setIsLoading: PropTypes.func.isRequired,
 };

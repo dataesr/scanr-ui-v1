@@ -73,6 +73,9 @@ class Structure extends Component {
   };
 
   render() {
+    if (this.props.renderList) {
+      this.props.history.push('/structures')
+    }
     const { structure } = this.state;
     let content = null;
     if (!structure) {
