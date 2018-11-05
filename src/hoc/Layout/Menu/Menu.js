@@ -6,6 +6,7 @@ import classes from './Menu.scss';
 
 const menu = () => (
   <Menu className={classes.sidebar}>
+    <img src="img/logo.svg" alt="logo" />
     <Menu.List title="General">
       <Menu.List.Item>
         <a href={URL_DOC} target="_blank" rel="noopener noreferrer">
@@ -19,27 +20,21 @@ const menu = () => (
           Conflits
       </Menu.List.Item>
     </Menu.List>
-
-    <Menu.List title="Databases">
-
+    <Menu.List title="Datastore">
       <Menu.List.Item>
-        <Menu.List title="Organisations">
-          <Menu.List.Item>
-            <NavLink to="/structures" activeClassName={classes.active}>
-              Structures
-            </NavLink>
-          </Menu.List.Item>
-          <Menu.List.Item>
-            <NavLink to="/entreprises" activeClassName={classes.active}>
-              Entreprises
-            </NavLink>
-          </Menu.List.Item>
-          <Menu.List.Item>
-            <NavLink to="/institutions" activeClassName={classes.active}>
-              Institutions
-            </NavLink>
-          </Menu.List.Item>
-        </Menu.List>
+        <NavLink to="/structures" activeClassName={classes.active}>
+          Structures
+        </NavLink>
+      </Menu.List.Item>
+      <Menu.List.Item>
+        <NavLink to="/entreprises" activeClassName={classes.active}>
+          Entreprises
+        </NavLink>
+      </Menu.List.Item>
+      <Menu.List.Item>
+        <NavLink to="/institutions" activeClassName={classes.active}>
+          Institutions
+        </NavLink>
       </Menu.List.Item>
       <Menu.List.Item>
           Publications
@@ -53,7 +48,9 @@ const menu = () => (
         Badges
       </Menu.List.Item>
       <Menu.List.Item>
+        <NavLink to="/panelsERC" activeClassName={classes.active}>
           Panels ERC
+        </NavLink>
       </Menu.List.Item>
     </Menu.List>
     <Menu.List title="Paramètres">

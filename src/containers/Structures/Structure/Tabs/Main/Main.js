@@ -17,11 +17,11 @@ const Main = props => (
       <GridFields
         data={props.names}
         description={NameDescription}
-        getStructure={props.getStructure}
+        refreshFunction={props.getStructure}
         infoMessage="Aucun libellé actif"
         label="libellé"
         schemaName="names"
-        structureId={props.structureId}
+        url={`structures/${props.structureId}`}
         title="Libellés"
       />
     </div>
@@ -52,11 +52,11 @@ const Main = props => (
       <GridFields
         data={props.emails}
         description={EmailsDescription}
-        getStructure={props.getStructure}
+        refreshFunction={props.getStructure}
         infoMessage="Aucun email actif"
         label="email"
         schemaName="emails"
-        structureId={props.structureId}
+        url={`structures/${props.structureId}`}
         title="Emails"
       />
     </div>
@@ -65,11 +65,11 @@ const Main = props => (
       <GridFields
         data={props.phones}
         description={PhonesDescription}
-        getStructure={props.getStructure}
+        refreshFunction={props.getStructure}
         infoMessage="Aucun téléphone actif"
         label="téléphone"
         schemaName="phones"
-        structureId={props.structureId}
+        url={`structures/${props.structureId}`}
         title="Téléphones"
       />
     </div>
@@ -78,11 +78,11 @@ const Main = props => (
       <GridFields
         data={props.social_medias}
         description={SocialMediasDescription}
-        getStructure={props.getStructure}
+        refreshFunction={props.getStructure}
         infoMessage="Aucun réseau social"
         label="réseau social"
         schemaName="social_medias"
-        structureId={props.structureId}
+        url={`structures/${props.structureId}`}
         title="Réseaux sociaux"
       />
     </div>
