@@ -19,7 +19,6 @@ import BtShowAll from '../../../UI/Field/BtShowAll';
 import Button from '../../../UI/Button/Button';
 import ErrorMessage from '../../../UI/Messages/ErrorMessage';
 import InfoMessage from '../../../UI/Messages/InfoMessage';
-import mainValidation from '../../../Utils/mainValidation';
 import SortStatus from '../../../Utils/SortStatus';
 
 import classes from './NomenclatureField.scss';
@@ -35,7 +34,7 @@ class NomenclatureField extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.data && prevProps.data.length > 0 && prevProps.data[0].code !== this.props.data[0].code) {
+    if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
       this.setState({ data: this.props.data })
     }
   }
@@ -130,6 +129,14 @@ class NomenclatureField extends Component {
     });
   }
 
+  paginationNext = () => {
+    this.props.refreshFunction('next');
+  }
+
+  paginationPrevious = () => {
+    this.props.refreshFunction('prev');
+  }
+
   save = () => {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
@@ -150,7 +157,7 @@ class NomenclatureField extends Component {
   renderHeader() {
     return this.props.description.map((field) => {
       if (field.isShown) {
-        return <th key={field.key}>{field.displayLabel}</th>;
+        return <th key={field.key} style={field.style}>{field.displayLabel}</th>;
       }
       return null;
     });
@@ -178,9 +185,7 @@ class NomenclatureField extends Component {
               <p
                 className={classes.P}
                 data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
-                par <b>${dataObject.created_by}</b>
-                <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>
-                par <b>${dataObject.modified_by}</b>`}
+                <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
               >
                 <i className="fas fa-info-circle" />
               </p>
@@ -260,20 +265,27 @@ class NomenclatureField extends Component {
       nbData = this.state.data.length;
     }
     return (
-      <Aux className={classes.NomenclatureField}>
-        <div>
-          <div className={classes.TextTitleInline}>
-            {this.props.title}
-            &nbsp;
-            <span className="tag is-white is-rounded">{nbData}</span>
+      <div className={classes.NomenclatureField}>
+        <div className="columns is-marginless">
+          <div className="column">
+            <div className={classes.TextTitleInline}>
+              {this.props.title}
+              <span className={`tag is-white is-rounded ${classes.SpaceTag}`}>{nbData}</span>
+            </div>
+            <BtAdd onClick={this.BtAddHandler}>
+              {`Ajouter un nouveau champ ${this.props.label}`}
+            </BtAdd>
+            {saveAndCancelButtons}
           </div>
-
-          <BtAdd onClick={this.BtAddHandler}>
-            {`Ajouter un nouveau champ ${this.props.label}`}
-          </BtAdd>
-
-          {saveAndCancelButtons}
-          <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
+          <div className="column">
+            <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
+          </div>
+          <div className="column is-2">
+            <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
+              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
+              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+            </nav>
+          </div>
         </div>
         {this.state.infoMessage
           ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
@@ -299,8 +311,18 @@ class NomenclatureField extends Component {
             label="anciens libellés"
           />)}
 
+        <div className="columns is-marginless">
+          <div className="column is-10" />
+          <div className="column is-2">
+            <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
+              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
+              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+            </nav>
+          </div>
+        </div>
+
         <ReactTooltip html />
-      </Aux>
+      </div>
     );
   }
 }
