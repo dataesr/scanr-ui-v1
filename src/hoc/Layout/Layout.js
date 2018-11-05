@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Aux from '../Aux';
 import Menu from './Menu/Menu';
 import Header from './Header/Header';
+import PanelsERC from '../../containers/PanelsERC/PanelsERC';
 import StructuresList from '../../containers/Structures/StructuresList/StructuresList';
 import Structure from '../../containers/Structures/Structure/Structure';
 
@@ -40,6 +41,7 @@ class Layout extends Component {
               nStructures={this.state.n_structures}
             />
             <Switch>
+              <Route path="/panelsERC" component={PanelsERC} />
               <Route path="/structures/:esr_id" component={Structure} />
               <Route
                 exact

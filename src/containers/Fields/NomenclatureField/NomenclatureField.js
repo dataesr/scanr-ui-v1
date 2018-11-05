@@ -22,9 +22,9 @@ import InfoMessage from '../../../UI/Messages/InfoMessage';
 import mainValidation from '../../../Utils/mainValidation';
 import SortStatus from '../../../Utils/SortStatus';
 
-import classes from './GridFields.scss';
+import classes from './NomenclatureField.scss';
 
-class GridFields extends Component {
+class NomenclatureField extends Component {
   state = {
     editMode: false,
     newRow: null,
@@ -75,20 +75,15 @@ class GridFields extends Component {
   };
 
   delete = (itemId) => {
-    const index = this.state.data.findIndex(item => item.meta.id === itemId);
+    const index = this.state.data.findIndex(item => item.id === itemId);
     if (index < 0 || !itemId) {
       this.setState({ newRow: null });
     } else {
       const updatedData = [...this.state.data];
       updatedData.splice(index, 1);
-      updatedData.forEach((dataRow) => {
-        if (typeof dataRow.code === 'object') {
-          dataRow.code = dataRow.code.id;
-        }
-      });
       this.axiosCall(updatedData);
     }
-  }
+  };
 
 
   toggleEditMode = (bool) => {
@@ -100,27 +95,26 @@ class GridFields extends Component {
 
   onChangeHandler = (event, id) => {
     event.persist();
-    const value = event.target.value || event.target.getAttribute('data-value');
     this.setState((prevState) => {
       const now = moment().format(DATE_FORMAT_API);
       const data = [...prevState.data];
-      const index = data.findIndex(item => item.meta.id === id);
+      const index = data.findIndex(item => item.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
         itemToUpdate.meta = {
           created_by: 'user',
           created_at: now,
         };
-        itemToUpdate[event.target.id] = event.target.type === 'date'
-          ? moment(value).format(DATE_FORMAT_API) : value;
+        itemToUpdate[event.target.id] = event.target.value;
         return {
           newRow: itemToUpdate,
-          showAll: value === 'old' ? true : prevState.showAll,
+          showAll: event.target.value === 'old' ? true : prevState.showAll,
         };
       }
       const itemToUpdate = { ...data[index] };
       itemToUpdate[event.target.id] = event.target.type === 'date'
-        ? moment(value).format(DATE_FORMAT_API) : value;
+        ? moment(event.target.value).format(DATE_FORMAT_API)
+        : event.target.value;
       const meta = {
         ...itemToUpdate.meta,
         modified_by: 'user',
@@ -140,7 +134,7 @@ class GridFields extends Component {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
       if (typeof dataRow.code === 'object') {
-        dataRow.code = dataRow.code.id;
+        dataRow.code = dataRow.code.code;
       }
     });
     if (this.state.newRow) {
@@ -148,37 +142,10 @@ class GridFields extends Component {
       Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);
       data.push(newRow);
     }
-    if (this.validate(data)) {
-      this.axiosCall(data);
-    }
+
+    this.axiosCall(data);
   }
 
-  validate(data) {
-    return this.props.description.filter(fieldDescription => fieldDescription.isShown && fieldDescription.rules)
-      .reduce((validation, rulesDescription) => {
-        let tempValidation = validation;
-        if ('canBeNull' in rulesDescription.rules) {
-          const nullValidation = data.reduce((tempNullValidation, dataRow) => {
-            if (rulesDescription.key in dataRow) {
-              return Boolean(dataRow[rulesDescription.key]) && tempNullValidation;
-            }
-            return tempNullValidation;
-          }, true);
-          if (!nullValidation) {
-            this.setState({ errorMessage: ERREUR_NULL });
-          }
-          tempValidation = tempValidation && nullValidation;
-        }
-        if ('mainStatus' in rulesDescription.rules) {
-          const mainStatusValidation = mainValidation(data);
-          if (!mainStatusValidation) {
-            this.setState({ errorMessage: ERREUR_STATUT });
-          }
-          tempValidation = tempValidation && mainStatusValidation;
-        }
-        return tempValidation;
-      }, true);
-  }
 
   renderHeader() {
     return this.props.description.map((field) => {
@@ -198,22 +165,22 @@ class GridFields extends Component {
       let deleteButton = null;
       if (this.state.editMode) {
         deleteButton = (
-          <Button onClick={() => this.delete(dataObject.meta.id)}>
+          <Button onClick={() => this.delete(dataObject.id)}>
             <i className="fas fa-trash" />
           </Button>
         );
       }
       return (
-        <tr key={dataObject.meta.id}>
+        <tr key={dataObject.id}>
           {this.renderRow(dataObject, false)}
           <td>
             <div className={classes.LastTableColumn}>
               <p
                 className={classes.P}
-                data-tip={`Créé le <b>${moment(dataObject.meta.created_at).format('LL')}</b>
-                par <b>${dataObject.meta.created_by}</b>
-                <br/> Modifié le <b>${moment(dataObject.meta.modified_at).format('LL')}</b>
-                par <b>${dataObject.meta.modified_by}</b>`}
+                data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
+                par <b>${dataObject.created_by}</b>
+                <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>
+                par <b>${dataObject.modified_by}</b>`}
               >
                 <i className="fas fa-info-circle" />
               </p>
@@ -232,7 +199,7 @@ class GridFields extends Component {
         let id = null;
         if (!isNew) {
           editMode = this.state.editMode;
-          id = row.meta.id;
+          id = row.id;
         }
         editMode = field.isEditable ? editMode : false;
         return (
@@ -293,7 +260,7 @@ class GridFields extends Component {
       nbData = this.state.data.length;
     }
     return (
-      <Aux className={classes.GridFields}>
+      <Aux className={classes.NomenclatureField}>
         <div>
           <div className={classes.TextTitleInline}>
             {this.props.title}
@@ -338,9 +305,9 @@ class GridFields extends Component {
   }
 }
 
-export default GridFields;
+export default NomenclatureField;
 
-GridFields.propTypes = {
+NomenclatureField.propTypes = {
   data: PropTypes.array,
   description: PropTypes.array.isRequired,
   refreshFunction: PropTypes.func.isRequired,
