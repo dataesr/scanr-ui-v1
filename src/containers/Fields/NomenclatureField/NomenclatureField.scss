@@ -24,3 +24,13 @@
 .ImportantTooltip{
   color: $main_color;
 }
+
+.Th{
+  cursor: pointer;
+}
+
+.SortIcon{
+  display: inline-block;
+  margin-left: 5px;
+  color: $text_secondary;
+}
