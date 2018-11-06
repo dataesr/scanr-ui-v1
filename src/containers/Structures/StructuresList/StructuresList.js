@@ -106,10 +106,13 @@ class StructuresList extends Component {
 
 
   render() {
-    let content = <div>Pas de structure !</div>;
+    let content = <div className={classes.NoResult}>Pas de structure !</div>;
+    if (!this.state.structures) {
+      return content;
+    }
     if (this.state.noResultFound) {
       content = (
-        <div>
+        <div className={classes.NoResult}>
           Aucun résultat ne correspond à votre recherche. Vérifiez que vous avez bien entré un mot complet
         </div>);
     }
