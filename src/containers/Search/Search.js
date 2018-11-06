@@ -13,6 +13,7 @@ import {
 import axios from '../../axios';
 import Menu from '../Menu/Menu';
 import SearchResults from './SearchResults/SearchResults';
+import FilterPanel from './FilterPanel/FilterPanel';
 
 import classes from './Search.scss';
 
@@ -20,6 +21,7 @@ class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      filterPanel: false,
       isLoading: false,
       noResultFound: false,
       pagination:
@@ -39,6 +41,10 @@ class Search extends Component {
       pagination: false,
     };
     this.axiosCall(p);
+  }
+
+  toggleFilterPanel = (bool) => {
+    this.setState({ filterPanel: bool });
   }
 
   searchTextHandler = (event) => {
@@ -105,8 +111,13 @@ class Search extends Component {
           <Menu
             isLoading={this.state.isLoading}
             searchTextHandler={this.searchTextHandler}
+            displayFilterPanel={() => this.toggleFilterPanel(true)}
           />
         </div>
+        <FilterPanel
+          visible={this.state.filterPanel}
+          hideFilterPanel={() => this.toggleFilterPanel(false)}
+        />
         <div id="content" className={classes.Content}>
           <Route path={`${this.props.match.path}/:esr_id`} component={this.props.entityComponent} />
           <Route
