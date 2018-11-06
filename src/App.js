@@ -1,10 +1,34 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Layout from './hoc/Layout/Layout';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import PanelsERC from './containers/PanelsERC/PanelsERC';
+import Search from './containers/Search/Search';
+import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
+import Structure from './containers/Structures/Structure/Structure';
 
 const App = () => (
   <BrowserRouter>
-    <Layout />
+    <Switch>
+      <Route path="/panelsERC" component={PanelsERC} />
+      <Route
+        path="/structures"
+        render={props => (
+          <Search
+            {...props}
+            entity="structures"
+            entityComponent={Structure}
+            gridComponent={<StructuresGridItems />}
+            label="structure"
+          />)}
+      />
+      <Route path="/entreprises" render={() => (<h3>Entreprises</h3>)} />
+      <Route path="/institutions" component={() => (<h3>Institutions</h3>)} />
+      <Redirect from="/" to="structures" />
+    </Switch>
   </BrowserRouter>
 );
 
