@@ -42,7 +42,7 @@ $undefinedStatus: #FFDD57;
   color: #4d4b4b;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: bold;
 }
 
@@ -54,4 +54,15 @@ $undefinedStatus: #FFDD57;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.9em;
+}
+.NoResult{
+  text-align: center;
+  margin-top: 50px;
+  font-size: 3em;
+  color: #ddd;
+  font-weight: bold;
+}
+
+.SpaceTag{
+  margin-left: 8px;
 }

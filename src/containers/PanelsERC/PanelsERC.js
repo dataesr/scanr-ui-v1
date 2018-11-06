@@ -9,18 +9,26 @@ import PanelsDescription from '../../config/descriptions/nomenclatures/panelsERC
 class PanelsERC extends Component {
   state = {
     panels: [],
+    links: {},
   };
 
   componentDidMount() {
     this.getPanels();
   }
 
-  getPanels = () => {
-    const url = 'panels?sort=[("level",1)]';
+  getPanels = (pagination) => {
+    let url = 'panels?sort=[("level",1)]';
+    if (pagination) {
+      if (this.state.links[pagination]) {
+        url = this.state.links[pagination].href;
+      }
+    }
     axios.get(url)
       .then((response) => {
-        console.log('panels:', response);
-        this.setState({ panels: response.data.data });
+        this.setState({
+          panels: response.data.data,
+          links: response.data.links,
+        });
       });
   }
 
