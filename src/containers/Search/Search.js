@@ -92,6 +92,7 @@ class Search extends Component {
               isLoading: false,
             };
           });
+          this.props.history.push(this.props.match.path);
         },
       )
       .catch(() => this.setState({ noResultFound: true, searchResults: null, isLoading: false }));
