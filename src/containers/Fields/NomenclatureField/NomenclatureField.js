@@ -52,6 +52,10 @@ class NomenclatureField extends Component {
     this.setState({ newRow: emptyRow, editMode: true });
   }
 
+  sortHandler = (field) => {
+    this.props.refreshFunction('', field);
+  }
+
   axiosCall = (data) => {
     const dataObject = {
       [this.props.schemaName]: data,
@@ -83,7 +87,6 @@ class NomenclatureField extends Component {
       this.axiosCall(updatedData);
     }
   };
-
 
   toggleEditMode = (bool) => {
     if (!bool) {
@@ -157,7 +160,19 @@ class NomenclatureField extends Component {
   renderHeader() {
     return this.props.description.map((field) => {
       if (field.isShown) {
-        return <th key={field.key} style={field.style}>{field.displayLabel}</th>;
+        const direction = this.props.sortDirection === 1 ? 'down' : 'up';
+        const sortIcon = <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />;
+        return (
+          <th
+            key={field.key}
+            style={field.style}
+            onClick={() => this.sortHandler(field.key)}
+            className={classes.Th}
+          >
+            {field.displayLabel}
+            {field.key === this.props.sortField && sortIcon}
+          </th>
+        );
       }
       return null;
     });
@@ -336,6 +351,8 @@ NomenclatureField.propTypes = {
   infoMessage: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  sortField: PropTypes.string.isRequired,
+  sortDirection: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
