@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import TagsInput from 'react-tagsinput';
 import axios from '../../../axios';
 
 // Composants UI
 import { ERREUR_PATCH } from '../../../config/config';
-import Aux from '../../../hoc/Aux';
 import ErrorMessage from '../../../UI/Messages/ErrorMessage';
 import classes from './TagField.scss';
 
@@ -44,7 +43,7 @@ class TagField extends Component {
 
   render() {
     return (
-      <Aux>
+      <Fragment>
         <div className={classes.TextTitleInline}>
           {this.props.title}
         </div>
@@ -54,7 +53,7 @@ class TagField extends Component {
           onChange={this.handleChange}
           value={this.state.tags || []}
         />
-      </Aux>
+      </Fragment>
     );
   }
 }

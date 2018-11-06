@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
@@ -12,7 +12,6 @@ import {
   DATE_FORMAT_API,
 }
   from '../../../config/config';
-import Aux from '../../../hoc/Aux';
 
 import BtAdd from '../../../UI/Field/btAdd';
 import BtShowAll from '../../../UI/Field/BtShowAll';
@@ -239,14 +238,14 @@ class NomenclatureField extends Component {
     let saveAndCancelButtons = null;
     if (this.state.editMode) {
       saveAndCancelButtons = (
-        <Aux>
+        <Fragment>
           <Button onClick={this.save}>
             <i className="fas fa-save" />
           </Button>
           <Button onClick={() => this.toggleEditMode(false)}>
             <i className="fas fa-undo" />
           </Button>
-        </Aux>
+        </Fragment>
       );
     }
 

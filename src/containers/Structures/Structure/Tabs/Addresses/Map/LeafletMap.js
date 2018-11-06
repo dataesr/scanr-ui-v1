@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import {
   Map, Marker, Popup, TileLayer,
 } from 'react-leaflet';
@@ -8,7 +8,6 @@ import {
   greenIcon, blueIcon, greyIcon, violetIcon,
 } from './Icons';
 import { STATUS_MAIN, STATUS_ACTIVE, STATUS_OLD } from '../../../../../../config/config';
-import Aux from '../../../../../../hoc/Aux';
 import Button from '../../../../../../UI/Button/Button';
 import InfoMessage from '../../../../../../UI/Messages/InfoMessage';
 
@@ -149,7 +148,7 @@ class LeafletMap extends Component {
       saveButton = <Button onClick={this.onSaveButtonClick}>Corriger les coordonnées gps</Button>;
     }
     return (
-      <Aux>
+      <Fragment>
         <InfoMessage>{message}</InfoMessage>
         {saveButton}
         <Map
@@ -163,7 +162,7 @@ class LeafletMap extends Component {
           {this.renderMarker()}
           {updatePositionMarker}
         </Map>
-      </Aux>
+      </Fragment>
     );
   }
 }

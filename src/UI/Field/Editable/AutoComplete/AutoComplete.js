@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import Aux from '../../../../hoc/Aux';
 import axios from '../../../../axios';
 import classes from '../../Field.css';
 
@@ -70,7 +69,7 @@ class AutoComplete extends Component {
         inputColor = this.state.searchInput ? 'is-primary' : 'is-danger';
       }
       component = (
-        <Aux>
+        <Fragment>
           <input
             value={this.state.searchInput}
             className={`input is-rounded is-small ${inputColor} ${classes.BoxSizing}`}
@@ -81,7 +80,7 @@ class AutoComplete extends Component {
           <div className={classes.ListContainer}>
             <ul>{this.state.onFocus && this.renderSearchResults()}</ul>
           </div>
-        </Aux>);
+        </Fragment>);
     }
     return component;
   }
