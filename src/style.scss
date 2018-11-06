@@ -14,7 +14,7 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
-$menuWidth: 250px;
+$menuWidth: 275px;
 
 $main_color: #00A6BC;
 $text_secondary: #888;
@@ -55,6 +55,7 @@ $undefinedStatus: #FFDD57;
   letter-spacing: 2px;
   font-size: 0.9em;
 }
+
 .NoResult{
   text-align: center;
   margin-top: 50px;
@@ -65,4 +66,31 @@ $undefinedStatus: #FFDD57;
 
 .SpaceTag{
   margin-left: 8px;
+}
+
+.Bg{
+  background-color: #00D1B2;
+  background: #00D1B2; /* Old browsers */
+  background: -moz-linear-gradient(left, #00D1B2 0%, #99ffef 85%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #00D1B2 0%,#99ffef 85%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #00D1B2 0%,#99ffef 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00D1B2', endColorstr='#99ffef',GradientType=1 ); /* IE6-9 */
+  padding: 16px;
+}
+
+.Layout{
+  min-height: 100%;
+  background-color: #f5f5f5;
+
+  .Menu{
+    width: $menuWidth;
+    position: fixed;
+    float: left;
+    height: 100%;
+  }
+
+  .Content{
+    margin-left: $menuWidth;
+    height: 100%;
+  }
 }

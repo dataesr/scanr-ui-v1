@@ -1,12 +1,22 @@
 import React from 'react';
 import { Menu } from 'react-bulma-components';
 import { NavLink } from 'react-router-dom';
-import { URL_DOC } from '../../../config/config';
+import PropTypes from 'prop-types';
+import { URL_DOC } from '../../config/config';
+import SearchBar from './Search-bar/Search-bar';
 import classes from './Menu.scss';
 
-const menu = () => (
+const menu = props => (
   <Menu className={classes.sidebar}>
     <img src="img/logo.svg" alt="logo" />
+    <Menu.List title="Recherche">
+      <Menu.List.Item>
+        <SearchBar
+          searchTextHandler={props.searchTextHandler}
+          isLoading={props.isLoading}
+        />
+      </Menu.List.Item>
+    </Menu.List>
     <Menu.List title="General">
       <Menu.List.Item>
         <a href={URL_DOC} target="_blank" rel="noopener noreferrer">
@@ -67,3 +77,8 @@ const menu = () => (
 );
 
 export default menu;
+
+menu.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
+  searchTextHandler: PropTypes.func.isRequired,
+};

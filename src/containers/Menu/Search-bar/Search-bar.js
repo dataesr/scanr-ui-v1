@@ -1,15 +1,13 @@
 import React from 'react';
-import { Field, Control, Help } from 'react-bulma-components/lib/components/form';
+import { Field, Control } from 'react-bulma-components/lib/components/form';
 import PropTypes from 'prop-types';
-
-// import classes from './Search-bar.css';
 
 const SearchBar = props => (
   <div>
     <Field>
       <Control iconRight>
         <input
-          className="input is-rounded is-medium"
+          className="input is-rounded is-small"
           placeholder="Rechercher..."
           type="text"
           onChange={props.searchTextHandler}
@@ -18,9 +16,6 @@ const SearchBar = props => (
           {props.isLoading ? <i className="fas fa-spinner" /> : <i className="fas fa-search" />}
         </span>
       </Control>
-      <Help>
-          Tapez votre recherche dans la champ ci-dessus. La recherche se lancera automatiquement
-      </Help>
     </Field>
   </div>
 );

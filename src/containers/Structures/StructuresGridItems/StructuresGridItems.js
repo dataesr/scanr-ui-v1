@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import StructureStatus from '../../../../UI/StatusTagMedium/StatusTagMedium';
-import StructureConflicts from '../../../../UI/StructureConflicts/StructureConflicts';
+import StructureStatus from '../../../UI/StatusTagMedium/StatusTagMedium';
+import StructureConflicts from '../../../UI/StructureConflicts/StructureConflicts';
 
 /* CSS */
 import classes from './StructuresGridItems.scss';
@@ -19,7 +19,7 @@ const getMainEntity = (entities) => {
 const structuresGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
-        props.structuresList.map(structure => (
+        props.data.map(structure => (
           <div key={structure.id} className="column is-one-third-desktop is-half-tablet">
             <div className={`card ${classes.GridCard}`} key={structure.id}>
               <div className={`card-content ${classes.CardContent}`}>
@@ -28,7 +28,7 @@ const structuresGridItems = props => (
 
                   <div className="column is-10">
                     <div className={classes.Content}>
-                      <NavLink to={`structures/${structure.id}`}>
+                      <NavLink to={`${props.match.path}/${structure.id}`}>
                         <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
                           {structure.names && getMainEntity(structure.names).name_fr}
                         </span>
@@ -78,5 +78,6 @@ const structuresGridItems = props => (
 export default structuresGridItems;
 
 structuresGridItems.propTypes = {
-  structuresList: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
+  match: PropTypes.object.isRequired,
 };

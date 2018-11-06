@@ -16,7 +16,7 @@ import Relationship from './Tabs/Relationship/Relationship';
 import Leaders from './Tabs/Leaders/Leaders';
 import Deals from './Tabs/Deals/Deals';
 
-import classes from './Structure.css';
+import classes from './Structure.scss';
 
 class Structure extends Component {
   state = {
@@ -158,12 +158,14 @@ class Structure extends Component {
 
     return (
       <Aux>
-        <div className="columns is-marginless is-gapless">
-          <div className="column is-four-fifths">
-            <TextTitle>{title}</TextTitle>
-          </div>
-          <div className="column has-text-right has-background-grey-darker">
-            <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
+        <div className={classes.Bg}>
+          <div className="columns is-marginless is-gapless">
+            <div className="column is-four-fifths">
+              <TextTitle>{title}</TextTitle>
+            </div>
+            <div className="column has-text-right">
+              <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
+            </div>
           </div>
         </div>
         <div className={`tabs is-marginless ${classes.Tabs}`}>
