@@ -10,24 +10,39 @@ class PanelsERC extends Component {
   state = {
     panels: [],
     links: {},
+    sort: {
+      field: 'level',
+      direction: -1,
+    },
   };
 
   componentDidMount() {
     this.getPanels();
   }
 
-  getPanels = (pagination) => {
-    let url = 'panels?sort=[("level",1)]';
+  getPanels = (
+    pagination = null,
+    sortTh = this.state.sort.field,
+  ) => {
+    let sortDirection = this.state.sort.direction;
+    if (this.state.sort.field === sortTh) {
+      sortDirection *= -1;
+    }
+
+    let url = `panels?sort=[("${sortTh}",${sortDirection})]`;
+
     if (pagination) {
       if (this.state.links[pagination]) {
         url = this.state.links[pagination].href;
       }
     }
+
     axios.get(url)
       .then((response) => {
         this.setState({
           panels: response.data.data,
           links: response.data.links,
+          sort: { field: sortTh, direction: sortDirection },
         });
       });
   }
@@ -45,6 +60,8 @@ class PanelsERC extends Component {
             schemaName="panels"
             url="panels"
             title="Panels ERC"
+            sortField={this.state.sort.field}
+            sortDirection={this.state.sort.direction}
           />
         </Aux>
       );
