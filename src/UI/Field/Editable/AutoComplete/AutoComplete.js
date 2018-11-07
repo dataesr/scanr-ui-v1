@@ -98,8 +98,7 @@ AutoComplete.propTypes = {
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
-  schemaName: PropTypes.string.isRequired,
-  size: PropTypes.string,
+  schemaName: PropTypes.string,
 };
 
 AutoComplete.defaultProps = {

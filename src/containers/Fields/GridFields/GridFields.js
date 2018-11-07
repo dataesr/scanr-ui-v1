@@ -12,7 +12,6 @@ import {
   DATE_FORMAT_API,
 }
   from '../../../config/config';
-import Aux from '../../../hoc/Aux';
 
 import BtAdd from '../../../UI/Field/btAdd';
 import BtShowAll from '../../../UI/Field/BtShowAll';
@@ -103,7 +102,7 @@ class GridFields extends Component {
     const value = event.target.value || event.target.getAttribute('data-value');
     this.setState((prevState) => {
       const now = moment().format(DATE_FORMAT_API);
-      const data = [...prevState.data];
+      const data = prevState.data ? [...prevState.data] : [];
       const index = data.findIndex(item => item.meta.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
@@ -137,7 +136,7 @@ class GridFields extends Component {
   }
 
   save = () => {
-    const data = [...this.state.data];
+    const data = this.state.data ? [...this.state.data] : [];
     data.forEach((dataRow) => {
       if (typeof dataRow.code === 'object') {
         dataRow.code = dataRow.code.id;

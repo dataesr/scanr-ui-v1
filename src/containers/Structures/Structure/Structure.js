@@ -86,28 +86,32 @@ class Structure extends Component {
       case 'resume':
         content = (
           <Resume
+            end_date={structure.end_date}
             esrId={structure.id}
             keywords_en={structure.keywords_en}
             keywords_fr={structure.keywords_fr}
-            level={structure.level && structure.level.value}
-            nature={structure.nature && structure.nature.value}
-            urlLogo={structure.logo && structure.logo.value}
-            urlWebsite={structure.website && structure.website.value}
+            level={structure.level}
+            nature={structure.nature}
+            start_date={structure.start_date}
+            urlLogo={structure.logo}
+            urlWebsite={structure.website && structure.website.find(site => site.status === 'main').url}
           />
         );
         break;
       case 'main':
         content = (
           <Main
-            structureId={structure.id}
-            getStructure={this.getStructure}
             alias={structure.alias}
             codeNumbers={structure.code_numbers}
-            names={structure.names}
+            descriptions={structure.descriptions}
             emails={structure.emails}
+            external_links={structure.externalLinks}
+            getStructure={this.getStructure}
+            names={structure.names}
             phones={structure.phones}
             social_medias={structure.social_medias}
-            status={structure.status}
+            structureId={structure.id}
+            websites={structure.websites}
           />);
         break;
       case 'addresses':
@@ -147,7 +151,7 @@ class Structure extends Component {
         break;
       case 'deals':
         content = (
-          <Deals />
+          <Deals offers={structure.offers}/>
         );
         break;
 
