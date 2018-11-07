@@ -1,11 +1,10 @@
 import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
-import Status from '../../../UI/Field/Editable/Status/Status';
 
 export default [
   {
-    key: 'email',
-    displayLabel: 'Email',
+    key: 'url',
+    displayLabel: 'Url',
     component: <Input />,
     isEditable: true,
     isShown: true,
@@ -14,15 +13,14 @@ export default [
     },
   },
   {
-    key: 'status',
-    displayLabel: 'Statut',
-    component: <Status />,
+    key: 'link_type',
+    displayLabel: 'Type de lien',
+    component: <Input />,
     isEditable: true,
     isShown: true,
-    canBeNull: false,
     rules: {
       canBeNull: false,
-      mainStatus: false,
     },
-  }
+  },
+
 ];

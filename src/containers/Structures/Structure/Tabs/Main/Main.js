@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Descriptions
-import NameDescription from '../../../../../config/descriptions/structure/names';
+import Descriptions from '../../../../../config/descriptions/structure/descriptions';
 import EmailsDescription from '../../../../../config/descriptions/structure/emails';
+import ExternalLinksDescription from '../../../../../config/descriptions/structure/externalLinks';
+import NameDescription from '../../../../../config/descriptions/structure/names';
 import PhonesDescription from '../../../../../config/descriptions/structure/phones';
 import SocialMediasDescription from '../../../../../config/descriptions/structure/socialMedias';
-
+import WebsitesDescription from '../../../../../config/descriptions/structure/websites';
 // Composants UI
 import GridFields from '../../../../Fields/GridFields/GridFields';
 import TagField from '../../../../Fields/TagField/TagField';
@@ -86,6 +88,43 @@ const Main = props => (
         title="Réseaux sociaux"
       />
     </div>
+    <div className="column is-12">
+      <GridFields
+        data={props.descriptions}
+        description={Descriptions}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucune description"
+        label="description"
+        schemaName="descriptions"
+        url={`structures/${props.structureId}`}
+        title="Descriptions"
+      />
+    </div>
+    <div className="column is-6">
+      <GridFields
+        data={props.websites}
+        description={WebsitesDescription}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucun site internet"
+        label="site internet"
+        schemaName="websites"
+        url={`structures/${props.structureId}`}
+        title="Sites internet"
+      />
+    </div>
+    <div className="column is-6">
+      <GridFields
+        data={props.external_links}
+        description={ExternalLinksDescription}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucun lien externe"
+        label="lien externe"
+        schemaName="external_links"
+        url={`structures/${props.structureId}`}
+        title="Liens externes"
+      />
+    </div>
+
   </div>
 );
 
@@ -94,10 +133,13 @@ export default Main;
 Main.propTypes = {
   alias: PropTypes.array,
   codeNumbers: PropTypes.array.isRequired,
+  descriptions: PropTypes.array,
+  external_links: PropTypes.array,
   emails: PropTypes.array,
+  getStructure: PropTypes.func.isRequired,
   names: PropTypes.array.isRequired,
   phones: PropTypes.array.isRequired,
-  social_medias: PropTypes.array.isRequired,
+  social_medias: PropTypes.array,
   structureId: PropTypes.string.isRequired,
-  getStructure: PropTypes.func.isRequired,
+  websites: PropTypes.array,
 };

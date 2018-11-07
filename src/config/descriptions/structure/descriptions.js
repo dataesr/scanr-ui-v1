@@ -1,13 +1,13 @@
 import React from 'react';
-import Input from '../../../UI/Field/Editable/Input/Input';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
+import TextArea from '../../../UI/Field/Editable/TextArea/TextArea';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
 export default [
   {
     key: 'description_fr',
     displayLabel: 'Fr',
-    component: <Input />,
+    component: <TextArea />,
     isEditable: true,
     isShown: true,
     rules: {
@@ -17,7 +17,7 @@ export default [
   {
     key: 'description_en',
     displayLabel: 'En',
-    component: <Input />,
+    component: <TextArea />,
     isEditable: true,
     isShown: true,
     rules: {
