@@ -78,6 +78,6 @@ const structuresGridItems = props => (
 export default structuresGridItems;
 
 structuresGridItems.propTypes = {
-  data: PropTypes.array.isRequired,
-  match: PropTypes.object.isRequired,
+  data: PropTypes.array,
+  match: PropTypes.object,
 };

@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
+import StructureFilters from './config/descriptions/structure/filters'
 import PanelsERC from './containers/PanelsERC/PanelsERC';
 import Search from './containers/Search/Search';
 import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
@@ -20,6 +21,7 @@ const App = () => (
           <Search
             {...props}
             entity="structures"
+            filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
             label="structure"
