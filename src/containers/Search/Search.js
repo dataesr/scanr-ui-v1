@@ -22,6 +22,7 @@ class Search extends Component {
     super(props);
     this.state = {
       filterPanel: false,
+      filters: {},
       isLoading: false,
       noResultFound: false,
       pagination:
@@ -57,40 +58,44 @@ class Search extends Component {
   }
 
   nextContentButtonHandler = () => {
-    const params = {
-      init: false,
-      pagination: true,
-    };
-    this.axiosCall(params);
+    this.axiosCall();
   }
 
-  axiosCall(params, search) {
-    let page;
-    if (params.pagination) {
-      page = this.state.pagination.n_page + 1;
-    } else {
-      page = PAGE;
+  selectFilter = (event) => {
+    event.persist();
+    const filters = { ...this.state.filters };
+    filters[event.target.name] = event.target.value;
+    if (!event.target.checked) {
+      delete filters[event.target.name];
     }
-    const query = `{"$text":{"$search": "${this.state.searchText}"}}`;
-    const where = `where=${encodeURIComponent(query)}&`;
-    const url = `${this.props.entity}?${this.state.searchText ? where : ''}page=${page}&max_results=${PER_PAGE}`;
+    this.axiosCall(true, filters);
+    this.setState({ filters });
+  }
+
+  axiosCall(init, filters) {
+    const page = init ? PAGE : this.state.pagination.n_page + 1;
+    const queries = { ...filters };
+    if (this.state.searchText) {
+      queries.$text = { $search: this.state.searchText };
+    }
+    const whereCondition = Object.keys(queries).length > 0
+      ? `where=${encodeURIComponent(JSON.stringify(queries))}&` : '';
+    const url = `${this.props.entity}?${whereCondition}page=${page}&max_results=${PER_PAGE}`;
+
     this.setState({ isLoading: true });
     axios.get(url)
       .then(
         (response) => {
           this.setState((prevState) => {
             let searchResults = response.data.data;
-            if (!search) {
+            const newPagination = { ...prevState.pagination };
+            if (!init) {
+              newPagination.n_page = 1;
               searchResults = [...prevState.searchResults];
               Array.prototype.push.apply(searchResults, response.data.data);
-            }
-            const newPagination = { ...prevState.pagination };
-            newPagination.n_hits = response.data.meta.total;
-            if (params.pagination) {
               newPagination.n_page += 1;
-            } else {
-              newPagination.n_page = 1;
             }
+            newPagination.n_hits = response.data.meta.total;
             return {
               searchResults,
               noResultFound: response.data.meta.total === 0,
@@ -115,8 +120,11 @@ class Search extends Component {
           />
         </div>
         <FilterPanel
-          visible={this.state.filterPanel}
+          activeFilters={this.state.filters}
+          filtersConfig={this.props.filtersConfig}
           hideFilterPanel={() => this.toggleFilterPanel(false)}
+          selectFilter={this.selectFilter}
+          visible={this.state.filterPanel}
         />
         <div id="content" className={classes.Content}>
           <Route path={`${this.props.match.path}/:esr_id`} component={this.props.entityComponent} />
@@ -143,6 +151,7 @@ export default Search;
 
 Search.propTypes = {
   entity: PropTypes.string.isRequired,
+  filtersConfig: PropTypes.array.isRequired,
   gridComponent: PropTypes.any,
   label: PropTypes.string.isRequired,
 };
