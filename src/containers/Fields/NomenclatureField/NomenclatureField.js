@@ -95,6 +95,19 @@ class NomenclatureField extends Component {
     this.setState({ editMode: bool });
   }
 
+  toggleEditModeRow = (itemId) => {
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    console.log('data:', this.state.data);
+    console.log('toggleEditModeRow:', index);
+    // Suppression d'un éventuel autre editMode
+    // TODO
+
+    // Ajout de la clé EditMode
+    const updatedData = [...this.state.data];
+    updatedData[index].editMode = true;
+    this.setState({ data: updatedData });
+  }
+
   onChangeHandler = (event, id) => {
     event.persist();
     this.setState((prevState) => {
@@ -155,7 +168,6 @@ class NomenclatureField extends Component {
 
     this.axiosCall(data);
   }
-
 
   renderHeader() {
     return this.props.description.map((field) => {
@@ -224,10 +236,9 @@ class NomenclatureField extends Component {
         let editMode = true;
         let id = null;
         if (!isNew) {
-          editMode = this.state.editMode;
+          editMode = row.editMode;
           id = row.id;
         }
-        editMode = field.isEditable ? editMode : false;
         return (
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
@@ -239,7 +250,7 @@ class NomenclatureField extends Component {
                 noMain: field.rules && field.rules.noMain,
                 schemaName: this.props.schemaName,
                 onChange: event => this.onChangeHandler(event, id),
-                onClick: () => this.toggleEditMode(true),
+                onClick: () => this.toggleEditModeRow(id),
               },
             )}
           </td>
@@ -303,8 +314,20 @@ class NomenclatureField extends Component {
           </div>
           <div className="column is-2">
             <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
-              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
-              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+              <button
+                type="button"
+                className="pagination-previous"
+                onClick={this.paginationPrevious}
+              >
+                Précédent
+              </button>
+              <button
+                type="button"
+                className="pagination-next"
+                onClick={this.paginationNext}
+              >
+                Suivant
+              </button>
             </nav>
           </div>
         </div>
@@ -336,8 +359,20 @@ class NomenclatureField extends Component {
           <div className="column is-10" />
           <div className="column is-2">
             <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
-              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
-              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+              <button
+                type="button"
+                className="pagination-previous"
+                onClick={this.paginationPrevious}
+              >
+                Précédent
+              </button>
+              <button
+                type="button"
+                className="pagination-next"
+                onClick={this.paginationNext}
+              >
+                Suivant
+              </button>
             </nav>
           </div>
         </div>
