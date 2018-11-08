@@ -9,15 +9,16 @@ import classes from './Menu.scss';
 const menu = props => (
   <Menu className={classes.sidebar}>
     <img src="img/logo.svg" alt="logo" />
-    <Menu.List title="Recherche">
-      <Menu.List.Item>
-        <SearchBar
-          searchTextHandler={props.searchTextHandler}
-          isLoading={props.isLoading}
-          displayFilterPanel={props.displayFilterPanel}
-        />
-      </Menu.List.Item>
-    </Menu.List>
+    {props.searchTextHandler && (
+      <Menu.List title="Recherche">
+        <Menu.List.Item>
+          <SearchBar
+            searchTextHandler={props.searchTextHandler}
+            isLoading={props.isLoading}
+            displayFilterPanel={props.displayFilterPanel}
+          />
+        </Menu.List.Item>
+      </Menu.List>)}
     <Menu.List title="General">
       <Menu.List.Item>
         <a href={URL_DOC} target="_blank" rel="noopener noreferrer">
@@ -80,7 +81,7 @@ const menu = props => (
 export default menu;
 
 menu.propTypes = {
-  displayFilterPanel: PropTypes.func.isRequired,
-  isLoading: PropTypes.bool.isRequired,
-  searchTextHandler: PropTypes.func.isRequired,
+  displayFilterPanel: PropTypes.func,
+  isLoading: PropTypes.bool,
+  searchTextHandler: PropTypes.func,
 };
