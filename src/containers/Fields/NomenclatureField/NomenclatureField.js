@@ -98,12 +98,13 @@ class NomenclatureField extends Component {
     const index = this.state.data.findIndex(item => item.id === itemId);
     console.log('data:', this.state.data);
     console.log('toggleEditModeRow:', index);
-    // Suppression d'un éventuel autre editMode
-    // TODO
-
-    // Ajout de la clé EditMode
     const updatedData = [...this.state.data];
-    updatedData[index].editMode = true;
+    // Suppression de la clé EditMode si elle existe pour passer en mode lecture
+    if (this.state.data[index].editMode) {
+      delete updatedData[index].editMode;
+    } else { // Sinon ajout de la clé EditMode
+      updatedData[index].editMode = true;
+    }
     this.setState({ data: updatedData });
   }
 
@@ -196,10 +197,16 @@ class NomenclatureField extends Component {
 
     return data.map((dataObject) => {
       let deleteButton = null;
-      if (this.state.editMode) {
+      let undoButton = null;
+      if (dataObject.editMode) {
         deleteButton = (
-          <Button onClick={() => this.delete(dataObject.id)}>
+          <Button onClick={() => this.delete(dataObject.id)} className="has-text-danger">
             <i className="fas fa-trash" />
+          </Button>
+        );
+        undoButton = (
+          <Button onClick={() => this.toggleEditModeRow(dataObject.id)}>
+            <i className="fas fa-undo" />
           </Button>
         );
       }
@@ -208,14 +215,24 @@ class NomenclatureField extends Component {
           {this.renderRow(dataObject, false)}
           <td>
             <div className={classes.LastTableColumn}>
-              <p
-                className={classes.P}
-                data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
-                <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
-              >
-                <i className="fas fa-info-circle" />
-              </p>
-              {deleteButton}
+              <ul>
+                <li>
+                  <p
+                    className={`${classes.P} has-text-primary`}
+                    data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
+                    <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
+                    data-place="left"
+                  >
+                    <i className="fas fa-info-circle" />
+                  </p>
+                </li>
+                <li>
+                  {deleteButton}
+                </li>
+                <li>
+                  {undoButton}
+                </li>
+              </ul>
             </div>
           </td>
         </tr>

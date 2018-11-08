@@ -6,9 +6,10 @@
 .LastTableColumn{
   text-align: center;
   display: inline-flex;
+  font-size: 1.2rem;
 }
 .P{
-  padding-top: 10px;
+  padding-right: 5px;
 }
 .TableContainer{
   overflow: auto;
@@ -23,14 +24,4 @@
 
 .ImportantTooltip{
   color: $main_color;
-}
-
-.Th{
-  cursor: pointer;
-}
-
-.SortIcon{
-  display: inline-block;
-  margin-left: 5px;
-  color: $text_secondary;
 }
