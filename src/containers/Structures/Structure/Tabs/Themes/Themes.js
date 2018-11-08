@@ -48,9 +48,9 @@ const themes = props => (
 export default themes;
 
 themes.propTypes = {
-  getStructure: PropTypes.func.isRequired,
+  getStructure: PropTypes.func,
   keywordsEn: PropTypes.array,
   keywordsFr: PropTypes.array,
-  panels: PropTypes.array.isRequired,
-  structureId: PropTypes.string.isRequired,
+  panels: PropTypes.array,
+  structureId: PropTypes.string,
 };

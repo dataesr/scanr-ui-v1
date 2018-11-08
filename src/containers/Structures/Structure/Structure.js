@@ -7,13 +7,7 @@ import axios from '../../../axios';
 import Addresses from './Tabs/Addresses/Addresses';
 import StatusToggle from '../../../UI/StatusToggle/StatusToggle';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
-import Main from './Tabs/Main/Main';
-import Resume from './Tabs/Resume/Resume';
-import Supervisors from './Tabs/Supervisors/Supervisors';
-import Themes from './Tabs/Themes/Themes';
-import Relationship from './Tabs/Relationship/Relationship';
-import Leaders from './Tabs/Leaders/Leaders';
-import Deals from './Tabs/Deals/Deals';
+import TabsDescription from './Tabs/TabsDescription';
 
 import classes from './Structure.scss';
 
@@ -71,93 +65,23 @@ class Structure extends Component {
       .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
+  renderTabsTitle() {
+    return TabsDescription.map(tab => (
+      <li className={this.state.activeTab === tab.id ? 'is-active' : ''}>
+        <a onClick={() => this.showTab(tab.id)}>
+          {tab.label}
+        </a>
+      </li>
+    ));
+  }
+
   render() {
-    if (this.props.renderList) {
-      this.props.history.push('/structures')
-    }
     const { structure } = this.state;
-    let content = null;
     if (!structure) {
       return null;
     }
+    const content = TabsDescription.find(tab => tab.id === this.state.activeTab);
     const title = structure.names ? this.getMainName(structure.names) : '';
-
-    switch (this.state.activeTab) {
-      case 'resume':
-        content = (
-          <Resume
-            end_date={structure.end_date}
-            esrId={structure.id}
-            keywords_en={structure.keywords_en}
-            keywords_fr={structure.keywords_fr}
-            level={structure.level}
-            nature={structure.nature}
-            start_date={structure.start_date}
-            urlLogo={structure.logo}
-            urlWebsite={structure.website && structure.website.find(site => site.status === 'main').url}
-          />
-        );
-        break;
-      case 'main':
-        content = (
-          <Main
-            alias={structure.alias}
-            codeNumbers={structure.code_numbers}
-            descriptions={structure.descriptions}
-            emails={structure.emails}
-            external_links={structure.externalLinks}
-            getStructure={this.getStructure}
-            names={structure.names}
-            phones={structure.phones}
-            social_medias={structure.social_medias}
-            structureId={structure.id}
-            websites={structure.websites}
-          />);
-        break;
-      case 'addresses':
-        content = (
-          <Addresses
-            addresses={structure.addresses}
-            structureId={structure.id}
-            getStructure={this.getStructure}
-          />
-        );
-        break;
-      case 'supervisors':
-        content = (
-          <Supervisors />
-        );
-        break;
-      case 'themes':
-        content = (
-          <Themes
-            structureId={structure.id}
-            getStructure={this.getStructure}
-            keywordsEn={structure.keywords_en}
-            keywordsFr={structure.keywords_fr}
-            panels={structure.panels}
-          />
-        );
-        break;
-      case 'relationship':
-        content = (
-          <Relationship />
-        );
-        break;
-      case 'leaders':
-        content = (
-          <Leaders />
-        );
-        break;
-      case 'deals':
-        content = (
-          <Deals offers={structure.offers}/>
-        );
-        break;
-
-      default:
-        content = this.showMainTab(structure);
-    }// /switch
 
     return (
       <Fragment>
@@ -179,53 +103,13 @@ class Structure extends Component {
                 <span>Retour</span>
               </Link>
             </li>
-            <li className={this.state.activeTab === 'resume' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('resume')}>
-                Résumé
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'main' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('main')}>
-                Général
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'addresses' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('addresses')}>
-                Adresses
-                &nbsp;
-                <span className="tag is-light is-rounded">{structure.addresses ? structure.addresses.length : ''}</span>
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'supervisors' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('supervisors')}>
-                Tutelles
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'themes' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('themes')}>
-                Thématiques
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'relationship' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('relationship')}>
-                Relations
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'leaders' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('leaders')}>
-                Dirigeants
-              </a>
-            </li>
-            <li className={this.state.activeTab === 'deals' ? 'is-active' : ''}>
-              <a onClick={() => this.showTab('deals')}>
-                Offres
-              </a>
-            </li>
-
+            {this.renderTabsTitle()}
           </ul>
         </div>
         <div className={classes.Height}>
-          {content}
+          {content && React.cloneElement(
+            content.component, { ...structure, getStructure: this.getStructure },
+          )}
         </div>
       </Fragment>
     );

@@ -153,7 +153,7 @@ class Addresses extends Component {
 export default Addresses;
 
 Addresses.propTypes = {
-  addresses: PropTypes.array.isRequired,
-  structureId: PropTypes.string.isRequired,
-  getStructure: PropTypes.func.isRequired,
+  addresses: PropTypes.array,
+  structureId: PropTypes.string,
+  getStructure: PropTypes.func,
 };
