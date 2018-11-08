@@ -1,10 +1,9 @@
 /* Composants externes */
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 /* Composants internes */
 import StatusTagMedium from '../../../../../../UI/StatusTagMedium/StatusTagMedium';
-import Aux from '../../../../../../hoc/Aux';
 import Tag from '../../../../../../UI/Tag/Tag';
 import Button from '../../../../../../UI/Button/Button';
 /* CSS */
@@ -24,7 +23,7 @@ const addressMini = (props) => {
     </div>);
   if (props.address.geocoded) {
     displayedAddress = (
-      <Aux>
+      <Fragment>
         <div className="column is-11" onClick={() => props.changeDisplayMode('full')}>
           <i className="fa fa-map-marker-alt hvr-icon" />
           <span className={classes.Text1}>
@@ -38,7 +37,7 @@ const addressMini = (props) => {
             {props.address.city}
           </span>
         </div>
-      </Aux>);
+      </Fragment>);
   }
   return (
     <div
@@ -58,7 +57,7 @@ const addressMini = (props) => {
                 <Tag tagValue="Géocodé" color="has-background-info" />
               </div>)
             : (
-              <Aux>
+              <Fragment>
                 <div className="column is-multiline">
                   <Tag tagValue="Non géocodé" color="has-background-danger" />
                 </div>
@@ -67,7 +66,7 @@ const addressMini = (props) => {
                     Chercher la localisation
                   </Button>
                 </div>
-              </Aux>)}
+              </Fragment>)}
         </div>
       </div>
     </div>);

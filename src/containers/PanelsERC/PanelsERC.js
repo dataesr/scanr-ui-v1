@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import axios from '../../axios';
-import Aux from '../../hoc/Aux';
 import Menu from '../Menu/Menu';
 import NomenclatureField from '../Fields/NomenclatureField/NomenclatureField';
 import PanelsDescription from '../../config/descriptions/nomenclatures/panelsERC';
@@ -61,8 +60,7 @@ class PanelsERC extends Component {
             />
           </div>
           <div id="content" className={classes.Content}>
-            <div className={classes.Bg}>
-            </div>
+            <div className={classes.Bg} />
             <NomenclatureField
               data={this.state.panels}
               description={PanelsDescription}
@@ -81,11 +79,7 @@ class PanelsERC extends Component {
       );
     }
 
-    return (
-      <Aux>
-        Pas de panel ERC
-      </Aux>
-    );
+    return 'Pas de panel ERC';
   }
 }
 

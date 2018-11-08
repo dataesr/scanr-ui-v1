@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Aux from '../../../../../hoc/Aux';
 import PanelsDescription from '../../../../../config/descriptions/structure/panels';
 import TagField from '../../../../Fields/TagField/TagField';
 import GridFields from '../../../../Fields/GridFields/GridFields';
 
 const themes = props => (
-  <Aux>
+  <Fragment>
     <div className="columns is-marginless">
       <div className="column">
         <TagField
@@ -44,7 +43,7 @@ const themes = props => (
         />
       </div>
     </div>
-  </Aux>);
+  </Fragment>);
 
 export default themes;
 

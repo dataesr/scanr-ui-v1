@@ -1,13 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-
-import Aux from '../../../../../../../hoc/Aux';
-
 
 import classes from './AddressField.css';
 
 const addressField = props => (
-  <Aux>
+  <Fragment>
     <div className="column is-narrow">
       <span className={classes.Header}>
         {props.label}
@@ -16,7 +13,7 @@ const addressField = props => (
     <div className="column" onClick={props.onClick}>
       {props.children}
     </div>
-  </Aux>);
+  </Fragment>);
 
 export default addressField;
 

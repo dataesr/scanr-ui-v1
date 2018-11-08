@@ -26,7 +26,7 @@ const structuresGridItems = props => (
 
                 <div className="columns is-gapless is-marginless">
 
-                  <div className="column is-10">
+                  <div className="column">
                     <div className={classes.Content}>
                       <NavLink to={`${props.match.path}/${structure.id}`}>
                         <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
@@ -53,7 +53,7 @@ const structuresGridItems = props => (
                     </div>
                   </div>
 
-                  <div className="column is-2 has-text-centered">
+                  <div style={{ minWidth: '52px' }} className="column is-2 has-text-centered">
                     <div className={classes.Info}>
                       <StructureStatus status={structure.status} />
                     </div>
@@ -78,6 +78,6 @@ const structuresGridItems = props => (
 export default structuresGridItems;
 
 structuresGridItems.propTypes = {
-  data: PropTypes.array.isRequired,
-  match: PropTypes.object.isRequired,
+  data: PropTypes.array,
+  match: PropTypes.object,
 };

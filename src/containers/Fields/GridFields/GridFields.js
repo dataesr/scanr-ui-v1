@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
@@ -267,14 +267,14 @@ class GridFields extends Component {
     let saveAndCancelButtons = null;
     if (this.state.editMode) {
       saveAndCancelButtons = (
-        <Aux>
+        <Fragment>
           <Button onClick={this.save}>
             <i className="fas fa-save" />
           </Button>
           <Button onClick={() => this.toggleEditMode(false)}>
             <i className="fas fa-undo" />
           </Button>
-        </Aux>
+        </Fragment>
       );
     }
 
@@ -293,7 +293,7 @@ class GridFields extends Component {
       nbData = this.state.data.length;
     }
     return (
-      <Aux className={classes.GridFields}>
+      <div className={classes.GridFields}>
         <div>
           <div className={classes.TextTitleInline}>
             {this.props.title}
@@ -333,7 +333,7 @@ class GridFields extends Component {
           />)}
 
         <ReactTooltip html />
-      </Aux>
+      </div>
     );
   }
 }
