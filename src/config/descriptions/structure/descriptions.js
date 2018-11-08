@@ -1,7 +1,8 @@
 import React from 'react';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
-import TextArea from '../../../UI/Field/Editable/TextArea/TextArea';
+import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
+import TextArea from '../../../UI/Field/Editable/TextArea/TextArea';
 
 export default [
   {
@@ -47,6 +48,13 @@ export default [
     key: 'end_date',
     displayLabel: 'Fin',
     component: <InputDate />,
+    isEditable: false,
+    isShown: true,
+  },
+  {
+    key: 'meta',
+    displayLabel: '',
+    component: <Meta />,
     isEditable: false,
     isShown: true,
   },

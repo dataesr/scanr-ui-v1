@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Descriptions
+import BadgesDescription from '../../../../../config/descriptions/structure/badges';
 import Descriptions from '../../../../../config/descriptions/structure/descriptions';
 import NameDescription from '../../../../../config/descriptions/structure/names';
 // Composants UI
@@ -18,7 +19,7 @@ const Main = props => (
         infoMessage="Aucun libellé actif"
         label="libellé"
         schemaName="names"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Libellés"
       />
     </div>
@@ -29,7 +30,7 @@ const Main = props => (
         infoMessage="Ajouter un alias"
         getStructure={props.getStructure}
         schemaName="alias"
-        structureId={props.structureId}
+        structureId={props.id}
         title="Alias"
       />
     </div>
@@ -40,8 +41,20 @@ const Main = props => (
         infoMessage="Ajouter un code"
         getStructure={props.getStructure}
         schemaName="code_numbers"
-        structureId={props.structureId}
+        structureId={props.id}
         title="Codes"
+      />
+    </div>
+    <div className="column is-4">
+      <GridFields
+        data={props.badges}
+        description={BadgesDescription}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucun badge actif"
+        label="badge"
+        schemaName="badges"
+        url={props.url}
+        title="Badges"
       />
     </div>
     <div className="column is-12">
@@ -52,7 +65,7 @@ const Main = props => (
         infoMessage="Aucune description"
         label="description"
         schemaName="descriptions"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Descriptions"
       />
     </div>
@@ -63,9 +76,11 @@ export default Main;
 
 Main.propTypes = {
   alias: PropTypes.array,
+  badges: PropTypes.array,
   codeNumbers: PropTypes.array,
   descriptions: PropTypes.array,
   getStructure: PropTypes.func,
+  id: PropTypes.string,
   names: PropTypes.array,
-  structureId: PropTypes.string,
+  url: PropTypes.string,
 };

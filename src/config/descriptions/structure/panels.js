@@ -1,6 +1,7 @@
 import React from 'react';
 import AutoComplete from '../../../UI/Field/Editable/AutoComplete/AutoComplete';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
+import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
 export default [
@@ -39,6 +40,13 @@ export default [
     displayLabel: 'Fin',
     component: <InputDate />,
     isEditable: true,
+    isShown: true,
+  },
+  {
+    key: 'meta',
+    displayLabel: '',
+    component: <Meta />,
+    isEditable: false,
     isShown: true,
   },
 ];
