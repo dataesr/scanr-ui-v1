@@ -14,7 +14,7 @@ const themes = props => (
           infoMessage="Ajouter un mot clé"
           getStructure={props.getStructure}
           schemaName="keywords_fr"
-          structureId={props.structureId}
+          structureId={props.id}
           title="Mots clés français"
         />
       </div>
@@ -24,7 +24,7 @@ const themes = props => (
           infoMessage="Ajouter un mot clé"
           getStructure={props.getStructure}
           schemaName="keywords_en"
-          structureId={props.structureId}
+          structureId={props.id}
           title="Mots clés anglais"
         />
       </div>
@@ -38,8 +38,8 @@ const themes = props => (
           infoMessage="Aucun panel actif"
           label="panel"
           schemaName="panels"
-          url={`structures/${props.structureId}`}
-          title="Panel"
+          url={props.url}
+          title="Panels"
         />
       </div>
     </div>
@@ -49,8 +49,9 @@ export default themes;
 
 themes.propTypes = {
   getStructure: PropTypes.func,
+  id: PropTypes.string,
   keywordsEn: PropTypes.array,
   keywordsFr: PropTypes.array,
   panels: PropTypes.array,
-  structureId: PropTypes.string,
+  url: PropTypes.string,
 };
