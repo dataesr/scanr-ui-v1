@@ -14,6 +14,7 @@ const menu = props => (
         <SearchBar
           searchTextHandler={props.searchTextHandler}
           isLoading={props.isLoading}
+          displayFilterPanel={props.displayFilterPanel}
         />
       </Menu.List.Item>
     </Menu.List>
@@ -79,6 +80,7 @@ const menu = props => (
 export default menu;
 
 menu.propTypes = {
+  displayFilterPanel: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   searchTextHandler: PropTypes.func.isRequired,
 };

@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import Aux from '../../../../../hoc/Aux';
 import Card from '../../../../../UI/Field/Card';
 import LinkCard from '../../../../../UI/Field/LinkCard';
 import WordCloud from '../../../../../UI/Field/WordCloud';
 
 const Resume = props => (
-  <Aux>
+  <Fragment>
     <div className="columns">
       <div className="column">
         {props.urlLogo && <img src={props.urlLogo} alt="" />}
@@ -47,7 +46,7 @@ const Resume = props => (
           words={props.keywords_fr.concat(props.keywords_en)}
         />)}
     </div>
-  </Aux>
+  </Fragment>
 );
 
 export default Resume;

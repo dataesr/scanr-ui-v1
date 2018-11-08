@@ -1,11 +1,10 @@
 /* Composants externes */
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 /* Config */
 import { PER_PAGE } from '../../../config/config';
 
 /* Composants internes */
-import Aux from '../../../hoc/Aux';
 import Button from '../../../UI/Button/Button';
 import SearchListItems from './SearchListItems/SearchListItems';
 
@@ -59,7 +58,7 @@ class SearchResults extends Component {
     }
 
     return (
-      <Aux>
+      <Fragment>
         <div className={classes.Bg}>
           <Button onClick={() => this.selectDisplayStyle('grid')}>
             <i className="fas fa-th" />
@@ -74,7 +73,7 @@ class SearchResults extends Component {
             {btNextContent}
           </div>
         </div>
-      </Aux>
+      </Fragment>
     );
   }
 }

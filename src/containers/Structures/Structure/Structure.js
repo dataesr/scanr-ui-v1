@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { ERREUR_PATCH } from '../../../config/config';
 import axios from '../../../axios';
-import Aux from '../../../hoc/Aux';
 import Addresses from './Tabs/Addresses/Addresses';
 import StatusToggle from '../../../UI/StatusToggle/StatusToggle';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
@@ -157,7 +156,7 @@ class Structure extends Component {
     }// /switch
 
     return (
-      <Aux>
+      <Fragment>
         <div className={classes.Bg}>
           <div className="columns is-marginless is-gapless">
             <div className="column is-four-fifths">
@@ -224,7 +223,7 @@ class Structure extends Component {
         <div className={classes.Height}>
           {content}
         </div>
-      </Aux>
+      </Fragment>
     );
   }
 }

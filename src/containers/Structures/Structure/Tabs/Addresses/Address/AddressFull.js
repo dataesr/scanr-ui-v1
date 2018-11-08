@@ -1,12 +1,11 @@
 /* Composants externes */
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import { DATE_FORMAT_API } from '../../../../../../config/config';
 
 /* Composants internes */
-import Aux from '../../../../../../hoc/Aux';
 import Button from '../../../../../../UI/Button/Button';
 import ErrorMessage from '../../../../../../UI/Messages/ErrorMessage';
 import FieldTitle from '../../../../../../UI/Field/FieldTitle';
@@ -279,7 +278,7 @@ class AddressFull extends Component {
             </div>) : 'Non géolocalisé'}
         </div>
         {this.props.lifecycle && (
-          <Aux>
+          <Fragment>
             <FieldTitle>
               Cycle de vie
             </FieldTitle>
@@ -291,7 +290,7 @@ class AddressFull extends Component {
                 modified_by={this.props.lifecycle.modified_by}
               />
             </div>
-          </Aux>)}
+          </Fragment>)}
         <div className="columns is-marginless">
           <div className="column has-text-centered">
             <Button onClick={this.props.deleteButton}>
