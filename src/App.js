@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import StructureFilters from './config/descriptions/structure/filters'
+import StructureFilters from './config/descriptions/structure/filters';
 import PanelsERC from './containers/PanelsERC/PanelsERC';
 import Search from './containers/Search/Search';
 import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
@@ -27,8 +27,30 @@ const App = () => (
             label="structure"
           />)}
       />
-      <Route path="/entreprises" render={() => (<h3>Entreprises</h3>)} />
-      <Route path="/institutions" component={() => (<h3>Institutions</h3>)} />
+      <Route
+        path="/entreprises"
+        render={props => (
+          <Search
+            {...props}
+            entity="entreprises"
+            filtersConfig={StructureFilters}
+            entityComponent={Structure}
+            gridComponent={<StructuresGridItems />}
+            label="entreprise"
+          />)}
+      />
+      <Route
+        path="/institutions"
+        render={props => (
+          <Search
+            {...props}
+            entity="institutions"
+            filtersConfig={StructureFilters}
+            entityComponent={Structure}
+            gridComponent={<StructuresGridItems />}
+            label="institution"
+          />)}
+      />
       <Redirect from="/" to="structures" />
     </Switch>
   </BrowserRouter>

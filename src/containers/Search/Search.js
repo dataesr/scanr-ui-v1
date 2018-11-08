@@ -37,11 +37,13 @@ class Search extends Component {
   }
 
   componentDidMount() {
-    const p = {
-      init: true,
-      pagination: false,
-    };
-    this.axiosCall(p);
+    this.axiosCall(true);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.match.path !== prevProps.match.path) {
+      this.axiosCall(true);
+    }
   }
 
   toggleFilterPanel = (bool) => {
