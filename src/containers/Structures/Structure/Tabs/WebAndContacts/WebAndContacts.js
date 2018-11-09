@@ -18,7 +18,7 @@ const WebAndContacts = props => (
         description={EmailsDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun email actif"
-        label="email"
+        newField="Ajouter un nouvel email"
         schemaName="emails"
         url={`structures/${props.structureId}`}
         title="Emails"
@@ -31,7 +31,7 @@ const WebAndContacts = props => (
         description={PhonesDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun téléphone actif"
-        label="téléphone"
+        newField="Ajouter un nouveau téléphone"
         schemaName="phones"
         url={`structures/${props.structureId}`}
         title="Téléphones"
@@ -44,7 +44,7 @@ const WebAndContacts = props => (
         description={SocialMediasDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun réseau social"
-        label="réseau social"
+        newField="Ajouter un nouveau réseau social"
         schemaName="social_medias"
         url={`structures/${props.structureId}`}
         title="Réseaux sociaux"
@@ -56,7 +56,7 @@ const WebAndContacts = props => (
         description={WebsitesDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun site internet"
-        label="site internet"
+        newField="Ajouter un nouveau site internet"
         schemaName="websites"
         url={`structures/${props.structureId}`}
         title="Sites internet"
@@ -68,7 +68,7 @@ const WebAndContacts = props => (
         description={ExternalLinksDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun lien externe"
-        label="lien externe"
+        newField="Ajouter un nouveau lien externe"
         schemaName="external_links"
         url={`structures/${props.structureId}`}
         title="Liens externes"
