@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import ReactTooltip from 'react-tooltip';
 import moment from 'moment';
 
 import axios from '../../../axios';
@@ -27,7 +26,7 @@ class GridFields extends Component {
   state = {
     editMode: false,
     newRow: null,
-    data: this.props.data,
+    data: this.props.data || [],
     errorMessage: null,
     showAll: false,
     infoMessage: false,
@@ -44,7 +43,6 @@ class GridFields extends Component {
   }
 
   BtAddHandler = () => {
-    // Ajout d'une ligne vide
     const emptyRow = {};
     for (let i = 0; i < this.props.description.length; i += 1) {
       emptyRow[this.props.description[i].key] = null;
@@ -74,7 +72,8 @@ class GridFields extends Component {
   };
 
   delete = (itemId) => {
-    const index = this.state.data.findIndex(item => item.meta.id === itemId);
+    const index = this.state.data.findIndex(item => (
+      typeof item === 'object' ? item.meta.id === itemId : item === itemId));
     if (index < 0 || !itemId) {
       this.setState({ newRow: null });
     } else {
@@ -97,7 +96,29 @@ class GridFields extends Component {
     this.setState({ editMode: bool });
   }
 
-  onChangeHandler = (event, id) => {
+  onChangeStringHandler = (event, index) => {
+    console.log('string');
+    event.persist();
+    const value = event.target.value || event.target.getAttribute('data-value');
+    console.log(value)
+    this.setState((prevState) => {
+      const data = prevState.data ? [...prevState.data] : [];
+      if (index < 0) {
+        return {
+          newRow: {
+            key: value,
+          },
+        };
+      }
+      data[index] = value;
+      return {
+        data,
+      };
+    });
+  }
+
+  onChangeObjectHandler = (event, id) => {
+    console.log('object');
     event.persist();
     const value = event.target.value || event.target.getAttribute('data-value');
     this.setState((prevState) => {
@@ -145,10 +166,15 @@ class GridFields extends Component {
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
       Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);
-      data.push(newRow);
-    }
-    if (this.validate(data)) {
-      this.axiosCall(data);
+      if (newRow.key) {
+        data.push(newRow.key);
+        this.axiosCall(data);
+      } else {
+        data.push(newRow);
+        if (this.validate(data)) {
+          this.axiosCall(data);
+        }
+      }
     }
   }
 
@@ -193,31 +219,21 @@ class GridFields extends Component {
       return null;
     }
 
-    return data.map((dataObject) => {
+    return data.map((dataItem) => {
       let deleteButton = null;
+      const itemId = typeof dataItem === 'object' ? dataItem.meta.id : dataItem;
       if (this.state.editMode) {
         deleteButton = (
-          <Button onClick={() => this.delete(dataObject.meta.id)}>
+          <Button onClick={() => this.delete(itemId)}>
             <i className="fas fa-trash" />
           </Button>
         );
       }
       return (
-        <tr key={dataObject.meta.id}>
-          {this.renderRow(dataObject, false)}
+        <tr key={itemId}>
+          {this.renderRow(dataItem, false)}
           <td>
-            <div className={classes.LastTableColumn}>
-              <p
-                className={classes.P}
-                data-tip={`Créé le <b>${moment(dataObject.meta.created_at).format('LL')}</b>
-                par <b>${dataObject.meta.created_by}</b>
-                <br/> Modifié le <b>${moment(dataObject.meta.modified_at).format('LL')}</b>
-                par <b>${dataObject.meta.modified_by}</b>`}
-              >
-                <i className="fas fa-info-circle" />
-              </p>
-              {deleteButton}
-            </div>
+            {deleteButton}
           </td>
         </tr>
       );
@@ -225,15 +241,16 @@ class GridFields extends Component {
   }
 
   renderRow(row, isNew) {
-    return this.props.description.map((field) => {
+    return this.props.description.map((field, index) => {
       if (field.isShown) {
         let editMode = true;
-        let id = null;
+        let id = -1;
         if (!isNew) {
           editMode = this.state.editMode;
-          id = row.meta.id;
+          id = this.props.description.length === 1 ? index : row.meta.id;
         }
         editMode = field.isEditable ? editMode : false;
+        const onChange = this.props.description.length === 1 ? this.onChangeStringHandler : this.onChangeObjectHandler;
         return (
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
@@ -241,10 +258,10 @@ class GridFields extends Component {
                 canBeNull: field.rules && field.rules.canBeNull,
                 editMode,
                 id: field.key,
-                fieldValue: row[field.key],
+                fieldValue: typeof row === 'object' ? row[field.key] : row,
                 noMain: field.rules && field.rules.noMain,
                 schemaName: this.props.schemaName,
-                onChange: event => this.onChangeHandler(event, id),
+                onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),
               },
             )}
@@ -331,7 +348,6 @@ class GridFields extends Component {
             label="anciens libellés"
           />)}
 
-        <ReactTooltip html />
       </div>
     );
   }

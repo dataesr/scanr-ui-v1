@@ -1,5 +1,6 @@
 import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
+import Meta from '../../../UI/Field/Meta';
 
 export default [
   {
@@ -21,6 +22,13 @@ export default [
     rules: {
       canBeNull: false,
     },
+  },
+  {
+    key: 'meta',
+    displayLabel: '',
+    component: <Meta />,
+    isEditable: false,
+    isShown: true,
   },
 
 ];

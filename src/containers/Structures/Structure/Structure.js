@@ -67,7 +67,7 @@ class Structure extends Component {
 
   renderTabsTitle() {
     return TabsDescription.map(tab => (
-      <li className={this.state.activeTab === tab.id ? 'is-active' : ''}>
+      <li key={tab.id} className={this.state.activeTab === tab.id ? 'is-active' : ''}>
         <a onClick={() => this.showTab(tab.id)}>
           {tab.label}
         </a>
@@ -108,7 +108,7 @@ class Structure extends Component {
         </div>
         <div className={classes.Height}>
           {content && React.cloneElement(
-            content.component, { ...structure, getStructure: this.getStructure },
+            content.component, { ...structure, getStructure: this.getStructure, url: `structures/${structure.id}` },
           )}
         </div>
       </Fragment>

@@ -10,7 +10,7 @@ import WebsitesDescription from '../../../../../config/descriptions/structure/we
 // Composants UI
 import GridFields from '../../../../Fields/GridFields/GridFields';
 
-const Main = props => (
+const WebAndContacts = props => (
   <div className="columns is-multiline is-marginless">
     <div className="column  is-6">
       <GridFields
@@ -78,9 +78,9 @@ const Main = props => (
   </div>
 );
 
-export default Main;
+export default WebAndContacts;
 
-Main.propTypes = {
+WebAndContacts.propTypes = {
   external_links: PropTypes.array,
   emails: PropTypes.array,
   getStructure: PropTypes.func,

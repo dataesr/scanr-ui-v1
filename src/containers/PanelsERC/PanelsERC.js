@@ -53,11 +53,7 @@ class PanelsERC extends Component {
 
         <div className={classes.Layout}>
           <div className={classes.Menu}>
-            <Menu
-              isLoading={this.state.isLoading}
-              nStructures={this.state.nStructures}
-              searchTextHandler={this.searchTextHandler}
-            />
+            <Menu />
           </div>
           <div id="content" className={classes.Content}>
             <div className={classes.Bg} />
