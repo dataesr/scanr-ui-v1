@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button/Button';
 
-import classes from './Field.css';
+import classes from './Field.scss';
 
 const btShowAll = props => (
   <div className={classes.bt_showAll}>

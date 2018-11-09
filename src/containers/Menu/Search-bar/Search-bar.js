@@ -2,6 +2,8 @@ import React from 'react';
 import { Field, Control } from 'react-bulma-components/lib/components/form';
 import PropTypes from 'prop-types';
 
+import classes from './Search-bar.scss';
+
 const SearchBar = props => (
   <div>
     <Field>
@@ -18,6 +20,10 @@ const SearchBar = props => (
         </span>
       </Control>
     </Field>
+    <div className={classes.FiltersLink} onClick={props.displayFilterPanel}>
+      <i className="fas fa-filter" />
+      &nbsp;Afficher les filtres
+    </div>
   </div>
 );
 

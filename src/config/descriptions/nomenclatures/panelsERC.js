@@ -22,7 +22,7 @@ export default [
     isEditable: true,
     isShown: true,
     style: {
-      width: '5%',
+      width: '10%',
     },
   },
   {
