@@ -30,7 +30,7 @@ export default Input;
 Input.propTypes = {
   canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
-  fieldValue: PropTypes.string,
+  fieldValue: PropTypes.any,
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
