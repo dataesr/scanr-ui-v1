@@ -60,7 +60,7 @@ class PanelsERC extends Component {
               description={PanelsDescription}
               refreshFunction={this.getPanels}
               infoMessage="vide"
-              label="panel ERC"
+              label="Ajouter un panel ERC"
               schemaName="panels"
               url="panels"
               title="Panels ERC"
