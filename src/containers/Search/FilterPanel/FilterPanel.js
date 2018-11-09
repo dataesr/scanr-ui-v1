@@ -16,7 +16,7 @@ const filterPanel = (props) => {
     </Menu.List.Item>
   ));
 
-  let style = { transform: 'translate3d(-108vh, 0, 0)' };
+  let style = { transform: 'translate3d(-160vh, 0, 0)' };
   if (props.visible) {
     style = {
       transform: 'translate3d(287px, 0, 0)',

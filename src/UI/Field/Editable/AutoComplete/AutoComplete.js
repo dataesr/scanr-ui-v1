@@ -7,7 +7,8 @@ class AutoComplete extends Component {
   state = {
     categoryList: [],
     onFocus: false,
-    searchInput: this.props.fieldValue && this.props.fieldValue.name_fr,
+    searchInput: typeof this.props.fieldValue === 'object'
+      ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue,
   }
 
   componentDidMount() {
@@ -61,7 +62,8 @@ class AutoComplete extends Component {
   render() {
     let component = (
       <span className={classes.Text} onClick={this.props.onClick}>
-        {this.props.fieldValue ? this.props.fieldValue.name_fr : ''}
+        {typeof this.props.fieldValue === 'object'
+          ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue}
       </span>);
     if (this.props.editMode) {
       let inputColor = null;
