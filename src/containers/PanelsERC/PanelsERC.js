@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 
 import axios from '../../axios';
 import NomenclatureField from '../Fields/NomenclatureField/NomenclatureField';
-
+import Menu from '../Menu/Menu';
 import PanelsDescription from '../../config/descriptions/nomenclatures/panelsERC';
 import classes from './PanelsERC.scss';
 class PanelsERC extends Component {
