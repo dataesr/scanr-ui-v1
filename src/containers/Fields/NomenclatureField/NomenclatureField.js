@@ -13,11 +13,9 @@ import {
   from '../../../config/config';
 
 import BtAdd from '../../../UI/Field/btAdd';
-import BtShowAll from '../../../UI/Field/BtShowAll';
 import Button from '../../../UI/Button/Button';
 import ErrorMessage from '../../../UI/Messages/ErrorMessage';
 import InfoMessage from '../../../UI/Messages/InfoMessage';
-import SortStatus from '../../../Utils/SortStatus';
 
 import classes from './NomenclatureField.scss';
 
@@ -42,10 +40,6 @@ class NomenclatureField extends Component {
       emptyRow[this.props.description[i].key] = null;
     }
     this.setState({ newRow: emptyRow });
-  }
-
-  sortHandler = (field) => {
-    this.props.refreshFunction('', field);
   }
 
   axiosCall = (data, itemId, itemIndex) => {
@@ -101,37 +95,20 @@ class NomenclatureField extends Component {
   onChangeHandler = (event, id) => {
     event.persist();
     this.setState((prevState) => {
-      const now = moment().format(DATE_FORMAT_API);
       const data = [...prevState.data];
       const index = data.findIndex(item => item.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
-        itemToUpdate.meta = {
-          created_by: 'user',
-          created_at: now,
-        };
         itemToUpdate[event.target.id] = event.target.value;
         return {
           newRow: itemToUpdate,
-          showAll: event.target.value === 'old' ? true : prevState.showAll,
         };
       }
       const itemToUpdate = { ...data[index] };
-      itemToUpdate[event.target.id] = event.target.type === 'date'
-        ? moment(event.target.value).format(DATE_FORMAT_API)
-        : event.target.value;
-      const meta = {
-        ...itemToUpdate.meta,
-        modified_by: 'user',
-        modified_at: now,
-      };
-      itemToUpdate.meta = meta;
+      itemToUpdate[event.target.id] = event.target.value;
       data[index] = itemToUpdate;
 
-      return {
-        data,
-        showAll: event.target.value === 'old' ? true : prevState.showAll,
-      };
+      return { data };
     });
   }
 
@@ -143,7 +120,7 @@ class NomenclatureField extends Component {
     this.props.refreshFunction('prev');
   }
 
-  save = (itemId, itemIndex) => {
+  save = (itemId) => {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
       if (typeof dataRow.code === 'object') {
@@ -173,7 +150,7 @@ class NomenclatureField extends Component {
           <th
             key={field.key}
             style={field.style}
-            onClick={() => this.sortHandler(field.key)}
+            onClick={() => this.props.changeDirection(field.key)}
             className={classes.Th}
           >
             {field.displayLabel}
@@ -219,7 +196,7 @@ class NomenclatureField extends Component {
               <ul>
                 <li>
                   <p
-                    className={`${classes.P} has-text-primary`}
+                    className={`${classes.InfoMeta}`}
                     data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
                     <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
                     data-place="left"
@@ -263,6 +240,7 @@ class NomenclatureField extends Component {
                 fieldValue: row[field.key],
                 noMain: field.rules && field.rules.noMain,
                 schemaName: this.props.schemaName,
+                // onChange: () => console.log('coucou'),
                 onChange: event => this.onChangeHandler(event, id),
                 onClick: () => this.toggleEditModeRow(id),
               },
@@ -282,28 +260,13 @@ class NomenclatureField extends Component {
           {this.renderRow(this.state.newRow, true)}
         </tr>);
     }
-
-    let oldStatusObject = null;
-    let data = null;
-    let nbData = 0;
-    if (this.props.data) {
-      oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
-      data = [...this.state.data].sort(SortStatus);
-      if (!this.state.showAll) {
-        data = data.filter(dataObject => dataObject.status !== 'old');
-        if (data.length === 0) {
-          this.setState({ infoMessage: true });
-        }
-      }
-      nbData = this.state.data.length;
-    }
     return (
       <div className={classes.NomenclatureField}>
         <div className="columns is-marginless">
           <div className="column">
             <div className={classes.TextTitleInline}>
               {this.props.title}
-              <span className={`tag is-white is-rounded ${classes.SpaceTag}`}>{nbData}</span>
+              <span className={`tag is-white is-rounded ${classes.SpaceTag}`}>{this.props.total}</span>
             </div>
             <BtAdd onClick={this.BtAddHandler}>
               {this.props.label}
@@ -344,7 +307,7 @@ class NomenclatureField extends Component {
                 </thead>
                 <tbody>
                   {newRow}
-                  {this.renderBody(data)}
+                  {this.renderBody(this.state.data)}
                 </tbody>
               </table>
             </div>)}
@@ -380,6 +343,7 @@ class NomenclatureField extends Component {
 export default NomenclatureField;
 
 NomenclatureField.propTypes = {
+  changeDirection: PropTypes.func.isRequired,
   data: PropTypes.array,
   description: PropTypes.array.isRequired,
   refreshFunction: PropTypes.func.isRequired,
@@ -389,5 +353,6 @@ NomenclatureField.propTypes = {
   sortField: PropTypes.string.isRequired,
   sortDirection: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './Field.css';
+import classes from './Field.scss';
 
 const btAdd = props => (
   <div className={classes.bt_add}>

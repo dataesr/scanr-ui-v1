@@ -27,7 +27,7 @@
   right: 0;
   border-radius: 12px;
   bottom: 0;
-  background-color: #3291EE;
+  background-color: $activeStatus;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -42,7 +42,7 @@
 .slider:before {
   position: absolute;
   content: "Statut";
-  color: #888;
+  color: $text_secondary;
   height: 22px;
   width: 69px;
   left: 1px;

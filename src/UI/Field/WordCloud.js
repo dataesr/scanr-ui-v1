@@ -3,7 +3,7 @@ import TagCloud from 'react-tag-cloud';
 import randomColor from 'randomcolor';
 import PropTypes from 'prop-types';
 
-import classes from './Field.css';
+import classes from './Field.scss';
 
 const style = {
   flex: '1',
