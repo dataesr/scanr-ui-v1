@@ -97,10 +97,8 @@ class GridFields extends Component {
   }
 
   onChangeStringHandler = (event, index) => {
-    console.log('string');
     event.persist();
     const value = event.target.value || event.target.getAttribute('data-value');
-    console.log(value)
     this.setState((prevState) => {
       const data = prevState.data ? [...prevState.data] : [];
       if (index < 0) {
@@ -118,7 +116,6 @@ class GridFields extends Component {
   }
 
   onChangeObjectHandler = (event, id) => {
-    console.log('object');
     event.persist();
     const value = event.target.value || event.target.getAttribute('data-value');
     this.setState((prevState) => {
@@ -168,14 +165,14 @@ class GridFields extends Component {
       Object.keys(this.state.newRow).forEach(key => !newRow[key] && delete newRow[key]);
       if (newRow.key) {
         data.push(newRow.key);
-        this.axiosCall(data);
-      } else {
-        data.push(newRow);
-        if (this.validate(data)) {
-          this.axiosCall(data);
-        }
+        return this.axiosCall(data);
       }
+      data.push(newRow);
     }
+    if (this.validate(data)) {
+      return this.axiosCall(data);
+    }
+    return null;
   }
 
   validate(data) {
@@ -318,7 +315,7 @@ class GridFields extends Component {
           </div>
 
           <BtAdd onClick={this.BtAddHandler}>
-            {`Ajouter un nouveau champ ${this.props.label}`}
+            {this.props.newField}
           </BtAdd>
 
           {saveAndCancelButtons}
@@ -360,8 +357,8 @@ GridFields.propTypes = {
   description: PropTypes.array.isRequired,
   refreshFunction: PropTypes.func.isRequired,
   infoMessage: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  newField: PropTypes.string.isRequired,
   schemaName: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
