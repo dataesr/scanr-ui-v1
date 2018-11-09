@@ -92,6 +92,19 @@ class NomenclatureField extends Component {
     this.setState({ data: updatedData });
   }
 
+  toggleEditModeRow = (itemId) => {
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    console.log('data:', this.state.data);
+    console.log('toggleEditModeRow:', index);
+    // Suppression d'un éventuel autre editMode
+    // TODO
+
+    // Ajout de la clé EditMode
+    const updatedData = [...this.state.data];
+    updatedData[index].editMode = true;
+    this.setState({ data: updatedData });
+  }
+
   onChangeHandler = (event, id) => {
     event.persist();
     this.setState((prevState) => {
