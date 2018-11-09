@@ -36,7 +36,7 @@ const themes = props => (
           description={PanelsDescription}
           refreshFunction={props.getStructure}
           infoMessage="Aucun panel actif"
-          label="panel"
+          newField="Ajouter un nouveau panel"
           schemaName="panels"
           url={props.url}
           title="Panels"

@@ -17,7 +17,7 @@ const Main = props => (
         description={NameDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun libellé actif"
-        label="libellé"
+        newField="Ajouter un nouveau libellé"
         schemaName="names"
         url={props.url}
         title="Libellés"
@@ -45,25 +45,25 @@ const Main = props => (
         title="Codes"
       />
     </div>
-    <div className="column is-4">
+    <div className="column is-5">
       <GridFields
         data={props.badges}
         description={BadgesDescription}
         refreshFunction={props.getStructure}
         infoMessage="Aucun badge actif"
-        label="badge"
+        newField="Ajouter un nouveau badge"
         schemaName="badges"
         url={props.url}
         title="Badges"
       />
     </div>
-    <div className="column is-12">
+    <div className="column is-7">
       <GridFields
         data={props.descriptions}
         description={Descriptions}
         refreshFunction={props.getStructure}
         infoMessage="Aucune description"
-        label="description"
+        newField="Ajouter une nouvelle description"
         schemaName="descriptions"
         url={props.url}
         title="Descriptions"
