@@ -3,6 +3,7 @@ import AutoComplete from '../../../UI/Field/Editable/AutoComplete/AutoComplete';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
+import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 
 export default [
   {
@@ -12,9 +13,7 @@ export default [
     requireCategoryList: true,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'status',
@@ -23,10 +22,7 @@ export default [
     isEditable: true,
     isShown: true,
     canBeNull: false,
-    rules: {
-      canBeNull: false,
-      noMain: true,
-    },
+    rules: [NO_NULL_RULE, STATUS_RULE],
   },
   {
     key: 'start_date',

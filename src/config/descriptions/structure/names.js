@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 import Input from '../../../UI/Field/Editable/Input/Input';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Meta from '../../../UI/Field/Meta';
@@ -12,9 +13,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'name_en',
@@ -22,9 +21,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'acronym',
@@ -32,7 +29,6 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    canBeNull: true,
   },
   {
     key: 'status',
@@ -41,10 +37,7 @@ export default [
     isEditable: true,
     isShown: true,
     canBeNull: false,
-    rules: {
-      canBeNull: false,
-      mainStatus: false,
-    },
+    rules: [NO_NULL_RULE, STATUS_RULE],
   },
   {
     key: 'start_date',
