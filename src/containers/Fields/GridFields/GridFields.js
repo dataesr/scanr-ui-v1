@@ -7,6 +7,8 @@ import axios from '../../../axios';
 import {
   ERREUR_PATCH,
   DATE_FORMAT_API,
+  NO_NULL_RULE,
+  STATUS_RULE,
 }
   from '../../../config/config';
 
@@ -30,9 +32,7 @@ class GridFields extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.data && prevProps.data.length > 0
-      && this.props.data && this.props.data.length > 0
-      && prevProps.data[0].code !== this.props.data[0].code) {
+    if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
       this.setState({ data: this.props.data })
     }
   }
@@ -186,8 +186,8 @@ class GridFields extends Component {
   }
 
   renderBody(data) {
-    if ((!data || data.length === 0) && !this.state.newRow) {
-      return <InfoMessage>{this.props.infoMessage}</InfoMessage>;
+    if (!data || data.length === 0) {
+      return <InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage>;
     }
 
     return data.map((dataItem) => {
@@ -226,12 +226,13 @@ class GridFields extends Component {
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
-                canBeNull: field.rules && field.rules.canBeNull,
+                canBeNull: field.rules && field.rules.includes(NO_NULL_RULE),
                 editMode,
                 id: field.key,
                 fieldValue: typeof row === 'object' ? row[field.key] : row,
-                noMain: field.rules && field.rules.noMain,
-                schemaName: this.props.schemaName,
+                noMain: field.rules && field.rules.includes(STATUS_RULE),
+                schemaName: field.schemaName,
+                searchInstitution: field.searchInstitution,
                 onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),
               },

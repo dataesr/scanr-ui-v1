@@ -53,7 +53,6 @@ const Main = props => (
         refreshFunction={props.getStructure}
         infoMessage="Aucun badge actif"
         newField="Ajouter un nouveau badge"
-        schemaName="badges"
         url={props.url}
         title="Badges"
       />
