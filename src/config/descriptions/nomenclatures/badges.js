@@ -10,17 +10,7 @@ export default [
     isEditable: false,
     isShown: true,
     style: {
-      width: '10%',
-    },
-  },
-  {
-    key: 'level',
-    displayLabel: 'Level',
-    component: <Input />,
-    isEditable: true,
-    isShown: true,
-    style: {
-      width: '10%',
+      width: '20%',
     },
   },
   {
@@ -44,8 +34,8 @@ export default [
     },
   },
   {
-    key: 'subname_fr',
-    displayLabel: 'subname_fr',
+    key: 'description_fr',
+    displayLabel: 'description_fr',
     component: <TextArea />,
     isEditable: true,
     isShown: true,
@@ -54,8 +44,8 @@ export default [
     },
   },
   {
-    key: 'subname_en',
-    displayLabel: 'subname_en',
+    key: 'description_en',
+    displayLabel: 'description_en',
     component: <TextArea />,
     isEditable: true,
     isShown: true,
