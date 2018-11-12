@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import { ERREUR_PATCH } from '../../../config/config';
 import axios from '../../../axios';
-import Addresses from './Tabs/Addresses/Addresses';
 import StatusToggle from '../../../UI/StatusToggle/StatusToggle';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import TabsDescription from './Tabs/TabsDescription';

@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
 import Meta from '../../../UI/Field/Meta';
+import { NO_NULL_RULE } from '../../config';
 
 export default [
   {
@@ -9,9 +10,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'link_type',
@@ -19,9 +18,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'meta',
