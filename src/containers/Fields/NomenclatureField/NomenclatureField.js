@@ -43,6 +43,7 @@ class NomenclatureField extends Component {
   }
 
   axiosCall = (data, itemId, itemIndex) => {
+    // Objet en fonction des props description
     const dataObject = {
       level: data[itemIndex].level || null,
       name_en: data[itemIndex].name_en || null,
@@ -89,19 +90,6 @@ class NomenclatureField extends Component {
     } else { // Sinon ajout de la clé EditMode
       updatedData[index].editMode = true;
     }
-    this.setState({ data: updatedData });
-  }
-
-  toggleEditModeRow = (itemId) => {
-    const index = this.state.data.findIndex(item => item.id === itemId);
-    console.log('data:', this.state.data);
-    console.log('toggleEditModeRow:', index);
-    // Suppression d'un éventuel autre editMode
-    // TODO
-
-    // Ajout de la clé EditMode
-    const updatedData = [...this.state.data];
-    updatedData[index].editMode = true;
     this.setState({ data: updatedData });
   }
 
@@ -158,7 +146,12 @@ class NomenclatureField extends Component {
     return this.props.description.map((field) => {
       if (field.isShown) {
         const direction = this.props.sortDirection === 1 ? 'down' : 'up';
-        const sortIcon = <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />;
+        const sortIcon = (
+          <span className={classes.SortIcon}>
+            <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />
+          </span>
+        );
+
         return (
           <th
             key={field.key}
