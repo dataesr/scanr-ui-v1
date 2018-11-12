@@ -9,7 +9,7 @@ export default [
     key: 'id',
     displayLabel: 'Code',
     component: <Input />,
-    isEditable: true,
+    isEditable: false,
     isShown: true,
     style: {
       width: '10%',
@@ -22,7 +22,7 @@ export default [
     isEditable: true,
     isShown: true,
     style: {
-      width: '5%',
+      width: '10%',
     },
   },
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from '../../Field.css';
+import classes from '../../Field.scss';
 
 const Input = (props) => {
   let component = (
@@ -30,7 +30,7 @@ export default Input;
 Input.propTypes = {
   canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
-  fieldValue: PropTypes.string,
+  fieldValue: PropTypes.any,
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,

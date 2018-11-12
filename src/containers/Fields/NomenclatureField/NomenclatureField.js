@@ -1,34 +1,29 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+
+import axios from 'axios';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
-import moment from 'moment';
-
-import axios from '../../../axios';
 
 import {
-  ERREUR_STATUT,
-  ERREUR_NULL,
+  API_END_POINT,
   ERREUR_PATCH,
   DATE_FORMAT_API,
 }
   from '../../../config/config';
 
 import BtAdd from '../../../UI/Field/btAdd';
-import BtShowAll from '../../../UI/Field/BtShowAll';
 import Button from '../../../UI/Button/Button';
 import ErrorMessage from '../../../UI/Messages/ErrorMessage';
 import InfoMessage from '../../../UI/Messages/InfoMessage';
-import SortStatus from '../../../Utils/SortStatus';
 
 import classes from './NomenclatureField.scss';
 
 class NomenclatureField extends Component {
   state = {
-    editMode: false,
     newRow: null,
     data: this.props.data,
     errorMessage: null,
-    showAll: false,
     infoMessage: false,
   }
 
@@ -38,41 +33,39 @@ class NomenclatureField extends Component {
     }
   }
 
-  toggleShowAllHandler = () => {
-    this.setState(prevState => ({ showAll: !prevState.showAll }));
-  }
-
   BtAddHandler = () => {
     // Ajout d'une ligne vide
     const emptyRow = {};
     for (let i = 0; i < this.props.description.length; i += 1) {
       emptyRow[this.props.description[i].key] = null;
     }
-    this.setState({ newRow: emptyRow, editMode: true });
+    this.setState({ newRow: emptyRow });
   }
 
-  sortHandler = (field) => {
-    this.props.refreshFunction('', field);
-  }
-
-  axiosCall = (data) => {
+  axiosCall = (data, itemId, itemIndex) => {
     const dataObject = {
-      [this.props.schemaName]: data,
+      level: data[itemIndex].level || null,
+      name_en: data[itemIndex].name_en || null,
+      name_fr: data[itemIndex].name_fr || null,
+      subname_en: data[itemIndex].subname_en || null,
+      subname_fr: data[itemIndex].subname_fr || null,
     };
-    axios.patch(this.props.url, dataObject)
-      .then(
-        (response) => {
-          if (response.status === 200) {
-            this.setState({
-              editMode: false,
-              errorMessage: null,
-              newRow: null,
-              data,
-            });
-            this.props.refreshFunction();
-          }
-        },
-      )
+    const url = `${API_END_POINT}${this.props.url}/${itemId}`;
+
+    axios.patch(url, dataObject, {
+      headers: { 'If-Match': data[itemIndex].etag },
+    }).then(
+      (response) => {
+        if (response.status === 200) {
+          this.setState({
+            errorMessage: null,
+            newRow: null,
+            data,
+          });
+          this.props.refreshFunction();
+        }
+      },
+    )
       .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
@@ -87,47 +80,48 @@ class NomenclatureField extends Component {
     }
   };
 
-  toggleEditMode = (bool) => {
-    if (!bool) {
-      this.setState({ data: this.props.data, newRow: null });
+  toggleEditModeRow = (itemId) => {
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    const updatedData = [...this.state.data];
+    // Suppression de la clé EditMode si elle existe pour passer en mode lecture
+    if (this.state.data[index].editMode) {
+      delete updatedData[index].editMode;
+    } else { // Sinon ajout de la clé EditMode
+      updatedData[index].editMode = true;
     }
-    this.setState({ editMode: bool });
+    this.setState({ data: updatedData });
+  }
+
+  toggleEditModeRow = (itemId) => {
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    console.log('data:', this.state.data);
+    console.log('toggleEditModeRow:', index);
+    // Suppression d'un éventuel autre editMode
+    // TODO
+
+    // Ajout de la clé EditMode
+    const updatedData = [...this.state.data];
+    updatedData[index].editMode = true;
+    this.setState({ data: updatedData });
   }
 
   onChangeHandler = (event, id) => {
     event.persist();
     this.setState((prevState) => {
-      const now = moment().format(DATE_FORMAT_API);
       const data = [...prevState.data];
       const index = data.findIndex(item => item.id === id);
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
-        itemToUpdate.meta = {
-          created_by: 'user',
-          created_at: now,
-        };
         itemToUpdate[event.target.id] = event.target.value;
         return {
           newRow: itemToUpdate,
-          showAll: event.target.value === 'old' ? true : prevState.showAll,
         };
       }
       const itemToUpdate = { ...data[index] };
-      itemToUpdate[event.target.id] = event.target.type === 'date'
-        ? moment(event.target.value).format(DATE_FORMAT_API)
-        : event.target.value;
-      const meta = {
-        ...itemToUpdate.meta,
-        modified_by: 'user',
-        modified_at: now,
-      };
-      itemToUpdate.meta = meta;
+      itemToUpdate[event.target.id] = event.target.value;
       data[index] = itemToUpdate;
 
-      return {
-        data,
-        showAll: event.target.value === 'old' ? true : prevState.showAll,
-      };
+      return { data };
     });
   }
 
@@ -139,7 +133,7 @@ class NomenclatureField extends Component {
     this.props.refreshFunction('prev');
   }
 
-  save = () => {
+  save = (itemId) => {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
       if (typeof dataRow.code === 'object') {
@@ -152,9 +146,13 @@ class NomenclatureField extends Component {
       data.push(newRow);
     }
 
-    this.axiosCall(data);
-  }
+    // Suppression de la clé editMode
+    this.toggleEditModeRow(itemId);
 
+    // Enregistrement API
+    const index = this.state.data.findIndex(item => item.id === itemId);
+    this.axiosCall(data, itemId, index);
+  }
 
   renderHeader() {
     return this.props.description.map((field) => {
@@ -165,7 +163,7 @@ class NomenclatureField extends Component {
           <th
             key={field.key}
             style={field.style}
-            onClick={() => this.sortHandler(field.key)}
+            onClick={() => this.props.changeDirection(field.key)}
             className={classes.Th}
           >
             {field.displayLabel}
@@ -184,10 +182,22 @@ class NomenclatureField extends Component {
 
     return data.map((dataObject) => {
       let deleteButton = null;
-      if (this.state.editMode) {
+      let undoButton = null;
+      let saveButton = null;
+      if (dataObject.editMode) {
         deleteButton = (
           <Button onClick={() => this.delete(dataObject.id)}>
             <i className="fas fa-trash" />
+          </Button>
+        );
+        undoButton = (
+          <Button onClick={() => this.toggleEditModeRow(dataObject.id)}>
+            <i className="fas fa-undo" />
+          </Button>
+        );
+        saveButton = (
+          <Button onClick={() => this.save(dataObject.id)}>
+            <i className="fas fa-save" />
           </Button>
         );
       }
@@ -196,14 +206,27 @@ class NomenclatureField extends Component {
           {this.renderRow(dataObject, false)}
           <td>
             <div className={classes.LastTableColumn}>
-              <p
-                className={classes.P}
-                data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
-                <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
-              >
-                <i className="fas fa-info-circle" />
-              </p>
-              {deleteButton}
+              <ul>
+                <li>
+                  <p
+                    className={`${classes.InfoMeta}`}
+                    data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
+                    <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
+                    data-place="left"
+                  >
+                    <i className="fas fa-info-circle" />
+                  </p>
+                </li>
+                <li>
+                  {deleteButton}
+                </li>
+                <li>
+                  {undoButton}
+                </li>
+                <li>
+                  {saveButton}
+                </li>
+              </ul>
             </div>
           </td>
         </tr>
@@ -217,22 +240,22 @@ class NomenclatureField extends Component {
         let editMode = true;
         let id = null;
         if (!isNew) {
-          editMode = this.state.editMode;
+          editMode = row.editMode;
           id = row.id;
         }
-        editMode = field.isEditable ? editMode : false;
         return (
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
                 canBeNull: field.rules && field.rules.canBeNull,
-                editMode,
+                editMode: editMode && field.isEditable,
                 id: field.key,
                 fieldValue: row[field.key],
                 noMain: field.rules && field.rules.noMain,
                 schemaName: this.props.schemaName,
+                // onChange: () => console.log('coucou'),
                 onChange: event => this.onChangeHandler(event, id),
-                onClick: () => this.toggleEditMode(true),
+                onClick: () => this.toggleEditModeRow(id),
               },
             )}
           </td>
@@ -250,54 +273,37 @@ class NomenclatureField extends Component {
           {this.renderRow(this.state.newRow, true)}
         </tr>);
     }
-    let saveAndCancelButtons = null;
-    if (this.state.editMode) {
-      saveAndCancelButtons = (
-        <Fragment>
-          <Button onClick={this.save}>
-            <i className="fas fa-save" />
-          </Button>
-          <Button onClick={() => this.toggleEditMode(false)}>
-            <i className="fas fa-undo" />
-          </Button>
-        </Fragment>
-      );
-    }
-
-    let oldStatusObject = null;
-    let data = null;
-    let nbData = 0;
-    if (this.props.data) {
-      oldStatusObject = this.props.data.find(dataObject => dataObject.status === 'old');
-      data = [...this.state.data].sort(SortStatus);
-      if (!this.state.showAll) {
-        data = data.filter(dataObject => dataObject.status !== 'old');
-        if (data.length === 0) {
-          this.setState({ infoMessage: true });
-        }
-      }
-      nbData = this.state.data.length;
-    }
     return (
       <div className={classes.NomenclatureField}>
         <div className="columns is-marginless">
           <div className="column">
             <div className={classes.TextTitleInline}>
               {this.props.title}
-              <span className={`tag is-white is-rounded ${classes.SpaceTag}`}>{nbData}</span>
+              <span className={`tag is-white is-rounded ${classes.SpaceTag}`}>{this.props.total}</span>
             </div>
             <BtAdd onClick={this.BtAddHandler}>
-              {`Ajouter un nouveau champ ${this.props.label}`}
+              {this.props.label}
             </BtAdd>
-            {saveAndCancelButtons}
           </div>
           <div className="column">
             <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
           </div>
           <div className="column is-2">
             <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
-              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
-              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+              <button
+                type="button"
+                className="pagination-previous"
+                onClick={this.paginationPrevious}
+              >
+                Précédent
+              </button>
+              <button
+                type="button"
+                className="pagination-next"
+                onClick={this.paginationNext}
+              >
+                Suivant
+              </button>
             </nav>
           </div>
         </div>
@@ -314,23 +320,29 @@ class NomenclatureField extends Component {
                 </thead>
                 <tbody>
                   {newRow}
-                  {this.renderBody(data)}
+                  {this.renderBody(this.state.data)}
                 </tbody>
               </table>
             </div>)}
-        {oldStatusObject && (
-          <BtShowAll
-            onClick={this.toggleShowAllHandler}
-            showAll={this.state.showAll}
-            label="anciens libellés"
-          />)}
 
         <div className="columns is-marginless">
           <div className="column is-10" />
           <div className="column is-2">
             <nav className="pagination is-rounded" role="navigation" aria-label="pagination">
-              <button type="button" className="pagination-previous" onClick={this.paginationPrevious}>Précédent</button>
-              <button type="button" className="pagination-next" onClick={this.paginationNext}>Suivant</button>
+              <button
+                type="button"
+                className="pagination-previous"
+                onClick={this.paginationPrevious}
+              >
+                Précédent
+              </button>
+              <button
+                type="button"
+                className="pagination-next"
+                onClick={this.paginationNext}
+              >
+                Suivant
+              </button>
             </nav>
           </div>
         </div>
@@ -344,6 +356,7 @@ class NomenclatureField extends Component {
 export default NomenclatureField;
 
 NomenclatureField.propTypes = {
+  changeDirection: PropTypes.func.isRequired,
   data: PropTypes.array,
   description: PropTypes.array.isRequired,
   refreshFunction: PropTypes.func.isRequired,
@@ -353,5 +366,6 @@ NomenclatureField.propTypes = {
   sortField: PropTypes.string.isRequired,
   sortDirection: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
 };

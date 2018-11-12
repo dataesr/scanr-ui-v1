@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import axios from '../../../../axios';
-import classes from '../../Field.css';
+import classes from '../../Field.scss';
 
 class AutoComplete extends Component {
   state = {

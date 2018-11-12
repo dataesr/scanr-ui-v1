@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import axios from '../../axios';
-import Menu from '../Menu/Menu';
+
 import NomenclatureField from '../Fields/NomenclatureField/NomenclatureField';
+import Menu from '../Menu/Menu';
+import Meta from '../../UI/Field/Meta';
 import PanelsDescription from '../../config/descriptions/nomenclatures/panelsERC';
+
 import classes from './PanelsERC.scss';
 
 class PanelsERC extends Component {
@@ -12,24 +15,35 @@ class PanelsERC extends Component {
     links: {},
     sort: {
       field: 'level',
-      direction: -1,
+      direction: 1,
     },
+    total: 0,
   };
 
   componentDidMount() {
     this.getPanels();
   }
+  
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.sort.field !== this.state.sort.field || prevState.sort.direction !== this.state.sort.direction) {
+      this.getPanels();
+    }
+  }
+  
+  changeDirection = (field) => {
+    this.setState( prevState => ({
+      sort: {
+          field,
+          direction : prevState.sort.field === field ? prevState.sort.direction * (-1) : 1,
+        }
+      })
+    )
+  }
 
   getPanels = (
     pagination = null,
-    sortTh = this.state.sort.field,
   ) => {
-    let sortDirection = this.state.sort.direction;
-    if (this.state.sort.field === sortTh) {
-      sortDirection *= -1;
-    }
-
-    let url = `panels?sort=[("${sortTh}",${sortDirection})]`;
+    let url = `panels?sort=[("${this.state.sort.field}",${this.state.sort.direction})]`;
 
     if (pagination) {
       if (this.state.links[pagination]) {
@@ -42,7 +56,7 @@ class PanelsERC extends Component {
         this.setState({
           panels: response.data.data,
           links: response.data.links,
-          sort: { field: sortTh, direction: sortDirection },
+          total: response.data.meta.total,
         });
       });
   }
@@ -50,7 +64,6 @@ class PanelsERC extends Component {
   render() {
     if (this.state.panels.length > 0) {
       return (
-
         <div className={classes.Layout}>
           <div className={classes.Menu}>
             <Menu />
@@ -58,24 +71,29 @@ class PanelsERC extends Component {
           <div id="content" className={classes.Content}>
             <div className={classes.Bg} />
             <NomenclatureField
+              changeDirection={this.changeDirection}
               data={this.state.panels}
               description={PanelsDescription}
               refreshFunction={this.getPanels}
               infoMessage="vide"
-              label="panel ERC"
+              label="Ajouter un panel ERC"
               schemaName="panels"
               url="panels"
               title="Panels ERC"
+              total={this.state.total}
               sortField={this.state.sort.field}
               sortDirection={this.state.sort.direction}
             />
           </div>
         </div>
-
       );
     }
 
-    return 'Pas de panel ERC';
+    return (
+      <div className={classes.NoResult}>
+        Pas de panel ERC
+      </div>
+    );
   }
 }
 

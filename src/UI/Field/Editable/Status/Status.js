@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { STATUS_ARRAY, STATUS_CONFLICT, STATUS_MAIN } from '../../../../config/config';
 import StatusTagMedium from '../../../StatusTagMedium/StatusTagMedium';
-import classes from '../../Field.css';
+import classes from '../../Field.scss';
 
 const Status = (props) => {
   let statusMode = (

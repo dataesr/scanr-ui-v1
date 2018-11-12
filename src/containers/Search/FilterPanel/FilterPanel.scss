@@ -7,13 +7,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: transform 0.5s;
+  transition: transform 0.2s;
   z-index: 5;
 }
 
 .Panel {
-  margin: auto;
-  padding: 50px 10px 50px 20px;
   background-color: #fff;
-  border: 1px solid #bbb;
+  border-right: 1px solid #bbb;
 }

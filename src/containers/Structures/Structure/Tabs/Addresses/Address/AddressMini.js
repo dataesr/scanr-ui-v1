@@ -49,7 +49,9 @@ const addressMini = (props) => {
         {displayedAddress}
         <div className="columns is-gapless">
           <div className="column ">
-            <StatusTagMedium status={props.status} />
+            <div className={classes.SpaceRight}>
+              <StatusTagMedium status={props.status} />
+            </div>
           </div>
           {props.address.geocoded
             ? (
