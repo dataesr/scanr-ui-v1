@@ -2,7 +2,7 @@ import 'moment/locale/fr';
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import classes from './Field.css';
+import classes from './Field.scss';
 
 moment.locale('fr');
 

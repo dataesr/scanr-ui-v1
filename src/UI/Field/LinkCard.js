@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './Field.css';
+import classes from './Field.scss';
 
 const LinkCard = props => (
   <a href={props.url} target="_blank" rel="noopener noreferrer">

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './Field.css';
+import classes from './Field.scss';
 
 const fieldTitle = props => (
   <div className={`column is-${props.columnSize}`}>

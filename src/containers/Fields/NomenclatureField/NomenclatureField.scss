@@ -7,9 +7,7 @@
   text-align: center;
   display: inline-flex;
 }
-.P{
-  padding-top: 10px;
-}
+
 .TableContainer{
   overflow: auto;
 }
@@ -23,14 +21,4 @@
 
 .ImportantTooltip{
   color: $main_color;
-}
-
-.Th{
-  cursor: pointer;
-}
-
-.SortIcon{
-  display: inline-block;
-  margin-left: 5px;
-  color: $text_secondary;
 }

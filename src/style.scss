@@ -16,17 +16,21 @@ body{
 
 $menuWidth: 275px;
 
-$main_color: #00A6BC;
+$main_color: #00D1B2;
 $text_secondary: #888;
-$link_primary: #3291EE;
-$background_menu: #363636;
+$link_primary: #31566E;
 $conflictColor: #FF3860;
+$menu-background: #31566E;
+
+/*CounterTags*/
+$counterTagColor: #31566E;
+$counterTagBgColor: #fff;
 
 /*Status colors*/
 $conflictStatus: #FF3860;
 $oldStatus: #bbb;
-$activeStatus: #00A6BC;
-$mainStatus: #00D1B2;
+$activeStatus: #D95741;
+$mainStatus: #D95741;
 $undefinedStatus: #FFDD57;
 
 .Link_item{
@@ -67,6 +71,13 @@ $undefinedStatus: #FFDD57;
 .SpaceTag{
   margin-left: 8px;
 }
+.Tag{
+  color: $counterTagColor;
+  background-color: $counterTagBgColor;
+  padding: 5px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
 
 .Bg{
   background-color: #00D1B2;
@@ -76,6 +87,12 @@ $undefinedStatus: #FFDD57;
   background: linear-gradient(to right, #00D1B2 0%,#99ffef 85%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00D1B2', endColorstr='#99ffef',GradientType=1 ); /* IE6-9 */
   padding: 16px;
+}
+
+.InfoMeta{
+  font-size: 1.2rem;
+  padding-right: 5px;
+  color: $main_color;
 }
 
 .Layout{
