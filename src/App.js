@@ -6,15 +6,48 @@ import {
   Redirect,
 } from 'react-router-dom';
 import StructureFilters from './config/descriptions/structure/filters';
-import PanelsERC from './containers/PanelsERC/PanelsERC';
+import Nomenclatures from './containers/Nomenclatures/Nomenclatures';
 import Search from './containers/Search/Search';
 import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
 import Structure from './containers/Structures/Structure/Structure';
 
+// Nomenclatures descriptions
+import BadgesDescription from './config/descriptions/nomenclatures/badges';
+import PanelsDescription from './config/descriptions/nomenclatures/panelsERC';
+
 const App = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/panelsERC" component={PanelsERC} />
+      <Route
+        path="/badges"
+        render={props => (
+          <Nomenclatures
+            {...props}
+            description={BadgesDescription}
+            defaulSortfield="name_fr"
+            infoMessage="vide"
+            labelAdd="Ajouter un badge"
+            schemaName="badges"
+            title="Badges"
+            urlAPI="badges"
+          />)}
+      />
+
+      <Route
+        path="/panelsERC"
+        render={props => (
+          <Nomenclatures
+            {...props}
+            description={PanelsDescription}
+            defaulSortfield="level"
+            infoMessage="vide"
+            labelAdd="Ajouter un panel ERC"
+            schemaName="panels"
+            title="Panel ERC"
+            urlAPI="panels"
+          />)}
+      />
+
       <Route
         path="/structures"
         render={props => (
