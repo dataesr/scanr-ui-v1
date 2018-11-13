@@ -158,6 +158,9 @@ class GridFields extends Component {
       if (typeof dataRow.code === 'object') {
         dataRow.code = dataRow.code.id;
       }
+      if (typeof dataRow.parent_id === 'object') {
+        dataRow.parent_id = dataRow.parent_id.id;
+      }
     });
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
