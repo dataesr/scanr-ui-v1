@@ -16,7 +16,7 @@ class AutoComplete extends Component {
     if (this.props.searchInstitution && this.props.fieldValue && this.props.fieldValue.names) {
       label = this.props.fieldValue.names.find(name => name.status === 'main');
     }
-    this.setState({ searchInput: label && label.name_fr });
+    this.setState({ searchInput: label && label[this.props.labelKey] });
   }
 
   onChange = (event) => {
@@ -37,14 +37,11 @@ class AutoComplete extends Component {
   APICall(searchInput) {
     const maxResults = '5';
     const regex = { $regex: `^(?i)${searchInput}.*` };
-    let query = { name_fr: regex };
-    if (this.props.searchInstitution) {
-      query = {
-        $or: [
-          { 'names.name_fr': regex },
-          { id: regex },
-        ],
-      };
+    let query = { [this.props.autoCompleteKeys]: regex };
+    if (Array.isArray(this.props.autoCompleteKeys)) {
+      query = [];
+      this.props.autoCompleteKeys.forEach(key => query.push({ [key]: regex }));
+      query = { $or: query };
     }
     const url = `${this.props.schemaName}?max_results=${maxResults}&where=${JSON.stringify(query)}`;
     axios.get(url)
@@ -69,7 +66,7 @@ class AutoComplete extends Component {
             onClick={this.onSelectCategory}
             data-value={category.id}
           >
-            {label.name_fr}
+            {label[this.props.labelKey]}
           </li>);
       });
     }
@@ -107,6 +104,10 @@ class AutoComplete extends Component {
 export default AutoComplete;
 
 AutoComplete.propTypes = {
+  autoCompleteKeys: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.string,
+  ]),
   canBeNull: PropTypes.bool,
   editMode: PropTypes.bool,
   fieldValue: PropTypes.oneOfType([
@@ -114,6 +115,7 @@ AutoComplete.propTypes = {
     PropTypes.string,
   ]),
   id: PropTypes.string,
+  labelKey: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
   schemaName: PropTypes.string,

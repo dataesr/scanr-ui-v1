@@ -10,12 +10,17 @@ export default [
   {
     key: 'parent_id',
     displayLabel: 'Parent',
-    component: <AutoComplete />,
+    component: (
+      <AutoComplete
+        schemaName="structures"
+        autoCompleteKeys={['id', 'names.name_fr']}
+        labelKey="name_fr"
+        searchInstitution
+      />),
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
     schemaName: 'structures',
-    searchInstitution: true,
   },
   {
     key: 'exclusive',
