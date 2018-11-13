@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 import axios from 'axios';
 import moment from 'moment';
@@ -42,16 +42,15 @@ class NomenclatureField extends Component {
     this.setState({ newRow: emptyRow });
   }
 
-  axiosCall = (data, itemId, itemIndex) => {
-    // Objet en fonction des props description
-    const dataObject = {
-      level: data[itemIndex].level || null,
-      name_en: data[itemIndex].name_en || null,
-      name_fr: data[itemIndex].name_fr || null,
-      subname_en: data[itemIndex].subname_en || null,
-      subname_fr: data[itemIndex].subname_fr || null,
-    };
+  axiosCallModify = (data, itemId, itemIndex) => {
     const url = `${API_END_POINT}${this.props.url}/${itemId}`;
+
+    const dataObject = {};
+    this.props.description.forEach((element) => {
+      if (element.key !== 'id') {
+        dataObject[element.key] = data[itemIndex][element.key] || null;
+      }
+    });
 
     axios.patch(url, dataObject, {
       headers: { 'If-Match': data[itemIndex].etag },
@@ -70,15 +69,23 @@ class NomenclatureField extends Component {
       .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
-  delete = (itemId) => {
-    const index = this.state.data.findIndex(item => item.id === itemId);
-    if (index < 0 || !itemId) {
-      this.setState({ newRow: null });
-    } else {
-      const updatedData = [...this.state.data];
-      updatedData.splice(index, 1);
-      this.axiosCall(updatedData);
-    }
+  axiosCallDelete = (data) => {
+    const url = `${API_END_POINT}${this.props.url}/${data.id}`;
+
+    axios.delete(url, {
+      headers: { 'If-Match': data.etag },
+    }).then(
+      (response) => {
+        if (response.status === 200) {
+          this.setState({
+            errorMessage: null,
+            newRow: null,
+          });
+          this.props.refreshFunction();
+        }
+      },
+    )
+      .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
   };
 
   toggleEditModeRow = (itemId) => {
@@ -121,6 +128,22 @@ class NomenclatureField extends Component {
     this.props.refreshFunction('prev');
   }
 
+  add = () => {
+    const url = `${API_END_POINT}${this.props.url}`;
+    axios.post(url, this.state.newRow).then(
+      (response) => {
+        if (response.status === 201) {
+          this.setState({
+            errorMessage: null,
+            newRow: null,
+          });
+          this.props.refreshFunction();
+        }
+      },
+    )
+      .catch(() => this.setState({ errorMessage: ERREUR_PATCH }));
+  }
+
   save = (itemId) => {
     const data = [...this.state.data];
     data.forEach((dataRow) => {
@@ -139,7 +162,7 @@ class NomenclatureField extends Component {
 
     // Enregistrement API
     const index = this.state.data.findIndex(item => item.id === itemId);
-    this.axiosCall(data, itemId, index);
+    this.axiosCallModify(data, itemId, index);
   }
 
   renderHeader() {
@@ -173,67 +196,20 @@ class NomenclatureField extends Component {
       return null;
     }
 
-    return data.map((dataObject) => {
-      let deleteButton = null;
-      let undoButton = null;
-      let saveButton = null;
-      if (dataObject.editMode) {
-        deleteButton = (
-          <Button onClick={() => this.delete(dataObject.id)}>
-            <i className="fas fa-trash" />
-          </Button>
-        );
-        undoButton = (
-          <Button onClick={() => this.toggleEditModeRow(dataObject.id)}>
-            <i className="fas fa-undo" />
-          </Button>
-        );
-        saveButton = (
-          <Button onClick={() => this.save(dataObject.id)}>
-            <i className="fas fa-save" />
-          </Button>
-        );
-      }
-      return (
-        <tr key={dataObject.id}>
-          {this.renderRow(dataObject, false)}
-          <td>
-            <div className={classes.LastTableColumn}>
-              <ul>
-                <li>
-                  <p
-                    className={`${classes.InfoMeta}`}
-                    data-tip={`Créé le <b>${moment(dataObject.created_at).format('LL')}</b>
-                    <br/> Modifié le <b>${moment(dataObject.modified_at).format('LL')}</b>`}
-                    data-place="left"
-                  >
-                    <i className="fas fa-info-circle" />
-                  </p>
-                </li>
-                <li>
-                  {deleteButton}
-                </li>
-                <li>
-                  {undoButton}
-                </li>
-                <li>
-                  {saveButton}
-                </li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-      );
-    });
+    return data.map(dataObject => (
+      <tr key={dataObject.id}>
+        {this.renderRow(dataObject, false)}
+      </tr>
+    ));
   }
 
   renderRow(row, isNew) {
-    return this.props.description.map((field) => {
+    const tds = this.props.description.map((field) => {
       if (field.isShown) {
         let editMode = true;
         let id = null;
         if (!isNew) {
-          editMode = row.editMode;
+          editMode = row.editMode && field.isEditable;
           id = row.id;
         }
         return (
@@ -241,12 +217,11 @@ class NomenclatureField extends Component {
             {React.cloneElement(
               field.component, {
                 canBeNull: field.rules && field.rules.canBeNull,
-                editMode: editMode && field.isEditable,
+                editMode,
                 id: field.key,
                 fieldValue: row[field.key],
                 noMain: field.rules && field.rules.noMain,
                 schemaName: this.props.schemaName,
-                // onChange: () => console.log('coucou'),
                 onChange: event => this.onChangeHandler(event, id),
                 onClick: () => this.toggleEditModeRow(id),
               },
@@ -256,6 +231,65 @@ class NomenclatureField extends Component {
       }
       return null;
     });
+
+    let deleteButton = null;
+    let undoButton = null;
+    let saveButton = null;
+    if (row.editMode) {
+      deleteButton = (
+        <Button onClick={() => this.axiosCallDelete(row)}>
+          <i className="fas fa-trash" />
+        </Button>
+      );
+      undoButton = (
+        <Button onClick={() => this.toggleEditModeRow(row.id)}>
+          <i className="fas fa-undo" />
+        </Button>
+      );
+      saveButton = (
+        <Button onClick={() => this.save(row.id)}>
+          <i className="fas fa-save" />
+        </Button>
+      );
+    }
+    if (isNew) {
+      saveButton = (
+        <Button onClick={this.add}>
+          <i className="fas fa-save" />
+        </Button>
+      );
+    }
+
+    return (
+      <Fragment>
+        {tds}
+        <td>
+          <div className={classes.LastTableColumn}>
+            <ul>
+              <li>
+                <p
+                  className={`${classes.InfoMeta}`}
+                  data-tip={`Créé le <b>${moment(row.created_at).format('LL')}</b>
+                  <br/> Modifié le <b>${moment(row.modified_at).format('LL')}</b>`}
+                  data-place="left"
+                >
+                  <i className="fas fa-info-circle" />
+                </p>
+              </li>
+              <li>
+                {deleteButton}
+              </li>
+              <li>
+                {undoButton}
+              </li>
+              <li>
+                {saveButton}
+              </li>
+            </ul>
+          </div>
+        </td>
+      </Fragment>
+    );
   }
 
   render() {
