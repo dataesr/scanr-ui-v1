@@ -60,7 +60,9 @@ const menu = props => (
     </Menu.List>
     <Menu.List title="Nomenclatures">
       <Menu.List.Item>
-        Badges
+        <NavLink to="/badges" activeClassName={classes.active}>
+          Badges
+        </NavLink>
       </Menu.List.Item>
       <Menu.List.Item>
         <NavLink to="/panelsERC" activeClassName={classes.active}>
