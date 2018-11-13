@@ -7,12 +7,16 @@ class AutoComplete extends Component {
   state = {
     categoryList: [],
     onFocus: false,
-    searchInput: typeof this.props.fieldValue === 'object'
-      ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue,
+    searchInput: '',
   }
 
   componentDidMount() {
     this.APICall('');
+    let label = this.props.fieldValue;
+    if (this.props.searchInstitution && this.props.fieldValue && this.props.fieldValue.names) {
+      label = this.props.fieldValue.names.find(name => name.status === 'main');
+    }
+    this.setState({ searchInput: label && label.name_fr });
   }
 
   onChange = (event) => {
@@ -32,8 +36,17 @@ class AutoComplete extends Component {
 
   APICall(searchInput) {
     const maxResults = '5';
-    const query = `{"name_fr": { "$regex": "^(?i)${searchInput}.*"}}`;
-    const url = `${this.props.schemaName}?max_results=${maxResults}&where=${query}`;
+    const regex = { $regex: `^(?i)${searchInput}.*` };
+    let query = { name_fr: regex };
+    if (this.props.searchInstitution) {
+      query = {
+        $or: [
+          { 'names.name_fr': regex },
+          { id: regex },
+        ],
+      };
+    }
+    const url = `${this.props.schemaName}?max_results=${maxResults}&where=${JSON.stringify(query)}`;
     axios.get(url)
       .then((response) => {
         this.setState({
@@ -44,17 +57,21 @@ class AutoComplete extends Component {
 
   renderSearchResults() {
     if (this.state.categoryList) {
-      return this.state.categoryList.map(category => (
-        <li
-          id={this.props.id}
-          key={category.id}
-          className={`is-small ${classes.Li}`}
-          onClick={this.onSelectCategory}
-          data-value={category.id}
-        >
-        {category.name_fr}
-        </li>
-      ));
+      return this.state.categoryList.map((category) => {
+        const label = this.props.searchInstitution
+          ? category.names.find(name => name.status === 'main')
+          : category;
+        return (
+          <li
+            id={this.props.id}
+            key={category.id}
+            className={`is-small ${classes.Li}`}
+            onClick={this.onSelectCategory}
+            data-value={category.id}
+          >
+            {label.name_fr}
+          </li>);
+      });
     }
     return null;
   }
@@ -62,8 +79,7 @@ class AutoComplete extends Component {
   render() {
     let component = (
       <span className={classes.Text} onClick={this.props.onClick}>
-        {typeof this.props.fieldValue === 'object'
-          ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue}
+        {this.state.searchInput}
       </span>);
     if (this.props.editMode) {
       let inputColor = null;
@@ -101,6 +117,7 @@ AutoComplete.propTypes = {
   onChange: PropTypes.func,
   onClick: PropTypes.func,
   schemaName: PropTypes.string,
+  searchInstitution: PropTypes.bool,
 };
 
 AutoComplete.defaultProps = {

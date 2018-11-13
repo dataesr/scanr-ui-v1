@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // Descriptions
 import BadgesDescription from '../../../../../config/descriptions/structure/badges';
 import Descriptions from '../../../../../config/descriptions/structure/descriptions';
+import EvaluationsDescription from '../../../../../config/descriptions/structure/evaluations';
 import NameDescription from '../../../../../config/descriptions/structure/names';
 // Composants UI
 import GridFields from '../../../../Fields/GridFields/GridFields';
@@ -16,7 +17,7 @@ const Main = props => (
         data={props.names}
         description={NameDescription}
         refreshFunction={props.getStructure}
-        infoMessage="Aucun libellé actif"
+        infoMessage="Aucun libellé"
         newField="Ajouter un nouveau libellé"
         schemaName="names"
         url={props.url}
@@ -52,12 +53,23 @@ const Main = props => (
         refreshFunction={props.getStructure}
         infoMessage="Aucun badge actif"
         newField="Ajouter un nouveau badge"
-        schemaName="badges"
         url={props.url}
         title="Badges"
       />
     </div>
     <div className="column is-7">
+      <GridFields
+        data={props.evaluations}
+        description={EvaluationsDescription}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucune évaluation"
+        newField="Ajouter une nouvelle évaluation"
+        schemaName="evaluations"
+        url={props.url}
+        title="Evaluations"
+      />
+    </div>
+    <div className="column is-12">
       <GridFields
         data={props.descriptions}
         description={Descriptions}
@@ -79,6 +91,7 @@ Main.propTypes = {
   badges: PropTypes.array,
   codeNumbers: PropTypes.array,
   descriptions: PropTypes.array,
+  evaluations: PropTypes.array,
   getStructure: PropTypes.func,
   id: PropTypes.string,
   names: PropTypes.array,

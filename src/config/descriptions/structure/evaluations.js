@@ -1,22 +1,13 @@
 import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
 import Meta from '../../../UI/Field/Meta';
-import SocialMedias from '../../../UI/Field/Editable/SocialMedias/SocialMedias';
-import { NO_NULL_RULE } from '../../config';
+import { NO_NULL_RULE, DATE_RULE } from '../../config';
 
 export default [
   {
-    key: 'account',
-    displayLabel: 'Compte',
+    key: 'evaluator',
+    displayLabel: 'Evaluateur',
     component: <Input />,
-    isEditable: true,
-    isShown: true,
-    rules: [NO_NULL_RULE],
-  },
-  {
-    key: 'social_media',
-    displayLabel: 'Média',
-    component: <SocialMedias />,
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
@@ -28,6 +19,14 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+  },
+  {
+    key: 'year',
+    displayLabel: 'Année',
+    component: <Input />,
+    isEditable: true,
+    isShown: true,
+    rules: [NO_NULL_RULE, DATE_RULE],
   },
   {
     key: 'meta',

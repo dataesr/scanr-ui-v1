@@ -5,10 +5,10 @@ import moment from 'moment';
 import axios from '../../../axios';
 
 import {
-  ERREUR_STATUT,
-  ERREUR_NULL,
   ERREUR_PATCH,
   DATE_FORMAT_API,
+  NO_NULL_RULE,
+  STATUS_RULE,
 }
   from '../../../config/config';
 
@@ -17,8 +17,8 @@ import BtShowAll from '../../../UI/Field/BtShowAll';
 import Button from '../../../UI/Button/Button';
 import ErrorMessage from '../../../UI/Messages/ErrorMessage';
 import InfoMessage from '../../../UI/Messages/InfoMessage';
-import mainValidation from '../../../Utils/mainValidation';
 import SortStatus from '../../../Utils/SortStatus';
+import validate from '../../../Utils/validations';
 
 import classes from './GridFields.scss';
 
@@ -29,11 +29,10 @@ class GridFields extends Component {
     data: this.props.data || [],
     errorMessage: null,
     showAll: false,
-    infoMessage: false,
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.data && prevProps.data.length > 0 && prevProps.data[0].code !== this.props.data[0].code) {
+    if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
       this.setState({ data: this.props.data })
     }
   }
@@ -82,6 +81,9 @@ class GridFields extends Component {
       updatedData.forEach((dataRow) => {
         if (typeof dataRow.code === 'object') {
           dataRow.code = dataRow.code.id;
+        }
+        if (typeof dataRow.parent_id === 'object') {
+          dataRow.parent_id = dataRow.parent_id.id;
         }
       });
       this.axiosCall(updatedData);
@@ -159,6 +161,9 @@ class GridFields extends Component {
       if (typeof dataRow.code === 'object') {
         dataRow.code = dataRow.code.id;
       }
+      if (typeof dataRow.parent_id === 'object') {
+        dataRow.parent_id = dataRow.parent_id.id;
+      }
     });
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
@@ -169,37 +174,12 @@ class GridFields extends Component {
       }
       data.push(newRow);
     }
-    if (this.validate(data)) {
+    const validation = validate(data, this.props.description);
+    if (validation === true) {
       return this.axiosCall(data);
     }
+    this.setState({ errorMessage: validation });
     return null;
-  }
-
-  validate(data) {
-    return this.props.description.filter(fieldDescription => fieldDescription.isShown && fieldDescription.rules)
-      .reduce((validation, rulesDescription) => {
-        let tempValidation = validation;
-        if ('canBeNull' in rulesDescription.rules) {
-          const nullValidation = data.reduce((tempNullValidation, dataRow) => {
-            if (rulesDescription.key in dataRow) {
-              return Boolean(dataRow[rulesDescription.key]) && tempNullValidation;
-            }
-            return tempNullValidation;
-          }, true);
-          if (!nullValidation) {
-            this.setState({ errorMessage: ERREUR_NULL });
-          }
-          tempValidation = tempValidation && nullValidation;
-        }
-        if ('mainStatus' in rulesDescription.rules) {
-          const mainStatusValidation = mainValidation(data);
-          if (!mainStatusValidation) {
-            this.setState({ errorMessage: ERREUR_STATUT });
-          }
-          tempValidation = tempValidation && mainStatusValidation;
-        }
-        return tempValidation;
-      }, true);
   }
 
   renderHeader() {
@@ -212,8 +192,8 @@ class GridFields extends Component {
   }
 
   renderBody(data) {
-    if (!data) {
-      return null;
+    if (!data || data.length === 0) {
+      return <InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage>;
     }
 
     return data.map((dataItem) => {
@@ -252,12 +232,13 @@ class GridFields extends Component {
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
-                canBeNull: field.rules && field.rules.canBeNull,
+                canBeNull: field.rules && field.rules.includes(NO_NULL_RULE),
                 editMode,
                 id: field.key,
                 fieldValue: typeof row === 'object' ? row[field.key] : row,
-                noMain: field.rules && field.rules.noMain,
-                schemaName: this.props.schemaName,
+                noMain: field.rules && field.rules.includes(STATUS_RULE),
+                schemaName: field.schemaName,
+                searchInstitution: field.searchInstitution,
                 onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),
               },
@@ -299,9 +280,6 @@ class GridFields extends Component {
       data = [...this.state.data].sort(SortStatus);
       if (!this.state.showAll) {
         data = data.filter(dataObject => dataObject.status !== 'old');
-        if (data.length === 0) {
-          this.setState({ infoMessage: true });
-        }
       }
       nbData = this.state.data.length;
     }
@@ -321,23 +299,20 @@ class GridFields extends Component {
           {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
-        {this.state.infoMessage
-          ? <InfoMessage>{this.props.infoMessage}</InfoMessage>
-          : (
-            <div className={classes.TableContainer}>
-              <table className={`table is-striped is-hoverable is-fullwidth ${classes.Table}`}>
-                <thead>
-                  <tr>
-                    {this.renderHeader()}
-                    <th />
-                  </tr>
-                </thead>
-                <tbody>
-                  {newRow}
-                  {this.renderBody(data)}
-                </tbody>
-              </table>
-            </div>)}
+        <div className={classes.TableContainer}>
+          <table className={`table is-striped is-hoverable is-fullwidth ${classes.Table}`}>
+            <thead>
+              <tr>
+                {this.renderHeader()}
+                <th />
+              </tr>
+            </thead>
+            <tbody>
+              {newRow}
+              {this.renderBody(data)}
+            </tbody>
+          </table>
+        </div>
         {oldStatusObject && (
           <BtShowAll
             onClick={this.toggleShowAllHandler}

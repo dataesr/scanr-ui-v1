@@ -2,6 +2,7 @@ import React from 'react';
 import Input from '../../../UI/Field/Editable/Input/Input';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
+import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 
 export default [
   {
@@ -10,9 +11,7 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
-    rules: {
-      canBeNull: false,
-    },
+    rules: [NO_NULL_RULE],
   },
   {
     key: 'status',
@@ -21,10 +20,7 @@ export default [
     isEditable: true,
     isShown: true,
     canBeNull: false,
-    rules: {
-      canBeNull: false,
-      mainStatus: false,
-    },
+    rules: [NO_NULL_RULE, STATUS_RULE],
   },
   {
     key: 'meta',
