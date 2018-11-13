@@ -28,7 +28,7 @@ export default singleCheckBox;
 
 singleCheckBox.propTypes = {
   editMode: PropTypes.bool,
-  fieldValue: PropTypes.string,
+  fieldValue: PropTypes.bool,
   id: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
