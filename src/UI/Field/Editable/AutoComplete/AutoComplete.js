@@ -7,12 +7,16 @@ class AutoComplete extends Component {
   state = {
     categoryList: [],
     onFocus: false,
-    searchInput: typeof this.props.fieldValue === 'object'
-      ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue,
+    searchInput: '',
   }
 
   componentDidMount() {
     this.APICall('');
+    let label = this.props.fieldValue;
+    if (this.props.searchInstitution && this.props.fieldValue && this.props.fieldValue.names) {
+      label = this.props.fieldValue.names.find(name => name.status === 'main');
+    }
+    this.setState({ searchInput: label && label.name_fr });
   }
 
   onChange = (event) => {
@@ -37,7 +41,7 @@ class AutoComplete extends Component {
     if (this.props.searchInstitution) {
       query = {
         $or: [
-          { name_fr: regex },
+          { 'names.name_fr': regex },
           { id: regex },
         ],
       };
@@ -57,7 +61,6 @@ class AutoComplete extends Component {
         const label = this.props.searchInstitution
           ? category.names.find(name => name.status === 'main')
           : category;
-        console.log(label);
         return (
           <li
             id={this.props.id}
@@ -76,8 +79,7 @@ class AutoComplete extends Component {
   render() {
     let component = (
       <span className={classes.Text} onClick={this.props.onClick}>
-        {typeof this.props.fieldValue === 'object'
-          ? this.props.fieldValue && this.props.fieldValue.name_fr : this.props.fieldValue}
+        {this.state.searchInput}
       </span>);
     if (this.props.editMode) {
       let inputColor = null;
