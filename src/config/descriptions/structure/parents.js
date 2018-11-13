@@ -1,6 +1,6 @@
 import React from 'react';
 import AutoComplete from '../../../UI/Field/Editable/AutoComplete/AutoComplete';
-import Bool from '../../../UI/Field/Editable/Bool/Bool';
+import SingleCheckBox from '../../../UI/Field/Editable/SingleCheckBox/SingleCheckBox';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
@@ -20,7 +20,7 @@ export default [
   {
     key: 'exclusive',
     displayLabel: 'Exclusivité',
-    component: <Bool />,
+    component: <SingleCheckBox />,
     isEditable: true,
     isShown: true,
   },
