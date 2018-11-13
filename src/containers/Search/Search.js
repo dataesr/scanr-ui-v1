@@ -81,7 +81,7 @@ class Search extends Component {
       queries.$text = { $search: this.state.searchText };
     }
     const whereCondition = Object.keys(queries).length > 0
-      ? `where=${encodeURIComponent(JSON.stringify(queries))}&` : '';
+      ? `where=${JSON.stringify(queries)}&` : '';
     const url = `${this.props.entity}?${whereCondition}page=${page}&max_results=${PER_PAGE}`;
 
     this.setState({ isLoading: true });

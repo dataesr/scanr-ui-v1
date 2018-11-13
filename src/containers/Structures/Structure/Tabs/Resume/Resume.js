@@ -25,7 +25,7 @@ const Resume = (props) => {
             iconCssClass="fas fa-fingerprint"
             title="Rnsr ID"
           >
-            {props.esrId}
+            {props.id}
           </Card>
         </div>
         <div className="column">
@@ -66,7 +66,7 @@ const Resume = (props) => {
 export default Resume;
 
 Resume.propTypes = {
-  esrId: PropTypes.string,
+  id: PropTypes.string,
   end_date: PropTypes.string,
   keywords_fr: PropTypes.array,
   keywords_en: PropTypes.array,

@@ -33,7 +33,14 @@ export const YOUTUBE_ICON = <i className="fab fa-youtube" />;
 /* ERREURS */
 export const ERREUR_STATUT = 'Erreur statut';
 export const ERREUR_NULL = 'Champ vide';
+export const ERREUR_DATE = 'Format date non valide';
 export const ERREUR_PATCH = "Erreur lors de l'envoi du formulaire";
+
+/* Validation */
+export const NO_NULL_RULE = 'cantBeNull';
+export const STATUS_RULE = 'mainStatus';
+export const DATE_RULE = 'isDate';
+
 /* Doc */
 export const URL_DOC = 'http://10.243.98.74:3000';
 
