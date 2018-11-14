@@ -40,11 +40,7 @@ class Structure extends Component {
     this.setState(newState);
   }
 
-  getMainName = (names) => {
-    // Recherche du nom principal
-    const mainName = names.find(item => item.status === 'main') || names[0];
-    return mainName.name_fr;
-  }
+  getMain = list => list.find(item => item.status === 'main') || list[0]
 
   toggleStatus = (status) => {
     const dataObject = {
@@ -85,14 +81,14 @@ class Structure extends Component {
       return null;
     }
     const content = TabsDescription.find(tab => tab.id === this.state.activeTab);
-    const title = structure.names ? this.getMainName(structure.names) : '';
-
+    const title = structure.names ? this.getMain(structure.names).name_fr : '';
+    const url = structure.websites && this.getMain(structure.websites).url;
     return (
       <Fragment>
         <div className={classes.Bg}>
           <div className="columns is-marginless is-gapless">
             <div className="column is-four-fifths">
-              <TextTitle>{title}</TextTitle>
+              <TextTitle url={url}>{title}</TextTitle>
             </div>
             <div className="column has-text-right">
               <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
