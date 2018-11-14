@@ -6,10 +6,14 @@ export default [
   {
     key: 'key',
     displayLabel: 'Badges',
-    component: <AutoComplete />,
+    component: (
+      <AutoComplete
+        schemaName="badges"
+        autoCompleteKeys="name_fr"
+        labelKey="name_fr"
+      />),
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
-    schemaName: 'badges',
   },
 ];

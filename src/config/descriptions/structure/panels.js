@@ -9,11 +9,15 @@ export default [
   {
     key: 'code',
     displayLabel: 'Panel',
-    component: <AutoComplete />,
+    component: (
+      <AutoComplete
+        schemaName="panels"
+        autoCompleteKeys="name_fr"
+        labelKey="name_fr"
+      />),
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
-    schemaName: "panels"
   },
   {
     key: 'status',
