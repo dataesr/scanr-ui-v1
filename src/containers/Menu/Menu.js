@@ -55,7 +55,9 @@ const menu = props => (
           Publications
       </Menu.List.Item>
       <Menu.List.Item>
-          Personnes
+      <NavLink to="/persons" activeClassName={classes.active}>
+        Personnes
+      </NavLink>
       </Menu.List.Item>
     </Menu.List>
     <Menu.List title="Nomenclatures">
