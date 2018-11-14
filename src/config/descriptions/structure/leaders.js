@@ -2,7 +2,7 @@ import React from 'react';
 
 import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 import Input from '../../../UI/Field/Editable/Input/Input';
-import LeaderField from '../../../containers/Structures/Structure/Tabs/Leaders/LeaderField'
+import LeaderField from '../../../containers/Structures/Structure/Tabs/Leaders/LeaderField';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';

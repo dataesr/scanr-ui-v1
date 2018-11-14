@@ -27,7 +27,7 @@ class AddressDispatcher extends Component {
       this.setState({ displayMode: 'mini' });
     }
     if (prevProps.editedAddress && !this.props.editedAddress) {
-      this.setState({ editMode: false })
+      this.setState({ editMode: false });
     }
   }
 

@@ -65,13 +65,15 @@ class Search extends Component {
 
   selectFilter = (event) => {
     event.persist();
-    const filters = { ...this.state.filters };
-    filters[event.target.name] = event.target.value;
-    if (!event.target.checked) {
-      delete filters[event.target.name];
-    }
-    this.axiosCall(true, filters);
-    this.setState({ filters });
+    this.setState((prevState) => {
+      const filters = { ...prevState.filters };
+      filters[event.target.name] = event.target.value;
+      if (!event.target.checked) {
+        delete filters[event.target.name];
+      }
+      this.axiosCall(true, filters);
+      return filters;
+    });
   }
 
   axiosCall(init, filters) {

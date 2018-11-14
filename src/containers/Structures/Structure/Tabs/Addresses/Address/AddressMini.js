@@ -11,7 +11,7 @@ import classes from './Address.scss';
 
 const addressMini = (props) => {
   let displayedAddress = (
-    <div className="columns" onClick={() => props.changeDisplayMode('full')}>
+    <div className="columns" onClick={() => props.changeDisplayMode('full')} role="presentation">
       <div className="column">
         <i className="fa fa-map-marker-alt hvr-icon" />
       </div>
@@ -24,13 +24,13 @@ const addressMini = (props) => {
   if (props.address.geocoded) {
     displayedAddress = (
       <Fragment>
-        <div className="column is-11" onClick={() => props.changeDisplayMode('full')}>
+        <div className="column is-11" onClick={() => props.changeDisplayMode('full')} role="presentation">
           <i className="fa fa-map-marker-alt hvr-icon" />
           <span className={classes.Text1}>
             {`${props.address.housenumber} ${props.address.street}`}
           </span>
         </div>
-        <div className="column is-11" onClick={() => props.changeDisplayMode('full')}>
+        <div className="column is-11" onClick={() => props.changeDisplayMode('full')} role="presentation">
           <span className={classes.Text2}>
             {props.address.postcode}
             -

@@ -5,7 +5,7 @@ import classes from '../../Field.scss';
 
 const TextArea = (props) => {
   let component = (
-    <span className={classes.Text} onClick={props.onClick}>
+    <span className={classes.Text} onClick={props.onClick} role="presentation">
       {props.fieldValue || <i className={classes.Na}>NA</i>}
     </span>);
   if (props.editMode) {

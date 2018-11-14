@@ -20,7 +20,10 @@ class SearchResults extends Component {
   }
 
   render() {
-    let content = <div className={classes.NoResult}>Pas de {this.props.label} !</div>; // style Jeremy
+    let content = (
+      <div className={classes.NoResult}>
+        {`Pas de ${this.props.label} !`}
+      </div>);
     if (this.props.noResultFound) {
       content = (
         <div className={classes.NoResult}>
