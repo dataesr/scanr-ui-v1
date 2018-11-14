@@ -77,9 +77,9 @@ class GridFields extends Component {
     if (index < 0 || !itemId) {
       this.setState({ newRow: null });
     } else {
-      const updatedData = [...this.state.data];
-      updatedData.splice(index, 1);
-      updatedData.forEach((dataRow) => {
+      const data = [...this.state.data];
+      data.splice(index, 1);
+      data.forEach((dataRow) => {
         if (typeof dataRow.code === 'object') {
           dataRow.code = dataRow.code.id;
         }
@@ -87,7 +87,7 @@ class GridFields extends Component {
           dataRow.parent_id = dataRow.parent_id.id;
         }
       });
-      this.axiosCall(updatedData);
+      this.axiosCall(data);
     }
   }
 
@@ -224,7 +224,7 @@ class GridFields extends Component {
         let editMode = true;
         let id = -1;
         if (!isNew) {
-          editMode = this.state.editMode;
+          ({ editMode } = this.state);
           id = this.props.description.length === 1 ? index : row.meta.id;
         }
         editMode = field.isEditable ? editMode : false;
@@ -292,10 +292,10 @@ class GridFields extends Component {
             <span className="tag is-white is-rounded">{nbData}</span>
           </div>
 
-          {this.props.newField &&
+          {this.props.newField && (
             <BtAdd onClick={this.BtAddHandler}>
               {this.props.newField}
-            </BtAdd>}
+            </BtAdd>)}
           {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>

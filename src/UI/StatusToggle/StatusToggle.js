@@ -6,8 +6,9 @@ import { STRUCTURE_STATUS_ACTIVE, STATUS_OLD } from '../../config/config';
 import classes from './StatusToggle.scss';
 
 const statusToggle = props => (
-  <label className={classes.switch}>
+  <label className={classes.switch} htmlFor="status">
     <input
+      id="status"
       defaultChecked={props.status === STATUS_OLD}
       type="checkbox"
       onChange={() => props.toggleStatus(

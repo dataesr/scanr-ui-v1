@@ -11,7 +11,8 @@ const Card = props => (
       {props.title}
     </div>
     <div className="card-content has-text-centered">
-      {props.children ? <div className={classes.CardContent}>{props.children}</div> : <small><i>non renseigné</i></small>}
+      {props.children
+        ? <div className={classes.CardContent}>{props.children}</div> : <small><i>non renseigné</i></small>}
     </div>
   </div>
 );

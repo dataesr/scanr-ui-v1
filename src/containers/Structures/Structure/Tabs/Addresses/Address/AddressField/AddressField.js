@@ -10,7 +10,7 @@ const addressField = props => (
         {props.label}
       </span>
     </div>
-    <div className="column" onClick={props.onClick}>
+    <div className="column" onClick={props.onClick} role="presentation">
       {props.children}
     </div>
   </Fragment>);

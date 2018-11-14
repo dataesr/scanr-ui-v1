@@ -20,7 +20,7 @@ const SearchBar = props => (
         </span>
       </Control>
     </Field>
-    <div className={classes.FiltersLink} onClick={props.displayFilterPanel}>
+    <div className={classes.FiltersLink} onClick={props.displayFilterPanel} role="presentation">
       <i className="fas fa-filter" />
       &nbsp;Afficher les filtres
     </div>

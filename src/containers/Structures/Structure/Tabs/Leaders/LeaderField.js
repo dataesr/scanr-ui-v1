@@ -25,8 +25,7 @@ class LeaderField extends Component {
     return (
       <div>
         {this.state.person}
-      </div>
-    )
+      </div>);
   }
 }
 
@@ -34,4 +33,4 @@ export default LeaderField;
 
 LeaderField.propTypes = {
   fieldValue: PropTypes.string,
-}
+};
