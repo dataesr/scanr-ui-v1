@@ -25,13 +25,13 @@ import classes from './GridFields.scss';
 class GridFields extends Component {
   state = {
     editMode: false,
-    newRow: null,
-    data: this.props.data || [],
-    errorMessage: null,
-    showAll: false,
-  }
+      newRow: null,
+      data: this.props.data || [],
+      errorMessage: null,
+      showAll: false,
+    }
 
-  componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps) {
     if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
       this.setState({ data: this.props.data })
     }
@@ -232,13 +232,12 @@ class GridFields extends Component {
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
               field.component, {
+                ...field.component.props,
                 canBeNull: field.rules && field.rules.includes(NO_NULL_RULE),
                 editMode,
                 id: field.key,
                 fieldValue: typeof row === 'object' ? row[field.key] : row,
                 noMain: field.rules && field.rules.includes(STATUS_RULE),
-                schemaName: field.schemaName,
-                searchInstitution: field.searchInstitution,
                 onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),
               },

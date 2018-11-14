@@ -25,6 +25,7 @@ class Structure extends Component {
     const embedded = {
       'panels.code': 1,
       'parents.parent_id': 1,
+      'leaders.leader_id': 1,
     };
     const url = `structures/${esrId}?embedded=${JSON.stringify(embedded)}`;
     axios.get(url)
