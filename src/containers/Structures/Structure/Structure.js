@@ -23,9 +23,9 @@ class Structure extends Component {
   getStructure = () => {
     const esrId = this.props.match.params.esr_id;
     const embedded = {
+      'leaders.leader_id': 1,
       'panels.code': 1,
       'parents.parent_id': 1,
-      'leaders.leader_id': 1,
     };
     const url = `structures/${esrId}?embedded=${JSON.stringify(embedded)}`;
     axios.get(url)
