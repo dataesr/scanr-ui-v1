@@ -38,7 +38,7 @@ const SocialMedias = (props) => {
       icon = 'NA';
   }
   let content = (
-    <p onClick={props.onClick}>
+    <p onClick={props.onClick} role="presentation">
       {icon}
     </p>
   );

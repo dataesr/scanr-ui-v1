@@ -7,10 +7,8 @@ import classes from './StuctureConflicts.scss';
 
 const getConflicts = (structure) => {
   for (let i = 0; i < STRUCTURES_CONFLICTS_TO_CHECK.length; i += 1) {
-    if (!structure[STRUCTURES_CONFLICTS_TO_CHECK[i]]) {
-      continue;
-    }
-    if (getBoolConflicts(structure[STRUCTURES_CONFLICTS_TO_CHECK[i]])) {
+    if (structure[STRUCTURES_CONFLICTS_TO_CHECK[i]]
+      && getBoolConflicts(structure[STRUCTURES_CONFLICTS_TO_CHECK[i]])) {
       return true;
     }
   }

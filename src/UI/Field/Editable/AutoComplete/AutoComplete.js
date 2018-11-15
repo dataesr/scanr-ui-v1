@@ -65,6 +65,7 @@ class AutoComplete extends Component {
             className={`is-small ${classes.Li}`}
             onClick={this.onSelectCategory}
             data-value={category.id}
+            role="presentation"
           >
             {label[this.props.labelKey]}
           </li>);
@@ -75,7 +76,7 @@ class AutoComplete extends Component {
 
   render() {
     let component = (
-      <span className={classes.Text} onClick={this.props.onClick}>
+      <span className={classes.Text} onClick={this.props.onClick} role="presentation">
         {this.state.searchInput}
       </span>);
     if (this.props.editMode) {

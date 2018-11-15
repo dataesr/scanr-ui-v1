@@ -8,7 +8,6 @@ import ReactTooltip from 'react-tooltip';
 import {
   API_END_POINT,
   ERREUR_PATCH,
-  DATE_FORMAT_API,
 }
   from '../../../config/config';
 
@@ -29,7 +28,7 @@ class NomenclatureField extends Component {
 
   componentDidUpdate(prevProps) {
     if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
-      this.setState({ data: this.props.data })
+      this.setState({ data: this.props.data });
     }
   }
 
@@ -90,14 +89,16 @@ class NomenclatureField extends Component {
 
   toggleEditModeRow = (itemId) => {
     const index = this.state.data.findIndex(item => item.id === itemId);
-    const updatedData = [...this.state.data];
-    // Suppression de la clé EditMode si elle existe pour passer en mode lecture
-    if (this.state.data[index].editMode) {
-      delete updatedData[index].editMode;
-    } else { // Sinon ajout de la clé EditMode
-      updatedData[index].editMode = true;
-    }
-    this.setState({ data: updatedData });
+    this.setState((prevState) => {
+      const updatedData = [...prevState.data];
+      // Suppression de la clé EditMode si elle existe pour passer en mode lecture
+      if (prevState.data[index].editMode) {
+        delete updatedData[index].editMode;
+      } else { // Sinon ajout de la clé EditMode
+        updatedData[index].editMode = true;
+      }
+      return { data: updatedData };
+    });
   }
 
   onChangeHandler = (event, id) => {
@@ -210,7 +211,7 @@ class NomenclatureField extends Component {
         let id = null;
         if (!isNew) {
           editMode = row.editMode && field.isEditable;
-          id = row.id;
+          ({ id } = row);
         }
         return (
           <td key={`${field.key}-${id}`}>

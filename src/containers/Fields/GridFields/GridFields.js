@@ -9,6 +9,7 @@ import {
   DATE_FORMAT_API,
   NO_NULL_RULE,
   STATUS_RULE,
+  USER,
 }
   from '../../../config/config';
 
@@ -25,15 +26,15 @@ import classes from './GridFields.scss';
 class GridFields extends Component {
   state = {
     editMode: false,
-      newRow: null,
-      data: this.props.data || [],
-      errorMessage: null,
-      showAll: false,
-    }
+    newRow: null,
+    data: this.props.data || [],
+    errorMessage: null,
+    showAll: false,
+  }
 
-    componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps) {
     if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
-      this.setState({ data: this.props.data })
+      this.setState({ data: this.props.data });
     }
   }
 
@@ -76,9 +77,9 @@ class GridFields extends Component {
     if (index < 0 || !itemId) {
       this.setState({ newRow: null });
     } else {
-      const updatedData = [...this.state.data];
-      updatedData.splice(index, 1);
-      updatedData.forEach((dataRow) => {
+      const data = [...this.state.data];
+      data.splice(index, 1);
+      data.forEach((dataRow) => {
         if (typeof dataRow.code === 'object') {
           dataRow.code = dataRow.code.id;
         }
@@ -86,7 +87,7 @@ class GridFields extends Component {
           dataRow.parent_id = dataRow.parent_id.id;
         }
       });
-      this.axiosCall(updatedData);
+      this.axiosCall(data);
     }
   }
 
@@ -127,7 +128,7 @@ class GridFields extends Component {
       if (index < 0) {
         const itemToUpdate = { ...prevState.newRow };
         itemToUpdate.meta = {
-          created_by: 'user',
+          created_by: USER,
           created_at: now,
         };
         itemToUpdate[event.target.id] = event.target.type === 'date'
@@ -142,7 +143,7 @@ class GridFields extends Component {
         ? moment(value).format(DATE_FORMAT_API) : value;
       const meta = {
         ...itemToUpdate.meta,
-        modified_by: 'user',
+        modified_by: USER,
         modified_at: now,
       };
       itemToUpdate.meta = meta;
@@ -223,7 +224,7 @@ class GridFields extends Component {
         let editMode = true;
         let id = -1;
         if (!isNew) {
-          editMode = this.state.editMode;
+          ({ editMode } = this.state);
           id = this.props.description.length === 1 ? index : row.meta.id;
         }
         editMode = field.isEditable ? editMode : false;
@@ -291,10 +292,10 @@ class GridFields extends Component {
             <span className="tag is-white is-rounded">{nbData}</span>
           </div>
 
-          <BtAdd onClick={this.BtAddHandler}>
-            {this.props.newField}
-          </BtAdd>
-
+          {this.props.newField && (
+            <BtAdd onClick={this.BtAddHandler}>
+              {this.props.newField}
+            </BtAdd>)}
           {saveAndCancelButtons}
           <ErrorMessage>{this.state.errorMessage}</ErrorMessage>
         </div>
@@ -331,7 +332,7 @@ GridFields.propTypes = {
   description: PropTypes.array.isRequired,
   refreshFunction: PropTypes.func.isRequired,
   infoMessage: PropTypes.string.isRequired,
-  newField: PropTypes.string.isRequired,
+  newField: PropTypes.string,
   schemaName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,

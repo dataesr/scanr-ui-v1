@@ -14,7 +14,6 @@ class AddressSearchBar extends Component {
     this.state = {
       searchInput: this.props.searchInput,
       searchResults: null,
-      selectedAddress: null,
     };
     this.addressGeocoding = debounce(this.addressGeocoding, 200);
   }
@@ -36,7 +35,7 @@ class AddressSearchBar extends Component {
   selectAddress = (event) => {
     event.persist();
     const selectedAddress = this.state.searchResults[event.target.id];
-    const coordinates = selectedAddress.geometry.coordinates;
+    const { coordinates } = selectedAddress.geometry;
     const newAddress = {
       city: selectedAddress.properties.city,
       citycode: selectedAddress.properties.citycode,
