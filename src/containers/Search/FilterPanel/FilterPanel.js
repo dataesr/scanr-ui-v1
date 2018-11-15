@@ -34,7 +34,7 @@ const filterPanel = (props) => {
             {renderMenuListItems(list.checkboxes)}
           </Menu.List>))}
       </Menu>
-      <div className="column" onClick={props.hideFilterPanel}/>
+      <div className="column" onClick={props.hideFilterPanel} role="presentation" />
     </div>);
 };
 

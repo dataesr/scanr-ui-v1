@@ -8,7 +8,7 @@ import classes from './SearchListItems.scss';
 const getMainEntity = (entities) => {
   let mainEntity = entities.find(entity => entity.status === 'main');
   if (!mainEntity) {
-    mainEntity = entities[0];
+    ([mainEntity] = entities);
   }
   return mainEntity;
 };

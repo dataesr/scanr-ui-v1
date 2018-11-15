@@ -3,7 +3,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import { DATE_FORMAT_API } from '../../../../../../config/config';
+import { DATE_FORMAT_API, USER } from '../../../../../../config/config';
 
 /* Composants internes */
 import Button from '../../../../../../UI/Button/Button';
@@ -62,9 +62,9 @@ class AddressFull extends Component {
 
   saveButton = () => {
     const now = moment().format(DATE_FORMAT_API);
-    let meta = { created_by: 'user', created_at: now };
+    let meta = { created_by: USER, created_at: now };
     if (this.props.lifecycle) {
-      meta = { ...this.props.lifecycle, modified_by: 'user', modified_at: now };
+      meta = { ...this.props.lifecycle, modified_by: USER, modified_at: now };
     }
     const newAddress = {
       ...this.props.address,

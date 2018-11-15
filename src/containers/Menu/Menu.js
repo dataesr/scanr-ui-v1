@@ -7,7 +7,7 @@ import SearchBar from './Search-bar/Search-bar';
 import classes from './Menu.scss';
 
 const url = window.location.href;
-const baseUrl = url.match('(.*?/.*?){3}')[0];
+const [baseUrl] = url.match('(.*?/.*?){3}');
 
 const menu = props => (
   <Menu className={classes.sidebar}>

@@ -10,7 +10,9 @@ import classes from './Resume.scss';
 
 const Resume = (props) => {
   const mainWebsite = props.websites && props.websites.find(website => website.status === 'main');
-
+  const words = props.keywords_fr.concat(
+    props.keywords_en, props.rnsr_domains, props.rnsr_themes,
+  );
   return (
     <Fragment>
       <div className={classes.Dates}>
@@ -55,7 +57,7 @@ const Resume = (props) => {
       <div className="columns">
         {props.keywords_fr && (
           <WordCloud
-            words={props.keywords_fr.concat(props.keywords_en)}
+            words={words}
           />)}
       </div>
     </Fragment>
@@ -74,5 +76,7 @@ Resume.propTypes = {
   nature: PropTypes.string,
   start_date: PropTypes.string,
   logo: PropTypes.string,
+  rnsr_domains: PropTypes.array,
+  rnsr_themes: PropTypes.array,
   websites: PropTypes.string,
 };

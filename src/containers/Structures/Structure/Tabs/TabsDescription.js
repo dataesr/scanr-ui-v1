@@ -49,7 +49,7 @@ export default [
   },
   {
     id: 'leaders',
-    label: 'Dirigeant',
+    label: 'Dirigeants',
     component: <Leaders />,
   },
   {

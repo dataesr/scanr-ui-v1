@@ -7,7 +7,7 @@ import classes from '../../Field.scss';
 
 const Status = (props) => {
   let statusMode = (
-    <span className={props.size === 'large' ? classes.Text : ''} onClick={props.onClick}>
+    <span className={classes.Text} onClick={props.onClick} role="presentation">
       {props.fieldValue
         ? <StatusTagMedium status={props.fieldValue} />
         : '-vide-'}

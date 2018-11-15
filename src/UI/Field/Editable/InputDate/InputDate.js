@@ -11,7 +11,7 @@ const InputDate = (props) => {
   }
 
   let component = (
-    <span className={classes.Text} onClick={props.onClick} >
+    <span className={classes.Text} onClick={props.onClick} role="presentation">
       {fieldValue}
     </span>);
   if (props.editMode) {
