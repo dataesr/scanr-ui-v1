@@ -10,7 +10,8 @@ export default [
       <AutoComplete
         schemaName="badges"
         autoCompleteKeys="name_fr"
-        labelKey="name_fr"
+        labelKey="id"
+        noInitialKey
       />),
     isEditable: true,
     isShown: true,

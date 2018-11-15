@@ -16,7 +16,6 @@ module.exports = {
         }],
       "import/no-named-as-default": 0,
       "jsx-a11y/anchor-is-valid": [0],
-      "linebreak-style": ["error", "windows"],
       "max-len": [1, 120, 2, {ignoreComments: true}],
       "no-param-reassign": [
         "error", {
