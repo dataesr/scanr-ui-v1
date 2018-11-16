@@ -131,7 +131,7 @@ class Search extends Component {
           visible={this.state.filterPanel}
         />
         <div id="content" className={classes.Content}>
-          <Route path={`${this.props.match.path}/:esr_id`} component={this.props.entityComponent} />
+          <Route path={`${this.props.match.path}/:id`} component={this.props.entityComponent} />
           <Route
             exact
             path={this.props.match.path}

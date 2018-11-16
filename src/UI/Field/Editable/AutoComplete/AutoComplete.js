@@ -11,15 +11,14 @@ class AutoComplete extends Component {
   }
 
   componentDidMount() {
-    this.APICall('');
     let label = this.props.fieldValue;
     if (this.props.searchInstitution && this.props.fieldValue && this.props.fieldValue.names) {
       label = this.props.fieldValue.names.find(name => name.status === 'main');
     }
-    if (!this.props.noInitialKey) {
+    if (!this.props.noInitialKey && this.props.fieldValue) {
       label = label[this.props.labelKey];
     }
-    this.setState({ searchInput: label });
+    this.setState({ searchInput: label || '' });
   }
 
   onChange = (event) => {
@@ -28,6 +27,7 @@ class AutoComplete extends Component {
   }
 
   onFocus = (bool) => {
+    this.APICall('');
     this.setState({ onFocus: bool });
   }
 

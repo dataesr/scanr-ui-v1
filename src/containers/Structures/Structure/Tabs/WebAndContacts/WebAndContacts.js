@@ -20,7 +20,7 @@ const WebAndContacts = props => (
         infoMessage="Aucun email actif"
         newField="Ajouter un nouvel email"
         schemaName="emails"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Emails"
       />
     </div>
@@ -33,7 +33,7 @@ const WebAndContacts = props => (
         infoMessage="Aucun téléphone actif"
         newField="Ajouter un nouveau téléphone"
         schemaName="phones"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Téléphones"
       />
     </div>
@@ -46,7 +46,7 @@ const WebAndContacts = props => (
         infoMessage="Aucun réseau social"
         newField="Ajouter un nouveau réseau social"
         schemaName="social_medias"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Réseaux sociaux"
       />
     </div>
@@ -58,7 +58,7 @@ const WebAndContacts = props => (
         infoMessage="Aucun site internet"
         newField="Ajouter un nouveau site internet"
         schemaName="websites"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Sites internet"
       />
     </div>
@@ -70,7 +70,7 @@ const WebAndContacts = props => (
         infoMessage="Aucun lien externe"
         newField="Ajouter un nouveau lien externe"
         schemaName="external_links"
-        url={`structures/${props.structureId}`}
+        url={props.url}
         title="Liens externes"
       />
     </div>
@@ -86,6 +86,6 @@ WebAndContacts.propTypes = {
   getStructure: PropTypes.func,
   phones: PropTypes.array,
   social_medias: PropTypes.array,
-  structureId: PropTypes.string,
+  url: PropTypes.string,
   websites: PropTypes.array,
 };

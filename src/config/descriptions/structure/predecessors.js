@@ -1,32 +1,31 @@
 import React from 'react';
-
-import { NO_NULL_RULE, STATUS_RULE } from '../../config';
-import Input from '../../../UI/Field/Editable/Input/Input';
+import AutoComplete from '../../../UI/Field/Editable/AutoComplete/AutoComplete';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
+import Select from '../../../UI/Field/Editable/Select/Select';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
+import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 
 export default [
   {
-    key: 'name_fr',
-    displayLabel: 'Nom français',
-    component: <Input />,
+    key: 'predecessor_id',
+    displayLabel: 'Prédecesseur',
+    component: (
+      <AutoComplete
+        schemaName="structures"
+        autoCompleteKeys={['id', 'names.name_fr']}
+        labelKey="name_fr"
+        searchInstitution
+      />),
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    schemaName: 'structures',
   },
   {
-    key: 'name_en',
-    displayLabel: 'Nom anglais',
-    component: <Input />,
-    isEditable: true,
-    isShown: true,
-    rules: [NO_NULL_RULE],
-  },
-  {
-    key: 'acronym',
-    displayLabel: 'Acronyme',
-    component: <Input />,
+    key: 'succession_type',
+    displayLabel: 'Type',
+    component: <Select />,
     isEditable: true,
     isShown: true,
   },
@@ -40,15 +39,8 @@ export default [
     rules: [NO_NULL_RULE, STATUS_RULE],
   },
   {
-    key: 'start_date',
-    displayLabel: 'Début',
-    component: <InputDate />,
-    isEditable: true,
-    isShown: true,
-  },
-  {
-    key: 'end_date',
-    displayLabel: 'Fin',
+    key: 'succession_date',
+    displayLabel: 'Date de succession',
     component: <InputDate />,
     isEditable: true,
     isShown: true,

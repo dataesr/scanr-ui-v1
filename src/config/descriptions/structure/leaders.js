@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { NO_NULL_RULE, STATUS_RULE } from '../../config';
-import Input from '../../../UI/Field/Editable/Input/Input';
+import Select from '../../../UI/Field/Editable/Select/Select';
 import LeaderField from '../../../containers/Structures/Structure/Tabs/Leaders/LeaderField';
 import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
 import Meta from '../../../UI/Field/Meta';
@@ -18,7 +18,7 @@ export default [
   {
     key: 'rank',
     displayLabel: 'Rôle',
-    component: <Input />,
+    component: <Select />,
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
