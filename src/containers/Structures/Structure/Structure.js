@@ -14,20 +14,48 @@ class Structure extends Component {
   state = {
     activeTab: 'main',
     structure: null,
+    types: {
+      id_type: ['grid', 'eter', 'wikipedia'],
+      relation_type: ['relationType1', 'relationType2'],
+      succession_type: ['predecessorType1', 'predecessorType2'],
+      supervision_type: ['supervisionType1', 'supervisionType2'],
+    },
   }
 
   componentDidMount() {
     this.getStructure();
+    this.getAllTypes();
+  }
+
+  getAllTypes() {
+    this.getTypes('external_ids', 'id_type');
+    this.getTypes('leaders', 'rank');
+    this.getTypes('relations', 'relation_type');
+    this.getTypes('predecessors', 'succession_type');
+    this.getTypes('supervisors', 'supervision_type');
+  }
+
+  getTypes(key, type) {
+    const url = `structures/distinct/${key}.${type}`;
+    axios.get(url)
+      .then((response) => {
+        this.setState((prevState) => {
+          const types = { ...prevState.types };
+          types[type] = response.data.data;
+          return { types };
+        });
+      });
   }
 
   getStructure = () => {
-    const esrId = this.props.match.params.esr_id;
+    const { id } = this.props.match.params;
     const embedded = {
       'leaders.leader_id': 1,
       'panels.code': 1,
       'parents.parent_id': 1,
+      'predecessors.predecessor_id': 1,
     };
-    const url = `structures/${esrId}?embedded=${JSON.stringify(embedded)}`;
+    const url = `structures/${id}?embedded=${JSON.stringify(embedded)}`;
     axios.get(url)
       .then((response) => {
         this.setState({ structure: response.data });
@@ -108,7 +136,12 @@ class Structure extends Component {
         </div>
         <div className={classes.Height}>
           {content && React.cloneElement(
-            content.component, { ...structure, getStructure: this.getStructure, url: `structures/${structure.id}` },
+            content.component, {
+              ...structure,
+              getStructure: this.getStructure,
+              url: `structures/${structure.id}`,
+              types: this.state.types,
+            },
           )}
         </div>
       </Fragment>
