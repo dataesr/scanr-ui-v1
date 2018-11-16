@@ -28,7 +28,7 @@ const structuresGridItems = props => (
 
                   <div className="column">
                     <div className={classes.Content}>
-                      <NavLink to={`${props.match.path}/${structure.id}`}>
+                      <NavLink to={`${props.location.pathname}/${structure.id}`}>
                         <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
                           {structure.names && getMainEntity(structure.names).name_fr}
                         </span>
@@ -79,5 +79,5 @@ export default structuresGridItems;
 
 structuresGridItems.propTypes = {
   data: PropTypes.array,
-  match: PropTypes.object,
+  location: PropTypes.object,
 };

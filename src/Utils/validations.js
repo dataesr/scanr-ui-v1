@@ -54,8 +54,9 @@ export default function validate(data, description) {
   const descriptionWithRules = description.filter(
     fieldDescription => fieldDescription.isShown && fieldDescription.rules,
   );
+  /* eslint-disable */
   for (const fieldDescription of descriptionWithRules) {
-    for (let rule of RULES) {
+    for (const rule of RULES) {
       if (fieldDescription.rules.includes(rule.ruleName)) {
         const ruleValidation = rule.function(data, fieldDescription);
         if (!ruleValidation) {
@@ -64,5 +65,6 @@ export default function validate(data, description) {
       }
     }
   }
+  /* eslint-enable */
   return true;
 }
