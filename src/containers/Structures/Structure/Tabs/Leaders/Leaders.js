@@ -26,7 +26,7 @@ export default Leaders;
 
 Leaders.propTypes = {
   getStructure: PropTypes.func,
-  leaders: PropTypes.array,
+  leaders: PropTypes.object,
   types: PropTypes.array,
   url: PropTypes.string,
 };

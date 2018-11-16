@@ -200,7 +200,7 @@ class GridFields extends Component {
 
   renderBody(data) {
     if (!data || data.length === 0) {
-      return <InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage>;
+      return <tr><td><InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage></td></tr>;
     }
 
     return data.map((dataItem) => {
