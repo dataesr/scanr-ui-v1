@@ -28,7 +28,7 @@ module.exports = {
       "react/destructuring-assignment": ["always", { "ignoreClassFields": true }],
       "react/forbid-prop-types": [0],
       "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-      "react/no-did-update-set-state": [0],
+      "react/no-did-update-set-state": 0,
       "react/prefer-stateless-function": [
         1, { "ignorePureComponents": false }],
       "react/require-default-props": [0, { forbidDefaultForRequired: true }],
