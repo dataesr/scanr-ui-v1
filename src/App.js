@@ -49,7 +49,7 @@ const App = () => (
       />
 
       <Route
-        path="/structures"
+        path={['/structures/:id', '/structures']}
         render={props => (
           <Search
             {...props}
@@ -57,11 +57,10 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="structure"
           />)}
       />
       <Route
-        path="/entreprises"
+        path={['/entreprises/:id', '/entreprises']}
         render={props => (
           <Search
             {...props}
@@ -69,11 +68,10 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="entreprise"
           />)}
       />
       <Route
-        path="/institutions"
+        path={['/institutions/:id', '/institutions']}
         render={props => (
           <Search
             {...props}
@@ -81,7 +79,6 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="institution"
           />)}
       />
       <Redirect from="/" to="structures" />
