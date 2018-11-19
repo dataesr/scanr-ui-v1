@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 /* Config */
 import {
   PAGE,
@@ -131,19 +131,22 @@ class Search extends Component {
           visible={this.state.filterPanel}
         />
         <div id="content" className={classes.Content}>
-          <Route path={`${this.props.match.path}/:esr_id`} component={this.props.entityComponent} />
-          <Route
-            exact
-            path={this.props.match.path}
-            render={() => (
-              <SearchResults
-                {...this.props}
-                nextContentButtonHandler={this.nextContentButtonHandler}
-                noResultFound={this.state.noResultFound}
-                pagination={this.state.pagination}
-                searchResults={this.state.searchResults}
-              />)}
-          />
+          <Switch>
+            <Route path={`/${this.props.entity}/:id`} component={this.props.entityComponent} />
+            <Route
+              exact
+              strict
+              path={`/${this.props.entity}`}
+              render={() => (
+                <SearchResults
+                  {...this.props}
+                  nextContentButtonHandler={this.nextContentButtonHandler}
+                  noResultFound={this.state.noResultFound}
+                  pagination={this.state.pagination}
+                  searchResults={this.state.searchResults}
+                />)}
+            />
+          </Switch>
         </div>
       </div>
     );
@@ -157,5 +160,4 @@ Search.propTypes = {
   entity: PropTypes.string.isRequired,
   filtersConfig: PropTypes.array.isRequired,
   gridComponent: PropTypes.any,
-  label: PropTypes.string.isRequired,
 };

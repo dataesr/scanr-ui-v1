@@ -9,13 +9,13 @@ class LeaderField extends Component {
   }
 
   componentDidMount() {
-    const embedded = { id_person: 1 };
-    const url = `rnsr_leaders/${this.props.fieldValue}?embedded=${JSON.stringify(embedded)}`;
+    const embedded = { id_persons: 1 };
+    const url = `rnsr-leaders/${this.props.fieldValue}?embedded=${JSON.stringify(embedded)}`;
     axios.get(url)
       .then((response) => {
-        let person = `${response.firstname} ${response.lastname}`;
-        if (typeof response.id_person === 'object') {
-          person = `${response.id_person.first_name} ${response.id_person.last_name}`;
+        let person = `${response.data.firstname} ${response.data.lastname}`;
+        if (typeof response.data.id_person === 'object') {
+          person = `${response.data.id_person.first_name} ${response.data.id_person.last_name}`;
         }
         this.setState({ person });
       });

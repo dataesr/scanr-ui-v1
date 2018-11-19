@@ -11,12 +11,14 @@ class AutoComplete extends Component {
   }
 
   componentDidMount() {
-    this.APICall('');
     let label = this.props.fieldValue;
     if (this.props.searchInstitution && this.props.fieldValue && this.props.fieldValue.names) {
       label = this.props.fieldValue.names.find(name => name.status === 'main');
     }
-    this.setState({ searchInput: label && label[this.props.labelKey] });
+    if (!this.props.noInitialKey && this.props.fieldValue) {
+      label = label[this.props.labelKey];
+    }
+    this.setState({ searchInput: label || '' });
   }
 
   onChange = (event) => {
@@ -25,6 +27,7 @@ class AutoComplete extends Component {
   }
 
   onFocus = (bool) => {
+    this.APICall('');
     this.setState({ onFocus: bool });
   }
 
@@ -55,9 +58,11 @@ class AutoComplete extends Component {
   renderSearchResults() {
     if (this.state.categoryList) {
       return this.state.categoryList.map((category) => {
-        const label = this.props.searchInstitution
-          ? category.names.find(name => name.status === 'main')
-          : category;
+        let label = category;
+        if (this.props.searchInstitution) {
+          label = category.names.find(name => name.status === 'main');
+        }
+        label = label[this.props.labelKey];
         return (
           <li
             id={this.props.id}
@@ -67,7 +72,7 @@ class AutoComplete extends Component {
             data-value={category.id}
             role="presentation"
           >
-            {label[this.props.labelKey]}
+            {label}
           </li>);
       });
     }
@@ -119,6 +124,7 @@ AutoComplete.propTypes = {
   labelKey: PropTypes.string,
   onChange: PropTypes.func,
   onClick: PropTypes.func,
+  noInitialKey: PropTypes.bool,
   schemaName: PropTypes.string,
   searchInstitution: PropTypes.bool,
 };

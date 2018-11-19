@@ -29,7 +29,7 @@ const SearchListItems = props => (
                   className={`column is-four-fifths ${classes.link} hvr-icon-forward`}
                 >
                   <i className="fa fa-chevron-circle-right hvr-icon" />
-                  <NavLink to={`${props.match.path}/${entity.id}`}>
+                  <NavLink to={`${props.location.pathname}/${entity.id}`}>
                     <span className={classes.link_item}>
                       {entity.names && getMainEntity(entity.names).name_fr}
                     </span>
@@ -51,5 +51,5 @@ export default SearchListItems;
 
 SearchListItems.propTypes = {
   data: PropTypes.array.isRequired,
-  match: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };

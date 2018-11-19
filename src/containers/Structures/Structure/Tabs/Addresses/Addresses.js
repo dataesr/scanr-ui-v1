@@ -42,9 +42,8 @@ class Addresses extends Component {
     const dataObject = {
       addresses,
     };
-    const url = `structures/${this.props.structureId}`;
     this.setState({ hasErrored: false });
-    axios.patch(url, dataObject)
+    axios.patch(this.props.url, dataObject)
       .then(
         (response) => {
           if (response.status === 200) {
@@ -154,6 +153,6 @@ export default Addresses;
 
 Addresses.propTypes = {
   addresses: PropTypes.array,
-  structureId: PropTypes.string,
   getStructure: PropTypes.func,
+  url: PropTypes.string,
 };

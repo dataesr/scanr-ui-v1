@@ -48,8 +48,8 @@ export const URL_DOC = 'http://10.243.98.74:3000';
 /* API */
 // export const API_END_POINT = 'http://0.0.0.0:5000/api/v0.1/datastore/';
 // export const API_END_POINT = 'http://10.243.98.107:5002/api/v0.1/datastore/';
-// export const API_END_POINT = 'http://10.243.98.74:5000/api/v1/';
-export const API_END_POINT = 'http://88.168.181.80:3000/api/v1/';
+export const API_END_POINT = 'http://10.243.98.74:5000/api/v1/';
+// export const API_END_POINT = 'http://88.168.181.80:3000/api/v1/';
 
 
 /* Conflits */

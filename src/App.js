@@ -15,6 +15,7 @@ import Structure from './containers/Structures/Structure/Structure';
 import BadgesDescription from './config/descriptions/nomenclatures/badges';
 import PanelsDescription from './config/descriptions/nomenclatures/panelsERC';
 
+/* eslint-disable */
 const App = () => (
   <BrowserRouter>
     <Switch>
@@ -49,19 +50,19 @@ const App = () => (
       />
 
       <Route
-        path="/structures"
+        path={['/structures/:id', '/structures']}
         render={props => (
           <Search
             {...props}
             entity="structures"
-            filtersConfig={StructureFilters}
             entityComponent={Structure}
+            filtersConfig={StructureFilters}
             gridComponent={<StructuresGridItems />}
             label="structure"
           />)}
       />
       <Route
-        path="/entreprises"
+        path={['/entreprises/:id', '/entreprises']}
         render={props => (
           <Search
             {...props}
@@ -69,11 +70,11 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="entreprise"
+            label="structure"
           />)}
       />
       <Route
-        path="/institutions"
+        path={['/institutions/:id', '/institutions']}
         render={props => (
           <Search
             {...props}
@@ -81,12 +82,13 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="institution"
+            label="structure"
           />)}
       />
       <Redirect from="/" to="structures" />
     </Switch>
   </BrowserRouter>
 );
+/* eslint-enable */
 
 export default App;

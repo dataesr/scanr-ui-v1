@@ -2,33 +2,54 @@ import React from 'react';
 
 import { NO_NULL_RULE, STATUS_RULE } from '../../config';
 import Input from '../../../UI/Field/Editable/Input/Input';
-import InputDate from '../../../UI/Field/Editable/InputDate/InputDate';
+import AddressMini from '../../../containers/Structures/Structure/Tabs/Addresses/Address/AddressMini';
 import Meta from '../../../UI/Field/Meta';
 import Status from '../../../UI/Field/Editable/Status/Status';
 
 export default [
   {
-    key: 'name_fr',
-    displayLabel: 'Nom français',
+    key: 'name',
+    displayLabel: 'Nom',
     component: <Input />,
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
   },
   {
-    key: 'name_en',
-    displayLabel: 'Nom anglais',
+    key: 'kind',
+    displayLabel: "Type d'offre",
     component: <Input />,
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
   },
   {
-    key: 'acronym',
-    displayLabel: 'Acronyme',
+    key: 'description',
+    displayLabel: 'Description',
     component: <Input />,
     isEditable: true,
     isShown: true,
+  },
+  {
+    key: 'details',
+    displayLabel: 'Détails',
+    component: <Input />,
+    isEditable: true,
+    isShown: true,
+  },
+  {
+    key: 'domains',
+    displayLabel: 'Domaines',
+    component: <Input />,
+    isEditable: true,
+    isShown: false,
+  },
+  {
+    key: 'address',
+    displayLabel: 'Adresse',
+    component: <AddressMini />,
+    isEditable: false,
+    isShown: false,
   },
   {
     key: 'status',
@@ -38,20 +59,6 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
-  },
-  {
-    key: 'start_date',
-    displayLabel: 'Début',
-    component: <InputDate />,
-    isEditable: true,
-    isShown: true,
-  },
-  {
-    key: 'end_date',
-    displayLabel: 'Fin',
-    component: <InputDate />,
-    isEditable: true,
-    isShown: true,
   },
   {
     key: 'meta',

@@ -17,29 +17,30 @@ const addressMini = (props) => {
       </div>
       <div className="column">
         <span className={classes.Text1}>
-          {props.address.input_address}
+          {props.fieldValue.input_address}
         </span>
       </div>
     </div>);
-  if (props.address.geocoded) {
+  if (props.fieldValue.geocoded) {
     displayedAddress = (
       <Fragment>
         <div className="column is-11" onClick={() => props.changeDisplayMode('full')} role="presentation">
           <i className="fa fa-map-marker-alt hvr-icon" />
           <span className={classes.Text1}>
-            {`${props.address.housenumber} ${props.address.street}`}
+            {`${props.fieldValue.housenumber} ${props.fieldValue.street}`}
           </span>
         </div>
         <div className="column is-11" onClick={() => props.changeDisplayMode('full')} role="presentation">
           <span className={classes.Text2}>
-            {props.address.postcode}
+            {props.fieldValue.postcode}
             -
-            {props.address.city}
+            {props.fieldValue.city}
           </span>
         </div>
       </Fragment>);
   }
   return (
+    /* eslint-disable */
     <div
       className={classes.Address}
       onMouseOver={props.mouseOver}
@@ -53,7 +54,7 @@ const addressMini = (props) => {
               <StatusTagMedium status={props.status} />
             </div>
           </div>
-          {props.address.geocoded
+          {props.fieldValue.geocoded
             ? (
               <div className="column ">
                 <Tag tagValue="Géocodé" color="has-background-info" />
@@ -73,13 +74,14 @@ const addressMini = (props) => {
       </div>
     </div>);
 };
+/* eslint-enable */
 
 export default addressMini;
 
 addressMini.propTypes = {
-  address: PropTypes.object.isRequired,
+  fieldValue: PropTypes.object,
   changeDisplayMode: PropTypes.func,
-  mouseOut: PropTypes.func.isRequired,
-  mouseOver: PropTypes.func.isRequired,
+  mouseOut: PropTypes.func,
+  mouseOver: PropTypes.func,
   status: PropTypes.string,
 };
