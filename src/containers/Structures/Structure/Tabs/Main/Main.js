@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import BadgesDescription from '../../../../../config/descriptions/structure/badges';
 import Descriptions from '../../../../../config/descriptions/structure/descriptions';
 import EvaluationsDescription from '../../../../../config/descriptions/structure/evaluations';
+import ExternalIdsDescriptions from '../../../../../config/descriptions/structure/external_ids';
 import NameDescription from '../../../../../config/descriptions/structure/names';
 // Composants UI
 import GridFields from '../../../../Fields/GridFields/GridFields';
@@ -46,6 +47,19 @@ const Main = props => (
         title="Codes"
       />
     </div>
+    <div className="column is-12">
+      <GridFields
+        data={props.external_ids}
+        description={ExternalIdsDescriptions}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucun identifiant externe"
+        newField="Ajouter un nouvel identifiant"
+        schemaName="external_ids"
+        typesList={props.types.id_type}
+        url={props.url}
+        title="Identifiants externes"
+      />
+    </div>
     <div className="column is-5">
       <GridFields
         data={props.badges}
@@ -53,6 +67,7 @@ const Main = props => (
         refreshFunction={props.getStructure}
         infoMessage="Aucun badge actif"
         newField="Ajouter un nouveau badge"
+        schemaName="badges"
         url={props.url}
         title="Badges"
       />
@@ -92,8 +107,10 @@ Main.propTypes = {
   codeNumbers: PropTypes.array,
   descriptions: PropTypes.array,
   evaluations: PropTypes.array,
+  external_ids: PropTypes.array,
   getStructure: PropTypes.func,
   id: PropTypes.string,
   names: PropTypes.array,
+  types: PropTypes.object,
   url: PropTypes.string,
 };

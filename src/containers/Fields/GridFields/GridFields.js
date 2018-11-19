@@ -86,6 +86,9 @@ class GridFields extends Component {
         if (typeof dataRow.parent_id === 'object') {
           dataRow.parent_id = dataRow.parent_id.id;
         }
+        if (typeof dataRow.predecessor_id === 'object') {
+          dataRow.predecessor_id = dataRow.predecessor_id.id;
+        }
       });
       this.axiosCall(data);
     }
@@ -165,6 +168,9 @@ class GridFields extends Component {
       if (typeof dataRow.parent_id === 'object') {
         dataRow.parent_id = dataRow.parent_id.id;
       }
+      if (typeof dataRow.predecessor_id === 'object') {
+        dataRow.predecessor_id = dataRow.predecessor_id.id;
+      }
     });
     if (this.state.newRow) {
       const newRow = { ...this.state.newRow };
@@ -194,7 +200,7 @@ class GridFields extends Component {
 
   renderBody(data) {
     if (!data || data.length === 0) {
-      return <InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage>;
+      return <tr><td><InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage></td></tr>;
     }
 
     return data.map((dataItem) => {
@@ -241,6 +247,7 @@ class GridFields extends Component {
                 noMain: field.rules && field.rules.includes(STATUS_RULE),
                 onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),
+                typesList: this.props.typesList,
               },
             )}
           </td>
@@ -317,7 +324,7 @@ class GridFields extends Component {
           <BtShowAll
             onClick={this.toggleShowAllHandler}
             showAll={this.state.showAll}
-            label="anciens libellés"
+            label="anciens champs"
           />)}
 
       </div>
@@ -335,5 +342,6 @@ GridFields.propTypes = {
   newField: PropTypes.string,
   schemaName: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  typesList: PropTypes.array,
   url: PropTypes.string.isRequired,
 };

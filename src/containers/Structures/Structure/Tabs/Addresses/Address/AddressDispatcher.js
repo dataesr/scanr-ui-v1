@@ -50,7 +50,7 @@ class AddressDispatcher extends Component {
       case 'mini':
         content = (
           <AddressMini
-            address={this.state.address}
+            fieldValue={this.state.address}
             changeDisplayMode={this.changeDisplayModeHandler}
             mouseOut={this.props.mouseOut}
             mouseOver={this.props.mouseOver}
