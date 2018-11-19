@@ -21,7 +21,7 @@ class Structure extends Component {
   }
 
   getStructure = () => {
-    const esrId = this.props.match.params.esr_id;
+    const esrId = this.props.match.params.id;
     const embedded = {
       'panels.code': 1,
       'parents.parent_id': 1,

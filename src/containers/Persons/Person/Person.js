@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import { ERREUR_PATCH } from '../../../config/config';
 import axios from '../../../axios';
-import StatusToggle from '../../../UI/StatusToggle/StatusToggle';
 import TextTitle from '../../../UI/TextTitle/TextTitle';
 import TabsDescription from './Tabs/TabsDescription';
 
@@ -13,7 +12,7 @@ import classes from './Person.scss';
 class Person extends Component {
   state = {
     activeTab: 'main',
-    structure: null,
+    person: null,
   }
 
   componentDidMount() {
@@ -21,11 +20,11 @@ class Person extends Component {
   }
 
   getPerson = () => {
-    const esrId = this.props.match.params.esr_id;
-    const url = `persons/${esrId}?embedded=${encodeURIComponent(`{"panels.code": 1}`)}`;
+    const url = `persons/${this.props.match.params.id}`;
     axios.get(url)
       .then((response) => {
-        this.setState({ structure: response.data });
+        console.log('response:', response);
+        this.setState({ person: response.data });
       });
   }
 
@@ -35,21 +34,8 @@ class Person extends Component {
     this.setState(newState);
   }
 
-  getMainName = (names) => {
-    // Recherche du nom principal
-    const mainName = names.find(item => item.status === 'main') || names[0];
-    return mainName.name_fr;
-  }
-
-  toggleStatus = (status) => {
-    const dataObject = {
-      status,
-    };
-    this.axiosCall(dataObject);
-  }
-
   axiosCall = (dataObject) => {
-    const url = `structures/${this.state.structure.id}?embedded=${encodeURIComponent(`{"panels.code": 1}`)}`;
+    const url = `persons/${this.state.person.id}`;
     axios.patch(url, dataObject)
       .then(
         (response) => {
@@ -75,29 +61,26 @@ class Person extends Component {
   }
 
   render() {
-    const { structure } = this.state;
-    if (!structure) {
+    const { person } = this.state;
+    if (!person) {
       return null;
     }
     const content = TabsDescription.find(tab => tab.id === this.state.activeTab);
-    const title = structure.names ? this.getMainName(structure.names) : '';
+    const title = `${person.last_name} ${person.first_name}`;
 
     return (
       <Fragment>
         <div className={classes.Bg}>
           <div className="columns is-marginless is-gapless">
-            <div className="column is-four-fifths">
+            <div className="column">
               <TextTitle>{title}</TextTitle>
-            </div>
-            <div className="column has-text-right">
-              <StatusToggle status={structure.status} toggleStatus={this.toggleStatus} />
             </div>
           </div>
         </div>
         <div className={`tabs is-marginless ${classes.Tabs}`}>
           <ul>
             <li>
-              <Link to="/">
+              <Link to="/persons">
                 <span className="icon"><i className="fas fa-angle-left" aria-hidden="true" /></span>
                 <span>Retour</span>
               </Link>
@@ -107,7 +90,7 @@ class Person extends Component {
         </div>
         <div className={classes.Height}>
           {content && React.cloneElement(
-            content.component, { ...structure, getPerson: this.getPerson, url: `structures/${structure.id}` },
+            content.component, { ...person, getPerson: this.getPerson, url: `persons/${person.id}` },
           )}
         </div>
       </Fragment>

@@ -12,10 +12,8 @@ const personsGridItems = props => (
   <section className={`columns is-multiline ${classes.Section}`}>
     {
         props.data.map((person) => {
-          console.log('person:', person);
-
-          const gender = (person.gender === 'F') ? <i className="fas fa-female" /> : <i className="fas fa-mars" />;
-          const agePerson = age(person.birth_date);
+          const gender = (person.gender === 'F') ? <i className="fas fa-female" /> : <i className="fas fa-male" />;
+          const agePerson = age(person.birth_date, person.death_date || null);
 
           return (
             <div key={person.id} className="column is-one-third-desktop is-half-tablet">
@@ -37,15 +35,22 @@ const personsGridItems = props => (
                       <div className={classes.Complementary}>
                         <div className={classes.Id}>
                           <i className="fas fa-fingerprint" />
-                          <a href={`http://idref.fr/${person.id_idref}`} target="_blank" rel="noopener noreferrer">
-                            {`http://idref.fr/${person.id_idref}`}
+                          <a href={person.id_idref} target="_blank" rel="noopener noreferrer">
+                            {person.id_idref}
                           </a>
                         </div>
                         <div className={classes.Id}>
-                          <i className="fas fa-fingerprint" />
-                          <a href={person.id_orcid} target="_blank" rel="noopener noreferrer">
-                            {person.id_orcid}
-                          </a>
+                          {
+                            (person.id_orcid)
+                              ? (
+                                <span>
+                                  <i className="fas fa-fingerprint" />
+                                  <a href={person.id_orcid} target="_blank" rel="noopener noreferrer">
+                                    {person.id_orcid}
+                                  </a>
+                                </span>)
+                              : null
+                          }
                         </div>
                       </div>
 

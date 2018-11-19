@@ -2,69 +2,60 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Descriptions
-import BadgesDescription from '../../../../../config/descriptions/structure/badges';
-import Descriptions from '../../../../../config/descriptions/structure/descriptions';
-import NameDescription from '../../../../../config/descriptions/structure/names';
+import AliasDescription from '../../../../../config/descriptions/person/alias';
+import IdExternalDescription from '../../../../../config/descriptions/person/idExternalDescription';
+import PersonDescriptions from '../../../../../config/descriptions/person/personDescriptions';
+
 // Composants UI
+import PersonInfosCard from '../../../../../UI/Field/personInfosCard';
 import GridFields from '../../../../Fields/GridFields/GridFields';
-import TagField from '../../../../Fields/TagField/TagField';
+
+import age from '../../../../../Utils/age';
 
 const Main = props => (
   <div className="columns is-multiline is-marginless">
-    <div className="column is-12">
+    <div className="column is-4">
       <GridFields
-        data={props.names}
-        description={NameDescription}
-        refreshFunction={props.getStructure}
-        infoMessage="Aucun libellé actif"
-        newField="Ajouter un nouveau libellé"
-        schemaName="names"
-        url={props.url}
-        title="Libellés"
-      />
-    </div>
-
-    <div className="column is-6">
-      <TagField
         data={props.alias}
-        infoMessage="Ajouter un alias"
-        getStructure={props.getStructure}
+        description={AliasDescription}
+        refreshFunction={props.getPerson}
+        infoMessage="Aucun alias actif"
+        newField="Ajouter un nouvel alias"
         schemaName="alias"
-        structureId={props.id}
+        url={props.url}
         title="Alias"
       />
     </div>
-
-    <div className="column is-6">
-      <TagField
-        data={props.codeNumbers}
-        infoMessage="Ajouter un code"
-        getStructure={props.getStructure}
-        schemaName="code_numbers"
-        structureId={props.id}
-        title="Codes"
-      />
-    </div>
-    <div className="column is-5">
+    <div className="column is-4">
       <GridFields
-        data={props.badges}
-        description={BadgesDescription}
-        refreshFunction={props.getStructure}
-        infoMessage="Aucun badge actif"
-        newField="Ajouter un nouveau badge"
-        schemaName="badges"
+        data={props.id_external}
+        description={IdExternalDescription}
+        refreshFunction={props.getPerson}
+        infoMessage="Aucun id"
+        newField="Ajouter un nouvel ID"
+        schemaName="id_external"
         url={props.url}
-        title="Badges"
+        title="ID externes"
       />
     </div>
-    <div className="column is-7">
+    <div className="column is-4">
+      <PersonInfosCard
+        age={age(props.birth_date, props.death_date || null)}
+        gender={props.gender}
+        id_idref={props.id_idref}
+        id_orcid={props.id_orcid}
+        orcid_creation_date={props.orcid_creation_date}
+      />
+
+    </div>
+    <div className="column is-12">
       <GridFields
-        data={props.descriptions}
-        description={Descriptions}
-        refreshFunction={props.getStructure}
+        data={props.person_descriptions}
+        description={PersonDescriptions}
+        refreshFunction={props.getPerson}
         infoMessage="Aucune description"
         newField="Ajouter une nouvelle description"
-        schemaName="descriptions"
+        schemaName="person_descriptions"
         url={props.url}
         title="Descriptions"
       />
@@ -75,12 +66,15 @@ const Main = props => (
 export default Main;
 
 Main.propTypes = {
+  getPerson: PropTypes.func,
   alias: PropTypes.array,
-  badges: PropTypes.array,
-  codeNumbers: PropTypes.array,
-  descriptions: PropTypes.array,
-  getStructure: PropTypes.func,
-  id: PropTypes.string,
-  names: PropTypes.array,
+  birth_date: PropTypes.string,
+  death_date: PropTypes.string,
+  gender: PropTypes.string,
+  id_external: PropTypes.array,
+  id_idref: PropTypes.string,
+  id_orcid: PropTypes.string,
+  orcid_creation_date: PropTypes.string,
+  person_descriptions: PropTypes.array,
   url: PropTypes.string,
 };
