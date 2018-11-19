@@ -38,7 +38,3 @@ jobs:
       - run:
           name: Build
           command: CI=false npm run build
-
-      - run:
-          name: Deploy
-          command: npm install --save-dev gh-pages
