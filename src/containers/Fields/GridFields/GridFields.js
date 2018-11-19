@@ -25,13 +25,13 @@ import classes from './GridFields.scss';
 class GridFields extends Component {
   state = {
     editMode: false,
-      newRow: null,
-      data: this.props.data || [],
-      errorMessage: null,
-      showAll: false,
-    }
+    newRow: null,
+    data: this.props.data || [],
+    errorMessage: null,
+    showAll: false,
+  }
 
-    componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps) {
     if (JSON.stringify(prevProps.data) !== JSON.stringify(this.props.data)) {
       this.setState({ data: this.props.data })
     }
@@ -195,10 +195,9 @@ class GridFields extends Component {
     if (!data || data.length === 0) {
       return <InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage>;
     }
-
     return data.map((dataItem) => {
       let deleteButton = null;
-      const itemId = typeof dataItem === 'object' ? dataItem.meta.id : dataItem;
+      const itemId = (typeof dataItem === 'object') ? dataItem.meta.id : dataItem;
       if (this.state.editMode) {
         deleteButton = (
           <Button onClick={() => this.delete(itemId)}>

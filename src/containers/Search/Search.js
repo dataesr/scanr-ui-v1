@@ -46,8 +46,8 @@ class Search extends Component {
     }
   }
 
-  toggleFilterPanel = (bool) => {
-    this.setState({ filterPanel: bool });
+  toggleFilterPanel = () => {
+    this.setState(prevState => ({ filterPanel: !prevState.filterPanel }));
   }
 
   searchTextHandler = (event) => {
@@ -118,18 +118,18 @@ class Search extends Component {
           <Menu
             isLoading={this.state.isLoading}
             searchTextHandler={this.searchTextHandler}
-            displayFilterPanel={() => this.toggleFilterPanel(true)}
+            displayFilterPanel={this.toggleFilterPanel}
           />
         </div>
         <FilterPanel
           activeFilters={this.state.filters}
           filtersConfig={this.props.filtersConfig}
-          hideFilterPanel={() => this.toggleFilterPanel(false)}
+          hideFilterPanel={this.toggleFilterPanel}
           selectFilter={this.selectFilter}
           visible={this.state.filterPanel}
         />
         <div id="content" className={classes.Content}>
-          <Route path={`${this.props.match.path}/:esr_id`} component={this.props.entityComponent} />
+          <Route path={`${this.props.match.path}/:id`} component={this.props.entityComponent} />
           <Route
             exact
             path={this.props.match.path}

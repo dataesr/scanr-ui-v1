@@ -22,7 +22,7 @@
 
     &:first-child{
       border-bottom: 1px solid #fff;
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     &:last-child{
@@ -55,11 +55,6 @@
 .Complementary{
   margin-top: 24px;
   color: $text_secondary;
-}
-
-.Complementary span{
-  display: inline-block;
-  padding-left: 10px;
 }
 
 /*Ellipsis sur 1 ou 2 lignes*/
