@@ -38,3 +38,7 @@ jobs:
       - run:
           name: Build
           command: CI=false npm run build
+
+      - run:
+          name: Deploy
+          command: npm run deploy
