@@ -25,7 +25,7 @@ import PanelsDescription from './config/descriptions/nomenclatures/panelsERC';
 
 /* eslint-disable */
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route
         path="/badges"
