@@ -5,13 +5,21 @@ import {
   Route,
   Redirect,
 } from 'react-router-dom';
-import StructureFilters from './config/descriptions/structure/filters';
-import Nomenclatures from './containers/Nomenclatures/Nomenclatures';
+
 import Search from './containers/Search/Search';
-import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
+
+// Structures
 import Structure from './containers/Structures/Structure/Structure';
+import StructureFilters from './config/descriptions/structure/filters';
+import StructuresGridItems from './containers/Structures/StructuresGridItems/StructuresGridItems';
+
+// Personnes
+import Person from './containers/Persons/Person/Person';
+import PersonFilters from './config/descriptions/person/filters';
+import PersonsGridItems from './containers/Persons/PersonsGridItems/PersonsGridItems';
 
 // Nomenclatures descriptions
+import Nomenclatures from './containers/Nomenclatures/Nomenclatures';
 import BadgesDescription from './config/descriptions/nomenclatures/badges';
 import PanelsDescription from './config/descriptions/nomenclatures/panelsERC';
 
@@ -83,6 +91,18 @@ const App = () => (
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
             label="structure"
+          />)}
+      />
+      <Route
+        path="/persons"
+        render={props => (
+          <Search
+            {...props}
+            entity="persons"
+            filtersConfig={PersonFilters}
+            entityComponent={Person}
+            gridComponent={<PersonsGridItems />}
+            label="personnes"
           />)}
       />
       <Redirect from="/" to="structures" />

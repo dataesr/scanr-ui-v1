@@ -202,10 +202,9 @@ class GridFields extends Component {
     if (!data || data.length === 0) {
       return <tr><td><InfoMessage>{this.state.newRow ? '' : this.props.infoMessage}</InfoMessage></td></tr>;
     }
-
     return data.map((dataItem) => {
       let deleteButton = null;
-      const itemId = typeof dataItem === 'object' ? dataItem.meta.id : dataItem;
+      const itemId = (typeof dataItem === 'object') ? dataItem.meta.id : dataItem;
       if (this.state.editMode) {
         deleteButton = (
           <Button onClick={() => this.delete(itemId)}>
