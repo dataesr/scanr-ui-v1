@@ -29,7 +29,7 @@ export default [
   },
   {
     id: 'addresses',
-    label: 'Addresses',
+    label: 'Adresses',
     component: <Addresses />,
   },
   {
