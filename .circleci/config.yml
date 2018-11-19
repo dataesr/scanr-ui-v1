@@ -39,19 +39,6 @@ jobs:
           name: Build
           command: CI=false npm run build
 
-      - deploy:
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              echo "$DOMAIN" > build/CNAME
-              cp -r .circleci build/.circleci
-              git config --global user.email "$GH_EMAIL"
-              git config --global user.name "$GH_NAME"
-              NODE_DEBUG=gh-pages npm run deploy -- -m 'automated build'
-              curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$CLOUDFLARE_ZONE/purge_cache" \
-                 -H "X-Auth-Email: $CLOUDFLARE_EMAIL" \
-                 -H "X-Auth-Key: $CLOUDFLARE_AUTH_KEY" \
-                 -H "Content-Type: application/json" \
-                 --data '{"purge_everything":true}'
-            else
-              echo "Not master branch so not deploying"
-            fi
+      - run:
+          name: Deploy
+          command: npm install --save-dev gh-pages
