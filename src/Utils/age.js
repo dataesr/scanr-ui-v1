@@ -1,9 +1,8 @@
-export default function age(birthDate, deathDate=null) {
+export default function age(birthDate, deathDate) {
   const birthday = new Date(birthDate);
-  if(!deathDate){
-    return new Number((new Date().getTime() - birthday.getTime()) / 31536000000).toFixed(0);
-  } else{
-    const deathDay = new Date(deathDate);
-    return new Number((deathDay.getTime() - birthday.getTime()) / 31536000000).toFixed(0);
+  let comparisonDate = new Date();
+  if (deathDate) {
+    comparisonDate = new Date(deathDate);
   }
+  return ((comparisonDate.getTime() - birthday.getTime()) / 31536000000).toFixed(0);
 }

@@ -53,7 +53,7 @@ class Person extends Component {
   renderTabsTitle() {
     return TabsDescription.map(tab => (
       <li key={tab.id} className={this.state.activeTab === tab.id ? 'is-active' : ''}>
-        <a onClick={() => this.showTab(tab.id)}>
+        <a onClick={() => this.showTab(tab.id)} role="presentation">
           {tab.label}
         </a>
       </li>
