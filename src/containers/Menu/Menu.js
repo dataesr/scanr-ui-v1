@@ -11,7 +11,7 @@ const [baseUrl] = url.match('(.*?/.*?){3}');
 
 const menu = props => (
   <Menu className={classes.sidebar}>
-    <img src={`${baseUrl}img/logo.svg`} alt="logo" />
+    <img src={`${baseUrl}${process.env.REACT_APP_PUBLIC_URL}img/logo.svg`} alt="logo" />
     {props.searchTextHandler && (
       <Menu.List title="Recherche">
         <Menu.List.Item>
