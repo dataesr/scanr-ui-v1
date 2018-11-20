@@ -39,7 +39,7 @@ const Main = props => (
 
     <div className="column is-6">
       <TagField
-        data={props.codeNumbers}
+        data={props.code_numbers}
         infoMessage="Ajouter un code"
         getStructure={props.getStructure}
         schemaName="code_numbers"
@@ -104,7 +104,7 @@ export default Main;
 Main.propTypes = {
   alias: PropTypes.array,
   badges: PropTypes.array,
-  codeNumbers: PropTypes.array,
+  code_numbers: PropTypes.array,
   descriptions: PropTypes.array,
   evaluations: PropTypes.array,
   external_ids: PropTypes.array,
