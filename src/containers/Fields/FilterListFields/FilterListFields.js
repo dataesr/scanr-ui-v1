@@ -25,10 +25,14 @@ class FilterListFields extends Component {
       ));
     }
 
-    const tr = result.map(item => (
+    const rows = result.map(item => (
       <tr>
         <td>
-          {item}
+          {
+            (this.props.redirection)
+              ? <a href={`/${this.props.redirection}/${item}`}>{item}</a>
+              : item
+          }
         </td>
       </tr>
     ));
@@ -43,8 +47,8 @@ class FilterListFields extends Component {
           <span className="tag is-white is-rounded">{nbData}</span>
         </div>
 
-        <div className="field has-addons">
-          <div className="control">
+        <div className={`field has-addons ${classes.Filter}`}>
+          <div className={`control ${classes.Input}`}>
             <input
               className="input"
               type="text"
@@ -61,7 +65,7 @@ class FilterListFields extends Component {
         </div>
         <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <tbody>
-            {tr}
+            {rows}
           </tbody>
         </table>
       </Fragment>
@@ -74,4 +78,5 @@ export default FilterListFields;
 FilterListFields.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
+  redirection: PropTypes.string,
 };

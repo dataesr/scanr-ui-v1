@@ -6,13 +6,14 @@ import FilterListFields from '../../../../Fields/FilterListFields/FilterListFiel
 
 const Contributors = props => (
   <div className="columns is-multiline is-marginless">
-    <div className="column is-3">
+    <div className="column is-4-widescreen is-6-desktop is-12-mobile">
       <FilterListFields
         data={props.co_contributors}
         title="Co-contributeurs"
+        redirection="persons"
       />
     </div>
-    <div className="column is-3">
+    <div className="column is-4-widescreen is-6-desktop is-12-mobile">
       <FilterListFields
         data={props.co_contributors_name_2}
         title="Co-contributeurs Name 2"
