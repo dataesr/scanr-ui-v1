@@ -11,7 +11,10 @@ import classes from './Menu.scss';
 
 const menu = props => (
   <Menu className={classes.sidebar}>
-    <img src="/img/logo.svg" alt="logo" />
+    <img
+      src={`${process.env.NODE_ENV === 'development' ? '' : process.env.REACT_APP_PUBLIC_URL}/img/logo.svg`}
+      alt="logo"
+    />
     {props.searchTextHandler && (
       <Menu.List title="Recherche">
         <Menu.List.Item>
