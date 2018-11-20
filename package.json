@@ -58,7 +58,7 @@
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint src/",
     "predeploy": "CI=false npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "CI=false gh-pages -d build"
   },
   "jest": {
     "collectCoverageFrom": [
