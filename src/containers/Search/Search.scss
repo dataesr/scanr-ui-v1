@@ -1,1 +1,19 @@
 @import '../../style.scss';
+
+.Layout{
+  min-height: 100%;
+  background-color: #f5f5f5;
+
+  .Menu{
+    width: $menuWidth;
+    position: fixed;
+    float: left;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .Content{
+    margin-left: $menuWidth;
+    height: 100%;
+  }
+}
