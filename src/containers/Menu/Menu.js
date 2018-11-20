@@ -6,12 +6,12 @@ import { URL_DOC } from '../../config/config';
 import SearchBar from './Search-bar/Search-bar';
 import classes from './Menu.scss';
 
-const url = window.location.href;
-const [baseUrl] = url.match('(.*?/.*?){3}');
+// const url = window.location.href;
+// const [baseUrl] = url.match('(.*?/.*?){3}');
 
 const menu = props => (
   <Menu className={classes.sidebar}>
-    <img src={`${baseUrl}${process.env.REACT_APP_PUBLIC_URL}img/logo.svg`} alt="logo" />
+    <img src="/img/logo.svg" alt="logo" />
     {props.searchTextHandler && (
       <Menu.List title="Recherche">
         <Menu.List.Item>
