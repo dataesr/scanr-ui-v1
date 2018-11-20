@@ -24,7 +24,7 @@ const personsGridItems = props => (
 
                     <div className="column">
                       <div className={classes.Content}>
-                        <NavLink to={`${props.match.path}/${person.id}`}>
+                        <NavLink to={`${props.location.pathname}/${person.id}`}>
                           <span className={`${classes.lineClamp} ${classes.lineClamp2} ${classes.Link_item}`}>
                             <b>{person.last_name}</b>
                             &nbsp;
@@ -82,5 +82,5 @@ export default personsGridItems;
 
 personsGridItems.propTypes = {
   data: PropTypes.array,
-  match: PropTypes.object,
+  location: PropTypes.object,
 };
