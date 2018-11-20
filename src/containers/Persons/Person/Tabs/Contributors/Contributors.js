@@ -25,8 +25,6 @@ const Contributors = props => (
 export default Contributors;
 
 Contributors.propTypes = {
-  getPerson: PropTypes.func,
   co_contributors: PropTypes.array,
   co_contributors_name_2: PropTypes.array,
-  url: PropTypes.string,
 };
