@@ -5,16 +5,14 @@ import PropTypes from 'prop-types';
 import { URL_DOC } from '../../config/config';
 import SearchBar from './Search-bar/Search-bar';
 import classes from './Menu.scss';
+import Logo from './logo.svg';
 
 // const url = window.location.href;
 // const [baseUrl] = url.match('(.*?/.*?){3}');
 
 const menu = props => (
   <Menu className={classes.sidebar}>
-    <img
-      src={`${process.env.NODE_ENV === 'development' ? '' : process.env.REACT_APP_PUBLIC_URL}/img/logo.svg`}
-      alt="logo"
-    />
+    <img src={Logo} alt="logo" />
     {props.searchTextHandler && (
       <Menu.List title="Recherche">
         <Menu.List.Item>
