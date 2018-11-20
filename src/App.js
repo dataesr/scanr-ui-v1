@@ -79,7 +79,7 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="structure"
+            label="entreprise"
           />)}
       />
       <Route
@@ -91,11 +91,11 @@ const App = () => (
             filtersConfig={StructureFilters}
             entityComponent={Structure}
             gridComponent={<StructuresGridItems />}
-            label="structure"
+            label="institution"
           />)}
       />
       <Route
-        path="/persons"
+        path={['/persons/:id', '/persons']}
         render={props => (
           <Search
             {...props}
