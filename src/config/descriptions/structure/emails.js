@@ -12,6 +12,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '70%',
+    },
   },
   {
     key: 'status',
@@ -21,6 +24,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -28,5 +34,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '5%',
+    },
   },
 ];
