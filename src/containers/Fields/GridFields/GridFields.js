@@ -192,7 +192,15 @@ class GridFields extends Component {
   renderHeader() {
     return this.props.description.map((field) => {
       if (field.isShown) {
-        return <th key={field.key}>{field.displayLabel}</th>;
+        return (
+          <th
+            key={field.key}
+            style={field.style}
+            className={classes.Th}
+          >
+            {field.displayLabel}
+          </th>
+        );
       }
       return null;
     });

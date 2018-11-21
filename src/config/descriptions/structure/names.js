@@ -14,6 +14,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '25%',
+    },
   },
   {
     key: 'name_en',
@@ -22,6 +25,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '25%',
+    },
   },
   {
     key: 'acronym',
@@ -29,6 +35,9 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'status',
@@ -38,6 +47,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '8%',
+    },
   },
   {
     key: 'start_date',
@@ -45,6 +57,9 @@ export default [
     component: <InputDate />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'end_date',
@@ -52,6 +67,9 @@ export default [
     component: <InputDate />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -59,5 +77,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '5%',
+    },
   },
 ];

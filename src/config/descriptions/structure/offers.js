@@ -14,6 +14,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '20%',
+    },
   },
   {
     key: 'kind',
@@ -22,6 +25,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'description',
@@ -29,6 +35,9 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'details',
@@ -36,6 +45,9 @@ export default [
     component: <Input />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'domains',
@@ -59,6 +71,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -66,5 +81,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
 ];
