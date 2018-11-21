@@ -94,7 +94,6 @@ class GridFields extends Component {
     }
   }
 
-
   toggleEditMode = (bool) => {
     if (!bool) {
       this.setState({ data: this.props.data, newRow: null });
@@ -234,6 +233,15 @@ class GridFields extends Component {
         }
         editMode = field.isEditable ? editMode : false;
         const onChange = this.props.description.length === 1 ? this.onChangeStringHandler : this.onChangeObjectHandler;
+
+        // Recherche d'un éventuel lien hypertext (a mettre en fonction si utilisé autre part)
+        let value = row[field.key];
+        if (field.activeUrl && !isNew) {
+          if (row[field.key].indexOf('http://') >= 0) {
+            value = <a href={row[field.key]} target="_blank" rel="noopener noreferrer">{row[field.key]}</a>;
+          }
+        }
+
         return (
           <td key={`${field.key}-${id}`}>
             {React.cloneElement(
@@ -242,7 +250,7 @@ class GridFields extends Component {
                 canBeNull: field.rules && field.rules.includes(NO_NULL_RULE),
                 editMode,
                 id: field.key,
-                fieldValue: typeof row === 'object' ? row[field.key] : row,
+                fieldValue: typeof row === 'object' ? value : row,
                 noMain: field.rules && field.rules.includes(STATUS_RULE),
                 onChange: event => onChange(event, id),
                 onClick: () => this.toggleEditMode(true),

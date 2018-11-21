@@ -67,6 +67,7 @@ export default [
     component: <Input />,
     isEditable: false,
     isShown: true,
+    activeUrl: true,
     rules: [NO_NULL_RULE],
     style: {
       width: '10%',
