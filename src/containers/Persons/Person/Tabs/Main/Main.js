@@ -4,10 +4,12 @@ import PropTypes from 'prop-types';
 // Descriptions
 import AliasDescription from '../../../../../config/descriptions/person/alias';
 import IdExternalDescription from '../../../../../config/descriptions/person/idExternalDescription';
+import LinksDescription from '../../../../../config/descriptions/person/linksDescription';
 import PersonDescriptions from '../../../../../config/descriptions/person/personDescriptions';
 
 // Composants UI
 import PersonInfosCard from '../../../../../UI/Field/personInfosCard';
+import FilterListFields from '../../../../Fields/FilterListFields/FilterListFields';
 import GridFields from '../../../../Fields/GridFields/GridFields';
 
 import age from '../../../../../Utils/age';
@@ -60,6 +62,30 @@ const Main = props => (
         title="Descriptions"
       />
     </div>
+    {
+    (props.emails) && (
+      <div className="column is-6">
+        <FilterListFields
+          data={props.emails}
+          title="Emails"
+          showFilter={false}
+        />
+      </div>
+    )
+  }
+
+    <div className="column is-6">
+      <GridFields
+        data={props.links}
+        description={LinksDescription}
+        refreshFunction={props.getPerson}
+        infoMessage="Aucun lien actif"
+        newField="Ajouter un nouveau lien"
+        schemaName="links"
+        url={props.url}
+        title="Liens"
+      />
+    </div>
   </div>
 );
 
@@ -70,6 +96,8 @@ Main.propTypes = {
   alias: PropTypes.array,
   birth_date: PropTypes.string,
   death_date: PropTypes.string,
+  emails: PropTypes.array,
+  links: PropTypes.array,
   gender: PropTypes.string,
   id_external: PropTypes.array,
   id_idref: PropTypes.string,
