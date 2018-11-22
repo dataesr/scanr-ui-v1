@@ -11,6 +11,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '50%',
+    },
   },
   {
     key: 'link_type',
@@ -19,6 +22,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'meta',
@@ -26,6 +32,9 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
 
 ];

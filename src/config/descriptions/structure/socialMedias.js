@@ -12,6 +12,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '40%',
+    },
   },
   {
     key: 'social_media',
@@ -20,6 +23,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'url',
@@ -28,6 +34,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -35,5 +44,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
 ];

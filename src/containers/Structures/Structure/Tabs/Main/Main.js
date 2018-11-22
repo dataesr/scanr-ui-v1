@@ -13,6 +13,22 @@ import TagField from '../../../../Fields/TagField/TagField';
 
 const Main = props => (
   <div className="columns is-multiline is-marginless">
+    <div className="column is-6">
+      <GridFields
+        data={props.external_ids}
+        description={ExternalIdsDescriptions}
+        refreshFunction={props.getStructure}
+        infoMessage="Aucun identifiant externe"
+        newField="Ajouter un nouvel identifiant"
+        schemaName="external_ids"
+        typesList={props.types.id_type}
+        url={props.url}
+        title="Identifiants externes"
+      />
+    </div>
+    <div className="column is-6">
+      Infos statiques de l onglet résumé
+    </div>
     <div className="column is-12">
       <GridFields
         data={props.names}
@@ -45,19 +61,6 @@ const Main = props => (
         schemaName="code_numbers"
         structureId={props.id}
         title="Codes"
-      />
-    </div>
-    <div className="column is-12">
-      <GridFields
-        data={props.external_ids}
-        description={ExternalIdsDescriptions}
-        refreshFunction={props.getStructure}
-        infoMessage="Aucun identifiant externe"
-        newField="Ajouter un nouvel identifiant"
-        schemaName="external_ids"
-        typesList={props.types.id_type}
-        url={props.url}
-        title="Identifiants externes"
       />
     </div>
     <div className="column is-5">

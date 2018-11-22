@@ -13,6 +13,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'description_en',
@@ -21,6 +24,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'status',
@@ -30,6 +36,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '8%',
+    },
   },
   {
     key: 'start_date',
@@ -37,6 +46,9 @@ export default [
     component: <InputDate />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'end_date',
@@ -44,6 +56,9 @@ export default [
     component: <InputDate />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -51,5 +66,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '5%',
+    },
   },
 ];

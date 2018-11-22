@@ -11,6 +11,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '40%',
+    },
   },
   {
     key: 'url',
@@ -19,6 +22,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE],
+    style: {
+      width: '30%',
+    },
   },
   {
     key: 'year',
@@ -27,6 +33,9 @@ export default [
     isEditable: true,
     isShown: true,
     rules: [NO_NULL_RULE, DATE_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -34,5 +43,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
 ];
