@@ -18,6 +18,10 @@ class FilterListFields extends Component {
   }
 
   render() {
+    if (!this.state.data) {
+      return null;
+    }
+
     let result = this.state.data;
     if (this.state.searchText) {
       result = this.state.data.filter(item => (
@@ -26,7 +30,7 @@ class FilterListFields extends Component {
     }
 
     const rows = result.map(item => (
-      <tr>
+      <tr key={item}>
         <td>
           {
             (this.props.redirection)
