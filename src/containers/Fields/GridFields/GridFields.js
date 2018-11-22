@@ -30,6 +30,10 @@ class GridFields extends Component {
     data: this.props.data || [],
     errorMessage: null,
     showAll: false,
+    sort: {
+      field: null,
+      direction: 0,
+    },
   }
 
   componentDidUpdate(prevProps) {
@@ -158,6 +162,23 @@ class GridFields extends Component {
     });
   }
 
+  onSort = (fieldKey) => {
+    const data = [...this.state.data];
+    let sortDirection;
+    let sortedData = [];
+    if (this.state.sort.direction === 0 || this.state.sort.direction === -1) {
+      sortDirection = 1;
+      sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
+    } else {
+      sortDirection = -1;
+      sortedData = data.sort((a, b) => (a[fieldKey] > b[fieldKey]));
+    }
+
+    if (sortedData) {
+      this.setState({ data: sortedData, sort: { field: fieldKey, direction: sortDirection } });
+    }
+  }
+
   save = () => {
     const data = this.state.data ? [...this.state.data] : [];
     data.forEach((dataRow) => {
@@ -191,13 +212,20 @@ class GridFields extends Component {
   renderHeader() {
     return this.props.description.map((field) => {
       if (field.isShown) {
+        const direction = this.state.sort.direction === 1 ? 'up' : 'down';
+        const sortIcon = (
+          <span className={classes.SortIcon}>
+            <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />
+          </span>);
         return (
           <th
             key={field.key}
             style={field.style}
+            onClick={() => this.onSort(field.key)}
             className={classes.Th}
           >
             {field.displayLabel}
+            {(field.key === this.state.sort.field && this.state.sort.direction !== 0) ? sortIcon : null}
           </th>
         );
       }
@@ -245,7 +273,7 @@ class GridFields extends Component {
         // Recherche d'un éventuel lien hypertext (a mettre en fonction si utilisé autre part)
         let value = row[field.key];
         if (field.activeUrl && !isNew) {
-          if (row[field.key].indexOf('http://') >= 0) {
+          if (row[field.key].indexOf('http') >= 0) {
             value = <a href={row[field.key]} target="_blank" rel="noopener noreferrer">{row[field.key]}</a>;
           }
         }

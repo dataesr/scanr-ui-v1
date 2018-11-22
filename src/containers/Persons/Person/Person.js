@@ -23,7 +23,6 @@ class Person extends Component {
     const url = `persons/${this.props.match.params.id}`;
     axios.get(url)
       .then((response) => {
-        console.log('response:', response);
         this.setState({ person: response.data });
       });
   }
