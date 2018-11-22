@@ -21,6 +21,9 @@ export default [
     isShown: true,
     rules: [NO_NULL_RULE],
     schemaName: 'structures',
+    style: {
+      width: '40%',
+    },
   },
   {
     key: 'succession_type',
@@ -28,6 +31,9 @@ export default [
     component: <Select />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '20%',
+    },
   },
   {
     key: 'status',
@@ -37,6 +43,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'succession_date',
@@ -44,6 +53,9 @@ export default [
     component: <InputDate />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -51,5 +63,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
 ];

@@ -22,6 +22,9 @@ export default [
     isShown: true,
     rules: [NO_NULL_RULE],
     schemaName: 'structures',
+    style: {
+      width: '15%',
+    },
   },
   {
     key: 'supervision_type',
@@ -29,6 +32,9 @@ export default [
     component: <Select />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '15%',
+    },
   },
   {
     key: 'rnsr_key',
@@ -36,6 +42,9 @@ export default [
     component: <Input />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'rnsr_name',
@@ -43,6 +52,9 @@ export default [
     component: <Input />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '20%',
+    },
   },
   {
     key: 'status',
@@ -52,6 +64,9 @@ export default [
     isShown: true,
     canBeNull: false,
     rules: [NO_NULL_RULE, STATUS_RULE],
+    style: {
+      width: '8%',
+    },
   },
   {
     key: 'start_date',
@@ -59,6 +74,9 @@ export default [
     component: <InputDate />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'end_date',
@@ -66,6 +84,9 @@ export default [
     component: <InputDate />,
     isEditable: true,
     isShown: true,
+    style: {
+      width: '10%',
+    },
   },
   {
     key: 'meta',
@@ -73,5 +94,8 @@ export default [
     component: <Meta />,
     isEditable: false,
     isShown: true,
+    style: {
+      width: '5%',
+    },
   },
 ];
