@@ -30,6 +30,10 @@ class GridFields extends Component {
     data: this.props.data || [],
     errorMessage: null,
     showAll: false,
+    sort: {
+      field: null,
+      direction: 0,
+    },
   }
 
   componentDidUpdate(prevProps) {
@@ -158,6 +162,31 @@ class GridFields extends Component {
     });
   }
 
+  onSort = (fieldKey) => {
+    const data = [...this.state.data];
+    let sortDirection;
+    let sortedData = [];
+    switch (this.state.sort.direction) {
+      case 0:
+        sortDirection = 1;
+        sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
+        break;
+      case 1:
+        sortDirection = -1;
+        sortedData = data.sort((a, b) => (a[fieldKey] > b[fieldKey]));
+        break;
+      case -1:
+        sortDirection = 1;
+        sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
+        break;
+      default:
+        sortDirection = 0;
+    }
+    if (sortedData) {
+      this.setState({ data: sortedData, sort: { field: fieldKey, direction: sortDirection } });
+    }
+  }
+
   save = () => {
     const data = this.state.data ? [...this.state.data] : [];
     data.forEach((dataRow) => {
@@ -191,7 +220,24 @@ class GridFields extends Component {
   renderHeader() {
     return this.props.description.map((field) => {
       if (field.isShown) {
-        return <th key={field.key}>{field.displayLabel}</th>;
+        const direction = this.state.sort.direction === 1 ? 'up' : 'down';
+        const sortIcon = (this.state.sort.direction !== 0)
+          ? (
+            <span className={classes.SortIcon}>
+              <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />
+            </span>)
+          : null;
+        return (
+          <th
+            key={field.key}
+            style={field.style}
+            onClick={() => this.onSort(field.key)}
+            className={classes.Th}
+          >
+            {field.displayLabel}
+            {field.key === this.state.sort.field && sortIcon}
+          </th>
+        );
       }
       return null;
     });
