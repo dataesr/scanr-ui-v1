@@ -166,22 +166,14 @@ class GridFields extends Component {
     const data = [...this.state.data];
     let sortDirection;
     let sortedData = [];
-    switch (this.state.sort.direction) {
-      case 0:
-        sortDirection = 1;
-        sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
-        break;
-      case 1:
-        sortDirection = -1;
-        sortedData = data.sort((a, b) => (a[fieldKey] > b[fieldKey]));
-        break;
-      case -1:
-        sortDirection = 1;
-        sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
-        break;
-      default:
-        sortDirection = 0;
+    if (this.state.sort.direction === 0 || this.state.sort.direction === -1) {
+      sortDirection = 1;
+      sortedData = data.sort((a, b) => (a[fieldKey] < b[fieldKey]));
+    } else {
+      sortDirection = -1;
+      sortedData = data.sort((a, b) => (a[fieldKey] > b[fieldKey]));
     }
+
     if (sortedData) {
       this.setState({ data: sortedData, sort: { field: fieldKey, direction: sortDirection } });
     }
@@ -221,12 +213,10 @@ class GridFields extends Component {
     return this.props.description.map((field) => {
       if (field.isShown) {
         const direction = this.state.sort.direction === 1 ? 'up' : 'down';
-        const sortIcon = (this.state.sort.direction !== 0)
-          ? (
-            <span className={classes.SortIcon}>
-              <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />
-            </span>)
-          : null;
+        const sortIcon = (
+          <span className={classes.SortIcon}>
+            <i className={`fas fa-sort-alpha-${direction} ${classes.SortIcon}`} />
+          </span>);
         return (
           <th
             key={field.key}
@@ -235,7 +225,7 @@ class GridFields extends Component {
             className={classes.Th}
           >
             {field.displayLabel}
-            {field.key === this.state.sort.field && sortIcon}
+            {(field.key === this.state.sort.field && this.state.sort.direction !== 0) ? sortIcon : null}
           </th>
         );
       }
@@ -283,7 +273,7 @@ class GridFields extends Component {
         // Recherche d'un éventuel lien hypertext (a mettre en fonction si utilisé autre part)
         let value = row[field.key];
         if (field.activeUrl && !isNew) {
-          if (row[field.key].indexOf('http://') >= 0) {
+          if (row[field.key].indexOf('http') >= 0) {
             value = <a href={row[field.key]} target="_blank" rel="noopener noreferrer">{row[field.key]}</a>;
           }
         }
