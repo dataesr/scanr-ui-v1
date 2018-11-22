@@ -18,6 +18,10 @@ class FilterListFields extends Component {
   }
 
   render() {
+    if (!this.state.data) {
+      return null;
+    }
+
     let result = this.state.data;
     if (this.state.searchText) {
       result = this.state.data.filter(item => (
@@ -26,7 +30,7 @@ class FilterListFields extends Component {
     }
 
     const rows = result.map(item => (
-      <tr>
+      <tr key={item}>
         <td>
           {
             (this.props.redirection)
@@ -47,22 +51,28 @@ class FilterListFields extends Component {
           <span className="tag is-white is-rounded">{nbData}</span>
         </div>
 
-        <div className={`field has-addons ${classes.Filter}`}>
-          <div className={`control ${classes.Input}`}>
-            <input
-              className="input"
-              type="text"
-              placeholder="Filtre"
-              onChange={this.addFilter}
-              value={this.state.searchText || ''}
-            />
-          </div>
-          <div className="control">
-            <a className="button is-warning" onClick={this.deleteFilter} role="presentation">
-              <i className="fas fa-eraser" />
-            </a>
-          </div>
-        </div>
+        {
+          (this.props.showFilter) ? (
+            <div className={`field has-addons ${classes.Filter}`}>
+              <div className={`control ${classes.Input}`}>
+                <input
+                  className="input"
+                  type="text"
+                  placeholder="Filtre"
+                  onChange={this.addFilter}
+                  value={this.state.searchText || ''}
+                />
+              </div>
+              <div className="control">
+                <a className="button is-warning" onClick={this.deleteFilter} role="presentation">
+                  <i className="fas fa-eraser" />
+                </a>
+              </div>
+            </div>
+          )
+            : null
+        }
+
         <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <tbody>
             {rows}
@@ -79,4 +89,9 @@ FilterListFields.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
   redirection: PropTypes.string,
+  showFilter: PropTypes.bool,
+};
+
+FilterListFields.defaultProps = {
+  showFilter: true,
 };
