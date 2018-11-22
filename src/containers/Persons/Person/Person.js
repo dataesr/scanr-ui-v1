@@ -1,4 +1,3 @@
-'Person.js'
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
