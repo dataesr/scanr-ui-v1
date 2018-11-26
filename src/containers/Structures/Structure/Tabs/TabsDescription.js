@@ -5,18 +5,12 @@ import Deals from './Deals/Deals';
 import Leaders from './Leaders/Leaders';
 import Main from './Main/Main';
 import Relationship from './Relationship/Relationship';
-import Resume from './Resume/Resume';
 import Supervisors from './Supervisors/Supervisors';
 import Themes from './Themes/Themes';
 import WebAndContacts from './WebAndContacts/WebAndContacts';
 
 
 export default [
-  {
-    id: 'resume',
-    label: 'Résumé',
-    component: <Resume />,
-  },
   {
     id: 'main',
     label: 'Général',

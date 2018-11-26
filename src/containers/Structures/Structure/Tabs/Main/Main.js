@@ -7,8 +7,10 @@ import Descriptions from '../../../../../config/descriptions/structure/descripti
 import EvaluationsDescription from '../../../../../config/descriptions/structure/evaluations';
 import ExternalIdsDescriptions from '../../../../../config/descriptions/structure/external_ids';
 import NameDescription from '../../../../../config/descriptions/structure/names';
+
 // Composants UI
 import GridFields from '../../../../Fields/GridFields/GridFields';
+import StructureInfosCard from '../../../../../UI/Field/structureInfosCard';
 import TagField from '../../../../Fields/TagField/TagField';
 
 const Main = props => (
@@ -27,7 +29,12 @@ const Main = props => (
       />
     </div>
     <div className="column is-6">
-      Infos statiques de l onglet résumé
+      <StructureInfosCard
+        id={props.id}
+        level={props.level}
+        nature={props.nature}
+        websites={props.websites}
+      />
     </div>
     <div className="column is-12">
       <GridFields
@@ -113,7 +120,10 @@ Main.propTypes = {
   external_ids: PropTypes.array,
   getStructure: PropTypes.func,
   id: PropTypes.string,
+  level: PropTypes.string,
   names: PropTypes.array,
+  nature: PropTypes.string,
   types: PropTypes.object,
   url: PropTypes.string,
+  websites: PropTypes.array,
 };
