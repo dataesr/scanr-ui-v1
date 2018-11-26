@@ -10,7 +10,7 @@ const Contributors = props => (
       <FilterListFields
         data={props.co_contributors}
         title="Co-contributeurs"
-        redirection="persons"
+        redirection="data-esr-ui/persons"
       />
     </div>
     <div className="column is-4-widescreen is-6-desktop is-12-mobile">

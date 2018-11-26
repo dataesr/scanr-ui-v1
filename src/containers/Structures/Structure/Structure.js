@@ -106,7 +106,6 @@ class Structure extends Component {
   render() {
     const { structure } = this.state;
 
-    console.log('str:', structure);
     if (!structure) {
       return null;
     }

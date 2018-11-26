@@ -48,7 +48,6 @@ const Main = props => (
         id_orcid={props.id_orcid}
         orcid_creation_date={props.orcid_creation_date}
       />
-
     </div>
     <div className="column is-12">
       <GridFields

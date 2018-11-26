@@ -158,3 +158,44 @@
     color: #fff;
   }
 }
+
+.StructureInfosCard{
+  background-color: #31566e;
+  text-align: center;
+  color: #fff;
+
+  .Id{
+    font-size: 1.8em;
+    border-bottom: 1px solid #85898c;
+    padding: 16px;
+    height: 60px;
+  }
+  .Level{
+    font-size: 1.2em;
+    font-style: italic;
+    border-bottom: 1px solid #85898c;
+    border-left: 1px solid #85898c;
+    border-right: 1px solid #85898c;
+    padding: 16px;
+    height: 60px;
+  }
+  .Nature{
+    font-size: 1.2em;
+    font-style: italic;
+    border-bottom: 1px solid #85898c;
+    padding: 16px;
+    height: 60px;
+  }
+  .Url{
+    border-left: 1px solid #85898c;
+    padding: 16px;
+    height: 100px;
+    font-size: 1.3em;
+  }
+  span{
+    font-size: 1.3em;
+  }
+  a{
+    color: #fff;
+  }
+}
