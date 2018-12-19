@@ -1,11 +1,15 @@
 import React from 'react';
 
+import Header from '../Shared/Header/Header-homePage';
+import Footer from '../Shared/Footer/Footer';
+
+import Lexicon from '../Shared/Lexicon/Lexicon';
+
+import classes from './Home-page.scss';
 
 const HomePage = () => (
-  <div>
-    <div>
-      Header
-    </div>
+  <div className={`container-fluid ${classes.HomePage}`}>
+    <Header />
 
     <div>
       ScanR aujourd hui
@@ -35,9 +39,9 @@ const HomePage = () => (
       Découvrir dataEsr
     </div>
 
-    <div>
-      Footer
-    </div>
+    <Footer />
+
+    <Lexicon className={classes.HomePageLexiconTop} />
   </div>
 );
 
