@@ -12,6 +12,10 @@ const HomePage = () => (
     <Header />
 
     <div>
+      Search HomePage
+    </div>
+
+    <div>
       ScanR aujourd hui
     </div>
 
@@ -25,10 +29,6 @@ const HomePage = () => (
 
     <div>
       Comment apparaitre dans ScanR ?
-    </div>
-
-    <div>
-      Liste des derniers focus
     </div>
 
     <div>

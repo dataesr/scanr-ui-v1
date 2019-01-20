@@ -4,11 +4,35 @@
   position: fixed;
   right: 0;
 
-  .TextInfo{
-
+  .TextInfo {
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Inter UI';
+    font-weight: bolder;
+    margin-right: 16px;
   }
 
-  .Button{
-
+  .Button {
+    background-color: $activeLinkButton;
+    color: #fff;
+    font-family: Georgia,Times,Times New Roman,serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 24px;
+    border: 0px;
+    padding: 8px 16px;
+    border-radius: 8px 0 0 8px;
+    cursor: pointer;
   }
+
+}
+
+.Panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background-color: $bgLexicon;
+
 }
