@@ -2,42 +2,53 @@ import React from 'react';
 
 import classes from './Footer.scss';
 
+
 const Footer = () => (
   <section className={classes.Footer}>
     <div className="container">
       <div className="row">
         <div className="col">
-          logo
+          <img
+            src="./img/logo-ministere.svg"
+            alt="Logo MESRI"
+            className={classes.Logo}
+          />
         </div>
         <div className="col">
           <ul>
-            <li>Open data - API</li>
-            <li>Contribuer</li>
-            <li>Github</li>
+            <li><a href="#">Open data - API</a></li>
+            <li><a href="#">Contribuer</a></li>
+            <li><a href="#">Github</a></li>
           </ul>
         </div>
         <div className="col">
           <ul>
-            <li>Accessibilité</li>
-            <li>Aide à la navigation</li>
-            <li>Plan du site</li>
-            <li>Mentions légales</li>
+            <li><a href="#">Accessibilité</a></li>
+            <li><a href="#">Aide à la navigation</a></li>
+            <li><a href="#">Plan du site</a></li>
+            <li><a href="#">Mentions légales</a></li>
           </ul>
         </div>
         <div className="col">
           <ul>
-            <li>FAQ</li>
-            <li>Glossaire</li>
-            <li>Contact</li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Glossaire</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </div>
         <div className="col">
-          <div>Notre blog</div>
+          <div><a href="#">Notre blog</a></div>
           <div>Suivez-nous sur</div>
           <ul>
-            <li>twitter</li>
-            <li>facebook</li>
-            <li>insta</li>
+            <li className={classes.SocialNetworkItem}>
+              <a href="#"><i className="fab fa-twitter" /></a>
+            </li>
+            <li className={classes.SocialNetworkItem}>
+              <a href="#"><i className="fab fa-facebook-f" /></a>
+            </li>
+            <li className={classes.SocialNetworkItem}>
+              <a href="#"><i className="fab fa-instagram" /></a>
+            </li>
           </ul>
         </div>
       </div>
