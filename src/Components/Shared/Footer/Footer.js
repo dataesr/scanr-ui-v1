@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import classes from './Footer.scss';
 
@@ -16,29 +17,111 @@ const Footer = () => (
         </div>
         <div className="col">
           <ul>
-            <li><a href="#">Open data - API</a></li>
-            <li><a href="#">Contribuer</a></li>
-            <li><a href="#">Github</a></li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.openData"
+                  defaultMessage="Footer.link.openData"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.contribute"
+                  defaultMessage="Footer.link.contribute"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.gitHub"
+                  defaultMessage="Footer.link.gitHub"
+                />
+              </a>
+            </li>
           </ul>
         </div>
         <div className="col">
           <ul>
-            <li><a href="#">Accessibilité</a></li>
-            <li><a href="#">Aide à la navigation</a></li>
-            <li><a href="#">Plan du site</a></li>
-            <li><a href="#">Mentions légales</a></li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.accessibility"
+                  defaultMessage="Footer.link.accessibility"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.navHelp"
+                  defaultMessage="Footer.link.navHelp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.siteMap"
+                  defaultMessage="Footer.link.siteMap"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.generalConditions"
+                  defaultMessage="Footer.link.generalConditions"
+                />
+              </a>
+            </li>
           </ul>
         </div>
         <div className="col">
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Glossaire</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.faq"
+                  defaultMessage="Footer.link.faq"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.glossary"
+                  defaultMessage="Footer.link.glossary"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.contact"
+                  defaultMessage="Footer.link.contact"
+                />
+              </a>
+            </li>
           </ul>
         </div>
         <div className="col">
-          <div><a href="#">Notre blog</a></div>
-          <div>Suivez-nous sur</div>
+          <div>
+            <a href="#">
+              <FormattedHTMLMessage
+                id="Footer.link.ourBlog"
+                defaultMessage="Footer.link.ourBlog"
+              />
+            </a>
+          </div>
+          <div>
+            <FormattedHTMLMessage
+              id="Footer.string.followUs"
+              defaultMessage="Footer.string.followUs"
+            />
+          </div>
           <ul>
             <li className={classes.SocialNetworkItem}>
               <a href="#"><i className="fab fa-twitter" /></a>
