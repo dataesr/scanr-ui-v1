@@ -1,0 +1,15 @@
+@import '../../../style.scss';
+
+.CounterCardByType {
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 16px;
+
+  .Counter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $titleColor;
+  }
+}

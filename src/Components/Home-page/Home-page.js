@@ -1,26 +1,33 @@
 import React from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import Header from '../Shared/Header/Header-homePage';
+import Search from './Search/Search';
+import ScanrToday from '../Shared/ScanrToday/ScanrToday';
+
 import Footer from '../Shared/Footer/Footer';
 
 import Lexicon from '../Shared/Lexicon/Lexicon';
 
 import classes from './Home-page.scss';
 
-const HomePage = () => (
+const HomePage = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
-    <Header />
+    <Header
+      language={props.language}
+      switchLanguage={props.switchLanguage}
+    />
+
+    <Search />
+
+    <ScanrToday />
 
     <div>
-      Search HomePage
-    </div>
-
-    <div>
-      ScanR aujourd hui
-    </div>
-
-    <div>
-      Quelles sont les sources de données ?
+      <FormattedHTMLMessage
+        id="app.title"
+        defaultMessage="app.title"
+      />
     </div>
 
     <div>
@@ -46,3 +53,8 @@ const HomePage = () => (
 );
 
 export default HomePage;
+
+HomePage.propTypes = {
+  language: PropTypes.string.isRequired,
+  switchLanguage: PropTypes.func.isRequired,
+};

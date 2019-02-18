@@ -12,15 +12,21 @@ class Lexicon extends Component {
     this.setState(prevState => ({ opened: !prevState.opened }));
   }
 
-  renderPanel = () => (
-    <div className={classes.Panel}>
-      panel
-    </div>
-  )
+  renderPanel = () => {
+    let content = null;
+    if (this.state.opened) {
+      content = (
+        <div className={classes.Panel}>
+          panel
+        </div>
+      );
+    }
+    return content;
+  }
 
 
   render() {
-    const panel = this.renderPanel || '';
+    const panel = this.renderPanel;
 
     return (
       <div className={`${classes.Lexicon} ${this.props.className}`}>

@@ -2,4 +2,23 @@
 
 .Header {
   background-color: #fff;
+
+  .Link {
+    display: inline-block;
+    color: grey;
+    padding-top: 8px;
+    cursor: pointer;
+  }
+  .Link:hover {
+    text-decoration: none;
+  }
+  .ActiveLink {
+    color: $activeLinkButton;
+    font-weight: bold;
+  }
+  .PipeLink {
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
 }
