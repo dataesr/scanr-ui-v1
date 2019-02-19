@@ -21,7 +21,7 @@ const HomePage = props => (
 
     <Search />
 
-    <ScanrToday />
+    <ScanrToday language={props.language} />
 
     <div>
       <FormattedHTMLMessage
@@ -46,7 +46,7 @@ const HomePage = props => (
       Découvrir dataEsr
     </div>
 
-    <Footer />
+    <Footer language={props.language} />
 
     <Lexicon className={classes.HomePageLexiconTop} />
   </div>
