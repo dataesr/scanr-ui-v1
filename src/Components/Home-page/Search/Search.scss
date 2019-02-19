@@ -1,6 +1,14 @@
 @import '../../../style.scss';
 
 .Search {
-  height: 250px;
+  height: 400px;
+  margin:0;
+  padding:0;
   background-color: $bgHomePageSearch;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  /* background: url(logo-ministere.svg) no-repeat center fixed; */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: cover; /* version standardisée */
 }
