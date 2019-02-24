@@ -7,9 +7,9 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 /* SCSS */
-import classes from './Newsletter.scss';
+import classes from './WhatAreOurSources.scss';
 
-const Newsletter = (props) => {
+const WhatAreOurSources = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
@@ -17,11 +17,11 @@ const Newsletter = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={classes.Newsletter}>
+      <section className={classes.WhatAreOurSources}>
 
         <FormattedHTMLMessage
-          id="Newsletter.lib"
-          defaultMessage="Newsletter.lib"
+          id="WhatAreOurSources.lib"
+          defaultMessage="WhatAreOurSources.lib"
         />
 
       </section>
@@ -29,8 +29,8 @@ const Newsletter = (props) => {
   );
 };
 
-export default Newsletter;
+export default WhatAreOurSources;
 
-Newsletter.propTypes = {
+WhatAreOurSources.propTypes = {
   language: PropTypes.string.isRequired,
 };

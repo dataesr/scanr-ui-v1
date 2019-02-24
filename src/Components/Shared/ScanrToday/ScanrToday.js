@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, addLocaleData, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
@@ -7,6 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import CounterCardByType from '../CounterCards/CounterCardByType';
+import EvolutionCardByType from '../CounterCards/EvolutionCardByType';
 
 import classes from './ScanrToday.scss';
 
@@ -26,31 +27,83 @@ const ScanrToday = (props) => {
                   id="ScanrToday.string.title"
                   defaultMessage="ScanrToday.string.title"
                 />
-                <i className="fa fa-info" />
+                &nbsp;
+                <i className="fa fa-info-circle" />
               </span>
             </div>
             <div className="col">
               <CounterCardByType
-                schema="entity"
+                schema="entities"
+                value="34 179"
+                language={props.language}
               />
             </div>
             <div className="col">
               <CounterCardByType
                 schema="persons"
+                value="127 447"
+                language={props.language}
               />
             </div>
             <div className="col">
               <CounterCardByType
                 schema="projects"
+                value="1 247"
+                language={props.language}
               />
             </div>
             <div className="col">
               <CounterCardByType
                 schema="publications"
+                value="420 887"
+                language={props.language}
               />
             </div>
           </div>
+          {/* /row */}
+          <hr style={{ marginBottom: '8px' }} />
+          <div className="row">
+            <div className="col">
+              <span className={classes.SubTitle}>
+                <FormattedHTMLMessage
+                  id="ScanrToday.string.evolution"
+                  defaultMessage="ScanrToday.string.evolution"
+                />
+              </span>
+            </div>
+            <div className="col">
+              <EvolutionCardByType
+                schema="entities"
+                value="-2"
+                language={props.language}
+              />
+            </div>
+            <div className="col">
+              <EvolutionCardByType
+                schema="persons"
+                value="+154"
+                language={props.language}
+              />
+            </div>
+            <div className="col">
+              <EvolutionCardByType
+                schema="projects"
+                value="+45"
+                language={props.language}
+              />
+            </div>
+            <div className="col">
+              <EvolutionCardByType
+                schema="publications"
+                value="+26"
+                language={props.language}
+              />
+            </div>
+          </div>
+          {/* /row */}
+          <hr style={{ marginTop: '0px' }} />
         </div>
+        {/* /container */}
       </section>
     </IntlProvider>
   );

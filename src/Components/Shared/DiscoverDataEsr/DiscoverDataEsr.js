@@ -7,9 +7,9 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 /* SCSS */
-import classes from './Newsletter.scss';
+import classes from './DiscoverDataEsr.scss';
 
-const Newsletter = (props) => {
+const DiscoverDataEsr = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
@@ -17,11 +17,11 @@ const Newsletter = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={classes.Newsletter}>
+      <section className={classes.DiscoverDataEsr}>
 
         <FormattedHTMLMessage
-          id="Newsletter.lib"
-          defaultMessage="Newsletter.lib"
+          id="DiscoverDataEsr.lib"
+          defaultMessage="DiscoverDataEsr.lib"
         />
 
       </section>
@@ -29,8 +29,8 @@ const Newsletter = (props) => {
   );
 };
 
-export default Newsletter;
+export default DiscoverDataEsr;
 
-Newsletter.propTypes = {
+DiscoverDataEsr.propTypes = {
   language: PropTypes.string.isRequired,
 };

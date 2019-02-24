@@ -1,7 +1,6 @@
 @import '../../../style.scss';
 
 .ScanrToday {
-  height: 200px;
   background-color: #efefef;
   padding: 32px 0;
 
@@ -10,4 +9,10 @@
     font-weight: bold;
     color: $titleColor;
   }
+
+  .SubTitle {
+    font-size: 0.9em;
+    color: $titleColor;
+  }
+
 }
