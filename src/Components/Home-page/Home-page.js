@@ -1,10 +1,15 @@
 import React from 'react';
-import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Header from '../Shared/Header/Header-homePage';
 import Search from './Search/Search';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
+import WhatAreOurSources from '../Shared/WhatAreOurSources/WhatAreOurSources';
+import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
+import HowToAppearInScanR from '../Shared/HowToAppearInScanR/HowToAppearInScanR';
+import LastFocus from '../Shared/LastFocus/LastFocus';
+import Newsletter from '../Shared/Newsletter/Newsletter';
+import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
 
 import Footer from '../Shared/Footer/Footer';
 
@@ -19,36 +24,28 @@ const HomePage = props => (
       switchLanguage={props.switchLanguage}
     />
 
-    <Search />
+    <Search language={props.language} />
 
     <ScanrToday language={props.language} />
 
-    <div>
-      <FormattedHTMLMessage
-        id="app.title"
-        defaultMessage="app.title"
-      />
-    </div>
+    <WhatAreOurSources language={props.language} />
 
-    <div>
-      10 thèmes les plus actifs
-    </div>
+    <MostActiveThemes language={props.language} />
 
-    <div>
-      Comment apparaitre dans ScanR ?
-    </div>
+    <HowToAppearInScanR language={props.language} />
 
-    <div>
-      Liste des derniers focus
-    </div>
+    <LastFocus language={props.language} />
 
-    <div>
-      Découvrir dataEsr
-    </div>
+    <Newsletter language={props.language} />
+
+    <DiscoverDataEsr language={props.language} />
 
     <Footer language={props.language} />
 
-    <Lexicon className={classes.HomePageLexiconTop} />
+    <Lexicon
+      className={classes.HomePageLexiconTop}
+      language={props.language}
+    />
   </div>
 );
 
