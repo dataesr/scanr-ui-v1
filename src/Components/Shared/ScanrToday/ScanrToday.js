@@ -21,7 +21,7 @@ const ScanrToday = (props) => {
       <section className={classes.ScanrToday}>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col-lg">
               <span className={classes.Title}>
                 <FormattedHTMLMessage
                   id="ScanrToday.string.title"
@@ -31,28 +31,28 @@ const ScanrToday = (props) => {
                 <i className="fa fa-info-circle" />
               </span>
             </div>
-            <div className="col">
+            <div className="col-lg">
               <CounterCardByType
                 schema="entities"
                 value="34 179"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <CounterCardByType
                 schema="persons"
                 value="127 447"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <CounterCardByType
                 schema="projects"
                 value="1 247"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <CounterCardByType
                 schema="publications"
                 value="420 887"
@@ -63,7 +63,7 @@ const ScanrToday = (props) => {
           {/* /row */}
           <hr style={{ marginBottom: '8px' }} />
           <div className="row">
-            <div className="col">
+            <div className="col-lg">
               <span className={classes.SubTitle}>
                 <FormattedHTMLMessage
                   id="ScanrToday.string.evolution"
@@ -71,28 +71,28 @@ const ScanrToday = (props) => {
                 />
               </span>
             </div>
-            <div className="col">
+            <div className="col-lg">
               <EvolutionCardByType
                 schema="entities"
                 value="-2"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <EvolutionCardByType
                 schema="persons"
                 value="+154"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <EvolutionCardByType
                 schema="projects"
                 value="+45"
                 language={props.language}
               />
             </div>
-            <div className="col">
+            <div className="col-lg">
               <EvolutionCardByType
                 schema="publications"
                 value="+26"
