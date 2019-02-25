@@ -27,3 +27,9 @@
 .publicationsBgColor {
   background-color: $publicationsColor;
 }
+
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .EvolutionCardByType {
+    margin-bottom: 16px;
+  }
+}

@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
+
 /* SCSS */
 import classes from './WhatAreOurSources.scss';
 
@@ -18,12 +20,21 @@ const WhatAreOurSources = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.WhatAreOurSources}>
-
-        <FormattedHTMLMessage
-          id="WhatAreOurSources.lib"
-          defaultMessage="WhatAreOurSources.lib"
-        />
-
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9">
+              <FormattedHTMLMessage
+                id="WhatAreOurSources.lib"
+                defaultMessage="WhatAreOurSources.lib"
+              />
+            </div>
+            <div className="col-lg-3 text-right">
+              <ButtonToPage>
+                Découvrir
+              </ButtonToPage>
+            </div>
+          </div>
+        </div>
       </section>
     </IntlProvider>
   );
