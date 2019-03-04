@@ -24,11 +24,9 @@ const CounterCardByType = props => (
           className={classes.Logo}
         />
       </div>
-
       <div className={classes.Value}>
         {props.value}
       </div>
-
       <div className={classes.Label}>
         <FormattedHTMLMessage
           id={`CounterCardByType.${props.schema}`}
