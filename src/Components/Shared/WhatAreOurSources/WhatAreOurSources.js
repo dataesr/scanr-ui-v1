@@ -29,7 +29,10 @@ const WhatAreOurSources = (props) => {
               />
             </div>
             <div className="col-lg-3 text-right">
-              <ButtonToPage>
+              <ButtonToPage
+                className={classes.MarginTop}
+                url=""
+              >
                 Découvrir
               </ButtonToPage>
             </div>

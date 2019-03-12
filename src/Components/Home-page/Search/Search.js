@@ -5,6 +5,8 @@ import Background from './poudre-header-home-yellow.jpg';
 
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
+  backgroundPosition: 'top 0 left 50%',
+  backgroundSize: '50%',
 };
 
 const Search = () => (
