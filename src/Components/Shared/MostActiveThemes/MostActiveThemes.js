@@ -33,4 +33,5 @@ export default MostActiveThemes;
 
 MostActiveThemes.propTypes = {
   language: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };

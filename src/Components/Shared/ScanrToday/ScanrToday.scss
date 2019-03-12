@@ -4,6 +4,13 @@
   background-color: #efefef;
   padding: 32px 0;
 
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  /* background: url(logo-ministere.svg) no-repeat center fixed; */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 30%; /* version standardisée */
+  //transform: rotate(30deg);
+
   .Title {
     font-size: 1.5em;
     font-weight: bold;
