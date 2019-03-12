@@ -24,15 +24,37 @@
     border-radius: 8px 0 0 8px;
     cursor: pointer;
   }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+  }
 
 }
 
 .Panel {
   position: fixed;
   right: 0;
-  top: 0;
-  width: 300px;
+  top: 56px;
+  width: 500px;
   height: 100%;
   background-color: $bgLexicon;
+  z-index: 1000;
 
+}
+
+.ButtonClosePanel {
+  position: relative;
+  left: -45px;
+  top: 40px;
+  background: none;
+  background-color: $activeLinkButton;
+  color: #fff;
+  font-family: Arial,serif;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px 0 0 8px;
+}
+.ButtonClosePanel:hover {
+  background-color: $hoverLinkButton;
 }

@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+/* SCSS */
 import classes from './Lexicon.scss';
 
 class Lexicon extends Component {
@@ -8,42 +14,51 @@ class Lexicon extends Component {
     opened: false,
   };
 
-  showPane = () => {
+  togglePane = () => {
     this.setState(prevState => ({ opened: !prevState.opened }));
   }
 
-  renderPanel = () => {
-    let content = null;
+  render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
+
+    let panel = null;
     if (this.state.opened) {
-      content = (
+      panel = (
         <div className={classes.Panel}>
+          <button
+            type="button"
+            className={classes.ButtonClosePanel}
+            onClick={this.togglePane}
+          >
+            x
+          </button>
           panel
         </div>
       );
     }
-    return content;
-  }
-
-
-  render() {
-    const panel = this.renderPanel;
 
     return (
-      <div className={`${classes.Lexicon} ${this.props.className}`}>
-        <span className={classes.TextInfo}>
-          Glossaire/FAQ
-        </span>
-        <button
-          type="button"
-          className={classes.Button}
-          onClick={this.showPane}
-        >
-          i
-        </button>
-        <div>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <div className={`${classes.Lexicon} ${this.props.className}`}>
+          <span className={classes.TextInfo}>
+            <FormattedHTMLMessage
+              id="Lexicon.title"
+              defaultMessage="Lexicon.title"
+            />
+          </span>
+          <button
+            type="button"
+            className={classes.Button}
+            onClick={this.togglePane}
+          >
+            i
+          </button>
           {panel}
         </div>
-      </div>
+      </IntlProvider>
     );
   }
 }
@@ -52,4 +67,5 @@ export default Lexicon;
 
 Lexicon.propTypes = {
   className: PropTypes.string,
+  language: PropTypes.string.isRequired,
 };

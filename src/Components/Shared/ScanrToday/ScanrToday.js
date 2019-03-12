@@ -9,7 +9,14 @@ import messagesEn from './translations/en.json';
 import CounterCardByType from '../CounterCards/CounterCardByType';
 import EvolutionCardByType from '../CounterCards/EvolutionCardByType';
 
+import Background from './poudre-bleu_Fgris-B.jpg';
+
 import classes from './ScanrToday.scss';
+
+const sectionStyle = {
+  backgroundImage: `url(${Background})`,
+  backgroundPosition: 'bottom 0 left 0',
+};
 
 const ScanrToday = (props) => {
   const messages = {
@@ -18,7 +25,7 @@ const ScanrToday = (props) => {
   };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={classes.ScanrToday}>
+      <section style={sectionStyle} className={classes.ScanrToday}>
         <div className="container">
           <div className="row">
             <div className="col-lg">
