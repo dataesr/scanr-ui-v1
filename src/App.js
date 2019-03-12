@@ -7,6 +7,8 @@ import localeEn from 'react-intl/locale-data/en';
 /* Composants */
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
+import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
+
 
 class App extends Component {
   state: {
@@ -55,6 +57,17 @@ class App extends Component {
               )}
             />
             <Route path="/search" component={SearchPage} />
+            <Route
+              exact
+              path="/legal"
+              component={props => (
+                <LegalNoticePage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
           </div>
         </Router>
       </IntlProvider>
