@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import Header from '../Shared/Header/Header-homePage';
 import Search from './Search/Search';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
-import WhatAreOurSources from '../Shared/WhatAreOurSources/WhatAreOurSources';
+import ComponentToPage from '../Shared/ComponentToPage/ComponentToPage';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
-import HowToAppearInScanR from '../Shared/HowToAppearInScanR/HowToAppearInScanR';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import Newsletter from '../Shared/Newsletter/Newsletter';
 import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
@@ -28,11 +27,22 @@ const HomePage = props => (
 
     <ScanrToday language={props.language} />
 
-    <WhatAreOurSources language={props.language} />
+    <ComponentToPage
+      labelKey="WhatAreOurSources"
+      language={props.language}
+      url=""
+    />
 
-    <MostActiveThemes language={props.language} />
+    <MostActiveThemes
+      language={props.language}
+      data={['Brain to computer', 'Anthropologie évolutive', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
+    />
 
-    <HowToAppearInScanR language={props.language} />
+    <ComponentToPage
+      labelKey="HowToAppearInScanR"
+      language={props.language}
+      url=""
+    />
 
     <LastFocus language={props.language} />
 
