@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import ButtonToSearch from '../Ui/Buttons/ButtonToSearch';
+
 /* SCSS */
 import classes from './MostActiveThemes.scss';
 
@@ -19,11 +21,32 @@ const MostActiveThemes = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.MostActiveThemes}>
 
-        <FormattedHTMLMessage
-          id="MostActiveThemes.lib"
-          defaultMessage="MostActiveThemes.lib"
-        />
-
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <div className={classes.Lib}>
+                <FormattedHTMLMessage
+                  id="MostActiveThemes.lib"
+                  defaultMessage="MostActiveThemes.lib"
+                />
+                <span className={classes.InfoIcon_style}>
+                  <i className="fas fa-info-circle" />
+                </span>
+              </div>
+              <div className={classes.Lib2}>
+                <FormattedHTMLMessage
+                  id="MostActiveThemes.lib2"
+                  defaultMessage="MostActiveThemes.lib2"
+                />
+              </div>
+            </div>
+            <div className="col-lg-7">
+              {
+                props.data.map(item => (<ButtonToSearch>{item}</ButtonToSearch>))
+              }
+            </div>
+          </div>
+        </div>
       </section>
     </IntlProvider>
   );
