@@ -22,7 +22,6 @@ const EvolutionCardByType = (props) => {
       <div className={`${classes.EvolutionCardByType} ${bgColor}`}>
         <div className={classes.Value}>
           {props.value}
-          test slack
         </div>
       </div>
     </IntlProvider>
