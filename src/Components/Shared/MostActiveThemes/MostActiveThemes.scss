@@ -1,2 +1,18 @@
  @import '../../../style.scss';
- 
+
+.MostActiveThemes {
+  color: #fff;
+  margin:0;
+  padding: 32px 0;
+  background-color: $bgHomePageSearch;
+
+  .Lib {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  .Lib2 {
+    margin-top: 16px;
+    line-height: 20px;
+  }
+}
