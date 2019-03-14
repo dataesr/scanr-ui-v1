@@ -1,0 +1,23 @@
+@import '../../../style.scss';
+
+.HeaderTitle {
+  background-color: $bgHeaderTitle;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  border-bottom: solid rgb(0, 33, 59);
+
+
+  .Title {
+    font-size: $sizeHeaderTitle;
+    color: $colorHeaderTitle;
+    font-weight: bold ;
+  }
+
+  .Path {
+    color: $colorPathHeaderTitle;
+  }
+
+  .img {
+    position: 'top 0';
+  }
+}

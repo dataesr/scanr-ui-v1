@@ -3,6 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Header from '../../Shared/Header/Header-homePage';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
@@ -38,6 +39,8 @@ const LegalNoticePage = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
+
+        <HeaderTitle />
 
         <section style={sectionStyle} className={classes.LegalSectionPoudre}>
           <div className="container">
