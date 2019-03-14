@@ -1,5 +1,17 @@
 @import '../../../../style.scss';
 
-.LogoCard {
-  background-color: rgb(212, 79, 79);
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  text-align: center;
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 35px;
+  margin: 5px;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
 }
