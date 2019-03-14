@@ -9,6 +9,53 @@
   top: 80px;
 }
 
+.LegalSectionPoudre {
+  padding: 32px 0;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  /* background: url(logo-ministere.svg) no-repeat center fixed; */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 30%; /* version standardisée */
+  //transform: rotate(30deg);
+}
+
+.LegalSectionGris {
+  padding: 32px 0;
+  background-color: rgb(233, 236, 241);
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  /* background: url(logo-ministere.svg) no-repeat center fixed; */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 30%; /* version standardisée */
+  //transform: rotate(30deg);
+}
+
+.LegalSectionBlanc {
+  padding: 32px 0;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  /* background: url(logo-ministere.svg) no-repeat center fixed; */
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 30%; /* version standardisée */
+  //transform: rotate(30deg);
+}
+
 .MarginTop {
   margin-top: 8px;
+}
+
+.col {
+  padding: 0;
+}
+
+.container {
+  width: 70%;
+  padding: O;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: rgb(0, 33, 59);
+  margin-bottom: 5px;
 }
