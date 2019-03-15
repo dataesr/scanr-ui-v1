@@ -2,22 +2,27 @@
 
 .HeaderTitle {
   background-color: $bgHeaderTitle;
-  padding-top: 15px;
-  padding-bottom: 30px;
   border-bottom: solid rgb(0, 33, 59);
-
 
   .Title {
     font-size: $sizeHeaderTitle;
     color: $colorHeaderTitle;
     font-weight: bold ;
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-left: 16px;
   }
 
-  .Path {
+  .BreadCrumb {
+    padding-left: 16px;
+    padding-top: 15px;
     color: $colorPathHeaderTitle;
   }
 
   .img {
-    position: 'top 0';
+    display: inline-block;
+    width: calc(100% - 100px);
+    max-width: 250px;
+    min-width: 100px;
   }
 }
