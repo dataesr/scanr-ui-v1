@@ -2,9 +2,12 @@
 
 .Header {
   background-color: #fff;
-  box-shadow: 0px 10px 10px 0px #aaaaaa !important;
+  box-shadow: 0px 15px 15px 0px rgba(33, 72, 103, 0.5) !important;
   z-index: 1010;
-  
+  position: fixed;
+  width: 100%;
+
+
   .Link {
     display: inline-block;
     color: grey;
