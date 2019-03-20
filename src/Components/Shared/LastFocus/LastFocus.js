@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
+import FocusCard from '../Ui/FocusCard/FocusCard';
+
 /* SCSS */
 import classes from './LastFocus.scss';
 
@@ -18,12 +21,42 @@ const LastFocus = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.LastFocus}>
+        <div className="container">
+          <div className="row">
+            <div className={`col-lg-9 ${classes.Title}`}>
+              <FormattedHTMLMessage
+                id="LastFocus.Title"
+                defaultMessage="LastFocus.Title"
+              />
+            </div>
+            <div className={`col-lg-3 ${classes.Button}`}>
+              <ButtonToPage
+                className={classes.MarginTop}
+                url=""
+              >
+                <FormattedHTMLMessage
+                  id="LastFocus.AllFocus"
+                  defaultMessage="LastFocus.AllFocus"
+                />
+              </ButtonToPage>
+            </div>
+          </div>
 
-        <FormattedHTMLMessage
-          id="LastFocus.lib"
-          defaultMessage="LastFocus.lib"
-        />
-
+          <div className="row">
+            {
+              props.focusList.map(oneFocus => (
+                <div className="col-lg-4">
+                  <FocusCard
+                    tags={oneFocus.tags}
+                    title={oneFocus.title}
+                    type={oneFocus.type}
+                    url={oneFocus.url}
+                  />
+                </div>
+              ))
+            }
+          </div>
+        </div>
       </section>
     </IntlProvider>
   );
@@ -33,4 +66,45 @@ export default LastFocus;
 
 LastFocus.propTypes = {
   language: PropTypes.string.isRequired,
+  focusList: PropTypes.array,
+};
+LastFocus.defaultProps = {
+  focusList: [
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'La carte des poles de compétitivité en France',
+      type: 'map',
+      url: '',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'Présence sur le web: état des lieux des laboratoires français',
+      type: 'treemap',
+      url: '',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'Japan Prize: Qui sont les lauréats français ?',
+      type: 'histoTop',
+      url: '',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'Dépots de brevets : Evolution des dernières années en France',
+      type: 'bubbleTop',
+      url: '',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'La carte des projets financés par l\'ANR',
+      type: 'donut',
+      url: '',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
+      type: 'bubble',
+      url: '',
+    },
+  ],
 };
