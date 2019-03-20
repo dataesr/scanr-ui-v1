@@ -1,0 +1,41 @@
+@import '../../../../style.scss';
+
+.FocusCard {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 15px 0;
+
+  .Img {
+    height: 300px;
+
+  }
+  .Title {
+    height: 70px;
+    color: $titleColor;
+    font-weight: bolder;
+    text-decoration: underline;
+    line-height: 18px;
+  }
+
+  .TagsAndButton {
+
+    .Tag {
+      color: $tagsColor;
+      font-size: 0.9em;
+    }
+    .Tag:after {
+      content: " ";
+    }
+
+    .Button {
+      font-size: 1.3em;
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .FocusCard {
+    margin-top: 16px;
+  }
+}
