@@ -8,10 +8,10 @@ const ButtonToPage = props => (
   <a href={props.url}>
     <div className={`${classes.ButtonToPage} ${props.className}`}>
       <div className="row">
-        <div className="col-sm-9">
+        <div className="col text-left">
           {props.children}
         </div>
-        <div className="col-sm-3 text-right">
+        <div className="col text-right">
           <i className="fas fa-chevron-right" />
         </div>
       </div>

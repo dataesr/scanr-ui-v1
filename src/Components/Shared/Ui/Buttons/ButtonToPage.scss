@@ -4,6 +4,12 @@
   background-color: rgb(56, 119, 186);
   color: white;
   font-size: 0.5em;
+  font-weight: bolder;
   padding: 8px;
-  border-radius: 4px;
+  padding-left: 16px;
+  border-radius: 5px;
+}
+.ButtonToPage:hover {
+  background-color: $hoverLinkButton;
+  color: white;
 }
