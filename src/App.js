@@ -8,6 +8,7 @@ import localeEn from 'react-intl/locale-data/en';
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
+import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 
 
 class App extends Component {
@@ -56,12 +57,26 @@ class App extends Component {
                 />
               )}
             />
+
             <Route path="/search" component={SearchPage} />
+
             <Route
               exact
-              path="/legal"
+              path="/legal_notice"
               component={props => (
                 <LegalNoticePage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/team_and_project"
+              component={props => (
+                <TeamAndProjectPage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
