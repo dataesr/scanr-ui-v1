@@ -1,15 +1,23 @@
 @import '../../../style.scss';
 
 .CardToPage {
-  padding: 10px ;
-  background-color: #f0f0f5;
-  padding: 36px 76px;
+  padding: 24px 70px;
   text-align: center;
+  color: rgb(15, 30, 62);
 
-  .Text {
-    text-align: center ;
-    border-color: blue;
-    font-size: 1em;
+  .Title {
+    padding-bottom: 8px;
+    font-size: 1.1em;
   }
 
+  .Button {
+  padding: 10px ;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .CardToPage {
+
+  }
 }
