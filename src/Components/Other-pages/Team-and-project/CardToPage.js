@@ -16,26 +16,37 @@ const messages = {
   en: messagesEn,
 };
 
-const CardToPage = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div className={`card ${classes.CardToPage}`}>
-      <FormattedHTMLMessage
-        id={`CardToPage.${props.labelKey}`}
-        defaultMessage={`CardToPage.${props.labelKey}`}
-      />
-      <ButtonToPage
-        className={classes.MarginTop}
-        url={props.url}
-      >
-        Découvrir
-      </ButtonToPage>
-    </div>
-  </IntlProvider>
-);
+const CardToPage = (props) => {
+  const style = { backgroundColor: props.bgColor };
+
+  return (
+    <IntlProvider locale={props.language} messages={messages[props.language]}>
+      <div className={`card ${classes.CardToPage}`} style={style}>
+        <div className={classes.Title}>
+          <FormattedHTMLMessage
+            id={`CardToPage.${props.labelKey}`}
+            defaultMessage={`CardToPage.${props.labelKey}`}
+          />
+        </div>
+
+        <div className={classes.Button}>
+          <ButtonToPage
+            className={classes.MarginTop}
+            url={props.url}
+          >
+            Découvrir
+          </ButtonToPage>
+        </div>
+      </div>
+    </IntlProvider>
+  );
+}
+
 
 export default CardToPage;
 
 CardToPage.propTypes = {
+  bgColor: PropTypes.string.isRequired,
   labelKey: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
