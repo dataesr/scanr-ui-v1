@@ -1,0 +1,20 @@
+@import '../../../style.scss';
+
+.CardOneColumn {
+  color: rgb(33, 72, 103);
+  border-radius: 8px;
+  padding: 14px;
+  margin:2px;
+  height: 120px;
+
+  .Title {
+    font-size: 0.9rem;
+  }
+
+  .Button {
+    width:80px;
+    padding-top:20px;
+
+  }
+
+}
