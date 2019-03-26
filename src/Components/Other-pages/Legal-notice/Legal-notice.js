@@ -39,8 +39,13 @@ const LegalNoticePage = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
-
-        <HeaderTitle />
+      <section>
+        <HeaderTitle
+          language={props.language}
+          switchLanguage={props.switchLanguage}
+          schema="legal"
+        />
+      </section>
 
         <section style={sectionStyle} className={classes.LegalSectionPoudre}>
           <div className="container">

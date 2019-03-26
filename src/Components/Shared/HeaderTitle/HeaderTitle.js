@@ -24,25 +24,28 @@ const HeaderTitle = (props) => {
   return(
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.HeaderTitle}>
-
         <div className="container">
           <div className="row">
-            <div className="col-lg-11">
               <BreadCrumb />
-            </div>
           </div>
           <div className="row">
-            <div className={classes.Title}>
+            <div className={classes.title}>
               <FormattedHTMLMessage
-                id="Page.title.legal"
-                defaultMessage="Page.title.legal"
+                id={`Page.title.${props.schema}`}
+                defaultMessage={`Page.title.${props.schema}`}
               />
             </div>
           </div>
         </div>
       </section>
     </IntlProvider>
-);
+  );
 };
 
 export default HeaderTitle;
+
+HeaderTitle.propTypes = {
+  language: PropTypes.string.isRequired,
+  switchLanguage: PropTypes.func.isRequired,
+  schema: PropTypes.string.isRequired,
+};
