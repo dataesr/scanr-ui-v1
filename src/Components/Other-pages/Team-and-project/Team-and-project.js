@@ -6,7 +6,7 @@ import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import CardToPage from './CardToPage';
 import Header from '../../Shared/Header/Header-homePage';
 import Footer from '../../Shared/Footer/Footer';
-// import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
+import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
 /* Gestion des langues */
@@ -71,7 +71,10 @@ const TeamAndProjectPage = (props) => {
             </div>
           </div>
         </section>
-
+        <DiscoverScanR
+          labelKey="Découvrez scanR en 2 minutes"
+          langage={props.language}
+        />
         <ComponentToPage
           labelKey="HowToAppearInScanR"
           language={props.language}
