@@ -3,20 +3,15 @@
 .HeaderTitle {
   background-color: $bgHeaderTitle;
   border-bottom: solid rgb(0, 33, 59);
+  padding-top: 58px;
 
-  .Title {
+  .title {
     font-size: $sizeHeaderTitle;
     color: $colorHeaderTitle;
     font-weight: bold ;
     display: inline-block;
     padding-bottom: 30px;
     padding-left: 16px;
-  }
-
-  .BreadCrumb {
-    padding-left: 16px;
-    padding-top: 15px;
-    color: $colorPathHeaderTitle;
   }
 
   .img {
