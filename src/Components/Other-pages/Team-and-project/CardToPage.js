@@ -21,14 +21,13 @@ const CardToPage = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`card ${classes.CardToPage}`} style={style}>
+      <div className={`card text-center ${classes.CardToPage}`} style={style}>
         <div className={classes.Title}>
           <FormattedHTMLMessage
             id={`CardToPage.${props.labelKey}`}
             defaultMessage={`CardToPage.${props.labelKey}`}
           />
         </div>
-
         <div className={classes.Button}>
           <ButtonToPage
             className={classes.MarginTop}
@@ -40,7 +39,7 @@ const CardToPage = (props) => {
       </div>
     </IntlProvider>
   );
-}
+};
 
 
 export default CardToPage;

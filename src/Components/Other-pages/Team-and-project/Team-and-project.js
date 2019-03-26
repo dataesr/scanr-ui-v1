@@ -6,7 +6,8 @@ import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import CardToPage from './CardToPage';
 import Header from '../../Shared/Header/Header-homePage';
 import Footer from '../../Shared/Footer/Footer';
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+// import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
+
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -29,33 +30,43 @@ const TeamAndProjectPage = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
-
+        <section>
+          <span>Module Titre de la Page</span>
+        </section>
         <section className={classes.Content}>
           <div className="container">
             <div className="row">
-              <div className="col-8">
-                <h2> Observez le monde de la Recherche avec ScanR</h2>
-                <p> ScanR moteur de recherche </p>
-                <p> En combinant les informations </p>
-                <p> Par son moteur de recherche </p>
-                <p> ScanR est proposé  en version beta </p>
+              <div className="col-lg-8">
+                <img
+                  src="./img/logo-scanr-blue.svg"
+                  alt="Logo"
+                />
+                <div className={classes.Texte}>
+                  <FormattedHTMLMessage
+                    id="Content.Texte"
+                    defaultMessage="Content.Texte"
+                  />
+                </div>
               </div>
-              <div className="col-4">
-                  <CardToPage
-                    labelKey="TheyTalkAboutScanR"
-                    language={props.language}
-                    url=""
-                  />
-                  <CardToPage
-                    labelKey="WhatAreOurSources"
-                    language={props.language}
-                    url=""
-                  />
-                  <CardToPage
-                    labelKey="ConsultFAQ"
-                    language={props.language}
-                    url=""
-                  />
+              <div className="col-lg-4 text-right">
+                <CardToPage
+                  bgColor="#fff"
+                  labelKey="TheyTalkAboutScanR"
+                  language={props.language}
+                  url=""
+                />
+                <CardToPage
+                  bgColor="#fff"
+                  labelKey="WhatAreOurSources"
+                  language={props.language}
+                  url=""
+                />
+                <CardToPage
+                  bgColor="#fff"
+                  labelKey="ConsultFAQ"
+                  language={props.language}
+                  url=""
+                />
               </div>
             </div>
           </div>
@@ -66,7 +77,6 @@ const TeamAndProjectPage = (props) => {
           language={props.language}
           url=""
         />
-
         <Footer language={props.language} />
       </div>
     </IntlProvider>

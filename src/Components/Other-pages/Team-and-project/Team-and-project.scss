@@ -3,7 +3,30 @@
 .TeamAndProjectPage {
 
   .Content {
-    background-color: #ddd;
-    border-color: #000 ;
+    padding: 50px 0;
+    background-color: #E9ECF1;
+    border-radius: 5px  ;
+    color: $textColor;
   }
+
+  H2 {
+    color: $titleColor;
+    font-size: 1.5rem ;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  IMG {
+    padding-top: 70px ;
+    width: 300px ;
+
+  }
+
+  P {
+    font-size: 0.9em;
+    padding-right: 80px
+  }
+
+
 }
