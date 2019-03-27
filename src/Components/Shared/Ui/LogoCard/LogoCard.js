@@ -8,7 +8,7 @@ const LogoCard = props => (
   <div className={classes.card}>
     <img
       src={`./img/logo-${props.schema}.svg`}
-      alt="Logo scanR"
+      alt={props.schema}
       className={`img-fluid ${classes.img}`}
     />
   </div>
