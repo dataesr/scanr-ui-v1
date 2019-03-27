@@ -98,6 +98,7 @@ const LegalNoticePage = props => (
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className={classes.LegalSectionBlanc}>
         <div className="container">
           <div className={`row ${classes.row}`}>
@@ -127,6 +128,54 @@ const LegalNoticePage = props => (
                   id="Section.title.actor2"
                   defaultMessage="Section.title.actor2"
                 />
+=======
+        <section style={sectionStyle} className={classes.LegalSectionPoudre}>
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.service"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.bold"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.light"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.address"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={`row ${classes.buttonsRow}`}>
+                  <div className="col-lg-4">
+                    <ButtonToPage
+                      className={classes.MarginTop}
+                      url="#"
+                    >
+                      Voir le site
+                    </ButtonToPage>
+                  </div>
+                  <div className="col-lg-4">
+                    <ButtonToPage
+                      className={classes.MarginTop}
+                      url="#"
+                    >
+                      Contactez-nous
+                    </ButtonToPage>
+                  </div>
+                </div>
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
               </div>
               <div>
                 <img
@@ -196,6 +245,7 @@ const LegalNoticePage = props => (
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className={classes.LegalSectionGris}>
         <div className="container">
           <div className={`row ${classes.row}`}>
@@ -208,12 +258,36 @@ const LegalNoticePage = props => (
               </div>
               <div className={classes.paragraph}>
                 <div className={classes.bold}>
+=======
+        <section className={classes.LegalSectionBlanc}>
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-4">
+                <div className={classes.title}>
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
                   <FormattedHTMLMessage
                     id="Section.text.team.bold1"
                     defaultMessage="Section.text.team.bold1"
                   />
                 </div>
                 <div className={classes.light}>
+<<<<<<< HEAD
+=======
+                  <FormattedHTMLMessage
+                    id="Section.text.actor1.light"
+                    defaultMessage="Section.text.actor1.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor1.bold"
+                    defaultMessage="Section.text.actor1.bold"
+                  />
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className={classes.title}>
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
                   <FormattedHTMLMessage
                     id="Section.text.team.light1"
                     defaultMessage="Section.text.team.light1"
@@ -259,6 +333,42 @@ const LegalNoticePage = props => (
                   />
                 </div>
                 <div className={classes.light}>
+<<<<<<< HEAD
+=======
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.light"
+                    defaultMessage="Section.text.actor3.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.bold"
+                    defaultMessage="Section.text.actor3.bold"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.address"
+                    defaultMessage="Section.text.actor3.address"
+                  />
+                </div>
+                <ButtonToPage
+                  className={classes.MarginTop}
+                  url="#"
+                >
+                  Voir le site
+                </ButtonToPage>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className={classes.LegalSectionGris}>
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
                   <FormattedHTMLMessage
                     id="Section.text.team.light2"
                     defaultMessage="Section.text.team.light2"
@@ -298,6 +408,7 @@ const LegalNoticePage = props => (
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className={classes.LegalSectionBlanc}>
         <div className="container">
           <div className={`row ${classes.row}`}>
@@ -307,6 +418,30 @@ const LegalNoticePage = props => (
                   id="Section.title.data1"
                   defaultMessage="Section.title.data1"
                 />
+=======
+        <section className={classes.LegalSectionBlanc}>
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.data1"
+                    defaultMessage="Section.title.data1"
+                  />
+                </div>
+                <div className={classes.subtitle}>
+                  <FormattedHTMLMessage
+                    id="Section.subtitle.data1"
+                    defaultMessage="Section.subtitle.data1"
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.data1.light"
+                    defaultMessage="Section.text.data1.light"
+                  />
+                </div>
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
               </div>
               <div className={classes.subtitle}>
                 <FormattedHTMLMessage
@@ -380,6 +515,7 @@ const LegalNoticePage = props => (
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -406,6 +542,16 @@ const LegalNoticePage = props => (
     </div>
   </IntlProvider>
 );
+=======
+        </section>
+
+        <Footer language={props.language} />
+
+      </div>
+    </IntlProvider>
+  );
+};
+>>>>>>> update legalNotice page and adding logo-cradar to public/img
 
 export default LegalNoticePage;
 
