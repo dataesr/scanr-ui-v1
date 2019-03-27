@@ -219,6 +219,37 @@ const LegalNoticePage = props => (
                     defaultMessage="Section.text.team.light1"
                   />
                 </div>
+                <div>
+                  <img
+                    src="./img/logo-cradar.png"
+                    alt="logo C-Radar"
+                    className={`img-fluid ${classes.img}`}
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.light"
+                    defaultMessage="Section.text.actor2.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.bold"
+                    defaultMessage="Section.text.actor2.bold"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.address"
+                    defaultMessage="Section.text.actor2.address"
+                  />
+                </div>
+                <ButtonToPage
+                  className={classes.MarginTop}
+                  url="#"
+                >
+                  Voir le site
+                </ButtonToPage>
               </div>
               <div className={classes.paragraph}>
                 <div className={classes.bold}>
@@ -232,6 +263,34 @@ const LegalNoticePage = props => (
                     id="Section.text.team.light2"
                     defaultMessage="Section.text.team.light2"
                   />
+                </div>
+                <div className={classes.paragraph}>
+                  <div className={classes.bold}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.bold1"
+                      defaultMessage="Section.text.team.bold1"
+                    />
+                  </div>
+                  <div className={classes.light}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.light1"
+                      defaultMessage="Section.text.team.light1"
+                    />
+                  </div>
+                </div>
+                <div className={classes.paragraph}>
+                  <div className={classes.bold}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.bold2"
+                      defaultMessage="Section.text.team.bold2"
+                    />
+                  </div>
+                  <div className={classes.light}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.light2"
+                      defaultMessage="Section.text.team.light2"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
