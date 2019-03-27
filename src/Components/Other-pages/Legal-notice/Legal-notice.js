@@ -57,6 +57,42 @@ const LegalNoticePage = (props) => {
                     defaultMessage="Section.title.service"
                   />
                 </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.bold"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.light"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.service.address"
+                    defaultMessage="Section.title.service"
+                  />
+                </div>
+                <div className={`row ${classes.buttonsRow}`}>
+                  <div className="col-lg-4">
+                    <ButtonToPage
+                      className={classes.MarginTop}
+                      url="#"
+                    >
+                      Voir le site
+                    </ButtonToPage>
+                  </div>
+                  <div className="col-lg-4">
+                    <ButtonToPage
+                      className={classes.MarginTop}
+                      url="#"
+                    >
+                      Contactez-nous
+                    </ButtonToPage>
+                  </div>
+                </div>
               </div>
               <div className="col-lg-4">
                 <LogoCard
@@ -70,7 +106,7 @@ const LegalNoticePage = (props) => {
           </div>
         </section>
 
-        <section className={classes.LegalSection}>
+        <section className={classes.LegalSectionBlanc}>
           <div className="container">
             <div className={`row ${classes.row}`}>
               <div className="col-lg-4">
@@ -78,6 +114,18 @@ const LegalNoticePage = (props) => {
                   <FormattedHTMLMessage
                     id="Section.title.actor1"
                     defaultMessage="Section.title.actor1"
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor1.light"
+                    defaultMessage="Section.text.actor1.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor1.bold"
+                    defaultMessage="Section.text.actor1.bold"
                   />
                 </div>
               </div>
@@ -88,6 +136,37 @@ const LegalNoticePage = (props) => {
                     defaultMessage="Section.title.actor2"
                   />
                 </div>
+                <div>
+                  <img
+                    src="./img/logo-cradar.png"
+                    alt="logo C-Radar"
+                    className={`img-fluid ${classes.img}`}
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.light"
+                    defaultMessage="Section.text.actor2.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.bold"
+                    defaultMessage="Section.text.actor2.bold"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor2.address"
+                    defaultMessage="Section.text.actor2.address"
+                  />
+                </div>
+                <ButtonToPage
+                  className={classes.MarginTop}
+                  url="#"
+                >
+                  Voir le site
+                </ButtonToPage>
               </div>
               <div className="col-lg-4">
                 <div className={classes.title}>
@@ -96,6 +175,30 @@ const LegalNoticePage = (props) => {
                     defaultMessage="Section.title.actor3"
                   />
                 </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.light"
+                    defaultMessage="Section.text.actor3.light"
+                  />
+                </div>
+                <div className={classes.bold}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.bold"
+                    defaultMessage="Section.text.actor3.bold"
+                  />
+                </div>
+                <div className={classes.address}>
+                  <FormattedHTMLMessage
+                    id="Section.text.actor3.address"
+                    defaultMessage="Section.text.actor3.address"
+                  />
+                </div>
+                <ButtonToPage
+                  className={classes.MarginTop}
+                  url="#"
+                >
+                  Voir le site
+                </ButtonToPage>
               </div>
             </div>
           </div>
@@ -111,12 +214,40 @@ const LegalNoticePage = (props) => {
                     defaultMessage="Section.title.team"
                   />
                 </div>
+                <div className={classes.paragraph}>
+                  <div className={classes.bold}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.bold1"
+                      defaultMessage="Section.text.team.bold1"
+                    />
+                  </div>
+                  <div className={classes.light}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.light1"
+                      defaultMessage="Section.text.team.light1"
+                    />
+                  </div>
+                </div>
+                <div className={classes.paragraph}>
+                  <div className={classes.bold}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.bold2"
+                      defaultMessage="Section.text.team.bold2"
+                    />
+                  </div>
+                  <div className={classes.light}>
+                    <FormattedHTMLMessage
+                      id="Section.text.team.light2"
+                      defaultMessage="Section.text.team.light2"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className={classes.LegalSection}>
+        <section className={classes.LegalSectionBlanc}>
           <div className="container">
             <div className={`row ${classes.row}`}>
               <div className="col-lg-8">
@@ -124,6 +255,18 @@ const LegalNoticePage = (props) => {
                   <FormattedHTMLMessage
                     id="Section.title.data1"
                     defaultMessage="Section.title.data1"
+                  />
+                </div>
+                <div className={classes.subtitle}>
+                  <FormattedHTMLMessage
+                    id="Section.subtitle.data1"
+                    defaultMessage="Section.subtitle.data1"
+                  />
+                </div>
+                <div className={classes.light}>
+                  <FormattedHTMLMessage
+                    id="Section.text.data1.light"
+                    defaultMessage="Section.text.data1.light"
                   />
                 </div>
               </div>
@@ -189,12 +332,6 @@ const LegalNoticePage = (props) => {
           </div>
         </section>
 
-        <ButtonToPage
-          className={classes.MarginTop}
-          url=""
-        >
-          Découvrir
-        </ButtonToPage>
         <Footer language={props.language} />
 
       </div>
