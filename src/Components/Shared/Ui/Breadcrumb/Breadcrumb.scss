@@ -1,0 +1,14 @@
+@import '../../../../style.scss';
+
+.BreadCrumb {
+  color: #ffffff;
+
+  .breadcrumb {
+    background-color: #ffffff00;
+  }
+
+  .breadcrumb > .active {
+    color: $colorBreadCrumbHeaderTitle;
+    font-weight: bold;
+  }
+}

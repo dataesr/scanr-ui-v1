@@ -21,6 +21,14 @@ $bgLexicon: rgb(0, 33, 59);
 $bgFooter: rgb(0, 33, 59);
 $footerHeight: 200px;
 
+/*HeaderTitle*/
+$bgHeaderTitle : rgb(56, 119, 186);
+$colorHeaderTitle: rgb(255, 255, 255);
+$sizeHeaderTitle : 2em;
+$colorBreadCrumbHeaderTitle : rgb(255,255,255);
+
+/*BreadCrumb*/
+$breadcrumb-divider: quote(">");
 
 .InfoIcon_style {
   display: inline-block;

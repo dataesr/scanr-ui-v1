@@ -3,6 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Header from '../../Shared/Header/Header-homePage';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
@@ -38,11 +39,18 @@ const LegalNoticePage = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
+      <section>
+        <HeaderTitle
+          language={props.language}
+          switchLanguage={props.switchLanguage}
+          schema="legal"
+        />
+      </section>
 
         <section style={sectionStyle} className={classes.LegalSectionPoudre}>
           <div className="container">
             <div className={`row ${classes.row}`}>
-              <div className={`col-lg-8 ${classes.col}`}>
+              <div className="col-lg-8">
                 <div className={classes.title}>
                   <FormattedHTMLMessage
                     id="Section.title.service"
@@ -50,7 +58,7 @@ const LegalNoticePage = (props) => {
                   />
                 </div>
               </div>
-              <div className={`col-lg-4 ${classes.col}`}>
+              <div className="col-lg-4">
                 <LogoCard
                   schema="scanr-blue"
                 />
@@ -65,7 +73,7 @@ const LegalNoticePage = (props) => {
         <section className={classes.LegalSection}>
           <div className="container">
             <div className={`row ${classes.row}`}>
-              <div className={`col-lg-4 ${classes.col}`}>
+              <div className="col-lg-4">
                 <div className={classes.title}>
                   <FormattedHTMLMessage
                     id="Section.title.actor1"
@@ -73,7 +81,7 @@ const LegalNoticePage = (props) => {
                   />
                 </div>
               </div>
-              <div className={`col-lg-4 ${classes.col}`}>
+              <div className="col-lg-4">
                 <div className={classes.title}>
                   <FormattedHTMLMessage
                     id="Section.title.actor2"
@@ -81,7 +89,7 @@ const LegalNoticePage = (props) => {
                   />
                 </div>
               </div>
-              <div className={`col-lg-4 ${classes.col}`}>
+              <div className="col-lg-4">
                 <div className={classes.title}>
                   <FormattedHTMLMessage
                     id="Section.title.actor3"
@@ -94,79 +102,87 @@ const LegalNoticePage = (props) => {
         </section>
 
         <section className={classes.LegalSectionGris}>
-          <div className={`row ${classes.row}`}>
-            <div className={`col-lg-8 ${classes.col}`}>
-              <div className={classes.title}>
-                <FormattedHTMLMessage
-                  id="Section.title.team"
-                  defaultMessage="Section.title.team"
-                />
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.team"
+                    defaultMessage="Section.title.team"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section className={classes.LegalSection}>
-          <div className={`row ${classes.row}`}>
-            <div className={`col-lg-8 ${classes.col}`}>
-              <div className={classes.title}>
-                <FormattedHTMLMessage
-                  id="Section.title.data1"
-                  defaultMessage="Section.title.data1"
-                />
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.data1"
+                    defaultMessage="Section.title.data1"
+                  />
+                </div>
               </div>
-            </div>
-            <div className={`col-lg-4 ${classes.col}`}>
-              <div className={classes.title}>
-                <FormattedHTMLMessage
-                  id="Section.title.data2"
-                  defaultMessage="Section.title.data2"
-                />
+              <div className="col-lg-4">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.data2"
+                    defaultMessage="Section.title.data2"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section className={classes.LegalSectionGris}>
-          <div className={`row ${classes.row}`}>
-            <div className={`col-lg-8 ${classes.col}`}>
-              <div className={classes.title}>
-                <FormattedHTMLMessage
-                  id="Section.title.personal"
-                  defaultMessage="Section.title.personal"
-                />
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
+                  <FormattedHTMLMessage
+                    id="Section.title.personal"
+                    defaultMessage="Section.title.personal"
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         <section>
-          <div className={`row ${classes.row}`}>
-            <div className={`col-lg-8 ${classes.col}`}>
-              <div className={classes.title}>
-                <FormattedHTMLMessage
-                  id="Section.title.credit"
-                  defaultMessage="Section.title.credit"
-                />
-              </div>
-              <div className="sectionContent">
-                <div className="content">
+          <div className="container">
+            <div className={`row ${classes.row}`}>
+              <div className="col-lg-8">
+                <div className={classes.title}>
                   <FormattedHTMLMessage
-                    id="credit.image"
-                    defaultMessage="credit.image"
+                    id="Section.title.credit"
+                    defaultMessage="Section.title.credit"
                   />
                 </div>
-                <div className="content">
-                  <FormattedHTMLMessage
-                    id="credit.infographic"
-                    defaultMessage="credit.infographic"
-                  />
-                </div>
-                <div className="content">
-                  <FormattedHTMLMessage
-                    id="credit.video"
-                    defaultMessage="credit.video"
-                  />
+                <div className="sectionContent">
+                  <div className="content">
+                    <FormattedHTMLMessage
+                      id="credit.image"
+                      defaultMessage="credit.image"
+                    />
+                  </div>
+                  <div className="content">
+                    <FormattedHTMLMessage
+                      id="credit.infographic"
+                      defaultMessage="credit.infographic"
+                    />
+                  </div>
+                  <div className="content">
+                    <FormattedHTMLMessage
+                      id="credit.video"
+                      defaultMessage="credit.video"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
