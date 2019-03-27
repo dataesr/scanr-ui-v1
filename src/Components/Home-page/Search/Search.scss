@@ -1,12 +1,47 @@
 @import '../../../style.scss';
 
 .Search {
+  padding-top: $headerHeight;
   height: 400px;
-  margin:0;
-  padding:0;
   background-color: $bgHomePageSearch;
   background-repeat: no-repeat;
   background-attachment: relative;
-  /* background: url(logo-ministere.svg) no-repeat center fixed; */
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+
+  .Logo {
+    height: 130px;
+  }
+
+  LABEL {
+    font-size: 0.8rem;
+    margin-bottom: 2px;
+    padding-left: 8px;
+  }
+  .TitleSearchBar { color: white; }
+  .SearchPerimeter { color: $textColor; }
+
+  .btn_dark_margin { margin-top: 24px; }
+
+  .Select {
+    background-color: rgb(0, 33, 59);
+    color: white;
+    border: 1px solid #00213b;
+  }
+
+  .HowTo {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .Suggest {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: 8px;
+
+    span {
+      margin-right: 8px;
+    }
+  }
 }
