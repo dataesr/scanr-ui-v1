@@ -129,13 +129,13 @@ const Footer = (props) => {
                   />
                 </a>
               </div>
-              <div>
+              <div className={classes.SocialNetworks}>
                 <FormattedHTMLMessage
                   id="Footer.string.followUs"
                   defaultMessage="Footer.string.followUs"
                 />
               </div>
-              <ul>
+              <ul className={classes.SocialNetworkItems}>
                 <li className={classes.SocialNetworkItem}>
                   <a href="#"><i className="fab fa-twitter" /></a>
                 </li>

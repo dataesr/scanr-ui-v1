@@ -1,2 +1,13 @@
  @import '../../../style.scss';
- 
+
+ .DiscoverDataEsr {
+  padding: 24px 0;
+  color: white;
+  background-color: $bgDiscoverDataEsr;
+  font-size: 1.1em;
+
+  .Button {
+    color: $activeLinkButton;
+    background-color: white;
+  }
+ }

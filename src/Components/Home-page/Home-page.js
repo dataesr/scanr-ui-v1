@@ -1,18 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Header from '../Shared/Header/Header-homePage';
-import Search from './Search/Search';
-import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import ComponentToPage from '../Shared/ComponentToPage/ComponentToPage';
-import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
-import LastFocus from '../Shared/LastFocus/LastFocus';
-import Newsletter from '../Shared/Newsletter/Newsletter';
 import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
-
 import Footer from '../Shared/Footer/Footer';
-
+import Header from '../Shared/Header/Header-homePage';
+import LastFocus from '../Shared/LastFocus/LastFocus';
 import Lexicon from '../Shared/Lexicon/Lexicon';
+import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
+import Newsletter from '../Shared/Newsletter/Newsletter';
+import ScanrToday from '../Shared/ScanrToday/ScanrToday';
+import Search from './Search/Search';
 
 import classes from './Home-page.scss';
 

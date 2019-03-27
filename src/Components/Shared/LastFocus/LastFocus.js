@@ -23,13 +23,13 @@ const LastFocus = (props) => {
       <section className={classes.LastFocus}>
         <div className="container">
           <div className="row">
-            <div className={`col-lg-9 ${classes.Title}`}>
+            <div className={`col-lg-10 ${classes.Title}`}>
               <FormattedHTMLMessage
                 id="LastFocus.Title"
                 defaultMessage="LastFocus.Title"
               />
             </div>
-            <div className={`col-lg-3 ${classes.Button}`}>
+            <div className={`col-lg-2 ${classes.Button}`}>
               <ButtonToPage
                 className={classes.MarginTop}
                 url=""
