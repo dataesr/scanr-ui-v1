@@ -17,10 +17,19 @@ $linkColorHover: rgb(255, 255, 255);
     height: 50px;
   }
 
+  .SocialNetworks {
+    font-weight: normal;
+    color: #bbb;
+  }
+
+  .SocialNetworkItems {
+    padding-left: 0;
+  }
+
   .SocialNetworkItem {
     display: inline-block;
-    padding: 8px;
-    font-size: 19px;
+    padding: 10px;
+    font-size: 16px;
   }
 
   a {

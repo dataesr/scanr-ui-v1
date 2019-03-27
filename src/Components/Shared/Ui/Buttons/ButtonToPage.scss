@@ -8,8 +8,11 @@
   padding: 8px;
   padding-left: 16px;
   border-radius: 5px;
+
+  .Text {
+    padding-left: 8px;
+  }
 }
 .ButtonToPage:hover {
   background-color: $hoverLinkButton;
-  color: white;
 }

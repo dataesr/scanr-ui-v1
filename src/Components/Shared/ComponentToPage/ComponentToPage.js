@@ -21,13 +21,13 @@ const ComponentToPage = props => (
     <section className={classes.ComponentToPage}>
       <div className="container">
         <div className="row">
-          <div className="col-lg-9">
+          <div className="col-lg-10">
             <FormattedHTMLMessage
               id={`ComponentToPage.${props.labelKey}`}
               defaultMessage={`ComponentToPage.${props.labelKey}`}
             />
           </div>
-          <div className="col-lg-3 text-right">
+          <div className="col-lg-2 text-right">
             <ButtonToPage
               className={classes.MarginTop}
               url={props.url}

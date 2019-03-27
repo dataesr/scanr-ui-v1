@@ -7,9 +7,15 @@
   background-repeat: no-repeat;
   background-attachment: relative;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-position: top 50% left 75%;
 
   .Logo {
     height: 130px;
+    padding-top: 40px;
+
+    IMG {
+      height: 85%;
+    }
   }
 
   LABEL {
