@@ -15,8 +15,8 @@
   }
 
   .img {
-    display: inline-block;
-    width: calc(100% - 100px);
+    position: absolute;
+    margin-left: 8px;
     max-width: 250px;
     min-width: 100px;
   }
