@@ -14,16 +14,20 @@ $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
 
 .entitiesBgColor {
-  background-color: $entitiesColor;
+  background-color: $entitiesColor !important;
+  color: $titleColor !important;
 }
 .projectsBgColor {
-  background-color: $projectsColor;
+  background-color: $projectsColor !important;
+  color: $titleColor !important;
 }
 .personsBgColor {
-  background-color: $personsColor;
+  background-color: $personsColor !important;
+  color: $titleColor !important;
 }
 .publicationsBgColor {
-  background-color: $publicationsColor;
+  background-color: $publicationsColor !important;
+  color: $titleColor !important;
 }
 
 /* HomePage */
@@ -47,6 +51,7 @@ $colorBreadCrumbHeaderTitle : rgb(255,255,255);
 $breadcrumb-divider: quote(">");
 
 $otherPagesPaddingTop: 90px;
+$otherPagesPaddingBottom: 90px;
 
 
 .InfoIcon_style {

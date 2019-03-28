@@ -6,6 +6,7 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import CardTwoColumns from './CardTwoColumns';
 import CardOneColumn from './CardOneColumn';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -28,7 +29,13 @@ const Opendata = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
-
+        <section>
+          <HeaderTitle
+            language={props.language}
+            switchLanguage={props.switchLanguage}
+            schema="opendata"
+          />
+        </section>
         <section className={classes.Content}>
           <div className="container">
             <div className="row">
