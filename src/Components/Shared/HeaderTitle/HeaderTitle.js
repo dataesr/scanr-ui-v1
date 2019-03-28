@@ -13,9 +13,6 @@ import messagesEn from './translations/en.json';
 import classes from './HeaderTitle.scss';
 
 const HeaderTitle = (props) => {
-  const frActive = (props.language === 'fr') ? classes.ActiveLink : '';
-  const enActive = (props.language === 'en') ? classes.ActiveLink : '';
-
   const messages = {
     fr: messagesFr,
     en: messagesEn,
@@ -53,6 +50,5 @@ export default HeaderTitle;
 
 HeaderTitle.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
   schema: PropTypes.string.isRequired,
 };

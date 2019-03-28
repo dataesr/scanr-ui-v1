@@ -2,12 +2,12 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import CardToPage from './CardToPage';
-import Header from '../../Shared/Header/Header-homePage';
-import Footer from '../../Shared/Footer/Footer';
+import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
-
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header-homePage';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -30,9 +30,12 @@ const TeamAndProjectPage = (props) => {
           language={props.language}
           switchLanguage={props.switchLanguage}
         />
-        <section>
-          <span>Module Titre de la Page</span>
-        </section>
+
+        <HeaderTitle
+          language={props.language}
+          schema="team"
+        />
+
         <section className={classes.Content}>
           <div className="container">
             <div className="row">
@@ -72,8 +75,8 @@ const TeamAndProjectPage = (props) => {
           </div>
         </section>
         <DiscoverScanR
-          labelKey="Découvrez scanR en 2 minutes"
-          langage={props.language}
+          labelKey="title"
+          language={props.language}
         />
         <ComponentToPage
           labelKey="HowToAppearInScanR"
