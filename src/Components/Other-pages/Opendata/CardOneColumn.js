@@ -16,11 +16,14 @@ const messages = {
 };
 
 const CardOneColumn = (props) => {
-  const bgColor = classes[`${props.schema}BgColor`];
-
+  // const bgColor = classes[`${props.schema}BgColor`];
+  let bgColor = '';
+  if (props.schema) {
+    bgColor = classes[`${props.schema}BgColor`];
+  }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className="col-lg-3">
+      <div className="col-lg-3" style={{ padding: '0px' }}>
         <div className={`${classes.CardOneColumn} ${bgColor}`}>
           <div className={classes.Title}>
             <FormattedHTMLMessage
@@ -30,7 +33,7 @@ const CardOneColumn = (props) => {
           </div>
           <div className={classes.Button}>
             <ButtonToPage
-              className={classes.MarginTop}
+              className=""
               url={props.url}
             >
               Voir
