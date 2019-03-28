@@ -15,7 +15,7 @@ const messages = {
 
 const CardTwoColumns = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div className="col-lg-6">
+    <div className="col-lg-6" style={{ padding: '0px' }}>
       <div className={classes.CardTwoColumns}>
         <div className={classes.Title}>
           <FormattedHTMLMessage
