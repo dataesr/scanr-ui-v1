@@ -21,7 +21,7 @@ const CardToPage = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`card text-center ${classes.CardToPage}`} style={style}>
+      <div className={`card text-center ${classes.CardToPage}`}>
         <div className={classes.Title}>
           <FormattedHTMLMessage
             id={`CardToPage.${props.labelKey}`}
