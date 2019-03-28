@@ -1,40 +1,45 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { Player } from 'video-react';
 
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import Background from './poudre-blanche_Fbleu-A.jpg';
 
 /* SCSS */
 import classes from './DiscoverScanR.scss';
-import '../../../../../node_modules/video-react/dist/video-react.css';
+
+const sectionStyle = {
+  backgroundImage: `url(${Background})`,
+  backgroundPosition: '0 0 0 0',
+};
 
 const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
 
+
 const DiscoverScanR = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <section className={classes.DiscoverScanR}>
+    <section style={sectionStyle} className={classes.DiscoverScanR}>
       <div className="container">
-        <div className="row">
-          <div>
-            <FormattedHTMLMessage
-              id={`${props.labelKey}`}
-              defaultMessage={`${props.labelKey}`}
+        <div className="row flex-column text-center text-white">
+          <FormattedHTMLMessage
+            id="DiscoverScanR.title"
+            defaultMessage={`DiscoverScanR.${props.labelKey}`}
+          />
+          <div className={classes.Video}>
+            <video
+              preload
+              width="60%"
+              controls
+              src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
             />
           </div>
-          <Player
-            className={classes.Player}
-            playsInline
-            poster="/assets/poster.png"
-            src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-          />
         </div>
       </div>
     </section>
