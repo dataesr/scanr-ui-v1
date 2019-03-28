@@ -1,0 +1,20 @@
+@import '../../../style.scss';
+
+.CardTwoColumns {
+  background-color: $opendataTitleBgColor;
+  color: white;
+  border-radius: 8px;
+  padding: 12px;
+  padding-top: 10px;
+  height: 150px;
+  margin:2px;
+
+  .Content {
+    font-size: 0.8rem;
+  }
+
+  .Title {
+    font-size: 1.3rem;
+  }
+
+}

@@ -5,12 +5,30 @@ $activeLinkButton: rgb(20, 51, 88);
 $hoverLinkButton: rgb(33, 72, 103);
 $tagsColor: rgb(56, 119, 186);
 $titleColor: rgb(20, 51, 88);
+$opendataTitleBgColor: rgb(0, 33, 59);
 $entitiesColor: rgb(235, 192, 52);
 $personsColor: rgb(254, 119, 71);
 $projectsColor: rgb(93, 217, 157);
 $publicationsColor: rgb(204, 61, 143);
 $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
+
+.entitiesBgColor {
+  background-color: $entitiesColor !important;
+  color: $titleColor !important;
+}
+.projectsBgColor {
+  background-color: $projectsColor !important;
+  color: $titleColor !important;
+}
+.personsBgColor {
+  background-color: $personsColor !important;
+  color: $titleColor !important;
+}
+.publicationsBgColor {
+  background-color: $publicationsColor !important;
+  color: $titleColor !important;
+}
 
 /* HomePage */
 $bgHomePageSearch: rgb(56, 119, 186);
@@ -31,6 +49,10 @@ $colorBreadCrumbHeaderTitle : rgb(255,255,255);
 
 /*BreadCrumb*/
 $breadcrumb-divider: quote(">");
+
+$otherPagesPaddingTop: 90px;
+$otherPagesPaddingBottom: 90px;
+
 
 .InfoIcon_style {
   display: inline-block;
