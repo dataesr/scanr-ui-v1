@@ -14,14 +14,13 @@ import classes from './DiscoverScanR.scss';
 
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
-  backgroundPosition: '0 0 0 0',
+  backgroundPosition: '450px 150px',
 };
 
 const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
-
 
 const DiscoverScanR = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -34,9 +33,11 @@ const DiscoverScanR = props => (
           />
           <div className={classes.Video}>
             <video
-              preload
+              preload="true"
               width="60%"
               controls
+              playinline="true"
+              poster=""
               src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
             />
           </div>

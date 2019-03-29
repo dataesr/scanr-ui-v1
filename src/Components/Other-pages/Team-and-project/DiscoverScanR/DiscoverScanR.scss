@@ -2,12 +2,14 @@
 
 .DiscoverScanR {
   background-color: $bgHomePageSearch;
-  padding: 30px 0;
+  padding: 32px 0;
   font-size: 1.6rem;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 75%; /* version standardisée */
 
   .Video{
-    padding-top: 20px;
+    padding: 10px;
   }
-
-
 }
