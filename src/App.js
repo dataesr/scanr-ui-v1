@@ -10,6 +10,7 @@ import SearchPage from './Components/Search-page/Search-page';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
+import IlsParlentDeScanrPage from './Components/Other-pages/IlsParlentDeScanr/IlsParlentDeScanr';
 
 
 class App extends Component {
@@ -90,6 +91,17 @@ class App extends Component {
               path="/opendata"
               component={props => (
                 <Opendata
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/IlsParlentDeScanr"
+              component={props => (
+                <IlsParlentDeScanrPage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
