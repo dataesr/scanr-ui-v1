@@ -51,7 +51,7 @@ const TeamAndProjectPage = (props) => {
                   />
                 </div>
               </div>
-              <div className="col-lg-4 text-right">
+              <div className="col-lg-4 text-center">
                 <CardToPage
                   bgColor="#fff"
                   labelKey="TheyTalkAboutScanR"
