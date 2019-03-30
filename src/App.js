@@ -10,7 +10,7 @@ import SearchPage from './Components/Search-page/Search-page';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
-import IlsParlentDeScanrPage from './Components/Other-pages/IlsParlentDeScanr/IlsParlentDeScanr';
+import TalkAboutScanr from './Components/Other-pages/TalkAboutScanr/TalkAboutScanr';
 
 
 class App extends Component {
@@ -99,9 +99,9 @@ class App extends Component {
             />
             <Route
               exact
-              path="/IlsParlentDeScanr"
+              path="/TalkAboutScanr"
               component={props => (
-                <IlsParlentDeScanrPage
+                <TalkAboutScanrPage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
