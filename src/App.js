@@ -11,7 +11,7 @@ import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice'
 import Opendata from './Components/Other-pages/Opendata/Opendata';
 import SearchPage from './Components/Search-page/Search-page';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
-import TheyTalkAboutScanrPage from './Components/Other-pages/They-talk-About-Scanr/They-talk-About-Scanr';
+import MediasPage from './Components/Other-pages/Medias/Medias';
 
 
 class App extends Component {
@@ -61,7 +61,7 @@ class App extends Component {
               )}
             />
 
-            <Route path="/search" component={SearchPage} />
+            <Route path="/rechercher" component={SearchPage} />
 
 
             {/* vvv--------------- other-pages ------------------vvv  */}
@@ -104,9 +104,9 @@ class App extends Component {
 
             <Route
               exact
-              path="/ils-parlent-de-scanr"
+              path="/medias"
               component={props => (
-                <TheyTalkAboutScanrPage
+                <MediasPage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
