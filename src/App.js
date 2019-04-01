@@ -5,11 +5,13 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
+import Contribute from './Components/Other-pages/Contribute/Contribute';
 import HomePage from './Components/Home-page/Home-page';
-import SearchPage from './Components/Search-page/Search-page';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
-import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
+import SearchPage from './Components/Search-page/Search-page';
+import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
+import TheyTalkAboutScanrPage from './Components/Other-pages/They-talk-About-Scanr/They-talk-About-Scanr';
 
 
 class App extends Component {
@@ -61,9 +63,12 @@ class App extends Component {
 
             <Route path="/search" component={SearchPage} />
 
+
+            {/* vvv--------------- other-pages ------------------vvv  */}
+
             <Route
               exact
-              path="/legal_notice"
+              path="/mentions-legales"
               component={props => (
                 <LegalNoticePage
                   {...props}
@@ -75,7 +80,7 @@ class App extends Component {
 
             <Route
               exact
-              path="/team_and_project"
+              path="/l-equipe-et-son-projet"
               component={props => (
                 <TeamAndProjectPage
                   {...props}
@@ -90,6 +95,29 @@ class App extends Component {
               path="/opendata"
               component={props => (
                 <Opendata
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/ils-parlent-de-scanr"
+              component={props => (
+                <TheyTalkAboutScanrPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/contribuer"
+              component={props => (
+                <Contribute
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
