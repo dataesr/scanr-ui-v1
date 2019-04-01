@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 
 /* SCSS */
 import classes from './BannerOpendata.scss';
@@ -33,7 +33,7 @@ const BannerOpendata = (props) => {
                 <FormattedHTMLMessage
                   id={props.child}
                   defaultMessage={props.child}
-                  />
+                />
               </div>
             </div>
             <div className="col-lg-2 text-right">
