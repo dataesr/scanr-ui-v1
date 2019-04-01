@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import CardToPage from './CardToPage';
 import Header from '../../Shared/Header/Header-homePage';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
 import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
@@ -16,75 +17,75 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './Team-and-project.scss';
 
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
-const TeamAndProjectPage = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
+const TeamAndProjectPage = props => (
+  <IntlProvider locale={props.language} messages={messages[props.language]}>
+    <div className={`container-fluid ${classes.TeamAndProjectPage}`}>
+      <Header
+        language={props.language}
+        switchLanguage={props.switchLanguage}
+      />
 
-  return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`container-fluid ${classes.TeamAndProjectPage}`}>
-        <Header
-          language={props.language}
-          switchLanguage={props.switchLanguage}
-        />
-        <section>
-          <span>Module Titre de la Page</span>
-        </section>
-        <section className={classes.Content}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8">
-                <img
-                  src="./img/logo-scanr-blue.svg"
-                  alt="Logo"
-                />
-                <div className={classes.Texte}>
-                  <FormattedHTMLMessage
-                    id="Content.Texte"
-                    defaultMessage="Content.Texte"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-4 text-right">
-                <CardToPage
-                  bgColor="#fff"
-                  labelKey="TheyTalkAboutScanR"
-                  language={props.language}
-                  url=""
-                />
-                <CardToPage
-                  bgColor="#fff"
-                  labelKey="WhatAreOurSources"
-                  language={props.language}
-                  url=""
-                />
-                <CardToPage
-                  bgColor="#fff"
-                  labelKey="ConsultFAQ"
-                  language={props.language}
-                  url=""
+      <HeaderTitle
+        language={props.language}
+        label="legal"
+      />
+
+      <section className={classes.Content}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <img
+                src="./img/logo-scanr-blue.svg"
+                alt="Logo"
+              />
+              <div className={classes.Texte}>
+                <FormattedHTMLMessage
+                  id="Content.Texte"
+                  defaultMessage="Content.Texte"
                 />
               </div>
             </div>
+            <div className="col-lg-4 text-right">
+              <CardToPage
+                bgColor="#fff"
+                labelKey="TheyTalkAboutScanR"
+                language={props.language}
+                url=""
+              />
+              <CardToPage
+                bgColor="#fff"
+                labelKey="WhatAreOurSources"
+                language={props.language}
+                url=""
+              />
+              <CardToPage
+                bgColor="#fff"
+                labelKey="ConsultFAQ"
+                language={props.language}
+                url=""
+              />
+            </div>
           </div>
-        </section>
-        <DiscoverScanR
-          labelKey="Découvrez scanR en 2 minutes"
-          langage={props.language}
-        />
-        <ComponentToPage
-          labelKey="HowToAppearInScanR"
-          language={props.language}
-          url=""
-        />
-        <Footer language={props.language} />
-      </div>
-    </IntlProvider>
-  );
-};
+        </div>
+      </section>
+      <DiscoverScanR
+        labelKey="Découvrez scanR en 2 minutes"
+        langage={props.language}
+      />
+      <ComponentToPage
+        labelKey="HowToAppearInScanR"
+        language={props.language}
+        url=""
+      />
+      <Footer language={props.language} />
+    </div>
+  </IntlProvider>
+);
 
 export default TeamAndProjectPage;
 
