@@ -13,16 +13,16 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 /* SCSS */
-import classes from './TalkAboutScanr.scss';
+import classes from './Medias.scss';
 
 const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
 
-const TalkAboutScanr = props => (
+const Medias = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div className={`container-fluid ${classes.TalkAboutScanr}`}>
+    <div className={`container-fluid ${classes.Medias}`}>
       <Header
         language={props.language}
         switchLanguage={props.switchLanguage}
@@ -50,9 +50,9 @@ const TalkAboutScanr = props => (
   </IntlProvider>
 );
 
-export default TalkAboutScanr;
+export default Medias;
 
-TalkAboutScanr.propTypes = {
+Medias.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };
