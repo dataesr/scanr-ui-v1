@@ -5,14 +5,18 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
-import Contribute from './Components/Other-pages/Contribute/Contribute';
+import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
+import ContributePage from './Components/Other-pages/Contribute/Contribute';
+import ContactPage from './Components/Other-pages/Contact/Contact';
+import FAQPage from './Components/Other-pages/FAQ/FAQ';
+import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import HomePage from './Components/Home-page/Home-page';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
+import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
 import SearchPage from './Components/Search-page/Search-page';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
-import MediasPage from './Components/Other-pages/Medias/Medias';
-
+import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
 
 class App extends Component {
   state: {
@@ -61,11 +65,22 @@ class App extends Component {
               )}
             />
 
-            <Route path="/rechercher" component={SearchPage} />
+            <Route path="/recherche" component={SearchPage} />
 
 
             {/* vvv--------------- other-pages ------------------vvv  */}
 
+            <Route
+              exact
+              path="/accessibilite"
+              component={props => (
+                <AccessibilityPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
             <Route
               exact
               path="/mentions-legales"
@@ -115,9 +130,53 @@ class App extends Component {
             />
             <Route
               exact
+              path="/tutoriels"
+              component={props => (
+                <TutorialsPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/faq"
+              component={props => (
+                <FAQPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/contact"
+              component={props => (
+                <ContactPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
+              path="/glossaire"
+              component={props => (
+                <GlossaryPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              exact
               path="/contribuer"
               component={props => (
-                <Contribute
+                <ContributePage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
