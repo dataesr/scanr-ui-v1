@@ -51,7 +51,7 @@ const TeamAndProjectPage = (props) => {
                   />
                 </div>
               </div>
-              <div className="col-lg-4 text-center">
+              <div className="col-lg-4 align-item-right">
                 <CardToPage
                   bgColor="#fff"
                   labelKey="TheyTalkAboutScanR"
@@ -74,15 +74,18 @@ const TeamAndProjectPage = (props) => {
             </div>
           </div>
         </section>
+
         <DiscoverScanR
           labelKey="title"
           language={props.language}
         />
+
         <ComponentToPage
           labelKey="HowToAppearInScanR"
           language={props.language}
           url=""
         />
+
         <Footer language={props.language} />
       </div>
     </IntlProvider>
