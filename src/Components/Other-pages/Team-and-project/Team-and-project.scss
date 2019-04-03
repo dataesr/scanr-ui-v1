@@ -3,7 +3,7 @@
 .TeamAndProjectPage {
 
   .Content {
-    padding: 50px 0;
+    padding: 50px 0 ;
     background-color: #E9ECF1;
     border-radius: 5px  ;
     color: $textColor;
@@ -28,5 +28,9 @@
     padding-right: 80px
   }
 
+  @media (min-width: 20px) and (max-width: 991.98px) {
+    margin: .5rem;
+
+  }
 
 }
