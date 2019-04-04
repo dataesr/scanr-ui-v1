@@ -1,7 +1,7 @@
 @import '../../../../style.scss';
 
 .BreadCrumb {
-  color: #ffffff;
+  color: white;
 
   .breadcrumb {
     background-color: #ffffff00;
@@ -10,5 +10,13 @@
   .breadcrumb > .active {
     color: $colorBreadCrumbHeaderTitle;
     font-weight: bold;
+
   }
+
+  .breadcrumb > .active:before {
+    content: ">";
+    color: white;
+  }
+
+
 }

@@ -6,16 +6,16 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 
-import classes from './CardOneColumn.scss';
+import classes from './CardWithButtonBigger.scss';
 
 const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
 
-const CardOneColumn = (props) => {
+const CardWithButtonBigger = (props) => {
   // const bgColor = classes[`${props.schema}BgColor`];
   let bgColor = '';
   if (props.schema) {
@@ -23,8 +23,8 @@ const CardOneColumn = (props) => {
   }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className="col-lg-3" style={{ padding: '0px' }}>
-        <div className={`${classes.CardOneColumn} ${bgColor}`}>
+      <div className="col-lg-4" style={{ padding: '0px' }}>
+        <div className={`${classes.CardWithButtonBigger} ${bgColor}`}>
           <div className={classes.Title}>
             <FormattedHTMLMessage
               id={props.title}
@@ -33,10 +33,10 @@ const CardOneColumn = (props) => {
           </div>
           <div className={classes.Button}>
             <ButtonToPage
-              className=""
+              className={classes.Butt}
               url={props.url}
             >
-              Voir
+              Découvrir
             </ButtonToPage>
           </div>
         </div>
@@ -46,10 +46,11 @@ const CardOneColumn = (props) => {
 };
 
 
-export default CardOneColumn;
+export default CardWithButtonBigger;
 
-CardOneColumn.propTypes = {
+CardWithButtonBigger.propTypes = {
   language: PropTypes.string.isRequired,
   schema: PropTypes.string,
   title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
