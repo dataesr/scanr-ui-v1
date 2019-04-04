@@ -5,10 +5,10 @@
   padding: 32px 0;
 
   background-repeat: no-repeat;
-  background-attachment: relative;
+  background-attachment: fixed;
   /* background: url(logo-ministere.svg) no-repeat center fixed; */
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: 30%; /* version standardisée */
+  background-size: 10%; /* version standardisée */
   //transform: rotate(30deg);
 
   .Title {

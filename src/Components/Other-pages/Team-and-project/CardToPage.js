@@ -34,7 +34,10 @@ const CardToPage = (props) => {
             className={classes.MarginTop}
             url={props.url}
           >
-            Découvrir
+            <FormattedHTMLMessage
+              id="ButtonToPage.text"
+              defaultMessage="Découvrir"
+            />
           </ButtonToPage>
         </div>
       </div>

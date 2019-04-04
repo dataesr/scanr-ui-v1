@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import CardToPage from './CardToPage';
 import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
-import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
+import DiscoverScanR from './DiscoverScanR/DiscoverScanRCopie';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
@@ -82,8 +82,8 @@ const TeamAndProjectPage = (props) => {
 
         <ComponentToPage
           labelKey="HowToAppearInScanR"
-          language={props.language}
           url=""
+          language={props.language}
         />
 
         <Footer language={props.language} />
