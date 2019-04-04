@@ -1,0 +1,11 @@
+@import '../../../style.scss';
+
+.Tutorials {
+  padding: 0;
+  margin: 0;
+
+  .Content {
+    padding-top: $otherPagesPaddingTop;
+    padding-bottom: $otherPagesPaddingBottom;
+  }
+}
