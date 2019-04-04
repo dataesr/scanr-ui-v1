@@ -23,6 +23,7 @@ const messages = {
   en: messagesEn,
 };
 
+
 const TeamAndProjectPage = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.TeamAndProjectPage}`}>
