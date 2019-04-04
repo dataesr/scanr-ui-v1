@@ -1,0 +1,11 @@
+@import '../../../style.scss';
+
+.Accessibility {
+  padding: 0;
+  margin: 0;
+
+  .Content {
+    padding-top: $otherPagesPaddingTop;
+    padding-bottom: $otherPagesPaddingBottom;
+  }
+}

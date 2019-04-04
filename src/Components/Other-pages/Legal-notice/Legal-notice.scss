@@ -13,10 +13,10 @@
   padding: 32px 0;
   background-repeat: no-repeat;
   background-attachment: relative;
-  /* background: url(logo-ministere.svg) no-repeat center fixed; */
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: 30%; /* version standardisée */
-  //transform: rotate(30deg);
+  background-color: rgb(233, 236, 241);
+  background-position: bottom 0 left 0;
 }
 
 .LegalSectionGris {
@@ -49,9 +49,44 @@
   padding: O;
 }
 
+.paragraph {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
 .title {
   font-size: 1.5em;
   font-weight: bold;
-  color: rgb(0, 33, 59);
-  margin-bottom: 5px;
+  color: $titleColor;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  color: $titleColor;
+  margin-bottom: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  color: $textColor;
+}
+
+.light {
+  color: $textColor;
+}
+.address {
+  font-style: italic;
+  font-weight: bold;
+  color: $textColor;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.buttonsRow {
+  width: 100%;
+}
+
+.img {
+  max-width: 60%;
+  height: auto;
 }
