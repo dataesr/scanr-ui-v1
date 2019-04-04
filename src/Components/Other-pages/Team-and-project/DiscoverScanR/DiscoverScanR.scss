@@ -9,7 +9,8 @@
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: 75%; /* version standardisée */
 
-  .Video{
-    padding: 10px;
+  .ComponentVideo{
+  //  height: 250px;
+    z-index: auto;
   }
 }
