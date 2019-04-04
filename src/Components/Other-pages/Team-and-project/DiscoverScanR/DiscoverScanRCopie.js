@@ -9,7 +9,7 @@ import messagesFr from '../translations/fr.json';
 import messagesEn from '../translations/en.json';
 
 import Background from './poudre-blanche_Fbleu-A.jpg';
-import Poster from './paques.jpg';
+
 
 /* SCSS */
 import classes from './DiscoverScanR.scss';
@@ -24,6 +24,8 @@ const messages = {
   en: messagesEn,
 };
 
+const videoPoster = 'img/video-poster/paques.jpg';
+
 const DiscoverScanR = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section style={sectionStyle} className={classes.DiscoverScanR}>
@@ -35,7 +37,7 @@ const DiscoverScanR = props => (
           />
           <ComponentVideo
             url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-            poster={`url(${Poster})`}
+            poster={videoPoster}
           />
         </div>
       </div>
