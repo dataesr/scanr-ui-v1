@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 
-import CardToPage from './CardToPage';
+import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
-import DiscoverScanR from './DiscoverScanR/DiscoverScanRCopie';
+import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
 /* Gestion des langues */
@@ -47,29 +47,33 @@ const TeamAndProjectPage = props => (
               />
               <div className={classes.Texte}>
                 <FormattedHTMLMessage
-                  id="Content.Texte"
-                  defaultMessage="Content.Texte"
+                  id="contentTexte"
+                  defaultMessage="contentTexte"
                 />
               </div>
             </div>
-            <div className="col-lg-4 text-right">
+            <div className="col-lg-4">
               <CardToPage
                 bgColor="#fff"
-                labelKey="TheyTalkAboutScanR"
+                textColor="rgb(15, 30, 62)"
+                labelKey="theyTalkAboutScanR"
                 language={props.language}
                 url=""
+                text="discover"
               />
               <CardToPage
                 bgColor="#fff"
-                labelKey="WhatAreOurSources"
+                labelKey="whatAreOurSources"
                 language={props.language}
                 url=""
+                text="discover"
               />
               <CardToPage
                 bgColor="#fff"
-                labelKey="ConsultFAQ"
+                labelKey="consultFAQ"
                 language={props.language}
                 url=""
+                text="discover"
               />
             </div>
           </div>
