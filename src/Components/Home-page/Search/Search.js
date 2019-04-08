@@ -47,7 +47,7 @@ const Search = (props) => {
                 </FormattedMessage>
                 <select id="inputState" className={`form-control ${classes.Select}`}>
                   <FormattedMessage id="Search.Select.All" defaultMessage="Search.Select.All">
-                    { option => <option className={classes.btn_dark} selected value="All">{option}</option> }
+                    { option => <option className={classes.btn_dark} value="All">{option}</option> }
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Entities" defaultMessage="Search.Select.Entities">
                     { option => <option className={classes.btn_dark} value="Entities">{option}</option> }
@@ -77,7 +77,7 @@ const Search = (props) => {
             <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
             <span>
               {
-                props.suggests.map(suggest => (<ButtonMiniDarkToSearch>{suggest.label}</ButtonMiniDarkToSearch>))
+                props.suggests.map(suggest => (<ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>))
               }
             </span>
           </div>

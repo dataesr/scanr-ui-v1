@@ -100,7 +100,7 @@ const Header = (props) => {
                 <a
                   className={`${classes.Link} ${frActive}`}
                   onClick={() => props.switchLanguage('fr')}
-                  onKeyress={() => props.switchLanguage('fr')}
+                  onKeyPress={() => props.switchLanguage('fr')}
                   role="button"
                   tabIndex={0}
                 >

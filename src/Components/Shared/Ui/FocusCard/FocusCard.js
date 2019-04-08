@@ -74,7 +74,7 @@ const FocusCard = (props) => {
       </div>
       <div className={`row ${classes.TagsAndButton}`}>
         <div className="col-lg-8">
-          {props.tags.map(tag => (<span className={classes.Tag}>{tag}</span>))}
+          {props.tags.map(tag => (<span className={classes.Tag} key={tag}>{tag}</span>))}
         </div>
         <div className={`col-lg-4 ${classes.Button}`}>
           <ButtonToPage
