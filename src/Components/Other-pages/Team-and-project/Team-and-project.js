@@ -40,7 +40,7 @@ const TeamAndProjectPage = props => (
       <section className={classes.Content}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-9">
               <img
                 src="./img/logo-scanr-blue.svg"
                 alt="Logo"
@@ -52,28 +52,27 @@ const TeamAndProjectPage = props => (
                 />
               </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-3">
               <CardToPage
-                bgColor="#fff"
-                textColor="rgb(15, 30, 62)"
+                cssClass="card_light"
                 labelKey="theyTalkAboutScanR"
                 language={props.language}
                 url=""
-                text="discover"
+                btnText="discover"
               />
               <CardToPage
-                bgColor="#fff"
+                cssClass="card_light"
                 labelKey="whatAreOurSources"
                 language={props.language}
                 url=""
-                text="discover"
+                btnText="discover"
               />
               <CardToPage
-                bgColor="#fff"
+                cssClass="card_light"
                 labelKey="consultFAQ"
                 language={props.language}
                 url=""
-                text="discover"
+                btnText="discover"
               />
             </div>
           </div>
