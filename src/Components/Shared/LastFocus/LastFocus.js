@@ -45,7 +45,7 @@ const LastFocus = (props) => {
           <div className="row">
             {
               props.focusList.map(oneFocus => (
-                <div className="col-lg-4">
+                <div className="col-lg-4" key={oneFocus.title}>
                   <FocusCard
                     schema={oneFocus.schema}
                     tags={oneFocus.tags}

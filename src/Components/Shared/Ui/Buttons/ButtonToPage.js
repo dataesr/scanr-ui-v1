@@ -22,7 +22,7 @@ const ButtonToPage = props => (
 export default ButtonToPage;
 
 ButtonToPage.propTypes = {
-  children: PropTypes.string.isRequired,
+  children: PropTypes.any,
   className: PropTypes.string,
   url: PropTypes.string.isRequired,
 };

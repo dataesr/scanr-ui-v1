@@ -41,7 +41,7 @@ const MostActiveThemes = props => (
           </div>
           <div className="col-lg-7">
             {
-              props.data.map(item => (<ButtonToSearch>{item}</ButtonToSearch>))
+              props.data.map(item => (<ButtonToSearch key={item}>{item}</ButtonToSearch>))
             }
           </div>
         </div>
@@ -54,5 +54,5 @@ export default MostActiveThemes;
 
 MostActiveThemes.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
 };
