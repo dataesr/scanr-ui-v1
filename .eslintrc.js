@@ -16,7 +16,7 @@ module.exports = {
         }],
       "import/no-named-as-default": 0,
       "jsx-a11y/anchor-is-valid": [0],
-      "max-len": [1, 2000, 2, {ignoreComments: true}],
+      "max-len": [1, 3000, 2, {ignoreComments: true}],
       "no-param-reassign": [
         "error", {
           "props": true,

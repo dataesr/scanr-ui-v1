@@ -16,5 +16,8 @@ export default ButtonMiniDarkToSearch;
 
 ButtonMiniDarkToSearch.propTypes = {
   children: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
+};
+ButtonMiniDarkToSearch.defaultProps = {
+  url: 'null',
 };
