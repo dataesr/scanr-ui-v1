@@ -7,42 +7,34 @@ import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 /* SCSS */
 import classes from './CardToPage.scss';
 
-const CardToPage = (props) => {
-  const style = {
-    backgroundColor: props.bgColor,
-    color: props.textColor,
-  };
-
-  return (
-    <div className={`card text-center mb-1 ${classes.CardToPage}`} style={style}>
-      <div className={classes.Title}>
-        <FormattedHTMLMessage
-          id={`CardToPage.${props.labelKey}`}
-          defaultMessage={`CardToPage.${props.labelKey}`}
-        />
-      </div>
-      <div className={classes.Button}>
-        <ButtonToPage
-          className={classes.MarginTop}
-          url={props.url}
-        >
-          <FormattedHTMLMessage
-            id={`ButtonToPage.${props.text}`}
-            defaultMessage={`ButtonToPage.${props.text}`}
-          />
-        </ButtonToPage>
-      </div>
+const CardToPage = props => (
+  <div className={`card text-center mb-1 ${classes.CardToPage} ${classes[props.cssClass]}`}>
+    <div className={classes.Title}>
+      <FormattedHTMLMessage
+        id={`CardToPage.${props.labelKey}`}
+        defaultMessage={`CardToPage.${props.labelKey}`}
+      />
     </div>
-  );
-};
+    <div className={classes.Button}>
+      <ButtonToPage
+        className={classes.MarginTop}
+        url={props.url}
+      >
+        <FormattedHTMLMessage
+          id={`ButtonToPage.${props.btnText}`}
+          defaultMessage={`ButtonToPage.${props.btnText}`}
+        />
+      </ButtonToPage>
+    </div>
+  </div>
+);
 
 
 export default CardToPage;
 
 CardToPage.propTypes = {
-  bgColor: PropTypes.string.isRequired,
+  cssClass: PropTypes.string.isRequired,
   labelKey: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
-  textColor: PropTypes.string.isRequired,
+  btnText: PropTypes.string.isRequired,
 };
