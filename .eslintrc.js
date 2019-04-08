@@ -22,8 +22,8 @@ module.exports = {
           "props": true,
           "ignorePropertyModificationsFor": ["dataRow", "request"] }],
       "prefer-destructuring": [1, {
-        "array": true,
-        "object": true
+        "array": false,
+        "object": false
       }],
       "react/destructuring-assignment": ["always", { "ignoreClassFields": true }],
       "react/forbid-prop-types": [0],

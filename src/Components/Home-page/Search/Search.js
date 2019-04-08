@@ -7,28 +7,38 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './Search.scss';
-import Background from './poudre-header-home-yellow.jpg';
+// import Background from './poudre-header-home-yellow.jpg';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
+import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
 
-const sectionStyle = {
-  backgroundImage: `url(${Background})`,
-  backgroundSize: '35%',
-};
+/* COULEURS */
+import {
+  ENTITY_COLOR,
+  PERSON_COLOR,
+  PROJECT_COLOR,
+  PUBLICATION_COLOR,
+} from '../../../config/config';
 
 const Search = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
+  const randomNumber = Math.floor(Math.random() * 4);
+  const schemasPowders = ['entities', 'persons', 'projects', 'publications'];
+  const schemasColors = [ENTITY_COLOR, PERSON_COLOR, PROJECT_COLOR, PUBLICATION_COLOR];
+  const color = schemasColors[randomNumber];
+  const bgUrl = `./img/poudre-header-home-${schemasPowders[randomNumber]}.jpg`;
+  const sectionStyle = {
+    backgroundImage: `url(${bgUrl})`,
+    backgroundSize: '35%',
+  };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section style={sectionStyle} className={classes.Search}>
         <div className="container">
           <div className={classes.Logo}>
-            <img
-              src="./img/logo-scanr-white.svg"
-              alt="Logo"
-            />
+            <LogoScanrWhiteSVG fill={color} />
           </div>
 
           <form>
