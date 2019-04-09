@@ -14,6 +14,16 @@ import Search from './Search/Search';
 
 import classes from './Home-page.scss';
 
+/**
+ * General component description.
+ * You can even use the native Markdown here.
+ * E.g.:
+ * ```html
+ * <MyComponent foo={541} />
+ * ```
+ * Commentaire
+ */
+
 const HomePage = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
     <Header
@@ -60,6 +70,9 @@ const HomePage = props => (
 export default HomePage;
 
 HomePage.propTypes = {
+  /**
+ * Description of prop "language".
+ */
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };
