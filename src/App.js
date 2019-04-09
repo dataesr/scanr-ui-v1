@@ -11,6 +11,7 @@ import ContactPage from './Components/Other-pages/Contact/Contact';
 import FAQPage from './Components/Other-pages/FAQ/FAQ';
 import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import HomePage from './Components/Home-page/Home-page';
+import Entity from './Components/Results/Entity-page/Entity';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
@@ -66,6 +67,8 @@ class App extends Component {
             />
 
             <Route path="/recherche" component={SearchPage} />
+
+            <Route path="/entity" component={Entity} />
 
 
             {/* vvv--------------- other-pages ------------------vvv  */}
