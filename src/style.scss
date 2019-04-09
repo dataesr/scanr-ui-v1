@@ -53,6 +53,31 @@ $breadcrumb-divider: quote(">");
 $otherPagesPaddingTop: 90px;
 $otherPagesPaddingBottom: 90px;
 
+/*Cards*/
+.card_dark {
+  background-color: rgb(56, 119, 186);
+  color: white;
+  a {
+    color: rgb(0, 33, 59);
+  }
+  .Button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(56, 119, 186);
+    border-radius: 5px;
+  }
+}
+.card_light {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 33, 59);
+  a {
+    color: white;
+  }
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+    border-radius: 5px;
+  }
+}
 
 .InfoIcon_style {
   display: inline-block;
