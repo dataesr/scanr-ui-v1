@@ -13,12 +13,20 @@ Components
 
 ### 1. HomePage
 
+General component description.
+You can even use the native Markdown here.
+E.g.:
+```html
+<MyComponent foo={541} />
+```
+Commentaire   
+
 
 
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-language|string|yes||
+language|string|yes||Description of prop &quot;language&quot;.
 switchLanguage|func|yes||
 -----
 **src/Components/Home-page/Search/Search.js**
