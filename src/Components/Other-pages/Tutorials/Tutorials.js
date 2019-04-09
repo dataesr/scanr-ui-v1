@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Tutorialvideo from './TutorialVideo/TutorialVideo';
+// import Tutorialvideo from './TutorialVideo/TutorialVideo';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -31,14 +31,19 @@ const Tutorials = props => (
           language={props.language}
           label="tutorials"
         />
-        <Tutorialvideo
+        {
+          /*
+
+          <Tutorialvideo
           labelKey="tuto1"
           language={props.language}
-        />
-        <Tutorialvideo
+          />
+          <Tutorialvideo
           labelKey="tuto2"
           language={props.language}
-        />
+          />
+          */
+        }
       </section>
       <Footer language={props.language} />
     </div>
