@@ -34,7 +34,7 @@ const TeamAndProjectPage = props => (
 
       <HeaderTitle
         language={props.language}
-        label="legal"
+        label="team"
       />
 
       <section className={classes.Content}>
