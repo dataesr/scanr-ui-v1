@@ -69,9 +69,6 @@ class App extends Component {
 
             <Route path="/recherche" component={SearchPage} />
 
-            <Route path="/entity" component={Entity} />
-
-
             <Route
               path="/entite/:id"
               render={props => (
