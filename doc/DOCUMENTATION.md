@@ -416,7 +416,7 @@ language|string|yes||
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 language|string|yes||
-data|array|yes||
+data|object|yes||
 -----
 **src/Components/Shared/Newsletter/Newsletter.js**
 
@@ -458,7 +458,7 @@ language|string|yes||
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 children|string|yes||
-url|string|no|&lt;See the source code&gt;|
+url|string|yes||
 -----
 **src/Components/Shared/Ui/Buttons/ButtonToPage.js**
 
@@ -469,7 +469,7 @@ url|string|no|&lt;See the source code&gt;|
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-children|any|no||
+children|string|yes||
 className|string|no||
 url|string|yes||
 -----
