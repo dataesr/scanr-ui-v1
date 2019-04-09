@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 
 import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 
-import CardToPage from './CardToPage';
+import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
-import DiscoverScanR from './DiscoverScanR/DiscoverScanRCopie';
+import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
 /* Gestion des langues */
@@ -23,6 +23,7 @@ const messages = {
   en: messagesEn,
 };
 
+
 const TeamAndProjectPage = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.TeamAndProjectPage}`}>
@@ -33,42 +34,45 @@ const TeamAndProjectPage = props => (
 
       <HeaderTitle
         language={props.language}
-        label="legal"
+        label="team"
       />
 
       <section className={classes.Content}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-9">
               <img
                 src="./img/logo-scanr-blue.svg"
                 alt="Logo"
               />
               <div className={classes.Texte}>
                 <FormattedHTMLMessage
-                  id="Content.Texte"
-                  defaultMessage="Content.Texte"
+                  id="contentTexte"
+                  defaultMessage="contentTexte"
                 />
               </div>
             </div>
-            <div className="col-lg-4 text-right">
+            <div className="col-lg-3">
               <CardToPage
-                bgColor="#fff"
-                labelKey="TheyTalkAboutScanR"
+                cssClass="card_light"
+                labelKey="theyTalkAboutScanR"
                 language={props.language}
                 url=""
+                btnText="discover"
               />
               <CardToPage
-                bgColor="#fff"
-                labelKey="WhatAreOurSources"
+                cssClass="card_light"
+                labelKey="whatAreOurSources"
                 language={props.language}
                 url=""
+                btnText="discover"
               />
               <CardToPage
-                bgColor="#fff"
-                labelKey="ConsultFAQ"
+                cssClass="card_light"
+                labelKey="consultFAQ"
                 language={props.language}
                 url=""
+                btnText="discover"
               />
             </div>
           </div>
