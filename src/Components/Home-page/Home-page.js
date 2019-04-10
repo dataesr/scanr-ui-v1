@@ -15,13 +15,12 @@ import Search from './Search/Search';
 import classes from './Home-page.scss';
 
 /**
- * General component description.
- * You can even use the native Markdown here.
- * E.g.:
- * ```html
- * <MyComponent foo={541} />
- * ```
- * Commentaire
+ * Home-page component <br/>
+ * Url : / <br/>
+ * Description : Page d'accueil <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>
  */
 
 const HomePage = props => (
@@ -70,9 +69,6 @@ const HomePage = props => (
 export default HomePage;
 
 HomePage.propTypes = {
-  /**
- * Description of prop "language".
- */
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };
