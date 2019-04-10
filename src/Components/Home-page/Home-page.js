@@ -14,6 +14,15 @@ import Search from './Search/Search';
 
 import classes from './Home-page.scss';
 
+/**
+ * Home-page component <br/>
+ * Url : / <br/>
+ * Description : Page d'accueil <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>
+ */
+
 const HomePage = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
     <Header
