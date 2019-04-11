@@ -1,41 +1,48 @@
 import React, { Component, Fragment } from 'react';
-// import Axios from 'axios';
+import Axios from 'axios';
 import PropTypes from 'prop-types';
+
+import { API_STRUCTURES_END_POINT } from '../../../config/config';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from './HeaderTitle/HeaderTitle';
+import Portrait from './Portrait/Portrait';
 
 import DataSample from './dataSample.json';
 
+/**
+ * Portrait
+ * Url : ex: /entite/200711886U
+ * Description : Correspond à une entité (structure)
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+*/
 class Entity extends Component {
   state = {
     data: DataSample,
-    id: null,
   };
 
   componentDidMount() {
     const { id } = this.props.match.params;
-    this.setState({ id });
-
-    // this.getData(id);
+    this.getData(id);
   }
 
-  // getData(id) {
-  //   console.log('getData de ', id);
-  //   // Récupéraion des données de l'entité
-  //   const url = `https://scanr.enseignementsup-recherche.gouv.fr/api/structures/${id}`;
-  //   Axios.get(url)
-  //     .then(({ response }) => {
-  //       console.log(response);
-  //       this.setState({ data: response });
-  //     });
-  // }
+  getData(id) {
+    // Récupéraion des données de l'entité
+    const url = `${API_STRUCTURES_END_POINT}/structure/${id}`;
+    console.log(url);
+    Axios.get(url)
+      .then((response) => {
+        this.setState({ data: response.data });
+      });
+  }
 
   render() {
-    // if (!this.state.data) {
-    //   return null;
-    // }
+    if (!this.state.data) {
+      return <Fragment>No data</Fragment>;
+    }
 
     return (
       <Fragment>
@@ -46,8 +53,12 @@ class Entity extends Component {
         <HeaderTitle
           language={this.props.language}
         />
+        <Portrait
+          language={this.props.language}
+          data={this.state.data}
+        />
 
-      <Footer language={this.props.language} />
+        <Footer language={this.props.language} />
       </Fragment>
     );
   }
