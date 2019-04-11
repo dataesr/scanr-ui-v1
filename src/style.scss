@@ -30,6 +30,40 @@ $headerHeight: 56px;
   color: $titleColor !important;
 }
 
+/* couleurs de bannières avec boutons */
+.BannerLight {
+  background-color: white;
+  color: $textColor;
+  a {
+    color: white;
+  }
+  .Button{
+    background-color: rgb(56, 119, 186);
+    color: white;
+    border-radius: 5px;
+  }
+}
+.BannerDark {
+  background-color: rgb(56, 119, 186);
+  color: white;
+  a {
+    color: rgb(0, 33, 59);
+  }
+  .Button {
+    background-color: white;
+    color: $titleColor;
+    border-radius: 5px;
+  }
+}
+.ButtonPadding {
+  margin:15px;
+  padding-top: 5px;
+  }
+
+.CardCenter {
+    text-align: center;
+}
+
 /* HomePage */
 $bgHomePageSearch: rgb(56, 119, 186);
 $bgDiscoverDataEsr: rgb(56, 119, 186);
@@ -101,7 +135,7 @@ $otherPagesPaddingBottom: 90px;
 }
 
 .btn_dark{
-  background-color: rgb(0, 33, 59);
+  background-color: $titleColor;
   color: white;
 }
 

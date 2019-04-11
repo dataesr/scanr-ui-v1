@@ -7,9 +7,7 @@ import Header from '../../Shared/Header/Header-homePage';
 import CardTwoColumns from './CardTwoColumns';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import DiscoverThreeCards from '../../Shared/DiscoverThreeCards/DiscoverThreeCards';
-import BlueBanner from '../../Shared/Banner/Banner';
-import BannerOpendata from '../../Shared/BannerOpendata/BannerOpendata';
+import Banner from '../../Shared/Banner/Banner';
 import Background from './poudre-bleu_Fgris-B.jpg';
 
 /* Gestion des langues */
@@ -65,6 +63,8 @@ const Opendata = props => (
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Voir"
             />
+          </div>
+          <div className="row">
             <CardWithButton
               language={props.language}
               schema="projects"
@@ -93,6 +93,8 @@ const Opendata = props => (
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Voir"
             />
+          </div>
+          <div className="row">
             <CardWithButton
               language={props.language}
               schema="persons"
@@ -121,22 +123,28 @@ const Opendata = props => (
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Voir"
             />
-            <CardWithButton
-              language={props.language}
-              schema="persons"
-              title="Opendata.card11"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
+          </div>
+          <div className="row">
+            <div className="col-lg-3" style={{ padding: '0px' }}>
+              <CardWithButton
+                language={props.language}
+                schema="persons"
+                title="Opendata.card11"
+                url="https://worldwide.espacenet.com/?locale=fr_EP"
+                lib_button="Voir"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <BannerOpendata
-        language={props.language}
-        title="BannerOpendata.Title"
-        child="BannerOpendata.child"
-        lib_button="BannerOpendata.lib_button"
-      />
+      <section className={classes.Plateforme}>
+        <Banner
+          language={props.language}
+          label="Opendata"
+          cssClass="BannerLight"
+          className="ButtonPadding"
+        />
+      </section>
       <section className={classes.Api}>
         <div className="container">
           <div className="row">
@@ -164,20 +172,34 @@ const Opendata = props => (
           </div>
         </div>
       </section>
-      <section>
-        <DiscoverThreeCards
-          language={props.language}
-          TitleCard1="Discover.TalkAboutScanr"
-          url1=""
-          TitleCard2="Discover.Sources"
-          url2=""
-          TitleCard3="Discover.Team"
-          url3=""
-        />
+      <section className={classes.ThreeCards}>
+        <div className="container">
+          <div className="row">
+            <CardWithButton
+              language={props.language}
+              title="Discover.TalkAboutScanr"
+              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              lib_button="Découvrir"
+            />
+            <CardWithButton
+              language={props.language}
+              title="Discover.Sources"
+              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              lib_button="Découvrir"
+            />
+            <CardWithButton
+              language={props.language}
+              title="Discover.Team"
+              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              lib_button="Découvrir"
+            />
+          </div>
+        </div>
       </section>
-      <BlueBanner
+      <Banner
         language={props.language}
-        schema="TalkAboutScanr"
+        label="Appear"
+        cssClass="BannerDark"
       />
       <Footer language={props.language} />
     </div>
