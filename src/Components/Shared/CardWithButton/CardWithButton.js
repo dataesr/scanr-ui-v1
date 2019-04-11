@@ -16,14 +16,13 @@ const messages = {
 };
 
 const CardWithButton = (props) => {
-  // const bgColor = classes[`${props.schema}BgColor`];
   let bgColor = '';
   if (props.schema) {
     bgColor = classes[`${props.schema}BgColor`];
   }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className="col-lg-3" style={{ padding: '0px' }}>
+      <div className="col-lg" style={{ padding: '0px' }}>
         <div className={`${classes.CardWithButton} ${bgColor}`}>
           <div className={classes.Title}>
             <FormattedHTMLMessage
