@@ -15,7 +15,6 @@ import ContributePage from './Components/Other-pages/Contribute/Contribute';
 import ContactPage from './Components/Other-pages/Contact/Contact';
 import FAQPage from './Components/Other-pages/FAQ/FAQ';
 import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
-import Entity from './Components/Results/Entity-page/Entity';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
