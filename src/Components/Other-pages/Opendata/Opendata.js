@@ -137,12 +137,14 @@ const Opendata = props => (
           </div>
         </div>
       </section>
-      <Banner
-        language={props.language}
-        title="BannerOpendata.Title"
-        child="BannerOpendata.child"
-        lib_button="BannerOpendata.lib_button"
-      />
+      <section className={classes.Plateforme}>
+        <Banner
+          language={props.language}
+          label="Opendata"
+          cssClass="BannerLight"
+          className="ButtonPadding"
+        />
+      </section>
       <section className={classes.Api}>
         <div className="container">
           <div className="row">
@@ -170,33 +172,34 @@ const Opendata = props => (
           </div>
         </div>
       </section>
-      <section>
+      <section className={classes.ThreeCards}>
         <div className="container">
           <div className="row">
             <CardWithButton
               language={props.language}
               title="Discover.TalkAboutScanr"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Lire"
+              lib_button="Découvrir"
             />
             <CardWithButton
               language={props.language}
-              title="Opendata.EnSavoirPlusApi"
+              title="Discover.Sources"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Lire"
+              lib_button="Découvrir"
             />
             <CardWithButton
               language={props.language}
-              title="Opendata.EnSavoirPlusApi"
+              title="Discover.Team"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Lire"
+              lib_button="Découvrir"
             />
           </div>
         </div>
       </section>
       <Banner
         language={props.language}
-        schema="TalkAboutScanr"
+        label="Appear"
+        cssClass="BannerDark"
       />
       <Footer language={props.language} />
     </div>

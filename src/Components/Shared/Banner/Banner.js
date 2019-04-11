@@ -18,29 +18,27 @@ const messages = {
 
 const Banner = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <section className={`${classes.Banner} ${props.bannerColor}`}>
+    <section className={`${classes.Banner} ${classes[props.cssClass]}`}>
       <div className="container">
         <div className="row">
           <div className="col-lg">
             <FormattedHTMLMessage
-              // id="Banner.lib"
-              // defaultMessage="Banner.lib"
               id={`Banner.title.${props.label}`}
               defaultMessage={`Banner.title.${props.label}`}
             />
           </div>
-          <div className="col-lg-2 text-right">
-            <ButtonToPage
-              className={classes.Button}
-              url=""
-            >
-              <FormattedHTMLMessage
-                // id="Banner.button"
-                // defaultMessage="Banner.button"
-                id={`Banner.button.${props.label}`}
-                defaultMessage={`Banner.button.${props.label}`}
-              />
-            </ButtonToPage>
+          <div className={`col-lg-2 ${classes[props.className]}`}>
+            <div className={classes.Button}>
+              <ButtonToPage
+                // className={classes[props.className]}
+                url=""
+              >
+                <FormattedHTMLMessage
+                  id={`Banner.button.${props.label}`}
+                  defaultMessage={`Banner.button.${props.label}`}
+                />
+              </ButtonToPage>
+            </div>
           </div>
         </div>
 
@@ -49,10 +47,12 @@ const Banner = props => (
   </IntlProvider>
 );
 
+
 export default Banner;
 
 Banner.propTypes = {
-  bannerColor: PropTypes.string,
+  cssClass: PropTypes.string,
   language: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };

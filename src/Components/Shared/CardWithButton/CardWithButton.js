@@ -16,7 +16,6 @@ const messages = {
 };
 
 const CardWithButton = (props) => {
-  // const bgColor = classes[`${props.schema}BgColor`];
   let bgColor = '';
   if (props.schema) {
     bgColor = classes[`${props.schema}BgColor`];
