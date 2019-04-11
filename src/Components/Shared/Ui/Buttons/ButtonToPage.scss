@@ -1,8 +1,8 @@
 @import '../../../../style.scss';
 
 .ButtonToPage {
-  background-color: rgb(56, 119, 186);
-  color: white;
+  // background-color: rgb(56, 119, 186);
+  // color: white;
   font-size: 0.7rem;
   font-weight: bolder;
   padding: 5px;
@@ -12,7 +12,4 @@
   .Text {
     padding-left: 8px;
   }
-}
-.ButtonToPage:hover {
-  background-color: $hoverLinkButton;
 }
