@@ -17,7 +17,7 @@ const CardToPage = props => (
     </div>
     <div className={classes.Button}>
       <ButtonToPage
-        className={classes.MarginTop}
+        className={`${classes.MarginTop} ${classes.Button}`}
         url={props.url}
       >
         <FormattedHTMLMessage
