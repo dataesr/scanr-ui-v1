@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 /* General */
 $activeLinkButton: rgb(20, 51, 88);
 $hoverLinkButton: rgb(33, 72, 103);
@@ -32,6 +30,40 @@ $headerHeight: 56px;
   color: $titleColor !important;
 }
 
+/* couleurs de bannières avec boutons */
+.BannerLight {
+  background-color: white;
+  color: $textColor;
+  a {
+    color: white;
+  }
+  .Button{
+    background-color: rgb(56, 119, 186);
+    color: white;
+    border-radius: 5px;
+  }
+}
+.BannerDark {
+  background-color: rgb(56, 119, 186);
+  color: white;
+  a {
+    color: rgb(0, 33, 59);
+  }
+  .Button {
+    background-color: white;
+    color: $titleColor;
+    border-radius: 5px;
+  }
+}
+.ButtonPadding {
+  margin:15px;
+  padding-top: 5px;
+  }
+
+.CardCenter {
+    text-align: center;
+}
+
 /* HomePage */
 $bgHomePageSearch: rgb(56, 119, 186);
 $bgDiscoverDataEsr: rgb(56, 119, 186);
@@ -59,25 +91,40 @@ $otherPagesPaddingBottom: 90px;
 .card_dark {
   background-color: rgb(56, 119, 186);
   color: white;
-  a {
-    color: rgb(0, 33, 59);
-  }
   .Button {
     background-color: rgb(255, 255, 255);
-    color: rgb(56, 119, 186);
+    color: rgb(0, 33, 59);
     border-radius: 5px;
+  }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+    color: white;
   }
 }
 .card_light {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 33, 59);
-  a {
-    color: white;
-  }
   .Button {
     background-color: rgb(56, 119, 186);
     color: white;
     border-radius: 5px;
+  }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+    color: white;
+  }
+}
+.card_lightdark {
+  background-color: #E9ECF1;
+  color: rgb(0, 33, 59);
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+    border-radius: 5px;
+  }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+    color: white;
   }
 }
 
@@ -88,6 +135,36 @@ $otherPagesPaddingBottom: 90px;
 }
 
 .btn_dark{
-  background-color: rgb(0, 33, 59);
+  background-color: $titleColor;
   color: white;
+}
+
+
+/* ComponaentToPage */
+.Component_dark {
+  background-color: rgb(56, 119, 186);
+  color: white;
+
+  .Button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 33, 59);
+  }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+    color: white;
+  }
+}
+
+.Component_light {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 33, 59);
+
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+  }
+  .Button:hover {
+    background-color: $hoverLinkButton;
+    color: white;
+  }
 }
