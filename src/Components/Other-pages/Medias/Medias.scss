@@ -7,10 +7,22 @@
   .Content {
     padding-top: $otherPagesPaddingTop;
     padding-bottom: $otherPagesPaddingBottom;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: 50%; /* version standardisée */
+    background-color: rgb(233, 236, 241);
+    background-position: bottom 0 left 0;
+  .periode {
+    padding-left: 20px;
+    color:$mediaTextColor;
+    font-size: 2.2rem;
+    }
   }
 }
 
-.BannerColor {
-  background-color: $bgDiscoverDataEsr;
-  color: white;
+
+.ThreeCards {
+  padding-top:30px;
+  padding-bottom:30px;
 }
