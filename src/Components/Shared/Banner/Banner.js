@@ -27,7 +27,7 @@ const Banner = props => (
               defaultMessage={`Banner.title.${props.label}`}
             />
           </div>
-          <div className={`col-lg-2 ${classes[props.className]}`}>
+          <div className={`col-lg-2 ${classes[props.positionbutton]}`}>
             <div className={classes.Button}>
               <ButtonToPage
                 // className={classes[props.className]}
@@ -54,5 +54,5 @@ Banner.propTypes = {
   cssClass: PropTypes.string,
   language: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  className: PropTypes.string,
+  positionbutton: PropTypes.string,
 };
