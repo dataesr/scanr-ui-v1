@@ -1,0 +1,36 @@
+@import '../../../style.scss';
+
+.MediasCard {
+  border-radius: 8px;
+  margin:7px;
+  height: 170px;
+  padding: 16px;
+  padding-top: 10px;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 33, 59);
+
+  .Article {
+    font-size: 1.1rem;
+    height: 70px;
+  }
+
+  .Site {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .Date {
+    font-size: 0.7rem;
+  }
+
+  .Button {
+    width: 6rem;
+    padding-top: 5px;
+    margin-top: 50px;
+    background-color: rgb(56, 119, 186);
+    color: white;
+
+  }
+}
