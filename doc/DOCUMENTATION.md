@@ -9,6 +9,25 @@ Components
 
 
 -----
+**src/Components/Focus-pages/List-HomePage.js**
+
+### 1. Focus
+
+List-Home-page component <br/>
+Url : /focus <br/>
+Description : Page principale des focus (aprcu des différents graphs et résultats) <br/>
+Responsive : . <br/>
+Accessible : soon™. <br/>
+Tests   
+
+
+
+
+Property | Type | Required | Default value | Description
+:--- | :--- | :--- | :--- | :---
+language|string|yes||
+switchLanguage|func|yes||
+-----
 **src/Components/Home-page/Home-page.js**
 
 ### 1. HomePage
@@ -148,33 +167,7 @@ Property | Type | Required | Default value | Description
 language|string|yes||
 switchLanguage|func|yes||
 -----
-**src/Components/Other-pages/Team-and-project/CardToPage.js**
-
-### 1. CardToPage
-
-
-
-
-Property | Type | Required | Default value | Description
-:--- | :--- | :--- | :--- | :---
-bgColor|string|yes||
-labelKey|string|yes||
-language|string|yes||
-url|string|yes||
------
 **src/Components/Other-pages/Team-and-project/DiscoverScanR/DiscoverScanR.js**
-
-### 1. DiscoverScanR
-
-
-
-
-Property | Type | Required | Default value | Description
-:--- | :--- | :--- | :--- | :---
-labelKey|string|yes||
-language|string|yes||
------
-**src/Components/Other-pages/Team-and-project/DiscoverScanR/DiscoverScanRCopie.js**
 
 ### 1. DiscoverScanR
 
@@ -211,6 +204,18 @@ language|string|yes||
 url|string|yes||
 poster|string|no||
 -----
+**src/Components/Other-pages/Tutorials/TutorialVideo/TutorialVideo.js**
+
+### 1. TutorialVideo
+
+
+
+
+Property | Type | Required | Default value | Description
+:--- | :--- | :--- | :--- | :---
+labelKey|string|yes||
+language|string|yes||
+-----
 **src/Components/Other-pages/Tutorials/Tutorials.js**
 
 ### 1. Tutorials
@@ -222,6 +227,14 @@ Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 language|string|yes||
 switchLanguage|func|yes||
+-----
+**src/Components/Results/Entity-page/Entity.js**
+
+### 1. Entity
+
+
+
+
 -----
 **src/Components/Search-page/Search-page.js**
 
@@ -240,23 +253,24 @@ switchLanguage|func|yes||
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-bannerColor|string|no||
+cssClass|string|no||
 language|string|yes||
 label|string|yes||
+className|string|no||
 -----
-**src/Components/Shared/BannerOpendata/BannerOpendata.js**
+**src/Components/Shared/CardWithButton/CardToPage.js**
 
-### 1. BannerOpendata
+### 1. CardToPage
 
 
 
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-language|string|yes||
-title|string|yes||
-child|string|yes||
-lib_button|string|yes||
+cssClass|string|yes||
+labelKey|string|yes||
+url|string|yes||
+btnText|string|yes||
 -----
 **src/Components/Shared/CardWithButton/CardWithButton.js**
 
@@ -296,8 +310,9 @@ url|string|yes||
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
+cssClass|string|yes||
+btnText|string|yes||
 labelKey|string|yes||
-language|string|yes||
 url|string|yes||
 -----
 **src/Components/Shared/CounterCards/CounterCardByType.js**
@@ -423,7 +438,7 @@ language|string|yes||
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 language|string|yes||
-data|object|yes||
+data|array|yes||
 -----
 **src/Components/Shared/Newsletter/Newsletter.js**
 
@@ -465,7 +480,7 @@ language|string|yes||
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 children|string|yes||
-url|string|yes||
+url|string|no|&lt;See the source code&gt;|
 -----
 **src/Components/Shared/Ui/Buttons/ButtonToPage.js**
 
@@ -476,7 +491,7 @@ url|string|yes||
 
 Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
-children|string|yes||
+children|any|no||
 className|string|no||
 url|string|yes||
 -----
@@ -588,6 +603,20 @@ width|string|no|&lt;See the source code&gt;|
 className|string|no|&lt;See the source code&gt;|
 -----
 **src/Components/Shared/svg/icon-focus-treemap.js**
+
+### 1. SVG
+
+
+
+
+Property | Type | Required | Default value | Description
+:--- | :--- | :--- | :--- | :---
+style|object|no|&lt;See the source code&gt;|
+fill|string|no|&lt;See the source code&gt;|
+width|string|no|&lt;See the source code&gt;|
+className|string|no|&lt;See the source code&gt;|
+-----
+**src/Components/Shared/svg/logo-scanr-white.js**
 
 ### 1. SVG
 
