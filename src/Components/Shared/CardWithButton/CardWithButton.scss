@@ -1,26 +1,21 @@
 @import '../../../style.scss';
 
 .CardWithButton {
-  color: white;
-  background-color: rgb(56, 119, 186);
   border-radius: 8px;
-  padding: 16px;
-  margin:2px;
+  margin:7px;
   height: 170px;
-  font-weight: bold;
+  padding: 16px;
+  padding-top: 10px;
 
   .Title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     height: 70px;
   }
 
   .Button {
-    width:100px;
-    padding-top: 34px;
-    .Butt {
-      background-color: white;
-      color:$opendataTitleBgColor;
-      font-size:0.8rem;
-    }
+    width: 6rem;
+    padding-top: 5px;
+    margin-top: 50px;
+
   }
 }

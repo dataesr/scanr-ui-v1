@@ -17,22 +17,26 @@ const messages = {
 
 const CardWithButton = (props) => {
   let bgColor = '';
+  let position = '';
   if (props.schema) {
-    bgColor = classes[`${props.schema}BgColor`];
+    bgColor = classes[`${props.schema}`];
+  }
+  if (props.position) {
+    position = classes[`${props.position}`];
   }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="col-lg" style={{ padding: '0px' }}>
-        <div className={`${classes.CardWithButton} ${bgColor}`}>
+        <div className={`${classes.CardWithButton} ${bgColor} ${position}`}>
           <div className={classes.Title}>
             <FormattedHTMLMessage
               id={props.title}
               defaultMessage={props.title}
             />
           </div>
-          <div className={classes.Button}>
+          <div>
             <ButtonToPage
-              className={classes.Butt}
+              className={classes.Button}
               url={props.url}
             >
               <FormattedHTMLMessage
@@ -56,4 +60,5 @@ CardWithButton.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   lib_button: PropTypes.string.isRequired,
+  position: PropTypes.string,
 };
