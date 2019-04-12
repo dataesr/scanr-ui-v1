@@ -12,6 +12,8 @@ import FAQPage from './Components/Other-pages/FAQ/FAQ';
 import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import HomePage from './Components/Home-page/Home-page';
 import Entity from './Components/Results/Entity-page/Entity';
+import Focus from './Components/Focus-pages/List-HomePage';
+import FocusId from './Components/Focus-pages/focus-1/focus-1'
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
@@ -70,6 +72,29 @@ class App extends Component {
 
             <Route path="/entity" component={Entity} />
 
+            <Route
+              exact
+              path="/focus"
+              component={props => (
+                <Focus
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/focus/:id"
+              component={props => (
+                <FocusId
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
 
             {/* vvv--------------- other-pages ------------------vvv  */}
 
