@@ -1,0 +1,16 @@
+@import '../../../../style.scss';
+
+.TutorialVideo {
+  background-color: $bgHomePageSearch;
+  padding: 32px 0;
+  font-size: 1.6rem;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 75%; /* version standardisée */
+
+  .ComponentVideo{
+  //  height: 250px;
+    z-index: auto;
+  }
+}

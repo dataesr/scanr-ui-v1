@@ -85,7 +85,9 @@ const TeamAndProjectPage = props => (
       />
 
       <ComponentToPage
-        labelKey="HowToAppearInScanR"
+        btnText="discover"
+        cssClass="Component_light"
+        labelKey="howToAppearInScanR"
         url=""
         language={props.language}
       />
