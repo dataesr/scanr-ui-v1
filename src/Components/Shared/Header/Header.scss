@@ -26,4 +26,14 @@
     padding-left: 2px;
     padding-right: 2px;
   }
+  .img {
+    position: absolute;
+    top: 56px;
+    right: auto;
+    left: auto;
+    max-width: 200px;
+    min-width: 100px;
+    /*border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;*/
+  }
 }
