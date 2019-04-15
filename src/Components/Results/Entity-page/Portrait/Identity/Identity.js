@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 
-import NameCard from '../../../../Shared/Ui/SimpleCard/SimpleCard'
+import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard'
 
 import classes from './Identity.scss';
 
@@ -54,14 +54,26 @@ const Identity = (props) => {
 
   return (
     <div className={classes.Identity}>
-      <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
+      <div className="row">
+        <div className={`col ${classes.NoSpace}`}>
+          <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
+        </div>
+      </div>
 
       <div className="row">
-        <div className="col-6">
-          <NameCard
+        <div className={`col-6 ${classes.NoSpace}`}>
+          <SimpleCard
             logo="fas fa-id-card"
             title={messages[props.language]['Entity.portrait.identity.name']}
             label={`${name}${acronym}`}
+            tooltip=""
+          />
+        </div>
+        <div className={`col-6 ${classes.NoSpace}`}>
+          <SimpleCard
+            logo="fas fa-flask"
+            title={messages[props.language]['Entity.portrait.identity.nature']}
+            label={props.nature || ''}
             tooltip=""
           />
         </div>
