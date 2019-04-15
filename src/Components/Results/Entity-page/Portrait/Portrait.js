@@ -37,7 +37,6 @@ class Portrait extends Component {
         <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
           <div className="container">
             <SectionTitle icon="fas fa-id-card">Portrait</SectionTitle>
-
             <div className="row">
               <div className="col-6">
                 <Identity
@@ -50,7 +49,7 @@ class Portrait extends Component {
                 />
               </div>
               <div className="col-6">2-Localisation</div>
-              <div className="col-6">3-Domaines d'expertise</div>
+              <div className="col-6">3-Domaines d expertise</div>
               <div className="col-6">4-Direction</div>
               <div className="col-6">5-Histoire</div>
             </div>
