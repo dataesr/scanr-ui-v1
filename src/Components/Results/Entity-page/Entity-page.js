@@ -32,7 +32,6 @@ class Entity extends Component {
   getData(id) {
     // Récupéraion des données de l'entité
     const url = `${API_STRUCTURES_END_POINT}/structure/${id}`;
-    console.log(url);
     Axios.get(url)
       .then((response) => {
         this.setState({ data: response.data });
