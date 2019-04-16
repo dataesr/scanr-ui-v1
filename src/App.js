@@ -13,7 +13,7 @@ import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import HomePage from './Components/Home-page/Home-page';
 import Entity from './Components/Results/Entity-page/Entity';
 import Focus from './Components/Focus-pages/List-HomePage';
-import FocusId from './Components/Focus-pages/focus-1/focus-1'
+import FocusId from './Components/Focus-pages/focus-1/focus-1';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';

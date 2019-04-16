@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
@@ -22,38 +22,38 @@ import classes from '../Home-page/Home-page.scss';
  */
 
 const Focus = props => (
-    <div className={`container-fluid ${classes.HomePage}`}>
-        <Header
-            language={props.language}
-            switchLanguage={props.switchLanguage}
-        />
+  <div className={`container-fluid ${classes.HomePage}`}>
+    <Header
+      language={props.language}
+      switchLanguage={props.switchLanguage}
+    />
 
-        {/* <Search language={props.language} /> */}
+    {/* <Search language={props.language} /> */}
 
-        <LastFocus language={props.language} />
+    <LastFocus language={props.language} />
 
-        <ComponentToPage
-            labelKey="HowToAppearInScanR"
-            language={props.language}
-            url=""
-        />
+    <ComponentToPage
+      labelKey="HowToAppearInScanR"
+      language={props.language}
+      url=""
+    />
 
-        <LastFocus language={props.language} />
+    <LastFocus language={props.language} />
 
-        <DiscoverDataEsr language={props.language} />
+    <DiscoverDataEsr language={props.language} />
 
-        <Footer language={props.language} />
+    <Footer language={props.language} />
 
-        <Lexicon
-            className={classes.HomePageLexiconTop}
-            language={props.language}
-        />
-    </div>
+    <Lexicon
+      className={classes.HomePageLexiconTop}
+      language={props.language}
+    />
+  </div>
 );
 
 export default Focus;
 
 Focus.propTypes = {
-    language: PropTypes.string.isRequired,
-    switchLanguage: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
+  switchLanguage: PropTypes.func.isRequired,
 };
