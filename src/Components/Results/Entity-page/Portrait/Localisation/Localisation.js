@@ -38,21 +38,24 @@ class Localisation extends Component {
     return (
       <div className={classes.Localisation}>
         <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
-
-        <Map
-          onClick={this.onMapClick}
-          {...mapProps}
-        >
-          <TileLayer
-            attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-            url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
-          />
-          <Marker
-            key={this.props.editedAddress.id}
-            position={this.props.editedAddress.coordinates.coordinates}
-            icon={violetIcon}
-          />
-        </Map>
+{
+  /*
+  <Map
+  onClick={this.onMapClick}
+  {...mapProps}
+  >
+  <TileLayer
+  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+  />
+  <Marker
+  key={this.props.editedAddress.id}
+  position={this.props.editedAddress.coordinates.coordinates}
+  icon={violetIcon}
+  />
+  </Map>
+  */
+}
       </div>
     );
   }
