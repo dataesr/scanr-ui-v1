@@ -23,6 +23,13 @@ const Header = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.Header}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div>
+            <img
+              className={`img-thumbnail ${classes.img}`}
+              src="./img/logo-ministere.svg"
+              alt="logo ministère"
+            />
+          </div>
           <a className="navbar-brand" href="#">
             ScanR_Icon
           </a>
