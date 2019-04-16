@@ -3,7 +3,7 @@
 .HeaderTitle {
   background-color: $bgHeaderTitle;
   border-bottom: solid rgb(0, 33, 59);
-  padding-top: 58px;
+  padding-top: 55px;
 
   .title {
     font-size: $sizeHeaderTitle;
@@ -14,10 +14,7 @@
     padding-left: 16px;
   }
 
-  .img {
-    position: absolute;
-    margin-left: 8px;
-    max-width: 250px;
-    min-width: 100px;
-  }
+@media (max-width: 1520px) {
+  padding-top: 115px;
+}
 }
