@@ -2,17 +2,14 @@
 
 .card {
   background-color: rgb(255, 255, 255);
-  border-radius: 12px;
+  border-radius: 8px;
   text-align: center;
-  padding-top: 35px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-bottom: 35px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding: 15px 15px;
+  margin: 3px;
+  height: 150px;
 }
 
 .img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
