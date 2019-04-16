@@ -1,0 +1,26 @@
+@import '../../../../style.scss';
+
+.SimpleCard {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 150px;
+  padding: 8px;
+  margin: 2px;
+
+  .Logo {
+    color: grey;
+  }
+
+  .Title {
+    color: grey;
+    font-style: italic;
+  }
+
+  .Label {
+    padding-top: 16px;
+    color: $textColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+}
