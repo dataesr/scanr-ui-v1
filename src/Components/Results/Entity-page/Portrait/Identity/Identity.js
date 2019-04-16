@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
-
-import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard'
+import LogoCard from '../../../../Shared/Ui/LogoCard/LogoCard';
+import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
 
 import classes from './Identity.scss';
 
@@ -67,6 +67,11 @@ const Identity = (props) => {
             title={messages[props.language]['Entity.portrait.identity.name']}
             label={`${name}${acronym}`}
             tooltip=""
+          />
+        </div>
+        <div className={`col-6 ${classes.NoSpace}`}>
+          <LogoCard
+            src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
           />
         </div>
         <div className={`col-6 ${classes.NoSpace}`}>
