@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 /* SCSS */
 import classes from './LogoCard.scss';
 
+/**
+ * LogoCard
+ * Url : ui
+ * Description : Composant affichant un logo soit à partir d'une URL distante, soit à partir du répertoire ./img
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+*/
 const LogoCard = (props) => {
   const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
   return (
