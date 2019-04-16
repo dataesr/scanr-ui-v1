@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
@@ -7,9 +7,9 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
 
-import D3Bar from './D3Bar'
-import D3BarRounded from './D3BarRounded'
-import HighChartsGraph from './HighChartsAccessibility'
+import D3Bar from './D3Bar';
+import D3BarRounded from './D3BarRounded';
+import HighChartsGraph from './HighChartsAccessibility';
 
 import classes from '../../Home-page/Home-page.scss';
 
@@ -40,52 +40,52 @@ import classes from '../../Home-page/Home-page.scss';
 // }
 
 const FocusId = props => (
-    <div className={`container-fluid ${classes.HomePage}`}>
-        <Header
-            language={props.language}
-            switchLanguage={props.switchLanguage}
-        />
+  <div className={`container-fluid ${classes.HomePage}`}>
+    <Header
+      language={props.language}
+      switchLanguage={props.switchLanguage}
+    />
 
-        {/* <LastFocus language={props.language} /> */}
+    {/* <LastFocus language={props.language} /> */}
 
-        <DiscoverDataEsr language={props.language} />
+    <DiscoverDataEsr language={props.language} />
 
-        <div>
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-            <br />
-            <p>BlaBlaBla</p>
-        </div>
-
-        <div id="d3" />
-
-        <D3Bar />
-
-        <D3BarRounded />
-
-        <HighChartsGraph />
-
-        <Footer language={props.language} />
-
-        <Lexicon
-            className={classes.HomePageLexiconTop}
-            language={props.language}
-        />
+    <div>
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
+      <br />
+      <p>BlaBlaBla</p>
     </div>
+
+    <div id="d3" />
+
+    <D3Bar />
+
+    <D3BarRounded />
+
+    <HighChartsGraph />
+
+    <Footer language={props.language} />
+
+    <Lexicon
+      className={classes.HomePageLexiconTop}
+      language={props.language}
+    />
+  </div>
 );
 
 export default FocusId;
 
 FocusId.propTypes = {
-    language: PropTypes.string.isRequired,
-    switchLanguage: PropTypes.func.isRequired,
+  language: PropTypes.string.isRequired,
+  switchLanguage: PropTypes.func.isRequired,
 };
