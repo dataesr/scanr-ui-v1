@@ -80,18 +80,6 @@ class App extends Component {
             />
 
 
-            <Route
-              path="/entite/:id"
-              render={props => (
-                <EntityPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-
-
             {/* vvv--------------- other-pages ------------------vvv  */}
 
             <Route
