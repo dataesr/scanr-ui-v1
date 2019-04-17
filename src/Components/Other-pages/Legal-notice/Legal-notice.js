@@ -38,6 +38,7 @@ const LegalNoticePage = props => (
       <HeaderTitle
         language={props.language}
         label="legal"
+        labelkey="legal"
       />
       <section style={sectionStyle} className={classes.LegalSectionPoudre}>
         <div className="container">
