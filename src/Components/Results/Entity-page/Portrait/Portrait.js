@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Identity from './Identity/Identity';
-import Localisation from './Localisation/Localisation';
+// import Localisation from './Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Background from './poudre-jaune_Fgris-B_V2.jpg';
 
@@ -50,10 +50,7 @@ class Portrait extends Component {
                 />
               </div>
               <div className="col-6">
-                <Localisation
-                  language={this.props.language}
-                  address={this.props.data.address}
-                />
+                localisation
               </div>
               <div className="col-6">3-Domaines d expertise</div>
               <div className="col-6">4-Direction</div>
