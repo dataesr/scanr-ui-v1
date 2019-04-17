@@ -16,23 +16,23 @@ const messages = {
 
 const CardWithButton = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <section className="col-lg-6">
-      <div className={classes.MediasCard}>
-        <div className="container">
-          <div className="row">
-            <div className={classes.Article}>
-              <FormattedHTMLMessage
-                id={`${props.article}.Title`}
-                defaultMessage={`${props.article}.Title`}
-              />
-            </div>
+    <div className={`col-lg-6 ${classes.MediasCard}`}>
+      <div className={classes.Content}>
+        <div className={`container ${classes.TopCard} `}>
+          <div className={classes.Title}>
+            <FormattedHTMLMessage
+              id={`${props.article}.Title`}
+              defaultMessage={`${props.article}.Title`}
+            />
           </div>
+        </div>
+        <div className={`container ${classes.BottomCard}`}>
           <div className="row">
-            <div className="col-lg-9">
-              <div className={classes.Site}>
+            <div className="col-9">
+              <div className={classes.Source}>
                 <FormattedHTMLMessage
-                  id={`${props.article}.Site`}
-                  defaultMessage={`${props.article}.Site`}
+                  id={`${props.article}.Source`}
+                  defaultMessage={`${props.article}.Source`}
                 />
               </div>
               <div className={classes.Date}>
@@ -42,10 +42,10 @@ const CardWithButton = props => (
                 />
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className={`col-3 ${classes.ButtonPosition}`}>
               <ButtonToPage
                 className={classes.Button}
-                url={props.url}
+                url={`${props.article}.Url`}
               >
                 <FormattedHTMLMessage
                   id="Lire"
@@ -56,7 +56,7 @@ const CardWithButton = props => (
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </IntlProvider>
 );
 
@@ -66,5 +66,4 @@ export default CardWithButton;
 CardWithButton.propTypes = {
   language: PropTypes.string.isRequired,
   article: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
 };
