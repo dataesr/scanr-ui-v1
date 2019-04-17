@@ -2,7 +2,11 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HCRounded from 'highcharts-rounded-corners';
+import HCExporting from 'highcharts/modules/exporting';
+import HCExportingData from 'highcharts/modules/export-data';
 
+HCExporting(Highcharts);
+HCExportingData(Highcharts);
 HCRounded(Highcharts);
 
 const options = {
@@ -47,6 +51,12 @@ const options = {
   plotOptions: {
     series: {
       stacking: 'normal',
+      dataLabels: {
+        enabled: true,
+        align: 'right',
+        x: 15,
+        style: { color: '#000000' },
+      }
     },
   },
   series: [{

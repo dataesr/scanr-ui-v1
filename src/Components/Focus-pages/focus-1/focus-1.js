@@ -9,6 +9,7 @@ import Lexicon from '../../Shared/Lexicon/Lexicon';
 
 import D3Bar from './D3Bar';
 import D3BarRounded from './D3BarRounded';
+import D3Map from './D3Map';
 import HighChartsGraph from './HighChartsAccessibility';
 
 import classes from '../../Home-page/Home-page.scss';
@@ -38,6 +39,11 @@ import classes from '../../Home-page/Home-page.scss';
 //     );
 //   }
 // }
+
+const divStyle = {
+  width: '800px',
+  height: '400px'
+};
 
 const FocusId = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
@@ -71,6 +77,10 @@ const FocusId = props => (
     <D3Bar />
 
     <D3BarRounded />
+
+    <div id="mapid" style={divStyle} />
+
+    <D3Map />
 
     <HighChartsGraph />
 
