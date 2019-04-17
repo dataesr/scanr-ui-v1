@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
+import ButtonWithModal from '../Buttons/ButtonWithModal';
 
 import classes from './SimpleListCard.scss';
 
@@ -12,10 +13,43 @@ import classes from './SimpleListCard.scss';
  * Accessible : .
  * Tests unitaires : .
 */
+const logoFunction = logo => (
+  (logo) ? <div className={classes.Logo}><i className={logo} /></div> : null
+);
+
+const titleFunction = title => (
+  (title) ? <div className={classes.Title}>{title}</div> : null
+);
+
+const labelFunction = label => (
+  (label) ? <div className={classes.Label}>{label}</div> : null
+);
+
+const additionalListFunction = (allProps) => {
+  const items = allProps.list.map(item => (
+    <li key={item.key} className="list-group-item">
+      <div className="row">
+        <div className="col">
+          <span className={classes.Key}>{item.key}</span>
+        </div>
+        <div className="col-8">
+          <span className={classes.Value}>{item.value}</span>
+        </div>
+      </div>
+    </li>
+  ));
+  const itemsHtml = <ul className="list-group list-group-flush">{items}</ul>;
+  return (
+    <ButtonWithModal
+      logo={allProps.logo}
+      title={allProps.title}
+      buttonLabel={allProps.labelListButton}
+      dataHtml={itemsHtml}
+    />
+  );
+};
+
 const SimpleListCard = (props) => {
-  const logo = (props.logo) ? <div className={classes.Logo}><i className={props.logo} /></div> : null;
-  const title = (props.title) ? <div className={classes.Title}>{props.title}</div> : null;
-  const label = (props.label) ? <div className={classes.Label}>{props.label}</div> : null;
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
@@ -23,21 +57,20 @@ const SimpleListCard = (props) => {
     </Fragment>
   ) : null;
 
-  let items = null;
-  if (props.list) {
-    items = props.list.map(item => <li>{item.value}</li>);
-  }
-
   return (
     <div className={classes.SimpleListCard}>
-      {logo}
-      {title}
-      {label}
+      {logoFunction(props.logo)}
+      {titleFunction(props.title)}
+      {labelFunction(props.label)}
+
       {tooltip}
-      {(items) || null}
+
+      {additionalListFunction(props)}
+
     </div>
   );
 };
+
 
 export default SimpleListCard;
 
