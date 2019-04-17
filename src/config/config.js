@@ -1,6 +1,8 @@
 // import React from 'react';
 
-export const API_END_POINT = '//88.168.181.80:3000/api/v1/';
+// export const API_END_POINT = '//88.168.181.80:3000/api/v1/';
+
+export const API_STRUCTURES_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/structures';
 
 // Couleurs du site
 export const ENTITY_COLOR = '#ebc034';

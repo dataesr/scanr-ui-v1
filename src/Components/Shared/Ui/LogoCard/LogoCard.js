@@ -4,18 +4,31 @@ import PropTypes from 'prop-types';
 /* SCSS */
 import classes from './LogoCard.scss';
 
-const LogoCard = props => (
-  <div className={classes.card}>
-    <img
-      src={`./img/logo-${props.label}.svg`}
-      alt={props.label}
-      className={`img-fluid ${classes.img}`}
-    />
-  </div>
-);
+/**
+ * LogoCard
+ * Url : ui
+ * Description : Composant affichant un logo soit à partir d'une URL distante, soit à partir du répertoire ./img
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+*/
+const LogoCard = (props) => {
+  const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
+  return (
+    <div className={classes.card}>
+      <img
+        src={src}
+        alt={props.label}
+        className={`img-fluid ${classes.img}`}
+      />
+    </div>
+  );
+};
+
 
 export default LogoCard;
 
 LogoCard.propTypes = {
-  label: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  src: PropTypes.string,
 };

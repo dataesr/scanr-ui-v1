@@ -1,0 +1,23 @@
+@import '../../../../style.scss';
+
+.HeaderTitle {
+  background-color: $bgHeaderTitle;
+  border-bottom: solid rgb(0, 33, 59);
+  padding-top: 58px;
+
+  .title {
+    font-size: $sizeHeaderTitle;
+    color: $colorHeaderTitle;
+    font-weight: bold ;
+    display: inline-block;
+    padding-bottom: 30px;
+    padding-left: 16px;
+  }
+
+  .img {
+    position: absolute;
+    margin-left: 8px;
+    max-width: 250px;
+    min-width: 100px;
+  }
+}
