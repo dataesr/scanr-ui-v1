@@ -32,7 +32,7 @@ const LastFocus = (props) => {
             <div className={`col-lg-2 ${classes.Button}`}>
               <ButtonToPage
                 className={classes.MarginTop}
-                url=""
+                url="/focus"
               >
                 <FormattedHTMLMessage
                   id="LastFocus.AllFocus"
