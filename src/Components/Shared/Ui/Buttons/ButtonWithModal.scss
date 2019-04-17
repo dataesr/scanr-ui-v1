@@ -1,0 +1,31 @@
+@import '../../../../style.scss';
+
+.Header {
+  text-align: center;
+}
+
+.Logo {
+  color: grey;
+}
+
+.Title {
+  color: grey;
+  font-style: italic;
+}
+.Content {
+  margin-top: 36px;
+
+}
+.ButtonWithModal {
+
+  .Button {
+    color: $colorCardButton;
+    background-color: $bgColorCardButton;
+    font-weight: bold;
+    I {
+      display: inline-block;
+      padding-left: 16px;
+    }
+  }
+
+}
