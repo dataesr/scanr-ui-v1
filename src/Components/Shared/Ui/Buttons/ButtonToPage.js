@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classes from './ButtonToPage.scss';
 
 const ButtonToPage = props => (
-  <a href={props.url}>
+  <a href={props.url} target={props.target}>
     <div className={`${classes.ButtonToPage} ${props.className}`}>
       <div className="row">
         <div className={classes.Text}>
@@ -25,4 +25,5 @@ ButtonToPage.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
   url: PropTypes.string.isRequired,
+  target: PropTypes.string,
 };
