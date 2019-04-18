@@ -3,7 +3,7 @@ import {
   Map, Marker, TileLayer,
 } from 'react-leaflet';
 import PropTypes from 'prop-types';
-import { violetIcon } from './icons';
+import { yellowIcon } from './icons';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 
@@ -16,7 +16,7 @@ import classes from './Localisation.scss';
 /**
  * Localisation
  * Url : /entite/<id>
- * Description : Affichage de la carte positionnant l'adresse
+ * Description : Affichage du bloc localisation. carte positionnant l'adresse + adresse en dessous
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
@@ -35,27 +35,39 @@ class Localisation extends Component {
       fr: messagesFr,
       en: messagesEn,
     };
+
+    const mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
+
     return (
       <div className={classes.Localisation}>
         <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
-{
-  /*
-  <Map
-  onClick={this.onMapClick}
-  {...mapProps}
-  >
-  <TileLayer
-  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
-  />
-  <Marker
-  key={this.props.editedAddress.id}
-  position={this.props.editedAddress.coordinates.coordinates}
-  icon={violetIcon}
-  />
-  </Map>
-  */
-}
+
+        <div className={classes.MapContainer}>
+          <Map
+            className={classes.Map}
+            {...mapProps}
+          >
+            <TileLayer
+              attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+              url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+            />
+            <Marker
+              position={this.props.address[0].gps}
+              icon={yellowIcon}
+            />
+          </Map>
+        </div>
+        <div className={classes.AddressContainer}>
+          <div className={classes.Title}>
+            <i className="fas fa-map-marker" />
+            Localisation
+            <div className={classes.Address}>
+              {this.props.address[0].address}
+              <br />
+              {`${this.props.address[0].city} - ${this.props.address[0].country}`}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
