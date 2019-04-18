@@ -11,19 +11,20 @@
     font-weight: bold;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 33, 59);
-    height: 9em;
 
     .TopCard {
       margin:0;
       padding: 0;
-      height:5em;
+      margin-bottom: 12px;
+      height:7em;
+      position: relative;
+      overflow: hidden;
+      max-height: 4.1em;
 
       .Title {
         font-size: 1.1em;
         line-height: 1.3em;
-        max-height: 3.9em !important;
-        position: relative;
-        overflow: hidden;
+        max-height: 3.9em;
       }
 
       .Title:after {
@@ -41,11 +42,31 @@
     .BottomCard{
       padding: 0;
       margin:0;
+      height: 2em;
 
       .Source {
         font-size: 0.9rem;
         font-weight: bold;
         text-align: left;
+        height:7em;
+        position: relative;
+        overflow: hidden;
+        max-height: 1.3em;
+        .TitleSource {
+          font-size: 1.1em;
+          line-height: 1.3em;
+          max-height: 1.3em;
+        }
+        .TitleSource:after {
+          content: "";
+          text-align: right;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 20%;
+          height: 1.2em;
+          background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+        }
       }
       .Date {
         font-size: 0.8rem;

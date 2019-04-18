@@ -45,7 +45,8 @@ const CardWithButton = props => (
             <div className={`col-3 ${classes.ButtonPosition}`}>
               <ButtonToPage
                 className={classes.Button}
-                url={`${props.article}.Url`}
+                url={props.url}
+                target="_blank"
               >
                 <FormattedHTMLMessage
                   id="Lire"
@@ -66,4 +67,5 @@ export default CardWithButton;
 CardWithButton.propTypes = {
   language: PropTypes.string.isRequired,
   article: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
