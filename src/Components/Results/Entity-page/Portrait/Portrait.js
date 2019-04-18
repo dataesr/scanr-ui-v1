@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 
+import History from './History/History';
 import Identity from './Identity/Identity';
 import Localisation from './Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
@@ -57,7 +58,13 @@ class Portrait extends Component {
               </div>
               <div className="col-6">3-Domaines d expertise</div>
               <div className="col-6">4-Direction</div>
-              <div className="col-6">5-Histoire</div>
+              <div className="col-6">
+                <History
+                  language={this.props.language}
+                  creationYear={this.props.data.creationYear}
+                  id={this.props.data.id}
+                />
+              </div>
             </div>
             <div className="row">
               <div className="col-12">Présence sur le web</div>
