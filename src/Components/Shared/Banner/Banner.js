@@ -21,21 +21,21 @@ const Banner = props => (
     <section className={`${classes.Banner} ${classes[props.cssClass]}`}>
       <div className="container">
         <div className="row">
-          <div className="col-lg">
+          <div className="col-lg-9">
             <FormattedHTMLMessage
-              id={`Banner.title.${props.label}`}
-              defaultMessage={`Banner.title.${props.label}`}
+              id={`Banner.title.${props.labelKey}`}
+              defaultMessage={`Banner.title.${props.labelKey}`}
             />
           </div>
-          <div className={`col-lg-2 ${classes[props.positionbutton]}`}>
+          <div className={`col-lg-3 ${classes.ContainerButton}`}>
             <div className={classes.Button}>
               <ButtonToPage
-                // className={classes[props.className]}
-                url=""
+                url={props.url}
+                target={props.target}
               >
                 <FormattedHTMLMessage
-                  id={`Banner.button.${props.label}`}
-                  defaultMessage={`Banner.button.${props.label}`}
+                  id={`Banner.button.${props.labelKey}`}
+                  defaultMessage={`Banner.button.${props.labelKey}`}
                 />
               </ButtonToPage>
             </div>
@@ -53,6 +53,7 @@ export default Banner;
 Banner.propTypes = {
   cssClass: PropTypes.string,
   language: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  positionbutton: PropTypes.string,
+  labelKey: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  target: PropTypes.string,
 };
