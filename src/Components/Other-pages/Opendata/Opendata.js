@@ -140,9 +140,10 @@ const Opendata = props => (
       <section className={classes.Plateforme}>
         <Banner
           language={props.language}
-          label="Opendata"
+          labelKey="Opendata"
           cssClass="BannerLight"
-          positionbutton="ButtonPadding"
+          url="https://data.enseignementsup-recherche.gouv.fr/pages/home/"
+          target="_blank"
         />
       </section>
       <section className={classes.Api}>
@@ -181,7 +182,7 @@ const Opendata = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.TalkAboutScanr"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./medias"
               lib_button="Découvrir"
               position="CardCenter"
             />
@@ -197,7 +198,7 @@ const Opendata = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.Team"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./l-equipe-et-son-projet"
               lib_button="Découvrir"
               position="CardCenter"
             />
@@ -206,8 +207,9 @@ const Opendata = props => (
       </section>
       <Banner
         language={props.language}
-        label="Appear"
+        labelKey="Appear"
         cssClass="BannerDark"
+        url=""
       />
       <Footer language={props.language} />
     </div>
