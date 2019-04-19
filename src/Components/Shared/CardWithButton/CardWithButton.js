@@ -2,12 +2,13 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import ButtonToPage from '../Ui/Buttons/ButtonToPage';
-
+/* SCSS */
 import classes from './CardWithButton.scss';
 
 const messages = {
