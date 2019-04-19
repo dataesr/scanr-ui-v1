@@ -17,3 +17,20 @@
       }
  }
 }
+
+@media (min-width: 20px) and (max-width: 991.98px) {
+.Banner{
+  .ContainerButton{
+    display: flex;
+    align-items:baseline;
+    justify-content:flex-start;
+    width: 150px;
+    padding: 15px 0px 0px 15px;
+      .Button {
+        padding: 2px 4px 2px 4px;
+        border-radius: 5px;
+        position: relative;
+      }
+    }
+  }
+}
