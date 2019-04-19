@@ -30,10 +30,12 @@ const CardWithButton = props => (
           <div className="row">
             <div className="col-9">
               <div className={classes.Source}>
-                <FormattedHTMLMessage
-                  id={`${props.article}.Source`}
-                  defaultMessage={`${props.article}.Source`}
-                />
+                <div className={classes.TitleSource}>
+                  <FormattedHTMLMessage
+                    id={`${props.article}.Source`}
+                    defaultMessage={`${props.article}.Source`}
+                  />
+                </div>
               </div>
               <div className={classes.Date}>
                 <FormattedHTMLMessage
