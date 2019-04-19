@@ -63,7 +63,6 @@ const CardWithButton = props => (
   </IntlProvider>
 );
 
-
 export default CardWithButton;
 
 CardWithButton.propTypes = {
