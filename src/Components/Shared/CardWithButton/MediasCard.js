@@ -28,7 +28,7 @@ const CardWithButton = props => (
         </div>
         <div className={`container ${classes.BottomCard}`}>
           <div className="row">
-            <div className={`col-9 ${classes.Origine}`}>
+            <div className="col-9">
               <div className={classes.Source}>
                 <div className={classes.TitleSource}>
                   <FormattedHTMLMessage
@@ -62,7 +62,9 @@ const CardWithButton = props => (
     </div>
   </IntlProvider>
 );
+
 export default CardWithButton;
+
 CardWithButton.propTypes = {
   language: PropTypes.string.isRequired,
   article: PropTypes.string.isRequired,
