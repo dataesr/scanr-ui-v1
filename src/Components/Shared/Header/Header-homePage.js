@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -24,10 +24,8 @@ const Header = (props) => {
       <section className={classes.Header}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div>
-            <img
-              className={`img-thumbnail ${classes.img}`}
-              src="./img/logo-ministere.svg"
-              alt="logo ministère"
+            <ScrollLogo
+              scrollStepInPx="50"
             />
           </div>
           <a className="navbar-brand" href="#">
@@ -132,9 +130,36 @@ const Header = (props) => {
   );
 };
 
+class ScrollLogo extends Component {
+  state = {
+    intervalId: 0,
+  };
+
+  scrollStep() {
+    if (window.pageYOffset === 0) {
+      clearInterval(this.state.intervalId);
+    }
+    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+  }
+
+  render() {
+    return (
+      <img
+        className={`img-thumbnail ${classes.img}`}
+        src="./img/logo-ministere.svg"
+        alt="logo ministère"
+      />
+    );
+  }
+}
+
 export default Header;
 
 Header.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
+};
+
+ScrollLogo.propTypes = {
+  scrollStepInPx: PropTypes.number,
 };
