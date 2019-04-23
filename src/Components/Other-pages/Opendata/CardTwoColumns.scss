@@ -2,19 +2,55 @@
 
 .CardTwoColumns {
   background-color: $opendataTitleBgColor;
+  margin:5px;
   color: white;
   border-radius: 8px;
-  padding: 16px;
-  padding-top: 10px;
+  padding: 10px 16px 16px 16px;
   height: 170px;
-  margin:2px;
-
-  .Content {
-    font-size: 0.9rem;
-  }
 
   .Title {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
-
+  .ContainerContent{
+    margin: 0px;
+    padding-top: 5px;
+    .Content {
+      margin: 0px;
+      font-size: 0.9em;
+    }
+  }
+}
+@media (min-width: 425px) and (max-width: 991.98px) {
+  .CardTwoColumns {
+    padding: 5px 8px 8px 10px;
+    max-height:none;
+    .Title {
+      font-size: 1.3rem;
+    }
+    .ContainerContent{
+      padding-top: 5px;
+      .Content {
+        margin: 0px;
+        font-size: 0.9em;
+        line-height: 1.2em;
+      }
+    }
+  }
+}
+@media (min-width: 20px) and (max-width: 425px) {
+  .CardTwoColumns {
+    padding: 5px 8px 8px 10px;
+    max-height:none;
+    .Title {
+      font-size: 1.1rem;
+    }
+    .ContainerContent{
+      padding-top: 5px;
+      .Content {
+        margin: 0px;
+        font-size: 0.8em;
+        line-height: 1.2em;
+      }
+    }
+  }
 }

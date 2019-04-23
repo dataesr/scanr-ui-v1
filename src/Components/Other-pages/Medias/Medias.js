@@ -77,14 +77,6 @@ const Medias = props => (
             <CardWithButton
               language={props.language}
               schema="card_dark"
-              title="Discover.TalkAboutScanr"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Découvrir"
-              position="CardCenter"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="card_dark"
               title="Discover.Sources"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Découvrir"
@@ -94,6 +86,14 @@ const Medias = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.Team"
+              url="./l-equipe-et-son-projet"
+              lib_button="Découvrir"
+              position="CardCenter"
+            />
+            <CardWithButton
+              language={props.language}
+              schema="card_dark"
+              title="Discover.FAQ"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Découvrir"
               position="CardCenter"
@@ -103,8 +103,9 @@ const Medias = props => (
       </section>
       <Banner
         language={props.language}
-        label="Appear"
+        labelKey="Appear"
         cssClass="BannerDark"
+        url=""
       />
       <Footer language={props.language} />
     </div>
