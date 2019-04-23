@@ -83,7 +83,7 @@ const Header = (props) => {
               </li>
             </ul>
             <ul className="navbar-nav">
-              <li className="na==v-item">
+              <li className="nav-item">
                 <a className="nav-link" href="#">
                   <FormattedHTMLMessage
                     id="Header.link.cookies"
