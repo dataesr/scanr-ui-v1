@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import BreadCrumb from '../../../Shared/Ui/Breadcrumb/Breadcrumb';
+//import BreadCrumb from '../../../Shared/Ui/Breadcrumb/Breadcrumb';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
