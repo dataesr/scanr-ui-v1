@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Identity from './Identity/Identity';
 // import Localisation from './Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-import Background from './poudre-jaune_Fgris-B_V2.jpg';
+//import Background from './poudre-jaune_Fgris-B_V2.jpg';
 
 import classes from './Portrait.scss';
 
@@ -16,6 +16,7 @@ import classes from './Portrait.scss';
  * Accessible : .
  * Tests unitaires : .
 */
+
 class Portrait extends Component {
   state = {
     data: {},
