@@ -18,7 +18,7 @@
       margin-bottom: 12px;
       height:7em;
       position: relative;
-      overflow: hidden;
+      overflow:hidden;
       max-height: 4.1em;
 
       .Title {
@@ -45,7 +45,6 @@
       height: 2em;
 
       .Source {
-        font-size: 0.9rem;
         font-weight: bold;
         text-align: left;
         height:7em;
@@ -53,7 +52,7 @@
         overflow: hidden;
         max-height: 1.3em;
         .TitleSource {
-          font-size: 1.1em;
+          font-size: 0.9em;
           line-height: 1.3em;
           max-height: 1.3em;
         }
@@ -63,7 +62,7 @@
           position: absolute;
           bottom: 0;
           right: 0;
-          width: 20%;
+          width: 30%;
           height: 1.2em;
           background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
         }
