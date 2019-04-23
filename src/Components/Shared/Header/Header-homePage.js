@@ -24,9 +24,7 @@ const Header = (props) => {
       <section className={classes.Header}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div>
-            <ScrollLogo
-              scrollStepInPx="50"
-            />
+            <ScrollLogo />
           </div>
           <a className="navbar-brand" href="#">
             ScanR_Icon
@@ -85,7 +83,7 @@ const Header = (props) => {
               </li>
             </ul>
             <ul className="navbar-nav">
-              <li className="nav-item">
+              <li className="na==v-item">
                 <a className="nav-link" href="#">
                   <FormattedHTMLMessage
                     id="Header.link.cookies"
@@ -130,28 +128,31 @@ const Header = (props) => {
   );
 };
 
-class ScrollLogo extends Component {
-  state = {
-    intervalId: 0,
-  };
-
-  scrollStep() {
-    if (window.pageYOffset === 0) {
-      clearInterval(this.state.intervalId);
+class ScrollLogo extends React.Component {
+  handleScroll = (e) => {
+    console.log('onScroll');
+    const element = e.target;
+    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+      // do something at end of scroll
     }
-    window.scroll(0, window.pageYOffset - this.props.scrollStepInPx);
+    console.log('scrollHeight:', element.scrollHeight);
+    console.log('scrollTop:', element.scrollTop);
+    console.log('clientHeight:', element.clientHeight);
   }
 
   render() {
     return (
-      <img
-        className={`img-thumbnail ${classes.img}`}
-        src="./img/logo-ministere.svg"
-        alt="logo ministère"
-      />
+      <div className="content-container" onScroll={() => this.handleScroll()}>
+        <img
+          className={`img-thumbnail ${classes.img}`}
+          src="./img/logo-ministere.svg"
+          alt="logo ministère"
+        />
+      </div>
     );
   }
 }
+
 
 export default Header;
 
