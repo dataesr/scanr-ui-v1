@@ -23,7 +23,7 @@ const messages = {
   en: messagesEn,
 };
 
-const videoPoster = 'img/Tai-Ji-gravure-paysage-Chine.gif';
+const videoPoster = 'img/video-poster/Tai-Ji-gravure-paysage-Chine.gif';
 
 const TutorialVideo = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
