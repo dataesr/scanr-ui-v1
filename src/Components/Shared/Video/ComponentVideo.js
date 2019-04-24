@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 
@@ -18,11 +18,11 @@ const messages = {
 const ComponentVideo = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`${classes.ComponentVideo}`}>
-      <video width="60%" controls poster={props.poster}>
+      <video width="100%" controls poster={props.poster}>
         <source src={props.url} type="video/mp4" />
-        <FormattedMessage
+        <FormattedHTMLMessage
           id="ComponentVideo.text"
-          defaultMessage="Votre navigateur ne suppporte pas cette video"
+          defaultMessage="ComponentVideo.text"
         />
       </video>
     </div>
@@ -32,7 +32,7 @@ const ComponentVideo = props => (
 export default ComponentVideo;
 
 ComponentVideo.propTypes = {
-  language: PropTypes.string.isRequired,
+  language: PropTypes.string,
   url: PropTypes.string.isRequired,
   poster: PropTypes.string,
 };
