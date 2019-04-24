@@ -1,11 +1,45 @@
 @import '../../../style.scss';
 
+
 .Tutorials {
   padding: 0;
-  margin: 0;
+  margin: 0 ;
+  border: none;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 100%; /* version standardisée */
 
   .Content {
-    padding-top: $otherPagesPaddingTop;
-    padding-bottom: $otherPagesPaddingBottom;
+    padding: 50px 0;
+    background-color: #E9ECF1;
+    border-radius: 5px  ;
+    color: $textColor;
+
+    H2 {
+      color: $titleColor;
+      font-size: 1.5rem ;
+      font-weight: bold;
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+
+    P {
+      font-size: 0.9em;
+      padding-right: 80px;
+    }
+
   }
+
+  .Cards {
+    background-color: white;
+    background-image: url("./poudre-bleu_Fblanc-A.jpg");
+    background-position: 50px 1000px ;
+  }
+
+  @media (min-width: 20px) and (max-width: 991.98px) {
+    margin: .5rem;
+
+  }
+
 }
