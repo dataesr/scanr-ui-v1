@@ -1,0 +1,23 @@
+@import '../../../style.scss';
+
+.Ressources {
+  padding: 0;
+  margin: 0;
+
+  .Content {
+    padding-top: $otherPagesPaddingTop;
+    padding-bottom: $otherPagesPaddingBottom;
+    background-repeat: no-repeat;
+    background-attachment: relative;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: 50%; /* version standardisée */
+    background-color: rgb(233, 236, 241);
+    background-position: bottom 0 left 0;
+    .parts{
+      padding-top:40px ;
+    }
+  }
+  .ThreeCards{
+    padding:24px 0px 24px 0px;
+  }
+}
