@@ -1,11 +1,14 @@
 import React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import CardToPage from '../../Shared/CardWithButton/CardToPage';
+import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-// import Tutorialvideo from './TutorialVideo/TutorialVideo';
+import TutorialVideo1 from './TutorialVideo/TutorialVideo1';
+import TutorialVideo2 from './TutorialVideo/TutorialVideo2';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -19,6 +22,15 @@ const messages = {
   en: messagesEn,
 };
 
+/**
+ * Tutorials
+ * Url : /tutoriels
+ * Description : Page de description des tutoriels - Comment fonctionne scanR ?
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+ */
+
 const Tutorials = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.Tutorials}`}>
@@ -26,25 +38,74 @@ const Tutorials = props => (
         language={props.language}
         switchLanguage={props.switchLanguage}
       />
-      <section>
-        <HeaderTitle
-          language={props.language}
-          label="tutorials"
-        />
-        {
-          /*
+      <HeaderTitle
+        language={props.language}
+        label="tutorial"
+      />
 
-          <Tutorialvideo
-          labelKey="tuto1"
-          language={props.language}
-          />
-          <Tutorialvideo
-          labelKey="tuto2"
-          language={props.language}
-          />
-          */
-        }
+      <section className={classes.Content}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <FormattedHTMLMessage
+                id="contentTexte"
+                defaultMessage="contentTexte"
+              />
+            </div>
+          </div>
+        </div>
       </section>
+
+      <TutorialVideo1
+        labelKey="titleTuto1"
+        language={props.language}
+      />
+      <TutorialVideo2
+        labelKey="titleTuto2"
+        language={props.language}
+      />
+
+      <section className={classes.Cards}>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg py-5">
+            <CardToPage
+              cssClass="card_lightdark"
+              labelKey="consultFAQ"
+              language={props.language}
+              url=""
+              btnText="discover"
+            />
+          </div>
+          <div className="col-lg py-5">
+            <CardToPage
+              cssClass="card_lightdark"
+              labelKey="whatAreOurSources"
+              language={props.language}
+              url=""
+              btnText="discover"
+            />
+          </div>
+          <div className="col-lg py-5">
+            <CardToPage
+              cssClass="card_lightdark"
+              labelKey="openData"
+              language={props.language}
+              url=""
+              btnText="discover"
+            />
+          </div>
+        </div>
+      </div>
+      </section>
+      <ComponentToPage
+        btnText="discover"
+        cssClass="Component_dark"
+        labelKey="howToAppearInScanR"
+        language={props.language}
+        url=""
+      />
+
       <Footer language={props.language} />
     </div>
   </IntlProvider>

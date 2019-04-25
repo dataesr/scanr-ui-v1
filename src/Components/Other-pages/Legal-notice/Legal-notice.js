@@ -3,12 +3,12 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import DiscoverThreeCards from '../../Shared/DiscoverThreeCards/DiscoverThreeCards';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
+import Banner from '../../Shared/Banner/Banner';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -37,7 +37,9 @@ const LegalNoticePage = props => (
       />
       <HeaderTitle
         language={props.language}
-        label="legal"
+        labelkey="legal"
+        url1="/"
+        url2="#"
       />
       <section style={sectionStyle} className={classes.LegalSectionPoudre}>
         <div className="container">
@@ -336,9 +338,10 @@ const LegalNoticePage = props => (
         />
       </section>
 
-      <ComponentToPage
-        labelKey="HowToAppearInScanR"
+      <Banner
         language={props.language}
+        labelKey="Appear"
+        cssClass="BannerDark"
         url=""
       />
 
