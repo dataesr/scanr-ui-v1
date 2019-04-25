@@ -99,6 +99,9 @@ $otherPagesPaddingBottom: 90px;
 /*Medias*/
 $colormediaperiod:rgb(56, 119, 186);
 
+/*Ressources*/
+$bgcolormSmallCard:rgb(56, 119, 186);
+
 /*Cards*/
 $cardTitleBgColor: rgb(220, 220, 220);
 .card_dark {
@@ -164,6 +167,11 @@ $cardTitleBgColor: rgb(220, 220, 220);
   color: white;
 }
 
+/* card de logo*/
+.CardLogo {
+  width: 200px;
+  height: 200px;
+}
 
 /* ComponaentToPage */
 .Component_dark {
