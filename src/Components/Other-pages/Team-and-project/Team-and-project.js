@@ -2,9 +2,9 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
+import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
@@ -23,6 +23,14 @@ const messages = {
   en: messagesEn,
 };
 
+/**
+ * Team-and-Project
+ * Url : /l-equipe-et-son-projet
+ * Description : Page de description de l'équipe - L'équipe et son projet
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+ */
 
 const TeamAndProjectPage = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -24,11 +24,7 @@ const Header = (props) => {
       <section className={classes.Header}>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div>
-            <img
-              className={`img-thumbnail ${classes.img}`}
-              src="./img/logo-ministere.svg"
-              alt="logo ministère"
-            />
+            <ScrollLogo />
           </div>
           <a className="navbar-brand" href="#">
             ScanR_Icon
@@ -132,9 +128,39 @@ const Header = (props) => {
   );
 };
 
+class ScrollLogo extends React.Component {
+  handleScroll = (e) => {
+    console.log('onScroll');
+    const element = e.target;
+    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
+      // do something at end of scroll
+    }
+    console.log('scrollHeight:', element.scrollHeight);
+    console.log('scrollTop:', element.scrollTop);
+    console.log('clientHeight:', element.clientHeight);
+  }
+
+  render() {
+    return (
+      <div className="content-container" onScroll={() => this.handleScroll()}>
+        <img
+          className={`img-thumbnail ${classes.img}`}
+          src="./img/logo-ministere.svg"
+          alt="logo ministère"
+        />
+      </div>
+    );
+  }
+}
+
+
 export default Header;
 
 Header.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
+};
+
+ScrollLogo.propTypes = {
+  scrollStepInPx: PropTypes.number,
 };
