@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ComponentVideo from '../Video/ComponentVideo';
+import ComponentVideo from '../../../Shared/Video/ComponentVideo';
 
 /* Gestion des langues */
 import messagesFr from '../translations/fr.json';
@@ -24,21 +24,25 @@ const messages = {
   en: messagesEn,
 };
 
-const videoPoster = 'img/video-poster/paques.jpg';
+const videoPoster = 'img/video-poster/paques-mini.png';
 
 const DiscoverScanR = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section style={sectionStyle} className={classes.DiscoverScanR}>
       <div className="container">
-        <div className="row flex-column justify-content-around text-center text-white">
-          <FormattedHTMLMessage
+        <div className="row">
+          <div className="col-lg" />
+          <div className="col-lg-9 cols-12">
+            <FormattedHTMLMessage
             id={`DiscoverScanR.${props.labelKey}`}
             defaultMessage={`DiscoverScanR.${props.labelKey}`}
-          />
-          <ComponentVideo
-            url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-            poster={videoPoster}
-          />
+            />
+            <ComponentVideo
+              url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+              poster={videoPoster}
+            />
+          </div>
+          <div className="col-lg" />
         </div>
       </div>
     </section>

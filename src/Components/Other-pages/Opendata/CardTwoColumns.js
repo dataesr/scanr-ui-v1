@@ -23,8 +23,10 @@ const CardTwoColumns = props => (
             defaultMessage={props.title}
           />
         </div>
-        <div className={classes.Content}>
-          {props.children}
+        <div className={`row ${classes.ContainerContent} `}>
+          <div className={classes.Content}>
+            {props.children}
+          </div>
         </div>
       </div>
     </div>
