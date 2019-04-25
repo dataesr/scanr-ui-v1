@@ -1,19 +1,31 @@
 @import '../../../style.scss';
 
 .Contact {
-  padding: 0;
-  margin: 0;
-  border: none;
-  background-repeat: no-repeat;
-  background-attachment: relative;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: 100%; /* version standardisée */
-  background-color: #E9ECF1;
 
-  .Content {
-    padding-top: $otherPagesPaddingTop;
-    padding-bottom: $otherPagesPaddingBottom;
+  .Content{
+  padding: 50px 0;
+  //padding-top: $otherPagesPaddingTop;
+  //padding-bottom: $otherPagesPaddingBottom;
+  background-color: #E9ECF1;
+  border-radius: 5px ;
+  color: $textColor;
+
+  H2 {
+    color: $titleColor;
+    font-size: 1.5rem ;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 10px;
   }
+
+  P {
+    font-size: 0.9em;
+    padding-right: 80px
+  }
+
+
+}
+
 
   .Cards {
     background-color: white;

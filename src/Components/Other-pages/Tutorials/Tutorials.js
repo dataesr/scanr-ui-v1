@@ -40,7 +40,9 @@ const Tutorials = props => (
       />
       <HeaderTitle
         language={props.language}
-        label="tutorial"
+        labelkey="tutorial"
+        url1="/"
+        url2="#"
       />
 
       <section className={classes.Content}>
