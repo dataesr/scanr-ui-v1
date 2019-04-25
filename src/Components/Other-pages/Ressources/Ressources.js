@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -27,16 +27,16 @@ const sectionStyle = {
   backgroundImage: `url(${Background})`,
 };
 
-const Ressources = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
+class Ressources extends Component {
+  renderRessources = () => (
     <div className={`container-fluid ${classes.Ressources}`}>
       <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
+        language={this.props.language}
+        switchLanguage={this.props.switchLanguage}
       />
       <section>
         <HeaderTitle
-          language={props.language}
+          language={this.props.language}
           label="ressources"
         />
       </section>
@@ -217,7 +217,7 @@ const Ressources = props => (
         <div className="container">
           <div className="row">
             <CardWithButton
-              language={props.language}
+              language={this.props.language}
               title="Discover.Sources"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Découvrir"
@@ -225,7 +225,7 @@ const Ressources = props => (
               schema="card_dark"
             />
             <CardWithButton
-              language={props.language}
+              language={this.props.language}
               title="Discover.TalkAboutScanr"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Découvrir"
@@ -233,7 +233,7 @@ const Ressources = props => (
               schema="card_dark"
             />
             <CardWithButton
-              language={props.language}
+              language={this.props.language}
               title="Discover.Opendata"
               url="https://worldwide.espacenet.com/?locale=fr_EP"
               lib_button="Découvrir"
@@ -244,14 +244,51 @@ const Ressources = props => (
         </div>
       </section>
       <Banner
-        language={props.language}
+        language={this.props.language}
         labelKey="Appear"
         cssClass="BannerDark"
       />
-      <Footer language={props.language} />
+      <Footer language={this.props.language} />
     </div>
-  </IntlProvider>
-);
+  )
+
+  renderOneRessource() {
+    return (
+      <div className={`container-fluid ${classes.Ressources}`}>
+        <Header
+          language={this.props.language}
+          switchLanguage={this.props.switchLanguage}
+        />
+        <section>
+          <HeaderTitle
+            language={this.props.language}
+            label="ressources"
+          />
+        </section>
+
+        {this.props.match.params.id}
+
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerDark"
+        />
+        <Footer language={this.props.language} />
+      </div>
+    );
+  }
+
+  render() {
+    const content = (this.props.match.params.id) ? this.renderOneRessource() : this.renderRessources();
+    return (
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
+          {content}
+        </Fragment>
+      </IntlProvider>
+    );
+  }
+}
 
 export default Ressources;
 

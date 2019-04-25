@@ -130,8 +130,7 @@ class App extends Component {
             />
 
             <Route
-              exact
-              path="/ressources"
+              path={['/ressources/:id', '/ressources']}
               component={props => (
                 <Ressources
                   {...props}
@@ -140,7 +139,6 @@ class App extends Component {
                 />
               )}
             />
-
 
             <Route
               exact
