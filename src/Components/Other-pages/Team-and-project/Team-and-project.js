@@ -42,7 +42,9 @@ const TeamAndProjectPage = props => (
 
       <HeaderTitle
         language={props.language}
-        label="team"
+        labelkey="team"
+        url1="/"
+        url2="#"
       />
 
       <section className={classes.Content}>
