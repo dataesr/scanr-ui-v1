@@ -1,14 +1,12 @@
 import React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
+import Banner from '../../Shared/Banner/Banner';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-
-import Background from './poudre-bleu_Fblanc-A.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -41,35 +39,47 @@ const Contact = props => (
       <section>
         <HeaderTitle
           language={props.language}
-          label="contact"
+          labelkey="contact"
+          url1="/"
+          url2="#"
         />
 
-        <section className={classes.FormContact}>
+        <section className={classes.Content}>
           <div className="container">
             <div className="row">
               <div className="col-lg-5">
-                Texte presente
+                <div className={classes.Texte}>
+                  <FormattedHTMLMessage
+                    id="contentTexte"
+                    defaultMessage="contentTexte"
+                  />
+                </div>
               </div>
               <div className="col-lg-7">
                 vide
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-5">
-                 4 Input
+
+          /*  <form action="#" className="FormContact"> */
+              <div className="row">
+                <div className="col-lg-5">
+                    <label htmlFor="name">Votre nom et prénom*</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+                <div className="col-lg-7">
+                  Formulaire
+                </div>
               </div>
-              <div className="col-lg-7">
-                Formulaire
+              <div className="row">
+                <div className="col-lg-5">
+                    Texte rgpd
+                </div>
+                <div className="col-lg-7">
+                    robot + button
+                </div>
               </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-5">
-                Texte rgpd
-              </div>
-              <div className="col-lg-7">
-                robot + button
-              </div>
-            </div>
+          /*  </form> */
+
           </div>
         </section>
 
@@ -106,14 +116,14 @@ const Contact = props => (
             </div>
           </div>
         </section>
-        <ComponentToPage
-          btnText="discover"
-          cssClass="Component_dark"
-          labelKey="howToAppearInScanR"
+
+        <Banner
+          cssClass="BannerDark"
+          labelKey="Appear"
           language={props.language}
           url=""
+          target="_blank"
         />
-
       </section>
       <Footer language={props.language} />
     </div>
