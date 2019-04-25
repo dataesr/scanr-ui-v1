@@ -14,6 +14,30 @@
     padding-left: 16px;
   }
 
+  .BreadCrumb {
+    color: white;
+
+    a {
+      color: white;
+    }
+
+    .breadcrumb {
+      background-color: #ffffff00;
+    }
+
+    .breadcrumb > .active {
+      color: $colorBreadCrumbHeaderTitle;
+      font-weight: bold;
+
+    }
+
+    .breadcrumb > .active:before {
+      content: ">";
+      color: white;
+    }
+
+  }
+
 @media (max-width: 1520px) {
   padding-top: 115px;
 }
