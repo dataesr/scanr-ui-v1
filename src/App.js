@@ -18,7 +18,6 @@ import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
-import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
 import RessourcesPage from './Components/Other-pages/Ressources/Ressources';
@@ -129,19 +128,6 @@ class App extends Component {
                 />
               )}
             />
-
-            <Route
-              exact
-              path="/ressources"
-              component={props => (
-                <Ressources
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-
 
             <Route
               exact
