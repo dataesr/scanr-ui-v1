@@ -3,9 +3,27 @@
 .Contact {
   padding: 0;
   margin: 0;
+  border: none;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 100%; /* version standardisée */
+  background-color: #E9ECF1;
 
   .Content {
     padding-top: $otherPagesPaddingTop;
     padding-bottom: $otherPagesPaddingBottom;
   }
+
+  .Cards {
+    background-color: white;
+    background-image: url("./poudre-bleu_Fblanc-A.jpg");
+    background-position: 50px 1000px ;
+  }
+
+  @media (min-width: 20px) and (max-width: 991.98px) {
+    margin: .5rem;
+
+  }
+
 }
