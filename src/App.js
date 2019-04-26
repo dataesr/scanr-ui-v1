@@ -5,19 +5,20 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
+import HomePage from './Components/Home-page/Home-page';
+import SearchPage from './Components/Search-page/Search-page';
+import EntityPage from './Components/Results/Entity-page/Entity-page';
+
+/* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
 import ContributePage from './Components/Other-pages/Contribute/Contribute';
 import ContactPage from './Components/Other-pages/Contact/Contact';
 import FAQPage from './Components/Other-pages/FAQ/FAQ';
 import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
-import HomePage from './Components/Home-page/Home-page';
-import Entity from './Components/Results/Entity-page/Entity';
-import Focus from './Components/Focus-pages/List-HomePage';
-import FocusId from './Components/Focus-pages/focus-1/focus-1';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
-import SearchPage from './Components/Search-page/Search-page';
+import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
 
@@ -31,9 +32,7 @@ class App extends Component {
   }
 
   setDefaultLanguage() {
-    const defaultLanguage = navigator.language.split(/[-_]/)[0];
-
-    this.setState({ language: defaultLanguage });
+    this.setState({ language: navigator.language.split(/[-_]/)[0] });
   }
 
   switchLanguage = (lang) => {
@@ -70,7 +69,16 @@ class App extends Component {
 
             <Route path="/recherche" component={SearchPage} />
 
-            <Route path="/entity" component={Entity} />
+            <Route
+              path="/entite/:id"
+              render={props => (
+                <EntityPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
 
             <Route
               exact
@@ -97,7 +105,6 @@ class App extends Component {
             />
 
             {/* vvv--------------- other-pages ------------------vvv  */}
-
             <Route
               exact
               path="/accessibilite"
@@ -138,6 +145,17 @@ class App extends Component {
               path="/opendata"
               component={props => (
                 <Opendata
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              path={['/ressources/:id', '/ressources']}
+              component={props => (
+                <Ressources
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
