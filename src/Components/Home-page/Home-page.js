@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ComponentToPage from '../Shared/ComponentToPage/ComponentToPage';
-import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import LastFocus from '../Shared/LastFocus/LastFocus';
@@ -11,6 +9,7 @@ import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
 import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
+import Banner from '../Shared/Banner/Banner';
 
 import classes from './Home-page.scss';
 
@@ -34,9 +33,10 @@ const HomePage = props => (
 
     <ScanrToday language={props.language} />
 
-    <ComponentToPage
-      labelKey="WhatAreOurSources"
+    <Banner
       language={props.language}
+      labelKey="WhatAreOurSources"
+      cssClass="BannerLight"
       url=""
     />
 
@@ -45,9 +45,10 @@ const HomePage = props => (
       data={['Brain to computer', 'Anthropologie évolutive', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
     />
 
-    <ComponentToPage
-      labelKey="HowToAppearInScanR"
+    <Banner
       language={props.language}
+      labelKey="Appear"
+      cssClass="BannerLight"
       url=""
     />
 
@@ -55,7 +56,13 @@ const HomePage = props => (
 
     <Newsletter language={props.language} />
 
-    <DiscoverDataEsr language={props.language} />
+    <Banner
+      language={props.language}
+      labelKey="DiscoverDataesr"
+      cssClass="BannerDark"
+      url="https://data.esr.gouv.fr/FR/"
+      target="_blank"
+    />
 
     <Footer language={props.language} />
 

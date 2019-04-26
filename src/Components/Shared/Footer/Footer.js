@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import logo from '../../Shared/svg/logo-ministere.svg';
+
 /* SCSS */
 import classes from './Footer.scss';
 
@@ -21,7 +23,7 @@ const Footer = props => (
         <div className="row">
           <div className="col">
             <img
-              src="./img/logo-ministere.svg"
+              src={logo}
               alt="Logo MESRI"
               className={classes.Logo}
             />

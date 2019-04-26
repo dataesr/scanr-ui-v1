@@ -12,24 +12,43 @@ $projectsColor: rgb(93, 217, 157);
 $publicationsColor: rgb(204, 61, 143);
 $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
+$mediaTextColor:rgb(56, 119, 186);
 
-.entitiesBgColor {
+/* cards de couleur dans la page open data*/
+.entitiesCards {
   background-color: $entitiesColor !important;
   color: $titleColor !important;
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+  }
 }
-.projectsBgColor {
+.projectsCards {
   background-color: $projectsColor !important;
   color: $titleColor !important;
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+  }
 }
-.personsBgColor {
+.personsCards {
   background-color: $personsColor !important;
   color: $titleColor !important;
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+  }
 }
-.publicationsBgColor {
+.publicationsCards {
   background-color: $publicationsColor !important;
   color: $titleColor !important;
+  .Button {
+    background-color: rgb(56, 119, 186);
+    color: white;
+  }
 }
 
+/* BANNIERES*/
 /* couleurs de bannières avec boutons */
 .BannerLight {
   background-color: white;
@@ -40,7 +59,6 @@ $headerHeight: 56px;
   .Button{
     background-color: rgb(56, 119, 186);
     color: white;
-    border-radius: 5px;
   }
 }
 .BannerDark {
@@ -52,16 +70,7 @@ $headerHeight: 56px;
   .Button {
     background-color: white;
     color: $titleColor;
-    border-radius: 5px;
   }
-}
-.ButtonPadding {
-  margin:15px;
-  padding-top: 5px;
-  }
-
-.CardCenter {
-    text-align: center;
 }
 
 /* HomePage */
@@ -87,7 +96,14 @@ $breadcrumb-divider: quote(">");
 $otherPagesPaddingTop: 90px;
 $otherPagesPaddingBottom: 90px;
 
+/*Medias*/
+$colormediaperiod:rgb(56, 119, 186);
+
+/*Ressources*/
+$bgcolormSmallCard:rgb(56, 119, 186);
+
 /*Cards*/
+$cardTitleBgColor: rgb(220, 220, 220);
 .card_dark {
   background-color: rgb(56, 119, 186);
   color: white;
@@ -128,6 +144,18 @@ $otherPagesPaddingBottom: 90px;
   }
 }
 
+/*centrage de la card*/
+
+.CardCenter {
+  text-align: center;
+  vertical-align:middle;
+  margin:auto;
+  font-size: 1.4rem;
+  .Button {
+    margin: auto;
+    width: 6rem;
+  }
+}
 .InfoIcon_style {
   display: inline-block;
   margin-left: 5px;
@@ -139,6 +167,11 @@ $otherPagesPaddingBottom: 90px;
   color: white;
 }
 
+/* card de logo*/
+.CardLogo {
+  width: 200px;
+  height: 200px;
+}
 
 /* ComponaentToPage */
 .Component_dark {
