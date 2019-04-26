@@ -9,7 +9,7 @@ import Lexicon from '../../Shared/Lexicon/Lexicon';
 
 import D3Bar from './D3Bar';
 import D3BarRounded from './D3BarRounded';
-import D3Map from './D3Map';
+import LMap from './LeafletMap';
 import HighChartsGraph from './HighChartsAccessibility';
 
 import classes from '../../Home-page/Home-page.scss';
@@ -80,7 +80,7 @@ const FocusId = props => (
 
     <div id="mapid" style={divStyle} />
 
-    <D3Map />
+    <LMap />
 
     <HighChartsGraph />
 
