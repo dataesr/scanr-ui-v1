@@ -7,7 +7,7 @@ import PrintControlDefault from 'react-leaflet-easyprint';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import yellowIcon from './MarkerStyle';
 
-import './customLeafletCss.scss';
+import './customLeaflet.scss';
 
 const PrintControl = withLeaflet(PrintControlDefault);
 
