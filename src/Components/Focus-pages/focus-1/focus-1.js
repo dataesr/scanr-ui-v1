@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Loadable from 'react-loadable';
 
 // Composants
 import DiscoverDataEsr from '../../Shared/DiscoverDataEsr/DiscoverDataEsr';
@@ -7,10 +8,11 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
 
-import D3Bar from './D3Bar';
-import D3BarRounded from './D3BarRounded';
-import LMap from './LeafletMap';
-import HighChartsGraph from './HighChartsAccessibility';
+
+// import D3Bar from './D3Bar';
+// import D3BarRounded from './D3BarRounded';
+// import LMap from './LeafletMap';
+// import HighChartsBar from './HighChartsBar';
 
 import classes from '../../Home-page/Home-page.scss';
 
@@ -18,6 +20,7 @@ import classes from '../../Home-page/Home-page.scss';
  * Focus-1 component <br/>
  * Url : /focus/$id <br/>
  * Description : Page présentant les graphs correspondant au focus $id <br/>
+ * Tableau de types afin de savoir quel graph charger
  * Responsive : . <br/>
  * Accessible : . <br/>
  * Tests
@@ -40,10 +43,35 @@ import classes from '../../Home-page/Home-page.scss';
 //   }
 // }
 
-const divStyle = {
-  width: '800px',
-  height: '400px',
-};
+const graphTypes = ['map', 'bar', 'donut', 'bubbles', 'treemap', 'histBubbles', 'cloudBubbles'];
+
+const test = require('../focus.json');
+
+let Component = '';
+
+switch (test.type) {
+  case 'map':
+    import('./LeafletMap');
+    break;
+  case 'bar':
+    Component = Loadable({
+      loader: () => import('./HighChartsBar'),
+      loading: () => <div>Loading...</div>,
+    });
+
+    break;
+  default:
+    Component = '';
+}
+
+function myClick() {
+  alert('toto');
+}
+
+// const LoadableComponent = Loadable({
+//   loader: () => import(component),
+//   loading: () => <div>{component}</div>
+// });
 
 const FocusId = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
@@ -72,17 +100,22 @@ const FocusId = props => (
       <p>BlaBlaBla</p>
     </div>
 
+    <button type="button" onClick={myClick}>Afficher les données du json</button>
+
+    <Component />
+
     <div id="d3" />
+    {
+  // <D3Bar />
+  //
+  // <D3BarRounded />
+  //
+  // <LMap />
+  //
+  // <HighChartsBar />
 
-    <D3Bar />
-
-    <D3BarRounded />
-
-    <div id="mapid" style={divStyle} />
-
-    <LMap />
-
-    <HighChartsGraph />
+    // <LoadableComponent />
+  }
 
     <Footer language={props.language} />
 
