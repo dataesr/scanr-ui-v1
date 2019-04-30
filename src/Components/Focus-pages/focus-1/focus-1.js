@@ -42,7 +42,7 @@ import classes from '../../Home-page/Home-page.scss';
 
 const divStyle = {
   width: '800px',
-  height: '400px'
+  height: '400px',
 };
 
 const FocusId = props => (
