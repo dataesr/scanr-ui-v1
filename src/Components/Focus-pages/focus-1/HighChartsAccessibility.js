@@ -9,18 +9,12 @@ HCExporting(Highcharts);
 HCExportingData(Highcharts);
 HCRounded(Highcharts);
 
-/**
- * HighChartsAccessibility component <br/>
- * Url : /focus/$id <br/>
- * Description : Intégration de bars horizontales avec HighCharts <br/>
- * Responsive : . <br/>
- * Accessible : . <br/>
- * Tests
- */
-
 const options = {
   chart: {
     type: 'bar',
+  },
+  credits: {
+    enabled: false,
   },
   // labels: {
   //     align: 'right',
@@ -31,13 +25,14 @@ const options = {
     text: '',
   },
   xAxis: {
+    lineWidth: 0,
     categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'],
     labels:
     {
       style: { color: '#000000' },
       // enabled: false
       align: 'left',
-      x: 0,
+      x: 20,
     },
   },
   yAxis: {
@@ -55,6 +50,7 @@ const options = {
   },
   legend: {
     hide: true,
+    enabled: false,
     // reversed: true
   },
   plotOptions: {
@@ -69,11 +65,13 @@ const options = {
     },
   },
   series: [{
-    color: '#FF8C00',
+    color: '#FDD85E',
     name: 'John',
-    data: [5, 3, 4, 7, 2],
+    data: [7, 5, 4, 3, 2],
     borderRadiusTopLeft: '80%',
     borderRadiusTopRight: '80%',
+    borderRadiusBottomLeft: '80%',
+    borderRadiusBottomRight: '80%',
   }],
   // }, {
   //   name: 'Jane',
