@@ -8,6 +8,8 @@ import localeEn from 'react-intl/locale-data/en';
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
+import Focus from './Components/Focus-pages/List-HomePage';
+import FocusId from './Components/Focus-pages/focus-1/focus-1';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
