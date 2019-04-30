@@ -9,6 +9,15 @@ HCExporting(Highcharts);
 HCExportingData(Highcharts);
 HCRounded(Highcharts);
 
+/**
+ * HighChartsAccessibility component <br/>
+ * Url : /focus/$id <br/>
+ * Description : Intégration de bars horizontales avec HighCharts <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests
+ */
+
 const options = {
   chart: {
     type: 'bar',
@@ -56,7 +65,7 @@ const options = {
         align: 'right',
         x: 15,
         style: { color: '#000000' },
-      }
+      },
     },
   },
   series: [{
