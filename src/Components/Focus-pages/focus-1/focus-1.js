@@ -53,73 +53,66 @@ let BlockComponent = '';
 
 let GraphComponent = '';
 
-const id = Number(path[path.length - 1]);
-
-
-
-try {
-  switch (paramsFile.elems[id].type) {
-    case 'map':
-      GraphComponent = Loadable({
-        loader: () => import('./LeafletMap'),
-        loading: () => <div>Chargement en cours...</div>,
-      });
-      break;
-    case 'bar':
-      GraphComponent = Loadable({
-        loader: () => import('./HighChartsBar'),
-        loading: () => <div>Chargement en cours...</div>,
-      });
-      break;
-    default:
-      GraphComponent = '';
-  }
-
-  const TitleComponent = () => (
-    <div>{paramsFile.elems[id].name}</div>
-  );
-
-  const TextComponent = () => (
-    <div>{paramsFile.elems[id].text}</div>
-  );
-
-  BlockComponent = () => (
-    <div>
-      <TitleComponent />
-      <GraphComponent />
-      <TextComponent />
-    </div>
-  )
-} catch (error) {
-  BlockComponent = () => (
-    <p>{"Désolé, ce focus n'existe pas..."}</p>
-  );
-}
-
-
 // const LoadableComponent = Loadable({
 //   loader: () => import(component),
 //   loading: () => <div>{component}</div>
 // });
 
 class FocusId extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null,
+    };
+  }
+
   componentDidMount() {
     fetch('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D')
-      .then((res) => {
-        if (res.ok) {
-          return res;
-        }
-        const errorMessage = 'error';
-        const error = new Error(errorMessage);
-        throw (error);
-      })
       .then(res => res.json())
-      .then((json) => {
-        alert(json.data[0].id);
-      });
+      .then(json => this.setState({ data: json }));
+    alert(this.state.data);
   }
 
   render() {
+    const id = Number(this.props.match.params.id);
+    try {
+      switch (paramsFile.elems[id].type) {
+        case 'map':
+          GraphComponent = Loadable({
+            loader: () => import('./LeafletMap'),
+            loading: () => <div>Chargement en cours...</div>,
+          });
+          break;
+        case 'bar':
+          GraphComponent = Loadable({
+            loader: () => import('./HighChartsBar'),
+            loading: () => <div>Chargement en cours...</div>,
+          });
+          break;
+        default:
+          GraphComponent = '';
+      }
+
+      const TitleComponent = () => (
+        <div>{paramsFile.elems[id].name}</div>
+      );
+
+      const TextComponent = () => (
+        <div>{paramsFile.elems[id].text}</div>
+      );
+
+      BlockComponent = () => (
+        <div>
+          <TitleComponent />
+          <GraphComponent />
+          <TextComponent />
+        </div>
+      );
+    } catch (error) {
+      BlockComponent = () => (
+        <p>{"Désolé, ce focus n'existe pas..."}</p>
+      );
+    }
     return (
       <div className={`container-fluid ${classes.HomePage}`}>
         <Header
@@ -215,6 +208,7 @@ class FocusId extends Component {
 export default FocusId;
 
 FocusId.propTypes = {
+  match: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };
