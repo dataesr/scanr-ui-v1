@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Loadable from 'react-loadable';
 
@@ -43,88 +43,174 @@ import classes from '../../Home-page/Home-page.scss';
 //   }
 // }
 
-const graphTypes = ['map', 'bar', 'donut', 'bubbles', 'treemap', 'histBubbles', 'cloudBubbles'];
+// const graphTypes = ['map', 'bar', 'donut', 'bubbles', 'treemap', 'histBubbles', 'cloudBubbles'];
 
-const test = require('../focus.json');
+const paramsFile = require('../focus.json');
 
-let Component = '';
+const path = window.location.pathname.split('/');
 
-switch (test.type) {
-  case 'map':
-    import('./LeafletMap');
-    break;
-  case 'bar':
-    Component = Loadable({
-      loader: () => import('./HighChartsBar'),
-      loading: () => <div>Loading...</div>,
-    });
+let BlockComponent = '';
 
-    break;
-  default:
-    Component = '';
+let GraphComponent = '';
+
+const id = Number(path[path.length - 1]);
+
+
+
+try {
+  switch (paramsFile.elems[id].type) {
+    case 'map':
+      GraphComponent = Loadable({
+        loader: () => import('./LeafletMap'),
+        loading: () => <div>Chargement en cours...</div>,
+      });
+      break;
+    case 'bar':
+      GraphComponent = Loadable({
+        loader: () => import('./HighChartsBar'),
+        loading: () => <div>Chargement en cours...</div>,
+      });
+      break;
+    default:
+      GraphComponent = '';
+  }
+
+  const TitleComponent = () => (
+    <div>{paramsFile.elems[id].name}</div>
+  );
+
+  const TextComponent = () => (
+    <div>{paramsFile.elems[id].text}</div>
+  );
+
+  BlockComponent = () => (
+    <div>
+      <TitleComponent />
+      <GraphComponent />
+      <TextComponent />
+    </div>
+  )
+} catch (error) {
+  BlockComponent = () => (
+    <p>{"Désolé, ce focus n'existe pas..."}</p>
+  );
 }
 
-function myClick() {
-  alert('toto');
-}
 
 // const LoadableComponent = Loadable({
 //   loader: () => import(component),
 //   loading: () => <div>{component}</div>
 // });
 
-const FocusId = props => (
-  <div className={`container-fluid ${classes.HomePage}`}>
-    <Header
-      language={props.language}
-      switchLanguage={props.switchLanguage}
-    />
-
-    {/* <LastFocus language={props.language} /> */}
-
-    <DiscoverDataEsr language={props.language} />
-
-    <div>
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-    </div>
-
-    <button type="button" onClick={myClick}>Afficher les données du json</button>
-
-    <Component />
-
-    <div id="d3" />
-    {
-  // <D3Bar />
-  //
-  // <D3BarRounded />
-  //
-  // <LMap />
-  //
-  // <HighChartsBar />
-
-    // <LoadableComponent />
+class FocusId extends Component {
+  componentDidMount() {
+    fetch('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D')
+      .then((res) => {
+        if (res.ok) {
+          return res;
+        }
+        const errorMessage = 'error';
+        const error = new Error(errorMessage);
+        throw (error);
+      })
+      .then(res => res.json())
+      .then((json) => {
+        alert(json.data[0].id);
+      });
   }
 
-    <Footer language={props.language} />
+  render() {
+    return (
+      <div className={`container-fluid ${classes.HomePage}`}>
+        <Header
+          language={this.props.language}
+          switchLanguage={this.props.switchLanguage}
+        />
 
-    <Lexicon
-      className={classes.HomePageLexiconTop}
-      language={props.language}
-    />
-  </div>
-);
+        {/* <LastFocus language={props.language} /> */}
+
+        <DiscoverDataEsr language={this.props.language} />
+
+        <div>
+          <p>BlaBlaBla</p>
+          <br />
+          <p>BlaBlaBla</p>
+          <br />
+          <p>BlaBlaBla</p>
+          <br />
+        </div>
+
+        <BlockComponent />
+
+        <div id="d3" />
+        {
+      // <D3Bar />
+      //
+      // <D3BarRounded />
+      //
+      // <LMap />
+      //
+      // <HighChartsBar />
+
+        // <LoadableComponent />
+      }
+
+        <Footer language={this.props.language} />
+
+        <Lexicon
+          className={classes.HomePageLexiconTop}
+          language={this.props.language}
+        />
+      </div>
+    );
+  }
+}
+
+// const FocusId = props => (
+  // <div className={`container-fluid ${classes.HomePage}`}>
+  //   <Header
+  //     language={props.language}
+  //     switchLanguage={props.switchLanguage}
+  //   />
+  //
+  //   {/* <LastFocus language={props.language} /> */}
+  //
+  //   <DiscoverDataEsr language={props.language} />
+  //
+  //   <div>
+  //     <p>BlaBlaBla</p>
+  //     <br />
+  //     <p>BlaBlaBla</p>
+  //     <br />
+  //     <p>BlaBlaBla</p>
+  //     <br />
+  //   </div>
+  //
+  //   <BlockComponent />
+  //
+  //   <Test />
+  //
+  //   <div id="d3" />
+  //   {
+  // // <D3Bar />
+  // //
+  // // <D3BarRounded />
+  // //
+  // // <LMap />
+  // //
+  // // <HighChartsBar />
+  //
+  //   // <LoadableComponent />
+  // }
+  //
+  //   <Footer language={props.language} />
+  //
+  //   <Lexicon
+  //     className={classes.HomePageLexiconTop}
+  //     language={props.language}
+  //   />
+  // </div>
+// );
 
 export default FocusId;
 

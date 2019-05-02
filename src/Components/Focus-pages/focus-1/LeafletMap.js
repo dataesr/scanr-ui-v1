@@ -4,7 +4,7 @@ import {
 } from 'react-leaflet';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import PrintControlDefault from 'react-leaflet-easyprint';
-import MarkerClusterGroup from 'react-leaflet-markercluster';
+// import MarkerClusterGroup from 'react-leaflet-markercluster';
 import yellowIcon from './MarkerStyle';
 
 import './customLeaflet.scss';
