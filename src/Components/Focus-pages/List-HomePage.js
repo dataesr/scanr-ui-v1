@@ -8,7 +8,7 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import Lexicon from '../Shared/Lexicon/Lexicon';
-import Search from '../Home-page/Search/Search';
+// import Search from '../Home-page/Search/Search';
 
 import classes from '../Home-page/Home-page.scss';
 
