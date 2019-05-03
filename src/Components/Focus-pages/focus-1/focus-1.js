@@ -62,15 +62,14 @@ class FocusId extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
+      data: [],
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     fetch('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D')
       .then(res => res.json())
-      .then(json => this.setState({ data: json }));
-    alert(this.state.data);
+      .then(json => alert(json.data[0].id));
   }
 
   render() {
