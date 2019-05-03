@@ -8,7 +8,6 @@ import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
 import BlockComponent from './GraphComponent';
 
-
 // import D3Bar from './D3Bar';
 // import D3BarRounded from './D3BarRounded';
 // import LMap from './LeafletMap';

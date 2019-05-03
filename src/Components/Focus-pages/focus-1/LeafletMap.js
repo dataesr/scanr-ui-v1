@@ -56,6 +56,8 @@ class FranceMaps extends Component<{}, State> {
   constructor() {
     super();
     this.print = this.print.bind(this);
+    this.data = [];
+    this.label = [];
   }
 
   state = {
@@ -91,25 +93,26 @@ class FranceMaps extends Component<{}, State> {
     // alert(data[0].address[0].gps.lat);
     // alert(data[0].address[0].gps.lon);
 
-    const data = this.props.data.data;
+    const pos = this.props.data.data;
 
-    data.forEach((element) => {
+    pos.forEach((element) => {
       const tmp = [];
       try {
         tmp.push(element.address[0].gps.lat);
-        tmp.push(element.address[0].gps.lng);
-        data.push(tmp);
+        tmp.push(element.address[0].gps.lon);
+        this.data.push(tmp);
+        this.label.push(element.label.fr);
       } catch (error) {
         console.log(error);
       }
     });
     this.createMarkers = () => {
       const markers = [];
-      for (let i = 0; i < 1; i += 1) {
-        markers.push(<Marker icon={yellowIcon} position={data[i]}><Tooltip>Coucou</Tooltip></Marker>);
+      for (let i = 0; i < this.data.length; i += 1) {
+        markers.push(<Marker icon={yellowIcon} position={this.data[i]}><Tooltip>{this.label[i]}</Tooltip></Marker>);
       }
       return markers;
-    }
+    };
     return (
       <div>
         <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '66vw' }}>
