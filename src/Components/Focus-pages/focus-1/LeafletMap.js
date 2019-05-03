@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import {
   Map, TileLayer, Marker, withLeaflet, MapControl, Tooltip, ZoomControl,
 } from 'react-leaflet';
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import PrintControlDefault from 'react-leaflet-easyprint';
-// import MarkerClusterGroup from 'react-leaflet-markercluster';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 import yellowIcon from './MarkerStyle';
 
 import './customLeaflet.scss';
 
 const PrintControl = withLeaflet(PrintControlDefault);
-
-const cities = require('./data/cities.json');
-
-const data = [];
-cities.forEach((element) => {
-  const tmp = [];
-  tmp.push(element.gps_lat);
-  tmp.push(element.gps_lng);
-  data.push(tmp);
-});
+//
+// const cities = require('./data/cities.json');
+//
+// const data = [];
+// cities.forEach((element) => {
+//   const tmp = [];
+//   tmp.push(element.gps_lat);
+//   tmp.push(element.gps_lng);
+//   data.push(tmp);
+// });
 
 // var cities = require('./data/fr.json');
 // var data = [];
@@ -63,15 +64,6 @@ class FranceMaps extends Component<{}, State> {
     zoom: 5,
   }
 
-  createMarkers = () => {
-    const markers = [];
-    for (let i = 0; i < data.length; i += 1) {
-      markers.push(<Marker icon={yellowIcon} position={data[i]}><Tooltip>{`${cities[i].name}, ${cities[i].zip_code}`}</Tooltip></Marker>);
-    }
-    return markers;
-  }
-
-
   print() {
     this.printControl.printMap('A4Portrait', 'MyFileName');
   }
@@ -95,6 +87,29 @@ class FranceMaps extends Component<{}, State> {
     //   .then(function (dataUrl) {
     //     download(dataUrl, 'my-node.png');
     //   });
+
+    // alert(data[0].address[0].gps.lat);
+    // alert(data[0].address[0].gps.lon);
+
+    const data = this.props.data.data;
+
+    data.forEach((element) => {
+      const tmp = [];
+      try {
+        tmp.push(element.address[0].gps.lat);
+        tmp.push(element.address[0].gps.lng);
+        data.push(tmp);
+      } catch (error) {
+        console.log(error);
+      }
+    });
+    this.createMarkers = () => {
+      const markers = [];
+      for (let i = 0; i < 1; i += 1) {
+        markers.push(<Marker icon={yellowIcon} position={data[i]}><Tooltip>Coucou</Tooltip></Marker>);
+      }
+      return markers;
+    }
     return (
       <div>
         <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '66vw' }}>
@@ -105,11 +120,9 @@ class FranceMaps extends Component<{}, State> {
               attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             />
-            {
-            // <MarkerClusterGroup maxClusterRadius={40}>
-            //   {this.createMarkers()}
-            // </MarkerClusterGroup>
-          }
+            <MarkerClusterGroup maxClusterRadius={40}>
+              {this.createMarkers()}
+            </MarkerClusterGroup>
             <ZoomControl position="bottomleft" />
             {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} /> */}
             <PrintControl style={{ display: 'none' }} ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
@@ -235,3 +248,7 @@ class FranceMaps extends Component<{}, State> {
 }
 
 export default FranceMaps;
+
+FranceMaps.propTypes = {
+  data: PropTypes.string.isRequired,
+};
