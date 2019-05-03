@@ -118,8 +118,6 @@ class FranceMaps extends Component<{}, State> {
         <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '66vw' }}>
           <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh', width: '66vw', borderStyle: 'solid' }} minZoom={2} maxZoom={19}>
             <TileLayer
-              //       attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              //          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             />
