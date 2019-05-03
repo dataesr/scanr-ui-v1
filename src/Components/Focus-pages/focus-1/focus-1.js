@@ -6,7 +6,7 @@ import DiscoverDataEsr from '../../Shared/DiscoverDataEsr/DiscoverDataEsr';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
-import BlockComponent from './GraphComponent';
+import GraphComponent from './GraphComponent';
 
 // import D3Bar from './D3Bar';
 // import D3BarRounded from './D3BarRounded';
@@ -14,7 +14,6 @@ import BlockComponent from './GraphComponent';
 // import HighChartsBar from './HighChartsBar';
 
 import classes from '../../Home-page/Home-page.scss';
-
 /**
  * Focus-1 component <br/>
  * Url : /focus/$id <br/>
@@ -55,16 +54,7 @@ const FocusId = props => (
 
     <DiscoverDataEsr language={props.language} />
 
-    <div>
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-      <p>BlaBlaBla</p>
-      <br />
-    </div>
-
-    <BlockComponent id={props.match.params.id} />
+    <GraphComponent id={props.match.params.id} />
 
     <div id="d3" />
     {
