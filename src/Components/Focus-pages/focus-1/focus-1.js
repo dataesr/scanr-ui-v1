@@ -66,10 +66,11 @@ class FocusId extends Component {
     };
   }
 
-  componentWillMount() {
-    fetch('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D')
+  async componentWillMount() {
+    await fetch('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D')
       .then(res => res.json())
-      .then(json => alert(json.data[0].id));
+      .then(json => this.setState({ data: json }));
+    alert(this.state.data.data[0].id);
   }
 
   render() {
