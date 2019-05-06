@@ -5,7 +5,7 @@
   margin: 0;
 
   .Content {
-    padding-top: $otherPagesPaddingTop;
+    padding-top: 20px;;
     padding-bottom: $otherPagesPaddingBottom;
     background-repeat: no-repeat;
     background-attachment: relative;
@@ -13,19 +13,11 @@
     background-size: 50%; /* version standardisée */
     background-color: rgb(233, 236, 241);
     background-position: bottom 0 left 0;
-    .Parts {
+    color: $ressourceColorDark;
+    .SourcesPart {
       padding-top:40px ;
     }
-    .Titre {
-      font-size: 1.5rem;
-      padding-bottom: 10px;
-    }
-    .TexteGras {
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 10px 0px 10px 0px;;
-    }
-    .Card {
+    .SourcesCard {
       background-color: $bgcolormSmallCard;
       color: white;
       border-radius: 8px;
@@ -33,6 +25,40 @@
       margin: 3px;
       height: 200px;
       width: 200px;
+      .Title {
+      font-weight: bold;
+      padding-top: 5px ;
+      font-size: 1.1rem;
+      }
+    }
+    .SourceTitre {
+      font-size: 1.4rem;
+      padding-bottom: 10px;
+      font-weight: bold;
+    }
+    .SourceTexteGras {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 5px 0px 5px 0px;
+      text-align: justify;
+    }
+    .SourceTextenormal {
+      font-size: 1rem;
+      font-weight: normal;
+      padding: 5px 0px 5px 0px;
+      text-align: justify;
+      color:$ressourceColorLight;
+    }
+    .SourceDemarcation {
+      margin:3px 0px 20px 0px;
+    }
+
+    .SourceCard {
+      background-color: white;
+      border-radius: 8px;
+      padding: 15px 15px;
+      margin: 3px;
+      width: 370px;
       .CardTitle {
 
       }

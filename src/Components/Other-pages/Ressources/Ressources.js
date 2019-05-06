@@ -8,8 +8,8 @@ import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
-import SimpleCard from './SimpleCard';
 import RedirectingLogoCard from '../../Shared/Ui/RedirectingLogoCard/RedirectingLogoCard';
+import IdentityCard from './IdentityCard';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -43,10 +43,12 @@ class Ressources extends Component {
       </section>
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
-          <div className="row">
-            <SimpleCard
-              labelKey="Ressources.Ref"
-            />
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                RÉFÉRENTIELS
+              </div>
+            </div>
             <RedirectingLogoCard
               labelKey="crossref"
               cssClass="CardLogo"
@@ -72,10 +74,12 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
           </div>
-          <div className={`row ${classes.Parts}`}>
-            <SimpleCard
-              labelKey="Ressources.Sources"
-            />
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                SOURCES
+              </div>
+            </div>
             <RedirectingLogoCard
               labelKey="anr"
               cssClass="CardLogo"
@@ -145,10 +149,12 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
           </div>
-          <div className={`row ${classes.Parts}`}>
-            <SimpleCard
-              labelKey="Ressources.Arch"
-            />
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                ARCHIVES OUVERTES
+              </div>
+            </div>
             <RedirectingLogoCard
               labelKey="hal"
               cssClass="CardLogo"
@@ -158,19 +164,23 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
           </div>
-          <div className={`row ${classes.Parts}`}>
-            <SimpleCard
-              labelKey="Ressources.Outils"
-            />
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                OUTILS
+              </div>
+            </div>
             <RedirectingLogoCard
               labelKey="adresse-data-gouv"
               cssClass="CardLogo"
             />
           </div>
-          <div className={`row ${classes.Parts}`}>
-            <SimpleCard
-              labelKey="Ressources.Contrib"
-            />
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                ONT CONTRIBUÉ À SCANR
+              </div>
+            </div>
             <RedirectingLogoCard
               labelKey="3cr"
               cssClass="CardLogo"
@@ -255,7 +265,11 @@ class Ressources extends Component {
 
   renderOneRessource() {
     const ressource = (this.props.match.params.id);
-    const role = `Ressource.role.${ressource}`;
+    const role = `Ressource.Role.${ressource}`;
+    const description = `Ressource.Description.${ressource}`;
+    const utilisation1 = `Ressource.Utilisation1.${ressource}`;
+    const utilisation2 = `Ressource.Utilisation2.${ressource}`;
+    const perimetre = `Ressource.Perimetre.${ressource}`;
     return (
       <div className={`container-fluid ${classes.Ressources}`}>
         <Header
@@ -272,26 +286,63 @@ class Ressources extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg-4">
-                {ressource}
+                <IdentityCard
+                  labelKey={ressource}
+                />
               </div>
-              <div className={`col-lg-8 ${classes.Titre}`}>
+              <div className="col-lg-8">
+                <div className={classes.SourceTitre}>
                 Rôle
-                <div className={classes.TexteGras}>
+                </div>
+                <div className={classes.SourceTexteGras}>
                   <FormattedHTMLMessage
                     id={role}
-                    defaultMessage="contentTexte"
+                    defaultMessage="s"
                   />
                 </div>
-                <div className={classes.Titre}>
+                {/* /row */}
+                <hr className={classes.SourceDemarcation} />
+                <div className={classes.SourceTitre}>
+                Description
+                </div>
+                <div className={classes.SourceTextenormal}>
+                  <FormattedHTMLMessage
+                    id={description}
+                    defaultMessage="s"
+                  />
+                </div>
+                {/* /row */}
+                <hr className={classes.SourceDemarcation} />
+                <div className={classes.SourceTitre}>
                 Utilisation dans scanR
                 </div>
-                <div className={classes.Card}>
-                  <div className={classes.CardTitle}>
-                    <FormattedHTMLMessage
-                      id="contentTexte"
-                      defaultMessage="contentTexte"
-                    />
+                <div className="row">
+                  <div className={classes.SourceCard}>
+                    <div className={classes.SourceCardTitle}>
+                      <FormattedHTMLMessage
+                        id={utilisation1}
+                        defaultMessage="contentTexte"
+                      />
+                    </div>
                   </div>
+                  <div className={classes.SourceCard}>
+                    <div className={classes.SourceCardTitle}>
+                      <FormattedHTMLMessage
+                        id={utilisation2}
+                        defaultMessage="contentTexte"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <hr className={classes.SourceDemarcation} />
+                <div className={classes.SourceTitre}>
+                Périmètre d'utilisation de la source dans scanR
+                </div>
+                <div className={classes.SourceTextenormal}>
+                  <FormattedHTMLMessage
+                    id={perimetre}
+                    defaultMessage="s"
+                  />
                 </div>
               </div>
             </div>
