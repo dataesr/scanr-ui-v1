@@ -23,6 +23,28 @@
     padding-right: 80px
   }
 
+  .FormContact {
+    margin-bottom: 5px;
+
+    label {
+      width: 100%;
+    }
+
+    button {
+      background-color: rgb(56, 119, 186);
+      color: white;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      font-weight: bolder;
+    }
+
+    button:hover {
+      background-color: $hoverLinkButton;
+      color: white;
+    }
+
+  }
+
 
 }
 
