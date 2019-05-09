@@ -46,40 +46,76 @@ const Contact = props => (
 
         <section className={classes.Content}>
           <div className="container">
-            <div className="row">
-              <div className="col-lg-5">
-                <div className={classes.Texte}>
+            <form action="#">
+
+              <div className="row">
+                <div className="col-lg-5">
+                  <div className={classes.Texte}>
+                    <FormattedHTMLMessage
+                      id="scanrTexte"
+                      defaultMessage="scanrTexte"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-lg-5">
+                  <div className={classes.FormContact}>
+                    <label htmlFor="name">
+                      Votre nom et prénom*
+                      <input className={'form-control type="text" placeholder="Ex: Péglion Jéremy" id="name" required'} />
+                    </label>
+                  </div>
+                  <div className={`${classes.FormContact}`}>
+                    <label htmlFor="organisation">
+                      Votre organisation
+                      <input className="form-control" type="text" placeholder="Ex: Institut Pasteur" id="organisation" name="organisation" />
+                    </label>
+                  </div>
+                  <div className={`${classes.FormContact}`}>
+                    <label htmlFor="fonction">
+                      Votre fonction*
+                      <input className="form-control" type="text" placeholder="Ex: Directrice de Centre" id="fonction" name="fonction" required />
+                    </label>
+                  </div>
+                  <div className={`${classes.FormContact}`}>
+                    <label htmlFor="email">
+                      Votre email
+                      <input className="form-control" type="email" placeholder="Ex: jerem@gmail.com" id="email" name="email" />
+                    </label>
+                  </div>
+                </div>
+                <div className="col-lg-7">
+                  <div className={`${classes.FormContact}`}>
+                    <label htmlFor="message">
+                      Votre message
+                      <textarea className="form-control" placeholder="..." rows="9" id="message" name="message" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className={`col-lg-5 ${classes.Texte}`}>
                   <FormattedHTMLMessage
-                    id="contentTexte"
-                    defaultMessage="contentTexte"
+                    id="formDataTexte"
+                    defaultMessage="formDataTexte"
                   />
                 </div>
+                <div className={`col-lg-7 ${classes.FormContact}`}
+                >
+                  <div className="form-checkbox">
+                    <label className="form-check-label" htmlFor="checkRobot">
+                      <input type="checkbox" className="form-check-input" id="checkRobot" name="checkRobot" />
+                      Je ne suis pas un robot
+                    </label>
+                  </div>
+                  <button type="submit">Envoyer</button>
+                </div>
               </div>
-              <div className="col-lg-7">
-                vide
-              </div>
-            </div>
 
-          /*  <form action="#" className="FormContact"> */
-              <div className="row">
-                <div className="col-lg-5">
-                    <label htmlFor="name">Votre nom et prénom*</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div className="col-lg-7">
-                  Formulaire
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-lg-5">
-                    Texte rgpd
-                </div>
-                <div className="col-lg-7">
-                    robot + button
-                </div>
-              </div>
-          /*  </form> */
-
+            </form>
           </div>
         </section>
 
