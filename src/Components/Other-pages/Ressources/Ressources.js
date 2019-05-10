@@ -15,6 +15,9 @@ import IdentityCard from './IdentityCard';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+/* Import des métadonnées */
+import metadata from './metadata.json';
+
 /* SCSS */
 import classes from './Ressources.scss';
 
@@ -22,7 +25,6 @@ const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
-
 
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
@@ -263,13 +265,9 @@ class Ressources extends Component {
     </div>
   )
 
-  renderOneRessource() {
-    const ressource = (this.props.match.params.id);
-    const role = `Ressource.Role.${ressource}`;
-    const description = `Ressource.Description.${ressource}`;
-    const utilisation1 = `Ressource.Utilisation1.${ressource}`;
-    const utilisation2 = `Ressource.Utilisation2.${ressource}`;
-    const perimetre = `Ressource.Perimetre.${ressource}`;
+  renderOneRessource = () => {
+    const ressource = this.props.match.params.id;
+    console.log('metadata:', metadata);
     return (
       <div className={`container-fluid ${classes.Ressources}`}>
         <Header
@@ -288,6 +286,7 @@ class Ressources extends Component {
               <div className="col-lg-4">
                 <IdentityCard
                   labelKey={ressource}
+                  webSite={metadata[`${ressource}.website`]}
                 />
               </div>
               <div className="col-lg-8">
@@ -296,7 +295,7 @@ class Ressources extends Component {
                 </div>
                 <div className={classes.SourceTexteGras}>
                   <FormattedHTMLMessage
-                    id={role}
+                    id={`Ressource.Role.${ressource}`}
                     defaultMessage="s"
                   />
                 </div>
@@ -307,7 +306,7 @@ class Ressources extends Component {
                 </div>
                 <div className={classes.SourceTextenormal}>
                   <FormattedHTMLMessage
-                    id={description}
+                    id={`Ressource.Description.${ressource}`}
                     defaultMessage="s"
                   />
                 </div>
@@ -320,7 +319,7 @@ class Ressources extends Component {
                   <div className={classes.SourceCard}>
                     <div className={classes.SourceCardTitle}>
                       <FormattedHTMLMessage
-                        id={utilisation1}
+                        id={`Ressource.Utilisation1.${ressource}`}
                         defaultMessage="contentTexte"
                       />
                     </div>
@@ -328,7 +327,7 @@ class Ressources extends Component {
                   <div className={classes.SourceCard}>
                     <div className={classes.SourceCardTitle}>
                       <FormattedHTMLMessage
-                        id={utilisation2}
+                        id={`Ressource.Utilisation2.${ressource}`}
                         defaultMessage="contentTexte"
                       />
                     </div>
@@ -340,7 +339,7 @@ class Ressources extends Component {
                 </div>
                 <div className={classes.SourceTextenormal}>
                   <FormattedHTMLMessage
-                    id={perimetre}
+                    id={`Ressource.Perimetre.${ressource}`}
                     defaultMessage="s"
                   />
                 </div>
@@ -375,4 +374,5 @@ export default Ressources;
 Ressources.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
+  match: PropTypes.any,
 };
