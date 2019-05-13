@@ -121,7 +121,7 @@ class FranceMaps extends Component<{}, State> {
               attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
               url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
             />
-            <MarkerClusterGroup maxClusterRadius={40}>
+            <MarkerClusterGroup maxClusterRadius={20}>
               {this.createMarkers()}
             </MarkerClusterGroup>
             <ZoomControl position="bottomleft" />
