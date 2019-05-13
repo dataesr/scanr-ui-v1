@@ -10,18 +10,30 @@
         "yAxis": "Axe y",
         "values" : [ 12, 34, 15, 72, 26]
       }
-},
-  {
-    "id":1,
-    "name": "Les centres CURIE en france",
-    "text": "Test sur les cartes Leaflet",
-    "type": "map",
-    "tags": ["tag1", "tag2", "tag3"],
-    "data" : {
-      "xAxis" : "Axe x",
-      "yAxis": "Axe y",
-      "values" : [ 12, 34, 15, 72, 26]
-      }
-    }
-  ]
+    },
+    {
+      "id":1,
+      "name": "Les centres CURIE en france",
+      "text": "Test sur les cartes Leaflet",
+      "type": "map",
+      "tags": ["tag1", "tag2", "tag3"],
+      "data" : {
+        "xAxis" : "Axe x",
+        "yAxis": "Axe y",
+        "values" : [ 12, 34, 15, 72, 26]
+        }
+      },
+      {
+        "id":2,
+        "name": "Les centres CURIE en france",
+        "text": "Test sur les cartes Leaflet",
+        "type": "pie",
+        "tags": ["tag1", "tag2", "tag3"],
+        "data" : {
+          "xAxis" : "Axe x",
+          "yAxis": "Axe y",
+          "values" : [ 12, 34, 15, 72, 26]
+          }
+        }
+    ]
 }

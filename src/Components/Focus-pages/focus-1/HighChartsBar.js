@@ -56,6 +56,8 @@ const options = {
   plotOptions: {
     series: {
       stacking: 'normal',
+      pointPadding: 0,
+      // groupPadding: 0.1,
       dataLabels: {
         enabled: true,
         align: 'right',
