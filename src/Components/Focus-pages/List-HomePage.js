@@ -6,6 +6,7 @@ import ComponentToPage from '../Shared/ComponentToPage/ComponentToPage';
 import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
+import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import Lexicon from '../Shared/Lexicon/Lexicon';
 // import Search from '../Home-page/Search/Search';
@@ -27,6 +28,14 @@ const Focus = props => (
       language={props.language}
       switchLanguage={props.switchLanguage}
     />
+
+    <HeaderTitle
+      language={props.language}
+      labelkey="focus"
+      url1="/"
+      url2="/focus"
+    />
+
 
     {/* <Search language={props.language} /> */}
 
