@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
-import DiscoverDataEsr from '../../Shared/DiscoverDataEsr/DiscoverDataEsr';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
 import GraphComponent from './GraphComponent';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 
 // import D3Bar from './D3Bar';
 // import D3BarRounded from './D3BarRounded';
@@ -21,7 +21,7 @@ import classes from '../../Home-page/Home-page.scss';
  * Tableau de types afin de savoir quel graph charger
  * Responsive : . <br/>
  * Accessible : . <br/>
- * Tests
+ * Tests unitaires : . <br/>
  */
 
 // class Focus extends Component {
@@ -49,25 +49,18 @@ const FocusId = props => (
       language={props.language}
       switchLanguage={props.switchLanguage}
     />
+    <HeaderTitle
+      language={props.language}
+      labelkey="focus"
+      url1="/"
+      url2="/focus"
+    />
 
     {/* <LastFocus language={props.language} /> */}
 
-    <DiscoverDataEsr language={props.language} />
+    {/* } <DiscoverDataEsr language={props.language} /> */}
 
     <GraphComponent id={props.match.params.id} />
-
-    <div id="d3" />
-    {
-  // <D3Bar />
-  //
-  // <D3BarRounded />
-  //
-  // <LMap />
-  //
-  // <HighChartsBar />
-
-    // <LoadableComponent />
-  }
 
     <Footer language={props.language} />
 
