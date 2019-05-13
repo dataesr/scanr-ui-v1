@@ -75,7 +75,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'La carte des poles de compétitivité en France',
       type: 'map',
-      url: '',
+      url: '/focus/1',
       schema: 'entity',
     },
     {
@@ -89,7 +89,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'Japan Prize: Qui sont les lauréats français ?',
       type: 'histoTop',
-      url: '',
+      url: '/focus/0',
       schema: 'entity',
     },
     {
@@ -103,7 +103,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'La carte des projets financés par l\'ANR',
       type: 'donut',
-      url: '',
+      url: '/focus/2',
       schema: 'project',
     },
     {
