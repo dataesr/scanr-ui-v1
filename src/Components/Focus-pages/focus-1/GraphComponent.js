@@ -10,6 +10,7 @@ export default class DisplayComponent extends Component {
     super(props);
     this.BlockComponent = null;
     this.state = {
+      // data: 'toto',
       data: null,
     };
   }
@@ -21,7 +22,6 @@ export default class DisplayComponent extends Component {
   }
 
   render() {
-    // this.BlockComponent = () => (<div>Test</div>);
     let GraphComponent = '';
     const id = Number(this.props.id);
     try {
@@ -35,6 +35,12 @@ export default class DisplayComponent extends Component {
         case 'bar':
           GraphComponent = Loadable({
             loader: () => import('./HighChartsBar'),
+            loading: () => <div>Chargement en cours...</div>,
+          });
+          break;
+        case 'pie':
+          GraphComponent = Loadable({
+            loader: () => import('./HighChartsPie'),
             loading: () => <div>Chargement en cours...</div>,
           });
           break;
