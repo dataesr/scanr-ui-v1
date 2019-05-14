@@ -20,28 +20,50 @@
 
   P {
     font-size: 0.9em;
-    padding-right: 80px
+    padding-right: 30px;
+  }
+
+  .Texte{
+    padding-left:5px;
   }
 
   .FormContact {
+
     margin-bottom: 5px;
 
-    label {
-      width: 100%;
+    TEXTAREA{
+      width:100%;
     }
 
-    button {
-      background-color: rgb(56, 119, 186);
-      color: white;
-      border-radius: 5px;
-      font-size: 0.7rem;
-      font-weight: bolder;
+    LABEL {
+      width: 100%
+
     }
 
-    button:hover {
-      background-color: $hoverLinkButton;
-      color: white;
+    .form-inline{
+
+      .g-recaptcha{
+        text-align: left;
+
+      }
+
+      BUTTON {
+        background-color: rgb(56, 119, 186);
+        color: white;
+        border-radius: 5px;
+        font-size: 0.7rem;
+        font-weight: bolder;
+        margin-left:100px;
+      }
+
+      BUTTON:hover {
+        background-color: $hoverLinkButton;
+        color: white;
+      }
+
     }
+
+
 
   }
 
