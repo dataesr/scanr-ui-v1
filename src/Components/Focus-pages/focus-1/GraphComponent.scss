@@ -1,0 +1,32 @@
+@import '../../../style.scss';
+
+.HomePage{
+  padding: 0;
+  background-color: #fff;
+}
+
+.HomePageLexiconTop{
+  top: 80px;
+}
+
+
+.Title {
+  color: #003259;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.Subtitle {
+  color: #4d708b;
+}
+
+.Text {
+  margin-top: 10px;
+  color: #003259;
+  font-weight: bold;
+}
+
+
+ .Button {
+   font-size: 1.6em;
+ }
