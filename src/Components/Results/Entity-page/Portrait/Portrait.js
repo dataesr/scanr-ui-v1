@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Identity from './Identity/Identity';
 // import Localisation from './Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-//import Background from './poudre-jaune_Fgris-B_V2.jpg';
+import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 import classes from './Portrait.scss';
 
@@ -46,7 +46,7 @@ class Portrait extends Component {
                   name={this.props.data.label}
                   acronym={this.props.data.acronym}
                   id={this.props.data.id}
-                  externalIds={this.props.data.externalIds}
+                  externalIds={[{ key: 'siren', value: 'gdklsjg4' }, { key: 'uai', value: '123456' }]}
                   nature={this.props.data.nature}
                 />
               </div>
