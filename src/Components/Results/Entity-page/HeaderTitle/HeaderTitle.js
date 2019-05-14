@@ -2,7 +2,6 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-//import BreadCrumb from '../../../Shared/Ui/Breadcrumb/Breadcrumb';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -19,16 +18,9 @@ const messages = {
 const HeaderTitle = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section className={classes.HeaderTitle}>
-      <div>
-        <img
-          className={`img-thumbnail ${classes.img}`}
-          src="../img/logo-ministere.svg"
-          alt="logo ministère"
-        />
-      </div>
       <div className="container">
         <div className="row">
-          <BreadCrumb />
+          ?
         </div>
         <div className="row">
           <div className={classes.title}>

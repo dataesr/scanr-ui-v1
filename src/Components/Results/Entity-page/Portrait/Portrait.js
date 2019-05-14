@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import History from './History/History';
 import Identity from './Identity/Identity';
-// import Localisation from './Localisation/Localisation';
+import Localisation from './Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
@@ -19,10 +19,6 @@ import classes from './Portrait.scss';
 */
 
 class Portrait extends Component {
-  state = {
-    data: {},
-  };
-
   componentDidMount() {
     console.log('componentDidMount()');
   }
@@ -43,24 +39,32 @@ class Portrait extends Component {
             <div className="row">
               <div className="col-6">
                 <Identity
+                  acronym={this.props.data.acronym}
+                  externalIds={[{ key: 'siren', value: 'gdklsjg4' }, { key: 'uai', value: '123456' }]}
+                  id={this.props.data.id}
                   language={this.props.language}
                   name={this.props.data.label}
-                  acronym={this.props.data.acronym}
-                  id={this.props.data.id}
-                  externalIds={[{ key: 'siren', value: 'gdklsjg4' }, { key: 'uai', value: '123456' }]}
                   nature={this.props.data.nature}
                 />
               </div>
-              <div className="col-6">
-                localisation
+              <div className={`col-6 ${classes.NoSpace}`}>
+                <Localisation
+                  address={this.props.data.address}
+                  language={this.props.language}
+                />
               </div>
-              <div className="col-6">3-Domaines d expertise</div>
-              <div className="col-6">4-Direction</div>
+              <div className="col-6">
+                3-Domaines d expertise
+              </div>
+              <div className="col-6">
+                4-Direction
+              </div>
               <div className="col-6">
                 <History
-                  language={this.props.language}
                   creationYear={this.props.data.creationYear}
                   id={this.props.data.id}
+                  language={this.props.language}
+                  predecessors={this.props.data.predecessors}
                 />
               </div>
             </div>

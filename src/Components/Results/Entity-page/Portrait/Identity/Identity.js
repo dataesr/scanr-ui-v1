@@ -73,6 +73,7 @@ const Identity = (props) => {
         <div className={`col-6 ${classes.NoSpace}`}>
           <LogoCard
             src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
+            cssClass="Height150"
           />
         </div>
         <div className={`col-6 ${classes.NoSpace}`}>

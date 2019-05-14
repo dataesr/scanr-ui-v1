@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
+import SimpleListCard from '../../../../Shared/Ui/SimpleListCard/SimpleListCard';
 
 import classes from './History.scss';
 
@@ -25,8 +26,9 @@ const messages = {
 };
 
 const History = (props) => {
+  const history = props.predecessors;
   return (
-    <div className={classes.Identity}>
+    <div className={classes.History}>
       <div className="row">
         <div className={`col ${classes.NoSpace}`}>
           <CardsTitle title={messages[props.language]['Entity.portrait.history.title']} />
@@ -37,9 +39,20 @@ const History = (props) => {
         <div className={`col-6 ${classes.NoSpace}`}>
           <SimpleCard
             logo="fas fa-id-card"
-            title={messages[props.language]['Entity.portrait.history.createdDate']}
+            title={messages[props.language]['Entity.portrait.history.createdDate.title']}
             label={props.creationYear}
             tooltip=""
+          />
+        </div>
+        <div className={`col-6 ${classes.NoSpace}`}>
+          <SimpleListCard
+            logo="fas fa-clock"
+            title={messages[props.language]['Entity.portrait.history.history.title']}
+            label={props.id}
+            list={history}
+            labelListButton={messages[props.language]['Entity.portrait.history.history.labelListButton']}
+            subCategory
+            tooltip={messages[props.language]['Entity.portrait.history.history.tooltip']}
           />
         </div>
       </div>
@@ -50,10 +63,8 @@ const History = (props) => {
 export default History;
 
 History.propTypes = {
+  creationYear: PropTypes.string,
+  id: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
-  acronym: PropTypes.array,
-  externalIds: PropTypes.array,
-  id: PropTypes.string,
-  name: PropTypes.object,
-  nature: PropTypes.string,
+  predecessors: PropTypes.array,
 };
