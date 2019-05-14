@@ -1,7 +1,19 @@
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Loadable from 'react-loadable';
 import axios from 'axios';
+
+import classes from './GraphComponent.scss';
+
+/**
+ * GraphComponent component <br/>
+ * Url : . <br/>
+ * Description : Choix du graph à afficher en fonction de l'id et de focus.jspn <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>
+ */
 
 const paramsFile = require('../focus.json');
 
@@ -19,6 +31,15 @@ export default class DisplayComponent extends Component {
     axios.get('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D').then((res) => {
       this.setState({ data: res.data });
     });
+  }
+
+  createTags = () => {
+    const table = [];
+    const id = Number(this.props.id);
+    for (let i = 0; i < paramsFile.elems[id].tags.length; i += 1) {
+      table.push(<td>{paramsFile.elems[id].tags[i]}</td>);
+    }
+    return table;
   }
 
   render() {
@@ -44,29 +65,45 @@ export default class DisplayComponent extends Component {
             loading: () => <div>Chargement en cours...</div>,
           });
           break;
+        case 'other':
+          GraphComponent = Loadable({
+            loader: () => import('./graphs/TeamPie'),
+            loading: () => <div>Chargement en cours...</div>,
+          });
+          break;
         default:
           GraphComponent = () => (
             <p>{"Désolé, ce focus n'existe pas !"}</p>
           );
       }
+
       const TitleComponent = () => (
         <div>
-          {paramsFile.elems[id].name}
-          <br />
-          {paramsFile.elems[id].subname}
+          <p className={`${classes.Title}`}>
+            {paramsFile.elems[id].name}
+          </p>
+          <p className={`${classes.Subtitle}`}>
+            {paramsFile.elems[id].subname}
+          </p>
+          <p className={`${classes.Title}`}>
+            {this.createTags()}
+          </p>
         </div>
       );
       const TextComponent = () => (
         <div>
-          {paramsFile.elems[id].text}
-          <br />
-          {paramsFile.elems[id].subtext}
+          <p className={`${classes.Text}`}>
+            {paramsFile.elems[id].text}
+          </p>
+          <p>
+            {paramsFile.elems[id].subtext}
+          </p>
         </div>
       );
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent data={this.state.data}/>
+          <GraphComponent data={this.state.data} />
           <TextComponent />
         </div>
       );
@@ -79,6 +116,10 @@ export default class DisplayComponent extends Component {
       <div>
         {this.state.data ? <this.BlockComponent /> : <div>Chargement (loading) </div> }
       </div>
-    )
+    );
   }
 }
+
+DisplayComponent.propTypes = {
+  id: PropTypes.string.isRequired,
+};
