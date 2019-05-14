@@ -7,6 +7,9 @@ import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 /* SCSS */
 import classes from './IdentityCard.scss';
 
+/* Import des métadonnées */
+import metadata from './metadata.json';
+
 const IdentityCard = (props) => {
   const logo = `../img/logo-${props.labelKey}.svg`;
   return (
@@ -19,7 +22,7 @@ const IdentityCard = (props) => {
         />
       </div>
       <hr />
-      <a href={props.WebSource} target="_blank" rel="noopener noreferrer">
+      <a href={metadata[`${props.labelKey}.WebSource`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
           Site internet de la source
@@ -39,7 +42,7 @@ const IdentityCard = (props) => {
           defaultMessage="s"
         />
       </div>
-      <a href={props.WebProducteur} target="_blank" rel="noopener noreferrer">
+      <a href={metadata[`${props.labelKey}.WebProducteur`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
             Site internet
@@ -49,7 +52,7 @@ const IdentityCard = (props) => {
           </span>
         </div>
       </a>
-      <a href={props.WebWikipedia} target="_blank" rel="noopener noreferrer">
+      <a href={metadata[`${props.labelKey}.WebWikipedia`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
             Page Wikipédia
@@ -75,5 +78,4 @@ export default IdentityCard;
 
 IdentityCard.propTypes = {
   labelKey: PropTypes.string,
-  webSite: PropTypes.string,
 };
