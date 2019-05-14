@@ -59,8 +59,13 @@ const FocusId = props => (
     {/* <LastFocus language={props.language} /> */}
 
     {/* } <DiscoverDataEsr language={props.language} /> */}
-
-    <GraphComponent id={props.match.params.id} />
+    <div className="container">
+      <div className="row">
+        <div className={`col-lg-10 ${classes.Title}`}>
+          <GraphComponent id={props.match.params.id} />
+        </div>
+      </div>
+    </div>
 
     <Footer language={props.language} />
 

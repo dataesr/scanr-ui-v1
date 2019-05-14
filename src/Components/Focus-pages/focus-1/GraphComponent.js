@@ -28,19 +28,19 @@ export default class DisplayComponent extends Component {
       switch (paramsFile.elems[id].type) {
         case 'map':
           GraphComponent = Loadable({
-            loader: () => import('./LeafletMap'),
+            loader: () => import('./graphs/LeafletMap'),
             loading: () => <div>Chargement en cours...</div>,
           });
           break;
         case 'bar':
           GraphComponent = Loadable({
-            loader: () => import('./HighChartsBar'),
+            loader: () => import('./graphs/HighChartsBar'),
             loading: () => <div>Chargement en cours...</div>,
           });
           break;
         case 'pie':
           GraphComponent = Loadable({
-            loader: () => import('./HighChartsPie'),
+            loader: () => import('./graphs/HighChartsPie'),
             loading: () => <div>Chargement en cours...</div>,
           });
           break;
@@ -50,10 +50,18 @@ export default class DisplayComponent extends Component {
           );
       }
       const TitleComponent = () => (
-        <div>{paramsFile.elems[id].name}</div>
+        <div>
+          {paramsFile.elems[id].name}
+          <br />
+          {paramsFile.elems[id].subname}
+        </div>
       );
       const TextComponent = () => (
-        <div>{paramsFile.elems[id].text}</div>
+        <div>
+          {paramsFile.elems[id].text}
+          <br />
+          {paramsFile.elems[id].subtext}
+        </div>
       );
       this.BlockComponent = () => (
         <div>
