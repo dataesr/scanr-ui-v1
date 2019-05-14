@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import LogoCard from '../../../../Shared/Ui/LogoCard/LogoCard';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
+import SimpleListCard from '../../../../Shared/Ui/SimpleListCard/SimpleListCard';
 
 import classes from './Identity.scss';
 
@@ -72,6 +73,16 @@ const Identity = (props) => {
         <div className={`col-6 ${classes.NoSpace}`}>
           <LogoCard
             src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
+          />
+        </div>
+        <div className={`col-6 ${classes.NoSpace}`}>
+          <SimpleListCard
+            logo="fas fa-qrcode"
+            title={messages[props.language]['Entity.portrait.identity.id']}
+            label={props.id}
+            list={props.externalIds}
+            labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
+            tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
           />
         </div>
         <div className={`col-6 ${classes.NoSpace}`}>
