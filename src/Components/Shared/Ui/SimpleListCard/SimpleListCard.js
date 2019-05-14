@@ -53,6 +53,7 @@ const prepareListFunction = (allProps) => {
   if (!allProps.subCategory) {
     return additionalListFunction(allProps);
   } else {
+    // Regroupement des données par année
     console.log('subCategory===true : allProps', allProps);
   }
 };
