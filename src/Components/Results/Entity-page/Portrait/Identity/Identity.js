@@ -87,6 +87,16 @@ const Identity = (props) => {
           />
         </div>
         <div className={`col-6 ${classes.NoSpace}`}>
+          <SimpleListCard
+            logo="fas fa-qrcode"
+            title={messages[props.language]['Entity.portrait.identity.id']}
+            label={props.id}
+            list={props.externalIds}
+            labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
+            tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
+          />
+        </div>
+        <div className={`col-6 ${classes.NoSpace}`}>
           <SimpleCard
             logo="fas fa-flask"
             title={messages[props.language]['Entity.portrait.identity.nature']}
