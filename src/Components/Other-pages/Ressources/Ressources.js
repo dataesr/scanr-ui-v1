@@ -267,7 +267,6 @@ class Ressources extends Component {
 
   renderOneRessource = () => {
     const ressource = this.props.match.params.id;
-    console.log('metadata:', metadata);
     return (
       <div className={`container-fluid ${classes.Ressources}`}>
         <Header
@@ -286,7 +285,7 @@ class Ressources extends Component {
               <div className="col-lg-4">
                 <IdentityCard
                   labelKey={ressource}
-                  webSite={metadata[`${ressource}.website`]}
+                  /* webSite={metadata[`${ressource}.website`]} */
                 />
               </div>
               <div className="col-lg-8">
@@ -310,6 +309,11 @@ class Ressources extends Component {
                     defaultMessage="s"
                   />
                 </div>
+                <a href={metadata[`${ressource}.Source`]} target="_blank" rel="noopener noreferrer">
+                  <div className={`row ${classes.SourceSource}`}>
+                    Source
+                  </div>
+                </a>
                 {/* /row */}
                 <hr className={classes.SourceDemarcation} />
                 <div className={classes.SourceTitre}>
@@ -358,7 +362,12 @@ class Ressources extends Component {
   }
 
   render() {
-    const content = (this.props.match.params.id) ? this.renderOneRessource() : this.renderRessources();
+    let content = this.renderRessources();
+    console.log('id:', this.props.match.params.id);
+    if (this.props.match.params.id) {
+      content = this.renderOneRessource();
+    }
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>

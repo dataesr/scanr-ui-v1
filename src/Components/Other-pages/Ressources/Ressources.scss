@@ -36,6 +36,13 @@
       padding-bottom: 10px;
       font-weight: bold;
     }
+    .SourceSource {
+      color:$ressourceColorDark;
+      font-weight: bold;
+      text-decoration-color: $ressourceUnderlineColor;
+      text-decoration-line: underline;
+      padding-left: 15px;
+    }
     .SourceTexteGras {
       font-size: 1rem;
       font-weight: bold;
@@ -50,7 +57,7 @@
       color:$ressourceColorLight;
     }
     .SourceDemarcation {
-      margin:3px 0px 20px 0px;
+      margin:20px 0px 20px 0px;
     }
 
     .SourceCard {
@@ -59,6 +66,7 @@
       padding: 15px 15px;
       margin: 3px;
       width: 370px;
+      height: 150px;
       .CardTitle {
 
       }
