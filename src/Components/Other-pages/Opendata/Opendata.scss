@@ -11,7 +11,7 @@
     background-attachment: relative;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: 50%; /* version standardisée */
-    background-color: rgb(233, 236, 241);
+    background-color: $scanrlightgreyColor;
     background-position: bottom 0 left 0;
   }
 
@@ -19,8 +19,8 @@
   }
 
   .Api {
-    background-color: #E9ECF1;
-    box-shadow: inset 0px 15px 15px 0px rgba(33, 72, 103, 0.3) !important;
+    background-color: $scanrlightgreyColor;
+    box-shadow: inset 0px 20px 20px 0px $scanrmiddlegreyColor !important;
     padding-top: 30px;
     padding-bottom: 30px;
   }
