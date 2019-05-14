@@ -1,9 +1,11 @@
 {"elems" : [
   {
       "id":0,
-      "name": "Les centres CURIE en france",
-      "text": "La France compte aujourd'hui blablabla",
-      "type": "bar",
+      "name": "Carte des pôles de compétitivité en France",
+      "subname": "En nombre d'entités au 31/12/2017",
+      "text": "La France compte aujourd'hui soixante-et-onze pôles de compétitivité.",
+      "subtext": "Créés en 2005, ces <<clusters à la française>>, ont pour objectif de dynamiser l'innovation et de renforcer l'industrie en stimulant les dépenses de R-&-D.",
+      "type": "map",
       "tags": ["tag1", "tag2", "tag3"],
       "data" : {
         "xAxis" : "Axe x",
@@ -36,6 +38,18 @@
           "yAxis": "Axe y",
           "values" : [ 12, 34, 15, 72, 26]
           }
-        }
+        },
+        {
+          "id":3,
+          "name": "Les centres CURIE en france",
+          "text": "Test sur les cartes Leaflet",
+          "type": "other",
+          "tags": ["tag1", "tag2", "tag3"],
+          "data" : {
+            "xAxis" : "Axe x",
+            "yAxis": "Axe y",
+            "values" : [ 12, 34, 15, 72, 26]
+            }
+          }
     ]
 }

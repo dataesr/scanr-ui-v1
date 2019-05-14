@@ -7,18 +7,14 @@ import Header from '../../Shared/Header/Header-homePage';
 import Lexicon from '../../Shared/Lexicon/Lexicon';
 import GraphComponent from './GraphComponent';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
+import LastFocus from '../../Shared/LastFocus/LastFocus';
 
-// import D3Bar from './D3Bar';
-// import D3BarRounded from './D3BarRounded';
-// import LMap from './LeafletMap';
-// import HighChartsBar from './HighChartsBar';
+import classes from './GraphComponent.scss';
 
-import classes from '../../Home-page/Home-page.scss';
 /**
  * Focus-1 component <br/>
  * Url : /focus/$id <br/>
- * Description : Page présentant les graphs correspondant au focus $id <br/>
- * Tableau de types afin de savoir quel graph charger
+ * Description : Page qui va charger GraphComponent <br/>
  * Responsive : . <br/>
  * Accessible : . <br/>
  * Tests unitaires : . <br/>
@@ -61,11 +57,13 @@ const FocusId = props => (
     {/* } <DiscoverDataEsr language={props.language} /> */}
     <div className="container">
       <div className="row">
-        <div className={`col-lg-10 ${classes.Title}`}>
+        <div className="col-lg-12">
           <GraphComponent id={props.match.params.id} />
         </div>
       </div>
     </div>
+
+    <LastFocus />
 
     <Footer language={props.language} />
 
