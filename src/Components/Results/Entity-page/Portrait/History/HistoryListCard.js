@@ -22,37 +22,55 @@ const titleFunction = title => (
 );
 
 const additionalListFunction = (allProps) => {
-  // const items = allProps.list.map(item => (
-  //   <li key={item.key} className="list-group-item">
-  //     <div className="row">
-  //       <div className="col">
-  //         <span className={classes.Key}>{item.key}</span>
-  //       </div>
-  //       <div className="col-8">
-  //         <span className={classes.Value}>{item.value}</span>
-  //       </div>
-  //     </div>
-  //   </li>
-  // ));
-
   // sorting by years
   const listByYear = allProps.list.sort(function(a, b){return a.eventYear-b.eventYear});
 
-  console.log(listByYear);
+  const objFinal = [];
+  const objYear = {};
+  let year = '';
+  for (let i = 0; i < listByYear.length; i += 1) {
+    if (listByYear[i].eventYear !== year) {
+      year = listByYear[i].eventYear;
+      objYear.year = year;
+      objYear.data = [];
+      objFinal.push(objYear);
+    }
 
-  // parcours : Pour chaque année, creation d'une list data
-  // const obj = {};
-  // let year = listByYear[0].eventYear;
-  // for (var i = 0; i < listByYear.length; i++) {
-  //   if (listByYear[i].eventYear !== year) {
-  //
-  //   }
-  // }
+    const data = {};
+    data.type = listByYear[i].eventType;
+    data.id = listByYear[i].structure.id;
+    data.label = listByYear[i].structure.label.fr;
+    objYear.data.push(data);
+  }
 
   // sorting by types
+  // TODO si pas fait par API
 
-  const items = <li>toto</li>;
-  const itemsHtml = <ul className="list-group list-group-flush">{items}</ul>;
+  const itemsHtml = objFinal.map((itemYear) => {
+    let title = '';
+    const dataHtml = itemYear.data.map((item) => {
+      title = `${itemYear.year} - ${item.type}`;
+      return (
+        <div className="row">
+          <div className="col">
+            {item.id}
+          </div>
+          <div className="col">
+            {item.label}
+          </div>
+        </div>
+      );
+    });
+    return (
+      <div>
+        <h2>{title}</h2>
+        {dataHtml}
+      </div>
+    );
+  });
+
+  // const items = <li>toto</li>;
+  // const itemsHtml = <ul className="list-group list-group-flush">{items}</ul>;
   return (
     <ButtonWithModal
       logo={allProps.logo}
