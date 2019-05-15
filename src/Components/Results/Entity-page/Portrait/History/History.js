@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
-import SimpleListCard from '../../../../Shared/Ui/SimpleListCard/SimpleListCard';
+import HistoryListCard from './HistoryListCard';
 
 import classes from './History.scss';
 
@@ -25,40 +25,34 @@ const messages = {
   en: messagesEn,
 };
 
-const History = (props) => {
-  const history = props.predecessors;
-  return (
-    <div className={classes.History}>
-      <div className="row">
-        <div className={`col ${classes.NoSpace}`}>
-          <CardsTitle title={messages[props.language]['Entity.portrait.history.title']} />
-        </div>
-      </div>
-
-      <div className="row">
-        <div className={`col-6 ${classes.NoSpace}`}>
-          <SimpleCard
-            logo="fas fa-id-card"
-            title={messages[props.language]['Entity.portrait.history.createdDate.title']}
-            label={props.creationYear}
-            tooltip=""
-          />
-        </div>
-        <div className={`col-6 ${classes.NoSpace}`}>
-          <SimpleListCard
-            logo="fas fa-clock"
-            title={messages[props.language]['Entity.portrait.history.history.title']}
-            label={props.id}
-            list={history}
-            labelListButton={messages[props.language]['Entity.portrait.history.history.labelListButton']}
-            subCategory
-            tooltip={messages[props.language]['Entity.portrait.history.history.tooltip']}
-          />
-        </div>
+const History = (props) => (
+  <div className={classes.History}>
+    <div className="row">
+      <div className={`col ${classes.NoSpace}`}>
+        <CardsTitle title={messages[props.language]['Entity.portrait.history.title']} />
       </div>
     </div>
-  );
-};
+
+    <div className="row">
+      <div className={`col-6 ${classes.NoSpace}`}>
+        <SimpleCard
+          logo="fas fa-id-card"
+          title={messages[props.language]['Entity.portrait.history.createdDate.title']}
+          label={props.creationYear}
+          tooltip=""
+        />
+      </div>
+      <div className={`col-6 ${classes.NoSpace}`}>
+        <HistoryListCard
+          title={messages[props.language]['Entity.portrait.history.history.title']}
+          list={props.predecessors}
+          labelListButton={messages[props.language]['Entity.portrait.history.history.labelListButton']}
+          tooltip={messages[props.language]['Entity.portrait.history.history.tooltip']}
+        />
+      </div>
+    </div>
+  </div>
+);
 
 export default History;
 
