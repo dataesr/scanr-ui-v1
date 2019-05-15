@@ -63,7 +63,7 @@ const IdentityCard = (props) => {
         </div>
       </a>
       <hr />
-      <div className={classes.positionButton}>
+      <div className={classes.PositionButton}>
         <ButtonToPage
           className={classes.Button}
           url=""
