@@ -3,7 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
+import Banner from '../../Shared/Banner/Banner';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
@@ -68,42 +68,42 @@ const Tutorials = props => (
       />
 
       <section className={classes.Cards}>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg py-5">
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="consultFAQ"
-              language={props.language}
-              url=""
-              btnText="discover"
-            />
-          </div>
-          <div className="col-lg py-5">
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="whatAreOurSources"
-              language={props.language}
-              url=""
-              btnText="discover"
-            />
-          </div>
-          <div className="col-lg py-5">
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="openData"
-              language={props.language}
-              url=""
-              btnText="discover"
-            />
+        <div className="container">
+          <div className="row">
+            <div className="col-lg py-5">
+              <CardToPage
+                cssClass="card_lightdark"
+                labelKey="consultFAQ"
+                language={props.language}
+                url=""
+                btnText="discover"
+              />
+            </div>
+            <div className="col-lg py-5">
+              <CardToPage
+                cssClass="card_lightdark"
+                labelKey="whatAreOurSources"
+                language={props.language}
+                url=""
+                btnText="discover"
+              />
+            </div>
+            <div className="col-lg py-5">
+              <CardToPage
+                cssClass="card_lightdark"
+                labelKey="openData"
+                language={props.language}
+                url=""
+                btnText="discover"
+              />
+            </div>
           </div>
         </div>
-      </div>
       </section>
-      <ComponentToPage
-        btnText="discover"
-        cssClass="Component_dark"
-        labelKey="howToAppearInScanR"
+
+      <Banner
+        cssClass="BannerDark"
+        labelKey="Appear"
         language={props.language}
         url=""
       />

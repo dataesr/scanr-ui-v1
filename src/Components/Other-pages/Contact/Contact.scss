@@ -2,6 +2,7 @@
 
 .Contact {
 
+
   .Content{
   padding: 50px 0;
   //padding-top: $otherPagesPaddingTop;
@@ -9,6 +10,7 @@
   background-color: #E9ECF1;
   border-radius: 5px ;
   color: $textColor;
+
 
   H2 {
     color: $titleColor;
@@ -29,40 +31,49 @@
 
   .FormContact {
 
-    margin-bottom: 5px;
+    box-sizing: border-box;
+
+    INPUT {
+      font-size: 0.9rem;
+      height: 1.8rem;
+      margin-bottom: 20px;
+
+    }
 
     TEXTAREA{
       width:100%;
     }
 
     LABEL {
-      width: 100%
+      width:100%;
+      font-weight: 600;
+      font-size: 0.9rem;
 
     }
 
-    .form-inline{
+    IMG{
+      width: 20%;
+    }
 
-      .g-recaptcha{
-        text-align: left;
+    BUTTON {
+      display:inline-flex;
+      justify-content: space-between;
+      padding-right: 0;
+      background-color: $scanrblueColor;
+      color: white;
+      border-radius: 5px;
+      border: none;
+      font-size: 0.7rem;
+      font-weight: bolder;
+      width:100%;
+      height: 2rem;
 
-      }
+    }
 
-      BUTTON {
-        background-color: rgb(56, 119, 186);
-        color: white;
-        border-radius: 5px;
-        font-size: 0.7rem;
-        font-weight: bolder;
-        margin-left:100px;
-      }
-
-      BUTTON:hover {
+    BUTTON:hover {
         background-color: $hoverLinkButton;
         color: white;
-      }
-
     }
-
 
 
   }
