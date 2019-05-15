@@ -282,13 +282,13 @@ class Ressources extends Component {
         <section style={sectionStyle} className={classes.Content}>
           <div className="container">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-sm-4">
                 <IdentityCard
                   labelKey={ressource}
                   /* webSite={metadata[`${ressource}.website`]} */
                 />
               </div>
-              <div className="col-lg-8">
+              <div className="col-sm-8">
                 <div className={classes.SourceTitre}>
                 Rôle
                 </div>

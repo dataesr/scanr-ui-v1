@@ -63,12 +63,14 @@ const IdentityCard = (props) => {
         </div>
       </a>
       <hr />
-      <ButtonToPage
-        className={classes.Button}
-        url=""
-      >
-        Voir dans scanR
-      </ButtonToPage>
+      <div className={classes.positionButton}>
+        <ButtonToPage
+          className={classes.Button}
+          url=""
+        >
+          Voir dans scanR
+        </ButtonToPage>
+      </div>
     </div>
   );
 };
