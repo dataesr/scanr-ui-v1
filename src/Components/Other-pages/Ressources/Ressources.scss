@@ -11,8 +11,8 @@
     background-attachment: relative;
     -webkit-background-size: cover; /* pour anciens Chrome et Safari */
     background-size: 50%; /* version standardisée */
-    background-color: rgb(233, 236, 241);
-    background-position: bottom 0 left 0;
+    background-color: $scanrlightgreyColor;
+    background-position:bottom 0 left 0;
     color: $ressourceColorDark;
     .SourcesPart {
       padding-top:40px ;
@@ -59,20 +59,30 @@
     .SourceDemarcation {
       margin:20px 0px 20px 0px;
     }
-
+    .Utilisation {
+      padding-left: 15px;
+    }
     .SourceCard {
       background-color: white;
       border-radius: 8px;
       padding: 15px 15px;
       margin: 3px;
-      width: 370px;
+      width: 360px;
       height: 150px;
-      .CardTitle {
-
-      }
     }
   }
   .ThreeCards{
     padding:24px 0px 24px 0px;
   }
+  .SourceThreeCards {
+      padding-top: 50px;
+      padding-bottom: $otherPagesPaddingBottom;
+      background-repeat: no-repeat;
+      background-attachment: relative;
+      -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+      background-size: 50%; /* version standardisée */
+      background-color: white;
+      background-position: top 0 right 0;
+      color: white;
+    }
 }

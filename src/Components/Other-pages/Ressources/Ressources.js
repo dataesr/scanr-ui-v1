@@ -8,6 +8,7 @@ import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
+import Backgroundblanc from '../../Shared/images/poudre-bleu_Fblanc-A.jpg';
 import RedirectingLogoCard from '../../Shared/Ui/RedirectingLogoCard/RedirectingLogoCard';
 import IdentityCard from './IdentityCard';
 
@@ -28,6 +29,9 @@ const messages = {
 
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
+};
+const sectionStyleblanc = {
+  backgroundImage: `url(${Backgroundblanc})`,
 };
 
 class Ressources extends Component {
@@ -231,16 +235,8 @@ class Ressources extends Component {
           <div className="row">
             <CardWithButton
               language={this.props.language}
-              title="Discover.Sources"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Découvrir"
-              position="CardCenter"
-              schema="card_dark"
-            />
-            <CardWithButton
-              language={this.props.language}
               title="Discover.TalkAboutScanr"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./medias"
               lib_button="Découvrir"
               position="CardCenter"
               schema="card_dark"
@@ -248,7 +244,15 @@ class Ressources extends Component {
             <CardWithButton
               language={this.props.language}
               title="Discover.Opendata"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./opendata"
+              lib_button="Découvrir"
+              position="CardCenter"
+              schema="card_dark"
+            />
+            <CardWithButton
+              language={this.props.language}
+              title="Discover.Team"
+              url="./l-equipe-et-son-projet"
               lib_button="Découvrir"
               position="CardCenter"
               schema="card_dark"
@@ -276,7 +280,7 @@ class Ressources extends Component {
         <section>
           <HeaderTitle
             language={this.props.language}
-            label="ressources"
+            labelkey="ressources"
           />
         </section>
         <section style={sectionStyle} className={classes.Content}>
@@ -319,7 +323,7 @@ class Ressources extends Component {
                 <div className={classes.SourceTitre}>
                 Utilisation dans scanR
                 </div>
-                <div className="row">
+                <div className={`row ${classes.Utilisation}`}>
                   <div className={classes.SourceCard}>
                     <div className={classes.SourceCardTitle}>
                       <FormattedHTMLMessage
@@ -348,6 +352,36 @@ class Ressources extends Component {
                   />
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section style={sectionStyleblanc} className={classes.SourceThreeCards}>
+          <div className="container">
+            <div className="row">
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Github"
+                url=""
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Opendata"
+                url="../opendata"
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Team"
+                url="../l-equipe-et-son-projet"
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
             </div>
           </div>
         </section>
