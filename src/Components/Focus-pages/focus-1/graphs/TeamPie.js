@@ -2,21 +2,19 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+// A faire stage:
+// valeur numerique + label + couleur -> pourrait etre aussi nombre (type d'affichage)
+// serie couleur ou nom échelle ?
+
+import classes from '../GraphComponent.scss';
+
+const test = ['#fe7747', '#96462a'];
+
 const options = {
-  chart: {
-    plotBackgroundColor: null,
-    plotBorderWidth: 0,
-    plotShadow: false,
-  },
-  title: { text: 'Je suis un titre très professionnel' },
+  title: '',
   credits: false,
-  // title: {
-  //     text: 'Browser<br>shares<br>2017',
-  //     align: 'center',
-  //     verticalAlign: 'middle',
-  //     y: 0
-  // },
   legend: {
+    enabled: false,
     align: 'right',
     layout: 'vertical',
     verticalAlign: 'middle',
@@ -32,12 +30,17 @@ const options = {
     },
   },
   tooltip: {
-    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+    pointFormat: '<b>{point.percentage:.1f}%</b>',
   },
   plotOptions: {
     pie: {
       dataLabels: {
-        enabled: false,
+        enabled: true,
+        format: '<b>{point.name}<br/>{point.percentage:.1f}%</b>',
+        style: {
+          color: 'red',
+          fontSize: '15px',
+        },
         // distance: -50,
         // style: {
         //     fontWeight: 'bold',
@@ -45,29 +48,20 @@ const options = {
         // }
       },
       showInLegend: true,
-      startAngle: 0,
-      endAngle: 360,
+      startAngle: 270,
+      endAngle: 90,
       center: ['50%', '50%'],
       size: '100%',
     },
   },
+  colors: test,
   series: [{
     type: 'pie',
-    name: 'Browser share',
     innerSize: '50%',
+    borderWidth: 10,
     data: [
-      ['Chrome', 58.9],
-      ['Firefox', 13.29],
-      ['Internet Explorer', 13],
-      ['Edge', 3.78],
-      ['Safari', 3.42],
-      {
-        name: 'Other',
-        y: 7.61,
-        dataLabels: {
-          enabled: false,
-        },
-      },
+      ['Chercheurs', 52],
+      ['Enseignants-chercheurs', 48],
     ],
   }],
 };
