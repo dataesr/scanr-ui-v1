@@ -49,15 +49,6 @@ const additionalListFunction = (allProps) => {
   );
 };
 
-const prepareListFunction = (allProps) => {
-  if (!allProps.subCategory) {
-    return additionalListFunction(allProps);
-  } else {
-    // Regroupement des données par année
-    console.log('subCategory===true : allProps', allProps);
-  }
-};
-
 const SimpleListCard = (props) => {
   const tooltip = (props.tooltip) ? (
     <Fragment>
@@ -74,7 +65,7 @@ const SimpleListCard = (props) => {
 
       {tooltip}
 
-      {prepareListFunction(props)}
+      {additionalListFunction(props)}
 
     </div>
   );
@@ -83,13 +74,9 @@ const SimpleListCard = (props) => {
 
 export default SimpleListCard;
 
-SimpleListCard.defaultProps = {
-  subCategory: false,
-};
 SimpleListCard.propTypes = {
   label: PropTypes.string,
   labelListButton: PropTypes.string,
-  subCategory: PropTypes.bool,
   list: PropTypes.array,
   logo: PropTypes.string,
   title: PropTypes.string,
