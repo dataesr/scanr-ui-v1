@@ -230,7 +230,7 @@ class Ressources extends Component {
           </div>
         </div>
       </section>
-      <section className={classes.ThreeCards}>
+      <section style={sectionStyleblanc} className={classes.ThreeCards}>
         <div className="container">
           <div className="row">
             <CardWithButton
