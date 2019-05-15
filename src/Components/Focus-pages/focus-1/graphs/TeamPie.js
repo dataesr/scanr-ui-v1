@@ -11,6 +11,9 @@ import classes from '../GraphComponent.scss';
 const test = ['#fe7747', '#96462a'];
 
 const options = {
+  chart: {
+    marginBottom: 60,
+  },
   title: '',
   credits: false,
   legend: {
@@ -36,10 +39,10 @@ const options = {
     pie: {
       dataLabels: {
         enabled: true,
-        format: '<b>{point.name}<br/>{point.percentage:.1f}%</b>',
+        format: '<b>{point.name} : {point.percentage:.1f}%</b>',
         style: {
-          color: 'red',
-          fontSize: '15px',
+          color: '#003259',
+          fontSize: '25px',
         },
         // distance: -50,
         // style: {
