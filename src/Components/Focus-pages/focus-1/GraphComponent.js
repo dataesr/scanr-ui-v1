@@ -103,7 +103,10 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent data={this.state.data} />
+          {
+            // <GraphComponent data={this.state.data} />
+          }
+          <GraphComponent data={paramsFile.elems[id].data} />
           <TextComponent />
         </div>
       );
