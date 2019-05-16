@@ -1,81 +1,95 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
-// A faire stage:
-// valeur numerique + label + couleur -> pourrait etre aussi nombre (type d'affichage)
-// serie couleur ou nom échelle ?
+/**
+ * TeamPie component <br/>
+ * Url : . <br/>
+ * Description : Affiche un donut en fonction de data (colors, labels, values, percentage) <br/>
+ * Ex:            "data" : { <br />
+               "percentage" : false, <br />
+               "values" : [52, 48], <br />
+               "labels" : ["Chercheurs", "Enseignants-chercheurs"], <br />
+               "colors" : ["#fe7747", "#96462a"] <br />
+             } <br />
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>
+ */
 
-import classes from '../GraphComponent.scss';
+export default class HighChartsPie extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      options: null,
+      data: this.props.data,
+    };
+  }
 
-const test = ['#fe7747', '#96462a'];
+  componentWillMount() {
+    let displayLabel = [];
 
-const options = {
-  chart: {
-    marginBottom: 60,
-  },
-  title: '',
-  credits: false,
-  legend: {
-    enabled: false,
-    align: 'right',
-    layout: 'vertical',
-    verticalAlign: 'middle',
-    x: 0,
-    y: 0,
-    itemStyle: {
-      fontSize: '20px',
-    },
-    itemMarginTop: 15,
-    itemMarginBottom: 15,
-    labelabelFormatter() {
-      return `<span>${this.name}</span>(<b>${this.y}%)<br/>`;
-    },
-  },
-  tooltip: {
-    pointFormat: '<b>{point.percentage:.1f}%</b>',
-  },
-  plotOptions: {
-    pie: {
-      dataLabels: {
-        enabled: true,
-        format: '<b>{point.name} : {point.percentage:.1f}%</b>',
-        style: {
-          color: '#003259',
-          fontSize: '25px',
-        },
-        // distance: -50,
-        // style: {
-        //     fontWeight: 'bold',
-        //     color: 'white'
-        // }
+
+    if (this.state.data.percentage === true) {
+      displayLabel = '<b>{point.name} : {point.percentage:.1f}%</b>';
+    } else {
+      displayLabel = '<b>{point.name} : {point.y}</b>';
+    }
+
+    const mySeries = [];
+    for (let i = 0; i < this.state.data.values.length; i += 1) {
+      mySeries.push([this.state.data.labels[i], this.state.data.values[i]]);
+    }
+
+    this.state.options = {
+      chart: {
+        marginBottom: 60,
       },
-      showInLegend: true,
-      startAngle: 270,
-      endAngle: 90,
-      center: ['50%', '50%'],
-      size: '100%',
-    },
-  },
-  colors: test,
-  series: [{
-    type: 'pie',
-    innerSize: '50%',
-    borderWidth: 10,
-    data: [
-      ['Chercheurs', 52],
-      ['Enseignants-chercheurs', 48],
-    ],
-  }],
+      title: '',
+      credits: false,
+      legend: {
+        enabled: false,
+      },
+      tooltip: false,
+      plotOptions: {
+        pie: {
+          dataLabels: {
+            enabled: true,
+            format: displayLabel,
+            style: {
+              color: '#003259',
+              fontSize: '25px',
+            },
+          },
+          showInLegend: true,
+          startAngle: 270,
+          endAngle: 90,
+          size: '80%',
+        },
+      },
+      colors: this.state.data.colors,
+      series: [{
+        type: 'pie',
+        innerSize: '50%',
+        borderWidth: 10,
+        data: mySeries,
+      }],
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <HighchartsReact
+          highcharts={Highcharts}
+          options={this.state.options}
+        />
+      </div>
+    );
+  }
+}
+
+HighChartsPie.propTypes = {
+  data: PropTypes.object.isRequired,
 };
-
-const HighChartsPie = () => (
-  <div>
-    <HighchartsReact
-      highcharts={Highcharts}
-      options={options}
-    />
-  </div>
-);
-
-export default HighChartsPie;
