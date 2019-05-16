@@ -3,7 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
-import DiscoverThreeCards from '../../Shared/DiscoverThreeCards/DiscoverThreeCards';
+import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
@@ -327,15 +327,34 @@ const LegalNoticePage = props => (
       </section>
 
       <section style={sectionStyle} className={classes.LegalSectionPoudre}>
-        <DiscoverThreeCards
-          language={props.language}
-          TitleCard1="Discover.TalkAboutScanr"
-          UrlCard1=""
-          TitleCard2="Discover.Sources"
-          UrlCard2=""
-          TitleCard3="Discover.Team"
-          UrlCard3=""
-        />
+        <div className="container">
+          <div className="row">
+            <CardWithButton
+              language={props.language}
+              schema="card_dark"
+              title="Discover.TalkAboutScanr"
+              url="./medias"
+              lib_button="Découvrir"
+              position="CardCenter"
+            />
+            <CardWithButton
+              language={props.language}
+              schema="card_dark"
+              title="Discover.Sources"
+              url="./ressources"
+              lib_button="Découvrir"
+              position="CardCenter"
+            />
+            <CardWithButton
+              language={props.language}
+              schema="card_dark"
+              title="Discover.Team"
+              url="./l-equipe-et-son-projet"
+              lib_button="Découvrir"
+              position="CardCenter"
+            />
+          </div>
+        </div>
       </section>
 
       <Banner

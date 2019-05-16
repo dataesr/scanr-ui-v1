@@ -1,0 +1,31 @@
+.IdentityCard {
+  background-color: white;
+  border-radius: 8px;
+  width: 350px;
+  height: 630px;
+  padding:   0px 15px;
+  .Logo {
+    padding: 0px 40px;
+     .img {
+      }
+  }
+  .ProducteurGras {
+    font-weight: bold;
+  }
+  .ProducteurNom {
+    padding-bottom: 5px;
+  }
+  .LienSiteExterne {
+    padding: 7px 10px 7px 0px;
+    .SiteExterne {
+      padding:0px 15px;
+    }
+  }
+  .Button {
+    margin : 20px 0px;
+    padding: 8px 10px 8px 20px;
+    background-color: rgb(56, 119, 186);
+    color: white;
+    font-size: 0.9em;
+  }
+}
