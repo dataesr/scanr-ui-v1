@@ -1,6 +1,7 @@
 @import '../../../../style.scss';
 
 .Portrait {
+  font-family: 'Lato', sans-serif;
   padding-top: 24px;
   background-repeat: no-repeat;
   background-attachment: relative;
@@ -8,4 +9,9 @@
   background-size: 50%; /* version standardisée */
   background-color: rgb(233, 236, 241);
   background-position: bottom 0 left 0;
+
+  .NoSpace {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

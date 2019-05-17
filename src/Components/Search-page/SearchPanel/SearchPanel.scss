@@ -1,0 +1,55 @@
+@import '../../../style.scss';
+
+
+.SearchBar {
+  padding-top: $headerHeight;
+  padding-bottom: 16px;
+  background-color: $bgHomePageSearch;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-position: top 50% left 82%;
+  border-bottom: 8px solid $textColor;
+
+  .Logo {
+    height: 130px;
+    padding-top: 40px;
+
+    IMG {
+      height: 85%;
+    }
+  }
+
+  .MainContainer {
+    padding-top: 8px;
+  }
+
+  LABEL {
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+  .TitleSearchBar { color: white; }
+
+  .SearchPerimeter { color: $textColor; }
+
+  .btn_dark_margin { margin-top: 24px; }
+
+  .Select {
+    background-color: rgb(0, 33, 59);
+    color: white;
+    border: 1px solid #00213b;
+  }
+
+  .HowTo {
+    color: white;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+
+  .Suggest {
+    color: white;
+    font-size: 0.7rem;
+    margin-top: -8px;
+  }
+}
