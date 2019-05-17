@@ -1,0 +1,35 @@
+@import '../../../../../style.scss';
+
+
+.Localisation {
+
+  .MapContainer {
+    padding-top: 1px;
+    .Map{
+      margin: 2px;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+      height: 310px;
+    }
+  }
+
+  .AddressContainer {
+    background-color: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 16px;
+    color: $localisationTextTitleColor;
+    font-style: italic;
+    I {
+      display: inline-block;
+      padding-right: 8px;
+    }
+    .Address {
+      color: $localisationTextColor;
+      font-weight: bold;
+      font-size: 1.2rem;
+      font-style: normal;
+    }
+  }
+
+}
