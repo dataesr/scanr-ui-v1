@@ -1,0 +1,76 @@
+@import '../../../style.scss';
+
+
+.Section {
+  padding: 16px;
+  padding-bottom: 8px;
+  min-height: 100%;
+}
+
+.ObjetcsNavItem {
+  background-color: white;
+  margin-right: 8px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: $titleColor;
+  text-align: center;
+}
+.ObjectsNavItemActive {
+  background-color: $titleColor;
+  color: white;
+}
+
+.ObjetcsNavItem:hover {
+  margin-right: 8px;
+  border-radius: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: $titleColor;
+  text-decoration: none;
+  box-shadow: 1px 1px 15px white
+}
+
+.ResultsNavContainer {
+  margin-top: 8px;
+  padding-right: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  right: 8px;
+  background-color: $titleColor;
+  color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+}
+
+.ResultsNavItem {
+  background-color: white;
+  border-radius: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  color: $mediaTextColor;
+  cursor: pointer;
+  .ResultsNavItemIcon {
+    margin-left: 8px;
+    margin-right: 16px;
+  }
+}
+.ResultsNavItemCols {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.ResultsNavItemActive {
+  background-color: $mediaTextColor;
+  border-radius: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  color: white;
+  font-weight: 500;
+}
+.ResultsNavItem:hover {
+  cursor: pointer;
+  box-shadow: 1px 1px 10px grey;
+}

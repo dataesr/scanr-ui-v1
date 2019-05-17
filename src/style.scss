@@ -48,6 +48,33 @@ $mediaTextColor:rgb(56, 119, 186);
   }
 }
 
+.has-background-darkblue {
+  background-color: $opendataTitleBgColor;
+}
+.has-background-white {
+  background-color: white;
+}
+.has-background-all {
+  background-color: #e4e4e4;
+}
+.has-background-entities {
+  background-color: $entitiesColor;
+}
+.has-background-persons {
+  background-color: $personsColor;
+}
+.has-background-projects {
+  background-color: $projectsColor;
+}
+.has-background-publications {
+  background-color: $publicationsColor;
+}
+
+.NoGutters {
+ padding: 0;
+ margin: 0;
+}
+
 /* BANNIERES*/
 /* couleurs de bannières avec boutons */
 .BannerLight {
