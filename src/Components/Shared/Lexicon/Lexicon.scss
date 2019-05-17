@@ -13,7 +13,7 @@
   }
 
   .Button {
-    background-color: $activeLinkButton;
+    background-color: $scanrdeepblueColor;
     color: #fff;
     font-family: Georgia,Times,Times New Roman,serif;
     font-weight: bold;
@@ -25,7 +25,7 @@
     cursor: pointer;
   }
   .Button:hover {
-    background-color: $hoverLinkButton;
+    background-color: $scanrgreyColor;
   }
 
 }
@@ -36,7 +36,7 @@
   top: 56px;
   width: 500px;
   height: 100%;
-  background-color: $bgLexicon;
+  background-color: $scanrfooterBgColor;
   z-index: 1000;
 
 }
@@ -46,7 +46,7 @@
   left: -45px;
   top: 40px;
   background: none;
-  background-color: $activeLinkButton;
+  background-color: $scanrdeepblueColor;
   color: #fff;
   font-family: Arial,serif;
   font-weight: bold;
@@ -56,5 +56,5 @@
   border-radius: 8px 0 0 8px;
 }
 .ButtonClosePanel:hover {
-  background-color: $hoverLinkButton;
+  background-color: $scanrgreyColor;
 }
