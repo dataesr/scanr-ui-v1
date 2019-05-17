@@ -62,7 +62,7 @@ const Identity = (props) => {
       </div>
 
       <div className="row">
-        <div className={`col-6 ${classes.NoSpace}`}>
+        <div className={`col-lg-6 ${classes.NoSpace}`}>
           <SimpleCard
             logo="fas fa-id-card"
             title={messages[props.language]['Entity.portrait.identity.name']}
@@ -70,12 +70,13 @@ const Identity = (props) => {
             tooltip=""
           />
         </div>
-        <div className={`col-6 ${classes.NoSpace}`}>
+        <div className={`col-lg-6 ${classes.NoSpace}`}>
           <LogoCard
             src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
+            cssClass="Height150"
           />
         </div>
-        <div className={`col-6 ${classes.NoSpace}`}>
+        <div className={`col-lg-6 ${classes.NoSpace}`}>
           <SimpleListCard
             logo="fas fa-qrcode"
             title={messages[props.language]['Entity.portrait.identity.id']}
@@ -85,7 +86,7 @@ const Identity = (props) => {
             tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
           />
         </div>
-        <div className={`col-6 ${classes.NoSpace}`}>
+        <div className={`col-lg-6 ${classes.NoSpace}`}>
           <SimpleCard
             logo="fas fa-flask"
             title={messages[props.language]['Entity.portrait.identity.nature']}
