@@ -1,0 +1,47 @@
+@import '../../../../../style.scss';
+
+.Web {
+  .NoSpace {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.MainWebSiteButton {
+  color: white;
+  background-color: $scanrblueColor;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 120px;
+  padding: 8px;
+  margin: 2px;
+  padding-top: 16px;
+  display: block;
+}
+
+.MainWebSiteButton:hover {
+  color: white;
+  background-color: $scanrblueColor;
+}
+.MainWebSiteButton:focus {
+  color: white;
+  background-color: $scanrblueColor;
+}
+
+.Container {
+  padding-left: 4px;
+}
+
+.SocialMedia {
+  color: white;
+  background-color: $scanrblueColor;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 50px;
+  padding: 8px;
+  margin: 2px;
+  padding-top: 16px;
+  display: block;
+}
