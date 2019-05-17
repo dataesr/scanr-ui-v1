@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HcAccessibility from 'highcharts/modules/accessibility';
+import { IntlProvider, FormattedMessage } from 'react-intl';
+
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
 /**
  * TeamPie component <br/>
@@ -99,25 +103,34 @@ export default class HighChartsPie extends Component {
   }
 
   render() {
-    const txt = 'Afficher / masquer le tableau de données';
+    const txt = 'toto';
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
 
     return (
-      <div style={{ textAlign: 'center' }}>
-        { this.state.showGraph ? <HighchartsReact highcharts={Highcharts} options={this.state.options} /> : (
-          <table style={{ margin: '0px auto' }}>
-            <tr>
-              <th>Catégorie</th>
-              <th>Valeurs</th>
-            </tr>
-            {this.createTable()}
-          </table>
-        )}
-        <button type="button" onClick={this.toggleGraph}>{txt}</button>
-      </div>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <div style={{ textAlign: 'center' }}>
+          { this.state.showGraph ? <HighchartsReact highcharts={Highcharts} options={this.state.options} /> : (
+            <table style={{ margin: '0px auto' }}>
+              <tr>
+                <th><FormattedMessage id="TeamPie.string.table.category" /></th>
+                <th><FormattedMessage id="TeamPie.string.table.values" /></th>
+              </tr>
+              {this.createTable()}
+            </table>
+          )}
+          <button type="button" onClick={this.toggleGraph}>
+            <FormattedMessage id="TeamPie.string.button" />
+          </button>
+        </div>
+      </IntlProvider>
     );
   }
 }
 
 HighChartsPie.propTypes = {
+  language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };

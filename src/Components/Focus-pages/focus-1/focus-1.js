@@ -58,7 +58,10 @@ const FocusId = props => (
     <div className="container">
       <div className="row">
         <div className="col-lg-12">
-          <GraphComponent id={props.match.params.id} />
+          <GraphComponent
+            id={props.match.params.id}
+            language={props.language}
+          />
         </div>
       </div>
     </div>
