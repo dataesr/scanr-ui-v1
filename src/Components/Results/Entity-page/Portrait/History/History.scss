@@ -1,20 +1,28 @@
-@import '../../../../style.scss';
+@import '../../../../../style.scss';
 
-.SimpleCard {
+.History {
+  .NoSpace {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.HistoryListCard {
   background-color: white;
   border-radius: 8px;
   text-align: center;
   min-height: 150px;
   padding: 8px;
-  margin: 3px;
+  margin: 2px;
 
   .Logo {
-    color: #656979;
+    color: grey;
   }
 
   .Title {
-    color: #656979;
+    color: grey;
     font-style: italic;
+    padding-bottom: 16px;
   }
 
   .Label {
