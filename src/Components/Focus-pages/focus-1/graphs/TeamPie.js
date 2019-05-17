@@ -26,9 +26,11 @@ export default class HighChartsPie extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      showGraph: true,
       options: null,
       data: this.props.data,
     };
+    this.toggleGraph = this.toggleGraph.bind(this);
   }
 
   componentWillMount() {
@@ -90,24 +92,27 @@ export default class HighChartsPie extends Component {
     return table;
   }
 
+  toggleGraph() {
+    this.setState(state => ({
+      showGraph: !state.showGraph,
+    }));
+  }
+
   render() {
     const txt = 'Afficher / masquer le tableau de données';
 
-
     return (
       <div style={{ textAlign: 'center' }}>
-        <table style={{ margin: '0px auto' }}>
-          <tr>
-            <th>Catégorie</th>
-            <th>Valeurs</th>
-          </tr>
-          {this.createTable()}
-        </table>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={this.state.options}
-        />
-        <button type="button">{txt}</button>
+        { this.state.showGraph ? <HighchartsReact highcharts={Highcharts} options={this.state.options} /> : (
+          <table style={{ margin: '0px auto' }}>
+            <tr>
+              <th>Catégorie</th>
+              <th>Valeurs</th>
+            </tr>
+            {this.createTable()}
+          </table>
+        )}
+        <button type="button" onClick={this.toggleGraph}>{txt}</button>
       </div>
     );
   }
