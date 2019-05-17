@@ -12,8 +12,8 @@ import metadata from './metadata.json';
 
 const IdentityCard = (props) => {
   const logo = `../img/logo-${props.labelKey}.svg`;
-  return (
-    <div className={`container ${classes.IdentityCard}`}>
+  const logopart = (logo) ? (
+    <fragment>
       <div className={`row ${classes.Logo}`}>
         <img
           src={logo}
@@ -22,10 +22,17 @@ const IdentityCard = (props) => {
         />
       </div>
       <hr />
+    </fragment>
+  ) : null;
+  const websourcepart = (message[`Identity.Source.Website.Title`]) ? (
+    <fragment>
       <a href={metadata[`${props.labelKey}.WebSource`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
-          Site internet de la source
+            <FormattedHTMLMessage
+              id={`Ressource.Utilisation2.${ressource}`}
+              defaultMessage="contentTexte"
+            />
           </div>
           <span className="col text-right">
             <i className="fas fa-arrow-right" />
@@ -33,6 +40,13 @@ const IdentityCard = (props) => {
         </div>
       </a>
       <hr />
+    </fragment>
+  ) : null;
+  return (
+    <div className={`container ${classes.IdentityCard}`}>
+      {logopart}
+      {websourcepart}
+
       <div className={classes.ProducteurGras}>
       Producteur
       </div>
