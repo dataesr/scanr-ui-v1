@@ -103,7 +103,6 @@ export default class HighChartsPie extends Component {
   }
 
   render() {
-    const txt = 'toto';
     const messages = {
       fr: messagesFr,
       en: messagesEn,

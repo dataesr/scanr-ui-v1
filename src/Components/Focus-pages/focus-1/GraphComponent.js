@@ -105,7 +105,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent data={this.state.data} language={this.props.language} /> : <GraphComponent data={paramsFile.elems[id].data} language={this.props.language} />}
+          {this.state.isMap ? <GraphComponent filename={paramsFile.elems[id].name} data={this.state.data} language={this.props.language} /> : <GraphComponent data={paramsFile.elems[id].data} language={this.props.language} />}
           <TextComponent />
         </div>
       );
