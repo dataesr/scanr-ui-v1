@@ -32,7 +32,7 @@ class SearchPage extends Component {
     if (prevState.currentQueryObject !== this.state.currentQueryObject) {
       this.setState({
         isLoading: true,
-        resultsData: []
+        resultsData: [],
       });
       // console.log('reset');
       this.submitResearch();
@@ -63,16 +63,44 @@ class SearchPage extends Component {
         this.setState({
           resultsData: response.data.results,
           facetsData: response.data.facets,
+          isLoading: false,
         });
       });
-    this.setState({ isLoading: false });
     console.log(this.state.resultsData);
   }
 
+  ShouldRenderContainer = () => {
+    if (!this.state.isLoading) {
+      return (
+        <div className="row">
+          <div className={`col-md-4 ${classes.NoGutters}`}>
+            <FilterPanel
+              language={this.props.language}
+              switchLanguage={this.props.switchLanguage}
+            />
+          </div>
+          <div className={`col-md-8 ${classes.NoGutters}`}>
+            <SearchResults
+              language={this.props.language}
+              switchLanguage={this.props.switchLanguage}
+              resultsData={this.state.resultsData}
+              currentResultView={this.state.currentResultView}
+              currentQueryObject={this.state.currentQueryObject}
+            />
+          </div>
+        </div>
+      );
+    }
+    return (
+      <div className="row justify-content-center">
+        <h1 className="col-4">
+          Loading...
+        </h1>
+      </div>
+    );
+  }
+
   render() {
-    // if (!this.state.data) {
-    //   return <Fragment>No data</Fragment>;
-    // }
     const bgColor = `has-background-${this.state.currentQueryObject}`;
     return (
       <Fragment>
@@ -101,23 +129,8 @@ class SearchPage extends Component {
             resultViewChangeHandler={this.resultViewChangeHandler}
           />
           <div className="container">
-            <div className="row">
-              <div className={`col-md-4 ${classes.NoGutters}`}>
-                <FilterPanel
-                  language={this.props.language}
-                  switchLanguage={this.props.switchLanguage}
-                />
-              </div>
-              <div className={`col-md-8 ${classes.NoGutters}`}>
-                <SearchResults
-                  language={this.props.language}
-                  switchLanguage={this.props.switchLanguage}
-                  resultsData={this.state.resultsData}
-                  currentResultView={this.state.currentResultView}
-                  currentQueryObject={this.state.currentQueryObject}
-                />
-              </div>
-            </div>
+            {this.ShouldRenderContainer()}
+
           </div>
         </div>
         <Footer language={this.props.language} />
