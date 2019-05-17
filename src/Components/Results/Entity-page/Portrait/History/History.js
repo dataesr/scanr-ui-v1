@@ -25,7 +25,7 @@ const messages = {
   en: messagesEn,
 };
 
-const History = (props) => (
+const History = props => (
   <div className={classes.History}>
     <div className="row">
       <div className={`col ${classes.NoSpace}`}>
@@ -34,7 +34,7 @@ const History = (props) => (
     </div>
 
     <div className="row">
-      <div className={`col-6 ${classes.NoSpace}`}>
+      <div className={`col-lg-6 ${classes.NoSpace}`}>
         <SimpleCard
           logo="fas fa-id-card"
           title={messages[props.language]['Entity.portrait.history.createdDate.title']}
@@ -42,7 +42,7 @@ const History = (props) => (
           tooltip=""
         />
       </div>
-      <div className={`col-6 ${classes.NoSpace}`}>
+      <div className={`col-lg-6 ${classes.NoSpace}`}>
         <HistoryListCard
           title={messages[props.language]['Entity.portrait.history.history.title']}
           list={props.predecessors}
@@ -58,7 +58,6 @@ export default History;
 
 History.propTypes = {
   creationYear: PropTypes.string,
-  id: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
   predecessors: PropTypes.array,
 };
