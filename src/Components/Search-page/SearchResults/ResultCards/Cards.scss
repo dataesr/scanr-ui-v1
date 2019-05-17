@@ -1,0 +1,64 @@
+@import '../../../../style.scss';
+
+.cardIsLeft {
+  padding-left: 0;
+  padding-right: 4px;
+  margin: 0;
+}
+
+.cardIsRight {
+  padding-left: 4px;
+  padding-right: 0;
+  margin: 0;
+}
+
+.ResultCard {
+  background-color: white;
+  color: $titleColor;
+  height: 300px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+
+  .CardHeader {
+    color: $titleColor;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.1;
+    text-decoration: underline $tagsColor;
+  }
+
+  .CardContent {
+    line-height: 1.5;
+  }
+
+  .Icons {
+      font-size: 1.1em;
+      color: $tagsColor;
+      width: 28px;
+      text-align: center;
+  }
+
+  .CardFooter {
+      font-weight: 700;
+      color: $tagsColor;
+
+    .Icons {
+      font-size: 1.5em;
+      color: $tagsColor;
+    }
+
+    .ButtonToPage {
+      background-color: rgb(56, 119, 186);
+      color: white;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-weight: bolder;
+      height: 48px;
+
+      .Text {
+        font-weight: 700;
+        font-size: 1.4em;
+      }
+    }
+  }
+}
