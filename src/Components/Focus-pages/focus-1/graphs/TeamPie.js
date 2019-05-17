@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import HcAccessibility from 'highcharts/modules/accessibility';
 
 /**
  * TeamPie component <br/>
@@ -18,6 +19,9 @@ import HighchartsReact from 'highcharts-react-official';
  * Tests unitaires : . <br/>
  */
 
+HcAccessibility(Highcharts);
+
+
 export default class HighChartsPie extends Component {
   constructor(props) {
     super(props);
@@ -28,14 +32,9 @@ export default class HighChartsPie extends Component {
   }
 
   componentWillMount() {
-    let displayLabel = [];
+    const displayLabel = (this.state.data.percentage === false) ? '<b>{point.name} : {point.y}</b>' : '<b>{point.name} : {point.percentage:.1f}%</b>';
 
-
-    if (this.state.data.percentage === true) {
-      displayLabel = '<b>{point.name} : {point.percentage:.1f}%</b>';
-    } else {
-      displayLabel = '<b>{point.name} : {point.y}</b>';
-    }
+    const colors = (this.state.data.colors && this.state.data.colors.length > 0) ? this.state.data.colors : ['#FFD138'];
 
     const mySeries = [];
     for (let i = 0; i < this.state.data.values.length; i += 1) {
@@ -68,7 +67,7 @@ export default class HighChartsPie extends Component {
           size: '80%',
         },
       },
-      colors: this.state.data.colors,
+      colors,
       series: [{
         type: 'pie',
         innerSize: '50%',
@@ -78,13 +77,37 @@ export default class HighChartsPie extends Component {
     };
   }
 
+  createTable = () => {
+    const table = [];
+    for (let i = 0; i < this.state.data.values.length; i += 1) {
+      table.push(
+        <tr>
+          <td>{this.state.data.labels[i]}</td>
+          <td>{this.state.data.values[i]}</td>
+        </tr>,
+      );
+    }
+    return table;
+  }
+
   render() {
+    const txt = 'Afficher / masquer le tableau de données';
+
+
     return (
-      <div>
+      <div style={{ textAlign: 'center' }}>
+        <table style={{ margin: '0px auto' }}>
+          <tr>
+            <th>Catégorie</th>
+            <th>Valeurs</th>
+          </tr>
+          {this.createTable()}
+        </table>
         <HighchartsReact
           highcharts={Highcharts}
           options={this.state.options}
         />
+        <button type="button">{txt}</button>
       </div>
     );
   }
