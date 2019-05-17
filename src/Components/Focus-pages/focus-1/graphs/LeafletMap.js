@@ -79,10 +79,10 @@ class FranceMaps extends Component<{}, State> {
     // };
     const downloadOptions = {
       position: 'bottomright',
-      filename: 'wesh_le_gang',
+      filename: this.props.filename,
       sizeModes: ['Current', 'A4Portrait', 'A4Landscape'],
       title: 'Télécharger au format PNG',
-      // hideControlContainer: false,
+      hideControlContainer: false,
       exportOnly: true,
     };
     // htmlToImage.toPng(document.getElementById('mapContainer'))
@@ -132,118 +132,6 @@ class FranceMaps extends Component<{}, State> {
         </div>
         <button type="button" onClick={() => this.printControl.printMap('A4Portrait', 'MyFileName')}>Print Map</button>
       </div>
-      // <div id='mapContainer'>
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: "60vh", width: "33vw", borderStyle: 'solid' }} minZoom={2} maxZoom={19}>
-      //       <TileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       <MarkerClusterGroup maxClusterRadius={60} >
-      //         {this.createMarkers()}
-      //       </MarkerClusterGroup>
-      //       <ZoomControl position={'bottomleft'} />
-      //       <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} />
-      //       <PrintControl ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
-      //       <GeoSearch />
-      //     </Map>
-      //   </div>
-      //   {/* <button onClick={() => this.print()} >Print Map</button> */}
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={[15.30174, -61.38808]} zoom={7} style={{ height: "30vh", width: "16vw", borderStyle: 'solid', top: '-30vh' }} minZoom={2} maxZoom={19}>
-      //       <TileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //       {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} />
-      //       <PrintControl ref={(ref) => { this.printControl = ref; }} {...downloadOptions} /> */}
-      //     </Map>
-      //     {/* <div class="row"> */}
-      //   </div>
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={[4, -53]} zoom={6} style={{ height: "30vh", width: "16vw", marginTop: '20px', borderStyle: 'solid', left: '-16vw' }} minZoom={2} maxZoom={19}>
-      //       <TileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //     </Map>
-      //     {/* </div> */}
-      //   </div>
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={[-12.807148, 45.150289]} zoom={9} style={{ height: "30vh", width: "17vw", borderStyle: 'solid', top: '-30vh', left: '-16vw' }} minZoom={2} maxZoom={19}>
-      //       <T// url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //     </Map>
-      //   </div>
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={[-21.100976, 55.547002]} zoom={9} style={{ height: "30vh", width: "17vw", marginTop: '20px', borderStyle: 'solid', left: '-33vw' }} minZoom={2} maxZoom={19}>
-      //       <TileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //     </Map>
-      //   </div>
-      //   {/* <button id='btnClick' onClick={() => this.print()} >Print Map</button> */}
-      // </div>ileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //     </Map>
-      //   </div>
-      //   <div style={{ display: 'inline-block' }}>
-      //     <Map zoomControl={false} center={[-21.100976, 55.547002]} zoom={9} style={{ height: "30vh", width: "17vw", marginTop: '20px', borderStyle: 'solid', left: '-33vw' }} minZoom={2} maxZoom={19}>
-      //       <TileLayer
-      //         // attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-      //         // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      //         attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-      //         url='https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png'
-      //       />
-      //       {/* <MarkerClusterGroup maxClusterRadius={90} >
-      //             {this.createMarkers()}
-      //           </MarkerClusterGroup> */}
-      //       <ZoomControl position={'bottomleft'} />
-      //       {/* <GeoSearch /> */}
-      //     </Map>
-      //   </div>
-      //   {/* <button id='btnClick' onClick={() => this.print()} >Print Map</button> */}
-      // </div>
     );
   }
 }
@@ -252,4 +140,5 @@ export default FranceMaps;
 
 FranceMaps.propTypes = {
   data: PropTypes.string.isRequired,
+  filename: PropTypes.string.isRequired,
 };
