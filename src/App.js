@@ -66,9 +66,16 @@ class App extends Component {
                 />
               )}
             />
-
-            <Route path="/recherche" component={SearchPage} />
-
+            <Route
+              path="/recherche"
+              render={props => (
+                <SearchPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
             <Route
               path="/entite/:id"
               render={props => (
@@ -128,7 +135,6 @@ class App extends Component {
                 />
               )}
             />
-
             <Route
               path={['/ressources/:id', '/ressources']}
               component={props => (
@@ -139,7 +145,6 @@ class App extends Component {
                 />
               )}
             />
-
             <Route
               exact
               path="/medias"
