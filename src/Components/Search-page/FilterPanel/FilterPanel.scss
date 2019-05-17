@@ -1,0 +1,30 @@
+@import '../../../style.scss';
+
+
+.Section {
+  padding: 0;
+  margin: 0;
+  padding-right: 4px;
+}
+
+.ActiveFiltersContainer {
+  background-color: $titleColor;
+  color: white;
+  padding: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.FiltersContainer {
+  background-color: #fff6d7;
+  color: $titleColor;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.FilterHeaders {
+  font-size: 1.3em;
+  font-weight: 700;
+}
