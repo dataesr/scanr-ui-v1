@@ -8,7 +8,7 @@ const options = {
     plotBorderWidth: 0,
     plotShadow: false,
   },
-  title: { text: 'Je suis un titre très professionnel' },
+  title: { text: 'Je suis un titre' },
   credits: false,
   // title: {
   //     text: 'Browser<br>shares<br>2017',

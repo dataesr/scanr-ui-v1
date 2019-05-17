@@ -24,6 +24,7 @@ export default class DisplayComponent extends Component {
     this.state = {
       // data: 'toto',
       data: null,
+      isMap: false,
     };
   }
 
@@ -48,6 +49,7 @@ export default class DisplayComponent extends Component {
     try {
       switch (paramsFile.elems[id].type) {
         case 'map':
+          this.state.isMap = true;
           GraphComponent = Loadable({
             loader: () => import('./graphs/LeafletMap'),
             loading: () => <div>Chargement en cours...</div>,
@@ -103,16 +105,14 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {
-            // <GraphComponent data={this.state.data} />
-          }
-          <GraphComponent data={paramsFile.elems[id].data} />
+          {this.state.isMap ? <GraphComponent data={this.state.data} language={this.props.language} /> : <GraphComponent data={paramsFile.elems[id].data} language={this.props.language} />}
           <TextComponent />
         </div>
       );
     } catch (error) {
+      const txt = "Désolé, ce focus n'existe pas !";
       this.BlockComponent = () => (
-        <p>{"Désolé, ce focus n'existe pas !"}</p>
+        <p>{txt}</p>
       );
     }
     return (
@@ -124,5 +124,6 @@ export default class DisplayComponent extends Component {
 }
 
 DisplayComponent.propTypes = {
+  language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
