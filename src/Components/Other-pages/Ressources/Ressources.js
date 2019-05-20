@@ -279,7 +279,7 @@ class Ressources extends Component {
         </div>
       </a>
     ) : null;
-    const utilisation2 =  (message[`Ressource.Utilisation2.${ressource}`]) ? (
+    const utilisation2 = (message[`Ressource.Utilisation2.${ressource}`]) ? (
       <div className={classes.SourceCard}>
         <div className={classes.SourceCardTitle}>
           <FormattedHTMLMessage
@@ -289,7 +289,7 @@ class Ressources extends Component {
         </div>
       </div>
     ) : null;
-    const utilisation3 =  (message[`Ressource.Utilisation3.${ressource}`]) ? (
+    const utilisation3 = (message[`Ressource.Utilisation3.${ressource}`]) ? (
       <div className={classes.SourceCard}>
         <div className={classes.SourceCardTitle}>
           <FormattedHTMLMessage
@@ -299,7 +299,7 @@ class Ressources extends Component {
         </div>
       </div>
     ) : null;
-    const utilisation4 =  (message[`Ressource.Utilisation4.${ressource}`]) ? (
+    const utilisation4 = (message[`Ressource.Utilisation4.${ressource}`]) ? (
       <div className={classes.SourceCard}>
         <div className={classes.SourceCardTitle}>
           <FormattedHTMLMessage
@@ -313,7 +313,7 @@ class Ressources extends Component {
       <Fragment>
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
-            id={`Ressource.Utilisation.Titre`}
+            id="Ressource.Utilisation.Titre"
             defaultMessage="s"
           />
         </div>
@@ -333,11 +333,21 @@ class Ressources extends Component {
         <hr className={classes.SourceDemarcation} />
       </Fragment>
     ) : null;
+    const retraitements2 =  (message[`Ressource.Retraitements2.${ressource}`]) ? (
+      <div className={classes.SourceCard}>
+        <div className={classes.SourceCardTitle}>
+          <FormattedHTMLMessage
+            id={`Ressource.Retraitements2.${ressource}`}
+            defaultMessage="contentTexte"
+          />
+        </div>
+      </div>
+    ) : null;
     const retraitements = (message[`Ressource.Retraitements.${ressource}`]) ? (
       <Fragment>
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
-            id={`Ressource.Retraitements.Titre`}
+            id="Ressource.Retraitements.Titre"
             defaultMessage="s"
           />
         </div>
@@ -355,21 +365,11 @@ class Ressources extends Component {
         <hr className={classes.SourceDemarcation} />
       </Fragment>
     ) : null;
-    const retraitements2 =  (message[`Ressource.Retraitements2.${ressource}`]) ? (
-      <div className={classes.SourceCard}>
-        <div className={classes.SourceCardTitle}>
-          <FormattedHTMLMessage
-            id={`Ressource.Retraitements2.${ressource}`}
-            defaultMessage="contentTexte"
-          />
-        </div>
-      </div>
-    ) : null;
     const perimetre = (message[`Ressource.Perimetre.${ressource}`]) ? (
       <Fragment>
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
-            id={`Ressource.Perimetre.Titre`}
+            id="Ressource.Perimetre.Titre"
             defaultMessage="s"
           />
         </div>
@@ -385,7 +385,7 @@ class Ressources extends Component {
       <Fragment>
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
-            id={`Ressource.Actualisation.Titre`}
+            id="Ressource.Actualisation.Titre"
             defaultMessage="s"
           />
         </div>
@@ -420,10 +420,10 @@ class Ressources extends Component {
               </div>
               <div className="col-sm-8">
                 <div className={classes.SourceTitre}>
-                <FormattedHTMLMessage
-                  id={`Ressource.Role.Titre`}
-                  defaultMessage="s"
-                />
+                  <FormattedHTMLMessage
+                    id="Ressource.Role.Titre"
+                    defaultMessage="s"
+                  />
                 </div>
                 <div className={classes.SourceTexteGras}>
                   <FormattedHTMLMessage
@@ -434,10 +434,10 @@ class Ressources extends Component {
                 {/* /row */}
                 <hr className={classes.SourceDemarcation} />
                 <div className={classes.SourceTitre}>
-                <FormattedHTMLMessage
-                  id={`Ressource.Description.Titre`}
-                  defaultMessage="s"
-                />
+                  <FormattedHTMLMessage
+                    id="Ressource.Description.Titre"
+                    defaultMessage="s"
+                  />
                 </div>
                 <div className={classes.SourceTextenormal}>
                   <FormattedHTMLMessage

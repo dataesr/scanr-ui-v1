@@ -20,11 +20,11 @@
     .SourcesCard {
       background-color: $bgcolormSmallCard;
       color: white;
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 15px 15px;
-      margin: 3px;
-      height: 200px;
-      width: 200px;
+      margin: 6px;
+      height: 215px;
+      width: 215px;
       .Title {
       font-weight: bold;
       padding-top: 5px ;
@@ -33,7 +33,7 @@
     }
     .SourceTitre {
       font-size: 1.4rem;
-      padding: 10px 0;
+      padding: 5px 0;
       font-weight: bold;
     }
     .SourceSource {

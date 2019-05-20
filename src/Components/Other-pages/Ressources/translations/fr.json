@@ -1,6 +1,7 @@
 {
   "Identity.Source.Website.Title" : "Site internet de la source",
   "Identity.Producer.Website.Title" : "Site internet",
+  "Identity.Producer" : "Producteur",
   "Identity.Producer.Wikipedia.Title" : "Page Wikipédia",
   "Identity.Button.Tiltle" : "Voir dans ScanR",
 
@@ -16,20 +17,22 @@
   "Ressource.Perimetre.crossref" : "Périmètre d'utilisation de la source dans scanR",
   "Ressource.Utilisation1.crossref" : "Attribution d'un identifiant GRID aux partenaires étrangers identifiés dans les productions et projets associés aux structures françaises.",
   "Ressource.Utilisation2.crossref" : "Identification des sites web associés aux structures étrangères associées à des partenaires français",
-  "crossref.Producteur" : "Crossref",
+  "Ressource.Producteur.Nom.crossref" : "Crossref",
 
   "Ressource.Role.rnsr" : "Répertoire national des structures de recherche (RNSR)",
   "Ressource.Description.rnsr" : "Le répertoire des structures de recherche a pour objectif de référencer au niveau national les structures de recherche publiques opérationnelles. Chaque structure est dotée d’un numéro unique national. À cet identifiant unique est associé un ensemble de métadonnées (informations géographiques et institutionnelles, thématiques scientifiques). Le RNSR associe également à chaque structure les différents couples label-numéro utilisés par les différentes tutelles pour désigner une même structure. Le RNSR est progressivement intégré dans les systèmes d’information sur la recherche. Le RNSR contribue au développement de l’interopérabilité des données sur la recherche en France. Le RNSR est administré par le Ministère en charge de la Recherche en s’appuyant sur un réseau de correspondants désignés par les établissements de tutelle.",
   "Ressource.Utilisation1.rnsr" : "Identification des structures de recherche (unités propres, mixtes, équipes d’accueil, fédérations) qui constituent une partie du champ de scanR",
   "Ressource.Utilisation2.rnsr" : "Accès aux métadonnées associées aux structures (informations géographiques et institutionnelles, thématiques scientifiques)",
-  "rnsr.Producteur" : "Ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation",
+  "Ressource.Producteur.Nom.rnsr" : "Ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation",
   "Ressource.Perimetre.rnsr" : "Unité en activité en 2016",
+  "Ressource.Retraitements.rnsr" : "<li>Mise à jour de la casse des libellés</li><li>Ajout de libellés multilingues</li><li>Enrichissement des acronymes</li><li>Décomposition des adresses</li>",
+  "Ressource.Retraitements2.rnsr" : "<li>Géocodage</li><li>Curation de données pour la hiérarchie et l'historique des structures</li><li>Curation de données pour les sites web</li>",
 
   "Ressource.Role.grid" : "Global Research Identifier Database (GRID)",
   "Ressource.Description.grid" : "GRID est un répertoire mondial d’institutions de tous types actives en matière de recherche académique (établissements d’enseignement supérieur et de recherche, agences gouvernementales, entreprises, institution sans but lucratif, institution ayant une fonction d’archivage, institutions de santé, grands équipements, etc.). Un identifiant unique est attribué à chaque institution référencée ; un ensemble de métadonnées y est associé. Les métadonnées proposées par GRID permettent notamment une mise en correspondance de l’identifiant GRID avec des identifiants ISNI, WIKIDATA ou liés aux systèmes nationaux d’archivage et de suivre les liens de filiation entre les structures. Enfin, GRID permet d’associer un site web à la plupart des institutions référencées.",
   "Ressource.Utilisation1.grid" : "Attribution d’un identifiant GRID aux partenaires étrangers identifiés dans les productions et projets associés aux structures françaises",
   "Ressource.Utilisation2.grid" : "Identification des sites web associés aux structures étrangères associées à des partenaires français",
-  "grid.Producteur" : "Digital Science & Research Ltd",
+  "Ressource.Producteur.Nom.grid" : "Digital Science & Research Ltd",
   "Ressource.Perimetre.grid" : "Hors entités françaises",
 
   "Ressource.Role.datainfogreffe" : "Datainfogreffe a été créé par le G.I.E. Infogreffe pour permettre aux greffiers des Tribunaux de commerce, officiers publics et ministériels, d´assurer une plus large diffusion de l´information légale sur les entreprises.",
@@ -37,7 +40,7 @@
   "Ressource.Perimetre.datainfogreffe" : "",
   "Ressource.Utilisation1.datainfogreffe" : "Consolidation des informations d'identification des entreprises référencées dans scanR",
   "Ressource.Utilisation2.datainfogreffe" : "",
-  "datainfogreffe.Producteur" : "Infogreffe",
+  "Ressource.Producteur.Nom.datainfogreffe" : "Infogreffe",
 
   "Ressource.Role.insee" : "SIRENE : La base Sirene® rassemble ainsi des informations économiques et juridiques sur 28 millions d’établissements, dont 11 millions actifs, appartenant à tous les secteurs d’activité.",
   "Ressource.Description.insee" : "Conformément aux articles R.123-220 à R.123-234 du code du commerce, le répertoire Sirene enregistre l'état civil de toutes les entreprises et leurs établissements : quelle que soit leur forme juridique ; quel que soit leur secteur d'activité (industriels, commerçants, artisans, professions libérales, agriculteurs, collectivités territoriales, banques, assurances, associations...), situés en France métropolitaine (y compris la Corse), ainsi qu'en Guadeloupe, Martinique, Guyane, La Réunion, Mayotte, Saint-Barthélémy, Saint-Martin et Saint-Pierre et Miquelon. Les organismes publics ou privés et les entreprises étrangères qui ont une représentation ou une activité en France y sont également répertoriés. En outre, le secteur public administratif, de l'État ou des communes, localisé en Nouvelle-Calédonie, Polynésie française, et Wallis et Futuna, est également inclus (articles R.930-1, R.940-1 et R.950-1 du code de commerce). L’ouverture de ce registre (gratuit en open data) a été annoncée le 12 janvier 2016 et sera effective au 1er janvier 2017",
@@ -46,19 +49,19 @@
   "Ressource.Utilisation2.insee" : "Utilisation de traitement réalisés par l’Insee (SIRUS) permettant de distinguer, au sein de la population des entreprises, les très petites entreprises (TPE), les petites et moyennes entreprises (PME), les entreprises de taille intermédiaire (ETI), les grandes entreprises.",
   "Ressource.Retraitements.insee" : "Géocodage",
   "Ressource.Actualisation.insee" : "Annuelle",
-  "insee.Producteur" : "Institut national de la statistique et des études économiques (Insee)",
+  "Ressource.Producteur.Nom.insee" : "Institut national de la statistique et des études économiques (Insee)",
 
   "Ressource.Role.wikidata" : "Wikidata",
   "Ressource.Description.wikidata" : "Wikidata est un projet de base de données libre éditée de manière collaborative et hébergée par la Wikimedia Foundation. […] Wikidata est une collection d'articles constitués de données et de couples clé-valeur formant un ensemble de graphes sémantiquement structuré. L'ambition est de former un graphe de connaissance unique.",
   "Ressource.Perimetre.wikidata" : "Hors entités françaises",
   "Ressource.Utilisation1.wikidata" : "Attribution d’un identifiant wikidata aux partenaires étrangers identifiés dans les productions et projets associés aux structures françaises",
   "Ressource.Utilisation2.wikidata" : "",
-  "wikidata.Producteur" : "Wikimedia Foundation",
+  "Ressource.Producteur.Nom.wikidata" : "Wikimedia Foundation",
 
   "Ressource.Role.anr" : "Projets financés par l'Agence nationale de la recherche",
   "Ressource.Description.anr" : "L’ANR propose, sous forme de fiches descriptives, un accès aux principales informations relatives aux projets qu’elle a financés. Cette application couvre l’essentiel des appels à projets correspondant à l’activité propre de l’ANR (notamment hors projets gérés par l’ANR dans le cadre du Programme des investissements d’avenir).",
   "Ressource.Perimetre.anr" : "Exploitation des projets financés par l’ANR entre 2005 et 2015 ; 12 225 projets financés par l’ANR sont mis en relation avec au moins une entité appartenant au périmètre de scanR ; 3 647 entités appartenant à scanR sont associées à au moins un projet financé par l’ANR",
   "Ressource.Utilisation1.anr" : "Association aux entités scanR des projets financés par l’ANR auxquels elles participent",
   "Ressource.Utilisation2.anr" : "Constitution d’un référentiel des libellés, acronymes et codes des projets financés par l’ANR pour effectuer un repérage automatisé des projets mentionnés sur les sites internet des entités inscrites dans le périmètre de scanR",
-  "anr.Producteur" : "Agence nationale de la recherche (ANR)"
+  "Ressource.Producteur.Nom.anr" : "Agence nationale de la recherche (ANR)"
 }
