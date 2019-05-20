@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
@@ -13,7 +13,7 @@ import metadata from './metadata.json';
 const IdentityCard = (props) => {
   const logo = `../img/logo-${props.labelKey}.svg`;
   const logopart = (logo) ? (
-    <fragment>
+    <Fragment>
       <div className={`row ${classes.Logo}`}>
         <img
           src={logo}
@@ -22,10 +22,10 @@ const IdentityCard = (props) => {
         />
       </div>
       <hr />
-    </fragment>
+    </Fragment>
   ) : null;
   const websourcepart = (metadata[`${props.labelKey}.WebSource`]) ? (
-    <fragment>
+    <Fragment>
       <a href={metadata[`${props.labelKey}.WebSource`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
@@ -40,10 +40,10 @@ const IdentityCard = (props) => {
         </div>
       </a>
       <hr />
-    </fragment>
+    </Fragment>
   ) : null;
   const webprodpart = (metadata[`${props.labelKey}.WebProducteur`]) ? (
-    <fragment>
+    <Fragment>
       <a href={metadata[`${props.labelKey}.WebProducteur`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
@@ -57,10 +57,10 @@ const IdentityCard = (props) => {
           </span>
         </div>
       </a>
-    </fragment>
+    </Fragment>
   ) : null;
   const webprodwikipediapart = (metadata[`${props.labelKey}.WebWikipedia`]) ? (
-    <fragment>
+    <Fragment>
       <a href={metadata[`${props.labelKey}.WebWikipedia`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
@@ -75,7 +75,7 @@ const IdentityCard = (props) => {
         </div>
       </a>
       <hr />
-    </fragment>
+    </Fragment>
   ) : null;
   return (
     <div className={`container ${classes.IdentityCard}`}>
