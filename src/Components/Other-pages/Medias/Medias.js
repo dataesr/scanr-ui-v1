@@ -78,7 +78,7 @@ const Medias = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.Sources"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./ressources"
               lib_button="Découvrir"
               position="CardCenter"
             />
@@ -94,7 +94,7 @@ const Medias = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.FAQ"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./faq"
               lib_button="Découvrir"
               position="CardCenter"
             />
