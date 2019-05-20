@@ -24,13 +24,48 @@ const IdentityCard = (props) => {
       <hr />
     </fragment>
   ) : null;
-  const websourcepart = (message[`Identity.Source.Website.Title`]) ? (
+  const websourcepart = (metadata[`${props.labelKey}.WebSource`]) ? (
     <fragment>
       <a href={metadata[`${props.labelKey}.WebSource`]} target="_blank" rel="noopener noreferrer">
         <div className={`row ${classes.LienSiteExterne}`}>
           <div className={classes.SiteExterne}>
             <FormattedHTMLMessage
-              id={`Ressource.Utilisation2.${ressource}`}
+              id="Identity.Source.Website.Title"
+              defaultMessage="contentTexte"
+            />
+          </div>
+          <span className="col text-right">
+            <i className="fas fa-arrow-right" />
+          </span>
+        </div>
+      </a>
+      <hr />
+    </fragment>
+  ) : null;
+  const webprodpart = (metadata[`${props.labelKey}.WebProducteur`]) ? (
+    <fragment>
+      <a href={metadata[`${props.labelKey}.WebProducteur`]} target="_blank" rel="noopener noreferrer">
+        <div className={`row ${classes.LienSiteExterne}`}>
+          <div className={classes.SiteExterne}>
+            <FormattedHTMLMessage
+              id="Identity.Producer.Website.Title"
+              defaultMessage="contentTexte"
+            />
+          </div>
+          <span className="col text-right">
+            <i className="fas fa-arrow-right" />
+          </span>
+        </div>
+      </a>
+    </fragment>
+  ) : null;
+  const webprodwikipediapart = (metadata[`${props.labelKey}.WebWikipedia`]) ? (
+    <fragment>
+      <a href={metadata[`${props.labelKey}.WebWikipedia`]} target="_blank" rel="noopener noreferrer">
+        <div className={`row ${classes.LienSiteExterne}`}>
+          <div className={classes.SiteExterne}>
+            <FormattedHTMLMessage
+              id="Identity.Producer.Wikipedia.Title"
               defaultMessage="contentTexte"
             />
           </div>
@@ -46,43 +81,29 @@ const IdentityCard = (props) => {
     <div className={`container ${classes.IdentityCard}`}>
       {logopart}
       {websourcepart}
-
       <div className={classes.ProducteurGras}>
-      Producteur
-      </div>
-      <div className={classes.ProducteurNom}>
         <FormattedHTMLMessage
-          id={`${props.labelKey}.Producteur`}
+          id="Identity.Producer"
           defaultMessage="s"
         />
       </div>
-      <a href={metadata[`${props.labelKey}.WebProducteur`]} target="_blank" rel="noopener noreferrer">
-        <div className={`row ${classes.LienSiteExterne}`}>
-          <div className={classes.SiteExterne}>
-            Site internet
-          </div>
-          <span className="col text-right">
-            <i className="fas fa-arrow-right" />
-          </span>
-        </div>
-      </a>
-      <a href={metadata[`${props.labelKey}.WebWikipedia`]} target="_blank" rel="noopener noreferrer">
-        <div className={`row ${classes.LienSiteExterne}`}>
-          <div className={classes.SiteExterne}>
-            Page Wikipédia
-          </div>
-          <span className="col text-right">
-            <i className="fas fa-arrow-right" />
-          </span>
-        </div>
-      </a>
-      <hr />
+      <div className={classes.ProducteurNom}>
+        <FormattedHTMLMessage
+          id={`Ressource.Producteur.Nom.${props.labelKey}`}
+          defaultMessage="s"
+        />
+      </div>
+      {webprodpart}
+      {webprodwikipediapart}
       <div className={classes.PositionButton}>
         <ButtonToPage
           className={classes.Button}
           url=""
         >
-          Voir dans scanR
+          <FormattedHTMLMessage
+            id="Identity.Button.Tiltle"
+            defaultMessage="contentTexte"
+          />
         </ButtonToPage>
       </div>
     </div>
