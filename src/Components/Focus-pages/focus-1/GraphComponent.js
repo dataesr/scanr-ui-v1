@@ -21,11 +21,13 @@ export default class DisplayComponent extends Component {
   constructor(props) {
     super(props);
     this.BlockComponent = null;
+    this.childRef = React.createRef();
     this.state = {
       name: paramsFile.elems[this.props.id].name,
       data: null,
       isMap: false,
     };
+    this.exportPdf = this.exportPdf.bind(this);
   }
 
   componentWillMount() {
@@ -43,10 +45,16 @@ export default class DisplayComponent extends Component {
     return table;
   }
 
+  exportPdf() {
+    alert(this.childRef.current)
+    this.childRef.current.exportChartPdf();
+  }
+
   render() {
     let GraphComponent = '';
     const id = Number(this.props.id);
     const txt = "Désolé, ce focus n'existe pas !";
+
     try {
       switch (paramsFile.elems[id].type) {
         case 'map':
@@ -107,7 +115,7 @@ export default class DisplayComponent extends Component {
         paddingLeft: '5px',
         paddingRight: '10px',
         color: '#3778bb',
-        cursor: 'pointer',
+        cursor: 'not-allowed',
       };
       const btnExport = {
         paddingLeft: '5px',
@@ -126,7 +134,7 @@ export default class DisplayComponent extends Component {
           </div>
           <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
             <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
-            <i style={btnExport} className="fas fa-file-pdf fa-lg" />
+            <button type="button" onClick={this.exportPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
             <p className={`${classes.Subtitle}`}>.pdf</p>
             <i style={btnExport} className="fas fa-image fa-lg" />
             <p className={`${classes.Subtitle}`}>.png</p>
@@ -138,7 +146,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} />}
+          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
           <TextComponent />
           <ShareComponent />
         </div>

@@ -86,6 +86,11 @@ export default class HighChartsBar extends Component {
             enabled: false,
           },
         },
+        chartOptions: {
+          title: {
+            text: this.props.filename,
+          },
+        },
       },
     };
   }
