@@ -4,6 +4,8 @@ import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HcAccessibility from 'highcharts/modules/accessibility';
 import { IntlProvider, FormattedMessage } from 'react-intl';
+import HCExporting from 'highcharts/modules/exporting';
+import HCExportingData from 'highcharts/modules/export-data';
 
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -24,6 +26,8 @@ import messagesEn from './translations/en.json';
  */
 
 HcAccessibility(Highcharts);
+HCExporting(Highcharts);
+HCExportingData(Highcharts);
 
 
 export default class HighChartsPie extends Component {
@@ -71,6 +75,13 @@ export default class HighChartsPie extends Component {
           startAngle: 270,
           endAngle: 90,
           size: '80%',
+        },
+      },
+      exporting: {
+        buttons: {
+          contextButton: {
+            enabled: false,
+          },
         },
       },
       colors,
