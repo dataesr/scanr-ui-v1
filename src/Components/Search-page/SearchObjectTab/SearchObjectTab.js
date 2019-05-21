@@ -26,7 +26,6 @@ const SearchObjectTab = (props) => {
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('all')}
-              href="#"
             >
               <div>
                 <strong>
@@ -41,7 +40,6 @@ const SearchObjectTab = (props) => {
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('entities')}
-              href="#"
             >
               <div>
                 <strong>
@@ -56,7 +54,6 @@ const SearchObjectTab = (props) => {
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('projects')}
-              href="#"
             >
               <div>
                 <strong>

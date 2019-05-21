@@ -125,8 +125,7 @@ class App extends Component {
             />
 
             <Route
-              exact
-              path="/opendata"
+              path="/:language/opendata"
               component={props => (
                 <Opendata
                   {...props}
@@ -135,6 +134,7 @@ class App extends Component {
                 />
               )}
             />
+
             <Route
               path={['/ressources/:id', '/ressources']}
               component={props => (
