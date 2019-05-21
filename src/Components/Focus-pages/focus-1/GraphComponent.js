@@ -22,7 +22,7 @@ export default class DisplayComponent extends Component {
     super(props);
     this.BlockComponent = null;
     this.state = {
-      // data: 'toto',
+      name: paramsFile.elems[this.props.id].name,
       data: null,
       isMap: false,
     };
@@ -46,6 +46,7 @@ export default class DisplayComponent extends Component {
   render() {
     let GraphComponent = '';
     const id = Number(this.props.id);
+    const txt = "Désolé, ce focus n'existe pas !";
     try {
       switch (paramsFile.elems[id].type) {
         case 'map':
@@ -75,7 +76,7 @@ export default class DisplayComponent extends Component {
           break;
         default:
           GraphComponent = () => (
-            <p>{"Désolé, ce focus n'existe pas !"}</p>
+            <p>{txt}</p>
           );
       }
 
@@ -102,15 +103,47 @@ export default class DisplayComponent extends Component {
           </p>
         </div>
       );
+      const btnShare = {
+        paddingLeft: '5px',
+        paddingRight: '10px',
+        color: '#3778bb',
+        cursor: 'pointer',
+      };
+      const btnExport = {
+        paddingLeft: '5px',
+        paddingRight: '5px',
+        color: '#3778bb',
+        cursor: 'pointer',
+      };
+      const ShareComponent = () => (
+        <div>
+          <hr />
+          <div style={{ display: 'inline-block', float: 'left' }}>
+            <p className={`${classes.Subtitle}`}>Partager</p>
+            <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
+            <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+            <i style={btnShare} className="fas fa-code fa-lg" />
+          </div>
+          <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
+            <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+            <i style={btnExport} className="fas fa-file-pdf fa-lg" />
+            <p className={`${classes.Subtitle}`}>.pdf</p>
+            <i style={btnExport} className="fas fa-image fa-lg" />
+            <p className={`${classes.Subtitle}`}>.png</p>
+            <i style={btnExport} className="fas fa-table fa-lg" />
+            <p className={`${classes.Subtitle}`}>.csv</p>
+          </div>
+        </div>
+      );
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent filename={paramsFile.elems[id].name} data={this.state.data} language={this.props.language} /> : <GraphComponent data={paramsFile.elems[id].data} language={this.props.language} />}
+          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} />}
           <TextComponent />
+          <ShareComponent />
         </div>
       );
     } catch (error) {
-      const txt = "Désolé, ce focus n'existe pas !";
       this.BlockComponent = () => (
         <p>{txt}</p>
       );
