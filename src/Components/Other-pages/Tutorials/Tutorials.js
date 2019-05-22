@@ -70,7 +70,7 @@ const Tutorials = props => (
       <section className={classes.Cards}>
         <div className="container">
           <div className="row">
-            <div className="col-lg py-5">
+            <div className="col-lg pt-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="consultFAQ"
@@ -79,7 +79,7 @@ const Tutorials = props => (
                 btnText="discover"
               />
             </div>
-            <div className="col-lg py-5">
+            <div className="col-lg pt-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="whatAreOurSources"
@@ -88,7 +88,7 @@ const Tutorials = props => (
                 btnText="discover"
               />
             </div>
-            <div className="col-lg py-5">
+            <div className="col-lg py-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="openData"
