@@ -11,25 +11,6 @@ import yellowIcon from './MarkerStyle';
 import './customLeaflet.scss';
 
 const PrintControl = withLeaflet(PrintControlDefault);
-//
-// const cities = require('./data/cities.json');
-//
-// const data = [];
-// cities.forEach((element) => {
-//   const tmp = [];
-//   tmp.push(element.gps_lat);
-//   tmp.push(element.gps_lng);
-//   data.push(tmp);
-// });
-
-// var cities = require('./data/fr.json');
-// var data = [];
-// cities.forEach(element => {
-//   var tmp = [];
-//   tmp.push(element.lat);
-//   tmp.push(element.lng);
-//   data.push(tmp);
-// });
 
 class Search extends MapControl {
   createLeafletElement() {
@@ -52,12 +33,13 @@ type State = {
 }
 
 // export default class SimpleExample extends Component<{}, State> {
-class FranceMaps extends Component<{}, State> {
+class LeafletMap extends Component<{}, State> {
   constructor() {
     super();
     this.print = this.print.bind(this);
     this.data = [];
     this.label = [];
+    this.exportChartPng = this.exportChartPng.bind(this);
   }
 
   state = {
@@ -68,6 +50,10 @@ class FranceMaps extends Component<{}, State> {
 
   print() {
     this.printControl.printMap('A4Portrait', 'MyFileName');
+  }
+
+  exportChartPng() {
+    this.printControl.printMap('A4Portrait', this.props.filename);
   }
 
   render() {
@@ -130,15 +116,15 @@ class FranceMaps extends Component<{}, State> {
             <GeoSearch />
           </Map>
         </div>
-        <button type="button" onClick={() => this.printControl.printMap('A4Portrait', 'MyFileName')}>Print Map</button>
+        <button type="button" onClick={this.exportChartPng}>Print Map</button>
       </div>
     );
   }
 }
 
-export default FranceMaps;
+export default LeafletMap;
 
-FranceMaps.propTypes = {
+LeafletMap.propTypes = {
   data: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
 };
