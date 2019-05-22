@@ -4,82 +4,31 @@
 
 
   .Content{
-  padding: 50px 0;
-  //padding-top: $otherPagesPaddingTop;
-  //padding-bottom: $otherPagesPaddingBottom;
-  background-color: #E9ECF1;
-  border-radius: 5px ;
-  color: $textColor;
+    padding: 50px 0;
+    //padding-top: $otherPagesPaddingTop;
+    //padding-bottom: $otherPagesPaddingBottom;
+    background-color: #E9ECF1;
+    border-radius: 5px ;
+    color: $textColor;
 
 
-  H2 {
-    color: $titleColor;
-    font-size: 1.5rem ;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
+    H2 {
+      color: $titleColor;
+      font-size: 1.5rem ;
+      font-weight: bold;
+      padding-top: 20px;
+      padding-bottom: 10px;
+    }
 
-  P {
-    font-size: 0.9em;
-    padding-right: 30px;
+    P {
+      font-size: 0.9em;
+      padding-right: 30px;
+    }
   }
 
   .Texte{
     padding-left:5px;
   }
-
-  .FormContact {
-
-    box-sizing: border-box;
-
-    INPUT {
-      font-size: 0.9rem;
-      height: 1.8rem;
-      margin-bottom: 20px;
-
-    }
-
-    TEXTAREA{
-      width:100%;
-    }
-
-    LABEL {
-      width:100%;
-      font-weight: 600;
-      font-size: 0.9rem;
-
-    }
-
-    IMG{
-      width: 20%;
-    }
-
-    BUTTON {
-      display:inline-flex;
-      justify-content: space-between;
-      padding-right: 0;
-      background-color: $scanrblueColor;
-      color: white;
-      border-radius: 5px;
-      border: none;
-      font-size: 0.7rem;
-      font-weight: bolder;
-      width:100%;
-      height: 2rem;
-
-    }
-
-    BUTTON:hover {
-        background-color: $hoverLinkButton;
-        color: white;
-    }
-
-
-  }
-
-
-}
 
 
   .Cards {
@@ -90,7 +39,6 @@
 
   @media (min-width: 20px) and (max-width: 991.98px) {
     margin: .5rem;
-
   }
 
 }
