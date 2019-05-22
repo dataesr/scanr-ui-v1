@@ -14,17 +14,17 @@ export default class HighChartsBar extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
+    this.data = this.props.data;
     this.state = {
       options: null,
-      data: this.props.data,
     };
     this.exportChartPdf = this.exportChartPdf.bind(this);
     this.exportChartPng = this.exportChartPng.bind(this);
     this.exportChartCsv = this.exportChartCsv.bind(this);
   }
 
-  componentWillMount() {
-    this.state.options = {
+  componentDidMount() {
+    const options = {
       chart: {
         type: 'bar',
       },
@@ -36,7 +36,7 @@ export default class HighChartsBar extends Component {
       },
       xAxis: {
         lineWidth: 0,
-        categories: this.state.data.labels,
+        categories: this.data.labels,
         labels:
         {
           style: { color: '#000000' },
@@ -72,8 +72,8 @@ export default class HighChartsBar extends Component {
       },
       series: [{
         color: '#FDD85E',
-        name: this.state.data.unit,
-        data: this.state.data.values,
+        name: this.data.unit,
+        data: this.data.values,
         borderRadiusTopLeft: '80%',
         borderRadiusTopRight: '80%',
         borderRadiusBottomLeft: '80%',
@@ -93,6 +93,7 @@ export default class HighChartsBar extends Component {
         },
       },
     };
+    this.setState({ options });
   }
 
   exportChartPdf() {
@@ -117,12 +118,20 @@ export default class HighChartsBar extends Component {
   render() {
     return (
       <div>
-        <HighchartsReact
-          highcharts={Highcharts}
-          options={this.state.options}
-          ref={this.chart}
-        />
-        <button type="button" onClick={this.exportChartCsv}>Export CSV</button>
+        {
+          this.state.options !== null ?
+            (
+              <div>
+                <HighchartsReact
+                  highcharts={Highcharts}
+                  options={this.state.options}
+                  ref={this.chart}
+                />
+                <button type="button" onClick={this.exportChartCsv}>Export CSV</button>
+              </div>
+            )
+            : <div>Loading...</div>
+        }
       </div>
     );
   }

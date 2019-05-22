@@ -31,17 +31,18 @@ export default class DisplayComponent extends Component {
     this.exportPng = this.exportPng.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     axios.get('http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}', {
-      headers: { Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=', 'Access-Control-Allow-Origin': '*' },
+      headers: {
+        Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=',
+      },
     })
       .then((res) => {
-        alert('coucou');
         this.setState({ data: res.data });
       })
       .catch((error) => {
         alert(error);
-        console.log(error.config)
+        console.log(error.config);
       });
   }
 
@@ -146,7 +147,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
+          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
           <TextComponent />
           <ShareComponent />
         </div>
