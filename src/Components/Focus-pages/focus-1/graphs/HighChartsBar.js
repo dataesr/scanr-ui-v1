@@ -122,8 +122,6 @@ export default class HighChartsBar extends Component {
           options={this.state.options}
           ref={this.chart}
         />
-        <button type="button" onClick={this.exportChartPdf}>Export PDF</button>
-        <button type="button" onClick={this.exportChartPng}>Export PNG</button>
         <button type="button" onClick={this.exportChartCsv}>Export CSV</button>
       </div>
     );
