@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Loadable from 'react-loadable';
+import loadable from '@loadable/component';
 import axios from 'axios';
 
 import classes from './GraphComponent.scss';
@@ -30,11 +30,13 @@ export default class DisplayComponent extends Component {
     this.exportPdf = this.exportPdf.bind(this);
   }
 
-  componentWillMount() {
-    axios.get('http://10.243.98.74/organizations/scanr?where=%7B%22badges.code%22:%20%22ResCurie%22%7D').then((res) => {
-      this.setState({ data: res.data });
-    });
-  }
+  // componentWillMount() {
+  //   alert('titi');
+  //   axios.get('http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}').then((res) => {
+  //     this.setState({ data: res.data });
+  //     alert('toto');
+  //   });
+  // }
 
   createTags = () => {
     const table = [];
@@ -46,7 +48,6 @@ export default class DisplayComponent extends Component {
   }
 
   exportPdf() {
-    alert(this.childRef.current)
     this.childRef.current.exportChartPdf();
   }
 
@@ -59,28 +60,20 @@ export default class DisplayComponent extends Component {
       switch (paramsFile.elems[id].type) {
         case 'map':
           this.state.isMap = true;
-          GraphComponent = Loadable({
-            loader: () => import('./graphs/LeafletMap'),
-            loading: () => <div>Chargement en cours...</div>,
-          });
+          GraphComponent = loadable(() => import('./graphs/LeafletMap'));
           break;
         case 'bar':
-          GraphComponent = Loadable({
-            loader: () => import('./graphs/HighChartsBar'),
-            loading: () => <div>Chargement en cours...</div>,
-          });
+          GraphComponent = loadable(() => import('./graphs/HighChartsBar'));
+          // GraphComponent = Loadable({
+          //   loader: () => import('./graphs/HighChartsBar'),
+          //   loading: () => <div>Chargement en cours...</div>,
+          // });
           break;
         case 'pie':
-          GraphComponent = Loadable({
-            loader: () => import('./graphs/HighChartsPie'),
-            loading: () => <div>Chargement en cours...</div>,
-          });
+          GraphComponent = loadable(() => import('./graphs/HighChartsPie'));
           break;
         case 'other':
-          GraphComponent = Loadable({
-            loader: () => import('./graphs/TeamPie'),
-            loading: () => <div>Chargement en cours...</div>,
-          });
+          GraphComponent = loadable(() => import('./graphs/TeamPie'));
           break;
         default:
           GraphComponent = () => (
@@ -158,7 +151,7 @@ export default class DisplayComponent extends Component {
     }
     return (
       <div>
-        {this.state.data ? <this.BlockComponent /> : <div>Chargement (loading) </div> }
+        <this.BlockComponent />
       </div>
     );
   }
