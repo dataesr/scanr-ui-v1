@@ -63,28 +63,10 @@ const Portrait = (props) => {
               leaders={props.data.leaders}
             />
 
-            <History
-              creationYear={props.data.creationYear}
-              id={props.data.id}
-              language={props.language}
-              predecessors={props.data.predecessors}
-            />
-
-            <History
-              creationYear={props.data.creationYear}
-              id={props.data.id}
-              language={props.language}
-              predecessors={props.data.predecessors}
-            />
-
             <ExpertiseField
               id={props.data.id}
               language={props.language}
             />
-
-
-
-
 
             <Web
               id={props.data.id}

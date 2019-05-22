@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import LastFocus from '../Shared/LastFocus/LastFocus';
-import Lexicon from '../Shared/Lexicon/Lexicon';
+import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
 import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
@@ -57,8 +57,8 @@ const HomePage = props => (
 
     <Footer language={props.language} />
 
-    <Lexicon
-      className={classes.HomePageLexiconTop}
+    <LexiconPanel
+      className={classes.HomePageLexiconPanelTop}
       language={props.language}
     />
   </div>
