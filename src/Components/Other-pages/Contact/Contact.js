@@ -8,6 +8,7 @@ import Banner from '../../Shared/Banner/Banner';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
+import FormContact from './FormContact/FormContact';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -47,7 +48,6 @@ const Contact = props => (
 
       <section className={classes.Content}>
         <div className="container">
-
           <div className="row">
             <div className="col-lg-5">
               <div className={classes.Texte}>
@@ -59,95 +59,23 @@ const Contact = props => (
             </div>
           </div>
 
-          <form action="#">
-            <div className="row">
-              <div className={`col-lg-5 ${classes.FormContact}`}>
-                <label htmlFor="name">
-                  <div className={classes.Texte}>
-                    <FormattedHTMLMessage
-                      id="FormContact.name"
-                      defaultMessage="FormContact.name"
-                    />
-                  </div>
-                  <input className="form-control" type="text" placeholder="Ex: Péglion Jéremy" id="name" required />
-                </label>
-                <label htmlFor="organisation">
-                  <div className={classes.Texte}>
-                    <FormattedHTMLMessage
-                      id="FormContact.organisation"
-                      defaultMessage="FormContact.organisation"
-                    />
-                  </div>
-                  <input className="form-control" type="text" placeholder="Ex: Institut Pasteur" id="organisation" name="organisation" />
-                </label>
-                <label htmlFor="fonction">
-                  <div className={classes.Texte}>
-                    <FormattedHTMLMessage
-                      id="FormContact.fonction"
-                      defaultMessage="FormContact.fonction"
-                    />
-                  </div>
-                  <input className="form-control" type="text" placeholder="Ex: Directrice de Centre" id="fonction" name="fonction" required />
-                </label>
-                <label htmlFor="email">
-                  <div className={classes.Texte}>
-                    <FormattedHTMLMessage
-                      id="FormContact.email"
-                      defaultMessage="FormContact.email"
-                    />
-                  </div>
-                  <input className="form-control" type="email" placeholder="Ex: jerem@gmail.com" id="email" name="email" required />
-                </label>
-              </div>
-              <div className={`col-lg-7 ${classes.FormContact}`}>
-                <label htmlFor="message">
-                  <div className={classes.Texte}>
-                    <FormattedHTMLMessage
-                      id="FormContact.message"
-                      defaultMessage="FormContact.message"
-                    />
-                  </div>
-                  <textarea className="form-control" placeholder="..." rows="10" id="message" name="message" />
-                </label>
-              </div>
-            </div>
-            <div className="row">
-              <div className={`col-lg-5 ${classes.FormContact}`}>
-                <div className={classes.Texte}>
-                  <FormattedHTMLMessage
-                    id="FormContact.dataText"
-                    defaultMessage="FormContact.dataText"
-                  />
-                </div>
-              </div>
-              <div className="col-lg-7">
-                <div className={`form-inline ${classes.FormContact}`}>
-                  <div className="g-recaptcha col-7 flex-grow-1" data-sitekey="">
-                    <img
-                      src="./img/RecaptchaLogo.svg"
-                      alt="ReCAPTCHA"
-                    />
-                  </div>
-                  <button type="submit" value="send" className="col-5">
-                    <FormattedHTMLMessage
-                      id="FormContact.btnText"
-                      defaultMessage="FormContact.btnText"
-                    />
-                    <span className="col-5 text-right">
-                      <i className="fas fa-paper-plane" color="white" />
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </form>
+          <FormContact
+            language={props.language}
+            name="name"
+            organisation="organisation"
+            fonction="fonction"
+            email="email"
+            message="message"
+            text="text"
+            btnText="btnText"
+          />
         </div>
       </section>
 
       <section className={classes.Cards}>
         <div className="container">
           <div className="row">
-            <div className="col-lg py-5">
+            <div className="col-lg pt-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="consultFAQ"
@@ -157,7 +85,7 @@ const Contact = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg py-5">
+            <div className="col-lg pt-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="whatAreOurSources"
@@ -167,7 +95,7 @@ const Contact = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg py-5">
+            <div className="col-lg py-3">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="openData"
