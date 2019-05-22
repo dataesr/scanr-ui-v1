@@ -28,15 +28,22 @@ export default class DisplayComponent extends Component {
       isMap: false,
     };
     this.exportPdf = this.exportPdf.bind(this);
+    this.exportPng = this.exportPng.bind(this);
   }
 
-  // componentWillMount() {
-  //   alert('titi');
-  //   axios.get('http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}').then((res) => {
-  //     this.setState({ data: res.data });
-  //     alert('toto');
-  //   });
-  // }
+  componentWillMount() {
+    axios.get('http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}', {
+      headers: { Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=', 'Access-Control-Allow-Origin': '*' },
+    })
+      .then((res) => {
+        alert('coucou');
+        this.setState({ data: res.data });
+      })
+      .catch((error) => {
+        alert(error);
+        console.log(error.config)
+      });
+  }
 
   createTags = () => {
     const table = [];
@@ -49,6 +56,10 @@ export default class DisplayComponent extends Component {
 
   exportPdf() {
     this.childRef.current.exportChartPdf();
+  }
+
+  exportPng() {
+    this.childRef.current.exportChartPng();
   }
 
   render() {
@@ -64,10 +75,6 @@ export default class DisplayComponent extends Component {
           break;
         case 'bar':
           GraphComponent = loadable(() => import('./graphs/HighChartsBar'));
-          // GraphComponent = Loadable({
-          //   loader: () => import('./graphs/HighChartsBar'),
-          //   loading: () => <div>Chargement en cours...</div>,
-          // });
           break;
         case 'pie':
           GraphComponent = loadable(() => import('./graphs/HighChartsPie'));
@@ -129,7 +136,7 @@ export default class DisplayComponent extends Component {
             <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
             <button type="button" onClick={this.exportPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
             <p className={`${classes.Subtitle}`}>.pdf</p>
-            <i style={btnExport} className="fas fa-image fa-lg" />
+            <button type="button" onClick={this.exportPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
             <p className={`${classes.Subtitle}`}>.png</p>
             <i style={btnExport} className="fas fa-table fa-lg" />
             <p className={`${classes.Subtitle}`}>.csv</p>
@@ -151,7 +158,7 @@ export default class DisplayComponent extends Component {
     }
     return (
       <div>
-        <this.BlockComponent />
+        {this.state.data ? <this.BlockComponent /> : <div>Loading...</div>}
       </div>
     );
   }
