@@ -2,11 +2,11 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import classes from './SearchObjectTab.scss';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
-import classes from './SearchObjectTab.scss';
 
 
 const SearchObjectTab = (props) => {
@@ -21,86 +21,91 @@ const SearchObjectTab = (props) => {
         <div className="container columns">
           <nav className="row">
             <a
-              className={(props.currentQueryObject === 'all')
+              className={(props.objectType === 'all')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('all')}
-              href="#"
             >
-              <div>
-                <strong>
-                  <FormattedHTMLMessage id="nav.all" defaultMessage="nav.all" />
-                </strong>
+              <div className="font-weight-bold">
+                <FormattedHTMLMessage id="nav.all" defaultMessage="nav.all" />
               </div>
-              <div>(count)</div>
+              <div>
+                (
+                {props.counts.all}
+                )
+              </div>
             </a>
             <a
-              className={(props.currentQueryObject === 'entities')
+              className={(props.objectType === 'entities')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('entities')}
-              href="#"
             >
-              <div>
-                <strong>
-                  <FormattedHTMLMessage id="nav.entities" defaultMessage="nav.entities" />
-                </strong>
+              <div className="font-weight-bold">
+                <FormattedHTMLMessage id="nav.entities" defaultMessage="nav.entities" />
               </div>
-              <div>(count)</div>
+              <div>
+                (
+                {props.counts.structures}
+                )
+              </div>
             </a>
             <a
-              className={(props.currentQueryObject === 'projects')
+              className={(props.objectType === 'projects')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('projects')}
-              href="#"
             >
-              <div>
-                <strong>
-                  <FormattedHTMLMessage id="nav.projects" defaultMessage="nav.projects" />
-                </strong>
+              <div className="font-weight-bold">
+                <FormattedHTMLMessage id="nav.projects" defaultMessage="nav.projects" />
               </div>
-              <div>(count)</div>
+              <div>
+                (
+                {props.counts.projects}
+                )
+              </div>
             </a>
             <a
-              className={(props.currentQueryObject === 'persons')
+              className={(props.objectType === 'persons')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('persons')}
-              href="#"
             >
-              <div>
-                <strong>
-                  <FormattedHTMLMessage id="nav.persons" defaultMessage="nav.persons" />
-                </strong>
+              <div className="font-weight-bold">
+                <FormattedHTMLMessage id="nav.persons" defaultMessage="nav.persons" />
               </div>
-              <div>(count)</div>
+              <div>
+                (
+                {props.counts.persons}
+                )
+              </div>
             </a>
             <a
-              className={(props.currentQueryObject === 'publications')
+              className={(props.objectType === 'publications')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
               onClick={() => props.queryObjectChangeHandler('publications')}
-              href="#"
             >
-              <div>
-                <strong>
-                  <FormattedHTMLMessage id="nav.publications" defaultMessage="nav.publications" />
-                </strong>
+              <div className="font-weight-bold">
+                <FormattedHTMLMessage id="nav.publications" defaultMessage="nav.publications" />
               </div>
-              <div>(count)</div>
+              <div>
+                (
+                {props.counts.publications}
+                )
+              </div>
             </a>
           </nav>
           <nav className={`row ${classes.ResultsNavContainer}`}>
             <a className={`col-lg-4 col-md-0 ${classes.ResultsNavItemCols}`}> </a>
             <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
               <div
-                className={(props.currentResultView === 'list')
+                className={(props.view === 'list')
                   ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
                   : `${classes.ResultsNavItem}`
                 }
@@ -112,7 +117,7 @@ const SearchObjectTab = (props) => {
             </a>
             <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
               <div
-                className={(props.currentResultView === 'visualization')
+                className={(props.view === 'visualization')
                   ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
                   : `${classes.ResultsNavItem}`
                 }
@@ -133,8 +138,9 @@ export default SearchObjectTab;
 
 SearchObjectTab.propTypes = {
   language: PropTypes.string.isRequired,
-  currentQueryObject: PropTypes.string,
-  currentResultView: PropTypes.string,
+  objectType: PropTypes.string,
+  view: PropTypes.string,
   queryObjectChangeHandler: PropTypes.func,
   resultViewChangeHandler: PropTypes.func,
+  counts: PropTypes.object,
 };

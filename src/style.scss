@@ -60,6 +60,8 @@ $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
 $mediaTextColor:rgb(56, 119, 186);
 
+/* Blanc avec alpha 0.7*/
+$alphaWhite7: rgba(255, 255, 255, 0.7);
 
 /* cards de couleur dans la page open data*/
 .entitiesCards {
@@ -102,7 +104,7 @@ $mediaTextColor:rgb(56, 119, 186);
   background-color: white;
 }
 .has-background-all {
-  background-color: #e4e4e4;
+  background-color: $scanrmiddlegreyColor;
 }
 .has-background-entities {
   background-color: $entitiesColor;
