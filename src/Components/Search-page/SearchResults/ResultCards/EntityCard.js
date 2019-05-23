@@ -8,8 +8,6 @@ import messagesEn from './translations/en.json';
 
 import classes from './Cards.scss';
 
-import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage'
-
 const isEven = (value) => {
   if (value % 2 === 0) {
     return classes.cardIsLeft;
@@ -23,49 +21,55 @@ const EntityCard = (props) => {
     en: messagesEn,
   };
   return (
-    props.resultsData.map((res, index) => {
+    props.results.map((res, index) => {
       const sideClass = isEven(index);
       return (
-        <IntlProvider locale={props.language} messages={messages[props.language]}>
-          <div className={`col-6 ${sideClass}`}>
-            <div className={`container d-flex flex-column ${classes.ResultCard}`}>
+        <div className={`col-12 col-md-6 ${sideClass}`} key={res.value.id}>
+          <IntlProvider locale={props.language} messages={messages[props.language]}>
+            <div className={`d-flex flex-column ${classes.ResultCard}`}>
               <a
-                className={`row p-3 pl-4 pt-4 align-items-top flex-grow-1 ${classes.CardHeader}`}
+                className={`mb-auto p-3 pl-4 pt-4 align-items-top ${classes.CardHeader}`}
                 href={`entite/${res.value.id}`}
               >
                 {(res.value.label) ? res.value.label[props.language] : null}
               </a>
-              <div className={`row pr-3 pb-1 pl-4 align-items-center ${classes.CardContent}`}>
+              <div className="d-flex flex-row flex-wrap pr-3 pb-1 pl-4 align-items-center">
                 <div className={classes.Icons}>
                   <i className="fas fa-map-marker" />
                 </div>
-                <div className="col-10">
+                <div className="flex-grow-1">
                   {
                     (res.value.address && res.value.address.length > 0 && res.value.address[0].postcode)
                       ? `${res.value.address[0].city} (${res.value.address[0].postcode.slice(0, 2)})`
                       : null
                   }
                 </div>
+              </div>
+              <div className="d-flex flex-row flex-wrap pr-3 pb-1 pl-4 align-items-center">
                 <div className={classes.Icons}>
                   <i className="fas fa-building" />
                 </div>
-                <div className="col-10">
+                <div className="flex-grow-1">
                   {res.value.nature}
                 </div>
+              </div>
+              <div className="d-flex flex-row flex-wrap pr-3 pb-1 pl-4 align-items-center">
                 <div className={classes.Icons}>
                   <i className="fas fa-atom" />
                 </div>
-                <div className="col-10">
+                <div className="flex-grow-1">
                   {res.value.nature}
                 </div>
+              </div>
+              <div className="d-flex flex-row flex-wrap pr-3 pb-1 pl-4 align-items-center">
                 <div className={classes.Icons}>
                   <i className="fas fa-th-large" />
                 </div>
-                <div className="col-10">
+                <div className="flex-grow-1">
                   {`Identifiant: ${res.value.id}`}
                 </div>
               </div>
-              <div className={`row pt-2 pr-3 pl-4 pb-4 d-flex align-items-center ${classes.CardFooter}`}>
+              <div className={`pt-2 pr-3 pl-4 pb-4 d-flex align-items-center ${classes.CardFooter}`}>
                 <div className={classes.Icons}>
                   <i className="fas fa-question" />
                 </div>
@@ -88,8 +92,8 @@ const EntityCard = (props) => {
                 </div>
               </div>
             </div>
-          </div>
-        </IntlProvider>
+          </IntlProvider>
+        </div>
       );
     })
   );
@@ -99,5 +103,5 @@ export default EntityCard;
 
 EntityCard.propTypes = {
   language: PropTypes.string.isRequired,
-  resultsData: PropTypes.object,
+  results: PropTypes.array,
 };
