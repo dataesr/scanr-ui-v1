@@ -66,8 +66,8 @@ const SearchPanel = (props) => {
         <div className={`container ${classes.MainContainer}`}>
           {ShouldRenderLogo()}
           <form onSubmit={props.submitResearch}>
-            <div className="form-row">
-              <div className="form-group col-md-8">
+            <div className="d-flex align-items-center mb-2">
+              <div className="d-flex flex-column flex-grow-1 pl-0">
                 <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
                   { label => <label className={classes.TitleSearchBar} htmlFor="inputCity">{label}</label> }
                 </FormattedMessage>
@@ -75,7 +75,7 @@ const SearchPanel = (props) => {
                   { placeholder => (
                     <input
                       type="text"
-                      className="form-control"
+                      className={`pl-2 ${classes.SearchBar2}`}
                       id="inputCity"
                       placeholder={placeholder}
                       value={props.currentQueryText}
@@ -84,7 +84,7 @@ const SearchPanel = (props) => {
                   )}
                 </FormattedMessage>
               </div>
-              <div className="form-group col-md-3">
+              <div className="d-flex flex-column pr-1 pl-1 col-xs-hidden">
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
                   { label => <label className={classes.SearchPerimeter} htmlFor="inputCity">{label}</label> }
                 </FormattedMessage>
@@ -110,7 +110,7 @@ const SearchPanel = (props) => {
                   </FormattedMessage>
                 </select>
               </div>
-              <div className="form-group col-md-1">
+              <div className="d-flex flex-column mr-4 pr-0 pl-1">
                 <button
                   type="submit"
                   className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}

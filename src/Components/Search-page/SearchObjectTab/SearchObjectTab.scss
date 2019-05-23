@@ -13,20 +13,22 @@
   border-radius: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
-  color: $titleColor;
+  color: $scanrdeepblueColor !important;
   text-align: center;
 }
+
 .ObjectsNavItemActive {
-  background-color: $titleColor;
-  color: white;
+  background-color: $scanrdeepblueColor;
+  color: white !important;
 }
 
 .ObjetcsNavItem:hover {
+  cursor: pointer;
   margin-right: 8px;
   border-radius: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
-  color: $titleColor;
+  color: $scanrdeepblueColor;
   text-decoration: none;
   box-shadow: 1px 1px 15px white
 }
@@ -37,7 +39,7 @@
   padding-top: 8px;
   padding-bottom: 8px;
   right: 8px;
-  background-color: $titleColor;
+  background-color: $scanrdeepblueColor;
   color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -50,7 +52,7 @@
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 6px;
-  color: $mediaTextColor;
+  color: $scanrblueColor;
   cursor: pointer;
   .ResultsNavItemIcon {
     margin-left: 8px;
@@ -62,7 +64,7 @@
   padding-right: 4px;
 }
 .ResultsNavItemActive {
-  background-color: $mediaTextColor;
+  background-color: $scanrblueColor;
   border-radius: 30px;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -72,5 +74,5 @@
 }
 .ResultsNavItem:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 10px grey;
+  box-shadow: 1px 1px 10px $scanrlightgreyColor;
 }
