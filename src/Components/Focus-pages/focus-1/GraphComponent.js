@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Modal } from 'react-bootstrap';
 import loadable from '@loadable/component';
 import axios from 'axios';
 
@@ -23,12 +24,14 @@ export default class DisplayComponent extends Component {
     this.BlockComponent = null;
     this.childRef = React.createRef();
     this.state = {
+      cursor: 'pointer',
       data: null,
       isMap: false,
     };
     this.exportPdf = this.exportPdf.bind(this);
     this.exportPng = this.exportPng.bind(this);
     this.exportCsv = this.exportCsv.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   componentDidMount() {
@@ -41,8 +44,8 @@ export default class DisplayComponent extends Component {
         this.setState({ data: res.data });
       })
       .catch((error) => {
-        alert(error);
-        console.log(error.config);
+        console.log(error);
+        console.log("Couldn't retrieve API data");
       });
   }
 
@@ -56,15 +59,31 @@ export default class DisplayComponent extends Component {
   }
 
   exportPdf() {
-    this.childRef.current.exportChartPdf();
+    try {
+      this.childRef.current.exportChartPdf();
+    } catch (error) {
+      this.setState({ show: true });
+    }
   }
 
   exportPng() {
-    this.childRef.current.exportChartPng();
+    try {
+      this.childRef.current.exportChartPng();
+    } catch (error) {
+      this.setState({ show: true });
+    }
   }
 
   exportCsv() {
-    this.childRef.current.exportChartCsv();
+    try {
+      this.childRef.current.exportChartCsv();
+    } catch (error) {
+      this.setState({ show: true });
+    }
+  }
+
+  handleClose() {
+    this.setState({ show: false });
   }
 
   render() {
@@ -124,7 +143,7 @@ export default class DisplayComponent extends Component {
       };
       const btnExport = {
         color: '#3778bb',
-        cursor: 'pointer',
+        cursor: this.state.cursor,
       };
       const ShareComponent = () => (
         <div>
@@ -146,12 +165,21 @@ export default class DisplayComponent extends Component {
           </div>
         </div>
       );
+      const GraphModal = () => (
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Format indisponible</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{"Désolé, ce format n'est pas encore disponible pour ce graph."}</Modal.Body>
+        </Modal>
+      );
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
           {this.state.isMap ? <GraphComponent filename={paramsFile.elems[this.props.id].name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={paramsFile.elems[this.props.id].name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
           <TextComponent />
           <ShareComponent />
+          <GraphModal />
         </div>
       );
     } catch (error) {
