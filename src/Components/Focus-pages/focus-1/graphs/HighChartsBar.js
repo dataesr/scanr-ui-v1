@@ -109,25 +109,21 @@ export default class HighChartsBar extends Component {
   }
 
   exportChartCsv() {
-    alert(this.chart.current.chart.getCSV());
-    alert(this.chart.current.chart.getTable());
-    alert(this.chart.current.chart.getDataRows());
-    this.chart.current.chart.getCSV();
+    this.chart.current.chart.downloadCSV();
   }
 
   render() {
     return (
       <div>
         {
-          this.state.options !== null ?
-            (
+          this.state.options !== null
+            ? (
               <div>
                 <HighchartsReact
                   highcharts={Highcharts}
                   options={this.state.options}
                   ref={this.chart}
                 />
-                <button type="button" onClick={this.exportChartCsv}>Export CSV</button>
               </div>
             )
             : <div>Loading...</div>
