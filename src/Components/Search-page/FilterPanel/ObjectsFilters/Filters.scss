@@ -1,0 +1,38 @@
+@import '../../../../style.scss';
+
+.SearchButton {
+  background-color: transparent !important;
+  border: 0;
+  margin-left: -40px;
+}
+.SearchButton:hover {
+  cursor: pointer;
+}
+.SearchIcon {
+  color: $scanrblueColor;
+  font-size: 1.2em;
+}
+.SearchBar {
+  background-color: white;
+  border: 2px solid $scanrmiddlegreyColor;
+  height: 45px;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 100%;
+}
+.SearchBar:focus {
+  border: 2px solid $scanrgreyColor;
+  outline: none;
+}
+
+.Select {
+  background-color: $scanrblueColor;
+  color: white;
+  border: 0;
+  height: 35px;
+  border-radius: 8px;
+  width: 100%;
+}
+.Select:focus {
+  outline: none;
+}
