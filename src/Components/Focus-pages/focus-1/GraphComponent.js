@@ -23,16 +23,16 @@ export default class DisplayComponent extends Component {
     this.BlockComponent = null;
     this.childRef = React.createRef();
     this.state = {
-      name: paramsFile.elems[this.props.id].name,
       data: null,
       isMap: false,
     };
     this.exportPdf = this.exportPdf.bind(this);
     this.exportPng = this.exportPng.bind(this);
+    this.exportCsv = this.exportCsv.bind(this);
   }
 
   componentDidMount() {
-    axios.get('http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}', {
+    axios.get(paramsFile.elems[this.props.id].data.url, {
       headers: {
         Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=',
       },
@@ -61,6 +61,10 @@ export default class DisplayComponent extends Component {
 
   exportPng() {
     this.childRef.current.exportChartPng();
+  }
+
+  exportCsv() {
+    this.childRef.current.exportChartCsv();
   }
 
   render() {
@@ -119,8 +123,6 @@ export default class DisplayComponent extends Component {
         cursor: 'not-allowed',
       };
       const btnExport = {
-        paddingLeft: '5px',
-        paddingRight: '5px',
         color: '#3778bb',
         cursor: 'pointer',
       };
@@ -139,7 +141,7 @@ export default class DisplayComponent extends Component {
             <p className={`${classes.Subtitle}`}>.pdf</p>
             <button type="button" onClick={this.exportPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
             <p className={`${classes.Subtitle}`}>.png</p>
-            <i style={btnExport} className="fas fa-table fa-lg" />
+            <button type="button" onClick={this.exportCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
             <p className={`${classes.Subtitle}`}>.csv</p>
           </div>
         </div>
@@ -147,7 +149,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent filename={this.state.name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={this.state.name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
+          {this.state.isMap ? <GraphComponent filename={paramsFile.elems[this.props.id].name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={paramsFile.elems[this.props.id].name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
           <TextComponent />
           <ShareComponent />
         </div>
