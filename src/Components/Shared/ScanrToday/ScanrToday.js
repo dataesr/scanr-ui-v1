@@ -35,7 +35,13 @@ const ScanrToday = (props) => {
                   defaultMessage="ScanrToday.string.title"
                 />
                 &nbsp;
-                <i className="fa fa-info-circle" />
+                <i
+                  className="fa fa-info-circle"
+                  onClick={() => props.lexiconHandler('glossary.glossaire4')}
+                  onKeyPress={() => props.lexiconHandler('glossary.glossaire4')}
+                  role="button"
+                  tabIndex={0}
+                />
               </span>
             </div>
             <div className="col-lg">
@@ -120,4 +126,5 @@ export default ScanrToday;
 
 ScanrToday.propTypes = {
   language: PropTypes.string.isRequired,
+  lexiconHandler: PropTypes.func,
 };
