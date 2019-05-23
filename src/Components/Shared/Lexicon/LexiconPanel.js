@@ -17,16 +17,29 @@ import classes from './LexiconPanel.scss';
 
 class Lexicon extends Component {
   state={
-    opened: true,
-    glossary: false,
+    opened: false,
+    glossary: true,
+    target: this.props.target,
   };
+
+  componentDidUpdate() {
+    if (this.props.target !== this.state.target) {
+      if (this.props.target) {
+        const termsTarget = this.props.target.split('.')[0];
+        const glossary = (termsTarget === 'glossary');
+        this.setState({ target: this.props.target, opened: true, glossary });
+      } else {
+        this.setState({ target: this.props.target, opened: true, glossary: true });
+      }
+    }
+  }
 
   togglePane = () => {
     this.setState(prevState => ({ opened: !prevState.opened }));
+    this.props.lexiconHandler(null);
   }
 
   handleChange = (checked) => {
-    console.log('here', checked);
     this.setState({ glossary: checked });
   }
 
@@ -37,26 +50,32 @@ class Lexicon extends Component {
     };
 
     let panel = null;
-    if (this.state.opened) {
+    let termsHtml = null;
+    if (this.state.opened && this.props.target) {
       const terms = (this.state.glossary) ? glossaryTerms : faqTerms;
+      termsHtml = Object.keys(terms).map((term) => {
+        const ifTarget = (term === this.props.target.split('.')[1]) ? 'IsTarget' : null;
 
-      const termsHtml = Object.keys(terms).map(term => (
-        <li key={terms[term].label[this.props.language]} id={term}>
-          <div className={classes.Title}>
-            <span className={classes.Logo}>
-              {
-                (terms[term].icon)
-                  ? <i className={terms[term].icon} />
-                  : <i className="fas fa-file-alt" />
-              }
-            </span>
-            {terms[term].label[this.props.language]}
-          </div>
-          <div className={classes.Description}>
-            {terms[term].description[this.props.language]}
-          </div>
-        </li>
-      ));
+        return (
+          <li key={terms[term].label[this.props.language]} id={term} className={classes[ifTarget]}>
+            <div className={classes.Item}>
+              <div className={classes.Title}>
+                <span className={classes.Logo}>
+                  {
+                    (terms[term].icon)
+                      ? <i className={terms[term].icon} />
+                      : <i className="fas fa-file-alt" />
+                  }
+                </span>
+                {terms[term].label[this.props.language]}
+              </div>
+              <div className={classes.Description}>
+                {terms[term].description[this.props.language]}
+              </div>
+            </div>
+          </li>
+        );
+      });
 
       panel = (
         <div className={classes.Panel}>
@@ -122,9 +141,12 @@ class Lexicon extends Component {
 }
 
 export default Lexicon;
-
+Lexicon.defaultProps = {
+  target: null,
+};
 Lexicon.propTypes = {
   className: PropTypes.string,
   language: PropTypes.string.isRequired,
   target: PropTypes.string,
+  lexiconHandler: PropTypes.func,
 };
