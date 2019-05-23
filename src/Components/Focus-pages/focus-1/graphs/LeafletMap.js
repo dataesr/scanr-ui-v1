@@ -100,23 +100,20 @@ class LeafletMap extends Component<{}, State> {
       return markers;
     };
     return (
-      <div>
-        <div style={{ marginLeft: 'auto', marginRight: 'auto', width: '66vw' }}>
-          <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh', borderStyle: 'solid' }} minZoom={2} maxZoom={19}>
-            <TileLayer
-              attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-              url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-            />
-            <MarkerClusterGroup maxClusterRadius={20}>
-              {this.createMarkers()}
-            </MarkerClusterGroup>
-            <ZoomControl position="bottomleft" />
-            {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} /> */}
-            <PrintControl style={{ display: 'none' }} ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
-            <GeoSearch />
-          </Map>
-        </div>
-        <button type="button" onClick={this.exportChartPng}>Print Map</button>
+      <div style={{ marginLeft: 'auto', marginRight: 'auto', width: 'auto' }}>
+        <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh', borderStyle: 'solid' }} minZoom={2} maxZoom={19}>
+          <TileLayer
+            attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
+            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          />
+          <MarkerClusterGroup maxClusterRadius={20}>
+            {this.createMarkers()}
+          </MarkerClusterGroup>
+          <ZoomControl position="bottomleft" />
+          {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} /> */}
+          <PrintControl style={{ display: 'none' }} ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
+          <GeoSearch />
+        </Map>
       </div>
     );
   }
