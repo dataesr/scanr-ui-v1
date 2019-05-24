@@ -7,7 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './FilterPanel.scss';
-
+import EntityFilters from './ObjectsFilters/EntityFilters'
 
 const FilterPanel = (props) => {
   const messages = {
@@ -17,19 +17,22 @@ const FilterPanel = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`row ${classes.Section}`}>
-        <div className={`col-12 ${classes.ActiveFiltersContainer}`}>
+      <div className="row d-flex flex-column">
+        <div className={`p-3 mb-2 mr-1 ${classes.ActiveFiltersContainer}`}>
           <div className={classes.FilterHeaders}>
             <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
             <span> - (count)</span>
           </div>
         </div>
-        <div className={`col-12 ${classes.FiltersContainer}`}>
+        <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
           <div className={classes.FilterHeaders}>
             <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
           </div>
+          <EntityFilters
+            language={props.language}
+          />
         </div>
-      </section>
+      </div>
     </IntlProvider>
   );
 };

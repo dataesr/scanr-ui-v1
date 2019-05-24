@@ -33,6 +33,7 @@ const Search = (props) => {
     backgroundImage: `url(${bgUrl})`,
     backgroundSize: '35%',
   };
+  /* eslint-disable */
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section style={sectionStyle} className={classes.Search}>
