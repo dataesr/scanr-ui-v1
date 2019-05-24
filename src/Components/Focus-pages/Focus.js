@@ -8,7 +8,6 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../Shared/LastFocus/LastFocus';
-import Lexicon from '../Shared/Lexicon/Lexicon';
 // import Search from '../Home-page/Search/Search';
 
 import classes from '../Home-page/Home-page.scss';
@@ -52,11 +51,6 @@ const Focus = props => (
     <DiscoverDataEsr language={props.language} />
 
     <Footer language={props.language} />
-
-    <Lexicon
-      className={classes.HomePageLexiconTop}
-      language={props.language}
-    />
   </div>
 );
 
