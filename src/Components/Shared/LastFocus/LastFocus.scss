@@ -14,6 +14,20 @@
   }
 
   .Button {
-    font-size: 1.6em;
+    background-color: $scanrblueColor;
+    color: white;
+    border-radius: 5px;
+    height: 36px;
+  }
+  .Button:hover {
+    background-color: $scanrgreyColor;
+    color: white;
+  }
+  .Button A {
+    color: white;
+  }
+  .Button A:hover, A:focus, {
+    color: white;
+    text-decoration: none;
   }
 }
