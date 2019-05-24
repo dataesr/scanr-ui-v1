@@ -7,7 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './Graphs.scss';
-
+import '../../../../Focus-pages/focus-1/graphs/HighChartsBar'
 
 const EntityGraphs = (props) => {
   const messages = {
