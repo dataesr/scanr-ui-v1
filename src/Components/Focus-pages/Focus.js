@@ -26,6 +26,7 @@ export default class FocusList extends Component {
     super(props);
     this.state = {
       data: null,
+      meta: null,
       missing: false,
     };
   }
@@ -35,7 +36,7 @@ export default class FocusList extends Component {
     let params = '';
     try {
       params = require(`${filename}`);
-      this.setState({ data: params });
+      this.setState({ meta: params });
     } catch (error) {
       this.setState({ missing: true });
     }
@@ -62,7 +63,29 @@ export default class FocusList extends Component {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              {this.state.data ? <div>C bon chef</div> : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : <div>Chargement/Loading...</div>)]}
+              {
+            // const TextComponent = () => (
+            //   <div>
+            //     <p className={`${classes.Text}`}>
+            //       {paramsFile.elems[id].text}
+            //     </p>
+            //     <p>
+            //       {paramsFile.elems[id].subtext}
+            //     </p>
+            //   </div>
+            // );
+          }
+              {this.state.data ? (
+                <GraphComponent
+                  name={this.state.meta.name}
+                  subname={this.state.meta.subname}
+                  type={this.state.meta.type}
+                  tags={this.state.meta.tags}
+                  data={this.state.data}
+                  language={this.props.language}
+                />
+              )
+                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : <div>Chargement/Loading...</div>)]}
               {
                 // <GraphComponent
                 //   id={props.match.params.id}
