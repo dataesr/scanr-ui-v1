@@ -117,11 +117,11 @@ const SearchObjectTab = (props) => {
             </a>
             <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
               <div
-                className={(props.view === 'visualization')
+                className={(props.view === 'graph')
                   ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
                   : `${classes.ResultsNavItem}`
                 }
-                onClick={() => props.resultViewChangeHandler('visualization')}
+                onClick={() => props.resultViewChangeHandler('graph')}
               >
                 <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
                 <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />

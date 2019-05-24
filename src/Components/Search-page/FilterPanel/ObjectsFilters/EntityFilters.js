@@ -14,9 +14,8 @@ const EntityFilters = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  console.log(props.facets);
-  const typeFacets = props.facets.find(item => item.id === 'facet_natures') || {entries: []}
-  console.log(typeFacets);
+  const typeFacets = props.facets.find(item => item.id === 'facet_natures') || { entries: [] };
+  const caractFacets = props.facets.find(item => item.id === 'facet_badges') || { entries: [] };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -41,34 +40,30 @@ const EntityFilters = (props) => {
         </div>
         <div className="d-flex flex-column mb-3">
           <FormattedHTMLMessage id="filters.entityType" defaultMessage="filters.entityType" />
-          <select className={`mt-1 pl-2 ${classes.Select}`} id="inlineFormCustomSelect">
-            <option selected>Choose...</option>
+          <select className={`mt-1 pl-2 ${classes.Select}`} id="nature">
+            <option>Choose...</option>
             {
-              typeFacets.entries.map((facet) => {
-                const a = 2
-                return (
-                  <option value={facet.value}>{`${facet.value} (${facet.count})`}</option>
-                );
-              })
+              typeFacets.entries.map(facet => (
+                <option key={facet.value} value={facet.value}>{`${facet.value} (${facet.count})`}</option>
+              ))
             }
           </select>
         </div>
         <div className="d-flex flex-column mb-3">
           <FormattedHTMLMessage id="filters.caracteristics" defaultMessage="filters.caracteristics" />
-          <select className={`mt-1 pl-2 ${classes.Select}`} id="inlineFormCustomSelect">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-        </div>
-        <div className="d-flex flex-column mb-3">
-          <FormattedHTMLMessage id="filters.caracteristics" defaultMessage="filters.caracteristics" />
-          <select className={`mt-1 pl-2 ${classes.Select}`} id="inlineFormCustomSelect">
-            <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+          <select className={`mt-1 pl-2 ${classes.Select}`} id="badges">
+            <option>Choose...</option>
+            {
+              caractFacets.entries.map(facet => (
+                <option
+                  key={facet.value}
+                  value={facet.value}
+                  onChange={props.filterChangeHandler}
+                >
+                  {`${facet.value} (${facet.count})`}
+                </option>
+              ))
+            }
           </select>
         </div>
       </div>
@@ -80,5 +75,6 @@ export default EntityFilters;
 
 EntityFilters.propTypes = {
   language: PropTypes.string.isRequired,
+  filterChangeHandler: PropTypes.func,
   facets: PropTypes.array,
 };
