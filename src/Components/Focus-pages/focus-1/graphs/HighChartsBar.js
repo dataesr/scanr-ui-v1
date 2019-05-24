@@ -24,6 +24,81 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
+    // const labels = [];
+    // const values = [];
+    // for (let i = 0; i < this.props.temp.meta.total; i += 1) {
+    //   labels.push(this.props.temp.data[i].address[0].city)
+    //   alert(labels[i]);
+    // }
+    // const tempOptions = {
+    //   chart: {
+    //     type: 'bar',
+    //   },
+    //   credits: {
+    //     enabled: false,
+    //   },
+    //   title: {
+    //     text: '',
+    //   },
+    //   xAxis: {
+    //     lineWidth: 0,
+    //     categories: this.data.labels,
+    //     labels:
+    //     {
+    //       style: { color: '#000000' },
+    //       // enabled: false
+    //       align: 'left',
+    //       x: 20,
+    //     },
+    //   },
+    //   yAxis: {
+    //     min: 0,
+    //     gridLineWidth: 0,
+    //     minorGridLineWidth: 0,
+    //     title: { text: '' },
+    //     labels: { enabled: false },
+    //   },
+    //   legend: {
+    //     hide: true,
+    //     enabled: false,
+    //     // reversed: true
+    //   },
+    //   plotOptions: {
+    //     series: {
+    //       stacking: 'normal',
+    //       pointPadding: 0,
+    //       // groupPadding: 0.1,
+    //       dataLabels: {
+    //         enabled: true,
+    //         align: 'right',
+    //         x: 15,
+    //         style: { color: '#000000' },
+    //       },
+    //     },
+    //   },
+    //   series: [{
+    //     color: '#FDD85E',
+    //     name: this.data.unit,
+    //     data: this.data.values,
+    //     borderRadiusTopLeft: '80%',
+    //     borderRadiusTopRight: '80%',
+    //     borderRadiusBottomLeft: '80%',
+    //     borderRadiusBottomRight: '80%',
+    //   }],
+    //   exporting: {
+    //     filename: this.props.filename,
+    //     buttons: {
+    //       contextButton: {
+    //         enabled: false,
+    //       },
+    //     },
+    //     chartOptions: {
+    //       title: {
+    //         text: this.props.filename,
+    //       },
+    //     },
+    //   },
+    // };
     const options = {
       chart: {
         type: 'bar',
@@ -134,6 +209,7 @@ export default class HighChartsBar extends Component {
 }
 
 HighChartsBar.propTypes = {
+  temp: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };

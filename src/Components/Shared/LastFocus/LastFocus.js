@@ -89,7 +89,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'Japan Prize: Qui sont les lauréats français ?',
       type: 'histoTop',
-      url: '/focus/0',
+      url: '',
       schema: 'entity',
     },
     {
@@ -103,7 +103,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'La carte des projets financés par l\'ANR',
       type: 'donut',
-      url: '/focus/2',
+      url: '',
       schema: 'project',
     },
     {
