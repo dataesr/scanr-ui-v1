@@ -9,18 +9,20 @@
   margin: 3px;
 
   .Logo {
-    color: #656979;
+    color: $scanrgreyColor;
   }
 
   .Title {
-    color: #656979;
+    color: $scanrgreyColor;
     font-style: italic;
+    font-size: 0.9rem;
   }
 
   .Label {
     padding-top: 16px;
-    color: $textColor;
-    font-size: 1.1rem;
+    color: $scanrdeepblueColor;
+    font-size: 1.2rem;
+    line-height: 22px;
     font-weight: bold;
   }
 }
