@@ -1,0 +1,14 @@
+{
+  "name": "Carte des pôles de compétitivité en France",
+  "subname": "En nombre d'entités au 31/12/2017",
+  "text": "La France compte aujourd'hui soixante-et-onze pôles de compétitivité.",
+  "subtext": "Créés en 2005, ces <<clusters à la française>>, ont pour objectif de dynamiser l'innovation et de renforcer l'industrie en stimulant les dépenses de R-&-D.",
+  "type": "bar",
+  "tags": ["tag1", "tag2", "tag3"],
+  "data" : {
+    "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}",
+    "unit" : "entités",
+    "labels" : ["Lyon", "Toulouse", "Montpellier", "Grenoble", "Marseille - Aix-en-Provence", "Bordeaux", "Nantes", "Paris", "Rennes", "Lille"],
+    "values" : [ 121, 96, 87, 80, 74, 64, 60, 55, 48, 8]
+  }
+}
