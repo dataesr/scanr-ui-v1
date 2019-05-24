@@ -38,7 +38,7 @@ class SearchPage extends Component {
       currentQueryText: '',
       request: {
         lang: this.props.language,
-        sourceFields: ['id', 'label', 'natur', 'address'],
+        sourceFields: ['id', 'label', 'nature', 'address'],
         searchFields: null,
         query: '',
         page: null,
@@ -85,16 +85,19 @@ class SearchPage extends Component {
     const objectType = this.props.match.params.objectType || 'entities';
     const view = queryString.parse(this.props.location.search).view || 'list';
     const query = queryString.parse(this.props.location.search).query || '';
+    const currentQueryText = queryString.parse(this.props.location.search).query || '';
     const pageSize = queryString.parse(this.props.location.search).pageSize;
     const page = queryString.parse(this.props.location.search).page;
-    const filters = queryString.parse(this.props.location.search).filter;
+    const filters = queryString.parse(this.props.location.search).filters || {};
     const newState = {
       objectType,
+      currentQueryText,
       view,
       request: {
         query,
         page,
         pageSize,
+        // filters,
       },
     };
     this.setState(newState);
@@ -134,13 +137,14 @@ class SearchPage extends Component {
 
   resultViewChangeHandler = (newView) => {
     const url = this.setParams('view', newView);
-    this.props.history.push(this.props.location.pathname + '?' + url);
+    this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
   filterChangeHandler = (e) => {
-    e.preventDefault();
-    const url = this.setParams('view', newView);
-    this.props.history.push(this.props.location.pathname + '?' + url);
+    console.log(e.target.id, e.target.value);
+
+    const url = this.setParams(e.target.id, e.target.value, true, false);
+    this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
   getData = (newState) => {
@@ -201,7 +205,7 @@ class SearchPage extends Component {
             <FilterPanel
               language={this.props.language}
               facets={this.state.facets}
-              filterChangeHandler={this.state.filterChangeHandler}
+              filterChangeHandler={this.filterChangeHandler}
             />
           </div>
           <div className="col-md-8">
