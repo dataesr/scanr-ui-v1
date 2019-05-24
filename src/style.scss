@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+*, html {
+  font-family: 'Inter UI';
+}
+
 /* couleurs officielles */
 /* tous les prog scss sont à modifier pour intégrer ces couleurs !!!!! */
 
@@ -60,6 +64,8 @@ $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
 $mediaTextColor:rgb(56, 119, 186);
 
+/* Blanc avec alpha 0.7*/
+$alphaWhite7: rgba(255, 255, 255, 0.7);
 
 /* cards de couleur dans la page open data*/
 .entitiesCards {
@@ -102,7 +108,7 @@ $mediaTextColor:rgb(56, 119, 186);
   background-color: white;
 }
 .has-background-all {
-  background-color: #e4e4e4;
+  background-color: $scanrmiddlegreyColor;
 }
 .has-background-entities {
   background-color: $entitiesColor;
@@ -156,7 +162,7 @@ $bgLexicon: $scanrfooterBgColor;
 
 /* Footer */
 $bgFooter: $scanrfooterBgColor;
-$footerHeight: 200px;
+$footerHeight: 15%;
 
 /*HeaderTitle*/
 $bgHeaderTitle : $scanrblueColor;
@@ -180,10 +186,10 @@ $ressourceColorLight:$scanrgreyColor;
 $ressourceUnderlineColor:$scanrblueColor;
 
 /*Resultats*/
-$bgColorCardButton: rgb(56, 119, 186);
-$colorCardButton: rgb(255, 255, 255);
-$localisationTextTitleColor: rgba(33, 72, 103, 0.7);
-$localisationTextColor: rgb(0, 33, 59);
+$bgColorCardButton: $scanrblueColor;
+$colorCardButton: white;
+$localisationTextTitleColor: $scanrgreyColor;
+$localisationTextColor: $scanrdeepblueColor;
 
 /*Cards*/
 $cardTitleBgColor: $scanrlightgreyColor;
@@ -252,8 +258,8 @@ $cardTitleBgColor: $scanrlightgreyColor;
 
 /* card de logo*/
 .CardLogo {
-  width: 200px;
-  height: 200px;
+  width: 215px;
+  height: 215px;
 }
 
 /* ComponaentToPage */
