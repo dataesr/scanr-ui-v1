@@ -54,45 +54,47 @@ const Identity = (props) => {
   // ids
 
   return (
-    <div className={classes.Identity}>
-      <div className="row">
-        <div className={`col ${classes.NoSpace}`}>
-          <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
+    <div className="col-6">
+      <div className={classes.Identity}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
+          </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className={`col-lg-6 ${classes.NoSpace}`}>
-          <SimpleCard
-            logo="fas fa-id-card"
-            title={messages[props.language]['Entity.portrait.identity.name']}
-            label={`${name}${acronym}`}
-            tooltip=""
-          />
-        </div>
-        <div className={`col-lg-6 ${classes.NoSpace}`}>
-          <LogoCard
-            src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
-            cssClass="Height150"
-          />
-        </div>
-        <div className={`col-lg-6 ${classes.NoSpace}`}>
-          <SimpleListCard
-            logo="fas fa-qrcode"
-            title={messages[props.language]['Entity.portrait.identity.id']}
-            label={props.id}
-            list={props.externalIds}
-            labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
-            tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
-          />
-        </div>
-        <div className={`col-lg-6 ${classes.NoSpace}`}>
-          <SimpleCard
-            logo="fas fa-flask"
-            title={messages[props.language]['Entity.portrait.identity.nature']}
-            label={props.nature || ''}
-            tooltip=""
-          />
+        <div className="row">
+          <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <SimpleCard
+              logo="fas fa-id-card"
+              title={messages[props.language]['Entity.portrait.identity.name']}
+              label={`${name}${acronym}`}
+              tooltip=""
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <LogoCard
+              src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
+              cssClass="Height150"
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <SimpleListCard
+              logo="fas fa-qrcode"
+              title={messages[props.language]['Entity.portrait.identity.id']}
+              label={props.id}
+              list={props.externalIds}
+              labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
+              tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <SimpleCard
+              logo="fas fa-flask"
+              title={messages[props.language]['Entity.portrait.identity.nature']}
+              label={props.nature || ''}
+              tooltip=""
+            />
+          </div>
         </div>
       </div>
     </div>
