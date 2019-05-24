@@ -34,7 +34,7 @@ const Opendata = props => (
       />
       <HeaderTitle
         language={props.language}
-        label="opendata"
+        labelkey="opendata"
       />
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
