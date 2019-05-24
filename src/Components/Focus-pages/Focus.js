@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -23,12 +22,23 @@ import classes from './Focus.scss';
 */
 
 export default class FocusList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null,
+      missing: false,
+    };
+  }
+
   componentDidMount() {
-    const filename = `./Focus-config/${this.props.match.params.id}.json`;
-    alert(filename)
-    const toto = import(filename);
-    alert(toto);
-    alert(toto.name);
+    const filename = `./Focus-data/${this.props.match.params.id}.json`;
+    let params = '';
+    try {
+      params = require(`${filename}`);
+      this.setState({ data: params });
+    } catch (error) {
+      this.setState({ missing: true });
+    }
     // alert(paramsFile.name);
   }
 
@@ -52,6 +62,7 @@ export default class FocusList extends Component {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
+              {this.state.data ? <div>C bon chef</div> : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : <div>Chargement/Loading...</div>)]}
               {
                 // <GraphComponent
                 //   id={props.match.params.id}
