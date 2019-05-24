@@ -11,11 +11,16 @@
   padding-left: 4px;
   margin: 0;
 }
-
+.GreyTitle {
+  color: $scanrmiddlegreyColor !important
+}
+.TextOverflow {
+  text-overflow: ellipsis;
+}
 .ResultCard {
   background-color: white;
   color: $scanrdeepblueColor;
-  height: 300px;
+  height: 325px;
   border-radius: 8px;
   margin-bottom: 8px;
 
@@ -32,7 +37,7 @@
   }
 
   .Icons {
-      font-size: 1.1em;
+      font-size: 1em;
       color: $scanrblueColor;
       width: 28px;
       text-align: center;

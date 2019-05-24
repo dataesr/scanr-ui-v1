@@ -37,16 +37,20 @@ class SearchPage extends Component {
       isLoading: false,
       currentQueryText: '',
       request: {
+        lang: this.props.language,
+        sourceFields: ['id', 'label', 'nature', 'address'],
+        searchFields: null,
         query: '',
         page: null,
         pageSize: null,
-        queryFilters: {},
+        filters: {},
+        aggregations: {},
       },
       objectType: 'all',
       view: 'list',
       results: [],
       resultsCount: 0,
-      facets: {},
+      facets: [],
       counts: {
         structures: 0,
         projects: 0,
@@ -81,23 +85,37 @@ class SearchPage extends Component {
     const objectType = this.props.match.params.objectType || 'entities';
     const view = queryString.parse(this.props.location.search).view || 'list';
     const query = queryString.parse(this.props.location.search).query || '';
+    const currentQueryText = queryString.parse(this.props.location.search).query || '';
     const pageSize = queryString.parse(this.props.location.search).pageSize;
     const page = queryString.parse(this.props.location.search).page;
+    const filters = queryString.parse(this.props.location.search).filters || {};
     const newState = {
       objectType,
+      currentQueryText,
       view,
       request: {
         query,
         page,
         pageSize,
+        // filters,
       },
     };
     this.setState(newState);
     return newState;
   }
 
-  setParams(key, value) {
+  setParams(key, value, isFilter = false, isAggregation = false) {
     const temp = { ...this.state.request };
+    if (isFilter) {
+      temp.filters[key] = value;
+      const url = queryString.stringify(temp);
+      return url;
+    }
+    if (isAggregation) {
+      temp.aggregations[key] = value;
+      const url = queryString.stringify(temp);
+      return url;
+    }
     temp[key] = value;
     const url = queryString.stringify(temp);
     return url;
@@ -118,8 +136,15 @@ class SearchPage extends Component {
   }
 
   resultViewChangeHandler = (newView) => {
-    const url = this.setParams({ view: newView });
-    this.props.history.push(url);
+    const url = this.setParams('view', newView);
+    this.props.history.push(`${this.props.location.pathname}?${url}`);
+  }
+
+  filterChangeHandler = (e) => {
+    console.log(e.target.id, e.target.value);
+
+    const url = this.setParams(e.target.id, e.target.value, true, false);
+    this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
   getData = (newState) => {
@@ -179,6 +204,8 @@ class SearchPage extends Component {
           <div className="col-md-4">
             <FilterPanel
               language={this.props.language}
+              facets={this.state.facets}
+              filterChangeHandler={this.filterChangeHandler}
             />
           </div>
           <div className="col-md-8">
@@ -186,6 +213,7 @@ class SearchPage extends Component {
               {...this.props}
               language={this.props.language}
               results={this.state.results}
+              facets={this.state.facets}
               resultsCount={this.state.resultsCount}
               view={this.state.view}
               objectType={this.state.objectType}
