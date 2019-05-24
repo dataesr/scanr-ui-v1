@@ -80,16 +80,16 @@ LastFocus.defaultProps = {
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'Présence sur le web: état des lieux des laboratoires français',
-      type: 'treemap',
-      url: '',
-      schema: 'person',
+      title: 'La carte des projets financés par l\'ANR',
+      type: 'donut',
+      url: '/focus/2',
+      schema: 'project',
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'Japan Prize: Qui sont les lauréats français ?',
       type: 'histoTop',
-      url: '',
+      url: '/focus/0',
       schema: 'entity',
     },
     {
@@ -101,10 +101,10 @@ LastFocus.defaultProps = {
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'La carte des projets financés par l\'ANR',
-      type: 'donut',
+      title: 'Présence sur le web: état des lieux des laboratoires français',
+      type: 'treemap',
       url: '',
-      schema: 'project',
+      schema: 'person',
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
