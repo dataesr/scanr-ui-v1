@@ -21,7 +21,7 @@ const messages = {
 };
 
 const MainWebSiteButton = props => (
-  <a href={props.url} className={classes.MainWebSiteButton}>
+  <a href={props.url} className={classes.MainWebSiteButton} target="_blank" rel="noopener noreferrer">
     <div>
       <i className="fas fa-mouse-pointer" />
     </div>
