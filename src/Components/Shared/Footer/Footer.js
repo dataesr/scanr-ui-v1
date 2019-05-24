@@ -39,15 +39,21 @@ const Footer = props => (
                 </a>
               </li>
               <li>
-                <a href="/contribuer">
+                <a href="/ressources">
                   <FormattedHTMLMessage
-                    id="Footer.link.contribute"
-                    defaultMessage="Footer.link.contribute"
+                    id="Footer.link.ressources"
+                    defaultMessage="Footer.link.ressources"
                   />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <FormattedHTMLMessage
+                  id="Footer.link.contribute"
+                  defaultMessage="Footer.link.contribute"
+                />
+              </li>
+              <li>
+                <a href="https://github.com/jerem1508/scanr-v2-demo" target="_blank" rel="noopener noreferrer">
                   <FormattedHTMLMessage
                     id="Footer.link.gitHub"
                     defaultMessage="Footer.link.gitHub"
@@ -59,28 +65,22 @@ const Footer = props => (
           <div className="col">
             <ul>
               <li>
-                <a href="#">
-                  <FormattedHTMLMessage
-                    id="Footer.link.accessibility"
-                    defaultMessage="Footer.link.accessibility"
-                  />
-                </a>
+                <FormattedHTMLMessage
+                  id="Footer.link.accessibility"
+                  defaultMessage="Footer.link.accessibility"
+                />
               </li>
               <li>
-                <a href="#">
-                  <FormattedHTMLMessage
-                    id="Footer.link.navHelp"
-                    defaultMessage="Footer.link.navHelp"
-                  />
-                </a>
+                <FormattedHTMLMessage
+                  id="Footer.link.faq"
+                  defaultMessage="Footer.link.faq"
+                />
               </li>
               <li>
-                <a href="#">
-                  <FormattedHTMLMessage
-                    id="Footer.link.siteMap"
-                    defaultMessage="Footer.link.siteMap"
-                  />
-                </a>
+                <FormattedHTMLMessage
+                  id="Footer.link.glossary"
+                  defaultMessage="Footer.link.glossary"
+                />
               </li>
               <li>
                 <a href="/mentions-legales">
@@ -95,18 +95,18 @@ const Footer = props => (
           <div className="col">
             <ul>
               <li>
-                <a href="#">
+                <a href="/medias">
                   <FormattedHTMLMessage
-                    id="Footer.link.faq"
-                    defaultMessage="Footer.link.faq"
+                    id="Footer.link.medias"
+                    defaultMessage="Footer.link.medias"
                   />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/tutoriels">
                   <FormattedHTMLMessage
-                    id="Footer.link.glossary"
-                    defaultMessage="Footer.link.glossary"
+                    id="Footer.link.tutorial"
+                    defaultMessage="Footer.link.tutorial"
                   />
                 </a>
               </li>
