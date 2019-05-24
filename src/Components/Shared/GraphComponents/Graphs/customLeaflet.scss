@@ -1,0 +1,56 @@
+@import '../../../../style.scss';
+
+.leafletCustomText {
+  color: black;
+  font-weight: bold;
+  background: transparent;
+  border:0;
+  box-shadow: none;
+  font-size:1.5em;
+  text-align: center;
+}
+
+.marker-cluster-small {
+	background-color: rgba(255, 218, 96, 1);
+	}
+.marker-cluster-small div {
+	background-color: rgba(255, 218, 96, 1);
+	}
+
+.marker-cluster-medium {
+	background-color: rgba(255, 218, 96, 1);
+	}
+.marker-cluster-medium div {
+	background-color: rgba(255, 218, 96, 1);
+	}
+
+.marker-cluster-large {
+	background-color: rgba(255, 218, 96, 1);
+	}
+.marker-cluster-large div {
+	background-color: rgba(255, 218, 96, 1);
+	}
+
+	/* IE 6-8 fallback colors */
+.leaflet-oldie .marker-cluster-small {
+	background-color: rgba(255, 218, 96, 1);
+	}
+.leaflet-oldie .marker-cluster-small div {
+	background-color: rgba(255, 218, 96, 1);
+	}
+
+.leaflet-oldie .marker-cluster-medium {
+	background-color: rgb(255, 218, 96);
+	}
+.leaflet-oldie .marker-cluster-medium div {
+	background-color: rgb(255, 218, 96);
+	}
+
+.leaflet-oldie .marker-cluster-large {
+	background-color: rgb(255, 218, 96);
+	}
+.leaflet-oldie .marker-cluster-large div {
+	background-color: rgb(255, 218, 96);
+}
+.leaflet-control-mapbox-geocoder-results a {width: '50px'}
+.leaflet-control-mapbox-geocoder-results a:hover {width: '50px'}
