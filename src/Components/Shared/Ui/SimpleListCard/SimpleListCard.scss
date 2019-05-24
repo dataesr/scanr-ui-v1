@@ -9,24 +9,25 @@
   margin: 2px;
 
   .Logo {
-    color: grey;
+    color: $scanrgreyColor;
   }
 
   .Title {
-    color: grey;
+    color: $scanrgreyColor;
     font-style: italic;
+    font-size: 0.9rem;
   }
 
   .Label {
     padding-top: 16px;
-    color: $textColor;
+    color: $scanrdeepblueColor;
     font-size: 1.1rem;
     font-weight: bold;
   }
 }
 
 .Key {
-  color: grey;
+  color: $scanrgreyColor;
   font-size: 1.1rem;
   text-transform: capitalize;
 }

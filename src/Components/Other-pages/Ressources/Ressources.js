@@ -8,6 +8,7 @@ import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
+import Backgroundblanc from '../../Shared/images/poudre-bleu_Fblanc-A.jpg';
 import RedirectingLogoCard from '../../Shared/Ui/RedirectingLogoCard/RedirectingLogoCard';
 import IdentityCard from './IdentityCard';
 
@@ -28,6 +29,9 @@ const messages = {
 
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
+};
+const sectionStyleblanc = {
+  backgroundImage: `url(${Backgroundblanc})`,
 };
 
 class Ressources extends Component {
@@ -226,21 +230,13 @@ class Ressources extends Component {
           </div>
         </div>
       </section>
-      <section className={classes.ThreeCards}>
+      <section style={sectionStyleblanc} className={classes.ThreeCards}>
         <div className="container">
           <div className="row">
             <CardWithButton
               language={this.props.language}
-              title="Discover.Sources"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Découvrir"
-              position="CardCenter"
-              schema="card_dark"
-            />
-            <CardWithButton
-              language={this.props.language}
               title="Discover.TalkAboutScanr"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./medias"
               lib_button="Découvrir"
               position="CardCenter"
               schema="card_dark"
@@ -248,7 +244,15 @@ class Ressources extends Component {
             <CardWithButton
               language={this.props.language}
               title="Discover.Opendata"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./opendata"
+              lib_button="Découvrir"
+              position="CardCenter"
+              schema="card_dark"
+            />
+            <CardWithButton
+              language={this.props.language}
+              title="Discover.Team"
+              url="./l-equipe-et-son-projet"
               lib_button="Découvrir"
               position="CardCenter"
               schema="card_dark"
@@ -267,6 +271,132 @@ class Ressources extends Component {
 
   renderOneRessource = () => {
     const ressource = this.props.match.params.id;
+    const message = messages[this.props.language];
+    const source = (metadata[`${ressource}.Source`]) ? (
+      <a href={metadata[`${ressource}.Source`]} target="_blank" rel="noopener noreferrer">
+        <div className={`row ${classes.SourceSource}`}>
+          Source
+        </div>
+      </a>
+    ) : null;
+    const utilisation2 = (message[`Ressource.Utilisation2.${ressource}`]) ? (
+      <div className={classes.SourceCard}>
+        <div className={classes.SourceCardTitle}>
+          <FormattedHTMLMessage
+            id={`Ressource.Utilisation2.${ressource}`}
+            defaultMessage="contentTexte"
+          />
+        </div>
+      </div>
+    ) : null;
+    const utilisation3 = (message[`Ressource.Utilisation3.${ressource}`]) ? (
+      <div className={classes.SourceCard}>
+        <div className={classes.SourceCardTitle}>
+          <FormattedHTMLMessage
+            id={`Ressource.Utilisation3.${ressource}`}
+            defaultMessage="contentTexte"
+          />
+        </div>
+      </div>
+    ) : null;
+    const utilisation4 = (message[`Ressource.Utilisation4.${ressource}`]) ? (
+      <div className={classes.SourceCard}>
+        <div className={classes.SourceCardTitle}>
+          <FormattedHTMLMessage
+            id={`Ressource.Utilisation4.${ressource}`}
+            defaultMessage="contentTexte"
+          />
+        </div>
+      </div>
+    ) : null;
+    const utilisation = (message[`Ressource.Utilisation1.${ressource}`]) ? (
+      <Fragment>
+        <div className={classes.SourceTitre}>
+          <FormattedHTMLMessage
+            id="Ressource.Utilisation.Titre"
+            defaultMessage="s"
+          />
+        </div>
+        <div className={`row ${classes.Utilisation}`}>
+          <div className={classes.SourceCard}>
+            <div className={classes.SourceCardTitle}>
+              <FormattedHTMLMessage
+                id={`Ressource.Utilisation1.${ressource}`}
+                defaultMessage="contentTexte"
+              />
+            </div>
+          </div>
+          {utilisation2}
+          {utilisation3}
+          {utilisation4}
+        </div>
+        <hr className={classes.SourceDemarcation} />
+      </Fragment>
+    ) : null;
+    const retraitements2 =  (message[`Ressource.Retraitements2.${ressource}`]) ? (
+      <div className={classes.SourceCard}>
+        <div className={classes.SourceCardTitle}>
+          <FormattedHTMLMessage
+            id={`Ressource.Retraitements2.${ressource}`}
+            defaultMessage="contentTexte"
+          />
+        </div>
+      </div>
+    ) : null;
+    const retraitements = (message[`Ressource.Retraitements.${ressource}`]) ? (
+      <Fragment>
+        <div className={classes.SourceTitre}>
+          <FormattedHTMLMessage
+            id="Ressource.Retraitements.Titre"
+            defaultMessage="s"
+          />
+        </div>
+        <div className={`row ${classes.Utilisation}`}>
+          <div className={classes.SourceCard}>
+            <div className={classes.SourceCardTitle}>
+              <FormattedHTMLMessage
+                id={`Ressource.Retraitements.${ressource}`}
+                defaultMessage="contentTexte"
+              />
+            </div>
+          </div>
+          {retraitements2}
+        </div>
+        <hr className={classes.SourceDemarcation} />
+      </Fragment>
+    ) : null;
+    const perimetre = (message[`Ressource.Perimetre.${ressource}`]) ? (
+      <Fragment>
+        <div className={classes.SourceTitre}>
+          <FormattedHTMLMessage
+            id="Ressource.Perimetre.Titre"
+            defaultMessage="s"
+          />
+        </div>
+        <div className={classes.SourceTextenormal}>
+          <FormattedHTMLMessage
+            id={`Ressource.Perimetre.${ressource}`}
+            defaultMessage="s"
+          />
+        </div>
+      </Fragment>
+    ) : null;
+    const actualisation = (message[`Ressource.Actualisation.${ressource}`]) ? (
+      <Fragment>
+        <div className={classes.SourceTitre}>
+          <FormattedHTMLMessage
+            id="Ressource.Actualisation.Titre"
+            defaultMessage="s"
+          />
+        </div>
+        <div className={classes.SourceTextenormal}>
+          <FormattedHTMLMessage
+            id={`Ressource.Actualisation.${ressource}`}
+            defaultMessage="s"
+          />
+        </div>
+      </Fragment>
+    ) : null;
     return (
       <div className={`container-fluid ${classes.Ressources}`}>
         <Header
@@ -276,21 +406,24 @@ class Ressources extends Component {
         <section>
           <HeaderTitle
             language={this.props.language}
-            label="ressources"
+            labelkey="ressources"
           />
         </section>
         <section style={sectionStyle} className={classes.Content}>
           <div className="container">
             <div className="row">
-              <div className="col-lg-4">
+              <div className="col-sm-4">
                 <IdentityCard
                   labelKey={ressource}
                   /* webSite={metadata[`${ressource}.website`]} */
                 />
               </div>
-              <div className="col-lg-8">
+              <div className="col-sm-8">
                 <div className={classes.SourceTitre}>
-                Rôle
+                  <FormattedHTMLMessage
+                    id="Ressource.Role.Titre"
+                    defaultMessage="s"
+                  />
                 </div>
                 <div className={classes.SourceTexteGras}>
                   <FormattedHTMLMessage
@@ -301,7 +434,10 @@ class Ressources extends Component {
                 {/* /row */}
                 <hr className={classes.SourceDemarcation} />
                 <div className={classes.SourceTitre}>
-                Description
+                  <FormattedHTMLMessage
+                    id="Ressource.Description.Titre"
+                    defaultMessage="s"
+                  />
                 </div>
                 <div className={classes.SourceTextenormal}>
                   <FormattedHTMLMessage
@@ -309,45 +445,44 @@ class Ressources extends Component {
                     defaultMessage="s"
                   />
                 </div>
-                <a href={metadata[`${ressource}.Source`]} target="_blank" rel="noopener noreferrer">
-                  <div className={`row ${classes.SourceSource}`}>
-                    Source
-                  </div>
-                </a>
+                {source}
                 {/* /row */}
                 <hr className={classes.SourceDemarcation} />
-                <div className={classes.SourceTitre}>
-                Utilisation dans scanR
-                </div>
-                <div className="row">
-                  <div className={classes.SourceCard}>
-                    <div className={classes.SourceCardTitle}>
-                      <FormattedHTMLMessage
-                        id={`Ressource.Utilisation1.${ressource}`}
-                        defaultMessage="contentTexte"
-                      />
-                    </div>
-                  </div>
-                  <div className={classes.SourceCard}>
-                    <div className={classes.SourceCardTitle}>
-                      <FormattedHTMLMessage
-                        id={`Ressource.Utilisation2.${ressource}`}
-                        defaultMessage="contentTexte"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <hr className={classes.SourceDemarcation} />
-                <div className={classes.SourceTitre}>
-                Périmètre d'utilisation de la source dans scanR
-                </div>
-                <div className={classes.SourceTextenormal}>
-                  <FormattedHTMLMessage
-                    id={`Ressource.Perimetre.${ressource}`}
-                    defaultMessage="s"
-                  />
-                </div>
+                {utilisation}
+                {perimetre}
+                {actualisation}
+                {retraitements}
               </div>
+            </div>
+          </div>
+        </section>
+        <section style={sectionStyleblanc} className={classes.SourceThreeCards}>
+          <div className="container">
+            <div className="row">
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Github"
+                url=""
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Opendata"
+                url="../opendata"
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
+              <CardWithButton
+                language={this.props.language}
+                title="Discover.Team"
+                url="../l-equipe-et-son-projet"
+                lib_button="Découvrir"
+                position="CardCenter"
+                schema="card_lightdark"
+              />
             </div>
           </div>
         </section>

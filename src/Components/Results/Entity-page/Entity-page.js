@@ -3,6 +3,7 @@ import Axios from 'axios';
 import PropTypes from 'prop-types';
 
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
+import getSelectKey from '../../../Utils/getSelectKey';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
@@ -51,6 +52,7 @@ class Entity extends Component {
         />
         <HeaderTitle
           language={this.props.language}
+          label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
         />
         <Portrait
           language={this.props.language}

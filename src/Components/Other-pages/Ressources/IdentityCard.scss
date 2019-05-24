@@ -1,8 +1,7 @@
 .IdentityCard {
   background-color: white;
   border-radius: 8px;
-  width: 350px;
-  height: 630px;
+  margin-top: 10px;
   padding:   0px 15px;
   .Logo {
     padding: 0px 40px;
@@ -21,8 +20,10 @@
       padding:0px 15px;
     }
   }
+  .PositionButton {
+    padding-bottom: 20px;
+  }
   .Button {
-    margin : 20px 0px;
     padding: 8px 10px 8px 20px;
     background-color: rgb(56, 119, 186);
     color: white;
