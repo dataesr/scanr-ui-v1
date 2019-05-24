@@ -40,25 +40,37 @@ const EntityFilters = (props) => {
         </div>
         <div className="d-flex flex-column mb-3">
           <FormattedHTMLMessage id="filters.entityType" defaultMessage="filters.entityType" />
-          <select className={`mt-1 pl-2 ${classes.Select}`} id="nature">
+          <select
+            className={`mt-1 pl-2 ${classes.Select}`}
+            id="nature"
+            onChange={e => props.filterChangeHandler(e)}
+          >
             <option>Choose...</option>
             {
               typeFacets.entries.map(facet => (
-                <option key={facet.value} value={facet.value}>{`${facet.value} (${facet.count})`}</option>
+                <option
+                  key={facet.value}
+                  value={facet.value}
+                >
+                  {`${facet.value} (${facet.count})`}
+                </option>
               ))
             }
           </select>
         </div>
         <div className="d-flex flex-column mb-3">
           <FormattedHTMLMessage id="filters.caracteristics" defaultMessage="filters.caracteristics" />
-          <select className={`mt-1 pl-2 ${classes.Select}`} id="badges">
+          <select
+            className={`mt-1 pl-2 ${classes.Select}`}
+            id="badges"
+            onChange={e => props.filterChangeHandler(e)}
+          >
             <option>Choose...</option>
             {
               caractFacets.entries.map(facet => (
                 <option
                   key={facet.value}
                   value={facet.value}
-                  onChange={props.filterChangeHandler}
                 >
                   {`${facet.value} (${facet.count})`}
                 </option>
