@@ -120,9 +120,11 @@ export default class DisplayComponent extends Component {
           <p className={`${classes.Subtitle}`}>
             {paramsFile.elems[id].subname}
           </p>
-          <p className={`${classes.Title}`}>
-            {this.createTags()}
-          </p>
+          {
+          // <p className={`${classes.Title}`}>
+          //   {this.createTags()}
+          // </p>
+        }
         </div>
       );
       const TextComponent = () => (
@@ -176,7 +178,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          {this.state.isMap ? <GraphComponent filename={paramsFile.elems[this.props.id].name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={paramsFile.elems[this.props.id].name} data={paramsFile.elems[id].data} language={this.props.language} ref={this.childRef} />}
+          {this.state.isMap ? <GraphComponent filename={paramsFile.elems[this.props.id].name} data={this.state.data} language={this.props.language} ref={this.childRef} /> : <GraphComponent filename={paramsFile.elems[this.props.id].name} data={paramsFile.elems[id].data} temp={this.state.data} language={this.props.language} ref={this.childRef} />}
           <TextComponent />
           <ShareComponent />
           <GraphModal />
