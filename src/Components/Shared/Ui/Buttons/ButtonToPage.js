@@ -6,7 +6,7 @@ import classes from './ButtonToPage.scss';
 
 const ButtonToPage = props => (
   <a href={props.url} target={props.target}>
-    <div className={`${classes.ButtonToPage} ${props.className}`}>
+    <div className={`d-flex align-items-center ${classes.ButtonToPage} ${props.className}`}>
       <div className="row">
         <div className={classes.Text}>
           {props.children}

@@ -7,32 +7,34 @@
   position: fixed;
   width: 100%;
 
-
-  .Link {
-    display: inline-block;
-    color: grey;
-    padding-top: 8px;
-    cursor: pointer;
-  }
-  .Link:hover {
-    text-decoration: none;
-  }
   .ActiveLink {
-    color: $activeLinkButton;
+    color: $scanrdeepblueColor;
     font-weight: bold;
   }
   .PipeLink {
     display: inline-block;
-    padding-left: 2px;
-    padding-right: 2px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .img {
     z-index: -1;
     position: absolute;
-    top: 53px;
+    top: 62px;
     max-width: 180px;
     min-width: 100px;
     border: none;
+  }
+
+  .Link {
+    color: $scanrblueColor;
+    font-weight: 600;
+    display: inline-block;
+    margin: 8px 16px;
+    cursor: pointer;
+  }
+  .Link:hover, .link:focus {
+    text-decoration: none;
+    color: $scanrdeepblueColor;
   }
 
 }
