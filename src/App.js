@@ -20,7 +20,7 @@ import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
-import RessourcesPage from './Components/Other-pages/Ressources/Ressources';
+import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
 
@@ -69,7 +69,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/recherche"
+              path="/recherche/:objectType"
               render={props => (
                 <SearchPage
                   {...props}
@@ -150,8 +150,7 @@ class App extends Component {
             />
 
             <Route
-              exact
-              path="/opendata"
+              path="/:language/opendata"
               component={props => (
                 <Opendata
                   {...props}
@@ -160,10 +159,11 @@ class App extends Component {
                 />
               )}
             />
+
             <Route
               path={['/ressources/:id', '/ressources']}
               component={props => (
-                <RessourcesPage
+                <Ressources
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
@@ -225,7 +225,6 @@ class App extends Component {
                 />
               )}
             />
-
             <Route
               exact
               path="/contribuer"

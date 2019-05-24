@@ -1,0 +1,39 @@
+@import '../../../style.scss';
+
+
+.Section {
+  background-color: $alphaWhite7;
+  border-radius: 8px;
+}
+
+.Section > div {
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  background-color: $scanrblueColor;
+  line-height: 1.5;
+  height: 40px;
+  min-width: 40px;
+  cursor: pointer;
+}
+
+
+.NoDisplay {
+  display: None !important;
+}
+
+.Dots {
+  background-color: transparent !important;
+  color: $scanrblueColor !important;
+  font-size: 1.2em;
+  cursor: default !important;
+}
+.NextPrevious {
+  background-color: transparent !important;
+  color: $scanrblueColor !important;
+  cursor: default !important;
+}
+
+.Active {
+  background-color: $scanrdeepblueColor !important;
+}
