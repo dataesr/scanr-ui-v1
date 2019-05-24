@@ -74,7 +74,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/focus">
                   <FormattedHTMLMessage
                     id="Header.link.focus"
                     defaultMessage="Header.link.focus"
