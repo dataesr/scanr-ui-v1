@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-import ComponentToPage from '../../Shared/ComponentToPage/ComponentToPage';
+import Banner from '../../Shared/Banner/Banner';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
@@ -42,13 +42,15 @@ const TeamAndProjectPage = props => (
 
       <HeaderTitle
         language={props.language}
-        label="team"
+        labelkey="team"
+        url1="/"
+        url2="#"
       />
 
       <section className={classes.Content}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-9">
+            <div className="col-lg-9 mt-4">
               <img
                 src="./img/logo-scanr-blue.svg"
                 alt="Logo"
@@ -92,10 +94,9 @@ const TeamAndProjectPage = props => (
         language={props.language}
       />
 
-      <ComponentToPage
-        btnText="discover"
-        cssClass="Component_light"
-        labelKey="howToAppearInScanR"
+      <Banner
+        cssClass="BannerLight"
+        labelKey="Appear"
         url=""
         language={props.language}
       />
