@@ -1,0 +1,83 @@
+{"elems" : [
+  {
+      "id":0,
+      "name": "Carte des pôles de compétitivité en France",
+      "subname": "En nombre d'entités au 31/12/2017",
+      "text": "La France compte aujourd'hui soixante-et-onze pôles de compétitivité.",
+      "subtext": "Créés en 2005, ces <<clusters à la française>>, ont pour objectif de dynamiser l'innovation et de renforcer l'industrie en stimulant les dépenses de R-&-D.",
+      "type": "bar",
+      "tags": ["tag1", "tag2", "tag3"],
+      "data" : {
+        "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}",
+        "unit" : "entités",
+        "labels" : ["Lyon", "Toulouse", "Montpellier", "Grenoble", "Marseille - Aix-en-Provence", "Bordeaux", "Nantes", "Paris", "Rennes", "Lille"],
+        "values" : [ 121, 96, 87, 80, 74, 64, 60, 55, 48, 8]
+      }
+    },
+    {
+      "id":1,
+      "name": "Carte des pôles de compétitivité en France",
+      "subname": "En nombre d'entités au 01/05/2019",
+      "text": "La France compte aujourd'hui dix-huit de compétitivité.",
+      "subtext": "Créés en 2005, ces <<clusters à la française>>, ont pour objectif de dynamiser l'innovation et de renforcer l'industrie en stimulant les dépenses de R-&-D.",
+      "type": "map",
+      "tags": ["tag1", "tag2", "tag3"],
+      "data" : {
+        "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22PoleCompetitivite%22}"
+        }
+      },
+      {
+        "id":2,
+        "name": "Les centres CURIE en france",
+        "text": "Test sur les cartes Leaflet",
+        "type": "pie",
+        "tags": ["tag1", "tag2", "tag3"],
+        "data" : {
+          "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22SATT%22}",
+          "xAxis" : "Axe x",
+          "yAxis": "Axe y",
+          "values" : [ 12, 34, 15, 72, 26]
+          }
+        },
+        {
+          "id":3,
+          "name": "Les centres CURIE en france",
+          "text": "Test sur les cartes Leaflet",
+          "type": "other",
+          "tags": ["tag1", "tag2", "tag3"],
+          "data" : {
+            "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22SATT%22}",
+            "percentage" : false,
+            "values" : [500, 270, 140, 30],
+            "labels" : ["Chercheurs", "Enseignants-chercheurs", "Dragons", "Serpents"],
+            "colors" : ["#7a6c5d", "#2a3d45", "#ddc9b4", "#c17c74"]
+            }
+          },
+          {
+            "id":4,
+            "name": "Les centres CURIE en france",
+            "text": "Test sur les cartes Leaflet",
+            "type": "other",
+            "tags": ["tag1", "tag2", "tag3"],
+            "data" : {
+              "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22SATT%22}",
+              "percentage" : true,
+              "values" : [52, 48],
+              "labels" : ["Chercheurs", "Enseignants-chercheurs"],
+              "colors" : ["#fe7747", "#96462a"]
+              }
+            },
+            {
+              "id":5,
+              "name": "Carte des SATT en France",
+              "subname": "En nombre d'entités au 31/12/2017",
+              "text": "La France compte aujourd'hui soixante-et-onze pôles de compétitivité.",
+              "subtext": "Créés en 2005, ces <<clusters à la française>>, ont pour objectif de dynamiser l'innovation et de renforcer l'industrie en stimulant les dépenses de R-&-D.",
+              "type": "map",
+              "tags": ["tag1", "tag2", "tag3"],
+              "data" : {
+                "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22SATT%22}"
+                }
+              }
+    ]
+}
