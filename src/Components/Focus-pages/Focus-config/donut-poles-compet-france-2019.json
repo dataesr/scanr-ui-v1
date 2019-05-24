@@ -1,0 +1,12 @@
+{
+  "name": "Les centres CURIE en france",
+  "text": "Test sur les cartes Leaflet",
+  "type": "pie",
+  "tags": ["tag1", "tag2", "tag3"],
+  "data" : {
+    "url": "http://185.161.45.213/organizations/scanr?where={%22badges.code%22:%20%22SATT%22}",
+    "xAxis" : "Axe x",
+    "yAxis": "Axe y",
+    "values" : [ 12, 34, 15, 72, 26]
+    }
+  }
