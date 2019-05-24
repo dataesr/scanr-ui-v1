@@ -24,10 +24,7 @@ const HeaderTitle = props => (
         </div>
         <div className="row">
           <div className={classes.title}>
-            <FormattedHTMLMessage
-              id={`Page.title.${props.label}`}
-              defaultMessage={`Page.title.${props.label}`}
-            />
+            {props.label}
           </div>
         </div>
       </div>

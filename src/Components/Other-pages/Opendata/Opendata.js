@@ -189,7 +189,7 @@ const Opendata = props => (
               language={props.language}
               schema="card_dark"
               title="Discover.Sources"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              url="./ressources"
               lib_button="Découvrir"
               position="CardCenter"
             />

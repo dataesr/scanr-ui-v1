@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
@@ -10,6 +10,10 @@ import classes from './Web.scss';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * Web
@@ -19,24 +23,17 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
-
 const Web = (props) => {
-  if (props.websites.length === 0) {
-    return null;
-  }
   const getSocialMeadiaButton = (socialMedia) => {
     let suffixUrl = null;
     if (props.socialMedias[socialMedia]) {
       suffixUrl = props.socialMedias[socialMedia];
-    } else if (props.websites.length > 0) {
-      if (props.websites[0][socialMedia]) {
-        if (props.websites[0][socialMedia].length > 0) {
-          suffixUrl = props.websites[0][socialMedia][0].account;
+    } else if (props.websites) {
+      if (props.websites.length > 0) {
+        if (props.websites[0][socialMedia]) {
+          if (props.websites[0][socialMedia].length > 0) {
+            suffixUrl = props.websites[0][socialMedia][0].account;
+          }
         }
       }
     }
@@ -96,49 +93,49 @@ const Web = (props) => {
           </span>);
     }
 
-    let content = logo;
     if (suffixUrl) {
-      content = (
-        <a href={url}>
-          {logo}
-        </a>
+      return (
+        <div className="col-4 p-0">
+          <span className={classes.SocialMedia}>
+            <a href={url}>
+              {logo}
+            </a>
+          </span>
+        </div>
       );
     }
 
-    return (
-      <div className="col-4 p-0">
-        <span className={classes.SocialMedia}>
-          {content}
-        </span>
-      </div>
-    );
+    return null;
   };
 
-  const mainWebSiteUrl = (props.websites.length > 0 && props.websites[0].baseURL) ? props.websites[0].baseURL : null;
+  let mainWebSiteUrl = null;
+  if (props.websites) {
+    mainWebSiteUrl = (props.websites.length > 0 && props.websites[0].baseURL) ? props.websites[0].baseURL : null;
+  }
 
   return (
-    <div className={classes.Web}>
-      <div className="row">
-        <div className={`col ${classes.NoSpace}`}>
-          <CardsTitle title={messages[props.language]['Entity.portrait.web.title']} />
+    <div className="col-12">
+      <div className={classes.Web}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={messages[props.language]['Entity.portrait.web.title']} />
+          </div>
         </div>
-      </div>
 
-      <div className="row">
-        <div className={`col-3 ${classes.NoSpace}`}>
-          <div className={`container row ${classes.NoSpace}`}>
-            {
-              (mainWebSiteUrl)
-                ? (
-                  <div className={`col-12 ${classes.NoSpace}`}>
-                    <MainWebSiteButton
-                      language={props.language}
-                      url={mainWebSiteUrl}
-                    />
-                  </div>
-                ) : null
-            }
-
+        <div className="row">
+          <div className={`col-3 ${classes.NoSpace}`}>
+            <div className={`container row ${classes.NoSpace}`}>
+              {
+                (mainWebSiteUrl)
+                  ? (
+                    <div className={`col-12 ${classes.NoSpace}`}>
+                      <MainWebSiteButton
+                        language={props.language}
+                        url={mainWebSiteUrl}
+                      />
+                    </div>
+                  ) : null
+              }
 
               {getSocialMeadiaButton('dailymotion')}
               {getSocialMeadiaButton('facebook')}
@@ -152,6 +149,7 @@ const Web = (props) => {
               {getSocialMeadiaButton('viadeo')}
               {getSocialMeadiaButton('youtube')}
 
+            </div>
           </div>
         </div>
       </div>
@@ -162,7 +160,6 @@ const Web = (props) => {
 export default Web;
 
 Web.propTypes = {
-  id: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
   socialMedias: PropTypes.array,
   websites: PropTypes.array,
