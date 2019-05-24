@@ -3,13 +3,14 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Banner from '../../Shared/Banner/Banner';
+import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
+import ComponentVideo from '../../Shared/Video/ComponentVideo';
 import Footer from '../../Shared/Footer/Footer';
 import FormContact from '../../Shared/FormContact/FormContact';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import SimpleCard from '../../Shared/Ui/SimpleCard/SimpleCard';
-import ComponentVideo from '../../Shared/Video/ComponentVideo';
+
 
 /* SCSS */
 import classes from './Contribute.scss';
@@ -52,74 +53,89 @@ const ContributePage = props => (
       <section className={classes.Content}>
         <div className="container">
           <div className="row">
-            <div className={classes.Title}>
+            <div className="col-lg-9">
               <FormattedHTMLMessage
                 id="howToContribute"
                 defaultMessage="howToContribute"
               />
             </div>
+            <div className="w-100" /> 
 
-              <div className="card-columns">
-
-                <div className={`card-body ${classes.CardBody}`}>
-                  <div className={`card-title ${classes.CardTitle}`}>
-                    <FormattedHTMLMessage
-                      id="improveInfo.title"
-                      defaultMessage="improveInfo.title"
-                    />
-                  </div>
-                  <div className={`card-text ${classes.CardText}`}>
-                    <FormattedHTMLMessage
-                      id="improveInfo.text"
-                      defaultMessage="improveInfo.text"
-                    />
-                  </div>
-                </div>
-
-                <div className={`card-body ${classes.CardBody}`}>
-                  <div className={`card-title ${classes.CardTitle}`}>
-                    <FormattedHTMLMessage
-                      id="newSource.title"
-                      defaultMessage="newSource.title"
-                    />
-                  </div>
-                  <div className={`card-text ${classes.CardText}`}>
-                    <FormattedHTMLMessage
-                      id="newSource.text"
-                      defaultMessage="newSource.text"
-                    />
-                  </div>
-                </div>
-
-                <div className={`card-body ${classes.CardBody}`}>
-                  <ComponentVideo
-                    url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-                    poster={videoPoster}
-                    language={props.language}
+            <div className={`card col-lg ${classes.Card}`}>
+              <div className={`card-body ${classes.card_light}`}>
+                <i className={`fas fa-pencil-alt ${classes.CardLogo}`} />
+                <div className="card-title">
+                  <FormattedHTMLMessage
+                    id="improveInfo.title"
+                    defaultMessage="improveInfo.title"
                   />
                 </div>
-
-                <SimpleCard
-                  title={messages[props.language]['futurScanr.title']}
-                  label="futurScanr.text"
-                />
-
-                <div className={`card-body ${classes.CardBody}`}>
-                  <div className={`card-title ${classes.CardTitle}`}>
-                    <FormattedHTMLMessage
-                      id="futurScanr.title"
-                      defaultMessage="futurScanr.title"
-                    />
-                  </div>
-                  <div className={`card-text ${classes.CardText}`}>
-                    <FormattedHTMLMessage
-                      id="futurScanr.text"
-                      defaultMessage="futurScanr.text"
-                    />
-                  </div>
+                <div className="card-text">
+                  <FormattedHTMLMessage
+                    id="improveInfo.text"
+                    defaultMessage="improveInfo.text"
+                  />
+                  <i className={`fas fa-play text-right ${classes.CardLogo}`} />
                 </div>
               </div>
+            </div>
 
+            <div className={`card col-lg ${classes.Card} ${classes.card_dark}`}>
+              <div className={`card-body ${classes.Video}`}>
+                <ComponentVideo
+                  url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+                  poster={videoPoster}
+                  language={props.language}
+                />
+              </div>
+            </div>
+            <div className="w-100" />
+            <div className={`card col-lg ${classes.Card} ${classes.card_dark}`}>
+              <div className="card-body">
+                <i className={`fas fa-ruler-combined ${classes.CardLogo}`} />
+                <div className="card-title">
+                  <FormattedHTMLMessage
+                    id="newSource.title"
+                    defaultMessage="newSource.title"
+                  />
+                </div>
+                <div className="card-text">
+                  <FormattedHTMLMessage
+                    id="newSource.text"
+                    defaultMessage="newSource.text"
+                  />
+                </div>
+                <i className={`fas fa-play text-bottom ${classes.CardArrow}`} />
+              </div>
+            </div>
+
+            <div className={`card col-lg ${classes.Card} ${classes.card_light}`}>
+              <div className="card-body">
+                <img src="./img/logo-Framasoft.svg" className="CardLogo" alt="logo_framasoft" />
+                <div className="card-title">
+                  <FormattedHTMLMessage
+                    id="futurScanr.title"
+                    defaultMessage="futurScanr.title"
+                  />
+                </div>
+                <div className="card-text">
+                  <FormattedHTMLMessage
+                    id="futurScanr.text"
+                    defaultMessage="futurScanr.text"
+                  />
+                </div>
+                <ButtonToPage
+                  className={`${classes.Button}`}
+                  url="#"
+                  target="_blank"
+                >
+                  <FormattedHTMLMessage
+                    id="futurScanr.button"
+                    defaultMessage="futurScanr.button"
+                  />
+                </ButtonToPage>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -196,5 +212,4 @@ export default ContributePage;
 ContributePage.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.string.isRequired,
-  cssClass: PropTypes.string.isRequired,
 };
