@@ -14,7 +14,9 @@ const EntityFilters = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-
+  console.log(props.facets);
+  const typeFacets = props.facets.find(item => item.id === 'facet_natures') || {entries: []}
+  console.log(typeFacets);
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -41,9 +43,14 @@ const EntityFilters = (props) => {
           <FormattedHTMLMessage id="filters.entityType" defaultMessage="filters.entityType" />
           <select className={`mt-1 pl-2 ${classes.Select}`} id="inlineFormCustomSelect">
             <option selected>Choose...</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
+            {
+              typeFacets.entries.map((facet) => {
+                const a = 2
+                return (
+                  <option value={facet.value}>{`${facet.value} (${facet.count})`}</option>
+                );
+              })
+            }
           </select>
         </div>
         <div className="d-flex flex-column mb-3">
@@ -73,6 +80,5 @@ export default EntityFilters;
 
 EntityFilters.propTypes = {
   language: PropTypes.string.isRequired,
-  currentQueryObject: PropTypes.string,
-  currentQueryFilters: PropTypes.object,
+  facets: PropTypes.array,
 };

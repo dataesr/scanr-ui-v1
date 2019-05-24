@@ -8,6 +8,7 @@ import messagesEn from './translations/en.json';
 
 import classes from './SearchResults.scss';
 import EntityCard from './ResultCards/EntityCard';
+import EntityGraphs from './ResultGraphs/EntityGraphs';
 import PersonCard from './ResultCards/PersonCard';
 import PublicationCard from './ResultCards/PublicationCard';
 import ProjectCard from './ResultCards/ProjectCard';
@@ -15,7 +16,7 @@ import ProjectCard from './ResultCards/ProjectCard';
 const ResultsToShow = {
   all: {
     list: EntityCard,
-    visualization: EntityCard,
+    visualization: EntityGraphs,
   },
   entities: {
     list: EntityCard,
@@ -62,6 +63,7 @@ const SearchResults = (props) => {
             <ToShow
               language={props.language}
               results={props.results}
+              facets={props.facets}
             />
           }
         </div>
@@ -77,5 +79,6 @@ SearchResults.propTypes = {
   objectType: PropTypes.string,
   view: PropTypes.string,
   results: PropTypes.array,
+  facets: PropTypes.array,
   resultsCount: PropTypes.number,
 };
