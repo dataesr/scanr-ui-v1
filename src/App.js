@@ -8,6 +8,8 @@ import localeEn from 'react-intl/locale-data/en';
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
+import Focus from './Components/Focus-pages/Focus';
+import FocusList from './Components/Focus-pages/focus-1/FocusList';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
@@ -87,6 +89,29 @@ class App extends Component {
               )}
             />
 
+            <Route
+              exact
+              path="/focus"
+              component={props => (
+                <Focus
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/focus/:id"
+              component={props => (
+                <FocusList
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
 
             {/* vvv--------------- other-pages ------------------vvv  */}
             <Route
