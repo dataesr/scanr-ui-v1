@@ -1,24 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './Focus.scss';
+import classes from './FocusList.scss';
 
 /**
- * Focus
+ * FocusList
  * Url : .
  * Description : .
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-const Focus = props => (
-  <div className={classes.Focus}>
-    Focus
+const FocusList = props => (
+  <div className={classes.FocusList}>
+    FocusList
   </div>
 );
 
-export default Focus;
+export default FocusList;
 
-Focus.propTypes = {
+FocusList.propTypes = {
   language: PropTypes.string.isRequired,
 };
