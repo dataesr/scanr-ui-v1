@@ -1,0 +1,81 @@
+@import '../../../style.scss';
+
+.Contribute{
+
+  .Content{
+    padding: 50px 0;
+    background-color: $scanrlightgreyColor;
+    color:  $scanrdeepblueColor;
+    font-size: 0.9em;
+    }
+
+//Title Content
+    H4{
+      font-size: 1rem ;
+      font-weight: bold;
+      padding-top: 50px;
+      padding-bottom: 20px;
+      padding-left:5px;
+    }
+
+//Title card
+    H3{
+      font-size: 1.1rem ;
+      font-weight: normal;
+      padding: 10px 0;
+    }
+
+    .Card{
+      border:none;
+      border-radius: 8px;
+      text-align: left;
+      vertical-align: middle;
+      margin:10px ;
+      width:100%;
+    }
+
+/*
+    .CardBody{
+      //background-color: white;
+      border-radius: 8px;
+      text-align: left;
+      padding: 20px 50px;
+      margin: 3px;
+      width:100%;
+    }
+*/
+
+    .CardLogo{
+      padding-top: 10px;
+      padding-left: 25px;
+      font-size: 2rem;
+      max-height: 2rem;
+
+    }
+
+    .CardArrow{
+      font-size: 2rem;
+    }
+
+
+    .Video{
+      max-width: 100rem;
+    }
+
+
+  .FormContact{
+      background-color: $scanrblueColor;
+      color: white;
+      padding: 30px 0;
+
+      BUTTON{
+        background-color: white;
+        color: $scanrfooterBgColor;
+      }
+  }
+
+  @media (min-width: 20px) and (max-width: 991.98px) {
+    margin: .5rem;
+  }
+
+}
