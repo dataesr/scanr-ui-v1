@@ -4,10 +4,7 @@ import PropTypes from 'prop-types';
 // Composants
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
-<<<<<<< HEAD
-=======
 // import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
->>>>>>> origin/master
 import GraphComponent from './GraphComponent';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../../Shared/LastFocus/LastFocus';
