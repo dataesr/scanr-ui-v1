@@ -9,6 +9,8 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './Header.scss';
 
+import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-blue';
+
 
 const Header = (props) => {
   const frActive = (props.language === 'fr') ? classes.ActiveLink : '';
@@ -22,12 +24,10 @@ const Header = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.Header}>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div>
-            <ScrollLogo />
-          </div>
-          <a className="navbar-brand" href="#">
-            ScanR_Icon
+        <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes["has-background-white"]}`}>
+          <ScrollLogo />
+          <a className="navbar-brand" href="/">
+            <LogoScanrWhiteSVG fill="#003259" height="40px" width="160px" />
           </a>
           <button
             className="navbar-toggler"
@@ -45,7 +45,7 @@ const Header = (props) => {
             <ul className="navbar-nav mr-auto">
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className={`dropdown-toggle ${classes.Link}`}
                   href="#"
                   id="navbarDropdown"
                   role="button"
@@ -65,8 +65,8 @@ const Header = (props) => {
                   <a className="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
+              <li className="nav-item">
+                <a className={classes.Link} href="/recherche/all">
                   <FormattedHTMLMessage
                     id="Header.link.search"
                     defaultMessage="Header.link.search"
@@ -74,7 +74,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/focus">
+                <a className={classes.Link} href="/focus">
                   <FormattedHTMLMessage
                     id="Header.link.focus"
                     defaultMessage="Header.link.focus"
@@ -84,7 +84,7 @@ const Header = (props) => {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className={classes.Link} href="#">
                   <FormattedHTMLMessage
                     id="Header.link.cookies"
                     defaultMessage="Header.link.cookies"
@@ -92,7 +92,7 @@ const Header = (props) => {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className={classes.Link} href="#">
                   <FormattedHTMLMessage
                     id="Header.link.share"
                     defaultMessage="Header.link.share"
