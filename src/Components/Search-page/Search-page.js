@@ -46,7 +46,7 @@ class SearchPage extends Component {
       view: 'list',
       results: [],
       resultsCount: 0,
-      facets: {},
+      facets: [],
       counts: {
         structures: 0,
         projects: 0,
@@ -179,6 +179,7 @@ class SearchPage extends Component {
           <div className="col-md-4">
             <FilterPanel
               language={this.props.language}
+              facets={this.state.facets}
             />
           </div>
           <div className="col-md-8">
@@ -186,6 +187,7 @@ class SearchPage extends Component {
               {...this.props}
               language={this.props.language}
               results={this.state.results}
+              facets={this.state.facets}
               resultsCount={this.state.resultsCount}
               view={this.state.view}
               objectType={this.state.objectType}

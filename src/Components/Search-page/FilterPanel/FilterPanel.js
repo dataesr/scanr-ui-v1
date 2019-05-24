@@ -30,6 +30,7 @@ const FilterPanel = (props) => {
           </div>
           <EntityFilters
             language={props.language}
+            facets={props.facets}
           />
         </div>
       </div>
@@ -41,6 +42,7 @@ export default FilterPanel;
 
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
+  facets: PropTypes.array,
   currentQueryObject: PropTypes.string,
   currentQueryFilters: PropTypes.object,
 };
