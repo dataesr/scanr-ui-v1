@@ -7,10 +7,10 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './SearchResults.scss';
-import EntityCard from './ResultCards/EntityCard'
-import PersonCard from './ResultCards/PersonCard'
-import PublicationCard from './ResultCards/PublicationCard'
-import ProjectCard from './ResultCards/ProjectCard'
+import EntityCard from './ResultCards/EntityCard';
+import PersonCard from './ResultCards/PersonCard';
+import PublicationCard from './ResultCards/PublicationCard';
+import ProjectCard from './ResultCards/ProjectCard';
 
 const ResultsToShow = {
   all: {
@@ -33,13 +33,6 @@ const ResultsToShow = {
     list: PublicationCard,
     visualization: EntityCard,
   },
-}
-
-const isEven = (value) => {
-  if (value % 2 === 0) {
-    return classes.cardIsLeft;
-  }
-  return classes.cardIsRight;
 };
 
 const SearchResults = (props) => {
@@ -47,25 +40,30 @@ const SearchResults = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const ToShow = ResultsToShow[props.currentQueryObject][props.currentResultView];
+  const ToShow = ResultsToShow[props.objectType][props.view];
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`row ${classes.Section}`}>
-        <div className={`col-12 ${classes.ActiveFiltersContainer}`}>
-          <div className={classes.ResultHeader}>
-            <span>(count) </span>
-            <FormattedHTMLMessage id="searchResults.objectType" defaultMessage="searchResults.objectType" />
+      <section className="row d-flex flex-column">
+        <div className={`ml-1 mb-2 ${classes.ActiveFiltersContainer}`}>
+          <div className={`p-3 ${classes.ResultHeader}`}>
+            <span>
+              {`${props.resultsCount} `}
+            </span>
+            <span>
+              <FormattedHTMLMessage
+                id={`searchResults.${props.objectType}`}
+                defaultMessage={`searchResults.${props.objectType}`}
+              />
+            </span>
           </div>
         </div>
-        <div className={`col-12 ${classes.ResultCardsContainer}`}>
-          <div className="row">
-            {
-              <ToShow
-                language={props.language}
-                resultsData={props.resultsData}
-              />
-            }
-          </div>
+        <div className="d-flex flex-row flex-wrap justify-content-between ml-1">
+          {
+            <ToShow
+              language={props.language}
+              results={props.results}
+            />
+          }
         </div>
       </section>
     </IntlProvider>
@@ -76,8 +74,8 @@ export default SearchResults;
 
 SearchResults.propTypes = {
   language: PropTypes.string.isRequired,
-  currentQueryObject: PropTypes.string,
-  currentResultView: PropTypes.string,
-  currentQueryFilters: PropTypes.object,
-  resultsData: PropTypes.object,
+  objectType: PropTypes.string,
+  view: PropTypes.string,
+  results: PropTypes.array,
+  resultsCount: PropTypes.number,
 };
