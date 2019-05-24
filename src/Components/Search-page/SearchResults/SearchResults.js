@@ -16,23 +16,23 @@ import ProjectCard from './ResultCards/ProjectCard';
 const ResultsToShow = {
   all: {
     list: EntityCard,
-    visualization: EntityGraphs,
+    graph: EntityGraphs,
   },
   entities: {
     list: EntityCard,
-    visualization: EntityCard,
+    graph: EntityGraphs,
   },
   projects: {
     list: ProjectCard,
-    visualization: EntityCard,
+    graph: EntityCard,
   },
   persons: {
     list: PersonCard,
-    visualization: EntityCard,
+    graph: EntityCard,
   },
   publications: {
     list: PublicationCard,
-    visualization: EntityCard,
+    graph: EntityCard,
   },
 };
 
@@ -76,8 +76,8 @@ export default SearchResults;
 
 SearchResults.propTypes = {
   language: PropTypes.string.isRequired,
-  objectType: PropTypes.string,
-  view: PropTypes.string,
+  objectType: PropTypes.string.isRequired,
+  view: PropTypes.string.isRequired,
   results: PropTypes.array,
   facets: PropTypes.array,
   resultsCount: PropTypes.number,
