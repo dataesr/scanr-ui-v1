@@ -150,7 +150,7 @@ class App extends Component {
             />
 
             <Route
-              path="/:language/opendata"
+              path="/opendata"
               component={props => (
                 <Opendata
                   {...props}
