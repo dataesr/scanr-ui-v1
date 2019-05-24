@@ -8,6 +8,10 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../Shared/LastFocus/LastFocus';
+<<<<<<< HEAD
+=======
+// import Lexicon from '../Shared/Lexicon/Lexicon';
+>>>>>>> origin/master
 // import Search from '../Home-page/Search/Search';
 
 import classes from '../Home-page/Home-page.scss';
