@@ -22,11 +22,13 @@
 
 .MainWebSiteButton:hover {
   color: white;
-  background-color: $scanrblueColor;
+  background-color: $scanrgreyColor;
+  text-decoration: none;
 }
 .MainWebSiteButton:focus {
   color: white;
-  background-color: $scanrblueColor;
+  background-color: $scanrgreyColor;
+  text-decoration: none;
 }
 
 .Container {
@@ -44,4 +46,14 @@
   margin: 2px;
   padding-top: 16px;
   display: block;
+
+  a {
+    color: white;
+  }
+}
+.SocialMedia:hover {
+  background-color: $scanrgreyColor;
+}
+.SocialMedia:focus {
+  background-color: $scanrgreyColor;
 }
