@@ -7,17 +7,42 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './Graphs.scss';
-import '../../../../Focus-pages/focus-1/graphs/HighChartsBar'
+import HighChartsBar from '../../../Focus-pages/focus-1/graphs/HighChartsBar'
 
 const EntityGraphs = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
-  const UrbanUnitData = 1
-  const NaturesData = 1
+  const typeFacets = props.facets.find(item => item.id === 'facet_natures') || { entries: [] }
+  const UUFacets = props.facets.find(item => item.id === 'facet_urban_hits') || { entries: [] }
+  const UrbanUnitData = {
+    labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
+    values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
+  };
+  const NaturesData = {
+    labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
+    values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
+  };
+  console.log(NaturesData);
+  console.log(UrbanUnitData);
   return (
-    <div />
+    <React.Fragment>
+      <div className="w-100 p-3 mb-3">
+        <HighChartsBar
+          data={NaturesData}
+          temp="blah"
+          filename="It rocks"
+        />
+      </div>
+      <div className="w-100 p-3 mb-3">
+        <HighChartsBar
+          data={UrbanUnitData}
+          temp="blah"
+          filename="It rocks"
+        />
+      </div>
+    </React.Fragment>
   );
 };
 

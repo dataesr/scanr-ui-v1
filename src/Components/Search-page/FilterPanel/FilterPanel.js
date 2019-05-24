@@ -7,7 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './FilterPanel.scss';
-import EntityFilters from './ObjectsFilters/EntityFilters'
+import EntityFilters from './ObjectsFilters/EntityFilters';
 
 const FilterPanel = (props) => {
   const messages = {
@@ -43,6 +43,4 @@ export default FilterPanel;
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   facets: PropTypes.array,
-  currentQueryObject: PropTypes.string,
-  currentQueryFilters: PropTypes.object,
 };
