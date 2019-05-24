@@ -1,0 +1,46 @@
+{
+  {
+      "id":1,
+      "name": "Japan Prize : qui sont les lauréats français ?",
+      "legend": "Les prix japonais",
+      "type": "bar",
+      "tags": ["tag1", "tag2", "tag3"],
+      "data" : {
+        "xAxis" : "Axe x",
+        "yAxis": "Axe y",
+        "values" : [ 12, 34, 15, 72, 26]
+      }
+  },
+  {
+    "id":2,
+    "name": "La carte des pôles de compétitivité en Frace",
+    "legend": "La france compte aujourd'hui soixante-et-onze pôles de compétitivité",
+    "type": "map",
+    "tags": ["tag1", "tag2", "tag3"],
+    "data" : {
+      "xAxis" : ,
+      "yAxis": ,
+      "values" : [{ "region": "fr-t", "value" : 0 },
+        { "region": "fr-e", "value" : 1 },
+        { "region": "fr-r", "value" : 2 },
+        { "region": "fr-u", "value" : 3 },
+        { "region": "fr-n", "value" : 4 },
+        { "region": "fr-p", "value" : 5 },
+        { "region": "fr-o", "value" : 6 },
+        { "region": "fr-v", "value" : 7 },
+        { "region": "fr-s", "value" : 8 },
+        { "region": "fr-g", "value" : 9 },
+        { "region": "fr-k", "value" : 10 },
+        { "region": "fr-a", "value" : 11 },
+        { "region": "fr-c", "value" : 12 },
+        { "region": "fr-f", "value" : 13 },
+        { "region": "fr-l", "value" : 14 },
+        { "region": "fr-d", "value" : 15 },
+        { "region": "fr-b", "value" : 16 },
+        { "region": "fr-i", "value" : 17 },
+        { "region": "fr-q", "value" : 18 },
+        { "region": "fr-j", "value" : 19 },
+        { "region": "fr-m", "value" : 20 }]
+    }
+  }
+}

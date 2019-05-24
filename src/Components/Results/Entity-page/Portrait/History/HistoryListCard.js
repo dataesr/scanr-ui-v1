@@ -13,9 +13,6 @@ import classes from './History.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const logoFunction = logo => (
-  (logo) ? <div className={classes.Logo}><i className={logo} /></div> : null
-);
 
 const titleFunction = title => (
   (title) ? <div className={classes.Title}>{title}</div> : null
@@ -23,7 +20,7 @@ const titleFunction = title => (
 
 const additionalListFunction = (allProps) => {
   // sorting by years
-  const listByYear = allProps.list.sort(function(a, b){return a.eventYear-b.eventYear});
+  const listByYear = allProps.list.sort((a, b) => (a.eventYear - b.eventYear));
 
   const objFinal = [];
   const objYear = {};
@@ -83,11 +80,7 @@ const additionalListFunction = (allProps) => {
 
 const HistoryListCard = (props) => {
   if (!props.list) {
-    return (
-      <Fragment>
-        Loading...
-      </Fragment>
-    );
+    return null;
   }
 
   const tooltip = (props.tooltip) ? (

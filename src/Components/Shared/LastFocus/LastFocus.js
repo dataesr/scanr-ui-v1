@@ -32,7 +32,7 @@ const LastFocus = (props) => {
             <div className={`col-lg-2 ${classes.Button}`}>
               <ButtonToPage
                 className={classes.MarginTop}
-                url=""
+                url="/focus"
               >
                 <FormattedHTMLMessage
                   id="LastFocus.AllFocus"
@@ -75,7 +75,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'La carte des poles de compétitivité en France',
       type: 'map',
-      url: '',
+      url: '/focus/1',
       schema: 'entity',
     },
     {

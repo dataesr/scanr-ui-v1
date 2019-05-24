@@ -8,6 +8,8 @@ import localeEn from 'react-intl/locale-data/en';
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
+import Focus from './Components/Focus-pages/Focus';
+import FocusList from './Components/Focus-pages/focus-1/FocusList';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
@@ -18,7 +20,7 @@ import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
 import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
 import MediasPage from './Components/Other-pages/Medias/Medias';
 import Opendata from './Components/Other-pages/Opendata/Opendata';
-import RessourcesPage from './Components/Other-pages/Ressources/Ressources';
+import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
 
@@ -67,7 +69,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/recherche"
+              path="/recherche/:objectType"
               render={props => (
                 <SearchPage
                   {...props}
@@ -87,6 +89,29 @@ class App extends Component {
               )}
             />
 
+            <Route
+              exact
+              path="/focus"
+              component={props => (
+                <Focus
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/focus/:id"
+              component={props => (
+                <FocusList
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
 
             {/* vvv--------------- other-pages ------------------vvv  */}
             <Route
@@ -125,7 +150,6 @@ class App extends Component {
             />
 
             <Route
-              exact
               path="/opendata"
               component={props => (
                 <Opendata
@@ -135,10 +159,11 @@ class App extends Component {
                 />
               )}
             />
+
             <Route
               path={['/ressources/:id', '/ressources']}
               component={props => (
-                <RessourcesPage
+                <Ressources
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
@@ -200,7 +225,6 @@ class App extends Component {
                 />
               )}
             />
-
             <Route
               exact
               path="/contribuer"
