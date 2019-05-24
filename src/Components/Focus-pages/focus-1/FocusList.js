@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Composants
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
-import Lexicon from '../../Shared/Lexicon/Lexicon';
+import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
 import GraphComponent from './GraphComponent';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../../Shared/LastFocus/LastFocus';
@@ -70,9 +70,11 @@ const FocusId = props => (
 
     <Footer language={props.language} />
 
-    <Lexicon
-      className={classes.HomePageLexiconTop}
-      language={props.language}
+    <LexiconPanel
+      className={classes.HomePageLexiconPanelTop}
+      language={this.props.language}
+      target={this.state.lexiconTarget}
+      lexiconHandler={v => this.lexiconHandler(v)}
     />
   </div>
 );

@@ -2,7 +2,10 @@
 
 
 .Localisation {
-
+  .NoSpace {
+    margin: 0;
+    padding: 0;
+  }
   .MapContainer {
     padding-top: 1px;
     .Map{
@@ -20,11 +23,15 @@
     padding: 16px;
     color: $localisationTextTitleColor;
     font-style: italic;
+    font-size: 0.9rem;
     I {
       display: inline-block;
       padding-right: 8px;
     }
     .Address {
+      margin-top: 10px;
+      padding-left: 24px;
+      line-height: 22px;
       color: $localisationTextColor;
       font-weight: bold;
       font-size: 1.2rem;

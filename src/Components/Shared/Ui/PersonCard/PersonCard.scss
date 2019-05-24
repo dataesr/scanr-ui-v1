@@ -1,0 +1,71 @@
+@import '../../../../style.scss';
+
+.PersonCard {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 150px;
+  padding: 8px;
+  margin: 3px;
+
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .Logo {
+    height: 60px;
+    overflow: hidden;
+  }
+
+  .Name {
+    color: $scanrdeepblueColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .Role {
+    color: $scanrgreyColor;
+    font-size: 0.9rem;
+  }
+
+  .Email {
+    color: $scanrdeepblueColor;
+    a, a:hover, a:focus {
+      color: $scanrdeepblueColor;
+      text-decoration: none;
+      position: relative;
+    }
+
+    a:after {
+        content: '';
+
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+
+        border-width: 0 0 2px;
+        border-style: solid;
+        border-color: $scanrblueColor;
+    }
+  }
+  .Email::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f0e0";
+    padding-right: 8px;
+    color: $scanrblueColor;
+  }
+
+  .Button {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    font-size: 1rem;
+  }
+
+}
