@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -31,6 +32,7 @@ export default class FocusList extends Component {
     };
   }
 
+
   componentDidMount() {
     const filename = `./Focus-data/${this.props.match.params.id}.json`;
     let params = '';
@@ -40,7 +42,18 @@ export default class FocusList extends Component {
     } catch (error) {
       this.setState({ missing: true });
     }
-    // alert(paramsFile.name);
+    axios.get(params.data.url, {
+      headers: {
+        Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=',
+      },
+    })
+      .then((res) => {
+        this.setState({ data: res.data });
+      })
+      .catch((error) => {
+        console.log(error);
+        console.log("Couldn't retrieve API data");
+      });
   }
 
   render() {
