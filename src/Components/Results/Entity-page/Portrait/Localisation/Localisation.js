@@ -39,32 +39,41 @@ class Localisation extends Component {
     const mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
 
     return (
-      <div className={classes.Localisation}>
-        <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
-
-        <div className={classes.MapContainer}>
-          <Map
-            className={classes.Map}
-            {...mapProps}
-          >
-            <TileLayer
-              attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-              url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
-            />
-            <Marker
-              position={this.props.address[0].gps}
-              icon={yellowIcon}
-            />
-          </Map>
-        </div>
-        <div className={classes.AddressContainer}>
-          <div className={classes.Title}>
-            <i className="fas fa-map-marker" />
-            Localisation
-            <div className={classes.Address}>
-              {this.props.address[0].address}
-              <br />
-              {`${this.props.address[0].city} - ${this.props.address[0].country}`}
+      <div className="col-6">
+        <div className={classes.Localisation}>
+          <div className="row">
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
+            </div>
+          </div>
+          <div className="row">
+            <div className={`col-lg ${classes.NoSpace}`}>
+              <div className={classes.MapContainer}>
+                <Map
+                  className={classes.Map}
+                  {...mapProps}
+                >
+                  <TileLayer
+                    attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                    url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+                  />
+                  <Marker
+                    position={this.props.address[0].gps}
+                    icon={yellowIcon}
+                  />
+                </Map>
+              </div>
+              <div className={classes.AddressContainer}>
+                <div className={classes.Title}>
+                  <i className="fas fa-map-marker" />
+                  Localisation
+                  <div className={classes.Address}>
+                    {this.props.address[0].address}
+                    <br />
+                    {`${this.props.address[0].city} - ${this.props.address[0].country}`}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
