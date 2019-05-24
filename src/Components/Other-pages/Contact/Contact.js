@@ -1,14 +1,14 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-/* import ReCAPTCHA from 'react-google-recaptcha'; */
+
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import Banner from '../../Shared/Banner/Banner';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import FormContact from './FormContact/FormContact';
+import FormContact from '../../Shared/FormContact/FormContact';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -78,7 +78,7 @@ const Contact = props => (
             <div className="col-lg pt-3">
               <CardToPage
                 cssClass="card_lightdark"
-                labelKey="consultFAQ"
+                labelKey="contributeScanr"
                 language={props.language}
                 btnText="discover"
                 url=""

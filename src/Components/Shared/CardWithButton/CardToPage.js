@@ -22,8 +22,8 @@ const CardToPage = props => (
     <div className={`card text-center mb-1 ${classes.CardToPage} ${classes[props.cssClass]}`}>
       <div className={classes.Title}>
         <FormattedHTMLMessage
-          id={`CardToPage.title.${props.labelKey}`}
-          defaultMessage={`CardToPage.title.${props.labelKey}`}
+          id={props.labelKey}
+          defaultMessage={props.labelKey}
         />
       </div>
       <div className={classes.Button}>
@@ -33,8 +33,8 @@ const CardToPage = props => (
           target={props.target}
         >
           <FormattedHTMLMessage
-            id={`CardToPage.button.${props.btnText}`}
-            defaultMessage={`CardToPage.button.${props.btnText}`}
+            id={props.btnText}
+            defaultMessage={props.btnText}
           />
         </ButtonToPage>
       </div>
