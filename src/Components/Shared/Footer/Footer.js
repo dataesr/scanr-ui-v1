@@ -111,6 +111,14 @@ const Footer = props => (
                 </a>
               </li>
               <li>
+                <a href="/l-equipe-et-son-projet">
+                  <FormattedHTMLMessage
+                    id="Footer.link.team"
+                    defaultMessage="Footer.link.team"
+                  />
+                </a>
+              </li>
+              <li>
                 <a href="#">
                   <FormattedHTMLMessage
                     id="Footer.link.contact"
