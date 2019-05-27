@@ -6,6 +6,8 @@ import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
 
+import classes from '../GraphComponents.scss';
+
 HCExporting(Highcharts);
 HCExportingData(Highcharts);
 HCRounded(Highcharts);
@@ -120,6 +122,36 @@ export default class HighChartsBar extends Component {
   }
 
   render() {
+    const btnShare = {
+      paddingLeft: '5px',
+      paddingRight: '10px',
+      color: '#3778bb',
+      cursor: 'not-allowed',
+    };
+    const btnExport = {
+      color: '#3778bb',
+      cursor: this.state.cursor,
+    };
+    const ShareComponent = () => (
+      <div>
+        <hr />
+        <div style={{ display: 'inline-block', float: 'left' }}>
+          <p className={`${classes.Subtitle}`}>Partager</p>
+          <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
+          <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+          <i style={btnShare} className="fas fa-code fa-lg" />
+        </div>
+        <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
+          <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+          <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.pdf</p>
+          <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.png</p>
+          <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.csv</p>
+        </div>
+      </div>
+    );
     return (
       <div>
         {
@@ -131,6 +163,7 @@ export default class HighChartsBar extends Component {
                   options={this.state.options}
                   ref={this.chart}
                 />
+                <ShareComponent />
               </div>
             )
             : <div>Loading...</div>
