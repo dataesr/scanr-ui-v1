@@ -82,7 +82,7 @@ LastFocus.defaultProps = {
       tags: ['#tag1', '#tag2', '#tag3'],
       title: 'La carte des projets financés par l\'ANR',
       type: 'donut',
-      url: '/focus/donut-poles-compet-france-2019',
+      url: '',
       schema: 'project',
     },
     {
