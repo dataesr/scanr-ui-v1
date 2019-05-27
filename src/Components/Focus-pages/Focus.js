@@ -12,6 +12,7 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 
 import classes from './Focus.scss';
 
+const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
 
 /**
  * Focus
@@ -41,14 +42,18 @@ export default class FocusList extends Component {
       this.setState({ meta: params });
     } catch (error) {
       this.setState({ missing: true });
+      return;
     }
-    axios.get(params.data.url, {
+    axios.get(params.url, {
       headers: {
-        Authorization: 'Basic YWRtaW46ZGF0YUVTUjIwMTk=',
+        Authorization: `Basic ${authorization}`,
       },
     })
       .then((res) => {
         this.setState({ data: res.data });
+        if (params.type === 'bar') {
+          this.setState({ data: params.data });
+        }
       })
       .catch((error) => {
         console.log(error);

@@ -1,9 +1,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'react-bootstrap';
 import loadable from '@loadable/component';
-import axios from 'axios';
 
 import classes from './GraphComponents.scss';
 
@@ -20,9 +18,6 @@ export default class DisplayComponent extends Component {
   constructor(props) {
     super(props);
     this.BlockComponent = null;
-    this.state = {
-      isMap: false,
-    };
   }
 
   createTags = () => {
@@ -40,7 +35,6 @@ export default class DisplayComponent extends Component {
     try {
       switch (this.props.type) {
         case 'map':
-          this.state.isMap = true;
           GraphComponent = loadable(() => import('./Graphs/LeafletMap'));
           break;
         case 'bar':
@@ -132,6 +126,6 @@ DisplayComponent.propTypes = {
   name: PropTypes.string.isRequired,
   subname: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  tags: PropTypes.object.isRequired,
+  tags: PropTypes.array.isRequired,
   data: PropTypes.object.isRequired,
 };
