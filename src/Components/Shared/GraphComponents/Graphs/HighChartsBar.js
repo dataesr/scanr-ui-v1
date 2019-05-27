@@ -24,6 +24,13 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
+    const labels = [];
+    const values = [];
+    const unit = 'unité';
+    for (let i = 0; i < this.props.data.length; i += 1) {
+      labels.push(this.props.data[i][0]);
+      values.push(this.props.data[i][1]);
+    }
     // const labels = [];
     // const values = [];
     // for (let i = 0; i < this.props.temp.meta.total; i += 1) {
@@ -111,7 +118,7 @@ export default class HighChartsBar extends Component {
       },
       xAxis: {
         lineWidth: 0,
-        categories: this.data.labels,
+        categories: labels,
         labels:
         {
           style: { color: '#000000' },
@@ -147,8 +154,8 @@ export default class HighChartsBar extends Component {
       },
       series: [{
         color: '#FDD85E',
-        name: this.data.unit,
-        data: this.data.values,
+        name: unit,
+        data: values,
         borderRadiusTopLeft: '80%',
         borderRadiusTopRight: '80%',
         borderRadiusBottomLeft: '80%',
@@ -209,7 +216,6 @@ export default class HighChartsBar extends Component {
 }
 
 HighChartsBar.propTypes = {
-  temp: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
