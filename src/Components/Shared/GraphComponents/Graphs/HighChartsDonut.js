@@ -167,6 +167,7 @@ export default class HighChartsDonut extends Component {
                 options={this.state.options}
                 ref={this.chart}
               />
+              <ShareComponent />
             </div>
           )
           : <div>Loading...</div>
