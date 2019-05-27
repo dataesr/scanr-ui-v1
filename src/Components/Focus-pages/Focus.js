@@ -51,7 +51,7 @@ export default class FocusList extends Component {
     })
       .then((res) => {
         this.setState({ data: res.data });
-        if (params.type === 'bar') {
+        if (params.type !== 'map') {
           this.setState({ data: params.data });
         }
       })

@@ -2,15 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
 
 import classes from '../GraphComponents.scss';
 
+HCAccessibility(Highcharts);
 HCExporting(Highcharts);
 HCExportingData(Highcharts);
 HCRounded(Highcharts);
+
+/**
+ * HighChartsBar
+ * Url : <br/>
+ * Description : Composant HighCharts qui rend les barres horizontales <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>.
+*/
 
 export default class HighChartsBar extends Component {
   constructor(props) {
