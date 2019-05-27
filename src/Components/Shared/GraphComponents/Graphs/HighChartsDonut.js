@@ -2,13 +2,26 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
+import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 
+import classes from '../GraphComponents.scss';
+
+HCAccessibility(Highcharts);
 HCExporting(Highcharts);
 HCExportingData(Highcharts);
 
-export default class HighChartsPie extends Component {
+/**
+ * HighChartsDonut
+ * Url : <br/>
+ * Description : Composant HighCharts qui rend les donuts <br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests unitaires : . <br/>.
+*/
+
+export default class HighChartsDonut extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
@@ -22,13 +35,7 @@ export default class HighChartsPie extends Component {
   }
 
   componentDidMount() {
-    const labels = [];
-    const values = [];
     const unit = 'unité';
-    for (let i = 0; i < this.props.data.length; i += 1) {
-      labels.push(this.props.data[i][0]);
-      values.push(this.props.data[i][1]);
-    }
     const options = {
       chart: {
         plotBackgroundColor: null,
@@ -50,10 +57,10 @@ export default class HighChartsPie extends Component {
         x: 0,
         y: 0,
         itemStyle: {
-          fontSize: '20px',
+          fontSize: '14px',
         },
-        itemMarginTop: 15,
-        itemMarginBottom: 15,
+        itemMarginTop: 5,
+        itemMarginBottom: 5,
         labelabelFormatter() {
           return `<span>${this.name}</span>(<b>${this.y}%)<br/>`;
         },
@@ -80,9 +87,9 @@ export default class HighChartsPie extends Component {
       },
       series: [{
         type: 'pie',
-        name: 'Browser share',
+        name: unit,
         innerSize: '50%',
-        data: ['this.props.data', 10],
+        data: this.props.data,
       }],
       exporting: {
         filename: this.props.filename,
@@ -119,6 +126,36 @@ export default class HighChartsPie extends Component {
   }
 
   render() {
+    const btnShare = {
+      paddingLeft: '5px',
+      paddingRight: '10px',
+      color: '#3778bb',
+      cursor: 'not-allowed',
+    };
+    const btnExport = {
+      color: '#3778bb',
+      cursor: this.state.cursor,
+    };
+    const ShareComponent = () => (
+      <div>
+        <hr />
+        <div style={{ display: 'inline-block', float: 'left' }}>
+          <p className={`${classes.Subtitle}`}>Partager</p>
+          <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
+          <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+          <i style={btnShare} className="fas fa-code fa-lg" />
+        </div>
+        <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
+          <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+          <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.pdf</p>
+          <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.png</p>
+          <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.csv</p>
+        </div>
+      </div>
+    );
     return (
       <div>
         {
@@ -140,7 +177,7 @@ export default class HighChartsPie extends Component {
 }
 
 
-HighChartsPie.propTypes = {
+HighChartsDonut.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
