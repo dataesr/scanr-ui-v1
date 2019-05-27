@@ -10,6 +10,8 @@ import yellowIcon from './MarkerStyle';
 
 import './customLeaflet.scss';
 
+import classes from '../GraphComponents.scss';
+
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
@@ -79,6 +81,34 @@ class LeafletMap extends Component<{}, State> {
     // alert(data[0].address[0].gps.lat);
     // alert(data[0].address[0].gps.lon);
 
+    const btnShare = {
+      paddingLeft: '5px',
+      paddingRight: '10px',
+      color: '#3778bb',
+      cursor: 'not-allowed',
+    };
+    const btnExport = {
+      color: '#3778bb',
+      cursor: this.state.cursor,
+    };
+
+    const ShareComponent = () => (
+      <div>
+        <hr />
+        <div style={{ display: 'inline-block', float: 'left' }}>
+          <p className={`${classes.Subtitle}`}>Partager</p>
+          <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
+          <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+          <i style={btnShare} className="fas fa-code fa-lg" />
+        </div>
+        <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
+          <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+          <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
+          <p className={`${classes.Subtitle}`}>.png</p>
+        </div>
+      </div>
+    );
+
     const pos = this.props.data.data;
 
     pos.forEach((element) => {
@@ -114,6 +144,7 @@ class LeafletMap extends Component<{}, State> {
           <PrintControl style={{ display: 'none' }} ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
           <GeoSearch />
         </Map>
+        <ShareComponent />
       </div>
     );
   }
