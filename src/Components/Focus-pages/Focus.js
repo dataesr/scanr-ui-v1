@@ -23,6 +23,8 @@ const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
  * Tests unitaires : . <br/>.
 */
 
+let params = '';
+
 export default class FocusList extends Component {
   constructor(props) {
     super(props);
@@ -30,13 +32,13 @@ export default class FocusList extends Component {
       data: null,
       meta: null,
       missing: false,
+      error: false,
     };
   }
 
 
   componentDidMount() {
     const filename = `./Focus-data/${this.props.match.params.id}.json`;
-    let params = '';
     try {
       params = require(`${filename}`);
       this.setState({ meta: params });
@@ -56,14 +58,29 @@ export default class FocusList extends Component {
         }
       })
       .catch((error) => {
+        this.setState({ error: true });
         console.log(error);
         console.log("Couldn't retrieve API data");
       });
   }
 
   render() {
+    const TextComponent = () => (
+      <div>
+        <p className={`${classes.Text}`}>
+          {params.text}
+        </p>
+        <div className="container">
+          <div className="row">
+            <p className={`col-8 ${classes.Subtext}`}>
+              {params.subtext}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
     return (
-      <div className={`container-fluid ${classes.HomePage}`}>
+      <div className={`container-fluid ${classes.HomePage}`} style={{ backgroundColor: '#EBEEF0' }}>
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
@@ -78,9 +95,9 @@ export default class FocusList extends Component {
         {/* <LastFocus language={props.language} /> */}
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
-        <div className="container">
+        <div className="container" style={{ backgroundColor: 'white', marginBottom: '50px' }}>
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12" style={{ backgroundColor: 'white' }}>
               {
             // const TextComponent = () => (
             //   <div>
@@ -94,16 +111,18 @@ export default class FocusList extends Component {
             // );
           }
               {this.state.data ? (
-                <GraphComponent
-                  name={this.state.meta.name}
-                  subname={this.state.meta.subname}
-                  type={this.state.meta.type}
-                  tags={this.state.meta.tags}
-                  data={this.state.data}
-                  language={this.props.language}
-                />
+                <div style={{ backgroundColor: 'white' }}>
+                  <GraphComponent
+                    title={this.state.meta.name}
+                    subtitle={this.state.meta.subname}
+                    type={this.state.meta.type}
+                    tags={this.state.meta.tags}
+                    data={this.state.data}
+                    language={this.props.language}
+                  />
+                </div>
               )
-                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : <div>Chargement/Loading...</div>)]}
+                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : [this.state.error ? <div>{"Erreur: ce focus n'a pas pu être chargé"}</div> : <div>Chargement/Loading...</div>])]}
               {
                 // <GraphComponent
                 //   id={props.match.params.id}
@@ -111,6 +130,7 @@ export default class FocusList extends Component {
                 // />
               }
             </div>
+            <TextComponent />
           </div>
         </div>
 

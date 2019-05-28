@@ -141,25 +141,24 @@ export default class HighChartsBar extends Component {
     };
     const btnExport = {
       color: '#3778bb',
-      cursor: this.state.cursor,
     };
     const ShareComponent = () => (
       <div>
         <hr />
-        <div style={{ display: 'inline-block', float: 'left' }}>
-          <p className={`${classes.Subtitle}`}>Partager</p>
+        <div style={{ float: 'left' }}>
+          <p className={`${classes.BtnTxt}`}>Partager</p>
           <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
-          <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+          <p className={`${classes.BtnTxt}`}>Intégrer le code</p>
           <i style={btnShare} className="fas fa-code fa-lg" />
         </div>
-        <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
-          <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+        <div style={{ float: 'right' }}>
+          <p className={`${classes.BtnTxt}`}><b>Télécharger</b></p>
           <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
-          <p className={`${classes.Subtitle}`}>.pdf</p>
+          <p className={`${classes.BtnTxt}`}>.pdf</p>
           <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
-          <p className={`${classes.Subtitle}`}>.png</p>
+          <p className={`${classes.BtnTxt}`}>.png</p>
           <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
-          <p className={`${classes.Subtitle}`}>.csv</p>
+          <p className={`${classes.BtnTxt}`}>.csv</p>
         </div>
       </div>
     );
@@ -169,11 +168,13 @@ export default class HighChartsBar extends Component {
           this.state.options !== null
             ? (
               <div>
-                <HighchartsReact
-                  highcharts={Highcharts}
-                  options={this.state.options}
-                  ref={this.chart}
-                />
+                <div style={{ paddingLeft: '5%' }}>
+                  <HighchartsReact
+                    highcharts={Highcharts}
+                    options={this.state.options}
+                    ref={this.chart}
+                  />
+                </div>
                 <ShareComponent />
               </div>
             )
