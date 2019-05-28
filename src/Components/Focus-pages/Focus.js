@@ -46,22 +46,36 @@ export default class FocusList extends Component {
       this.setState({ missing: true });
       return;
     }
-    axios.get(params.url, {
-      headers: {
-        Authorization: `Basic ${authorization}`,
-      },
+    axios.post(params.url, {
+      query: 'beta',
     })
       .then((res) => {
-        this.setState({ data: res.data });
-        if (params.type !== 'map') {
-          this.setState({ data: params.data });
-        }
+        this.setState({ data: res.data.facets });
+        // if (params.type !== 'map') {
+        //   this.setState({ data: params.data });
+        // }
       })
       .catch((error) => {
         this.setState({ error: true });
         console.log(error);
         console.log("Couldn't retrieve API data");
       });
+    // axios.get(params.url, {
+    //   headers: {
+    //     Authorization: `Basic ${authorization}`,
+    //   },
+    // })
+    //   .then((res) => {
+    //     this.setState({ data: res.data });
+    //     if (params.type !== 'map') {
+    //       this.setState({ data: params.data });
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     this.setState({ error: true });
+    //     console.log(error);
+    //     console.log("Couldn't retrieve API data");
+    //   });
   }
 
   render() {
@@ -130,7 +144,7 @@ export default class FocusList extends Component {
                 // />
               }
             </div>
-            <TextComponent />
+            {this.state.error ? null : <TextComponent />}
           </div>
         </div>
 
