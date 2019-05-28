@@ -55,10 +55,10 @@ export default class DisplayComponent extends Component {
       const TitleComponent = () => (
         <div>
           <p className={`${classes.Title}`}>
-            {this.props.name}
+            {this.props.title}
           </p>
           <p className={`${classes.Subtitle}`}>
-            {this.props.subname}
+            {this.props.subtitle}
           </p>
           {
           // <p className={`${classes.Title}`}>
@@ -67,36 +67,6 @@ export default class DisplayComponent extends Component {
         }
         </div>
       );
-      // const btnShare = {
-      //   paddingLeft: '5px',
-      //   paddingRight: '10px',
-      //   color: '#3778bb',
-      //   cursor: 'not-allowed',
-      // };
-      // const btnExport = {
-      //   color: '#3778bb',
-      //   cursor: this.state.cursor,
-      // };
-      // const ShareComponent = () => (
-      //   <div>
-      //     <hr />
-      //     <div style={{ display: 'inline-block', float: 'left' }}>
-      //       <p className={`${classes.Subtitle}`}>Partager</p>
-      //       <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
-      //       <p className={`${classes.Subtitle}`}>Intégrer le code</p>
-      //       <i style={btnShare} className="fas fa-code fa-lg" />
-      //     </div>
-      //     <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
-      //       <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
-      //       <button type="button" onClick={this.exportPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
-      //       <p className={`${classes.Subtitle}`}>.pdf</p>
-      //       <button type="button" onClick={this.exportPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
-      //       <p className={`${classes.Subtitle}`}>.png</p>
-      //       <button type="button" onClick={this.exportCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
-      //       <p className={`${classes.Subtitle}`}>.csv</p>
-      //     </div>
-      //   </div>
-      // );
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
@@ -123,8 +93,8 @@ export default class DisplayComponent extends Component {
 
 DisplayComponent.propTypes = {
   language: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  subname: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   data: PropTypes.object.isRequired,
