@@ -37,13 +37,18 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
-    const labels = [];
-    const values = [];
+    const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
+    const data = [];
+    const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
+    const UrbanUnitData = {
+      labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
+      values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
+    };
+    const NaturesData = {
+      labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
+      values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
+    };
     const unit = 'unité';
-    for (let i = 0; i < this.props.data.length; i += 1) {
-      labels.push(this.props.data[i][0]);
-      values.push(this.props.data[i][1]);
-    }
     const options = {
       chart: {
         type: 'bar',
@@ -56,7 +61,7 @@ export default class HighChartsBar extends Component {
       },
       xAxis: {
         lineWidth: 0,
-        categories: labels,
+        categories: NaturesData.labels,
         labels:
         {
           style: { color: '#000000' },
@@ -93,7 +98,7 @@ export default class HighChartsBar extends Component {
       series: [{
         color: '#FDD85E',
         name: unit,
-        data: values,
+        data: NaturesData.values,
         borderRadiusTopLeft: '80%',
         borderRadiusTopRight: '80%',
         borderRadiusBottomLeft: '80%',

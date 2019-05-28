@@ -35,7 +35,24 @@ export default class HighChartsDonut extends Component {
   }
 
   componentDidMount() {
-    const unit = 'unité';
+    const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
+    const data = [];
+    const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
+    const UrbanUnitData = {
+      labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
+      values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
+    };
+    const NaturesData = {
+      labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
+      values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
+    };
+    for (let i = 0; i < 10; i += 1) {
+      const tmp = [];
+      tmp.push(NaturesData.labels[i]);
+      tmp.push(NaturesData.values[i]);
+      data.push(tmp);
+    }
+    // const unit = 'unité';
     const options = {
       chart: {
         plotBackgroundColor: null,
@@ -89,7 +106,7 @@ export default class HighChartsDonut extends Component {
       series: [{
         type: 'pie',
         innerSize: '50%',
-        data: this.props.data,
+        data,
       }],
       exporting: {
         filename: this.props.filename,
