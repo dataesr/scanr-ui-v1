@@ -3,6 +3,9 @@
 *, html {
   font-family: 'Inter UI';
 }
+body, html {
+  height: 100%;
+}
 
 /* couleurs officielles */
 /* tous les prog scss sont à modifier pour intégrer ces couleurs !!!!! */
@@ -18,6 +21,7 @@ $scanrfooterBgColor : rgb(0,33,59);
 
 /* couleurs entités */
 $entityColor : rgb(255,209,56);
+$structureColor : rgb(255,209,56);
 
 /* couleurs personnes */
 $personColor : rgb(254,119,71);
@@ -110,7 +114,7 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
 .has-background-all {
   background-color: $scanrmiddlegreyColor;
 }
-.has-background-entities {
+.has-background-structures {
   background-color: $entitiesColor;
 }
 .has-background-persons {
