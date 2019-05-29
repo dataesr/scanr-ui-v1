@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string'
+import { GridLoader } from 'react-spinners';
 
 import classes from './Search-page.scss';
 
@@ -15,19 +16,6 @@ import Pagination from './Pagination/Pagination';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 
-const transformRequest = (requests) => {
-  const req = { ...requests };
-  if (!req.query) {
-    req.query = '';
-  }
-  if (requests.page) {
-    req.page -= 1;
-  }
-  if (req.pageSize && req.pageSize < 10) {
-    req.pageSize = 10;
-  }
-  return req;
-};
 
 class SearchPage extends Component {
   constructor(props) {
@@ -36,68 +24,94 @@ class SearchPage extends Component {
     this.state = {
       isLoading: false,
       currentQueryText: '',
+      api: 'all',
+      view: 'list',
       request: {
         lang: this.props.language,
         sourceFields: ['id', 'label', 'nature', 'address'],
         searchFields: null,
         query: '',
+        sort: null,
         page: null,
         pageSize: null,
-        filters: {},
-        aggregations: {},
+        filters: null,
+        aggregations: null,
       },
-      objectType: 'all',
-      view: 'list',
-      results: [],
-      resultsCount: 0,
-      facets: [],
-      counts: {
-        structures: 0,
-        projects: 0,
-        persons: 0,
-        publications: 0,
+      data: {
+        results: [],
+        facets: [],
+        total: 0,
+      },
+      preview: {
+        structures: {
+          count: 0,
+          data: [],
+        },
+        projects: {
+          count: 0,
+          data: [],
+        },
+        persons: {
+          count: 0,
+          data: [],
+        },
+        publications: {
+          count: 0,
+          data: [],
+        },
         all: 0,
       },
     };
   }
 
+  // *******************************************************************
+  // REACT LIFECIRCLE HANDLERS
+  // *******************************************************************
   componentDidMount() {
     const newState = this.getParams();
     this.getCounts(newState);
     this.getData(newState);
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
       this.setState({
         isLoading: true,
-        results: [],
+        data: {},
       });
-      // console.log('reset');
       const newState = this.getParams();
       this.getCounts(newState);
       this.getData(newState);
     }
   }
 
+  // *******************************************************************
+  // MAINTAINING URL AND STATE CONSISTANT WITH getParams and setParams
+  // *******************************************************************
   getParams() {
     // recup params dans url
-    const objectType = this.props.match.params.objectType || 'entities';
-    const view = queryString.parse(this.props.location.search).view || 'list';
-    const query = queryString.parse(this.props.location.search).query || '';
-    const currentQueryText = queryString.parse(this.props.location.search).query || '';
-    const pageSize = queryString.parse(this.props.location.search).pageSize;
-    const page = queryString.parse(this.props.location.search).page;
-    const filters = queryString.parse(this.props.location.search).filters || {};
+    const api = this.props.match.params.api;
+    const parsedURL = queryString.parse(this.props.location.search)
+    const view = parsedURL.view || 'list';
+    const query = parsedURL.query || '';
+    const currentQueryText = query;
+    const pageSize = parsedURL.pageSize;
+    const page = parsedURL.page;
+    const filters = parsedURL.filters;
+    const sort = parsedURL.sort;
+    const aggregations = parsedURL.aggregations;
     const newState = {
-      objectType,
+      api,
       currentQueryText,
       view,
       request: {
+        // searchFields: null, not in use now
         query,
+        sort,
         page,
         pageSize,
-        // filters,
+        filters,
+        aggregations,
       },
     };
     this.setState(newState);
@@ -121,43 +135,81 @@ class SearchPage extends Component {
     return url;
   }
 
-
+  // *******************************************************************
+  // HANDLE CHANGE ON USER ACTIONS
+  // *******************************************************************
   queryTextChangeHandler = (e) => {
     this.setState({ currentQueryText: e.target.value });
   }
 
-  objectTypeChangeHandler = (e) => {
+  apiChangeHandler = (e) => {
     if (typeof e === 'object') {
       e.preventDefault();
     }
     const newObject = (typeof e === 'object') ? e.target.value.toLowerCase() : e;
-    const params = this.setParams();
+    const params = `query=${this.state.request.query}`;
     this.props.history.push(`/recherche/${newObject}?${params}`);
   }
 
-  resultViewChangeHandler = (newView) => {
+  viewChangeHandler = (newView) => {
     const url = this.setParams('view', newView);
     this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
   filterChangeHandler = (e) => {
-    console.log(e.target.id, e.target.value);
-
+    // console.log(e.target.id, e.target.value);
     const url = this.setParams(e.target.id, e.target.value, true, false);
     this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
+  submitResearch = (e) => {
+    e.preventDefault();
+    const nextParams = `query=${this.state.currentQueryText}`;
+    this.props.history.push(`${this.props.location.pathname}?${nextParams}`);
+  }
+
+  paginationHandler = (value) => {
+    const nextUrl = this.setParams('page', value);
+    this.props.history.push(`${this.props.location.pathname}?${nextUrl}`);
+  }
+
+
+  // *******************************************************************
+  // AXIOS CALL TO GET DATA
+  // *******************************************************************
+  transformRequest = (requests) => {
+    const req = { ...requests };
+    if (!req.query) {
+      req.query = '';
+    }
+    if (requests.page) {
+      req.page -= 1;
+    }
+    if (req.pageSize && req.pageSize < 10) {
+      req.pageSize = 10;
+    }
+    return req;
+  };
+
+
   getData = (newState) => {
-    const apiName = (['entities', 'all'].includes(newState.objectType))
-      ? 'structures'
-      : newState.objectType;
-    const url = `https://scanr-preprod.sword-group.com/api/v2/${apiName}/search`;
-    Axios.post(url, transformRequest(newState.request))
+    if (newState.api === 'all') {
+      const data = {};
+      this.setState({
+        data,
+        isLoading: false,
+      });
+    }
+    const url = `https://scanr-preprod.sword-group.com/api/v2/${newState.api}/search`;
+    Axios.post(url, this.transformRequest(newState.request))
       .then((response) => {
-        this.setState({
+        const data = {
           results: response.data.results,
           facets: response.data.facets,
-          resultsCount: response.data.total,
+          total: response.data.total,
+        };
+        this.setState({
+          data,
           isLoading: false,
         });
       })
@@ -170,41 +222,53 @@ class SearchPage extends Component {
     const query = { query: newState.request.query };
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
-      const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`
+      const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
       Axios.post(url, query)
         .then((response) => {
-          const newCounts = { ...this.state.counts };
-          newCounts[api] = response.data.total;
+          const newCounts = { ...this.state.preview };
+          newCounts[api].count = response.data.total;
+          newCounts[api].data = response.data.results.slice(0, 6);
           newCounts.all = (
-            newCounts.structures
-            + newCounts.persons
-            + newCounts.projects
-            + newCounts.publications
+            newCounts.structures.count
+            + newCounts.persons.count
+            + newCounts.projects.count
+            + newCounts.publications.count
           );
-          this.setState({ counts: newCounts });
+          this.setState({ preview: newCounts });
         });
     });
   }
 
-  submitResearch = (e) => {
-    e.preventDefault();
-    const nextParams = `query=${this.state.currentQueryText}`;
-    this.props.history.push(`${this.props.location.pathname}?${nextParams}`);
+  // *******************************************************************
+  // HELPERS FOR PAGE RENDERING
+  // *******************************************************************
+  ShouldRenderPagination = () => {
+    if (this.state.view === 'list' && this.state.api !== 'all' && this.state.data.total) {
+      return (
+        <div className="col-md-8 ml-md-auto">
+          <Pagination
+            {...this.props}
+            language={this.props.language}
+            data={this.state.data}
+            paginationHandler={this.paginationHandler}
+            currentPage={parseInt(this.state.request.page, 0)}
+            currentPageSize={parseInt(this.state.request.pageSize, 0)}
+            totalDocuments={parseInt(this.state.data.total, 0)}
+          />
+        </div>
+      );
+    }
+    return null;
   }
 
-  PaginationHandler = (value) => {
-    const nextUrl = this.setParams('page', value);
-    this.props.history.push(`${this.props.location.pathname}?${nextUrl}`);
-  }
-
-  ShouldRenderContainer = () => {
-    if (!this.state.isLoading) {
+  ShouldRenderResults = () => {
+    if (!this.state.isLoading && this.state.api !== 'all') {
       return (
         <div className="row">
           <div className="col-md-4">
             <FilterPanel
               language={this.props.language}
-              facets={this.state.facets}
+              facets={this.state.data.facets}
               filterChangeHandler={this.filterChangeHandler}
             />
           </div>
@@ -212,40 +276,43 @@ class SearchPage extends Component {
             <SearchResults
               {...this.props}
               language={this.props.language}
-              results={this.state.results}
-              facets={this.state.facets}
-              resultsCount={this.state.resultsCount}
+              data={this.state.data}
               view={this.state.view}
-              objectType={this.state.objectType}
+              api={this.state.api}
             />
           </div>
-          <div className="col-md-8 ml-md-auto">
-            <Pagination
-              {...this.props}
-              language={this.props.language}
-              results={this.state.results}
-              PaginationHandler={this.PaginationHandler}
-              currentPage={parseInt(this.state.request.page)}
-              currentPageSize={parseInt(this.state.request.pageSize)}
-              totalDocuments={parseInt(this.state.resultsCount)}
-            />
+          {this.ShouldRenderPagination()}
+        </div>
+      );
+    }
+    if (!this.state.isLoading && this.state.api === 'all') {
+      return (
+        <div className="row">
+          <div className="col-md-12">
+            blah blah blah
           </div>
         </div>
       );
     }
+    const scanRcolor = '#3778bb';
     return (
       <div className="row justify-content-center">
-        <h1 className="col-4">
-          Loading...
-        </h1>
+        <GridLoader
+          color={scanRcolor}
+          loading={this.state.isLoading}
+        />
       </div>
     );
   }
 
+
+  // *******************************************************************
+  // RENDER METHOD
+  // *******************************************************************
   render() {
-    const bgColor = `has-background-${this.state.objectType}`;
+    const bgColor = `has-background-${this.state.api}`;
     return (
-      <Fragment>
+      <div className="d-flex flex-column h-100">
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
@@ -253,28 +320,27 @@ class SearchPage extends Component {
         <SearchPanel
           language={this.props.language}
           isHome={false}
-          objectType={this.state.objectType}
+          api={this.state.api}
           currentQueryText={this.state.currentQueryText}
           queryTextChangeHandler={this.queryTextChangeHandler}
-          queryObjectChangeHandler={this.objectTypeChangeHandler}
+          apiChangeHandler={this.apiChangeHandler}
           submitResearch={this.submitResearch}
         />
-        <div className={classes[bgColor]}>
+        <section className={`flex-grow-1 ${classes[bgColor]}`}>
           <SearchObjectTab
             language={this.props.language}
-            isHome={false}
-            objectType={this.state.objectType}
-            queryObjectChangeHandler={this.objectTypeChangeHandler}
+            api={this.state.api}
+            apiChangeHandler={this.apiChangeHandler}
             view={this.state.view}
-            resultViewChangeHandler={this.resultViewChangeHandler}
-            counts={this.state.counts}
+            viewChangeHandler={this.viewChangeHandler}
+            preview={this.state.preview}
           />
           <div className="container">
-            {this.ShouldRenderContainer()}
+            {this.ShouldRenderResults()}
           </div>
-        </div>
+        </section>
         <Footer language={this.props.language} />
-      </Fragment>
+      </div>
     );
   }
 }
