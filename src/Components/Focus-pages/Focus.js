@@ -127,8 +127,8 @@ export default class FocusList extends Component {
               {this.state.data ? (
                 <div style={{ backgroundColor: 'white' }}>
                   <GraphComponent
-                    title={this.state.meta.name}
-                    subtitle={this.state.meta.subname}
+                    title={this.state.meta.title}
+                    subtitle={this.state.meta.subtitle}
                     type={this.state.meta.type}
                     tags={this.state.meta.tags}
                     data={this.state.data}
