@@ -38,7 +38,6 @@ export default class HighChartsBar extends Component {
 
   componentDidMount() {
     const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
-    const data = [];
     const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
     const UrbanUnitData = {
       labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
@@ -52,6 +51,7 @@ export default class HighChartsBar extends Component {
     const options = {
       chart: {
         type: 'bar',
+        style: { 'font-family': 'Inter UI' },
       },
       credits: {
         enabled: false,
@@ -65,7 +65,6 @@ export default class HighChartsBar extends Component {
         labels:
         {
           style: { color: '#000000' },
-          // enabled: false
           align: 'left',
           x: 20,
         },
@@ -90,7 +89,7 @@ export default class HighChartsBar extends Component {
           dataLabels: {
             enabled: true,
             align: 'right',
-            x: 15,
+            // x: 30,
             style: { color: '#000000' },
           },
         },
