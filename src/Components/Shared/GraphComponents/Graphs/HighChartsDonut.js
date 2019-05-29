@@ -35,6 +35,7 @@ export default class HighChartsDonut extends Component {
   }
 
   componentDidMount() {
+    alert(this.props.filename);
     const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
     const data = [];
     const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };

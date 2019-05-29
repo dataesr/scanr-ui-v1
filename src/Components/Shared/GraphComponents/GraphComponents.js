@@ -70,7 +70,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent filename={this.props.name} data={this.props.data} language={this.props.language} />
+          <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} />
           {
           // <TextComponent />
           // <ShareComponent />
