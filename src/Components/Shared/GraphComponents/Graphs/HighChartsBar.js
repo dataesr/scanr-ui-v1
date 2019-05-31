@@ -87,6 +87,7 @@ export default class HighChartsBar extends Component {
           pointPadding: 0,
           // groupPadding: 0.1,
           dataLabels: {
+            stacking: 'normal',
             enabled: true,
             align: 'right',
             // x: 30,
