@@ -15,7 +15,7 @@ import classes from '../GraphComponents.scss';
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
-  createLeafletElement() {
+  createLeafletElement() { // eslint-disable-class-methods-use-this
     return GeoSearchControl({
       // style: 'button',
       autoClose: true,
