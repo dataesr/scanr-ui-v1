@@ -14,6 +14,21 @@ const FilterPanel = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
+  const filters = (props.filters) ? props.filters : {};
+  // const count = Object.keys(filters).map(key => (
+  //   filters[key].values.length
+  // );
+  const activeFilters = Object.keys(filters).map(key => (
+    <span className="badge badge-pill badge-primary p-1 m-1">
+      <div className=" justify-content-start">
+        {filters[key].values.map(value => (value))}
+      </div>
+    </span>
+  ));
+
+  // const activeFilters = getActiveFilters();
+  // console.log(activeFilters);
+
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -22,6 +37,11 @@ const FilterPanel = (props) => {
           <div className={classes.FilterHeaders}>
             <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
             <span> - (count)</span>
+          </div>
+          <div className={classes.FilterHeaders}>
+            <div className="d-flex flex-column mt-2 mb-2 p-1">
+              {activeFilters}
+            </div>
           </div>
         </div>
         <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
@@ -32,6 +52,7 @@ const FilterPanel = (props) => {
             language={props.language}
             facets={props.facets}
             filterChangeHandler={props.filterChangeHandler}
+            filters={props.filters}
           />
         </div>
       </div>
@@ -45,4 +66,5 @@ FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   filterChangeHandler: PropTypes.func,
   facets: PropTypes.array,
+  filters: PropTypes.object,
 };
