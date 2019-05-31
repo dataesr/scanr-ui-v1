@@ -73,13 +73,16 @@ class SearchPage extends Component {
     this.getData(newState);
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.location !== this.props.location) {
       this.setState({
         isLoading: true,
         data: {},
       });
       const newState = this.getParams();
+      // Need to avaid getCount each change
+      // if (prevState.request.query !== this.state.request.query) {
+      // }
       this.getCounts(newState);
       this.getData(newState);
     }
@@ -97,9 +100,9 @@ class SearchPage extends Component {
     const currentQueryText = query;
     const pageSize = parsedURL.pageSize;
     const page = parsedURL.page;
-    const filters = parsedURL.filters;
-    const sort = parsedURL.sort;
-    const aggregations = parsedURL.aggregations;
+    const filters = (parsedURL.filters) ? JSON.parse(parsedURL.filters) : null;
+    const aggregations = (parsedURL.aggregations) ? JSON.parse(parsedURL.aggregations) : null;
+    const sort = (parsedURL.sort) ? JSON.parse(parsedURL.sort) : null;
     const newState = {
       api,
       currentQueryText,
@@ -121,7 +124,9 @@ class SearchPage extends Component {
   setParams(key, value, isFilter = false, isAggregation = false) {
     const temp = { ...this.state.request };
     if (isFilter) {
+      temp.filters = (temp.filters) ? temp.filters : {};
       temp.filters[key] = value;
+      temp.filters = JSON.stringify(temp.filters);
       const url = queryString.stringify(temp);
       return url;
     }
@@ -129,6 +134,15 @@ class SearchPage extends Component {
       temp.aggregations[key] = value;
       const url = queryString.stringify(temp);
       return url;
+    }
+    if (temp.filters) {
+      temp.filters = JSON.stringify(temp.filters);
+    }
+    if (temp.sort) {
+      temp.sort = JSON.stringify(temp.sort);
+    }
+    if (temp.aggregations) {
+      temp.aggregations = JSON.stringify(temp.aggregations);
     }
     temp[key] = value;
     const url = queryString.stringify(temp);
@@ -158,7 +172,14 @@ class SearchPage extends Component {
 
   filterChangeHandler = (e) => {
     // console.log(e.target.id, e.target.value);
-    const url = this.setParams(e.target.id, e.target.value, true, false);
+    console.log('id', e.target.id);
+    console.log('value', e.target.value);
+    const news = {
+      type: 'MultiValueSearchFilter',
+      op: 'all',
+      values: [e.target.value],
+    };
+    const url = this.setParams(e.target.id, news, true, false);
     this.props.history.push(`${this.props.location.pathname}?${url}`);
   }
 
@@ -270,6 +291,7 @@ class SearchPage extends Component {
               language={this.props.language}
               facets={this.state.data.facets}
               filterChangeHandler={this.filterChangeHandler}
+              filters={this.state.request.filters}
             />
           </div>
           <div className="col-md-8">

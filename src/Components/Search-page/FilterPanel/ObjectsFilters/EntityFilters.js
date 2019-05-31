@@ -42,6 +42,7 @@ const EntityFilters = (props) => {
           <FormattedHTMLMessage id="filters.entityType" defaultMessage="filters.entityType" />
           <select
             className={`mt-1 pl-2 ${classes.Select}`}
+            name="nature"
             id="nature"
             onChange={e => props.filterChangeHandler(e)}
           >
@@ -62,10 +63,11 @@ const EntityFilters = (props) => {
           <FormattedHTMLMessage id="filters.caracteristics" defaultMessage="filters.caracteristics" />
           <select
             className={`mt-1 pl-2 ${classes.Select}`}
-            id="badges"
+            name="badges"
+            id="badges.label.fr"
             onChange={e => props.filterChangeHandler(e)}
           >
-            <option>Choose...</option>
+            {(caractFacets.length === 1) ? null : <option>Choose...</option>}
             {
               caractFacets.entries.map(facet => (
                 <option
