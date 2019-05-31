@@ -35,14 +35,13 @@ export default class HighChartsDonut extends Component {
   }
 
   componentDidMount() {
-    alert(this.props.filename);
     const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
     const data = [];
-    const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
-    const UrbanUnitData = {
-      labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
-      values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
-    };
+    //  const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
+    // const UrbanUnitData = {
+    //   labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
+    //   values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
+    // };
     const NaturesData = {
       labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
       values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
