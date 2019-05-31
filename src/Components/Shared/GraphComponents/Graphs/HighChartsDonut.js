@@ -154,7 +154,7 @@ export default class HighChartsDonut extends Component {
       cursor: this.state.cursor,
     };
     const ShareComponent = () => (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <hr />
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>

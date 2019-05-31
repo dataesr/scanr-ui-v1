@@ -148,7 +148,7 @@ export default class HighChartsBar extends Component {
       color: '#3778bb',
     };
     const ShareComponent = () => (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <hr />
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>

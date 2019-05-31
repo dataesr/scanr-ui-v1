@@ -15,12 +15,10 @@ import classes from '../GraphComponents.scss';
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
-  createLeafletElement() { // eslint-disable-class-methods-use-this
+  createLeafletElement() {
     return GeoSearchControl({
-      // style: 'button',
       autoClose: true,
       searchLabel: 'Ex : pays, villes, CP...',
-      // keepResult: false,
       position: 'topright',
       provider: new OpenStreetMapProvider(),
     });
@@ -92,7 +90,7 @@ class LeafletMap extends Component<{}, State> {
     };
 
     const ShareComponent = () => (
-      <div>
+      <div style={{ overflow: 'hidden' }}>
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>
           <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
@@ -116,8 +114,7 @@ class LeafletMap extends Component<{}, State> {
         tmp.push(element.value.address[0].gps.lon);
         this.data.push(tmp);
         this.label.push(element.value.label.fr);
-      } catch (error) {
-        console.log(error);
+      } catch (error) { // eslint-disable-no-empty
       }
     });
     this.createMarkers = () => {
