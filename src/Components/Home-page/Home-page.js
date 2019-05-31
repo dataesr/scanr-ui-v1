@@ -14,9 +14,36 @@ import Banner from '../Shared/Banner/Banner';
 import classes from './Home-page.scss';
 
 class HomePage extends Component {
-  state = {
-    lexiconTarget: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      lexiconTarget: null,
+      isSearchFull: true,
+    };
+
+    this.handleScroll = this.handleScroll.bind(this);
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isSearchFull !== this.state.isSearchFull) {
+      return true;
+    }
+    return false;
+  }
+
+  handleScroll = () => {
+    if (window.scrollY) {
+      if (this.state.isSearchFull) { this.setState({ isSearchFull: false }); }
+    } else {
+      /* eslint-disable */
+      if (!this.state.isSearchFull && window.scrollY === 0) { this.setState({ isSearchFull: true }); }
+      /* eslint-enable */
+    }
+  }
 
   lexiconHandler = (lexiconTarget) => {
     this.setState({ lexiconTarget });
@@ -24,13 +51,18 @@ class HomePage extends Component {
 
   render() {
     return (
-      <div className={`container-fluid ${classes.HomePage}`}>
+      <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
         />
 
-        <Search language={this.props.language} />
+        <Search
+          {...this.props}
+          language={this.props.language}
+          isFull={this.state.isSearchFull}
+          lexiconHandler={this.lexiconHandler}
+        />
 
         <ScanrToday
           language={this.props.language}
@@ -71,11 +103,11 @@ class HomePage extends Component {
         <Footer language={this.props.language} />
 
         <LexiconPanel
-          className={classes.HomePageLexiconPanelTop}
           language={this.props.language}
           target={this.state.lexiconTarget}
-          lexiconHandler={v => this.lexiconHandler(v)}
+          lexiconHandler={this.lexiconHandler}
         />
+
       </div>
     );
   }
