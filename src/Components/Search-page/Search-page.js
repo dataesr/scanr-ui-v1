@@ -73,6 +73,13 @@ class SearchPage extends Component {
     this.getData(newState);
   }
 
+  // componentWillUpdate(nextProps, nextState) {
+  //   if (nextState.request !== this.state.request) {
+  //     return false;
+  //   }
+  //   return true;
+  // }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.location !== this.props.location) {
       this.setState({
@@ -89,20 +96,20 @@ class SearchPage extends Component {
   }
 
   // *******************************************************************
-  // MAINTAINING URL AND STATE CONSISTANT WITH getParams and setParams
+  // MAINTAINING URL AND STATE CONSISTANT WITH getParams and setURL
   // *******************************************************************
   getParams() {
     // recup params dans url
     const api = this.props.match.params.api;
-    const parsedURL = queryString.parse(this.props.location.search)
+    const parsedURL = queryString.parse(this.props.location.search);
     const view = parsedURL.view || 'list';
     const query = parsedURL.query || '';
     const currentQueryText = query;
     const pageSize = parsedURL.pageSize;
     const page = parsedURL.page;
-    const filters = (parsedURL.filters) ? JSON.parse(parsedURL.filters) : null;
-    const aggregations = (parsedURL.aggregations) ? JSON.parse(parsedURL.aggregations) : null;
-    const sort = (parsedURL.sort) ? JSON.parse(parsedURL.sort) : null;
+    const filters = (parsedURL.filters) ? JSON.parse(parsedURL.filters) : parsedURL.filters;
+    const aggregations = (parsedURL.aggregations) ? JSON.parse(parsedURL.aggregations) : parsedURL.aggregations;
+    const sort = (parsedURL.sort) ? JSON.parse(parsedURL.sort) : parsedURL.sort;
     const newState = {
       api,
       currentQueryText,
@@ -121,31 +128,17 @@ class SearchPage extends Component {
     return newState;
   }
 
-  setParams(key, value, isFilter = false, isAggregation = false) {
-    const temp = { ...this.state.request };
-    if (isFilter) {
-      temp.filters = (temp.filters) ? temp.filters : {};
-      temp.filters[key] = value;
-      temp.filters = JSON.stringify(temp.filters);
-      const url = queryString.stringify(temp);
-      return url;
+  setURL(request) {
+    if (request.filters) {
+      request.filters = JSON.stringify(request.filters);
     }
-    if (isAggregation) {
-      temp.aggregations[key] = value;
-      const url = queryString.stringify(temp);
-      return url;
+    if (request.sort) {
+      request.sort = JSON.stringify(request.sort);
     }
-    if (temp.filters) {
-      temp.filters = JSON.stringify(temp.filters);
+    if (request.aggregations) {
+      request.aggregations = JSON.stringify(request.aggregations);
     }
-    if (temp.sort) {
-      temp.sort = JSON.stringify(temp.sort);
-    }
-    if (temp.aggregations) {
-      temp.aggregations = JSON.stringify(temp.aggregations);
-    }
-    temp[key] = value;
-    const url = queryString.stringify(temp);
+    const url = `${this.props.location.pathname}?${queryString.stringify(request)}`;
     return url;
   }
 
@@ -166,34 +159,73 @@ class SearchPage extends Component {
   }
 
   viewChangeHandler = (newView) => {
-    const url = this.setParams('view', newView);
-    this.props.history.push(`${this.props.location.pathname}?${url}`);
-  }
-
-  filterChangeHandler = (e) => {
-    // console.log(e.target.id, e.target.value);
-    console.log('id', e.target.id);
-    console.log('value', e.target.value);
-    const news = {
-      type: 'MultiValueSearchFilter',
-      op: 'all',
-      values: [e.target.value],
-    };
-    const url = this.setParams(e.target.id, news, true, false);
-    this.props.history.push(`${this.props.location.pathname}?${url}`);
+    const newRequest = { ...this.state.request };
+    newRequest.view = newView;
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
   }
 
   submitResearch = (e) => {
     e.preventDefault();
-    const nextParams = `query=${this.state.currentQueryText}`;
-    this.props.history.push(`${this.props.location.pathname}?${nextParams}`);
+    const newRequest = { query: this.state.currentQueryText };
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
   }
 
   paginationHandler = (value) => {
-    const nextUrl = this.setParams('page', value);
-    this.props.history.push(`${this.props.location.pathname}?${nextUrl}`);
+    const newRequest = { ...this.state.request };
+    newRequest.page = value;
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
   }
 
+  // *******************************************************************
+  // HANDLE FILTERS ACTIONS
+  // *******************************************************************
+  addMultiValueSearchFilter = (e) => {
+    const newRequest = { ...this.state.request };
+    if (newRequest.filters && newRequest.filters[e.target.id]) {
+      newRequest.filters[e.target.id].values.push(e.target.value);
+    } else {
+      newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
+      newRequest.filters[e.target.id] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [e.target.value],
+      };
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  deleteMultiValueSearchFilter = (key, value) => {
+    const newRequest = { ...this.state.request };
+    newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
+      item !== value
+    ));
+    if (newRequest.filters[key].values.length === 0) {
+      delete newRequest.filters[key];
+    }
+    if (Object.entries(newRequest.filters).length === 0) {
+      delete newRequest.filters;
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  deleteFilter = (key) => {
+    const newRequest = { ...this.state.request };
+    delete newRequest.filters[key];
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  deleteAllFilters = () => {
+    const newRequest = { ...this.state.request };
+    delete newRequest.filters;
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
 
   // *******************************************************************
   // AXIOS CALL TO GET DATA
@@ -290,7 +322,8 @@ class SearchPage extends Component {
             <FilterPanel
               language={this.props.language}
               facets={this.state.data.facets}
-              filterChangeHandler={this.filterChangeHandler}
+              addMultiValueSearchFilter={this.addMultiValueSearchFilter}
+              deleteMultiValueSearchFilter={this.deleteMultiValueSearchFilter}
               filters={this.state.request.filters}
             />
           </div>

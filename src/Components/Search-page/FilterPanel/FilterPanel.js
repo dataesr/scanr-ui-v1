@@ -15,17 +15,21 @@ const FilterPanel = (props) => {
     en: messagesEn,
   };
   const filters = (props.filters) ? props.filters : {};
-  // const count = Object.keys(filters).map(key => (
-  //   filters[key].values.length
-  // );
-  const activeFilters = Object.keys(filters).map(key => (
-    <span className="badge badge-pill badge-primary p-1 m-1">
-      <div className=" justify-content-start">
-        {filters[key].values.map(value => (value))}
-      </div>
-    </span>
-  ));
 
+  const activeFilters = Object.keys(filters).map(key => (
+    filters[key].values.map(value => (
+      <button
+        type="button"
+        key={key}
+        className="badge badge-pill badge-primary p-1 m-1"
+        onClick={() => props.deleteMultiValueSearchFilter(key, value)}
+      >
+        <div className=" justify-content-start">
+          {value}
+        </div>
+      </button>
+    ))
+  ));
   // const activeFilters = getActiveFilters();
   // console.log(activeFilters);
 
@@ -51,7 +55,8 @@ const FilterPanel = (props) => {
           <EntityFilters
             language={props.language}
             facets={props.facets}
-            filterChangeHandler={props.filterChangeHandler}
+            addMultiValueSearchFilter={props.addMultiValueSearchFilter}
+            deleteFilter={props.deleteFilter}
             filters={props.filters}
           />
         </div>
@@ -64,7 +69,8 @@ export default FilterPanel;
 
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
-  filterChangeHandler: PropTypes.func,
+  addMultiValueSearchFilter: PropTypes.func,
+  deleteMultiValueSearchFilter: PropTypes.func,
   facets: PropTypes.array,
   filters: PropTypes.object,
 };
