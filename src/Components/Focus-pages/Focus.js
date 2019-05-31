@@ -12,7 +12,7 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 
 import classes from './Focus.scss';
 
-const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
+// const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
 
 /**
  * Focus
@@ -51,9 +51,9 @@ export default class FocusList extends Component {
     })
       .then((res) => {
         this.setState({ data: res.data.facets });
-        // if (params.type !== 'map') {
-        //   this.setState({ data: params.data });
-        // }
+        if (params.type === 'map') {
+          this.setState({ data: res.data });
+        }
       })
       .catch((error) => {
         this.setState({ error: true });
