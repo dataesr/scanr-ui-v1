@@ -108,7 +108,6 @@ const HistoryListCard = (props) => {
 export default HistoryListCard;
 
 HistoryListCard.propTypes = {
-  labelListButton: PropTypes.string,
   list: PropTypes.array,
   title: PropTypes.string,
   tooltip: PropTypes.string,
