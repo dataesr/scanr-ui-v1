@@ -109,9 +109,9 @@ export default class FocusList extends Component {
         {/* <LastFocus language={props.language} /> */}
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
-        <div className="container" style={{ backgroundColor: 'white', marginBottom: '50px' }}>
+        <div className="container">
           <div className="row">
-            <div className="col-lg-12" style={{ backgroundColor: 'white' }}>
+            <div className="col-lg-12">
               {
             // const TextComponent = () => (
             //   <div>
@@ -125,7 +125,7 @@ export default class FocusList extends Component {
             // );
           }
               {this.state.data ? (
-                <div style={{ backgroundColor: 'white' }}>
+                <div>
                   <GraphComponent
                     title={this.state.meta.title}
                     subtitle={this.state.meta.subtitle}
