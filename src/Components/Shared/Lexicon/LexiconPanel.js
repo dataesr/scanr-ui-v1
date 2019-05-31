@@ -78,7 +78,7 @@ class Lexicon extends Component {
       });
 
       panel = (
-        <div className={classes.Panel}>
+        <div className={`animated fadeInRight faster ${classes.Panel}`}>
           <button type="button" className={classes.ButtonClosePanel} onClick={this.togglePane}>
             <i className="fa fa-times" />
           </button>
