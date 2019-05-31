@@ -69,14 +69,14 @@ const SearchPanel = (props) => {
             <div className="d-flex align-items-center mb-2">
               <div className="d-flex flex-column flex-grow-1 pl-0">
                 <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
-                  { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="inputCity">{label}</label> }
+                  { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="query">{label}</label> }
                 </FormattedMessage>
                 <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
                   { placeholder => (
                     <input
                       type="text"
                       className={`pl-2 ${classes.SearchBar2}`}
-                      id="inputCity"
+                      id="query"
                       placeholder={placeholder}
                       value={props.currentQueryText}
                       onChange={props.queryTextChangeHandler}
@@ -86,10 +86,10 @@ const SearchPanel = (props) => {
               </div>
               <div className="d-flex flex-column pr-1 pl-1 col-xs-hidden">
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
-                  { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="inputCity">{label}</label> }
+                  { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
                 </FormattedMessage>
                 <select
-                  id="inputState"
+                  id="api"
                   className={`form-control ${classes.Select}`}
                   onChange={props.apiChangeHandler}
                 >
