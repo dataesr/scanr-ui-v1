@@ -44,7 +44,7 @@ const EntityFilters = (props) => {
             className={`mt-1 pl-2 ${classes.Select}`}
             name="nature"
             id="nature"
-            onChange={e => props.filterChangeHandler(e)}
+            onChange={e => props.addMultiValueSearchFilter(e)}
           >
             <option>Choose...</option>
             {
@@ -65,7 +65,7 @@ const EntityFilters = (props) => {
             className={`mt-1 pl-2 ${classes.Select}`}
             name="badges"
             id="badges.label.fr"
-            onChange={e => props.filterChangeHandler(e)}
+            onChange={e => props.addMultiValueSearchFilter(e)}
           >
             {(caractFacets.length === 1) ? null : <option>Choose...</option>}
             {
@@ -89,6 +89,7 @@ export default EntityFilters;
 
 EntityFilters.propTypes = {
   language: PropTypes.string.isRequired,
-  filterChangeHandler: PropTypes.func,
+  addMultiValueSearchFilter: PropTypes.func,
+  deleteMultiValueSearchFilter: PropTypes.func,
   facets: PropTypes.array,
 };
