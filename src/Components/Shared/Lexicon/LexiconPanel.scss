@@ -3,8 +3,11 @@
 $logoWidth: 24px;
 
 .Lexicon{
-  position: fixed;
+  position: absolute;
   right: 0;
+  top: 80px;
+  // float: right;
+  z-index: 1000;
 
   .TextInfo {
     color: white;
