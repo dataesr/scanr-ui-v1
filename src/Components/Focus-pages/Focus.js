@@ -40,6 +40,7 @@ export default class FocusList extends Component {
   componentDidMount() {
     const filename = `./Focus-data/${this.props.match.params.id}.json`;
     try {
+      // eslint-disable-next-line
       params = require(`${filename}`);
       this.setState({ meta: params });
     } catch (error) {
