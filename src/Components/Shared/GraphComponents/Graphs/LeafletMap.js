@@ -15,6 +15,7 @@ import classes from '../GraphComponents.scss';
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
+  // eslint-disable-next-line
   createLeafletElement() {
     return GeoSearchControl({
       autoClose: true,
@@ -90,7 +91,7 @@ class LeafletMap extends Component<{}, State> {
     };
 
     const ShareComponent = () => (
-      <div style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden', paddingLeft: '2%' }}>
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>
           <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
