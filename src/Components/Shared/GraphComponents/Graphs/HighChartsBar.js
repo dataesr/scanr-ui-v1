@@ -70,7 +70,7 @@ export default class HighChartsBar extends Component {
         },
       },
       yAxis: {
-        min: 0,
+        // min: ,
         gridLineWidth: 0,
         minorGridLineWidth: 0,
         title: { text: '' },
@@ -148,7 +148,7 @@ export default class HighChartsBar extends Component {
       color: '#3778bb',
     };
     const ShareComponent = () => (
-      <div style={{ overflow: 'hidden' }}>
+      <div style={{ overflow: 'hidden', paddingLeft: '2%' }}>
         <hr />
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>
