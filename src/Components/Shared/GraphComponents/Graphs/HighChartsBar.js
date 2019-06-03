@@ -66,7 +66,7 @@ export default class HighChartsBar extends Component {
         {
           style: { color: '#000000' },
           align: 'left',
-          x: 20,
+          x: 10,
         },
       },
       yAxis: {
@@ -87,10 +87,10 @@ export default class HighChartsBar extends Component {
           pointPadding: 0,
           // groupPadding: 0.1,
           dataLabels: {
-            stacking: 'normal',
             enabled: true,
-            align: 'right',
-            // x: 30,
+            // align: 'right',
+            textAlign: 'right',
+            x: 500,
             style: { color: '#000000' },
           },
         },
