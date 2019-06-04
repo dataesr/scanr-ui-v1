@@ -12,6 +12,10 @@ $linkColorHover: rgb(255, 255, 255);
   font-size: 13px;
   line-height: 20px;
 
+  LI {
+    list-style: none;
+  }
+
   .Logo {
     height: 50px;
   }
