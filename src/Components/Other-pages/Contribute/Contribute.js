@@ -59,71 +59,63 @@ const ContributePage = props => (
                 defaultMessage="howToContribute"
               />
             </div>
-            <div className="w-100" /> 
-
-            <div className={`card col-lg ${classes.Card}`}>
-              <div className={`card-body ${classes.card_light}`}>
-                <i className={`fas fa-pencil-alt ${classes.CardLogo}`} />
-                <div className="card-title">
-                  <FormattedHTMLMessage
-                    id="improveInfo.title"
-                    defaultMessage="improveInfo.title"
-                  />
-                </div>
-                <div className="card-text">
-                  <FormattedHTMLMessage
-                    id="improveInfo.text"
-                    defaultMessage="improveInfo.text"
-                  />
-                  <i className={`fas fa-play text-right ${classes.CardLogo}`} />
-                </div>
-              </div>
-            </div>
-
-            <div className={`card col-lg ${classes.Card} ${classes.card_dark}`}>
-              <div className={`card-body ${classes.Video}`}>
-                <ComponentVideo
-                  url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
-                  poster={videoPoster}
-                  language={props.language}
+            <div className="w-100" />
+            <div className={`card col-lg ${classes.Card} ${classes.card_light}`}>
+              <i className={`fas fa-pencil-alt ${classes.Logo}`} />
+              <div className={classes.Text}>
+                <FormattedHTMLMessage
+                  id="improveInfo.title"
+                  defaultMessage="improveInfo.title"
+                />
+                <FormattedHTMLMessage
+                  id="improveInfo.text"
+                  defaultMessage="improveInfo.text"
                 />
               </div>
+              <i className={`fas fa-caret-right text-right ${classes.ArrowRight}`} />
+
             </div>
+            <div className={`card col-lg p-0 ${classes.Card} ${classes.card_dark} `}>
+
+              <ComponentVideo
+                url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+                poster={videoPoster}
+                language={props.language}
+              />
+
+            </div>
+
             <div className="w-100" />
-            <div className={`card col-lg ${classes.Card} ${classes.card_dark}`}>
-              <div className="card-body">
-                <i className={`fas fa-ruler-combined ${classes.CardLogo}`} />
-                <div className="card-title">
-                  <FormattedHTMLMessage
-                    id="newSource.title"
-                    defaultMessage="newSource.title"
-                  />
-                </div>
-                <div className="card-text">
-                  <FormattedHTMLMessage
-                    id="newSource.text"
-                    defaultMessage="newSource.text"
-                  />
-                </div>
-                <i className={`fas fa-play text-bottom ${classes.CardArrow}`} />
+            <div className={`card col-lg ${classes.Card} ${classes.card_darkdark}`}>
+
+              <i className={`fas fa-ruler-combined ${classes.Logo}`} />
+              <div className={classes.Text}>
+                <FormattedHTMLMessage
+                  id="newSource.title"
+                  defaultMessage="newSource.title"
+                />
+
+                <FormattedHTMLMessage
+                  id="newSource.text"
+                  defaultMessage="newSource.text"
+                />
               </div>
+
+              <i className={`fas fa-caret-down text-bottom ${classes.ArrowDown}`} />
             </div>
 
             <div className={`card col-lg ${classes.Card} ${classes.card_light}`}>
-              <div className="card-body">
-                <img src="./img/logo-Framasoft.svg" className="CardLogo" alt="logo_framasoft" />
-                <div className="card-title">
-                  <FormattedHTMLMessage
-                    id="futurScanr.title"
-                    defaultMessage="futurScanr.title"
-                  />
-                </div>
-                <div className="card-text">
-                  <FormattedHTMLMessage
-                    id="futurScanr.text"
-                    defaultMessage="futurScanr.text"
-                  />
-                </div>
+
+              <img src="./img/logo-Framasoft.svg" className={classes.Logo} alt="logo_framasoft" />
+              <div className={classes.Text}>
+                <FormattedHTMLMessage
+                  id="futurScanr.title"
+                  defaultMessage="futurScanr.title"
+                />
+                <FormattedHTMLMessage
+                  id="futurScanr.text"
+                  defaultMessage="futurScanr.text"
+                />
                 <ButtonToPage
                   className={`${classes.Button}`}
                   url="#"
@@ -135,7 +127,9 @@ const ContributePage = props => (
                   />
                 </ButtonToPage>
               </div>
+
             </div>
+
           </div>
         </div>
       </section>
@@ -157,8 +151,8 @@ const ContributePage = props => (
 
       <section className={classes.Cards}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg pt-3">
+          <div className="row py-5">
+            <div className="col-lg">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="consultFAQ"
@@ -168,7 +162,7 @@ const ContributePage = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg pt-3">
+            <div className="col-lg">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="whatAreOurSources"
@@ -178,7 +172,7 @@ const ContributePage = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg py-3">
+            <div className="col-lg ">
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="openData"
