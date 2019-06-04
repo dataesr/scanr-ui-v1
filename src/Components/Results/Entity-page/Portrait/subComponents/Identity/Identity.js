@@ -1,10 +1,13 @@
 import React from 'react';
+import Axios from 'axios';
 import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import LogoCard from '../../../../../Shared/Ui/LogoCard/LogoCard';
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard';
 import SimpleListCard from '../../../../../Shared/Ui/SimpleListCard/SimpleListCard';
+
+import getSelectKey from '../../../../../../Utils/getSelectKey';
 
 import classes from './Identity.scss';
 
@@ -28,30 +31,10 @@ const Identity = (props) => {
   };
 
   // nom
-  let name = 'no name';
-  if (props.name[props.language]) {
-    name = props.name[props.language];
-  } else if (props.name.fr) {
-    name = props.name.fr;
-  } else {
-    name = 'no name';
-  }
+  const name = getSelectKey(props, 'name', props.language, 'fr');
 
   // acronym
-  let acronym = '';
-  if (props.acronym[props.language]) {
-    acronym = ` (${props.acronym[props.language]})`;
-  } else if (props.acronym.fr) {
-    acronym = ` (${props.acronym.fr})`;
-  } else {
-    acronym = '';
-  }
-
-  // Logo
-
-  // Type
-
-  // ids
+  const acronym = getSelectKey(props, 'acronym', props.language, 'fr');
 
   return (
     <div className="col-6">
@@ -102,7 +85,7 @@ const Identity = (props) => {
 };
 
 export default Identity;
-
+/* eslint-disable */
 Identity.propTypes = {
   language: PropTypes.string.isRequired,
   acronym: PropTypes.array,

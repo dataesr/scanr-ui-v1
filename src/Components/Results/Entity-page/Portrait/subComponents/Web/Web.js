@@ -24,15 +24,17 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
-  const getSocialMeadiaButton = (socialMedia) => {
+  const getSocialMediaButton = (socialMedia) => {
     let suffixUrl = null;
-    if (props.socialMedias[socialMedia]) {
-      suffixUrl = props.socialMedias[socialMedia];
-    } else if (props.websites) {
-      if (props.websites.length > 0) {
-        if (props.websites[0][socialMedia]) {
-          if (props.websites[0][socialMedia].length > 0) {
-            suffixUrl = props.websites[0][socialMedia][0].account;
+    if (props.socialMedias) {
+      if (props.socialMedias[socialMedia]) {
+        suffixUrl = props.socialMedias[socialMedia];
+      } else if (props.websites) {
+        if (props.websites.length > 0) {
+          if (props.websites[0][socialMedia]) {
+            if (props.websites[0][socialMedia].length > 0) {
+              suffixUrl = props.websites[0][socialMedia][0].account;
+            }
           }
         }
       }
@@ -137,17 +139,17 @@ const Web = (props) => {
                   ) : null
               }
 
-              {getSocialMeadiaButton('dailymotion')}
-              {getSocialMeadiaButton('facebook')}
-              {getSocialMeadiaButton('flickr')}
-              {getSocialMeadiaButton('instagram')}
-              {getSocialMeadiaButton('linkedin')}
-              {getSocialMeadiaButton('pinterest')}
-              {getSocialMeadiaButton('snappchat')}
-              {getSocialMeadiaButton('soundcloud')}
-              {getSocialMeadiaButton('twitter')}
-              {getSocialMeadiaButton('viadeo')}
-              {getSocialMeadiaButton('youtube')}
+              {getSocialMediaButton('dailymotion')}
+              {getSocialMediaButton('facebook')}
+              {getSocialMediaButton('flickr')}
+              {getSocialMediaButton('instagram')}
+              {getSocialMediaButton('linkedin')}
+              {getSocialMediaButton('pinterest')}
+              {getSocialMediaButton('snappchat')}
+              {getSocialMediaButton('soundcloud')}
+              {getSocialMediaButton('twitter')}
+              {getSocialMediaButton('viadeo')}
+              {getSocialMediaButton('youtube')}
 
             </div>
           </div>
@@ -158,7 +160,7 @@ const Web = (props) => {
 };
 
 export default Web;
-
+/* eslint-disable */
 Web.propTypes = {
   language: PropTypes.string.isRequired,
   socialMedias: PropTypes.array,

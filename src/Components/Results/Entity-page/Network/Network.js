@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import SimpleCountListCard from '../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
 
+import getSelectKey from '../../../../Utils/getSelectKey';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -25,28 +27,44 @@ import classes from './Network.scss';
 class Network extends Component {
   state = {
     dataSupervisorOf: {},
+    dataSupervisorOfTotal: 0,
   };
 
   componentDidMount() {
     this.getDataSupervisorOf();
   }
 
+  componentDidUpdate(prevProps) {
+    if (prevProps.data.id !== this.props.data.id) {
+      this.getDataSupervisorOf();
+    }
+  }
+
   getDataSupervisorOf = () => {
-    const url = `${API_STRUCTURES_END_POINT}/search`;
-    const obj = {
-      filters: {
-        'institutions.structure.id': {
-          type: 'MultiValueSearchFilter',
-          op: 'all',
-          values: ['200711886U'],
+    if (this.props.data.id) {
+      const url = `${API_STRUCTURES_END_POINT}/search`;
+      const obj = {
+        filters: {
+          'institutions.structure.id': {
+            type: 'MultiValueSearchFilter',
+            op: 'all',
+            values: [`${this.props.data.id}`],
+          },
         },
-      },
-    };
-    Axios.post(url, obj)
-      .then((response) => {
-        console.log('response:', response.data.result);
-      })
-      .catch(e => console.log('error:', e));
+      };
+      Axios.post(url, obj)
+        .then((response) => {
+          const newData = response.data.results.map((item) => {
+            const o = { label: getSelectKey(item.value, 'label', this.props.language, 'fr') };
+            return o;
+          });
+          this.setState({ dataSupervisorOf: newData, dataSupervisorOfTotal: response.data.total });
+        });
+    }
+  }
+
+  componentDidCatch(error, info) {
+    console.log('catch : ', error, info);
   }
 
   render() {
@@ -68,7 +86,7 @@ class Network extends Component {
               </SectionTitle>
               <div className="row">
                 {
-                  (this.props.data.institutions.length > 0) ? (
+                  (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
                     <div className={`col-4 ${classes.NoSpace}`}>
                       <SimpleCountListCard
                         language={this.props.language}
@@ -83,7 +101,7 @@ class Network extends Component {
                   ) : null
                 }
                 {
-                  (this.props.data.children.length > 0) ? (
+                  (this.props.data.children && this.props.data.children.length > 0) ? (
                     <div className={`col-4 ${classes.NoSpace}`}>
                       <SimpleCountListCard
                         language={this.props.language}
@@ -98,11 +116,12 @@ class Network extends Component {
                   ) : null
                 }
                 {
-                  (this.state.dataSupervisorOf.length > 0) ? (
+                  (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
                     <div className={`col-4 ${classes.NoSpace}`}>
                       <SimpleCountListCard
                         language={this.props.language}
                         data={this.state.dataSupervisorOf}
+                        count={this.state.dataSupervisorOfTotal}
                         title={messages[this.props.language]['Entity.network.supervisorOf.title']}
                         label={(this.state.dataSupervisorOf.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
                         tooltip=""
