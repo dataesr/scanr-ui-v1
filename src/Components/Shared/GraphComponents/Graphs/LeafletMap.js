@@ -94,17 +94,20 @@ class LeafletMap extends Component<{}, State> {
 
     const ShareComponent = () => (
       <div>
-        <hr />
-        <div style={{ display: 'inline-block', float: 'left' }}>
-          <p className={`${classes.Subtitle}`}>Partager</p>
+        <div style={{ float: 'left' }}>
+          <p className={`${classes.BtnTxt}`}>Partager</p>
           <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
-          <p className={`${classes.Subtitle}`}>Intégrer le code</p>
+          <p className={`${classes.BtnTxt}`}>Intégrer le code</p>
           <i style={btnShare} className="fas fa-code fa-lg" />
         </div>
-        <div style={{ display: 'inline-block', marginBottom: '20px', float: 'right' }}>
-          <p className={`${classes.Subtitle}`}><b>Télécharger</b></p>
+        <div style={{ float: 'right' }}>
+          <p className={`${classes.BtnTxt}`}><b>Télécharger</b></p>
+          <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
+          <p className={`${classes.BtnTxt}`}>.pdf</p>
           <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
-          <p className={`${classes.Subtitle}`}>.png</p>
+          <p className={`${classes.BtnTxt}`}>.png</p>
+          <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
+          <p className={`${classes.BtnTxt}`}>.csv</p>
         </div>
       </div>
     );
@@ -131,7 +134,7 @@ class LeafletMap extends Component<{}, State> {
     };
     return (
       <div style={{ marginLeft: 'auto', marginRight: 'auto', width: 'auto' }}>
-        <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh', borderStyle: 'solid' }} minZoom={2} maxZoom={19}>
+        <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh' }} minZoom={2} maxZoom={19}>
           <TileLayer
             attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
