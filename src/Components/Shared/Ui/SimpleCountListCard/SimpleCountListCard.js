@@ -72,28 +72,34 @@ const SimpleCountListCard = (props) => {
   ) : null;
 
   return (
-    <div className={classes.SimpleCountListCard}>
+    <div className={`d-flex flex-column ${classes.SimpleCountListCard}`}>
       <div className={classes.Title}>
         {props.title}
       </div>
       <div className={classes.Value}>
-        {props.data.length}
+        {(props.count || props.data.length)}
       </div>
       <div className={classes.Label}>
         {props.label}
       </div>
       {listItems}
-      {modalButton}
+      <div className="mt-auto">
+        {modalButton}
+      </div>
       {tooltip}
     </div>
   );
 };
 
 export default SimpleCountListCard;
+SimpleCountListCard.defaultProps = {
+  count: null,
+};
 
 SimpleCountListCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
+  count: PropTypes.number,
   title: PropTypes.string,
   label: PropTypes.string,
   tooltip: PropTypes.string,
