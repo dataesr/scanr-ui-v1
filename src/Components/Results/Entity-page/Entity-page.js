@@ -20,7 +20,7 @@ import LastEntityFocus from './LastEntityFocus/LastEntityFocus';
 
 import Banner from '../../Shared/Banner/Banner';
 
-import DataSample from './dataSample.json';
+// import DataSample from './dataSample.json';
 
 /**
  * Entity
@@ -32,7 +32,7 @@ import DataSample from './dataSample.json';
 */
 class Entity extends Component {
   state = {
-    data: DataSample,
+    data: {},
   };
 
   componentDidMount() {
@@ -51,7 +51,7 @@ class Entity extends Component {
 
   render() {
     if (!this.state.data) {
-      return <Fragment>No data</Fragment>;
+      return <Fragment>Chargement ...</Fragment>;
     }
 
     return (
