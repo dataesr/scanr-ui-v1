@@ -1,0 +1,35 @@
+@import '../../../../style.scss';
+
+.SimpleCountListCard {
+  background-color: $scanrlightgreyColor;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 150px;
+  padding: 8px;
+  margin: 3px;
+
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+
+  .Label, .Value {
+    color: $scanrdeepblueColor;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  UL {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+    color: $scanrdeepblueColor;
+
+    I {
+      color: $scanrblueColor
+    }
+  }
+
+}
