@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Map, Marker, TileLayer,
 } from 'react-leaflet';
@@ -21,66 +21,60 @@ import classes from './Localisation.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class Localisation extends Component {
-  state = {
-    data: {},
+const Localisation = (props) => {
+  const messages = {
+    fr: messagesFr,
+    en: messagesEn,
   };
 
-  componentDidMount() {
-    console.log('componentDidMount()');
+  if (!props.address) {
+    return null;
   }
 
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
+  const mapProps = { center: [props.address[0].gps.lat, props.address[0].gps.lon], zoom: 16 };
 
-    const mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
-
-    return (
-      <div className="col-6">
-        <div className={classes.Localisation}>
-          <div className="row">
-            <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
-            </div>
+  return (
+    <div className="col-6">
+      <div className={classes.Localisation}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={messages[props.language]['Entity.portrait.localisation.title']} />
           </div>
-          <div className="row">
-            <div className={`col-lg ${classes.NoSpace}`}>
-              <div className={classes.MapContainer}>
-                <Map
-                  className={classes.Map}
-                  {...mapProps}
-                >
-                  <TileLayer
-                    attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                    url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
-                  />
-                  <Marker
-                    position={this.props.address[0].gps}
-                    icon={yellowIcon}
-                  />
-                </Map>
-              </div>
-              <div className={classes.AddressContainer}>
-                <div className={classes.Title}>
-                  <i className="fas fa-map-marker" />
-                  Localisation
-                  <div className={classes.Address}>
-                    {this.props.address[0].address}
-                    <br />
-                    {`${this.props.address[0].city} - ${this.props.address[0].country}`}
-                  </div>
+        </div>
+        <div className="row">
+          <div className={`col-lg ${classes.NoSpace}`}>
+            <div className={classes.MapContainer}>
+              <Map
+                className={classes.Map}
+                {...mapProps}
+              >
+                <TileLayer
+                  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+                />
+                <Marker
+                  position={props.address[0].gps}
+                  icon={yellowIcon}
+                />
+              </Map>
+            </div>
+            <div className={classes.AddressContainer}>
+              <div className={classes.Title}>
+                <i className="fas fa-map-marker" />
+                Localisation
+                <div className={classes.Address}>
+                  {props.address[0].address}
+                  <br />
+                  {`${props.address[0].city} - ${props.address[0].country}`}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Localisation;
 
