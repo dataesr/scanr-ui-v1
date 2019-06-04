@@ -5,25 +5,23 @@ import HighchartsReact from 'highcharts-react-official';
 import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
-import HCRounded from 'highcharts-rounded-corners';
 
 import classes from '../GraphComponents.scss';
 
 HCAccessibility(Highcharts);
 HCExporting(Highcharts);
 HCExportingData(Highcharts);
-HCRounded(Highcharts);
 
 /**
- * HighChartsBar
+ * HighChartsDonut
  * Url : <br/>
- * Description : Composant HighCharts qui rend les barres horizontales <br/>
+ * Description : Composant HighCharts qui rend les donuts <br/>
  * Responsive : . <br/>
  * Accessible : . <br/>
  * Tests unitaires : . <br/>.
 */
 
-export default class HighChartsBar extends Component {
+export default class HighChartsDonut extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
@@ -37,7 +35,9 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
+    alert(this.props.filename);
     const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
+    const data = [];
     const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
     const UrbanUnitData = {
       labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
@@ -47,62 +47,67 @@ export default class HighChartsBar extends Component {
       labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
       values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
     };
-    const unit = 'unité';
+    for (let i = 0; i < 10; i += 1) {
+      const tmp = [];
+      tmp.push(NaturesData.labels[i]);
+      tmp.push(NaturesData.values[i]);
+      data.push(tmp);
+    }
+    // const unit = 'unité';
     const options = {
       chart: {
-        type: 'bar',
-        style: { 'font-family': 'Inter UI' },
+        plotBackgroundColor: null,
+        plotBorderWidth: 0,
+        plotShadow: false,
       },
-      credits: {
-        enabled: false,
-      },
-      title: {
-        text: '',
-      },
-      xAxis: {
-        lineWidth: 0,
-        categories: NaturesData.labels,
-        labels:
-        {
-          style: { color: '#000000' },
-          align: 'left',
-          x: 20,
+      title: { text: '' },
+      credits: false,
+      // title: {
+      //     text: 'Browser<br>shares<br>2017',
+      //     align: 'center',
+      //     verticalAlign: 'middle',
+      //     y: 0
+      // },
+      legend: {
+        align: 'right',
+        layout: 'vertical',
+        verticalAlign: 'middle',
+        x: 0,
+        y: 0,
+        itemStyle: {
+          fontSize: '14px',
+        },
+        itemMarginTop: 5,
+        itemMarginBottom: 5,
+        labelFormatter() {
+          const percentage = this.percentage.toFixed(1);
+          return `<span>${this.name}</span> (<b>${percentage}%)<br/>`;
         },
       },
-      yAxis: {
-        min: 0,
-        gridLineWidth: 0,
-        minorGridLineWidth: 0,
-        title: { text: '' },
-        labels: { enabled: false },
-      },
-      legend: {
-        hide: true,
-        enabled: false,
-        // reversed: true
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
       },
       plotOptions: {
-        series: {
-          stacking: 'normal',
-          pointPadding: 0,
-          // groupPadding: 0.1,
+        pie: {
           dataLabels: {
-            stacking: 'normal',
-            enabled: true,
-            align: 'right',
-            // x: 30,
-            style: { color: '#000000' },
+            enabled: false,
+            // distance: -50,
+            // style: {
+            //     fontWeight: 'bold',
+            //     color: 'white'
+            // }
           },
+          showInLegend: true,
+          startAngle: 0,
+          endAngle: 360,
+          center: ['50%', '50%'],
+          size: '100%',
         },
       },
       series: [{
-        color: '#FDD85E',
-        name: unit,
-        data: NaturesData.values,
-        borderRadiusTopLeft: '80%',
-        borderRadiusTopRight: '80%',
-        borderRadiusBottomLeft: '80%',
-        borderRadiusBottomRight: '80%',
+        type: 'pie',
+        innerSize: '50%',
+        data,
       }],
       exporting: {
         filename: this.props.filename,
@@ -120,6 +125,7 @@ export default class HighChartsBar extends Component {
     };
     this.setState({ options });
   }
+
 
   exportChartPdf() {
     this.chart.current.chart.exportChart({
@@ -146,6 +152,7 @@ export default class HighChartsBar extends Component {
     };
     const btnExport = {
       color: '#3778bb',
+      cursor: this.state.cursor,
     };
     const ShareComponent = () => (
       <div>
@@ -170,27 +177,27 @@ export default class HighChartsBar extends Component {
     return (
       <div>
         {
-          this.state.options !== null
-            ? (
-              <div>
-                <div style={{ paddingLeft: '5%' }}>
-                  <HighchartsReact
-                    highcharts={Highcharts}
-                    options={this.state.options}
-                    ref={this.chart}
-                  />
-                </div>
-                <ShareComponent />
-              </div>
-            )
-            : <div>Loading...</div>
-        }
+        this.state.options !== null
+          ? (
+            <div>
+              <hr />
+              <HighchartsReact
+                highcharts={Highcharts}
+                options={this.state.options}
+                ref={this.chart}
+              />
+              <ShareComponent />
+            </div>
+          )
+          : <div>Loading...</div>
+      }
       </div>
     );
   }
 }
 
-HighChartsBar.propTypes = {
+
+HighChartsDonut.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
