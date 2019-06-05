@@ -9,11 +9,21 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from './HeaderTitle/HeaderTitle';
 import Portrait from './Portrait/Portrait';
+import Network from './Network/Network';
+import Team from './Team/Team';
+import Projects from './Projects/Projects';
+import Productions from './Productions/Productions';
+import Ecosystem from './Ecosystem/Ecosystem';
+import Awards from './Awards/Awards';
+import SimilarEntities from './SimilarEntities/SimilarEntities';
+import LastEntityFocus from './LastEntityFocus/LastEntityFocus';
 
-import DataSample from './dataSample.json';
+import Banner from '../../Shared/Banner/Banner';
+
+// import DataSample from './dataSample.json';
 
 /**
- * Portrait
+ * Entity
  * Url : ex: /entite/200711886U
  * Description : Correspond à une entité (structure)
  * Responsive : .
@@ -22,7 +32,7 @@ import DataSample from './dataSample.json';
 */
 class Entity extends Component {
   state = {
-    data: DataSample,
+    data: {},
   };
 
   componentDidMount() {
@@ -41,7 +51,7 @@ class Entity extends Component {
 
   render() {
     if (!this.state.data) {
-      return <Fragment>No data</Fragment>;
+      return <Fragment>Chargement ...</Fragment>;
     }
 
     return (
@@ -57,6 +67,51 @@ class Entity extends Component {
         <Portrait
           language={this.props.language}
           data={this.state.data}
+        />
+
+        <Network
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Team
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Projects
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Productions
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerDeep"
+          url=""
+        />
+        <Ecosystem
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Awards
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <SimilarEntities
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <LastEntityFocus
+          language={this.props.language}
+          data={this.state.data}
+        />
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerDark"
+          url=""
         />
 
         <Footer language={this.props.language} />
