@@ -188,15 +188,19 @@ class SearchPage extends Component {
   // *******************************************************************
 
   // MULTI VALUE FILTERS
-  addMultiValueSearchFilter = (key, value, push = true) => {
+  multiValueFilterHandler = (key, value, push = true, op = 'all') => {
     const newRequest = { ...this.state.request };
     if (newRequest.filters && newRequest.filters[key] && push) {
-      newRequest.filters[key].values.push(value);
+      if (!newRequest.filters[key].values.includes(value)) {
+        newRequest.filters[key].values.push(value);
+      } else {
+        this.deleteMultiValueSearchFilter(key, value);
+      }
     } else {
       newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
       newRequest.filters[key] = {
         type: 'MultiValueSearchFilter',
-        op: 'all',
+        op,
         values: [value],
       };
     }
@@ -219,68 +223,7 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
-  // GEO FILTERS
-  addGeoFilter = (value, filterName) => {
-    const filter = filterName || 'address.urbanUnitLabel';
-    const newRequest = { ...this.state.request };
-    newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
-    newRequest.filters[filter] = {
-      type: 'MultiValueSearchFilter',
-      op: 'all',
-      values: [value],
-    }
-    const url = this.setURL(newRequest);
-    this.props.history.push(url);
-  }
-
-  deleteGeoFilter = (key, value) => {
-    const newRequest = { ...this.state.request };
-    newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
-      item !== value
-    ));
-    if (newRequest.filters[key].values.length === 0) {
-      delete newRequest.filters[key];
-    }
-    if (Object.entries(newRequest.filters).length === 0) {
-      delete newRequest.filters;
-    }
-    const url = this.setURL(newRequest);
-    this.props.history.push(url);
-  }
-
   // RANGE FILTERS
-  addRangeFilter = (e) => {
-    e.preventDefault();
-    console.log(e.target);
-    const newRequest = { ...this.state.request };
-    if (newRequest.filters && newRequest.filters[e.target.id]) {
-      newRequest.filters[e.target.id].values.push(e.target.value);
-    } else {
-      newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
-      newRequest.filters[e.target.id] = {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [e.target.value],
-      };
-    }
-    const url = this.setURL(newRequest);
-    this.props.history.push(url);
-  }
-
-  deleteRangeFilter = (key, value) => {
-    const newRequest = { ...this.state.request };
-    newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
-      item !== value
-    ));
-    if (newRequest.filters[key].values.length === 0) {
-      delete newRequest.filters[key];
-    }
-    if (Object.entries(newRequest.filters).length === 0) {
-      delete newRequest.filters;
-    }
-    const url = this.setURL(newRequest);
-    this.props.history.push(url);
-  }
 
   // FILTERS ACTIONS
   deleteFilter = (key) => {
@@ -322,6 +265,7 @@ class SearchPage extends Component {
         data,
         isLoading: false,
       });
+      return;
     }
     const url = `https://scanr-preprod.sword-group.com/api/v2/${newState.api}/search`;
     Axios.post(url, this.transformRequest(newState.request))
@@ -394,10 +338,8 @@ class SearchPage extends Component {
               language={this.props.language}
               facets={this.state.data.facets}
               generalFacets={this.state.preview[this.state.api].facets}
-              addMultiValueSearchFilter={this.addMultiValueSearchFilter}
-              addGeoFilter={this.addGeoFilter}
-              deleteMultiValueSearchFilter={this.deleteMultiValueSearchFilter}
-              filters={this.state.request.filters}
+              multiValueFilterHandler={this.multiValueFilterHandler}
+              filters={this.state.request.filters || {}}
               api={this.state.api}
             />
           </div>
