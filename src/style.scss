@@ -156,6 +156,17 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
     color: $scanrdeepblueColor;
   }
 }
+.BannerDeep {
+  background-color: $scanrdeepblueColor;
+  color: white;
+  a {
+    color: $scanrdeepblueColor;
+  }
+  .Button {
+    background-color: $scanrmiddlegreyColor;
+    color: $scanrdeepblueColor;
+  }
+}
 
 /* HomePage */
 $bgHomePageSearch: $scanrblueColor;
@@ -323,4 +334,10 @@ $cardTitleBgColor: $scanrlightgreyColor;
   background-color: rgb(0, 33, 59);
   color: white;
   cursor: help;
+}
+
+/* Pages de détails */
+.NoSpace {
+  padding-left: 0;
+  padding-right: 0;
 }
