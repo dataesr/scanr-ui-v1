@@ -28,7 +28,7 @@ const ActiveFilterCard = (props) => {
           </div>
           <i
             className={`fas fa-times ml-auto ${classes.closeIcon}`}
-            onClick={() => props.deleteMultiValueSearchFilter(key, value)}
+            onClick={() => props.multiValueFilterHandler(key, value)}
           />
         </div>
       );
@@ -65,6 +65,6 @@ export default ActiveFilterCard;
 
 ActiveFilterCard.propTypes = {
   language: PropTypes.string.isRequired,
-  deleteMultiValueSearchFilter: PropTypes.func,
+  multiValueFilterHandler: PropTypes.func,
   filters: PropTypes.object,
 };
