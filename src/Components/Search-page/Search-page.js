@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string'
@@ -46,18 +46,22 @@ class SearchPage extends Component {
         structures: {
           count: 0,
           data: [],
+          facets: [],
         },
         projects: {
           count: 0,
           data: [],
+          facets: [],
         },
         persons: {
           count: 0,
           data: [],
+          facets: [],
         },
         publications: {
           count: 0,
           data: [],
+          facets: [],
         },
         all: 0,
       },
@@ -182,16 +186,18 @@ class SearchPage extends Component {
   // *******************************************************************
   // HANDLE FILTERS ACTIONS
   // *******************************************************************
-  addMultiValueSearchFilter = (e) => {
+
+  // MULTI VALUE FILTERS
+  addMultiValueSearchFilter = (key, value, push = true) => {
     const newRequest = { ...this.state.request };
-    if (newRequest.filters && newRequest.filters[e.target.id]) {
-      newRequest.filters[e.target.id].values.push(e.target.value);
+    if (newRequest.filters && newRequest.filters[key] && push) {
+      newRequest.filters[key].values.push(value);
     } else {
       newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
-      newRequest.filters[e.target.id] = {
+      newRequest.filters[key] = {
         type: 'MultiValueSearchFilter',
         op: 'all',
-        values: [e.target.value],
+        values: [value],
       };
     }
     const url = this.setURL(newRequest);
@@ -213,6 +219,70 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
+  // GEO FILTERS
+  addGeoFilter = (value, filterName) => {
+    const filter = filterName || 'address.urbanUnitLabel';
+    const newRequest = { ...this.state.request };
+    newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
+    newRequest.filters[filter] = {
+      type: 'MultiValueSearchFilter',
+      op: 'all',
+      values: [value],
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  deleteGeoFilter = (key, value) => {
+    const newRequest = { ...this.state.request };
+    newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
+      item !== value
+    ));
+    if (newRequest.filters[key].values.length === 0) {
+      delete newRequest.filters[key];
+    }
+    if (Object.entries(newRequest.filters).length === 0) {
+      delete newRequest.filters;
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  // RANGE FILTERS
+  addRangeFilter = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    const newRequest = { ...this.state.request };
+    if (newRequest.filters && newRequest.filters[e.target.id]) {
+      newRequest.filters[e.target.id].values.push(e.target.value);
+    } else {
+      newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
+      newRequest.filters[e.target.id] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [e.target.value],
+      };
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  deleteRangeFilter = (key, value) => {
+    const newRequest = { ...this.state.request };
+    newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
+      item !== value
+    ));
+    if (newRequest.filters[key].values.length === 0) {
+      delete newRequest.filters[key];
+    }
+    if (Object.entries(newRequest.filters).length === 0) {
+      delete newRequest.filters;
+    }
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
+
+  // FILTERS ACTIONS
   deleteFilter = (key) => {
     const newRequest = { ...this.state.request };
     delete newRequest.filters[key];
@@ -281,6 +351,7 @@ class SearchPage extends Component {
           const newCounts = { ...this.state.preview };
           newCounts[api].count = response.data.total;
           newCounts[api].data = response.data.results.slice(0, 6);
+          newCounts[api].facets = response.data.facets;
           newCounts.all = (
             newCounts.structures.count
             + newCounts.persons.count
@@ -322,9 +393,12 @@ class SearchPage extends Component {
             <FilterPanel
               language={this.props.language}
               facets={this.state.data.facets}
+              generalFacets={this.state.preview[this.state.api].facets}
               addMultiValueSearchFilter={this.addMultiValueSearchFilter}
+              addGeoFilter={this.addGeoFilter}
               deleteMultiValueSearchFilter={this.deleteMultiValueSearchFilter}
               filters={this.state.request.filters}
+              api={this.state.api}
             />
           </div>
           <div className="col-md-8">
