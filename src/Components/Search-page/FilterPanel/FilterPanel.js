@@ -8,55 +8,44 @@ import messagesEn from './translations/en.json';
 
 import classes from './FilterPanel.scss';
 import EntityFilters from './ObjectsFilters/EntityFilters';
+import PersonsFilters from './ObjectsFilters/PersonsFilters';
+import ProjectsFilters from './ObjectsFilters/ProjectsFilters';
+import PublicationsFilters from './ObjectsFilters/PublicationsFilters';
+import ActiveFilterCard from './ActiveFilterCard/ActiveFilterCard';
+
+const ResultsToShow = {
+  structures: EntityFilters,
+  projects: ProjectsFilters,
+  persons: PersonsFilters,
+  publications: PublicationsFilters,
+};
 
 const FilterPanel = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
-  const filters = (props.filters) ? props.filters : {};
 
-  const activeFilters = Object.keys(filters).map(key => (
-    filters[key].values.map(value => (
-      <button
-        type="button"
-        key={key}
-        className="badge badge-pill badge-primary p-1 m-1"
-        onClick={() => props.deleteMultiValueSearchFilter(key, value)}
-      >
-        <div className=" justify-content-start">
-          {value}
-        </div>
-      </button>
-    ))
-  ));
-  // const activeFilters = getActiveFilters();
-  // console.log(activeFilters);
-
-
+  const ToShow = ResultsToShow[props.api];
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="row d-flex flex-column">
-        <div className={`p-3 mb-2 mr-1 ${classes.ActiveFiltersContainer}`}>
-          <div className={classes.FilterHeaders}>
-            <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
-            <span> - (count)</span>
-          </div>
-          <div className={classes.FilterHeaders}>
-            <div className="d-flex flex-column mt-2 mb-2 p-1">
-              {activeFilters}
-            </div>
-          </div>
-        </div>
+        <ActiveFilterCard
+          language={props.language}
+          filters={props.filters}
+          deleteMultiValueSearchFilter={props.deleteMultiValueSearchFilter}
+        />
         <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
           <div className={classes.FilterHeaders}>
             <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
           </div>
-          <EntityFilters
+          <ToShow
             language={props.language}
             facets={props.facets}
+            generalFacets={props.generalFacets}
             addMultiValueSearchFilter={props.addMultiValueSearchFilter}
-            deleteFilter={props.deleteFilter}
+            addGeoFilter={props.addGeoFilter}
+            deleteFilter={props.deleteMultiValueSearchFilter}
             filters={props.filters}
           />
         </div>
@@ -70,7 +59,10 @@ export default FilterPanel;
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   addMultiValueSearchFilter: PropTypes.func,
+  addGeoFilter: PropTypes.func,
   deleteMultiValueSearchFilter: PropTypes.func,
   facets: PropTypes.array,
+  generalFacets: PropTypes.array,
   filters: PropTypes.object,
+  api: PropTypes.string.isRequired,
 };
