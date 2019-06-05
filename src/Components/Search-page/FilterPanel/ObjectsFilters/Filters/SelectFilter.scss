@@ -1,0 +1,89 @@
+@import '../../../../../style.scss';
+
+.Labels {
+  font-size: 0.9em;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.FacetsCounts {
+  color: $scanrmiddlegreyColor;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.SearchButton {
+  background-color: transparent !important;
+  border: 0;
+  margin-left: -40px;
+}
+
+.SearchButton {
+  cursor: pointer;
+}
+
+.SearchBar:hover {
+  cursor: pointer;
+}
+
+.SearchButton:focus {
+  outline: none;
+}
+
+.SearchIcon {
+  color: white;
+  font-size: 1.2em;
+}
+
+.SearchBar {
+  background-color: $scanrblueColor;
+  color: white;
+  border: 0;
+  height: 35px;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 100%;
+  cursor: none;
+}
+
+.SearchBar:focus {
+  outline: none;
+}
+
+.Autocomplete {
+  margin: 0 !important;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.AutocompleteFull {
+  background-color: white;
+  color: $scanrblueColor;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px $scanrmiddlegreyColor;
+}
+.Autocomplete::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  background-color: $scanrlightgreyColor;
+}
+
+.Autocomplete::-webkit-scrollbar-thumb {
+  background-color: $scanrfooterBgColor;
+  border: solid 0 transparent;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0 1px $scanrfooterBgColor, inset 0 0 0 6px $scanrfooterBgColor;
+}
+
+.Suggestion {
+  list-style-type: none;
+}
+
+.Suggestion:hover {
+  color: $scanrfooterBgColor;
+  cursor: pointer;
+}
