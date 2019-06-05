@@ -41,7 +41,11 @@ const MostActiveThemes = props => (
           </div>
           <div className="col-lg-7">
             {
-              props.data.map(item => (<ButtonToSearch key={item}>{item}</ButtonToSearch>))
+              props.data.map(item => (
+                <ButtonToSearch key={item} href={`/recherche/all?query=${item}`}>
+                  {item}
+                </ButtonToSearch>
+              ))
             }
           </div>
         </div>
