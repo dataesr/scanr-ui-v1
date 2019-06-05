@@ -92,7 +92,7 @@ class SelectFilter extends Component {
                     onKeyPress={() => this.submitWrapper(facet.value)}
                     onMouseDown={event => event.preventDefault()}
                   >
-                    <div className="d-flex flex-row align-item-center">
+                    <div className="d-flex flex-row align-items-center">
                       <div>
                         {facet.value}
                       </div>
