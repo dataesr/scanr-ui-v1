@@ -7,6 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './FilterPanel.scss';
+
 import EntityFilters from './ObjectsFilters/EntityFilters';
 import PersonsFilters from './ObjectsFilters/PersonsFilters';
 import ProjectsFilters from './ObjectsFilters/ProjectsFilters';
@@ -27,13 +28,14 @@ const FilterPanel = (props) => {
   };
 
   const ToShow = ResultsToShow[props.api];
+
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="row d-flex flex-column">
         <ActiveFilterCard
           language={props.language}
           filters={props.filters}
-          deleteMultiValueSearchFilter={props.deleteMultiValueSearchFilter}
+          multiValueFilterHandler={props.multiValueFilterHandler}
         />
         <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
           <div className={classes.FilterHeaders}>
@@ -43,10 +45,8 @@ const FilterPanel = (props) => {
             language={props.language}
             facets={props.facets}
             generalFacets={props.generalFacets}
-            addMultiValueSearchFilter={props.addMultiValueSearchFilter}
-            addGeoFilter={props.addGeoFilter}
-            deleteFilter={props.deleteMultiValueSearchFilter}
             filters={props.filters}
+            multiValueFilterHandler={props.multiValueFilterHandler}
           />
         </div>
       </div>
@@ -58,9 +58,7 @@ export default FilterPanel;
 
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
-  addMultiValueSearchFilter: PropTypes.func,
-  addGeoFilter: PropTypes.func,
-  deleteMultiValueSearchFilter: PropTypes.func,
+  multiValueFilterHandler: PropTypes.func,
   facets: PropTypes.array,
   generalFacets: PropTypes.array,
   filters: PropTypes.object,
