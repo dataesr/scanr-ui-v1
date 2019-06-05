@@ -55,7 +55,7 @@ class App extends Component {
     return (
       <IntlProvider>
         <Router>
-          <div>
+          <React.Fragment>
             <Route
               exact
               path="/"
@@ -68,7 +68,7 @@ class App extends Component {
               )}
             />
             <Route
-              path="/recherche/:objectType"
+              path="/recherche/:api"
               render={props => (
                 <SearchPage
                   {...props}
@@ -235,7 +235,7 @@ class App extends Component {
                 />
               )}
             />
-          </div>
+          </React.Fragment>
         </Router>
       </IntlProvider>
     );
