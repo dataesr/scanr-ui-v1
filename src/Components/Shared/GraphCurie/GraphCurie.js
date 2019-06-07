@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import HighChartsBar from './Graphs/HighChartsBar';
 
 const params = require('./GraphCurie-data/indicateurs.json');
-const countryList = require('./GraphCurie-data/iso3.json');
+const isoList = require('./GraphCurie-data/iso3.json');
 
 const url = 'http://10.243.98.74/datastore/curie';
 
@@ -12,47 +12,127 @@ class GraphCurie extends Component {
   constructor(props) {
     super(props);
     this.country = null;
+    this.countryList = [this.props.countryCode];
+    this.graphIndex = 0;
     this.state = {
       isMissing: true,
-      data: null,
+      allData: [],
+      filterData: null,
     };
     this.getGraphValues = this.getGraphValues.bind(this);
+    this.toggleCountry = this.toggleCountry.bind(this);
+    this.getData = this.getData.bind(this);
   }
 
   componentDidMount() {
-    let i;
+    let i = 0;
 
     this.country = this.props.countryCode;
-    for (i = 0; i < countryList.length; i += 1) {
-      if (countryList[i]['alpha-3'] === this.country) {
+    for (i = 0; i < isoList.length; i += 1) {
+      if (isoList[i]['alpha-3'] === this.country) {
         this.setState({ isMissing: false });
         break;
       }
     }
     if (i === 249) {
       this.setState({ isMissing: true });
+      return;
     }
-    this.getGraphValues(this.props.graphType, 0);
+    this.getGraphValues(this.props.graphType, this.graphIndex);
   }
 
-  getGraphValues(label, index) {
+  async getData(i, label, index, tempData) {
+    const res = await axios.get(url, {
+      params: {
+        where: `{"country_code":"${this.countryList[i]}","code":"${params[label][0].unit[index].code}"}`,
+      },
+    });
+    // eslint-disable-next-line
+    // alert('res =>' + res.data);
+    tempData[i] = res.data;
+  }
+
+  async getGraphValues(label, index) {
+    // On vérifie si le label existe pour la récupération des indicateurs et des codes
     if (params[label] == null) {
       this.setState({ isMissing: true });
       return;
     }
-    this.setState({ data: null });
-    // alert(params[label][0].unit[index].label);
-    axios.get(url, {
-      params: {
-        where: `{"country_code":"${this.country}","code":"${params[label][0].unit[index].code}"}`,
-      },
-    })
-      .then((res) => {
-        this.setState({ data: res.data });
-      })
-      .catch(() => {
-        this.setState({ error: true });
-      });
+
+    // On créé tempData qui va contenir les différentes données
+    const tempData = [];
+    for (let i = 0; i < this.countryList.length; i += 1) {
+      tempData.push(null);
+    }
+
+    // On met à jour l'index (définit quel code choisir pour l'indicateur choisi)
+    this.graphIndex = index;
+
+    // On reset les données
+    this.setState({ filterData: null });
+
+    // On vérifie si la data est dispo afin d'éviter les requêtes inutiles
+    // todo: on boucle sur chaque element et si pas dispo on met null, et on le remplace après (il faut [FRA, code, requete where])
+    for (let i = 0; i < this.countryList.length; i += 1) {
+      for (let j = 0; j < this.state.allData.length; j += 1) {
+        if ((this.state.allData[j][0] === this.countryList[i]) && (this.state.allData[j][1] === params[label][0].unit[index].code)) {
+          tempData[i] = this.state.allData[2];
+        }
+      }
+    }
+
+    for (let i = 0; i < tempData.length; i += 1) {
+      if (tempData[i] === null) {
+        // eslint-disable-next-line
+        await this.getData(i, label, index, tempData);
+      }
+
+    // alert(params[label][0].unit[index].code);
+    // for (let i = 0; i < this.countryList.length; i += 1) {
+    //   tempData.push();
+    // }
+    }
+    this.setState({ filterData: tempData });
+  }
+
+
+  // getGraphValues(label, index) {
+  //   this.graphIndex = index;
+  //   // alert('graph Index: ' + this.graphIndex);
+  //   if (params[label] == null) {
+  //     this.setState({ isMissing: true });
+  //     return;
+  //   }
+  //   // alert(params[label][0].unit[index].label);
+  //   this.setState({ data: null });
+  //   // for (let i = 0; i < this.countryList.length; i += 1) {
+  //   axios.get(url, {
+  //     params: {
+  //       where: `{"country_code":"${this.countryList[i]}","code":"${params[label][0].unit[index].code}"}`,
+  //     },
+  //   })
+  //     .then((res) => {
+  //       this.data.push(res.data);
+  //       // alert(this.data);
+  //       this.setState({ data: res.data });
+  //     })
+  //     .catch(() => {
+  //       this.setState({ error: true });
+  //     });
+  //   // }
+  //   // this.setState({ data: this.data });
+  // }
+
+  toggleCountry(id) {
+    if (!this.countryList.includes(id)) {
+      this.countryList.push(id);
+    } else {
+      const index = this.countryList.indexOf(id);
+      if (index > -1) {
+        this.countryList.splice(index, 1);
+      }
+    }
+    this.getGraphValues(this.props.graphType, this.graphIndex);
   }
 
   render() {
@@ -64,10 +144,14 @@ class GraphCurie extends Component {
               <div>
                 {'Welcome to my world ! I can see that you are from '}
                 { this.country }
-                {this.state.data ? <HighChartsBar data={this.state.data} /> : null
+                {this.state.filterData ? <HighChartsBar data={this.state.filterData} /> : null
               }
                 <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 0)}>Monnaies locales</button>
                 <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 1)}>$PPA</button>
+                <input type="checkbox" name="love" value="love" id="FRA" onChange={e => this.toggleCountry(e.target.id)} />
+                  FRA
+                <input type="checkbox" name="love" value="love" id="CAN" onChange={e => this.toggleCountry(e.target.id)} />
+                  CAN
               </div>
             ),
           ]
