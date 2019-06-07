@@ -38,22 +38,48 @@ export default class HighChartsBar extends Component {
   componentDidMount() {
     // alert(this.data.data[0].year);
     // alert(this.data.data[0].value);
-    const data = [];
-    for (let i = 0; i < this.data.data.length; i += 1) {
-      const tmp = [];
-      tmp.push(this.data.data[i].year);
-      tmp.push(this.data.data[i].value);
-      data.push(tmp);
+    const allData = [];
+    const dl = this.data.length;
+    let series = [];
+    for (let i = 0; i < dl; i += 1) {
+      const data = [];
+      for (let j = 0; j < this.data[i].data.length; j += 1) {
+        const tmp = [];
+        tmp.push(this.data[i].data[j].year);
+        tmp.push(this.data[i].data[j].value);
+        data.push(tmp);
+      }
+      allData.push(data);
     }
 
-    const series = [{
-      name: 'Population',
-      data,
-      color: '#FFB200',
-    }, {
-      name: 'Test',
-      data,
-    }];
+    if (dl === 1) {
+      series = [{
+        name: 'Population',
+        data: allData[0],
+        color: '#FFB200',
+      }];
+    } else if (dl === 2) {
+      series = [{
+        name: 'Population',
+        data: allData[0],
+        color: '#FFB200',
+      }, {
+        name: 'Test',
+        data: allData[1],
+      }];
+    } else {
+      series = [{
+        name: 'Population',
+        data: allData[0],
+        color: '#FFB200',
+      }, {
+        name: 'Test',
+        data: allData[1],
+      }, {
+        name: 'Test2',
+        data: allData[2],
+      }];
+    }
 
     const options = {
       chart: {
