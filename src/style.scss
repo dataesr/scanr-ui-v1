@@ -270,6 +270,26 @@ $cardTitleBgColor: $scanrlightgreyColor;
   color: white;
 }
 
+.btn_scanrBlue{
+  background-color: $scanrblueColor;
+  color: white;
+  font-weight: bold;
+}
+.btn_scanrBlue:hover, .btn_scanrBlue:focus{
+  background-color: $scanrgreyColor;
+  color: white;
+}
+
+.btn_scanrlightgrey{
+  background-color: $scanrlightgreyColor;
+  color: $scanrdeepblueColor;
+  font-weight: bold;
+}
+.btn_scanrlightgrey:hover, .btn_scanrlightgrey:focus{
+  background-color: $scanrgreyColor;
+  color: white;
+}
+
 /* card de logo*/
 .CardLogo {
   width: 215px;
