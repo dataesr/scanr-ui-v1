@@ -1,0 +1,160 @@
+@import '../../../../../style.scss';
+
+.Labels {
+  font-size: 0.9em;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.FacetsCounts {
+  color: $scanrmiddlegreyColor;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.SearchButton {
+  background-color: transparent !important;
+  border: 0;
+  margin-left: -40px;
+}
+
+.SearchButton {
+  cursor: pointer;
+}
+
+.SearchBar:hover {
+  cursor: pointer;
+}
+
+.SearchButton:focus {
+  outline: none;
+}
+
+.SearchIcon {
+  color: white;
+  font-size: 1.2em;
+}
+
+.SearchBar {
+  background-color: $scanrblueColor;
+  color: white;
+  border: 0;
+  height: 35px;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 100%;
+  cursor: none;
+}
+
+.SearchBar:focus {
+  outline: none;
+}
+
+/* Customize the label (the CheckBox) */
+.CheckBox {
+  border-radius: 3px;
+  display: block;
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 1.2em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.CheckBox INPUT {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.CheckMark {
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: $scanrfooterBgColor;
+}
+
+/* On mouse-over, add a grey background color */
+.CheckBox:hover INPUT ~ .CheckMark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.CheckBox INPUT:checked ~ .CheckMark {
+  background-color: white;
+}
+
+/* Create the CheckMark/indicator (hidden when not checked) */
+.CheckMark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the CheckMark when checked */
+.CheckBox INPUT:checked ~ .CheckMark:after {
+  display: block;
+}
+
+/* Style the CheckMark/indicator */
+.CheckBox .CheckMark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid $scanrfooterBgColor;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.Autocomplete {
+  margin: 0 !important;
+  padding: 0;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+.AutocompleteFull {
+  background-color: $scanrblueColor;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px $scanrmiddlegreyColor;
+}
+.Autocomplete::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 10px;
+  background-color: $scanrlightgreyColor;
+}
+
+.Autocomplete::-webkit-scrollbar-thumb {
+  background-color: $scanrfooterBgColor;
+  border: solid 0 transparent;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0 1px $scanrfooterBgColor, inset 0 0 0 6px $scanrfooterBgColor;
+}
+
+.Suggestion {
+  list-style-type: none;
+  color: white;
+}
+
+.Suggestion:hover {
+  color: $scanrfooterBgColor;
+  cursor: pointer;
+}
