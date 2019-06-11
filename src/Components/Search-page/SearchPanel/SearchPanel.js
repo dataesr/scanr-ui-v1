@@ -29,7 +29,7 @@ const SearchPanel = (props) => {
   const randomNumber = Math.floor(Math.random() * 4);
   const schemasColors = [ENTITY_COLOR, PERSON_COLOR, PROJECT_COLOR, PUBLICATION_COLOR];
   const color = schemasColors[randomNumber];
-  const bgUrl = `./img/poudre-header-home-${props.currentQueryObject}.jpg`;
+  const bgUrl = `./img/poudre-header-home-${props.api}.jpg`;
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
     backgroundSize: '35%',
@@ -69,14 +69,14 @@ const SearchPanel = (props) => {
             <div className="d-flex align-items-center mb-2">
               <div className="d-flex flex-column flex-grow-1 pl-0">
                 <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
-                  { label => <label className={classes.TitleSearchBar} htmlFor="inputCity">{label}</label> }
+                  { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="query">{label}</label> }
                 </FormattedMessage>
                 <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
                   { placeholder => (
                     <input
                       type="text"
                       className={`pl-2 ${classes.SearchBar2}`}
-                      id="inputCity"
+                      id="query"
                       placeholder={placeholder}
                       value={props.currentQueryText}
                       onChange={props.queryTextChangeHandler}
@@ -86,12 +86,12 @@ const SearchPanel = (props) => {
               </div>
               <div className="d-flex flex-column pr-1 pl-1 col-xs-hidden">
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
-                  { label => <label className={classes.SearchPerimeter} htmlFor="inputCity">{label}</label> }
+                  { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
                 </FormattedMessage>
                 <select
-                  id="inputState"
+                  id="api"
                   className={`form-control ${classes.Select}`}
-                  onChange={props.queryObjectChangeHandler}
+                  onChange={props.apiChangeHandler}
                 >
                   <FormattedMessage id="Search.Select.All" defaultMessage="Search.Select.All">
                     { option => <option className={classes.btn_dark} value="All">{option}</option> }
@@ -142,10 +142,9 @@ SearchPanel.propTypes = {
   suggests: PropTypes.array,
   isHome: PropTypes.bool,
   currentQueryText: PropTypes.string,
-  currentQueryObject: PropTypes.string,
-  currentQueryFilters: PropTypes.object,
+  api: PropTypes.string,
   queryTextChangeHandler: PropTypes.func,
-  queryObjectChangeHandler: PropTypes.func,
+  apiChangeHandler: PropTypes.func,
   submitResearch: PropTypes.func,
 };
 SearchPanel.defaultProps = {

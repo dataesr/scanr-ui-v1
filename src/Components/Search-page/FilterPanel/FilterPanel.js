@@ -7,7 +7,19 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './FilterPanel.scss';
+
 import EntityFilters from './ObjectsFilters/EntityFilters';
+import PersonsFilters from './ObjectsFilters/PersonsFilters';
+import ProjectsFilters from './ObjectsFilters/ProjectsFilters';
+import PublicationsFilters from './ObjectsFilters/PublicationsFilters';
+import ActiveFilterCard from './ActiveFilterCard/ActiveFilterCard';
+
+const ResultsToShow = {
+  structures: EntityFilters,
+  projects: ProjectsFilters,
+  persons: PersonsFilters,
+  publications: PublicationsFilters,
+};
 
 const FilterPanel = (props) => {
   const messages = {
@@ -15,23 +27,26 @@ const FilterPanel = (props) => {
     en: messagesEn,
   };
 
+  const ToShow = ResultsToShow[props.api];
+
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="row d-flex flex-column">
-        <div className={`p-3 mb-2 mr-1 ${classes.ActiveFiltersContainer}`}>
-          <div className={classes.FilterHeaders}>
-            <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
-            <span> - (count)</span>
-          </div>
-        </div>
+        <ActiveFilterCard
+          language={props.language}
+          filters={props.filters}
+          multiValueFilterHandler={props.multiValueFilterHandler}
+        />
         <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
           <div className={classes.FilterHeaders}>
             <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
           </div>
-          <EntityFilters
+          <ToShow
             language={props.language}
             facets={props.facets}
-            filterChangeHandler={props.filterChangeHandler}
+            generalFacets={props.generalFacets}
+            filters={props.filters}
+            multiValueFilterHandler={props.multiValueFilterHandler}
           />
         </div>
       </div>
@@ -43,6 +58,9 @@ export default FilterPanel;
 
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
-  filterChangeHandler: PropTypes.func,
+  multiValueFilterHandler: PropTypes.func,
   facets: PropTypes.array,
+  generalFacets: PropTypes.array,
+  filters: PropTypes.object,
+  api: PropTypes.string.isRequired,
 };
