@@ -79,7 +79,7 @@ class Entity extends Component {
         />
         <Projects
           language={this.props.language}
-          data={this.state.data}
+          data={this.state.data.projects}
         />
         <Productions
           language={this.props.language}
