@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import PropTypes from 'prop-types';
 import HighChartsBar from './Graphs/HighChartsBar';
+import GraphHeader from './Shared/GraphHeader';
 
 const params = require('./GraphCurie-data/indicateurs.json');
 const isoList = require('./GraphCurie-data/iso3.json');
@@ -41,15 +42,13 @@ class GraphCurie extends Component {
     this.getGraphValues(this.props.graphType, this.graphIndex);
   }
 
-  async getData(i, label, index, tempData) {
+  async getData(i, label, index) {
     const res = await axios.get(url, {
       params: {
         where: `{"country_code":"${this.countryList[i]}","code":"${params[label][0].unit[index].code}"}`,
       },
     });
-    // eslint-disable-next-line
-    // alert('res =>' + res.data);
-    tempData[i] = res.data;
+    return (res.data);
   }
 
   async getGraphValues(label, index) {
@@ -60,7 +59,7 @@ class GraphCurie extends Component {
     }
 
     // On créé tempData qui va contenir les différentes données
-    const tempData = [];
+    let tempData = [];
     for (let i = 0; i < this.countryList.length; i += 1) {
       tempData.push(null);
     }
@@ -81,10 +80,12 @@ class GraphCurie extends Component {
       }
     }
 
+    const results = [];
     for (let i = 0; i < tempData.length; i += 1) {
       if (tempData[i] === null) {
+        results.push(this.getData(i, label, index));
         // eslint-disable-next-line
-        await this.getData(i, label, index, tempData);
+        // tempData[i] = await this.getData(i, label, index);
       }
 
     // alert(params[label][0].unit[index].code);
@@ -92,6 +93,7 @@ class GraphCurie extends Component {
     //   tempData.push();
     // }
     }
+    tempData = await Promise.all(results);
     this.setState({ filterData: tempData });
   }
 
@@ -142,8 +144,15 @@ class GraphCurie extends Component {
           : [this.state.isMissing ? <div>Ce graph est indisponible pour le moment.</div>
             : (
               <div>
-                {'Welcome to my world ! I can see that you are from '}
-                { this.country }
+                <GraphHeader />
+                <div style={{ width: '100%' }}>
+                  <div style={{ float: 'left', width: '97%' }}>Norvège</div>
+                  <div style={{ float: 'right', width: '3%', marginTop: '10px' }}><i className="fas fa-info-circle fa-lg" /></div>
+                </div>
+                <div>
+                  {'Welcome to my world ! I can see that you are from '}
+                  { this.country }
+                </div>
                 {this.state.filterData ? <HighChartsBar data={this.state.filterData} /> : null
               }
                 <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 0)}>Monnaies locales</button>
