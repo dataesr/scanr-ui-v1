@@ -1,20 +1,13 @@
 @import '../../../style.scss';
 
 
-
-.ActiveFiltersContainer {
-  background-color: $scanrdeepblueColor;
-  color: white;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-}
-
 .FiltersContainer {
   background-color: $alphaWhite7;
   color: $scanrdeepblueColor;
   border-radius: 8px;
   margin-bottom: 8px;
 }
+
 
 .FilterHeaders {
   font-size: 1.3em;
