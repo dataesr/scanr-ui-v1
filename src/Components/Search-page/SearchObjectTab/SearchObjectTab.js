@@ -15,121 +15,133 @@ const SearchObjectTab = (props) => {
     en: messagesEn,
   };
 
+
+  const ShouldRenderView = () => {
+    if (props.api !== 'all') {
+      return (
+        <React.Fragment>
+          <a className={`col-lg-4 col-md-0 ${classes.ResultsNavItemCols}`}> </a>
+          <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
+            <div
+              className={(props.view === 'list')
+                ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
+                : `${classes.ResultsNavItem}`
+              }
+              onClick={() => props.viewChangeHandler('list')}
+            >
+              <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
+              <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+            </div>
+          </a>
+          <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
+            <div
+              className={(props.view === 'graph')
+                ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
+                : `${classes.ResultsNavItem}`
+              }
+              onClick={() => props.viewChangeHandler('graph')}
+            >
+              <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
+              <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+            </div>
+          </a>
+        </React.Fragment>
+      );
+    }
+    return (<a className={`col-12 ${classes.ResultsNavItemCols}`}> </a>);
+  }
+
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={classes.Section}>
+      <div className={classes.Section}>
         <div className="container columns">
           <nav className="row">
             <a
-              className={(props.objectType === 'all')
+              className={(props.api === 'all')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
-              onClick={() => props.queryObjectChangeHandler('all')}
+              onClick={() => props.apiChangeHandler('all')}
             >
               <div className="font-weight-bold">
                 <FormattedHTMLMessage id="nav.all" defaultMessage="nav.all" />
               </div>
               <div>
                 (
-                {props.counts.all}
+                {props.preview.all}
                 )
               </div>
             </a>
             <a
-              className={(props.objectType === 'entities')
+              className={(props.api === 'structures')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
-              onClick={() => props.queryObjectChangeHandler('entities')}
+              onClick={() => props.apiChangeHandler('structures')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.entities" defaultMessage="nav.entities" />
+                <FormattedHTMLMessage id="nav.structures" defaultMessage="nav.structures" />
               </div>
               <div>
                 (
-                {props.counts.structures}
+                {props.preview.structures.count}
                 )
               </div>
             </a>
             <a
-              className={(props.objectType === 'projects')
+              className={(props.api === 'projects')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
-              onClick={() => props.queryObjectChangeHandler('projects')}
+              onClick={() => props.apiChangeHandler('projects')}
             >
               <div className="font-weight-bold">
                 <FormattedHTMLMessage id="nav.projects" defaultMessage="nav.projects" />
               </div>
               <div>
                 (
-                {props.counts.projects}
+                {props.preview.projects.count}
                 )
               </div>
             </a>
             <a
-              className={(props.objectType === 'persons')
+              className={(props.api === 'persons')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
-              onClick={() => props.queryObjectChangeHandler('persons')}
+              onClick={() => props.apiChangeHandler('persons')}
             >
               <div className="font-weight-bold">
                 <FormattedHTMLMessage id="nav.persons" defaultMessage="nav.persons" />
               </div>
               <div>
                 (
-                {props.counts.persons}
+                {props.preview.persons.count}
                 )
               </div>
             </a>
             <a
-              className={(props.objectType === 'publications')
+              className={(props.api === 'publications')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
                 : `col-lg-2 ${classes.ObjetcsNavItem}`
               }
-              onClick={() => props.queryObjectChangeHandler('publications')}
+              onClick={() => props.apiChangeHandler('publications')}
             >
               <div className="font-weight-bold">
                 <FormattedHTMLMessage id="nav.publications" defaultMessage="nav.publications" />
               </div>
               <div>
                 (
-                {props.counts.publications}
+                {props.preview.publications.count}
                 )
               </div>
             </a>
           </nav>
           <nav className={`row ${classes.ResultsNavContainer}`}>
-            <a className={`col-lg-4 col-md-0 ${classes.ResultsNavItemCols}`}> </a>
-            <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
-              <div
-                className={(props.view === 'list')
-                  ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
-                  : `${classes.ResultsNavItem}`
-                }
-                onClick={() => props.resultViewChangeHandler('list')}
-              >
-                <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
-                <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
-              </div>
-            </a>
-            <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
-              <div
-                className={(props.view === 'graph')
-                  ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
-                  : `${classes.ResultsNavItem}`
-                }
-                onClick={() => props.resultViewChangeHandler('graph')}
-              >
-                <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
-                <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
-              </div>
-            </a>
+            {ShouldRenderView()}
           </nav>
         </div>
-      </section>
+      </div>
     </IntlProvider>
   );
 };
@@ -138,9 +150,9 @@ export default SearchObjectTab;
 
 SearchObjectTab.propTypes = {
   language: PropTypes.string.isRequired,
-  objectType: PropTypes.string,
+  api: PropTypes.string,
   view: PropTypes.string,
-  queryObjectChangeHandler: PropTypes.func,
-  resultViewChangeHandler: PropTypes.func,
-  counts: PropTypes.object,
+  apiChangeHandler: PropTypes.func,
+  viewChangeHandler: PropTypes.func,
+  preview: PropTypes.object,
 };

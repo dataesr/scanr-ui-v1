@@ -21,6 +21,7 @@ $scanrfooterBgColor : rgb(0,33,59);
 
 /* couleurs entités */
 $entityColor : rgb(255,209,56);
+$structureColor : rgb(255,209,56);
 
 /* couleurs personnes */
 $personColor : rgb(254,119,71);
@@ -113,7 +114,7 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
 .has-background-all {
   background-color: $scanrmiddlegreyColor;
 }
-.has-background-entities {
+.has-background-structures {
   background-color: $entitiesColor;
 }
 .has-background-persons {

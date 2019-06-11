@@ -1,0 +1,29 @@
+@import '../../../../style.scss';
+
+.ActiveFiltersContainer {
+  background-color: $scanrdeepblueColor;
+  color: white;
+  max-width: 100%;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.FilterHeaders {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
+.deleteFilter {
+  max-width: 100%;
+  background-color: white;
+  color: $scanrblueColor;
+}
+.deleteFilterTxt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.closeIcon:hover {
+  cursor: pointer;
+}
