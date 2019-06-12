@@ -1,9 +1,14 @@
 {
   "aboutCountry": [
-    { "name": "Produit intérieur brut", "unit" :
+    { "name": "pib", "unit" :
       [
         { "label": "monnaies nationale", "code" : "NY.GDP.MKTP.CN.AD"},
         { "label" : "$ PPA courantes", "code" : "NY.GDP.MKTP.PP.CD"}
+      ]
+    }, {
+      "name": "pop", "unit" :
+      [
+        { "label": "Population active, total", "code" : "SL.TLF.TOTL.IN"}
       ]
     }
   ],

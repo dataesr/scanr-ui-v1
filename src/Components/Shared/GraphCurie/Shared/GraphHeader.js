@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
-  Container, Row, Col,
+  Row, Col,
 } from 'react-bootstrap';
 import classes from './GraphHeader.scss';
 
-const GraphHeader = () => (
+const GraphHeader = props => (
   <div>
     <Row>
       <Col style={{ backgroundColor: '#093e6c' }}>
@@ -18,11 +19,9 @@ const GraphHeader = () => (
         </div>
       </Col>
       <Col style={{ backgroundColor: '#ffb200' }} className={classes.arrowRight}>
-        <select>
+        <select onChange={props.handleIndic} value={props.value}>
           <option value="pib">Produit intérieur brut</option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
+          <option value="pop">Population</option>
         </select>
       </Col>
     </Row>
@@ -37,3 +36,10 @@ const GraphHeader = () => (
 );
 
 export default GraphHeader;
+
+GraphHeader.propTypes = {
+  handleIndic: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  // language: PropTypes.string.isRequired,
+  // switchLanguage: PropTypes.func.isRequired,
+};
