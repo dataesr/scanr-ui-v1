@@ -15,14 +15,17 @@ class GraphCurie extends Component {
     this.country = null;
     this.countryList = [this.props.countryCode];
     this.graphIndex = 0;
+    this.indic = 0;
     this.state = {
       isMissing: true,
       allData: [],
       filterData: null,
+      indicator: '',
     };
     this.getGraphValues = this.getGraphValues.bind(this);
     this.toggleCountry = this.toggleCountry.bind(this);
     this.getData = this.getData.bind(this);
+    this.handleIndic = this.handleIndic.bind(this);
   }
 
   componentDidMount() {
@@ -45,7 +48,7 @@ class GraphCurie extends Component {
   async getData(i, label, index) {
     const res = await axios.get(url, {
       params: {
-        where: `{"country_code":"${this.countryList[i]}","code":"${params[label][0].unit[index].code}"}`,
+        where: `{"country_code":"${this.countryList[i]}","code":"${params[label][this.indic].unit[index].code}"}`,
       },
     });
     return (res.data);
@@ -137,6 +140,18 @@ class GraphCurie extends Component {
     this.getGraphValues(this.props.graphType, this.graphIndex);
   }
 
+  handleIndic(event) {
+    alert(event.target.value);
+    if (event.target.value === 'pop') {
+      this.indic = 1;
+    } else {
+      this.indic = 0;
+    }
+    this.indic = Number(this.indic);
+    alert(this.indic);
+    this.setState({ indicator: event.target.value });
+  }
+
   render() {
     return (
       <div>
@@ -144,7 +159,7 @@ class GraphCurie extends Component {
           : [this.state.isMissing ? <div>Ce graph est indisponible pour le moment.</div>
             : (
               <div>
-                <GraphHeader />
+                <GraphHeader handleIndic={this.handleIndic} value={this.state.label} />
                 <div style={{ width: '100%' }}>
                   <div style={{ float: 'left', width: '97%' }}>Norvège</div>
                   <div style={{ float: 'right', width: '3%', marginTop: '10px' }}><i className="fas fa-info-circle fa-lg" /></div>
