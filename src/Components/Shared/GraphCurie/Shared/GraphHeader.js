@@ -21,7 +21,7 @@ const GraphHeader = props => (
       <Col style={{ backgroundColor: '#ffb200' }} className={classes.arrowRight}>
         <select onChange={props.handleIndic} value={props.value}>
           <option value="pib">Produit intérieur brut</option>
-          <option value="pop">Population</option>
+          <option value="pop_act">Population active (total)</option>
         </select>
       </Col>
     </Row>
