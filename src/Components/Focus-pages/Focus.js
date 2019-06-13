@@ -12,7 +12,7 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 
 import classes from './Focus.scss';
 
-const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
+// const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
 
 /**
  * Focus
@@ -40,6 +40,7 @@ export default class FocusList extends Component {
   componentDidMount() {
     const filename = `./Focus-data/${this.props.match.params.id}.json`;
     try {
+      // eslint-disable-next-line
       params = require(`${filename}`);
       this.setState({ meta: params });
     } catch (error) {
@@ -51,14 +52,12 @@ export default class FocusList extends Component {
     })
       .then((res) => {
         this.setState({ data: res.data.facets });
-        // if (params.type !== 'map') {
-        //   this.setState({ data: params.data });
-        // }
+        if (params.type === 'map') {
+          this.setState({ data: res.data });
+        }
       })
-      .catch((error) => {
+      .catch(() => {
         this.setState({ error: true });
-        console.log(error);
-        console.log("Couldn't retrieve API data");
       });
     // axios.get(params.url, {
     //   headers: {
@@ -80,7 +79,7 @@ export default class FocusList extends Component {
 
   render() {
     const TextComponent = () => (
-      <div>
+      <div style={{ backgroundColor: 'white', borderRadius: '0 0 15px 15px', marginTop: '-15px', marginBottom: '40px' }}>
         <p className={`${classes.Text}`}>
           {params.text}
         </p>
@@ -93,6 +92,7 @@ export default class FocusList extends Component {
         </div>
       </div>
     );
+    const errorMsg = "Erreur: ce focus n'a pas pu être chargé";
     return (
       <div className={`container-fluid ${classes.HomePage}`} style={{ backgroundColor: '#EBEEF0' }}>
         <Header
@@ -109,9 +109,9 @@ export default class FocusList extends Component {
         {/* <LastFocus language={props.language} /> */}
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
-        <div className="container" style={{ backgroundColor: 'white', marginBottom: '50px' }}>
+        <div className="container">
           <div className="row">
-            <div className="col-lg-12" style={{ backgroundColor: 'white' }}>
+            <div className="col-lg-12">
               {
             // const TextComponent = () => (
             //   <div>
@@ -125,7 +125,7 @@ export default class FocusList extends Component {
             // );
           }
               {this.state.data ? (
-                <div style={{ backgroundColor: 'white' }}>
+                <div>
                   <GraphComponent
                     title={this.state.meta.title}
                     subtitle={this.state.meta.subtitle}
@@ -136,7 +136,7 @@ export default class FocusList extends Component {
                   />
                 </div>
               )
-                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : [this.state.error ? <div>{"Erreur: ce focus n'a pas pu être chargé"}</div> : <div>Chargement/Loading...</div>])]}
+                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : [this.state.error ? <div>{errorMsg}</div> : <div>Chargement/Loading...</div>])]}
               {
                 // <GraphComponent
                 //   id={props.match.params.id}
@@ -144,8 +144,8 @@ export default class FocusList extends Component {
                 // />
               }
             </div>
-            {this.state.error ? null : <TextComponent />}
           </div>
+          {this.state.error ? null : <TextComponent />}
         </div>
 
         <LastFocus />
