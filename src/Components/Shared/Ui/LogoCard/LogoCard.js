@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactImageFallback from 'react-image-fallback';
 
 /* SCSS */
 import classes from './LogoCard.scss';
+
+import fallbackImage from '../../images/not_found_image.png';
+import initialImage from '../../images/Spinner-1s-70px.gif';
 
 /**
  * LogoCard
@@ -20,8 +24,10 @@ const LogoCard = (props) => {
   }
   return (
     <div className={`${classes.card} ${cssClass}`}>
-      <img
+      <ReactImageFallback
         src={src}
+        fallbackImage={fallbackImage}
+        initialImage={initialImage}
         alt={props.label}
         className={`img-fluid ${classes.img}`}
       />

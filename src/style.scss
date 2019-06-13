@@ -4,7 +4,7 @@
   font-family: 'Inter UI';
 }
 html, body{
-  height: 100%;  
+  height: 100%;
 }
 
 /* couleurs officielles */
@@ -21,6 +21,7 @@ $scanrfooterBgColor : rgb(0,33,59);
 
 /* couleurs entités */
 $entityColor : rgb(255,209,56);
+$structureColor : rgb(255,209,56);
 
 /* couleurs personnes */
 $personColor : rgb(254,119,71);
@@ -113,7 +114,7 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
 .has-background-all {
   background-color: $scanrmiddlegreyColor;
 }
-.has-background-entities {
+.has-background-structures {
   background-color: $entitiesColor;
 }
 .has-background-persons {
@@ -152,6 +153,17 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
   }
   .Button {
     background-color: white;
+    color: $scanrdeepblueColor;
+  }
+}
+.BannerDeep {
+  background-color: $scanrdeepblueColor;
+  color: white;
+  a {
+    color: $scanrdeepblueColor;
+  }
+  .Button {
+    background-color: $scanrmiddlegreyColor;
     color: $scanrdeepblueColor;
   }
 }
@@ -259,6 +271,26 @@ $cardTitleBgColor: $scanrlightgreyColor;
   color: white;
 }
 
+.btn_scanrBlue{
+  background-color: $scanrblueColor;
+  color: white;
+  font-weight: bold;
+}
+.btn_scanrBlue:hover, .btn_scanrBlue:focus{
+  background-color: $scanrgreyColor;
+  color: white;
+}
+
+.btn_scanrlightgrey{
+  background-color: $scanrlightgreyColor;
+  color: $scanrdeepblueColor;
+  font-weight: bold;
+}
+.btn_scanrlightgrey:hover, .btn_scanrlightgrey:focus{
+  background-color: $scanrgreyColor;
+  color: white;
+}
+
 /* card de logo*/
 .CardLogo {
   width: 215px;
@@ -322,4 +354,10 @@ $cardTitleBgColor: $scanrlightgreyColor;
   background-color: rgb(0, 33, 59);
   color: white;
   cursor: help;
+}
+
+/* Pages de détails */
+.NoSpace {
+  padding-left: 0;
+  padding-right: 0;
 }
