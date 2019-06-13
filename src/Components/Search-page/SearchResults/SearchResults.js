@@ -18,7 +18,7 @@ const ResultsToShow = {
     list: EntityCard,
     graph: EntityGraphs,
   },
-  entities: {
+  structures: {
     list: EntityCard,
     graph: EntityGraphs,
   },
@@ -41,19 +41,19 @@ const SearchResults = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const ToShow = ResultsToShow[props.objectType][props.view];
+  const ToShow = ResultsToShow[props.api][props.view];
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className="row d-flex flex-column">
         <div className={`ml-1 mb-2 ${classes.ActiveFiltersContainer}`}>
           <div className={`p-3 ${classes.ResultHeader}`}>
             <span>
-              {`${props.resultsCount} `}
+              {`${props.data.total} `}
             </span>
             <span>
               <FormattedHTMLMessage
-                id={`searchResults.${props.objectType}`}
-                defaultMessage={`searchResults.${props.objectType}`}
+                id={`searchResults.${props.api}`}
+                defaultMessage={`searchResults.${props.api}`}
               />
             </span>
           </div>
@@ -62,8 +62,8 @@ const SearchResults = (props) => {
           {
             <ToShow
               language={props.language}
-              results={props.results}
-              facets={props.facets}
+              results={props.data.results}
+              facets={props.data.facets}
             />
           }
         </div>
@@ -76,9 +76,7 @@ export default SearchResults;
 
 SearchResults.propTypes = {
   language: PropTypes.string.isRequired,
-  objectType: PropTypes.string.isRequired,
+  api: PropTypes.string.isRequired,
   view: PropTypes.string.isRequired,
-  results: PropTypes.array,
-  facets: PropTypes.array,
-  resultsCount: PropTypes.number,
+  data: PropTypes.object,
 };

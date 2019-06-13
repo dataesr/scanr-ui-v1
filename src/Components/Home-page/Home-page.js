@@ -73,7 +73,7 @@ class HomePage extends Component {
           language={this.props.language}
           labelKey="WhatAreOurSources"
           cssClass="BannerLight"
-          url=""
+          url="/ressources"
         />
 
         <MostActiveThemes
