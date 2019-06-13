@@ -3,6 +3,7 @@
 .Portrait {
   font-family: 'Lato', sans-serif;
   padding-top: 24px;
+  padding-bottom: 24px;
   background-repeat: no-repeat;
   background-attachment: relative;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
@@ -10,8 +11,4 @@
   background-color: rgb(233, 236, 241);
   background-position: bottom 0 left 0;
 
-  .NoSpace {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
