@@ -20,7 +20,6 @@ class GraphCurie extends Component {
       isMissing: true,
       allData: [],
       filterData: null,
-      indicator: '',
     };
     this.getGraphValues = this.getGraphValues.bind(this);
     this.toggleCountry = this.toggleCountry.bind(this);
@@ -42,19 +41,19 @@ class GraphCurie extends Component {
       this.setState({ isMissing: true });
       return;
     }
-    this.getGraphValues(this.props.graphType, this.graphIndex);
+    this.getGraphValues(this.props.graphType, this.graphIndex, this.indic);
   }
 
-  async getData(i, label, index) {
+  async getData(i, label, index, indic) {
     const res = await axios.get(url, {
       params: {
-        where: `{"country_code":"${this.countryList[i]}","code":"${params[label][this.indic].unit[index].code}"}`,
+        where: `{"country_code":"${this.countryList[i]}","code":"${params[label][indic].unit[index].code}"}`,
       },
     });
     return (res.data);
   }
 
-  async getGraphValues(label, index) {
+  async getGraphValues(label, index, indic) {
     // On vérifie si le label existe pour la récupération des indicateurs et des codes
     if (params[label] == null) {
       this.setState({ isMissing: true });
@@ -86,7 +85,7 @@ class GraphCurie extends Component {
     const results = [];
     for (let i = 0; i < tempData.length; i += 1) {
       if (tempData[i] === null) {
-        results.push(this.getData(i, label, index));
+        results.push(this.getData(i, label, index, indic));
         // eslint-disable-next-line
         // tempData[i] = await this.getData(i, label, index);
       }
@@ -137,19 +136,20 @@ class GraphCurie extends Component {
         this.countryList.splice(index, 1);
       }
     }
-    this.getGraphValues(this.props.graphType, this.graphIndex);
+    this.getGraphValues(this.props.graphType, this.graphIndex, this.indic);
   }
 
   handleIndic(event) {
-    alert(event.target.value);
-    if (event.target.value === 'pop') {
-      this.indic = 1;
+    let i = this.indic;
+    // alert(params.aboutCountry[this.state.indic].name)
+    // alert(event.target.value);
+    if (i === 0) {
+      i = 1;
     } else {
-      this.indic = 0;
+      i = 0;
     }
-    this.indic = Number(this.indic);
-    alert(this.indic);
-    this.setState({ indicator: event.target.value });
+    this.indic = i;
+    this.getGraphValues(this.props.graphType, this.graphIndex, this.indic);
   }
 
   render() {
@@ -170,8 +170,8 @@ class GraphCurie extends Component {
                 </div>
                 {this.state.filterData ? <HighChartsBar data={this.state.filterData} /> : null
               }
-                <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 0)}>Monnaies locales</button>
-                <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 1)}>$PPA</button>
+                <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 0, this.indic)}>Monnaies locales</button>
+                <button type="button" onClick={() => this.getGraphValues(this.props.graphType, 1, this.indic)}>$PPA</button>
                 <input type="checkbox" name="love" value="love" id="FRA" onChange={e => this.toggleCountry(e.target.id)} />
                   FRA
                 <input type="checkbox" name="love" value="love" id="CAN" onChange={e => this.toggleCountry(e.target.id)} />
