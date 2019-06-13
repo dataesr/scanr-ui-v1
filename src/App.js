@@ -10,6 +10,7 @@ import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
 import FocusList from './Components/Focus-pages/FocusList';
 import Focus from './Components/Focus-pages/Focus';
+import CurieHome from './Components/Shared/GraphCurie/CurieHome';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
@@ -105,6 +106,18 @@ class App extends Component {
               path="/focus/:id"
               component={props => (
                 <Focus
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+
+            <Route
+              exact
+              path="/curie"
+              component={props => (
+                <CurieHome
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}

@@ -40,7 +40,7 @@ export default class DisplayComponent extends Component {
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
           break;
-        case 'pie':
+        case 'donut':
           GraphComponent = loadable(() => import('./Graphs/HighChartsDonut'));
           break;
         case 'other':
@@ -68,7 +68,7 @@ export default class DisplayComponent extends Component {
         </div>
       );
       this.BlockComponent = () => (
-        <div>
+        <div style={{ backgroundColor: 'white' }}>
           <TitleComponent />
           <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} />
           {
@@ -84,8 +84,8 @@ export default class DisplayComponent extends Component {
       );
     }
     return (
-      <div>
-        <this.BlockComponent />
+      <div style={{ backgroundColor: 'white' }}>
+        <this.BlockComponent style={{ backgroundColor: 'white' }} />
       </div>
     );
   }
