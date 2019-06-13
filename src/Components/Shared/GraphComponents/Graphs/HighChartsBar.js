@@ -38,11 +38,11 @@ export default class HighChartsBar extends Component {
 
   componentDidMount() {
     const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
-    const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
-    const UrbanUnitData = {
-      labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
-      values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
-    };
+    // const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
+    // const UrbanUnitData = {
+    //   labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
+    //   values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
+    // };
     const NaturesData = {
       labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
       values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
@@ -66,11 +66,11 @@ export default class HighChartsBar extends Component {
         {
           style: { color: '#000000' },
           align: 'left',
-          x: 20,
+          x: 10,
         },
       },
       yAxis: {
-        min: 0,
+        // min: ,
         gridLineWidth: 0,
         minorGridLineWidth: 0,
         title: { text: '' },
@@ -87,10 +87,10 @@ export default class HighChartsBar extends Component {
           pointPadding: 0,
           // groupPadding: 0.1,
           dataLabels: {
-            stacking: 'normal',
             enabled: true,
-            align: 'right',
-            // x: 30,
+            // align: 'right',
+            textAlign: 'right',
+            x: 500,
             style: { color: '#000000' },
           },
         },
@@ -148,7 +148,7 @@ export default class HighChartsBar extends Component {
       color: '#3778bb',
     };
     const ShareComponent = () => (
-      <div>
+      <div style={{ overflow: 'hidden', paddingLeft: '2%' }}>
         <hr />
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>
