@@ -50,7 +50,7 @@ const TeamAndProjectPage = props => (
       <section className={classes.Content}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-9 mt-4">
+            <div className="col-lg-9 my-4">
               <img
                 src="./img/logo-scanr-blue.svg"
                 alt="Logo"
