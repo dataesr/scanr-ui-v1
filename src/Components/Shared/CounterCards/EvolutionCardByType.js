@@ -15,7 +15,7 @@ const messages = {
 };
 
 const EvolutionCardByType = (props) => {
-  const bgColor = classes[`${props.schema}BgColor`];
+  const bgColor = classes[`${props.schema}Cards`];
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
