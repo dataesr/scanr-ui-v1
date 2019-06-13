@@ -96,7 +96,7 @@ const Contact = props => (
             <div className={`col-lg ${classes.recaptcha}`}>
               <ReCAPTCHA
                 size="normal"
-                sitekey="6LdcrqQUAAAAAGvHkaE0VyK1uFdboJbsQqJBevMm"
+                sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 onChange={onChange}
               />
             </div>
