@@ -15,12 +15,11 @@ import classes from '../GraphComponents.scss';
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
+  // eslint-disable-next-line
   createLeafletElement() {
     return GeoSearchControl({
-      // style: 'button',
       autoClose: true,
       searchLabel: 'Ex : pays, villes, CP...',
-      // keepResult: false,
       position: 'topright',
       provider: new OpenStreetMapProvider(),
     });
@@ -36,18 +35,17 @@ type State = {
 
 // export default class SimpleExample extends Component<{}, State> {
 class LeafletMap extends Component<{}, State> {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.print = this.print.bind(this);
     this.data = [];
     this.label = [];
     this.exportChartPng = this.exportChartPng.bind(this);
-  }
-
-  state = {
-    lat: 46.5,
-    lng: 2.618787,
-    zoom: 5,
+    this.state = {
+      lat: 46.5,
+      lng: 2.618787,
+      zoom: 5,
+    };
   }
 
   print() {
@@ -93,7 +91,7 @@ class LeafletMap extends Component<{}, State> {
     };
 
     const ShareComponent = () => (
-      <div>
+      <div style={{ overflow: 'hidden', paddingLeft: '2%' }}>
         <div style={{ float: 'left' }}>
           <p className={`${classes.BtnTxt}`}>Partager</p>
           <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
@@ -102,27 +100,22 @@ class LeafletMap extends Component<{}, State> {
         </div>
         <div style={{ float: 'right' }}>
           <p className={`${classes.BtnTxt}`}><b>Télécharger</b></p>
-          <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
-          <p className={`${classes.BtnTxt}`}>.pdf</p>
           <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
           <p className={`${classes.BtnTxt}`}>.png</p>
-          <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
-          <p className={`${classes.BtnTxt}`}>.csv</p>
         </div>
       </div>
     );
 
-    const pos = this.props.data.data;
+    const pos = this.props.data.results;
 
     pos.forEach((element) => {
       const tmp = [];
       try {
-        tmp.push(element.address[0].gps.lat);
-        tmp.push(element.address[0].gps.lon);
+        tmp.push(element.value.address[0].gps.lat);
+        tmp.push(element.value.address[0].gps.lon);
         this.data.push(tmp);
-        this.label.push(element.label.fr);
-      } catch (error) {
-        console.log(error);
+        this.label.push(element.value.label.fr);
+      } catch (error) { // eslint-disable-no-empty
       }
     });
     this.createMarkers = () => {
