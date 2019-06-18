@@ -2,7 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import getSelectKey from '../../../../Utils/getSelectKey';
+
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
+import Select from '../../../Shared/Ui/Select/Select';
+import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -23,6 +27,9 @@ class Projects extends Component {
     viewMode: 'list',
     data: [],
     selectedProject: {},
+    typeFilter: [],
+    filterValue: null,
+    autocompleteData: null,
   }
 
   componentDidMount() {
@@ -34,6 +41,8 @@ class Projects extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.data !== this.state.data) {
       this.sortByYear();
+      this.createTypeFilter();
+      this.createAutocompleteData();
     }
   }
 
@@ -49,6 +58,58 @@ class Projects extends Component {
 
   setSelectedProjectHandler = (selectedProject) => {
     this.setState({ selectedProject });
+  }
+
+  createTypeFilter = () => {
+    const typeFilter = [];
+    for (let i = 0; i < this.props.data.length; i += 1) {
+      const type = this.props.data[i].project.type;
+      const found = typeFilter.find(item => item.value === type);
+      if (found) {
+        found.count += 1;
+      } else {
+        const obj = {};
+        obj.value = type;
+        obj.count = 1;
+        typeFilter.push(obj);
+      }
+    }
+    this.setState({ typeFilter });
+  }
+
+  createAutocompleteData = () => {
+    const autocompleteData = [];
+    for (let i = 0; i < this.props.data.length; i += 1) {
+      const obj = {};
+      const values = [];
+      if (this.props.data[i].project.label.en) {
+        values.push(this.props.data[i].project.label.en);
+      }
+      if (this.props.data[i].project.label.fr) {
+        values.push(this.props.data[i].project.label.fr);
+      }
+      if (this.props.data[i].project.acronym.en) {
+        values.push(this.props.data[i].project.acronym.en);
+      }
+      if (this.props.data[i].project.acronym.fr) {
+        values.push(this.props.data[i].project.acronym.fr);
+      }
+
+      obj.label = getSelectKey(this.props.data[i].project, 'label', this.props.language, 'fr');
+      obj.values = values;
+      obj.project = this.props.data[i];
+      autocompleteData.push(obj);
+    }
+    this.setState({ autocompleteData });
+  }
+
+  setTypeFilter = (filterValue) => {
+    if (filterValue !== 'all') {
+      const data = this.props.data.filter(item => item.project.type.includes(filterValue));
+      this.setState({ data });
+    } else {
+      this.setState({ data: this.props.data, filterValue: null });
+    }
   }
 
   renderViewList = () => {
@@ -104,7 +165,7 @@ class Projects extends Component {
                   <hr />
                   <div className="row">
                     <div className="col">
-                      {`${this.state.selectedProject.founding} €`}
+                      {`${this.state.selectedProject.founding.toLocaleString()} €`}
                     </div>
                     <div className="col">
                       {`${this.state.selectedProject.project.duration} mois`}
@@ -153,6 +214,10 @@ class Projects extends Component {
       en: messagesEn,
     };
 
+    const typeFilterPlaceHolder = (this.state.filterValue)
+      ? `${this.state.data.length} ${this.state.filterValue}`
+      : `${this.state.data.length} ${messages[this.props.language]['Entity.projects.selectTypesFilter.placeHolder']}`;
+
     return (
       <Fragment>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -196,15 +261,28 @@ class Projects extends Component {
                 </div>
               </div>
               {/* /row */}
+              <hr />
               <div className={`row ${classes.Filters}`}>
                 <div className="col">
-                  filtre type
+                  <Select
+                    allLabel={messages[this.props.language]['Entity.projects.selectTypesFilter.allLabel']}
+                    count={this.state.data.length}
+                    title={messages[this.props.language]['Entity.projects.selectTypesFilter.title']}
+                    placeHolder={typeFilterPlaceHolder}
+                    data={this.state.typeFilter}
+                    onSubmit={this.setTypeFilter}
+                  />
                 </div>
                 <div className="col">
                   slider year
                 </div>
                 <div className="col">
-                  search label
+                  <Autocomplete
+                    title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
+                    placeHolder={typeFilterPlaceHolder}
+                    data={this.state.autocompleteData}
+                    onSubmit={this.setSelectedProjectHandler}
+                  />
                 </div>
               </div>
               {/* /row */}
@@ -218,13 +296,13 @@ class Projects extends Component {
               </div>
               {/* /row */}
               <hr />
-              badges ?
+              badges liés aux projets
             </div>
           </section>
         </IntlProvider>
       </Fragment>
     );
-  };
+  }
 }
 
 
