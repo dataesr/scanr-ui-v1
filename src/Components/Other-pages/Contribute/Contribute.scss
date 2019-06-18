@@ -1,0 +1,151 @@
+@import '../../../style.scss';
+
+.Contribute{
+
+.Content{
+    padding: 50px 0;
+    background-color: $scanrlightgreyColor;
+    color:  $scanrdeepblueColor;
+    font-size: 1rem;
+    }
+
+//Title Content
+    H4{
+      font-size: 1.3rem ;
+      font-weight: bold;
+      //padding-bottom: 20px;
+      padding-left:10px;
+    }
+
+//Title card
+    H3{
+      font-size: 1.1rem ;
+      font-weight: normal;
+      padding: 10px 0;
+    }
+
+    .Card{
+      border:none;
+      border-radius: 8px;
+      text-align: left;
+      align-items: baseline;
+      margin:3px ;
+      width: 100%;
+    //  height: 19rem;
+
+      }
+
+
+    .Logo{
+      padding-top: 20px;
+      padding-left: 25px;
+      padding-bottom: 10px;
+      font-size: 2.5rem;
+      width: 5rem;
+
+        I{
+        height: 5rem;
+        }
+
+        IMG{
+          height: 6rem;
+        }
+
+      }
+
+      .Text{
+        padding-right: 50px;
+        padding-left: 15px;
+        padding-bottom: 20px;
+      }
+
+      .ArrowDown{
+         position:absolute;
+         left: 45%;
+         top: 88%;
+    //    margin-bottom:-45px;
+        font-size: 5rem;
+        z-index:1;
+
+        color:$scanrfooterBgColor;
+      }
+      .ArrowRight {
+        position:absolute;
+        left: 100%;
+        bottom: 40%;
+    //    margin-right:-30px;
+        font-size: 5rem;
+    //    width:10%;
+        z-index: 1;
+        color:white;
+        padding:0;
+      }
+
+    .Button{
+      display: inline-block;
+      padding: 10px 15px;
+      width: 100%;
+      height: 2.5rem;
+      }
+
+    .Video{
+      z-index: auto;
+     }
+
+
+  .FormContact{
+      background-color: $scanrblueColor;
+      color: white;
+      padding: 30px 0;
+
+      BUTTON{
+        background-color: white;
+        color: $scanrfooterBgColor;
+      }
+  }
+
+}
+
+@media all and (max-width: 991.98px) {
+
+    margin: .5rem;
+
+}
+
+@media all and (max-width: 991.98px) {
+
+  .Contribute{
+
+    .Content{
+      font-size: 0.8rem;
+    }
+
+//Title Content
+    H4{
+      font-size: 1.1rem ;
+    }
+
+//Title card
+    H3{
+      font-size: 0.9rem ;
+      font-weight: normal;
+    }
+
+
+    .ArrowDown{
+      visibility: hidden;
+    }
+    .ArrowRight {
+      visibility: hidden;
+    }
+
+    .Button{
+      height: inherit;
+      .Text{
+        padding: 1px;
+      }
+
+    }
+  }
+
+}
