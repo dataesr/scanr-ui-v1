@@ -1,0 +1,20 @@
+{
+  "aboutCountry": [
+    { "name": "pib", "unit" :
+      [
+        { "label": "monnaies nationale", "code" : "NY.GDP.MKTP.CN.AD"},
+        { "label" : "$ PPA courantes", "code" : "NY.GDP.MKTP.PP.CD"}
+      ]
+    }, {
+      "name": "pop_act", "unit" :
+      [
+        { "label": "Population active, total", "code" : "SL.TLF.TOTL.IN"}
+      ]
+    }
+  ],
+  "esri": ["Personnel"],
+  "es": ["Dépenses pour ES"],
+  "ri": ["Personnel R&D"],
+  "intlCoop": ["Programme de collaboration internationale"],
+  "studentMobility": ["Étudiants par nationalité"]
+}
