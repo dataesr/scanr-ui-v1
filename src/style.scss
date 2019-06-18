@@ -248,6 +248,20 @@ $cardTitleBgColor: $scanrlightgreyColor;
   }
 }
 
+.card_darkdark {
+  background-color: $scanrfooterBgColor;;
+  color: white;
+  .Button {
+    background-color: $scanrblueColor;
+    color: white;
+    border-radius: 5px;
+  }
+  .Button:hover {
+    background-color: $scanrgreyColor;
+    color: white;
+  }
+}
+
 /*centrage de la card*/
 
 .CardCenter {
