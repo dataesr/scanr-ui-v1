@@ -136,5 +136,5 @@ Autocomplete.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
   placeholder: PropTypes.string,
-  facetID: PropTypes.string.isRequired,
+  // facetID: PropTypes.string.isRequired,
 };

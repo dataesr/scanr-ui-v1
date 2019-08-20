@@ -54,7 +54,7 @@ const EntityFilters = (props) => {
 export default EntityFilters;
 
 EntityFilters.propTypes = {
-  language: PropTypes.string.isRequired,
+  // language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
   // deleteMultiValueSearchFilter: PropTypes.func,
   facets: PropTypes.array,

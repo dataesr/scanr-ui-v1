@@ -15,6 +15,7 @@ const SearchObjectTab = (props) => {
     en: messagesEn,
   };
 
+/* eslint-disable */
 
   const ShouldRenderView = () => {
     if (props.api !== 'all') {
