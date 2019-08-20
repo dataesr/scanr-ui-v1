@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import queryString from 'query-string'
+import queryString from 'query-string';
 import { GridLoader } from 'react-spinners';
 
 import classes from './Search-page.scss';
@@ -84,7 +84,7 @@ class SearchPage extends Component {
   //   return true;
   // }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (prevProps.location !== this.props.location) {
       this.setState({
         isLoading: true,
@@ -281,6 +281,7 @@ class SearchPage extends Component {
         });
       })
       .catch((error) => {
+        /* eslint-disable-next-line */
         console.log(error);
       });
   }
@@ -292,6 +293,7 @@ class SearchPage extends Component {
       const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
       Axios.post(url, query)
         .then((response) => {
+          /* eslint-disable-next-line */
           const newCounts = { ...this.state.preview };
           newCounts[api].count = response.data.total;
           newCounts[api].data = response.data.results.slice(0, 6);

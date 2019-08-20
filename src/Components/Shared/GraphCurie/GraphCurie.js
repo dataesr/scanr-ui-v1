@@ -139,7 +139,7 @@ class GraphCurie extends Component {
     this.getGraphValues(this.props.graphType, this.graphIndex, this.indic);
   }
 
-  handleIndic(event) {
+  handleIndic() {
     let i = this.indic;
     // alert(params.aboutCountry[this.state.indic].name)
     // alert(event.target.value);

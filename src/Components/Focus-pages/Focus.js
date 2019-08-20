@@ -79,7 +79,10 @@ export default class FocusList extends Component {
 
   render() {
     const TextComponent = () => (
-      <div style={{ backgroundColor: 'white', borderRadius: '0 0 15px 15px', marginTop: '-15px', marginBottom: '40px' }}>
+      <div style={{
+        backgroundColor: 'white', borderRadius: '0 0 15px 15px', marginTop: '-15px', marginBottom: '40px',
+      }}
+      >
         <p className={`${classes.Text}`}>
           {params.text}
         </p>

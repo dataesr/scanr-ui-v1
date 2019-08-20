@@ -76,8 +76,8 @@ export default SimpleListCard;
 
 SimpleListCard.propTypes = {
   label: PropTypes.string,
-  labelListButton: PropTypes.string,
-  list: PropTypes.array,
+  // labelListButton: PropTypes.string,
+  // list: PropTypes.array,
   logo: PropTypes.string,
   title: PropTypes.string,
   tooltip: PropTypes.string,

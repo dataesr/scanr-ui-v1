@@ -32,7 +32,9 @@ import Banner from '../../Shared/Banner/Banner';
 */
 class Entity extends Component {
   state = {
-    data: {},
+    data: {
+      projects: null,
+    },
   };
 
   componentDidMount() {
@@ -46,7 +48,8 @@ class Entity extends Component {
     Axios.get(url)
       .then((response) => {
         this.setState({ data: response.data });
-      });
+        console.log('response=>', response);
+      }).catch(e => console.log('erreur=>', e));
   }
 
   render() {

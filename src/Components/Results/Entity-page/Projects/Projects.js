@@ -39,7 +39,7 @@ class Projects extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.data !== this.state.data) {
+    if (prevProps.data !== this.state.data && this.state.data.length > 0) {
       this.sortByYear();
       this.createTypeFilter();
       this.createAutocompleteData();
@@ -52,8 +52,10 @@ class Projects extends Component {
 
   sortByYear = () => {
     const sortedData = this.props.data;
-    sortedData.sort((a, b) => (a.project.year - b.project.year));
-    this.setState({ data: sortedData });
+    if (sortedData) {
+      sortedData.sort((a, b) => (a.project.year - b.project.year));
+      this.setState({ data: sortedData });
+    }
   }
 
   setSelectedProjectHandler = (selectedProject) => {
@@ -197,13 +199,11 @@ class Projects extends Component {
     );
   }
 
-  renderViewGraph = () => {
-    return (
-      <div className="col">
-        graph
-      </div>
-    );
-  }
+  renderViewGraph = () => (
+    <div className="col">
+      graph
+    </div>
+  );
 
   render() {
     if (!this.props.data) {
