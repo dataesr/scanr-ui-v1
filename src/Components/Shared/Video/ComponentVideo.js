@@ -18,6 +18,7 @@ const messages = {
 const ComponentVideo = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`${classes.ComponentVideo}`}>
+      {/* eslint-disable-next-line */}
       <video width="100%" controls poster={props.poster}>
         <source src={props.url} type="video/mp4" />
         <FormattedHTMLMessage

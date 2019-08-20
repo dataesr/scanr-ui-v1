@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './Header.scss';
 
-import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-blue';
+import LogoScanrWhiteSVG from '../svg/logo-scanr-blue';
 
 
 const Header = (props) => {
@@ -24,7 +24,7 @@ const Header = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.Header}>
-        <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes["has-background-white"]}`}>
+        <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
           <ScrollLogo />
           <a className="navbar-brand" href="/">
             <LogoScanrWhiteSVG fill="#003259" height="40px" width="160px" />
@@ -130,14 +130,10 @@ const Header = (props) => {
 
 class ScrollLogo extends React.Component {
   handleScroll = (e) => {
-    console.log('onScroll');
     const element = e.target;
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
       // do something at end of scroll
     }
-    console.log('scrollHeight:', element.scrollHeight);
-    console.log('scrollTop:', element.scrollTop);
-    console.log('clientHeight:', element.clientHeight);
   }
 
   render() {
@@ -161,6 +157,6 @@ Header.propTypes = {
   switchLanguage: PropTypes.func.isRequired,
 };
 
-ScrollLogo.propTypes = {
-  scrollStepInPx: PropTypes.number,
-};
+// ScrollLogo.propTypes = {
+//   scrollStepInPx: PropTypes.number,
+// };

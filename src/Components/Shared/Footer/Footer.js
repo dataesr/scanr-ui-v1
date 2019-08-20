@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import logo from '../../Shared/svg/logo-ministere.svg';
+import logo from '../svg/logo-ministere.svg';
 
 /* SCSS */
 import classes from './Footer.scss';

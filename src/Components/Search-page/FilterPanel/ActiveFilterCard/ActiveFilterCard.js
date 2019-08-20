@@ -29,6 +29,9 @@ const ActiveFilterCard = (props) => {
           <i
             className={`fas fa-times ml-auto ${classes.closeIcon}`}
             onClick={() => props.multiValueFilterHandler(key, value)}
+            onKeypress={() => props.multiValueFilterHandler(key, value)}
+            role="button"
+            tabIndex={0}
           />
         </div>
       );

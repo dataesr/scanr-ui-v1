@@ -69,6 +69,7 @@ const SearchPanel = (props) => {
             <div className="d-flex align-items-center mb-2">
               <div className="d-flex flex-column flex-grow-1 pl-0">
                 <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
+                  {/* eslint-disable-next-line */}
                   { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="query">{label}</label> }
                 </FormattedMessage>
                 <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
@@ -86,6 +87,7 @@ const SearchPanel = (props) => {
               </div>
               <div className="d-flex flex-column pr-1 pl-1 col-xs-hidden">
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
+                  {/* eslint-disable-next-line */}
                   { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
                 </FormattedMessage>
                 <select
@@ -140,6 +142,7 @@ export default SearchPanel;
 SearchPanel.propTypes = {
   language: PropTypes.string.isRequired,
   suggests: PropTypes.array,
+  /* eslint-disable-next-line */
   isHome: PropTypes.bool,
   currentQueryText: PropTypes.string,
   api: PropTypes.string,

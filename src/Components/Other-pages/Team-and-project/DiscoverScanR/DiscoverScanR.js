@@ -34,8 +34,8 @@ const DiscoverScanR = props => (
           <div className="col-lg" />
           <div className="col-lg-9 cols-12">
             <FormattedHTMLMessage
-            id={`DiscoverScanR.${props.labelKey}`}
-            defaultMessage={`DiscoverScanR.${props.labelKey}`}
+              id={`DiscoverScanR.${props.labelKey}`}
+              defaultMessage={`DiscoverScanR.${props.labelKey}`}
             />
             <ComponentVideo
               url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
