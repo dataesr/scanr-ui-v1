@@ -64,6 +64,7 @@ class Network extends Component {
   }
 
   componentDidCatch(error, info) {
+    /* eslint-disable-next-line */
     console.log('catch : ', error, info);
   }
 

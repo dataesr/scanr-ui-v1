@@ -333,7 +333,7 @@ class Ressources extends Component {
         <hr className={classes.SourceDemarcation} />
       </Fragment>
     ) : null;
-    const retraitements2 =  (message[`Ressource.Retraitements2.${ressource}`]) ? (
+    const retraitements2 = (message[`Ressource.Retraitements2.${ressource}`]) ? (
       <div className={classes.SourceCard}>
         <div className={classes.SourceCardTitle}>
           <FormattedHTMLMessage
@@ -498,7 +498,6 @@ class Ressources extends Component {
 
   render() {
     let content = this.renderRessources();
-    console.log('id:', this.props.match.params.id);
     if (this.props.match.params.id) {
       content = this.renderOneRessource();
     }
