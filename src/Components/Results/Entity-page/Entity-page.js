@@ -48,7 +48,7 @@ class Entity extends Component {
     Axios.get(url)
       .then((response) => {
         this.setState({ data: response.data });
-        console.log('response=>', response);
+        /* eslint-disable-next-line */
       }).catch(e => console.log('erreur=>', e));
   }
 
@@ -70,23 +70,28 @@ class Entity extends Component {
         <Portrait
           language={this.props.language}
           data={this.state.data}
+          id="Portrait"
         />
 
         <Network
           language={this.props.language}
           data={this.state.data}
+          id="Network"
         />
         <Team
           language={this.props.language}
           data={this.state.data}
+          id="Team"
         />
         <Projects
           language={this.props.language}
           data={this.state.data.projects}
+          id="Projects"
         />
         <Productions
           language={this.props.language}
           data={this.state.data}
+          id="Productions"
         />
         <Banner
           language={this.props.language}
@@ -97,18 +102,22 @@ class Entity extends Component {
         <Ecosystem
           language={this.props.language}
           data={this.state.data}
+          id="Ecosystem"
         />
         <Awards
           language={this.props.language}
           data={this.state.data}
+          id="Awards"
         />
         <SimilarEntities
           language={this.props.language}
           data={this.state.data}
+          id="SimilarEntities"
         />
         <LastEntityFocus
           language={this.props.language}
           data={this.state.data}
+          id="LastEntityFocus"
         />
         <Banner
           language={this.props.language}
