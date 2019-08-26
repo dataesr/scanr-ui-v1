@@ -28,6 +28,7 @@ class Network extends Component {
   state = {
     dataSupervisorOf: {},
     dataSupervisorOfTotal: 0,
+    modifyMode: false,
   };
 
   componentDidMount() {
@@ -63,81 +64,120 @@ class Network extends Component {
     }
   }
 
+  modifyModeHandle = () => {
+    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
+  }
+
   componentDidCatch(error, info) {
     /* eslint-disable-next-line */
     console.log('catch : ', error, info);
   }
 
+  renderTitle = messages => (
+    <Fragment>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <div className="container">
+          <SectionTitle icon="fas fa-network-wired" modifyModeHandle={this.modifyModeHandle} modifyMode={this.state.modifyMode}>
+            <FormattedHTMLMessage id="Entity.network.title" defaultMessage="Entity.network.title" />
+          </SectionTitle>
+        </div>
+      </IntlProvider>
+    </Fragment>
+  );
+
+  renderEmptySection = messages => (
+    <Fragment>
+      {this.renderTitle(messages)}
+      <div className={`container ${classes.EmptySection}`}>
+        Cette section est vide
+        <br />
+        Vous pouvez nous suggérer des informations en appuyant sur le bouton &#34;Enrichir/Corriger&#34; ci-dessus
+      </div>
+    </Fragment>
+  );
+
+  renderSection = messages => (
+    <Fragment>
+      {this.renderTitle(messages)}
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <section className={`container-fluid ${classes.Network}`}>
+          <div className="container">
+            <div className="row">
+              {
+                (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
+                  <div className={`col-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.props.data.institutions}
+                      title={messages[this.props.language]['Entity.network.supervisors.title']}
+                      label={(this.props.data.institutions.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.title']}
+                      masterKey="network.institutions"
+                      modifyMode={this.state.modifyMode}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.props.data.children && this.props.data.children.length > 0) ? (
+                  <div className={`col-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.props.data.children}
+                      title={messages[this.props.language]['Entity.network.headOf.title']}
+                      label={(this.props.data.children.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                      masterKey="network.children"
+                      modifyMode={this.state.modifyMode}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
+                  <div className={`col-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.dataSupervisorOf}
+                      count={this.state.dataSupervisorOfTotal}
+                      title={messages[this.props.language]['Entity.network.supervisorOf.title']}
+                      label={(this.state.dataSupervisorOf.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                      masterKey="network.dataSupervisorOf"
+                      modifyMode={this.state.modifyMode}
+                    />
+                  </div>
+                ) : null
+              }
+            </div>
+          </div>
+        </section>
+      </IntlProvider>
+    </Fragment>
+  );
+
+
   render() {
-    if (!this.props.data) {
-      return null;
-    }
     const messages = {
       fr: messagesFr,
       en: messagesEn,
     };
 
-    return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.Network}`}>
-            <div className="container">
-              <SectionTitle icon="fas fa-network-wired">
-                <FormattedHTMLMessage id="Entity.network.title" defaultMessage="Entity.network.title" />
-              </SectionTitle>
-              <div className="row">
-                {
-                  (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
-                    <div className={`col-4 ${classes.NoSpace}`}>
-                      <SimpleCountListCard
-                        language={this.props.language}
-                        data={this.props.data.institutions}
-                        title={messages[this.props.language]['Entity.network.supervisors.title']}
-                        label={(this.props.data.institutions.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
-                        tooltip=""
-                        modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
-                        modalButtonTitle={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.title']}
-                      />
-                    </div>
-                  ) : null
-                }
-                {
-                  (this.props.data.children && this.props.data.children.length > 0) ? (
-                    <div className={`col-4 ${classes.NoSpace}`}>
-                      <SimpleCountListCard
-                        language={this.props.language}
-                        data={this.props.data.children}
-                        title={messages[this.props.language]['Entity.network.headOf.title']}
-                        label={(this.props.data.children.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
-                        tooltip=""
-                        modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
-                        modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      />
-                    </div>
-                  ) : null
-                }
-                {
-                  (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
-                    <div className={`col-4 ${classes.NoSpace}`}>
-                      <SimpleCountListCard
-                        language={this.props.language}
-                        data={this.state.dataSupervisorOf}
-                        count={this.state.dataSupervisorOfTotal}
-                        title={messages[this.props.language]['Entity.network.supervisorOf.title']}
-                        label={(this.state.dataSupervisorOf.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
-                        tooltip=""
-                        modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
-                        modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      />
-                    </div>
-                  ) : null
-                }
-              </div>
-            </div>
-          </section>
-        </IntlProvider>
-      </Fragment>
-    );
+
+    if (!this.props.data
+      || (this.state.dataSupervisorOfTotal === 0
+        && (this.props.data.children && this.props.data.children.length === 0)
+        && (this.props.data.institutions && this.props.data.institutions.length))) {
+      return this.renderEmptySection(messages);
+    }
+
+    return this.renderSection(messages);
   }
 }
 
