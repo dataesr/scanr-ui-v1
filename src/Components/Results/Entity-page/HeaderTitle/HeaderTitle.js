@@ -27,7 +27,7 @@ const HeaderTitle = props => (
                   <a href="/">Accueil</a>
                 </li>
                 <li className={classes['breadcrumb-item']}>
-                  <a href="/recherche">Recherche</a>
+                  <a href="/recherche/all">Recherche</a>
                 </li>
                 <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>Entité</li>
               </ol>
@@ -42,20 +42,22 @@ const HeaderTitle = props => (
           </div>
           <div className="col-3 pr-0">
             <div className="form-group">
-             <label for="exampleFormControlSelect1">
-               Naviguer par thème
-             </label>
-             <select className="form-control form-control-lg" id="exampleFormControlSelect1">
-               <option>Portrait</option>
-               <option>Appartenance, réseau</option>
-               <option>Equipe</option>
-               <option>Productions</option>
-               <option>Ecosystème</option>
-               <option>Certifications & Prix</option>
-               <option>Entités similaires</option>
-               <option>Derniers focus de l'entité</option>
-             </select>
-           </div>
+              <label htmlFor="headerTitleSelect">
+                Naviguer par thème
+                <select id="headerTitleSelect" className="form-control form-control-lg">
+                  <option value="Portrait">Portrait</option>
+                  <option value="Network">Appartenance, réseau</option>
+                  <option value="Team">Equipe</option>
+                  <option value="Projects">Projets</option>
+                  <option value="Productions">Productions</option>
+                  <option value="Ecosystem">Ecosystème</option>
+                  <option value="Awards">Certifications & Prix</option>
+                  <option value="SimilarEntities">Entités similaires</option>
+                  <option value="LastEntityFocus">Derniers focus de l&#39;entité</option>
+                </select>
+              </label>
+
+            </div>
           </div>
         </div>
       </div>
