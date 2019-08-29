@@ -8,8 +8,8 @@ import Leaders from '../Shared/Leaders/Leaders';
 import Background from '../../../Shared/images/poudre-jaune_Fgris-BR.jpg';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './Team.scss';
 
@@ -39,7 +39,7 @@ const Team = (props) => {
         <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
           <div className="container">
             <SectionTitle icon="fas fa-users">
-              <FormattedHTMLMessage id="Entity.team.title" defaultMessage="Entity.team.title" />
+              <FormattedHTMLMessage id="Entity.Section.Team.label" />
             </SectionTitle>
 
             <Leaders

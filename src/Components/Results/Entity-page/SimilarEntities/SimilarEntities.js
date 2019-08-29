@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './SimilarEntities.scss';
 
@@ -33,7 +33,7 @@ const SimilarEntities = (props) => {
         <section className={`container-fluid ${classes.SimilarEntities}`}>
           <div className="container">
             <SectionTitle icon="fas fa-th">
-              <FormattedHTMLMessage id="Entity.similarEntities.title" defaultMessage="Entity.similarEntities.title" />
+              <FormattedHTMLMessage id="Entity.Section.SimilarEntities.label" />
             </SectionTitle>
           </div>
         </section>

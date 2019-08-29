@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './Ecosystem.scss';
 
@@ -34,7 +34,7 @@ const Ecosystem = (props) => {
         <section className={`container-fluid ${classes.Ecosystem}`}>
           <div className="container">
             <SectionTitle icon="fas fa-globe">
-              <FormattedHTMLMessage id="Entity.ecosystem.title" defaultMessage="Entity.ecosystem.title" />
+              <FormattedHTMLMessage id="Entity.Section.Ecosystem.label" />
             </SectionTitle>
           </div>
         </section>

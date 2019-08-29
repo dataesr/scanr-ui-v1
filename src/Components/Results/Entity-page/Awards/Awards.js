@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './Awards.scss';
 
@@ -33,7 +33,7 @@ const Awards = (props) => {
         <section className={`container-fluid ${classes.Awards}`}>
           <div className="container">
             <SectionTitle icon="fas fa-trophy">
-              <FormattedHTMLMessage id="Entity.awards.title" defaultMessage="Entity.awards.title" />
+              <FormattedHTMLMessage id="Entity.Section.Awards.label" />
             </SectionTitle>
           </div>
         </section>

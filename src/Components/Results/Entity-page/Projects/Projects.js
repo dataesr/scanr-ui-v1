@@ -12,6 +12,9 @@ import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import messagesEntityFr from '../translations/fr.json';
+import messagesEntityEn from '../translations/en.json';
+
 import classes from './Projects.scss';
 
 /**
@@ -214,6 +217,11 @@ class Projects extends Component {
       en: messagesEn,
     };
 
+    const messagesEntity = {
+      fr: messagesEntityFr,
+      en: messagesEntityEn,
+    };
+
     const typeFilterPlaceHolder = (this.state.filterValue)
       ? `${this.state.data.length} ${this.state.filterValue}`
       : `${this.state.data.length} ${messages[this.props.language]['Entity.projects.selectTypesFilter.placeHolder']}`;
@@ -229,7 +237,7 @@ class Projects extends Component {
                   <span className={classes.Label}>
                     {this.props.data.length}
                     &nbsp;
-                    <FormattedHTMLMessage id="Entity.projects.title" defaultMessage="Entity.projects.title" />
+                    {messagesEntity[this.props.language]['Entity.Section.Projects.label']}
                   </span>
                 </div>
                 <div className="col text-right">
