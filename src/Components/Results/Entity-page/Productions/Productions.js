@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './Productions.scss';
 
@@ -33,7 +33,7 @@ const Productions = (props) => {
         <section className={`container-fluid ${classes.Productions}`}>
           <div className="container">
             <SectionTitle icon="fas fa-copy">
-              <FormattedHTMLMessage id="Entity.productions.title" defaultMessage="Entity.productions.title" />
+              <FormattedHTMLMessage id="Entity.Section.Productions.label" />
             </SectionTitle>
           </div>
         </section>

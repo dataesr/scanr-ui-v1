@@ -13,10 +13,17 @@ import Web from './subComponents/Web/Web';
 import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './Portrait.scss';
+
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
 
 /**
  * Portrait
@@ -33,10 +40,7 @@ const Portrait = (props) => {
   const sectionStyle = {
     backgroundImage: `url(${Background})`,
   };
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
+
 
   return (
     <Fragment>
@@ -44,7 +48,7 @@ const Portrait = (props) => {
         <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
           <div className="container">
             <SectionTitle icon="fas fa-id-card">
-              <FormattedHTMLMessage id="Entity.portrait.title" defaultMessage="Entity.portrait.title" />
+              <FormattedHTMLMessage id="Entity.Section.Portrait.label" defaultMessage="Entity.Section.Portrait.label" />
             </SectionTitle>
             <div className="row">
               <Identity

@@ -50,7 +50,7 @@ const Identity = (props) => {
             <SimpleCard
               logo="fas fa-id-card"
               title={messages[props.language]['Entity.portrait.identity.name']}
-              label={`${name}${acronym}`}
+              label={`${name} (${acronym})`}
               tooltip=""
             />
           </div>
