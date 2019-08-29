@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import ButtonWithModal from '../Buttons/ButtonWithModal';
+import SubmitBox from '../../SubmitBox/SubmitBox';
 
 import classes from './SimpleCountListCard.scss';
 
@@ -71,13 +72,13 @@ const SimpleCountListCard = (props) => {
     </Fragment>
   ) : null;
 
-  const submitBox = (
-    <div className={`d-flex align-self-center ${classes.SubmitBox}`}>
-      <button className="btn" type="button">
-        Enrichir/Corriger
-      </button>
-    </div>
-  );
+  // const submitBox = (
+  //   <div className={`d-flex align-self-center ${classes.SubmitBox}`}>
+  //     <button className="btn" type="button">
+  //       Enrichir/Corriger
+  //     </button>
+  //   </div>
+  // );
 
   return (
     <div
@@ -94,11 +95,11 @@ const SimpleCountListCard = (props) => {
         {props.label}
       </div>
       {listItems}
-      <div className="mt-auto">
+      <div>
         {modalButton}
       </div>
       {tooltip}
-      {(props.modifyMode) ? submitBox : null}
+      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
     </div>
   );
 };
@@ -121,4 +122,5 @@ SimpleCountListCard.propTypes = {
   modalButtonTitle: PropTypes.string,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
+  allData: PropTypes.object.isRequired,
 };
