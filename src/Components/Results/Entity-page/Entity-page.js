@@ -90,7 +90,7 @@ class Entity extends Component {
         />
         <Productions
           language={this.props.language}
-          data={this.state.data}
+          data={null}
           id="Productions"
         />
         <Banner
@@ -101,24 +101,29 @@ class Entity extends Component {
         />
         <Ecosystem
           language={this.props.language}
-          data={this.state.data}
+          data={null}
           id="Ecosystem"
         />
         <Awards
           language={this.props.language}
-          data={this.state.data}
+          data={null}
           id="Awards"
         />
         <SimilarEntities
           language={this.props.language}
-          data={this.state.data}
+          data={null}
           id="SimilarEntities"
         />
-        <LastEntityFocus
-          language={this.props.language}
-          data={this.state.data}
-          id="LastEntityFocus"
-        />
+        {
+          (this.state.lastFocus)
+            ? (
+              <LastEntityFocus
+                language={this.props.language}
+                data={this.state.data}
+                id="LastEntityFocus"
+              />
+            ) : null
+        }
         <Banner
           language={this.props.language}
           labelKey="Appear"

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
@@ -32,16 +32,18 @@ const messagesEntity = {
 */
 class SubmitBox extends Component {
   state = {
-    showModifyModal: false,
+    showModifyModal: this.props.autoLaunch,
     buttons: {
       enrich: true,
       revise: false,
     },
   };
 
-
   toggleModifyModal = () => {
     this.setState(prevState => ({ showModifyModal: !prevState.showModifyModal }));
+    if (this.props.autoLaunch) {
+      this.props.modifyModeHandle();
+    }
   }
 
   changeTypeHandler = (type) => {
@@ -65,10 +67,16 @@ class SubmitBox extends Component {
   render() {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className={`d-flex align-self-center ${classes.SubmitBox}`}>
-          <button className="btn" type="button" onClick={this.toggleModifyModal}>
-            <FormattedHTMLMessage id="SubmitBox.mainButton.label" defaultMessage="SubmitBox.mainButton.label" />
-          </button>
+        <Fragment>
+          {
+            (!this.props.emptySection) ? (
+              <div className={`d-flex align-self-center ${classes.SubmitBox}`}>
+                <button className="btn" type="button" onClick={this.toggleModifyModal}>
+                  <FormattedHTMLMessage id="SubmitBox.mainButton.label" defaultMessage="SubmitBox.mainButton.label" />
+                </button>
+              </div>
+            ) : null
+          }
 
           <Modal show={this.state.showModifyModal} onHide={this.toggleModifyModal} size="lg">
             <Modal.Header closeButton />
@@ -91,14 +99,17 @@ class SubmitBox extends Component {
                   >
                     <FormattedHTMLMessage id="SubmitBox.enrich.label" />
                   </button>
-
-                  <button
-                    className={`btn ${(this.state.buttons.revise) ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}
-                    type="button"
-                    onClick={() => this.changeTypeHandler('revise')}
-                  >
-                    <FormattedHTMLMessage id="SubmitBox.revise.label" />
-                  </button>
+                  {
+                    (!this.props.emptySection) ? (
+                      <button
+                        className={`btn ${(this.state.buttons.revise) ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}
+                        type="button"
+                        onClick={() => this.changeTypeHandler('revise')}
+                      >
+                        <FormattedHTMLMessage id="SubmitBox.revise.label" />
+                      </button>
+                    ) : null
+                  }
                 </div>
                 <div className={`text-center ${classes.Text3}`}>
                   <span className={classes.Important}>
@@ -106,10 +117,16 @@ class SubmitBox extends Component {
                       messagesEntity[this.props.language][`Entity.Section.${this.props.masterKey.split('.')[0]}.label`].toUpperCase()
                     }
                   </span>
-                  <FormattedHTMLMessage id="for" />
-                  <span className={classes.Important}>
-                    {this.props.label}
-                  </span>
+                  {
+                    (!this.props.emptySection) ? (
+                      <Fragment>
+                        <FormattedHTMLMessage id="for" />
+                        <span className={classes.Important}>
+                          {this.props.label}
+                        </span>
+                      </Fragment>
+                    ) : null
+                  }
                 </div>
                 <div className="container">
                   <form>
@@ -156,7 +173,7 @@ class SubmitBox extends Component {
               </div>
             </Modal.Body>
           </Modal>
-        </div>
+        </Fragment>
       </IntlProvider>
     );
   }
@@ -165,8 +182,17 @@ class SubmitBox extends Component {
 
 export default SubmitBox;
 
+
+SubmitBox.defaultProps = {
+  emptySection: false,
+  autoLaunch: false,
+};
+
 SubmitBox.propTypes = {
   language: PropTypes.string.isRequired,
   masterKey: PropTypes.string.isRequired, // Utilisée pour le mode modifier/enrichir
   label: PropTypes.string.isRequired,
+  emptySection: PropTypes.bool,
+  autoLaunch: PropTypes.bool,
+  modifyModeHandle: PropTypes.func,
 };
