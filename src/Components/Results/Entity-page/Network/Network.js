@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 
@@ -94,8 +94,30 @@ class Network extends Component {
 
   renderEmptySection = messages => (
     <Fragment>
-      {this.renderTitle(messages)}
-      <EmptySection language={this.props.language} />
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <section className={`container-fluid ${classes.Network}`}>
+          <div className="container">
+            <SectionTitle
+              icon="fas fa-th"
+              modifyModeHandle={this.modifyModeHandle}
+              modifyMode={this.state.modifyMode}
+              emptySection
+            >
+              {messagesEntity[this.props.language]['Entity.Section.Network.label']}
+            </SectionTitle>
+            <div className="row">
+              <div className="col">
+                <EmptySection
+                  language={this.props.language}
+                  masterKey="Network"
+                  modifyMode={this.state.modifyMode}
+                  modifyModeHandle={this.modifyModeHandle}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </IntlProvider>
     </Fragment>
   );
 
@@ -175,10 +197,12 @@ class Network extends Component {
       en: messagesEn,
     };
 
+    const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
+    const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
-        && (this.props.data.children && this.props.data.children.length === 0)
-        && (this.props.data.institutions && this.props.data.institutions.length))) {
+        && childrenHasNoData
+        && institutionsHasNoData)) {
       return this.renderEmptySection(messages);
     }
 

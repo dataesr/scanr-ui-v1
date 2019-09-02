@@ -42,6 +42,7 @@ const HeaderTitle = props => (
           </div>
           <div className="col-3 pr-0">
             <div className="form-group">
+              {/* eslint-disable-next-line */}
               <label htmlFor="headerTitleSelect">
                 Naviguer par thème
                 <select id="headerTitleSelect" className="form-control form-control-lg">

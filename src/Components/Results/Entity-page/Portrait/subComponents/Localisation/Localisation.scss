@@ -17,13 +17,17 @@
   }
 
   .AddressContainer {
+    position: relative;
     background-color: white;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    padding: 16px;
     color: $localisationTextTitleColor;
     font-style: italic;
     font-size: 0.9rem;
+
+    .Title {
+      padding: 16px;
+    }
     I {
       display: inline-block;
       padding-right: 8px;
