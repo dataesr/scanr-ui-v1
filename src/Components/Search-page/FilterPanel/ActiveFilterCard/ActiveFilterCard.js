@@ -53,7 +53,7 @@ const ActiveFilterCard = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`p-3 mb-2 mr-1 ${classes.ActiveFiltersContainer}`}>
+      <div className={`p-3 mb-2 ${classes.ActiveFiltersContainer}`}>
         <div className={classes.FilterHeaders}>
           <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
           <span>{` - (${count})`}</span>
