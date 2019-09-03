@@ -76,12 +76,6 @@ class LeafletMap extends Component<{}, State> {
     }
     const position = [this.state.lat, this.state.lng];
     const markers = createMarkers(this.props.data);
-    // const printOptions = {
-    //   position: 'topleft',
-    //   sizeModes: ['Current', 'A4Portrait', 'A4Landscape'],
-    //   hideControlContainer: false
-    // };
-    console.log('markers', markers);
     const downloadOptions = {
       position: 'bottomright',
       filename: this.props.filename,
@@ -92,28 +86,28 @@ class LeafletMap extends Component<{}, State> {
     };
 
     const ShareComponent = () => (
-      <div className={`d-flex flex-nowrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
+      <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
         <div className="mr-auto d-flex align-items-center">
           <div className="pr-1 d-flex align-items-center">
-            <span className="pr-2">Partager</span>
+            <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
           <div className="pr-1 d-flex align-items-center">
-            <span className="pr-2 pl-3">Intégrer le code</span>
+            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-code" />
             </button>
           </div>
         </div>
         <div className="d-flex align-items-center">
-          <div className="pr-2">Télécharger:</div>
+          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPng} className={classes.Button}>
               <i className="fas fa-image" />
             </button>
-            <span className="pr-1">.png</span>
+            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
           </div>
         </div>
       </div>

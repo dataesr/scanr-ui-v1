@@ -99,7 +99,7 @@ const SearchPanel = (props) => {
                     { option => <option className={classes.btn_dark} value="All">{option}</option> }
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Entities" defaultMessage="Search.Select.Entities">
-                    { option => <option className={classes.btn_dark} value="Entities">{option}</option> }
+                    { option => <option className={classes.btn_dark} value="Structures">{option}</option> }
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Persons" defaultMessage="Search.Select.Persons">
                     { option => <option className={classes.btn_dark} value="Persons">{option}</option> }
@@ -112,7 +112,7 @@ const SearchPanel = (props) => {
                   </FormattedMessage>
                 </select>
               </div>
-              <div className="d-flex flex-column mr-4 pr-0 pl-1">
+              <div className="d-flex flex-column pr-0 pl-1">
                 <button
                   type="submit"
                   className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
