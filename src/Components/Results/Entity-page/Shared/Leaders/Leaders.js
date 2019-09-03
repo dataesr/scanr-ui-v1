@@ -51,6 +51,9 @@ const Leaders = (props) => {
                   language={props.language}
                   lastName={leader.lastName}
                   role={leader.role}
+                  masterKey={props.masterKey}
+                  modifyMode={props.modifyMode}
+                  allData={props.allData}
                 />
               </div>
             ))
@@ -68,4 +71,7 @@ Leaders.defaultProps = {
 Leaders.propTypes = {
   language: PropTypes.string.isRequired,
   leaders: PropTypes.array,
+  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
+  modifyMode: PropTypes.bool,
+  allData: PropTypes.object.isRequired,
 };

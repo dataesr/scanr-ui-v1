@@ -21,7 +21,7 @@ const SectionTitle = props => (
     </div>
     <div className="col text-right">
       {
-        (!props.modifyMode)
+        (!props.modifyMode || props.emptySection)
           ? (
             <Fragment>
               <span className={classes.TxtBtn}>Enrichir/Modifier</span>
@@ -53,9 +53,14 @@ const SectionTitle = props => (
 
 export default SectionTitle;
 
+SectionTitle.defaultProps = {
+  emptySection: false,
+};
+
 SectionTitle.propTypes = {
   icon: PropTypes.string.isRequired,
   children: PropTypes.string.isRequired,
   modifyModeHandle: PropTypes.func,
   modifyMode: PropTypes.bool,
+  emptySection: PropTypes.bool,
 };

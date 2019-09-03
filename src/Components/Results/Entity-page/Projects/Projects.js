@@ -1,16 +1,21 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
 
-import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
-import Select from '../../../Shared/Ui/Select/Select';
 import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
+import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
+import EmptySection from '../Shared/EmptySection/EmptySection';
+import Select from '../../../Shared/Ui/Select/Select';
+import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+
+import messagesEntityFr from '../translations/fr.json';
+import messagesEntityEn from '../translations/en.json';
 
 import classes from './Projects.scss';
 
@@ -30,6 +35,7 @@ class Projects extends Component {
     typeFilter: [],
     filterValue: null,
     autocompleteData: null,
+    modifyMode: false,
   }
 
   componentDidMount() {
@@ -205,14 +211,52 @@ class Projects extends Component {
     </div>
   );
 
+  modifyModeHandle = () => {
+    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
+  }
+
   render() {
-    if (!this.props.data) {
-      return null;
-    }
     const messages = {
       fr: messagesFr,
       en: messagesEn,
     };
+
+    const messagesEntity = {
+      fr: messagesEntityFr,
+      en: messagesEntityEn,
+    };
+
+    if (!this.props.data) {
+      return (
+        <Fragment>
+          <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+            <section className={`container-fluid ${classes.Projects}`}>
+              <div className="container">
+                <SectionTitle
+                  icon="fas fa-folder-open"
+                  modifyModeHandle={this.modifyModeHandle}
+                  modifyMode={this.state.modifyMode}
+                  emptySection
+                >
+                  {messagesEntity[this.props.language]['Entity.Section.Projects.label']}
+                </SectionTitle>
+                <div className="row">
+                  <div className="col">
+                    <EmptySection
+                      language={this.props.language}
+                      masterKey="Projects"
+                      modifyMode={this.state.modifyMode}
+                      modifyModeHandle={this.modifyModeHandle}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </IntlProvider>
+        </Fragment>
+      );
+    }
+
 
     const typeFilterPlaceHolder = (this.state.filterValue)
       ? `${this.state.data.length} ${this.state.filterValue}`
@@ -229,7 +273,7 @@ class Projects extends Component {
                   <span className={classes.Label}>
                     {this.props.data.length}
                     &nbsp;
-                    <FormattedHTMLMessage id="Entity.projects.title" defaultMessage="Entity.projects.title" />
+                    {messagesEntity[this.props.language]['Entity.Section.Projects.label']}
                   </span>
                 </div>
                 <div className="col text-right">
