@@ -1,0 +1,11 @@
+@import '../../../../style.scss';
+
+.BulletBlock {
+  flex: 0 1 calc(20% - 5px);
+  align-self: stretch;
+  max-width: calc(20% - 5px);
+}
+
+.Bullet {
+  color: $entityColor;
+}

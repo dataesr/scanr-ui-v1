@@ -50,6 +50,10 @@ class Autocomplete extends Component {
       .filter(item => item.value.toLowerCase().includes(value.toLowerCase()));
     if (filtered[0]) {
       this.props.onSubmit(this.props.facetID, filtered[0].value, false);
+      this.setState({
+        active: false,
+        query: '',
+      });
     }
   }
 
@@ -65,6 +69,7 @@ class Autocomplete extends Component {
           <label className={classes.Labels} htmlFor="input">
             {this.props.title}
           </label>
+          <br />
           {/* eslint-disable-next-line */}
           <label className={classes.Labels} htmlFor="input">
             {this.props.subtitle}

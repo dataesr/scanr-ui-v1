@@ -50,7 +50,7 @@ class CheckBoxFilter extends Component {
   render() {
     const filters = this.props.filters.values || [];
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
-
+    const disabled = (this.props.facets.length === 0);
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
@@ -72,6 +72,7 @@ class CheckBoxFilter extends Component {
             placeholder={this.props.placeholder}
             onClick={this.switchActive}
             onFocus={event => event.preventDefault()}
+            disabled={disabled}
           />
           <button
             type="button"
@@ -128,7 +129,7 @@ export default CheckBoxFilter;
 CheckBoxFilter.propTypes = {
   onSubmit: PropTypes.func,
   facets: PropTypes.array,
-  filters: PropTypes.array,
+  filters: PropTypes.object,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
   subtitle: PropTypes.string,

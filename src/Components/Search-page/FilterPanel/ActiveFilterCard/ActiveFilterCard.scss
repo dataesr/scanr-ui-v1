@@ -7,7 +7,13 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
+@media screen and (max-width: 993px) {
+  .ActiveFiltersContainer {
+    margin-bottom: 0 !important;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
 .FilterHeaders {
   font-size: 1.3em;
   font-weight: 700;

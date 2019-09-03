@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import { GridLoader } from 'react-spinners';
 
 import classes from './Search-page.scss';
 
@@ -10,7 +9,6 @@ import SearchPanel from './SearchPanel/SearchPanel';
 import SearchResults from './SearchResults/SearchResults';
 import FilterPanel from './FilterPanel/FilterPanel';
 import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
-import Pagination from './Pagination/Pagination';
 
 
 import Footer from '../Shared/Footer/Footer';
@@ -41,6 +39,7 @@ class SearchPage extends Component {
         results: [],
         facets: [],
         total: 0,
+        graphs: [],
       },
       preview: {
         structures: {
@@ -75,6 +74,7 @@ class SearchPage extends Component {
     const newState = this.getParams();
     this.getCounts(newState);
     this.getData(newState);
+    window.scrollTo(0, 0);
   }
 
   // componentWillUpdate(nextProps, nextState) {
@@ -96,6 +96,7 @@ class SearchPage extends Component {
       // }
       this.getCounts(newState);
       this.getData(newState);
+      window.scrollTo(0, 0);
     }
   }
 
@@ -310,76 +311,6 @@ class SearchPage extends Component {
   }
 
   // *******************************************************************
-  // HELPERS FOR PAGE RENDERING
-  // *******************************************************************
-  ShouldRenderPagination = () => {
-    if (this.state.view === 'list' && this.state.api !== 'all' && this.state.data.total) {
-      return (
-        <div className="col-md-8 ml-md-auto">
-          <Pagination
-            {...this.props}
-            language={this.props.language}
-            data={this.state.data}
-            paginationHandler={this.paginationHandler}
-            currentPage={parseInt(this.state.request.page, 0)}
-            currentPageSize={parseInt(this.state.request.pageSize, 0)}
-            totalDocuments={parseInt(this.state.data.total, 0)}
-          />
-        </div>
-      );
-    }
-    return null;
-  }
-
-  ShouldRenderResults = () => {
-    if (!this.state.isLoading && this.state.api !== 'all') {
-      return (
-        <div className="row">
-          <div className="col-md-4">
-            <FilterPanel
-              language={this.props.language}
-              facets={this.state.data.facets}
-              generalFacets={this.state.preview[this.state.api].facets}
-              multiValueFilterHandler={this.multiValueFilterHandler}
-              filters={this.state.request.filters || {}}
-              api={this.state.api}
-            />
-          </div>
-          <div className="col-md-8">
-            <SearchResults
-              {...this.props}
-              language={this.props.language}
-              data={this.state.data}
-              view={this.state.view}
-              api={this.state.api}
-            />
-          </div>
-          {this.ShouldRenderPagination()}
-        </div>
-      );
-    }
-    if (!this.state.isLoading && this.state.api === 'all') {
-      return (
-        <div className="row">
-          <div className="col-md-12">
-            blah blah blah
-          </div>
-        </div>
-      );
-    }
-    const scanRcolor = '#3778bb';
-    return (
-      <div className="row justify-content-center">
-        <GridLoader
-          color={scanRcolor}
-          loading={this.state.isLoading}
-        />
-      </div>
-    );
-  }
-
-
-  // *******************************************************************
   // RENDER METHOD
   // *******************************************************************
   render() {
@@ -409,7 +340,30 @@ class SearchPage extends Component {
             preview={this.state.preview}
           />
           <div className="container">
-            {this.ShouldRenderResults()}
+            <div className="row d-flex flex-wrap justify-content-between">
+              <div className={classes.filters}>
+                <FilterPanel
+                  language={this.props.language}
+                  facets={this.state.data.facets}
+                  generalFacets={this.state.preview[this.state.api].facets}
+                  multiValueFilterHandler={this.multiValueFilterHandler}
+                  filters={this.state.request.filters || {}}
+                  api={this.state.api}
+                />
+              </div>
+              <div className={classes.results}>
+                <SearchResults
+                  {...this.props}
+                  language={this.props.language}
+                  data={this.state.data}
+                  request={this.state.request}
+                  view={this.state.view}
+                  api={this.state.api}
+                  isLoading={this.state.isLoading}
+                  paginationHandler={this.paginationHandler}
+                />
+              </div>
+            </div>
           </div>
         </section>
         <Footer language={this.props.language} />
