@@ -21,8 +21,7 @@ const SearchObjectTab = (props) => {
     if (props.api !== 'all') {
       return (
         <React.Fragment>
-          <a className={`col-lg-4 col-md-0 ${classes.ResultsNavItemCols}`}> </a>
-          <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
+          <a className={`ml-auto ${classes.ResultsNavItemCols}`}>
             <div
               className={(props.view === 'list')
                 ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
@@ -34,7 +33,7 @@ const SearchObjectTab = (props) => {
               <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
             </div>
           </a>
-          <a className={`col-lg-4 col-md-6 ${classes.ResultsNavItemCols}`}>
+          <a className={`ml-1 ${classes.ResultsNavItemCols}`}>
             <div
               className={(props.view === 'graph')
                 ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
@@ -49,14 +48,14 @@ const SearchObjectTab = (props) => {
         </React.Fragment>
       );
     }
-    return (<a className={`col-12 ${classes.ResultsNavItemCols}`}> </a>);
+    return (<a className={classes.ResultsNavItemCols}> </a>);
   }
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={classes.Section}>
-        <div className="container columns">
-          <nav className="row">
+      <div>
+        <div className="container">
+          <nav className={`d-flex flex-wrap p-2 ${classes.ObjNav}`}>
             <a
               className={(props.api === 'all')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
@@ -138,7 +137,7 @@ const SearchObjectTab = (props) => {
               </div>
             </a>
           </nav>
-          <nav className={`row ${classes.ResultsNavContainer}`}>
+          <nav className={` row d-flex flex-wrap p-2 ${classes.ResultsNavContainer}`}>
             {ShouldRenderView()}
           </nav>
         </div>
