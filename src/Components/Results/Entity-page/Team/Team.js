@@ -1,15 +1,17 @@
-import React, { Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import React, { Component, Fragment } from 'react';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Leaders from '../Shared/Leaders/Leaders';
-
-import Background from '../../../Shared/images/poudre-jaune_Fgris-BR.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+
+import messagesEntityFr from '../translations/fr.json';
+import messagesEntityEn from '../translations/en.json';
 
 import classes from './Team.scss';
 
@@ -21,42 +23,90 @@ import classes from './Team.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const Team = (props) => {
-  if (!props.data) {
-    return null;
+class Team extends Component {
+  state = {
+    modifyMode: false,
   }
-  const sectionStyle = {
-    backgroundImage: `url(${Background})`,
-  };
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
 
-  return (
-    <Fragment>
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
-          <div className="container">
-            <SectionTitle icon="fas fa-users">
-              <FormattedHTMLMessage id="Entity.team.title" defaultMessage="Entity.team.title" />
-            </SectionTitle>
+  modifyModeHandle = () => {
+    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
+  }
 
-            <Leaders
-              id={props.data.id}
-              language={props.language}
-              leaders={props.data.leaders}
-            />
-          </div>
-        </section>
-      </IntlProvider>
-    </Fragment>
-  );
-};
+  render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
+
+    const messagesEntity = {
+      fr: messagesEntityFr,
+      en: messagesEntityEn,
+    };
+
+    if (!this.props.data.leaders || this.props.data.leaders.length === 0) {
+      return (
+        <Fragment>
+          <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+            <section className={`container-fluid ${classes.Team}`}>
+              <div className="container">
+                <SectionTitle
+                  icon="fas fa-th"
+                  modifyModeHandle={this.modifyModeHandle}
+                  modifyMode={this.state.modifyMode}
+                  emptySection
+                >
+                  {messagesEntity[this.props.language]['Entity.Section.Team.label']}
+                </SectionTitle>
+                <div className="row">
+                  <div className="col">
+                    <EmptySection
+                      language={this.props.language}
+                      masterKey="Team"
+                      modifyMode={this.state.modifyMode}
+                      modifyModeHandle={this.modifyModeHandle}
+                    />
+                  </div>
+                </div>
+              </div>
+            </section>
+          </IntlProvider>
+        </Fragment>
+      );
+    }
+
+    return (
+      <Fragment>
+        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+          <section className={`container-fluid ${classes.Team}`}>
+            <div className="container">
+              <SectionTitle
+                icon="fas fa-th"
+                modifyModeHandle={this.modifyModeHandle}
+                modifyMode={this.state.modifyMode}
+              >
+                {messagesEntity[this.props.language]['Entity.Section.Team.label']}
+              </SectionTitle>
+
+              <Leaders
+                id={this.props.data.id}
+                language={this.props.language}
+                leaders={this.props.data.leaders}
+                masterKey={`${this.props.id}.Leaders`}
+                modifyMode={this.state.modifyMode}
+                allData={this.props.data}
+              />
+            </div>
+          </section>
+        </IntlProvider>
+      </Fragment>
+    );
+  }
+}
 
 export default Team;
 
 Team.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };

@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './LastEntityFocus.scss';
 
@@ -33,7 +33,7 @@ const LastEntityFocus = (props) => {
         <section className={`container-fluid ${classes.LastEntityFocus}`}>
           <div className="container">
             <SectionTitle icon="fas fa-compress-arrows-alt">
-              <FormattedHTMLMessage id="Entity.lastEntityFocus.title" defaultMessage="Entity.lastEntityFocus.title" />
+              <FormattedHTMLMessage id="Entity.Section.LastEntityFocus.label" />
             </SectionTitle>
           </div>
         </section>
