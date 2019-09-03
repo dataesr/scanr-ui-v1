@@ -46,7 +46,7 @@ class Localisation extends Component {
     const mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
 
     return (
-      <div className="col-6">
+      <div className="col-md-6">
         <div className={classes.Localisation}>
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>

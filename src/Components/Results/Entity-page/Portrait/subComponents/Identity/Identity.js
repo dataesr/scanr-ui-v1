@@ -45,7 +45,7 @@ class Identity extends Component {
     const acronym = getSelectKey(this.props, 'acronym', this.props.language, 'fr');
 
     return (
-      <div className="col-6">
+      <div className="col-md-6">
         <div className={classes.Identity}>
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
