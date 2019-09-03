@@ -112,6 +112,7 @@ class Portrait extends Component {
                   language={this.props.language}
                   socialMedias={this.props.data.socialMedias}
                   websites={this.props.data.websites}
+                  links={this.props.data.links}
                 />
 
               </div>
