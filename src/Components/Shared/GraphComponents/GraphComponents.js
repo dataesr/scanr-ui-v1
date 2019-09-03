@@ -5,27 +5,11 @@ import loadable from '@loadable/component';
 
 import classes from './GraphComponents.scss';
 
-/**
- * GraphComponents component <br/>
- * Url : . <br/>
- * Description : Choix du graph à afficher en fonction de l'id et de focus.jspn <br/>
- * Responsive : . <br/>
- * Accessible : . <br/>
- * Tests unitaires : . <br/>
- */
 
 export default class DisplayComponent extends Component {
   constructor(props) {
     super(props);
     this.BlockComponent = null;
-  }
-
-  createTags = () => {
-    const table = [];
-    for (let i = 0; i < this.props.tags.length; i += 1) {
-      table.push(<td>{this.props.tags[i]}</td>);
-    }
-    return table;
   }
 
   render() {
@@ -53,13 +37,13 @@ export default class DisplayComponent extends Component {
       }
 
       const TitleComponent = () => (
-        <div>
-          <p className={`${classes.Title}`}>
+        <div className="p-4">
+          <div className={classes.Title}>
             {this.props.title}
-          </p>
-          <p className={`${classes.Subtitle}`}>
+          </div>
+          <div className={`${classes.Subtitle}`}>
             {this.props.subtitle}
-          </p>
+          </div>
           {
           // <p className={`${classes.Title}`}>
           //   {this.createTags()}
@@ -68,7 +52,7 @@ export default class DisplayComponent extends Component {
         </div>
       );
       this.BlockComponent = () => (
-        <div style={{ backgroundColor: 'white' }}>
+        <div>
           <TitleComponent />
           <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} />
           {
@@ -83,11 +67,14 @@ export default class DisplayComponent extends Component {
         <p>{txt}</p>
       );
     }
-    return (
-      <div style={{ backgroundColor: 'white' }}>
-        <this.BlockComponent style={{ backgroundColor: 'white' }} />
-      </div>
-    );
+    if (this.props.data !== []) {
+      return (
+        <div className={`w-100 ${classes.graphCard}`}>
+          <this.BlockComponent />
+        </div>
+      );
+    }
+    return null;
   }
 }
 
@@ -96,6 +83,5 @@ DisplayComponent.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.any,
 };

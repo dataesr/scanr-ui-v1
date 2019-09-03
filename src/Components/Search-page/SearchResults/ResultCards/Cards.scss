@@ -1,28 +1,51 @@
 @import '../../../../style.scss';
 
-.cardIsLeft {
-  padding: 0;
-  padding-right: 4px;
-  margin: 0;
+.card {
+  flex: 0 1 calc(50% - 4px);
+  align-self: stretch;
+}
+@media screen and (max-width: 991px) {
+  .card {
+    flex: 0 1 100%;
+  }
 }
 
-.cardIsRight {
-  padding: 0;
-  padding-left: 4px;
-  margin: 0;
-}
 .GreyTitle {
-  color: $scanrmiddlegreyColor !important
+  color: $scanrmiddlegreyColor !important;
 }
 .TextOverflow {
   text-overflow: ellipsis;
 }
+.Highlights {
+  font-size: 0.8em;
+}
+
+.Tags {
+  color: $scanrelectricblueColor;
+  font-weight: 500;
+  font-size: 0.9em
+}
+.UnknownData {
+  color: $scanrgreyColor;
+  font-style: italic;
+  font-size: 0.852em;
+}
+.Capitalised {
+  font-style: italic;
+  line-height: 1;
+}
+.FoundIn {
+  font-size: 0.8em;
+  font-weight: 600;
+}
 .ResultCard {
   background-color: white;
   color: $scanrdeepblueColor;
-  height: 325px;
+  min-height: 275px;
+  height: calc(100% - 8px);
   border-radius: 8px;
   margin-bottom: 8px;
+  font-size: 0.90em;
 
   .CardHeader {
     color: $scanrdeepblueColor;
@@ -37,10 +60,9 @@
   }
 
   .Icons {
-      font-size: 1em;
+      font-size: 1.1em;
       color: $scanrblueColor;
-      width: 28px;
-      text-align: center;
+      min-width: 28px !important;
   }
 
   .CardFooter {

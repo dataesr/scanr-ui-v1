@@ -37,16 +37,11 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
-    const typeFacets = this.props.data.find(item => item.id === 'facet_natures') || { entries: [] };
-    // const UUFacets = this.props.data.find(item => item.id === 'facet_urban_hits') || { entries: [] };
-    // const UrbanUnitData = {
-    //   labels: UUFacets.entries.slice(0, 10).map(item => (item.value)),
-    //   values: UUFacets.entries.slice(0, 10).map(item => (item.count)),
-    // };
-    const NaturesData = {
-      labels: typeFacets.entries.slice(0, 10).map(item => (item.value)),
-      values: typeFacets.entries.slice(0, 10).map(item => (item.count)),
+    const data = {
+      labels: this.data.entries.map(item => (item.value)),
+      values: this.data.entries.map(item => (item.count)),
     };
+
     const unit = 'unité';
     const options = {
       chart: {
@@ -61,7 +56,7 @@ export default class HighChartsBar extends Component {
       },
       xAxis: {
         lineWidth: 0,
-        categories: NaturesData.labels,
+        categories: data.labels,
         labels:
         {
           style: { color: '#000000' },
@@ -98,7 +93,7 @@ export default class HighChartsBar extends Component {
       series: [{
         color: '#FDD85E',
         name: unit,
-        data: NaturesData.values,
+        data: data.values,
         borderRadiusTopLeft: '80%',
         borderRadiusTopRight: '80%',
         borderRadiusBottomLeft: '80%',
@@ -138,32 +133,42 @@ export default class HighChartsBar extends Component {
   }
 
   render() {
-    const btnShare = {
-      paddingLeft: '5px',
-      paddingRight: '10px',
-      color: '#3778bb',
-      cursor: 'not-allowed',
-    };
-    const btnExport = {
-      color: '#3778bb',
-    };
     const ShareComponent = () => (
-      <div style={{ overflow: 'hidden', paddingLeft: '2%' }}>
-        <hr />
-        <div style={{ float: 'left' }}>
-          <p className={`${classes.BtnTxt}`}>Partager</p>
-          <i style={btnShare} className="fas fa-share-alt-square fa-lg" />
-          <p className={`${classes.BtnTxt}`}>Intégrer le code</p>
-          <i style={btnShare} className="fas fa-code fa-lg" />
+      <div className={`d-flex flex-nowrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
+        <div className="mr-auto d-flex align-items-center">
+          <div className="pr-1 d-flex align-items-center">
+            <span className="pr-2">Partager</span>
+            <button type="button" className={classes.Button}>
+              <i className="fas fa-share-alt-square" />
+            </button>
+          </div>
+          <div className="pr-1 d-flex align-items-center">
+            <span className="pr-2 pl-3">Intégrer le code</span>
+            <button type="button" className={classes.Button}>
+              <i className="fas fa-code" />
+            </button>
+          </div>
         </div>
-        <div style={{ float: 'right' }}>
-          <p className={`${classes.BtnTxt}`}><b>Télécharger</b></p>
-          <button type="button" onClick={this.exportChartPdf} className={`${classes.Button}`}><i style={btnExport} className="fas fa-file-pdf fa-lg" /></button>
-          <p className={`${classes.BtnTxt}`}>.pdf</p>
-          <button type="button" onClick={this.exportChartPng} className={`${classes.Button}`}><i style={btnExport} className="fas fa-image fa-lg" /></button>
-          <p className={`${classes.BtnTxt}`}>.png</p>
-          <button type="button" onClick={this.exportChartCsv} className={`${classes.Button}`}><i style={btnExport} className="fas fa-table fa-lg" /></button>
-          <p className={`${classes.BtnTxt}`}>.csv</p>
+        <div className="d-flex align-items-center">
+          <div className="pr-2">Télécharger:</div>
+          <div className="pr-1 d-flex align-items-center">
+            <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
+              <i className="fas fa-file-pdf" />
+            </button>
+            <span className="pr-1">.pdf</span>
+          </div>
+          <div className="pr-1 d-flex align-items-center">
+            <button type="button" onClick={this.exportChartPng} className={classes.Button}>
+              <i className="fas fa-image" />
+            </button>
+            <span className="pr-1">.png</span>
+          </div>
+          <div className="pr-1 d-flex align-items-center">
+            <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
+              <i className="fas fa-table" />
+            </button>
+            <span>.csv</span>
+          </div>
         </div>
       </div>
     );
@@ -173,13 +178,15 @@ export default class HighChartsBar extends Component {
           this.state.options !== null
             ? (
               <div>
-                <div style={{ paddingLeft: '5%' }}>
+                <hr className={classes.HorizontalBar} />
+                <div className="pl-4">
                   <HighchartsReact
                     highcharts={Highcharts}
                     options={this.state.options}
                     ref={this.chart}
                   />
                 </div>
+                <hr className={classes.HorizontalBar} />
                 <ShareComponent />
               </div>
             )
@@ -190,7 +197,11 @@ export default class HighChartsBar extends Component {
   }
 }
 
+HighChartsBar.defaultProps = {
+  data: { entries: [] },
+};
+
 HighChartsBar.propTypes = {
   filename: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
 };

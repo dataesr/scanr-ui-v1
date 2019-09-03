@@ -1,17 +1,22 @@
 @import '../../../style.scss';
 
-.HomePage{
-  padding: 0;
-  background-color: #fff;
+.graphCard {
+  background-color: white;
+  color: $scanrdeepblueColor;
+  border-radius: 8px;
+  margin-bottom: 8px;
 }
 
-.HomePageLexiconTop{
-  top: 80px;
+.HorizontalBar {
+  padding: 0;
+  margin: 0;
+}
+
+.ShareComponent {
+  color: $scanrgreyColor
 }
 
 .Title {
-  padding-top: 20px;
-  padding-left: 2%;
   color: #003259;
   font-family: "lato";
   font-size: 1.5em;
@@ -19,20 +24,24 @@
 }
 
 .Subtitle {
-  padding-left: 2%;
   display: inline-block;
   color: #4C6F8B;
 }
 
- .Button {
-   display: inline-block;
-   background-color: white;
-   border: none;
-   cursor: pointer;
- }
+.Button {
+  display: inline-block;
+  background-color: $scanrblueColor;
+  border: 0;
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
 
- .BtnTxt {
-   display: inline-block;
-   color: #4C6F8B;
-   padding-right: 10px;
- }
+.BtnTxt {
+  display: inline-block;
+  color: #4C6F8B;
+  padding-right: 2px;
+  font-weight: 600;
+}

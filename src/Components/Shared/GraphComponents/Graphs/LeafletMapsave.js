@@ -33,27 +33,13 @@ type State = {
   zoom: number,
 }
 
-const createMarkers = (pos) => {
-  const markers = [];
-  pos.forEach((element) => {
-    try {
-      markers.push(
-        <Marker icon={yellowIcon} position={element.position} key={element.id}>
-          <Tooltip>{element.infos.map(info => (<div>{info}</div>))}</Tooltip>
-        </Marker>,
-      );
-    } catch (error) {
-      // eslint-disable-no-empty
-    }
-  });
-  return markers;
-};
-
 // export default class SimpleExample extends Component<{}, State> {
 class LeafletMap extends Component<{}, State> {
   constructor(props) {
     super(props);
     this.print = this.print.bind(this);
+    this.data = [];
+    this.label = [];
     this.exportChartPng = this.exportChartPng.bind(this);
     this.state = {
       lat: 46.5,
@@ -71,17 +57,15 @@ class LeafletMap extends Component<{}, State> {
   }
 
   render() {
-    if (!this.props.data) {
-      return (<p>Pas de données géographiques.</p>);
+    if (!this.props.data.results) {
+      return null;
     }
     const position = [this.state.lat, this.state.lng];
-    const markers = createMarkers(this.props.data);
     // const printOptions = {
     //   position: 'topleft',
     //   sizeModes: ['Current', 'A4Portrait', 'A4Landscape'],
     //   hideControlContainer: false
     // };
-    console.log('markers', markers);
     const downloadOptions = {
       position: 'bottomright',
       filename: this.props.filename,
@@ -119,15 +103,35 @@ class LeafletMap extends Component<{}, State> {
       </div>
     );
 
+    const pos = this.props.data.results;
+
+    pos.forEach((element) => {
+      const tmp = [];
+      try {
+        tmp.push(element.value.address[0].gps.lat);
+        tmp.push(element.value.address[0].gps.lon);
+        this.data.push(tmp);
+        this.label.push(element.value.label.fr);
+      } catch (error) { // eslint-disable-no-empty
+      }
+    });
+    this.createMarkers = () => {
+      const markers = [];
+      for (let i = 0; i < this.data.length; i += 1) {
+        markers.push(<Marker icon={yellowIcon} position={this.data[i]}><Tooltip>{this.label[i]}</Tooltip></Marker>);
+      }
+      console.log("markers", markers);
+      return markers;
+    };
     return (
-      <div>
+      <div style={{ marginLeft: 'auto', marginRight: 'auto', width: 'auto' }}>
         <Map zoomControl={false} center={position} zoom={this.state.zoom} style={{ height: '40vh' }} minZoom={2} maxZoom={19}>
           <TileLayer
             attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
           />
           <MarkerClusterGroup maxClusterRadius={20}>
-            {markers}
+            {this.createMarkers()}
           </MarkerClusterGroup>
           <ZoomControl position="bottomleft" />
           {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} /> */}

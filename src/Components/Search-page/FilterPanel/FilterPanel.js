@@ -15,6 +15,7 @@ import PublicationsFilters from './ObjectsFilters/PublicationsFilters';
 import ActiveFilterCard from './ActiveFilterCard/ActiveFilterCard';
 
 const ResultsToShow = {
+  all: null,
   structures: EntityFilters,
   projects: ProjectsFilters,
   persons: PersonsFilters,
@@ -28,30 +29,32 @@ const FilterPanel = (props) => {
   };
 
   const ToShow = ResultsToShow[props.api];
-
-  return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className="row d-flex flex-column">
-        <ActiveFilterCard
-          language={props.language}
-          filters={props.filters}
-          multiValueFilterHandler={props.multiValueFilterHandler}
-        />
-        <div className={`p-3 mb-2 mr-1 ${classes.FiltersContainer}`}>
-          <div className={classes.FilterHeaders}>
-            <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
-          </div>
-          <ToShow
+  if (ToShow) {
+    return (
+      <IntlProvider locale={props.language} messages={messages[props.language]}>
+        <div className="d-flex flex-column">
+          <ActiveFilterCard
             language={props.language}
-            facets={props.facets}
-            generalFacets={props.generalFacets}
             filters={props.filters}
             multiValueFilterHandler={props.multiValueFilterHandler}
           />
+          <div className={`p-3 mb-2 ${classes.FiltersContainer}`}>
+            <div className={classes.FilterHeaders}>
+              <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
+            </div>
+            <ToShow
+              language={props.language}
+              facets={props.facets}
+              generalFacets={props.generalFacets}
+              filters={props.filters}
+              multiValueFilterHandler={props.multiValueFilterHandler}
+            />
+          </div>
         </div>
-      </div>
-    </IntlProvider>
-  );
+      </IntlProvider>
+    );
+  }
+  return null;
 };
 
 export default FilterPanel;
