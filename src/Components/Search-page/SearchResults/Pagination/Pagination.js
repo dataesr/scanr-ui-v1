@@ -35,7 +35,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(1)}
-            onKeypress={() => props.paginationHandler(1)}
+            onKeyPress={() => props.paginationHandler(1)}
             role="button"
             tabIndex={0}
           >
@@ -44,7 +44,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(2)}
-            onKeypress={() => props.paginationHandler(2)}
+            onKeyPress={() => props.paginationHandler(2)}
             role="button"
             tabIndex={0}
           >
@@ -53,7 +53,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(3)}
-            onKeypress={() => props.paginationHandler(3)}
+            onKeyPress={() => props.paginationHandler(3)}
             role="button"
             tabIndex={0}
           >
@@ -68,7 +68,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(pageCurrent - 2)}
-            onKeypress={() => props.paginationHandler(pageCurrent - 2)}
+            onKeyPress={() => props.paginationHandler(pageCurrent - 2)}
             role="button"
             tabIndex={0}
           >
@@ -77,7 +77,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(pageCurrent - 1)}
-            onKeypress={() => props.paginationHandler(pageCurrent - 1)}
+            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
             role="button"
             tabIndex={0}
           >
@@ -92,7 +92,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler(pageCurrent - 1)}
-            onKeypress={() => props.paginationHandler(pageCurrent - 1)}
+            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
             role="button"
             tabIndex={0}
           >
@@ -109,7 +109,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(1)}
-          onKeypress={() => props.paginationHandler(1)}
+          onKeyPress={() => props.paginationHandler(1)}
           role="button"
           tabIndex={0}
         >
@@ -119,7 +119,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(pageCurrent - 2)}
-          onKeypress={() => props.paginationHandler(pageCurrent - 2)}
+          onKeyPress={() => props.paginationHandler(pageCurrent - 2)}
           role="button"
           tabIndex={0}
         >
@@ -128,7 +128,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(pageCurrent - 1)}
-          onKeypress={() => props.paginationHandler(pageCurrent - 1)}
+          onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
           role="button"
           tabIndex={0}
         >
@@ -145,7 +145,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 3))}
-            onKeypress={() => props.paginationHandler((lastIndex - 3))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 3))}
             role="button"
             tabIndex={0}
           >
@@ -154,7 +154,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 2))}
-            onKeypress={() => props.paginationHandler((lastIndex - 2))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 2))}
             role="button"
             tabIndex={0}
           >
@@ -163,7 +163,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeypress={() => props.paginationHandler((lastIndex - 1))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
             role="button"
             tabIndex={0}
           >
@@ -178,7 +178,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 2))}
-            onKeypress={() => props.paginationHandler((lastIndex - 2))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 2))}
             role="button"
             tabIndex={0}
           >
@@ -187,7 +187,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeypress={() => props.paginationHandler((lastIndex - 1))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
             role="button"
             tabIndex={0}
           >
@@ -202,7 +202,7 @@ const Pagination = (props) => {
           <div
             className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
             onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeypress={() => props.paginationHandler((lastIndex - 1))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
             role="button"
             tabIndex={0}
           >
@@ -219,7 +219,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(pageCurrent + 1)}
-          onKeypress={() => props.paginationHandler(pageCurrent + 1)}
+          onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
           role="button"
           tabIndex={0}
         >
@@ -228,7 +228,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(pageCurrent + 2)}
-          onKeypress={() => props.paginationHandler(pageCurrent + 2)}
+          onKeyPress={() => props.paginationHandler(pageCurrent + 2)}
           role="button"
           tabIndex={0}
         >
@@ -238,7 +238,7 @@ const Pagination = (props) => {
         <div
           className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
           onClick={() => props.paginationHandler(lastIndex)}
-          onKeypress={() => props.paginationHandler(lastIndex)}
+          onKeyPress={() => props.paginationHandler(lastIndex)}
           role="button"
           tabIndex={0}
         >
@@ -268,7 +268,7 @@ const Pagination = (props) => {
         <div
           className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
           onClick={() => props.paginationHandler(pageCurrent - 1)}
-          onKeypress={() => props.paginationHandler(pageCurrent - 1)}
+          onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
           role="button"
           tabIndex={0}
         >
@@ -288,7 +288,7 @@ const Pagination = (props) => {
         <div
           className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
           onClick={() => props.paginationHandler(pageCurrent + 1)}
-          onKeypress={() => props.paginationHandler(pageCurrent + 1)}
+          onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
           role="button"
           tabIndex={0}
         >
