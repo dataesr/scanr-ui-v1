@@ -27,7 +27,7 @@ const HeaderTitle = props => (
     <section className={classes.HeaderTitle}>
       <div className="container">
         <div className="row">
-          <div className="col-9">
+          <div className="col-md-9">
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className={classes['breadcrumb-item']}>
@@ -43,7 +43,7 @@ const HeaderTitle = props => (
               {props.label}
             </div>
           </div>
-          <div className="col-3 pr-0">
+          <div className={`col pr-0 ${classes.ColToDelete}`}>
             <div className={`form-group ${classes.NavBox}`}>
               {/* eslint-disable-next-line */}
               <label htmlFor="headerTitleSelect">

@@ -54,4 +54,10 @@ LABEL {
   .NavBox {
     display: none;
   }
+  OL {
+    margin-top: 0 !important;
+  }
+  .ColToDelete {
+    display: none;
+  }
 }
