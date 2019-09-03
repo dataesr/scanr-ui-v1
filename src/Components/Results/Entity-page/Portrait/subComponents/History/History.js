@@ -35,7 +35,7 @@ class History extends Component {
       en: messagesEn,
     };
     return (
-      <div className="col-6">
+      <div className="col-md-6">
         <div className={classes.History}>
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>

@@ -130,7 +130,7 @@ class Network extends Component {
             <div className="row">
               {
                 (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
-                  <div className={`col-4 ${classes.NoSpace}`}>
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
                     <SimpleCountListCard
                       language={this.props.language}
                       data={this.props.data.institutions}
@@ -148,7 +148,7 @@ class Network extends Component {
               }
               {
                 (this.props.data.children && this.props.data.children.length > 0) ? (
-                  <div className={`col-4 ${classes.NoSpace}`}>
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
                     <SimpleCountListCard
                       language={this.props.language}
                       data={this.props.data.children}
@@ -166,7 +166,7 @@ class Network extends Component {
               }
               {
                 (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
-                  <div className={`col-4 ${classes.NoSpace}`}>
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
                     <SimpleCountListCard
                       language={this.props.language}
                       data={this.state.dataSupervisorOf}
