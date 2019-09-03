@@ -1,11 +1,13 @@
 import React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+import messagesEntityFr from '../translations/fr.json';
+import messagesEntityEn from '../translations/en.json';
 
 /* SCSS */
 import classes from './HeaderTitle.scss';
@@ -15,12 +17,17 @@ const messages = {
   en: messagesEn,
 };
 
+const messagesEntity = {
+  fr: messagesEntityFr,
+  en: messagesEntityEn,
+};
+
 const HeaderTitle = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section className={classes.HeaderTitle}>
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-9">
             <nav aria-label="breadcrumb">
               <ol className="breadcrumb">
                 <li className={classes['breadcrumb-item']}>
@@ -32,32 +39,28 @@ const HeaderTitle = props => (
                 <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>Entité</li>
               </ol>
             </nav>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-9">
             <div className={classes.Title}>
               {props.label}
             </div>
           </div>
           <div className="col-3 pr-0">
-            <div className="form-group">
+            <div className={`form-group ${classes.NavBox}`}>
               {/* eslint-disable-next-line */}
               <label htmlFor="headerTitleSelect">
-                Naviguer par thème
+                <FormattedHTMLMessage id="HeaderTitle.label1" />
+
                 <select id="headerTitleSelect" className="form-control form-control-lg">
-                  <option value="Portrait">Portrait</option>
-                  <option value="Network">Appartenance, réseau</option>
-                  <option value="Team">Equipe</option>
-                  <option value="Projects">Projets</option>
-                  <option value="Productions">Productions</option>
-                  <option value="Ecosystem">Ecosystème</option>
-                  <option value="Awards">Certifications & Prix</option>
-                  <option value="SimilarEntities">Entités similaires</option>
-                  <option value="LastEntityFocus">Derniers focus de l&#39;entité</option>
+                  <option value="Portrait">{messagesEntity[props.language]['Entity.Section.Portrait.label']}</option>
+                  <option value="Network">{messagesEntity[props.language]['Entity.Section.Network.label']}</option>
+                  <option value="Team">{messagesEntity[props.language]['Entity.Section.Team.label']}</option>
+                  <option value="Projects">{messagesEntity[props.language]['Entity.Section.Projects.label']}</option>
+                  <option value="Productions">{messagesEntity[props.language]['Entity.Section.Productions.label']}</option>
+                  <option value="Ecosystem">{messagesEntity[props.language]['Entity.Section.Ecosystem.label']}</option>
+                  <option value="Awards">{messagesEntity[props.language]['Entity.Section.Awards.label']}</option>
+                  <option value="SimilarEntities">{messagesEntity[props.language]['Entity.Section.SimilarEntities.label']}</option>
+                  <option value="LastEntityFocus">{messagesEntity[props.language]['Entity.Section.LastEntityFocus.label']}</option>
                 </select>
               </label>
-
             </div>
           </div>
         </div>
