@@ -4,7 +4,6 @@
   background-color: $bgHeaderTitle;
   border-bottom: solid rgb(0, 33, 59);
   padding-top: 85px;
-
   .Title {
     font-size: $sizeHeaderTitle;
     color: $colorHeaderTitle;
@@ -13,30 +12,26 @@
     padding-bottom: 30px;
     padding-left: 16px;
   }
-
   .img {
     position: absolute;
     margin-left: 8px;
     max-width: 250px;
     min-width: 100px;
   }
-
   OL {
     background-color: transparent;
     padding-left: 0;
     margin: 0;
   }
-
   A {
     color: $colorHeaderTitle;
   }
-
   .ItemActive {
     font-weight: bold;
     color: $colorHeaderTitle;
   }
-
 }
+
 .breadcrumb-item+.breadcrumb-item::before {
   display: inline-block;
   padding-right: .5rem;
@@ -44,7 +39,6 @@
   color: #f8f9fa !important;
   content: "/";
 }
-
 LABEL {
   color: $colorHeaderTitle;
   font-weight: bold;
@@ -52,7 +46,12 @@ LABEL {
 }
 
 @media (max-width: 1540px) {
-  OL {
+  OL, .NavBox {
     margin-top: 30px !important;
+  }
+}
+@media (max-width: 991px) {
+  .NavBox {
+    display: none;
   }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
@@ -24,6 +24,16 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
+  const getMainWebSite = () => {
+    if (!props.links) { return null; }
+    for (let i = 0; i < props.links.length; i += 1) {
+      if (props.links[i].type === 'main') {
+        return props.links[i].url;
+      }
+    }
+    return null;
+  };
+
   const getSocialMediaButton = (socialMedia) => {
     let suffixUrl = null;
     if (props.socialMedias) {
@@ -110,52 +120,60 @@ const Web = (props) => {
     return null;
   };
 
-  let mainWebSiteUrl = null;
-  if (props.websites) {
-    mainWebSiteUrl = (props.websites.length > 0 && props.websites[0].baseURL) ? props.websites[0].baseURL : null;
-  }
+  // let mainWebSiteUrl = null;
+  // if (props.websites) {
+  //   mainWebSiteUrl = (props.websites.length > 0 && props.websites[0].baseURL) ? props.websites[0].baseURL : null;
+  // }
+  const mainWebSiteUrl = getMainWebSite();
 
   return (
-    <div className="col-12">
-      <div className={classes.Web}>
-        <div className="row">
-          <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.web.title']} />
-          </div>
-        </div>
+    <Fragment>
+      {
+        (mainWebSiteUrl)
+          ? (
+            <div className="col-12">
+              <div className={classes.Web}>
+                <div className="row">
+                  <div className={`col ${classes.NoSpace}`}>
+                    <CardsTitle title={messages[props.language]['Entity.portrait.web.title']} />
+                  </div>
+                </div>
 
-        <div className="row">
-          <div className={`col-3 ${classes.NoSpace}`}>
-            <div className={`container row ${classes.NoSpace}`}>
-              {
-                (mainWebSiteUrl)
-                  ? (
-                    <div className={`col-12 ${classes.NoSpace}`}>
-                      <MainWebSiteButton
-                        language={props.language}
-                        url={mainWebSiteUrl}
-                      />
+                <div className="row">
+                  <div className={`col-3 ${classes.NoSpace}`}>
+                    <div className={`container row ${classes.NoSpace}`}>
+                      {
+                        (mainWebSiteUrl)
+                          ? (
+                            <div className={`col-12 ${classes.NoSpace}`}>
+                              <MainWebSiteButton
+                                language={props.language}
+                                url={mainWebSiteUrl}
+                              />
+                            </div>
+                          ) : null
+                      }
+
+                      {getSocialMediaButton('dailymotion')}
+                      {getSocialMediaButton('facebook')}
+                      {getSocialMediaButton('flickr')}
+                      {getSocialMediaButton('instagram')}
+                      {getSocialMediaButton('linkedin')}
+                      {getSocialMediaButton('pinterest')}
+                      {getSocialMediaButton('snappchat')}
+                      {getSocialMediaButton('soundcloud')}
+                      {getSocialMediaButton('twitter')}
+                      {getSocialMediaButton('viadeo')}
+                      {getSocialMediaButton('youtube')}
+
                     </div>
-                  ) : null
-              }
-
-              {getSocialMediaButton('dailymotion')}
-              {getSocialMediaButton('facebook')}
-              {getSocialMediaButton('flickr')}
-              {getSocialMediaButton('instagram')}
-              {getSocialMediaButton('linkedin')}
-              {getSocialMediaButton('pinterest')}
-              {getSocialMediaButton('snappchat')}
-              {getSocialMediaButton('soundcloud')}
-              {getSocialMediaButton('twitter')}
-              {getSocialMediaButton('viadeo')}
-              {getSocialMediaButton('youtube')}
-
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          ) : null
+      }
+    </Fragment>
   );
 };
 
@@ -165,4 +183,5 @@ Web.propTypes = {
   language: PropTypes.string.isRequired,
   socialMedias: PropTypes.array,
   websites: PropTypes.array,
+  links: PropTypes.array,
 };

@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 
+import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import SimpleCountListCard from '../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
 
@@ -12,9 +13,17 @@ import getSelectKey from '../../../../Utils/getSelectKey';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import messagesEntityFr from '../translations/fr.json';
+import messagesEntityEn from '../translations/en.json';
+
 import { API_STRUCTURES_END_POINT } from '../../../../config/config';
 
 import classes from './Network.scss';
+
+const messagesEntity = {
+  fr: messagesEntityFr,
+  en: messagesEntityEn,
+};
 
 /**
  * Network
@@ -73,26 +82,42 @@ class Network extends Component {
     console.log('catch : ', error, info);
   }
 
-  renderTitle = messages => (
+  renderTitle = () => (
     <Fragment>
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className="container">
-          <SectionTitle icon="fas fa-network-wired" modifyModeHandle={this.modifyModeHandle} modifyMode={this.state.modifyMode}>
-            <FormattedHTMLMessage id="Entity.network.title" defaultMessage="Entity.network.title" />
-          </SectionTitle>
-        </div>
-      </IntlProvider>
+      <div className="container">
+        <SectionTitle icon="fas fa-network-wired" modifyModeHandle={this.modifyModeHandle} modifyMode={this.state.modifyMode}>
+          {messagesEntity[this.props.language]['Entity.Section.Network.label']}
+        </SectionTitle>
+      </div>
     </Fragment>
   );
 
   renderEmptySection = messages => (
     <Fragment>
-      {this.renderTitle(messages)}
-      <div className={`container ${classes.EmptySection}`}>
-        Cette section est vide
-        <br />
-        Vous pouvez nous suggérer des informations en appuyant sur le bouton &#34;Enrichir/Corriger&#34; ci-dessus
-      </div>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <section className={`container-fluid ${classes.Network}`}>
+          <div className="container">
+            <SectionTitle
+              icon="fas fa-th"
+              modifyModeHandle={this.modifyModeHandle}
+              modifyMode={this.state.modifyMode}
+              emptySection
+            >
+              {messagesEntity[this.props.language]['Entity.Section.Network.label']}
+            </SectionTitle>
+            <div className="row">
+              <div className="col">
+                <EmptySection
+                  language={this.props.language}
+                  masterKey="Network"
+                  modifyMode={this.state.modifyMode}
+                  modifyModeHandle={this.modifyModeHandle}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </IntlProvider>
     </Fragment>
   );
 
@@ -114,8 +139,9 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.title']}
-                      masterKey="network.institutions"
+                      masterKey={`${this.props.id}.institutions`}
                       modifyMode={this.state.modifyMode}
+                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -131,8 +157,9 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey="network.children"
+                      masterKey={`${this.props.id}.children`}
                       modifyMode={this.state.modifyMode}
+                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -149,8 +176,9 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey="network.dataSupervisorOf"
+                      masterKey={`${this.props.id}.dataSupervisorOf`}
                       modifyMode={this.state.modifyMode}
+                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -169,11 +197,12 @@ class Network extends Component {
       en: messagesEn,
     };
 
-
+    const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
+    const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
-        && (this.props.data.children && this.props.data.children.length === 0)
-        && (this.props.data.institutions && this.props.data.institutions.length))) {
+        && childrenHasNoData
+        && institutionsHasNoData)) {
       return this.renderEmptySection(messages);
     }
 
@@ -186,4 +215,5 @@ export default Network;
 Network.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };

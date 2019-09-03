@@ -1,5 +1,4 @@
-import React from 'react';
-// import Axios from 'axios';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
@@ -24,65 +23,91 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const Identity = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
+class Identity extends Component {
+  state = {
+    modifyMode: false,
+  }
 
-  // nom
-  const name = getSelectKey(props, 'name', props.language, 'fr');
+  modifyModeHandle = () => {
+    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
+  }
 
-  // acronym
-  const acronym = getSelectKey(props, 'acronym', props.language, 'fr');
+  render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
 
-  return (
-    <div className="col-6">
-      <div className={classes.Identity}>
-        <div className="row">
-          <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
-          </div>
-        </div>
+    // nom
+    const name = getSelectKey(this.props, 'name', this.props.language, 'fr');
 
-        <div className="row">
-          <div className={`col-lg-6 ${classes.NoSpace}`}>
-            <SimpleCard
-              logo="fas fa-id-card"
-              title={messages[props.language]['Entity.portrait.identity.name']}
-              label={`${name}${acronym}`}
-              tooltip=""
-            />
+    // acronym
+    const acronym = getSelectKey(this.props, 'acronym', this.props.language, 'fr');
+
+    return (
+      <div className="col-6">
+        <div className={classes.Identity}>
+          <div className="row">
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={messages[this.props.language]['Entity.portrait.identity.title']} />
+            </div>
           </div>
-          <div className={`col-lg-6 ${classes.NoSpace}`}>
-            <LogoCard
-              src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
-              cssClass="Height150"
-            />
-          </div>
-          <div className={`col-lg-6 ${classes.NoSpace}`}>
-            <SimpleListCard
-              logo="fas fa-qrcode"
-              title={messages[props.language]['Entity.portrait.identity.id']}
-              label={props.id}
-              list={props.externalIds}
-              labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
-              tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
-            />
-          </div>
-          <div className={`col-lg-6 ${classes.NoSpace}`}>
-            <SimpleCard
-              logo="fas fa-flask"
-              title={messages[props.language]['Entity.portrait.identity.nature']}
-              label={props.nature || ''}
-              tooltip=""
-            />
+
+          <div className="row">
+            <div className={`col-lg-6 ${classes.NoSpace}`}>
+              <SimpleCard
+                language={this.props.language}
+                logo="fas fa-id-card"
+                title={messages[this.props.language]['Entity.portrait.identity.name']}
+                label={`${name} (${acronym})`}
+                tooltip=""
+                masterKey={this.props.masterKey}
+                modifyMode={this.props.modifyMode}
+                allData={this.props.allData}
+              />
+            </div>
+            <div className={`col-lg-6 ${classes.NoSpace}`}>
+              <LogoCard
+                language={this.props.language}
+                src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${this.props.id}.png`}
+                cssClass="Height150"
+                masterKey={this.props.masterKey}
+                modifyMode={this.props.modifyMode}
+                allData={this.props.allData}
+              />
+            </div>
+            <div className={`col-lg-6 ${classes.NoSpace}`}>
+              <SimpleListCard
+                language={this.props.language}
+                logo="fas fa-qrcode"
+                title={messages[this.props.language]['Entity.portrait.identity.id']}
+                label={this.props.id}
+                list={this.props.externalIds}
+                labelListButton={messages[this.props.language]['Entity.portrait.identity.externalIdsButtons']}
+                tooltip={messages[this.props.language]['Entity.portrait.identity.id.tooltip']}
+                masterKey={this.props.masterKey}
+                modifyMode={this.props.modifyMode}
+                allData={this.props.allData}
+              />
+            </div>
+            <div className={`col-lg-6 ${classes.NoSpace}`}>
+              <SimpleCard
+                language={this.props.language}
+                logo="fas fa-flask"
+                title={messages[this.props.language]['Entity.portrait.identity.nature']}
+                label={this.props.nature || ''}
+                tooltip=""
+                masterKey={this.props.masterKey}
+                modifyMode={this.props.modifyMode}
+                allData={this.props.allData}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Identity;
 /* eslint-disable */
@@ -93,4 +118,7 @@ Identity.propTypes = {
   id: PropTypes.string,
   name: PropTypes.object,
   nature: PropTypes.string,
+  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
+  modifyMode: PropTypes.bool,
+  allData: PropTypes.object.isRequired,
 };
