@@ -33,7 +33,7 @@ const Leaders = (props) => {
   }
 
   return (
-    <div className="col-6" style={styleCss}>
+    <div className="col-md-6" style={styleCss}>
       <div className={classes.Leaders}>
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
