@@ -85,7 +85,7 @@ const SearchPanel = (props) => {
                   )}
                 </FormattedMessage>
               </div>
-              <div className="d-flex flex-column pr-1 pl-1 col-xs-hidden">
+              <div className="d-flex flex-column pr-1 pl-1">
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
                   {/* eslint-disable-next-line */}
                   { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
@@ -96,23 +96,63 @@ const SearchPanel = (props) => {
                   onChange={props.apiChangeHandler}
                 >
                   <FormattedMessage id="Search.Select.All" defaultMessage="Search.Select.All">
-                    { option => <option className={classes.btn_dark} value="All">{option}</option> }
+                    { option => (
+                      <option
+                        className={classes.btn_dark}
+                        value="All"
+                        selected={(props.api === 'all')}
+                      >
+                        {option}
+                      </option>
+                    )}
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Entities" defaultMessage="Search.Select.Entities">
-                    { option => <option className={classes.btn_dark} value="Entities">{option}</option> }
+                    { option => (
+                      <option
+                        className={classes.btn_dark}
+                        value="Structures"
+                        selected={(props.api === 'structures')}
+                      >
+                        {option}
+                      </option>
+                    )}
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Persons" defaultMessage="Search.Select.Persons">
-                    { option => <option className={classes.btn_dark} value="Persons">{option}</option> }
+                    { option => (
+                      <option
+                        className={classes.btn_dark}
+                        value="Persons"
+                        selected={(props.api === 'persons')}
+                      >
+                        {option}
+                      </option>
+                    )}
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Projects" defaultMessage="Search.Select.Projects">
-                    { option => <option className={classes.btn_dark} value="Projects">{option}</option> }
+                    { option => (
+                      <option
+                        className={classes.btn_dark}
+                        value="Projects"
+                        selected={(props.api === 'projects')}
+                      >
+                        {option}
+                      </option>
+                    )}
                   </FormattedMessage>
                   <FormattedMessage id="Search.Select.Publications" defaultMessage="Search.Select.Publications">
-                    { option => <option className={classes.btn_dark} value="Publications">{option}</option> }
+                    { option => (
+                      <option
+                        className={classes.btn_dark}
+                        value="Publications"
+                        selected={(props.api === 'publications')}
+                      >
+                        {option}
+                      </option>
+                    )}
                   </FormattedMessage>
                 </select>
               </div>
-              <div className="d-flex flex-column mr-4 pr-0 pl-1">
+              <div className="d-flex flex-column pr-0 pl-1">
                 <button
                   type="submit"
                   className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}

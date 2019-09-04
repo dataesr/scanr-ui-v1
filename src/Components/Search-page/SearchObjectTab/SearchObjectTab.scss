@@ -1,17 +1,23 @@
 @import '../../../style.scss';
 
 
-.Section {
-  padding: 16px;
-  padding-bottom: 8px;
-}
-@media screen and (max-width: 993px) {
-  .Section {
-    display: none;
+@media screen and (max-width: 991px) {
+  .ObjNav {
+    display: none !important;
   }
+  .ObjetcsNavItem {
+    padding: 3px !important;
+    margin-right: 0px !important;
+    border-radius: 0px !important;
+    text-align: center;
+  }
+}
+.ObjNavMobile {
+  display: none;
 }
 
 .ObjetcsNavItem {
+  flex: 0 1 calc(15% - 5px);
   background-color: white;
   margin-right: 8px;
   border-radius: 8px;
@@ -38,16 +44,11 @@
 }
 
 .ResultsNavContainer {
-  margin-top: 8px;
-  padding-right: 4px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  right: 8px;
   background-color: $scanrdeepblueColor;
   color: white;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-
+  margin-bottom: 8px;
 }
 
 .ResultsNavItem {
@@ -63,11 +64,21 @@
     margin-right: 16px;
   }
 }
+
 .ResultsNavItemCols {
-  padding-left: 4px;
-  padding-right: 4px;
-  min-height: 36px;
+  flex: 0 1 calc(33% - 5px);
 }
+@media screen and (max-width: 991px) {
+  .ResultsNavItemCols {
+    flex: 0 1 calc(50% - 5px);
+  }
+  .ResultsNavContainer {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    margin-bottom: 8px;
+  }
+}
+
 .ResultsNavItemActive {
   background-color: $scanrblueColor;
   border-radius: 30px;

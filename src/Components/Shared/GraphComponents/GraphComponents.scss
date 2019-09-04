@@ -39,6 +39,12 @@
   color: white;
 }
 
+@media screen and (max-width: 991px) {
+  .ShareTexts {
+    display: none;
+  }
+}
+
 .BtnTxt {
   display: inline-block;
   color: #4C6F8B;

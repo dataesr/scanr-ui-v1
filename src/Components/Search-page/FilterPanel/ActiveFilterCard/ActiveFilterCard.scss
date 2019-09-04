@@ -14,6 +14,20 @@
     border-bottom-right-radius: 0px;
   }
 }
+
+.Visible {}
+.Hidden { display: none; }
+
+.ActivateFiltersBtn {
+  background-color: $scanrblueColor;
+  border: 0;
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
 .FilterHeaders {
   font-size: 1.3em;
   font-weight: 700;
