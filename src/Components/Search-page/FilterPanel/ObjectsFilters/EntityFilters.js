@@ -11,8 +11,8 @@ const EntityFilters = (props) => {
   const generalFacets = props.generalFacets || [];
   const caractActiveFilters = props.filters['badges.label.fr'] || {};
   const natureActiveFilters = props.filters.nature || {};
-  const tutellesActiveFilters = props.filters.level || {};
-  const tutellesFacets = facets.find(item => item.id === 'facet_institutions') || { entries: [] };
+  const projectsActiveFilters = props.filters.level || {};
+  const projectsFacets = facets.find(item => item.id === 'facet_projects_types') || { entries: [] };
   const natureFacets = generalFacets.find(item => item.id === 'facet_natures') || { entries: [] };
   const caractFacetsTest = facets.find(item => item.id === 'facet_badges') || { entries: [] };
   const geoFacets = facets.find(item => item.id === 'facet_localisations') || { entries: [] };
@@ -37,9 +37,9 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           title="Type de financement public"
-          facets={tutellesFacets.entries}
-          filters={tutellesActiveFilters}
-          facetID="institutions.structure.label.fr"
+          facets={projectsFacets.entries}
+          filters={projectsActiveFilters}
+          facetID="projects.project.type"
           onSubmit={props.multiValueFilterHandler}
         />
         <CheckBoxFilter
