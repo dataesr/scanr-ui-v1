@@ -11,6 +11,8 @@ import EmptySection from '../Shared/EmptySection/EmptySection';
 import Select from '../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
+import SankeyGraph from '../../../Shared/GraphComponents/Graphs/HightChartsSankey';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -244,7 +246,7 @@ class Projects extends Component {
 
   renderViewGraph = () => (
     <div className="col">
-      graph
+      <SankeyGraph />
     </div>
   );
 
