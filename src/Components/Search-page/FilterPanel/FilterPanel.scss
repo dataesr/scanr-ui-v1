@@ -10,13 +10,14 @@
 
 @media screen and (max-width: 993px) {
   .FiltersContainer {
-    margin-bottom: 0 !important;
     border-radius: 0px !important;
   }
 }
-
 
 .FilterHeaders {
   font-size: 1.3em;
   font-weight: 700;
 }
+
+.Visible { display: block; }
+.Hidden { display: none; }

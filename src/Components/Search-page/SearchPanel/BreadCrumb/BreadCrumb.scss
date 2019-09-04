@@ -1,5 +1,11 @@
 @import '../../../../style.scss';
 
+@media screen and (max-width: 991px) {
+  .BreadCrumb {
+    display: none;
+  }
+}
+
 .BreadCrumb {
   color: white;
 

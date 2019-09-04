@@ -261,10 +261,55 @@ const Pagination = (props) => {
   //     }
   //     return null;
   //   };
-
+  if (window.innerWidth > 992) {
+    return (
+      <IntlProvider locale={props.language} messages={messages[props.language]}>
+        <section className={`row mb-3 pb-3 pt-3 d-flex flex-row justify-content-end ${classes.Section}`}>
+          <div
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
+            onClick={() => props.paginationHandler(pageCurrent - 1)}
+            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
+            role="button"
+            tabIndex={0}
+          >
+            <i className="fas fa-chevron-left" />
+          </div>
+          <div className={`row d-flex justify-content-center align-items-center m-1 pr-3 ${ShouldDisabled('previous')} ${classes.NextPrevious}`}>
+            <FormattedHTMLMessage id="pagination.previous" defaultMessage="pagination.previous" />
+          </div>
+          {ShouldPrintPaginationStart()}
+          <div className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${classes.Active}`}>
+            {pageCurrent}
+          </div>
+          {ShouldPrintPaginationEnd()}
+          <div className={`row d-flex justify-content-center align-items-center m-1 pl-3 ${ShouldDisabled('next')} ${classes.NextPrevious}`}>
+            <FormattedHTMLMessage id="pagination.next" defaultMessage="pagination.next" />
+          </div>
+          <div
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
+            onClick={() => props.paginationHandler(pageCurrent + 1)}
+            onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
+            role="button"
+            tabIndex={0}
+            >
+            <i className="fas fa-chevron-right" />
+          </div>
+        </section>
+      </IntlProvider>
+    );
+  }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`row mb-3 p-3 d-flex flex-row justify-content-end ${classes.Section}`}>
+      <section className={`row mb-3 pb-3 pt-3 d-flex flex-row justify-content-center ${classes.Section}`}>
+        <div
+          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
+          onClick={() => props.paginationHandler(1)}
+          onKeyPress={() => props.paginationHandler(1)}
+          role="button"
+          tabIndex={0}
+        >
+          <i className="fas fa-angle-double-left" />
+        </div>
         <div
           className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
           onClick={() => props.paginationHandler(pageCurrent - 1)}
@@ -274,16 +319,8 @@ const Pagination = (props) => {
         >
           <i className="fas fa-chevron-left" />
         </div>
-        <div className={`row d-flex justify-content-center align-items-center m-1 pr-3 ${ShouldDisabled('previous')} ${classes.NextPrevious}`}>
-          <FormattedHTMLMessage id="pagination.previous" defaultMessage="pagination.previous" />
-        </div>
-        {ShouldPrintPaginationStart()}
         <div className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${classes.Active}`}>
-          {pageCurrent}
-        </div>
-        {ShouldPrintPaginationEnd()}
-        <div className={`row d-flex justify-content-center align-items-center m-1 pl-3 ${ShouldDisabled('next')} ${classes.NextPrevious}`}>
-          <FormattedHTMLMessage id="pagination.next" defaultMessage="pagination.next" />
+          {`${pageCurrent}/${lastIndex}`}
         </div>
         <div
           className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
@@ -293,6 +330,15 @@ const Pagination = (props) => {
           tabIndex={0}
         >
           <i className="fas fa-chevron-right" />
+        </div>
+        <div
+          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
+          onClick={() => props.paginationHandler(lastIndex)}
+          onKeyPress={() => props.paginationHandler(lastIndex)}
+          role="button"
+          tabIndex={0}
+        >
+          <i className="fas fa-angle-double-right" />
         </div>
       </section>
     </IntlProvider>

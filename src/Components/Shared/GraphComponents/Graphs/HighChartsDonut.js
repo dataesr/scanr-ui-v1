@@ -99,6 +99,13 @@ export default class HighChartsDonut extends Component {
         },
       },
     };
+    if (window.innerWidth < 992) {
+      options.legend.align = 'left';
+      options.legend.layout = 'horizontal';
+      options.legend.verticalAlign = 'bottom';
+      options.legend.itemStyle.fontSize = '11px';
+      options.legend.maxHeight = 100;
+    }
     this.setState({ options });
   }
 
