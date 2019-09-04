@@ -85,8 +85,8 @@ class Entity extends Component {
         />
         <Projects
           language={this.props.language}
-          data={this.state.data.projects}
           id="Projects"
+          structureId={this.props.match.params.id}
         />
         <Productions
           language={this.props.language}
