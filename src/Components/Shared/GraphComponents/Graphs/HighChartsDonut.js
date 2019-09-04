@@ -99,6 +99,13 @@ export default class HighChartsDonut extends Component {
         },
       },
     };
+    if (window.innerWidth < 992) {
+      options.legend.align = 'left';
+      options.legend.layout = 'horizontal';
+      options.legend.verticalAlign = 'bottom';
+      options.legend.itemStyle.fontSize = '11px';
+      options.legend.maxHeight = 100;
+    }
     this.setState({ options });
   }
 
@@ -121,40 +128,40 @@ export default class HighChartsDonut extends Component {
 
   render() {
     const ShareComponent = () => (
-      <div className={`d-flex flex-nowrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
+      <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
         <div className="mr-auto d-flex align-items-center">
           <div className="pr-1 d-flex align-items-center">
-            <span className="pr-2">Partager</span>
+            <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
           <div className="pr-1 d-flex align-items-center">
-            <span className="pr-2 pl-3">Intégrer le code</span>
+            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-code" />
             </button>
           </div>
         </div>
         <div className="d-flex align-items-center">
-          <div className="pr-2">Télécharger:</div>
+          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
               <i className="fas fa-file-pdf" />
             </button>
-            <span className="pr-1">.pdf</span>
+            <span className={`pr-1 ${classes.ShareTexts}`}>.pdf</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPng} className={classes.Button}>
               <i className="fas fa-image" />
             </button>
-            <span className="pr-1">.png</span>
+            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
               <i className="fas fa-table" />
             </button>
-            <span>.csv</span>
+            <span className={classes.ShareTexts}>.csv</span>
           </div>
         </div>
       </div>
