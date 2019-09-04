@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
+import Axios from 'axios';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
 
@@ -39,17 +40,50 @@ class Projects extends Component {
   }
 
   componentDidMount() {
-    if (this.props.data) {
-      this.sortByYear();
-    }
+    this.getData();
+    // if (this.props.data) {
+    //   this.sortByYear();
+    // }
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.data !== this.state.data && this.state.data.length > 0) {
       this.sortByYear();
-      this.createTypeFilter();
-      this.createAutocompleteData();
+      // this.createTypeFilter();
+      // this.createAutocompleteData();
     }
+  }
+
+  getData = () => {
+    //https://scanr-preprod.sword-group.com/api/v2/publications/search
+    //affiliations.id
+    const url = 'https://scanr-preprod.sword-group.com/api/v2/projects/search';
+    const data = {
+      pageSize: 5000,
+      sourceFields: ['id', 'title', 'type', 'year', 'acronym', 'duration', 'label', 'url', 'description', 'founding'],
+      filters: {
+        'participants.structure.id': {
+          type: 'MultiValueSearchFilter',
+          op: 'all',
+          values: [this.props.structureId],
+        },
+      },
+      aggregations: {
+        types: {
+          field: 'type',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 50,
+        },
+      },
+    };
+    Axios.post(url, data).then((response) => {
+      this.setState({ data: response.data.results });
+    });
   }
 
   viewModeClickHandler = (viewMode) => {
@@ -70,8 +104,8 @@ class Projects extends Component {
 
   createTypeFilter = () => {
     const typeFilter = [];
-    for (let i = 0; i < this.props.data.length; i += 1) {
-      const type = this.props.data[i].project.type;
+    for (let i = 0; i < this.state.data.length; i += 1) {
+      const type = this.state.data[i].value.type;
       const found = typeFilter.find(item => item.value === type);
       if (found) {
         found.count += 1;
@@ -87,25 +121,25 @@ class Projects extends Component {
 
   createAutocompleteData = () => {
     const autocompleteData = [];
-    for (let i = 0; i < this.props.data.length; i += 1) {
+    for (let i = 0; i < this.state.data.length; i += 1) {
       const obj = {};
       const values = [];
-      if (this.props.data[i].project.label.en) {
-        values.push(this.props.data[i].project.label.en);
+      if (this.state.data[i].value && this.state.data[i].value.label && this.state.data[i].value.label.en) {
+        values.push(this.state.data[i].value.label.en);
       }
-      if (this.props.data[i].project.label.fr) {
-        values.push(this.props.data[i].project.label.fr);
+      if (this.state.data[i].value && this.state.data[i].value.label && this.state.data[i].value.label.fr) {
+        values.push(this.state.data[i].value.label.fr);
       }
-      if (this.props.data[i].project.acronym.en) {
-        values.push(this.props.data[i].project.acronym.en);
+      if (this.state.data[i].value && this.state.data[i].value.acronym && this.state.data[i].value.acronym.en) {
+        values.push(this.state.data[i].value.acronym.en);
       }
-      if (this.props.data[i].project.acronym.fr) {
-        values.push(this.props.data[i].project.acronym.fr);
+      if (this.state.data[i].value && this.state.data[i].value.acronym && this.state.data[i].value.acronym.fr) {
+        values.push(this.state.data[i].value.acronym.fr);
       }
 
-      obj.label = getSelectKey(this.props.data[i].project, 'label', this.props.language, 'fr');
+      obj.label = getSelectKey(this.state.data[i].value, 'label', this.props.language, 'fr');
       obj.values = values;
-      obj.project = this.props.data[i];
+      obj.project = this.state.data[i];
       autocompleteData.push(obj);
     }
     this.setState({ autocompleteData });
@@ -124,9 +158,9 @@ class Projects extends Component {
     let year = null;
     const content = this.state.data.map((item) => {
       let titleYear = null;
-      if (year !== item.project.year) {
-        year = item.project.year;
-        titleYear = <div className={classes.TitleYear}>{item.project.year}</div>;
+      if (year !== item.value.year) { // Rupture sur les années
+        year = item.value.year;
+        titleYear = <div className={classes.TitleYear}>{item.value.year}</div>;
       }
 
       /* Selection du premier par defaut */
@@ -146,10 +180,10 @@ class Projects extends Component {
             tabIndex={0}
           >
             <span className={classes.Acronym}>
-              {item.project.acronym.en}
+              {item.value.acronym.default}
             </span>
             <span className={classes.Type}>
-              {item.project.type}
+              {item.value.type}
             </span>
           </div>
         </Fragment>
@@ -164,37 +198,40 @@ class Projects extends Component {
         </div>
         <div className="col-lg-7">
           {
-            (this.state.selectedProject.project)
+            (this.state.selectedProject.value)
               ? (
                 <Fragment>
                   <div className={classes.detailTitle}>
-                    {this.state.selectedProject.project.label.en}
+                    {this.state.selectedProject.value.label.en}
                   </div>
                   <hr />
                   <div className="row">
                     <div className="col">
-                      {`${this.state.selectedProject.founding.toLocaleString()} €`}
+                      {/*`${this.state.selectedProject.founding.toLocaleString()} €`*/}
+                      founding
                     </div>
                     <div className="col">
-                      {`${this.state.selectedProject.project.duration} mois`}
+                      {`${this.state.selectedProject.value.duration} mois`}
                     </div>
                   </div>
                   <div className="row">
                     <div className="col">
-                      {this.state.selectedProject.project.type}
+                      {this.state.selectedProject.type}
                     </div>
                     <div className="col">
-                      {`n°${this.state.selectedProject.project.id}`}
+                      {`n°${this.state.selectedProject.value.id}`}
                     </div>
                   </div>
                   <hr />
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eros enim, fringilla in sagittis id, dictum at purus. Morbi vitae sapien consectetur, tincidunt enim et, condimentum tellus. Praesent lobortis fringilla enim vitae porta. Sed eu est erat. In egestas venenatis blandit. Vestibulum semper luctus nisi et tincidunt. Quisque imperdiet, tortor nec porta pellentesque, ligula sem condimentum nisl, sed ullamcorper felis risus id dui. Vivamus rhoncus nisi vel ipsum porta tempus. Nunc aliquet molestie rhoncus. Vestibulum vitae nibh quis velit iaculis blandit at quis sapien.
+                  <div className={classes.Description}>
+                    {this.state.selectedProject.value.description.en}
+                  </div>
                   <hr />
                   <ButtonToPage
                     className={classes.btn_dark}
-                    url="#"
+                    url={this.state.selectedProject.value.url}
                   >
-                    Voir le projet dans scanR
+                    Voir le projet
                   </ButtonToPage>
                 </Fragment>
               )
@@ -226,7 +263,7 @@ class Projects extends Component {
       en: messagesEntityEn,
     };
 
-    if (!this.props.data) {
+    if (!this.state.data) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -271,7 +308,7 @@ class Projects extends Component {
                 <div className="col">
                   <i className="fas fa-folder-open" />
                   <span className={classes.Label}>
-                    {this.props.data.length}
+                    {this.state.data.length}
                     &nbsp;
                     {messagesEntity[this.props.language]['Entity.Section.Projects.label']}
                   </span>
@@ -307,7 +344,7 @@ class Projects extends Component {
               {/* /row */}
               <hr />
               <div className={`row ${classes.Filters}`}>
-                <div className="col">
+                <div className="col-md">
                   <Select
                     allLabel={messages[this.props.language]['Entity.projects.selectTypesFilter.allLabel']}
                     count={this.state.data.length}
@@ -317,10 +354,10 @@ class Projects extends Component {
                     onSubmit={this.setTypeFilter}
                   />
                 </div>
-                <div className="col">
+                <div className="col-md">
                   slider year
                 </div>
-                <div className="col">
+                <div className="col-md">
                   <Autocomplete
                     title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
                     placeHolder={typeFilterPlaceHolder}
@@ -354,5 +391,6 @@ export default Projects;
 
 Projects.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  // data: PropTypes.string.isRequired,
+  structureId: PropTypes.string.isRequired,
 };
