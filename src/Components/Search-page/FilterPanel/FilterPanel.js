@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -22,40 +22,64 @@ const ResultsToShow = {
   publications: PublicationsFilters,
 };
 
-const FilterPanel = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
+class FilterPanel extends Component {
+  constructor(props) {
+    super(props);
 
-  const ToShow = ResultsToShow[props.api];
-  if (ToShow) {
-    return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className="d-flex flex-column">
-          <ActiveFilterCard
-            language={props.language}
-            filters={props.filters}
-            multiValueFilterHandler={props.multiValueFilterHandler}
-          />
-          <div className={`p-3 mb-2 ${classes.FiltersContainer}`}>
-            <div className={classes.FilterHeaders}>
-              <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
-            </div>
-            <ToShow
-              language={props.language}
-              facets={props.facets}
-              generalFacets={props.generalFacets}
-              filters={props.filters}
-              multiValueFilterHandler={props.multiValueFilterHandler}
-            />
-          </div>
-        </div>
-      </IntlProvider>
-    );
+    this.state = {
+      isActive: true,
+      isMobile: (window.innerWidth < 992),
+    };
   }
-  return null;
-};
+
+  componentDidMount() {
+    if (window.innerWidth < 992) {
+      this.setState({ isActive: false });
+    }
+  }
+
+  activateFilters = (isActive) => {
+    this.setState({ isActive });
+  }
+
+  render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
+
+    const ToShow = ResultsToShow[this.props.api];
+    if (ToShow) {
+      return (
+        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+          <div className="d-flex flex-column mb-2">
+            <ActiveFilterCard
+              language={this.props.language}
+              filters={this.props.filters}
+              multiValueFilterHandler={this.props.multiValueFilterHandler}
+              isMobile={this.state.isMobile}
+              isActive={this.state.isActive}
+              activateFilters={this.activateFilters}
+            />
+            <div className={`p-3 mb-2 ${classes.FiltersContainer} ${classes[(this.state.isActive) ? 'Visible' : 'Hidden']}`}>
+              <div className={classes.FilterHeaders}>
+                <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
+              </div>
+              <ToShow
+                language={this.props.language}
+                facets={this.props.facets}
+                generalFacets={this.props.generalFacets}
+                filters={this.props.filters}
+                multiValueFilterHandler={this.props.multiValueFilterHandler}
+              />
+            </div>
+          </div>
+        </IntlProvider>
+      );
+    }
+    return null;
+  }
+}
 
 export default FilterPanel;
 

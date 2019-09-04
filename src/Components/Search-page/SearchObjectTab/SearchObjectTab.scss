@@ -5,10 +5,19 @@
   .ObjNav {
     display: none !important;
   }
+  .ObjetcsNavItem {
+    padding: 3px !important;
+    margin-right: 0px !important;
+    border-radius: 0px !important;
+    text-align: center;
+  }
+}
+.ObjNavMobile {
+  display: none;
 }
 
-
 .ObjetcsNavItem {
+  flex: 0 1 calc(15% - 5px);
   background-color: white;
   margin-right: 8px;
   border-radius: 8px;
