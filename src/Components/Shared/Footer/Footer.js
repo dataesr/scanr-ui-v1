@@ -21,14 +21,14 @@ const Footer = props => (
     <section className={classes.Footer}>
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className={`col-md ${classes.Col}`}>
             <img
               src={logo}
               alt="Logo MESRI"
               className={classes.Logo}
             />
           </div>
-          <div className="col">
+          <div className={`col-md ${classes.Col}`}>
             <ul>
               <li>
                 <a href="/opendata">
@@ -62,7 +62,7 @@ const Footer = props => (
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className={`col-md ${classes.Col}`}>
             <ul>
               <li>
                 <FormattedHTMLMessage
@@ -92,7 +92,7 @@ const Footer = props => (
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className={`col-md ${classes.Col}`}>
             <ul>
               <li>
                 <a href="/medias">
@@ -128,7 +128,7 @@ const Footer = props => (
               </li>
             </ul>
           </div>
-          <div className="col">
+          <div className={`col-md ${classes.Col}`}>
             <div>
               <a href="#">
                 <FormattedHTMLMessage
