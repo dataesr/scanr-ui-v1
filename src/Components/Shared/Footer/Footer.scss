@@ -5,7 +5,7 @@ $linkColorHover: rgb(255, 255, 255);
 
 .Footer {
   background-color: $bgFooter;
-  height: $footerHeight;
+  min-height: $footerHeight;
   padding-top: 32px;
   color: #ddd;
   font-weight: bold;
@@ -41,5 +41,21 @@ $linkColorHover: rgb(255, 255, 255);
   }
   a:active, a:hover {
     color: $linkColorHover;
+  }
+
+  .Col {
+    text-align: left;
+  }
+}
+
+@media (max-width: 991px) {
+  .Footer {
+    .Col {
+      text-align: center !important;
+    }
+    UL {
+      text-align: center !important;
+      padding-left: 0 !important;     
+    }
   }
 }
