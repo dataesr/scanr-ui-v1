@@ -119,3 +119,33 @@ HR {
 .Description {
   text-align: justify;
 }
+
+.Empty{
+  color: $scanrmiddlegreyColor;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  padding-top: 20%;
+}
+
+.RangeSlider {
+  .Title {
+    font-size: 0.9em;
+    display: inline-block;
+    padding-left: 16px;
+    padding-bottom: 0;
+    color: #4c6f8b;
+  }
+  .Slider {
+    margin-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .RangeSlider {
+    padding-bottom: 24px;
+  }
+}
