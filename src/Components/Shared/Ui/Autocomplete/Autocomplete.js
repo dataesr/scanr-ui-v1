@@ -4,13 +4,10 @@ import PropTypes from 'prop-types';
 import classes from './Autocomplete.scss';
 
 class Autocomplete extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      active: false,
-      query: '',
-    };
-  }
+  state = {
+    active: false,
+    query: '',
+  };
 
   queryTextChangeHandler = (e) => {
     this.setState({
@@ -58,21 +55,16 @@ class Autocomplete extends Component {
   }
 
   render() {
-    let filtered = [];
-    let data = this.props.data;
-    if (!this.props.data) {
-      data = [];
-    }
-    filtered = data.filter((item) => {
+    const data = this.props.data || [];
+    const filtered = data.filter((item) => {
       const founded = item.values.filter(el => (
         el.toLowerCase().indexOf(this.state.query.toLowerCase()) !== -1
       ));
-      if (founded.length > 1) {
+      if (founded.length > 0) {
         return true;
       }
       return false;
     });
-
     return (
       <div className={`d-flex flex-column mb-3 ${classes.Container}`}>
         <form id="searchForm">
@@ -116,6 +108,10 @@ class Autocomplete extends Component {
                     onMouseDown={event => event.preventDefault()}
                   >
                     <div>
+                      <strong>
+                        {filter.project.value.acronym.default}
+                      </strong>
+                      &nbsp;-&nbsp;
                       {filter.label}
                     </div>
                   </li>
@@ -136,5 +132,4 @@ Autocomplete.propTypes = {
   data: PropTypes.array,
   title: PropTypes.string,
   placeholder: PropTypes.string,
-  // facetID: PropTypes.string.isRequired,
 };
