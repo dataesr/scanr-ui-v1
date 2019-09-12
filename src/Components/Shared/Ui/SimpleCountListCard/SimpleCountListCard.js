@@ -25,7 +25,8 @@ const SimpleCountListCard = (props) => {
       : getSelectKey(item.structure, 'label', props.language, 'fr');
     if (i < MAX_LIST) {
       return (
-        <li key={item}>
+        /* eslint-disable-next-line */
+        <li key={`${item}_${i}`}>
           <span className="fa-li">
             <i className="fas fa-chevron-circle-right" />
           </span>
