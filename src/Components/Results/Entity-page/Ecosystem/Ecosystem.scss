@@ -1,1 +1,19 @@
 @import '../../../../style.scss';
+
+.Ecosystem {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $textColor;
+
+  .Label {
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.SectionTitle {
+  font-size: 1.5rem;
+
+}
