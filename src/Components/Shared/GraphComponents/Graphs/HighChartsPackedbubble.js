@@ -2,6 +2,7 @@ import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HCmore from 'highcharts/highcharts-more.src';
+import PropTypes from 'prop-types';
 
 HCmore(Highcharts);
 
@@ -11,6 +12,8 @@ const PackedBubbleChart = (props) => {
       type: 'packedbubble',
       height: '50%',
     },
+    exporting: { enabled: false },
+    credits: { enabled: false },
     title: {
       text: props.text,
     },
@@ -20,10 +23,10 @@ const PackedBubbleChart = (props) => {
     },
     plotOptions: {
       packedbubble: {
-        minSize: '70%',
+        minSize: '80%',
         maxSize: '100%',
         zMin: 0,
-        zMax: 1000,
+        zMax: 100,
         layoutAlgorithm: {
           splitSeries: false,
           gravitationalConstant: 0.02,
@@ -56,3 +59,8 @@ const PackedBubbleChart = (props) => {
 };
 
 export default PackedBubbleChart;
+
+PackedBubbleChart.propTypes = {
+  series: PropTypes.array.isRequired,
+  text: PropTypes.string,
+};
