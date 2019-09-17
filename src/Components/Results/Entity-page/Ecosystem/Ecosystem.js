@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import PackedBubbleChart from '../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
-import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
 import Select from '../../../Shared/Ui/Select/Select';
 
 /* Gestion des langues */
@@ -29,8 +28,14 @@ import classes from './Ecosystem.scss';
 */
 class Ecosystem extends Component {
   state = {
-    viewMode: 'graph',
+    viewMode: 'list',
     modifyMode: false,
+    viewListFilters: {
+      nature: 'all',
+      frInt: 'all',
+      type: 'all',
+    },
+    selectedStructure: {},
   }
 
   getDataGraph = () => {
@@ -79,168 +84,82 @@ class Ecosystem extends Component {
   }
 
   renderViewList = (messages) => {
-    console.log('renderViewList', this.props.data);
+    const natures = [];
+    this.props.data.forEach((e) => {
+      if (e.structure.nature) {
+        natures.push(e.structure.nature);
+      }
+    });
+    const dataByNature = [...new Set(natures)];
+
+    dataByNature.forEach((nature) => {
+      dataByNature[nature] = [];
+    });
+
+    this.props.data.forEach((e) => {
+      if (e.structure.nature) {
+        dataByNature[e.structure.nature].push(e);
+      }
+    });
+
+    console.log(dataByNature);
+    const filteredData = dataByNature;
+
+    let nature = null;
+    const content = filteredData.map((item, i) => (
+      <Fragment key={item}>
+        <div>
+          {filteredData[i]}
+          {item.length}
+        </div>
+
+      </Fragment>
+    ));
 
     return (
-      <div className="row">
-        <div className='col-md'>
-          Selection type
+      <Fragment>
+        <div className="row">
+          <div className="col-md">
+            <Select
+              allLabel="all label"
+              count="8"
+              title="Type recherché"
+              placeHolder="Tous les types"
+              data={[]}
+              onSubmit=""
+            />
+          </div>
+          <div className="col-md">
+            <Select
+              allLabel="all label"
+              count="8"
+              title="France/Internationnal"
+              placeHolder="Toutes collaborations"
+              data={[]}
+              onSubmit=""
+            />
+          </div>
+          <div className="col-md">
+            <Select
+              allLabel="all label"
+              count="8"
+              title="Nature recherchée"
+              placeHolder="Toutes les natures"
+              data={[]}
+              onSubmit=""
+            />
+          </div>
         </div>
-        <div className='col-md'>
-          Selection fr/int
+        <div className="row">
+          <div className="col-md-5">
+            {content}
+          </div>
+          <div className="col-md">
+            detail
+          </div>
         </div>
-        <div className='col-md'>
-          Selection nature
-        </div>
-      </div>
+      </Fragment>
     );
-
-    // fr/internationnale
-    // Nature des structures à afficher
-    // type de collaboration (projet/publications)
-    //
-    // let year = null;
-    // const content = this.props.data.map((item) => {
-    //   let titleYear = null;
-    //   if (year !== item.value.year) { // Rupture sur les années
-    //     year = item.value.year;
-    //     titleYear = <div className={classes.TitleYear}>{item.value.year}</div>;
-    //   }
-    //
-    //   /* Selection du premier par defaut */
-    //   let selected = '';
-    //   if (item === this.state.selectedProject) {
-    //     selected = classes.Selected;
-    //   }
-    //
-    //   return (
-    //     <Fragment key={item.value}>
-    //       {titleYear}
-    //       <div
-    //         className={`${classes.Item} ${selected}`}
-    //         onClick={() => this.setSelectedProjectHandler(item)}
-    //         onKeyPress={() => this.setSelectedProjectHandler(item)}
-    //         role="button"
-    //         tabIndex={0}
-    //       >
-    //         <span className={classes.Acronym}>
-    //           {item.value.acronym.default}
-    //         </span>
-    //         <span className={classes.Type}>
-    //           {item.value.type}
-    //         </span>
-    //       </div>
-    //     </Fragment>
-    //   );
-    // });
-    // const typeFilterPlaceHolder = (this.state.filterValue)
-    //   ? `${this.state.data.length} ${this.state.filterValue}`
-    //   : `${this.state.data.length} ${messages[this.props.language]['Entity.projects.selectTypesFilter.placeHolder']}`;
-    //
-    // let description = null;
-    // if (this.state.selectedProject.value) {
-    //   description = getSelectKey(this.state.selectedProject.value, 'description', this.props.language, 'fr');
-    // }
-    // if (!description) {
-    //   description = 'Pas de description trouvée';
-    // }
-    //
-    // return (
-    //   <Fragment>
-    //     <div className={`row ${classes.Filters}`}>
-    //       <div className="col-md">
-    //         <Select
-    //           allLabel={messages[this.props.language]['Entity.projects.selectTypesFilter.allLabel']}
-    //           count={this.state.data.length}
-    //           title={messages[this.props.language]['Entity.projects.selectTypesFilter.title']}
-    //           placeHolder={typeFilterPlaceHolder}
-    //           data={this.state.typeFilter}
-    //           onSubmit={this.setTypeFilter}
-    //         />
-    //       </div>
-    //       <div className={`col-md ${classes.RangeSlider}`}>
-    //         <div className={classes.Title}>
-    //           Sélectionner une période
-    //         </div>
-    //       </div>
-    //       <div className="col-md">
-    //         <Autocomplete
-    //           title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
-    //           placeHolder={typeFilterPlaceHolder}
-    //           data={this.state.autocompleteData}
-    //           onSubmit={this.setSelectedProjectHandler}
-    //         />
-    //       </div>
-    //     </div>
-    //     {/* /row */}
-    //     <div className="row">
-    //       <div className="col-lg-5">
-    //         <div className={classes.ListOfProjects}>
-    //           {content}
-    //         </div>
-    //       </div>
-    //       <div className="col-lg-7">
-    //         {
-    //           (this.state.selectedProject.value)
-    //             ? (
-    //               <Fragment>
-    //                 <div className={classes.detailTitle}>
-    //                   {this.state.selectedProject.value.label.en}
-    //                 </div>
-    //                 <hr />
-    //                 <div className="row">
-    //                   <div className="col">
-    //                     {
-    //                       /* eslint-disable-next-line */
-    //                       /* `${this.state.selectedProject.founding.toLocaleString()} €  `*/
-    //                     }
-    //                     funding
-    //                   </div>
-    //                   <div className="col">
-    //                     {
-    //                       (this.state.selectedProject.value.duration)
-    //                         ? (
-    //                           `${this.state.selectedProject.value.duration} mois`
-    //                         )
-    //                         : (
-    //                           <div>
-    //                             Durée inconnue
-    //                           </div>
-    //                         )
-    //                     }
-    //                   </div>
-    //                 </div>
-    //                 <div className="row">
-    //                   <div className="col">
-    //                     {this.state.selectedProject.type}
-    //                   </div>
-    //                   <div className="col">
-    //                     {`n°${this.state.selectedProject.value.id}`}
-    //                   </div>
-    //                 </div>
-    //                 <hr />
-    //                 <div className={classes.Description}>
-    //                   {description}
-    //                 </div>
-    //                 <hr />
-    //                 <ButtonToPage
-    //                   className={classes.btn_dark}
-    //                   url={this.state.selectedProject.value.url}
-    //                 >
-    //                   Voir le projet
-    //                 </ButtonToPage>
-    //               </Fragment>
-    //             )
-    //             : (
-    //               <div className={classes.Empty}>
-    //                 {messages[this.props.language]['Entity.projects.empty.label']}
-    //               </div>
-    //             )
-    //         }
-    //       </div>
-    //     </div>
-    //   </Fragment>
-    // );
   }
 
 
