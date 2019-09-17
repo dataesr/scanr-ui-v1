@@ -10,7 +10,7 @@ const PackedBubbleChart = (props) => {
   const options = {
     chart: {
       type: 'packedbubble',
-      height: '50%',
+
     },
     exporting: { enabled: false },
     credits: { enabled: false },
@@ -23,27 +23,13 @@ const PackedBubbleChart = (props) => {
     },
     plotOptions: {
       packedbubble: {
-        minSize: '80%',
-        maxSize: '100%',
+        minSize: '10%',
+        maxSize: '120%',
         zMin: 0,
         zMax: 100,
         layoutAlgorithm: {
           splitSeries: false,
           gravitationalConstant: 0.02,
-        },
-        dataLabels: {
-          enabled: true,
-          format: '{point.name}',
-          filter: {
-            property: 'y',
-            operator: '>',
-            value: 1000,
-          },
-          style: {
-            color: 'black',
-            textOutline: 'none',
-            fontWeight: 'normal',
-          },
         },
       },
     },
