@@ -111,7 +111,7 @@ class Entity extends Component {
         />
         <SimilarEntities
           language={this.props.language}
-          data={null}
+          data={this.state.data}
           id="SimilarEntities"
         />
         {

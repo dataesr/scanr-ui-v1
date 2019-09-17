@@ -331,7 +331,9 @@ class Projects extends Component {
                     </div>
                     <hr />
                     <div className={classes.Description}>
-                      {description}
+                      <div className={classes.Content}>
+                        {description}
+                      </div>
                     </div>
                     <hr />
                     <ButtonToPage
