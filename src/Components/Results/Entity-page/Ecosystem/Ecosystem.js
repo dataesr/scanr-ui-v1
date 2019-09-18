@@ -2,9 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../Shared/EmptySection/EmptySection';
-import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import PackedBubbleChart from '../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
+import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Select from '../../../Shared/Ui/Select/Select';
 
 /* Gestion des langues */
@@ -35,7 +36,7 @@ class Ecosystem extends Component {
       frInt: 'all',
       type: 'all',
     },
-    selectedStructure: {},
+    selectedCollaboration: {},
   }
 
   getDataGraph = () => {
@@ -83,6 +84,10 @@ class Ecosystem extends Component {
     this.setState({ viewMode });
   }
 
+  setSelectedCollaborationHandler = (selectedCollaboration) => {
+    this.setState({ selectedCollaboration });
+  }
+
   renderViewList = (messages) => {
     const natures = [];
     this.props.data.forEach((e) => {
@@ -90,29 +95,59 @@ class Ecosystem extends Component {
         natures.push(e.structure.nature);
       }
     });
-    const dataByNature = [...new Set(natures)];
+    const distinctNatures = [...new Set(natures)];
 
-    dataByNature.forEach((nature) => {
+    const dataByNature = [];
+    distinctNatures.forEach((nature) => {
       dataByNature[nature] = [];
     });
 
+    let total = 0;
     this.props.data.forEach((e) => {
       if (e.structure.nature) {
         dataByNature[e.structure.nature].push(e);
+        total += 1;
       }
     });
+    console.log('dataByNature', dataByNature);
 
-    console.log(dataByNature);
     const filteredData = dataByNature;
 
-    let nature = null;
-    const content = filteredData.map((item, i) => (
-      <Fragment key={item}>
-        <div>
-          {filteredData[i]}
-          {item.length}
+    const content = distinctNatures.map(nature => (
+      <Fragment key={nature}>
+        <div className={classes.Title}>
+          <div className={classes.StructureLabel}>
+            {nature}
+          </div>
+          <div className={classes.NBCollaborations}>
+            {`${filteredData[nature].length} entités`}
+          </div>
         </div>
+        {
+          filteredData[nature].map((collaboration) => {
+            let selected = '';
+            if (collaboration === this.state.selectedCollaboration) {
+              selected = classes.Selected;
+            }
 
+            return (
+              <div
+                className={`${classes.Item} ${selected}`}
+                onClick={() => this.setSelectedCollaborationHandler(collaboration)}
+                onKeyPress={() => this.setSelectedCollaborationHandler(collaboration)}
+                role="button"
+                tabIndex={0}
+              >
+                <div className={classes.StructureTitle}>
+                  {getSelectKey(collaboration.structure, 'label', this.props.language, 'fr')}
+                </div>
+                <div className={classes.SharedProd}>
+                  {`${collaboration.weight} productions en commun`}
+                </div>
+              </div>
+            );
+          })
+        }
       </Fragment>
     ));
 
@@ -150,12 +185,77 @@ class Ecosystem extends Component {
             />
           </div>
         </div>
+        {`${total} productions communes`}
         <div className="row">
-          <div className="col-md-5">
+          <div className={`col-md-5 ${classes.List}`}>
             {content}
           </div>
           <div className="col-md">
-            detail
+            {
+              (this.state.selectedCollaboration.structure)
+                ? (
+                  <div className={classes.Details}>
+                    <div className={classes.detailTitle}>
+                      {getSelectKey(this.state.selectedCollaboration.structure, 'label', this.props.language, 'fr')}
+                    </div>
+                    <hr />
+                    <div className="row">
+                      <div className="col">
+                        <span>
+                          {`${this.state.selectedCollaboration.weight} productions communes`}
+                        </span>
+                      </div>
+                      <div className="col">
+                        {
+                          (this.state.selectedCollaboration.details.publication)
+                            ? (
+                              <span className={classes.Arrow}>
+                                <i className="fas fa-arrow-right" />
+                                {`${this.state.selectedCollaboration.details.publication} publications`}
+                              </span>
+                            ) : null
+                        }
+                        {
+                          (this.state.selectedCollaboration.details.Project)
+                            ? (
+                              <span className={classes.Arrow}>
+                                <i className="fas fa-arrow-right" />
+                                {`${this.state.selectedCollaboration.details.Project} projets`}
+                              </span>
+                            ) : null
+                        }
+                      </div>
+                    </div>
+                    <hr />
+                    <div className={classes.Description}>
+                      <div className={classes.Content}>
+                        <pre>
+                          Label
+                          id
+                          nature
+                          isFrench
+                          Adresse
+                          Liste des projets en communs (popup ?)
+                          Liste des publications en commun (popup ?)
+                          statut (active/old)
+                        </pre>
+                      </div>
+                    </div>
+                    <hr />
+                    <ButtonToPage
+                      className={classes.btn_dark}
+                      url=""
+                    >
+                      Voir l entité
+                    </ButtonToPage>
+                  </div>
+                )
+                : (
+                  <div className={classes.Empty}>
+                    {messages[this.props.language]['Entity.projects.empty.label']}
+                  </div>
+                )
+            }
           </div>
         </div>
       </Fragment>

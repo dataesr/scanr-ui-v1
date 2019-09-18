@@ -23,10 +23,8 @@ const PackedBubbleChart = (props) => {
     },
     plotOptions: {
       packedbubble: {
-        minSize: '10%',
-        maxSize: '120%',
-        zMin: 0,
-        zMax: 100,
+        minSize: '30%',
+        maxSize: '150%',
         layoutAlgorithm: {
           splitSeries: false,
           gravitationalConstant: 0.02,

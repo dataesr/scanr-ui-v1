@@ -208,7 +208,6 @@ class Projects extends Component {
         titleYear = <div className={classes.TitleYear}>{item.value.year}</div>;
       }
 
-      /* Selection du premier par defaut */
       let selected = '';
       if (item === this.state.selectedProject) {
         selected = classes.Selected;
