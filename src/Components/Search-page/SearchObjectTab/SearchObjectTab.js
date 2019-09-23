@@ -22,28 +22,30 @@ const SearchObjectTab = (props) => {
       return (
         <React.Fragment>
           <a className={`ml-auto ${classes.ResultsNavItemCols}`}>
-            <div
-              className={(props.view === 'list')
-                ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
-                : `${classes.ResultsNavItem}`
-              }
-              onClick={() => props.viewChangeHandler('list')}
-            >
-              <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
-              <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
-            </div>
+            {
+              (props.view === ('list' || null))
+                ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
+                    <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
+                    <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                  </div>
+                : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('list')}>
+                    <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
+                    <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                  </div>
+            }
           </a>
-          <a className={`ml-1 ${classes.ResultsNavItemCols}`}>
-            <div
-              className={(props.view === 'graph')
-                ? `${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`
-                : `${classes.ResultsNavItem}`
-              }
-              onClick={() => props.viewChangeHandler('graph')}
-            >
-              <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
-              <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
-            </div>
+          <a className={`ml-2 ${classes.ResultsNavItemCols}`}>
+            {
+              (props.view === 'graph')
+                ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
+                    <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
+                    <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                  </div>
+                : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('graph')}>
+                    <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
+                    <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                  </div>
+            }
           </a>
         </React.Fragment>
       );
@@ -156,65 +158,3 @@ SearchObjectTab.propTypes = {
   viewChangeHandler: PropTypes.func,
   preview: PropTypes.object,
 };
-
-
-
-
-// Alternative mobile background
-// <nav className={`row d-flex flex-wrap justify-content-between ${classes.ObjNavMobile}`}>
-//   <a
-//     className={(props.api === 'all')
-//       ? `flex-grow ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
-//       : `${classes.ObjetcsNavItem}`
-//     }
-//     onClick={() => props.apiChangeHandler('all')}
-//   >
-//     <div className="font-weight-bold">
-//       <FormattedHTMLMessage id="nav.all" defaultMessage="nav.all" />
-//     </div>
-//   </a>
-//   <a
-//     className={(props.api === 'structures')
-//       ? `flex-grow ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
-//       : `${classes.ObjetcsNavItem}`
-//     }
-//     onClick={() => props.apiChangeHandler('structures')}
-//   >
-//     <div className="font-weight-bold">
-//       <FormattedHTMLMessage id="nav.structures" defaultMessage="nav.structures" />
-//     </div>
-//   </a>
-//   <a
-//     className={(props.api === 'projects')
-//       ? `flex-grow ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
-//       : `${classes.ObjetcsNavItem}`
-//     }
-//     onClick={() => props.apiChangeHandler('projects')}
-//   >
-//     <div className="font-weight-bold">
-//       <FormattedHTMLMessage id="nav.projects" defaultMessage="nav.projects" />
-//     </div>
-//   </a>
-//   <a
-//     className={(props.api === 'persons')
-//       ? `flex-grow ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
-//       : `${classes.ObjetcsNavItem}`
-//     }
-//     onClick={() => props.apiChangeHandler('persons')}
-//   >
-//     <div className="font-weight-bold">
-//       <FormattedHTMLMessage id="nav.persons" defaultMessage="nav.persons" />
-//     </div>
-//   </a>
-//   <a
-//     className={(props.api === 'publications')
-//       ? `flex-grow ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
-//       : `${classes.ObjetcsNavItem}`
-//     }
-//     onClick={() => props.apiChangeHandler('publications')}
-//   >
-//     <div className="font-weight-bold">
-//       <FormattedHTMLMessage id="nav.publications" defaultMessage="nav.publications" />
-//     </div>
-//   </a>
-// </nav>
