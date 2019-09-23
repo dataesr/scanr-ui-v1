@@ -70,6 +70,7 @@ class Identity extends Component {
               <LogoCard
                 language={this.props.language}
                 src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${this.props.id}.png`}
+                url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${this.props.id}`}
                 cssClass="Height150"
                 masterKey={this.props.masterKey}
                 modifyMode={this.props.modifyMode}

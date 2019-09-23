@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import MainWebSiteButton from './MainWebSiteButton';
 
+import { OTHER_WEBSITES } from '../../../../../../config/config';
+
 import classes from './Web.scss';
 
 /* Gestion des langues */
@@ -24,78 +26,61 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
-  const getMainWebSite = () => {
-    if (!props.links) { return null; }
-    for (let i = 0; i < props.links.length; i += 1) {
-      if (props.links[i].type === 'main') {
-        return props.links[i].url;
-      }
+  const getWebSiteByType = (type) => {
+    let url = null;
+    if (props.links) {
+      const el = props.links.find(site => (site.type === type));
+      url = (el && el.url) ? el.url : null;
     }
-    return null;
+    return url;
   };
 
+
   const getSocialMediaButton = (socialMedia) => {
-    let suffixUrl = null;
+    let urlSocialMedia = null;
     if (props.socialMedias) {
-      if (props.socialMedias[socialMedia]) {
-        suffixUrl = props.socialMedias[socialMedia];
-      } else if (props.websites) {
-        if (props.websites.length > 0) {
-          if (props.websites[0][socialMedia]) {
-            if (props.websites[0][socialMedia].length > 0) {
-              suffixUrl = props.websites[0][socialMedia][0].account;
-            }
-          }
-        }
+      const element = props.socialMedias.find(el => el.socialMediaType === socialMedia);
+      if (element && element.url) {
+        urlSocialMedia = element.url;
       }
     }
 
+    if (!urlSocialMedia) { return null; }
+
     let logo = '?';
-    let url = '';
     switch (socialMedia) {
       case 'dailymotion':
         logo = <i className="fas fa-video" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'facebook':
         logo = <i className="fab fa-facebook" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'flickr':
         logo = <i className="fab fa-flickr" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'instagram':
         logo = <i className="fab fa-instagram" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'linkedin':
         logo = <i className="fab fa-linkedin" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'pinterest':
         logo = <i className="fab fa-pinterest" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'snappchat':
         logo = <i className="fab fa-snapchat-ghost" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'soundcloud':
         logo = <i className="fab fa-soundcloud" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'twitter':
         logo = <i className="fab fa-twitter" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'viadeo':
         logo = <i className="fab fa-viadeo" />;
-        url = ` ${suffixUrl}`;
         break;
       case 'youtube':
         logo = <i className="fab fa-youtube" />;
-        url = ` ${suffixUrl}`;
         break;
 
       default:
@@ -105,26 +90,23 @@ const Web = (props) => {
           </span>);
     }
 
-    if (suffixUrl) {
-      return (
-        <div className="col-4 p-0">
-          <span className={classes.SocialMedia}>
-            <a href={url}>
-              {logo}
-            </a>
-          </span>
-        </div>
-      );
-    }
-
-    return null;
+    return (
+      <div className="col-4 p-0">
+        <span className={classes.SocialMedia}>
+          <a href={urlSocialMedia}>
+            {logo}
+          </a>
+        </span>
+      </div>
+    );
   };
 
-  // let mainWebSiteUrl = null;
-  // if (props.websites) {
-  //   mainWebSiteUrl = (props.websites.length > 0 && props.websites[0].baseURL) ? props.websites[0].baseURL : null;
-  // }
-  const mainWebSiteUrl = getMainWebSite();
+  const mainWebSiteUrl = getWebSiteByType('main');
+
+  const othWebSites = [];
+  OTHER_WEBSITES.forEach((type) => {
+    othWebSites.push({ type, url: getWebSiteByType(type) });
+  });
 
   return (
     <Fragment>
@@ -165,7 +147,25 @@ const Web = (props) => {
                       {getSocialMediaButton('twitter')}
                       {getSocialMediaButton('viadeo')}
                       {getSocialMediaButton('youtube')}
-
+                    </div>
+                  </div>
+                  <div className="col-3">
+                    ?
+                  </div>
+                  <div className="col-6">
+                    <div className="row">
+                      {
+                        othWebSites.map((webSite) => {
+                          if (webSite.url) {
+                            return (
+                              <div className="col-md-6">
+                                {webSite.type}
+                              </div>
+                            );
+                          }
+                          return null;
+                        })
+                      }
                     </div>
                   </div>
                 </div>
