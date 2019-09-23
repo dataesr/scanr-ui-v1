@@ -90,8 +90,8 @@ class Entity extends Component {
         />
         <Productions
           language={this.props.language}
-          data={null}
           id="Productions"
+          structureId={this.props.match.params.id}
         />
         <Banner
           language={this.props.language}
@@ -101,7 +101,7 @@ class Entity extends Component {
         />
         <Ecosystem
           language={this.props.language}
-          data={null}
+          data={this.state.data.graph}
           id="Ecosystem"
         />
         <Awards
@@ -111,7 +111,7 @@ class Entity extends Component {
         />
         <SimilarEntities
           language={this.props.language}
-          data={null}
+          data={this.state.data}
           id="SimilarEntities"
         />
         {
