@@ -74,6 +74,7 @@ class Productions extends Component {
       },
     };
     Axios.post(url, data).then((response) => {
+      console.log('getData_', url, '=>', response);
       this.setState({ data: response.data.results, initialData: response.data.results });
     });
   }
@@ -92,6 +93,7 @@ class Productions extends Component {
       },
     };
     Axios.post(url, data).then((response) => {
+      console.log('getYearsBounds_', url, '=>', response);
       const facetPublicationDates = response.data.facets.find(facet => facet.id === 'facet_publication_date');
 
       if (facetPublicationDates) {
