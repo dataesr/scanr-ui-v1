@@ -68,6 +68,7 @@ class Portrait extends Component {
                   externalIds={[{ key: 'siren', value: 'gdklsjg4' }, { key: 'uai', value: '123456' }]}
                   id={this.props.data.id}
                   language={this.props.language}
+                  description={this.props.data.description}
                   name={this.props.data.label}
                   nature={this.props.data.nature}
                   masterKey={`${this.props.id}/identity.Identity`}
