@@ -150,16 +150,13 @@ const Web = (props) => {
                       {getSocialMediaButton('youtube')}
                     </div>
                   </div>
-                  <div className="col-3">
-                    ?
-                  </div>
-                  <div className="col-6">
+                  <div className="col-9">
                     <div className="row">
                       {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
-                              <div className={`col-6 ${classes.NoSpace}`}>
+                              <div className={`col-4 ${classes.NoSpace}`}>
                                 <WebSiteButton
                                   language={props.language}
                                   url={webSite.url}
