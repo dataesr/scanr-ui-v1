@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import MainWebSiteButton from './MainWebSiteButton';
+import WebSiteButton from './WebSiteButton';
 
 import { OTHER_WEBSITES } from '../../../../../../config/config';
 
@@ -158,8 +159,12 @@ const Web = (props) => {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
-                              <div className="col-md-6">
-                                {webSite.type}
+                              <div className={`col-6 ${classes.NoSpace}`}>
+                                <WebSiteButton
+                                  language={props.language}
+                                  url={webSite.url}
+                                  type={webSite.type}
+                                />
                               </div>
                             );
                           }

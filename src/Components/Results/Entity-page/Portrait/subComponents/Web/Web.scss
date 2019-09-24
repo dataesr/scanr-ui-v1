@@ -19,7 +19,6 @@
   padding-top: 16px;
   display: block;
 }
-
 .MainWebSiteButton:hover {
   color: white;
   background-color: $scanrgreyColor;
@@ -29,6 +28,41 @@
   color: white;
   background-color: $scanrgreyColor;
   text-decoration: none;
+}
+
+.WebSiteButton {
+  color: white;
+  background-color: white;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 120px;
+  padding: 8px;
+  margin: 2px;
+  padding-top: 16px;
+  display: block;
+}
+
+.HalLogo {
+  background-color: $scanrdeepblueColor;
+  padding: 8px;
+  border-radius: 5px;
+
+}
+.WikipediaLogo {
+  color: $scanrdeepblueColor;
+  font-size: 0.9rem;
+  font-weight: bold;
+  IMG {
+    width: 30%;
+    margin: auto;
+  }
+}
+.HypotheseLogo {
+  padding-top: 16px;
+  IMG {
+    width: 80%;
+  }
 }
 
 .Container {
