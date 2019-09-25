@@ -12,3 +12,14 @@
   font-size: 1.3em;
   font-weight: 700;
 }
+
+.card {
+  flex: 0 1 calc(50% - 4px);
+  align-self: stretch;
+}
+
+@media screen and (max-width: 991px) {
+  .card {
+    flex: 0 1 100%;
+  }
+}

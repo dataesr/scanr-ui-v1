@@ -10,20 +10,16 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './SearchResults.scss';
-import EntityCard from './ResultCards/EntityCard';
 import EntityGraphsWrapper from './ResultGraphs/EntityGraphsWrapper';
 import ProjectsGraphsWrapper from './ResultGraphs/ProjectsGraphsWrapper';
 import PublicationsGraphsWrapper from './ResultGraphs/PublicationsGraphsWrapper';
 import PersonsGraphsWrapper from './ResultGraphs/PersonsGraphsWrapper';
+import EntityCard from './ResultCards/EntityCard';
 import PersonCard from './ResultCards/PersonCard';
 import PublicationCard from './ResultCards/PublicationCard';
 import ProjectCard from './ResultCards/ProjectCard';
 
 const ResultsToShow = {
-  all: {
-    list: EntityCard,
-    graph: EntityGraphsWrapper,
-  },
   structures: {
     list: EntityCard,
     graph: EntityGraphsWrapper,
@@ -62,7 +58,7 @@ const SearchResults = (props) => {
       />
     );
   }
-  if (props.isLoading || !props.data.results) {
+  if (props.isLoading) {
     return (
       <div className="row justify-content-center pt-5 mt-5">
         <GridLoader
@@ -71,6 +67,28 @@ const SearchResults = (props) => {
         />
       </div>
     );
+  }
+  const RenderResults = () => {
+    if (props.view === 'list') {
+      return (
+        props.data.results.map(res => (
+          <div className={classes.card} key={res.value.id}>
+            <ToShow
+              data={res}
+              size="big"
+              highlights={true}
+              language={props.language}
+            />
+          </div>
+        ))
+      );
+    }
+    return (
+      <ToShow
+        language={props.language}
+        request={props.request}
+      />
+    )
   }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -89,14 +107,7 @@ const SearchResults = (props) => {
           </div>
         </div>
         <div className="d-flex flex-wrap justify-content-between">
-          {
-            <ToShow
-              language={props.language}
-              results={props.data.results}
-              facets={props.data.facets}
-              request={props.request}
-            />
-          }
+          {RenderResults()}
         </div>
         <div className="pl-3 pr-3">
           {pagination}

@@ -16,6 +16,13 @@
   display: none;
 }
 
+.separator {
+  background-color: $scanrdeepblueColor;
+  border-radius: 8px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
 .ObjetcsNavItem {
   flex: 0 1 calc(15% - 5px);
   background-color: white;
