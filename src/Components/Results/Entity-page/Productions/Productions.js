@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
+import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../config/config';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
@@ -124,7 +124,12 @@ class Productions extends Component {
   }
 
   setSelectedProductionHandler = (selectedProduction) => {
-    this.setState({ selectedProduction });
+    // Appel API sur production
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
+    Axios.get(url).then((response) => {
+      console.log('setSelectedProductionHandler_jre=>', response);
+      // this.setState({ selectedProduction });
+    });
   }
 
   createTypeFilter = () => {
