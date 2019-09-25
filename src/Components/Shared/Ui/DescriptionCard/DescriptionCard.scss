@@ -1,0 +1,24 @@
+@import '../../../../style.scss';
+
+.DescriptionCard {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  min-height: 150px;
+  margin: 3px;
+  color: $scanrdeepblueColor;
+
+  .Title {
+    font-size: 1.2rem;
+    padding-top: 16px;
+    padding-left: 16px;
+    font-weight: bold;
+  }
+
+  .Text {
+    padding: 16px;
+    font-size: 0.9rem;
+    line-height: 22px;
+    text-align: justify;
+  }
+}

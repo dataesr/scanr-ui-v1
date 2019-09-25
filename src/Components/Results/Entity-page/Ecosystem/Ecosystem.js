@@ -109,7 +109,6 @@ class Ecosystem extends Component {
         total += 1;
       }
     });
-    console.log('dataByNature', dataByNature);
 
     const filteredData = dataByNature;
 
@@ -209,19 +208,19 @@ class Ecosystem extends Component {
                         {
                           (this.state.selectedCollaboration.details.publication)
                             ? (
-                              <span className={classes.Arrow}>
+                              <div className={classes.Arrow}>
                                 <i className="fas fa-arrow-right" />
                                 {`${this.state.selectedCollaboration.details.publication} publications`}
-                              </span>
+                              </div>
                             ) : null
                         }
                         {
                           (this.state.selectedCollaboration.details.Project)
                             ? (
-                              <span className={classes.Arrow}>
+                              <div className={classes.Arrow}>
                                 <i className="fas fa-arrow-right" />
                                 {`${this.state.selectedCollaboration.details.Project} projets`}
-                              </span>
+                              </div>
                             ) : null
                         }
                       </div>
@@ -229,16 +228,12 @@ class Ecosystem extends Component {
                     <hr />
                     <div className={classes.Description}>
                       <div className={classes.Content}>
-                        <pre>
-                          Label
-                          id
-                          nature
-                          isFrench
-                          Adresse
-                          Liste des projets en communs (popup ?)
-                          Liste des publications en commun (popup ?)
-                          statut (active/old)
-                        </pre>
+
+                        nature
+                        isFrench
+                        Adresse
+                        statut (active/old)
+
                       </div>
                     </div>
                     <hr />

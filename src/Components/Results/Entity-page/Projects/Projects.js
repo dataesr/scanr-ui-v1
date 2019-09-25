@@ -8,11 +8,10 @@ import { API_PROJECTS_SEARCH_END_POINT } from '../../../../config/config';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
-import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import Select from '../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-
+import ProjectDetail from './ProjectDetail';
 import SankeyGraph from '../../../Shared/GraphComponents/Graphs/HightChartsSankey';
 
 /* Gestion des langues */
@@ -238,14 +237,6 @@ class Projects extends Component {
       ? `${this.state.data.length} ${this.state.filterValue}`
       : `${this.state.data.length} ${messages[this.props.language]['Entity.projects.selectTypesFilter.placeHolder']}`;
 
-    let description = null;
-    if (this.state.selectedProject.value) {
-      description = getSelectKey(this.state.selectedProject.value, 'description', this.props.language, 'fr');
-    }
-    if (!description) {
-      description = 'Pas de description trouvée';
-    }
-
     return (
       <Fragment>
         <div className={`row ${classes.Filters}`}>
@@ -290,65 +281,7 @@ class Projects extends Component {
             </div>
           </div>
           <div className="col-lg-7">
-            {
-              (this.state.selectedProject.value)
-                ? (
-                  <Fragment>
-                    <div className={classes.detailTitle}>
-                      {this.state.selectedProject.value.label.en}
-                    </div>
-                    <hr />
-                    <div className="row">
-                      <div className="col">
-                        {
-                          /* eslint-disable-next-line */
-                          /* `${this.state.selectedProject.founding.toLocaleString()} €  `*/
-                        }
-                        funding
-                      </div>
-                      <div className="col">
-                        {
-                          (this.state.selectedProject.value.duration)
-                            ? (
-                              `${this.state.selectedProject.value.duration} mois`
-                            )
-                            : (
-                              <div>
-                                Durée inconnue
-                              </div>
-                            )
-                        }
-                      </div>
-                    </div>
-                    <div className="row">
-                      <div className="col">
-                        {this.state.selectedProject.type}
-                      </div>
-                      <div className="col">
-                        {`n°${this.state.selectedProject.value.id}`}
-                      </div>
-                    </div>
-                    <hr />
-                    <div className={classes.Description}>
-                      <div className={classes.Content}>
-                        {description}
-                      </div>
-                    </div>
-                    <hr />
-                    <ButtonToPage
-                      className={classes.btn_dark}
-                      url={this.state.selectedProject.value.url}
-                    >
-                      Voir le projet
-                    </ButtonToPage>
-                  </Fragment>
-                )
-                : (
-                  <div className={classes.Empty}>
-                    {messages[this.props.language]['Entity.projects.empty.label']}
-                  </div>
-                )
-            }
+            <ProjectDetail data={this.state.selectedProject} language={this.props.language} />
           </div>
         </div>
       </Fragment>
