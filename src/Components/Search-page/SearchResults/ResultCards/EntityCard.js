@@ -14,8 +14,8 @@ const EntityCard = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const ShouldRenderFoundIn = (res) => {
-    if (res.highlights && res.highlights.length > 0) {
+  const ShouldRenderFoundIn = (data, highlight) => {
+    if (highlight && data.highlights && data.highlights.length > 0) {
       return (
         <div className="d-flex flex-row flex-nowrap">
           <div className={classes.Icons}>
@@ -26,7 +26,7 @@ const EntityCard = (props) => {
               <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
             </div>
             {
-              res.highlights.map((h) => {
+              data.highlights.map((h) => {
                 const high = h.type.concat(': ').concat(h.value);
                 return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
               })
@@ -37,58 +37,70 @@ const EntityCard = (props) => {
     }
     return null;
   };
-  return (
-    props.results.map(res => (
-      <div className={classes.card} key={res.value.id}>
-        <IntlProvider locale={props.language} messages={messages[props.language]}>
-          <div className={`d-flex flex-column p-4 ${classes.ResultCard}`}>
-            <a
-              className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
-              href={`entite/${res.value.id}`}
-            >
-              {(res.value.label) ? res.value.label[props.language] : null}
-            </a>
-            <div className="d-flex flex-row flex-nowrap align-items-center">
-              <div className={classes.Icons}>
-                <i className="fas fa-map-marker" />
-              </div>
-              <div className="flex-grow-1">
-                {
-                  (res.value.address && res.value.address.length > 0 && res.value.address[0].postcode)
-                    ? `${res.value.address[0].city} (${res.value.address[0].postcode.slice(0, 2)})`
-                    : null
-                }
-              </div>
+  const ShouldRenderSmall = () => {
+    if (props.size !== 'small') {
+      return (
+        <React.Fragment>
+          <div className="d-flex flex-row flex-nowrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-building" />
             </div>
-            <div className="d-flex flex-row flex-nowrap align-items-center">
-              <div className={classes.Icons}>
-                <i className="fas fa-building" />
-              </div>
-              <div className="flex-grow-1">
-                {res.value.nature}
-              </div>
+            <div className="flex-grow-1">
+              {props.data.value.nature}
             </div>
-            <div className="d-flex flex-row flex-nowrap align-items-center">
-              <div className={classes.Icons}>
-                <i className="fas fa-atom" />
-              </div>
-              <div className="flex-grow-1">
-                {res.value.nature}
-              </div>
-            </div>
-            <div className="d-flex flex-row flex-nowrap align-items-center">
-              <div className={classes.Icons}>
-                <i className="fas fa-th-large" />
-              </div>
-              <div className="flex-grow-1">
-                {`Identifiant: ${res.value.id}`}
-              </div>
-            </div>
-            {ShouldRenderFoundIn(res)}
           </div>
-        </IntlProvider>
-      </div>
-    ))
+          <div className="d-flex flex-row flex-nowrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-atom" />
+            </div>
+            <div className="flex-grow-1">
+              {props.data.value.nature}
+            </div>
+          </div>
+        </React.Fragment>
+      );
+    }
+    return null;
+  };
+  const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
+  if (props.bgColor) {
+    isSmall.backgroundColor = props.bgColor;
+  }
+  return (
+    <div>
+      <IntlProvider locale={props.language} messages={messages[props.language]}>
+        <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
+          <a
+            className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
+            href={`entite/${props.data.value.id}`}
+          >
+            {(props.data.value.label) ? props.data.value.label[props.language] : null}
+          </a>
+          <div className="d-flex flex-row flex-nowrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-map-marker" />
+            </div>
+            <div className="flex-grow-1">
+              {
+                (props.data.value.address && props.data.value.address.length > 0 && props.data.value.address[0].postcode)
+                  ? `${props.data.value.address[0].city} (${props.data.value.address[0].postcode.slice(0, 2)})`
+                  : null
+              }
+            </div>
+          </div>
+          {ShouldRenderSmall()}
+          <div className="d-flex flex-row flex-nowrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-th-large" />
+            </div>
+            <div className="flex-grow-1">
+              {`Identifiant: ${props.data.value.id}`}
+            </div>
+          </div>
+          {ShouldRenderFoundIn(props.data, props.highlights)}
+        </div>
+      </IntlProvider>
+    </div>
   );
 };
 
@@ -96,7 +108,10 @@ export default EntityCard;
 
 EntityCard.propTypes = {
   language: PropTypes.string.isRequired,
-  results: PropTypes.array,
+  data: PropTypes.object,
+  size: PropTypes.string.isRequired,
+  highlights: PropTypes.bool,
+  bgColor: PropTypes.string,
 };
 
 
@@ -108,7 +123,7 @@ EntityCard.propTypes = {
 //     <u><FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" /></u>
 //   </div>
 //   <div className="ml-auto">
-//     <a href={`entite/${res.value.id}`}>
+//     <a href={`entite/${props.data.value.id}`}>
 //       <div className="container">
 //         <div className={`row d-flex align-items-center ${classes.ButtonToPage}`}>
 //           <div className={`col float-left ${classes.Text}`}>

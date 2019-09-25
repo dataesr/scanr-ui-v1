@@ -20,7 +20,7 @@ const SearchObjectTab = (props) => {
   const ShouldRenderView = () => {
     if (props.api !== 'all') {
       return (
-        <React.Fragment>
+        <nav className={`row d-flex flex-wrap p-2 ${classes.ResultsNavContainer}`}>
           <a className={`ml-auto ${classes.ResultsNavItemCols}`}>
             {
               (props.view === ('list' || null))
@@ -47,17 +47,17 @@ const SearchObjectTab = (props) => {
                   </div>
             }
           </a>
-        </React.Fragment>
+        </nav>
       );
     }
-    return (<a className={classes.ResultsNavItemCols}> </a>);
+    return (<div className={`row ${classes.separator}`}></div>);
   }
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div>
         <div className="container">
-          <nav className={`row d-flex flex-wrap p-2 ${classes.ObjNav}`}>
+          <nav className={`row d-flex flex-wrap pt-2 pb-2 ${classes.ObjNav}`}>
             <a
               className={(props.api === 'all')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
@@ -139,9 +139,7 @@ const SearchObjectTab = (props) => {
               </div>
             </a>
           </nav>
-          <nav className={` row d-flex flex-wrap p-2 ${classes.ResultsNavContainer}`}>
-            {ShouldRenderView()}
-          </nav>
+          {ShouldRenderView()}
         </div>
       </div>
     </IntlProvider>
