@@ -12,6 +12,8 @@ import EmptySection from '../Shared/EmptySection/EmptySection';
 import Select from '../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
+import SunburstChart from '../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -31,7 +33,7 @@ import classes from './Productions.scss';
 */
 class Productions extends Component {
   state = {
-    viewMode: 'list',
+    viewMode: 'graph',
     data: [],
     initialData: [],
     selectedProduction: {},
@@ -60,6 +62,60 @@ class Productions extends Component {
     }
   }
 
+  getDataGraph = () => {
+    const pubOa = this.state.data.filter(el => (el.value.productionType === 'publication' && el.value.isOa));
+    const pubNoa = this.state.data.filter(el => (el.value.productionType === 'publication' && !el.value.isOa));
+    const thesesOa = this.state.data.filter(el => (el.value.productionType === 'these' && el.value.isOa));
+    const thesesNoa = this.state.data.filter(el => (el.value.productionType === 'these' && !el.value.isOa));
+
+    const dataGraph = [{
+      id: 'Production',
+      parent: '',
+      name: 'Production',
+    },
+    {
+      id: 'Publications',
+      parent: 'Production',
+      name: 'Publications',
+      color: 'rgb(204,61,143)',
+    },
+    {
+      id: 'Publications-oa',
+      parent: 'Publications',
+      name: 'Publications<br>Données ouvertes',
+      value: pubOa.length,
+      color: '#7F0069',
+    },
+    {
+      id: 'Publications-noa',
+      parent: 'Publications',
+      name: 'Publications<br>Données fermées',
+      value: pubNoa.length,
+      color: '#7F00aa',
+    },
+    {
+      id: 'Theses',
+      parent: 'Production',
+      name: 'Thèses',
+      color: 'rgb(254,173,64)',
+    },
+    {
+      id: 'Theses-oa',
+      parent: 'Theses',
+      name: 'Thèses<br>Données ouvertes',
+      value: thesesOa.length,
+      color: 'rgb(254,173,64,0.5)',
+    },
+    {
+      id: 'Theses-noa',
+      parent: 'Theses',
+      name: 'Thèses<br>Données fermées',
+      value: thesesNoa.length,
+    },
+    ];
+    return dataGraph;
+  }
+
   getData = () => {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     const data = {
@@ -86,7 +142,7 @@ class Productions extends Component {
       },
     };
     Axios.post(url, data).then((response) => {
-      console.log('getData_', url, '=>', response);
+      // eslint-disable-next-line
       this.setState({ data: response.data.results, initialData: response.data.results });
     });
   }
@@ -105,7 +161,6 @@ class Productions extends Component {
       },
     };
     Axios.post(url, data).then((response) => {
-      console.log('getYearsBounds_', url, '=>', response);
       const facetPublicationDates = response.data.facets.find(facet => facet.id === 'facet_publication_date');
 
       if (facetPublicationDates) {
@@ -123,13 +178,17 @@ class Productions extends Component {
     this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
   }
 
+  viewModeClickHandler = (viewMode) => {
+    this.setState({ viewMode });
+  }
+
   setSelectedProductionHandler = (selectedProduction) => {
-    // Appel API sur production
     const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
     Axios.get(url).then((response) => {
-      console.log('setSelectedProductionHandler_jre=>', response);
-      // this.setState({ selectedProduction });
-    });
+      console.log('response:', response);
+    }).catch((e) => console.log('error:', e));
+    console.log(selectedProduction);
+    this.setState({ selectedProduction });
   }
 
   createTypeFilter = () => {
@@ -159,7 +218,7 @@ class Productions extends Component {
       }
 
       return (
-        <Fragment key={item.value}>
+        <Fragment key={item.value.id}>
           <div
             className={`${classes.Item} ${selected}`}
             onClick={() => this.setSelectedProductionHandler(item)}
@@ -234,6 +293,44 @@ class Productions extends Component {
     );
   }
 
+  renderViewGraph = (data) => {
+    const pubOa = data.find(el => (el.id === 'Publications-oa'));
+    const pubNoa = data.find(el => (el.id === 'Publications-noa'));
+    const thesesOa = data.find(el => (el.id === 'Theses-oa'));
+    const thesesNoa = data.find(el => (el.id === 'Theses-noa'));
+
+    return (
+      <div className="row">
+        <div className={`col-md ${classes.Legendary}`}>
+          <div className={classes.Production}>
+            <span className={`${classes.Bullet} ${classes.publicationColor}`} />
+            {`${(pubOa.value + pubNoa.value).toLocaleString()} publications`}
+            <div className={classes.Sub}>
+              {`dont ${pubOa.value.toLocaleString()} en Open Access`}
+            </div>
+            <div className={classes.Sub}>
+              {`et ${pubNoa.value.toLocaleString()} non ouvertes`}
+            </div>
+          </div>
+
+          <div className={classes.Production}>
+            <span className={`${classes.Bullet} ${classes.theseColor}`} />
+            {`${(thesesOa.value + thesesNoa.value).toLocaleString()} thèses`}
+            <div className={classes.Sub}>
+              {`dont ${thesesOa.value.toLocaleString()} en Open Access`}
+            </div>
+            <div className={classes.Sub}>
+              {`et ${thesesNoa.value.toLocaleString()} non ouvertes`}
+            </div>
+          </div>
+        </div>
+        <div className="col-md">
+          <SunburstChart text="Productions" series={data} />
+        </div>
+      </div>
+    );
+  }
+
   render() {
     const messages = {
       fr: messagesFr,
@@ -245,7 +342,7 @@ class Productions extends Component {
       en: messagesEntityEn,
     };
 
-    if (!this.state.data) {
+    if (!this.state.data || this.state.data.length === 0) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -275,6 +372,8 @@ class Productions extends Component {
         </Fragment>
       );
     }
+
+    const dataGraph = this.getDataGraph();
 
     return (
       <Fragment>
@@ -331,7 +430,7 @@ class Productions extends Component {
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
-                  : 'graph'
+                  : this.renderViewGraph(dataGraph)
               }
             </div>
           </section>

@@ -17,6 +17,7 @@ import SankeyGraph from '../../../Shared/GraphComponents/Graphs/HightChartsSanke
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+
 import messagesEntityFr from '../translations/fr.json';
 import messagesEntityEn from '../translations/en.json';
 
@@ -212,7 +213,7 @@ class Projects extends Component {
       }
 
       return (
-        <Fragment key={item.value}>
+        <Fragment key={item.value.id}>
           {titleYear}
           <div
             className={`${classes.Item} ${selected}`}
