@@ -47,7 +47,7 @@ class SimilarEntities extends Component {
           if (response.data.results[i].value.id !== this.props.data.id) {
             data3.push(response.data.results[i]);
           }
-          if (i === 3) {
+          if (data3.length === 3) {
             break;
           }
         }
