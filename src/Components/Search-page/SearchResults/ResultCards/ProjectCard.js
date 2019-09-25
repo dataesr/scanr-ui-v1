@@ -13,8 +13,16 @@ const ProjectCard = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const ShouldRenderFoundIn = (res) => {
-    if (res.highlights && res.highlights.length > 0) {
+  const options = {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  };
+  const startDate = (props.data.value.startDate) ? new Date(props.data.value.startDate) : null;
+  const endDate = (props.data.value.endDate) ? new Date(props.data.value.endDate) : null;
+
+  const ShouldRenderFoundIn = (data, highlight) => {
+    if (highlight && data.highlights && data.highlights.length > 0) {
       return (
         <div className="d-flex flex-row flex-nowrap">
           <div className={classes.Icons}>
@@ -25,9 +33,9 @@ const ProjectCard = (props) => {
               <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
             </div>
             {
-              res.highlights.map((h) => {
+              data.highlights.map((h) => {
                 const high = h.type.concat(': ').concat(h.value);
-                return (<div className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
+                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
               })
             }
           </div>
@@ -36,56 +44,59 @@ const ProjectCard = (props) => {
     }
     return null;
   };
-  return (
-    props.results.map((res) => {
-      // const status = ((parseInt(res.value.year, 0) + res.value.duration / 12) >= 2019) ? 'en cours' : 'terminé';
-      const options = {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      };
-      const startDate = (res.value.startDate) ? new Date(res.value.startDate) : null;
-      const endDate = (res.value.endDate) ? new Date(res.value.endDate) : null;
+  const ShouldRenderSmall = () => {
+    if (props.size !== 'small') {
       return (
-        <div className={classes.card} key={res.value.id}>
-          <IntlProvider locale={props.language} messages={messages[props.language]}>
-            <div className={`d-flex flex-column p-4 ${classes.ResultCard}`}>
-              <a
-                className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
-                href={`entite/${res.value.id}`}
-              >
-                {(res.value.label) ? res.value.label.en || res.value.label.en || res.value.label.default : null}
-              </a>
-              <div className="d-flex flex-row flex-wrap align-items-center">
-                <div className={classes.Icons}>
-                  <i className="fas fa-building" />
-                </div>
-                <div className="flex-grow-1">
-                  {(res.value.type)}
-                </div>
-              </div>
-              <div className="d-flex flex-row flex-wrap align-items-center">
-                <div className={classes.Icons}>
-                  <i className="fas fa-play" />
-                </div>
-                <div className="flex-grow-1">
-                  {(startDate) ? (startDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
-                </div>
-              </div>
-              <div className="d-flex flex-row flex-wrap align-items-center">
-                <div className={classes.Icons}>
-                  <i className="fas fa-stop" />
-                </div>
-                <div className="flex-grow-1">
-                  {(endDate) ? (endDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
-                </div>
-              </div>
-              {ShouldRenderFoundIn(res)}
+        <React.Fragment>
+          <div className="d-flex flex-row flex-wrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-play" />
             </div>
-          </IntlProvider>
-        </div>
+            <div className="flex-grow-1">
+              {(startDate) ? (startDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
+            </div>
+          </div>
+          <div className="d-flex flex-row flex-wrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-stop" />
+            </div>
+            <div className="flex-grow-1">
+              {(endDate) ? (endDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
+            </div>
+          </div>
+        </React.Fragment>
       );
-    })
+    }
+    return null;
+  };
+  const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
+  if (props.bgColor) {
+    isSmall.backgroundColor = props.bgColor;
+  }
+  // const status = ((parseInt(props.data.value.year, 0) + props.data.value.duration / 12) >= 2019) ? 'en cours' : 'terminé';
+  return (
+    <div className={classes.card} key={props.data.value.id}>
+      <IntlProvider locale={props.language} messages={messages[props.language]}>
+        <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
+          <a
+            className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
+            href={`entite/${props.data.value.id}`}
+          >
+            {(props.data.value.label) ? props.data.value.label.en || props.data.value.label.en || props.data.value.label.default : null}
+          </a>
+          <div className="d-flex flex-row flex-wrap align-items-center">
+            <div className={classes.Icons}>
+              <i className="fas fa-building" />
+            </div>
+            <div className="flex-grow-1">
+              {(props.data.value.type)}
+            </div>
+          </div>
+          {ShouldRenderSmall()}
+          {ShouldRenderFoundIn(props.data, props.highlights)}
+        </div>
+      </IntlProvider>
+    </div>
   );
 };
 
@@ -93,5 +104,8 @@ export default ProjectCard;
 
 ProjectCard.propTypes = {
   language: PropTypes.string.isRequired,
-  results: PropTypes.array,
+  data: PropTypes.object,
+  size: PropTypes.string.isRequired,
+  highlights: PropTypes.bool,
+  bgColor: PropTypes.string,
 };
