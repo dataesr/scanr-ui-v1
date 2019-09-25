@@ -39,11 +39,15 @@ class Localisation extends Component {
       en: messagesEn,
     };
 
-    if (!this.props.address) {
+    // eslint-disable-next-line
+    if (!this.props.address || (!this.props.address[0].address && !this.props.address[0].city || !this.props.address[0].country)) {
       return null;
     }
 
-    const mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
+    let mapProps = {};
+    if (this.props.address[0].gps && this.props.address[0].gps.lat && this.props.address[0].gps.lon) {
+      mapProps = { center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 16 };
+    }
 
     return (
       <div className="col-md-6">
