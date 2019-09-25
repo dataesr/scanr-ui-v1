@@ -139,6 +139,19 @@ const Pagination = (props) => {
   };
 
   const ShouldPrintPaginationEnd = () => {
+    if (pageCurrent === (lastIndex - 1)) {
+      return (
+        <div
+          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
+          onClick={() => props.paginationHandler((lastIndex))}
+          onKeyPress={() => props.paginationHandler((lastIndex))}
+          role="button"
+          tabIndex={0}
+        >
+          {(lastIndex)}
+        </div>
+      );
+    }
     if (pageCurrent === (lastIndex - 4)) {
       return (
         <React.Fragment>
@@ -207,6 +220,15 @@ const Pagination = (props) => {
             tabIndex={0}
           >
             {(lastIndex - 1)}
+          </div>
+          <div
+            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
+            onClick={() => props.paginationHandler((lastIndex - 1))}
+            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
+            role="button"
+            tabIndex={0}
+          >
+            {(lastIndex)}
           </div>
         </React.Fragment>
       );
@@ -291,7 +313,7 @@ const Pagination = (props) => {
             onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
             role="button"
             tabIndex={0}
-            >
+          >
             <i className="fas fa-chevron-right" />
           </div>
         </section>
