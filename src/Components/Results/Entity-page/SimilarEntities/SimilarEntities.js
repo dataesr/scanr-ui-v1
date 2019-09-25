@@ -90,7 +90,7 @@ class SimilarEntities extends Component {
               </div>
               <div className="row">
                 {
-                  this.state.data.map((item) => {
+                  this.state.data.map((item, i) => {
                     let address = null;
                     if (item.value.address && item.value.address.length > 0) {
                       address = item.value.address[0].city;
@@ -100,7 +100,8 @@ class SimilarEntities extends Component {
                     }
 
                     return (
-                      <div className="col-md-4 p-0">
+                      /* eslint-disable-next-line */
+                      <div className="col-md-4 p-0" key={`se_card_${item.value.id}_${i}`}>
                         <div className={classes.Card}>
                           <div className={classes.Title}>
                             {

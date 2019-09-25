@@ -5,6 +5,7 @@ import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import LogoCard from '../../../../../Shared/Ui/LogoCard/LogoCard';
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard';
 import SimpleListCard from '../../../../../Shared/Ui/SimpleListCard/SimpleListCard';
+import DescriptionCard from '../../../../../Shared/Ui/DescriptionCard/DescriptionCard';
 
 import getSelectKey from '../../../../../../Utils/getSelectKey';
 
@@ -44,6 +45,12 @@ class Identity extends Component {
     // acronym
     const acronym = getSelectKey(this.props, 'acronym', this.props.language, 'fr');
 
+    // label
+    const label = (acronym) ? `${name} (${acronym})` : name;
+
+    // description
+    const description = getSelectKey(this.props, 'description', this.props.language, 'fr');
+
     return (
       <div className="col-md-6">
         <div className={classes.Identity}>
@@ -59,7 +66,7 @@ class Identity extends Component {
                 language={this.props.language}
                 logo="fas fa-id-card"
                 title={messages[this.props.language]['Entity.portrait.identity.name']}
-                label={`${name} (${acronym})`}
+                label={label}
                 tooltip=""
                 masterKey={this.props.masterKey}
                 modifyMode={this.props.modifyMode}
@@ -70,6 +77,7 @@ class Identity extends Component {
               <LogoCard
                 language={this.props.language}
                 src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${this.props.id}.png`}
+                url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${this.props.id}`}
                 cssClass="Height150"
                 masterKey={this.props.masterKey}
                 modifyMode={this.props.modifyMode}
@@ -102,6 +110,22 @@ class Identity extends Component {
                 allData={this.props.allData}
               />
             </div>
+            {
+              (description)
+                ? (
+                  <div className={`col-lg-12 ${classes.NoSpace}`}>
+                    <DescriptionCard
+                      language={this.props.language}
+                      title={messages[this.props.language]['Entity.portrait.identity.description.title']}
+                      text={`${description}`}
+                      tooltip=""
+                      masterKey={this.props.masterKey}
+                      modifyMode={this.props.modifyMode}
+                      allData={this.props.allData}
+                    />
+                  </div>
+                ) : null
+            }
           </div>
         </div>
       </div>
@@ -114,6 +138,7 @@ export default Identity;
 Identity.propTypes = {
   language: PropTypes.string.isRequired,
   acronym: PropTypes.array,
+  description: PropTypes.object,
   externalIds: PropTypes.array,
   id: PropTypes.string,
   name: PropTypes.object,
