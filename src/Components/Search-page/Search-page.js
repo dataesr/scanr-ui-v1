@@ -7,6 +7,7 @@ import classes from './Search-page.scss';
 
 import SearchPanel from './SearchPanel/SearchPanel';
 import SearchResults from './SearchResults/SearchResults';
+import AllResults from './SearchResults/AllResults';
 import FilterPanel from './FilterPanel/FilterPanel';
 import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
 
@@ -255,6 +256,11 @@ class SearchPage extends Component {
     if (req.pageSize && req.pageSize < 10) {
       req.pageSize = 10;
     }
+    // if (this.state.api === 'publications') {
+    //   req.lang = 'default';
+    // } else {
+    //   req.lang = this.props.language;
+    // }
     return req;
   };
 
@@ -311,6 +317,53 @@ class SearchPage extends Component {
   }
 
   // *******************************************************************
+  // RENDER HELPERS
+  // *******************************************************************
+  WhichResults = () => {
+    if (this.state.api !== 'all') {
+      return(
+        <div className="container">
+          <div className="row d-flex flex-wrap justify-content-between">
+            <div className={classes.filters}>
+              <FilterPanel
+                language={this.props.language}
+                facets={this.state.data.facets}
+                generalFacets={this.state.preview[this.state.api].facets}
+                multiValueFilterHandler={this.multiValueFilterHandler}
+                filters={this.state.request.filters || {}}
+                api={this.state.api}
+              />
+            </div>
+            <div className={classes.results}>
+              <SearchResults
+                {...this.props}
+                language={this.props.language}
+                data={this.state.data}
+                request={this.state.request}
+                view={this.state.view}
+                api={this.state.api}
+                isLoading={this.state.isLoading}
+                paginationHandler={this.paginationHandler}
+                preview={this.state.preview}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    return (
+      <AllResults
+        language={this.props.language}
+        request={this.state.request}
+        api={this.state.api}
+        isLoading={this.state.isLoading}
+        preview={this.state.preview}
+        apiChangeHandler={this.apiChangeHandler}
+      />
+    );
+  }
+
+  // *******************************************************************
   // RENDER METHOD
   // *******************************************************************
   render() {
@@ -339,32 +392,7 @@ class SearchPage extends Component {
             viewChangeHandler={this.viewChangeHandler}
             preview={this.state.preview}
           />
-          <div className="container">
-            <div className="row d-flex flex-wrap justify-content-between">
-              <div className={classes.filters}>
-                <FilterPanel
-                  language={this.props.language}
-                  facets={this.state.data.facets}
-                  generalFacets={this.state.preview[this.state.api].facets}
-                  multiValueFilterHandler={this.multiValueFilterHandler}
-                  filters={this.state.request.filters || {}}
-                  api={this.state.api}
-                />
-              </div>
-              <div className={classes.results}>
-                <SearchResults
-                  {...this.props}
-                  language={this.props.language}
-                  data={this.state.data}
-                  request={this.state.request}
-                  view={this.state.view}
-                  api={this.state.api}
-                  isLoading={this.state.isLoading}
-                  paginationHandler={this.paginationHandler}
-                />
-              </div>
-            </div>
-          </div>
+          {this.WhichResults()}
         </section>
         <Footer language={this.props.language} />
       </div>
