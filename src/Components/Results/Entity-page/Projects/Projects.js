@@ -17,7 +17,6 @@ import SankeyGraph from '../../../Shared/GraphComponents/Graphs/HightChartsSanke
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
 import messagesEntityFr from '../translations/fr.json';
 import messagesEntityEn from '../translations/en.json';
 
@@ -311,7 +310,7 @@ class Projects extends Component {
       en: messagesEntityEn,
     };
 
-    if (!this.state.data) {
+    if (!this.state.data || this.state.data.length === 0) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
