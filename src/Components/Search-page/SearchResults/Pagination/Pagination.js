@@ -286,7 +286,7 @@ const Pagination = (props) => {
   if (window.innerWidth > 992) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className={`row mb-3 pb-3 pt-3 d-flex flex-row justify-content-end ${classes.Section}`}>
+        <section className={`row mb-3 pb-3 pt-3 pr-2 d-flex flex-row justify-content-end ${classes.Section}`}>
           <div
             className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
             onClick={() => props.paginationHandler(pageCurrent - 1)}
@@ -322,7 +322,7 @@ const Pagination = (props) => {
   }
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`row mb-3 pb-3 pt-3 d-flex flex-row justify-content-center ${classes.Section}`}>
+      <section className={`row mb-3 pb-3 pt-3 pr-2 d-flex flex-row justify-content-center ${classes.Section}`}>
         <div
           className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
           onClick={() => props.paginationHandler(1)}

@@ -50,7 +50,10 @@ const SearchObjectTab = (props) => {
         </nav>
       );
     }
-    return (<div className={`row ${classes.separator}`}></div>);
+    if (props.api === 'all' && window.innerWidth > 992) {
+      return (<div className={`row ${classes.separator}`}></div>)
+    }
+    return null;
   }
 
   return (

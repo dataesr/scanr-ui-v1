@@ -14,6 +14,7 @@ import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
 
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
+import Banner from '../Shared/Banner/Banner';
 
 
 class SearchPage extends Component {
@@ -26,8 +27,6 @@ class SearchPage extends Component {
       api: 'all',
       view: 'list',
       request: {
-        lang: this.props.language,
-        sourceFields: ['id', 'label', 'nature', 'address'],
         searchFields: null,
         query: '',
         sort: null,
@@ -74,7 +73,7 @@ class SearchPage extends Component {
   componentDidMount() {
     const newState = this.getParams();
     this.getCounts(newState);
-    this.getData(newState);
+    // this.getData(newState);
     window.scrollTo(0, 0);
   }
 
@@ -85,7 +84,7 @@ class SearchPage extends Component {
   //   return true;
   // }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
     if (prevProps.location !== this.props.location) {
       this.setState({
         isLoading: true,
@@ -93,10 +92,12 @@ class SearchPage extends Component {
       });
       const newState = this.getParams();
       // Need to avaid getCount each change
-      // if (prevState.request.query !== this.state.request.query) {
-      // }
-      this.getCounts(newState);
-      this.getData(newState);
+      if (prevState.request.query !== newState.request.query) {
+        this.getCounts(newState);
+        this.getData(newState);
+      } else {
+        this.getData(newState);
+      }
       window.scrollTo(0, 0);
     }
   }
@@ -121,7 +122,6 @@ class SearchPage extends Component {
       currentQueryText,
       view,
       request: {
-        // searchFields: null, not in use now
         query,
         sort,
         page,
@@ -245,22 +245,23 @@ class SearchPage extends Component {
   // *******************************************************************
   // AXIOS CALL TO GET DATA
   // *******************************************************************
-  transformRequest = (requests) => {
+  transformRequest = (requests, api, fun) => {
     const req = { ...requests };
     if (!req.query) {
       req.query = '';
     }
-    if (requests.page) {
+    if (req.page) {
       req.page -= 1;
     }
     if (req.pageSize && req.pageSize < 10) {
       req.pageSize = 10;
     }
-    // if (this.state.api === 'publications') {
-    //   req.lang = 'default';
-    // } else {
-    //   req.lang = this.props.language;
-    // }
+    if (api === 'publications') {
+      req.lang = 'default';
+    } else {
+      req.lang = this.props.language;
+    }
+    console.log(fun, req);
     return req;
   };
 
@@ -275,7 +276,7 @@ class SearchPage extends Component {
       return;
     }
     const url = `https://scanr-preprod.sword-group.com/api/v2/${newState.api}/search`;
-    Axios.post(url, this.transformRequest(newState.request))
+    Axios.post(url, this.transformRequest(newState.request, newState.api, "getData"))
       .then((response) => {
         const data = {
           results: response.data.results,
@@ -298,7 +299,7 @@ class SearchPage extends Component {
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
       const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
-      Axios.post(url, query)
+      Axios.post(url, this.transformRequest(query, api, "getCount"))
         .then((response) => {
           /* eslint-disable-next-line */
           const newCounts = { ...this.state.preview };
@@ -321,7 +322,7 @@ class SearchPage extends Component {
   // *******************************************************************
   WhichResults = () => {
     if (this.state.api !== 'all') {
-      return(
+      return (
         <div className="container">
           <div className="row d-flex flex-wrap justify-content-between">
             <div className={classes.filters}>
@@ -363,6 +364,25 @@ class SearchPage extends Component {
     );
   }
 
+  WhichBanner = () => {
+    if (this.state.api !== 'all') {
+      return (
+        <Banner
+          cssClass="deep"
+          language={this.props.language}
+          labelKey="WhatAreOurSources"
+        />
+      );
+    }
+    return (
+      <Banner
+        cssClass="deep"
+        language={this.props.language}
+        labelKey="Appear"
+      />
+    );
+  }
+
   // *******************************************************************
   // RENDER METHOD
   // *******************************************************************
@@ -394,6 +414,7 @@ class SearchPage extends Component {
           />
           {this.WhichResults()}
         </section>
+        {this.WhichBanner()}
         <Footer language={this.props.language} />
       </div>
     );
