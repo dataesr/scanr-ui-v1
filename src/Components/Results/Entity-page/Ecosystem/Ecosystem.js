@@ -29,7 +29,7 @@ import classes from './Ecosystem.scss';
 */
 class Ecosystem extends Component {
   state = {
-    viewMode: 'list',
+    viewMode: 'graph',
     modifyMode: false,
     viewListFilters: {
       nature: 'all',
@@ -131,6 +131,7 @@ class Ecosystem extends Component {
 
             return (
               <div
+                key={collaboration.structure.id}
                 className={`${classes.Item} ${selected}`}
                 onClick={() => this.setSelectedCollaborationHandler(collaboration)}
                 onKeyPress={() => this.setSelectedCollaborationHandler(collaboration)}
@@ -312,7 +313,6 @@ class Ecosystem extends Component {
     }
 
     const dataGraph = this.getDataGraph();
-    console.log('dataGraph', dataGraph);
 
     return (
       <Fragment>
