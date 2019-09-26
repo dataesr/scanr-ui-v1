@@ -10,7 +10,6 @@ const PackedBubbleChart = (props) => {
   const options = {
     chart: {
       type: 'packedbubble',
-
     },
     exporting: { enabled: false },
     credits: { enabled: false },
