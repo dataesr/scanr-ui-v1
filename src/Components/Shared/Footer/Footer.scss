@@ -5,7 +5,7 @@ $linkColorHover: rgb(255, 255, 255);
 
 .Footer {
   background-color: $bgFooter;
-  min-height: $footerHeight;
+  // min-height: $footerHeight; deleted by fred TODO check
   padding-top: 32px;
   color: #ddd;
   font-weight: bold;
@@ -55,7 +55,7 @@ $linkColorHover: rgb(255, 255, 255);
     }
     UL {
       text-align: center !important;
-      padding-left: 0 !important;     
+      padding-left: 0 !important;
     }
   }
 }

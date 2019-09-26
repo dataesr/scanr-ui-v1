@@ -43,13 +43,22 @@ const SearchResults = (props) => {
 
   return (
     Object.keys(CardsComponents).map((section, index) => {
-      const BgClass = ([0, 2].includes(index)) ? classes.noBg : classes.whiteBg;
+      const BgClass = ([0, 2].includes(index)) ? 'gris' : 'blanc';
       const CardColor = ([0, 2].includes(index)) ? null : cardsGrey;
       const CardsToShow = CardsComponents[section];
+      const bgUrl = `./img/poudre-${section}_fond_${BgClass}.jpg`;
+      const sizes = ['100%', '80%', '75%', '70%'];
+      const positions = ['-115% -15%', '0 -25%', '100% -50%', '10% -30%'];
+      const sectionStyle = {
+        backgroundImage: `url(${bgUrl})`,
+        backgroundSize: sizes[index],
+        backgroundPosition: positions[index],
+        backgroundRepeat: 'no-repeat',
+      };
       return (
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <section>
-            <div className={BgClass}>
+            <div style={sectionStyle} className={`pt-5 pb-5 ${classes[BgClass]}`}>
               <div className="container">
                 <div className="row d-flex flex-row justify-content-between">
                   <div className={`${classes.headers}`}>
@@ -80,16 +89,22 @@ const SearchResults = (props) => {
                         )
                     }
                   </div>
-                  <div
-                    onClick={() => props.apiChangeHandler(section)}
-                    >
-                    <ButtonToPageLinkLess>
-                      <FormattedHTMLMessage
-                        id="searchResults.viewAll"
-                        defaultMessage="searchResults.viewAll"
-                      />
-                    </ButtonToPageLinkLess>
-                  </div>
+                  {
+                    (window.innerWidth < 992)
+                      ? null
+                      : (
+                        <div
+                          onClick={() => props.apiChangeHandler(section)}
+                          >
+                          <ButtonToPageLinkLess>
+                            <FormattedHTMLMessage
+                              id="searchResults.viewAll"
+                              defaultMessage="searchResults.viewAll"
+                            />
+                          </ButtonToPageLinkLess>
+                        </div>
+                      )
+                  }
                 </div>
                 <div className="row d-flex flex-wrap justify-content-between">
                   {
