@@ -213,7 +213,7 @@ class Projects extends Component {
       }
 
       return (
-        <Fragment key={item.value}>
+        <Fragment key={item.value.id}>
           {titleYear}
           <div
             className={`${classes.Item} ${selected}`}
@@ -311,7 +311,7 @@ class Projects extends Component {
       en: messagesEntityEn,
     };
 
-    if (!this.state.data) {
+    if (!this.state.data || this.state.data.length === 0) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
