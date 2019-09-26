@@ -20,15 +20,15 @@ const Banner = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section className={`${classes.Banner} ${classes[props.cssClass]}`}>
       <div className="container">
-        <div className="row">
-          <div className="col-lg-9">
+        <div className="row d-flex flex-row justify-content-between align-items-center pt-4 pb-4">
+          <div className="">
             <FormattedHTMLMessage
               id={`Banner.title.${props.labelKey}`}
               defaultMessage={`Banner.title.${props.labelKey}`}
             />
           </div>
-          <div className={`col-lg-3 ${classes.ContainerButton}`}>
-            <div className={classes.Button}>
+          <div>
+            <div>
               <ButtonToPage
                 url={props.url}
                 target={props.target}
@@ -41,7 +41,6 @@ const Banner = props => (
             </div>
           </div>
         </div>
-
       </div>
     </section>
   </IntlProvider>
