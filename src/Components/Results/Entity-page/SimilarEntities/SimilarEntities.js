@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
-import { API_PROJECTS_SEARCH_END_POINT } from '../../../../config/config';
+import { API_STRUCTURE_LIKE_END_POINT } from '../../../../config/config';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
@@ -30,7 +30,7 @@ class SimilarEntities extends Component {
   };
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/structures/like';
+    const url = API_STRUCTURE_LIKE_END_POINT;
     const searched = getSelectKey(this.props.data, 'label', this.props.language, 'fr');
     const data = {
       fields: [
