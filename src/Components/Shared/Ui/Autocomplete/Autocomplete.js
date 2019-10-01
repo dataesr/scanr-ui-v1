@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './Autocomplete.scss';
@@ -108,10 +108,17 @@ class Autocomplete extends Component {
                     onMouseDown={event => event.preventDefault()}
                   >
                     <div>
-                      <strong>
-                        {filter.project.value.acronym.default}
-                      </strong>
-                      &nbsp;-&nbsp;
+                      {
+                        filter.project
+                          ? (
+                            <Fragment>
+                              <strong>
+                                {filter.project.value.acronym.default}
+                              </strong>
+                              &nbsp;-&nbsp;
+                            </Fragment>
+                          ) : null
+                      }
                       {filter.label}
                     </div>
                   </li>
