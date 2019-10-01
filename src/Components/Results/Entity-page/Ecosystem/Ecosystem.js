@@ -31,11 +31,11 @@ class Ecosystem extends Component {
   state = {
     viewMode: 'graph',
     modifyMode: false,
-    viewListFilters: {
-      nature: 'all',
-      frInt: 'all',
-      type: 'all',
-    },
+    // viewListFilters: {
+    //   nature: 'all',
+    //   frInt: 'all',
+    //   type: 'all',
+    // },
     selectedCollaboration: {},
   }
 
