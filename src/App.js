@@ -8,6 +8,7 @@ import localeEn from 'react-intl/locale-data/en';
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
+import ProductionPage from './Components/Results/Production-page/Production-page';
 import FocusList from './Components/Focus-pages/FocusList';
 import Focus from './Components/Focus-pages/Focus';
 import CurieHome from './Components/Shared/GraphCurie/CurieHome';
@@ -24,6 +25,8 @@ import Opendata from './Components/Other-pages/Opendata/Opendata';
 import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
+
+import TestAPI from './Components/TestAPI';
 
 class App extends Component {
   state: {
@@ -59,6 +62,13 @@ class App extends Component {
           <React.Fragment>
             <Route
               exact
+              path="/test"
+              component={() => (
+                <TestAPI />
+              )}
+            />
+            <Route
+              exact
               path="/"
               component={props => (
                 <HomePage
@@ -82,6 +92,16 @@ class App extends Component {
               path="/entite/:id"
               render={props => (
                 <EntityPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
+            <Route
+              path="/publication/:id"
+              render={props => (
+                <ProductionPage
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}

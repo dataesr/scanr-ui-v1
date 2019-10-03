@@ -11,7 +11,7 @@ import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import Select from '../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-
+import ProductionDetail from './ProductionDetail';
 import SunburstChart from '../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 
 /* Gestion des langues */
@@ -33,7 +33,7 @@ import classes from './Productions.scss';
 */
 class Productions extends Component {
   state = {
-    viewMode: 'graph',
+    viewMode: 'list',
     data: [],
     initialData: [],
     selectedProduction: {},
@@ -58,15 +58,15 @@ class Productions extends Component {
     if (prevState.data !== this.state.data && this.state.data.length > 0) {
       // this.sortByYear();
       this.createTypeFilter();
-      // this.createAutocompleteData();
+      this.createAutocompleteData();
     }
   }
 
   getDataGraph = () => {
     const pubOa = this.state.data.filter(el => (el.value.productionType === 'publication' && el.value.isOa));
     const pubNoa = this.state.data.filter(el => (el.value.productionType === 'publication' && !el.value.isOa));
-    const thesesOa = this.state.data.filter(el => (el.value.productionType === 'these' && el.value.isOa));
-    const thesesNoa = this.state.data.filter(el => (el.value.productionType === 'these' && !el.value.isOa));
+    const thesesOa = this.state.data.filter(el => (el.value.productionType === 'thesis' && el.value.isOa));
+    const thesesNoa = this.state.data.filter(el => (el.value.productionType === 'thesis' && !el.value.isOa));
 
     const dataGraph = [{
       id: 'Production',
@@ -77,40 +77,41 @@ class Productions extends Component {
       id: 'Publications',
       parent: 'Production',
       name: 'Publications',
-      color: 'rgb(204,61,143)',
+      color: '#cc3d8f',
     },
     {
       id: 'Publications-oa',
       parent: 'Publications',
-      name: 'Publications<br>Données ouvertes',
+      name: 'Publications<br>Accès ouvert',
       value: pubOa.length,
-      color: '#7F0069',
+      color: '#D580B0',
     },
     {
       id: 'Publications-noa',
       parent: 'Publications',
-      name: 'Publications<br>Données fermées',
+      name: 'Publications<br>Accès fermé',
       value: pubNoa.length,
-      color: '#7F00aa',
+      color: '#4D2E3F',
     },
     {
       id: 'Theses',
       parent: 'Production',
       name: 'Thèses',
-      color: 'rgb(254,173,64)',
+      color: '#fead3f',
     },
     {
       id: 'Theses-oa',
       parent: 'Theses',
-      name: 'Thèses<br>Données ouvertes',
+      name: 'Thèses<br>Accès ouvert',
       value: thesesOa.length,
-      color: 'rgb(254,173,64,0.5)',
+      color: '#FFCF8C',
     },
     {
       id: 'Theses-noa',
       parent: 'Theses',
-      name: 'Thèses<br>Données fermées',
+      name: 'Thèses<br>Accès fermé',
       value: thesesNoa.length,
+      color: '#806846',
     },
     ];
     return dataGraph;
@@ -183,18 +184,18 @@ class Productions extends Component {
   }
 
   setSelectedProductionHandler = (selectedProduction) => {
-    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
+    // const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
+    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%2525F978-3-319-24195-1_10';
     Axios.get(url).then((response) => {
-      console.log('response:', response);
-    }).catch((e) => console.log('error:', e));
-    console.log(selectedProduction);
-    this.setState({ selectedProduction });
-  }
+      console.log('setSelectedProductionHandler_jre:', response);
+      this.setState({ selectedProduction: response.data });
+    }).catch(e => console.log('error:', e));
+  };
 
   createTypeFilter = () => {
     const typeFilter = [];
     for (let i = 0; i < this.state.data.length; i += 1) {
-      const type = this.state.data[i].value.type;
+      const type = this.state.data[i].value.productionType;
       const found = typeFilter.find(item => item.value === type);
       if (found) {
         found.count += 1;
@@ -206,6 +207,39 @@ class Productions extends Component {
       }
     }
     this.setState({ typeFilter });
+  }
+
+  setTypeFilter = (filterValue) => {
+    if (filterValue !== 'all') {
+      /* eslint-disable-next-line */
+      const data = this.state.data.filter(item => item.value.productionType.includes(filterValue));
+      this.setState({ data });
+    } else {
+      this.setState(prevState => ({ data: prevState.initialData, filterValue: null }));
+    }
+  }
+
+  createAutocompleteData = () => {
+    const autocompleteData = [];
+    for (let i = 0; i < this.state.data.length; i += 1) {
+      const obj = {};
+      const values = [];
+      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.default) {
+        values.push(this.state.data[i].value.title.default);
+      }
+      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.fr) {
+        values.push(this.state.data[i].value.title.fr);
+      }
+      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.en) {
+        values.push(this.state.data[i].value.title.en);
+      }
+
+      obj.label = getSelectKey(this.state.data[i].value, 'title', this.props.language, 'default');
+      obj.values = values;
+      obj.production = this.state.data[i];
+      autocompleteData.push(obj);
+    }
+    this.setState({ autocompleteData });
   }
 
   renderViewList = (messages) => {
@@ -240,16 +274,16 @@ class Productions extends Component {
 
     const typeFilterPlaceHolder = (this.state.filterValue)
       ? `${this.state.data.length} ${this.state.filterValue}`
-      : `${this.state.data.length} ${messages[this.props.language]['Entity.projects.selectTypesFilter.placeHolder']}`;
+      : `${this.state.data.length} ${messages[this.props.language]['Entity.productions.selectTypesFilter.placeHolder']}`;
 
     return (
       <Fragment>
         <div className={`row ${classes.Filters}`}>
           <div className="col-md">
             <Select
-              allLabel={messages[this.props.language]['Entity.projects.selectTypesFilter.allLabel']}
+              allLabel={messages[this.props.language]['Entity.productions.selectTypesFilter.allLabel']}
               count={this.state.data.length}
-              title={messages[this.props.language]['Entity.projects.selectTypesFilter.title']}
+              title={messages[this.props.language]['Entity.productions.selectTypesFilter.title']}
               placeHolder={typeFilterPlaceHolder}
               data={this.state.typeFilter}
               onSubmit={this.setTypeFilter}
@@ -274,7 +308,7 @@ class Productions extends Component {
               title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
               placeHolder={typeFilterPlaceHolder}
               data={this.state.autocompleteData}
-              onSubmit={this.setSelectedProjectHandler}
+              onSubmit={this.setSelectedProductionHandler}
             />
           </div>
         </div>
@@ -286,7 +320,7 @@ class Productions extends Component {
             </div>
           </div>
           <div className="col-lg-7">
-            Detail
+            <ProductionDetail data={this.state.selectedProduction} language={this.props.language} />
           </div>
         </div>
       </Fragment>
@@ -306,10 +340,10 @@ class Productions extends Component {
             <span className={`${classes.Bullet} ${classes.publicationColor}`} />
             {`${(pubOa.value + pubNoa.value).toLocaleString()} publications`}
             <div className={classes.Sub}>
-              {`dont ${pubOa.value.toLocaleString()} en Open Access`}
+              {`dont ${pubOa.value.toLocaleString()} en accès ouvert`}// open access
             </div>
             <div className={classes.Sub}>
-              {`et ${pubNoa.value.toLocaleString()} non ouvertes`}
+              {`et ${pubNoa.value.toLocaleString()} en accès fermé`}// closed access
             </div>
           </div>
 
@@ -317,10 +351,10 @@ class Productions extends Component {
             <span className={`${classes.Bullet} ${classes.theseColor}`} />
             {`${(thesesOa.value + thesesNoa.value).toLocaleString()} thèses`}
             <div className={classes.Sub}>
-              {`dont ${thesesOa.value.toLocaleString()} en Open Access`}
+              {`dont ${thesesOa.value.toLocaleString()} en accès ouvert`}
             </div>
             <div className={classes.Sub}>
-              {`et ${thesesNoa.value.toLocaleString()} non ouvertes`}
+              {`et ${thesesNoa.value.toLocaleString()} en accès fermé`}
             </div>
           </div>
         </div>
