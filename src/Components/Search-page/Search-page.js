@@ -245,7 +245,7 @@ class SearchPage extends Component {
   // *******************************************************************
   // AXIOS CALL TO GET DATA
   // *******************************************************************
-  transformRequest = (requests, api, fun) => {
+  transformRequest = (requests, api) => {
     const req = { ...requests };
     if (!req.query) {
       req.query = '';
@@ -261,7 +261,7 @@ class SearchPage extends Component {
     } else {
       req.lang = this.props.language;
     }
-    console.log(fun, req);
+    Object.keys(req).forEach(key => (req[key] === undefined ? delete req[key] : ''));
     return req;
   };
 
@@ -276,7 +276,7 @@ class SearchPage extends Component {
       return;
     }
     const url = `https://scanr-preprod.sword-group.com/api/v2/${newState.api}/search`;
-    Axios.post(url, this.transformRequest(newState.request, newState.api, "getData"))
+    Axios.post(url, this.transformRequest(newState.request, newState.api))
       .then((response) => {
         const data = {
           results: response.data.results,
@@ -299,13 +299,12 @@ class SearchPage extends Component {
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
       const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
-      Axios.post(url, this.transformRequest(query, api, "getCount"))
+      Axios.post(url, this.transformRequest(query, api))
         .then((response) => {
           /* eslint-disable-next-line */
           const newCounts = { ...this.state.preview };
           newCounts[api].count = response.data.total;
           newCounts[api].data = response.data.results.slice(0, 6);
-          newCounts[api].facets = response.data.facets;
           newCounts.all = (
             newCounts.structures.count
             + newCounts.persons.count
@@ -313,6 +312,10 @@ class SearchPage extends Component {
             + newCounts.publications.count
           );
           this.setState({ preview: newCounts });
+        })
+        .catch((e) => {
+          /* eslint-disable-next-line */
+          console.log('error', e);
         });
     });
   }

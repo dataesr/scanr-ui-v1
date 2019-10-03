@@ -35,7 +35,7 @@ const ProjectCard = (props) => {
             {
               data.highlights.map((h) => {
                 const high = h.type.concat(': ').concat(h.value);
-                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
+                return (<div key={high} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
               })
             }
           </div>
