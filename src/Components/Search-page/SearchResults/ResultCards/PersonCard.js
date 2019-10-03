@@ -27,7 +27,7 @@ const PersonsCard = (props) => {
             {
               data.highlights.map((h) => {
                 const high = h.type.concat(': ').concat(h.value);
-                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
+                return (<div key={high} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
               })
             }
           </div>
@@ -39,28 +39,22 @@ const PersonsCard = (props) => {
   const ShouldRenderSmall = () => {
     if (props.size !== 'small') {
       return (
-        <React.Fragment>
-          <div className="d-flex flex-row flex-nowrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-map-marker" />
-            </div>
-            <div className="flex-grow-1">
-              {
-                (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.address.length > 0 && props.data.value.affiliations[0].structure.address[0].postcode)
-                  ? `${props.data.value.affiliations[0].structure.address[0].city} (${props.data.value.affiliations[0].structure.address[0].postcode.slice(0, 2)})`
-                  : <div className={classes.UnknownData}><FormattedHTMLMessage id="resultCard.unknownData" defaultMessage="resultCard.unknownData" /></div>
-              }
-            </div>
-          </div>
-          <div className="d-flex flex-row flex-nowrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-th-large" />
-            </div>
-            <div className="flex-grow-1">
-              {`idref: ${props.data.value.id.slice(5)}`}
-            </div>
-          </div>
-        </React.Fragment>
+        <div className="d-flex flex-row flex-nowrap align-items-center">
+          {
+            (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.address.length > 0 && props.data.value.affiliations[0].structure.address[0].postcode)
+              ? (
+                <React.Fragment>
+                  <div className={classes.Icons}>
+                    <i className="fas fa-map-marker" />
+                  </div>
+                  <div className={`flex-grow-1 ${classes.UnknownData}`}>
+                    {`${props.data.value.affiliations[0].structure.address[0].city} (${props.data.value.affiliations[0].structure.address[0].postcode.slice(0, 2)})`}
+                  </div>
+                </React.Fragment>
+              )
+              : null
+          }
+        </div>
       );
     }
     return null;
@@ -81,22 +75,37 @@ const PersonsCard = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
           <a
-            className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
+            className={`pb-1 align-items-top ${classes.CardHeader}`}
             href={`personnes/${props.data.value.id}`}
           >
             {`${props.data.value.firstName} ${props.data.value.lastName || null}`}
           </a>
+          <div className={`d-flex align-items-center mb-auto ${classes.Unknown}`}>
+            <i className={`fas fa-qrcode pr-1 ${classes.Icons}`} />
+            {`idref: ${props.data.value.id.slice(5)}`}
+          </div>
           <div className="d-flex flex-row flex-nowrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-building" />
-            </div>
-            <div className="flex-grow-1">
-              {
-                (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.label)
-                  ? props.data.value.affiliations[0].structure.label.fr
-                  : <div className={classes.UnknownData}><FormattedHTMLMessage id="resultCard.unknownData" defaultMessage="resultCard.unknownData" /></div>
-              }
-            </div>
+            {
+              (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.address.length > 0 && props.data.value.affiliations[0].structure.address[0].postcode)
+                ? (
+                  <React.Fragment>
+                    <div className={classes.Icons}>
+                      <i className="fas fa-building" />
+                    </div>
+                    <div className={`flex-grow-1 ${classes.UnknownData}`}>
+                      {`${props.data.value.affiliations[0].structure.label.fr}`}
+                    </div>
+                  </React.Fragment>
+                )
+                : (
+                  <React.Fragment>
+                    <div className={classes.Icons}>
+                      <i className="fas fa-building" />
+                    </div>
+                    <div className={classes.UnknownData}><FormattedHTMLMessage id="resultCard.unknownData" defaultMessage="resultCard.unknownData" /></div>
+                  </React.Fragment>
+                )
+            }
           </div>
           {ShouldRenderSmall()}
           <div className="d-flex flex-row flex-nowrap">
