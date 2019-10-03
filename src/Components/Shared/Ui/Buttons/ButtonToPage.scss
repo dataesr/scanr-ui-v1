@@ -1,16 +1,8 @@
 @import '../../../../style.scss';
 
 .ButtonToPage {
-  // background-color: rgb(56, 119, 186);
-  // color: white;
   font-size: 0.7rem;
   font-weight: bolder;
-  padding: 9px;
-  padding-left: 16px;
   border-radius: 5px;
   cursor: pointer;
-
-  .Text {
-    padding-left: 8px;
-  }
 }
