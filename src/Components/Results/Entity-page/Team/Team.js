@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Leaders from '../Shared/Leaders/Leaders';
+import TeamComposition from './SubComponents/teamComposition';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -86,15 +87,25 @@ class Team extends Component {
               >
                 {messagesEntity[this.props.language]['Entity.Section.Team.label']}
               </SectionTitle>
+              <div className="row">
 
-              <Leaders
-                id={this.props.data.id}
-                language={this.props.language}
-                leaders={this.props.data.leaders}
-                masterKey={`${this.props.id}.Leaders`}
-                modifyMode={this.state.modifyMode}
-                allData={this.props.data}
-              />
+                <Leaders
+                  id={this.props.data.id}
+                  language={this.props.language}
+                  leaders={this.props.data.leaders}
+                  masterKey={`${this.props.id}.Leaders`}
+                  modifyMode={this.state.modifyMode}
+                  allData={this.props.data}
+                />
+                <TeamComposition
+                  id={this.props.data.id}
+                  language={this.props.language}
+                  persons={this.props.data.persons}
+                  masterKey={`${this.props.id}.Persons`}
+                  modifyMode={this.state.modifyMode}
+                  allData={this.props.data}
+                />
+              </div>
             </div>
           </section>
         </IntlProvider>
