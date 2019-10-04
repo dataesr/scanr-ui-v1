@@ -11,4 +11,10 @@
   background-color: rgb(233, 236, 241);
   background-position: bottom 0 right 0;
 
+  .TeamComposition {
+    .NoSpace {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
