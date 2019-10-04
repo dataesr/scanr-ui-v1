@@ -80,7 +80,7 @@ const ProjectCard = (props) => {
         <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
           <a
             className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
-            href={`entite/${props.data.value.id}`}
+            href={`project/${props.data.value.id}`}
           >
             {(props.data.value.label) ? props.data.value.label.en || props.data.value.label.en || props.data.value.label.default : null}
           </a>
