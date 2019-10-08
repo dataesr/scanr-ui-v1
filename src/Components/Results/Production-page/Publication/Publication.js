@@ -61,8 +61,8 @@ class Publication extends Component {
     const publicationDate = moment(this.props.data.publicationDate).format('L');
 
     return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
           <section className={`container-fluid ${classes.Publication}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
@@ -72,7 +72,6 @@ class Publication extends Component {
               >
                 <FormattedHTMLMessage id="Publication.title" defaultMessage="Publication.title" />
               </SectionTitle>
-
 
               <div className="row">
                 <div className="col-lg">
@@ -91,7 +90,7 @@ class Publication extends Component {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col-5">
+                    <div className="col-md-5">
                       <div className="row">
                         <div className={`col-md-12 ${classes.CardContainer}`}>
                           <SimpleCard
@@ -156,19 +155,33 @@ class Publication extends Component {
                         allData={this.props.data}
                       />
                     </div>
-                    <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <SimpleCard
-                        language={this.props.language}
-                        logo="fas fa-bookmark"
-                        title=""
-                        label="SOFTWARE heritage"
-                        tooltip=""
-                        masterKey="Publication/publicationType"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
-                      />
-                    </div>
+
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className={`container-fluid ${classes.Publication}`} style={sectionStyle}>
+            <div className="container">
+              <SectionTitle
+                icon={(this.props.data && this.props.data.isOa) ? 'fas fa-lock-open' : 'fas fa-lock'}
+                modifyModeHandle={this.modifyModeHandleAuthors}
+                modifyMode={this.state.modifyModeAuthors}
+              >
+                <FormattedHTMLMessage id="Publication.oa.title" defaultMessage="Publication.oa.title" />
+              </SectionTitle>
+              <div className="row">
+                <div className={`col-3 ${classes.CardContainer}`}>
+                  <SimpleCard
+                    language={this.props.language}
+                    logo="fas fa-id-card"
+                    title={messages[this.props.language]['Publication.publication.title']}
+                    label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
+                    tooltip=""
+                    masterKey="Publication/title"
+                    modifyMode={this.state.modifyModePortrait}
+                    allData={this.props.data}
+                  />
                 </div>
               </div>
 
@@ -195,8 +208,8 @@ class Publication extends Component {
               </div>
             </div>
           </section>
-        </IntlProvider>
-      </Fragment>
+        </Fragment>
+      </IntlProvider>
     );
   }
 }

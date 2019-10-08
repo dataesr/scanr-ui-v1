@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import ReactTooltip from 'react-tooltip';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 import classes from './SourceCard.scss';
+
+/* Gestion des langues */
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * SourceCard component
@@ -20,7 +29,7 @@ const SourceCard = (props) => {
   const publisher = (props.data.publisher) ? (
     <Fragment>
       <div className={classes.Title}>
-        Publisher
+        <FormattedHTMLMessage id="Publication.source.publisher" defaultMessage="Publication.source.publisher" />
       </div>
       <div className={`${classes.Value} ${classes.Publisher}`}>
         {props.data.publisher}
@@ -31,7 +40,7 @@ const SourceCard = (props) => {
   const title = (props.data.title) ? (
     <Fragment>
       <div className={classes.Title}>
-        Title
+        <FormattedHTMLMessage id="Publication.source.title" defaultMessage="Publication.source.title" />
       </div>
       <div className={`flex-grow-1 ${classes.Value}`}>
         {props.data.title}
@@ -44,7 +53,7 @@ const SourceCard = (props) => {
     issns = (
       <div>
         <div className={classes.Title}>
-          ISSN du journal
+          <FormattedHTMLMessage id="Publication.source.issns" defaultMessage="Publication.source.issns" />
         </div>
         <div className={classes.Value}>
           {
@@ -58,7 +67,7 @@ const SourceCard = (props) => {
   const pagination = (props.data.pagination) ? (
     <div>
       <div className={classes.Title}>
-        Pagination
+        <FormattedHTMLMessage id="Publication.source.pagination" defaultMessage="Publication.source.pagination" />
       </div>
       <div className={classes.Value}>
         {props.data.pagination}
@@ -72,16 +81,18 @@ const SourceCard = (props) => {
 
 
   return (
-    <div className={`d-flex align-items-center flex-column ${classes.SourceCard}`}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
-      {publisher}
-      {title}
-      <div className="d-flex pr-4 pl-4 w-100 justify-content-between">
-        {issns}
-        {(issns && pagination) ? <div className={classes.Border} /> : null}
-        {pagination}
+    <IntlProvider locale={props.language} messages={messages[props.language]}>
+      <div className={`d-flex align-items-center flex-column ${classes.SourceCard}`}>
+        {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
+        {publisher}
+        {title}
+        <div className="d-flex pr-4 pl-4 w-100 justify-content-between">
+          {issns}
+          {(issns && pagination) ? <div className={classes.Border} /> : null}
+          {pagination}
+        </div>
       </div>
-    </div>
+    </IntlProvider>
   );
 };
 
