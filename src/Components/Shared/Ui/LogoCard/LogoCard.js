@@ -23,12 +23,14 @@ import initialImage from '../../images/Spinner-1s-70px.gif';
 */
 class LogoCard extends Component {
   state = {
+    // eslint-disable-next-line
     logoPNG: null,
   };
 
   componentDidUpdate(prevProps) {
     if (prevProps.url !== this.props.url) {
       Axios.get(this.props.url).then((image) => {
+        // eslint-disable-next-line
         this.setState({ logoPNG: image.data });
       });
     }

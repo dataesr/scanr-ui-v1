@@ -76,7 +76,7 @@ const SearchResults = (props) => {
             <ToShow
               data={res}
               size="big"
-              highlights={true}
+              highlights
               language={props.language}
             />
           </div>
@@ -88,8 +88,8 @@ const SearchResults = (props) => {
         language={props.language}
         request={props.request}
       />
-    )
-  }
+    );
+  };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className="d-flex flex-column">

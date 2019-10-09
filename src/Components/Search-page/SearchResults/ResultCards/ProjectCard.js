@@ -35,6 +35,7 @@ const ProjectCard = (props) => {
             {
               data.highlights.map((h) => {
                 const high = h.type.concat(': ').concat(h.value);
+                // eslint-disable-next-line
                 return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
               })
             }

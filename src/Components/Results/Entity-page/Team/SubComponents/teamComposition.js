@@ -137,7 +137,7 @@ TeamComposition.propTypes = {
   language: PropTypes.string.isRequired,
   persons: PropTypes.array,
   id: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
+  // masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
+  // modifyMode: PropTypes.bool,
+  // allData: PropTypes.object.isRequired,
 };
