@@ -57,7 +57,7 @@ class Publication extends Component {
       backgroundImage: `url(${Background})`,
     };
 
-    const publicationDate = moment(this.props.data.publicationDate).format('L')
+    const publicationDate = moment(this.props.data.publicationDate).format('L');
 
     return (
       <Fragment>

@@ -1,0 +1,20 @@
+@import '../../../../style.scss';
+
+
+.Title {
+  font-weight: 600;
+}
+.Funding {
+  font-style: italic;
+  color: $scanrgreyColor
+}
+
+.yellowBullet {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 5px;
+  background-color: red;
+  margin-right: 5px;
+  margin-top: 5px;
+}
