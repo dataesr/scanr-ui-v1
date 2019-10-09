@@ -18,7 +18,7 @@ import classes from './SimpleCard.scss';
 */
 const SimpleCard = (props) => {
   const logo = (props.logo) ? <div className={classes.Logo}><i className={props.logo} aria-hidden="true" /></div> : null;
-  const title = (props.title) ? <h1 className={classes.Title}>{props.title}</h1> : null;
+  const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
   const tooltip = (props.tooltip) ? (
     <Fragment>

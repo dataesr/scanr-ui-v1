@@ -6,6 +6,7 @@ import moment from 'moment';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
 import SummaryCard from './SubComponents/SummaryCard';
+import SourceCard from './SubComponents/SourceCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
 
 import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
@@ -60,8 +61,8 @@ class Publication extends Component {
     const publicationDate = moment(this.props.data.publicationDate).format('L');
 
     return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
           <section className={`container-fluid ${classes.Publication}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
@@ -71,10 +72,11 @@ class Publication extends Component {
               >
                 <FormattedHTMLMessage id="Publication.title" defaultMessage="Publication.title" />
               </SectionTitle>
+
               <div className="row">
-                <div className="col-md-6">
+                <div className="col-lg">
                   <div className="row">
-                    <div className={`col-lg-12 ${classes.NoSpace}`}>
+                    <div className={`col-12 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-id-card"
@@ -86,19 +88,62 @@ class Publication extends Component {
                         allData={this.props.data}
                       />
                     </div>
-                    <div className={`col-lg-6 ${classes.NoSpace}`}>
-                      <SimpleCard
+                  </div>
+                  <div className="row">
+                    <div className="col-md-5">
+                      <div className="row">
+                        <div className={`col-md-12 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={this.props.language}
+                            logo="fas fa-calendar-day"
+                            title="Id"
+                            label="doi"
+                            tooltip=""
+                            masterKey="Publication/publicationDate"
+                            modifyMode={this.state.modifyModePortrait}
+                            allData={this.props.data}
+                          />
+                        </div>
+                        <div className={`col-md-12 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={this.props.language}
+                            logo="fas fa-calendar-day"
+                            title={messages[this.props.language]['Publication.publication.publicationDate']}
+                            label={publicationDate}
+                            tooltip=""
+                            masterKey="Publication/publicationDate"
+                            modifyMode={this.state.modifyModePortrait}
+                            allData={this.props.data}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div className={`col-md-7 ${classes.CardContainer}`}>
+                      <SourceCard
                         language={this.props.language}
-                        logo="fas fa-calendar-day"
-                        title={messages[this.props.language]['Publication.publication.publicationDate']}
-                        label={publicationDate}
-                        tooltip=""
-                        masterKey="Publication/publicationDate"
+                        data={this.props.data.source}
+                        masterKey="Publication/publicationType"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
                     </div>
-                    <div className={`col-lg-6 ${classes.NoSpace}`}>
+                  </div>
+                </div>
+
+                <div className="col-lg">
+                  <div className="row">
+                    <div className={`col-12 ${classes.CardContainer}`}>
+                      <SummaryCard
+                        language={this.props.language}
+                        title={messages[this.props.language]['Publication.summary.title']}
+                        text={getSelectKey(this.props.data, 'summary', this.props.language, 'default')}
+                        tooltip=""
+                        masterKey="Publication/summary"
+                        modifyMode={this.state.modifyModePortrait}
+                        allData={this.props.data}
+                      />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-bookmark"
@@ -110,15 +155,30 @@ class Publication extends Component {
                         allData={this.props.data}
                       />
                     </div>
+
                   </div>
                 </div>
-                <div className={`col-md-6 ${classes.NoSpace}`}>
-                  <SummaryCard
+              </div>
+            </div>
+          </section>
+          <section className={`container-fluid ${classes.Publication}`} style={sectionStyle}>
+            <div className="container">
+              <SectionTitle
+                icon={(this.props.data && this.props.data.isOa) ? 'fas fa-lock-open' : 'fas fa-lock'}
+                modifyModeHandle={this.modifyModeHandleAuthors}
+                modifyMode={this.state.modifyModeAuthors}
+              >
+                <FormattedHTMLMessage id="Publication.oa.title" defaultMessage="Publication.oa.title" />
+              </SectionTitle>
+              <div className="row">
+                <div className={`col-3 ${classes.CardContainer}`}>
+                  <SimpleCard
                     language={this.props.language}
-                    title={messages[this.props.language]['Publication.summary.title']}
-                    text={getSelectKey(this.props.data, 'summary', this.props.language, 'default')}
+                    logo="fas fa-id-card"
+                    title={messages[this.props.language]['Publication.publication.title']}
+                    label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
                     tooltip=""
-                    masterKey="Publication/summary"
+                    masterKey="Publication/title"
                     modifyMode={this.state.modifyModePortrait}
                     allData={this.props.data}
                   />
@@ -148,8 +208,8 @@ class Publication extends Component {
               </div>
             </div>
           </section>
-        </IntlProvider>
-      </Fragment>
+        </Fragment>
+      </IntlProvider>
     );
   }
 }
