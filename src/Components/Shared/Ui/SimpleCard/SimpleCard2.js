@@ -2,23 +2,28 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
-import getSelectKey from '../../../../../Utils/getSelectKey';
+import getSelectKey from '../../../../Utils/getSelectKey';
 
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
+import SubmitBox from '../../SubmitBox/SubmitBox';
 
-import classes from './Summary.scss';
+import classes from './SimpleCard2.scss';
 
 /**
- * SummaryCard component
+ * SimpleCard component
  * Url : .
  * Description : Carte avec logo, titre, label et tooltip
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-const SummaryCard = (props) => {
-  const title = (props.title) ? <div className={classes.Title}>{props.title}</div> : null;
-  const text = (props.text) ? <div className={classes.Text}>{props.text}</div> : null;
+const SimpleCard2 = (props) => {
+  if (!props.label) {
+    return null;
+  }
+  const style = { backgroundColor: props.bgColor || 'white' };
+  const logo = (props.logo) ? <div className={classes.Logo}><i className={props.logo} aria-hidden="true" /></div> : null;
+  const title = (props.title) ? <h1 className={classes.Title}>{props.title}</h1> : null;
+  const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
@@ -27,23 +32,26 @@ const SummaryCard = (props) => {
   ) : null;
 
   return (
-    <div className={classes.SummaryCard}>
+    <div className={classes.SimpleCard} style={style}>
       {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
+      {logo}
       {title}
-      {text}
+      {label}
       {tooltip}
     </div>
   );
 };
 
-export default SummaryCard;
+export default SimpleCard2;
 
-SummaryCard.propTypes = {
+SimpleCard2.propTypes = {
   language: PropTypes.string.isRequired,
+  logo: PropTypes.string,
   title: PropTypes.string,
-  text: PropTypes.string,
+  label: PropTypes.string,
   tooltip: PropTypes.string,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,
+  bgColor: PropTypes.string,
 };
