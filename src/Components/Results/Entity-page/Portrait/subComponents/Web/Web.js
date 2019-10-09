@@ -88,7 +88,8 @@ const Web = (props) => {
         logo = (
           <span>
             {socialMedia.substring(0, 2)}
-          </span>);
+          </span>
+        );
     }
 
     return (
@@ -128,7 +129,7 @@ const Web = (props) => {
                       {
                         (mainWebSiteUrl)
                           ? (
-                            <div className={`col-12 ${classes.NoSpace}`}>
+                            <div className={`col-12 ${classes.CardContainer}`}>
                               <MainWebSiteButton
                                 language={props.language}
                                 url={mainWebSiteUrl}
@@ -156,7 +157,7 @@ const Web = (props) => {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
-                              <div className={`col-4 ${classes.NoSpace}`}>
+                              <div className={`col-4 ${classes.CardContainer}`}>
                                 <WebSiteButton
                                   language={props.language}
                                   url={webSite.url}

@@ -61,7 +61,7 @@ class Identity extends Component {
           </div>
 
           <div className="row">
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <SimpleCard
                 language={this.props.language}
                 logo="fas fa-id-card"
@@ -73,7 +73,7 @@ class Identity extends Component {
                 allData={this.props.allData}
               />
             </div>
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <LogoCard
                 language={this.props.language}
                 src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${this.props.id}.png`}
@@ -84,7 +84,7 @@ class Identity extends Component {
                 allData={this.props.allData}
               />
             </div>
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <SimpleListCard
                 language={this.props.language}
                 logo="fas fa-qrcode"
@@ -98,7 +98,7 @@ class Identity extends Component {
                 allData={this.props.allData}
               />
             </div>
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <SimpleCard
                 language={this.props.language}
                 logo="fas fa-flask"
@@ -113,7 +113,7 @@ class Identity extends Component {
             {
               (description)
                 ? (
-                  <div className={`col-lg-12 ${classes.NoSpace}`}>
+                  <div className={`col-lg-12 ${classes.CardContainer}`}>
                     <DescriptionCard
                       language={this.props.language}
                       title={messages[this.props.language]['Entity.portrait.identity.description.title']}

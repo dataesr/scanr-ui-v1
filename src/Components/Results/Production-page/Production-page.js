@@ -97,6 +97,6 @@ export default Production;
 
 Production.propTypes = {
   language: PropTypes.string.isRequired,
-  match: PropTypes.object.isRequired,
+  // match: PropTypes.object.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };

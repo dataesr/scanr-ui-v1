@@ -321,7 +321,7 @@ class SearchPage extends Component {
   // *******************************************************************
   WhichResults = () => {
     if (this.state.api !== 'all') {
-      return(
+      return (
         <div className="container">
           <div className="row d-flex flex-wrap justify-content-between">
             <div className={classes.filters}>

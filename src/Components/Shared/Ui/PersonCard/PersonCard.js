@@ -86,7 +86,8 @@ const PersonCard = (props) => {
                       defaultMessage="PersonCard.emailLink.label"
                     />
                   </a>
-                </span>)
+                </span>
+              )
               : null
           }
         </div>

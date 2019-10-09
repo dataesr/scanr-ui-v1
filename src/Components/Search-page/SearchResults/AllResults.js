@@ -82,7 +82,10 @@ const SearchResults = (props) => {
                   </div>
                   <div
                     onClick={() => props.apiChangeHandler(section)}
-                    >
+                    onKeypress={() => props.apiChangeHandler(section)}
+                    role="button"
+                    tabIndex={0}
+                  >
                     <ButtonToPageLinkLess>
                       <FormattedHTMLMessage
                         id="searchResults.viewAll"
