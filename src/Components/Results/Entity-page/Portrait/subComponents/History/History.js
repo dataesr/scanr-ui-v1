@@ -44,7 +44,7 @@ class History extends Component {
           </div>
 
           <div className="row">
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <SimpleCard
                 language={this.props.language}
                 logo="fas fa-id-card"
@@ -56,7 +56,7 @@ class History extends Component {
                 allData={this.props.allData}
               />
             </div>
-            <div className={`col-lg-6 ${classes.NoSpace}`}>
+            <div className={`col-lg-6 ${classes.CardContainer}`}>
               <HistoryListCard
                 language={this.props.language}
                 title={messages[this.props.language]['Entity.portrait.history.history.title']}

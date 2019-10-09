@@ -18,26 +18,26 @@ import classes from './SimpleListCard.scss';
  * Tests unitaires : .
 */
 const logoFunction = logo => (
-  (logo) ? <div className={classes.Logo}><i className={logo} /></div> : null
+  (logo) ? <div className={classes.Logo}><i className={logo} aria-hidden="true" /></div> : null
 );
 
 const titleFunction = title => (
-  (title) ? <div className={classes.Title}>{title}</div> : null
+  (title) ? <h3 className={classes.Title}>{title}</h3> : null
 );
 
 const labelFunction = label => (
-  (label) ? <div className={classes.Label}>{label}</div> : null
+  (label) ? <p className={classes.Label}>{label}</p> : null
 );
 
 const additionalListFunction = (allProps) => {
   const items = allProps.list.map(item => (
-    <li key={item.key} className="list-group-item">
+    <li key={item.type} className="list-group-item">
       <div className="row">
         <div className="col">
-          <span className={classes.Key}>{item.key}</span>
+          <span className={classes.Key}>{item.type}</span>
         </div>
         <div className="col-8">
-          <span className={classes.Value}>{item.value}</span>
+          <span className={classes.Value}>{item.id}</span>
         </div>
       </div>
     </li>
