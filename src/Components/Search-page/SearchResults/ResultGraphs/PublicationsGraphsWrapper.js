@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 
-const PublicationsGraphsWrapper = props => (
+const PublicationsGraphsWrapper = () => (
   <React.Fragment>
     TODO
   </React.Fragment>
@@ -11,6 +11,6 @@ const PublicationsGraphsWrapper = props => (
 export default PublicationsGraphsWrapper;
 
 PublicationsGraphsWrapper.propTypes = {
-  request: PropTypes.object.isRequired,
-  language: PropTypes.string.isRequired,
+  // request: PropTypes.object.isRequired,
+  // language: PropTypes.string.isRequired,
 };

@@ -17,8 +17,8 @@ import classes from './DescriptionCard.scss';
  * Tests unitaires : .
 */
 const DescriptionCard = (props) => {
-  const title = (props.title) ? <div className={classes.Title}>{props.title}</div> : null;
-  const text = (props.text) ? <div className={classes.Text}>{props.text}</div> : null;
+  const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
+  const text = (props.text) ? <p className={classes.Text}>{props.text}</p> : null;
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>

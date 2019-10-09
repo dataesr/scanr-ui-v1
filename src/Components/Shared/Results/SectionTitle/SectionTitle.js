@@ -14,10 +14,10 @@ import classes from './SectionTitle.scss';
 const SectionTitle = props => (
   <div className={`row ${classes.SectionTitle}`}>
     <div className="col">
-      <i className={props.icon} />
-      <span className={classes.Label}>
+      <i className={props.icon} aria-hidden="true" />
+      <h1 className={classes.Label}>
         {props.children}
-      </span>
+      </h1>
     </div>
     <div className="col text-right">
       {
