@@ -39,6 +39,6 @@ export default ProjectsFilters;
 ProjectsFilters.propTypes = {
   multiValueFilterHandler: PropTypes.func,
   facets: PropTypes.array,
-  generalFacets: PropTypes.array,
+  // generalFacets: PropTypes.array,
   filters: PropTypes.object,
 };

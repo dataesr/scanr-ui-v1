@@ -388,8 +388,10 @@ $cardTitleBgColor: $scanrlightgreyColor;
   padding-left: 0;
   padding-right: 0;
 }
-
 .noDataOnSection {
+  color: $scanrgreyColor;
   font-style: italic;
-  color: $scanrgreyColor
+}
+.CardContainer {
+  padding: 3px;
 }
