@@ -32,6 +32,6 @@ const nbPersonsCard = props => (
 export default nbPersonsCard;
 
 nbPersonsCard.propTypes = {
-  language: PropTypes.string.isRequired,
+  // language: PropTypes.string.isRequired,
   nbPersons: PropTypes.number.isRequired,
 };

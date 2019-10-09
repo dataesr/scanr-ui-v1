@@ -89,22 +89,19 @@ const SearchResults = (props) => {
                         )
                     }
                   </div>
-                  {
-                    (window.innerWidth < 992)
-                      ? null
-                      : (
-                        <div
-                          onClick={() => props.apiChangeHandler(section)}
-                          >
-                          <ButtonToPageLinkLess>
-                            <FormattedHTMLMessage
-                              id="searchResults.viewAll"
-                              defaultMessage="searchResults.viewAll"
-                            />
-                          </ButtonToPageLinkLess>
-                        </div>
-                      )
-                  }
+                  <div
+                    onClick={() => props.apiChangeHandler(section)}
+                    onKeypress={() => props.apiChangeHandler(section)}
+                    role="button"
+                    tabIndex={0}
+                  >
+                    <ButtonToPageLinkLess>
+                      <FormattedHTMLMessage
+                        id="searchResults.viewAll"
+                        defaultMessage="searchResults.viewAll"
+                      />
+                    </ButtonToPageLinkLess>
+                  </div>
                 </div>
                 <div className="row d-flex flex-wrap justify-content-between">
                   {

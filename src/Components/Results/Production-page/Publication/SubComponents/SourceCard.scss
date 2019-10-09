@@ -1,28 +1,31 @@
-@import '../../../../style.scss';
+@import '../../../../../style.scss';
 
-.SimpleCard {
+.SourceCard {
   position: relative;
   background-color: white;
   border-radius: 8px;
   text-align: center;
-  min-height: 150px;
-
-  .Logo {
-    padding-top: 16px;
-    color: $scanrgreyColor;
-  }
+  min-height: 306px;
 
   .Title {
     color: $scanrgreyColor;
     font-style: italic;
     font-size: 0.9rem;
-    padding-top: 8px;
+    padding-top: 16px;
+  }
+  .Publisher {
+    color: $scanrblueColor !important;
+    font-size: 1.2rem;
   }
 
-  .Label {
+  .Value {
     padding: 8px;
     color: $scanrdeepblueColor;
     line-height: 22px;
     font-weight: bold;
   }
+  .Border {
+    border-left: 5px solid $scanrlightgreyColor;
+  }
+
 }

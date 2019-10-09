@@ -51,8 +51,8 @@ class Portrait extends Component {
     };
 
     return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
           <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
@@ -65,7 +65,7 @@ class Portrait extends Component {
               <div className="row">
                 <Identity
                   acronym={this.props.data.acronym}
-                  externalIds={[{ key: 'siren', value: 'gdklsjg4' }, { key: 'uai', value: '123456' }]}
+                  externalIds={this.props.data.externalIds || []}
                   id={this.props.data.id}
                   language={this.props.language}
                   description={this.props.data.description}
@@ -119,8 +119,8 @@ class Portrait extends Component {
               </div>
             </div>
           </section>
-        </IntlProvider>
-      </Fragment>
+        </Fragment>
+      </IntlProvider>
     );
   }
 }

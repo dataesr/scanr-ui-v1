@@ -12,9 +12,9 @@ import classes from './CardsTitle.scss';
  * Tests unitaires : .
 */
 const CardsTitle = props => (
-  <div className={classes.CardsTitle}>
+  <h2 className={classes.CardsTitle}>
     {props.title}
-  </div>
+  </h2>
 );
 
 export default CardsTitle;

@@ -7,20 +7,12 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import messageEntityFr from '../../Results/Entity-page/translations/fr.json';
-import messageEntityEn from '../../Results/Entity-page/translations/en.json';
-
 import classes from './SubmitBox.scss';
 
 const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
-const messagesEntity = {
-  fr: messageEntityFr,
-  en: messageEntityEn,
-};
-
 
 /**
  * SubmitBox
@@ -114,7 +106,7 @@ class SubmitBox extends Component {
                 <div className={`text-center ${classes.Text3}`}>
                   <span className={classes.Important}>
                     {
-                      messagesEntity[this.props.language][`Entity.Section.${this.props.masterKey.split('.')[0]}.label`].toUpperCase()
+                      messages[this.props.language][`Section.${this.props.masterKey.split('.')[0]}.label`].toUpperCase()
                     }
                   </span>
                   {
