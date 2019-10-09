@@ -1,0 +1,17 @@
+@import '../../../../../style.scss';
+
+.genderGraphCard {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 224px;
+  margin: 3px;
+  padding: 8px;
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+}

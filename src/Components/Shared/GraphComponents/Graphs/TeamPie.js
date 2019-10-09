@@ -10,6 +10,8 @@ import HCExportingData from 'highcharts/modules/export-data';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import classes from './TeamPie.scss';
+
 /**
  * TeamPie component <br/>
  * Url : . <br/>
@@ -35,72 +37,17 @@ export default class HighChartsPie extends Component {
     super(props);
     this.state = {
       showGraph: true,
-      options: null,
-      data: this.props.data,
     };
     this.toggleGraph = this.toggleGraph.bind(this);
   }
 
-  componentWillMount() {
-    const displayLabel = (this.state.data.percentage === false) ? '<b>{point.name} : {point.y}</b>' : '<b>{point.name} : {point.percentage:.1f}%</b>';
-
-    const colors = (this.state.data.colors && this.state.data.colors.length > 0) ? this.state.data.colors : ['#FFD138'];
-
-    const mySeries = [];
-    for (let i = 0; i < this.state.data.values.length; i += 1) {
-      mySeries.push([this.state.data.labels[i], this.state.data.values[i]]);
-    }
-
-    this.state.options = {
-      chart: {
-        marginBottom: 60,
-      },
-      title: '',
-      credits: false,
-      legend: {
-        enabled: false,
-      },
-      tooltip: false,
-      plotOptions: {
-        pie: {
-          dataLabels: {
-            enabled: true,
-            format: displayLabel,
-            style: {
-              color: '#003259',
-              fontSize: '25px',
-            },
-          },
-          showInLegend: true,
-          startAngle: 270,
-          endAngle: 90,
-          size: '80%',
-        },
-      },
-      exporting: {
-        buttons: {
-          contextButton: {
-            enabled: false,
-          },
-        },
-      },
-      colors,
-      series: [{
-        type: 'pie',
-        innerSize: '50%',
-        borderWidth: 10,
-        data: mySeries,
-      }],
-    };
-  }
-
   createTable = () => {
     const table = [];
-    for (let i = 0; i < this.state.data.values.length; i += 1) {
+    for (let i = 0; i < this.props.data.values.length; i += 1) {
       table.push(
         <tr>
-          <td>{this.state.data.labels[i]}</td>
-          <td>{this.state.data.values[i]}</td>
+          <td>{this.props.data.labels[i]}</td>
+          <td>{this.props.data.values[i]}</td>
         </tr>,
       );
     }
@@ -119,11 +66,70 @@ export default class HighChartsPie extends Component {
       en: messagesEn,
     };
 
+    if (this.props.data.value && this.props.data.value[0] === 0 && this.props.data.value[1] === 0) {
+      return null;
+    }
+
+    const displayLabel = (this.props.data.percentage === false) ? '<b>{point.y}<br />{point.name}</b>' : '<b>{point.name}<br />{point.percentage:.1f}%</b>';
+
+    const colors = (this.props.data.colors && this.props.data.colors.length > 0) ? this.props.data.colors : ['#FFD138'];
+    const bgColor = this.props.bgColor || 'white';
+    const borderSize = this.props.borderSize || 5;
+    const data = [];
+    for (let i = 0; i < this.props.data.values.length; i += 1) {
+      data.push([this.props.data.labels[i], this.props.data.values[i]]);
+    }
+
+    const options = {
+      chart: {
+        marginBottom: 16,
+        height: 212,
+        backgroundColor: bgColor,
+      },
+      title: 'Répartition par genre',
+      credits: false,
+      legend: {
+        enabled: false,
+      },
+      tooltip: true,
+      plotOptions: {
+        pie: {
+          dataLabels: {
+            enabled: true,
+            format: displayLabel,
+            style: {
+              color: '#003259',
+              fontSize: '18px',
+            },
+            distance: 0,
+          },
+          showInLegend: true,
+          startAngle: 270,
+          endAngle: 90,
+          size: '70%',
+        },
+      },
+      exporting: {
+        buttons: {
+          contextButton: {
+            enabled: false,
+          },
+        },
+      },
+      colors,
+      series: [{
+        type: 'pie',
+        innerSize: '40%',
+        borderWidth: borderSize,
+        data,
+      }],
+    };
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div style={{ textAlign: 'center' }}>
-          { this.state.showGraph ? <HighchartsReact highcharts={Highcharts} options={this.state.options} /> : (
-            <table style={{ margin: '0px auto' }}>
+        <div className={classes.TeamPie}>
+          { this.state.showGraph ? <HighchartsReact highcharts={Highcharts} options={options} /> : (
+            <table className="table">
               <tr>
                 <th><FormattedMessage id="TeamPie.string.table.category" /></th>
                 <th><FormattedMessage id="TeamPie.string.table.values" /></th>
@@ -131,8 +137,14 @@ export default class HighChartsPie extends Component {
               {this.createTable()}
             </table>
           )}
-          <button type="button" onClick={this.toggleGraph}>
-            <FormattedMessage id="TeamPie.string.button" />
+          <button
+            className={`btn ${classes.btn_scanrGrey}`}
+            type="button"
+            onClick={this.toggleGraph}
+          >
+            {
+              (this.state.showGraph) ? <FormattedMessage id="TeamPie.string.button.graph" /> : <FormattedMessage id="TeamPie.string.button.dataTable" />
+            }
           </button>
         </div>
       </IntlProvider>
@@ -143,4 +155,6 @@ export default class HighChartsPie extends Component {
 HighChartsPie.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
+  borderSize: PropTypes.number,
+  bgColor: PropTypes.string,
 };
