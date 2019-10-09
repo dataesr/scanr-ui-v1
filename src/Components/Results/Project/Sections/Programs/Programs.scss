@@ -1,6 +1,6 @@
-@import '../../../../style.scss';
+@import '../../../../../style.scss';
 
-.Team {
+.Programs {
   font-family: 'Lato', sans-serif;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -9,12 +9,20 @@
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: 50%; /* version standardisée */
   background-color: rgb(233, 236, 241);
-  background-position: bottom 0 right 0;
+  background-position: bottom 0 left 0;
+}
 
-  .TeamComposition {
-    .NoSpace {
-      margin: 0;
-      padding: 0;
-    }
+.noSpace {
+  margin: 0;
+  padding: 0;
+  flex: 0 1 calc(50% - 2px);
+}
+
+
+@media screen and (max-width: 991px) {
+  .noSpace {
+    margin: 0;
+    padding: 0;
+    flex: 1 1 calc(100% - 2px);
   }
 }
