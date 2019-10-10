@@ -10,6 +10,7 @@ import SearchPage from './Components/Search-page/Search-page';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
 import ProductionPage from './Components/Results/Production-page/Production-page';
 import ProjectPage from './Components/Results/Project/Project';
+import PersonPage from './Components/Results/Person/Person';
 import FocusList from './Components/Focus-pages/FocusList';
 import Focus from './Components/Focus-pages/Focus';
 import CurieHome from './Components/Shared/GraphCurie/CurieHome';
@@ -119,7 +120,16 @@ class App extends Component {
                 />
               )}
             />
-
+            <Route
+              path="/person/:id"
+              render={props => (
+                <PersonPage
+                  {...props}
+                  language={this.state.language}
+                  switchLanguage={this.switchLanguage}
+                />
+              )}
+            />
             <Route
               exact
               path="/focus"
