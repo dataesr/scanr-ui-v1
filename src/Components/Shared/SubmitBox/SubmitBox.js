@@ -70,7 +70,7 @@ class SubmitBox extends Component {
             ) : null
           }
 
-          <Modal show={this.state.showModifyModal} onHide={this.toggleModifyModal} size="lg">
+          <Modal show={this.state.showModifyModal || this.props.autoLaunch} onHide={this.toggleModifyModal} size="lg">
             <Modal.Header closeButton />
             <Modal.Body>
               <div className={classes.Modal}>

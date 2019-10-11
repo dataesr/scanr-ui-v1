@@ -77,7 +77,7 @@ const PersonsCard = (props) => {
         <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
           <a
             className={`pb-1 align-items-top ${classes.CardHeader}`}
-            href={`personnes/${props.data.value.id}`}
+            href={`person/${props.data.value.id}`}
           >
             {`${props.data.value.firstName} ${props.data.value.lastName || null}`}
           </a>
