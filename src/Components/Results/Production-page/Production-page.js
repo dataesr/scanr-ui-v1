@@ -26,9 +26,9 @@ class Production extends Component {
   };
 
   componentDidMount() {
-    // const { id } = this.props.match.params;
+    const { id } = this.props.match.params;
     // const id = 'doi10.10072%2525F978-3-319-24195-1_10';
-    const id = 'these2018TOU30090';
+    // const id = 'these2018TOU30090';
     // const id = 'doi10.10072%F978-3-319-24195-1_10';
     this.getData(id);
   }
