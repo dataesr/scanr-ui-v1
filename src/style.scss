@@ -292,6 +292,7 @@ $cardTitleBgColor: $scanrlightgreyColor;
   background-color: $scanrblueColor;
   color: white;
   font-weight: bold;
+  max-height: 40px;
 }
 .btn_scanrBlue:hover, .btn_scanrBlue:focus{
   background-color: $scanrgreyColor;

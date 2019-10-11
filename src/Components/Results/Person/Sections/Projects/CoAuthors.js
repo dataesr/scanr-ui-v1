@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import PersonCard from '../../../../Search-page/SearchResults/ResultCards/PersonCard';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
-import classes from './Description.scss';
-
+import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
 
@@ -15,38 +15,37 @@ const messages = {
   en: messagesEn,
 };
 /**
- * Description
+ * Productions
  * Url : .
  * Description : .
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-const Description = (props) => {
-  const bgUrl = './img/poudre-projects_fond_blanc.jpg';
+const Productions = (props) => {
+  const bgUrl = './img/poudre-projects_fond_gris.jpg';
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
-  const AlternativeLanguage = (props.language === 'fr') ? 'en' : 'fr';
   if (props.data) {
     return (
-      <section className={`container-fluid ${classes.Description}`} style={sectionStyle}>
+      <section className={`container-fluid ${classes.Productions}`} style={sectionStyle}>
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
               icon="fas fa-id-card"
               modifyModeHandle={props.modifyModeHandle}
-              modifyModeKey="description"
+              modifyModeKey="productions"
               modifyMode={props.modifyMode}
             >
-              <FormattedHTMLMessage id="Project.description.title" defaultMessage="Project.description.title" />
+              <FormattedHTMLMessage id="Project.productions.title" defaultMessage="Project.productions.title" />
             </SectionTitle>
             {
               (props.modifyMode)
                 ? (
                   <SubmitBox
                     language={props.language}
-                    masterKey="Project/description"
+                    masterKey="Project/title"
                     label="empty"
                     emptySection
                     autoLaunch={props.modifyMode}
@@ -56,9 +55,17 @@ const Description = (props) => {
                 : null
             }
             <div className="row">
-              <div className="d-flex pl-4 pr-4">
-                {props.data[props.language] || props.data[AlternativeLanguage] || props.data.default}
-              </div>
+              {
+                props.data.map(pers => (
+                  <div key={pers.id} className="col-4 p-1">
+                    <PersonCard
+                      language={props.language}
+                      data={{ value: pers }}
+                      size="small"
+                    />
+                  </div>
+                ))
+              }
             </div>
           </div>
         </IntlProvider>
@@ -66,23 +73,23 @@ const Description = (props) => {
     );
   }
   return (
-    <section className={`container-fluid ${classes.Description}`} style={sectionStyle}>
+    <section className={`container-fluid ${classes.Productions}`} style={sectionStyle}>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
             icon="fas fa-id-card"
             modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="description"
+            modifyModeKey="participants"
             modifyMode={props.modifyMode}
           >
-            <FormattedHTMLMessage id="Project.description.title" defaultMessage="Project.description.title" />
+            <FormattedHTMLMessage id="Project.productions.title" defaultMessage="Project.productions.title" />
           </SectionTitle>
           {
             (props.modifyMode)
               ? (
                 <SubmitBox
                   language={props.language}
-                  masterKey="Project/description"
+                  masterKey="Project/productions"
                   label="empty"
                   emptySection
                   autoLaunch={props.modifyMode}
@@ -93,7 +100,7 @@ const Description = (props) => {
           }
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
-              <FormattedHTMLMessage id="Project.description.noDescription" defaultMessage="Project.description.noDescription" />
+              <FormattedHTMLMessage id="Project.productions.noProductions" defaultMessage="Project.productions.noProductions" />
             </div>
           </div>
         </div>
@@ -102,11 +109,11 @@ const Description = (props) => {
   );
 };
 
-export default Description;
+export default Productions;
 
-Description.propTypes = {
+Productions.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  data: PropTypes.array,
   modifyModeHandle: PropTypes.func.isRequired,
   modifyMode: PropTypes.bool.isRequired,
 };

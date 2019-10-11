@@ -1,10 +1,17 @@
 @import '../../../../style.scss';
 
-.SimpleCard {
-  position: relative;
+
+.Tag {
+  border-radius: 4px;
+  list-style: none;
+  display: inline-block;
+}
+
+.TagCard {
   border-radius: 8px;
   text-align: center;
   min-height: 150px;
+  background-color: white;
 
   .Logo {
     padding-top: 16px;
@@ -24,4 +31,7 @@
     line-height: 22px;
     font-weight: bold;
   }
+}
+.MyUL {
+  margin-bottom: 0px;
 }

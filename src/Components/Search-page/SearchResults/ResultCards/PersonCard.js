@@ -60,16 +60,39 @@ const PersonsCard = (props) => {
     }
     return null;
   };
-  const domains = props.data.value.domains.map(dom => dom.label[props.language])
-    .filter(txt => (txt))
-    .filter(txt => (txt.length > 1))
-    .filter(txt => (txt.length < 20))
-    .sort((a, b) => b.length - a.length)
-    .slice(-4);
+  let domains = [];
+  if (props.data.value.domains && props.data.value.domains.length > 0) {
+    domains = props.data.value.domains.map(dom => dom.label[props.language])
+      .filter(txt => (txt))
+      .filter(txt => (txt.length > 1))
+      .filter(txt => (txt.length < 20))
+      .sort((a, b) => b.length - a.length)
+      .slice(-4);
+  }
 
   const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
   if (props.bgColor) {
     isSmall.backgroundColor = props.bgColor;
+  }
+  if (props.size === 'minimal') {
+    return (
+      <React.Fragment>
+        <IntlProvider locale={props.language} messages={messages[props.language]}>
+          <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={{ minHeight: '100px' }}>
+            <a
+              className={`pb-1 align-items-top ${classes.CardHeader}`}
+              href={`person/${props.data.value.id}`}
+            >
+              {props.data.value.fullName}
+            </a>
+            <div className={`d-flex align-items-center mb-auto ${classes.Unknown}`}>
+              <i className={`fas fa-qrcode pr-1 ${classes.Icons}`} />
+              {`idref: ${props.data.value.id.slice(5)}`}
+            </div>
+          </div>
+        </IntlProvider>
+      </React.Fragment>
+    );
   }
   return (
     <div>

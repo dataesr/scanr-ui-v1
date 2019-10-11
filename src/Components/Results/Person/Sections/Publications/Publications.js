@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import PublicationCard from '../../../../Search-page/SearchResults/ResultCards/PublicationCard';
+import PersonCard from '../../../../Search-page/SearchResults/ResultCards/PersonCard';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
-import classes from './Productions.scss';
+import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
 
@@ -27,7 +27,6 @@ const Productions = (props) => {
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
-
   if (props.data) {
     return (
       <section className={`container-fluid ${classes.Productions}`} style={sectionStyle}>
@@ -57,11 +56,11 @@ const Productions = (props) => {
             }
             <div className="row">
               {
-                props.data.map(prod => (
-                  <div key={prod.id} className="col-4 p-1">
-                    <PublicationCard
+                props.data.map(pers => (
+                  <div key={pers.id} className="col-4 p-1">
+                    <PersonCard
                       language={props.language}
-                      data={{ value: prod }}
+                      data={{ value: pers }}
                       size="small"
                     />
                   </div>
