@@ -5,7 +5,7 @@ import moment from 'moment';
 
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 
-import SummaryCard from './SubComponents/SummaryCard';
+import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SourceCard from './SubComponents/SourceCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
 
