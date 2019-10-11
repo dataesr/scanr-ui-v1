@@ -1,0 +1,63 @@
+@import '../../../../style.scss';
+
+.CounterListCard {
+  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  min-height: 224px;
+
+  .Logo {
+    padding-top: 16px;
+    color: $scanrgreyColor;
+  }
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-top: 8px;
+  }
+
+  .Counter {
+    padding-top: 55px;
+    padding-bottom: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0;
+    SPAN {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+  }
+
+  .Label {
+    padding: 8px;
+    line-height: 22px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+}
+.Default {
+  color: $scanrdeepblueColor;
+  background-color: white;
+}
+.Persons {
+  color: white;
+  background-color: $personColor !important;
+}
+
+.ModalLabel {
+  color: $scanrdeepblueColor;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.Button {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 1rem;
+}
