@@ -1,0 +1,45 @@
+@import '../../../../style.scss';
+
+.Thesis {
+  font-family: 'Lato', sans-serif;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
+  background-position: bottom 0 left 0;
+
+}
+
+.OaSection {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: 'Lato', sans-serif;
+  background-color: white;
+}
+
+.AuthorsSection {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: 'Lato', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrblueColor;
+  background-position: right 0 bottom 0;
+}
+
+.AffiliationsSection {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: 'Lato', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
+  background-position: bottom 0 left 0;
+}

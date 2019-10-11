@@ -44,7 +44,7 @@ class ButtonWithModal extends Component {
 
         <button className={`btn ${classes.Button}`} onClick={this.handleShowModal} onKeypress={this.handleShowModal} type="button" tabIndex={0}>
           {this.props.buttonLabel}
-          <i className="fas fa-expand" />
+          <i className="fas fa-expand" aria-hidden="true" />
         </button>
       </div>
     );

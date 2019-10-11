@@ -1,0 +1,48 @@
+@import '../../../../style.scss';
+
+.Card {
+  margin: 4px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 12px;
+  min-height: 220px !important;
+  position: relative;
+
+  .Title {
+    color: $scanrdeepblueColor;
+    height: 40px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-decoration: underline $scanrblueColor;
+  }
+
+  .Content {
+    font-size: 1rem;
+    padding-top: 24px;
+    line-height: 32px;
+    I {
+      font-size: 0.9rem;
+      display: inline-block;
+      width: 32px;
+      color: $scanrblueColor;
+    }
+    SPAN {
+      display: inline-block;
+    }
+    .ButtonContainer {
+
+      .Button {
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        font-size: 1rem;
+        width: 32% !important;
+        height: 38px !important;
+        i {
+          color: white !important;
+        }
+      }
+    }
+  }
+}
