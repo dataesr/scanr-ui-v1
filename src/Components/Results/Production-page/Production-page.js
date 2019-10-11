@@ -10,6 +10,7 @@ import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
 
 import Publication from './Publication/Publication';
+import Thesis from './Thesis/Thesis';
 
 /**
  * Production
@@ -26,7 +27,8 @@ class Production extends Component {
 
   componentDidMount() {
     // const { id } = this.props.match.params;
-    const id = 'doi10.10072%2525F978-3-319-24195-1_10';
+    // const id = 'doi10.10072%2525F978-3-319-24195-1_10';
+    const id = 'these2018TOU30090';
     // const id = 'doi10.10072%F978-3-319-24195-1_10';
     this.getData(id);
   }
@@ -53,7 +55,10 @@ class Production extends Component {
 
   renderThesis = () => (
     <Fragment>
-      Thèse
+      <Thesis
+        language={this.props.language}
+        data={this.state.data}
+      />
     </Fragment>
   )
 
