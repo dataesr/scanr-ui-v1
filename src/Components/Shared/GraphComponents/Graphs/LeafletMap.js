@@ -39,7 +39,7 @@ const createMarkers = (pos) => {
     try {
       markers.push(
         <Marker icon={yellowIcon} position={element.position} key={element.id}>
-          <Tooltip>{element.infos.map(info => (<div>{info}</div>))}</Tooltip>
+          <Tooltip>{element.infos.map(info => (<div key={JSON.stringify(element)}>{info}</div>))}</Tooltip>
         </Marker>,
       );
     } catch (error) {
@@ -74,7 +74,7 @@ class LeafletMap extends Component<{}, State> {
     if (!this.props.data) {
       return (<p>Pas de données géographiques.</p>);
     }
-    const mapStyle = this.props.style || { height: '40vh' }
+    const mapStyle = this.props.style || { height: '40vh' };
     const position = [this.state.lat, this.state.lng];
     const markers = createMarkers(this.props.data);
     const downloadOptions = {
@@ -140,5 +140,5 @@ export default LeafletMap;
 LeafletMap.propTypes = {
   data: PropTypes.array.isRequired,
   filename: PropTypes.string.isRequired,
-  viewheight: PropTypes.string.isRequired,
+  style: PropTypes.object,
 };
