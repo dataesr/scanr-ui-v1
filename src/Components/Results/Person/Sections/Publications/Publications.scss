@@ -1,0 +1,13 @@
+@import '../../../../../style.scss';
+
+.Productions {
+  font-family: 'Lato', sans-serif;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 40%; /* version standardisée */
+  background-color: #e9ecf1;
+  background-position: bottom -100% left 110%;
+}

@@ -7,8 +7,9 @@ import { API_PERSONS_END_POINT } from '../../../config/config';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
-import Description from './Sections/Description/Description';
+import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
+import Production from '../../Shared/Results/Productions/Productions';
 
 
 /**
@@ -45,7 +46,7 @@ class Person extends Component {
     if (section === 'informations') {
       this.setState(prevState => ({ modifyModeInformations: !prevState.modifyModeInformations }));
     }
-    if (section === 'description') {
+    if (section === 'coAuthors') {
       this.setState(prevState => ({ modifyModeDescription: !prevState.modifyModeDescription }));
     }
   }
@@ -71,10 +72,15 @@ class Person extends Component {
           modifyModeHandle={() => this.modifyModeHandle('informations')}
           modifyMode={this.state.modifyModeInformations}
         />
-        <Description
+        <Production
           language={this.props.language}
-          data={this.state.data.description}
-          modifyModeHandle={() => this.modifyModeHandle('description')}
+          id={this.props.match.params.id}
+          filterKey="authors.person.id"
+        />
+        <CoAuthors
+          language={this.props.language}
+          data={this.state.data.coContributors}
+          modifyModeHandle={() => this.modifyModeHandle('coAuthors')}
           modifyMode={this.state.modifyModeDescription}
         />
         <Footer language={this.props.language} />

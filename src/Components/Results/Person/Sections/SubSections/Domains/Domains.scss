@@ -1,0 +1,19 @@
+@import '../../../../../../style.scss';
+
+.Domains {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  min-height: 150px;
+}
+
+.SubSectionTitle {
+  margin-bottom: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: $scanrmiddlegreyColor;
+  color: $scanrdeepblueColor;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 700;
+}

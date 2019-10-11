@@ -1,0 +1,145 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import moment from 'moment';
+
+import LeafletMap from '../../../../../Shared/GraphComponents/Graphs/LeafletMap';
+import getSelectKey from '../../../../../../Utils/getSelectKey';
+
+import classes from './Affiliations.scss';
+
+import messagesFr from '../../../translations/fr.json';
+import messagesEn from '../../../translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
+// const RenderAffiliations = (AffiliationsObjectPerYear) => (
+//   Object.keys(AffiliationsObjectPerYear).map(aff => (
+//     <div className="d-flex">
+//       <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
+//         {aff}
+//       </div>
+//       <div className={`${classes.vl}`} />
+//       {
+//         testAffs[aff].map(af => (
+//           <div
+//             key={JSON.stringify(af)}
+//             className={`d-flex align-items-center pt-3 pb-3 w-100 ${classes.AffiliationItem}`}
+//             >
+//             <div className={`${classes.AffiliationTitle} mr-auto`}>{af.structure.label.fr}</div>
+//             <button type="button" href={`/entite/${af.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
+//               <i className="fas fa-arrow-right" aria-hidden="true" />
+//             </button>
+//           </div>
+//         ))
+//       }
+//     </div>
+//   ));
+// );
+
+
+/**
+ * Affiliations
+ * Url : .
+ * Description : .
+ * Responsive : .
+ * Accessible : .
+ * Tests unitaires : .
+*/
+const Affiliations = (props) => {
+  if (props.data) {
+    const mapdata = [];
+    props.data.forEach((aff) => {
+      try {
+        const dataElement = {
+          id: aff.structure.id,
+          position: [aff.structure.address[0].gps.lat, aff.structure.address[0].gps.lon],
+          infos: [getSelectKey(aff.structure, 'label', props.language, 'default')],
+        };
+        mapdata.push(dataElement);
+      } catch (error) {
+        // eslint-disable-no-empty
+      }
+    });
+    const mapStyle = {
+      height: '35vh',
+      borderTopLeftRadius: '10px',
+      borderTopRightRadius: '10px',
+      borderBottom: '5px solid #3778bb',
+    };
+    const testAffs = {};
+    const affYears = props.data.map((aff) => {
+      const endDate = moment(aff.endDate).format('YYYY');
+      return endDate;
+    });
+    affYears.forEach((year) => {
+      testAffs[year] = [];
+    });
+    props.data.forEach((aff) => {
+      const affiliation = { ...aff };
+      affiliation.endDate = moment(aff.endDate).format('YYYY');
+      affiliation.startDate = moment(aff.startDate).format('YYYY');
+      testAffs[affiliation.endDate].push(affiliation);
+    });
+
+    return (
+      <section className={classes.Affiliations}>
+        <IntlProvider locale={props.language} messages={messages[props.language]}>
+          <div className="d-flex flex-column">
+            <div className={`p-3 mb-1 align-self-end w-100 ${classes.SubSectionTitle}`}>
+              Affiliations
+            </div>
+            <div className="w-100">
+              <LeafletMap
+                filename="carto"
+                data={mapdata}
+                language={props.language}
+                style={mapStyle}
+              />
+            </div>
+            <div className={`w-100 ${classes.AffiliationsList}`}>
+              {
+                Object.keys(testAffs).map(year => (
+                  <div className="d-flex">
+                    <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
+                      {year}
+                    </div>
+                    <div className={`${classes.vl}`} />
+                    <div className={`d-flex flex-column pt-3 pb-3 w-100 ${classes.AffiliationItem}`}>
+                      {
+                        testAffs[year].map(struct => (
+                          <div key={JSON.stringify(struct)} className="d-flex pl-2 pr-2 pb-2 align-items-center">
+                            <div className={`${classes.AffiliationTitle} mr-auto`}>
+                              {struct.structure.label.fr}
+                            </div>
+                            <button type="button" href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
+                              <i className="fas fa-arrow-right" aria-hidden="true" />
+                            </button>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </IntlProvider>
+      </section>
+    );
+  }
+  return null;
+};
+
+export default Affiliations;
+
+Affiliations.propTypes = {
+  language: PropTypes.string.isRequired,
+  data: PropTypes.array,
+};
+
+// modifyModeHandle: PropTypes.func.isRequired,
+// modifyMode: PropTypes.bool.isRequired,
