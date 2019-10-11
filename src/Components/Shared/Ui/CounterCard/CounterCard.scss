@@ -1,11 +1,10 @@
 @import '../../../../style.scss';
 
-.SimpleCard {
+.CounterCard {
   position: relative;
-  background-color: white;
   border-radius: 8px;
   text-align: center;
-  min-height: 150px;
+  min-height: 224px;
 
   .Logo {
     padding-top: 16px;
@@ -19,11 +18,28 @@
     padding-top: 8px;
   }
 
+  .Counter {
+    padding-top: 55px;
+    padding-bottom: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0;
+  }
+
   .Label {
     padding: 8px;
-    color: $scanrdeepblueColor;
     line-height: 22px;
     font-weight: bold;
     margin: 0;
   }
+
+}
+.Default {
+  color: $scanrdeepblueColor;
+  background-color: white;
+}
+.Persons {
+  color: white;
+  background-color: $personColor !important;
 }

@@ -1,0 +1,43 @@
+@import '../../../../../style.scss';
+
+.OaCard {
+  background-color: $scanrlightgreyColor;
+  border-radius: 8px;
+  min-height: 150px;
+  .Icon {
+    display: inline-block;
+    padding: 32px;
+    border-radius: 50%;
+    I {
+      font-size: 3rem;
+      color: white;
+    }
+  }
+}
+
+.OaOpenBg {
+  background-color: $oaOpenColor;
+}
+.OaOpenRepository {
+  background-color: $oaOpenRepositoryColor;
+}
+.OaOpenPublisher {
+  background-color: $oaOpenPublisherColor;
+}
+.OaClose {
+  background-color: $oaClose;
+}
+
+.OaHost {
+  background-color: $scanrlightgreyColor;
+  border-radius: 8px;
+  min-height: 150px;
+
+}
+
+.OaLink {
+  background-color: $scanrlightgreyColor;
+  border-radius: 8px;
+  min-height: 150px;
+
+}
