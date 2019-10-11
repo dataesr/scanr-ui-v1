@@ -86,33 +86,38 @@ class LeafletMap extends Component<{}, State> {
       exportOnly: true,
     };
 
-    const ShareComponent = () => (
-      <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
-        <div className="mr-auto d-flex align-items-center">
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-share-alt-square" />
-            </button>
+    const ShareComponent = () => {
+      if (this.props.share) {
+        return (
+          <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
+            <div className="mr-auto d-flex align-items-center">
+              <div className="pr-1 d-flex align-items-center">
+                <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
+                <button type="button" className={classes.Button}>
+                  <i className="fas fa-share-alt-square" />
+                </button>
+              </div>
+              <div className="pr-1 d-flex align-items-center">
+                <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
+                <button type="button" className={classes.Button}>
+                  <i className="fas fa-code" />
+                </button>
+              </div>
+            </div>
+            <div className="d-flex align-items-center">
+              <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
+              <div className="pr-1 d-flex align-items-center">
+                <button type="button" onClick={this.exportChartPng} className={classes.Button}>
+                  <i className="fas fa-image" />
+                </button>
+                <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
+              </div>
+            </div>
           </div>
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-code" />
-            </button>
-          </div>
-        </div>
-        <div className="d-flex align-items-center">
-          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-              <i className="fas fa-image" />
-            </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
-          </div>
-        </div>
-      </div>
-    );
+        );
+      }
+      return null;
+    };
 
     return (
       <div className="w-100">
@@ -137,8 +142,13 @@ class LeafletMap extends Component<{}, State> {
 
 export default LeafletMap;
 
+LeafletMap.defaultProps = {
+  share: false,
+};
+
 LeafletMap.propTypes = {
   data: PropTypes.array.isRequired,
   filename: PropTypes.string.isRequired,
   style: PropTypes.object,
+  share: PropTypes.bool,
 };

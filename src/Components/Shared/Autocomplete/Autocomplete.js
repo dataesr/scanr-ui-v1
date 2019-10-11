@@ -55,8 +55,10 @@ class Autocomplete extends Component {
 
   render() {
     let filtered = [];
-    filtered = this.props.facets
-      .filter(item => item.value.toLowerCase().includes(this.state.query.toLowerCase()));
+    if (this.props.facets) {
+      filtered = this.props.facets
+        .filter(item => item.value.toLowerCase().includes(this.state.query.toLowerCase()));
+    }
 
     return (
       <div className="d-flex flex-column mb-3">
