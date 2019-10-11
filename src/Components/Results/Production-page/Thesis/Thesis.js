@@ -118,9 +118,9 @@ class Thesis extends Component {
                         language={this.props.language}
                         logo="fas fa-calendar-day"
                         title="Id"
-                        label="doi"
+                        label={this.props.data.id}
                         tooltip=""
-                        masterKey="Publication/publicationDate"
+                        masterKey="Publication/Id"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
