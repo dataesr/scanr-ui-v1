@@ -1,0 +1,26 @@
+@import '../../../../style.scss';
+
+.Budget {
+  background-color: rgb(233, 236, 241);
+  border-radius: 8px;
+  text-align: center;
+  min-height: 224px;
+  margin: 3px;
+  padding: 8px;
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    display: inline-block;
+  }
+  .Logo {
+    padding-top: 16px;
+    color: $scanrgreyColor;
+  }
+}
+
+.BudgetEuros {
+  color: $scanrgreyColor;
+  font-style: italic;
+}
