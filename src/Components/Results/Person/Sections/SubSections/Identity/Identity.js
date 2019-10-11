@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import PersonNameCard from '../../../Components/PersonNameCard';
 
 import classes from './Identity.scss';
 
@@ -35,11 +36,11 @@ const Identity = (props) => {
               <div className="container-fluid">
                 <div className="row">
                   <div className={`col-6 ${classes.CardContainer}`}>
-                    <SimpleCard
+                    <PersonNameCard
                       logo="fas fa-flask"
                       title="Domaines de recherche"
                       language={props.language}
-                      label="Tous les domaines"
+                      data={props.data}
                       masterKey={props.masterKey}
                       modifyMode={props.modifyMode}
                       allData={props.allData}
