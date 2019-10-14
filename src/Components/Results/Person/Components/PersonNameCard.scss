@@ -1,20 +1,31 @@
 @import '../../../../style.scss';
 
+.PersonCardName {
+  border-radius: 8px;
+  text-align: center;
+  height: 306px;
 
-.Title {
-  font-weight: 600;
-}
-.Funding {
-  font-style: italic;
-  color: $scanrgreyColor
-}
+  background-color: white;
 
-.yellowBullet {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 5px;
-  background-color: red;
-  margin-right: 5px;
-  margin-top: 5px;
+  .Logo {
+    padding-top: 16px;
+    color: $scanrgreyColor;
+  }
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-top: 8px;
+  }
+
+  .Label {
+    padding: 3px;
+    color: $scanrdeepblueColor;
+    line-height: 22px;
+    font-weight: bold;
+  }
+}
+.MyUL {
+  margin-bottom: 0px;
 }

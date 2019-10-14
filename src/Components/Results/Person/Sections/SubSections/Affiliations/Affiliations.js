@@ -40,7 +40,7 @@ const Affiliations = (props) => {
       }
     });
     const mapStyle = {
-      height: '35vh',
+      height: '32.5vh',
       borderTopLeftRadius: '10px',
       borderTopRightRadius: '10px',
       borderBottom: '5px solid #3778bb',
@@ -66,7 +66,7 @@ const Affiliations = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                Domains
+                <FormattedHTMLMessage id="Person.affiliation.title" defaultMessage="Project.affiliations.title" />
               </div>
               <div className="w-100">
                 <LeafletMap

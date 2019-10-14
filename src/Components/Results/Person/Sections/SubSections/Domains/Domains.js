@@ -30,7 +30,7 @@ const Domains = (props) => {
         .filter(txt => (txt))
         .filter(txt => (txt.length > 1))
         .filter(txt => (txt.length < 20))
-        .sort((a, b) => b.length - a.length)
+        .sort((a, b) => b.length - a.length);
     }
     const tagList = [...new Set(tags)];
 
