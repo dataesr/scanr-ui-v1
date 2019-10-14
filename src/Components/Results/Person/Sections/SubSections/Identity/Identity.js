@@ -52,9 +52,9 @@ const Identity = (props) => {
                         <div className={`col-12 ${classes.CardContainer}`}>
                           <SimpleCard
                             logo="fas fa-flask"
-                            title="Domaines de recherche"
+                            title="Status"
                             language={props.language}
-                            label="Tous les domaines"
+                            label="Chercheur"
                             masterKey={props.masterKey}
                             modifyMode={props.modifyMode}
                             allData={props.allData}

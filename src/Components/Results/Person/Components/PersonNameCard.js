@@ -1,40 +1,79 @@
-import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import React, { Fragment } from 'react';
+// import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import ReactTooltip from 'react-tooltip';
+
 import PropTypes from 'prop-types';
 
 import classes from './PersonNameCard.scss';
-import getSelectKey from '../../../../Utils/getSelectKey';
-
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
+import SubmitBox from '../../../Shared/SubmitBox/SubmitBox';
+import ButtonWithModal from '../../../Shared/Ui/Buttons/ButtonWithModal';
 /**
- * genderGraphCard
+ * PersonCardName component
  * Url : .
- * Description : .
+ * Description : Carte avec logo, titre, label et tooltip
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-const PersonNameCard = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div>
-      {props.data.fullName}
-      {props.data.gender}
-      {JSON.stringify(props.data.externalIds)}
+
+const PersonCardName = (props) => {
+  const logo = (<div className={classes.Logo}><i className="fas fa-qrcode" aria-hidden="true" /></div>);
+  const htmlList = (props.data.externalIds)
+    ? props.data.externalIds.map(tag => (
+      `${tag.type}: ${tag.id}`
+    ))
+    : null;
+  const tooltip = (props.tooltip) ? (
+    <Fragment>
+      <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
+      <ReactTooltip html />
+    </Fragment>
+  ) : null;
+  return (
+    <div className={`d-flex flex-column pb-3 ${classes.PersonCardName}`}>
+      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={props.allData.fullName} /> : null}
+      <div className={classes.Logo}>
+        {logo}
+      </div>
+      <div className={classes.Title}>
+        {'Name'}
+      </div>
+      <div className={classes.Label}>
+        {props.data.fullName}
+      </div>
+      <div className={classes.Title}>
+        {'Gender'}
+      </div>
+      <div className={classes.Label}>
+        {props.data.gender}
+      </div>
+      <div className={`mt-auto pb-2 ${classes.Title}`}>
+        {'External ids'}
+      </div>
+      {
+        (props.data.externalIds && props.data.externalIds.length > 0)
+          ? (
+            <ButtonWithModal
+              logo={logo}
+              title="externalIds"
+              buttonLabel="Voir tous les identifiants"
+              dataHtml={htmlList}
+            />
+          )
+          : 'No ids'
+      }
+      {tooltip}
     </div>
-  </IntlProvider>
-);
+  );
+};
 
+export default PersonCardName;
 
-export default PersonNameCard;
-
-PersonNameCard.propTypes = {
-  language: PropTypes.string.isRequired,
+PersonCardName.propTypes = {
+  language: PropTypes.string,
   data: PropTypes.object,
+  tooltip: PropTypes.string,
+  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
+  modifyMode: PropTypes.bool,
+  allData: PropTypes.object.isRequired,
 };
