@@ -26,6 +26,7 @@ class Production extends Component {
   };
 
   componentDidMount() {
+    // eslint-disable-next-line
     const { id } = this.props.match.params;
     // const id = 'doi10.10072%2525F978-3-319-24195-1_10';
     // const id = 'these2018TOU30090';
