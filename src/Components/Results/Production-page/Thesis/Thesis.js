@@ -117,7 +117,7 @@ class Thesis extends Component {
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-calendar-day"
-                        title="Id"
+                        title="Identifiant"
                         label={this.props.data.id}
                         tooltip=""
                         masterKey="Publication/Id"
