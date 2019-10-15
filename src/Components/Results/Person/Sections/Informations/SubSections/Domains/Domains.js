@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 
-import TagCard from '../../../../../Shared/Ui/TagCard/TagCard';
+import TagCard from '../../../../../../Shared/Ui/TagCard/TagCard';
 
 import classes from './Domains.scss';
 
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
+import messagesFr from '../../../../translations/fr.json';
+import messagesEn from '../../../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
@@ -40,7 +40,7 @@ const Domains = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                Domains
+                <FormattedHTMLMessage id="Person.informations.affiliation.title" defaultMessage="Person.informations.affiliation.title" />
               </div>
               <TagCard
                 logo="fas fa-flask"
