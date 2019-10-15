@@ -5,15 +5,11 @@ import PropTypes from 'prop-types';
 import classes from './ButtonToSearch.scss';
 
 const ButtonToSearch = props => (
-  <a href={props.href}>
-    <span className={classes.ButtonToSearch}>
-      <span className={classes.Label}>
-        {props.children}
-      </span>
-      <span className={classes.Arrow}>
-        <i className="fas fa-arrow-right" />
-      </span>
-    </span>
+  <a href={props.href} className={`${classes.ButtonToSearch} ${props.className}`}>
+    <p className={classes.Label}>
+      {props.children}
+      <i className="fas fa-arrow-right" />
+    </p>
   </a>
 );
 
@@ -24,5 +20,6 @@ ButtonToSearch.defaultProps = {
 
 ButtonToSearch.propTypes = {
   href: PropTypes.string,
+  className: PropTypes.string,
   children: PropTypes.string.isRequired,
 };

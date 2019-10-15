@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
-import PersonNameCard from '../../../Components/PersonNameCard';
+import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import PersonNameCard from '../../../../Components/PersonNameCard';
 
 import classes from './Identity.scss';
 
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
+import messagesFr from '../../../../translations/fr.json';
+import messagesEn from '../../../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
@@ -31,7 +31,7 @@ const Identity = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                Identité
+                <FormattedHTMLMessage id="Person.informations.identity.title" defaultMessage="Person.informations.identity.title" />
               </div>
               <div className="container-fluid">
                 <div className="row">

@@ -44,7 +44,12 @@ const CounterListCard = (props) => {
     }
     return (
       <li className="d-flex m-2" key={item}>
-        <div className={`mr-auto ${classes.ModalLabel}`}>{item.fullName}</div>
+        <p className={`mr-auto ${classes.ModalLabel}`}>
+          {item.fullName}
+        </p>
+        <p className={classes.Role}>
+          {messages[props.language][item.role]}
+        </p>
         {bt}
       </li>
     );

@@ -14,6 +14,7 @@ import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 import AffiliationCard from '../../../Shared/Ui/AffiliationCard/AffiliationCard';
+import TagCard from '../../../Shared/Ui/TagCard/TagCard';
 
 import EmptySection from '../../Entity-page/Shared/EmptySection/EmptySection';
 
@@ -65,6 +66,22 @@ class Thesis extends Component {
     this.setState(prevState => ({ modifyModeAffiliations: !prevState.modifyModeAffiliations }));
   }
 
+  getAuthor = role => (this.props.data.authors.find(person => person.role === role))
+
+  getAuthors = role => (this.props.data.authors.filter(person => person.role === role))
+
+  getSortedAuthors = () => {
+    const orderAuthors = ['author', 'directeurthese', 'presidentjury', 'membrejury', 'rapporteur'];
+    const sortedAuthors = [];
+    orderAuthors.forEach((role) => {
+      const authors = this.getAuthors(role);
+      if (authors.length > 0) {
+        authors.forEach(author => sortedAuthors.push(author));
+      }
+    });
+    return sortedAuthors;
+  }
+
   render() {
     if (!this.props.data) {
       return null;
@@ -79,9 +96,11 @@ class Thesis extends Component {
       backgroundImage: `url(${BackgroundAffiliations})`,
     };
 
+    const id = (this.props.data.id.substring(0, 5) === 'these') ? this.props.data.id.substring(5) : this.props.data.id;
     const publicationDate = moment(this.props.data.publicationDate).format('L');
-
+    const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
     const nbAuthorsToShow = 7;
+    const sortedAuthors = this.getSortedAuthors();
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -116,11 +135,11 @@ class Thesis extends Component {
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={this.props.language}
-                        logo="fas fa-calendar-day"
-                        title="Identifiant"
-                        label={this.props.data.id}
+                        logo="fas fa-id-card"
+                        title={messages[this.props.language]['Publication.publication.id']}
+                        label={id}
                         tooltip=""
-                        masterKey="Publication/Id"
+                        masterKey="Publication/id"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
@@ -136,6 +155,19 @@ class Thesis extends Component {
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      { /* eslint-disable */ }
+                      <PersonCard
+                        data={this.getAuthor('author')}
+                        showTitle={false}
+                        language={this.props.language}
+                        role={messages[this.props.language]['Publication.publication.author']}
+                        masterKey="Publication/mainAuthor"
+                        modifyMode={this.state.modifyModePortrait}
+                        allData={this.props.data}
+                      />
+                    { /* eslint-enable */ }
                     </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
@@ -157,9 +189,23 @@ class Thesis extends Component {
                       <SummaryCard
                         language={this.props.language}
                         title={messages[this.props.language]['Publication.summary.title']}
-                        text={getSelectKey(this.props.data, 'summary', this.props.language, 'default')}
+                        text={summary}
                         tooltip=""
                         masterKey="Publication/summary"
+                        modifyMode={this.state.modifyModePortrait}
+                        allData={this.props.data}
+                      />
+                    </div>
+                    <div className={`col-12 ${classes.CardContainer}`}>
+                      <TagCard
+                        language={this.props.language}
+                        logo="fas fa-clipboard-list"
+                        title={messages[this.props.language]['Publication.publication.tags']}
+                        tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
+                        labelListButton="Autres"
+                        tagList={this.props.data.keywords.default}
+                        tooltip=""
+                        masterKey="Publication/tags"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
@@ -226,25 +272,28 @@ class Thesis extends Component {
                   (this.props.data.authors && this.props.data.authors.length > 1)
                     ? (
                       <div className={`col-3 ${classes.CardContainer}`}>
-                        <CounterCard counter={this.props.data.authors.length} title="" label="co-auteurs" color="Persons" />
+                        <CounterCard
+                          counter={this.props.data.authors.length}
+                          title=""
+                          label={messages[this.props.language]['Publication.publication.persons']}
+                          color="Persons"
+                        />
                       </div>
                     ) : null
                 }
                 {
-                  this.props.data.authors.map((author, index) => {
+                  sortedAuthors.map((author, index) => {
                     if (index < nbAuthorsToShow) {
                       return (
                         <div className={`col-3 ${classes.CardContainer}`}>
                           <PersonCard
                             data={author}
-                            email=""
-                            firstName=""
+                            showTitle={false}
                             language={this.props.language}
-                            lastName=""
-                            role={author.role}
-                            masterKey="mlk/mlk"
-                            modifyMode={false}
-                            allData={null}
+                            role={messages[this.props.language][`Publication.publication.${author.role}`]}
+                            masterKey="Publication/person"
+                            modifyMode={this.state.modifyModeAuthors}
+                            allData={this.props.data}
                           />
                         </div>
                       );
@@ -258,7 +307,7 @@ class Thesis extends Component {
                       <div className={`col-3 ${classes.CardContainer}`}>
                         <CounterListCard
                           language={this.props.language}
-                          data={this.props.data.authors}
+                          data={sortedAuthors}
                           limit={nbAuthorsToShow}
                           title=""
                           labelKey="authors"

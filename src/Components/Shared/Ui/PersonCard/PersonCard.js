@@ -54,17 +54,21 @@ const PersonCard = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex flex-column ${classes.PersonCard}`}>
-        <div>
-          <span className={classes.Title}>
-            <FormattedHTMLMessage
-              id="PersonCard.title"
-              defaultMessage="PersonCard.title"
-            />
-          </span>
-        </div>
+        {
+          (props.showTitle) ? (
+            <div>
+              <span className={classes.Title}>
+                <FormattedHTMLMessage
+                  id="PersonCard.title"
+                  defaultMessage="PersonCard.title"
+                />
+              </span>
+            </div>
+          ) : null
+        }
         <div>
           <div className={classes.Logo}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="" />
           </div>
         </div>
         <div>
@@ -120,10 +124,12 @@ export default PersonCard;
 PersonCard.defaultProps = {
   masterKey: 'default.default',
   modifyMode: false,
+  showTitle: true,
 };
 
 PersonCard.propTypes = {
   data: PropTypes.object,
+  showTitle: PropTypes.bool,
   email: PropTypes.string,
   firstName: PropTypes.string,
   language: PropTypes.string,
