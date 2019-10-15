@@ -31,7 +31,7 @@ const Identity = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                Identité
+                <FormattedHTMLMessage id="Person.informations.identity.title" defaultMessage="Person.informations.identity.title" />
               </div>
               <div className="container-fluid">
                 <div className="row">
