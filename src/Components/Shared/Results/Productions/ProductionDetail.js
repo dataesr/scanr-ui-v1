@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
-
+// eslint-disable-next-line
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 
 import classes from './ProductionDetail.scss';
