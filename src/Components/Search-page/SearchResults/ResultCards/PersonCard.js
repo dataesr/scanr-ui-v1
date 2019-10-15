@@ -1,6 +1,7 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import getSelectedKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -13,6 +14,15 @@ const PersonsCard = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
+
+  const affiliation = (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure)
+    ? props.data.value.affiliations[0].structure
+    : null;
+
+  const address = (affiliation && affiliation.address && affiliation.address.length > 0)
+    ? affiliation.address[0]
+    : null;
+
   const ShouldRenderFoundIn = (data, highlight) => {
     if (highlight && data.highlights && data.highlights.length > 0) {
       return (
@@ -42,14 +52,14 @@ const PersonsCard = (props) => {
       return (
         <div className="d-flex flex-row flex-nowrap align-items-center">
           {
-            (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.address.length > 0 && props.data.value.affiliations[0].structure.address[0].postcode)
+            (address)
               ? (
                 <React.Fragment>
                   <div className={classes.Icons}>
                     <i className="fas fa-map-marker" />
                   </div>
                   <div className={`flex-grow-1 ${classes.UnknownData}`}>
-                    {`${props.data.value.affiliations[0].structure.address[0].city} (${props.data.value.affiliations[0].structure.address[0].postcode.slice(0, 2)})`}
+                    {(address.postcode) ? `${(address.city) ? address.city : ''} (${address.postcode.slice(0, 2)})` : address.city}
                   </div>
                 </React.Fragment>
               )
@@ -62,7 +72,7 @@ const PersonsCard = (props) => {
   };
   let domains = [];
   if (props.data.value.domains && props.data.value.domains.length > 0) {
-    domains = props.data.value.domains.map(dom => dom.label[props.language])
+    domains = props.data.value.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
       .filter(txt => (txt.length > 1))
       .filter(txt => (txt.length < 20))
@@ -95,7 +105,7 @@ const PersonsCard = (props) => {
     );
   }
   return (
-    <div>
+    <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
           <a
@@ -110,14 +120,14 @@ const PersonsCard = (props) => {
           </div>
           <div className="d-flex flex-row flex-nowrap align-items-center">
             {
-              (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure.address.length > 0 && props.data.value.affiliations[0].structure.address[0].postcode)
+              (affiliation)
                 ? (
                   <React.Fragment>
                     <div className={classes.Icons}>
                       <i className="fas fa-building" />
                     </div>
                     <div className={`flex-grow-1 ${classes.UnknownData}`}>
-                      {`${props.data.value.affiliations[0].structure.label.fr}`}
+                      {getSelectedKey(affiliation, 'label', props.language, 'en')}
                     </div>
                   </React.Fragment>
                 )
@@ -140,7 +150,7 @@ const PersonsCard = (props) => {
               <div className={classes.Tags}>
                 {
                   domains.map(d => (
-                    <a href={`recherche/persons?filters={"domains.label.fr": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${d}"]}}`}>{`#${d} `}</a>
+                    <a href={`recherche/persons?filters={"domains.label.${props.language}": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${d}"]}}`}>{`#${d} `}</a>
                   ))
                 }
               </div>
@@ -149,7 +159,7 @@ const PersonsCard = (props) => {
           {ShouldRenderFoundIn(props.data, props.highlights)}
         </div>
       </IntlProvider>
-    </div>
+    </React.Fragment>
   );
 };
 

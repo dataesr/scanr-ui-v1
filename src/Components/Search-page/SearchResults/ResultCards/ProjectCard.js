@@ -1,6 +1,7 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import getSelectedKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -83,7 +84,7 @@ const ProjectCard = (props) => {
             className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
             href={`project/${props.data.value.id}`}
           >
-            {(props.data.value.label) ? props.data.value.label.en || props.data.value.label.en || props.data.value.label.default : null}
+            {getSelectedKey(props.data.value, 'label', props.language, 'default')}
           </a>
           <div className="d-flex flex-row flex-wrap align-items-center">
             <div className={classes.Icons}>

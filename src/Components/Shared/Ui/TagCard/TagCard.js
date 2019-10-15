@@ -4,6 +4,7 @@ import ReactTooltip from 'react-tooltip';
 
 import SubmitBox from '../../SubmitBox/SubmitBox';
 import ButtonWithModal from '../Buttons/ButtonWithModal';
+import ButtonToSearch from '../Buttons/ButtonToSearch';
 
 import classes from './TagCard.scss';
 
@@ -21,11 +22,13 @@ const TagCard = (props) => {
   const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
   const labelListButton = props.labelListButton;
   const htmlList = props.tagList.map(tag => (
-    <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag}`} style={props.tagStyle}>
-      {tag}
+    <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag}`} style={props.tagStyle} key={tag}>
+      <ButtonToSearch href={`/recherche/all?query=${tag}`}>
+        {tag}
+      </ButtonToSearch>
     </li>
   ));
-  const max = props.maxElements || 12;
+
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
@@ -39,17 +42,13 @@ const TagCard = (props) => {
       {title}
       <ul className={`d-flex flex-wrap p-3 ${classes.MyUL}`}>
         {
-          (props.tagList.length > max)
-            ? props.tagList.slice(-max).map(tag => (
-              <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag}`} style={props.tagStyle}>
-                {tag}
-              </li>
-            ))
+          (props.tagList.length > props.maxElements)
+            ? htmlList.slice(-props.maxElements)
             : htmlList
         }
       </ul>
       {
-        (props.tagList.length > max)
+        (props.tagList.length > props.maxElements)
           ? (
             <ButtonWithModal
               logo={props.logo}
@@ -66,6 +65,10 @@ const TagCard = (props) => {
 };
 
 export default TagCard;
+
+TagCard.defaultProps = {
+  maxElements: 12,
+};
 
 TagCard.propTypes = {
   language: PropTypes.string,

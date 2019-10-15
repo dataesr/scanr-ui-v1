@@ -48,7 +48,7 @@ const PersonCardName = (props) => {
         {props.data.gender}
       </div>
       <div className={`mt-auto pb-2 ${classes.Title}`}>
-        External ids
+        Autres identifiants
       </div>
       {
         (props.data.externalIds && props.data.externalIds.length > 0)

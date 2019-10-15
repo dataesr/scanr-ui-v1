@@ -17,3 +17,21 @@
     line-height: 20px;
   }
 }
+
+.Tags {
+  padding: 6px;
+  margin: 6px;
+  background-color: $scanrgreyColor;
+  color: white;
+  border-radius: 6px;
+  A,SPAN {
+    color: white;
+  }
+  A:hover, SPAN:hover {
+    color: white;
+  }
+}
+.Tags:hover {
+  background-color: $scanrlightgreyColor;
+  color: $scanrdeepblueColor;
+}
