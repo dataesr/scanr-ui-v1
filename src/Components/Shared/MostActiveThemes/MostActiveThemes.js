@@ -29,7 +29,7 @@ const MostActiveThemes = props => (
                 defaultMessage="MostActiveThemes.lib"
               />
               <span className={classes.InfoIcon_style}>
-                <i className="fas fa-info-circle" />
+                <i className="fas fa-info-circle" aria-hidden />
               </span>
             </div>
             <div className={classes.Lib2}>
@@ -42,7 +42,7 @@ const MostActiveThemes = props => (
           <div className="col-lg-7">
             {
               props.data.map(item => (
-                <ButtonToSearch key={item} href={`/recherche/all?query=${item}`}>
+                <ButtonToSearch key={item} href={`/recherche/all?query=${item}`} className={classes.Tags}>
                   {item}
                 </ButtonToSearch>
               ))
