@@ -92,7 +92,7 @@ const PublicationCard = (props) => {
               {
                 (props.data.value.authors && props.data.value.authors.length > 1)
                   ? `${props.data.value.authors.length} co-authors`
-                  : "no coAuthor"
+                  : 'no coAuthor'
               }
             </div>
           </div>
