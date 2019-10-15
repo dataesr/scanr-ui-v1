@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard2';
 import PersonNameCard from '../../../../Components/PersonNameCard';

@@ -11,3 +11,36 @@
   background-color: #e9ecf1;
   background-position: bottom -100% left 110%;
 }
+
+.OneFourth {
+  flex: 0 1 calc(25% - 5px);
+  align-self: stretch;
+}
+
+@media screen and (max-width: 991px) {
+  .OneFourth {
+    flex: 0 1 100%;
+  }
+}
+
+.Card {
+  border-radius: 8px;
+  text-align: center;
+  background-color: white;
+  color: $scanrdeepblueColor;
+  list-style: none;
+}
+
+.CountCard {
+  font-size: 2rem;
+  background-color: $personsColor;
+
+}
+
+.SeeMoreCard {
+}
+
+.PersonCard {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
