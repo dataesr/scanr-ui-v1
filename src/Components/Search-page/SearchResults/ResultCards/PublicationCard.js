@@ -90,9 +90,9 @@ const PublicationCard = (props) => {
             </div>
             <div className="flex-grow-1">
               {
-                (props.data.value.authors && props.data.value.authors.length && props.data.value.authors.length > 1)
+                (props.data.value.authors && props.data.value.authors.length > 1)
                   ? `${props.data.value.authors.length} co-authors`
-                  : props.data.value.authors[0].fullName
+                  : "no coAuthor"
               }
             </div>
           </div>
