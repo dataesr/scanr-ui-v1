@@ -1,7 +1,7 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-
+import getSelectedKey from '../../../../Utils/getSelectKey';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -68,14 +68,14 @@ const EntityCard = (props) => {
     isSmall.backgroundColor = props.bgColor;
   }
   return (
-    <div>
+    <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
           <a
             className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
             href={`entite/${props.data.value.id}`}
           >
-            {(props.data.value.label) ? props.data.value.label[props.language] : null}
+            {getSelectedKey(props.data.value, 'label', props.language, 'default')}
           </a>
           <div className="d-flex flex-row flex-nowrap align-items-center">
             <div className={classes.Icons}>
@@ -101,7 +101,7 @@ const EntityCard = (props) => {
           {ShouldRenderFoundIn(props.data, props.highlights)}
         </div>
       </IntlProvider>
-    </div>
+    </React.Fragment>
   );
 };
 
