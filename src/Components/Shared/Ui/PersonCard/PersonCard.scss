@@ -17,6 +17,7 @@
   .Logo {
     height: 60px;
     overflow: hidden;
+    padding-top: 8px;
   }
 
   .Name {
@@ -40,12 +41,10 @@
 
     a:after {
         content: '';
-
         width: 100%;
         position: absolute;
         left: 0;
         bottom: -2px;
-
         border-width: 0 0 2px;
         border-style: solid;
         border-color: $scanrblueColor;

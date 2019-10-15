@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import PersonCard from '../../../../Search-page/SearchResults/ResultCards/PersonCard';
+import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
+import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 import classes from './CoAuthors.scss';
@@ -22,12 +23,45 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
+const CountCard = coAuthorsCount => (
+  <li className={`p-3 mb-2 d-flex flex-column ${classes.CountCard} ${classes.Card} ${classes.OneFourth}`}>
+    {coAuthorsCount}
+    <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
+  </li>
+);
+const SeeMoreCard = coAuthorsList => (
+  <li className={`p-3 mb-2 d-flex flex-column ${classes.SeeMoreCard} ${classes.Card} ${classes.OneFourth}`}>
+    <p>
+      {coAuthorsList.length - 6}
+      de plus
+    </p>
+    <ButtonWithModal
+      logo=""
+      title="hello"
+      buttonLabel="world"
+      dataHtml={coAuthorsList}
+    />
+  </li>
+);
+
 const CoAuthors = (props) => {
   const bgUrl = './img/poudre-projects_fond_gris.jpg';
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
   if (props.data) {
+    const coAuthorsList = props.data.map(coAuthors => (
+      <li key={coAuthors.id} className={`p-3 mb-2 d-flex flex-column ${classes.PersonCard} ${classes.Card} ${classes.OneFourth}`}>
+
+        <div className="mb-auto">{coAuthors.fullName}</div>
+        <ButtonToPage
+          className={`${classes.Component_dark} ml-5 mr-5`}
+          url={`/person/${coAuthors.id}`}
+        >
+          {messages[props.language]['Person.authorsLink']}
+        </ButtonToPage>
+      </li>
+    ));
     return (
       <section className={`container-fluid ${classes.CoAuthors}`} style={sectionStyle}>
         <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -54,19 +88,11 @@ const CoAuthors = (props) => {
                 )
                 : null
             }
-            <div className="row">
-              {
-                props.data.map(pers => (
-                  <div key={pers.id} className="col-4 p-1">
-                    <PersonCard
-                      language={props.language}
-                      data={{ value: pers }}
-                      size="minimal"
-                    />
-                  </div>
-                ))
-              }
-            </div>
+            <ul className="d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0">
+              {CountCard(props.data.length)}
+              {(coAuthorsList.length > 6) ? coAuthorsList.slice(-6) : coAuthorsList}
+              {(coAuthorsList.length > 6) ? SeeMoreCard(coAuthorsList) : null}
+            </ul>
           </div>
         </IntlProvider>
       </section>

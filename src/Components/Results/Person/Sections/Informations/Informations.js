@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import Affiliations from '../SubSections/Affiliations/Affiliations';
-import Domains from '../SubSections/Domains/Domains';
-import Identity from '../SubSections/Identity/Identity';
+import Affiliations from './SubSections/Affiliations/Affiliations';
+import Domains from './SubSections/Domains/Domains';
+import Identity from './SubSections/Identity/Identity';
 import classes from './Informations.scss';
 
 import messagesFr from '../../translations/fr.json';

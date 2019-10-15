@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 
-import LeafletMap from '../../../../../Shared/GraphComponents/Graphs/LeafletMap';
-import getSelectKey from '../../../../../../Utils/getSelectKey';
+import LeafletMap from '../../../../../../Shared/GraphComponents/Graphs/LeafletMap';
+import getSelectKey from '../../../../../../../Utils/getSelectKey';
 
 import classes from './Affiliations.scss';
 
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
+import messagesFr from '../../../../translations/fr.json';
+import messagesEn from '../../../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
@@ -66,7 +66,7 @@ const Affiliations = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                <FormattedHTMLMessage id="Person.affiliation.title" defaultMessage="Project.affiliations.title" />
+                <FormattedHTMLMessage id="Person.informations.affiliation.title" defaultMessage="Person.informations.affiliation.title" />
               </div>
               <div className="w-100">
                 <LeafletMap
