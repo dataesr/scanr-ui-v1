@@ -1,6 +1,7 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import getSelectedKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -66,7 +67,7 @@ const PublicationCard = (props) => {
   };
   const PubDate = (props.data.value.publicationDate) ? new Date(props.data.value.publicationDate) : 'NA';
   return (
-    <div>
+    <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column pt-3 pl-4 pr-4 pb-4 ${classes.ResultCard}`} style={isSmall}>
           <div className={`d-flex pb-1 ${classes.GreyTitle}`}>
@@ -81,7 +82,7 @@ const PublicationCard = (props) => {
             className={`mb-auto align-items-top ${classes.CardHeader}`}
             href={`entite/${props.data.value.id}`}
           >
-            {(props.data.value.title) ? props.data.value.title.default : null}
+            {getSelectedKey(props.data.value, 'title', props.language, 'default')}
           </a>
           <div className="d-flex">
             <div className={classes.Icons}>
@@ -89,9 +90,9 @@ const PublicationCard = (props) => {
             </div>
             <div className="flex-grow-1">
               {
-                (props.data.value.authors && props.data.value.authors.length && props.data.value.authors.length > 1)
+                (props.data.value.authors && props.data.value.authors.length > 1)
                   ? `${props.data.value.authors.length} co-authors`
-                  : props.data.value.authors[0].fullName
+                  : 'no coAuthor'
               }
             </div>
           </div>
@@ -109,7 +110,7 @@ const PublicationCard = (props) => {
           {ShouldRenderFoundIn(props.data, props.highlights)}
         </div>
       </IntlProvider>
-    </div>
+    </React.Fragment>
   );
 };
 
