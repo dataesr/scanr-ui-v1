@@ -36,19 +36,19 @@ const PersonCardName = (props) => {
         {logo}
       </div>
       <div className={classes.Title}>
-        {'Name'}
+        Name
       </div>
       <div className={classes.Label}>
         {props.data.fullName}
       </div>
       <div className={classes.Title}>
-        {'Gender'}
+        Gender
       </div>
       <div className={classes.Label}>
         {props.data.gender}
       </div>
       <div className={`mt-auto pb-2 ${classes.Title}`}>
-        {'External ids'}
+        Autres identifiants
       </div>
       {
         (props.data.externalIds && props.data.externalIds.length > 0)

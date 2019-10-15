@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 
-import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import PersonNameCard from '../../../../Components/PersonNameCard';
 
-import classes from './Activities.scss';
+import classes from './Identity.scss';
 
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
+import messagesFr from '../../../../translations/fr.json';
+import messagesEn from '../../../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
@@ -22,7 +23,7 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
-const Activities = (props) => {
+const Identity = (props) => {
   if (props.data) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -32,25 +33,14 @@ const Activities = (props) => {
               <div className={classes.SubSectionTitle}>
                 Identité
               </div>
-              <div className={`col-12 ${classes.CardContainer}`}>
-                <SimpleCard
-                  logo="fas fa-flask"
-                  title="Domaines de recherche"
-                  language={props.language}
-                  label="Tous les domaines"
-                  masterKey={props.masterKey}
-                  modifyMode={props.modifyMode}
-                  allData={props.allData}
-                />
-              </div>
               <div className="container-fluid">
                 <div className="row">
                   <div className={`col-6 ${classes.CardContainer}`}>
-                    <SimpleCard
+                    <PersonNameCard
                       logo="fas fa-flask"
                       title="Domaines de recherche"
                       language={props.language}
-                      label="Tous les domaines"
+                      data={props.data}
                       masterKey={props.masterKey}
                       modifyMode={props.modifyMode}
                       allData={props.allData}
@@ -62,9 +52,9 @@ const Activities = (props) => {
                         <div className={`col-12 ${classes.CardContainer}`}>
                           <SimpleCard
                             logo="fas fa-flask"
-                            title="Domaines de recherche"
+                            title="Status"
                             language={props.language}
-                            label="Tous les domaines"
+                            label="Chercheur"
                             masterKey={props.masterKey}
                             modifyMode={props.modifyMode}
                             allData={props.allData}
@@ -95,9 +85,9 @@ const Activities = (props) => {
   return null;
 };
 
-export default Activities;
+export default Identity;
 
-Activities.propTypes = {
+Identity.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
