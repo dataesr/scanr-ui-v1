@@ -99,7 +99,7 @@ class Thesis extends Component {
     const id = (this.props.data.id.substring(0, 5) === 'these') ? this.props.data.id.substring(5) : this.props.data.id;
     const publicationDate = moment(this.props.data.publicationDate).format('L');
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
-    const nbAuthorsToShow = 2;
+    const nbAuthorsToShow = 7;
     const sortedAuthors = this.getSortedAuthors();
 
     return (
@@ -139,7 +139,7 @@ class Thesis extends Component {
                         title={messages[this.props.language]['Publication.publication.id']}
                         label={id}
                         tooltip=""
-                        masterKey="Publication/Id"
+                        masterKey="Publication/id"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
                       />
@@ -163,9 +163,9 @@ class Thesis extends Component {
                         showTitle={false}
                         language={this.props.language}
                         role={messages[this.props.language]['Publication.publication.author']}
-                        masterKey="mlk/mlk"
-                        modifyMode={false}
-                        allData={null}
+                        masterKey="Publication/mainAuthor"
+                        modifyMode={this.state.modifyModePortrait}
+                        allData={this.props.data}
                       />
                     { /* eslint-enable */ }
                     </div>
@@ -291,9 +291,9 @@ class Thesis extends Component {
                             showTitle={false}
                             language={this.props.language}
                             role={messages[this.props.language][`Publication.publication.${author.role}`]}
-                            masterKey="mlk/mlk"
-                            modifyMode={false}
-                            allData={null}
+                            masterKey="Publication/person"
+                            modifyMode={this.state.modifyModeAuthors}
+                            allData={this.props.data}
                           />
                         </div>
                       );

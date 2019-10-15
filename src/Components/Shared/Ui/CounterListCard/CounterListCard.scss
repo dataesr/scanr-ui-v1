@@ -51,7 +51,14 @@
 .ModalLabel {
   color: $scanrdeepblueColor;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  padding: 6px 0 0 0;
+}
+.Role {
+  padding: 6px 8px 0 0;
+  margin: 0;
+  color: $scanrdeepblueColor;
+  font-style: italic;
 }
 
 .Button {
