@@ -8,7 +8,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import CounterCardByType from '../CounterCards/CounterCardByType';
-import EvolutionCardByType from '../CounterCards/EvolutionCardByType';
+// import EvolutionCardByType from '../CounterCards/EvolutionCardByType';
 
 import Background from './poudre-bleu_Fgris-B.jpg';
 
@@ -52,7 +52,7 @@ class ScanrToday extends Component {
           <div className="container">
             <div className="row">
               <div className="col-lg">
-                <span className={classes.Title}>
+                <h2 className={classes.Title}>
                   <FormattedHTMLMessage
                     id="ScanrToday.string.title"
                     defaultMessage="ScanrToday.string.title"
@@ -65,7 +65,7 @@ class ScanrToday extends Component {
                     role="button"
                     tabIndex={0}
                   />
-                </span>
+                </h2>
               </div>
               <div className="col-lg">
                 <CounterCardByType
@@ -96,7 +96,7 @@ class ScanrToday extends Component {
                 />
               </div>
             </div>
-            {/* /row */}
+            {/*
             <hr style={{ marginBottom: '8px' }} />
             <div className="row">
               <div className="col-lg">
@@ -136,8 +136,8 @@ class ScanrToday extends Component {
                 />
               </div>
             </div>
-            {/* /row */}
             <hr style={{ marginTop: '0px' }} />
+            { */}
           </div>
           {/* /container */}
         </section>

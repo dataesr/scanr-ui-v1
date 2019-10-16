@@ -52,7 +52,7 @@ class Search extends Component {
             { placeholder => <input type="text" className="form-control" id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
-        <div className="form-group col-md-3">
+        <div className="form-group col-xs-3">
           <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
             { label => <label className={classes.SearchPerimeter} htmlFor="api">{label}</label> }
           </FormattedMessage>
@@ -74,12 +74,12 @@ class Search extends Component {
             </FormattedMessage>
           </select>
         </div>
-        <div className="form-group col-md-1">
+        <div className="form-group col-xs-1">
           <button
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
           >
-            <i className="fas fa-search" />
+            <i className="fas fa-search" aria-label="Lancer la recherche"/>
           </button>
         </div>
       </div>
@@ -102,20 +102,24 @@ class Search extends Component {
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
             <div className="container">
-              <div className={classes.Logo}>
+              <h1 className={classes.Logo} aria-label="scanr, le moteur de la recherche et de l'innovation">
                 <LogoScanrWhiteSVG fill={color} />
-              </div>
+              </h1>
               {this.renderForm()}
-              <div className={classes.HowTo}>
+              <p className={classes.HowTo}>
                 <FormattedHTMLMessage id="Search.HowTo" defaultMessage="Search.HowTo" />
-              </div>
+              </p>
               <div className={classes.Suggest}>
                 <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
-                <span>
+                <ul>
                   {
-                    this.props.suggests.map(suggest => (<ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>))
+                    this.props.suggests.map(suggest => (
+                      <li>
+                        <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                      </li>
+                    ))
                   }
-                </span>
+                </ul>
               </div>
             </div>
           </section>

@@ -19,7 +19,6 @@ const messages = {
 const MostActiveThemes = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section className={classes.MostActiveThemes}>
-
       <div className="container">
         <div className="row">
           <div className="col-lg-5">
@@ -40,13 +39,17 @@ const MostActiveThemes = props => (
             </div>
           </div>
           <div className="col-lg-7">
-            {
-              props.data.map(item => (
-                <ButtonToSearch key={item} href={`/recherche/all?query=${item}`} className={classes.Tags}>
-                  {item}
-                </ButtonToSearch>
-              ))
-            }
+            <ul>
+              {
+                props.data.map(item => (
+                  <li>
+                    <ButtonToSearch key={item} href={`/recherche/all?query=${item}`} className={classes.Tags}>
+                      {item}
+                    </ButtonToSearch>
+                  </li>
+                ))
+              }
+            </ul>
           </div>
         </div>
       </div>

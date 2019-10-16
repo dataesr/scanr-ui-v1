@@ -24,10 +24,12 @@ const LastFocus = (props) => {
         <div className="container">
           <div className="row">
             <div className={`col-lg-10 ${classes.Title}`}>
-              <FormattedHTMLMessage
-                id="LastFocus.Title"
-                defaultMessage="LastFocus.Title"
-              />
+              <h2>
+                <FormattedHTMLMessage
+                  id="LastFocus.Title"
+                  defaultMessage="LastFocus.Title"
+                />
+              </h2>
             </div>
             <div className={`col-lg-2 ${classes.Button}`}>
               <ButtonToPage

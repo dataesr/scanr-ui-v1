@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { ReactTitle } from 'react-meta-tags';
 
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
@@ -52,6 +53,9 @@ class HomePage extends Component {
   render() {
     return (
       <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
+
+        <ReactTitle title="scanR, le moteur de la recherche et de l'innovation - Accueil" />
+
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
