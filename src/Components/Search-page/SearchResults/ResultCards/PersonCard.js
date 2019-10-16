@@ -2,77 +2,35 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import getSelectedKey from '../../../../Utils/getSelectKey';
-
+import highlightsFr from './translations/highlights_fr.json';
+import highlightsEn from './translations/highlights_en.json';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './Cards.scss';
 
-const PersonsCard = (props) => {
+const PersonCard = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
+  const highlights = {
+    fr: highlightsFr,
+    en: highlightsEn,
+  };
 
-  const affiliation = (props.data.value.affiliations && props.data.value.affiliations.length > 0 && props.data.value.affiliations[0].structure)
-    ? props.data.value.affiliations[0].structure
+  const affiliation = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
+    ? props.data.affiliations[0].structure
     : null;
 
   const address = (affiliation && affiliation.address && affiliation.address.length > 0)
     ? affiliation.address[0]
     : null;
 
-  const ShouldRenderFoundIn = (data, highlight) => {
-    if (highlight && data.highlights && data.highlights.length > 0) {
-      return (
-        <div className="d-flex flex-row flex-nowrap">
-          <div className={classes.Icons}>
-            <i className="fas fa-search" />
-          </div>
-          <div className="flex-grow-1 pl-1">
-            <div className={classes.FoundIn}>
-              <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
-            </div>
-            {
-              data.highlights.map((h) => {
-                const high = h.type.concat(': ').concat(h.value);
-                // eslint-disable-next-line
-                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
-              })
-            }
-          </div>
-        </div>
-      );
-    }
-    return null;
-  };
-  const ShouldRenderSmall = () => {
-    if (props.size !== 'small') {
-      return (
-        <div className="d-flex flex-row flex-nowrap align-items-center">
-          {
-            (address)
-              ? (
-                <React.Fragment>
-                  <div className={classes.Icons}>
-                    <i className="fas fa-map-marker" />
-                  </div>
-                  <div className={`flex-grow-1 ${classes.UnknownData}`}>
-                    {(address.postcode) ? `${(address.city) ? address.city : ''} (${address.postcode.slice(0, 2)})` : address.city}
-                  </div>
-                </React.Fragment>
-              )
-              : null
-          }
-        </div>
-      );
-    }
-    return null;
-  };
   let domains = [];
-  if (props.data.value.domains && props.data.value.domains.length > 0) {
-    domains = props.data.value.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
+  if (props.data.domains && props.data.domains.length > 0) {
+    domains = props.data.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
       .filter(txt => (txt.length > 1))
       .filter(txt => (txt.length < 20))
@@ -80,95 +38,128 @@ const PersonsCard = (props) => {
       .slice(-4);
   }
 
-  const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
-  if (props.bgColor) {
-    isSmall.backgroundColor = props.bgColor;
-  }
-  if (props.size === 'minimal') {
-    return (
-      <React.Fragment>
-        <IntlProvider locale={props.language} messages={messages[props.language]}>
-          <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={{ minHeight: '100px' }}>
-            <a
-              className={`pb-1 align-items-top ${classes.CardHeader}`}
-              href={`person/${props.data.value.id}`}
-            >
-              {props.data.value.fullName}
-            </a>
-            <div className={`d-flex align-items-center mb-auto ${classes.Unknown}`}>
-              <i className={`fas fa-qrcode pr-1 ${classes.Icons}`} />
-              {`idref: ${props.data.value.id.slice(5)}`}
-            </div>
-          </div>
-        </IntlProvider>
-      </React.Fragment>
+  const affiliations = (affiliation)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-building" />
+        </div>
+        <p className="m-0">
+          {getSelectedKey(affiliation, 'label', props.language, 'en')}
+        </p>
+      </li>
+    )
+    : (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-building" />
+        </div>
+        <p className={`m-0 ${classes.UnknownData}`}>
+          {messages[props.language]['resultCard.unknownData']}
+        </p>
+      </li>
     );
-  }
+
+  const addresses = (address && !props.small)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-map-marker" />
+        </div>
+        <p className="m-0">
+          {`${(address.city) ? address.city : ''} ${(address.postcode) ? ` ${address.postcode}` : ''}`}
+        </p>
+      </li>
+    )
+    : null;
+
+  const identifier = (props.data.id)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-fingerprint" />
+        </div>
+        <p className="m-0">
+          {`ID: ${props.data.id.slice(5)}`}
+        </p>
+      </li>
+    )
+    : null;
+
+  const domain = (domains && domains.length > 0 && !props.small)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-tags" />
+        </div>
+        <ul className={`m-0 p-0 ${classes.NoneStyleUL}`}>
+          {
+            domains.map(d => (
+              <li className={classes.InlineLI}>
+                <a href={`recherche/persons?filters={"domains.label.${props.language}": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${d}"]}}`}>{`#${d} `}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+    )
+    : null;
+
+  const highlight = (props.highlights && props.highlights.length > 0)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-search" />
+        </div>
+        <div className="m-0 flex-grow-1 pl-1">
+          <p className={`m-0 ${classes.FoundIn}`}>
+            <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
+          </p>
+          <p className={`d-flex m-0 ${classes.Highlights}`}>
+            {
+              [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ')
+            }
+          </p>
+        </div>
+      </li>
+    )
+    : null;
+
+
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
-          <a
-            className={`pb-1 align-items-top ${classes.CardHeader}`}
-            href={`person/${props.data.value.id}`}
-          >
-            {`${props.data.value.firstName} ${props.data.value.lastName || null}`}
-          </a>
-          <div className={`d-flex align-items-center mb-auto ${classes.Unknown}`}>
-            <i className={`fas fa-qrcode pr-1 ${classes.Icons}`} />
-            {`idref: ${props.data.value.id.slice(5)}`}
-          </div>
-          <div className="d-flex flex-row flex-nowrap align-items-center">
-            {
-              (affiliation)
-                ? (
-                  <React.Fragment>
-                    <div className={classes.Icons}>
-                      <i className="fas fa-building" />
-                    </div>
-                    <div className={`flex-grow-1 ${classes.UnknownData}`}>
-                      {getSelectedKey(affiliation, 'label', props.language, 'en')}
-                    </div>
-                  </React.Fragment>
-                )
-                : (
-                  <React.Fragment>
-                    <div className={classes.Icons}>
-                      <i className="fas fa-building" />
-                    </div>
-                    <div className={classes.UnknownData}><FormattedHTMLMessage id="resultCard.unknownData" defaultMessage="resultCard.unknownData" /></div>
-                  </React.Fragment>
-                )
-            }
-          </div>
-          {ShouldRenderSmall()}
-          <div className="d-flex flex-row flex-nowrap">
-            <div className={classes.Icons}>
-              <i className="fas fa-tags" />
-            </div>
-            <div className="flex-grow-1">
-              <div className={classes.Tags}>
-                {
-                  domains.map(d => (
-                    <a href={`recherche/persons?filters={"domains.label.${props.language}": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${d}"]}}`}>{`#${d} `}</a>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-          {ShouldRenderFoundIn(props.data, props.highlights)}
-        </div>
+        <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
+          <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
+            <a href={`person/${props.data.id}`}>
+              {`${(props.data.firstName) ? props.data.firstName : ''} ${(props.data.lastName) ? ` ${props.data.lastName}` : ''}`}
+            </a>
+          </h3>
+          <ul className="m-0 p-0">
+            {identifier}
+            {affiliations}
+            {addresses}
+            {domain}
+            <hr className={`mb-2 mt-2 ${classes.HighlightPersonSep}`} aria-hidden="true" />
+            {highlight}
+          </ul>
+        </article>
       </IntlProvider>
     </React.Fragment>
   );
 };
 
-export default PersonsCard;
+export default PersonCard;
 
-PersonsCard.propTypes = {
+PersonCard.defaultProps = {
+  cardColor: 'CardWhite',
+  small: false,
+};
+
+PersonCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  size: PropTypes.string.isRequired,
-  highlights: PropTypes.bool,
-  bgColor: PropTypes.string,
+  highlights: PropTypes.array,
+  cardColor: PropTypes.string,
+  small: PropTypes.bool,
 };
