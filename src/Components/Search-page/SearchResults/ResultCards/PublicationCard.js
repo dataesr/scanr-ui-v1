@@ -6,6 +6,8 @@ import getSelectedKey from '../../../../Utils/getSelectKey';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+import highlightsFr from './translations/highlights_fr.json';
+import highlightsEn from './translations/highlights_en.json';
 
 import classes from './Cards.scss';
 
@@ -14,101 +16,125 @@ const PublicationCard = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const ShouldRenderFoundIn = (data, highlight) => {
-    if (highlight && data.highlights && data.highlights.length > 0) {
-      return (
-        <div className="d-flex flex-row flex-nowrap">
-          <div className={classes.Icons}>
-            <i className="fas fa-search" />
-          </div>
-          <div className="flex-grow-1 pl-1">
-            <div className={classes.FoundIn}>
-              <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
-            </div>
-            {
-              data.highlights.map((h) => {
-                const high = h.type.concat(': ').concat(h.value);
-                // eslint-disable-next-line
-                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
-              })
-            }
-          </div>
-        </div>
-      );
-    }
-    return null;
+  const highlights = {
+    fr: highlightsFr,
+    en: highlightsEn,
   };
-  const ShouldRenderSmall = () => {
-    if (props.size !== 'small') {
-      return (
-        <React.Fragment>
-          <div className="d-flex">
-            <div className={classes.Icons}>
-              <i className="fas fa-th-large" />
-            </div>
-            <div className={`flex-grow-1 ${classes.TextOverflow}`}>
-              {(props.data.value.source) ? props.data.value.source.title : 'NA'}
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    }
-    return null;
-  };
-  const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
-  if (props.bgColor) {
-    isSmall.backgroundColor = props.bgColor;
-  }
   const options = {
-    weekday: 'long',
     year: 'numeric',
     month: 'long',
     day: 'numeric',
   };
-  const PubDate = (props.data.value.publicationDate) ? new Date(props.data.value.publicationDate) : 'NA';
+
+  const productionType = (props.data.productionType)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-clipboard" />
+        </div>
+        <p className="m-0">
+          {messages[props.language][`resultCard.production.${props.data.productionType}`]}
+        </p>
+      </li>
+    )
+    : null;
+
+  const coAuthors = (props.data.authors && props.data.authors.length > 0 && !props.small)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-users" />
+        </div>
+        <p className="m-0">
+          {`${props.data.authors.length} ${messages[props.language]['resultCard.production.coAuthors']}`}
+        </p>
+      </li>
+    )
+    : (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-users" />
+        </div>
+        <p className={`m-0 ${classes.UnknownData}`}>
+          {messages[props.language]['resultCard.production.noAuthors']}
+        </p>
+      </li>
+    );
+
+  const publicationDate = (props.data.publicationDate)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-calendar" />
+        </div>
+        <p p className="m-0">
+          {new Date(props.data.publicationDate).toLocaleDateString('fr-FR', options)}
+        </p>
+      </li>
+    )
+    : (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-calendar" />
+        </div>
+        <p className={`m-0 ${classes.UnknownData}`}>
+          {messages[props.language]['resultCard.production.noDate']}
+        </p>
+      </li>
+    );
+
+  const journal = (props.data.source && props.data.source.title && !props.small)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-folder-open" />
+        </div>
+        <p p className="m-0">
+          {props.data.source.title}
+        </p>
+      </li>
+    )
+    : null;
+
+  const highlight = (props.highlights && props.highlights.length > 0)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-search" />
+        </div>
+        <div className="m-0 flex-grow-1 pl-1">
+          <p className={`m-0 ${classes.FoundIn}`}>
+            <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
+          </p>
+          <p className={`d-flex m-0 ${classes.Highlights}`}>
+            {
+              [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ')
+            }
+          </p>
+        </div>
+      </li>
+    )
+    : null;
+
+
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className={`d-flex flex-column pt-3 pl-4 pr-4 pb-4 ${classes.ResultCard}`} style={isSmall}>
-          <div className={`d-flex pb-1 ${classes.GreyTitle}`}>
-            <div className={`${classes.Icons} ${classes.GreyTitle}`}>
-              <i className="fas fa-building" />
-            </div>
-            <div className="flex-grow-1">
-              Publication
-            </div>
-          </div>
-          <a
-            className={`mb-auto align-items-top ${classes.CardHeader}`}
-            href={`entite/${props.data.value.id}`}
-          >
-            {getSelectedKey(props.data.value, 'title', props.language, 'default')}
-          </a>
-          <div className="d-flex">
-            <div className={classes.Icons}>
-              <i className="fas fa-building" />
-            </div>
-            <div className="flex-grow-1">
-              {
-                (props.data.value.authors && props.data.value.authors.length > 1)
-                  ? `${props.data.value.authors.length} co-authors`
-                  : 'no coAuthor'
-              }
-            </div>
-          </div>
-          <div className="d-flex">
-            <div className={classes.Icons}>
-              <i className="fas fa-atom" />
-            </div>
-            <div className="flex-grow-1">
-              {
-                (PubDate === 'NA') ? PubDate : PubDate.toLocaleDateString('fr-FR', options)
-               }
-            </div>
-          </div>
-          {ShouldRenderSmall()}
-          {ShouldRenderFoundIn(props.data, props.highlights)}
-        </div>
+        <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
+          <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
+            <a href={`publication/${props.data.id}`}>
+              {getSelectedKey(props.data, 'title', props.language, 'default')}
+            </a>
+          </h3>
+          <ul className="m-0 p-0">
+            {productionType}
+            {coAuthors}
+            {publicationDate}
+            {journal}
+            <hr className={`mb-2 mt-2 ${classes.HighlightProductionSep}`} aria-hidden="true" />
+            {highlight}
+          </ul>
+        </article>
       </IntlProvider>
     </React.Fragment>
   );
@@ -116,10 +142,15 @@ const PublicationCard = (props) => {
 
 export default PublicationCard;
 
+PublicationCard.defaultProps = {
+  cardColor: 'CardWhite',
+  small: false,
+};
+
 PublicationCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  size: PropTypes.string.isRequired,
-  highlights: PropTypes.bool,
-  bgColor: PropTypes.string,
+  highlights: PropTypes.array,
+  cardColor: PropTypes.string,
+  small: PropTypes.bool,
 };

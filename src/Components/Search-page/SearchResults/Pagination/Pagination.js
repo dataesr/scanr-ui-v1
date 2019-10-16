@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -8,364 +8,78 @@ import messagesEn from './translations/en.json';
 
 import classes from './Pagination.scss';
 
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
-const Pagination = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
-  const pageSize = props.currentPageSize || 20;
-  const pageCurrent = props.currentPage || 1;
-  const lastIndex = Math.ceil(props.totalDocuments / pageSize) || 1;
+class Pagination extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      nextPage: this.props.currentPage || 1,
+    };
+  }
 
-  const ShouldDisabled = (position) => {
-    if (position === 'previous' && pageCurrent === 1) {
+
+  ShouldDisabled = (position) => {
+    if (position === 'previous' && this.state.nextPage < 2) {
       return classes.NoDisplay;
     }
-    if (position === 'next' && pageCurrent === lastIndex) {
+    if (position === 'next' && this.state.nextPage >= this.state.lastIndex) {
       return classes.NoDisplay;
     }
     return '';
-  };
+  }
 
-  const ShouldPrintPaginationStart = () => {
-    if (pageCurrent === 4) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(1)}
-            onKeyPress={() => props.paginationHandler(1)}
-            role="button"
-            tabIndex={0}
-          >
-            1
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(2)}
-            onKeyPress={() => props.paginationHandler(2)}
-            role="button"
-            tabIndex={0}
-          >
-            2
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(3)}
-            onKeyPress={() => props.paginationHandler(3)}
-            role="button"
-            tabIndex={0}
-          >
-            3
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (pageCurrent === 3) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(pageCurrent - 2)}
-            onKeyPress={() => props.paginationHandler(pageCurrent - 2)}
-            role="button"
-            tabIndex={0}
-          >
-            {pageCurrent - 2}
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(pageCurrent - 1)}
-            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
-            role="button"
-            tabIndex={0}
-          >
-            {pageCurrent - 1}
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (pageCurrent === 2) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler(pageCurrent - 1)}
-            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
-            role="button"
-            tabIndex={0}
-          >
-            {pageCurrent - 1}
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (!pageCurrent || pageCurrent === 1) {
-      return null;
-    }
-    return (
-      <React.Fragment>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(1)}
-          onKeyPress={() => props.paginationHandler(1)}
-          role="button"
-          tabIndex={0}
-        >
-          1
-        </div>
-        <div className={`row d-flex justify-content-center align-items-end m-0 ${classes.Dots}`}>...</div>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(pageCurrent - 2)}
-          onKeyPress={() => props.paginationHandler(pageCurrent - 2)}
-          role="button"
-          tabIndex={0}
-        >
-          {pageCurrent - 2}
-        </div>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(pageCurrent - 1)}
-          onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
-          role="button"
-          tabIndex={0}
-        >
-          {pageCurrent - 1}
-        </div>
-      </React.Fragment>
-    );
-  };
+  HandlePageInputChange = (e) => {
+    this.setState({ nextPage: e.target.value });
+  }
 
-  const ShouldPrintPaginationEnd = () => {
-    if (pageCurrent === (lastIndex - 1)) {
-      return (
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler((lastIndex))}
-          onKeyPress={() => props.paginationHandler((lastIndex))}
-          role="button"
-          tabIndex={0}
-        >
-          {(lastIndex)}
-        </div>
-      );
-    }
-    if (pageCurrent === (lastIndex - 4)) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 3))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 3))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 3)}
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 2))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 2))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 2)}
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 1)}
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (pageCurrent === (lastIndex - 3)) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 2))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 2))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 2)}
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 1)}
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (pageCurrent === (lastIndex - 2)) {
-      return (
-        <React.Fragment>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex - 1)}
-          </div>
-          <div
-            className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-            onClick={() => props.paginationHandler((lastIndex - 1))}
-            onKeyPress={() => props.paginationHandler((lastIndex - 1))}
-            role="button"
-            tabIndex={0}
-          >
-            {(lastIndex)}
-          </div>
-        </React.Fragment>
-      );
-    }
-    if (pageCurrent === lastIndex) {
-      return null;
-    }
+  render() {
+    const currentPage = this.props.currentPage || 1;
+    const lastIndex = Math.ceil(this.props.totalDocuments / (this.props.currentPageSize || 20)) || 1;
     return (
-      <React.Fragment>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(pageCurrent + 1)}
-          onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
-          role="button"
-          tabIndex={0}
-        >
-          {pageCurrent + 1}
-        </div>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(pageCurrent + 2)}
-          onKeyPress={() => props.paginationHandler(pageCurrent + 2)}
-          role="button"
-          tabIndex={0}
-        >
-          {pageCurrent + 2}
-        </div>
-        <div className={`row d-flex justify-content-center align-items-end m-0 ${classes.Dots}`}>...</div>
-        <div
-          className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2"
-          onClick={() => props.paginationHandler(lastIndex)}
-          onKeyPress={() => props.paginationHandler(lastIndex)}
-          role="button"
-          tabIndex={0}
-        >
-          {lastIndex}
-        </div>
-      </React.Fragment>
-    );
-  };
-
-  // const ShouldPrintPaginationEnd = () => {
-  //     if (![lastIndex, lastIndex - 1, lastIndex - 2].includes(pageCurrent)) {
-  //       return (
-  //         <React.Fragment>
-  //           <div className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2" onClick={() => props.paginationHandler(pageCurrent + 1)}>{pageCurrent + 1}</div>
-  //           <div className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2" onClick={() => props.paginationHandler(pageCurrent + 2)}>{pageCurrent + 2}</div>
-  //           <div className={`row d-flex justify-content-center align-items-end m-0 ${classes.Dots}`}>...</div>
-  //           <div className="row d-flex justify-content-center align-items-center m-1 pl-2 pr-2" onClick={() => props.paginationHandler(lastIndex)}>{lastIndex}</div>
-  //         </React.Fragment>
-  //       );
-  //     }
-  //     return null;
-  //   };
-  if (window.innerWidth > 992) {
-    return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className={`row mb-3 pb-3 pt-3 pr-2 d-flex flex-row justify-content-end ${classes.Section}`}>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <section className={`row mb-3 p-3 d-flex flex-row justify-content-around ${classes.Section}`}>
           <div
-            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
-            onClick={() => props.paginationHandler(pageCurrent - 1)}
-            onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.ShouldDisabled('previous')} ${classes.Buttons}`}
+            onClick={() => this.props.paginationHandler(currentPage - 1)}
+            onKeyPress={() => this.props.paginationHandler(currentPage - 1)}
             role="button"
             tabIndex={0}
           >
-            <i className="fas fa-chevron-left" />
-          </div>
-          <div className={`row d-flex justify-content-center align-items-center m-1 pr-3 ${ShouldDisabled('previous')} ${classes.NextPrevious}`}>
+            <i aria-label="previous page" className="fas fa-chevron-left mr-3" />
             <FormattedHTMLMessage id="pagination.previous" defaultMessage="pagination.previous" />
           </div>
-          {ShouldPrintPaginationStart()}
-          <div className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${classes.Active}`}>
-            {pageCurrent}
-          </div>
-          {ShouldPrintPaginationEnd()}
-          <div className={`row d-flex justify-content-center align-items-center m-1 pl-3 ${ShouldDisabled('next')} ${classes.NextPrevious}`}>
-            <FormattedHTMLMessage id="pagination.next" defaultMessage="pagination.next" />
-          </div>
+          <form className="mr-3 ml-3 d-flex align-items-center" onSubmit={() => this.props.paginationHandler(this.state.nextPage)}>
+            <input
+              className={`mr-1 ${classes.PageInput}`}
+              value={this.state.nextPage}
+              onChange={e => this.HandlePageInputChange(e)}
+            />
+            <div className={`mr-1 ${classes.MaxPage}`}>
+              /
+            </div>
+            <div className={classes.MaxPage}>
+              {lastIndex}
+            </div>
+          </form>
           <div
-            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
-            onClick={() => props.paginationHandler(pageCurrent + 1)}
-            onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.ShouldDisabled('next')} ${classes.Buttons}`}
+            onClick={() => this.props.paginationHandler(currentPage + 1)}
+            onKeyPress={() => this.props.paginationHandler(currentPage + 1)}
             role="button"
             tabIndex={0}
           >
-            <i className="fas fa-chevron-right" />
+            <FormattedHTMLMessage id="pagination.next" defaultMessage="pagination.next" />
+            <i aria-hidden="true" className="fas fa-chevron-right ml-3" />
           </div>
         </section>
       </IntlProvider>
     );
   }
-  return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`row mb-3 pb-3 pt-3 pr-2 d-flex flex-row justify-content-center ${classes.Section}`}>
-        <div
-          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
-          onClick={() => props.paginationHandler(1)}
-          onKeyPress={() => props.paginationHandler(1)}
-          role="button"
-          tabIndex={0}
-        >
-          <i className="fas fa-angle-double-left" />
-        </div>
-        <div
-          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('previous')}`}
-          onClick={() => props.paginationHandler(pageCurrent - 1)}
-          onKeyPress={() => props.paginationHandler(pageCurrent - 1)}
-          role="button"
-          tabIndex={0}
-        >
-          <i className="fas fa-chevron-left" />
-        </div>
-        <div className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${classes.Active}`}>
-          {`${pageCurrent}/${lastIndex}`}
-        </div>
-        <div
-          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
-          onClick={() => props.paginationHandler(pageCurrent + 1)}
-          onKeyPress={() => props.paginationHandler(pageCurrent + 1)}
-          role="button"
-          tabIndex={0}
-        >
-          <i className="fas fa-chevron-right" />
-        </div>
-        <div
-          className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${ShouldDisabled('next')}`}
-          onClick={() => props.paginationHandler(lastIndex)}
-          onKeyPress={() => props.paginationHandler(lastIndex)}
-          role="button"
-          tabIndex={0}
-        >
-          <i className="fas fa-angle-double-right" />
-        </div>
-      </section>
-    </IntlProvider>
-  );
-};
+}
 
 export default Pagination;
 
