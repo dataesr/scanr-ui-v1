@@ -2,7 +2,6 @@
 
 .SearchFull {
   padding-top: $headerHeight;
-  height: 400px;
   background-color: $bgHomePageSearch;
   background-repeat: no-repeat;
   background-attachment: relative;
@@ -11,7 +10,8 @@
   position:relative;
 
   .Logo {
-    height: 130px;
+    // height: 130px;
+    width: 100%;
     padding-top: 40px;
 
     IMG {
@@ -19,16 +19,38 @@
     }
   }
 
-  .SearchPerimeter { color: $scanrdeepblueColor; }
+  .SearchPerimeter {
+    color: $scanrdeepblueColor;
+  }
 }
+
+.SearchMini {
+  position: fixed;
+  top: 0;
+  padding-top: 75px;
+  z-index: 1000;
+  width: 100%;
+  background-color: $bgHomePageSearch;
+  box-shadow: 0px 15px 15px 0px rgba(33, 72, 103, 0.5) !important;
+
+  .SearchPerimeter {
+    color: white;
+  }
+}
+
 LABEL {
   font-size: 0.8rem;
   margin-bottom: 2px;
   padding-left: 8px;
 }
-.TitleSearchBar { color: white; }
 
-.btn_dark_margin { margin-top: 24px; }
+.TitleSearchBar {
+  color: white;
+}
+
+.btn_dark_margin {
+  margin-top: 24px;
+}
 
 .Select {
   background-color: rgb(0, 33, 59);
@@ -53,15 +75,12 @@ LABEL {
   }
 }
 
-.SearchMini {
-  position: fixed;
-  top: 0;
-  padding-top: 75px;
-  z-index: 1000;
-  width: 100%;
-  height: 160px;
-  background-color: $bgHomePageSearch;
-  box-shadow: 0px 15px 15px 0px rgba(33, 72, 103, 0.5) !important;
-
-  .SearchPerimeter { color: white; }
+LI {
+  list-style: none;
+  display: inline;
+}
+UL {
+  padding-bottom: 16px;
+  padding-left: 0;
+  margin: 0;
 }
