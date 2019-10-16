@@ -2,6 +2,8 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import getSelectedKey from '../../../../Utils/getSelectKey';
+import highlightsFr from './translations/highlights_fr.json';
+import highlightsEn from './translations/highlights_en.json';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -14,100 +16,116 @@ const ProjectCard = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
+  const highlights = {
+    fr: highlightsFr,
+    en: highlightsEn,
+  };
   const options = {
     year: 'numeric',
-    month: 'long',
-    day: 'numeric',
   };
-  const startDate = (props.data.value.startDate) ? new Date(props.data.value.startDate) : null;
-  const endDate = (props.data.value.endDate) ? new Date(props.data.value.endDate) : null;
 
-  const ShouldRenderFoundIn = (data, highlight) => {
-    if (highlight && data.highlights && data.highlights.length > 0) {
-      return (
-        <div className="d-flex flex-row flex-nowrap">
-          <div className={classes.Icons}>
-            <i className="fas fa-search" />
-          </div>
-          <div className="flex-grow-1 pl-1">
-            <div className={classes.FoundIn}>
-              <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
-            </div>
+  const type = (props.data.type)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-building" />
+        </div>
+        <p className="m-0">
+          {props.data.type}
+        </p>
+      </li>
+    )
+    : null;
+
+  const year = (props.data.year && !props.small)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-calendar" />
+        </div>
+        <p p className="m-0">
+          {new Date(props.data.startDate).toLocaleDateString('fr-FR', options)}
+        </p>
+      </li>
+    )
+    : null;
+
+  const status = (props.data.endDate && new Date(props.data.endDate).toLocaleDateString('fr-FR', options) > '2019')
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-battery-half" />
+        </div>
+        <p p className="m-0">
+          <FormattedHTMLMessage id="resultCard.status.running" defaultMessage="resultCard.status.running" />
+        </p>
+      </li>
+    )
+    : (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-battery-full" />
+        </div>
+        <p p className="m-0">
+          <FormattedHTMLMessage id="resultCard.status.over" defaultMessage="resultCard.status.over" />
+        </p>
+      </li>
+    );
+
+  const highlight = (props.highlights && props.highlights.length > 0)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-search" />
+        </div>
+        <div className="m-0 flex-grow-1 pl-1">
+          <p className={`m-0 ${classes.FoundIn}`}>
+            <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
+          </p>
+          <p className={`d-flex m-0 ${classes.Highlights}`}>
             {
-              data.highlights.map((h) => {
-                const high = h.type.concat(': ').concat(h.value);
-                // eslint-disable-next-line
-                return (<div key={h.value} className={classes.Highlights} dangerouslySetInnerHTML={{ __html: high }} />);
-              })
+              [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ')
             }
-          </div>
+          </p>
         </div>
-      );
-    }
-    return null;
-  };
-  const ShouldRenderSmall = () => {
-    if (props.size !== 'small') {
-      return (
-        <React.Fragment>
-          <div className="d-flex flex-row flex-wrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-play" />
-            </div>
-            <div className="flex-grow-1">
-              {(startDate) ? (startDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
-            </div>
-          </div>
-          <div className="d-flex flex-row flex-wrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-stop" />
-            </div>
-            <div className="flex-grow-1">
-              {(endDate) ? (endDate.toLocaleDateString('fr-FR', options)) : 'unknown'}
-            </div>
-          </div>
-        </React.Fragment>
-      );
-    }
-    return null;
-  };
-  const isSmall = (props.size === 'small') ? { minHeight: '175px' } : { minHeight: '275px' };
-  if (props.bgColor) {
-    isSmall.backgroundColor = props.bgColor;
-  }
-  // const status = ((parseInt(props.data.value.year, 0) + props.data.value.duration / 12) >= 2019) ? 'en cours' : 'terminé';
+      </li>
+    )
+    : null;
+
+
   return (
-    <div className={classes.card} key={props.data.value.id}>
+    <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className={`d-flex flex-column p-4 ${classes.ResultCard}`} style={isSmall}>
-          <a
-            className={`mb-auto pb-4 align-items-top ${classes.CardHeader}`}
-            href={`project/${props.data.value.id}`}
-          >
-            {getSelectedKey(props.data.value, 'label', props.language, 'default')}
-          </a>
-          <div className="d-flex flex-row flex-wrap align-items-center">
-            <div className={classes.Icons}>
-              <i className="fas fa-building" />
-            </div>
-            <div className="flex-grow-1">
-              {(props.data.value.type)}
-            </div>
-          </div>
-          {ShouldRenderSmall()}
-          {ShouldRenderFoundIn(props.data, props.highlights)}
-        </div>
+        <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
+          <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
+            <a href={`project/${props.data.id}`}>
+              {getSelectedKey(props.data, 'label', props.language, 'default')}
+            </a>
+          </h3>
+          <ul className="m-0 p-0">
+            {type}
+            {year}
+            {status}
+            <hr className={`mb-2 mt-2 ${classes.HighlightProjectSep}`} aria-hidden="true" />
+            {highlight}
+          </ul>
+        </article>
       </IntlProvider>
-    </div>
+    </React.Fragment>
   );
 };
 
 export default ProjectCard;
 
+ProjectCard.defaultProps = {
+  cardColor: 'CardWhite',
+  small: false,
+};
+
 ProjectCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  size: PropTypes.string.isRequired,
-  highlights: PropTypes.bool,
-  bgColor: PropTypes.string,
+  highlights: PropTypes.array,
+  cardColor: PropTypes.string,
+  small: PropTypes.bool,
 };
