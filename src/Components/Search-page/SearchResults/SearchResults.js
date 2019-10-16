@@ -74,9 +74,8 @@ const SearchResults = (props) => {
         props.data.results.map(res => (
           <div className={classes.card} key={res.value.id}>
             <ToShow
-              data={res}
-              size="big"
-              highlights
+              data={res.value}
+              highlights={res.highlights}
               language={props.language}
             />
           </div>
@@ -100,8 +99,8 @@ const SearchResults = (props) => {
             </span>
             <span>
               <FormattedHTMLMessage
-                id={`searchResults.${props.api}`}
-                defaultMessage={`searchResults.${props.api}`}
+                id="searchResults.results"
+                defaultMessage="searchResults.results"
               />
             </span>
           </div>
