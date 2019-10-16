@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import classes from './ButtonToPage.scss';
 
 const ButtonToPageLinkLess = props => (
-  <div className={`d-flex align-items-center ${classes.ButtonToPage}`}>
+  <div className={`d-flex align-items-center justify-content-between ${classes.ButtonToPage}`}>
     <div className="row">
       <div className={classes.Text}>
         {props.children}

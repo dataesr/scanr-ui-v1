@@ -42,21 +42,49 @@
   font-size: 0.8em;
   font-weight: 600;
 }
+.NoneStyleUL {
+  list-style: none;
+}
+.InlineLI {
+  display: inline;
+}
+.HighlightEntitySep {
+  background-color: $entityColor;
+  border-color: $entityColor;
+}
+.HighlightProjectSep {
+  background-color: $projectgreenColor;
+  border-color: $projectgreenColor;
+}
+.HighlightProductionSep {
+  background-color: $publicationsColor;
+  border-color: $publicationsColor;
+}
+.HighlightPersonSep {
+  background-color: $personsColor;
+  border-color: $personsColor;
+}
+
 .ResultCard {
-  background-color: white;
-  color: $scanrdeepblueColor;
-  min-height: 275px;
   height: calc(100% - 8px);
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 0.90em;
+  padding: 1.5em 1.5em 0.6em 1.5em;
 
-  .CardHeader {
+  .CardTitle {
     color: $scanrdeepblueColor;
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.1;
+  }
+  .CardTitle > a {
+    color: $scanrdeepblueColor;
+  }
+  .CardTitle > a:hover {
+    color: $scanrblueColor;
     text-decoration: underline $scanrblueColor;
+    cursor: pointer;
   }
 
   .CardContent {
@@ -67,29 +95,5 @@
       font-size: 1.1em;
       color: $scanrblueColor;
       min-width: 28px !important;
-  }
-
-  .CardFooter {
-      font-weight: 700;
-      color: $scanrblueColor;
-
-    .Icons {
-      font-size: 1.5em;
-      color: $scanrblueColor;
-    }
-
-    .ButtonToPage {
-      background-color: $scanrblueColor;
-      color: white;
-      border-radius: 8px;
-      font-size: 0.7rem;
-      font-weight: bolder;
-      height: 48px;
-
-      .Text {
-        font-weight: 700;
-        font-size: 1.4em;
-      }
-    }
   }
 }
