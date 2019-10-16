@@ -11,7 +11,7 @@ import EntityCard from './ResultCards/EntityCard';
 import PersonCard from './ResultCards/PersonCard';
 import ProjectCard from './ResultCards/ProjectCard';
 import PublicationCard from './ResultCards/PublicationCard';
-import ButtonToPageLinkLess from '../../Shared/Ui/Buttons/ButtonToPageLinkLess';
+import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 
 
 import classes from './AllResults.scss';
@@ -23,7 +23,6 @@ const SearchResults = (props) => {
     en: messagesEn,
   };
   const scanRcolor = '#3778bb';
-  const cardsGrey = '#e9ecf1';
   if (props.isLoading) {
     return (
       <div className="row justify-content-center pt-5 mt-5">
@@ -44,7 +43,7 @@ const SearchResults = (props) => {
   return (
     Object.keys(CardsComponents).map((section, index) => {
       const BgClass = ([0, 2].includes(index)) ? 'gris' : 'blanc';
-      const CardColor = ([0, 2].includes(index)) ? null : cardsGrey;
+      const cardColor = ([0, 2].includes(index)) ? 'CardWhite' : 'CardGrey';
       const CardsToShow = CardsComponents[section];
       const bgUrl = `./img/poudre-${section}_fond_${BgClass}.jpg`;
       const sizes = ['100%', '80%', '75%', '70%'];
@@ -91,16 +90,18 @@ const SearchResults = (props) => {
                   </div>
                   <div
                     onClick={() => props.apiChangeHandler(section)}
-                    onKeypress={() => props.apiChangeHandler(section)}
+                    onKeyPress={() => props.apiChangeHandler(section)}
                     role="button"
                     tabIndex={0}
                   >
-                    <ButtonToPageLinkLess>
+                    <ButtonToPage
+                      className="btn_scanrBlue"
+                    >
                       <FormattedHTMLMessage
                         id="searchResults.viewAll"
                         defaultMessage="searchResults.viewAll"
                       />
-                    </ButtonToPageLinkLess>
+                    </ButtonToPage>
                   </div>
                 </div>
                 <div className="row d-flex flex-wrap justify-content-between">
@@ -108,11 +109,10 @@ const SearchResults = (props) => {
                     props.preview[section].data.map(res => (
                       <div className={classes.card} key={res.value.id + res.value.label}>
                         <CardsToShow
-                          data={res}
-                          size="small"
-                          highlights={false}
+                          data={res.value}
+                          small
                           language={props.language}
-                          bgColor={CardColor}
+                          cardColor={cardColor}
                         />
                       </div>
                     ))

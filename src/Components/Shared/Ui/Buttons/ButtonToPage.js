@@ -6,11 +6,11 @@ import classes from './ButtonToPage.scss';
 
 const ButtonToPage = props => (
   <a href={props.url} target={props.target}>
-    <div className={`d-flex align-items-center justify-content-between p-2 ${classes.ButtonToPage} ${props.className}`}>
-      <div className="pl-1">
+    <div className={`d-flex align-items-center justify-content-between p-2 ${classes.ButtonToPage} ${classes[props.className]}`}>
+      <p className="m-0 pl-1">
         {props.children}
-      </div>
-      <div>
+      </p>
+      <div className="pl-2">
         <i className="fas fa-chevron-right" />
       </div>
     </div>
@@ -22,6 +22,6 @@ export default ButtonToPage;
 ButtonToPage.propTypes = {
   children: PropTypes.any,
   className: PropTypes.string,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   target: PropTypes.string,
 };
