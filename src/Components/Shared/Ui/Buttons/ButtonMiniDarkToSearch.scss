@@ -3,8 +3,13 @@
 .ButtonMiniDarkToSearch {
   display: inline-block;
   padding: 2px 8px;
-  background-color: rgb(0, 50, 89);
-  color: white;
+  background-color: $scanrdeepblueColor;
+  color: white !important;
   margin-left: 2px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.ButtonMiniDarkToSearch:hover {
+  background-color: $scanrgreyColor;
+  color: white !important;
 }

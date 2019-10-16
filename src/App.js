@@ -58,6 +58,7 @@ class App extends Component {
 
   render() {
     addLocaleData([...localeEn, ...localeFr]);
+    document.documentElement.setAttribute('lang', this.state.language);
     return (
       <IntlProvider>
         <Router>

@@ -40,7 +40,7 @@ const Web = (props) => {
   const getSocialMediaButton = (socialMedia) => {
     let urlSocialMedia = null;
     if (props.socialMedias) {
-      const element = props.socialMedias.find(el => el.socialMediaType === socialMedia);
+      const element = props.socialMedias.find(el => el.type === socialMedia);
       if (element && element.url) {
         urlSocialMedia = element.url;
       }

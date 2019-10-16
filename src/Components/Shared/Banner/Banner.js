@@ -21,12 +21,12 @@ const Banner = props => (
     <section className={`${classes.Banner} ${classes[props.cssClass]}`}>
       <div className="container">
         <div className="row d-flex flex-row justify-content-between align-items-center pt-4 pb-4">
-          <div className="">
+          <p>
             <FormattedHTMLMessage
               id={`Banner.title.${props.labelKey}`}
               defaultMessage={`Banner.title.${props.labelKey}`}
             />
-          </div>
+          </p>
           <div>
             <div>
               <ButtonToPage
