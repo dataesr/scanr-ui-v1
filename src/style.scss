@@ -360,6 +360,17 @@ $cardTitleBgColor: $scanrlightgreyColor;
   }
 }
 
+.CardWhite {
+  border-radius: 8px;
+  background-color: white;
+  color: $scanrdeepblueColor;
+}
+.CardGrey {
+  border-radius: 8px;
+  background-color: $scanrlightgreyColor;
+  color: $scanrdeepblueColor;
+}
+
 .Tooltip_i_top_right {
   display: inline-block;
   position: absolute;

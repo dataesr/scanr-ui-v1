@@ -6,7 +6,7 @@
   border-radius: 8px;
 }
 
-.Section > div {
+.Buttons {
   border-radius: 8px;
   color: white;
   font-weight: 700;
@@ -17,23 +17,34 @@
   cursor: pointer;
 }
 
+.MaxPage{
+  color: $scanrdeepblueColor;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.PageInput {
+  background-color: white;
+  text-align: center;
+  border: 2px solid $scanrdeepblueColor;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 700;
+  color: $scanrdeepblueColor;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 40px;
+}
+.PageInput:focus {
+  border: 2px solid $scanrgreyColor;
+  outline: none;
+}
+
 
 .NoDisplay {
   display: None !important;
 }
 
-.Dots {
-  background-color: transparent !important;
-  color: $scanrblueColor !important;
-  font-size: 1.2em;
-  cursor: default !important;
-}
 .NextPrevious {
-  background-color: transparent !important;
-  color: $scanrblueColor !important;
-  cursor: default !important;
-}
-
-.Active {
-  background-color: $scanrdeepblueColor !important;
+  color: white;
 }
