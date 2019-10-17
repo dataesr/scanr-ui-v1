@@ -16,3 +16,6 @@ export const PUBLICATION_COLOR = '#cc3d8f';
 
 // portrait
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
+
+// ecosystem
+export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur Privé', 'Secteur public'];
