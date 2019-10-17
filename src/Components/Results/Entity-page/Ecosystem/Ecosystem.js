@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import { GRAPH_ITEMS_LIST } from '../../../../config/config';
+
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
@@ -40,16 +42,43 @@ class Ecosystem extends Component {
   }
 
   getDataGraph = () => {
-    const natures = [];
-    this.props.data.forEach(e => (natures.push(e.structure.nature)));
-    const distinctNatures = [...new Set(natures)];
+    // const natures = [];
+    // this.props.data.forEach(e => (natures.push(e.structure.nature)));
+    // const distinctNatures = [...new Set(natures)];
 
     const dataGraph = [];
+    // distinctNatures.forEach((nature) => {
+    //   // Recherche des structures qui ont cette nature
+    //   const structuresListFr = this.props.data.filter(el => (el.structure.nature === nature && el.structure.isFrench));
+    //   const structuresListFo = this.props.data.filter(el => (el.structure.nature === nature && !el.structure.isFrench));
 
-    distinctNatures.forEach((nature) => {
-      // Recherche des structures qui on cette nature
-      const structuresListFr = this.props.data.filter(el => (el.structure.nature === nature && el.structure.isFrench));
-      const structuresListFo = this.props.data.filter(el => (el.structure.nature === nature && !el.structure.isFrench));
+    //   const dataFr = [];
+    //   structuresListFr.forEach((el) => {
+    //     dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
+    //   });
+    //   const dataFo = [];
+    //   structuresListFo.forEach((el) => {
+    //     dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
+    //   });
+
+    //   const objFr = {
+    //     name: `${dataFr.length} françaises`,
+    //     data: dataFr,
+    //     color: '#119fd4',
+    //   };
+    //   const objFo = {
+    //     name: `${dataFo.length} internationales`,
+    //     data: dataFo,
+    //     color: '#4fc4c0',
+    //   };
+
+    //   dataGraph[nature] = [objFr, objFo];
+    // });
+
+    GRAPH_ITEMS_LIST.forEach((graphType) => {
+      // Recherche des structures qui ont ce libellé dans leur clé "kind"
+      const structuresListFr = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+      const structuresListFo = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
 
       const dataFr = [];
       structuresListFr.forEach((el) => {
@@ -71,8 +100,9 @@ class Ecosystem extends Component {
         color: '#4fc4c0',
       };
 
-      dataGraph[nature] = [objFr, objFo];
+      dataGraph[graphType] = [objFr, objFo];
     });
+
     return dataGraph;
   }
 
@@ -261,12 +291,18 @@ class Ecosystem extends Component {
 
   renderViewGraph = data => (
     <div className="row">
-      <div className="col-md">
-        <PackedBubbleChart text="GE" series={data.GE} />
-      </div>
-      <div className="col-md">
-        <PackedBubbleChart text="Facility" series={data.Facility} />
-      </div>
+      {
+        GRAPH_ITEMS_LIST.map((graphType) => {
+          if (data[graphType].length > 0) {
+            return (
+              <div className="col-md">
+                <PackedBubbleChart text={graphType} series={data[graphType]} />
+              </div>
+            );
+          }
+          return null;
+        })
+      }
     </div>
   );
 
