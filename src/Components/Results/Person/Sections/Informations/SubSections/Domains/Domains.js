@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import TagCard from '../../../../../../Shared/Ui/TagCard/TagCard';
+import getSelectedKey from '../../../../../../../Utils/getSelectKey';
 
 import classes from './Domains.scss';
 
@@ -26,13 +27,14 @@ const Domains = (props) => {
   if (props.data) {
     let tags = [];
     if (props.data.domains && props.data.domains.length > 0) {
-      tags = props.data.domains.map(dom => dom.label[props.language])
+      tags = props.data.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
         .filter(txt => (txt))
         .filter(txt => (txt.length > 1))
         .filter(txt => (txt.length < 20))
         .sort((a, b) => b.length - a.length);
     }
     const tagList = [...new Set(tags)];
+    const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'fr'))];
 
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -40,13 +42,13 @@ const Domains = (props) => {
           <div className="row">
             <div className={`col-12 ${classes.CardContainer}`}>
               <div className={classes.SubSectionTitle}>
-                <FormattedHTMLMessage id="Person.informations.affiliation.title" defaultMessage="Person.informations.affiliation.title" />
+                <FormattedHTMLMessage id="Person.informations.domains.title" defaultMessage="Person.informations.domains.title" />
               </div>
               <TagCard
                 logo="fas fa-flask"
                 title="Domaines de recherche"
                 tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
-                tagList={tagList}
+                tagList={keywords || tagList}
                 language={props.language}
                 maxElements={12}
                 labelListButton="Tous les domaines"
@@ -72,6 +74,3 @@ Domains.propTypes = {
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,
 };
-
-// modifyModeHandle: PropTypes.func.isRequired,
-// modifyMode: PropTypes.bool.isRequired,
