@@ -54,18 +54,7 @@ const Identity = (props) => {
                             logo="fas fa-flask"
                             title="Status"
                             language={props.language}
-                            label="Chercheur"
-                            masterKey={props.masterKey}
-                            modifyMode={props.modifyMode}
-                            allData={props.allData}
-                          />
-                        </div>
-                        <div className={`col-12 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            logo="fas fa-flask"
-                            title="Domaines de recherche"
-                            language={props.language}
-                            label="Tous les domaines"
+                            label={messages[props.language]['Person.informations.identity.researcher']}
                             masterKey={props.masterKey}
                             modifyMode={props.modifyMode}
                             allData={props.allData}

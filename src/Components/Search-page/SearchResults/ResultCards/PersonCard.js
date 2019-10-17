@@ -132,7 +132,7 @@ const PersonCard = (props) => {
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
             <a href={`person/${props.data.id}`}>
-              {`${(props.data.firstName) ? props.data.firstName : ''} ${(props.data.lastName) ? ` ${props.data.lastName}` : ''}`}
+              {props.data.fullName || `${(props.data.firstName) ? props.data.firstName : ''} ${(props.data.lastName) ? ` ${props.data.lastName}` : ''}`}
             </a>
           </h3>
           <ul className="m-0 p-0">
