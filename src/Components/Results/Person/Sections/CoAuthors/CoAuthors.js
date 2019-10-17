@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
-
+import PersonCard from '../../../../Search-page/SearchResults/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
@@ -31,37 +30,39 @@ const CountCard = coAuthorsCount => (
 );
 const SeeMoreCard = coAuthorsList => (
   <li className={`p-3 mb-2 d-flex flex-column ${classes.SeeMoreCard} ${classes.Card} ${classes.OneFourth}`}>
-    <p>
+    <p className={classes.SeeMore}>
       {coAuthorsList.length - 6}
-      de plus
+      <FormattedHTMLMessage id="Person.more" defaultMessage="Person.more" />
     </p>
     <ButtonWithModal
-      logo=""
-      title="hello"
-      buttonLabel="world"
+      logo="fas fa-expand"
+      title={<FormattedHTMLMessage id="Person.coAuthors.all" defaultMessage="Person.coAuthors.all" />}
+      buttonLabel={<FormattedHTMLMessage id="Person.seeAll" defaultMessage="Person.seeAll" />}
       dataHtml={coAuthorsList}
     />
   </li>
 );
 
 const CoAuthors = (props) => {
-  const bgUrl = './img/poudre-projects_fond_gris.jpg';
+  const bgUrl = './img/poudre-persons_fond_gris.jpg';
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
   if (props.data) {
     const coAuthorsList = props.data.map(coAuthors => (
-      <li key={coAuthors.id} className={`p-3 mb-2 d-flex flex-column ${classes.PersonCard} ${classes.Card} ${classes.OneFourth}`}>
-
-        <div className="mb-auto">{coAuthors.fullName}</div>
-        <ButtonToPage
-          className={`${classes.Component_dark} ml-5 mr-5`}
-          url={`/person/${coAuthors.id}`}
-        >
-          {messages[props.language]['Person.authorsLink']}
-        </ButtonToPage>
+      <li key={coAuthors.id} className={classes.OneFourth}>
+        <PersonCard
+          language={props.language}
+          data={coAuthors}
+          small
+        />
       </li>
     ));
+    if ((6 - coAuthorsList.length) > 0) {
+      for (let i = 0; i < (8 - coAuthorsList.length); i += 1) {
+        coAuthorsList.push(<li key={i} className={classes.OneFourth} />);
+      }
+    }
     return (
       <section className={`container-fluid ${classes.CoAuthors}`} style={sectionStyle}>
         <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -79,7 +80,7 @@ const CoAuthors = (props) => {
                 ? (
                   <SubmitBox
                     language={props.language}
-                    masterKey="Person/title"
+                    masterKey="Person/coAuthors"
                     label="empty"
                     emptySection
                     autoLaunch={props.modifyMode}
@@ -90,8 +91,8 @@ const CoAuthors = (props) => {
             }
             <ul className="d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0">
               {CountCard(props.data.length)}
-              {(coAuthorsList.length > 6) ? coAuthorsList.slice(-6) : coAuthorsList}
-              {(coAuthorsList.length > 6) ? SeeMoreCard(coAuthorsList) : null}
+              {(coAuthorsList.length > 8) ? coAuthorsList.slice(-6) : coAuthorsList}
+              {(coAuthorsList.length > 8) ? SeeMoreCard(coAuthorsList) : null}
             </ul>
           </div>
         </IntlProvider>

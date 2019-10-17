@@ -61,7 +61,7 @@ const Productions = (props) => {
                   <div key={prod.id} className="col-4 p-1">
                     <PublicationCard
                       language={props.language}
-                      data={{ value: prod }}
+                      data={prod}
                       size="small"
                     />
                   </div>
