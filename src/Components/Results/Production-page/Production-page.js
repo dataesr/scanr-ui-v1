@@ -37,7 +37,7 @@ class Production extends Component {
   getData(id) {
     // Récupéraion des données de l'entité
     const url = `${API_PUBLICATIONS_END_POINT}/${id}`;
-    // https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%2525F978-3-319-24195-1_10
+    // const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%252f978-3-319-24195-1_10';
     Axios.get(url)
       .then((response) => {
         this.setState({ data: response.data });
