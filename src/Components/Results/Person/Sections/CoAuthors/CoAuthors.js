@@ -89,7 +89,7 @@ const CoAuthors = (props) => {
                 )
                 : null
             }
-            <ul className="d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0">
+            <ul className={`${classes.noListStyle} d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0`}>
               {CountCard(props.data.length)}
               {(coAuthorsList.length > 8) ? coAuthorsList.slice(-6) : coAuthorsList}
               {(coAuthorsList.length > 8) ? SeeMoreCard(coAuthorsList) : null}
