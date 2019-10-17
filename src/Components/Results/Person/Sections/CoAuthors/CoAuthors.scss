@@ -17,6 +17,10 @@
   align-self: stretch;
 }
 
+.noListStyle {
+  list-style: none;
+}
+
 @media screen and (max-width: 991px) {
   .OneFourth {
     flex: 0 1 100%;
