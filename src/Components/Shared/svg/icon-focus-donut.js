@@ -53,16 +53,16 @@ const SVG = props => (
 
 export default SVG;
 
-SVG.propTypes = {
-  style: PropTypes.object,
-  fill: PropTypes.string,
-  width: PropTypes.string,
-  className: PropTypes.string,
-};
-
 SVG.defaultProps = {
   style: {},
   fill: '#000',
   width: '100%',
   className: '',
+};
+
+SVG.propTypes = {
+  style: PropTypes.object,
+  fill: PropTypes.string,
+  width: PropTypes.string,
+  className: PropTypes.string,
 };

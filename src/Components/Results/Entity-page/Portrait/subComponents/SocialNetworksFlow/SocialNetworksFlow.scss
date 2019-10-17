@@ -6,3 +6,23 @@
     padding: 0;
   }
 }
+
+.CardsTitle {
+  background-color: $scanrmiddlegreyColor;
+  border-radius: 8px;
+
+  H2 {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px;
+    margin: 2px;
+    color: $textColor;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+
+  }
+
+  .Button {
+    padding: 4px 6px 0 0;
+  }
+}
