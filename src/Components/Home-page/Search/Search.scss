@@ -22,6 +22,16 @@
   .SearchPerimeter {
     color: $scanrdeepblueColor;
   }
+  LI {
+    list-style: none;
+    display: inline;
+  }
+
+  UL {
+    padding-bottom: 16px;
+    padding-left: 0;
+    margin: 0;
+  }
 }
 
 .SearchMini {
@@ -36,6 +46,7 @@
   .SearchPerimeter {
     color: white;
   }
+
 }
 
 LABEL {
@@ -73,14 +84,4 @@ LABEL {
   span {
     margin-right: 8px;
   }
-}
-
-LI {
-  list-style: none;
-  display: inline;
-}
-UL {
-  padding-bottom: 16px;
-  padding-left: 0;
-  margin: 0;
 }

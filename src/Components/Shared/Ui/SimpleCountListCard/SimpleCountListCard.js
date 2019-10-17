@@ -96,7 +96,7 @@ const SimpleCountListCard = (props) => {
         {props.label}
       </div>
       {listItems}
-      <div>
+      <div className={classes.Button}>
         {modalButton}
       </div>
       {tooltip}
