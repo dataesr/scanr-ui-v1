@@ -21,7 +21,7 @@ const PersonCard = (props) => {
   };
 
   const affiliation = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
-    ? props.data.affiliations[0].structure
+    ? props.data.affiliations.sort((a, b) => a.endDate > b.endDate)[0].structure
     : null;
 
   const address = (affiliation && affiliation.address && affiliation.address.length > 0)
@@ -38,8 +38,10 @@ const PersonCard = (props) => {
       .slice(-4);
   }
 
-  const affiliations = (affiliation)
-    ? (
+  let affiliations;
+
+  if (affiliation) {
+    affiliations = (
       <li className="d-flex">
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-building" />
@@ -48,8 +50,11 @@ const PersonCard = (props) => {
           {getSelectedKey(affiliation, 'label', props.language, 'en')}
         </p>
       </li>
-    )
-    : (
+    );
+  } else if (!affiliation && props.onlyExisting) {
+    affiliations = null;
+  } else {
+    affiliations = (
       <li className="d-flex">
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-building" />
@@ -59,6 +64,7 @@ const PersonCard = (props) => {
         </p>
       </li>
     );
+  }
 
   const addresses = (address && !props.small)
     ? (
@@ -154,6 +160,7 @@ export default PersonCard;
 PersonCard.defaultProps = {
   cardColor: 'CardWhite',
   small: false,
+  onlyExisting: false,
 };
 
 PersonCard.propTypes = {
@@ -162,4 +169,5 @@ PersonCard.propTypes = {
   highlights: PropTypes.array,
   cardColor: PropTypes.string,
   small: PropTypes.bool,
+  onlyExisting: PropTypes.bool,
 };

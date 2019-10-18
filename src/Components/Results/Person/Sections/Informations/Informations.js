@@ -31,7 +31,7 @@ const Informations = (props) => {
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
-  const hasAffiliations = (props.data.affiliations) ? '-12' : '-6';
+  const hasAffiliations = (props.data.affiliations) ? 'col-12' : 'col-lg-6 col-md-12';
 
   const propsData = { ...props.data };
   // propsData.roles = [{ role: 'directeur', description: 'Institut des sciences __blah' }, { role: 'directeur', description: 'Institut des sciences __blah' }];
@@ -63,7 +63,7 @@ const Informations = (props) => {
           <div className="row">
             <div className="col-lg">
               <div className="row">
-                <div className={`col${hasAffiliations} ${classes.NoSpace}`}>
+                <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Identity
                     language={props.language}
                     data={props.data}
@@ -72,7 +72,7 @@ const Informations = (props) => {
                     allData={props.data}
                   />
                 </div>
-                <div className={`col${hasAffiliations} ${classes.NoSpace}`}>
+                <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Domains
                     language={props.language}
                     data={props.data}
@@ -81,7 +81,7 @@ const Informations = (props) => {
                     allData={props.data}
                   />
                 </div>
-                <div className={`col${hasAffiliations} ${classes.NoSpace}`}>
+                <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Prizes
                     language={props.language}
                     data={propsData}
@@ -93,7 +93,7 @@ const Informations = (props) => {
                 {
                   (!props.data.affiliations)
                     ? (
-                      <div className={`col${hasAffiliations} ${classes.NoSpace}`}>
+                      <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                         <Roles
                           language={props.language}
                           data={propsData}

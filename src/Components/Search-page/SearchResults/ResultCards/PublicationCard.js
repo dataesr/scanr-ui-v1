@@ -39,7 +39,7 @@ const PublicationCard = (props) => {
     )
     : null;
 
-  const coAuthors = (props.data.authors && props.data.authors.length > 0 && !props.small)
+  const coAuthors = (props.data.authors && props.data.authors.length > 0)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>

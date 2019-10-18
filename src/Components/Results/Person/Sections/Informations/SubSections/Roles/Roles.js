@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import RoleCard from '../../../../Components/RoleCard';
 
 import classes from './Roles.scss';
 
@@ -39,12 +39,11 @@ const Roles = (props) => {
                 <div className="row">
                   {
                     props.data.roles.map(role => (
-                      <div className={`col-6 ${classes.CardContainer}`}>
-                        <SimpleCard
+                      <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
+                        <RoleCard
                           logo="fas fa-user"
-                          title={role.role}
+                          data={role}
                           language={props.language}
-                          label={role.description.split('_')[0]}
                           masterKey={props.masterKey}
                           modifyMode={props.modifyMode}
                           allData={props.allData}
