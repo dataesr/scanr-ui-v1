@@ -39,7 +39,7 @@ const Prizes = (props) => {
                 <div className="row">
                   {
                     props.data.awards.map(award => (
-                      <div className={`col-6 ${classes.CardContainer}`}>
+                      <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
                         <PrizeCard
                           date={award.date}
                           language={props.language}

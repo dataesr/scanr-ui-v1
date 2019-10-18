@@ -49,7 +49,7 @@ const Participants = (props) => {
       height: '60vh',
       borderTopLeftRadius: '10px',
       borderTopRightRadius: '10px',
-      borderBottom: '5px solid #3778bb',
+      borderBottom: '5px solid #ebc034',
     };
     return (
       <section className={`container-fluid ${classes.Participant}`} style={sectionStyle}>
@@ -78,22 +78,24 @@ const Participants = (props) => {
                 : null
             }
             <div className="row">
-              <div className={`${classes.participantList} col-12 col-lg-5`}>
-                {
-                  props.data.map(part => (
-                    <div
-                      key={getSelectKey(part, 'label', props.language, 'default')}
-                      className={`col-12 pt-1 pr-1 pl-2 pb-3 ${classes.participantItem}`}
-                      role="button"
-                    >
-                      <ParticipantRow
-                        language={props.language}
-                        data={part}
-                        size="small"
-                      />
-                    </div>
-                  ))
-                }
+              <div className="px-3 col-12 col-lg-5">
+                <div className={`${classes.participantList}`}>
+                  {
+                    props.data.map(part => (
+                      <div
+                        key={getSelectKey(part, 'label', props.language, 'default')}
+                        className={`col-12 py-3 px-3 ${classes.participantItem}`}
+                        role="button"
+                      >
+                        <ParticipantRow
+                          language={props.language}
+                          data={part}
+                          size="small"
+                        />
+                      </div>
+                    ))
+                  }
+                </div>
               </div>
               <div className="col-hidden col-lg-7 p-0">
                 <div className={`w-100 ${classes.MapContainer}`}>

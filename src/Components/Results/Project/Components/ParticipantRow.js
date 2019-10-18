@@ -29,33 +29,52 @@ const ParticipantRow = props => (
           ? (
             <div className="d-flex justify-content-start align-items-bottom pr-2">
               <span className={classes.yellowBullet} />
-              <FormattedHTMLMessage id="Project.participantRow.coordinator" defaultMessage="Project.participantRow.coordinator" />
+              <FormattedHTMLMessage
+                id="Project.participantRow.coordinator"
+                defaultMessage="Project.participantRow.coordinator"
+              >
+                {
+                  txt => (
+                    <p className={classes.Funding}>
+                      {txt}
+                    </p>
+                  )
+                }
+              </FormattedHTMLMessage>
             </div>
           )
           : null
 
       }
-      <div className={classes.Title}>
+      <p className={classes.Title}>
         {
           (props.data.structure)
-            ? getSelectKey(props.data.structure, 'label', props.language, 'default')
+            ? (
+              <a href={`entite/${props.data.structure.id}`}>
+                {getSelectKey(props.data.structure, 'label', props.language, 'default')}
+              </a>
+            )
             : getSelectKey(props.data, 'label', props.language, 'default')
         }
-      </div>
+      </p>
       <div className={`d-flex justify-content-between align-items-bottom pr-2 ${classes.Funding}`}>
         {
           (props.data.funding)
             ? (
-              <div>{`${props.data.funding} €`}</div>
+              <p>{`${props.data.funding} €`}</p>
             )
-            : null
+            : <div />
         }
         {
           (props.data.structure && props.data.structure.address.length > 0 && props.data.structure.address[0].country)
             ? (
-              <div>{`${props.data.structure.address[0].country}`}</div>
+              <p>{`${props.data.structure.address[0].country}`}</p>
             )
-            : null
+            : (
+              <p>
+                <FormattedHTMLMessage id="Project.participantRow.noAddress" defaultMessage="Project.participantRow.noAddress" />
+              </p>
+            )
         }
       </div>
     </div>
