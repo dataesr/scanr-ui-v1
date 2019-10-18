@@ -1,11 +1,11 @@
 @import '../../../../style.scss';
 
-.SimpleCard {
-  position: relative;
+.RoleCard {
   border-radius: 8px;
   text-align: center;
-  min-height: 150px;
-  justify-content: center;
+  min-height: 225px;
+
+  background-color: white;
 
   .Logo {
     padding-top: 16px;
@@ -20,9 +20,12 @@
   }
 
   .Label {
-    padding: 8px;
+    padding: 3px;
     color: $scanrdeepblueColor;
     line-height: 22px;
     font-weight: bold;
   }
+}
+.MyUL {
+  margin-bottom: 0px;
 }
