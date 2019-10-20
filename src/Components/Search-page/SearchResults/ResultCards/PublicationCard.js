@@ -122,7 +122,7 @@ const PublicationCard = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
-            <a href={`publication/${props.data.id}`}>
+            <a href={`publication/${props.data.id.replace('/', '%25252f')}`}>
               {getSelectedKey(props.data, 'title', props.language, 'default')}
             </a>
           </h3>
