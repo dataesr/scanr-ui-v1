@@ -54,6 +54,10 @@ const SearchResults = (props) => {
         backgroundPosition: positions[index],
         backgroundRepeat: 'no-repeat',
       };
+      let subTitle = 'searchResults.relevance';
+      subTitle = (props.preview[section].count === 0) ? 'searchResults.noResults' : subTitle;
+      subTitle = (props.preview[section].count === 1) ? 'searchResults.singleResult' : subTitle;
+      const Title = (props.preview[section].count > 1) ? `searchResults.${section}` : `searchResults.singular.${section}`;
       return (
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <section>
@@ -64,45 +68,38 @@ const SearchResults = (props) => {
                     <h2>
                       {`${props.preview[section].count} `}
                       <FormattedHTMLMessage
-                        id={`searchResults.${section}`}
-                        defaultMessage={`searchResults.${section}`}
+                        id={Title}
+                        defaultMessage={Title}
                       />
                     </h2>
-                    {
-                      (props.preview[section].count === 0)
-                        ? (
-                          <p>
-                            <FormattedHTMLMessage
-                              id="searchResults.noResults"
-                              defaultMessage="searchResults.noResults"
-                            />
-                          </p>
-                        )
-                        : (
-                          <p>
-                            <FormattedHTMLMessage
-                              id="searchResults.relevance"
-                              defaultMessage="searchResults.relevance"
-                            />
-                          </p>
-                        )
-                    }
-                  </div>
-                  <div
-                    onClick={() => props.apiChangeHandler(section)}
-                    onKeyPress={() => props.apiChangeHandler(section)}
-                    role="button"
-                    tabIndex={0}
-                  >
-                    <ButtonToPage
-                      className="btn_scanrBlue"
-                    >
+                    <p>
                       <FormattedHTMLMessage
-                        id="searchResults.viewAll"
-                        defaultMessage="searchResults.viewAll"
+                        id={subTitle}
+                        defaultMessage={subTitle}
                       />
-                    </ButtonToPage>
+                    </p>
                   </div>
+                  {
+                    (props.preview[section].count > 6)
+                      ? (
+                        <div
+                          onClick={() => props.apiChangeHandler(section)}
+                          onKeyPress={() => props.apiChangeHandler(section)}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <ButtonToPage
+                            className="btn_scanrBlue"
+                          >
+                            <FormattedHTMLMessage
+                              id="searchResults.viewAll"
+                              defaultMessage="searchResults.viewAll"
+                            />
+                          </ButtonToPage>
+                        </div>
+                      )
+                      : null
+                  }
                 </div>
                 <div className="row d-flex flex-wrap justify-content-between">
                   {

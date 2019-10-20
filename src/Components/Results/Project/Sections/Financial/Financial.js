@@ -49,7 +49,7 @@ const Financial = (props) => {
                           language={props.language}
                           logo="fas fa-euro-sign"
                           title={messages[props.language]['Project.financial.total']}
-                          label={props.data.budgetTotal}
+                          label={props.data.budgetTotal.toLocaleString()}
                           tooltip=""
                           masterKey="Project/budgetTotal"
                           modifyMode={props.modifyMode}
@@ -68,7 +68,7 @@ const Financial = (props) => {
                           language={props.language}
                           logo="fas fa-euro-sign"
                           title={messages[props.language]['Project.financial.financed']}
-                          label={props.data.budgetFinanced}
+                          label={props.data.budgetFinanced.toLocaleString()}
                           tooltip=""
                           masterKey="Project/budgetFinanced"
                           modifyMode={props.modifyMode}
