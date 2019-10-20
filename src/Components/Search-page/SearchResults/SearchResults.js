@@ -46,7 +46,7 @@ const SearchResults = (props) => {
   const ToShow = ResultsToShow[props.api][props.view];
   const scanRcolor = '#3778bb';
   let pagination = null;
-  const numResults = (props.data.total < 2) ? "searchResults.result" : "searchResults.results"
+  const numResults = (props.data.total < 2) ? 'searchResults.result' : 'searchResults.results';
   if (props.view === 'list' && props.api !== 'all') {
     pagination = (
       <Pagination
