@@ -8,12 +8,14 @@ import Autocomplete from './Filters/Autocomplete';
 
 const EntityFilters = (props) => {
   const facets = props.facets || [];
-  const generalFacets = props.generalFacets || [];
+  // const generalFacets = props.generalFacets || [];
   const caractActiveFilters = props.filters['badges.label.fr'] || {};
-  const natureActiveFilters = props.filters.nature || {};
+  const kindActiveFilters = props.filters.kind || {};
   const projectsActiveFilters = props.filters.level || {};
   const projectsFacets = facets.find(item => item.id === 'facet_projects_types') || { entries: [] };
-  const natureFacets = generalFacets.find(item => item.id === 'facet_natures') || { entries: [] };
+  const kindFacets = facets.find(item => item.id === 'facet_kind') || { entries: [] };
+  // const mainKindFacets = null;
+  // const secondaryKindFacets = null;
   const caractFacetsTest = facets.find(item => item.id === 'facet_badges') || { entries: [] };
   const geoFacets = facets.find(item => item.id === 'facet_localisations') || { entries: [] };
 
@@ -30,9 +32,9 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           title="Type d'organisme"
-          facets={natureFacets.entries}
-          filters={natureActiveFilters}
-          facetID="nature"
+          facets={kindFacets.entries}
+          filters={kindActiveFilters}
+          facetID="kind"
           onSubmit={props.multiValueFilterHandler}
         />
         <CheckBoxFilter
@@ -61,6 +63,6 @@ EntityFilters.propTypes = {
   multiValueFilterHandler: PropTypes.func,
   // deleteMultiValueSearchFilter: PropTypes.func,
   facets: PropTypes.array,
-  generalFacets: PropTypes.array,
+  // generalFacets: PropTypes.array,
   filters: PropTypes.object,
 };
