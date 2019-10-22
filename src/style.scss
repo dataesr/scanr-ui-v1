@@ -413,3 +413,13 @@ $cardTitleBgColor: $scanrlightgreyColor;
 .CardContainer {
   padding: 3px;
 }
+.W50 {
+  width: 50% !important;
+  padding: 0.25em;
+}
+@media screen and (max-width: 60em) {
+  .W50 {
+    width: 100% !important;
+    padding: 0.25em;
+  }
+}

@@ -11,24 +11,3 @@
   background-color: rgb(233, 236, 241);
   background-position: bottom 0 left 0;
 }
-
-.noSpace50 {
-  margin: 0;
-  padding: 0;
-  flex: 1 1 calc(50% - 2px);
-}
-
-.noSpace100 {
-  margin: 0;
-  padding: 0;
-  flex: 1 1 calc(100% - 2px);
-}
-
-
-@media screen and (max-width: 991px) {
-  .noSpace {
-    margin: 0;
-    padding: 0;
-    flex: 1 1 calc(100% - 2px);
-  }
-}
