@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import getSelectKey from '../../../../../Utils/getSelectKey';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
+// import getSelectKey from '../../../../../Utils/getSelectKey';
+// import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
