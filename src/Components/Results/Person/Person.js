@@ -74,7 +74,7 @@ class Person extends Component {
         />
         <Production
           language={this.props.language}
-          id={this.props.match.params.id}
+          objectId={this.props.match.params.id}
           filterKey="authors.person.id"
         />
         <CoAuthors

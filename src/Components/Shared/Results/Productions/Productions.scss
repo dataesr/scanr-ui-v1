@@ -31,6 +31,18 @@ HR {
   border-radius: 10px;
   overflow-y: scroll;
 
+  .TitleYear {
+    background-color: $scanrdeepblueColor;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    padding: 6px 12px;
+  }
+  .TitleYear:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
   .Item:first-child {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -63,7 +75,7 @@ HR {
         background-color: $productionpublicationColor;
         margin-right: 5px;
       }
-      .these {
+      .thesis {
         display: inline-block;
         width: 12px;
         height: 12px;
@@ -71,7 +83,7 @@ HR {
         background-color: $productionthesesColor;
         margin-right: 5px;
       }
-      .brevet {
+      .patent {
         display: inline-block;
         width: 12px;
         height: 12px;
@@ -176,6 +188,10 @@ HR {
       background-color: $productionbrevetsColor;
     }
   }
+}
+
+.ViewChangeButton:hover {
+  cursor: pointer;
 }
 
 

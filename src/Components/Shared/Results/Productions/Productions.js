@@ -3,9 +3,11 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
+import moment from 'moment';
+
 import getSelectKey from '../../../../Utils/getSelectKey';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
+import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../config/config';
 import Autocomplete from '../../Ui/Autocomplete/Autocomplete';
 import EmptySection from '../../../Results/Entity-page/Shared/EmptySection/EmptySection';
 import Select from '../../Ui/Select/Select';
@@ -17,8 +19,6 @@ import SunburstChart from '../../GraphComponents/Graphs/HighChartsSunburst';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import messagesEntityFr from '../../../Results/Entity-page/Productions/translations/fr.json';
-import messagesEntityEn from '../../../Results/Entity-page/Productions/translations/en.json';
 
 import classes from './Productions.scss';
 
@@ -140,7 +140,7 @@ class Productions extends Component {
     data.filters[filterKey] = {
       type: 'MultiValueSearchFilter',
       op: 'all',
-      values: [this.props.id],
+      values: [this.props.objectId],
     };
     Axios.post(url, data).then((response) => {
       // eslint-disable-next-line
@@ -160,7 +160,7 @@ class Productions extends Component {
     data.filters[filterKey] = {
       type: 'MultiValueSearchFilter',
       op: 'all',
-      values: [this.props.id],
+      values: [this.props.objectId],
     };
     Axios.post(url, data).then((response) => {
       const facetPublicationDates = response.data.facets.find(facet => facet.id === 'facet_publication_date');
@@ -186,11 +186,9 @@ class Productions extends Component {
 
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    // const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%2525F978-3-319-24195-1_10';
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace('/', '%252f')}`;
     Axios.get(url).then((response) => {
       // eslint-disable-next-line
-      console.log('setSelectedProductionHandler_jre:', response);
       this.setState({ selectedProduction: response.data });
       // eslint-disable-next-line
     }).catch(e => console.log('error:', e));
@@ -247,9 +245,12 @@ class Productions extends Component {
   }
 
   renderViewList = (messages) => {
-    const filteredData = this.state.data;
-
-    const content = filteredData.map((item) => {
+    const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+    const content = filteredData.map((item, i) => {
+      let first = false;
+      if ((i - 1) > 0) {
+        first = (moment(filteredData[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
+      }
       let selected = '';
       if (item === this.state.selectedProduction) {
         selected = classes.Selected;
@@ -257,6 +258,17 @@ class Productions extends Component {
 
       return (
         <Fragment key={item.value.id}>
+          {
+            (i === 0 || first)
+              ? (
+                <div className={classes.TitleYear}>
+                  {
+                    moment(item.value.publicationDate).format('YYYY')
+                  }
+                </div>
+              )
+              : null
+          }
           <div
             className={`${classes.Item} ${selected}`}
             onClick={() => this.setSelectedProductionHandler(item)}
@@ -269,7 +281,7 @@ class Productions extends Component {
             </span>
             <span className={classes.Type}>
               <span className={classes[item.value.productionType]} />
-              {item.value.productionType}
+              {messages[this.props.language][`Productions.${item.value.productionType}`]}
             </span>
           </div>
         </Fragment>
@@ -278,16 +290,16 @@ class Productions extends Component {
 
     const typeFilterPlaceHolder = (this.state.filterValue)
       ? `${this.state.data.length} ${this.state.filterValue}`
-      : `${this.state.data.length} ${messages[this.props.language]['Entity.productions.selectTypesFilter.placeHolder']}`;
+      : `${this.state.data.length} ${messages[this.props.language]['Productions.selectTypesFilter.placeHolder']}`;
 
     return (
       <Fragment>
         <div className={`row ${classes.Filters}`}>
           <div className="col-md">
             <Select
-              allLabel={messages[this.props.language]['Entity.productions.selectTypesFilter.allLabel']}
+              allLabel={messages[this.props.language]['Productions.selectTypesFilter.allLabel']}
               count={this.state.data.length}
-              title={messages[this.props.language]['Entity.productions.selectTypesFilter.title']}
+              title={messages[this.props.language]['Productions.selectTypesFilter.title']}
               placeHolder={typeFilterPlaceHolder}
               data={this.state.typeFilter}
               onSubmit={this.setTypeFilter}
@@ -309,7 +321,7 @@ class Productions extends Component {
           </div>
           <div className="col-md">
             <Autocomplete
-              title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
+              title={messages[this.props.language]['Productions.autoCompleteTypesFilter.title']}
               placeHolder={typeFilterPlaceHolder}
               data={this.state.autocompleteData}
               onSubmit={this.setSelectedProductionHandler}
@@ -375,11 +387,6 @@ class Productions extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
-
     if (!this.state.data || this.state.data.length === 0) {
       return (
         <Fragment>
@@ -392,7 +399,7 @@ class Productions extends Component {
                   modifyMode={this.state.modifyMode}
                   emptySection
                 >
-                  {messagesEntity[this.props.language]['Entity.Section.Productions.label']}
+                  {messages[this.props.language]['Productions.label']}
                 </SectionTitle>
                 <div className="row">
                   <div className="col">
@@ -418,48 +425,53 @@ class Productions extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.Productions}`}>
             <div className="container">
-              <div className={`row ${classes.SectionTitle}`}>
-                <div className="col">
+              <div className={classes.SectionTitle}>
+                <div className="d-flex flex-wrap align-items-center">
                   <i className="fas fa-folder-open" />
-                  <span className={classes.Label}>
+                  <span className={`mr-auto my-2 ${classes.Label}`}>
                     {this.state.data.length}
                     &nbsp;
-                    {messagesEntity[this.props.language]['Entity.Section.Productions.label']}
+                    {messages[this.props.language]['Productions.label']}
                   </span>
-                </div>
-                <div className="col text-right">
-                  <div className="btn-group text-left" role="group">
-                    {
-                      (this.state.viewMode === 'list')
-                        ? (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                        : (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                    }
+                  <div className="d-flex flex-wrap align-items-center">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledBy="productionViewList"
+                      onClick={() => this.viewModeClickHandler('list')}
+                      onKeyPress={() => this.viewModeClickHandler('list')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-list" />
+                        </span>
+                        <p className="m-0" id="productionViewList">
+                          Liste
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledBy="productionViewGraph"
+                      onClick={() => this.viewModeClickHandler('graph')}
+                      onKeyPress={() => this.viewModeClickHandler('graph')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-chart-pie" />
+                        </span>
+                        <p className="m-0" id="productionViewGraph">
+                          Visualisation
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -482,6 +494,7 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  // id: PropTypes.string.isRequired,
+  objectId: PropTypes.string.isRequired,
   filterKey: PropTypes.string.isRequired,
 };
