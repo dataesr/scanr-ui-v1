@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import { GRAPH_ITEMS_LIST } from '../../../../config/config';
+import { GRAPH_ITEMS_LIST, ECOSYSTEM_LIMIT } from '../../../../config/config';
 
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../Shared/EmptySection/EmptySection';
@@ -31,60 +31,48 @@ import classes from './Ecosystem.scss';
 */
 class Ecosystem extends Component {
   state = {
-    viewMode: 'graph',
+    data: this.props.data,
+    viewMode: 'list',
     modifyMode: false,
-    // viewListFilters: {
-    //   nature: 'all',
-    //   frInt: 'all',
-    //   type: 'all',
-    // },
+    kindFilter: [],
+    kindFilterValue: null,
+    frIntFilter: [],
+    frIntFilterValue: null,
     selectedCollaboration: {},
   }
 
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.data !== this.props.data) {
+      this.setState({ data: this.props.data });
+      this.createKindFilter();
+      this.createFrIntFilter();
+    }
+  }
+
   getDataGraph = () => {
-    // const natures = [];
-    // this.props.data.forEach(e => (natures.push(e.structure.nature)));
-    // const distinctNatures = [...new Set(natures)];
-
     const dataGraph = [];
-    // distinctNatures.forEach((nature) => {
-    //   // Recherche des structures qui ont cette nature
-    //   const structuresListFr = this.props.data.filter(el => (el.structure.nature === nature && el.structure.isFrench));
-    //   const structuresListFo = this.props.data.filter(el => (el.structure.nature === nature && !el.structure.isFrench));
-
-    //   const dataFr = [];
-    //   structuresListFr.forEach((el) => {
-    //     dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
-    //   });
-    //   const dataFo = [];
-    //   structuresListFo.forEach((el) => {
-    //     dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
-    //   });
-
-    //   const objFr = {
-    //     name: `${dataFr.length} françaises`,
-    //     data: dataFr,
-    //     color: '#119fd4',
-    //   };
-    //   const objFo = {
-    //     name: `${dataFo.length} internationales`,
-    //     data: dataFo,
-    //     color: '#4fc4c0',
-    //   };
-
-    //   dataGraph[nature] = [objFr, objFo];
-    // });
-
     GRAPH_ITEMS_LIST.forEach((graphType) => {
       // Recherche des structures qui ont ce libellé dans leur clé "kind"
-      const structuresListFr = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
-      const structuresListFo = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+      // const structuresListFr = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+      // const structuresListFo = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+
+      const dataSorted = this.props.data.sort((a, b) => {
+        const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
+        const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
+        return prodB - prodA;
+      });
+      const limitedData = [];
+      for (let i = 0; i <= ECOSYSTEM_LIMIT; i += 1) {
+        limitedData.push(dataSorted[i]);
+      }
+      const structuresListFr = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+      const structuresListFo = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
 
       const dataFr = [];
+      const dataFo = [];
       structuresListFr.forEach((el) => {
         dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
       });
-      const dataFo = [];
       structuresListFo.forEach((el) => {
         dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
       });
@@ -115,107 +103,134 @@ class Ecosystem extends Component {
   }
 
   setSelectedCollaborationHandler = (selectedCollaboration) => {
-    this.setState({ selectedCollaboration });
+    this.setState({ selectedCollaboration })
+  }
+
+  setFrIntFilter = (frIntFilterValue) => {
+    if (frIntFilterValue !== 'all') {
+      /* eslint-disable-next-line */
+      const data = this.state.data.filter(item => item.structure.isFrench === (frIntFilterValue === 'fr'));
+      this.setState({ data });
+    } else {
+      this.setState(prevState => ({ data: prevState.initialData, frIntFilterValue: null }));
+    }
+  }
+
+  setKindFilter = (filterValue) => {
+    if (filterValue !== 'all') {
+      /* eslint-disable-next-line */
+      const data = this.state.data.filter(item => item.structure.kind.find(el => el === filterValue));
+      this.setState({ data });
+    } else {
+      this.setState({ data: this.props.data, kindFilterValue: null });
+    }
+  }
+
+  createKindFilter = () => {
+    const kindFilter = [];
+    GRAPH_ITEMS_LIST.forEach((graphType) => {
+      const listObjects = this.props.data.filter(item => item.structure.kind.find(el => el === graphType));
+      const obj = {};
+      obj.value = graphType;
+      obj.count = listObjects.length;
+      kindFilter.push(obj);
+    });
+    this.setState({ kindFilter });
+    // this.setState(prevState => ({ viewListFilters: { frInt: prevState.viewListFilters.frInt, kind: typeFilter } }));
+  }
+
+  createFrIntFilter = () => {
+    let nbFr = 0;
+    let nbEn = 0;
+    this.props.data.forEach((item) => {
+      if (item.structure.isFrench) {
+        nbFr += 1;
+      } else {
+        nbEn += 1;
+      }
+    });
+    const objFr = {};
+    objFr.value = 'fr';
+    objFr.count = nbFr;
+    const objEn = {};
+    objEn.value = 'en';
+    objEn.count = nbEn;
+    const listToAdd = [objFr, objEn];
+    this.setState({ frIntFilter: listToAdd });
+    // this.setState(prevState => ({ viewListFilters: { kind: prevState.viewListFilters.kind, frInt: listToAdd } }));
   }
 
   renderViewList = (messages) => {
-    const natures = [];
-    this.props.data.forEach((e) => {
-      if (e.structure.nature) {
-        natures.push(e.structure.nature);
+    if (!this.state.data || this.state.data.length === 0) {
+      return (<div>Pas de données</div>);
+    }
+    // Tri des données filtrées avant affichage
+    const dataSorted = this.state.data.sort((a, b) => {
+      const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
+      const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
+      return prodB - prodA;
+    });
+
+
+    const content = dataSorted.map((data) => {
+      let selected = '';
+      if (data === this.state.selectedCollaboration) {
+        selected = classes.Selected;
       }
-    });
-    const distinctNatures = [...new Set(natures)];
-
-    const dataByNature = [];
-    distinctNatures.forEach((nature) => {
-      dataByNature[nature] = [];
-    });
-
-    let total = 0;
-    this.props.data.forEach((e) => {
-      if (e.structure.nature) {
-        dataByNature[e.structure.nature].push(e);
-        total += 1;
-      }
-    });
-
-    const filteredData = dataByNature;
-
-    const content = distinctNatures.map(nature => (
-      <Fragment key={nature}>
-        <div className={classes.Title}>
-          <div className={classes.StructureLabel}>
-            {nature}
+      return (
+        <Fragment key={data.structure.id}>
+          <div
+            className={`${classes.Item} ${selected}`}
+            onClick={() => this.setSelectedCollaborationHandler(data)}
+            onKeyPress={() => this.setSelectedCollaborationHandler(data)}
+            role="button"
+            tabIndex={0}
+          >
+            <div className={classes.StructureTitle}>
+              {getSelectKey(data.structure, 'label', this.props.language, 'fr')}
+            </div>
+            <div className={classes.SharedProd}>
+              {`${data.weight} productions en commun`}
+            </div>
           </div>
-          <div className={classes.NBCollaborations}>
-            {`${filteredData[nature].length} entités`}
-          </div>
-        </div>
-        {
-          filteredData[nature].map((collaboration) => {
-            let selected = '';
-            if (collaboration === this.state.selectedCollaboration) {
-              selected = classes.Selected;
-            }
+        </Fragment>
+      );
+    });
 
-            return (
-              <div
-                key={collaboration.structure.id}
-                className={`${classes.Item} ${selected}`}
-                onClick={() => this.setSelectedCollaborationHandler(collaboration)}
-                onKeyPress={() => this.setSelectedCollaborationHandler(collaboration)}
-                role="button"
-                tabIndex={0}
-              >
-                <div className={classes.StructureTitle}>
-                  {getSelectKey(collaboration.structure, 'label', this.props.language, 'fr')}
-                </div>
-                <div className={classes.SharedProd}>
-                  {`${collaboration.weight} productions en commun`}
-                </div>
-              </div>
-            );
-          })
-        }
-      </Fragment>
-    ));
+    const kindFilterPlaceHolder = (this.state.kindFilterValue)
+      ? `${this.props.data.length} ${this.state.kindFilterValue}`
+      : `${this.props.data.length} ${messages[this.props.language]['Entity.ecosystem.selectTypesFilter.placeHolder']}`;
+
+    const frIntFilterPlaceHolder = (this.state.filterValue)
+      ? `${this.props.data.length} ${this.state.filterValue}`
+      : `${this.props.data.length} ${messages[this.props.language]['Entity.ecosystem.selectTypesFilter.placeHolder']}`;
 
     return (
       <Fragment>
         <div className="row">
           <div className="col-md">
             <Select
-              allLabel="all label"
-              count="8"
-              title="Type recherché"
-              placeHolder="Tous les types"
-              data={[]}
-              onSubmit=""
+              allLabel={messages[this.props.language]['Entity.ecosystem.selectTypesFilter.allLabel']}
+              count={this.props.data.length}
+              title={messages[this.props.language]['Entity.ecosystem.selectTypesFilter.title']}
+              placeHolder={kindFilterPlaceHolder}
+              data={this.state.kindFilter || []}
+              onSubmit={this.setKindFilter}
             />
           </div>
           <div className="col-md">
             <Select
-              allLabel="all label"
-              count="8"
-              title="France/Internationnal"
-              placeHolder="Toutes collaborations"
-              data={[]}
-              onSubmit=""
-            />
-          </div>
-          <div className="col-md">
-            <Select
-              allLabel="all label"
-              count="8"
-              title="Nature recherchée"
-              placeHolder="Toutes les natures"
-              data={[]}
-              onSubmit=""
+              allLabel={messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.allLabel']}
+              count={this.props.data.length}
+              title={messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.title']}
+              placeHolder={frIntFilterPlaceHolder}
+              data={this.state.frIntFilter || []}
+              onSubmit={this.setFrIntFilter}
             />
           </div>
         </div>
-        {`${total} productions communes`}
+
+        {`${this.state.data.length} productions communes`}
         <div className="row">
           <div className={`col-md-5 ${classes.List}`}>
             {content}
@@ -282,6 +297,7 @@ class Ecosystem extends Component {
                   </div>
                 )
             }
+            vide
           </div>
         </div>
       </Fragment>
