@@ -7,7 +7,8 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
-import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
+// import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
+import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-v2';
 
 import classes from './Search.scss';
 
@@ -52,7 +53,7 @@ class Search extends Component {
             { placeholder => <input type="text" className="form-control" id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
-        <div className="form-group col-xs-3">
+        <div className="form-group col-md-3">
           <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
             { label => <label className={classes.SearchPerimeter} htmlFor="api">{label}</label> }
           </FormattedMessage>
@@ -74,12 +75,13 @@ class Search extends Component {
             </FormattedMessage>
           </select>
         </div>
-        <div className="form-group col-xs-1">
+        <div className="form-group col-md-1">
           <button
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
+            aria-label="Lancer la recherche"
           >
-            <i className="fas fa-search" aria-label="Lancer la recherche"/>
+            <i className="fas fa-search" aria-hidden />
           </button>
         </div>
       </div>
@@ -95,7 +97,7 @@ class Search extends Component {
     const bgUrl = `./img/poudre-header-home-${schemasPowders[randomNumber]}.jpg`;
     const sectionStyle = {
       backgroundImage: `url(${bgUrl})`,
-      backgroundSize: '35%',
+      backgroundSize: '500px',
     };
     /* eslint-disable */
     return (
@@ -106,20 +108,28 @@ class Search extends Component {
                 <LogoScanrWhiteSVG fill={color} />
               </h1>
               {this.renderForm()}
-              <p className={classes.HowTo}>
-                <FormattedHTMLMessage id="Search.HowTo" defaultMessage="Search.HowTo" />
-              </p>
-              <div className={classes.Suggest}>
-                <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
-                <ul>
-                  {
-                    this.props.suggests.map(suggest => (
-                      <li>
-                        <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
-                      </li>
-                    ))
-                  }
-                </ul>
+              <div className="row">
+                <div className="col-xs">
+                  <div className={classes.Suggest}>
+                    <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
+                    <ul>
+                      {
+                        this.props.suggests.map(suggest => (
+                          <li>
+                            <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </div>
+                {/*
+                <div className="col">
+                  <p className={classes.HowTo}>
+                    <FormattedHTMLMessage id="Search.HowTo" defaultMessage="Search.HowTo" />
+                  </p>
+                </div>
+                */}
               </div>
             </div>
           </section>

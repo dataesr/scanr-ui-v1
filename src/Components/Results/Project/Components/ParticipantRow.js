@@ -61,7 +61,7 @@ const ParticipantRow = props => (
         {
           (props.data.funding)
             ? (
-              <p>{`${props.data.funding.toLocaleString()} €`}</p>
+              <p>{`${parseFloat(props.data.funding).toLocaleString()} €`}</p>
             )
             : <div />
         }
@@ -72,7 +72,7 @@ const ParticipantRow = props => (
             )
             : (
               <p>
-                <FormattedHTMLMessage id="Project.participantRow.noAddress" defaultMessage="Project.participantRow.noAddress" />
+                <FormattedHTMLMessage id="Project.participantsRow.noAddress" defaultMessage="Project.participantsRow.noAddress" />
               </p>
             )
         }

@@ -100,7 +100,7 @@ const PersonCard = (props) => {
             ? (
               <div className="mt-auto">
                 <ButtonToPage
-                  className={`${classes.MarginTop} ${classes.Button} ${classes.Component_dark}`}
+                  className={`${classes.Button} ${classes.btn_scanrBlue}`}
                   url={url}
                 >
                   <FormattedHTMLMessage
