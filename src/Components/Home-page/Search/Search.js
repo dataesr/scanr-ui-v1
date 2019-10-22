@@ -78,8 +78,9 @@ class Search extends Component {
           <button
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
+            aria-label="Lancer la recherche"
           >
-            <i className="fas fa-search" aria-label="Lancer la recherche"/>
+            <i className="fas fa-search" aria-hidden />
           </button>
         </div>
       </div>

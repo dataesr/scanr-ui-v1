@@ -85,7 +85,7 @@ class SearchPage extends Component {
   // }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.location !== this.props.location) {
+    if (prevProps.location !== this.props.location || (this.state.data.total === 0)) {
       this.setState({
         isLoading: true,
         data: {},
