@@ -2,20 +2,23 @@
 
 .detailTitle{
   color: $scanrdeepblueColor;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.20rem;
+  font-weight: 500;
+  margin: 0;
 }
 
-.Date {
-  padding-left: 16px;
+.Grey {
   font-size: 0.9rem;
-  color: $scanrmiddlegreyColor;
+  color: $scanrgreyColor;
+}
+
+.Italic {
+  font-style: italic;
 }
 
 .Ids {
-  padding-right: 16px;
   font-size: 0.9rem;
-  color: $scanrmiddlegreyColor;
+  color: $scanrgreyColor;
 }
 
 
@@ -32,7 +35,6 @@
 }
 
 .Source  {
-  padding-left: 16px;
   display: inline-block;
   SPAN {
     font-weight: bold;
@@ -40,15 +42,10 @@
   }
 }
 
-.Authors {
-  padding-left: 16px;
-  font-style: italic;
-}
 .Summary {
   text-align: justify;
   height: 235px;
-  overflow-y: scroll;
-  padding-left: 16px;
+  overflow-y: auto;
   padding-right: 16px;
 
 }
@@ -83,12 +80,28 @@
   }
 }
 .Empty{
-  color: $scanrmiddlegreyColor;
+  color: $scanrgreyColor;
   font-size: 2rem;
   font-weight: bold;
   font-style: italic;
   text-align: center;
   padding-top: 20%;
+}
+
+.thesis {
+  border-color: #fead3f;
+  color: #fead3f;
+  background-color: #fead3f;
+}
+.publication {
+  border-color: $publicationsColor;
+  color: $publicationsColor;
+  background-color: $publicationsColor;
+}
+.patent {
+  border-color: #4D2E3F;
+  color: #4D2E3F;
+  background-color: #4D2E3F;
 }
 
 .BtnWidth {

@@ -41,13 +41,13 @@ const ProductionDetail = (props) => {
 
   let id = '';
   if (props.data.id.substring(0, 3) === 'doi') {
-    id = `doi : ${props.data.id.substring(3).replace('%2F', '/')}`;
+    id = `doi : ${props.data.id.substring(3)}`;
   } else if (props.data.id.substring(0, 5) === 'these') {
-    id = `these : ${props.data.id.substring(5).replace('%2F', '/')}`;
+    id = `these : ${props.data.id.substring(5)}`;
   } else if (props.data.id.substring(0, 5) === 'sudoc') {
-    id = `sudoc : ${props.data.id.substring(5).replace('%2F', '/')}`;
+    id = `sudoc : ${props.data.id.substring(5)}`;
   } else if (props.data.id.substring(0, 6) === 'brevet') {
-    id = `brevet : ${props.data.id.substring(6).replace('%2F', '/')}`;
+    id = `brevet : ${props.data.id.substring(6)}`;
   }
 
   // Mots clés
@@ -62,7 +62,7 @@ const ProductionDetail = (props) => {
   const maxAuthors = 3;
   const authors = [];
   for (let i = 0; i < maxAuthors; i += 1) {
-    authors.push(`${props.data.authors[i].firstName} ${props.data.authors[i].lastName}`);
+    authors.push(props.data.authors[i].fullName);
   }
   const diff = props.data.authors.length - maxAuthors;
   let others = '';
