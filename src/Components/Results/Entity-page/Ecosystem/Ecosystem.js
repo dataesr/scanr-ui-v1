@@ -37,7 +37,7 @@ class Ecosystem extends Component {
     kindFilter: [],
     kindFilterValue: null,
     frIntFilter: [],
-    frIntFilterValue: null,
+    // frIntFilterValue: null,
     selectedCollaboration: {},
   }
 
@@ -103,7 +103,7 @@ class Ecosystem extends Component {
   }
 
   setSelectedCollaborationHandler = (selectedCollaboration) => {
-    this.setState({ selectedCollaboration })
+    this.setState({ selectedCollaboration });
   }
 
   setFrIntFilter = (frIntFilterValue) => {
@@ -112,7 +112,8 @@ class Ecosystem extends Component {
       const data = this.state.data.filter(item => item.structure.isFrench === (frIntFilterValue === 'fr'));
       this.setState({ data });
     } else {
-      this.setState(prevState => ({ data: prevState.initialData, frIntFilterValue: null }));
+      // this.setState(prevState => ({ data: prevState.initialData, frIntFilterValue: null }));
+      this.setState(prevState => ({ data: prevState.initialData }));
     }
   }
 
