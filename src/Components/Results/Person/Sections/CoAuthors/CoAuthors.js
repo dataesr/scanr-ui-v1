@@ -28,7 +28,7 @@ const CountCard = coAuthorsCount => (
     <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
   </li>
 );
-const SeeMoreCard = coAuthorsList => (
+const SeeMoreCard = (coAuthorsList, coAuthorsHtlm) => (
   <li className={`p-3 mb-2 d-flex flex-column ${classes.SeeMoreCard} ${classes.Card} ${classes.OneFourth}`}>
     <p className={classes.SeeMore}>
       {coAuthorsList.length - 6}
@@ -38,7 +38,7 @@ const SeeMoreCard = coAuthorsList => (
       logo="fas fa-expand"
       title={<FormattedHTMLMessage id="Person.coAuthors.all" defaultMessage="Person.coAuthors.all" />}
       buttonLabel={<FormattedHTMLMessage id="Person.seeAll" defaultMessage="Person.seeAll" />}
-      dataHtml={coAuthorsList}
+      dataHtml={coAuthorsHtlm}
     />
   </li>
 );
@@ -55,12 +55,29 @@ const CoAuthors = (props) => {
           language={props.language}
           data={coAuthors}
           small
+          onlyExisting
         />
       </li>
     ));
-    if ((6 - coAuthorsList.length) > 0) {
-      for (let i = 0; i < (8 - coAuthorsList.length); i += 1) {
-        coAuthorsList.push(<li key={i} className={classes.OneFourth} />);
+    const coAuthorsListModal = (
+      <ul className={`${classes.noListStyle} d-flex flex-column justify-content-between align-content-stretch p-0 m-0`}>
+        {
+          props.data.map(coAuthors => (
+            <li key={coAuthors.id} className={classes.OneFourth}>
+              <PersonCard
+                language={props.language}
+                data={coAuthors}
+                small
+                onlyExisting
+              />
+            </li>
+          ))
+        }
+      </ul>
+    );
+    if (coAuthorsList.length < 7) {
+      while (coAuthorsList.length < 7) {
+        coAuthorsList.push(<li key={coAuthorsList.length} className={classes.OneFourth} />);
       }
     }
     return (
@@ -73,7 +90,13 @@ const CoAuthors = (props) => {
               modifyModeKey="coAuthors"
               modifyMode={props.modifyMode}
             >
-              <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
+              <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title">
+                {txt => (
+                  <h2>
+                    {txt}
+                  </h2>
+                )}
+              </FormattedHTMLMessage>
             </SectionTitle>
             {
               (props.modifyMode)
@@ -91,8 +114,8 @@ const CoAuthors = (props) => {
             }
             <ul className={`${classes.noListStyle} d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0`}>
               {CountCard(props.data.length)}
-              {(coAuthorsList.length > 8) ? coAuthorsList.slice(-6) : coAuthorsList}
-              {(coAuthorsList.length > 8) ? SeeMoreCard(coAuthorsList) : null}
+              {(coAuthorsList.length > 7) ? coAuthorsList.slice(-6) : coAuthorsList}
+              {(coAuthorsList.length > 7) ? SeeMoreCard(coAuthorsList, coAuthorsListModal) : null}
             </ul>
           </div>
         </IntlProvider>
