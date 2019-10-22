@@ -26,17 +26,17 @@
 .Tags {
   padding: 6px;
   margin: 6px;
-  background-color: $scanrgreyColor;
-  color: white;
+  background-color: white;
+  color: $scanrdeepblueColor;
   border-radius: 6px;
   A,SPAN {
-    color: white;
+    color: $scanrdeepblueColor;
   }
   A:hover, SPAN:hover {
-    color: white;
+    color: $scanrdeepblueColor;
   }
 }
 .Tags:hover {
-  background-color: $scanrlightgreyColor;
-  color: $scanrdeepblueColor;
+  background-color: $scanrdeepblueColor;
+  color: white;
 }
