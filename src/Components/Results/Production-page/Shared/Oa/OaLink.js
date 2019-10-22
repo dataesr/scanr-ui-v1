@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import getSelectKey from '../../../../../Utils/getSelectKey';
-
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
 import classes from './Oa.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * OaLink component
@@ -17,13 +24,19 @@ import classes from './Oa.scss';
  * Tests unitaires : .
 */
 
-// eslint-disable-next-line
 const OaLink = (props) => {
+  const logo = (props.oaEvidence.pdfurl) ? <i className="fas fa-file-pdf" aria-hidden /> : <i className="fas fa-download" aria-hidden />;
   return (
-    <div className={classes.OaLink}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
-      Lien OA avec test si PDF
-    </div>
+    <p className={classes.OaLink}>
+      <p className={classes.Title}>
+        {
+          messages[props.language]['Publication.Oa.OaLink.Title']
+        }
+      </p>
+      <a href={(props.oaEvidence.pdfurl) ? props.oaEvidence.pdfurl : props.oaEvidence.url}>
+        {logo}
+      </a>
+    </p>
   );
 };
 
@@ -31,7 +44,5 @@ export default OaLink;
 
 OaLink.propTypes = {
   language: PropTypes.string.isRequired,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
+  oaEvidence: PropTypes.object.isRequired,
 };
