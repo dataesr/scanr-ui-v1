@@ -70,7 +70,7 @@ class SubmitBox extends Component {
             ) : null
           }
 
-          <Modal show={this.state.showModifyModal || this.props.autoLaunch} onHide={this.toggleModifyModal} size="lg">
+          <Modal show={this.state.showModifyModal || this.props.autoLaunch} onHide={this.toggleModifyModal} size="lg" aria-label={messages[this.props.language]['SubmitBox.mainButton.label']}>
             <Modal.Header closeButton />
             <Modal.Body>
               <div className={classes.Modal}>
@@ -124,21 +124,19 @@ class SubmitBox extends Component {
                   <form>
                     <div className="form-row">
                       <div className="form-group">
-                        { /* eslint-disable-next-line */ }
-                        <label for="commentInput">
+                        <p>
                           <FormattedHTMLMessage id="SubmitBox.commentInput.label" />
-                        </label>
-                        <textarea className="form-control" id="commentInput" name="commentInput" rows="5" />
+                        </p>
+                        <textarea className="form-control" name="commentInput" title={messages[this.props.language]['SubmitBox.commentInput.label']} rows="5" required />
                       </div>
                     </div>
 
                     <div className="form-row">
                       <div className="form-group col-md-6">
-                        { /* eslint-disable-next-line */ }
-                        <label for="nameInput">
+                        <p>
                           <FormattedHTMLMessage id="SubmitBox.nameInput.label" />
-                        </label>
-                        <input type="text" className="form-control" id="nameInput" name="nameInput" />
+                        </p>
+                        <input type="text" className="form-control" name="nameInput" title={messages[this.props.language]['SubmitBox.nameInput.label']} required />
                       </div>
                       <div className="form-group col-md-6">
                         captcha
@@ -147,11 +145,10 @@ class SubmitBox extends Component {
 
                     <div className="form-row">
                       <div className="form-group col-md-6">
-                        { /* eslint-disable-next-line */ }
-                        <label for="emailInput">
+                        <p>
                           <FormattedHTMLMessage id="SubmitBox.emailInput.label" />
-                        </label>
-                        <input type="email" className="form-control" id="emailInput" name="emailInput" />
+                        </p>
+                        <input type="email" className="form-control" name="emailInput" title={messages[this.props.language]['SubmitBox.emailInput.label']} required />
                       </div>
                       <div className="form-group col-md-6" style={{ position: 'relative' }}>
                         <button type="submit" className={`btn ${classes.btn_scanrGrey} ${classes.Submit}`}>
