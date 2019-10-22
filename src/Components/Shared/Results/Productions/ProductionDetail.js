@@ -29,25 +29,25 @@ const ProductionDetail = (props) => {
   if (Object.entries(props.data).length === 0) {
     return (
       <div className={classes.Empty}>
-        {messages[props.language]['Entity.productions.empty.label']}
+        {messages[props.language]['Productions.empty.label']}
       </div>
     );
   }
 
   let date = '';
-  if (props.data.productionType && props.data.productionType === 'publication' && props.data.publicationDate) {
+  if (props.data.publicationDate) {
     date = moment(props.data.publicationDate).format('YYYY');
   }
 
   let id = '';
   if (props.data.id.substring(0, 3) === 'doi') {
-    id = `doi : ${props.data.id.substring(3).replace('%2F', '/')}`;
+    id = `doi : ${props.data.id.substring(3)}`;
   } else if (props.data.id.substring(0, 5) === 'these') {
-    id = `these : ${props.data.id.substring(5).replace('%2F', '/')}`;
+    id = `these : ${props.data.id.substring(5)}`;
   } else if (props.data.id.substring(0, 5) === 'sudoc') {
-    id = `sudoc : ${props.data.id.substring(5).replace('%2F', '/')}`;
+    id = `sudoc : ${props.data.id.substring(5)}`;
   } else if (props.data.id.substring(0, 6) === 'brevet') {
-    id = `brevet : ${props.data.id.substring(6).replace('%2F', '/')}`;
+    id = `brevet : ${props.data.id.substring(6)}`;
   }
 
   // Mots clés
@@ -57,36 +57,76 @@ const ProductionDetail = (props) => {
   } else if (props.data.keywords && props.data.keywords.en) {
     keywords = props.data.keywords.en;
   }
+  keywords = [...new Set(keywords)];
 
   // Auteurs
-  const maxAuthors = 3;
-  const authors = [];
-  for (let i = 0; i < maxAuthors; i += 1) {
-    authors.push(`${props.data.authors[i].firstName} ${props.data.authors[i].lastName}`);
-  }
+  const maxAuthors = 2;
+  const getAuthors = (data) => {
+    let authors = [];
+    if (data.productionType === 'publication') {
+      authors = data.authors.map((author) => {
+        if (author.person) {
+          return <a href={`person/${author.person.id}`}>{author.fullName}</a>;
+        }
+        return <span>{author.fullName}</span>;
+      });
+    } else if (data.productionType === 'thesis') {
+      authors = data.authors
+        .filter(author => author.role === 'author')
+        .map((author) => {
+          if (author.person) {
+            return <a href={`person/${author.person.id}`}>{author.fullName}</a>;
+          }
+          return <span>{author.fullName}</span>;
+        });
+    } else {
+      return null;
+    }
+    return authors;
+  };
+
+  const authors = getAuthors(props.data);
+
   const diff = props.data.authors.length - maxAuthors;
   let others = '';
   if (diff === 1) {
-    others = `${messages[props.language]['Entity.productions.detail.and']} 1 ${messages[props.language]['Entity.productions.detail.author']}`;
+    others = `${messages[props.language]['Productions.detail.and']} 1 ${messages[props.language]['Productions.detail.author']}`;
   } else if (diff > 1) {
-    others = `${messages[props.language]['Entity.productions.detail.and']} ${diff} ${messages[props.language]['Entity.productions.detail.authors']}`;
+    others = `${messages[props.language]['Productions.detail.and']} ${diff} ${messages[props.language]['Productions.detail.authors']}`;
   }
-  const authorsJSX = `${authors.join(', ')} ${others}`;
+
 
   return (
     <Fragment>
-      <div className={classes.detailTitle}>
+      <p className={classes.detailTitle}>
         {getSelectKey(props.data, 'title', props.language, 'default')}
-      </div>
-      <div className="d-flex justify-content-between">
-        <div className={classes.Date}>
+      </p>
+      <p className="m-0">
+        {
+          authors.reduce((prev, curr) => [prev, ', ', curr])
+        }
+        {' '}
+        {
+          (props.data.productionType !== 'thesis')
+            ? others
+            : null
+        }
+      </p>
+      <div>
+        <p className={classes.Grey}>
+          {
+            (props.data.source && props.data.source.title)
+              ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${props.data.source.title}"]}}`} className={classes.Italic}>{props.data.source.title}</a>
+              : null
+          }
+          {' | '}
           {date}
-        </div>
-        <div className={classes.Ids}>
+        </p>
+        <p className={classes.Grey}>
           {id}
-        </div>
+        </p>
       </div>
-      <hr />
+      <hr className={classes[props.data.productionType]} />
       <div className={classes.Summary}>
         {getSelectKey(props.data, 'summary', props.language, 'default')}
       </div>
@@ -102,42 +142,32 @@ const ProductionDetail = (props) => {
           ))
         }
       </div>
-      <hr />
-      <div className={classes.Authors}>
-        {authorsJSX}
-      </div>
-      <div className={classes.Oa}>
-        {(props.data.isOa) ? (
-          <span className={`fa-stack ${classes.isOa}`}>
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
-          </span>
-        ) : (
-          <span className={`fa-stack ${classes.isNotOa}`}>
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fas fa-lock fa-stack-1x fa-inverse" />
-          </span>
-        )}
-      </div>
-      <div className={classes.Source}>
-        {(props.data.source && props.data.source.publisher) ? <span>{props.data.source.publisher}</span> : null}
-        {(props.data.source && props.data.source.publisher && props.data.source.title) ? messages[props.language]['Entity.productions.detail.in'] : null}
-        {(props.data.source && props.data.source.title) ? <span>{props.data.source.title}</span> : null}
-      </div>
-      <hr />
+      <hr className={classes[props.data.productionType]} />
       <div className="d-flex justify-content-between">
+        <div className={classes.Oa}>
+          {(props.data.isOa) ? (
+            <div className="d-flex align-items-center">
+              <span aria-hidden className={`fa-stack ${classes.isOa}`}>
+                <i className="fas fa-circle fa-stack-2x" />
+                <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
+              </span>
+              <ButtonToPage
+                className="btn_dark"
+                url={props.data.oaEvidence.pdfUrl}
+              >
+                Aller au PDF
+              </ButtonToPage>
+            </div>
+          ) : (
+            <span className={`fa-stack ${classes.isNotOa}`}>
+              <i className="fas fa-circle fa-stack-2x" />
+              <i className="fas fa-lock fa-stack-1x fa-inverse" />
+            </span>
+          )}
+        </div>
         <ButtonToPage
-          className={`${classes.btn_dark} ${classes.BtnWidth}`}
-          url={props.data.oaEvidence.pdfUrl}
-        >
-          <span className={classes.IconPdf}>
-            <i className="fas fa-file-pdf" />
-          </span>
-          Voir la publication PDF
-        </ButtonToPage>
-        <ButtonToPage
-          className={`${classes.btn_dark} ${classes.BtnWidth}`}
-          url={props.data.oaEvidence.pdfUrl}
+          className="btn_dark"
+          url={`publication/${props.data.id.replace('/', '%25252f')}`}
         >
           Voir la publication dans scanR
         </ButtonToPage>
