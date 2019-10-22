@@ -46,6 +46,7 @@ const SearchResults = (props) => {
   const ToShow = ResultsToShow[props.api][props.view];
   const scanRcolor = '#3778bb';
   let pagination = null;
+  const numResults = (props.data.total < 2) ? 'searchResults.result' : 'searchResults.results';
   if (props.view === 'list' && props.api !== 'all') {
     pagination = (
       <Pagination
@@ -99,8 +100,8 @@ const SearchResults = (props) => {
             </span>
             <span>
               <FormattedHTMLMessage
-                id="searchResults.results"
-                defaultMessage="searchResults.results"
+                id={numResults}
+                defaultMessage={numResults}
               />
             </span>
           </div>

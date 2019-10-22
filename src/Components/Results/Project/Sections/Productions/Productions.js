@@ -58,11 +58,10 @@ const Productions = (props) => {
             <div className="row">
               {
                 props.data.map(prod => (
-                  <div key={prod.id} className="col-4 p-1">
+                  <div key={prod.id} className="col-4 px-1">
                     <PublicationCard
                       language={props.language}
                       data={prod}
-                      size="small"
                     />
                   </div>
                 ))

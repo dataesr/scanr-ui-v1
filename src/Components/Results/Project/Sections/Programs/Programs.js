@@ -57,8 +57,8 @@ const Programs = (props) => {
                 <FormattedHTMLMessage id="Project.programs.title" defaultMessage="Project.programs.title" />
               </SectionTitle>
               <div className="row">
-                <div className="d-flex flex-wrap align-self-start">
-                  <div className={classes.noSpace}>
+                <div className="d-flex flex-wrap">
+                  <div className={classes.W50}>
                     <SimpleCard
                       language={props.language}
                       logo="fas fa-calendar-day"
@@ -74,7 +74,7 @@ const Programs = (props) => {
                       allData={props.data}
                     />
                   </div>
-                  <div className={classes.noSpace}>
+                  <div className={classes.W50}>
                     <SimpleCard
                       language={props.language}
                       logo="fas fa-calendar-day"
@@ -90,7 +90,7 @@ const Programs = (props) => {
                       allData={props.data}
                     />
                   </div>
-                  <div className={classes.noSpace}>
+                  <div className={classes.W50}>
                     <SimpleCard
                       language={props.language}
                       logo="fas fa-calendar-day"
@@ -102,7 +102,7 @@ const Programs = (props) => {
                       allData={props.data}
                     />
                   </div>
-                  <div className={classes.noSpace}>
+                  <div className={classes.W50}>
                     <SimpleCard
                       language={props.language}
                       logo="fas fa-calendar-day"
