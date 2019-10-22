@@ -12,7 +12,8 @@ import Portrait from './Portrait/Portrait';
 import Network from './Network/Network';
 import Team from './Team/Team';
 import Projects from './Projects/Projects';
-import Productions from './Productions/Productions';
+// import Productions from './Productions/Productions';
+import Productions from '../../Shared/Results/Productions/Productions';
 import Ecosystem from './Ecosystem/Ecosystem';
 import Awards from './Awards/Awards';
 import SimilarEntities from './SimilarEntities/SimilarEntities';
@@ -91,7 +92,8 @@ class Entity extends Component {
         <Productions
           language={this.props.language}
           id="Productions"
-          structureId={this.props.match.params.id}
+          filterKey="affiliations.id"
+          objectId={this.props.match.params.id}
         />
         <Banner
           language={this.props.language}

@@ -6,7 +6,16 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
 import classes from './Oa.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * OaCard component
@@ -25,8 +34,13 @@ const OaCard = (props) => {
     color = 'OaOpenPublisher';
   }
   return (
-    <div className={`d-flex align-items-center justify-content-center ${classes.OaCard}`}>
+    <div className={classes.OaCard}>
       {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
+      <p className={classes.Label}>
+        {
+          (props.oa) ? messages[props.language]['Publication.Oa.isOa'] : messages[props.language]['Publication.Oa.isNotOa']
+        }
+      </p>
       <div className={`${classes.Icon} ${classes[color]}`}>
         {
           (props.oa) ? (
