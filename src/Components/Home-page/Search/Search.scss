@@ -2,25 +2,22 @@
 
 .SearchFull {
   padding-top: $headerHeight;
+  position:relative;
   background-color: $bgHomePageSearch;
   background-repeat: no-repeat;
-  background-attachment: relative;
-  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-position: top 50% left 82%;
-  position:relative;
+  background-position: top 3em left 78%;
+    // background-attachment: relative;
+  // -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+
 
   .Logo {
-    // height: 130px;
     width: 100%;
-    padding-top: 40px;
-
-    IMG {
-      height: 85%;
-    }
+    padding-top: 24px;
   }
 
   .SearchPerimeter {
     color: $scanrdeepblueColor;
+    white-space: nowrap;
   }
   LI {
     list-style: none;
@@ -61,6 +58,7 @@ LABEL {
 
 .btn_dark_margin {
   margin-top: 24px;
+  width: 100%;
 }
 
 .Select {
@@ -74,12 +72,12 @@ LABEL {
   text-decoration: underline;
   font-size: 0.8rem;
   font-weight: bold;
+  margin-top: 8px;
 }
 
 .Suggest {
   color: white;
   font-size: 0.7rem;
-  margin-top: 8px;
 
   span {
     margin-right: 8px;

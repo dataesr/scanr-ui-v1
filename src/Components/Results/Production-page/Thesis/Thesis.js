@@ -251,6 +251,9 @@ class Thesis extends Component {
                       <OaLink
                         language={this.props.language}
                         oaEvidence={this.props.data.oaEvidence}
+                        masterKey="AccessType/OaCard"
+                        modifyMode={this.state.modifyModeOa}
+                        allData={this.props.data}
                       />
                     </div>
                   ) : null
