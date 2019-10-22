@@ -4,9 +4,16 @@
 .Title {
   font-weight: 600;
 }
+.Title a {
+  font-weight: 600;
+  color: inherit;
+}
 .Funding {
   font-style: italic;
-  color: $scanrgreyColor
+  color: $scanrgreyColor;
+}
+.participant p {
+  margin: 0;
 }
 
 .yellowBullet {
@@ -14,7 +21,7 @@
   width: 12px;
   height: 12px;
   border-radius: 5px;
-  background-color: red;
+  background-color: $entityColor;
   margin-right: 5px;
   margin-top: 5px;
 }

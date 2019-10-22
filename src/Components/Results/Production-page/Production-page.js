@@ -27,6 +27,7 @@ class Production extends Component {
 
   componentDidMount() {
     // eslint-disable-next-line
+    console.log(this.props.match.params);
     const { id } = this.props.match.params;
     // const id = 'doi10.10072%2525F978-3-319-24195-1_10';
     // const id = 'these2018TOU30090';
@@ -103,6 +104,6 @@ export default Production;
 
 Production.propTypes = {
   language: PropTypes.string.isRequired,
-  // match: PropTypes.object.isRequired,
+  match: PropTypes.object.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };

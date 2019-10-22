@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
+import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../config/config';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
@@ -185,8 +185,7 @@ class Productions extends Component {
 
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    // const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id}`;
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%2525F978-3-319-24195-1_10';
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace('/', '%25252f')}`;
     Axios.get(url).then((response) => {
       // eslint-disable-next-line
       console.log('setSelectedProductionHandler_jre:', response);

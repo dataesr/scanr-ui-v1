@@ -1,0 +1,39 @@
+@import '../../../../../../style.scss';
+
+
+.SubSectionTitle {
+  margin: 0.25em;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: $scanrmiddlegreyColor;
+  color: $scanrdeepblueColor;
+
+  .Title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.Pile {
+  border-radius: 8px;
+  border: 7px solid $projectgreenColor;
+  padding: 0.25em;
+  height: 5em;
+  width: 13em;
+
+}
+
+.PileExtend {
+  background-color: $projectgreenColor;
+  margin-left: -7px;
+  height: 2em;
+  width: 15px;
+  border-radius: 3px;
+}
+.PileFill {
+  height: 100%;
+  background-color: $projectgreenColor;
+}

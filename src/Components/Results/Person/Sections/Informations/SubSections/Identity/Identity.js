@@ -35,7 +35,7 @@ const Identity = (props) => {
               </div>
               <div className="container-fluid">
                 <div className="row">
-                  <div className={`col-6 ${classes.CardContainer}`}>
+                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
                     <PersonNameCard
                       logo="fas fa-flask"
                       title="Domaines de recherche"
@@ -46,7 +46,7 @@ const Identity = (props) => {
                       allData={props.allData}
                     />
                   </div>
-                  <div className={`col-6 ${classes.NoSpace}`}>
+                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace}`}>
                     <div className="container-fluid">
                       <div className="row">
                         <div className={`col-12 ${classes.CardContainer}`}>

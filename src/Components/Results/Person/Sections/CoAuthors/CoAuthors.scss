@@ -11,6 +11,10 @@
   background-color: #e9ecf1;
   background-position: bottom -100% left 110%;
 }
+.CoAuthors h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
 
 .OneFourth {
   flex: 0 1 calc(25% - 5px);
@@ -21,7 +25,13 @@
   list-style: none;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 60em) {
+  .OneFourth {
+    flex: 0 1 calc(50% - 5px);
+  }
+}
+
+@media screen and (max-width: 30em) {
   .OneFourth {
     flex: 0 1 100%;
   }
@@ -36,8 +46,9 @@
 }
 
 .CountCard {
-  font-size: 2rem;
+  font-size: 1.3rem;
   background-color: $personsColor;
+  font-weight: 600;
 
 }
 

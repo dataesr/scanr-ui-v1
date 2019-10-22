@@ -33,9 +33,9 @@ const Domains = (props) => {
         .filter(txt => (txt.length < 20))
         .sort((a, b) => b.length - a.length);
     }
-    const tagList = [...new Set(tags)];
+    const domains = [...new Set(tags)];
     const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'fr'))];
-
+    const tagList = (keywords.length > 0) ? keywords : domains;
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid">
@@ -48,7 +48,7 @@ const Domains = (props) => {
                 logo="fas fa-flask"
                 title="Domaines de recherche"
                 tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
-                tagList={keywords || tagList}
+                tagList={tagList}
                 language={props.language}
                 maxElements={12}
                 labelListButton="Tous les domaines"

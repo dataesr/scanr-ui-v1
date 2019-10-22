@@ -101,9 +101,9 @@ const Affiliations = (props) => {
                                     {`${struct.sources.length} productions`}
                                   </p>
                                 </div>
-                                <button type="button" href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
+                                <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
                                   <i className="fas fa-arrow-right" aria-hidden="true" />
-                                </button>
+                                </a>
                               </div>
                             ))
                           }
