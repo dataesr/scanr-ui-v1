@@ -127,9 +127,15 @@ const ProductionDetail = (props) => {
         </p>
       </div>
       <hr className={classes[props.data.productionType]} />
-      <div className={classes.Summary}>
-        {getSelectKey(props.data, 'summary', props.language, 'default')}
-      </div>
+      {
+        (getSelectKey(props.data, 'summary', props.language, 'default'))
+          ? (
+            <div className={classes.Summary}>
+              {getSelectKey(props.data, 'summary', props.language, 'default')}
+            </div>
+          )
+          : null
+      }
       <div className={classes.Keywords}>
         {
           keywords.map(keyword => (
@@ -143,7 +149,7 @@ const ProductionDetail = (props) => {
         }
       </div>
       <hr className={classes[props.data.productionType]} />
-      <div className="d-flex justify-content-between">
+      <div className="d-flex mt-auto justify-content-between">
         <div className={classes.Oa}>
           {(props.data.isOa) ? (
             <div className="d-flex align-items-center">
