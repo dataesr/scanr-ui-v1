@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
 import OaCard from '../Shared/Oa/OaCard';
@@ -15,12 +14,12 @@ import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 import AffiliationCard from '../../../Shared/Ui/AffiliationCard/AffiliationCard';
 import TagCard from '../../../Shared/Ui/TagCard/TagCard';
-
 import EmptySection from '../../Entity-page/Shared/EmptySection/EmptySection';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import BackgroundAffiliations from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+
 import classes from './Thesis.scss';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
