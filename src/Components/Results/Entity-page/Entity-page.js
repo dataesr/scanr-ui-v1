@@ -52,6 +52,11 @@ class Entity extends Component {
       }).catch(e => console.log('erreur=>', e));
   }
 
+  handleChange = (sectionName) => {
+    document.getElementById(sectionName).scrollIntoView(true);
+    window.scrollBy({ top: -120, behavior: 'smooth' });
+  };
+
   render() {
     if (!this.state.data) {
       return <Fragment>Chargement ...</Fragment>;
@@ -63,68 +68,89 @@ class Entity extends Component {
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
         />
+
         <HeaderTitle
           language={this.props.language}
           label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
-        />
-        <Portrait
-          language={this.props.language}
-          data={this.state.data}
-          id="Portrait"
+          handleChangeForScroll={this.handleChange}
         />
 
-        <Network
-          language={this.props.language}
-          data={this.state.data}
-          id="Network"
-        />
-        <Team
-          language={this.props.language}
-          data={this.state.data}
-          id="Team"
-        />
-        <Projects
-          language={this.props.language}
-          id="Projects"
-          structureId={this.props.match.params.id}
-        />
-        <Productions
-          language={this.props.language}
-          id="Productions"
-          objectId={this.props.match.params.id}
-          filterKey="affiliations.id"
-        />
+        <div id="Portrait">
+          <Portrait
+            language={this.props.language}
+            data={this.state.data}
+          />
+        </div>
+
+        <div id="Network">
+          <Network
+            language={this.props.language}
+            data={this.state.data}
+          />
+        </div>
+
+        <div id="Team">
+          <Team
+            language={this.props.language}
+            data={this.state.data}
+          />
+        </div>
+
+        <div id="Projects">
+          <Projects
+            language={this.props.language}
+            structureId={this.props.match.params.id}
+          />
+        </div>
+
+        <div id="Productions">
+          <Productions
+            language={this.props.language}
+            objectId={this.props.match.params.id}
+            filterKey="affiliations.id"
+          />
+        </div>
+
         <Banner
           language={this.props.language}
           labelKey="Appear"
           cssClass="BannerDeep"
           url=""
         />
-        <Ecosystem
-          language={this.props.language}
-          data={this.state.data.graph}
-          id="Ecosystem"
-        />
-        <Awards
-          language={this.props.language}
-          data={null}
-          id="Awards"
-        />
-        <SimilarEntities
-          language={this.props.language}
-          data={this.state.data}
-          id="SimilarEntities"
-        />
+
+        <div id="Ecosystem">
+          <Ecosystem
+            language={this.props.language}
+            data={this.state.data.graph}
+          />
+        </div>
+
+        <div id="Awards">
+          <Awards
+            language={this.props.language}
+            data={null}
+          />
+        </div>
+
+        <div id="SimilarEntities">
+          <SimilarEntities
+            language={this.props.language}
+            data={this.state.data}
+          />
+        </div>
+
         {
           (this.state.lastFocus)
             ? (
-              <LastEntityFocus
-                language={this.props.language}
-                data={this.state.data}
-                id="LastEntityFocus"
-              />
+              <div id="LastEntityFocus">
+                <LastEntityFocus
+                  language={this.props.language}
+                  data={this.state.data}
+                />
+              </div>
             ) : null
         }
+
         <Banner
           language={this.props.language}
           labelKey="Appear"

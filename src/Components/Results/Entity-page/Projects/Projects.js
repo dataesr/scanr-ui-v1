@@ -315,7 +315,7 @@ class Projects extends Component {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <section className={`container-fluid ${classes.Projects}`}>
+            <section className={`container-fluid ${classes.Projects}`} id={this.props.id}>
               <div className="container">
                 <SectionTitle
                   icon="fas fa-folder-open"
@@ -414,5 +414,6 @@ export default Projects;
 
 Projects.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   structureId: PropTypes.string.isRequired,
 };
