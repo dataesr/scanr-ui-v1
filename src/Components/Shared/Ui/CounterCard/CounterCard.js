@@ -17,7 +17,7 @@ const CounterCard = (props) => {
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
 
   return (
-    <div className={`${classes.CounterCard} ${classes[props.color]}`}>
+    <div className={`${classes.CounterCard} ${classes[props.color]} ${props.className}`}>
       {title}
       {counter}
       {label}
@@ -32,4 +32,5 @@ CounterCard.propTypes = {
   title: PropTypes.string,
   label: PropTypes.string,
   color: PropTypes.string,
+  className: PropTypes.object,
 };

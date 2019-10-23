@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-import getSelectKey from '../../../../../Utils/getSelectKey';
-
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
 import classes from './Oa.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * OaHost component
  * Url : .
- * Description : Carte avec logo open access et couleur associé au type d'open access
+ * Description : Carte avec type d'hote pour open access
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
@@ -19,11 +23,25 @@ import classes from './Oa.scss';
 
 // eslint-disable-next-line
 const OaHost = (props) => {
+  const hostType = (props.oaEvidence && props.oaEvidence.hostType) ? props.oaEvidence.hostType : null;
+
+  if (!hostType) {
+    return null;
+  }
+
   return (
-    <div className={classes.OaHost}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
-      Hosts
-    </div>
+    <p className={classes.OaHost}>
+      <p className={classes.Title}>
+        {
+          messages[props.language]['Publication.Oa.OaHost.Title']
+        }
+      </p>
+      <p className={classes.Label}>
+        {
+          messages[props.language][`Publication.Oa.OaHost.${hostType}`]
+        }
+      </p>
+    </p>
   );
 };
 
@@ -31,7 +49,5 @@ export default OaHost;
 
 OaHost.propTypes = {
   language: PropTypes.string.isRequired,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
+  oaEvidence: PropTypes.object.isRequired,
 };
