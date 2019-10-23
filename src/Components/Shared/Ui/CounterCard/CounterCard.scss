@@ -4,8 +4,9 @@
   position: relative;
   border-radius: 8px;
   text-align: center;
-  min-height: 224px;
-
+  // min-height: 224px;
+  min-height: 150;
+  
   .Logo {
     padding-top: 16px;
     color: $scanrgreyColor;

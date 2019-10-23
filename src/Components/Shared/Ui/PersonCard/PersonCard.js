@@ -30,12 +30,11 @@ const PersonCard = (props) => {
     en: messagesEn,
   };
 
-  let email = props.email;
-  let firstName = props.firstName;
-  let lastName = props.lastName;
-  const role = props.role;
+  let email = props.data.email;
+  let firstName = props.data.firstName;
+  let lastName = props.data.lastName;
+  const role = props.data.role;
   let url = null;
-
   if (props.data.person) {
     if (props.data.person.email) {
       email = props.data.person.email;
@@ -53,7 +52,7 @@ const PersonCard = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`d-flex flex-column ${classes.PersonCard}`}>
+      <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
         {
           (props.showTitle) ? (
             <div>
@@ -138,4 +137,5 @@ PersonCard.propTypes = {
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,
+  className: PropTypes.object,
 };

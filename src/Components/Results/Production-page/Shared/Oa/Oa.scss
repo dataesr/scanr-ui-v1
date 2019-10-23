@@ -39,7 +39,19 @@
   background-color: $scanrlightgreyColor;
   border-radius: 8px;
   min-height: 150px;
+  text-align: center;
 
+  .Title {
+    padding-top: 16px;
+    color: $scanrblueColor;
+    font-style: italic;
+  }
+  .Label {
+    padding-top: 16px;
+    color: $scanrdeepblueColor;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
 }
 
 .OaLink {
