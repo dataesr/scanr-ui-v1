@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import getSelectKey from '../../../../../Utils/getSelectKey';
-// import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
-
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -25,7 +22,7 @@ const messages = {
 */
 
 const OaLink = (props) => {
-  const logo = (props.oaEvidence.pdfurl) ? <i className="fas fa-file-pdf" aria-hidden /> : <i className="fas fa-download" aria-hidden />;
+  const logo = (props.oaEvidence.pdfUrl) ? <i className="fas fa-file-pdf" aria-hidden /> : <i className="fas fa-download" aria-hidden />;
   return (
     <p className={classes.OaLink}>
       <p className={classes.Title}>
@@ -33,7 +30,7 @@ const OaLink = (props) => {
           messages[props.language]['Publication.Oa.OaLink.Title']
         }
       </p>
-      <a href={(props.oaEvidence.pdfurl) ? props.oaEvidence.pdfurl : props.oaEvidence.url}>
+      <a href={(props.oaEvidence.pdfUrl) ? props.oaEvidence.pdfUrl : props.oaEvidence.url}>
         {logo}
       </a>
     </p>
