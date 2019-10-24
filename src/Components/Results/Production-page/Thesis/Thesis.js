@@ -3,6 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
+import HeaderTitle from '../../Entity-page/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
@@ -12,9 +13,8 @@ import OaLink from '../Shared/Oa/OaLink';
 import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
-import AffiliationCard from '../../../Shared/Ui/AffiliationCard/AffiliationCard';
+import AffiliationCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
 import TagCard from '../../../Shared/Ui/TagCard/TagCard';
-import EmptySection from '../../Entity-page/Shared/EmptySection/EmptySection';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
@@ -81,6 +81,11 @@ class Thesis extends Component {
     return sortedAuthors;
   }
 
+  handleChange = (sectionName) => {
+    document.getElementById(sectionName).scrollIntoView(true);
+    window.scrollBy({ top: -120, behavior: 'smooth' });
+  };
+
   render() {
     if (!this.props.data) {
       return null;
@@ -98,13 +103,19 @@ class Thesis extends Component {
     const id = (this.props.data.id.substring(0, 5) === 'these') ? this.props.data.id.substring(5) : this.props.data.id;
     const publicationDate = moment(this.props.data.publicationDate).format('L');
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
-    const nbAuthorsToShow = 7;
+    const nbAuthorsToShow = 6;
     const sortedAuthors = this.getSortedAuthors();
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle}>
+          <HeaderTitle
+            language={this.props.language}
+            label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
+            handleChangeForScroll={this.handleChange}
+            idPage="Thesis"
+          />
+          <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle} id="Thesis">
             <div className="container">
               <SectionTitle
                 icon="fas fa-id-card"
@@ -214,7 +225,7 @@ class Thesis extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.OaSection}`}>
+          <section className={`container-fluid ${classes.OaSection}`} id="AccessType">
             <div className="container">
               <SectionTitle
                 icon={(this.props.data && this.props.data.isOa) ? 'fas fa-lock-open' : 'fas fa-lock'}
@@ -260,7 +271,7 @@ class Thesis extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors}>
+          <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors} id="Authors">
             <div className="container">
               <SectionTitle
                 icon="fas fa-id-card"
@@ -321,55 +332,35 @@ class Thesis extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations}>
-            <div className="container">
-              <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.modifyModeHandleAffiliations}
-                modifyMode={this.state.modifyModeAffiliations}
-              >
-                <FormattedHTMLMessage id="Publication.affiliations.title" defaultMessage="Publication.affiliations.title" />
-              </SectionTitle>
-              <div className="row">
-                {
-                  (this.props.data && this.props.data.affiliations)
-                    ? (
-                      this.props.data.affiliations.map((item, i) => {
-                        let address = null;
-                        if (item.address && item.address.length > 0) {
-                          address = item.address[0].city;
-                          if (item.address[0].postcode) {
-                            address += ` (${item.address[0].postcode.slice(0, 2)})`;
-                          }
-                        }
-
-                        return (
-                          /* eslint-disable-next-line */
-                          <div className="col-md-3 p-0" key={`card_${item.id}_${i}`}>
+          {
+            (this.props.data && this.props.data.affiliations)
+              ? (
+                <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations} id="Affiliations">
+                  <div className="container">
+                    <SectionTitle
+                      icon="fas fa-id-card"
+                      modifyModeHandle={this.modifyModeHandleAffiliations}
+                      modifyMode={this.state.modifyModeAffiliations}
+                    >
+                      <FormattedHTMLMessage id="Publication.affiliations.title" defaultMessage="Publication.affiliations.title" />
+                    </SectionTitle>
+                    <ul className={`row ${classes.Ul}`}>
+                      {
+                        this.props.data.affiliations.map(item => (
+                          <li key={item} className={`col-3 ${classes.Li}`}>
                             <AffiliationCard
-                              label={getSelectKey(item, 'label', this.props.language, 'fr')}
-                              address={address || null}
-                              nature={item.nature || null}
-                              id={item.id || null}
+                              data={item}
+                              small
+                              language={this.props.language}
                             />
-                          </div>
-                        );
-                      })
-                    )
-                    : (
-                      <div className="col">
-                        <EmptySection
-                          language={this.props.language}
-                          masterKey="Network"
-                          modifyMode={this.state.modifyMode}
-                          modifyModeHandle={this.modifyModeHandle}
-                        />
-                      </div>
-                    )
-                }
-              </div>
-            </div>
-          </section>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </section>
+              ) : null
+          }
         </Fragment>
       </IntlProvider>
     );

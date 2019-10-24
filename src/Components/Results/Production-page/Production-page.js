@@ -7,7 +7,7 @@ import getSelectKey from '../../../Utils/getSelectKey';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
-import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
+
 
 import Publication from './Publication/Publication';
 import Thesis from './Thesis/Thesis';
@@ -26,19 +26,13 @@ class Production extends Component {
   };
 
   componentDidMount() {
-    // eslint-disable-next-line
-    console.log(this.props.match.params);
     const { id } = this.props.match.params;
-    // const id = 'doi10.10072%2525F978-3-319-24195-1_10';
-    // const id = 'these2018TOU30090';
-    // const id = 'doi10.10072%F978-3-319-24195-1_10';
     this.getData(id);
   }
 
   getData(id) {
     // Récupéraion des données de l'entité
     const url = `${API_PUBLICATIONS_END_POINT}/${id}`;
-    // const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%252f978-3-319-24195-1_10';
     Axios.get(url)
       .then((response) => {
         this.setState({ data: response.data });
@@ -88,10 +82,6 @@ class Production extends Component {
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
-        />
-        <HeaderTitle
-          language={this.props.language}
-          label={getSelectKey(this.state.data, 'title', this.props.language, 'default')}
         />
         {content}
         <Footer language={this.props.language} />

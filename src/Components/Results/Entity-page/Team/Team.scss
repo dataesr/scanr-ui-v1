@@ -7,8 +7,8 @@
   background-repeat: no-repeat;
   background-attachment: relative;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
-  background-size: 50%; /* version standardisée */
-  background-color: rgb(233, 236, 241);
+  background-size: 30%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
   background-position: bottom 0 right 0;
 
   .TeamComposition {

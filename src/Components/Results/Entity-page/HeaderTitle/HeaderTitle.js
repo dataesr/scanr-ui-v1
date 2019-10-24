@@ -2,12 +2,9 @@ import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-import messagesEntityFr from '../translations/fr.json';
-import messagesEntityEn from '../translations/en.json';
 
 /* SCSS */
 import classes from './HeaderTitle.scss';
@@ -15,11 +12,6 @@ import classes from './HeaderTitle.scss';
 const messages = {
   fr: messagesFr,
   en: messagesEn,
-};
-
-const messagesEntity = {
-  fr: messagesEntityFr,
-  en: messagesEntityEn,
 };
 
 class HeaderTitle extends Component {
@@ -30,11 +22,49 @@ class HeaderTitle extends Component {
   handleChange = (e) => {
     this.setState({ selectedOption: e.target.value });
     this.props.handleChangeForScroll(e.target.value);
-    // document.getElementById(e.target.value).scrollIntoView(true);
-    // window.scrollBy({ top: -120, behavior: 'smooth' });
   };
 
   render() {
+    const list = [];
+    switch (this.props.idPage) {
+      case 'Entity':
+        list.push('Portrait');
+        list.push('Network');
+        list.push('Team');
+        list.push('Projects');
+        list.push('Productions');
+        list.push('Ecosystem');
+        list.push('Awards');
+        list.push('SimilarEntities');
+        list.push('LastEntityFocus');
+        break;
+      case 'Person':
+        list.push('Informations');
+        list.push('Production');
+        list.push('CoAuthors');
+        break;
+      case 'Project':
+        list.push('Informations');
+        list.push('Financial');
+        list.push('Programs');
+        list.push('Participants');
+        list.push('Productions');
+        break;
+      case 'Thesis':
+        list.push('Thesis');
+        list.push('AccessType');
+        list.push('Authors');
+        list.push('Affiliations');
+        break;
+      case 'Publication':
+        list.push('Publication');
+        list.push('AccessType');
+        list.push('Authors');
+        list.push('Affiliations');
+        break;
+      default:
+        break;
+    }
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
@@ -44,12 +74,12 @@ class HeaderTitle extends Component {
                 <nav aria-label="breadcrumb">
                   <ol className="breadcrumb">
                     <li className={classes['breadcrumb-item']}>
-                      <a href="/">Accueil</a>
+                      <a href="/">{messages[this.props.language].Home}</a>
                     </li>
                     <li className={classes['breadcrumb-item']}>
-                      <a href="/recherche/all">Recherche</a>
+                      <a href="/recherche/all">{messages[this.props.language].Search}</a>
                     </li>
-                    <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>Entité</li>
+                    <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>{messages[this.props.language][this.props.idPage]}</li>
                   </ol>
                 </nav>
                 <div className={classes.Title}>
@@ -63,15 +93,11 @@ class HeaderTitle extends Component {
                     <FormattedHTMLMessage id="HeaderTitle.label1" />
 
                     <select id="headerTitleSelect" className="form-control" onChange={this.handleChange} value={this.state.selectedOption}>
-                      <option value="Portrait">{messagesEntity[this.props.language]['Entity.Section.Portrait.label']}</option>
-                      <option value="Network">{messagesEntity[this.props.language]['Entity.Section.Network.label']}</option>
-                      <option value="Team">{messagesEntity[this.props.language]['Entity.Section.Team.label']}</option>
-                      <option value="Projects">{messagesEntity[this.props.language]['Entity.Section.Projects.label']}</option>
-                      <option value="Productions">{messagesEntity[this.props.language]['Entity.Section.Productions.label']}</option>
-                      <option value="Ecosystem">{messagesEntity[this.props.language]['Entity.Section.Ecosystem.label']}</option>
-                      <option value="Awards">{messagesEntity[this.props.language]['Entity.Section.Awards.label']}</option>
-                      <option value="SimilarEntities">{messagesEntity[this.props.language]['Entity.Section.SimilarEntities.label']}</option>
-                      <option value="LastEntityFocus">{messagesEntity[this.props.language]['Entity.Section.LastEntityFocus.label']}</option>
+                      {
+                        list.map(item => (
+                          <option value={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
+                        ))
+                      }
                     </select>
                   </label>
                 </div>
@@ -89,5 +115,6 @@ export default HeaderTitle;
 HeaderTitle.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  idPage: PropTypes.string.isRequired,
   handleChangeForScroll: PropTypes.func,
 };

@@ -73,6 +73,7 @@ class Entity extends Component {
           language={this.props.language}
           label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
           handleChangeForScroll={this.handleChange}
+          idPage="Entity"
         />
 
         <div id="Portrait">

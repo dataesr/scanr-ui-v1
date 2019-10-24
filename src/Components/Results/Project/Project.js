@@ -71,6 +71,10 @@ class Project extends Component {
     }
   }
 
+  handleChange = (sectionName) => {
+    document.getElementById(sectionName).scrollIntoView(true);
+    window.scrollBy({ top: -120, behavior: 'smooth' });
+  };
 
   render() {
     if (!this.state.data) {
@@ -85,43 +89,57 @@ class Project extends Component {
         <HeaderTitle
           language={this.props.language}
           label={getSelectKey(this.state.data, 'label', this.props.language, 'default')}
+          handleChangeForScroll={this.handleChange}
+          idPage="Project"
         />
-        <Informations
-          language={this.props.language}
-          data={this.state.data}
-          modifyModeHandle={() => this.modifyModeHandle('informations')}
-          modifyMode={this.state.modifyModeInformations}
-        />
-        <Financial
-          language={this.props.language}
-          data={this.state.data}
-          modifyModeHandle={() => this.modifyModeHandle('financial')}
-          modifyMode={this.state.modifyModeFinancial}
-        />
-        <Programs
-          language={this.props.language}
-          data={this.state.data}
-          modifyModeHandle={() => this.modifyModeHandle('programs')}
-          modifyMode={this.state.modifyModePrograms}
-        />
-        <Description
-          language={this.props.language}
-          data={this.state.data.description}
-          modifyModeHandle={() => this.modifyModeHandle('description')}
-          modifyMode={this.state.modifyModeDescription}
-        />
-        <Participants
-          language={this.props.language}
-          data={this.state.data.participants}
-          modifyModeHandle={() => this.modifyModeHandle('participants')}
-          modifyMode={this.state.modifyModeParticipants}
-        />
-        <Productions
-          language={this.props.language}
-          data={this.state.data.publications}
-          modifyModeHandle={() => this.modifyModeHandle('productions')}
-          modifyMode={this.state.modifyModeProductions}
-        />
+        <div id="Informations">
+          <Informations
+            language={this.props.language}
+            data={this.state.data}
+            modifyModeHandle={() => this.modifyModeHandle('informations')}
+            modifyMode={this.state.modifyModeInformations}
+          />
+        </div>
+        <div id="Financial">
+          <Financial
+            language={this.props.language}
+            data={this.state.data}
+            modifyModeHandle={() => this.modifyModeHandle('financial')}
+            modifyMode={this.state.modifyModeFinancial}
+          />
+        </div>
+        <div id="Programs">
+          <Programs
+            language={this.props.language}
+            data={this.state.data}
+            modifyModeHandle={() => this.modifyModeHandle('programs')}
+            modifyMode={this.state.modifyModePrograms}
+          />
+        </div>
+        <div id="Description">
+          <Description
+            language={this.props.language}
+            data={this.state.data.description}
+            modifyModeHandle={() => this.modifyModeHandle('description')}
+            modifyMode={this.state.modifyModeDescription}
+          />
+        </div>
+        <div id="Participants">
+          <Participants
+            language={this.props.language}
+            data={this.state.data.participants}
+            modifyModeHandle={() => this.modifyModeHandle('participants')}
+            modifyMode={this.state.modifyModeParticipants}
+          />
+        </div>
+        <div id="Productions">
+          <Productions
+            language={this.props.language}
+            data={this.state.data.publications}
+            modifyModeHandle={() => this.modifyModeHandle('productions')}
+            modifyMode={this.state.modifyModeProductions}
+          />
+        </div>
         <Footer language={this.props.language} />
       </Fragment>
     );
