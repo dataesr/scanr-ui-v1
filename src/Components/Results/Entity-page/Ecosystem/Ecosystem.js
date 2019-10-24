@@ -62,9 +62,11 @@ class Ecosystem extends Component {
         return prodB - prodA;
       });
       const limitedData = [];
-      for (let i = 0; i <= ECOSYSTEM_LIMIT; i += 1) {
+      const limit = (dataSorted.length < ECOSYSTEM_LIMIT) ? dataSorted.length - 1 : ECOSYSTEM_LIMIT;
+      for (let i = 0; i <= limit; i += 1) {
         limitedData.push(dataSorted[i]);
       }
+
       const structuresListFr = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
       const structuresListFo = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
 
