@@ -5,6 +5,12 @@
   padding-top: 20px;
   padding-bottom: 20px;
   color: $textColor;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
+  background-position: bottom 0 left 0;
 
   .SectionTitle {
     padding-bottom: 20px;
@@ -64,4 +70,13 @@
       }
     }
   }
+}
+
+.Ul {
+  padding: 0;
+}
+
+.Li {
+  list-style: none;
+  padding: 3px;
 }

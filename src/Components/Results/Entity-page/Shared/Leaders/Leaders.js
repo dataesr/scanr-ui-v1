@@ -54,6 +54,7 @@ const Leaders = (props) => {
                   masterKey={props.masterKey}
                   modifyMode={props.modifyMode}
                   allData={props.allData}
+                  className={classes.PersonCardHeight}
                 />
               </div>
             ))

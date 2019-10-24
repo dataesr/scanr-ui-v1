@@ -6,6 +6,7 @@ import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Leaders from '../Shared/Leaders/Leaders';
 import TeamComposition from './SubComponents/teamComposition';
+import Background from '../../../Shared/images/poudre-orange_Fgris-BR.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -44,11 +45,15 @@ class Team extends Component {
       en: messagesEntityEn,
     };
 
+    const sectionStyle = {
+      backgroundImage: `url(${Background})`,
+    };
+
     if (!this.props.data.leaders || this.props.data.leaders.length === 0) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <section className={`container-fluid ${classes.Team}`}>
+            <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
               <div className="container">
                 <SectionTitle
                   icon="fas fa-th"
@@ -78,7 +83,7 @@ class Team extends Component {
     return (
       <Fragment>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.Team}`}>
+          <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
                 icon="fas fa-th"
