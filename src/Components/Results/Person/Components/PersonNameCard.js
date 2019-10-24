@@ -29,7 +29,7 @@ const PersonCardName = (props) => {
   const logo = (<div className={classes.Logo}><i className="fas fa-qrcode" aria-hidden="true" /></div>);
   const htmlList = (props.data.externalIds)
     ? props.data.externalIds.map(tag => (
-      <li className="d-flex">
+      <li className="d-flex" key={tag}>
         <p className="m-0 pr-4">
           {tag.type}
         </p>
@@ -72,7 +72,7 @@ const PersonCardName = (props) => {
             (props.data.externalIds && props.data.externalIds.length > 0)
               ? (
                 <ButtonWithModal
-                  logo={logo}
+                  logo="fas fa-qrcode"
                   title={messages[props.language]['Person.informations.identity.identifiers']}
                   buttonLabel={messages[props.language]['Person.seeAll']}
                   dataHtml={htmlList}

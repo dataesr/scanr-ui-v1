@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import Axios from 'axios';
 import PropTypes from 'prop-types';
-
+import moment from 'moment';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -29,6 +30,13 @@ class SubmitBox extends Component {
       enrich: true,
       revise: false,
     },
+    id: this.props.id,
+    type: this.props.type,
+    created_at: moment(new Date()).format(),
+    email: null,
+    name: null,
+    action_type: 'enrich',
+    modifications: null,
   };
 
   toggleModifyModal = () => {
@@ -36,6 +44,14 @@ class SubmitBox extends Component {
     if (this.props.autoLaunch) {
       this.props.modifyModeHandle();
     }
+  }
+
+  sendForm = () => {
+    const data = { ...this.state };
+    delete data.showModifyModal;
+    delete data.buttons;
+    data.action_type = (this.state.buttons.enrich) ? 'enrich' : 'revise';
+    Axios.post('http://185.161.45.213/datastore/crowdsourcing', data);
   }
 
   changeTypeHandler = (type) => {

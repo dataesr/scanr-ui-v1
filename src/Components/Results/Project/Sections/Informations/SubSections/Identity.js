@@ -62,7 +62,7 @@ const Identity = (props) => {
             <div className={classes.W50}>
               <LogoCard
                 language={props.language}
-                url="http://www.safecluster.com/wp-content/uploads/2016/08/H2020-logo-etoiles-quadri_275910.png"
+                url={`/img/projects/${props.data.type.toLowerCase()}.png`}
                 label={props.data.type.toLowerCase()}
                 cssClass="Height150"
                 allData={props.data}

@@ -26,6 +26,10 @@ const messages = {
  * Tests unitaires : .
 */
 const Affiliations = (props) => {
+  // ADD ROLES in AFFILIATIONS!
+  // const addRoles = props.roles.map((role) => {
+  //
+  // })
   if (props.data) {
     const mapdata = [];
     props.data.forEach((aff) => {
@@ -83,7 +87,7 @@ const Affiliations = (props) => {
                 <div className={`w-100 ${classes.AffiliationsList}`}>
                   {
                     orderedYears.map(year => (
-                      <div className="d-flex">
+                      <div className="d-flex" key={year}>
                         <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
                           {year}
                         </div>
@@ -126,7 +130,7 @@ export default Affiliations;
 
 Affiliations.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.array,
+  data: PropTypes.object,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,
