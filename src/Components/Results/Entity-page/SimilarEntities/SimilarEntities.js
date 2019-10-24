@@ -3,9 +3,10 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
-import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
+import EntityCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
 import { API_STRUCTURE_LIKE_END_POINT } from '../../../../config/config';
 import getSelectKey from '../../../../Utils/getSelectKey';
+import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -67,6 +68,10 @@ class SimilarEntities extends Component {
       en: messagesEntityEn,
     };
 
+    const sectionStyle = {
+      backgroundImage: `url(${Background})`,
+    };
+
     if (this.state.data === null) {
       this.getData();
     }
@@ -78,7 +83,7 @@ class SimilarEntities extends Component {
     return (
       <Fragment>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.SimilarEntities}`}>
+          <section className={`container-fluid ${classes.SimilarEntities}`} style={sectionStyle}>
             <div className="container">
               <div className={`row ${classes.SectionTitle}`}>
                 <div className="col">
@@ -88,77 +93,19 @@ class SimilarEntities extends Component {
                   </span>
                 </div>
               </div>
-              <div className="row">
+              <ul className={`row ${classes.Ul}`}>
                 {
-                  this.state.data.map((item, i) => {
-                    let address = null;
-                    if (item.value.address && item.value.address.length > 0) {
-                      address = item.value.address[0].city;
-                      if (item.value.address[0].postcode) {
-                        address += ` (${item.value.address[0].postcode.slice(0, 2)})`;
-                      }
-                    }
-
-                    return (
-                      /* eslint-disable-next-line */
-                      <div className="col-md-4 p-0" key={`se_card_${item.value.id}_${i}`}>
-                        <div className={classes.Card}>
-                          <div className={classes.Title}>
-                            {
-                              getSelectKey(item.value, 'label', this.props.language, 'fr')
-                            }
-                          </div>
-                          <div className={classes.Content}>
-                            {
-                              (address)
-                                ? (
-                                  <div>
-                                    <i className="fas fa-map-marker" />
-                                    <span>
-                                      {
-                                        address
-                                      }
-                                    </span>
-                                  </div>
-                                ) : null
-                            }
-                            {
-                              (item.value.nature)
-                                ? (
-                                  <div>
-                                    <i className="fas fa-flask" />
-                                    <span>
-                                      {item.value.nature}
-                                    </span>
-                                  </div>
-                                ) : null
-                            }
-                            {
-                              (item.value.id)
-                                ? (
-                                  <div>
-                                    <i className="fas fa-th-large" />
-                                    <span>
-                                      {item.value.id}
-                                    </span>
-                                  </div>
-                                ) : null
-                            }
-                            <div className={classes.ButtonContainer}>
-                              <ButtonToPage
-                                className={`${classes.btn_scanrBlue} ${classes.Button}`}
-                                url={`entite/${item.value.id}`}
-                              >
-                                Fiche
-                              </ButtonToPage>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })
+                  this.state.data.map(item => (
+                    <li key={item.value} className={`col-4 ${classes.Li}`}>
+                      <EntityCard
+                        data={item.value}
+                        small
+                        language={this.props.language}
+                      />
+                    </li>
+                  ))
                 }
-              </div>
+              </ul>
             </div>
           </section>
         </IntlProvider>

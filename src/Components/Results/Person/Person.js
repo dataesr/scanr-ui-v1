@@ -51,6 +51,10 @@ class Person extends Component {
     }
   }
 
+  handleChange = (sectionName) => {
+    document.getElementById(sectionName).scrollIntoView(true);
+    window.scrollBy({ top: -120, behavior: 'smooth' });
+  };
 
   render() {
     if (!this.state.data) {
@@ -65,25 +69,37 @@ class Person extends Component {
         <HeaderTitle
           language={this.props.language}
           label={(this.state.data.fullName) ? this.state.data.fullName : ''}
+          handleChangeForScroll={this.handleChange}
+          idPage="Person"
         />
-        <Informations
-          language={this.props.language}
-          data={this.state.data}
-          modifyModeHandle={() => this.modifyModeHandle('informations')}
-          modifyMode={this.state.modifyModeInformations}
-        />
-        <Production
-          language={this.props.language}
-          objectId={this.props.match.params.id}
-          objectName={(this.state.data.fullName) ? this.state.data.fullName : ''}
-          filterKey="authors.person.id"
-        />
-        <CoAuthors
-          language={this.props.language}
-          data={this.state.data.coContributors}
-          modifyModeHandle={() => this.modifyModeHandle('coAuthors')}
-          modifyMode={this.state.modifyModeDescription}
-        />
+
+        <div id="Informations">
+          <Informations
+            language={this.props.language}
+            data={this.state.data}
+            modifyModeHandle={() => this.modifyModeHandle('informations')}
+            modifyMode={this.state.modifyModeInformations}
+          />
+        </div>
+
+        <div id="Production">
+          <Production
+            language={this.props.language}
+            objectId={this.props.match.params.id}
+            objectName={(this.state.data.fullName) ? this.state.data.fullName : ''}
+            filterKey="authors.person.id"
+          />
+        </div>
+
+        <div id="CoAuthors">
+          <CoAuthors
+            language={this.props.language}
+            data={this.state.data.coContributors}
+            modifyModeHandle={() => this.modifyModeHandle('coAuthors')}
+            modifyMode={this.state.modifyModeDescription}
+          />
+        </div>
+
         <Footer language={this.props.language} />
       </Fragment>
     );
