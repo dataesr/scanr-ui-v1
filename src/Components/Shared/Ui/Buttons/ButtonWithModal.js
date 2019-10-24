@@ -42,7 +42,7 @@ class ButtonWithModal extends Component {
           </Modal.Body>
         </Modal>
 
-        <button className={`btn ${classes.Button}`} onClick={this.handleShowModal} onKeypress={this.handleShowModal} type="button" tabIndex={0}>
+        <button className={`btn ${classes.Button}`} onClick={this.handleShowModal} onKeyPress={this.handleShowModal} type="button" tabIndex={0}>
           {this.props.buttonLabel}
           <i className="fas fa-expand" aria-hidden="true" />
         </button>
@@ -56,7 +56,7 @@ export default ButtonWithModal;
 
 ButtonWithModal.propTypes = {
   logo: PropTypes.string,
-  title: PropTypes.string,
-  buttonLabel: PropTypes.string,
-  dataHtml: PropTypes.string,
+  title: PropTypes.node,
+  buttonLabel: PropTypes.node,
+  dataHtml: PropTypes.node,
 };

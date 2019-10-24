@@ -66,18 +66,18 @@ const ProductionDetail = (props) => {
     if (data.productionType === 'publication') {
       authors = data.authors.map((author) => {
         if (author.person) {
-          return <a href={`person/${author.person.id}`}>{author.fullName}</a>;
+          return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
         }
-        return <span>{author.fullName}</span>;
+        return <span key={JSON.stringify(author)}>{author.fullName}</span>;
       });
     } else if (data.productionType === 'thesis') {
       authors = data.authors
         .filter(author => author.role === 'author')
         .map((author) => {
           if (author.person) {
-            return <a href={`person/${author.person.id}`}>{author.fullName}</a>;
+            return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
           }
-          return <span>{author.fullName}</span>;
+          return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
     } else {
       return null;
@@ -85,7 +85,7 @@ const ProductionDetail = (props) => {
     return authors;
   };
 
-  const authors = getAuthors(props.data);
+  const authors = getAuthors(props.data).slice(0, maxAuthors);
 
   const diff = props.data.authors.length - maxAuthors;
   let others = '';
@@ -158,7 +158,7 @@ const ProductionDetail = (props) => {
                 <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
               </span>
               <ButtonToPage
-                className="btn_dark"
+                className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
                 url={props.data.oaEvidence.pdfUrl}
               >
                 Aller au PDF
@@ -172,7 +172,7 @@ const ProductionDetail = (props) => {
           )}
         </div>
         <ButtonToPage
-          className="btn_dark"
+          className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
           url={`publication/${props.data.id.replace('/', '%25252f')}`}
         >
           Voir la publication dans scanR

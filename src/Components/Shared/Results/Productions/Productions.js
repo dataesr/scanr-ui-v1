@@ -144,7 +144,8 @@ class Productions extends Component {
     };
     Axios.post(url, data).then((response) => {
       // eslint-disable-next-line
-      this.setState({ data: response.data.results, initialData: response.data.results });
+      const listOrGraph = (response.data.total > 20) ? 'graph' : 'list';
+      this.setState({ data: response.data.results, initialData: response.data.results, viewMode: listOrGraph });
     });
   }
 
@@ -255,7 +256,8 @@ class Productions extends Component {
       if (item === this.state.selectedProduction) {
         selected = classes.Selected;
       }
-
+      const authorsRole = (this.props.objectName) ? item.value.authors.filter(author => author.fullName === this.props.objectName) : null;
+      const role = (authorsRole && authorsRole.length > 0) ? authorsRole[0].role : null;
       return (
         <Fragment key={item.value.id}>
           {
@@ -276,13 +278,16 @@ class Productions extends Component {
             role="button"
             tabIndex={0}
           >
-            <span className={classes.Title}>
+            <p className={classes.Title}>
               {item.value.title.default}
-            </span>
-            <span className={classes.Type}>
+            </p>
+            <div className={`d-flex align-items-center ${classes.Type}`}>
+              {
+                (role) ? <p className="mb-0 mr-auto">{messages[this.props.language][`Production.thesis.role.${role}`]}</p> : <p className="mb-0 mr-auto" />
+              }
               <span className={classes[item.value.productionType]} />
-              {messages[this.props.language][`Productions.${item.value.productionType}`]}
-            </span>
+              <p className="m-0">{messages[this.props.language][`Productions.${item.value.productionType}`]}</p>
+            </div>
           </div>
         </Fragment>
       );
@@ -298,7 +303,7 @@ class Productions extends Component {
           <div className="col-md">
             <Select
               allLabel={messages[this.props.language]['Productions.selectTypesFilter.allLabel']}
-              count={this.state.data.length}
+              count={toString(this.state.data.length)}
               title={messages[this.props.language]['Productions.selectTypesFilter.title']}
               placeHolder={typeFilterPlaceHolder}
               data={this.state.typeFilter}
@@ -343,7 +348,7 @@ class Productions extends Component {
     );
   }
 
-  renderViewGraph = (data) => {
+  renderViewGraph = (data, messages) => {
     const pubOa = data.find(el => (el.id === 'Publications-oa'));
     const pubNoa = data.find(el => (el.id === 'Publications-noa'));
     const thesesOa = data.find(el => (el.id === 'Theses-oa'));
@@ -354,23 +359,23 @@ class Productions extends Component {
         <div className={`col-md ${classes.Legendary}`}>
           <div className={classes.Production}>
             <span className={`${classes.Bullet} ${classes.publicationColor}`} />
-            {`${(pubOa.value + pubNoa.value).toLocaleString()} publications`}
+            {`${(pubOa.value + pubNoa.value).toLocaleString()} ${messages[this.props.language]['Productions.publication']}`}
             <div className={classes.Sub}>
-              {`dont ${pubOa.value.toLocaleString()} en accès ouvert`}
+              {`${pubOa.value.toLocaleString()} ${messages[this.props.language]['Productions.isOpen']}`}
             </div>
             <div className={classes.Sub}>
-              {`et ${pubNoa.value.toLocaleString()} en accès fermé`}
+              {`${pubNoa.value.toLocaleString()} ${messages[this.props.language]['Productions.isClosed']}`}
             </div>
           </div>
 
           <div className={classes.Production}>
             <span className={`${classes.Bullet} ${classes.theseColor}`} />
-            {`${(thesesOa.value + thesesNoa.value).toLocaleString()} thèses`}
+            {`${(thesesOa.value + thesesNoa.value).toLocaleString()} ${messages[this.props.language]['Productions.thesis']}`}
             <div className={classes.Sub}>
-              {`dont ${thesesOa.value.toLocaleString()} en accès ouvert`}
+              {`${thesesOa.value.toLocaleString()} ${messages[this.props.language]['Productions.isOpen']}`}
             </div>
             <div className={classes.Sub}>
-              {`et ${thesesNoa.value.toLocaleString()} en accès fermé`}
+              {`${thesesNoa.value.toLocaleString()} ${messages[this.props.language]['Productions.isClosed']}`}
             </div>
           </div>
         </div>
@@ -437,7 +442,7 @@ class Productions extends Component {
                     <div
                       role="button"
                       tabIndex={0}
-                      aria-labelledBy="productionViewList"
+                      aria-labelledby="productionViewList"
                       onClick={() => this.viewModeClickHandler('list')}
                       onKeyPress={() => this.viewModeClickHandler('list')}
                       className={classes.ViewChangeButton}
@@ -456,7 +461,7 @@ class Productions extends Component {
                     <div
                       role="button"
                       tabIndex={0}
-                      aria-labelledBy="productionViewGraph"
+                      aria-labelledby="productionViewGraph"
                       onClick={() => this.viewModeClickHandler('graph')}
                       onKeyPress={() => this.viewModeClickHandler('graph')}
                       className={classes.ViewChangeButton}
@@ -480,7 +485,7 @@ class Productions extends Component {
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
-                  : this.renderViewGraph(dataGraph)
+                  : this.renderViewGraph(dataGraph, messages)
               }
             </div>
           </section>
@@ -496,5 +501,6 @@ Productions.propTypes = {
   language: PropTypes.string.isRequired,
   // id: PropTypes.string.isRequired,
   objectId: PropTypes.string.isRequired,
+  objectName: PropTypes.string,
   filterKey: PropTypes.string.isRequired,
 };

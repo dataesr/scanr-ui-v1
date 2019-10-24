@@ -66,7 +66,7 @@ const ParticipantRow = props => (
             : <div />
         }
         {
-          (props.data.structure && props.data.structure.address.length > 0 && props.data.structure.address[0].country)
+          (props.data.structure && props.data.structure.address && props.data.structure.address.length > 0 && props.data.structure.address[0].country)
             ? (
               <p>{`${props.data.structure.address[0].country}`}</p>
             )

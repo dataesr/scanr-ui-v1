@@ -64,7 +64,7 @@ class Person extends Component {
         />
         <HeaderTitle
           language={this.props.language}
-          label={this.state.data.fullName}
+          label={(this.state.data.fullName) ? this.state.data.fullName : ''}
         />
         <Informations
           language={this.props.language}
@@ -75,6 +75,7 @@ class Person extends Component {
         <Production
           language={this.props.language}
           objectId={this.props.match.params.id}
+          objectName={(this.state.data.fullName) ? this.state.data.fullName : ''}
           filterKey="authors.person.id"
         />
         <CoAuthors
