@@ -89,7 +89,7 @@ const SearchResults = (props) => {
                           tabIndex={0}
                         >
                           <ButtonToPage
-                            className="btn_scanrBlue"
+                            className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
                           >
                             <FormattedHTMLMessage
                               id="searchResults.viewAll"
@@ -107,6 +107,7 @@ const SearchResults = (props) => {
                       <div className={classes.card} key={res.value.id + res.value.label}>
                         <CardsToShow
                           data={res.value}
+                          highlights={res.highlights}
                           small
                           language={props.language}
                           cardColor={cardColor}

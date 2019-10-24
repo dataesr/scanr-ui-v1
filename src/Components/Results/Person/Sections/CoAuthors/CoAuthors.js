@@ -90,13 +90,7 @@ const CoAuthors = (props) => {
               modifyModeKey="coAuthors"
               modifyMode={props.modifyMode}
             >
-              <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title">
-                {txt => (
-                  <h2>
-                    {txt}
-                  </h2>
-                )}
-              </FormattedHTMLMessage>
+              <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
             </SectionTitle>
             {
               (props.modifyMode)

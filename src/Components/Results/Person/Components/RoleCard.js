@@ -64,7 +64,7 @@ const RoleCard = (props) => {
                 ? (
                   <ButtonToPage
                     url={`entite/${id}`}
-                    className="btn_scanrBlue"
+                    className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
                   >
                   Voir la fiche
                   </ButtonToPage>
