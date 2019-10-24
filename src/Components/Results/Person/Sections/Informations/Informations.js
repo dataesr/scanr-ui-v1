@@ -33,20 +33,6 @@ const Informations = (props) => {
   };
   const hasAffiliations = (props.data.affiliations) ? 'col-12' : 'col-lg-6 col-md-12';
 
-  const propsData = { ...props.data };
-  // propsData.roles = [{ role: 'directeur', description: 'Institut des sciences __blah' }, { role: 'directeur', description: 'Institut des sciences __blah' }];
-  // propsData.awards = [
-  //   {
-  //     structureName: 'IUF',
-  //     label: "Lauréat de l'Institut universitaire de France",
-  //     date: '2006-10-01T00:00:00',
-  //     description: 'Nouveau membre junior IUF',
-  //   },
-  //   {
-  //     structureName: 'FIELDS',
-  //     label: 'Médaille Fields',
-  //   },
-  // ];
 
   return (
     <section className={`container-fluid ${classes.Informations}`} style={sectionStyle}>
@@ -84,7 +70,7 @@ const Informations = (props) => {
                 <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Prizes
                     language={props.language}
-                    data={propsData}
+                    data={props.data}
                     masterKey="Person/prizes"
                     modifyMode={props.modifyMode}
                     allData={props.data}
@@ -96,7 +82,7 @@ const Informations = (props) => {
                       <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                         <Roles
                           language={props.language}
-                          data={propsData}
+                          data={props.data}
                           masterKey="Person/roles"
                           modifyMode={props.modifyMode}
                           allData={props.data}
@@ -124,7 +110,7 @@ const Informations = (props) => {
                       <div className={`col-12 ${classes.NoSpace}`}>
                         <Roles
                           language={props.language}
-                          data={propsData}
+                          data={props.data}
                           masterKey="Person/roles"
                           modifyMode={props.modifyMode}
                           allData={props.data}

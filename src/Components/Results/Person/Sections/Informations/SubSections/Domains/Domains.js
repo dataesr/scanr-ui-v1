@@ -35,7 +35,8 @@ const Domains = (props) => {
     }
     const domains = [...new Set(tags)];
     const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'fr'))];
-    const tagList = (keywords.length > 0) ? keywords : domains;
+    const tagL = keywords.concat(domains);
+    const tagList = [...new Set(tagL)];
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid">
@@ -69,7 +70,7 @@ export default Domains;
 
 Domains.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.array,
+  data: PropTypes.object,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,

@@ -15,9 +15,9 @@ const SectionTitle = props => (
   <div className={`row ${classes.SectionTitle}`}>
     <div className="col">
       <i className={props.icon} aria-hidden="true" />
-      <h1 className={classes.Label}>
+      <h2 className={classes.Label}>
         {props.children}
-      </h1>
+      </h2>
     </div>
     <div className="col text-right">
       {
@@ -59,7 +59,7 @@ SectionTitle.defaultProps = {
 
 SectionTitle.propTypes = {
   icon: PropTypes.string.isRequired,
-  children: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
   modifyModeHandle: PropTypes.func,
   modifyMode: PropTypes.bool,
   emptySection: PropTypes.bool,

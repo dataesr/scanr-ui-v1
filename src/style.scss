@@ -288,10 +288,6 @@ $cardTitleBgColor: $scanrlightgreyColor;
   margin-left: 5px;
   font-size: 0.8rem;
 }
-.SquareButton {
-  width: 2.5em;
-  height: 2.5em;
-}
 
 .btn_dark{
   background-color: $scanrdeepblueColor;
@@ -406,6 +402,13 @@ $cardTitleBgColor: $scanrlightgreyColor;
 }
 
 /* Pages de détails */
+.SquareButton {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+.RectangleButton {
+  height: 2.5rem;
+}
 .NoSpace {
   padding-left: 0;
   padding-right: 0;
