@@ -37,8 +37,6 @@ class WikidataCard extends Component {
             for (const item in responseText.data.query.pages) {
               if (responseText.data.query.pages.hasOwnProperty(item)) {
                 const obj = responseText.data.query.pages[item];
-                console.log('jre_obj:', obj);
-                // const title = obj.title || null;
                 const extract = obj.extract || null;
                 this.setState({ title, extract });
               }
