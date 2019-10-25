@@ -121,6 +121,7 @@ class Portrait extends Component {
                   id={this.props.data.id}
                   language={this.props.language}
                   socialMedias={this.props.data.socialMedias}
+                  externalIds={this.props.data.externalIds || []}
                 />
 
               </div>
