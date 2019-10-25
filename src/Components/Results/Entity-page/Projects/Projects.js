@@ -200,7 +200,7 @@ class Projects extends Component {
     }
 
     let year = null;
-    const content = filteredData.map((item) => {
+    const content = filteredData.reverse().map((item) => {
       let titleYear = null;
       if (year !== item.value.year) { // Rupture sur les années
         year = item.value.year;
@@ -223,7 +223,7 @@ class Projects extends Component {
             tabIndex={0}
           >
             <span className={classes.Acronym}>
-              {item.value.acronym.default}
+              {getSelectKey(item.value, 'acronym', this.props.language, 'default') || getSelectKey(item.value, 'title', this.props.language, 'default')}
             </span>
             <span className={classes.Type}>
               {item.value.type}

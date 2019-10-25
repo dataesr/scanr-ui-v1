@@ -187,7 +187,7 @@ class Productions extends Component {
 
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace('/', '%252f')}`;
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace(new RegExp('/', 'g'), '%25252f')}`;
     Axios.get(url).then((response) => {
       // eslint-disable-next-line
       this.setState({ selectedProduction: response.data });
@@ -249,7 +249,7 @@ class Productions extends Component {
     const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
     const content = filteredData.map((item, i) => {
       let first = false;
-      if ((i - 1) > 0) {
+      if (i > 0) {
         first = (moment(filteredData[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
       }
       let selected = '';
