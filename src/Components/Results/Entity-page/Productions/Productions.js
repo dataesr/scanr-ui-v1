@@ -185,7 +185,7 @@ class Productions extends Component {
 
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace('/', '%25252f')}`;
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace(new RegExp('/', 'g'), '%25252f')}`;
     Axios.get(url).then((response) => {
       // eslint-disable-next-line
       console.log('setSelectedProductionHandler_jre:', response);

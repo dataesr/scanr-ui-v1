@@ -126,7 +126,11 @@ const ProductionDetail = (props) => {
           {id}
         </p>
       </div>
-      <hr className={classes[props.data.productionType]} />
+      {
+        (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
+          ? <hr className={classes[props.data.productionType]} />
+          : null
+      }
       {
         (getSelectKey(props.data, 'summary', props.language, 'default'))
           ? (
@@ -173,7 +177,7 @@ const ProductionDetail = (props) => {
         </div>
         <ButtonToPage
           className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
-          url={`publication/${props.data.id.replace('/', '%25252f')}`}
+          url={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}
         >
           Voir la publication dans scanR
         </ButtonToPage>

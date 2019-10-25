@@ -37,7 +37,7 @@ const ProjectDetail = (props) => {
     return (
       <React.Fragment>
         <div className={classes.detailTitle}>
-          {props.data.value.label.en}
+          {getSelectKey(props.data.value, 'label', props.language, 'default')}
         </div>
         <hr />
         <div className="row">
@@ -77,12 +77,14 @@ const ProjectDetail = (props) => {
           </div>
         </div>
         <hr />
-        <ButtonToPage
-          className={classes.btn_dark}
-          url={props.data.value.url}
-        >
-          Voir le projet
-        </ButtonToPage>
+        <div className="d-flex justify-content-end">
+          <ButtonToPage
+            className={`${classes.btn_dark} ${classes.RectangleButton} mr-1`}
+            url={`project/${props.data.value.id}`}
+          >
+            Voir le projet
+          </ButtonToPage>
+        </div>
       </React.Fragment>
     );
   }
