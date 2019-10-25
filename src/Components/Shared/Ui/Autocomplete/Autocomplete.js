@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './Autocomplete.scss';
+import getSelectKey from '../../../../Utils/getSelectKey';
 
 class Autocomplete extends Component {
   state = {
@@ -113,7 +114,7 @@ class Autocomplete extends Component {
                           ? (
                             <Fragment>
                               <strong>
-                                {filter.project.value.acronym.default}
+                                {getSelectKey(filter.project.value, 'acronym', 'fr', 'default')}
                               </strong>
                               &nbsp;-&nbsp;
                             </Fragment>
