@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 // import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
+import WikidataCard from '../../../../../Shared/Ui/WikidataCard/WikidataCard';
+
 import classes from './SocialNetworksFlow.scss';
 
 /* Gestion des langues */
@@ -47,7 +49,19 @@ class SocialNetworksFlow extends Component {
     this.setState(prevState => ({ isOpen: !prevState.isOpen }));
   }
 
+  getWikidataId = () => {
+    if (this.props.externalIds && this.props.externalIds.length > 0) {
+      for (let i = 0; i < this.props.externalIds.length; i += 1) {
+        if (this.props.externalIds[i].type.toLowerCase() === 'wikidata') {
+          return this.props.externalIds[i].id;
+        }
+      }
+    }
+    return null;
+  }
+
   render() {
+    const id = this.getWikidataId();
     return (
       <Fragment>
         {
@@ -82,6 +96,9 @@ class SocialNetworksFlow extends Component {
                           <div className={`col-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
                             <TwitterTimelineEmbed url={this.getSNUrl('twitter')} autoHeight />
                           </div>
+                          <div className={`col-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                            <WikidataCard language={this.props.language} id={id} />
+                          </div>
                         </div>
                       ) : null
                   }
@@ -99,4 +116,5 @@ export default SocialNetworksFlow;
 SocialNetworksFlow.propTypes = {
   language: PropTypes.string.isRequired,
   socialMedias: PropTypes.array,
+  externalIds: PropTypes.array,
 };
