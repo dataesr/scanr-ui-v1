@@ -16,6 +16,7 @@ import classes from './WikidataCard.scss';
 */
 class WikidataCard extends Component {
   state= {
+    // eslint-disable-next-line
     title: null,
     extract: null,
   }
@@ -55,7 +56,17 @@ class WikidataCard extends Component {
   render() {
     return (
       <div className={classes.WikidataCard}>
-        données wiki en cours ...
+        <p className={classes.Title}>
+          Wikipedia
+        </p>
+        <div className={classes.Content}>
+          <p className={classes.Extract}>
+            {this.state.extract}
+          </p>
+        </div>
+        <p className={classes.Footer}>
+          footer
+        </p>
       </div>
     );
   }
