@@ -1,0 +1,41 @@
+@import '../../../../style.scss';
+
+.WikidataCard {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  min-height: 150px;
+
+  .Title {
+    padding: 10px;
+    font-family: Helvetica;
+    border-bottom: 1px solid rgba(15,70,100,.12);
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #292F33;
+  }
+
+  .Content {
+    height: 395px;
+    overflow-y: scroll;
+  }
+
+  .Image {
+    padding-top: 16px;
+    color: $scanrgreyColor;
+  }
+
+  .Extract {
+    padding: 7px 10px 10px 10px;
+    font-size: 0.9rem;
+    color: $scanrdeepblueColor;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  .Footer {
+    border-top: 1px solid rgba(15,70,100,.12);
+    height: 46px;
+  }
+}
