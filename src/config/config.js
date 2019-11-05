@@ -8,6 +8,8 @@ export const API_PUBLICATIONS_SEARCH_END_POINT = 'https://scanr-preprod.sword-gr
 
 export const API_STRUCTURE_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/structures/like';
 export const API_PUBLICATIONS_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/publications/like';
+export const API_PROJECT_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/projects/like';
+export const API_PERSON_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/persons/like';
 
 // Couleurs du site
 export const ENTITY_COLOR = '#ebc034';

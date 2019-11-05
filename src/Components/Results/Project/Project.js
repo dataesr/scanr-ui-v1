@@ -14,6 +14,7 @@ import Productions from './Sections/Productions/Productions';
 import Informations from './Sections/Informations/Informations';
 import Financial from './Sections/Financial/Financial';
 import Programs from './Sections/Programs/Programs';
+import Similars from './Sections/Similars/Similars';
 
 
 /**
@@ -138,6 +139,12 @@ class Project extends Component {
             data={this.state.data.publications}
             modifyModeHandle={() => this.modifyModeHandle('productions')}
             modifyMode={this.state.modifyModeProductions}
+          />
+        </div>
+        <div id="Similars">
+          <Similars
+            language={this.props.language}
+            data={this.state.data}
           />
         </div>
         <Footer language={this.props.language} />

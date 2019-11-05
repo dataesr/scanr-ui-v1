@@ -3,18 +3,15 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
-import EntityCard from '../../../Search/SearchResults/ResultCards/EntityCard';
-import { API_STRUCTURE_LIKE_END_POINT } from '../../../../config/config';
-import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import SimilarCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
+import { API_PERSON_LIKE_END_POINT } from '../../../../../config/config';
+import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
 
-import messagesEntityFr from '../translations/fr.json';
-import messagesEntityEn from '../translations/en.json';
-
-import classes from './SimilarEntities.scss';
+import classes from './Similars.scss';
 
 /**
  * SimilarEntities
@@ -24,7 +21,7 @@ import classes from './SimilarEntities.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class SimilarEntities extends Component {
+class SimilarPersons extends Component {
   state= {
     data: null,
   };
@@ -53,21 +50,6 @@ class SimilarEntities extends Component {
           }
         }
       }
-    } else if (this.props.data.websites && this.props.data.websites.length) {
-      searchTarget = 'websites.description';
-      for (let i = 0; i < this.props.data.websites.length; i += 1) {
-        if (this.props.data.websites[i].description) {
-          const splitTab = this.props.data.websites[i].description.toLowerCase().split(' ');
-          for (let j = 0; j < splitTab.length; j += 1) {
-            if (splitTab[j].length > 3) {
-              if (!countsObj[splitTab[j]]) {
-                countsObj[splitTab[j]] = 0;
-              }
-              countsObj[splitTab[j]] += 1;
-            }
-          }
-        }
-      }
     }
     /* eslint-disable */
     const countsObjSorted = [];
@@ -84,14 +66,13 @@ class SimilarEntities extends Component {
     }
     const searchText = searchTextTab.join(' ');
     /* eslint-enable */
-
     if (searchTarget) {
       this.getData(searchText, searchTarget);
     }
   }
 
   getData = (searchText, searchTarget) => {
-    const url = API_STRUCTURE_LIKE_END_POINT;
+    const url = API_PERSON_LIKE_END_POINT;
     const data = {
       fields: [
         searchTarget,
@@ -101,13 +82,15 @@ class SimilarEntities extends Component {
       lang: 'default',
     };
     Axios.post(url, data).then((response) => {
+      const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
       if (response.data.total > 0) {
         const data3 = [];
         for (let i = 0; i < response.data.total; i += 1) {
-          if (response.data.results[i].value.id !== this.props.data.id) {
+          const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
+          if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
             data3.push(response.data.results[i]);
           }
-          if (data3.length === 6) {
+          if (data3.length === 4) {
             break;
           }
         }
@@ -122,10 +105,6 @@ class SimilarEntities extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
 
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
@@ -138,21 +117,21 @@ class SimilarEntities extends Component {
     return (
       <Fragment>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.SimilarEntities}`} style={sectionStyle}>
+          <section className={`container-fluid ${classes.Similar}`} style={sectionStyle}>
             <div className="container">
               <div className={`row ${classes.SectionTitle}`}>
                 <div className="col">
                   <i className="fas fa-th" />
                   <span className={classes.Label}>
-                    {messagesEntity[this.props.language]['Entity.Section.SimilarEntities.label']}
+                    {messages[this.props.language]['Person.similars.title']}
                   </span>
                 </div>
               </div>
-              <ul className={`row ${classes.Ul}`}>
+              <ul className={`row px-2 ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
-                    <li key={item.value} className={`col-4 ${classes.Li}`}>
-                      <EntityCard
+                    <li key={item.value} className={`col-3 col-s-12 ${classes.Li}`}>
+                      <SimilarCard
                         data={item.value}
                         small
                         language={this.props.language}
@@ -169,9 +148,9 @@ class SimilarEntities extends Component {
   }
 }
 
-export default SimilarEntities;
+export default SimilarPersons;
 
-SimilarEntities.propTypes = {
+SimilarPersons.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
 };
