@@ -14,7 +14,7 @@ import OaLink from '../Shared/Oa/OaLink';
 import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
-import AffiliationCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
+import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';

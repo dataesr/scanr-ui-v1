@@ -6,7 +6,7 @@ import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
 import HomePage from './Components/Home-page/Home-page';
-import SearchPage from './Components/Search-page/Search-page';
+import SearchPage from './Components/Search/Search';
 import EntityPage from './Components/Results/Entity-page/Entity-page';
 import ProductionPage from './Components/Results/Production-page/Production-page';
 import ProjectPage from './Components/Results/Project/Project';
@@ -27,8 +27,6 @@ import Opendata from './Components/Other-pages/Opendata/Opendata';
 import Ressources from './Components/Other-pages/Ressources/Ressources';
 import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
 import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
-
-import TestAPI from './Components/TestAPI';
 
 class App extends Component {
   state: {
@@ -63,13 +61,6 @@ class App extends Component {
       <IntlProvider>
         <Router>
           <React.Fragment>
-            <Route
-              exact
-              path="/test"
-              component={() => (
-                <TestAPI />
-              )}
-            />
             <Route
               exact
               path="/"

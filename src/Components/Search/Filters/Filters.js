@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import classes from './FilterPanel.scss';
+import classes from './Filters.scss';
 
 import EntityFilters from './ObjectsFilters/EntityFilters';
 import PersonsFilters from './ObjectsFilters/PersonsFilters';
