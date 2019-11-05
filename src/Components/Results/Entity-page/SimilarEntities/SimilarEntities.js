@@ -103,7 +103,7 @@ class SimilarEntities extends Component {
     Axios.post(url, data).then((response) => {
       if (response.data.total > 0) {
         const data3 = [];
-        for (let i = 0; i < 7; i += 1) {
+        for (let i = 0; i < response.data.total; i += 1) {
           if (response.data.results[i].value.id !== this.props.data.id) {
             data3.push(response.data.results[i]);
           }
