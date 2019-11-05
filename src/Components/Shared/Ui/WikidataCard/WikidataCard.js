@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
+import Md5 from 'md5';
 
 // import getSelectKey from '../../../../Utils/getSelectKey';
 
@@ -19,6 +20,7 @@ class WikidataCard extends Component {
     // eslint-disable-next-line
     title: null,
     extract: null,
+    urlImageOnServer: null,
   }
 
   componentDidMount() {
@@ -33,22 +35,30 @@ class WikidataCard extends Component {
       if (response.data && response.data.entities && response.data.entities[this.props.id] && response.data.entities[this.props.id].sitelinks && response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`]) {
         const urlText = `https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${title}&origin=*`;
         Axios.get(urlText).then((responseText) => {
-          console.log('jre_responseText', responseText);
           if (responseText.data && responseText.data.query && responseText.data.query.pages) {
             for (const item in responseText.data.query.pages) {
               if (responseText.data.query.pages.hasOwnProperty(item)) {
                 const obj = responseText.data.query.pages[item];
                 const extract = obj.extract || null;
                 this.setState({ title, extract });
+
+                // Recherche de l'image
+                const urlImage = `https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${this.props.id}&property=P154&format=json&origin=*`
+                Axios.get(urlImage).then((responseImage) => {
+                  if (responseImage.data && responseImage.data.claims && responseImage.data.claims.P154 && responseImage.data.claims.P154[0] && responseImage.data.claims.P154[0].mainsnak && responseImage.data.claims.P154[0].mainsnak.datavalue && responseImage.data.claims.P154[0].mainsnak.datavalue.value){
+                    let imageName = responseImage.data.claims.P154[0].mainsnak.datavalue.value;
+                    const regex = / /gi;
+                    imageName = imageName.replace(regex, '_');
+                    const imageNameHash = Md5(imageName)
+                    const urlImageOnServer = `https://upload.wikimedia.org/wikipedia/commons/${imageNameHash.substring(0,1)}/${imageNameHash.substring(0,2)}/${imageName}`;
+                    this.setState({ urlImageOnServer });
+                  }
+                });
               }
             }
           }
-        }).catch((e) => {
-          console.log('jre_erreur2', e);
         });
       }
-    }).catch((e) => {
-      console.log('jre_erreur1', e);
     });
         /* eslint-enable */
   }
@@ -60,6 +70,14 @@ class WikidataCard extends Component {
           Wikipedia
         </p>
         <div className={classes.Content}>
+          {
+            (this.state.urlImageOnServer)
+              ? (
+                <div className={classes.Image}>
+                  <img alt="wikipedia" src={this.state.urlImageOnServer} className="img-fluid" />
+                </div>
+              ) : null
+          }
           <p className={classes.Extract}>
             {this.state.extract}
           </p>
