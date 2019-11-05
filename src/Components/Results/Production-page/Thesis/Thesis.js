@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import Axios from 'axios';
+import { API_PUBLICATIONS_LIKE_END_POINT } from '../../../../config/config';
 
 import HeaderTitle from '../../Entity-page/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
@@ -15,10 +17,12 @@ import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 import AffiliationCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
 import TagCard from '../../../Shared/Ui/TagCard/TagCard';
+import ProductionCard from '../../../Search-page/SearchResults/ResultCards/PublicationCard';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import BackgroundAffiliations from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import BackgroundSimilarProductions from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 
 import classes from './Thesis.scss';
 
@@ -47,7 +51,12 @@ class Thesis extends Component {
     modifyModeOa: false,
     modifyModeAuthors: false,
     modifyModeAffiliations: false,
+    similarProductions: null,
   };
+
+  componentDidMount() {
+    this.getSimilarProductions();
+  }
 
   modifyModeHandlePortrait = () => {
     this.setState(prevState => ({ modifyModePortrait: !prevState.modifyModePortrait }));
@@ -65,6 +74,10 @@ class Thesis extends Component {
     this.setState(prevState => ({ modifyModeAffiliations: !prevState.modifyModeAffiliations }));
   }
 
+  modifyModeHandleSimilarProductions = () => {
+    this.setState(prevState => ({ modifyModeSimilarProductions: !prevState.modifyModeSimilarProductions }));
+  }
+
   getAuthor = role => (this.props.data.authors.find(person => person.role === role))
 
   getAuthors = role => (this.props.data.authors.filter(person => person.role === role))
@@ -79,6 +92,41 @@ class Thesis extends Component {
       }
     });
     return sortedAuthors;
+  }
+
+  getSimilarProductions = () => {
+    const url = API_PUBLICATIONS_LIKE_END_POINT;
+    const searchTab = [];
+    if (this.props.data.title && this.props.data.title.default) {
+      searchTab.push(this.props.data.title.default);
+    }
+    if (this.props.data.summary && this.props.data.summary.default) {
+      searchTab.push(this.props.data.summary.default);
+    }
+    if (this.props.data.keywords && this.props.data.keywords.default) {
+      searchTab.push(this.props.data.keywords.default.join(' '));
+    }
+
+    const data = {
+      fields: ['title', 'summary', 'keywords'],
+      likeIds: [],
+      likeTexts: searchTab,
+      lang: 'default',
+    };
+    Axios.post(url, data).then((response) => {
+      if (response.data.total > 0) {
+        const data6 = [];
+        for (let i = 0; i < response.data.total; i += 1) {
+          if (response.data.results[i].value.id !== this.props.data.id) {
+            data6.push(response.data.results[i]);
+          }
+          if (data6.length === 6) {
+            break;
+          }
+        }
+        this.setState({ similarProductions: data6 });
+      }
+    });
   }
 
   handleChange = (sectionName) => {
@@ -98,6 +146,9 @@ class Thesis extends Component {
     };
     const sectionStyleAffiliations = {
       backgroundImage: `url(${BackgroundAffiliations})`,
+    };
+    const sectionStyleSimilarProductions = {
+      backgroundImage: `url(${BackgroundSimilarProductions})`,
     };
 
     const id = (this.props.data.id.substring(0, 5) === 'these') ? this.props.data.id.substring(5) : this.props.data.id;
@@ -195,17 +246,21 @@ class Thesis extends Component {
                 </div>
                 <div className="col-lg">
                   <div className="row">
-                    <div className={`col-12 ${classes.CardContainer}`}>
-                      <SummaryCard
-                        language={this.props.language}
-                        title={messages[this.props.language]['Publication.summary.title']}
-                        text={summary}
-                        tooltip=""
-                        masterKey="Publication/summary"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
-                      />
-                    </div>
+                    {
+                      (summary) ? (
+                        <div className={`col-12 ${classes.CardContainer}`}>
+                          <SummaryCard
+                            language={this.props.language}
+                            title={messages[this.props.language]['Publication.summary.title']}
+                            text={summary}
+                            tooltip=""
+                            masterKey="Publication/summary"
+                            modifyMode={this.state.modifyModePortrait}
+                            allData={this.props.data}
+                          />
+                        </div>
+                      ) : null
+                    }
                     <div className={`col-12 ${classes.CardContainer}`}>
                       <TagCard
                         language={this.props.language}
@@ -350,6 +405,36 @@ class Thesis extends Component {
                           <li key={item} className={`col-3 ${classes.Li}`}>
                             <AffiliationCard
                               data={item}
+                              small
+                              language={this.props.language}
+                            />
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </div>
+                </section>
+              ) : null
+          }
+          {
+            (this.state.similarProductions)
+              ? (
+                <section className={`container-fluid ${classes.SimilarProductions}`} style={sectionStyleSimilarProductions} id="SimilarProductions">
+                  <div className="container">
+                    <div className={`row ${classes.SectionTitle}`}>
+                      <div className="col">
+                        <i className="fas fa-th" />
+                        <span className={classes.Label}>
+                          <FormattedHTMLMessage id="Publication.similarProductions.title" defaultMessage="Publication.similarProductions.title" />
+                        </span>
+                      </div>
+                    </div>
+                    <ul className={`row ${classes.Ul}`}>
+                      {
+                        this.state.similarProductions.map(item => (
+                          <li key={item} className={`col-4 ${classes.Li}`}>
+                            <ProductionCard
+                              data={item.value}
                               small
                               language={this.props.language}
                             />
