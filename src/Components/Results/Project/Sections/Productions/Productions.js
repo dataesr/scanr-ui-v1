@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import PublicationCard from '../../../../Search-page/SearchResults/ResultCards/PublicationCard';
+import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 import classes from './Productions.scss';
