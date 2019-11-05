@@ -5,7 +5,6 @@ import Axios from 'axios';
 
 import EntityCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
 import { API_STRUCTURE_LIKE_END_POINT } from '../../../../config/config';
-import getSelectKey from '../../../../Utils/getSelectKey';
 import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 /* Gestion des langues */
@@ -30,25 +29,85 @@ class SimilarEntities extends Component {
     data: null,
   };
 
-  getData = () => {
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.setCounts();
+    }
+  }
+
+  setCounts = () => {
+    const countsObj = {};
+    let searchTarget = '';
+    if (this.props.data.publications && this.props.data.publications.length > 0) {
+      searchTarget = 'publications.publication.title';
+      for (let i = 0; i < this.props.data.publications.length; i += 1) {
+        if (this.props.data.publications[i].publication && this.props.data.publications[i].publication.title) {
+          const splitTab = this.props.data.publications[i].publication.title.default.toLowerCase().split(' ');
+          for (let j = 0; j < splitTab.length; j += 1) {
+            if (splitTab[j].length > 3) {
+              if (!countsObj[splitTab[j]]) {
+                countsObj[splitTab[j]] = 0;
+              }
+              countsObj[splitTab[j]] += 1;
+            }
+          }
+        }
+      }
+    } else if (this.props.data.websites && this.props.data.websites.length) {
+      searchTarget = 'websites.description';
+      for (let i = 0; i < this.props.data.websites.length; i += 1) {
+        if (this.props.data.websites[i].description) {
+          const splitTab = this.props.data.websites[i].description.toLowerCase().split(' ');
+          for (let j = 0; j < splitTab.length; j += 1) {
+            if (splitTab[j].length > 3) {
+              if (!countsObj[splitTab[j]]) {
+                countsObj[splitTab[j]] = 0;
+              }
+              countsObj[splitTab[j]] += 1;
+            }
+          }
+        }
+      }
+    }
+    /* eslint-disable */
+    const countsObjSorted = [];
+    for (var item in countsObj) {
+        countsObjSorted.push([item, countsObj[item]]);
+    }
+
+    countsObjSorted.sort(function(a, b) {
+        return b[1] - a[1];
+    });
+    const searchTextTab = [];
+    for (let k = 0; k < Math.min(50,countsObjSorted.length); k += 1) {
+      searchTextTab.push(countsObjSorted[k][0]);
+    }
+    const searchText = searchTextTab.join(' ');
+    /* eslint-enable */
+
+    if (searchTarget) {
+      this.getData(searchText, searchTarget);
+    }
+  }
+
+  getData = (searchText, searchTarget) => {
     const url = API_STRUCTURE_LIKE_END_POINT;
-    const searched = getSelectKey(this.props.data, 'label', this.props.language, 'fr');
     const data = {
       fields: [
-        'label',
+        searchTarget,
       ],
       likeIds: [],
-      likeTexts: [searched],
-      lang: 'fr',
+      likeTexts: [searchText],
+      lang: 'default',
     };
     Axios.post(url, data).then((response) => {
       if (response.data.total > 0) {
         const data3 = [];
-        for (let i = 0; i < 4; i += 1) {
+        for (let i = 0; i < 7; i += 1) {
           if (response.data.results[i].value.id !== this.props.data.id) {
             data3.push(response.data.results[i]);
           }
-          if (data3.length === 3) {
+          if (data3.length === 6) {
             break;
           }
         }
@@ -71,10 +130,6 @@ class SimilarEntities extends Component {
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
     };
-
-    if (this.state.data === null) {
-      this.getData();
-    }
 
     if (!this.props.data || this.state.data === null) {
       return null;
