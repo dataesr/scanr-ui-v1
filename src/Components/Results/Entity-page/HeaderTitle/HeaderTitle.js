@@ -55,12 +55,14 @@ class HeaderTitle extends Component {
         list.push('AccessType');
         list.push('Authors');
         list.push('Affiliations');
+        list.push('SimilarProductions');
         break;
       case 'Publication':
         list.push('Publication');
         list.push('AccessType');
         list.push('Authors');
         list.push('Affiliations');
+        list.push('SimilarProductions');
         break;
       default:
         break;
