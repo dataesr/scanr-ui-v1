@@ -5,7 +5,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
-import PersonCard from '../../../../Search-page/SearchResults/ResultCards/PersonCard';
+import PersonCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';

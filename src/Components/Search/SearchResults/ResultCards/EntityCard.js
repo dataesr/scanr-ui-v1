@@ -84,7 +84,7 @@ const EntityCard = (props) => {
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
-          <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
+          <h3 className={`mb-auto pb-3 ${classes.CardTitle} ${classes.blockWithText}`}>
             <a href={`entite/${props.data.id}`}>
               {getSelectedKey(props.data, 'label', props.language, 'default')}
             </a>
