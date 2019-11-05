@@ -16,6 +16,7 @@ import OaLink from '../Shared/Oa/OaLink';
 import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
+
 import AffiliationCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
 import ProductionCard from '../../../Search-page/SearchResults/ResultCards/PublicationCard';
 

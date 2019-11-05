@@ -3,18 +3,16 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
-import EntityCard from '../../../Search/SearchResults/ResultCards/EntityCard';
-import { API_STRUCTURE_LIKE_END_POINT } from '../../../../config/config';
-import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import SimilarCard from '../../../../Search/SearchResults/ResultCards/ProjectCard';
+import { API_PROJECT_LIKE_END_POINT } from '../../../../../config/config';
+import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import getSelectKey from '../../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
 
-import messagesEntityFr from '../translations/fr.json';
-import messagesEntityEn from '../translations/en.json';
-
-import classes from './SimilarEntities.scss';
+import classes from './Similars.scss';
 
 /**
  * SimilarEntities
@@ -24,7 +22,7 @@ import classes from './SimilarEntities.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class SimilarEntities extends Component {
+class SimilarProjects extends Component {
   state= {
     data: null,
   };
@@ -39,10 +37,10 @@ class SimilarEntities extends Component {
     const countsObj = {};
     let searchTarget = '';
     if (this.props.data.publications && this.props.data.publications.length > 0) {
-      searchTarget = 'publications.publication.title';
+      searchTarget = 'publications.title';
       for (let i = 0; i < this.props.data.publications.length; i += 1) {
-        if (this.props.data.publications[i].publication && this.props.data.publications[i].publication.title) {
-          const splitTab = this.props.data.publications[i].publication.title.default.toLowerCase().split(' ');
+        if (this.props.data.publications[i] && this.props.data.publications[i].title) {
+          const splitTab = this.props.data.publications[i].title.default.toLowerCase().split(' ');
           for (let j = 0; j < splitTab.length; j += 1) {
             if (splitTab[j].length > 3) {
               if (!countsObj[splitTab[j]]) {
@@ -53,11 +51,22 @@ class SimilarEntities extends Component {
           }
         }
       }
-    } else if (this.props.data.websites && this.props.data.websites.length) {
-      searchTarget = 'websites.description';
-      for (let i = 0; i < this.props.data.websites.length; i += 1) {
-        if (this.props.data.websites[i].description) {
-          const splitTab = this.props.data.websites[i].description.toLowerCase().split(' ');
+    } else if (getSelectKey(this.props.data, 'description', this.props.language, 'en')) {
+      searchTarget = 'description';
+      const splitTab = getSelectKey(this.props.data, 'description', this.props.language, 'en').toLowerCase().split(' ');
+      for (let j = 0; j < splitTab.length; j += 1) {
+        if (splitTab[j].length > 3) {
+          if (!countsObj[splitTab[j]]) {
+            countsObj[splitTab[j]] = 0;
+          }
+          countsObj[splitTab[j]] += 1;
+        }
+      }
+    } else if (this.props.data.domains && this.props.data.domains.length > 0) {
+      searchTarget = 'domains.label';
+      for (let i = 0; i < this.props.data.domains.length; i += 1) {
+        if (this.props.data.domains[i] && this.props.data.domains[i].label) {
+          const splitTab = this.props.data.domains[i].label.default.toLowerCase().split(' ');
           for (let j = 0; j < splitTab.length; j += 1) {
             if (splitTab[j].length > 3) {
               if (!countsObj[splitTab[j]]) {
@@ -84,14 +93,13 @@ class SimilarEntities extends Component {
     }
     const searchText = searchTextTab.join(' ');
     /* eslint-enable */
-
     if (searchTarget) {
       this.getData(searchText, searchTarget);
     }
   }
 
   getData = (searchText, searchTarget) => {
-    const url = API_STRUCTURE_LIKE_END_POINT;
+    const url = API_PROJECT_LIKE_END_POINT;
     const data = {
       fields: [
         searchTarget,
@@ -103,7 +111,7 @@ class SimilarEntities extends Component {
     Axios.post(url, data).then((response) => {
       if (response.data.total > 0) {
         const data3 = [];
-        for (let i = 0; i < response.data.total; i += 1) {
+        for (let i = 0; i < 7; i += 1) {
           if (response.data.results[i].value.id !== this.props.data.id) {
             data3.push(response.data.results[i]);
           }
@@ -122,10 +130,6 @@ class SimilarEntities extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
 
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
@@ -138,13 +142,13 @@ class SimilarEntities extends Component {
     return (
       <Fragment>
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.SimilarEntities}`} style={sectionStyle}>
+          <section className={`container-fluid ${classes.Similar}`} style={sectionStyle}>
             <div className="container">
               <div className={`row ${classes.SectionTitle}`}>
                 <div className="col">
                   <i className="fas fa-th" />
                   <span className={classes.Label}>
-                    {messagesEntity[this.props.language]['Entity.Section.SimilarEntities.label']}
+                    {messages[this.props.language]['Project.similars.title']}
                   </span>
                 </div>
               </div>
@@ -152,7 +156,7 @@ class SimilarEntities extends Component {
                 {
                   this.state.data.map(item => (
                     <li key={item.value} className={`col-4 ${classes.Li}`}>
-                      <EntityCard
+                      <SimilarCard
                         data={item.value}
                         small
                         language={this.props.language}
@@ -169,9 +173,9 @@ class SimilarEntities extends Component {
   }
 }
 
-export default SimilarEntities;
+export default SimilarProjects;
 
-SimilarEntities.propTypes = {
+SimilarProjects.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
 };
