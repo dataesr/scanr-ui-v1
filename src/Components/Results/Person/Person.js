@@ -9,8 +9,8 @@ import Header from '../../Shared/Header/Header-homePage';
 import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
+import Similars from './Sections/Similars/Similars';
 import Production from '../../Shared/Results/Productions/Productions';
-
 
 /**
  * Publication
@@ -97,6 +97,12 @@ class Person extends Component {
             data={this.state.data.coContributors}
             modifyModeHandle={() => this.modifyModeHandle('coAuthors')}
             modifyMode={this.state.modifyModeDescription}
+          />
+        </div>
+        <div>
+          <Similars
+            language={this.props.language}
+            data={this.state.data}
           />
         </div>
 
