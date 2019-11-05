@@ -3,12 +3,12 @@ import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 
-import classes from './Search-page.scss';
+import classes from './Search.scss';
 
 import SearchPanel from './SearchPanel/SearchPanel';
 import SearchResults from './SearchResults/SearchResults';
 import AllResults from './SearchResults/AllResults';
-import FilterPanel from './FilterPanel/FilterPanel';
+import FilterPanel from './Filters/Filters';
 import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
 
 
