@@ -44,6 +44,18 @@
   background-position: bottom 0 left 0;
 }
 
+.SimilarProductions {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: 'Lato', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
+  background-position: bottom 0 left 0;
+}
+
 .PersonCardHeight {
   height: 160px;
 }
@@ -55,4 +67,17 @@
 .Li {
   list-style: none;
   padding: 3px;
+}
+
+.SectionTitle {
+  padding-bottom: 20px;
+  font-size: 1.6rem;
+  color: $scanrdeepblueColor;
+}
+
+.Label {
+  font-weight: bold;
+  display: inline-block;
+  padding-left: 8px;
+  font-family: 'Lato', sans-serif;
 }
