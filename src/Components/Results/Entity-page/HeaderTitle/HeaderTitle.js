@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import { ReactTitle } from 'react-meta-tags';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -70,6 +71,7 @@ class HeaderTitle extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
+          <ReactTitle title={this.props.label} />
           <div className="container">
             <div className="row">
               <div className="col-md-9">
