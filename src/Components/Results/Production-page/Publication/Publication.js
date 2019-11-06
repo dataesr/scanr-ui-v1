@@ -17,8 +17,8 @@ import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 
-import AffiliationCard from '../../../Search-page/SearchResults/ResultCards/EntityCard';
-import ProductionCard from '../../../Search-page/SearchResults/ResultCards/PublicationCard';
+import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
+import ProductionCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
