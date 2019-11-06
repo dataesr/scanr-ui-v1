@@ -113,10 +113,12 @@ $logoWidth: 24px;
   .Logo {
     display: inline-block;
     width: $logoWidth;
+    color: $scanrmiddlegreyColor;
   }
   .Title {
     margin-top: 12px;
     font-weight: bold;
+    color: $scanrmiddlegreyColor;
   }
   .Description {
     color: $scanrmiddlegreyColor;
