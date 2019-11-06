@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
+import { ReactTitle } from 'react-meta-tags';
 
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
 import getSelectKey from '../../../Utils/getSelectKey';
@@ -61,9 +62,10 @@ class Entity extends Component {
     if (!this.state.data) {
       return <Fragment>Chargement ...</Fragment>;
     }
-
     return (
       <Fragment>
+        <ReactTitle title={getSelectKey(this.state.data, 'label', this.props.language, 'fr')} />
+
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
