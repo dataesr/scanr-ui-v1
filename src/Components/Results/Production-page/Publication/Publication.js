@@ -396,7 +396,7 @@ class Publication extends Component {
                     <ul className={`row ${classes.Ul}`}>
                       {
                         this.props.data.affiliations.map(item => (
-                          <li key={item} className={`col-3 ${classes.Li}`}>
+                          <li key={item} className={`col-md-4 ${classes.Li}`}>
                             <AffiliationCard
                               data={item}
                               small
@@ -426,7 +426,7 @@ class Publication extends Component {
                     <ul className={`row ${classes.Ul}`}>
                       {
                         this.state.similarProductions.map(item => (
-                          <li key={item} className={`col-4 ${classes.Li}`}>
+                          <li key={item} className={`col-md-4 ${classes.Li}`}>
                             <ProductionCard
                               data={item.value}
                               small
