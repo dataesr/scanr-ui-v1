@@ -153,5 +153,5 @@ export default SimilarPersons;
 
 SimilarPersons.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };

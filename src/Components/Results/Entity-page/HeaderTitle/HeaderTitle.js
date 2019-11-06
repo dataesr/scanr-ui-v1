@@ -99,7 +99,7 @@ class HeaderTitle extends Component {
                     <select id="headerTitleSelect" className="form-control" onChange={this.handleChange} value={this.state.selectedOption}>
                       {
                         list.map(item => (
-                          <option value={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
+                          <option value={item} key={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
                         ))
                       }
                     </select>

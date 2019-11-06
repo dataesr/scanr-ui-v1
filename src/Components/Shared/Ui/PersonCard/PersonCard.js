@@ -70,13 +70,15 @@ const PersonCard = (props) => {
             <img src={logo} alt="" />
           </div>
         </div>
-        <div>
-          <span className={classes.Name}>
-            {`${firstName} ${lastName}`}
-          </span>
+        <div className={classes.Name}>
+          {`${firstName} ${lastName}`}
         </div>
         <div>
-          {(role) ? <span className={classes.Role}>{role}</span> : null}
+          {(role) ? (
+            <span className={classes.Role}>
+              {messages[props.language][role]}
+            </span>
+          ) : null}
         </div>
         <div>
           {
