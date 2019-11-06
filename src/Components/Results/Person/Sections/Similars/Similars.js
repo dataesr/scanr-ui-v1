@@ -80,21 +80,22 @@ class SimilarPersons extends Component {
       likeIds: [],
       likeTexts: [searchText],
       lang: 'default',
+      pageSize: 100,
     };
     Axios.post(url, data).then((response) => {
       const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
       if (response.data.total > 0) {
-        const data3 = [];
-        for (let i = 0; i < response.data.total; i += 1) {
+        const data4 = [];
+        for (let i = 0; i < response.data.results.length; i += 1) {
           const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
           if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
-            data3.push(response.data.results[i]);
+            data4.push(response.data.results[i]);
           }
-          if (data3.length === 4) {
+          if (data4.length === 4) {
             break;
           }
         }
-        this.setState({ data: data3 });
+        this.setState({ data: data4 });
       }
     });
   }
@@ -110,7 +111,7 @@ class SimilarPersons extends Component {
       backgroundImage: `url(${Background})`,
     };
 
-    if (!this.props.data || this.state.data === null) {
+    if (!this.props.data || !this.state.data || this.state.data.length === 0) {
       return null;
     }
 
