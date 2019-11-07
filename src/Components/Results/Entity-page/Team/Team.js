@@ -6,7 +6,8 @@ import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Leaders from '../Shared/Leaders/Leaders';
 import TeamComposition from './SubComponents/teamComposition';
-import Background from '../../../Shared/images/poudre-orange_Fgris-BR.jpg';
+// import Background from '../../../Shared/images/poudre-orange_Fgris-BR.jpg';
+import Background from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -60,6 +61,7 @@ class Team extends Component {
                   modifyModeHandle={this.modifyModeHandle}
                   modifyMode={this.state.modifyMode}
                   emptySection
+                  color="#fff"
                 >
                   {messagesEntity[this.props.language]['Entity.Section.Team.label']}
                 </SectionTitle>
@@ -89,11 +91,11 @@ class Team extends Component {
                 icon="fas fa-th"
                 modifyModeHandle={this.modifyModeHandle}
                 modifyMode={this.state.modifyMode}
+                color="#fff"
               >
                 {messagesEntity[this.props.language]['Entity.Section.Team.label']}
               </SectionTitle>
               <div className="row">
-
                 <Leaders
                   id={this.props.data.id}
                   language={this.props.language}

@@ -106,6 +106,13 @@ class Entity extends Component {
           />
         </div>
 
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerDark"
+          url=""
+        />
+
         <div id="Productions">
           <Productions
             language={this.props.language}
@@ -131,7 +138,7 @@ class Entity extends Component {
         <div id="Awards">
           <Awards
             language={this.props.language}
-            data={null}
+            data={this.state.data}
           />
         </div>
 
@@ -157,7 +164,7 @@ class Entity extends Component {
         <Banner
           language={this.props.language}
           labelKey="Appear"
-          cssClass="BannerDark"
+          cssClass="BannerLight"
           url=""
         />
 

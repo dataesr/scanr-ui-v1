@@ -32,7 +32,7 @@ import classes from './Ecosystem.scss';
 class Ecosystem extends Component {
   state = {
     data: this.props.data,
-    viewMode: 'list',
+    viewMode: 'graph', // list
     modifyMode: false,
     kindFilter: [],
     kindFilterValue: null,
@@ -300,7 +300,6 @@ class Ecosystem extends Component {
                   </div>
                 )
             }
-            vide
           </div>
         </div>
       </Fragment>
