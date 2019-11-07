@@ -97,3 +97,17 @@
       min-width: 28px !important;
   }
 }
+
+.ResultCard2 {
+  height: calc(100% - 3px);
+  border-radius: 8px;
+  margin-bottom: 1px;
+  font-size: 0.90em;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+
+  .CardTitle2 {
+    color: $scanrdeepblueColor;
+    font-size: 1.1em;
+    font-weight: 600;
+  }
+}

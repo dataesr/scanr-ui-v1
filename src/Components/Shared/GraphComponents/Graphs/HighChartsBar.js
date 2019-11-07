@@ -55,18 +55,21 @@ export default class HighChartsBar extends Component {
         text: '',
       },
       xAxis: {
+        minorGridLineWidth: 0,
+        gridLineWidth: 0,
         lineWidth: 0,
+        tickWidth: 0,
         categories: data.labels,
-        labels:
-        {
+        labels: {
           style: { color: '#000000' },
-          align: 'left',
-          x: 10,
+          align: 'right',
+          x: -10,
         },
       },
       yAxis: {
-        // min: ,
         gridLineWidth: 0,
+        lineWidth: 0,
+        tickWidth: 0,
         minorGridLineWidth: 0,
         title: { text: '' },
         labels: { enabled: false },
@@ -83,9 +86,9 @@ export default class HighChartsBar extends Component {
           // groupPadding: 0.1,
           dataLabels: {
             enabled: true,
-            // align: 'right',
-            textAlign: 'right',
-            x: 500,
+            align: 'right',
+            // textAlign: 'right',
+            x: 0,
             style: { color: '#000000' },
           },
         },
