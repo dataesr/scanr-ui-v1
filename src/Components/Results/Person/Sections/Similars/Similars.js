@@ -43,15 +43,9 @@ class SimilarPersons extends Component {
     };
     Axios.post(url, data).then((response) => {
       const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
-<<<<<<< HEAD
       if (response.data.total && response.data.total > 0) {
         const data3 = [];
         for (let i = 0; i < Math.min(response.data.total, 10); i += 1) {
-=======
-      if (response.data.total > 0) {
-        const data4 = [];
-        for (let i = 0; i < response.data.results.length; i += 1) {
->>>>>>> 09cc2944edd1ff15032deb5f309445bfa4e2c27f
           const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
           if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
             data4.push(response.data.results[i]);
