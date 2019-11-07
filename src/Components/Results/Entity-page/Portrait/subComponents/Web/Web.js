@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import MainWebSiteButton from './MainWebSiteButton';
 import WebSiteButton from './WebSiteButton';
+import WikidataCard from '../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
 import { OTHER_WEBSITES } from '../../../../../../config/config';
 
@@ -36,6 +38,32 @@ const Web = (props) => {
     return url;
   };
 
+  const existFlow = (socialNetwork) => {
+    if (props.socialMedias.find(el => el.type === socialNetwork)) {
+      return true;
+    }
+    return false;
+  };
+
+  const getSNUrl = (socialNetwork) => {
+    const sn = props.socialMedias.find(el => el.type === socialNetwork);
+    if (sn) {
+      return sn.url;
+    }
+
+    return false;
+  };
+
+  const getWikidataId = () => {
+    if (props.externalIds && props.externalIds.length > 0) {
+      for (let i = 0; i < props.externalIds.length; i += 1) {
+        if (props.externalIds[i].type.toLowerCase() === 'wikidata') {
+          return props.externalIds[i].id;
+        }
+      }
+    }
+    return null;
+  };
 
   const getSocialMediaButton = (socialMedia) => {
     let urlSocialMedia = null;
@@ -93,7 +121,7 @@ const Web = (props) => {
     }
 
     return (
-      <div className="col-4 p-0">
+      <div className="col-md-2 p-0">
         <span className={classes.SocialMedia}>
           <a href={urlSocialMedia}>
             {logo}
@@ -107,8 +135,12 @@ const Web = (props) => {
 
   const othWebSites = [];
   OTHER_WEBSITES.forEach((type) => {
-    othWebSites.push({ type, url: getWebSiteByType(type) });
+    if (type !== 'wikipedia') {
+      othWebSites.push({ type, url: getWebSiteByType(type) });
+    }
   });
+
+  const idWiki = getWikidataId();
 
   return (
     <Fragment>
@@ -124,7 +156,7 @@ const Web = (props) => {
                 </div>
 
                 <div className="row">
-                  <div className={`col-3 ${classes.NoSpace}`}>
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
                     <div className={`container row ${classes.NoSpace}`}>
                       {
                         (mainWebSiteUrl)
@@ -137,27 +169,15 @@ const Web = (props) => {
                             </div>
                           ) : null
                       }
-
-                      {getSocialMediaButton('dailymotion')}
-                      {getSocialMediaButton('facebook')}
-                      {getSocialMediaButton('flickr')}
-                      {getSocialMediaButton('instagram')}
-                      {getSocialMediaButton('linkedin')}
-                      {getSocialMediaButton('pinterest')}
-                      {getSocialMediaButton('snappchat')}
-                      {getSocialMediaButton('soundcloud')}
-                      {getSocialMediaButton('twitter')}
-                      {getSocialMediaButton('viadeo')}
-                      {getSocialMediaButton('youtube')}
                     </div>
                   </div>
-                  <div className="col-9">
+                  <div className="col-md-8">
                     <div className="row">
                       {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
-                              <div className={`col-4 ${classes.CardContainer}`}>
+                              <div className={`col-md-6 ${classes.CardContainer}`}>
                                 <WebSiteButton
                                   language={props.language}
                                   url={webSite.url}
@@ -171,6 +191,40 @@ const Web = (props) => {
                       }
                     </div>
                   </div>
+                </div>
+
+                <div className="row">
+                  {getSocialMediaButton('dailymotion')}
+                  {getSocialMediaButton('facebook')}
+                  {getSocialMediaButton('flickr')}
+                  {getSocialMediaButton('instagram')}
+                  {getSocialMediaButton('linkedin')}
+                  {getSocialMediaButton('pinterest')}
+                  {getSocialMediaButton('snappchat')}
+                  {getSocialMediaButton('soundcloud')}
+                  {getSocialMediaButton('twitter')}
+                  {getSocialMediaButton('viadeo')}
+                  {getSocialMediaButton('youtube')}
+                </div>
+                <div className="row">
+                  {
+                    (props.socialMedias && props.socialMedias.length > 0 && existFlow('twitter'))
+                      ? (
+                        <div className={`col-md-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                          <TwitterTimelineEmbed url={getSNUrl('twitter')} autoHeight />
+                        </div>
+                      )
+                      : null
+                  }
+                  {
+                    (props.socialMedias && props.socialMedias.length > 0 && idWiki)
+                      ? (
+                        <div className={`col-md-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                          <WikidataCard language={props.language} id={idWiki} />
+                        </div>
+                      )
+                      : null
+                  }
                 </div>
               </div>
             </div>
@@ -187,4 +241,5 @@ Web.propTypes = {
   socialMedias: PropTypes.array,
   websites: PropTypes.array,
   links: PropTypes.array,
+  externalIds: PropTypes.array,
 };
