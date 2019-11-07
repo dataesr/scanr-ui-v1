@@ -24,10 +24,12 @@ const WebSiteButton = (props) => {
   let logo = null;
   let UsedClasse = null;
   let label = null;
+  let style = null;
   switch (props.type) {
     case 'HAL':
       logo = <img src="./img/hal.logo.png" alt="logo HAL" />;
       UsedClasse = classes.HalLogo;
+      style = { backgroundColor: '#003259' };
       break;
     case 'wikipedia':
       logo = <img src="./img/Wikipedia-logo.png" alt="logo wikipedia" />;
@@ -42,8 +44,9 @@ const WebSiteButton = (props) => {
       logo = null;
   }
 
+
   return (
-    <a href={props.url} className={classes.WebSiteButton} target="_blank" rel="noopener noreferrer">
+    <a href={props.url} className={classes.WebSiteButton} target="_blank" rel="noopener noreferrer" style={style}>
       <div className={UsedClasse}>
         {logo}
         <div>{label}</div>

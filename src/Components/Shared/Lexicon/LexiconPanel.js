@@ -29,8 +29,13 @@ class Lexicon extends Component {
         const glossary = (termsTarget === 'glossary');
         this.setState({ target: this.props.target, opened: true, glossary });
       } else {
-        this.setState({ target: this.props.target, opened: true, glossary: true });
+        this.setState({ target: null, opened: true, glossary: true });
       }
+    }
+    if (this.state.opened) {
+      const panelHeight = document.getElementById('panel').offsetHeight;
+      const targetTop = (this.props.target) ? document.getElementById(this.props.target.split('.')[1]).offsetTop : 0;
+      document.getElementById('terms').scrollTop = (panelHeight - targetTop);
     }
   }
 
@@ -51,11 +56,10 @@ class Lexicon extends Component {
 
     let panel = null;
     let termsHtml = null;
-    if (this.state.opened && this.props.target) {
+    if (this.state.opened) {
       const terms = (this.state.glossary) ? glossaryTerms : faqTerms;
       termsHtml = Object.keys(terms).map((term) => {
-        const ifTarget = (term === this.props.target.split('.')[1]) ? 'IsTarget' : null;
-
+        const ifTarget = (this.props.target && term === this.props.target.split('.')[1]) ? 'IsTarget' : null;
         return (
           <li key={terms[term].label[this.props.language]} id={term} className={classes[ifTarget]}>
             <div className={classes.Item}>
@@ -78,7 +82,7 @@ class Lexicon extends Component {
       });
 
       panel = (
-        <div className={`animated fadeInRight faster ${classes.Panel}`}>
+        <div className={`animated fadeInRight faster ${classes.Panel}`} id="panel">
           <button type="button" className={classes.ButtonClosePanel} onClick={this.togglePane}>
             <i className="fa fa-times" />
           </button>
@@ -109,7 +113,7 @@ class Lexicon extends Component {
               </span>
             </h2>
             <hr />
-            <ul>
+            <ul id="terms">
               {termsHtml}
             </ul>
           </div>
@@ -119,7 +123,7 @@ class Lexicon extends Component {
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className={`${classes.Lexicon} ${this.props.className}`}>
+        <div className={`${classes.Lexicon} ${this.props.className}`} id="lexiconPanel">
           <span className={classes.TextInfo}>
             <FormattedHTMLMessage
               id="Lexicon.title"
