@@ -40,7 +40,7 @@ const Web = (props) => {
 
   const existFlow = (socialNetwork) => {
     const find = props.socialMedias.filter(el => el.type === socialNetwork);
-    if (socialNetwork === 'twitter' && find[0].url.indexOf('twitter.com') === -1) {
+    if (socialNetwork === 'twitter' && find.length > 0 && find[0].url.indexOf('twitter.com') === -1) {
       return false;
     }
     if (find && find.length > 0) {
