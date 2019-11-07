@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import ButtonToPage from '../Ui/Buttons/ButtonToPage';
+import ButtonToPage from '../Ui/Buttons/ButtonToPage2';
 
 /* SCSS */
 import classes from './Banner.scss';
@@ -27,19 +27,16 @@ const Banner = props => (
               defaultMessage={`Banner.title.${props.labelKey}`}
             />
           </p>
-          <div>
-            <div>
-              <ButtonToPage
-                url={props.url}
-                target={props.target}
-              >
-                <FormattedHTMLMessage
-                  id={`Banner.button.${props.labelKey}`}
-                  defaultMessage={`Banner.button.${props.labelKey}`}
-                />
-              </ButtonToPage>
-            </div>
-          </div>
+          <ButtonToPage
+            url={props.url}
+            target={props.target}
+            className={classes.Button}
+          >
+            <FormattedHTMLMessage
+              id={`Banner.button.${props.labelKey}`}
+              defaultMessage={`Banner.button.${props.labelKey}`}
+            />
+          </ButtonToPage>
         </div>
       </div>
     </section>
