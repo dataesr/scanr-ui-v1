@@ -59,7 +59,7 @@ class Autocomplete extends Component {
       filtered = this.props.facets
         .filter(item => item.value.toLowerCase().includes(this.state.query.toLowerCase()));
     }
-
+    /* eslint-disable */
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">

@@ -39,21 +39,28 @@ class SimilarPersons extends Component {
       likeIds: [this.props.data.id],
       likeTexts: [],
       lang: 'default',
+      pageSize: 100,
     };
     Axios.post(url, data).then((response) => {
       const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
+<<<<<<< HEAD
       if (response.data.total && response.data.total > 0) {
         const data3 = [];
         for (let i = 0; i < Math.min(response.data.total, 10); i += 1) {
+=======
+      if (response.data.total > 0) {
+        const data4 = [];
+        for (let i = 0; i < response.data.results.length; i += 1) {
+>>>>>>> 09cc2944edd1ff15032deb5f309445bfa4e2c27f
           const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
           if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
-            data3.push(response.data.results[i]);
+            data4.push(response.data.results[i]);
           }
-          if (data3.length === 4) {
+          if (data4.length === 4) {
             break;
           }
         }
-        this.setState({ data: data3 });
+        this.setState({ data: data4 });
       }
     });
   }
@@ -69,7 +76,7 @@ class SimilarPersons extends Component {
       backgroundImage: `url(${Background})`,
     };
 
-    if (!this.props.data || this.state.data === null) {
+    if (!this.props.data || !this.state.data || this.state.data.length === 0) {
       return null;
     }
 
@@ -111,5 +118,5 @@ export default SimilarPersons;
 
 SimilarPersons.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };

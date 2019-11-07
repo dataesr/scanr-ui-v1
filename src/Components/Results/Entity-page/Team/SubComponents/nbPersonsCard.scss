@@ -4,7 +4,7 @@
   background-color: white;
   border-radius: 8px;
   text-align: center;
-  height: 224px;
+  height: 291px;
   margin: 3px;
   padding-top: 16px;
 
@@ -14,7 +14,7 @@
   }
 
   .Nb {
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: $scanrdeepblueColor;
     font-weight: bold;
     padding-top: 16px;
@@ -22,5 +22,7 @@
   .Label {
     color: $scanrgreyColor;
     font-size: 0.9rem;
+    display: block;
+    padding-bottom: 24px;
   }
 }
