@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import EmptySection from '../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
+import PrizeCard from '../../../Shared/Ui/PrizeCard/PrizeCard';
+
+import getSelectKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -42,7 +45,7 @@ class Awards extends Component {
       en: messagesEntityEn,
     };
 
-    if (!this.props.data) {
+    if (!this.props.data || !this.props.data.badges) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -53,6 +56,7 @@ class Awards extends Component {
                   modifyModeHandle={this.modifyModeHandle}
                   modifyMode={this.state.modifyMode}
                   emptySection
+                  color="#fff"
                 >
                   {messagesEntity[this.props.language]['Entity.Section.Awards.label']}
                 </SectionTitle>
@@ -83,11 +87,27 @@ class Awards extends Component {
                 modifyModeHandle={this.modifyModeHandle}
                 modifyMode={this.state.modifyMode}
                 emptySection
+                color="#fff"
               >
                 {messagesEntity[this.props.language]['Entity.Section.Awards.label']}
               </SectionTitle>
-              <div>
-                content
+              <div className="row">
+                {
+                  this.props.data.badges.map(badge => (
+                    <div className={`col-md-4 ${classes.CardContainer}`}>
+                      <PrizeCard
+                        date={null}
+                        language={this.props.language}
+                        label={getSelectKey(badge, 'label', this.props.language, 'fr')}
+                        icon="prize"
+                        color="#fe7747"
+                        masterKey="Awards"
+                        modifyMode={this.state.modifyMode}
+                        allData={this.props.data}
+                      />
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </section>

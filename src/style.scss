@@ -153,6 +153,10 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
     background-color: $scanrblueColor;
     color: white;
   }
+  .Button:hover, .Button:focus {
+    background-color: $scanrdeepblueColor;
+    color: white;
+  }
 }
 .BannerDark {
   background-color: $scanrblueColor;
@@ -164,6 +168,10 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
     background-color: white;
     color: $scanrdeepblueColor;
   }
+  .Button:hover, .Button:focus {
+    background-color: $scanrmiddlegreyColor;
+    color: $scanrdeepblueColor;
+  }
 }
 .BannerDeep {
   background-color: $scanrdeepblueColor;
@@ -173,6 +181,10 @@ $alphaWhite7: rgba(255, 255, 255, 0.7);
   }
   .Button {
     background-color: $scanrmiddlegreyColor;
+    color: $scanrdeepblueColor;
+  }
+  .Button:hover, .Button:focus {
+    background-color: white;
     color: $scanrdeepblueColor;
   }
 }
