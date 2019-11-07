@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
-// import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import WikidataCard from '../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
@@ -25,9 +24,9 @@ const messages = {
  * Tests unitaires : .
 */
 class SocialNetworksFlow extends Component {
-  state = {
-    isOpen: false,
-  };
+  // state = {
+  //   isOpen: false,
+  // };
 
   existFow = (socialNetwork) => {
     if (this.props.socialMedias.find(el => el.type === socialNetwork)) {
@@ -45,9 +44,9 @@ class SocialNetworksFlow extends Component {
     return false;
   }
 
-  buttonHandler = () => {
-    this.setState(prevState => ({ isOpen: !prevState.isOpen }));
-  }
+  // buttonHandler = () => {
+  //   this.setState(prevState => ({ isOpen: !prevState.isOpen }));
+  // }
 
   getWikidataId = () => {
     if (this.props.externalIds && this.props.externalIds.length > 0) {
