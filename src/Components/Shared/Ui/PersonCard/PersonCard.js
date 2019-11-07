@@ -9,7 +9,7 @@ import SubmitBox from '../../SubmitBox/SubmitBox';
 import classes from './PersonCard.scss';
 
 import logo from '../../svg/icon-fiche-responsable_h.svg';
-import ButtonToPage from '../Buttons/ButtonToPage';
+import ButtonToPage from '../Buttons/ButtonToPage2';
 
 
 /* Gestion des langues */
