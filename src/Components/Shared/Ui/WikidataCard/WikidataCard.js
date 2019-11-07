@@ -3,9 +3,18 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import Md5 from 'md5';
 
-// import getSelectKey from '../../../../Utils/getSelectKey';
+import logo from '../../images/wikipedia.png';
 
 import classes from './WikidataCard.scss';
+
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * WikidataCard component
@@ -26,6 +35,7 @@ class WikidataCard extends Component {
   componentDidMount() {
     this.getData();
   }
+
 
   getData = () => {
     /* eslint-disable */
@@ -60,15 +70,22 @@ class WikidataCard extends Component {
         });
       }
     });
-        /* eslint-enable */
+    /* eslint-enable */
   }
 
+
   render() {
+    const wikiLink = `https://fr.wikipedia.org/wiki/${this.state.title}`;
     return (
       <div className={classes.WikidataCard}>
-        <p className={classes.Title}>
-          Wikipedia
-        </p>
+        <div className={`d-flex  justify-content-between ${classes.Header}`}>
+          <p className={classes.Title}>
+            Wikipedia
+          </p>
+          <div className={classes.LogoWiki}>
+            <img src={logo} alt="Wikipedia" />
+          </div>
+        </div>
         <div className={classes.Content}>
           {
             (this.state.urlImageOnServer)
@@ -83,7 +100,9 @@ class WikidataCard extends Component {
           </p>
         </div>
         <p className={classes.Footer}>
-          footer
+          <a href={wikiLink} target="_blank" rel="noopener noreferrer">
+            {messages[this.props.language].wikiLink}
+          </a>
         </p>
       </div>
     );
