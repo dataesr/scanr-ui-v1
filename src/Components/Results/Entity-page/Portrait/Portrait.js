@@ -9,7 +9,7 @@ import Leaders from '../Shared/Leaders/Leaders';
 import Localisation from './subComponents/Localisation/Localisation';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import Web from './subComponents/Web/Web';
-import SocialNetworksFlow from './subComponents/SocialNetworksFlow/SocialNetworksFlow';
+// import SocialNetworksFlow from './subComponents/SocialNetworksFlow/SocialNetworksFlow';
 
 import Background from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
