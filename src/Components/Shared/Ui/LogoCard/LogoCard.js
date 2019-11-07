@@ -29,13 +29,15 @@ const LogoCard = (props) => {
   return (
     <div className={`${classes.card} ${cssClass}`}>
       {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
-      <ReactImageFallback
-        src={src}
-        fallbackImage={props.url}
-        initialImage={initialImage}
-        alt={props.label}
-        className={`img-fluid ${classes.img}`}
-      />
+      <a href={props.targetUrl} target="_blank" rel="noopener noreferrer">
+        <ReactImageFallback
+          src={src}
+          fallbackImage={props.url}
+          initialImage={initialImage}
+          alt={props.label}
+          className={`img-fluid ${classes.img}`}
+        />
+      </a>
     </div>
   );
 };
@@ -51,4 +53,5 @@ LogoCard.propTypes = {
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
   modifyMode: PropTypes.bool,
   allData: PropTypes.object.isRequired,
+  targetUrl: PropTypes.string,
 };
