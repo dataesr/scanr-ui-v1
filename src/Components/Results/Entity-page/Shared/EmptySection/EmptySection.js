@@ -25,7 +25,7 @@ const messages = {
 const EmptySection = props => (
   <Fragment>
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`container ${classes.EmptySection}`}>
+      <div className={`container ${classes.EmptySection}`} style={{ color: props.color }}>
         <FormattedHTMLMessage id="EmptySection.message" />
         {(props.modifyMode) ? (
           <SubmitBox
@@ -49,4 +49,5 @@ EmptySection.propTypes = {
   masterKey: PropTypes.string,
   modifyMode: PropTypes.bool,
   modifyModeHandle: PropTypes.func,
+  color: PropTypes.string,
 };
