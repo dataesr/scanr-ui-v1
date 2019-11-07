@@ -66,6 +66,7 @@ class Autocomplete extends Component {
       }
       return false;
     });
+    /* eslint-disable*/
     return (
       <div className={`d-flex flex-column mb-3 ${classes.Container}`}>
         <form id="searchForm">
@@ -97,11 +98,11 @@ class Autocomplete extends Component {
           >
             <ul id="suggestions" className={`d-flex flex-column ${classes.Autocomplete}`}>
               {
-                filtered.map(filter => (
+                filtered.map((filter, ind) => (
                   <li
                     role="option"
                     aria-selected={false}
-                    key={filter.label}
+                    key={`${filter.id}_${ind}`}
                     id={filter.label}
                     className={`p-1 pl-2 pr-2 ${classes.Suggestion}`}
                     onClick={() => this.submitWrapper(filter.project)}

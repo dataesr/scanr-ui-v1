@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import { ReactTitle } from 'react-meta-tags';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -70,6 +71,7 @@ class HeaderTitle extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
+          <ReactTitle title={this.props.label} />
           <div className="container">
             <div className="row">
               <div className="col-md-9">
@@ -97,7 +99,7 @@ class HeaderTitle extends Component {
                     <select id="headerTitleSelect" className="form-control" onChange={this.handleChange} value={this.state.selectedOption}>
                       {
                         list.map(item => (
-                          <option value={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
+                          <option value={item} key={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
                         ))
                       }
                     </select>

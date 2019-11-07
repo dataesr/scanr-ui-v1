@@ -7,6 +7,7 @@ import { API_PERSONS_SEARCH_END_POINT } from '../../../../../config/config';
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import NbPersonsCard from './nbPersonsCard';
 import GenderGraphCard from './genderGraphCard';
+import PersonCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
 
 import classes from '../Team.scss';
 
@@ -69,7 +70,7 @@ class TeamComposition extends Component {
             direction: 'DESC',
             type: 'COUNT',
           },
-          size: 50,
+          size: 10000,
         },
       },
     };
@@ -91,6 +92,23 @@ class TeamComposition extends Component {
   }
 
   render() {
+    const teamModalData = (
+      <ul className={`${classes.noListStyle} d-flex flex-column justify-content-between align-content-stretch p-0 m-0`}>
+        {
+          this.props.persons.map(person => (
+            <li key={person.id} className={`${classes.OneFourth} ${classes.noListStyle}`}>
+              <PersonCard
+                language={this.props.language}
+                data={person.person}
+                small
+                onlyExisting
+              />
+            </li>
+          ))
+        }
+      </ul>
+    );
+
     let styleCss = null;
     if (this.props.persons.length === 0) {
       styleCss = {
@@ -120,7 +138,11 @@ class TeamComposition extends Component {
               }
             </div>
             <div className={`col-md-5 ${classes.NoSpace}`}>
-              <NbPersonsCard nbPersons={this.state.nbPersons} />
+              <NbPersonsCard
+                language={this.props.language}
+                nbPersons={this.state.nbPersons}
+                personsModalList={teamModalData}
+              />
             </div>
           </div>
         </div>

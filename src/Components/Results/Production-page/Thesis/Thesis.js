@@ -136,7 +136,7 @@ class Thesis extends Component {
 
   render() {
     if (!this.props.data) {
-      return null;
+      return <div>null</div>;
     }
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
@@ -339,7 +339,7 @@ class Thesis extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > 1)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterCard
                           counter={this.props.data.authors.length}
                           title=""
@@ -353,7 +353,7 @@ class Thesis extends Component {
                   sortedAuthors.map((author, index) => {
                     if (index < nbAuthorsToShow) {
                       return (
-                        <div className={`col-3 ${classes.CardContainer}`}>
+                        <div className={`col-md-3 ${classes.CardContainer}`}>
                           <PersonCard
                             data={author}
                             showTitle={false}
@@ -372,7 +372,7 @@ class Thesis extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > nbAuthorsToShow)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterListCard
                           language={this.props.language}
                           data={sortedAuthors}
@@ -399,19 +399,19 @@ class Thesis extends Component {
                     >
                       <FormattedHTMLMessage id="Publication.affiliations.title" defaultMessage="Publication.affiliations.title" />
                     </SectionTitle>
-                    <ul className={`row ${classes.Ul}`}>
+                    <div className={`row ${classes.Ul}`}>
                       {
                         this.props.data.affiliations.map(item => (
-                          <li key={item} className={`col-3 ${classes.Li}`}>
+                          <div key={item} className={`col-md-4 ${classes.Li}`}>
                             <AffiliationCard
                               data={item}
                               small
                               language={this.props.language}
                             />
-                          </li>
+                          </div>
                         ))
                       }
-                    </ul>
+                    </div>
                   </div>
                 </section>
               ) : null
@@ -432,7 +432,7 @@ class Thesis extends Component {
                     <ul className={`row ${classes.Ul}`}>
                       {
                         this.state.similarProductions.map(item => (
-                          <li key={item} className={`col-4 ${classes.Li}`}>
+                          <li key={item} className={`col-md-4 ${classes.Li}`}>
                             <ProductionCard
                               data={item.value}
                               small

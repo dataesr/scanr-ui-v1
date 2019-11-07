@@ -43,16 +43,16 @@ class SimilarProjects extends Component {
     };
     Axios.post(url, data).then((response) => {
       if (response.data.total > 0) {
-        const data3 = [];
-        for (let i = 0; i < 7; i += 1) {
+        const data6 = [];
+        for (let i = 0; i < response.data.total; i += 1) {
           if (response.data.results[i].value.id !== this.props.data.id) {
-            data3.push(response.data.results[i]);
+            data6.push(response.data.results[i]);
           }
-          if (data3.length === 6) {
+          if (data6.length === 6) {
             break;
           }
         }
-        this.setState({ data: data3 });
+        this.setState({ data: data6 });
       }
     });
   }
