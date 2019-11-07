@@ -8,6 +8,7 @@ import SimpleListCard from '../../../../../Shared/Ui/SimpleListCard/SimpleListCa
 import DescriptionCard from '../../../../../Shared/Ui/DescriptionCard/DescriptionCard';
 
 import getSelectKey from '../../../../../../Utils/getSelectKey';
+import getWebSiteByType from '../../../../../../Utils/getWebSiteByType';
 
 import classes from './Identity.scss';
 
@@ -82,6 +83,7 @@ class Identity extends Component {
                 masterKey={this.props.masterKey}
                 modifyMode={this.props.modifyMode}
                 allData={this.props.allData}
+                targetUrl={getWebSiteByType(this.props.links, 'main')}
               />
             </div>
             <div className={`col-lg-6 ${classes.CardContainer}`}>
@@ -140,6 +142,7 @@ Identity.propTypes = {
   acronym: PropTypes.array,
   description: PropTypes.object,
   externalIds: PropTypes.array,
+  links: PropTypes.array,
   id: PropTypes.string,
   name: PropTypes.object,
   nature: PropTypes.string,

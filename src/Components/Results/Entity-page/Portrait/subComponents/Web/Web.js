@@ -7,6 +7,8 @@ import MainWebSiteButton from './MainWebSiteButton';
 import WebSiteButton from './WebSiteButton';
 import WikidataCard from '../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
+import getWebSiteByType from '../../../../../../Utils/getWebSiteByType';
+
 import { OTHER_WEBSITES } from '../../../../../../config/config';
 
 import classes from './Web.scss';
@@ -29,15 +31,6 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
-  const getWebSiteByType = (type) => {
-    let url = null;
-    if (props.links) {
-      const el = props.links.find(site => (site.type === type));
-      url = (el && el.url) ? el.url : null;
-    }
-    return url;
-  };
-
   const existFlow = (socialNetwork) => {
     const find = props.socialMedias.filter(el => el.type === socialNetwork);
     if (socialNetwork === 'twitter' && find.length > 0 && find[0].url.indexOf('twitter.com') === -1) {
@@ -127,7 +120,7 @@ const Web = (props) => {
     return (
       <div className="col-md-2 p-0">
         <span className={classes.SocialMedia}>
-          <a href={urlSocialMedia}>
+          <a href={urlSocialMedia} target="_blank" rel="noopener noreferrer">
             {logo}
           </a>
         </span>
@@ -135,12 +128,12 @@ const Web = (props) => {
     );
   };
 
-  const mainWebSiteUrl = getWebSiteByType('main');
+  const mainWebSiteUrl = getWebSiteByType(props.links, 'main');
 
   const othWebSites = [];
   OTHER_WEBSITES.forEach((type) => {
     if (type !== 'wikipedia') {
-      othWebSites.push({ type, url: getWebSiteByType(type) });
+      othWebSites.push({ type, url: getWebSiteByType(props.links, type) });
     }
   });
 
