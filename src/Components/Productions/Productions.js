@@ -2,23 +2,17 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
-import InputRange from 'react-input-range';
-import moment from 'moment';
-
-import getSelectKey from '../../Utils/getSelectKey';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../config/config';
-import Autocomplete from '../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../Results/Entity-page/Shared/EmptySection/EmptySection';
-import Select from '../Shared/Ui/Select/Select';
+import PublicationCard from '../Search/SearchResults/ResultCards/PublicationCard';
 import SectionTitle from '../Shared/Results/SectionTitle/SectionTitle';
-import ProductionDetail from './ProductionDetail';
 import SunburstChart from '../Shared/GraphComponents/Graphs/HighChartsSunburst';
+import BarChart from '../Shared/GraphComponents/Graphs/HighChartsBar';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
 
 import classes from './Productions.scss';
 
@@ -32,33 +26,22 @@ import classes from './Productions.scss';
 */
 class Productions extends Component {
   state = {
-    viewMode: 'list',
     data: [],
-    initialData: [],
-    selectedProduction: {},
-    typeFilter: [],
-    filterValue: null,
-    autocompleteData: null,
+    total: '',
+    isOa: {},
+    journals: {},
+    years: {},
+    types: {},
     modifyMode: false,
-    sliderYear: {
-      min: 2000,
-      max: new Date().getFullYear(),
-    },
-    minYear: 2000,
-    maxYear: new Date().getFullYear(),
+    graph: 'isOa',
   }
 
   componentDidMount() {
     this.getData();
-    // this.getYearsBounds();
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.data !== this.state.data && this.state.data.length > 0) {
-      // this.sortByYear();
-      this.createTypeFilter();
-      this.createAutocompleteData();
-    }
+  changeGraphHandler = (nextGraph) => {
+    this.setState({ graph: nextGraph });
   }
 
   getDataGraph = () => {
@@ -117,11 +100,10 @@ class Productions extends Component {
   }
 
   getData = () => {
-    console.log(this.props.match.params.id, this.props.match.params.api);
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const filterKey = this.props.match.params.api ? 'affiliations.id': null;
-    const data = {
-      pageSize: 5000,
+    const filterKey = 'affiliations.id';
+    const request = {
+      pageSize: 50,
       filters: {},
       aggregations: {
         types: {
@@ -134,6 +116,26 @@ class Productions extends Component {
           },
           size: 50,
         },
+        journal: {
+          field: 'source.title',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 10,
+        },
+        years: {
+          field: 'year',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 100,
+        },
         isOa: {
           field: 'isOa',
           filters: {},
@@ -142,57 +144,34 @@ class Productions extends Component {
             direction: 'DESC',
             type: 'COUNT',
           },
-          size: 2,
+          size: 10,
         },
       },
     };
-    data.filters[filterKey] = {
+    request.filters[filterKey] = {
       type: 'MultiValueSearchFilter',
       op: 'all',
       values: [this.props.match.params.id],
     };
-    Axios.post(url, data).then((response) => {
-      // eslint-disable-next-line
-      console.log(response.data);
-      const listOrGraph = (response.data.total > 20) ? 'graph' : 'list';
-      this.setState({ data: response.data.results, initialData: response.data.results, viewMode: listOrGraph });
-    });
-  }
-
-  getYearsBounds = () => {
-    const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const filterKey = this.props.filterKey;
-    const data = {
-      pageSize: 5000,
-      lang: 'fr',
-      sourceFields: ['id'],
-      filters: {},
-    };
-    data.filters[filterKey] = {
+    request.filters.productionType = {
       type: 'MultiValueSearchFilter',
       op: 'all',
-      values: [this.props.objectId],
+      values: ['publication'],
     };
-    Axios.post(url, data).then((response) => {
-      const facetPublicationDates = response.data.facets.find(facet => facet.id === 'facet_publication_date');
-
-      if (facetPublicationDates) {
-        const allYears = [];
-        facetPublicationDates.entries.forEach(e => (allYears.push(e.value.substring(0, 4))));
-
-        const minYear = Math.min(...allYears);
-        const maxYear = Math.max(...allYears);
-        this.setState({ minYear, maxYear, sliderYear: { min: minYear, max: maxYear } });
-      }
+    Axios.post(url, request).then((response) => {
+      // eslint-disable-next-line
+      console.log(response.data);
+      this.setState(
+        {
+          data: response.data.results,
+          total: response.data.total,
+          journals: response.data.facets.find(item => item.id === 'journal'),
+          years: response.data.facets.find(facet => facet.id === 'years'),
+          domains: response.data.facets.find(facet => facet.id === 'domains'),
+          types: response.data.facets.find(facet => facet.id === 'types'),
+        },
+      );
     });
-  }
-
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
-
-  viewModeClickHandler = (viewMode) => {
-    this.setState({ viewMode });
   }
 
   // eslint-disable-next-line
@@ -205,203 +184,11 @@ class Productions extends Component {
     }).catch(e => console.log('error:', e));
   };
 
-  createTypeFilter = () => {
-    const typeFilter = [];
-    for (let i = 0; i < this.state.data.length; i += 1) {
-      const type = this.state.data[i].value.productionType;
-      const found = typeFilter.find(item => item.value === type);
-      if (found) {
-        found.count += 1;
-      } else {
-        const obj = {};
-        obj.value = type;
-        obj.count = 1;
-        typeFilter.push(obj);
-      }
-    }
-    this.setState({ typeFilter });
-  }
-
-  setTypeFilter = (filterValue) => {
-    if (filterValue !== 'all') {
-      /* eslint-disable-next-line */
-      const data = this.state.data.filter(item => item.value.productionType.includes(filterValue));
-      this.setState({ data });
-    } else {
-      this.setState(prevState => ({ data: prevState.initialData, filterValue: null }));
-    }
-  }
-
-  createAutocompleteData = () => {
-    const autocompleteData = [];
-    for (let i = 0; i < this.state.data.length; i += 1) {
-      const obj = {};
-      const values = [];
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.default) {
-        values.push(this.state.data[i].value.title.default);
-      }
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.fr) {
-        values.push(this.state.data[i].value.title.fr);
-      }
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.en) {
-        values.push(this.state.data[i].value.title.en);
-      }
-
-      obj.label = getSelectKey(this.state.data[i].value, 'title', this.props.language, 'default');
-      obj.values = values;
-      obj.production = this.state.data[i];
-      autocompleteData.push(obj);
-    }
-    this.setState({ autocompleteData });
+  modifyModeHandle = () => {
+    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
   }
 
   renderViewList = (messages) => {
-    const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
-    const content = filteredData.map((item, i) => {
-      let first = false;
-      if (i > 0) {
-        first = (moment(filteredData[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
-      }
-      let selected = '';
-      if (item === this.state.selectedProduction) {
-        selected = classes.Selected;
-      }
-      const authorsRole = (this.props.objectName) ? item.value.authors.filter(author => author.fullName === this.props.objectName) : null;
-      const role = (authorsRole && authorsRole.length > 0) ? authorsRole[0].role : null;
-      return (
-        <Fragment key={item.value.id}>
-          {
-            (i === 0 || first)
-              ? (
-                <div className={classes.TitleYear}>
-                  {
-                    moment(item.value.publicationDate).format('YYYY')
-                  }
-                </div>
-              )
-              : null
-          }
-          <div
-            className={`${classes.Item} ${selected}`}
-            onClick={() => this.setSelectedProductionHandler(item)}
-            onKeyPress={() => this.setSelectedProductionHandler(item)}
-            role="button"
-            tabIndex={0}
-          >
-            <p className={classes.Title}>
-              {item.value.title.default}
-            </p>
-            <div className={`d-flex align-items-center ${classes.Type}`}>
-              {
-                (role) ? <p className="mb-0 mr-auto">{messages[this.props.language][`Production.thesis.role.${role}`]}</p> : <p className="mb-0 mr-auto" />
-              }
-              <span className={classes[item.value.productionType]} />
-              <p className="m-0">{messages[this.props.language][`Productions.${item.value.productionType}`]}</p>
-            </div>
-          </div>
-        </Fragment>
-      );
-    });
-
-    const typeFilterPlaceHolder = (this.state.filterValue)
-      ? `${this.state.data.length} ${this.state.filterValue}`
-      : `${this.state.data.length} ${messages[this.props.language]['Productions.selectTypesFilter.placeHolder']}`;
-
-    return (
-      <Fragment>
-        <div className={`row ${classes.Filters}`}>
-          <div className="col-md">
-            <Select
-              allLabel={messages[this.props.language]['Productions.selectTypesFilter.allLabel']}
-              count={toString(this.state.data.length)}
-              title={messages[this.props.language]['Productions.selectTypesFilter.title']}
-              placeHolder={typeFilterPlaceHolder}
-              data={this.state.typeFilter}
-              onSubmit={this.setTypeFilter}
-            />
-          </div>
-          <div className={`col-md ${classes.RangeSlider}`}>
-            <div className={classes.Title}>
-              Sélectionner une période
-            </div>
-            <div className={classes.Slider}>
-              <InputRange
-                minValue={this.state.minYear}
-                maxValue={this.state.maxYear}
-                formatLabel={value => value}
-                value={this.state.sliderYear}
-                onChange={value => this.setState({ sliderYear: value })}
-              />
-            </div>
-          </div>
-          <div className="col-md">
-            <Autocomplete
-              title={messages[this.props.language]['Productions.autoCompleteTypesFilter.title']}
-              placeHolder={typeFilterPlaceHolder}
-              data={this.state.autocompleteData}
-              onSubmit={this.setSelectedProductionHandler}
-            />
-          </div>
-        </div>
-        {/* /row */}
-        <div className="row">
-          <div className="col-lg-5">
-            <div className={classes.ListOfProductions}>
-              {content}
-            </div>
-          </div>
-          <div className="col-lg-7">
-            <ProductionDetail data={this.state.selectedProduction} language={this.props.language} />
-          </div>
-        </div>
-      </Fragment>
-    );
-  }
-
-  renderViewGraph = (data, messages) => {
-    const pubOa = data.find(el => (el.id === 'Publications-oa'));
-    const pubNoa = data.find(el => (el.id === 'Publications-noa'));
-    const thesesOa = data.find(el => (el.id === 'Theses-oa'));
-    const thesesNoa = data.find(el => (el.id === 'Theses-noa'));
-
-    return (
-      <div className="row">
-        <div className={`col-md ${classes.Legendary}`}>
-          <div className={classes.Production}>
-            <span className={`${classes.Bullet} ${classes.publicationColor}`} />
-            {`${(pubOa.value + pubNoa.value).toLocaleString()} ${messages[this.props.language]['Productions.publication']}`}
-            <div className={classes.Sub}>
-              {`${pubOa.value.toLocaleString()} ${messages[this.props.language]['Productions.isOpen']}`}
-            </div>
-            <div className={classes.Sub}>
-              {`${pubNoa.value.toLocaleString()} ${messages[this.props.language]['Productions.isClosed']}`}
-            </div>
-          </div>
-
-          <div className={classes.Production}>
-            <span className={`${classes.Bullet} ${classes.theseColor}`} />
-            {`${(thesesOa.value + thesesNoa.value).toLocaleString()} ${messages[this.props.language]['Productions.thesis']}`}
-            <div className={classes.Sub}>
-              {`${thesesOa.value.toLocaleString()} ${messages[this.props.language]['Productions.isOpen']}`}
-            </div>
-            <div className={classes.Sub}>
-              {`${thesesNoa.value.toLocaleString()} ${messages[this.props.language]['Productions.isClosed']}`}
-            </div>
-          </div>
-        </div>
-        <div className="col-md">
-          <SunburstChart text="Productions" series={data} />
-        </div>
-      </div>
-    );
-  }
-
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
     if (!this.state.data || this.state.data.length === 0) {
       return (
         <Fragment>
@@ -432,6 +219,49 @@ class Productions extends Component {
         </Fragment>
       );
     }
+    return (
+      <div className="row">
+        <div className="col-md-4">
+          {
+            this.state.data.map(publi => (
+              <PublicationCard
+                data={publi.value}
+                language={this.props.language}
+              />
+            ))
+          }
+        </div>
+      </div>
+    );
+  }
+
+  whichGraph = (data) => {
+    if (this.state.graph === 'isOa') {
+      return <SunburstChart text="Productions" series={data} />;
+    }
+    return (
+      <BarChart
+        filename={this.state.graph}
+        data={this.state[this.state.graph]}
+        language={this.props.language}
+      />
+    );
+  }
+
+  renderViewGraph = data => (
+    <div className="row">
+      <div className={`col-md-12 ${classes.graphCard}`}>
+        {this.whichGraph(data)}
+      </div>
+    </div>
+  );
+
+  render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
+
 
     const dataGraph = this.getDataGraph();
 
@@ -444,56 +274,45 @@ class Productions extends Component {
                 <div className="d-flex flex-wrap align-items-center">
                   <i className="fas fa-folder-open" />
                   <span className={`mr-auto my-2 ${classes.Label}`}>
-                    {this.state.data.length}
+                    {this.state.total || 0}
                     &nbsp;
                     {messages[this.props.language]['Productions.label']}
                   </span>
-                  <div className="d-flex flex-wrap align-items-center">
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewList"
-                      onClick={() => this.viewModeClickHandler('list')}
-                      onKeyPress={() => this.viewModeClickHandler('list')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-list" />
-                        </span>
-                        <p className="m-0" id="productionViewList">
-                          Liste
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewGraph"
-                      onClick={() => this.viewModeClickHandler('graph')}
-                      onKeyPress={() => this.viewModeClickHandler('graph')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-chart-pie" />
-                        </span>
-                        <p className="m-0" id="productionViewGraph">
-                          Visualisation
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
-              {/* /row */}
-              <hr />
+              <ul className="nav justify-content-center py-1">
+                <li
+                  className="btn btn-primary mx-1"
+                  onClick={() => this.changeGraphHandler('isOa')}
+                  onKeyPress={() => this.changeGraphHandler('isOa')}
+                >
+                  OpenAccess
+                </li>
+                <li
+                  className="btn btn-primary mx-1"
+                  onClick={() => this.changeGraphHandler('journals')}
+                  onKeyPress={() => this.changeGraphHandler('journals')}
+                >
+                  Journals
+                </li>
+                <li
+                  className="btn btn-primary mx-1"
+                  onClick={() => this.changeGraphHandler('years')}
+                  onKeyPress={() => this.changeGraphHandler('years')}
+                >
+                  Years
+                </li>
+                <li
+                  className="btn btn-primary mx-1"
+                  onClick={() => this.changeGraphHandler('types')}
+                  onKeyPress={() => this.changeGraphHandler('types')}
+                >
+                  Types
+                </li>
+              </ul>
+
               {
-                (this.state.viewMode === 'list')
+                !this.state.data || this.state.data.length < 6
                   ? this.renderViewList(messages)
                   : this.renderViewGraph(dataGraph, messages)
               }
@@ -509,8 +328,6 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
-  // id: PropTypes.string.isRequired,
-  objectId: PropTypes.string.isRequired,
-  objectName: PropTypes.string,
-  filterKey: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
+  productionType: PropTypes.string,
 };
