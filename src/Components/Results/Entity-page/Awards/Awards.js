@@ -67,6 +67,7 @@ class Awards extends Component {
                       masterKey="Awards"
                       modifyMode={this.state.modifyMode}
                       modifyModeHandle={this.modifyModeHandle}
+                      color="#fff"
                     />
                   </div>
                 </div>

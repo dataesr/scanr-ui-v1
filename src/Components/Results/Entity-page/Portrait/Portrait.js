@@ -67,6 +67,7 @@ class Portrait extends Component {
                 <Identity
                   acronym={this.props.data.acronym}
                   externalIds={this.props.data.externalIds || []}
+                  links={this.props.data.links || []}
                   id={this.props.data.id}
                   language={this.props.language}
                   description={this.props.data.description}

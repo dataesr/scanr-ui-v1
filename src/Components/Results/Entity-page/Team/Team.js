@@ -72,6 +72,7 @@ class Team extends Component {
                       masterKey="Team"
                       modifyMode={this.state.modifyMode}
                       modifyModeHandle={this.modifyModeHandle}
+                      color="#fff"
                     />
                   </div>
                 </div>
