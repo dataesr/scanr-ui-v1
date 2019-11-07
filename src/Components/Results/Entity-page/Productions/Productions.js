@@ -5,14 +5,13 @@ import Axios from 'axios';
 import InputRange from 'react-input-range';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../config/config';
-import getSelectKey from '../../../../Utils/getSelectKey';
 
-import Autocomplete from '../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../Shared/EmptySection/EmptySection';
-import Select from '../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
-import ProductionDetail from './ProductionDetail';
+import ProductionDetail from '../../../Shared/Results/Productions/ProductionDetail';
 import SunburstChart from '../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
+import BarChart from '../../../Shared/GraphComponents/Graphs/HighChartsBar';
+import PublicationCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -33,32 +32,45 @@ import classes from './Productions.scss';
 */
 class Productions extends Component {
   state = {
+    query: '',
+    currentQueryText: '',
+    total: '',
+    isOa: {},
+    journals: {},
+    years: {},
+    types: {},
+    modifyMode: false,
+    activeGraph: 'isOa',
     viewMode: 'list',
     data: [],
     initialData: [],
     selectedProduction: {},
-    typeFilter: [],
-    filterValue: null,
     autocompleteData: null,
-    modifyMode: false,
     sliderYear: {
-      min: 2000,
-      max: new Date().getFullYear(),
+      min: null,
+      max: null,
     },
-    minYear: 2000,
-    maxYear: new Date().getFullYear(),
+    minYear: null,
+    maxYear: null,
   }
 
   componentDidMount() {
-    this.getData();
-    // this.getYearsBounds();
+    const initial = true;
+    this.getData(initial);
+    // this.setYearsBounds();
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevState.data !== this.state.data && this.state.data.length > 0) {
-      // this.sortByYear();
-      this.createTypeFilter();
-      this.createAutocompleteData();
+    if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
+      this.getData();
+    }
+    if (prevState.query !== this.state.query) {
+      const sliderYears = {
+        min: null,
+        max: null,
+      };
+      this.setState({ sliderYears });
+      this.getData(true);
     }
   }
 
@@ -117,16 +129,25 @@ class Productions extends Component {
     return dataGraph;
   }
 
-  getData = () => {
+  getData = (initial = false) => {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const data = {
-      pageSize: 5000,
-      // sourceFields: ['id', 'title', 'type', 'year', 'acronym', 'duration', 'label', 'url', 'description', 'founding', 'participants'],
+    let st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
+    let en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
+    if (initial) {
+      st = 2000;
+      en = 2020;
+    }
+    const start = new Date(Date.UTC(st, 0, 1)).toISOString();
+    const end = new Date(Date.UTC(en, 11, 31)).toISOString();
+    const request = {
+      pageSize: 500,
+      query: this.state.query,
       filters: {
-        'affiliations.id': {
-          type: 'MultiValueSearchFilter',
-          op: 'all',
-          values: [this.props.structureId],
+        publicationDate: {
+          type: 'DateRangeFilter',
+          max: end,
+          min: start,
+          missing: false,
         },
       },
       aggregations: {
@@ -140,38 +161,78 @@ class Productions extends Component {
           },
           size: 50,
         },
-      },
-    };
-    Axios.post(url, data).then((response) => {
-      // eslint-disable-next-line
-      this.setState({ data: response.data.results, initialData: response.data.results });
-    });
-  }
-
-  getYearsBounds = () => {
-    const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const data = {
-      pageSize: 5000,
-      sourceFields: ['id'],
-      filters: {
-        'affiliations.id': {
-          type: 'MultiValueSearchFilter',
-          op: 'all',
-          values: [this.props.structureId],
+        journal: {
+          field: 'source.title',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 10,
+        },
+        years: {
+          field: 'year',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 100,
+        },
+        isOa: {
+          field: 'isOa',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 10,
         },
       },
     };
-    Axios.post(url, data).then((response) => {
-      const facetPublicationDates = response.data.facets.find(facet => facet.id === 'facet_publication_date');
-
-      if (facetPublicationDates) {
-        const allYears = [];
-        facetPublicationDates.entries.forEach(e => (allYears.push(e.value.substring(0, 4))));
-
-        const minYear = Math.min(...allYears);
-        const maxYear = Math.max(...allYears);
-        this.setState({ minYear, maxYear, sliderYear: { min: minYear, max: maxYear } });
+    request.filters[this.props.filterKey] = {
+      type: 'MultiValueSearchFilter',
+      op: 'all',
+      values: [this.props.match.params.id],
+    };
+    request.filters.productionType = {
+      type: 'MultiValueSearchFilter',
+      op: 'all',
+      values: ['publication'],
+    };
+    Axios.post(url, request).then((response) => {
+      // eslint-disable-next-line
+      let years = [2000, 2020]
+      try {
+        years = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
+      } catch (err) {
+        console.log(err);
       }
+      const stableState = { ...this.state };
+      let minYear = stableState.minYear;
+      let maxYear = stableState.maxYear;
+      if (initial) {
+        minYear = Math.min(...years);
+        maxYear = Math.max(...years);
+      }
+      this.setState({
+        data: response.data.results,
+        initialData: response.data.results,
+        total: response.data.total,
+        sliderYear: {
+          min: Math.min(...years),
+          max: Math.max(...years),
+        },
+        minYear,
+        maxYear,
+        journals: response.data.facets.find(item => item.id === 'journal'),
+        years: response.data.facets.find(facet => facet.id === 'years'),
+        domains: response.data.facets.find(facet => facet.id === 'domains'),
+        types: response.data.facets.find(facet => facet.id === 'types'),
+      });
     });
   }
 
@@ -183,68 +244,29 @@ class Productions extends Component {
     this.setState({ viewMode });
   }
 
+  queryTextChangeHandler = (e) => {
+    this.setState({ currentQueryText: e.target.value });
+  }
+
+  queryChangeHandler = () => {
+    const prevState = { ...this.state };
+    this.setState({ query: prevState.currentQueryText });
+  }
+
+  changeGraphHandler = (nextGraph) => {
+    this.setState({ activeGraph: nextGraph });
+  }
+
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace(new RegExp('/', 'g'), '%25252f')}`;
+    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace(new RegExp('/', 'g'), '%252f')}`;
     Axios.get(url).then((response) => {
-      // eslint-disable-next-line
-      console.log('setSelectedProductionHandler_jre:', response);
       this.setState({ selectedProduction: response.data });
       // eslint-disable-next-line
     }).catch(e => console.log('error:', e));
   };
 
-  createTypeFilter = () => {
-    const typeFilter = [];
-    for (let i = 0; i < this.state.data.length; i += 1) {
-      const type = this.state.data[i].value.productionType;
-      const found = typeFilter.find(item => item.value === type);
-      if (found) {
-        found.count += 1;
-      } else {
-        const obj = {};
-        obj.value = type;
-        obj.count = 1;
-        typeFilter.push(obj);
-      }
-    }
-    this.setState({ typeFilter });
-  }
-
-  setTypeFilter = (filterValue) => {
-    if (filterValue !== 'all') {
-      /* eslint-disable-next-line */
-      const data = this.state.data.filter(item => item.value.productionType.includes(filterValue));
-      this.setState({ data });
-    } else {
-      this.setState(prevState => ({ data: prevState.initialData, filterValue: null }));
-    }
-  }
-
-  createAutocompleteData = () => {
-    const autocompleteData = [];
-    for (let i = 0; i < this.state.data.length; i += 1) {
-      const obj = {};
-      const values = [];
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.default) {
-        values.push(this.state.data[i].value.title.default);
-      }
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.fr) {
-        values.push(this.state.data[i].value.title.fr);
-      }
-      if (this.state.data[i].value && this.state.data[i].value.title && this.state.data[i].value.title.en) {
-        values.push(this.state.data[i].value.title.en);
-      }
-
-      obj.label = getSelectKey(this.state.data[i].value, 'title', this.props.language, 'default');
-      obj.values = values;
-      obj.production = this.state.data[i];
-      autocompleteData.push(obj);
-    }
-    this.setState({ autocompleteData });
-  }
-
-  renderViewList = (messages) => {
+  renderViewList = () => {
     const filteredData = this.state.data;
 
     const content = filteredData.map((item) => {
@@ -274,23 +296,9 @@ class Productions extends Component {
       );
     });
 
-    const typeFilterPlaceHolder = (this.state.filterValue)
-      ? `${this.state.data.length} ${this.state.filterValue}`
-      : `${this.state.data.length} ${messages[this.props.language]['Entity.productions.selectTypesFilter.placeHolder']}`;
-
     return (
       <Fragment>
-        <div className={`row ${classes.Filters}`}>
-          <div className="col-md">
-            <Select
-              allLabel={messages[this.props.language]['Entity.productions.selectTypesFilter.allLabel']}
-              count={this.state.data.length}
-              title={messages[this.props.language]['Entity.productions.selectTypesFilter.title']}
-              placeHolder={typeFilterPlaceHolder}
-              data={this.state.typeFilter}
-              onSubmit={this.setTypeFilter}
-            />
-          </div>
+        <div className={`row align-items-center ${classes.Filters}`}>
           <div className={`col-md ${classes.RangeSlider}`}>
             <div className={classes.Title}>
               Sélectionner une période
@@ -305,13 +313,28 @@ class Productions extends Component {
               />
             </div>
           </div>
+          <div className="col-md col-xs-hidden" />
           <div className="col-md">
-            <Autocomplete
-              title={messages[this.props.language]['Entity.projects.autoCompleteTypesFilter.title']}
-              placeHolder={typeFilterPlaceHolder}
-              data={this.state.autocompleteData}
-              onSubmit={this.setSelectedProductionHandler}
+            <label className={classes.Title} htmlFor="input">
+              Rechercher dans les publications
+            </label>
+            <input
+              type="text"
+              autoComplete="off"
+              id="input"
+              value={this.state.currentQueryText}
+              className={`pl-2 ${classes.SearchBar}`}
+              onChange={this.queryTextChangeHandler}
+              onFocus={this.setActive}
+              onBlur={this.setInactive}
             />
+            <button
+              className={classes.SearchButton}
+              type="submit"
+              onClick={this.queryChangeHandler}
+            >
+              <i className={`fas fa-search ${classes.SearchIcon}`} />
+            </button>
           </div>
         </div>
         {/* /row */}
@@ -366,6 +389,27 @@ class Productions extends Component {
       </div>
     );
   }
+
+  whichGraph = (data) => {
+    if (this.state.graph === 'isOa') {
+      return <SunburstChart text="Productions" series={data} />;
+    }
+    return (
+      <BarChart
+        filename={this.state.graph}
+        data={this.state[this.state.graph]}
+        language={this.props.language}
+      />
+    );
+  }
+
+  renderViewGraph = data => (
+    <div className="row">
+      <div className={`col-md-12 ${classes.graphCard}`}>
+        {this.whichGraph(data)}
+      </div>
+    </div>
+  );
 
   render() {
     const messages = {
@@ -480,5 +524,6 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
-  structureId: PropTypes.string.isRequired,
+  filterKey: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
 };
