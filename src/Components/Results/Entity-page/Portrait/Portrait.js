@@ -115,15 +115,18 @@ class Portrait extends Component {
                   socialMedias={this.props.data.socialMedias}
                   websites={this.props.data.websites}
                   links={this.props.data.links}
-                />
-
-                <SocialNetworksFlow
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  socialMedias={this.props.data.socialMedias}
                   externalIds={this.props.data.externalIds || []}
                 />
-
+                {
+                  /*
+                  <SocialNetworksFlow
+                    id={this.props.data.id}
+                    language={this.props.language}
+                    socialMedias={this.props.data.socialMedias}
+                    externalIds={this.props.data.externalIds || []}
+                  />
+                  */
+                }
               </div>
             </div>
           </section>
