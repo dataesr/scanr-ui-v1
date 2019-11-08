@@ -39,8 +39,8 @@ export default class ProductionYears extends Component {
     Axios.post(url, transformRequest(request))
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
-        var newData = { entries: newStateData.entries.sort((a, b) => a.value - b.value) };
-	newData.entries = newData.entries.filter(item => (item.value > "2012") && (item.value < "2024"));
+        const newData = { entries: newStateData.entries.sort((a, b) => a.value - b.value) };
+        newData.entries = newData.entries.filter(item => (item.value > '2012') && (item.value < '2024'));
         this.setState({ data: newData, isLoading: false });
       })
       .catch((error) => {

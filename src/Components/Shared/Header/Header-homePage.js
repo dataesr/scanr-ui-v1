@@ -127,7 +127,7 @@ const Header = (props) => {
   );
 };
 
-class ScrollLogo extends React.Component {
+/* class ScrollLogo extends React.Component {
   handleScroll = (e) => {
     const element = e.target;
     if (element.scrollHeight - element.scrollTop === element.clientHeight) {
@@ -147,6 +147,7 @@ class ScrollLogo extends React.Component {
     );
   }
 }
+*/
 
 
 export default Header;
