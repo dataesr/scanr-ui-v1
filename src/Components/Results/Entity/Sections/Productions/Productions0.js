@@ -229,9 +229,6 @@ class Productions extends Component {
         minYear = (years.length > 0) ? Math.min(...years) : 2000;
         maxYear = (years.length > 0) ? Math.max(...years) : 2020;
       }
-      if (response.data.results.length > 0) {
-        this.setSelectedProductionHandler(response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate))[0]);
-      }
       this.setState({
         data: response.data.results,
         initialData: response.data.results,
