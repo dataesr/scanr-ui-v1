@@ -5,14 +5,14 @@ import { GridLoader } from 'react-spinners';
 
 import classes from '../GraphCard.scss';
 import transformRequest from '../../../../../Utils/transformRequest';
-import HighChartsBar from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
+import HighChartsWordCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import GraphTitles from '../../../../Shared/GraphComponents/Graphs/GraphTitles';
 
-export default class ProductionDomains extends Component {
+export default class ProductionKeywords extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
-    title: 'Top 10 des mots-clés',
+    title: 'Principaux mots-clés',
     subtitle: 'basé sur les résultats de recherche',
     aggregations: {
       facet: {
@@ -23,7 +23,7 @@ export default class ProductionDomains extends Component {
           direction: 'DESC',
           type: 'COUNT',
         },
-        size: 10,
+        size: 50,
       },
     },
   }
@@ -56,8 +56,8 @@ export default class ProductionDomains extends Component {
             title={this.state.title}
             subtitle={this.state.subtitle}
           />
-          <HighChartsBar
-            filename="top10cities"
+          <HighChartsWordCloud
+            filename="top-keywords"
             data={this.state.data}
             language={this.props.language}
           />
@@ -81,7 +81,7 @@ export default class ProductionDomains extends Component {
   }
 }
 
-ProductionDomains.propTypes = {
+ProductionKeywords.propTypes = {
   language: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };
