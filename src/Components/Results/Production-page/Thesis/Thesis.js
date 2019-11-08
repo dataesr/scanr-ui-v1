@@ -156,6 +156,7 @@ class Thesis extends Component {
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
     const nbAuthorsToShow = 6;
     const sortedAuthors = this.getSortedAuthors();
+    const theseLink = 'http://www.theses.fr/'.concat({ id }.id);
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -194,16 +195,18 @@ class Thesis extends Component {
                   </div>
                   <div className="row">
                     <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <SimpleCard
-                        language={this.props.language}
-                        logo="fas fa-id-card"
-                        title={messages[this.props.language]['Publication.publication.id']}
-                        label={id}
-                        tooltip=""
-                        masterKey="Publication/id"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
-                      />
+                      <a href={theseLink} target="_blank" rel="noopener noreferrer">
+                        <SimpleCard
+                          language={this.props.language}
+                          logo="fas fa-id-card"
+                          title={messages[this.props.language]['Publication.publication.id']}
+                          label={id}
+                          tooltip=""
+                          masterKey="Publication/id"
+                          modifyMode={this.state.modifyModePortrait}
+                          allData={this.props.data}
+                        />
+                      </a>
                     </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
