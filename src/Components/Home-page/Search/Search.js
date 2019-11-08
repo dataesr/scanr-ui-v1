@@ -36,51 +36,25 @@ const messages = {
 class Search extends Component {
   submitResearch = (e) => {
     e.preventDefault();
-    const api = e.target.api.value;
     const query = e.target.query.value;
-    this.props.history.push(`/recherche/${api}?query=${query}`);
+    this.props.history.push(`/recherche/all?query=${query}`);
   }
 
   /* eslint-disable */
   renderForm = () => (
     <form onSubmit={this.submitResearch}>
-      <div className="form-row">
-        <div className="form-group col-md-8">
-          <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
-            { label => <label className={classes.TitleSearchBar} htmlFor="query">{label}</label> }
-          </FormattedMessage>
+      <div className="row mt-4 mb-4">
+        <div className="col-md-11 p-0">
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
             { placeholder => <input type="text" className="form-control" id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
-        <div className="form-group col-md-3">
-          <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
-            { label => <label className={classes.SearchPerimeter} htmlFor="api">{label}</label> }
-          </FormattedMessage>
-          <select id="api" className={`form-control ${classes.Select}`}>
-            <FormattedMessage id="Search.Select.All" defaultMessage="Search.Select.All">
-              { option => <option className={classes.btn_dark} value="all">{option}</option> }
-            </FormattedMessage>
-            <FormattedMessage id="Search.Select.Entities" defaultMessage="Search.Select.Entities">
-              { option => <option className={classes.btn_dark} value="structures">{option}</option> }
-            </FormattedMessage>
-            <FormattedMessage id="Search.Select.Persons" defaultMessage="Search.Select.Persons">
-              { option => <option className={classes.btn_dark} value="persons">{option}</option> }
-            </FormattedMessage>
-            <FormattedMessage id="Search.Select.Projects" defaultMessage="Search.Select.Projects">
-              { option => <option className={classes.btn_dark} value="projects">{option}</option> }
-            </FormattedMessage>
-            <FormattedMessage id="Search.Select.Publications" defaultMessage="Search.Select.Publications">
-              { option => <option className={classes.btn_dark} value="publications">{option}</option> }
-            </FormattedMessage>
-          </select>
-        </div>
-        <div className="form-group col-md-1">
+        <div className="col-md-1 pl-1">
           <button
             type="submit"
-            className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
+            className={`btn ${classes.btn_dark}`}
             aria-label="Lancer la recherche"
-          >
+            >
             <i className="fas fa-search" aria-hidden />
           </button>
         </div>
