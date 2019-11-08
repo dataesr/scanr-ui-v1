@@ -85,7 +85,7 @@ const SearchPanel = (props) => {
                   )}
                 </FormattedMessage>
               </div>
-              <div className="d-flex flex-column pr-1 pl-1">
+              <div className={`d-flex flex-column pr-1 pl-1 ${classes.onlyMobile}`}>
                 <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
                   {/* eslint-disable-next-line */}
                   { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
