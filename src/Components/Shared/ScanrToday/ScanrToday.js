@@ -93,32 +93,40 @@ class ScanrToday extends Component {
                 </h2>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="entities"
-                  value={this.state.data.fullStructures.toLocaleString()}
-                  language={this.props.language}
-                />
+	        <a href="recherche/structures">
+                    <CounterCardByType
+                      schema="entities"
+                      value={this.state.data.fullStructures.toLocaleString()}
+                      language={this.props.language}
+                    />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="persons"
-                  value={this.state.data.fullPersons.toLocaleString()}
-                  language={this.props.language}
-                />
+	        <a href="recherche/persons">
+                    <CounterCardByType
+                      schema="persons"
+                      value={this.state.data.fullPersons.toLocaleString()}
+                      language={this.props.language}
+                    />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="projects"
-                  value={this.state.data.fullProjects.toLocaleString()}
-                  language={this.props.language}
-                />
+	        <a href="recherche/projects">
+                    <CounterCardByType
+                      schema="projects"
+                      value={this.state.data.fullProjects.toLocaleString()}
+                      language={this.props.language}
+                    />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="publications"
-                  value={this.state.data.fullPublications.toLocaleString()}
-                  language={this.props.language}
-                />
+	        <a href="recherche/publications">
+                    <CounterCardByType
+                      schema="publications"
+                      value={this.state.data.fullPublications.toLocaleString()}
+                      language={this.props.language}
+                    />
+                </a>
               </div>
             </div>
             {/*
