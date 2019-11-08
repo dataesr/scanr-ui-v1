@@ -152,7 +152,21 @@ class Publication extends Component {
       backgroundImage: `url(${Background})`,
     };
 
-    const id = (this.props.data.id.substring(0, 3) === 'doi') ? this.props.data.id.substring(3) : this.props.data.id;
+    let id = this.props.data.id;
+    let idName = 'Identifiant';
+    let externalLink = '#';
+    if (this.props.data.id.substring(0, 3) === 'doi') {
+      idName = 'DOI';
+      id = this.props.data.id.substring(3);
+      externalLink = 'http://doi.org/'.concat({ id }.id);
+    } else if (this.props.data.id.substring(0, 5) === 'sudoc') {
+      idName = 'Sudoc';
+      id = this.props.data.id.substring(5);
+      externalLink = 'http://www.sudoc.fr/'.concat({ id }.id);
+    } else {
+      idName = 'HAL';
+      externalLink = 'https://hal.archives-ouvertes.fr/'.concat({ id }.id);
+    }
     const publicationDate = moment(this.props.data.publicationDate).format('L');
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
     const nbAuthorsToShow = 6;
@@ -197,16 +211,18 @@ class Publication extends Component {
                     <div className="col-md-5">
                       <div className="row">
                         <div className={`col-md-12 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            language={this.props.language}
-                            logo="fas fa-calendar-day"
-                            title="doi"
-                            label={id}
-                            tooltip=""
-                            masterKey="Publication/publicationDate"
-                            modifyMode={this.state.modifyModePortrait}
-                            allData={this.props.data}
-                          />
+                          <a href={externalLink} target="_blank" rel="noopener noreferrer">
+                            <SimpleCard
+                              language={this.props.language}
+                              logo="fas fa-calendar-day"
+                              title={idName}
+                              label={id}
+                              tooltip=""
+                              masterKey="Publication/publicationDate"
+                              modifyMode={this.state.modifyModePortrait}
+                              allData={this.props.data}
+                            />
+                          </a>
                         </div>
                         <div className={`col-md-12 ${classes.CardContainer}`}>
                           <SimpleCard
