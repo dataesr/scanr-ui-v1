@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
-
-import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
+// eslint-disable-next-line
+import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 
 import classes from './ProductionDetail.scss';
 
@@ -29,13 +29,13 @@ const ProductionDetail = (props) => {
   if (Object.entries(props.data).length === 0) {
     return (
       <div className={classes.Empty}>
-        {messages[props.language]['Entity.productions.empty.label']}
+        {messages[props.language]['Productions.empty.label']}
       </div>
     );
   }
 
   let date = '';
-  if (props.data.productionType && props.data.productionType === 'publication' && props.data.publicationDate) {
+  if (props.data.publicationDate) {
     date = moment(props.data.publicationDate).format('YYYY');
   }
 
@@ -57,39 +57,89 @@ const ProductionDetail = (props) => {
   } else if (props.data.keywords && props.data.keywords.en) {
     keywords = props.data.keywords.en;
   }
+  keywords = [...new Set(keywords)];
 
   // Auteurs
-  const maxAuthors = 3;
-  const authors = [];
-  for (let i = 0; i < maxAuthors; i += 1) {
-    authors.push(props.data.authors[i].fullName);
-  }
+  const maxAuthors = 2;
+  const getAuthors = (data) => {
+    let authors = [];
+    if (data.productionType === 'publication') {
+      authors = data.authors.map((author) => {
+        if (author.person) {
+          return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
+        }
+        return <span key={JSON.stringify(author)}>{author.fullName}</span>;
+      });
+    } else if (data.productionType === 'thesis') {
+      authors = data.authors
+        .filter(author => author.role === 'author')
+        .map((author) => {
+          if (author.person) {
+            return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
+          }
+          return <span key={JSON.stringify(author)}>{author.fullName}</span>;
+        });
+    } else {
+      return null;
+    }
+    return authors;
+  };
+
+  const authors = getAuthors(props.data).slice(0, maxAuthors);
+
   const diff = props.data.authors.length - maxAuthors;
   let others = '';
   if (diff === 1) {
-    others = `${messages[props.language]['Entity.productions.detail.and']} 1 ${messages[props.language]['Entity.productions.detail.author']}`;
+    others = `${messages[props.language]['Productions.detail.and']} 1 ${messages[props.language]['Productions.detail.author']}`;
   } else if (diff > 1) {
-    others = `${messages[props.language]['Entity.productions.detail.and']} ${diff} ${messages[props.language]['Entity.productions.detail.authors']}`;
+    others = `${messages[props.language]['Productions.detail.and']} ${diff} ${messages[props.language]['Productions.detail.authors']}`;
   }
-  const authorsJSX = `${authors.join(', ')} ${others}`;
+
 
   return (
-    <Fragment>
-      <div className={classes.detailTitle}>
+    <div className="d-flex flex-column h-100">
+      <p className={classes.detailTitle}>
         {getSelectKey(props.data, 'title', props.language, 'default')}
-      </div>
-      <div className="d-flex justify-content-between">
-        <div className={classes.Date}>
+      </p>
+      <p className="m-0">
+        {
+          authors.reduce((prev, curr) => [prev, ', ', curr])
+        }
+        {' '}
+        {
+          (props.data.productionType !== 'thesis')
+            ? others
+            : null
+        }
+      </p>
+      <div>
+        <p className={classes.Grey}>
+          {
+            (props.data.source && props.data.source.title)
+              ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${props.data.source.title}"]}}`} className={classes.Italic}>{props.data.source.title}</a>
+              : null
+          }
+          {' | '}
           {date}
-        </div>
-        <div className={classes.Ids}>
+        </p>
+        <p className={classes.Grey}>
           {id}
-        </div>
+        </p>
       </div>
-      <hr />
-      <div className={classes.Summary}>
-        {getSelectKey(props.data, 'summary', props.language, 'default')}
-      </div>
+      {
+        (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
+          ? <hr className={`w-100 ${classes[props.data.productionType]}`} />
+          : null
+      }
+      {
+        (getSelectKey(props.data, 'summary', props.language, 'default'))
+          ? (
+            <div className={classes.Summary}>
+              {getSelectKey(props.data, 'summary', props.language, 'default')}
+            </div>
+          )
+          : null
+      }
       <div className={classes.Keywords}>
         {
           keywords.map(keyword => (
@@ -102,47 +152,37 @@ const ProductionDetail = (props) => {
           ))
         }
       </div>
-      <hr />
-      <div className={classes.Authors}>
-        {authorsJSX}
-      </div>
-      <div className={classes.Oa}>
-        {(props.data.isOa) ? (
-          <span className={`fa-stack ${classes.isOa}`}>
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
-          </span>
-        ) : (
-          <span className={`fa-stack ${classes.isNotOa}`}>
-            <i className="fas fa-circle fa-stack-2x" />
-            <i className="fas fa-lock fa-stack-1x fa-inverse" />
-          </span>
-        )}
-      </div>
-      <div className={classes.Source}>
-        {(props.data.source && props.data.source.publisher) ? <span>{props.data.source.publisher}</span> : null}
-        {(props.data.source && props.data.source.publisher && props.data.source.title) ? messages[props.language]['Entity.productions.detail.in'] : null}
-        {(props.data.source && props.data.source.title) ? <span>{props.data.source.title}</span> : null}
-      </div>
-      <hr />
+      <hr className={`w-100 mt-auto ${classes[props.data.productionType]}`} />
       <div className="d-flex justify-content-between">
+        <div className={classes.Oa}>
+          {(props.data.isOa) ? (
+            <div className="d-flex align-items-center">
+              <span aria-hidden className={`fa-stack ${classes.isOa}`}>
+                <i className="fas fa-circle fa-stack-2x" />
+                <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
+              </span>
+              <ButtonToPage
+                className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
+                url={props.data.oaEvidence.pdfUrl}
+              >
+                Aller au PDF
+              </ButtonToPage>
+            </div>
+          ) : (
+            <span className={`fa-stack ${classes.isNotOa}`}>
+              <i className="fas fa-circle fa-stack-2x" />
+              <i className="fas fa-lock fa-stack-1x fa-inverse" />
+            </span>
+          )}
+        </div>
         <ButtonToPage
-          className={`${classes.btn_dark} ${classes.BtnWidth}`}
-          url={props.data.oaEvidence.pdfUrl}
-        >
-          <span className={classes.IconPdf}>
-            <i className="fas fa-file-pdf" />
-          </span>
-          Voir la publication PDF
-        </ButtonToPage>
-        <ButtonToPage
-          className={`${classes.btn_dark} ${classes.BtnWidth}`}
-          url={props.data.oaEvidence.pdfUrl}
+          className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
+          url={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}
         >
           Voir la publication dans scanR
         </ButtonToPage>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

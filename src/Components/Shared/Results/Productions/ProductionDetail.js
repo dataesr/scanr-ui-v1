@@ -97,7 +97,7 @@ const ProductionDetail = (props) => {
 
 
   return (
-    <Fragment>
+    <div className="d-flex flex-column h-100">
       <p className={classes.detailTitle}>
         {getSelectKey(props.data, 'title', props.language, 'default')}
       </p>
@@ -128,7 +128,7 @@ const ProductionDetail = (props) => {
       </div>
       {
         (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
-          ? <hr className={classes[props.data.productionType]} />
+          ? <hr className={`w-100 ${classes[props.data.productionType]}`} />
           : null
       }
       {
@@ -152,8 +152,8 @@ const ProductionDetail = (props) => {
           ))
         }
       </div>
-      <hr className={classes[props.data.productionType]} />
-      <div className="d-flex mt-auto justify-content-between">
+      <hr className={`w-100 mt-auto ${classes[props.data.productionType]}`} />
+      <div className="d-flex justify-content-between">
         <div className={classes.Oa}>
           {(props.data.isOa) ? (
             <div className="d-flex align-items-center">
@@ -182,7 +182,7 @@ const ProductionDetail = (props) => {
           Voir la publication dans scanR
         </ButtonToPage>
       </div>
-    </Fragment>
+    </div>
   );
 };
 
