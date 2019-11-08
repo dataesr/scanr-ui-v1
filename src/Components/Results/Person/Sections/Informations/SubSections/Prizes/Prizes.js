@@ -23,7 +23,16 @@ const messages = {
  * Tests unitaires : .
 */
 const Prizes = (props) => {
+  const newAwards = [];
   if (props.data.awards) {
+    props.data.awards.forEach((element) => {
+      let labelToUse = element.label;
+      if (element.description) {
+        labelToUse = element.label.concat(' (', element.description).concat(')');
+      }
+      newAwards.push(labelToUse);
+    });
+
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid">
@@ -38,12 +47,12 @@ const Prizes = (props) => {
               <div className="container-fluid">
                 <div className="row">
                   {
-                    props.data.awards.map(award => (
+                    newAwards.map(award => (
                       <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
                         <PrizeCard
                           date={award.date}
                           language={props.language}
-                          label={award.label}
+                          label={award}
                           icon="prize"
                           color="#fe7747"
                           masterKey={props.masterKey}
