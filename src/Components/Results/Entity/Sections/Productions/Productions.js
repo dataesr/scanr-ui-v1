@@ -32,6 +32,7 @@ import classes from './Productions.scss';
 */
 class Productions extends Component {
   state = {
+    productionType: 'publication',
     query: '',
     currentQueryText: '',
     total: '',
@@ -57,14 +58,13 @@ class Productions extends Component {
 
   componentDidMount() {
     this.getData(true);
-    // this.setYearsBounds();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
       this.getData();
     }
-    if (prevState.query !== this.state.query) {
+    if (prevState.query !== this.state.query || prevState.productionType !== this.state.productionType) {
       const sliderYears = {
         min: null,
         max: null,
@@ -211,7 +211,7 @@ class Productions extends Component {
     request.filters.productionType = {
       type: 'MultiValueSearchFilter',
       op: 'all',
-      values: ['publication'],
+      values: [this.state.productionType],
     };
     Axios.post(url, request).then((response) => {
       // eslint-disable-next-line
@@ -231,6 +231,8 @@ class Productions extends Component {
       }
       if (response.data.results.length > 0) {
         this.setSelectedProductionHandler(response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate))[0]);
+      } else {
+        this.setState({ selectedProduction: {} });
       }
       this.setState({
         data: response.data.results,
@@ -245,7 +247,7 @@ class Productions extends Component {
         journals: response.data.facets.find(item => item.id === 'journal'),
         keywords: response.data.facets.find(item => item.id === 'keywords'),
         years: {
-          entries: [],
+          entries: response.data.facets.find(item => item.id === 'years').entries.sort((a, b) => (a.value - b.value)),
         },
         domains: response.data.facets.find(facet => facet.id === 'domains'),
         types: response.data.facets.find(facet => facet.id === 'types'),
@@ -333,7 +335,14 @@ class Productions extends Component {
     return (
       <Fragment>
         <div className={`row align-items-center ${classes.Filters}`}>
-          <div className={`col-lg-5 ${classes.RangeSlider} ${(this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
+          <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
+            <select name="type" id="type-select" className="h-100" onChange={e => this.changeTypeHandler(e)}>
+              <option value="publication">Publications</option>
+              <option value="thesis">Thèses</option>
+              <option value="patents">Brevets</option>
+            </select>
+          </div>
+          <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
             <div className={classes.Title}>
               Sélectionner une période
             </div>
@@ -347,7 +356,7 @@ class Productions extends Component {
               />
             </div>
           </div>
-          <form className="col-lg-7" onSubmit={this.queryChangeHandler}>
+          <form className="col-lg-4" onSubmit={this.queryChangeHandler}>
             <label className={classes.Title} htmlFor="input">
               Rechercher dans les publications
             </label>
@@ -385,8 +394,12 @@ class Productions extends Component {
   }
 
   changeGraphHandler = (nextGraph) => {
-    console.log('nextGraph', nextGraph);
     this.setState({ activeGraph: nextGraph });
+  }
+
+  changeTypeHandler = (e) => {
+    e.preventDefault();
+    this.setState({ productionType: e.target.value });
   }
 
   whichGraph = (data) => {
@@ -410,44 +423,59 @@ class Productions extends Component {
 
   renderViewGraph = data => (
     <React.Fragment>
-      <ul className="nav justify-content-center py-1">
-        <li
+      <div className="nav justify-content-center py-1">
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'isOa') ? classes.active : ''} ${(this.state.isOa) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('isOa')}
           onKeyPress={() => this.changeGraphHandler('isOa')}
         >
           OpenAccess
-        </li>
-        <li
-          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
-          onClick={() => this.changeGraphHandler('journals')}
-          onKeyPress={() => this.changeGraphHandler('journals')}
-        >
-          Journals
-        </li>
-        <li
+        </button>
+        {
+          (this.state.productionType === 'publication')
+            ? (
+              <button
+                className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
+                onClick={() => this.changeGraphHandler('journals')}
+                onKeyPress={() => this.changeGraphHandler('journals')}
+                isDisabled={(this.state.journals.entries && this.state.journals.entries.length > 0) ? '' : 'true'}
+                >
+                Journals
+              </button>
+            )
+            : null
+        }
+        {
+          (this.state.productionType === 'publication')
+            ? (
+              <button
+                className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
+                onClick={() => this.changeGraphHandler('types')}
+                onKeyPress={() => this.changeGraphHandler('types')}
+                isDisabled={(this.state.types.entries && this.state.types.entries.length > 0) ? '' : 'true'}
+                >
+                Types
+              </button>
+            )
+            : null
+        }
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'years') ? classes.active : ''}`}
-          disable={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
+          isDisabled={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
           onClick={() => this.changeGraphHandler('years')}
           onKeyPress={() => this.changeGraphHandler('years')}
         >
           Years
-        </li>
-        <li
-          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'types') ? classes.active : ''} ${(this.state.types.entries) ? '' : 'disabled'}`}
-          onClick={() => this.changeGraphHandler('types')}
-          onKeyPress={() => this.changeGraphHandler('types')}
-        >
-          Types
-        </li>
-        <li
+        </button>
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'keywords') ? classes.active : ''} ${(this.state.keywords.entries) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('keywords')}
           onKeyPress={() => this.changeGraphHandler('keywords')}
+          isDisabled={(this.state.keywords.entries && this.state.keywords.entries.length > 0) ? '' : 'true'}
         >
           Keywords
-        </li>
-      </ul>
+        </button>
+      </div>
       <div className="row">
         <div className={`col-md-12 ${classes.graphCard}`}>
           {this.whichGraph(data)}
@@ -462,37 +490,6 @@ class Productions extends Component {
       en: messagesEn,
     };
 
-    if (!this.state.query && this.state.data.length === 0) {
-      return (
-        <Fragment>
-          <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <section className={`container-fluid ${classes.Productions}`}>
-              <div className="container">
-                <SectionTitle
-                  icon="fas fa-th"
-                  modifyModeHandle={this.modifyModeHandle}
-                  modifyMode={this.state.modifyMode}
-                  emptySection
-                >
-                  {messages[this.props.language]['Entity.productions.publication.label']}
-                </SectionTitle>
-                <div className="row">
-                  <div className="col">
-                    <EmptySection
-                      language={this.props.language}
-                      masterKey="Productions"
-                      modifyMode={this.state.modifyMode}
-                      modifyModeHandle={this.modifyModeHandle}
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
-          </IntlProvider>
-        </Fragment>
-      );
-    }
-
     const dataGraph = this.getDataGraph();
 
     return (
@@ -504,7 +501,7 @@ class Productions extends Component {
                 <div className="d-flex flex-wrap align-items-center">
                   <i className="fas fa-folder-open" />
                   <span className={`mr-auto my-2 ${classes.Label}`}>
-                    {this.state.data.length}
+                    {this.state.total}
                     &nbsp;
                     {messages[this.props.language]['Entity.productions.publication.label']}
                   </span>
