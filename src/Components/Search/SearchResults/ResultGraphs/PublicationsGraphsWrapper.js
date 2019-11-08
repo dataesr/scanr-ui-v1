@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PublicationTypes from './PublicationsGraphs/PublicationsTypes';
-import PublicationDomains from './PublicationsGraphs/PublicationsDomains';
+import PublicationKeywords from './PublicationsGraphs/PublicationsKeywords';
 import PublicationYears from './PublicationsGraphs/PublicationsYears';
 import PublicationJournals from './PublicationsGraphs/PublicationsJournals';
 
@@ -11,7 +11,7 @@ const PublicationsGraphsWrapper = props => (
       language={props.language}
       request={props.request}
     />
-    <PublicationDomains
+    <PublicationKeywords
       language={props.language}
       request={props.request}
     />
