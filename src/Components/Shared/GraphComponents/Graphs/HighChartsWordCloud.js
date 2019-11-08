@@ -41,25 +41,22 @@ export default class HighChartsWordCloud extends Component {
   }
 
   componentDidMount() {
-    const data = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
-    
-//console.log("WordCloud",data)
-
+    const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
     const options = {
       credits: {
         enabled: false,
       },
       tooltip: {
-          enabled: false
+        enabled: false,
       },
       colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
       title: {
         text: '',
       },
       series: [{
-	type: 'wordcloud',
+        data: localData,
+        type: 'wordcloud',
         minFontSize: 10,
-        data: data,
       }],
       exporting: {
         filename: this.props.filename,
