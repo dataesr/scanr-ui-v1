@@ -1,0 +1,14 @@
+@import '../../../../../style.scss';
+
+.Portrait {
+  font-family: 'Lato', sans-serif;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: rgb(233, 236, 241);
+  background-position: bottom 0 left 0;
+
+}
