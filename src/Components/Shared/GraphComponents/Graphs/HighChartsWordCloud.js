@@ -6,12 +6,11 @@ import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
-
 import wordCloudModule from 'highcharts/modules/wordcloud';
+import classes from '../GraphComponents.scss';
 
 wordCloudModule(Highcharts);
 
-import classes from '../GraphComponents.scss';
 
 HCAccessibility(Highcharts);
 HCExporting(Highcharts);
