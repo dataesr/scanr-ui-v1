@@ -7,11 +7,11 @@ import PublicationJournals from './PublicationsGraphs/PublicationsJournals';
 
 const PublicationsGraphsWrapper = props => (
   <React.Fragment>
-    <PublicationTypes
+    <PublicationKeywords
       language={props.language}
       request={props.request}
     />
-    <PublicationKeywords
+    <PublicationJournals
       language={props.language}
       request={props.request}
     />
@@ -19,7 +19,7 @@ const PublicationsGraphsWrapper = props => (
       language={props.language}
       request={props.request}
     />
-    <PublicationJournals
+    <PublicationTypes
       language={props.language}
       request={props.request}
     />
