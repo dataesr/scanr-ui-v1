@@ -71,6 +71,7 @@ class HomePage extends Component {
         <ScanrToday
           language={this.props.language}
           lexiconHandler={this.lexiconHandler}
+          isFull={this.state.isSearchFull}
         />
 
         <Banner
