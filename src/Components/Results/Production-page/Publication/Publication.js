@@ -19,6 +19,7 @@ import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard'
 
 import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
 import ProductionCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
+import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
@@ -171,6 +172,13 @@ class Publication extends Component {
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
     const nbAuthorsToShow = 6;
     const sortedAuthors = this.getSortedAuthors();
+    let swHeritageLink = null;
+    if (this.props.data.links && this.props.data.links.length > 0) {
+      const swL = this.props.data.links.find(el => el.type === 'software_heritage');
+      if (swL) {
+        swHeritageLink = swL.url;
+      }
+    }
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -279,6 +287,21 @@ class Publication extends Component {
                         allData={this.props.data}
                       />
                     </div>
+                    {
+                    (swHeritageLink) ? (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <LogoCard
+                          url="./img/swh-logo.jpg"
+                          language={this.props.language}
+                          cssClass="Height150"
+                          masterKey="Publication/publicationType"
+                          modifyMode={this.state.modifyModePortrait}
+                          targetUrl={swHeritageLink}
+                          allData={this.props.data}
+                        />
+                      </div>
+                    ) : null
+                    }
 
                   </div>
                 </div>
