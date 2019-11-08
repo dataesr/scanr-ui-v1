@@ -25,7 +25,6 @@ const Header = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.Header}>
         <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
-          <ScrollLogo />
           <a className="navbar-brand" href="/">
             <LogoScanrWhiteSVG fill="#003259" height="40px" width="160px" />
           </a>
