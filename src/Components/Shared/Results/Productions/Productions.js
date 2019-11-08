@@ -9,7 +9,7 @@ import getSelectKey from '../../../../Utils/getSelectKey';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../config/config';
 import Autocomplete from '../../Ui/Autocomplete/Autocomplete';
-import EmptySection from '../../../Results/Entity-page/Shared/EmptySection/EmptySection';
+import EmptySection from '../EmptySection/EmptySection';
 import Select from '../../Ui/Select/Select';
 import SectionTitle from '../SectionTitle/SectionTitle';
 import ProductionDetail from './ProductionDetail';

@@ -14,8 +14,8 @@ import classes from './SectionTitle.scss';
 const SectionTitle = props => (
   <div className={`row ${classes.SectionTitle}`}>
     <div className="col">
-      <i className={props.icon} aria-hidden="true" />
-      <h2 className={classes.Label}>
+      <i className={props.icon} aria-hidden="true" style={{ color: props.color }} />
+      <h2 className={classes.Label} style={{ color: props.color }}>
         {props.children}
       </h2>
     </div>
@@ -24,11 +24,12 @@ const SectionTitle = props => (
         (!props.modifyMode || props.emptySection)
           ? (
             <Fragment>
-              <span className={classes.TxtBtn}>Enrichir/Modifier</span>
+              <span className={classes.TxtBtn} style={{ color: props.color }}>Enrichir/Modifier</span>
               <button
                 className={`btn ${classes.btn_dark}`}
                 type="button"
                 onClick={props.modifyModeHandle}
+                style={{ color: props.color }}
               >
                 <i className="fas fa-pen" />
               </button>
@@ -36,11 +37,12 @@ const SectionTitle = props => (
           )
           : (
             <Fragment>
-              <span className={classes.TxtBtn}>J&#39;ai terminé</span>
+              <span className={classes.TxtBtn} style={{ color: props.color }}>J&#39;ai terminé</span>
               <button
                 className={`btn ${classes.btn_dark}`}
                 type="button"
                 onClick={props.modifyModeHandle}
+                style={{ color: props.color }}
               >
                 <i className="fas fa-check" />
               </button>
@@ -63,4 +65,5 @@ SectionTitle.propTypes = {
   modifyModeHandle: PropTypes.func,
   modifyMode: PropTypes.bool,
   emptySection: PropTypes.bool,
+  color: PropTypes.string,
 };
