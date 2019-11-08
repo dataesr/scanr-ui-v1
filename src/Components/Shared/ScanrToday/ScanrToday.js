@@ -14,11 +14,6 @@ import Background from './poudre-bleu_Fgris-B.jpg';
 
 import classes from './ScanrToday.scss';
 
-const sectionStyle = {
-  backgroundImage: `url(${Background})`,
-  backgroundPosition: 'bottom 0 left 0',
-};
-
 class ScanrToday extends Component {
   state = {
     data: {
@@ -71,6 +66,15 @@ class ScanrToday extends Component {
       en: messagesEn,
     };
 
+    const sectionStyle = {
+      backgroundImage: `url(${Background})`,
+      backgroundPosition: 'bottom 0 left 0',
+    };
+
+    if (!this.props.isFull) {
+      sectionStyle.paddingTop = '230px';
+    }
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section style={sectionStyle} className={classes.ScanrToday}>
@@ -93,32 +97,40 @@ class ScanrToday extends Component {
                 </h2>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="entities"
-                  value={this.state.data.fullStructures.toLocaleString()}
-                  language={this.props.language}
-                />
+                <a href="recherche/structures">
+                  <CounterCardByType
+                    schema="entities"
+                    value={this.state.data.fullStructures.toLocaleString()}
+                    language={this.props.language}
+                  />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="persons"
-                  value={this.state.data.fullPersons.toLocaleString()}
-                  language={this.props.language}
-                />
+                <a href="recherche/persons">
+                  <CounterCardByType
+                    schema="persons"
+                    value={this.state.data.fullPersons.toLocaleString()}
+                    language={this.props.language}
+                  />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="projects"
-                  value={this.state.data.fullProjects.toLocaleString()}
-                  language={this.props.language}
-                />
+                <a href="recherche/projects">
+                  <CounterCardByType
+                    schema="projects"
+                    value={this.state.data.fullProjects.toLocaleString()}
+                    language={this.props.language}
+                  />
+                </a>
               </div>
               <div className="col-lg">
-                <CounterCardByType
-                  schema="publications"
-                  value={this.state.data.fullPublications.toLocaleString()}
-                  language={this.props.language}
-                />
+                <a href="recherche/publications">
+                  <CounterCardByType
+                    schema="publications"
+                    value={this.state.data.fullPublications.toLocaleString()}
+                    language={this.props.language}
+                  />
+                </a>
               </div>
             </div>
             {/*
@@ -175,4 +187,5 @@ export default ScanrToday;
 ScanrToday.propTypes = {
   language: PropTypes.string.isRequired,
   lexiconHandler: PropTypes.func,
+  isFull: PropTypes.bool,
 };
