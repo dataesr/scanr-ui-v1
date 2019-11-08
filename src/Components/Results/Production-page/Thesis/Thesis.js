@@ -5,7 +5,7 @@ import moment from 'moment';
 import Axios from 'axios';
 import { API_PUBLICATIONS_LIKE_END_POINT } from '../../../../config/config';
 
-import HeaderTitle from '../../Entity-page/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../../../Shared/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../../Shared/Results/SectionTitle/SectionTitle';
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
