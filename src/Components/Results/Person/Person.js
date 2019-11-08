@@ -6,7 +6,7 @@ import { API_PERSONS_END_POINT } from '../../../config/config';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
-import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
