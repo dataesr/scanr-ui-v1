@@ -11,14 +11,11 @@ import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProductionDetail from '../../../../Shared/Results/Productions/ProductionDetail';
 import SunburstChart from '../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
-// import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
+import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsCloud';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
-import messagesEntityFr from '../../translations/fr.json';
-import messagesEntityEn from '../../translations/en.json';
 
 import classes from './Productions.scss';
 
@@ -160,6 +157,16 @@ class Productions extends Component {
             type: 'COUNT',
           },
           size: 50,
+        },
+        keywords: {
+          field: 'keywords.fr',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 100,
         },
         journal: {
           field: 'source.title',
@@ -353,75 +360,75 @@ class Productions extends Component {
       </Fragment>
     );
   }
-
-  renderViewGraph = (data) => {
-    const pubOa = data.find(el => (el.id === 'Publications-oa'));
-    const pubNoa = data.find(el => (el.id === 'Publications-noa'));
-    const thesesOa = data.find(el => (el.id === 'Theses-oa'));
-    const thesesNoa = data.find(el => (el.id === 'Theses-noa'));
-
-    return (
-      <div className="row">
-        <div className={`col-md ${classes.Legendary}`}>
-          <div className={classes.Production}>
-            <span className={`${classes.Bullet} ${classes.publicationColor}`} />
-            {`${(pubOa.value + pubNoa.value).toLocaleString()} publications`}
-            <div className={classes.Sub}>
-              {`dont ${pubOa.value.toLocaleString()} en accès ouvert`}
-            </div>
-            <div className={classes.Sub}>
-              {`et ${pubNoa.value.toLocaleString()} en accès fermé`}
-            </div>
-          </div>
-
-          <div className={classes.Production}>
-            <span className={`${classes.Bullet} ${classes.theseColor}`} />
-            {`${(thesesOa.value + thesesNoa.value).toLocaleString()} thèses`}
-            <div className={classes.Sub}>
-              {`dont ${thesesOa.value.toLocaleString()} en accès ouvert`}
-            </div>
-            <div className={classes.Sub}>
-              {`et ${thesesNoa.value.toLocaleString()} en accès fermé`}
-            </div>
-          </div>
-        </div>
-        <div className="col-md">
-          <SunburstChart text="Productions" series={data} />
-        </div>
-      </div>
-    );
+  changeGraphHandler = (nextGraph) => {
+    this.setState({ aCtiveGraph: nextGraph });
   }
 
   whichGraph = (data) => {
-    if (this.state.graph === 'isOa') {
+    console.log("whichGraph");
+    if (this.state.activeGraph === 'isOa') {
       return <SunburstChart text="Productions" series={data} />;
     }
     return (
       <BarChart
-        filename={this.state.graph}
-        data={this.state[this.state.graph]}
+        filename={this.state.activeGraph}
+        data={this.state[this.state.activeGraph]}
         language={this.props.language}
       />
     );
   }
 
   renderViewGraph = data => (
-    <div className="row">
-      <div className={`col-md-12 ${classes.graphCard}`}>
-        {this.whichGraph(data)}
+    <React.Fragment>
+      <ul className="nav justify-content-center py-1">
+        <li
+          className="btn btn-primary mx-1"
+          onClick={() => this.changeGraphHandler('isOa')}
+          onKeyPress={() => this.changeGraphHandler('isOa')}
+        >
+          OpenAccess
+        </li>
+        <li
+          className="btn btn-primary mx-1"
+          onClick={() => this.changeGraphHandler('journals')}
+          onKeyPress={() => this.changeGraphHandler('journals')}
+        >
+          Journals
+        </li>
+        <li
+          className="btn btn-primary mx-1"
+          onClick={() => this.changeGraphHandler('years')}
+          onKeyPress={() => this.changeGraphHandler('years')}
+        >
+          Years
+        </li>
+        <li
+          className="btn btn-primary mx-1"
+          onClick={() => this.changeGraphHandler('types')}
+          onKeyPress={() => this.changeGraphHandler('types')}
+        >
+          Types
+        </li>
+        <li
+          className="btn btn-primary mx-1"
+          onClick={() => this.changeGraphHandler('keywords')}
+          onKeyPress={() => this.changeGraphHandler('keywords')}
+        >
+          Types
+        </li>
+      </ul>
+      <div className="row">
+        <div className={`col-md-12 ${classes.graphCard}`}>
+          {this.whichGraph(data)}
+        </div>
       </div>
-    </div>
+    </React.Fragment>
   );
 
   render() {
     const messages = {
       fr: messagesFr,
       en: messagesEn,
-    };
-
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
     };
 
     if (!this.state.data || this.state.data.length === 0) {
@@ -436,7 +443,7 @@ class Productions extends Component {
                   modifyMode={this.state.modifyMode}
                   emptySection
                 >
-                  {messagesEntity[this.props.language]['Entity.Section.Productions.label']}
+                  {messages[this.props.language]['Entity.productions.publication.label']}
                 </SectionTitle>
                 <div className="row">
                   <div className="col">
@@ -462,52 +469,56 @@ class Productions extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.Productions}`}>
             <div className="container">
-              <div className={`row ${classes.SectionTitle}`}>
-                <div className="col">
+              <div className={classes.SectionTitle}>
+                <div className="d-flex flex-wrap align-items-center">
                   <i className="fas fa-folder-open" />
-                  <span className={classes.Label}>
+                  <span className={`mr-auto my-2 ${classes.Label}`}>
                     {this.state.data.length}
                     &nbsp;
-                    {messagesEntity[this.props.language]['Entity.Section.Productions.label']}
+                    {messages[this.props.language]['Entity.productions.publication.label']}
                   </span>
-                </div>
-                <div className="col text-right">
-                  <div className="btn-group text-left" role="group">
-                    {
-                      (this.state.viewMode === 'list')
-                        ? (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                        : (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                    }
+                  <div className="d-flex flex-wrap align-items-center">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledby="productionViewList"
+                      onClick={() => this.viewModeClickHandler('list')}
+                      onKeyPress={() => this.viewModeClickHandler('list')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-list" />
+                        </span>
+                        <p className="m-0" id="productionViewList">
+                          Liste
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledby="productionViewGraph"
+                      onClick={() => this.viewModeClickHandler('graph')}
+                      onKeyPress={() => this.viewModeClickHandler('graph')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-chart-pie" />
+                        </span>
+                        <p className="m-0" id="productionViewGraph">
+                          Visualisation
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* /row */}
               <hr />
               {
                 (this.state.viewMode === 'list')
