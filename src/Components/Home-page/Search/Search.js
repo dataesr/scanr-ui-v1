@@ -90,7 +90,9 @@ class Search extends Component {
                       {
                         this.props.suggests.map(suggest => (
                           <li>
-                            <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                            <a href={`recherche/all?query=${suggest.label}`}>
+                              <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                            </a>
                           </li>
                         ))
                       }
