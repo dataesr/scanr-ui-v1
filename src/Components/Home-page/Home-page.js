@@ -83,7 +83,7 @@ class HomePage extends Component {
 
         <MostActiveThemes
           language={this.props.language}
-          data={['Brain to computer', 'Anthropologie évolutive', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
+          data={['Brain to computer', 'Marathon', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
         />
 
         <Banner

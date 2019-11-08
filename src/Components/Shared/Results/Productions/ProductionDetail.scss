@@ -89,17 +89,20 @@
 }
 
 .thesis {
-  border-color: #fead3f;
+  border: 2px solid #fead3f;
+  border-radius: 4px;
   color: #fead3f;
   background-color: #fead3f;
 }
 .publication {
-  border-color: $publicationsColor;
+  border: 2px solid $publicationsColor;
+  border-radius: 4px;
   color: $publicationsColor;
   background-color: $publicationsColor;
 }
 .patent {
-  border-color: #4D2E3F;
+  border: 2px solid #4D2E3F;
+  border-radius: 4px;
   color: #4D2E3F;
   background-color: #4D2E3F;
 }
