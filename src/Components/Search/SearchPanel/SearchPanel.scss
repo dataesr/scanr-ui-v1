@@ -65,8 +65,15 @@
   }
 }
 
+.onlyMobile {
+  display: none !important;
+}
+
 @media screen and (max-width: 991px) {
   .Suggest { display: none; }
+  .onlyMobile {
+    display: block !important;
+  }
   .SearchBar {
     padding-top: 66px;
     padding-bottom: 8px;
