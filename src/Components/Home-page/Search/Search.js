@@ -149,15 +149,15 @@ Search.defaultProps = {
       url: '',
     },
     {
+      label: 'Réchauffement climatique',
+      url: '',
+    },
+    {
       label: 'Biotechnologie',
       url: '',
     },
     {
-      label: 'openData',
-      url: '',
-    },
-    {
-      label: 'PIA',
+      label: 'Ebola',
       url: '',
     },
   ],
