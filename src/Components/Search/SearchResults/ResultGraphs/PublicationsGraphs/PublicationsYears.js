@@ -5,15 +5,27 @@ import { GridLoader } from 'react-spinners';
 
 import classes from '../GraphCard.scss';
 import transformRequest from '../../../../../Utils/transformRequest';
-import LeafletMap from '../../../../Shared/GraphComponents/Graphs/LeafletMap';
+import HighChartsBar from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import GraphTitles from '../../../../Shared/GraphComponents/Graphs/GraphTitles';
 
-export default class PublicationsMap extends Component {
+export default class ProductionYears extends Component {
   state = {
-    data: [],
+    data: { entries: [] },
     isLoading: true,
-    title: 'Cartographie',
-    subtitle: 'des résultats de recheche',
+    title: 'Publications par années',
+    subtitle: 'basé sur les résultats de recherche',
+    aggregations: {
+      facet: {
+        field: 'year',
+        filters: {},
+        min_doc_count: 1,
+        order: {
+          direction: 'DESC',
+          type: 'COUNT',
+        },
+        size: 100,
+      },
+    },
   }
 
   componentDidMount() {
@@ -21,34 +33,14 @@ export default class PublicationsMap extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/search/georesults';
+    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/search';
     const request = { ...this.props.request };
-    request.pageSize = 500;
+    request.aggregations = this.state.aggregations;
     Axios.post(url, transformRequest(request))
       .then((response) => {
-        const mapdata = [];
-        if (response.data && response.data.results) {
-          response.data.results.forEach((element) => {
-            try {
-              const affiliations = element.value.affiliations;
-              affiliations.forEach((aff) => {
-                try {
-                  const dataElement = {
-                    id: element.value.id + Math.floor(Math.random() * Math.floor(10000000)),
-                    position: [aff.address[0].gps.lat, aff.address[0].gps.lon],
-                    infos: [element.value.label.default, aff.label.fr || aff.label.en || ''],
-                  };
-                  mapdata.push(dataElement);
-                } catch (error) {
-                  // eslint-disable-no-empty
-                }
-              });
-            } catch (error) {
-              // eslint-disable-no-empty
-            }
-          });
-        }
-        this.setState({ data: mapdata, isLoading: false });
+        const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
+        const newData = { entries: newStateData.entries.sort((a, b) => a.value - b.value) };
+        this.setState({ data: newData, isLoading: false });
       })
       .catch((error) => {
         /* eslint-disable-next-line */
@@ -65,8 +57,8 @@ export default class PublicationsMap extends Component {
             title={this.state.title}
             subtitle={this.state.subtitle}
           />
-          <LeafletMap
-            filename="carto"
+          <HighChartsBar
+            filename="top10cities"
             data={this.state.data}
             language={this.props.language}
           />
@@ -90,7 +82,7 @@ export default class PublicationsMap extends Component {
   }
 }
 
-PublicationsMap.propTypes = {
+ProductionYears.propTypes = {
   language: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };

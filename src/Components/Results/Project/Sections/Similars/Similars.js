@@ -6,7 +6,6 @@ import Axios from 'axios';
 import SimilarCard from '../../../../Search/SearchResults/ResultCards/ProjectCard';
 import { API_PROJECT_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-import getSelectKey from '../../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
