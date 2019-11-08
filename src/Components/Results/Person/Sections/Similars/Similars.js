@@ -44,17 +44,17 @@ class SimilarPersons extends Component {
     Axios.post(url, data).then((response) => {
       const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
       if (response.data.total && response.data.total > 0) {
-        const data3 = [];
+        const pushData = [];
         for (let i = 0; i < Math.min(response.data.total, 10); i += 1) {
           const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
           if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
-            data4.push(response.data.results[i]);
+            pushData.push(response.data.results[i]);
           }
-          if (data4.length === 4) {
+          if (pushData.length === 4) {
             break;
           }
         }
-        this.setState({ data: data4 });
+        this.setState({ data: pushData });
       }
     });
   }
