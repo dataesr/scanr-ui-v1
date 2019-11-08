@@ -58,7 +58,6 @@ class Productions extends Component {
 
   componentDidMount() {
     this.getData(true);
-    // this.setYearsBounds();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -232,6 +231,8 @@ class Productions extends Component {
       }
       if (response.data.results.length > 0) {
         this.setSelectedProductionHandler(response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate))[0]);
+      } else {
+        this.setState({ selectedProduction: {} });
       }
       this.setState({
         data: response.data.results,
@@ -335,8 +336,7 @@ class Productions extends Component {
       <Fragment>
         <div className={`row align-items-center ${classes.Filters}`}>
           <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
-            <label htmlFor="type-select">Choose a pet:</label>
-            <select name="type" id="type-select" onChange={(e) => this.changeTypeHandler(e)}>
+            <select name="type" id="type-select" className="h-100" onChange={e => this.changeTypeHandler(e)}>
               <option value="publication">Publications</option>
               <option value="thesis">Thèses</option>
               <option value="patents">Brevets</option>
@@ -423,57 +423,59 @@ class Productions extends Component {
 
   renderViewGraph = data => (
     <React.Fragment>
-      <ul className="nav justify-content-center py-1">
-        <li
+      <div className="nav justify-content-center py-1">
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'isOa') ? classes.active : ''} ${(this.state.isOa) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('isOa')}
           onKeyPress={() => this.changeGraphHandler('isOa')}
         >
           OpenAccess
-        </li>
+        </button>
         {
           (this.state.productionType === 'publication')
             ? (
-              <li
+              <button
                 className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
                 onClick={() => this.changeGraphHandler('journals')}
                 onKeyPress={() => this.changeGraphHandler('journals')}
+                isDisabled={(this.state.journals.entries && this.state.journals.entries.length > 0) ? '' : 'true'}
                 >
                 Journals
-              </li>
+              </button>
             )
             : null
         }
         {
           (this.state.productionType === 'publication')
             ? (
-              <li
+              <button
                 className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
                 onClick={() => this.changeGraphHandler('types')}
                 onKeyPress={() => this.changeGraphHandler('types')}
+                isDisabled={(this.state.types.entries && this.state.types.entries.length > 0) ? '' : 'true'}
                 >
                 Types
-              </li>
+              </button>
             )
             : null
         }
-        <li
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'years') ? classes.active : ''}`}
-          disable={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
+          isDisabled={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
           onClick={() => this.changeGraphHandler('years')}
           onKeyPress={() => this.changeGraphHandler('years')}
         >
           Years
-        </li>
-        <li
+        </button>
+        <button
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'keywords') ? classes.active : ''} ${(this.state.keywords.entries) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('keywords')}
           onKeyPress={() => this.changeGraphHandler('keywords')}
-          disable={(this.state.keywords.entries && this.state.keywords.entries.length > 0) ? 'false' : 'true'}
+          isDisabled={(this.state.keywords.entries && this.state.keywords.entries.length > 0) ? '' : 'true'}
         >
           Keywords
-        </li>
-      </ul>
+        </button>
+      </div>
       <div className="row">
         <div className={`col-md-12 ${classes.graphCard}`}>
           {this.whichGraph(data)}
@@ -488,8 +490,6 @@ class Productions extends Component {
       en: messagesEn,
     };
 
-
-
     const dataGraph = this.getDataGraph();
 
     return (
@@ -501,7 +501,7 @@ class Productions extends Component {
                 <div className="d-flex flex-wrap align-items-center">
                   <i className="fas fa-folder-open" />
                   <span className={`mr-auto my-2 ${classes.Label}`}>
-                    {this.state.data.length}
+                    {this.state.total}
                     &nbsp;
                     {messages[this.props.language]['Entity.productions.publication.label']}
                   </span>
