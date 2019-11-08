@@ -5,14 +5,14 @@ import { GridLoader } from 'react-spinners';
 
 import classes from '../GraphCard.scss';
 import transformRequest from '../../../../../Utils/transformRequest';
-import HighChartsBar from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
+import HighChartsLine from '../../../../Shared/GraphComponents/Graphs/HighChartsLine';
 import GraphTitles from '../../../../Shared/GraphComponents/Graphs/GraphTitles';
 
 export default class ProductionYears extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
-    title: 'Publications par années',
+    title: 'Publications par années depuis 2013',
     subtitle: 'basé sur les résultats de recherche',
     aggregations: {
       facet: {
@@ -39,7 +39,9 @@ export default class ProductionYears extends Component {
     Axios.post(url, transformRequest(request))
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
-        const newData = { entries: newStateData.entries.sort((a, b) => a.value - b.value) };
+        var newData = { entries: newStateData.entries.sort((a, b) => a.value - b.value) };
+	newData.entries = newData.entries.filter(item => (item.value > "2012") && (item.value < "2024"));
+	      console.log("dataYear",newData);
         this.setState({ data: newData, isLoading: false });
       })
       .catch((error) => {
@@ -57,8 +59,8 @@ export default class ProductionYears extends Component {
             title={this.state.title}
             subtitle={this.state.subtitle}
           />
-          <HighChartsBar
-            filename="top10cities"
+          <HighChartsLine
+            filename="publicationsYear"
             data={this.state.data}
             language={this.props.language}
           />
