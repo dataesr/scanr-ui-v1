@@ -373,46 +373,51 @@ class Ecosystem extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.Ecosystem}`}>
             <div className="container">
-              <div className={`row ${classes.SectionTitle}`}>
-                <div className="col">
-                  <i className="fas fa-th" />
-                  <span className={classes.Label}>
+              <div className={classes.SectionTitle}>
+                <div className="d-flex flex-wrap align-items-center">
+                  <i className="fas fa-folder-open" />
+                  <span className={`mr-auto my-2 ${classes.Label}`}>
                     {messagesEntity[this.props.language]['Entity.Section.Ecosystem.label']}
                   </span>
-                </div>
-                <div className="col text-right">
-                  <div className="btn-group text-left" role="group">
-                    {
-                      (this.state.viewMode === 'list')
-                        ? (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                        : (
-                          <Fragment>
-                            <button type="button" onClick={() => this.viewModeClickHandler('list')} className={`btn  btn-sm ${classes.btn_scanrlightgrey}`}>
-                              <i className="fas fa-list" />
-                              &nbsp;
-                              Liste des résultats
-                            </button>
-                            <button type="button" onClick={() => this.viewModeClickHandler('graph')} className={`btn  btn-sm ${classes.btn_scanrBlue}`}>
-                              <i className="fas fa-chart-pie" />
-                              &nbsp;
-                              Visualisation des résultats
-                            </button>
-                          </Fragment>
-                        )
-                    }
+                  <div className="d-flex flex-wrap align-items-center">
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledby="productionViewList"
+                      onClick={() => this.viewModeClickHandler('list')}
+                      onKeyPress={() => this.viewModeClickHandler('list')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-list" />
+                        </span>
+                        <p className="m-0" id="productionViewList">
+                          Liste
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      role="button"
+                      tabIndex={0}
+                      aria-labelledby="productionViewGraph"
+                      onClick={() => this.viewModeClickHandler('graph')}
+                      onKeyPress={() => this.viewModeClickHandler('graph')}
+                      className={classes.ViewChangeButton}
+                    >
+                      <div className="mx-3 d-flex flex-nowrap align-items-center">
+                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                          <i aria-hidden className="fas fa-chart-pie" />
+                        </span>
+                        <p className="m-0" id="productionViewGraph">
+                          Visualisation
+                          <br />
+                          des résultats
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
