@@ -14,11 +14,6 @@ import Background from './poudre-bleu_Fgris-B.jpg';
 
 import classes from './ScanrToday.scss';
 
-const sectionStyle = {
-  backgroundImage: `url(${Background})`,
-  backgroundPosition: 'bottom 0 left 0',
-};
-
 class ScanrToday extends Component {
   state = {
     data: {
@@ -70,6 +65,15 @@ class ScanrToday extends Component {
       fr: messagesFr,
       en: messagesEn,
     };
+
+    const sectionStyle = {
+      backgroundImage: `url(${Background})`,
+      backgroundPosition: 'bottom 0 left 0',
+    };
+
+    if (!this.props.isFull) {
+      sectionStyle.paddingTop = '230px';
+    }
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -183,4 +187,5 @@ export default ScanrToday;
 ScanrToday.propTypes = {
   language: PropTypes.string.isRequired,
   lexiconHandler: PropTypes.func,
+  isFull: PropTypes.bool,
 };
