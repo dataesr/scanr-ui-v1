@@ -3,6 +3,8 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
+import moment from 'moment';
+
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../../config/config';
 
@@ -11,7 +13,7 @@ import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProductionDetail from '../../../../Shared/Results/Productions/ProductionDetail';
 import SunburstChart from '../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
-import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsCloud';
+import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -35,6 +37,7 @@ class Productions extends Component {
     isOa: {},
     journals: {},
     years: {},
+    keywords: {},
     types: {},
     modifyMode: false,
     activeGraph: 'isOa',
@@ -52,8 +55,7 @@ class Productions extends Component {
   }
 
   componentDidMount() {
-    const initial = true;
-    this.getData(initial);
+    this.getData(true);
     // this.setYearsBounds();
   }
 
@@ -223,20 +225,21 @@ class Productions extends Component {
       let minYear = stableState.minYear;
       let maxYear = stableState.maxYear;
       if (initial) {
-        minYear = Math.min(...years);
-        maxYear = Math.max(...years);
+        minYear = (years.length > 0) ? Math.min(...years) : 2000;
+        maxYear = (years.length > 0) ? Math.max(...years) : 2020;
       }
       this.setState({
         data: response.data.results,
         initialData: response.data.results,
         total: response.data.total,
         sliderYear: {
-          min: Math.min(...years),
-          max: Math.max(...years),
+          min: (years.length > 0) ? Math.min(...years) : 2000,
+          max: (years.length > 0) ? Math.max(...years) : 2020,
         },
         minYear,
         maxYear,
         journals: response.data.facets.find(item => item.id === 'journal'),
+        keywords: response.data.facets.find(item => item.id === 'keywords'),
         years: response.data.facets.find(facet => facet.id === 'years'),
         domains: response.data.facets.find(facet => facet.id === 'domains'),
         types: response.data.facets.find(facet => facet.id === 'types'),
@@ -275,17 +278,31 @@ class Productions extends Component {
     }).catch(e => console.log('error:', e));
   };
 
-  renderViewList = () => {
-    const filteredData = this.state.data;
+  renderViewList = (messages) => {
+    const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
 
-    const content = filteredData.map((item) => {
+    const content = filteredData.map((item, i) => {
+      let first = false;
+      if (i > 0) {
+        first = (moment(filteredData[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
+      }
       let selected = '';
       if (item === this.state.selectedProduction) {
         selected = classes.Selected;
       }
-
       return (
         <Fragment key={item.value.id}>
+          {
+            (i === 0 || first)
+              ? (
+                <div className={classes.TitleYear}>
+                  {
+                    moment(item.value.publicationDate).format('YYYY')
+                  }
+                </div>
+              )
+              : null
+          }
           <div
             className={`${classes.Item} ${selected}`}
             onClick={() => this.setSelectedProductionHandler(item)}
@@ -293,13 +310,14 @@ class Productions extends Component {
             role="button"
             tabIndex={0}
           >
-            <span className={classes.Title}>
+            <p className={classes.Title}>
               {item.value.title.default}
-            </span>
-            <span className={classes.Type}>
+            </p>
+            <div className={`d-flex align-items-center ${classes.Type}`}>
+              <div className="mr-auto" />
               <span className={classes[item.value.productionType]} />
-              {item.value.productionType}
-            </span>
+              <p className="m-0">{item.value.type}</p>
+            </div>
           </div>
         </Fragment>
       );
@@ -308,7 +326,7 @@ class Productions extends Component {
     return (
       <Fragment>
         <div className={`row align-items-center ${classes.Filters}`}>
-          <div className={`col-md ${classes.RangeSlider}`}>
+          <div className={`col-lg-5 ${classes.RangeSlider} ${(this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
             <div className={classes.Title}>
               Sélectionner une période
             </div>
@@ -322,8 +340,7 @@ class Productions extends Component {
               />
             </div>
           </div>
-          <div className="col-md col-xs-hidden" />
-          <div className="col-md">
+          <form className="col-lg-7">
             <label className={classes.Title} htmlFor="input">
               Rechercher dans les publications
             </label>
@@ -344,13 +361,13 @@ class Productions extends Component {
             >
               <i className={`fas fa-search ${classes.SearchIcon}`} />
             </button>
-          </div>
+          </form>
         </div>
         {/* /row */}
         <div className="row">
           <div className="col-lg-5">
             <div className={classes.ListOfProductions}>
-              {content}
+              {(content.length > 0) ? content : 'Aucun résultat'}
             </div>
           </div>
           <div className="col-lg-7">
@@ -360,14 +377,18 @@ class Productions extends Component {
       </Fragment>
     );
   }
+
   changeGraphHandler = (nextGraph) => {
-    this.setState({ aCtiveGraph: nextGraph });
+    console.log('nextGraph', nextGraph);
+    this.setState({ activeGraph: nextGraph });
   }
 
   whichGraph = (data) => {
-    console.log("whichGraph");
     if (this.state.activeGraph === 'isOa') {
       return <SunburstChart text="Productions" series={data} />;
+    }
+    if (this.state.activeGraph === 'keywords') {
+      return <WorldCloud filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
     }
     return (
       <BarChart
@@ -382,39 +403,39 @@ class Productions extends Component {
     <React.Fragment>
       <ul className="nav justify-content-center py-1">
         <li
-          className="btn btn-primary mx-1"
+          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'isOa') ? classes.active : ''}`}
           onClick={() => this.changeGraphHandler('isOa')}
           onKeyPress={() => this.changeGraphHandler('isOa')}
         >
           OpenAccess
         </li>
         <li
-          className="btn btn-primary mx-1"
+          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''}`}
           onClick={() => this.changeGraphHandler('journals')}
           onKeyPress={() => this.changeGraphHandler('journals')}
         >
           Journals
         </li>
         <li
-          className="btn btn-primary mx-1"
+          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'years') ? classes.active : ''}`}
           onClick={() => this.changeGraphHandler('years')}
           onKeyPress={() => this.changeGraphHandler('years')}
         >
           Years
         </li>
         <li
-          className="btn btn-primary mx-1"
+          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'types') ? classes.active : ''}`}
           onClick={() => this.changeGraphHandler('types')}
           onKeyPress={() => this.changeGraphHandler('types')}
         >
           Types
         </li>
         <li
-          className="btn btn-primary mx-1"
+          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'keywords') ? classes.active : ''}`}
           onClick={() => this.changeGraphHandler('keywords')}
           onKeyPress={() => this.changeGraphHandler('keywords')}
         >
-          Types
+          Keywords
         </li>
       </ul>
       <div className="row">
@@ -431,7 +452,7 @@ class Productions extends Component {
       en: messagesEn,
     };
 
-    if (!this.state.data || this.state.data.length === 0) {
+    if (!this.state.query && this.state.data.length === 0) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
@@ -519,7 +540,6 @@ class Productions extends Component {
                   </div>
                 </div>
               </div>
-              <hr />
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
