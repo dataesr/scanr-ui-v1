@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../config/config';
-import EmptySection from '../Results/Entity-page/Shared/EmptySection/EmptySection';
+import EmptySection from '../Shared/Results/EmptySection/EmptySection';
 import PublicationCard from '../Search/SearchResults/ResultCards/PublicationCard';
 import SectionTitle from '../Shared/Results/SectionTitle/SectionTitle';
 import SunburstChart from '../Shared/GraphComponents/Graphs/HighChartsSunburst';

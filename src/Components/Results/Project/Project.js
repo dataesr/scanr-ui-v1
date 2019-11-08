@@ -7,7 +7,7 @@ import getSelectKey from '../../../Utils/getSelectKey';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header-homePage';
-import HeaderTitle from '../Entity-page/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Description from './Sections/Description/Description';
 import Participants from './Sections/Participants/Participants';
 import Productions from './Sections/Productions/Productions';

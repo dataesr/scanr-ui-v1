@@ -7,7 +7,7 @@ import localeEn from 'react-intl/locale-data/en';
 /* Composants */
 import HomePage from './Components/Home-page/Home-page';
 import SearchPage from './Components/Search/Search';
-import EntityPage from './Components/Results/Entity-page/Entity-page';
+import EntityPage from './Components/Results/Entity/Entity';
 import ProductionPage from './Components/Results/Production-page/Production-page';
 import ProjectPage from './Components/Results/Project/Project';
 import PersonPage from './Components/Results/Person/Person';
