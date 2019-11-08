@@ -15,7 +15,6 @@ import FocusList from './Components/Focus-pages/FocusList';
 import Focus from './Components/Focus-pages/Focus';
 import CurieHome from './Components/Shared/GraphCurie/CurieHome';
 import Productions from './Components/Productions/Productions';
-import WorldCloud from './Components/EricGraphs/WorldCloud';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
@@ -128,16 +127,6 @@ class App extends Component {
               path="/:api/:id/productions"
               render={props => (
                 <Productions
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/eric-graphs"
-              render={props => (
-                <WorldCloud
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
