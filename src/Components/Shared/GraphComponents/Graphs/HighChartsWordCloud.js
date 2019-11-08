@@ -58,6 +58,7 @@ export default class HighChartsWordCloud extends Component {
       },
       series: [{
 	type: 'wordcloud',
+        minFontSize: 10,
         data: data,
       }],
       exporting: {
