@@ -25,11 +25,20 @@
   display: block;
   font-weight: bold;
   padding: 6px 0;
+  margin: 0;
 }
 
 .Filters {
   padding: 0;
   padding-bottom: 16px;
+}
+.graphSelector {
+  color: $scanrdeepblueColor;
+  background-color: $scanrlightgreyColor;
+}
+.active {
+  color: white;
+  background-color: $scanrblueColor;
 }
 
 .ListOfProductions {
@@ -39,6 +48,18 @@
   padding-right: 20px;
   border-radius: 10px;
   overflow-y: scroll;
+
+  .TitleYear {
+    background-color: $scanrdeepblueColor;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    padding: 6px 12px;
+  }
+  .TitleYear:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 
   .Item:first-child {
     border-top-left-radius: 10px;
@@ -54,7 +75,7 @@
     .Type {
       display: block;
       text-align: right;
-      padding: 6px 12px;
+      padding: 1px 12px;
       font-style: italic;
       font-size: 0.9rem;
       border-bottom: 1px solid $scanrmiddlegreyColor;
