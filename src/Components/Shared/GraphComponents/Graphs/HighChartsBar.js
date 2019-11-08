@@ -27,7 +27,6 @@ export default class HighChartsBar extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
-    this.data = this.props.data;
     this.state = {
       options: null,
     };
@@ -37,9 +36,19 @@ export default class HighChartsBar extends Component {
   }
 
   componentDidMount() {
+    this.loadAll();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.data !== prevProps.data) {
+      this.loadAll();
+    }
+  }
+
+  loadAll() {
     const data = {
-      labels: this.data.entries.map(item => (item.value)),
-      values: this.data.entries.map(item => (item.count)),
+      labels: this.props.data.entries.map(item => (item.value)),
+      values: this.props.data.entries.map(item => (item.count)),
     };
 
     const unit = 'unité';
