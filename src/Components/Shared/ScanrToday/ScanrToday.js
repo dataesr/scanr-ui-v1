@@ -34,9 +34,34 @@ class ScanrToday extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/services/counts';
-    Axios.get(url).then((response) => {
-      this.setState({ data: response.data });
+    const countData = {
+      fullStructures: 0,
+      fullPersons: 0,
+      fullProjects: 0,
+      fullPublications: 0,
+    };
+
+    const params = { query: '' };
+    const url1 = 'https://scanr-preprod.sword-group.com/api/v2/structures/search';
+    const url2 = 'https://scanr-preprod.sword-group.com/api/v2/persons/search';
+    const url3 = 'https://scanr-preprod.sword-group.com/api/v2/projects/search';
+    const url4 = 'https://scanr-preprod.sword-group.com/api/v2/publications/search';
+
+    Axios.post(url1, params).then((response) => {
+      countData.fullStructures = response.data.total;
+      this.setState({ data: countData });
+    });
+    Axios.post(url2, params).then((response) => {
+      countData.fullPersons = response.data.total;
+      this.setState({ data: countData });
+    });
+    Axios.post(url3, params).then((response) => {
+      countData.fullProjects = response.data.total;
+      this.setState({ data: countData });
+    });
+    Axios.post(url4, params).then((response) => {
+      countData.fullPublications = response.data.total;
+      this.setState({ data: countData });
     });
   }
 
