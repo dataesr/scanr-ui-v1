@@ -30,7 +30,10 @@ const Prizes = (props) => {
       if (element.description) {
         labelToUse = element.label.concat(' (', element.description).concat(')');
       }
-      newAwards.push(labelToUse);
+      newAwards.push({
+        label: labelToUse,
+        date: element.date,
+      });
     });
 
     return (
@@ -52,7 +55,7 @@ const Prizes = (props) => {
                         <PrizeCard
                           date={award.date}
                           language={props.language}
-                          label={award}
+                          label={award.label}
                           icon="prize"
                           color="#fe7747"
                           masterKey={props.masterKey}
