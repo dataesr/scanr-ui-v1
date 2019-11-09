@@ -44,7 +44,11 @@ const ProjectCard = (props) => {
           <i aria-hidden="true" className="fas fa-calendar" />
         </div>
         <p p className="m-0">
-          {new Date(props.data.startDate).toLocaleDateString('fr-FR', options)}
+          {
+            new Date(props.data.startDate).toLocaleDateString('fr-FR', options) !== 'Invalid Date'
+              ? new Date(props.data.startDate).toLocaleDateString('fr-FR', options)
+              : props.data.year
+          }
         </p>
       </li>
     )
