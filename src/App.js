@@ -14,7 +14,6 @@ import PersonPage from './Components/Results/Person/Person';
 import FocusList from './Components/Focus-pages/FocusList';
 import Focus from './Components/Focus-pages/Focus';
 import CurieHome from './Components/Shared/GraphCurie/CurieHome';
-import Productions from './Components/Productions/Productions';
 
 /* Pages froides */
 import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
@@ -117,16 +116,6 @@ class App extends Component {
               path="/person/:id"
               render={props => (
                 <PersonPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/:api/:id/productions"
-              render={props => (
-                <Productions
                   {...props}
                   language={this.state.language}
                   switchLanguage={this.switchLanguage}
