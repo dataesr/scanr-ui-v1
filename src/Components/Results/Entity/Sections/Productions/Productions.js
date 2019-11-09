@@ -8,8 +8,8 @@ import moment from 'moment';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../../config/config';
 
-import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+// import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+// import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProductionDetail from '../../../../Shared/Results/Productions/ProductionDetail';
 import SunburstChart from '../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
@@ -270,8 +270,7 @@ class Productions extends Component {
   queryChangeHandler = (e) => {
     // eslint-disable-next-line
     e.preventDefault();
-    const prevState = { ...this.state };
-    this.setState({ query: prevState.currentQueryText });
+    this.setState(prevState => ({ query: prevState.currentQueryText }));
   }
 
   changeGraphHandler = (nextGraph) => {
@@ -287,7 +286,7 @@ class Productions extends Component {
     }).catch(e => console.log('error:', e));
   };
 
-  renderViewList = (messages) => {
+  renderViewList = () => {
     const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
 
     const content = filteredData.map((item, i) => {
@@ -357,25 +356,25 @@ class Productions extends Component {
             </div>
           </div>
           <form className="col-lg-4" onSubmit={this.queryChangeHandler}>
-            <label className={classes.Title} htmlFor="input">
+            <label className={classes.Title} htmlFor="inputFilter">
               Rechercher dans les publications
+              <input
+                type="text"
+                autoComplete="off"
+                id="inputFilter"
+                value={this.state.currentQueryText}
+                className={`pl-2 ${classes.SearchBar}`}
+                onChange={this.queryTextChangeHandler}
+                onFocus={this.setActive}
+                onBlur={this.setInactive}
+              />
+              <button
+                className={classes.SearchButton}
+                type="submit"
+              >
+                <i className={`fas fa-search ${classes.SearchIcon}`} />
+              </button>
             </label>
-            <input
-              type="text"
-              autoComplete="off"
-              id="input"
-              value={this.state.currentQueryText}
-              className={`pl-2 ${classes.SearchBar}`}
-              onChange={this.queryTextChangeHandler}
-              onFocus={this.setActive}
-              onBlur={this.setInactive}
-            />
-            <button
-              className={classes.SearchButton}
-              type="submit"
-            >
-              <i className={`fas fa-search ${classes.SearchIcon}`} />
-            </button>
           </form>
         </div>
         {/* /row */}
@@ -425,6 +424,7 @@ class Productions extends Component {
     <React.Fragment>
       <div className="nav justify-content-center py-1">
         <button
+          type="button"
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'isOa') ? classes.active : ''} ${(this.state.isOa) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('isOa')}
           onKeyPress={() => this.changeGraphHandler('isOa')}
@@ -435,11 +435,12 @@ class Productions extends Component {
           (this.state.productionType === 'publication')
             ? (
               <button
+                type="button"
                 className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
                 onClick={() => this.changeGraphHandler('journals')}
                 onKeyPress={() => this.changeGraphHandler('journals')}
                 isDisabled={(this.state.journals.entries && this.state.journals.entries.length > 0) ? '' : 'true'}
-                >
+              >
                 Journals
               </button>
             )
@@ -449,17 +450,19 @@ class Productions extends Component {
           (this.state.productionType === 'publication')
             ? (
               <button
+                type="button"
                 className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
                 onClick={() => this.changeGraphHandler('types')}
                 onKeyPress={() => this.changeGraphHandler('types')}
                 isDisabled={(this.state.types.entries && this.state.types.entries.length > 0) ? '' : 'true'}
-                >
+              >
                 Types
               </button>
             )
             : null
         }
         <button
+          type="button"
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'years') ? classes.active : ''}`}
           isDisabled={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
           onClick={() => this.changeGraphHandler('years')}
@@ -468,6 +471,7 @@ class Productions extends Component {
           Years
         </button>
         <button
+          type="button"
           className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'keywords') ? classes.active : ''} ${(this.state.keywords.entries) ? '' : 'disabled'}`}
           onClick={() => this.changeGraphHandler('keywords')}
           onKeyPress={() => this.changeGraphHandler('keywords')}
