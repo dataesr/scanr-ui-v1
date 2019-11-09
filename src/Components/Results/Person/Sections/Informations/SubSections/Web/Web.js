@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
@@ -24,10 +25,19 @@ const messages = {
 */
 const Web = (props) => {
   let wikidataId = null;
+  wikidataId = 'Q334065';
   if (props.data.externalIds && props.data.externalIds.length > 0) {
     for (let i = 0; i < props.data.externalIds.length; i += 1) {
       if (props.data.externalIds[i].type.toLowerCase() === 'wikidata') {
         wikidataId = props.data.externalIds[i].id;
+      }
+    }
+  }
+  let twitterUrl = null;
+  if (props.data.links && props.data.links.length > 0) {
+    for (let i = 0; i < props.data.links.length; i += 1) {
+      if (props.data.links[i].type.toLowerCase() === 'twitter') {
+        twitterUrl = props.data.links[i].url;
       }
     }
   }
@@ -40,6 +50,11 @@ const Web = (props) => {
               { (wikidataId) ? (
                 <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
                   <WikidataCard language={props.language} id={wikidataId} />
+                </div>
+              ) : null }
+              { (twitterUrl) ? (
+                <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                  <TwitterTimelineEmbed url={twitterUrl} autoHeight />
                 </div>
               ) : null }
             </div>
