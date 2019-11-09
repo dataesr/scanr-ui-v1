@@ -15,8 +15,18 @@ export default class ProductionKeywords extends Component {
     title: 'Principaux mots-clés',
     subtitle: 'basé sur les résultats de recherche',
     aggregations: {
-      facet: {
-        field: `keywords.${this.props.language}`,
+      facet_en: {
+        field: 'keywords.en',
+        filters: {},
+        min_doc_count: 1,
+        order: {
+          direction: 'DESC',
+          type: 'COUNT',
+        },
+        size: 50,
+      },
+      facet_fr: {
+        field: 'keywords.fr',
         filters: {},
         min_doc_count: 1,
         order: {
@@ -38,7 +48,9 @@ export default class ProductionKeywords extends Component {
     request.aggregations = this.state.aggregations;
     Axios.post(url, transformRequest(request))
       .then((response) => {
-        const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
+        const newStateDataEn = response.data.facets.find(item => item.id === 'facet_en') || { entries: [] };
+        const newStateDataFr = response.data.facets.find(item => item.id === 'facet_fr') || { entries: [] };
+        const newStateData = { entries: newStateDataEn.entries.concat(newStateDataFr.entries) };
         this.setState({ data: newStateData, isLoading: false });
       })
       .catch((error) => {
