@@ -36,8 +36,8 @@ class SimilarProjects extends Component {
     const url = API_PROJECT_LIKE_END_POINT;
     const data = {
       fields: ['publications.title', 'description', 'domains.label', 'label'],
-      likeIds: [],
-      likeTexts: [this.props.data.id],
+      likeIds: [this.props.data.id],
+      likeTexts: [],
       lang: 'default',
     };
     Axios.post(url, data).then((response) => {
