@@ -42,7 +42,7 @@ class SimilarPersons extends Component {
       pageSize: 100,
     };
     Axios.post(url, data).then((response) => {
-      const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : null;
+      const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : [];
       if (response.data.total && response.data.total > 0) {
         const pushData = [];
         for (let i = 0; i < Math.min(response.data.total, 10); i += 1) {
