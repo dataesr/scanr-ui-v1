@@ -4,6 +4,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
+import YoutubeCard from '../../../../../../Shared/Ui/YoutubeCard/YoutubeCard';
 
 import classes from './Web.scss';
 
@@ -24,6 +25,14 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
+  let youtubeUrl = null;
+  if (props.data.links && props.data.links.length > 0) {
+    for (let i = 0; i < props.data.links.length; i += 1) {
+      if (props.data.links[i].type.toLowerCase() === 'youtube') {
+        youtubeUrl = props.data.links[i].url;
+      }
+    }
+  }
   let wikidataId = null;
   wikidataId = 'Q334065';
   if (props.data.externalIds && props.data.externalIds.length > 0) {
@@ -55,6 +64,11 @@ const Web = (props) => {
               { (twitterUrl) ? (
                 <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
                   <TwitterTimelineEmbed url={twitterUrl} autoHeight />
+                </div>
+              ) : null }
+              { (youtubeUrl) ? (
+                <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                  <YoutubeCard url={youtubeUrl} autoHeight />
                 </div>
               ) : null }
             </div>
