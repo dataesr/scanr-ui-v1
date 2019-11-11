@@ -19,6 +19,7 @@ import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCar
 import TagCard from '../../../Shared/Ui/TagCard/TagCard';
 import ProductionCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
+import YoutubeCard from '../../../Shared/Ui/YoutubeCard/YoutubeCard';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
@@ -165,7 +166,14 @@ class Thesis extends Component {
         swHeritageLink = swL.url;
       }
     }
-
+    let youtubeUrl = null;
+    if (this.props.data.links && this.props.data.links.length > 0) {
+      for (let i = 0; i < this.props.data.links.length; i += 1) {
+        if (this.props.data.links[i].type.toLowerCase() === 'youtube') {
+          youtubeUrl = this.props.data.links[i].url;
+        }
+      }
+    }
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
@@ -256,6 +264,13 @@ class Thesis extends Component {
                       </div>
                     ) : null
                     }
+                  </div>
+                  <div className="row">
+                    { (youtubeUrl) ? (
+                      <div className={`col-md-12 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                        <YoutubeCard url={youtubeUrl} autoHeight />
+                      </div>
+                    ) : null }
                   </div>
                 </div>
                 <div className="col-lg">
