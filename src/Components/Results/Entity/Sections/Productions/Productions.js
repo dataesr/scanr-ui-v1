@@ -335,7 +335,7 @@ class Productions extends Component {
       <Fragment>
         <div className={`row align-items-center ${classes.Filters}`}>
           <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
-            <select name="type" id="type-select" className="h-100" onChange={e => this.changeTypeHandler(e)}>
+            <select name="type" id="type-select" className="form-control" onChange={e => this.changeTypeHandler(e)}>
               <option value="publication">Publications</option>
               <option value="thesis">Thèses</option>
               <option value="patents">Brevets</option>
