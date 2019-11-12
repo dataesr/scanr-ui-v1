@@ -35,13 +35,8 @@ class SimilarPersons extends Component {
 
   getData = () => {
     const url = API_PERSON_LIKE_END_POINT;
-<<<<<<< HEAD
-    const request = {
-      fields: ['publications.publication.title', 'keywords.fr', 'keywords.en'],
-=======
     const data = {
       fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
->>>>>>> 1ac44cc05979ee08c5de3030fee7bcefe0e2c514
       likeIds: [this.props.data.id],
       likeTexts: [],
       lang: 'default',
