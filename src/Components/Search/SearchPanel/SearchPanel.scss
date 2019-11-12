@@ -22,46 +22,10 @@
   background-position: top 50% left 82%;
   border-bottom: 8px solid $scanrdeepblueColor;
 
-  .Logo {
-    height: 130px;
-    padding-top: 40px;
-
-    IMG {
-      height: 85%;
-    }
-  }
-
-  .MainContainer {
-    padding-top: 8px;
-  }
-
-  LABEL {
-    font-size: 1rem;
-    margin-bottom: 2px;
-  }
-  .TitleSearchBar { color: white; }
-
-  .SearchPerimeter { color: $scanrdeepblueColor; min-width: 12vw; }
-
-  .btn_dark_margin { margin-top: 24px; height: 45px; width: 45px; }
-
-  .Select {
-    background-color: $scanrdeepblueColor;
-    color: white;
-    border: 1px solid $scanrdeepblueColor;
+  .btn_dark_margin {
     height: 45px;
-  }
-
-  .HowTo {
-    color: white;
-    text-decoration: underline;
-    font-size: 0.8rem;
-    font-weight: bold;
-  }
-
-  .Suggest {
-    color: white;
-    font-size: 0.7rem;
+    width: 45px;
+    border-radius: 8px;
   }
 }
 
@@ -70,12 +34,11 @@
 }
 
 @media screen and (max-width: 991px) {
-  .Suggest { display: none; }
   .onlyMobile {
     display: block !important;
   }
   .SearchBar {
-    padding-top: 66px;
+    padding-top: 70px;
     padding-bottom: 8px;
     background-position: top 10% left 92%;
   }
