@@ -38,7 +38,7 @@ class SimilarEntities extends Component {
   getData = () => {
     const url = API_STRUCTURE_LIKE_END_POINT;
     const data = {
-      fields: ['publications.publication.title', 'websites.description'],
+      fields: ['publications.publication.title', 'websites.description', 'activities.label', 'description'],
       likeIds: [this.props.data.id],
       likeTexts: [],
       lang: 'default',
@@ -94,7 +94,7 @@ class SimilarEntities extends Component {
               <ul className={`row ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
-                    <li key={item.value} className={`col-4 ${classes.Li}`}>
+                    <li key={item.value} className={`col-md-4 ${classes.Li}`}>
                       <EntityCard
                         data={item.value}
                         small
