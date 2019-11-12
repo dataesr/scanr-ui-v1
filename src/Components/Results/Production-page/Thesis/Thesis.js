@@ -20,6 +20,7 @@ import TagCard from '../../../Shared/Ui/TagCard/TagCard';
 import ProductionCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 import YoutubeCard from '../../../Shared/Ui/YoutubeCard/YoutubeCard';
+import PrizeCard from '../../../Shared/Ui/PrizeCard/PrizeCard';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
@@ -159,6 +160,7 @@ class Thesis extends Component {
     const nbAuthorsToShow = 6;
     const sortedAuthors = this.getSortedAuthors();
     const theseLink = 'http://www.theses.fr/'.concat({ id }.id);
+
     let swHeritageLink = null;
     if (this.props.data.links && this.props.data.links.length > 0) {
       const swL = this.props.data.links.find(el => el.type === 'software_heritage');
@@ -166,6 +168,7 @@ class Thesis extends Component {
         swHeritageLink = swL.url;
       }
     }
+
     let youtubeUrl = null;
     if (this.props.data.links && this.props.data.links.length > 0) {
       for (let i = 0; i < this.props.data.links.length; i += 1) {
@@ -174,6 +177,22 @@ class Thesis extends Component {
         }
       }
     }
+
+    const newAwards = [];
+    if (this.props.data.awards) {
+      this.props.data.awards.forEach((element) => {
+        let labelToUse = element.label;
+        if (element.description) {
+          labelToUse = element.label.concat(' (', element.description).concat(')');
+        }
+        newAwards.push({
+          label: labelToUse,
+          date: element.date,
+        });
+      });
+    }
+	  console.log("awards", newAwards);
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
@@ -272,6 +291,26 @@ class Thesis extends Component {
                       </div>
                     ) : null }
                   </div>
+
+                  <div className="row">
+                    {
+                      newAwards.map(award => (
+                        <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
+                          <PrizeCard
+                            date={award.date}
+                            language={this.props.language}
+                            label={award.label}
+                            icon="prize"
+                            color="#fe7747"
+                            masterKey="Publication/award"
+                            modifyMode={this.state.modifyModePortrait}
+                            allData={this.props.data}
+                          />
+                        </div>
+                      ))
+                    }
+                  </div>
+
                 </div>
                 <div className="col-lg">
                   <div className="row">
@@ -290,20 +329,24 @@ class Thesis extends Component {
                         </div>
                       ) : null
                     }
-                    <div className={`col-12 ${classes.CardContainer}`}>
-                      <TagCard
-                        language={this.props.language}
-                        logo="fas fa-clipboard-list"
-                        title={messages[this.props.language]['Publication.publication.tags']}
-                        tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
-                        labelListButton="Autres"
-                        tagList={this.props.data.keywords.default}
-                        tooltip=""
-                        masterKey="Publication/tags"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
-                      />
-                    </div>
+                    {
+                      (this.props.data.keywords.default.length > 0) ? (
+                        <div className={`col-12 ${classes.CardContainer}`}>
+                          <TagCard
+                            language={this.props.language}
+                            logo="fas fa-clipboard-list"
+                            title={messages[this.props.language]['Publication.publication.tags']}
+                            tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
+                            labelListButton="Autres"
+                            tagList={this.props.data.keywords.default}
+                            tooltip=""
+                            masterKey="Publication/tags"
+                            modifyMode={this.state.modifyModePortrait}
+                            allData={this.props.data}
+                          />
+                        </div>
+                      ) : null
+                    }
                   </div>
                 </div>
               </div>
