@@ -90,7 +90,7 @@ class SimilarPersons extends Component {
               <ul className={`row px-2 ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
-                    <li key={item.value} className={`col-3 col-s-12 ${classes.Li}`}>
+                    <li key={item.value} className={`col-md-3 col-s-12 ${classes.Li}`}>
                       <SimilarCard
                         data={item.value}
                         small
