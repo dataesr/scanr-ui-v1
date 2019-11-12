@@ -8,6 +8,7 @@ import Domains from './SubSections/Domains/Domains';
 import Identity from './SubSections/Identity/Identity';
 import Roles from './SubSections/Roles/Roles';
 import Prizes from './SubSections/Prizes/Prizes';
+import Web from './SubSections/Web/Web';
 import classes from './Informations.scss';
 
 import messagesFr from '../../translations/fr.json';
@@ -72,6 +73,15 @@ const Informations = (props) => {
                     language={props.language}
                     data={props.data}
                     masterKey="Person/prizes"
+                    modifyMode={props.modifyMode}
+                    allData={props.data}
+                  />
+                </div>
+                <div className={`${hasAffiliations} ${classes.NoSpace}`}>
+                  <Web
+                    language={props.language}
+                    data={props.data}
+                    masterKey="Person/web"
                     modifyMode={props.modifyMode}
                     allData={props.data}
                   />
