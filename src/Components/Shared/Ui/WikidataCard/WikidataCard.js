@@ -53,18 +53,32 @@ class WikidataCard extends Component {
                 this.setState({ title, extract });
 
                 // Recherche de l'image
-                const urlImage = `https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${this.props.id}&property=P154&format=json&origin=*`
-                Axios.get(urlImage).then((responseImage) => {
+                const urlImage1 = `https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${this.props.id}&property=P154&format=json&origin=*`
+                const urlImage2 = `https://www.wikidata.org/w/api.php?action=wbgetclaims&entity=${this.props.id}&property=P18&format=json&origin=*`
+                const regex = / /gi;
+                let imageName = null;
+                Axios.get(urlImage1).then((responseImage) => {
                   if (responseImage.data && responseImage.data.claims && responseImage.data.claims.P154 && responseImage.data.claims.P154[0] && responseImage.data.claims.P154[0].mainsnak && responseImage.data.claims.P154[0].mainsnak.datavalue && responseImage.data.claims.P154[0].mainsnak.datavalue.value){
-                    let imageName = responseImage.data.claims.P154[0].mainsnak.datavalue.value;
-                    const regex = / /gi;
+                    imageName = responseImage.data.claims.P154[0].mainsnak.datavalue.value;
                     imageName = imageName.replace(regex, '_');
                     const imageNameHash = Md5(imageName)
                     const urlImageOnServer = `https://upload.wikimedia.org/wikipedia/commons/${imageNameHash.substring(0,1)}/${imageNameHash.substring(0,2)}/${imageName}`;
                     this.setState({ urlImageOnServer });
-                  }
+                    this.setState({ imageName });
+                  } else{
+                Axios.get(urlImage2).then((responseImage) => {
+                  if (responseImage.data && responseImage.data.claims && responseImage.data.claims.P18 && responseImage.data.claims.P18[0] && responseImage.data.claims.P18[0].mainsnak && responseImage.data.claims.P18[0].mainsnak.datavalue && responseImage.data.claims.P18[0].mainsnak.datavalue.value){
+                    imageName = responseImage.data.claims.P18[0].mainsnak.datavalue.value;
+                    imageName = imageName.replace(regex, '_');
+                    const imageNameHash = Md5(imageName)
+                    const urlImageOnServer = `https://upload.wikimedia.org/wikipedia/commons/${imageNameHash.substring(0,1)}/${imageNameHash.substring(0,2)}/${imageName}`;
+                    this.setState({ urlImageOnServer });
+                    this.setState({ imageName });
+		  }
+                  });
+		  }
                 });
-              }
+	      }
             }
           }
         });
@@ -83,7 +97,7 @@ class WikidataCard extends Component {
             Wikipedia
           </p>
           <div className={classes.LogoWiki}>
-            <img src={logo} alt="Wikipedia" />
+            <img src={logo} alt="wikipedia" />
           </div>
         </div>
         <div className={classes.Content}>
@@ -91,7 +105,7 @@ class WikidataCard extends Component {
             (this.state.urlImageOnServer)
               ? (
                 <div className={classes.Image}>
-                  <img alt="wikipedia" src={this.state.urlImageOnServer} className="img-fluid" />
+                  <img alt={this.state.imageName} src={this.state.urlImageOnServer} className={classes.WikiImg} />
                 </div>
               ) : null
           }

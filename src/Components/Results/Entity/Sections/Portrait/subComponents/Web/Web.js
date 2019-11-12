@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Axios from 'axios';
 import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
@@ -6,6 +7,7 @@ import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import MainWebSiteButton from './MainWebSiteButton';
 import WebSiteButton from './WebSiteButton';
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
+import YoutubeCard from '../../../../../../Shared/Ui/YoutubeCard/YoutubeCard';
 
 import getWebSiteByType from '../../../../../../../Utils/getWebSiteByType';
 
@@ -56,6 +58,19 @@ const Web = (props) => {
       for (let i = 0; i < props.externalIds.length; i += 1) {
         if (props.externalIds[i].type.toLowerCase() === 'wikidata') {
           return props.externalIds[i].id;
+        }
+      }
+    }
+    return null;
+  };
+
+  const getYoutubeId = () => {
+    let youtubeUrl = null;
+    if (props.socialMedias && props.socialMedias.length > 0) {
+      for (let i = 0; i < props.socialMedias.length; i += 1) {
+        if (props.socialMedias[i].type.toLowerCase() === 'youtube') {
+          youtubeUrl = props.socialMedias[i].url;
+          return youtubeUrl;
         }
       }
     }
@@ -138,6 +153,8 @@ const Web = (props) => {
   });
 
   const idWiki = getWikidataId();
+  const youtubeUrl = getYoutubeId();
+
 
   return (
     <Fragment>
@@ -218,6 +235,15 @@ const Web = (props) => {
                       ? (
                         <div className={`col-md-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
                           <WikidataCard language={props.language} id={idWiki} />
+                        </div>
+                      )
+                      : null
+                  }
+                  {
+                    (props.socialMedias && props.socialMedias.length > 0 && youtubeUrl)
+                      ? (
+                        <div className={`col-md-4 ${classes.CardContainer}`} style={{ height: '500px' }}>
+                          <YoutubeCard language={props.language} url={youtubeUrl} />
                         </div>
                       )
                       : null
