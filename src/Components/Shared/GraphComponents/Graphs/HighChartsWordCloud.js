@@ -31,6 +31,7 @@ export default class HighChartsWordCloud extends Component {
     super(props);
     this.chart = React.createRef();
     this.data = this.props.data;
+    this.max_nb_word = 50;
     this.state = {
       options: null,
     };
@@ -40,7 +41,10 @@ export default class HighChartsWordCloud extends Component {
   }
 
   componentDidMount() {
-    const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
+    let localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
+    if (localData.length > this.max_nb_word) {
+      localData = localData.slice(0, this.max_nb_word);
+    }
     const options = {
       credits: {
         enabled: false,
@@ -48,7 +52,7 @@ export default class HighChartsWordCloud extends Component {
       tooltip: {
         enabled: false,
       },
-      colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#6AF9C4'],
+      colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
       title: {
         text: '',
       },
