@@ -8,10 +8,24 @@ import Autocomplete from './Filters/Autocomplete';
 
 
 const PublicationsFilters = (props) => {
+  if (!props.facets || props.facets.length === 0) {
+    return (<div className="d-flex flex-column mt-1 mb-3 pr-3" />)
+  }
+
+  const typeActiveFilters = props.filters.productionType || {};
+  const typeFacets = props.facets.find(item => item.id === 'facet_production_types') || { entries: [] };
 
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
-     TODO
+      <div className="p-2">
+        <CheckBoxFilter
+          title="Type"
+          facets={typeFacets.entries}
+          filters={typeActiveFilters}
+          facetID="productionType"
+          onSubmit={props.multiValueFilterHandler}
+        />
+      </div>
     </div>
   );
 };
