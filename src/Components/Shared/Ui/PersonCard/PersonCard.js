@@ -33,7 +33,7 @@ const PersonCard = (props) => {
   let email = props.data.email;
   let firstName = props.data.firstName;
   let lastName = props.data.lastName;
-  const role = props.data.role;
+  const role = props.role;
   let url = null;
   if (props.data.person) {
     if (props.data.person.email) {
