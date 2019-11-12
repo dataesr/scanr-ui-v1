@@ -30,7 +30,7 @@ const OaLink = (props) => {
           messages[props.language]['Publication.Oa.OaLink.Title']
         }
       </p>
-      <a href={(props.oaEvidence.pdfUrl) ? props.oaEvidence.pdfUrl : props.oaEvidence.url}>
+      <a href={(props.oaEvidence.pdfUrl) ? props.oaEvidence.pdfUrl : props.oaEvidence.url} target="_blank" rel="noopener noreferrer">
         {logo}
       </a>
     </p>

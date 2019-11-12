@@ -57,7 +57,7 @@ class YoutubeCard extends Component {
                   title="xx"
                   type="text/html"
                   width="100%"
-                  height="500px"
+                  height="492px"
                   src={this.state.urlIframe}
                   frameBorder="0"
                 />

@@ -318,7 +318,7 @@ class Publication extends Component {
                 <FormattedHTMLMessage id="Publication.oa.title" defaultMessage="Publication.oa.title" />
               </SectionTitle>
               <div className="row">
-                <div className={`col-3 ${classes.CardContainer}`}>
+                <div className={`col-md-3 ${classes.CardContainer}`}>
                   <OaCard
                     language={this.props.language}
                     oa={(this.props.data && this.props.data.isOa) ? this.props.data.isOa : false}
@@ -330,7 +330,7 @@ class Publication extends Component {
                 </div>
                 {
                   (this.props.data && this.props.data.oaEvidence && this.props.data.oaEvidence.hostType) ? (
-                    <div className={`col-3 ${classes.CardContainer}`}>
+                    <div className={`col-md-3 ${classes.CardContainer}`}>
                       <OaHost
                         language={this.props.language}
                         oaEvidence={this.props.data.oaEvidence}
@@ -343,7 +343,7 @@ class Publication extends Component {
                 }
                 {
                   (this.props.data && this.props.data.oaEvidence && (this.props.data.oaEvidence.url || this.props.data.oaEvidence.pdfurl)) ? (
-                    <div className={`col-3 ${classes.CardContainer}`}>
+                    <div className={`col-md-3 ${classes.CardContainer}`}>
                       <OaLink
                         language={this.props.language}
                         oaEvidence={this.props.data.oaEvidence}
@@ -370,7 +370,7 @@ class Publication extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > 1)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterCard
                           counter={this.props.data.authors.length}
                           title=""
@@ -385,12 +385,11 @@ class Publication extends Component {
                   sortedAuthors.map((author, index) => {
                     if (index < nbAuthorsToShow) {
                       return (
-                        <div className={`col-3 ${classes.CardContainer}`}>
+                        <div className={`col-md-3 ${classes.CardContainer}`}>
                           <PersonCard
                             data={author}
                             showTitle={false}
                             language={this.props.language}
-                            role={messages[this.props.language][`Publication.publication.${author.role}`]}
                             masterKey="Publication/person"
                             modifyMode={this.state.modifyModeAuthors}
                             allData={this.props.data}
@@ -405,14 +404,14 @@ class Publication extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > nbAuthorsToShow)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterListCard
                           language={this.props.language}
                           data={sortedAuthors}
                           limit={nbAuthorsToShow}
                           title=""
-                          labelKey="authors"
                           color="Default"
+                          labelKey="authors"
                         />
                       </div>
                     ) : null
