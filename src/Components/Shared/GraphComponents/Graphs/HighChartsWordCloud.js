@@ -48,7 +48,7 @@ export default class HighChartsWordCloud extends Component {
       tooltip: {
         enabled: false,
       },
-      colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
+      colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#6AF9C4'],
       title: {
         text: '',
       },
@@ -56,6 +56,10 @@ export default class HighChartsWordCloud extends Component {
         data: localData,
         type: 'wordcloud',
         minFontSize: 10,
+        rotation: {
+          from: 0,
+          to: 0,
+        },
       }],
       exporting: {
         filename: this.props.filename,
