@@ -34,7 +34,6 @@ const Web = (props) => {
     }
   }
   let wikidataId = null;
-  wikidataId = 'Q334065';
   if (props.data.externalIds && props.data.externalIds.length > 0) {
     for (let i = 0; i < props.data.externalIds.length; i += 1) {
       if (props.data.externalIds[i].type.toLowerCase() === 'wikidata') {
