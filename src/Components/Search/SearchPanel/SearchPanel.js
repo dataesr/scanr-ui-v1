@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { IntlProvider, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
@@ -9,23 +9,11 @@ import messagesEn from './translations/en.json';
 import classes from './SearchPanel.scss';
 import BreadCrumb from './BreadCrumb/BreadCrumb';
 
-/* COULEURS */
-import {
-  ENTITY_COLOR,
-  PERSON_COLOR,
-  PROJECT_COLOR,
-  PUBLICATION_COLOR,
-} from '../../../config/config';
-
-
 const SearchPanel = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
-  const randomNumber = Math.floor(Math.random() * 4);
-  const schemasColors = [ENTITY_COLOR, PERSON_COLOR, PROJECT_COLOR, PUBLICATION_COLOR];
-  const color = schemasColors[randomNumber];
   const bgUrl = `./img/poudre-header-home-${props.api}.jpg`;
   const headerPosition = (props.isFull) ? 'relative' : 'fixed';
   const sectionStyle = {
@@ -36,7 +24,7 @@ const SearchPanel = (props) => {
     zIndex: '1001',
   };
 
-  const renderForm = () => (
+  const renderForm = (
     <form onSubmit={props.submitResearch}>
       <div className="row d-flex align-items-end mb-2 mt-1">
         <div className="d-flex flex-column flex-grow-1 pl-0">
@@ -137,7 +125,7 @@ const SearchPanel = (props) => {
     </form>
   );
 
-  const renderFull = () => (
+  const renderFull = (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchBar}`}>
         <div className="container pt-3">
@@ -146,23 +134,23 @@ const SearchPanel = (props) => {
             label="search"
             url="#"
           />
-          {renderForm()}
+          {renderForm}
         </div>
       </section>
     </IntlProvider>
   );
 
-  const renderMini = () => (
+  const renderMini = (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section style={sectionStyle} className={`animated slideInDown faster ${classes.SearchBar}`}>
         <div className="container pt-3">
-          {renderForm()}
+          {renderForm}
         </div>
       </section>
     </IntlProvider>
   );
 
-  const content = props.isFull ? renderFull() : renderMini();
+  const content = props.isFull ? renderFull : renderMini;
 
   return (<Fragment>{content}</Fragment>);
 };
@@ -171,9 +159,6 @@ export default SearchPanel;
 
 SearchPanel.propTypes = {
   language: PropTypes.string.isRequired,
-  suggests: PropTypes.array,
-  /* eslint-disable-next-line */
-  isHome: PropTypes.bool,
   currentQueryText: PropTypes.string,
   api: PropTypes.string,
   queryTextChangeHandler: PropTypes.func,
@@ -183,22 +168,4 @@ SearchPanel.propTypes = {
 };
 SearchPanel.defaultProps = {
   isFull: true,
-  suggests: [
-    {
-      label: '5G',
-      url: '',
-    },
-    {
-      label: 'Biotechnologie',
-      url: '',
-    },
-    {
-      label: 'openData',
-      url: '',
-    },
-    {
-      label: 'PIA',
-      url: '',
-    },
-  ],
 };

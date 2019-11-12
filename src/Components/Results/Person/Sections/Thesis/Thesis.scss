@@ -1,0 +1,33 @@
+@import '../../../../../style.scss';
+
+.Thesis {
+  background-color: #E9ECF1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $textColor;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+  background-size: 50%; /* version standardisée */
+  background-color: $scanrlightgreyColor;
+  background-position: bottom 0 left 0;
+
+  .SectionTitle {
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+  }
+
+  .Label {
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.isOa {
+  height: 204px;
+  background-color: white;
+  border-radius: 8px;
+  padding: auto;
+}
