@@ -370,7 +370,7 @@ class Publication extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > 1)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterCard
                           counter={this.props.data.authors.length}
                           title=""
@@ -385,7 +385,7 @@ class Publication extends Component {
                   sortedAuthors.map((author, index) => {
                     if (index < nbAuthorsToShow) {
                       return (
-                        <div className={`col-3 ${classes.CardContainer}`}>
+                        <div className={`col-md-3 ${classes.CardContainer}`}>
                           <PersonCard
                             data={author}
                             showTitle={false}
@@ -404,14 +404,14 @@ class Publication extends Component {
                 {
                   (this.props.data.authors && this.props.data.authors.length > nbAuthorsToShow)
                     ? (
-                      <div className={`col-3 ${classes.CardContainer}`}>
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
                         <CounterListCard
                           language={this.props.language}
                           data={sortedAuthors}
                           limit={nbAuthorsToShow}
                           title=""
-                          labelKey="authors"
                           color="Default"
+                          labelKey="authors"
                         />
                       </div>
                     ) : null
