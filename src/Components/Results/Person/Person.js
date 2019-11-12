@@ -10,6 +10,7 @@ import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
+import Thesis from './Sections/Thesis/Thesis';
 import Production from '../../Shared/Results/Productions/Productions';
 
 /**
@@ -24,6 +25,7 @@ class Person extends Component {
   state = {
     modifyModeInformations: false,
     modifyModeDescription: false,
+    modifyModeThesis: false,
     data: {},
   };
 
@@ -49,6 +51,9 @@ class Person extends Component {
     if (section === 'coAuthors') {
       this.setState(prevState => ({ modifyModeDescription: !prevState.modifyModeDescription }));
     }
+    if (section === 'thesis') {
+      this.setState(prevState => ({ modifyModeThesis: !prevState.modifyModeThesis }));
+    }
   }
 
   handleChange = (sectionName) => {
@@ -72,7 +77,6 @@ class Person extends Component {
           handleChangeForScroll={this.handleChange}
           idPage="Person"
         />
-
         <div id="Informations">
           <Informations
             language={this.props.language}
@@ -81,7 +85,15 @@ class Person extends Component {
             modifyMode={this.state.modifyModeInformations}
           />
         </div>
-
+        <div id="Thesis">
+          <Thesis
+            language={this.props.language}
+            person={this.props.match.params.id}
+            personName={this.state.data.fullName}
+            modifyModeHandle={() => this.modifyModeHandle('thesis')}
+            modifyMode={this.state.modifyModeDescription}
+          />
+        </div>
         <div id="Production">
           <Production
             language={this.props.language}
@@ -90,7 +102,6 @@ class Person extends Component {
             filterKey="authors.person.id"
           />
         </div>
-
         <div id="CoAuthors">
           <CoAuthors
             language={this.props.language}
