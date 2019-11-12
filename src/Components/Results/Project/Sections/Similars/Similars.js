@@ -87,7 +87,7 @@ class SimilarProjects extends Component {
               <ul className={`row ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
-                    <li key={item.value} className={`col-4 ${classes.Li}`}>
+                    <li key={item.value} className={`col-md-4 ${classes.Li}`}>
                       <SimilarCard
                         data={item.value}
                         small
