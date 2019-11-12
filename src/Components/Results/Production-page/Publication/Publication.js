@@ -390,7 +390,6 @@ class Publication extends Component {
                             data={author}
                             showTitle={false}
                             language={this.props.language}
-                            role={messages[this.props.language][`Publication.publication.${author.role}`]}
                             masterKey="Publication/person"
                             modifyMode={this.state.modifyModeAuthors}
                             allData={this.props.data}

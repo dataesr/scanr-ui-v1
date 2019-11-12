@@ -261,7 +261,7 @@ class Thesis extends Component {
                         data={this.getAuthor('author')}
                         showTitle={false}
                         language={this.props.language}
-                        role={messages[this.props.language]['Publication.publication.author']}
+                        role="author"
                         masterKey="Publication/mainAuthor"
                         modifyMode={this.state.modifyModePortrait}
                         allData={this.props.data}
@@ -430,7 +430,7 @@ class Thesis extends Component {
                             data={author}
                             showTitle={false}
                             language={this.props.language}
-                            role={messages[this.props.language][`Publication.publication.${author.role}`]}
+                            role={author.role}
                             masterKey="Publication/person"
                             modifyMode={this.state.modifyModeAuthors}
                             allData={this.props.data}
