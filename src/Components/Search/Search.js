@@ -23,6 +23,7 @@ class SearchPage extends Component {
 
     this.state = {
       isLoading: false,
+      isSearchFull: true,
       currentQueryText: '',
       api: 'all',
       view: 'list',
@@ -65,6 +66,7 @@ class SearchPage extends Component {
         all: 0,
       },
     };
+    this.handleScroll = this.handleScroll.bind(this);
   }
 
   // *******************************************************************
@@ -74,6 +76,7 @@ class SearchPage extends Component {
     const newState = this.getParams();
     this.getCounts(newState);
     // this.getData(newState);
+    window.addEventListener('scroll', this.handleScroll);
     window.scrollTo(0, 0);
   }
 
@@ -183,6 +186,16 @@ class SearchPage extends Component {
     newRequest.page = value;
     const url = this.setURL(newRequest);
     this.props.history.push(url);
+  }
+
+  handleScroll = () => {
+    if (window.scrollY) {
+      if (this.state.isSearchFull) { this.setState({ isSearchFull: false }); }
+    } else {
+      /* eslint-disable */
+      if (!this.state.isSearchFull && window.scrollY === 0) { this.setState({ isSearchFull: true }); }
+      /* eslint-enable */
+    }
   }
 
   // *******************************************************************
@@ -401,12 +414,13 @@ class SearchPage extends Component {
         />
         <SearchPanel
           language={this.props.language}
-          isHome={false}
+          isHome={true}
           api={this.state.api}
           currentQueryText={this.state.currentQueryText}
           queryTextChangeHandler={this.queryTextChangeHandler}
           apiChangeHandler={this.apiChangeHandler}
           submitResearch={this.submitResearch}
+          isFull={this.state.isSearchFull}
         />
         <section className={`flex-grow-1 ${classes[bgColor]}`}>
           <SearchObjectTab
