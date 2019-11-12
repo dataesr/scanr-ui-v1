@@ -362,7 +362,7 @@ class Thesis extends Component {
                 <FormattedHTMLMessage id="Publication.oa.title" defaultMessage="Publication.oa.title" />
               </SectionTitle>
               <div className="row">
-                <div className={`col-3 ${classes.CardContainer}`}>
+                <div className={`col-md-3 ${classes.CardContainer}`}>
                   <OaCard
                     language={this.props.language}
                     oa={(this.props.data && this.props.data.isOa) ? this.props.data.isOa : false}
@@ -374,7 +374,7 @@ class Thesis extends Component {
                 </div>
                 {
                   (this.props.data && this.props.data.oaEvidence && this.props.data.oaEvidence.hostType) ? (
-                    <div className={`col-3 ${classes.CardContainer}`}>
+                    <div className={`col-md-3 ${classes.CardContainer}`}>
                       <OaHost
                         language={this.props.language}
                         hostType={this.props.data.oaEvidence.hostType}
@@ -384,7 +384,7 @@ class Thesis extends Component {
                 }
                 {
                   (this.props.data && this.props.data.oaEvidence && (this.props.data.oaEvidence.url || this.props.data.oaEvidence.pdfurl)) ? (
-                    <div className={`col-3 ${classes.CardContainer}`}>
+                    <div className={`col-md-3 ${classes.CardContainer}`}>
                       <OaLink
                         language={this.props.language}
                         oaEvidence={this.props.data.oaEvidence}
