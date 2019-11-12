@@ -191,7 +191,6 @@ class Thesis extends Component {
         });
       });
     }
-	  console.log("awards", newAwards);
 
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
