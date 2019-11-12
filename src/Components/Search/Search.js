@@ -414,7 +414,6 @@ class SearchPage extends Component {
         />
         <SearchPanel
           language={this.props.language}
-          isHome={true}
           api={this.state.api}
           currentQueryText={this.state.currentQueryText}
           queryTextChangeHandler={this.queryTextChangeHandler}

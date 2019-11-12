@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';

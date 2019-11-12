@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import Axios from 'axios';
 import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
