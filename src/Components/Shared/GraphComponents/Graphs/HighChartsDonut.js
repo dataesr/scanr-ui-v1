@@ -26,6 +26,11 @@ export default class HighChartsDonut extends Component {
     super(props);
     this.chart = React.createRef();
     this.data = this.props.data;
+    if (this.props.colors) {
+      this.colors = this.props.colors;
+    } else {
+      this.colors = ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'];
+    }
     this.state = {
       options: null,
     };
@@ -35,7 +40,7 @@ export default class HighChartsDonut extends Component {
   }
 
   componentDidMount() {
-    const data = this.data.entries.map(item => ([item.value, item.count]));
+    const data = this.data.entries.map(item => ({ name: item.value, y: item.count, color: item.color }));
     const options = {
       chart: {
         plotBackgroundColor: null,
@@ -43,6 +48,7 @@ export default class HighChartsDonut extends Component {
         plotShadow: false,
       },
       title: { text: '' },
+      colors: this.colors,
       credits: false,
       legend: {
         align: 'right',
@@ -61,12 +67,19 @@ export default class HighChartsDonut extends Component {
         },
       },
       tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>',
+        pointFormat: '{point.percentage:.1f} % <br> ({point.y} {point.name})',
       },
       plotOptions: {
         pie: {
           dataLabels: {
             enabled: false,
+            format: '<b>{point.name}</b><br>{point.percentage:.1f} %',
+            distance: 50,
+            filter: {
+              property: 'percentage',
+              operator: '>',
+              value: 4,
+            },
             // distance: -50,
             // style: {
             //     fontWeight: 'bold',
@@ -193,4 +206,5 @@ export default class HighChartsDonut extends Component {
 HighChartsDonut.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
+  colors: PropTypes.object.isRequired,
 };
