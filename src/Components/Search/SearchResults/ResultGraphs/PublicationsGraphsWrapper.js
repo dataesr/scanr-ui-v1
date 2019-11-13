@@ -4,9 +4,14 @@ import PublicationTypes from './PublicationsGraphs/PublicationsTypes';
 import PublicationKeywords from './PublicationsGraphs/PublicationsKeywords';
 import PublicationYears from './PublicationsGraphs/PublicationsYears';
 import PublicationJournals from './PublicationsGraphs/PublicationsJournals';
+import PublicationIsOa from './PublicationsGraphs/PublicationsIsOa';
 
 const PublicationsGraphsWrapper = props => (
   <React.Fragment>
+    <PublicationIsOa
+      language={props.language}
+      request={props.request}
+    />
     <PublicationKeywords
       language={props.language}
       request={props.request}
