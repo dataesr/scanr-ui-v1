@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import SunburstChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
+import SunburstChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import WorldCloud from '../../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import YearChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsLine';
@@ -43,6 +43,25 @@ const ProductionGraphs = (props) => {
   const renderGraph = () => {
     if (active === 'keywords') {
       return <WorldCloud filename={active} data={props.graphData[active]} />;
+    }
+    if (active === 'isOa') {
+      const data = { entries: [] };
+      props.graphData.isOa.entries.forEach((entry) => {
+        if (entry.value === 'false') {
+          data.entries.push({
+            color: 'rgb(170, 170, 170)',
+            value: 'Closed access',
+            count: entry.count,
+          });
+        } else {
+          data.entries.push({
+            color: 'rgb(32, 225, 104)',
+            value: 'Open access',
+            count: entry.count,
+          });
+        }
+      });
+      return <SunburstChart filename={active} series={data} />;
     }
     if (active === 'years') {
       const data = {
