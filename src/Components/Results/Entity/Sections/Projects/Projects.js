@@ -4,15 +4,17 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
 
+
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
+// import SankeyGraph2 from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
 import Select from '../../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProjectDetail from './ProjectDetail';
-import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
