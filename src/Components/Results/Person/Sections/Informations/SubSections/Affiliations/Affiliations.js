@@ -51,6 +51,7 @@ const Affiliations = (props) => {
       borderBottom: '5px solid #ffd138',
     };
     const testAffs = {};
+    /*
     const affYears = props.data.map((aff) => {
       const endDate = moment(aff.endDate).format('YYYY');
       return endDate;
@@ -58,14 +59,45 @@ const Affiliations = (props) => {
     affYears.forEach((year) => {
       testAffs[year] = [];
     });
+    */
     props.data.forEach((aff) => {
       const affiliation = { ...aff };
       affiliation.endDate = moment(aff.endDate).format('YYYY');
       affiliation.startDate = moment(aff.startDate).format('YYYY');
-      testAffs[affiliation.endDate].push(affiliation);
+      if (affiliation.sources.length === 1) {
+        affiliation.subLabel = affiliation.sources.length.toString().concat(' ', 'production');
+      } else {
+        affiliation.subLabel = affiliation.sources.length.toString().concat(' ', 'productions');
+      }
+      const key = affiliation.startDate.concat('-', affiliation.endDate);
+      if (!(key in testAffs)) {
+        testAffs[key] = [];
+      }
+      testAffs[key].push(affiliation);
     });
-    const orderedYears = Object.keys(testAffs).sort((a, b) => b - a);
-
+    if (props.allData.roles) {
+      props.allData.roles.forEach((role) => {
+        const affiliation = {};
+        affiliation.startDate = moment(role.startDate).format('YYYY');
+        if (role.endDate) {
+          affiliation.endDate = moment(role.endDate).format('YYYY');
+        } else {
+          affiliation.endDate = 'xxxx';
+        }
+        affiliation.sources = [];
+        affiliation.subLabel = role.role;
+        const structure = {};
+        structure.id = role.description.split('__idstructure__')[1];
+        structure.label = { default: role.description.split('__idstructure__')[0] };
+        affiliation.structure = structure;
+        const key = affiliation.startDate.concat('-', affiliation.endDate);
+        if (!(key in testAffs)) {
+          testAffs[key] = [];
+        }
+        testAffs[key].push(affiliation);
+      });
+    }
+    const orderedYears = Object.keys(testAffs).sort((a, b) => b.replace('-', '') - a.replace('-', ''));
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <React.Fragment>
@@ -101,8 +133,7 @@ const Affiliations = (props) => {
                                     {getSelectKey(struct.structure, 'label', props.language, 'default')}
                                   </p>
                                   <p className={`m-0 ${classes.AffiliationYears}`}>
-                                    <FormattedHTMLMessage id="Person.informations.affiliation.foundIn" defaultMessage="Person.informations.affiliation.foundIn" />
-                                    {`${struct.sources.length} productions`}
+                                    {`${struct.subLabel}`}
                                   </p>
                                 </div>
                                 <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
