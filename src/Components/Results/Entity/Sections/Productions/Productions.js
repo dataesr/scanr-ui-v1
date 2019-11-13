@@ -1,26 +1,18 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
-import InputRange from 'react-input-range';
-import moment from 'moment';
+import { GridLoader } from 'react-spinners';
 
 
-import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '../../../../../config/config';
+import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 
-// import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-// import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import ProductionDetail from '../../../../Shared/Results/Productions/ProductionDetail';
-import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
-import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
-import YearChart from '../../../../Shared/GraphComponents/Graphs/HighChartsLine';
-import DonutChart from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-import classes from './Productions.scss';
+import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import SectionTitleViewMode from './Components/SectionTitleViewMode';
+import FilterPanel from './Components/FilterPanel';
+import ProductionList from './Components/ProductionList';
+import ProductionGraphs from './Components/ProductionGraphs';
+import Request from './Requests/Request';
+import PreRequest from './Requests/PreRequest';
 
 /**
  * Productions
@@ -33,185 +25,173 @@ import classes from './Productions.scss';
 class Productions extends Component {
   state = {
     productionType: 'publication',
+    error: false,
+    isLoading: true,
+    total: 0,
+    totalPerType: {
+      patents: null,
+      publications: null,
+      thesis: null,
+    },
     query: '',
     currentQueryText: '',
-    total: '',
-    isOa: {},
-    journals: {},
-    years: {},
-    keywords: {},
-    types: {},
-    modifyMode: false,
-    activeGraph: 'isOa',
+    graphData: {
+      isOa: {},
+      journals: {},
+      years: {},
+      keywords: {},
+      types: {},
+    },
+    activeGraph: null,
     viewMode: 'list',
     data: [],
-    initialData: [],
-    selectedProduction: {},
-    autocompleteData: null,
+    selectedProduction: '',
     sliderYear: {
       min: null,
       max: null,
     },
-    minYear: null,
-    maxYear: null,
+    sliderBounds: {
+      min: null,
+      max: null,
+    },
+    modifyMode: false,
   }
 
   componentDidMount() {
-    this.getData(true);
+    this.fetchGlobalData();
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
-      this.getData();
+      this.fetchDataByType();
     }
-    if (prevState.query !== this.state.query || prevState.productionType !== this.state.productionType) {
-      const sliderYears = {
-        min: null,
-        max: null,
+    if (prevState.total !== this.state.total) {
+      this.fetchDataByType();
+    }
+    if (prevState.productionType !== this.state.productionType) {
+      this.fetchDataByType();
+    }
+    if (prevState.query !== this.state.query) {
+      const sliderYear = {
+        min: 2000,
+        max: 2020,
       };
-      this.setState({ sliderYears });
-      this.getData(true);
+      this.setState({ sliderYear });
+      this.fetchDataByType();
     }
   }
 
-  getData = (initial = false) => {
+
+  fetchGlobalData = () => {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    let st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
-    let en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
-    if (initial) {
-      st = 2000;
-      en = 2020;
+    const preRequest = PreRequest;
+    if (this.props.person) {
+      preRequest.filters = {
+        'authors.person.id': {
+          type: 'MultiValueSearchFilter',
+          op: 'all',
+          values: [this.props.match.params.id],
+        },
+        productionType: {
+          type: 'MultiValueSearchFilter',
+          op: 'any',
+          values: ['publication', 'patent'],
+        },
+      };
+    } else {
+      preRequest.filters = {
+        'affiliations.id': {
+          type: 'MultiValueSearchFilter',
+          op: 'all',
+          values: [this.props.match.params.id],
+        },
+      };
     }
-    const start = new Date(Date.UTC(st, 0, 1)).toISOString();
-    const end = new Date(Date.UTC(en, 11, 31)).toISOString();
-    const request = {
-      pageSize: 500,
-      query: this.state.query,
-      filters: {
-        publicationDate: {
-          type: 'DateRangeFilter',
-          max: end,
-          min: start,
-          missing: false,
-        },
-      },
-      aggregations: {
-        types: {
-          field: 'type',
-          filters: {},
-          min_doc_count: 1,
-          order: {
-            direction: 'DESC',
-            type: 'COUNT',
-          },
-          size: 50,
-        },
-        keywords: {
-          field: 'keywords.fr',
-          filters: {},
-          min_doc_count: 1,
-          order: {
-            direction: 'DESC',
-            type: 'COUNT',
-          },
-          size: 100,
-        },
-        journal: {
-          field: 'source.title',
-          filters: {},
-          min_doc_count: 1,
-          order: {
-            direction: 'DESC',
-            type: 'COUNT',
-          },
-          size: 10,
-        },
-        years: {
-          field: 'year',
-          filters: {},
-          min_doc_count: 1,
-          order: {
-            direction: 'DESC',
-            type: 'COUNT',
-          },
-          size: 100,
-        },
-        isOa: {
-          field: 'isOa',
-          filters: {},
-          min_doc_count: 1,
-          order: {
-            direction: 'DESC',
-            type: 'COUNT',
-          },
-          size: 10,
-        },
-      },
-    };
-    request.filters[this.props.filterKey] = {
-      type: 'MultiValueSearchFilter',
-      op: 'all',
-      values: [this.props.match.params.id],
-    };
-    request.filters.productionType = {
-      type: 'MultiValueSearchFilter',
-      op: 'all',
-      values: [this.state.productionType],
-    };
-    Axios.post(url, request).then((response) => {
-      // eslint-disable-next-line
-      let years = [2000, 2020]
+    Axios.post(url, preRequest).then((response) => {
+      let years = [2000, 2020];
       try {
-        years = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
+        const years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
+        if (years2.length > 0) {
+          years = years2;
+        }
       } catch (err) {
         // eslint-disable-next-line
         console.log(err);
       }
-      const stableState = { ...this.state };
-      let minYear = stableState.minYear;
-      let maxYear = stableState.maxYear;
-      if (initial) {
-        minYear = (years.length > 0) ? Math.min(...years) : 2000;
-        maxYear = (years.length > 0) ? Math.max(...years) : 2020;
-      }
-      if (response.data.results.length > 0) {
-        this.setSelectedProductionHandler(response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate))[0]);
-      } else {
-        this.setState({ selectedProduction: {} });
-      }
-      this.setState({
-        data: response.data.results,
-        initialData: response.data.results,
-        total: response.data.total,
-        sliderYear: {
-          min: (years.length > 0) ? Math.min(...years) : 2000,
-          max: (years.length > 0) ? Math.max(...years) : 2020,
-        },
-        minYear,
-        maxYear,
-        journals: response.data.facets.find(item => item.id === 'journal'),
-        keywords: response.data.facets.find(item => item.id === 'keywords'),
-        years: {
-          entries: response.data.facets.find(item => item.id === 'years').entries.sort((a, b) => (a.value - b.value)),
-        },
-        domains: response.data.facets.find(facet => facet.id === 'domains'),
-        isOa: response.data.facets.find(facet => facet.id === 'isOa'),
-        types: response.data.facets.find(facet => facet.id === 'types'),
+      const totalPerType = {};
+      // const MaxProduction = '';
+      response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
+        totalPerType[type.value] = type.count;
       });
-      for (let i = 0; i < this.state.isOa.entries.length; i += 1) {
-        if (this.state.isOa.entries[i].value === 'false') {
-          this.state.isOa.entries[i].color = 'rgb(170, 170, 170)';
-          this.state.isOa.entries[i].value = 'Closed access';
-        } else {
-          this.state.isOa.entries[i].color = 'rgb(32, 225, 104)';
-          this.state.isOa.entries[i].value = 'Open access';
-        }
+      const sliderBounds = {
+        min: Math.min(...years),
+        max: Math.max(...years),
+      };
+      const viewMode = response.data.total > 10 ? 'graph' : 'list';
+      this.setState({
+        total: response.data.total,
+        totalPerType,
+        viewMode,
+        sliderBounds,
+        sliderYear: sliderBounds,
+      });
+    });
+  }
+
+  fetchDataByType = () => {
+    this.setState({ isLoading: true });
+    const url = API_PUBLICATIONS_SEARCH_END_POINT;
+    const st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
+    const en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
+    const request = Request;
+    request.query = this.state.query;
+    request.filters.publicationDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
+    request.filters.publicationDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
+    request.filters.productionType.values = [this.state.productionType];
+    if (this.props.person) {
+      request.filters['authors.person.id'] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [this.props.match.params.id],
+      };
+    } else {
+      request.filters['affiliations.id'] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [this.props.match.params.id],
+      };
+    }
+    Axios.post(url, request).then((response) => {
+      // eslint-disable-next-line
+      let years2 = [2000, 2020]
+      try {
+        years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
+      } catch (err) {
+        // eslint-disable-next-line
+        console.log(err);
       }
+      const graphData = {};
+      response.data.facets.forEach((facet) => {
+        graphData[facet.id] = facet;
+      });
+      const data = response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+      const selectedProduction = data.length > 0 ? data[0].value.id : '';
+      this.setState({
+        data,
+        selectedProduction,
+        graphData,
+        isLoading: false,
+      });
     });
   }
 
   modifyModeHandle = () => {
     this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
+  }
+
+  changeTypeHandler = (e) => {
+    e.preventDefault();
+    this.setState({ productionType: e.target.value, activeGraph: null });
   }
 
   viewModeClickHandler = (viewMode) => {
@@ -228,290 +208,122 @@ class Productions extends Component {
     this.setState(prevState => ({ query: prevState.currentQueryText }));
   }
 
-  changeGraphHandler = (nextGraph) => {
+  setActiveGraphHandler = (nextGraph) => {
     this.setState({ activeGraph: nextGraph });
+  }
+
+  sliderChangeHandler = (value) => {
+    this.setState({ sliderYear: value });
   }
 
   // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
-    const url = `${API_PUBLICATIONS_END_POINT}/${selectedProduction.value.id.replace(new RegExp('/', 'g'), '%252f')}`;
-    Axios.get(url).then((response) => {
-      this.setState({ selectedProduction: response.data });
-      // eslint-disable-next-line
-    }).catch(e => console.log('error:', e));
+    this.setState({ selectedProduction });
   };
 
-  renderViewList = () => {
-    const filteredData = this.state.data.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
-
-    const content = filteredData.map((item, i) => {
-      let first = false;
-      if (i > 0) {
-        first = (moment(filteredData[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
-      }
-      let selected = '';
-      if (item === this.state.selectedProduction) {
-        selected = classes.Selected;
-      }
-      return (
-        <Fragment key={item.value.id}>
-          {
-            (i === 0 || first)
-              ? (
-                <div className={classes.TitleYear}>
-                  {
-                    moment(item.value.publicationDate).format('YYYY')
-                  }
-                </div>
-              )
-              : null
-          }
-          <div
-            className={`${classes.Item} ${selected}`}
-            onClick={() => this.setSelectedProductionHandler(item)}
-            onKeyPress={() => this.setSelectedProductionHandler(item)}
-            role="button"
-            tabIndex={0}
-          >
-            <p className={classes.Title}>
-              {item.value.title.default}
-            </p>
-            <div className={`d-flex align-items-center ${classes.Type}`}>
-              <div className="mr-auto" />
-              <span className={classes[item.value.productionType]} />
-              <p className="m-0">{item.value.type}</p>
-            </div>
-          </div>
-        </Fragment>
-      );
-    });
-
-    return (
-      <Fragment>
-        <div className={`row align-items-center ${classes.Filters}`}>
-          <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
-            <select name="type" id="type-select" className="form-control" onChange={e => this.changeTypeHandler(e)}>
-              <option value="publication">Publications</option>
-              <option value="thesis">Thèses</option>
-              <option value="patents">Brevets</option>
-            </select>
-          </div>
-          <div className={`col-lg-4 ${classes.RangeSlider} ${(this.state.years.entries && this.state.years.entries.length > 0 ? '' : 'hidden')}`}>
-            <div className={classes.Title}>
-              Sélectionner une période
-            </div>
-            <div className={classes.Slider}>
-              <InputRange
-                minValue={this.state.minYear}
-                maxValue={this.state.maxYear}
-                formatLabel={value => value}
-                value={this.state.sliderYear}
-                onChange={value => this.setState({ sliderYear: value })}
-              />
-            </div>
-          </div>
-          <form className="col-lg-4" onSubmit={this.queryChangeHandler}>
-            <label className={classes.Title} htmlFor="inputFilter">
-              Rechercher dans les publications
-              <input
-                type="text"
-                autoComplete="off"
-                id="inputFilter"
-                value={this.state.currentQueryText}
-                className={`pl-2 ${classes.SearchBar}`}
-                onChange={this.queryTextChangeHandler}
-                onFocus={this.setActive}
-                onBlur={this.setInactive}
-              />
-              <button
-                className={classes.SearchButton}
-                type="submit"
-              >
-                <i className={`fas fa-search ${classes.SearchIcon}`} />
-              </button>
-            </label>
-          </form>
-        </div>
-        {/* /row */}
-        <div className="row">
-          <div className="col-lg-5">
-            <div className={classes.ListOfProductions}>
-              {(content.length > 0) ? content : 'Aucun résultat'}
-            </div>
-          </div>
-          <div className="col-lg-7">
-            <ProductionDetail data={this.state.selectedProduction} language={this.props.language} />
-          </div>
-        </div>
-      </Fragment>
-    );
-  }
-
-  changeGraphHandler = (nextGraph) => {
-    this.setState({ activeGraph: nextGraph });
-  }
-
-  changeTypeHandler = (e) => {
-    e.preventDefault();
-    this.setState({ productionType: e.target.value });
-  }
-
-  whichGraph = () => {
-    if (this.state.activeGraph === 'isOa') {
-      return <DonutChart filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
-    }
-    if (this.state.activeGraph === 'keywords') {
-      return <WorldCloud filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
-    }
-    if (this.state.activeGraph === 'years') {
-      return <YearChart filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
-    }
-    return (
-      <BarChart
-        filename={this.state.activeGraph}
-        data={this.state[this.state.activeGraph]}
-        language={this.props.language}
-      />
-    );
-  }
-
-  renderViewGraph = () => (
-    <React.Fragment>
-      <div className="nav justify-content-center py-1">
-        <button
-          type="button"
-          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'isOa') ? classes.active : ''} ${(this.state.isOa) ? '' : 'disabled'}`}
-          onClick={() => this.changeGraphHandler('isOa')}
-          onKeyPress={() => this.changeGraphHandler('isOa')}
-        >
-          OpenAccess
-        </button>
-        {
-          (this.state.productionType === 'publication')
-            ? (
-              <button
-                type="button"
-                className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
-                onClick={() => this.changeGraphHandler('journals')}
-                onKeyPress={() => this.changeGraphHandler('journals')}
-                isDisabled={(this.state.journals.entries && this.state.journals.entries.length > 0) ? '' : 'true'}
-              >
-                Journals
-              </button>
-            )
-            : null
-        }
-        {
-          (this.state.productionType === 'publication')
-            ? (
-              <button
-                type="button"
-                className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'journals') ? classes.active : ''} ${(this.state.journals.entries) ? '' : 'disabled'}`}
-                onClick={() => this.changeGraphHandler('types')}
-                onKeyPress={() => this.changeGraphHandler('types')}
-                isDisabled={(this.state.types.entries && this.state.types.entries.length > 0) ? '' : 'true'}
-              >
-                Types
-              </button>
-            )
-            : null
-        }
-        <button
-          type="button"
-          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'years') ? classes.active : ''}`}
-          isDisabled={(this.state.years.entries && this.state.years.entries.length > 0) ? 'false' : 'true'}
-          onClick={() => this.changeGraphHandler('years')}
-          onKeyPress={() => this.changeGraphHandler('years')}
-        >
-          Years
-        </button>
-        <button
-          type="button"
-          className={`btn mx-1 ${classes.graphSelector} ${(this.state.activeGraph === 'keywords') ? classes.active : ''} ${(this.state.keywords.entries) ? '' : 'disabled'}`}
-          onClick={() => this.changeGraphHandler('keywords')}
-          onKeyPress={() => this.changeGraphHandler('keywords')}
-          isDisabled={(this.state.keywords.entries && this.state.keywords.entries.length > 0) ? '' : 'true'}
-        >
-          Keywords
-        </button>
-      </div>
-      <div className="row">
-        <div className={`col-md-12 ${classes.graphCard}`}>
-          {this.whichGraph()}
-        </div>
-      </div>
-    </React.Fragment>
-  );
-
   render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
-    return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.Productions}`}>
+    if (this.state.total === 0) {
+      return (
+        <Fragment>
+          <section className="container-fluid py-4">
             <div className="container">
-              <div className={classes.SectionTitle}>
-                <div className="d-flex flex-wrap align-items-center">
-                  <i className="fas fa-folder-open" />
-                  <span className={`mr-auto my-2 ${classes.Label}`}>
-                    {this.state.total}
-                    &nbsp;
-                    {messages[this.props.language]['Entity.productions.publication.label']}
-                  </span>
-                  <div className="d-flex flex-wrap align-items-center">
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewList"
-                      onClick={() => this.viewModeClickHandler('list')}
-                      onKeyPress={() => this.viewModeClickHandler('list')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-list" />
-                        </span>
-                        <p className="m-0" id="productionViewList">
-                          Liste
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewGraph"
-                      onClick={() => this.viewModeClickHandler('graph')}
-                      onKeyPress={() => this.viewModeClickHandler('graph')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-chart-pie" />
-                        </span>
-                        <p className="m-0" id="productionViewGraph">
-                          Visualisation
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {
-                (this.state.viewMode === 'list')
-                  ? this.renderViewList(messages)
-                  : this.renderViewGraph()
-              }
+              <SectionTitleViewMode
+                total={this.state.total}
+                label="Productions"
+                viewModeClickHandler={this.viewModeClickHandler}
+                viewMode={this.state.viewMode}
+              />
+              <EmptySection language={this.props.language} />
             </div>
           </section>
-        </IntlProvider>
+        </Fragment>
+      );
+    }
+    if (this.state.error) {
+      return (
+        <Fragment>
+          <section className="container-fluid py-4">
+            <div className="container">
+              <SectionTitleViewMode
+                total={this.state.total}
+                label="Productions"
+                viewModeClickHandler={this.viewModeClickHandler}
+                viewMode={this.state.viewMode}
+              />
+              <p>Une erreur s&aposest produite.</p>
+            </div>
+          </section>
+        </Fragment>
+      );
+    }
+    if (this.state.isLoading) {
+      return (
+        <Fragment>
+          <section className="container-fluid py-4">
+            <div className="container">
+              <SectionTitleViewMode
+                total={this.state.total}
+                label="Productions"
+                viewModeClickHandler={this.viewModeClickHandler}
+                viewMode={this.state.viewMode}
+              />
+              <div className="row justify-content-center py-5 my-5">
+                <GridLoader
+                  color="#cc3d8f"
+                  loading={this.state.isLoading}
+                />
+              </div>
+            </div>
+          </section>
+        </Fragment>
+      );
+    }
+
+    return (
+      <Fragment>
+        <section className="container-fluid py-4">
+          <div className="container">
+            <SectionTitleViewMode
+              language={this.props.language}
+              total={this.state.total}
+              label="Productions"
+              viewModeClickHandler={this.viewModeClickHandler}
+              viewMode={this.state.viewMode}
+            />
+            <FilterPanel
+              language={this.props.language}
+              totalPerType={this.state.totalPerType}
+              selectedType={this.state.productionType}
+              changeTypeHandler={this.changeTypeHandler}
+              currentQueryText={this.state.currentQueryText}
+              queryChangeHandler={this.queryChangeHandler}
+              queryTextChangeHandler={this.queryTextChangeHandler}
+              sliderBounds={this.state.sliderBounds}
+              sliderYear={this.state.sliderYear}
+              sliderChangeHandler={this.sliderChangeHandler}
+            />
+            {
+              (this.state.viewMode === 'list')
+                ? (
+                  <ProductionList
+                    language={this.props.language}
+                    data={this.state.data}
+                    selectedProduction={this.state.selectedProduction}
+                    setSelectedProductionHandler={this.setSelectedProductionHandler}
+                  />
+                )
+                : (
+                  <ProductionGraphs
+                    language={this.props.language}
+                    activeGraph={this.state.activeGraph}
+                    setActiveGraphHandler={this.setActiveGraphHandler}
+                    graphData={this.state.graphData}
+                    productionType={this.state.productionType}
+                  />
+                )
+            }
+          </div>
+        </section>
       </Fragment>
     );
   }
@@ -521,6 +333,6 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
-  filterKey: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
+  person: PropTypes.bool,
 };
