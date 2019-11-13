@@ -2,15 +2,10 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-// eslint-disable-next-line
-import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
+import getSelectKey from '../../../../../../Utils/getSelectKey';
+import ButtonToPage from '../../../../../Shared/Ui/Buttons/ButtonToPage';
 
 import classes from './ProductionDetail.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 /**
  * ProductionDetail
@@ -21,17 +16,8 @@ import messagesEn from './translations/en.json';
  * Tests unitaires : .
 */
 const ProductionDetail = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
-
   if (Object.entries(props.data).length === 0) {
-    return (
-      <div className={classes.Empty}>
-        {messages[props.language]['Productions.empty.label']}
-      </div>
-    );
+    return null;
   }
 
   let date = '';
@@ -90,9 +76,9 @@ const ProductionDetail = (props) => {
   const diff = props.data.authors.length - maxAuthors;
   let others = '';
   if (diff === 1) {
-    others = `${messages[props.language]['Productions.detail.and']} 1 ${messages[props.language]['Productions.detail.author']}`;
+    others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'autre auteur' : 'more author'}`;
   } else if (diff > 1) {
-    others = `${messages[props.language]['Productions.detail.and']} ${diff} ${messages[props.language]['Productions.detail.authors']}`;
+    others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'autre auteur' : 'more author'}`;
   }
 
 
