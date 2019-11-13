@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SunburstChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import WorldCloud from '../../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import YearChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsLine';
+import DonutChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
 import classes from './ProductionGraphs.scss';
 
 /**
@@ -45,23 +45,23 @@ const ProductionGraphs = (props) => {
       return <WorldCloud filename={active} data={props.graphData[active]} />;
     }
     if (active === 'isOa') {
-      const data = { entries: [] };
+      const data = { id: 'isOa', entries: [] };
       props.graphData.isOa.entries.forEach((entry) => {
         if (entry.value === 'false') {
           data.entries.push({
             color: 'rgb(170, 170, 170)',
-            value: 'Closed access',
+            value: (props.language === 'fr') ? 'Accès fermé' : 'Closed access',
             count: entry.count,
           });
         } else {
           data.entries.push({
             color: 'rgb(32, 225, 104)',
-            value: 'Open access',
+            value: (props.language === 'fr') ? 'Accès ouvert' : 'Open access',
             count: entry.count,
           });
         }
       });
-      return <SunburstChart filename={active} series={data} />;
+      return <DonutChart filename={active} data={data} />;
     }
     if (active === 'years') {
       const data = {
@@ -88,15 +88,32 @@ const ProductionGraphs = (props) => {
       </button>
     ))
   );
+  if (props.totalPerType[props.productionType] < 2) {
+    return (
+      <React.Fragment>
+        <div className={`justify-content-center py-1 ${classes.ProductionGraphs}`}>
+          <p className={`py-5 pl-4 ${classes.ToFew}`}>
+            {
+              (props.language === 'fr')
+                ? 'Trop peu de publication pour afficher les visualisations'
+                : 'Not enought data to print vizualisations'
+            }
+          </p>
+        </div>
+      </React.Fragment>
+    );
+  }
 
   return (
     <React.Fragment>
-      <div className="justify-content-center py-1">
-        {graphNav()}
-      </div>
-      <div className="row">
-        <div className={`col-md-12 ${classes.graphCard}`}>
-          {renderGraph(props.activeGraph, props.graphData)}
+      <div className={classes.ProductionGraphs}>
+        <div className="justify-content-center py-1">
+          {graphNav()}
+        </div>
+        <div className="row">
+          <div className={`col-md-12 ${classes.graphCard}`}>
+            {renderGraph(props.activeGraph, props.graphData)}
+          </div>
         </div>
       </div>
     </React.Fragment>
@@ -111,4 +128,5 @@ ProductionGraphs.propTypes = {
   setActiveGraphHandler: PropTypes.func.isRequired,
   graphData: PropTypes.object.isRequired,
   productionType: PropTypes.string.isRequired,
+  totalPerType: PropTypes.object.isRequired,
 };
