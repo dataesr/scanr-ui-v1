@@ -29,8 +29,8 @@ class Productions extends Component {
     isLoading: true,
     total: 0,
     totalPerType: {
-      patents: null,
-      publications: null,
+      patent: null,
+      publication: null,
       thesis: null,
     },
     query: '',
@@ -319,6 +319,7 @@ class Productions extends Component {
                     setActiveGraphHandler={this.setActiveGraphHandler}
                     graphData={this.state.graphData}
                     productionType={this.state.productionType}
+                    totalPerType={this.state.totalPerType}
                   />
                 )
             }
