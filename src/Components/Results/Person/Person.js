@@ -11,7 +11,7 @@ import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
 import Thesis from './Sections/Thesis/Thesis';
-import Production from '../../Shared/Results/Productions/Productions';
+import Productions from '../Entity/Sections/Productions/Productions';
 
 /**
  * Publication
@@ -95,11 +95,10 @@ class Person extends Component {
           />
         </div>
         <div id="Production">
-          <Production
+          <Productions
             language={this.props.language}
-            objectId={this.props.match.params.id}
-            objectName={(this.state.data.fullName) ? this.state.data.fullName : ''}
-            filterKey="authors.person.id"
+            match={this.props.match}
+            person
           />
         </div>
         <div id="CoAuthors">
