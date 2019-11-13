@@ -11,10 +11,10 @@ import { API_PUBLICATIONS_SEARCH_END_POINT, API_PUBLICATIONS_END_POINT } from '.
 // import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 // import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProductionDetail from '../../../../Shared/Results/Productions/ProductionDetail';
-import SunburstChart from '../../../../Shared/GraphComponents/Graphs/HighChartsSunburst';
 import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import YearChart from '../../../../Shared/GraphComponents/Graphs/HighChartsLine';
+import DonutChart from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -72,61 +72,6 @@ class Productions extends Component {
       this.setState({ sliderYears });
       this.getData(true);
     }
-  }
-
-  getDataGraph = () => {
-    const pubOa = this.state.data.filter(el => (el.value.productionType === 'publication' && el.value.isOa));
-    const pubNoa = this.state.data.filter(el => (el.value.productionType === 'publication' && !el.value.isOa));
-    const thesesOa = this.state.data.filter(el => (el.value.productionType === 'thesis' && el.value.isOa));
-    const thesesNoa = this.state.data.filter(el => (el.value.productionType === 'thesis' && !el.value.isOa));
-
-    const dataGraph = [{
-      id: 'Production',
-      parent: '',
-      name: 'Production',
-    },
-    {
-      id: 'Publications',
-      parent: 'Production',
-      name: 'Publications',
-      color: '#cc3d8f',
-    },
-    {
-      id: 'Publications-oa',
-      parent: 'Publications',
-      name: 'Publications<br>Accès ouvert',
-      value: pubOa.length,
-      color: '#D580B0',
-    },
-    {
-      id: 'Publications-noa',
-      parent: 'Publications',
-      name: 'Publications<br>Accès fermé',
-      value: pubNoa.length,
-      color: '#4D2E3F',
-    },
-    {
-      id: 'Theses',
-      parent: 'Production',
-      name: 'Thèses',
-      color: '#fead3f',
-    },
-    {
-      id: 'Theses-oa',
-      parent: 'Theses',
-      name: 'Thèses<br>Accès ouvert',
-      value: thesesOa.length,
-      color: '#FFCF8C',
-    },
-    {
-      id: 'Theses-noa',
-      parent: 'Theses',
-      name: 'Thèses<br>Accès fermé',
-      value: thesesNoa.length,
-      color: '#806846',
-    },
-    ];
-    return dataGraph;
   }
 
   getData = (initial = false) => {
@@ -250,8 +195,18 @@ class Productions extends Component {
           entries: response.data.facets.find(item => item.id === 'years').entries.sort((a, b) => (a.value - b.value)),
         },
         domains: response.data.facets.find(facet => facet.id === 'domains'),
+        isOa: response.data.facets.find(facet => facet.id === 'isOa'),
         types: response.data.facets.find(facet => facet.id === 'types'),
       });
+      for (let i = 0; i < this.state.isOa.entries.length; i += 1) {
+        if (this.state.isOa.entries[i].value === 'false') {
+          this.state.isOa.entries[i].color = 'rgb(170, 170, 170)';
+          this.state.isOa.entries[i].value = 'Closed access';
+        } else {
+          this.state.isOa.entries[i].color = 'rgb(32, 225, 104)';
+          this.state.isOa.entries[i].value = 'Open access';
+        }
+      }
     });
   }
 
@@ -401,9 +356,9 @@ class Productions extends Component {
     this.setState({ productionType: e.target.value });
   }
 
-  whichGraph = (data) => {
+  whichGraph = () => {
     if (this.state.activeGraph === 'isOa') {
-      return <SunburstChart text="Productions" series={data} />;
+      return <DonutChart filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
     }
     if (this.state.activeGraph === 'keywords') {
       return <WorldCloud filename={this.state.activeGraph} data={this.state[this.state.activeGraph]} language={this.props.language} />;
@@ -420,7 +375,7 @@ class Productions extends Component {
     );
   }
 
-  renderViewGraph = data => (
+  renderViewGraph = () => (
     <React.Fragment>
       <div className="nav justify-content-center py-1">
         <button
@@ -482,7 +437,7 @@ class Productions extends Component {
       </div>
       <div className="row">
         <div className={`col-md-12 ${classes.graphCard}`}>
-          {this.whichGraph(data)}
+          {this.whichGraph()}
         </div>
       </div>
     </React.Fragment>
@@ -493,8 +448,6 @@ class Productions extends Component {
       fr: messagesFr,
       en: messagesEn,
     };
-
-    const dataGraph = this.getDataGraph();
 
     return (
       <Fragment>
@@ -554,7 +507,7 @@ class Productions extends Component {
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
-                  : this.renderViewGraph(dataGraph)
+                  : this.renderViewGraph()
               }
             </div>
           </section>
