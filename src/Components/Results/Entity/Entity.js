@@ -13,7 +13,6 @@ import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
 import Team from './Sections/Team/Team';
 import Projects from './Sections/Projects/Projects';
-// import Productions from '../../Shared/Results/Productions/Productions';
 import Productions from './Sections/Productions/Productions';
 import Ecosystem from './Sections/Ecosystem/Ecosystem';
 import Awards from './Sections/Awards/Awards';
@@ -118,7 +117,6 @@ class Entity extends Component {
           <Productions
             language={this.props.language}
             match={this.props.match}
-            filterKey="affiliations.id"
           />
         </div>
 
