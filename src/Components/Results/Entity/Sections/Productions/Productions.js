@@ -127,9 +127,11 @@ class Productions extends Component {
         min: Math.min(...years),
         max: Math.max(...years),
       };
+      const viewMode = response.data.total > 10 ? 'graph' : 'list';
       this.setState({
         total: response.data.total,
         totalPerType,
+        viewMode,
         sliderBounds,
         sliderYear: sliderBounds,
       });
