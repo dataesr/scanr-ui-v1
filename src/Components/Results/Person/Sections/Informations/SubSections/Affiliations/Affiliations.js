@@ -82,7 +82,7 @@ const Affiliations = (props) => {
         if (role.endDate) {
           affiliation.endDate = moment(role.endDate).format('YYYY');
         } else {
-          affiliation.endDate = 'xxxx';
+          affiliation.endDate = '\n...';
         }
         affiliation.sources = [];
         affiliation.subLabel = role.role;
