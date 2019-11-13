@@ -42,6 +42,7 @@ export default class HighChartsSankey extends Component {
       credits: {
         enabled: false,
       },
+      colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
       tooltip: {
         enabled: false,
       },
