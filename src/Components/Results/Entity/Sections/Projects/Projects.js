@@ -4,15 +4,17 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import InputRange from 'react-input-range';
 
+
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
+// import SankeyGraph2 from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
 import Select from '../../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProjectDetail from './ProjectDetail';
-import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -39,6 +41,7 @@ class Projects extends Component {
     initialData: [],
     selectedProject: {},
     typeFilter: [],
+    sankeyData: [],
     filterValue: null,
     autocompleteData: null,
     modifyMode: false,
@@ -59,6 +62,7 @@ class Projects extends Component {
     if (prevState.data !== this.state.data && this.state.data.length > 0) {
       this.sortByYear();
       this.createTypeFilter();
+      this.createGraphData();
       this.createAutocompleteData();
     }
   }
@@ -153,6 +157,35 @@ class Projects extends Component {
       }
     }
     this.setState({ typeFilter });
+  }
+
+  createGraphData = () => {
+    const relations = [];
+    for (let i = 0; i < this.state.data.length; i += 1) {
+      const currentProject = this.state.data[i].value;
+      const type = currentProject.type;
+      const year = (currentProject.year) ? (currentProject.year.toString()) : 'na';
+      const duration = (currentProject.duration) ? (currentProject.duration.toString()) : 'na';
+
+      const key1 = year.concat(';', type);
+      const key2 = type.concat(';', duration);
+      const keys = [key1, key2];
+      for (let j = 0; j < keys.length; j += 1) {
+        if (!(keys[j] in relations)) {
+          relations[keys[j]] = 0;
+        }
+        relations[keys[j]] += 1;
+      }
+    }
+    const sankeyData = [];
+    const keys = Object.keys(relations);
+    for (let i = 0; i < keys.length; i += 1) {
+      const from = keys[i].split(';')[0];
+      const to = keys[i].split(';')[1];
+      const weight = relations[keys[i]];
+      sankeyData.push([from, to, weight]);
+    }
+    this.setState({ sankeyData });
   }
 
   createAutocompleteData = () => {
@@ -291,7 +324,11 @@ class Projects extends Component {
   renderViewGraph = () => (
     <div className="row">
       <div className="col">
-        <SankeyGraph />
+        <SankeyGraph
+          filename="project_sankey"
+          data={this.state.sankeyData}
+          language={this.props.language}
+        />
       </div>
     </div>
   );
