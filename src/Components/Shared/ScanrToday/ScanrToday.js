@@ -3,6 +3,8 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
+import LexiconModal from '../LexiconModal/LexiconModal';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -22,6 +24,7 @@ class ScanrToday extends Component {
       fullProjects: 0,
       fullPublications: 0,
     },
+    showLexicon: false,
   };
 
   componentDidMount() {
@@ -60,6 +63,11 @@ class ScanrToday extends Component {
     });
   }
 
+  showLexiconHandle = () => {
+    // this.setState(prevState => ({ showLexicon: !prevState.showLexicon }));
+    this.setState({ showLexicon: true });
+  }
+
   render() {
     const messages = {
       fr: messagesFr,
@@ -78,6 +86,7 @@ class ScanrToday extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section style={sectionStyle} className={classes.ScanrToday}>
+          <LexiconModal language={this.props.language} show={this.state.showLexicon} target="ScanrToday" />
           <div className="container">
             <div className="row">
               <div className="col-lg">
@@ -89,7 +98,7 @@ class ScanrToday extends Component {
                   &nbsp;
                   <i
                     className="fa fa-info-circle"
-                    onClick={() => this.props.lexiconHandler('glossary.glossaire4')}
+                    onClick={this.showLexiconHandle}
                     onKeyPress={() => this.props.lexiconHandler('glossary.glossaire4')}
                     role="button"
                     tabIndex={0}

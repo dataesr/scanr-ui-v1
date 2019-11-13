@@ -27,9 +27,13 @@ const MostActiveThemes = props => (
                 id="MostActiveThemes.lib"
                 defaultMessage="MostActiveThemes.lib"
               />
-              <span className={classes.InfoIcon_style}>
-                <i className="fas fa-info-circle" aria-hidden />
-              </span>
+              <i
+                className="fa fa-info-circle"
+                onClick={() => props.lexiconHandler('top10')}
+                onKeyPress={() => props.lexiconHandler('top10')}
+                role="button"
+                tabIndex={0}
+              />
             </div>
             <div className={classes.Lib2}>
               <FormattedHTMLMessage
@@ -62,4 +66,5 @@ export default MostActiveThemes;
 MostActiveThemes.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
+  lexiconHandler: PropTypes.func,
 };
