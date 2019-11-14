@@ -161,6 +161,14 @@ $sanKey2 : #90ee7e;
     color: white;
   }
 }
+.scanrdeepblueColorCards {
+  background-color: $scanrdeepblueColor !important;
+  color: white !important;
+  .Button {
+    background-color: white;
+    color: $scanrdeepblueColor;
+  }
+}
 
 .has-background-darkblue {
   background-color: $opendataTitleBgColor;

@@ -16,6 +16,10 @@ import classes from './ProjectGraphs.scss';
  * Tests unitaires : .
 */
 const ProjectGraphs = (props) => {
+  const createWordCloudData = () => (
+    props.graphData.keywords
+  );
+
   const createSankeyData = () => {
     const relations = [];
     for (let i = 0; i < props.data.length; i += 1) {
@@ -102,10 +106,11 @@ const ProjectGraphs = (props) => {
 
   const renderGraph = () => {
     if (active === 'keywords') {
-      return <WorldCloud filename={active} data={props.graphData[active]} />;
+      const data = createWordCloudData();
+      return <WorldCloud filename={active} data={data} />;
     }
     if (active === 'sankey') {
-      const data = createSankeyData(props.data);
+      const data = createSankeyData();
       return <SankeyChart filename={active} data={data} />;
     }
     if (active === 'years') {
