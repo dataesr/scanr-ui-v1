@@ -22,7 +22,7 @@ const HeaderTitle = props => (
       <div className="container">
         <div className="row">
           <nav className={classes.BreadCrumb} aria-label="breadcrumb">
-            <ol className={`breadcrumb ${classes.breadcrumb}`}>
+            <ol className={`breadcrumb ${classes.Breadcrumb}`}>
               <li className={`breadcrumb-item ${classes.item}`}>
                 <a href={props.url1}>
                   <FormattedHTMLMessage

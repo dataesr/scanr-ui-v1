@@ -2,8 +2,8 @@
 
 .HeaderTitle {
   background-color: $bgHeaderTitle;
-  border-bottom: solid rgb(0, 33, 59);
-  padding-top: 55px;
+  border-bottom: solid $scanrdeepblueColor;
+  padding-top: 65px;
 
   .title {
     font-size: $sizeHeaderTitle;
@@ -16,26 +16,25 @@
 
   .BreadCrumb {
     color: white;
+    margin-bottom: 0;
 
     a {
       color: white;
     }
 
-    .breadcrumb {
+    .Breadcrumb {
       background-color: #ffffff00;
     }
 
-    .breadcrumb > .active {
+    .Breadcrumb > .active {
       color: $colorBreadCrumbHeaderTitle;
       font-weight: bold;
-
     }
 
-    .breadcrumb > .active:before {
+    .Breadcrumb > .active:before {
       content: ">";
       color: white;
     }
-
   }
 
 @media (max-width: 1520px) {
