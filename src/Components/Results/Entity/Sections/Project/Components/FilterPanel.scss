@@ -1,0 +1,252 @@
+@import '../../../../../../style.scss';
+
+.graphCard {
+  background-color: white;
+  color: $scanrdeepblueColor;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.Productions {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: $textColor;
+
+  .Label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: inline-block;
+    padding-left: 8px;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.Title {
+  display: block;
+  font-weight: bold;
+  padding: 6px 0;
+  margin: 0;
+}
+
+.Filters {
+  padding: 0;
+  padding-bottom: 16px;
+}
+.graphSelector {
+  color: $scanrdeepblueColor;
+  background-color: $scanrlightgreyColor;
+}
+.active {
+  color: white;
+  background-color: $scanrblueColor;
+}
+
+.ListOfProductions {
+  height: 515px;
+  direction: rtl;
+  padding-left: 16px;
+  padding-right: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+
+  .TitleYear {
+    background-color: $scanrdeepblueColor;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    padding: 6px 12px;
+  }
+  .TitleYear:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .Item:first-child {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .Item {
+    direction: ltr;
+    background-color: $scanrlightgreyColor;
+    padding-left: 12px;
+    color: $scanrdeepblueColor;
+    cursor: pointer;
+
+    .Type {
+      display: block;
+      text-align: right;
+      padding: 1px 12px;
+      font-style: italic;
+      font-size: 0.9rem;
+      border-bottom: 1px solid $scanrmiddlegreyColor;
+
+      .publication {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 5px;
+        background-color: $productionpublicationColor;
+        margin-right: 5px;
+      }
+      .these {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 5px;
+        background-color: $productionthesesColor;
+        margin-right: 5px;
+      }
+      .brevet {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 5px;
+        background-color: $productionbrevetsColor;
+        margin-right: 5px;
+      }
+    }
+  }
+  .Item:hover {
+    background-color: $scanrblueColor;
+    color: white;
+  }
+  .Selected {
+    background-color: $scanrblueColor;
+    color: white;
+    position:relative;
+  }
+  .Selected:focus {
+    outline: none;
+  }
+  .Selected:after {
+    content:'';
+    position: absolute;
+    top: 24%;
+    left: 100%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-top: solid 20px $scanrblueColor;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+    transform: rotate(270deg);
+  }
+}
+.ListOfProductions::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+  -webkit-border-radius: 10px;
+  background-color: $scanrlightgreyColor;
+}
+.ListOfProductions::-webkit-scrollbar-thumb {
+  border: solid 0 transparent;
+  border-right-width: 1px;
+  border-left-width: 1px;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 0 1px white, inset 0 0 0 6px White;
+}
+
+.ListOfProductions:after {
+  content: "";
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+}
+.TitleFilter {
+  font-size: 0.9em;
+  display: inline-block;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 0;
+  color: #4c6f8b;
+}
+
+
+.RangeSlider {
+  .Slider {
+    margin-top: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.Legendary {
+
+  .Production {
+    border: 1px solid $scanrlightgreyColor;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 8px;
+    // display: inline-block;
+    .Sub {
+      padding-left: 16px;
+    }
+    .Bullet {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    .publicationColor {
+      background-color: $productionpublicationColor;
+    }
+    .theseColor {
+      background-color: $productionthesesColor;
+    }
+    .brevetColor {
+      background-color: $productionbrevetsColor;
+    }
+  }
+}
+
+.SearchButton {
+  background-color: transparent !important;
+  border: 0;
+  margin-left: -40px;
+}
+.SearchButton:hover {
+  cursor: pointer;
+}
+.SearchIcon {
+  color: $scanrblueColor;
+  font-size: 1.2em;
+}
+.SearchBar {
+  background-color: white;
+  border: 2px solid $scanrmiddlegreyColor;
+  height: 45px;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 100%;
+}
+.SearchBar:focus {
+  border: 2px solid $scanrgreyColor;
+  outline: none;
+}
+
+.Select:focus {
+  border: 2px solid $scanrgreyColor;
+  background-color: $scanrblueColor;
+  color: white;
+}
+
+.Select {
+  background-color: $scanrblueColor;
+  color: white;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 1.2em;
+}
+
+
+@media (max-width: 991px) {
+  .RangeSlider {
+    padding-bottom: 24px;
+  }
+}

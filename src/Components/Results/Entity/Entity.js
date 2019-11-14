@@ -12,7 +12,7 @@ import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
 import Team from './Sections/Team/Team';
-import Projects from './Sections/Projects/Projects';
+import Projects from './Sections/Project/Projects';
 import Productions from './Sections/Productions/Productions';
 import Ecosystem from './Sections/Ecosystem/Ecosystem';
 import Awards from './Sections/Awards/Awards';
@@ -102,7 +102,7 @@ class Entity extends Component {
         <div id="Projects">
           <Projects
             language={this.props.language}
-            structureId={this.props.match.params.id}
+            match={this.props.match}
           />
         </div>
 
