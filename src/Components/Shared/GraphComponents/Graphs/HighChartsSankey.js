@@ -21,7 +21,7 @@ export default class HighChartsSankey extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
-    this.data = this.props.data;
+    // this.data = this.props.data;
     this.state = {
       options: null,
     };
@@ -42,13 +42,14 @@ export default class HighChartsSankey extends Component {
       credits: {
         enabled: false,
       },
-      colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
+      //colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
+      colors: [classes.sanKey1, classes.sanKey2],
       tooltip: {
         enabled: false,
       },
       series: [{
         keys: ['from', 'to', 'weight'],
-        data: this.data,
+        data: this.props.data,
         type: 'sankey',
       }],
     };
@@ -56,6 +57,10 @@ export default class HighChartsSankey extends Component {
   }
 
   render() {
+    if (!this.state.options) {
+      return null;
+    }
+
     return (
       <div>
         <hr className={classes.HorizontalBar} />
@@ -73,9 +78,11 @@ export default class HighChartsSankey extends Component {
 }
 
 HighChartsSankey.defaultProps = {
-  data: [1, 1, 1],
+  data: [['2006', 'ANR', 1], ['ANR', 'na', 16]],
 };
 
 HighChartsSankey.propTypes = {
-  data: PropTypes.object,
+  data: PropTypes.array,
+  filename: PropTypes.string,
+  language: PropTypes.string,
 };
