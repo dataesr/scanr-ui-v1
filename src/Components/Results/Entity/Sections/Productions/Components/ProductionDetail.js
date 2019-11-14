@@ -149,7 +149,8 @@ const ProductionDetail = (props) => {
               </span>
               <ButtonToPage
                 className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
-                url={props.data.oaEvidence.pdfUrl}
+                url={props.data.oaEvidence.url}
+                target="_blank"
               >
                 Aller au PDF
               </ButtonToPage>
