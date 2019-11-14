@@ -4,7 +4,8 @@ import InputRange from 'react-input-range';
 
 import classes from './FilterPanel.scss';
 
-import '../../../../../../../node_modules/react-input-range/lib/css/index.css';
+import './inputRange.css';
+
 /**
  * FilterPanel
  * Url : ex: /entite/200711886U
