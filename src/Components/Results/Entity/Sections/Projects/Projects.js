@@ -10,7 +10,6 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-// import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
 import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
 import Select from '../../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
@@ -164,17 +163,56 @@ class Projects extends Component {
     for (let i = 0; i < this.state.data.length; i += 1) {
       const currentProject = this.state.data[i].value;
       const type = currentProject.type;
-      const year = (currentProject.year) ? (currentProject.year.toString()) : 'na';
-      const duration = (currentProject.duration) ? (currentProject.duration.toString()) : 'na';
+      const year = (currentProject.year) ? (currentProject.year.toString()) : 'NODATA#';
 
-      const key1 = year.concat(';', type);
-      const key2 = type.concat(';', duration);
-      const keys = [key1, key2];
+      const duration = (currentProject.duration) ? (currentProject.duration) : 0;
+      let durationKey = 'NODATA#';
+      if (duration <= 6) {
+        durationKey = '0-6 mois';
+      }
+      if (duration > 6 && duration <= 12) {
+        durationKey = '7-12 mois';
+      }
+      if (duration > 12 && duration <= 24) {
+        durationKey = '13-24 mois';
+      }
+      if (duration > 24 && duration <= 36) {
+        durationKey = '25-36 mois';
+      }
+      if (duration > 36 && duration <= 48) {
+        durationKey = '37-48 mois';
+      }
+      if (duration > 48) {
+        durationKey = '48+ mois';
+      }
+
+      const nbParticipants = (currentProject.participants) ? (currentProject.participants.length) : 0;
+      let participantKey = 'NODATA#';
+      if (nbParticipants > 0 && nbParticipants <= 1) {
+        participantKey = '1 participant';
+      }
+      if (nbParticipants > 2 && nbParticipants <= 5) {
+        participantKey = '2-5 participants';
+      }
+      if (nbParticipants > 5 && nbParticipants <= 10) {
+        participantKey = '6-10 participants';
+      }
+      if (nbParticipants > 10) {
+        participantKey = '11+ participants';
+      }
+
+
+      const key1 = type.concat(';', year);
+      const key2 = year.concat(';', durationKey);
+      const key3 = durationKey.concat(';', participantKey);
+      const keys = [key1, key2, key3];
       for (let j = 0; j < keys.length; j += 1) {
-        if (!(keys[j] in relations)) {
-          relations[keys[j]] = 0;
+        if (keys[j].indexOf('NODATA#') === -1) {
+          if (!(keys[j] in relations)) {
+            relations[keys[j]] = 0;
+          }
+          relations[keys[j]] += 1;
         }
-        relations[keys[j]] += 1;
       }
     }
     const sankeyData = [];
@@ -335,7 +373,7 @@ class Projects extends Component {
         </div>
       );
     }
-    return <div>Pas de donnée graph</div>;
+    return null;
   }
 
   modifyModeHandle = () => {
@@ -435,7 +473,6 @@ class Projects extends Component {
                 </div>
               </div>
               {/* /row */}
-              <hr />
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
