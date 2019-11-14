@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
+import {
+  API_STRUCTURES_SEARCH_END_POINT,
+  API_PERSONS_SEARCH_END_POINT,
+  API_PROJECTS_SEARCH_END_POINT,
+  API_PUBLICATIONS_SEARCH_END_POINT,
+} from '../../../config/config';
 
 import LexiconModal from '../LexiconModal/LexiconModal';
 
@@ -24,7 +30,6 @@ class ScanrToday extends Component {
       fullProjects: 0,
       fullPublications: 0,
     },
-    showLexicon: false,
   };
 
   componentDidMount() {
@@ -40,10 +45,10 @@ class ScanrToday extends Component {
     };
 
     const params = { query: '' };
-    const url1 = 'https://scanr-preprod.sword-group.com/api/v2/structures/search';
-    const url2 = 'https://scanr-preprod.sword-group.com/api/v2/persons/search';
-    const url3 = 'https://scanr-preprod.sword-group.com/api/v2/projects/search';
-    const url4 = 'https://scanr-preprod.sword-group.com/api/v2/publications/search';
+    const url1 = API_STRUCTURES_SEARCH_END_POINT;
+    const url2 = API_PERSONS_SEARCH_END_POINT;
+    const url3 = API_PROJECTS_SEARCH_END_POINT;
+    const url4 = API_PUBLICATIONS_SEARCH_END_POINT;
 
     Axios.post(url1, params).then((response) => {
       countData.fullStructures = response.data.total;
@@ -61,11 +66,6 @@ class ScanrToday extends Component {
       countData.fullPublications = response.data.total;
       this.setState({ data: countData });
     });
-  }
-
-  showLexiconHandle = () => {
-    // this.setState(prevState => ({ showLexicon: !prevState.showLexicon }));
-    this.setState({ showLexicon: true });
   }
 
   render() {
@@ -86,7 +86,6 @@ class ScanrToday extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section style={sectionStyle} className={classes.ScanrToday}>
-          <LexiconModal language={this.props.language} show={this.state.showLexicon} target="ScanrToday" />
           <div className="container">
             <div className="row">
               <div className="col-lg">
@@ -96,13 +95,9 @@ class ScanrToday extends Component {
                     defaultMessage="ScanrToday.string.title"
                   />
                   &nbsp;
-                  <i
-                    className="fa fa-info-circle"
-                    onClick={this.showLexiconHandle}
-                    onKeyPress={() => this.props.lexiconHandler('glossary.glossaire4')}
-                    role="button"
-                    tabIndex={0}
-                  />
+                  <LexiconModal language={this.props.language} target="ScanrToday">
+                    <i className="fa fa-info-circle" />
+                  </LexiconModal>
                 </h2>
               </div>
               <div className="col-lg">
@@ -195,6 +190,5 @@ export default ScanrToday;
 
 ScanrToday.propTypes = {
   language: PropTypes.string.isRequired,
-  lexiconHandler: PropTypes.func,
   isFull: PropTypes.bool,
 };

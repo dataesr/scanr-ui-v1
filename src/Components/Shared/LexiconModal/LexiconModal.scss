@@ -2,49 +2,38 @@
 
 .LexiconModal {
   .Header {
-    background-color: $scanrdeepblueColor;
+    background-color: $scanrlightgreyColor;
+    I {
+      display: inline-block;
+      padding-right: 16px;
+    }
   }
 
   .Title {
-    font-size: 1.5rem;
-    color: $scanrlightgreyColor;
+    font-size: 1.8rem;
+    color: $scanrfooterBgColor;
     font-weight: bold;
     font-family: 'Lato';
-    text-align: center;
-    width: 100%;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
 
   .Content {
     background-color: $scanrfooterBgColor;
   }
 
-  .SearchTermLabel {
-    font-size: 1rem;
+  .Term {
     color: $scanrlightgreyColor;
-    padding: 0;
-    margin: 0;
+    padding-left: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
   }
-
-  .Terms {
-
-  }
-
-  .Li {
-    list-style: none;
-    color: $scanrlightgreyColor;
-
-    .Term {
-      display: inline-block;
-      padding-left: 8px;
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
-  }
-
 
   .Definition {
     color: $scanrmiddlegreyColor;
-
   }
 
+  .Footer {
+    background-color: $scanrlightgreyColor;
+  }
 }
