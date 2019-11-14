@@ -102,7 +102,7 @@ class Entity extends Component {
         <div id="Projects">
           <Projects
             language={this.props.language}
-            structureId={this.props.match.params.id}
+            match={this.props.match}
           />
         </div>
 
