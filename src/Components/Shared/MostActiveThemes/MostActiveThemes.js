@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
+import LexiconModal from '../LexiconModal/LexiconModal';
 import ButtonToSearch from '../Ui/Buttons/ButtonToSearch';
 
 /* SCSS */
@@ -27,13 +28,10 @@ const MostActiveThemes = props => (
                 id="MostActiveThemes.lib"
                 defaultMessage="MostActiveThemes.lib"
               />
-              <i
-                className="fa fa-info-circle"
-                onClick={() => props.lexiconHandler('top10')}
-                onKeyPress={() => props.lexiconHandler('top10')}
-                role="button"
-                tabIndex={0}
-              />
+              &nbsp;
+              <LexiconModal language={props.language} target="top10">
+                <i className="fa fa-info-circle" />
+              </LexiconModal>
             </div>
             <div className={classes.Lib2}>
               <FormattedHTMLMessage
@@ -66,5 +64,4 @@ export default MostActiveThemes;
 MostActiveThemes.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
-  lexiconHandler: PropTypes.func,
 };
