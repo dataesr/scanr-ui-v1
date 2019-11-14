@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
+import '../../../../../../../node_modules/react-input-range/lib/css/index.css';
 
 import classes from './FilterPanel.scss';
 
@@ -50,8 +51,9 @@ const FilterPanel = props => (
                 minValue={props.sliderBounds.min}
                 maxValue={props.sliderBounds.max}
                 formatLabel={value => value}
-                value={props.sliderYear}
+                value={props.sliderYearPrint}
                 onChange={value => props.sliderChangeHandler(value)}
+                onChangeComplete={value => props.sliderChangeCompleteHandler(value)}
               />
             </div>
           </div>
@@ -87,8 +89,9 @@ FilterPanel.propTypes = {
   totalPerType: PropTypes.object.isRequired,
   selectedType: PropTypes.string.isRequired,
   sliderBounds: PropTypes.object.isRequired,
-  sliderYear: PropTypes.object.isRequired,
+  sliderYearPrint: PropTypes.object.isRequired,
   sliderChangeHandler: PropTypes.func.isRequired,
+  sliderChangeCompleteHandler: PropTypes.func.isRequired,
   currentQueryText: PropTypes.string,
   changeTypeHandler: PropTypes.func.isRequired,
   queryChangeHandler: PropTypes.func.isRequired,

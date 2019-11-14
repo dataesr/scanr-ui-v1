@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import { GridLoader } from 'react-spinners';
 
-
-
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
@@ -37,6 +35,10 @@ class Projects extends Component {
     viewMode: 'list',
     data: [],
     selectedProject: '',
+    sliderYearPrint: {
+      min: null,
+      max: null,
+    },
     sliderYear: {
       min: null,
       max: null,
@@ -72,7 +74,6 @@ class Projects extends Component {
     }
   }
 
-
   fetchGlobalData = () => {
     const url = API_PROJECTS_SEARCH_END_POINT;
     const preRequest = PreRequest;
@@ -104,6 +105,7 @@ class Projects extends Component {
         viewMode,
         sliderBounds,
         sliderYear: sliderBounds,
+        sliderYearPrint: sliderBounds,
       });
     });
   }
@@ -180,6 +182,10 @@ class Projects extends Component {
   }
 
   sliderChangeHandler = (value) => {
+    this.setState({ sliderYearPrint: value });
+  }
+
+  sliderChangeCompleteHandler = (value) => {
     this.setState({ sliderYear: value });
   }
 
@@ -244,8 +250,9 @@ class Projects extends Component {
               queryChangeHandler={this.queryChangeHandler}
               queryTextChangeHandler={this.queryTextChangeHandler}
               sliderBounds={this.state.sliderBounds}
-              sliderYear={this.state.sliderYear}
+              sliderYearPrint={this.state.sliderYearPrint}
               sliderChangeHandler={this.sliderChangeHandler}
+              sliderChangeCompleteHandler={this.sliderChangeCompleteHandler}
             />
             {
               (this.state.viewMode === 'list')
@@ -263,6 +270,7 @@ class Projects extends Component {
                     activeGraph={this.state.activeGraph}
                     setActiveGraphHandler={this.setActiveGraphHandler}
                     graphData={this.state.graphData}
+                    data={this.state.data}
                     productionType={this.state.productionType}
                     totalPerType={this.state.totalPerType}
                   />
