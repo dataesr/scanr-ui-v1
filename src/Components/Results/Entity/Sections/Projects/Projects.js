@@ -10,8 +10,8 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import Autocomplete from '../../../../Shared/Ui/Autocomplete/Autocomplete';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
-// import SankeyGraph2 from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
+// import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HightChartsSankey';
+import SankeyGraph from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
 import Select from '../../../../Shared/Ui/Select/Select';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ProjectDetail from './ProjectDetail';
@@ -36,7 +36,7 @@ import '../../Shared/rangeSlider.css';
 */
 class Projects extends Component {
   state = {
-    viewMode: 'list',
+    viewMode: 'graph',
     data: [],
     initialData: [],
     selectedProject: {},
@@ -321,17 +321,22 @@ class Projects extends Component {
     );
   }
 
-  renderViewGraph = () => (
-    <div className="row">
-      <div className="col">
-        <SankeyGraph
-          filename="project_sankey"
-          data={this.state.sankeyData}
-          language={this.props.language}
-        />
-      </div>
-    </div>
-  );
+  renderViewGraph = () => {
+    if (this.state.sankeyData.length > 0) {
+      return (
+        <div className="row">
+          <div className="col">
+            <SankeyGraph
+              filename="project_sankey"
+              data={this.state.sankeyData}
+              language={this.props.language}
+            />
+          </div>
+        </div>
+      );
+    }
+    return <div>Pas de donnée graph</div>;
+  }
 
   modifyModeHandle = () => {
     this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
