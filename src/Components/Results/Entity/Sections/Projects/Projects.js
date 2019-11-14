@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import { GridLoader } from 'react-spinners';
 
-
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
@@ -36,6 +35,10 @@ class Projects extends Component {
     viewMode: 'list',
     data: [],
     selectedProject: '',
+    sliderYearPrint: {
+      min: null,
+      max: null,
+    },
     sliderYear: {
       min: null,
       max: null,
@@ -71,75 +74,6 @@ class Projects extends Component {
     }
   }
 
-  createSankeyData = () => {
-    const relations = [];
-    for (let i = 0; i < this.state.data.length; i += 1) {
-      const currentProject = this.state.data[i].value;
-      const type = currentProject.type;
-      const year = (currentProject.year) ? (currentProject.year.toString()) : 'NODATA#';
-
-      const duration = (currentProject.duration) ? (currentProject.duration) : 0;
-      let durationKey = 'NODATA#';
-      if (duration <= 6) {
-        durationKey = '0-6 mois';
-      }
-      if (duration > 6 && duration <= 12) {
-        durationKey = '7-12 mois';
-      }
-      if (duration > 12 && duration <= 24) {
-        durationKey = '13-24 mois';
-      }
-      if (duration > 24 && duration <= 36) {
-        durationKey = '25-36 mois';
-      }
-      if (duration > 36 && duration <= 48) {
-        durationKey = '37-48 mois';
-      }
-      if (duration > 48) {
-        durationKey = '48+ mois';
-      }
-
-      const nbParticipants = (currentProject.participants) ? (currentProject.participants.length) : 0;
-      let participantKey = 'NODATA#';
-      if (nbParticipants > 0 && nbParticipants <= 1) {
-        participantKey = '1 participant';
-      }
-      if (nbParticipants > 2 && nbParticipants <= 5) {
-        participantKey = '2-5 participants';
-      }
-      if (nbParticipants > 5 && nbParticipants <= 10) {
-        participantKey = '6-10 participants';
-      }
-      if (nbParticipants > 10) {
-        participantKey = '11+ participants';
-      }
-
-
-      const key1 = type.concat(';', year);
-      const key2 = year.concat(';', durationKey);
-      const key3 = durationKey.concat(';', participantKey);
-      const keys = [key1, key2, key3];
-      for (let j = 0; j < keys.length; j += 1) {
-        if (keys[j].indexOf('NODATA#') === -1) {
-          if (!(keys[j] in relations)) {
-            relations[keys[j]] = 0;
-          }
-          relations[keys[j]] += 1;
-        }
-      }
-    }
-    const sankeyData = [];
-    const keys = Object.keys(relations);
-    for (let i = 0; i < keys.length; i += 1) {
-      const from = keys[i].split(';')[0];
-      const to = keys[i].split(';')[1];
-      const weight = relations[keys[i]];
-      sankeyData.push([from, to, weight]);
-    }
-    this.setState({ sankeyData });
-  }
-
-
   fetchGlobalData = () => {
     const url = API_PROJECTS_SEARCH_END_POINT;
     const preRequest = PreRequest;
@@ -171,6 +105,7 @@ class Projects extends Component {
         viewMode,
         sliderBounds,
         sliderYear: sliderBounds,
+        sliderYearPrint: sliderBounds,
       });
     });
   }
@@ -247,6 +182,10 @@ class Projects extends Component {
   }
 
   sliderChangeHandler = (value) => {
+    this.setState({ sliderYearPrint: value });
+  }
+
+  sliderChangeCompleteHandler = (value) => {
     this.setState({ sliderYear: value });
   }
 
@@ -311,8 +250,9 @@ class Projects extends Component {
               queryChangeHandler={this.queryChangeHandler}
               queryTextChangeHandler={this.queryTextChangeHandler}
               sliderBounds={this.state.sliderBounds}
-              sliderYear={this.state.sliderYear}
+              sliderYearPrint={this.state.sliderYearPrint}
               sliderChangeHandler={this.sliderChangeHandler}
+              sliderChangeCompleteHandler={this.sliderChangeCompleteHandler}
             />
             {
               (this.state.viewMode === 'list')
@@ -330,7 +270,7 @@ class Projects extends Component {
                     activeGraph={this.state.activeGraph}
                     setActiveGraphHandler={this.setActiveGraphHandler}
                     graphData={this.state.graphData}
-                    sankeyData={this.state.sankeyData}
+                    data={this.state.data}
                     productionType={this.state.productionType}
                     totalPerType={this.state.totalPerType}
                   />
