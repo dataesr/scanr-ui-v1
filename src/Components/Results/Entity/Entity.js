@@ -12,7 +12,7 @@ import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
 import Team from './Sections/Team/Team';
-import Projects from './Sections/Project/Projects';
+import Projects from './Sections/Projects/Projects';
 import Productions from './Sections/Productions/Productions';
 import Ecosystem from './Sections/Ecosystem/Ecosystem';
 import Awards from './Sections/Awards/Awards';
