@@ -4,65 +4,35 @@ import PropTypes from 'prop-types';
 import BarChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import WorldCloud from '../../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import YearChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsLine';
-import DonutChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
-import TypeMapping from '../Utils/TypeMapping';
-import classes from './ProductionGraphs.scss';
+import classes from './ProjectGraphs.scss';
 
 /**
- * ProductionGraphs
+ * ProjectGraphs
  * Url : ex: /entite/200711886U
  * Description : Bloc identité visible dans la section Protrait
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-const ProductionGraphs = (props) => {
-  const graphFor = {
-    thesis: ['isOa', 'years', 'keywords'],
-    publication: ['isOa', 'years', 'keywords', 'journal', 'types'],
-    patent: ['isOa'],
-  };
+const ProjectGraphs = (props) => {
+  const graphs = ['types', 'years', 'keywords'];
   const labelFor = {
     fr: {
-      isOa: 'Open Access',
       years: 'Par année',
       keywords: 'Nuage de mots clés',
-      journal: 'Top 10 des journaux',
       types: 'Types de publications',
     },
     en: {
-      isOa: 'Open Access',
       years: 'By year',
       keywords: 'Keywords cloud',
-      journal: 'Top 10 journals',
       types: 'Publication types',
     },
   };
-
-  const active = (props.activeGraph) ? props.activeGraph : graphFor[props.productionType][0];
+  const active = (props.activeGraph) ? props.activeGraph : 'types';
 
   const renderGraph = () => {
     if (active === 'keywords') {
       return <WorldCloud filename={active} data={props.graphData[active]} />;
-    }
-    if (active === 'isOa') {
-      const data = { id: 'isOa', entries: [] };
-      props.graphData.isOa.entries.forEach((entry) => {
-        if (entry.value === 'false') {
-          data.entries.push({
-            color: 'rgb(170, 170, 170)',
-            value: (props.language === 'fr') ? 'Accès fermé' : 'Closed access',
-            count: entry.count,
-          });
-        } else {
-          data.entries.push({
-            color: 'rgb(32, 225, 104)',
-            value: (props.language === 'fr') ? 'Accès ouvert' : 'Open access',
-            count: entry.count,
-          });
-        }
-      });
-      return <DonutChart filename={active} data={data} />;
     }
     if (active === 'years') {
       const data = {
@@ -70,22 +40,13 @@ const ProductionGraphs = (props) => {
       };
       return <YearChart filename={active} data={data} />;
     }
-    if (active === 'types') {
-      const typesData = { id: 'types', entries: [] };
-      props.graphData.types.entries.forEach((entry) => {
-        const type = { ...entry };
-        type.value = TypeMapping[props.language][entry.value];
-        typesData.entries.push(type);
-      });
-      return <BarChart filename={active} data={typesData} />;
-    }
     return (
       <BarChart filename={active} data={props.graphData[active]} />
     );
   };
 
   const graphNav = () => (
-    graphFor[props.productionType].map(graph => (
+    graphs.map(graph => (
       <button
         key={graph}
         type="button"
@@ -98,10 +59,10 @@ const ProductionGraphs = (props) => {
       </button>
     ))
   );
-  if (props.totalPerType[props.productionType] < 2) {
+  if (props.totalPerType[props.ProjectType] < 2) {
     return (
       <React.Fragment>
-        <div className={`justify-content-center py-1 ${classes.ProductionGraphs}`}>
+        <div className={`justify-content-center py-1 ${classes.ProjectGraphs}`}>
           <p className={`py-5 pl-4 ${classes.ToFew}`}>
             {
               (props.language === 'fr')
@@ -116,7 +77,7 @@ const ProductionGraphs = (props) => {
 
   return (
     <React.Fragment>
-      <div className={classes.ProductionGraphs}>
+      <div className={classes.ProjectGraphs}>
         <div className="justify-content-center py-1">
           {graphNav()}
         </div>
@@ -130,13 +91,13 @@ const ProductionGraphs = (props) => {
   );
 };
 
-export default ProductionGraphs;
+export default ProjectGraphs;
 
-ProductionGraphs.propTypes = {
+ProjectGraphs.propTypes = {
   language: PropTypes.string.isRequired,
   activeGraph: PropTypes.string,
   setActiveGraphHandler: PropTypes.func.isRequired,
   graphData: PropTypes.object.isRequired,
-  productionType: PropTypes.string.isRequired,
+  ProjectType: PropTypes.string.isRequired,
   totalPerType: PropTypes.object.isRequired,
 };
