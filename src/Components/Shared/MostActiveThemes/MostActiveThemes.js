@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import LexiconModal from '../LexiconModal/LexiconModal';
+import LexiconModal from '../Lexicon/LexiconModal/LexiconModal';
 import ButtonToSearch from '../Ui/Buttons/ButtonToSearch';
 
 /* SCSS */
