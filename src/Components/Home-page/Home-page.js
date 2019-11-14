@@ -5,12 +5,14 @@ import { ReactTitle } from 'react-meta-tags';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import LastFocus from '../Shared/LastFocus/LastFocus';
-import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
+// import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
 import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
+
+import LexiconModal from '../Shared/LexiconModal/LexiconModal';
 
 import classes from './Home-page.scss';
 
@@ -18,8 +20,11 @@ class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lexiconTarget: null,
       isSearchFull: true,
+      lexicon: {
+        show: false,
+        target: null,
+      },
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -47,7 +52,7 @@ class HomePage extends Component {
   }
 
   lexiconHandler = (lexiconTarget) => {
-    this.setState({ lexiconTarget });
+    this.setState({ lexicon: { show: true, target: lexiconTarget } });
   }
 
   render() {
@@ -65,13 +70,12 @@ class HomePage extends Component {
           {...this.props}
           language={this.props.language}
           isFull={this.state.isSearchFull}
-          lexiconHandler={this.lexiconHandler}
         />
 
         <ScanrToday
           language={this.props.language}
-          lexiconHandler={this.lexiconHandler}
           isFull={this.state.isSearchFull}
+          lexicon={{ target: this.state.lexiconTarget, lexiconHandler: this.lexiconHandler }}
         />
 
         <Banner
@@ -84,6 +88,7 @@ class HomePage extends Component {
         <MostActiveThemes
           language={this.props.language}
           data={['Brain to computer', 'Marathon', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
+          lexiconHandler={() => this.lexiconHandler()}
         />
 
         <Banner
@@ -106,13 +111,11 @@ class HomePage extends Component {
         />
 
         <Footer language={this.props.language} />
-
-        <LexiconPanel
+        <LexiconModal
           language={this.props.language}
-          target={this.state.lexiconTarget}
-          lexiconHandler={this.lexiconHandler}
+          show={this.state.lexicon.show}
+          target={this.state.lexicon.target}
         />
-
       </div>
     );
   }

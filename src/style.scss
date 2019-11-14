@@ -77,6 +77,57 @@ $oaClose: rgb(170, 170, 170);
 /* Blanc avec alpha 0.7*/
 $alphaWhite7: rgba(255, 255, 255, 0.7);
 
+$sanKey1 : #55BF3B;
+$sanKey2 : #90ee7e;
+
+:export {
+  scanrblueColor: $scanrblueColor;
+  scanrdeepblueColor: $scanrdeepblueColor;
+  scanrgreyColor: $scanrgreyColor;
+  scanrmiddlegreyColor: $scanrmiddlegreyColor;
+  scanrlightgreyColor: $scanrlightgreyColor;
+  scanrelectricblueColor: $scanrelectricblueColor;
+  scanrfooterBgColor: $scanrfooterBgColor;
+  entityColor: $entityColor;
+  structureColor: $structureColor;
+  personColor: $personColor;
+  projectgreenColor: $projectgreenColor;
+  projectlightgreenColor: $projectlightgreenColor;
+  projectmiddlegreenColor: $projectmiddlegreenColor;
+  projectdarkgreenColor: $projectdarkgreenColor;
+  productionColor: $productionColor;
+  productionpublicationColor: $productionpublicationColor;
+  productionbrevetsColor: $productionbrevetsColor;
+  productionthesesColor: $productionthesesColor;
+  frenchentityColor: $frenchentityColor;
+  internationalentityColor: $internationalentityColor;
+  researchstructuresColor: $researchstructuresColor;
+  entreprisesColor: $entreprisesColor;
+  oiColor: $oiColor;
+  publicsectorColor: $publicsectorColor;
+  isblColor: $isblColor;
+  warningColor: $warningColor;
+  activeLinkButton: $activeLinkButton;
+  hoverLinkButton: $hoverLinkButton;
+  tagsColor: $tagsColor;
+  titleColor: $titleColor;
+  opendataTitleBgColor: $opendataTitleBgColor;
+  entitiesColor: $entitiesColor;
+  personsColor: $personsColor;
+  projectsColor: $projectsColor;
+  publicationsColor: $publicationsColor;
+  textColor: $textColor;
+  headerHeight: $headerHeight;
+  mediaTextColor: $mediaTextColor;
+  oaOpenColor: $oaOpenColor;
+  oaOpenRepositoryColor: $oaOpenRepositoryColor;
+  oaOpenPublisherColor: $oaOpenPublisherColor;
+  oaClose: $oaClose;
+  alphaWhite7: $alphaWhite7;
+  sanKey1: $sanKey1;
+  sanKey2: $sanKey2;
+}
+
 /* cards de couleur dans la page open data*/
 .entitiesCards {
   background-color: $entityColor !important;

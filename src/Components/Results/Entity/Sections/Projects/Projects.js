@@ -4,6 +4,7 @@ import Axios from 'axios';
 import { GridLoader } from 'react-spinners';
 
 
+
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
@@ -188,7 +189,7 @@ class Projects extends Component {
   };
 
   render() {
-    if (this.state.total === 0) {
+    if (this.state.total === 0 || this.state.error || this.state.isLoading) {
       return (
         <Fragment>
           <section className="container-fluid py-4">
@@ -199,46 +200,24 @@ class Projects extends Component {
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
-              <EmptySection language={this.props.language} />
-            </div>
-          </section>
-        </Fragment>
-      );
-    }
-    if (this.state.error) {
-      return (
-        <Fragment>
-          <section className="container-fluid py-4">
-            <div className="container">
-              <SectionTitleViewMode
-                total={this.state.total}
-                label="Projects"
-                viewModeClickHandler={this.viewModeClickHandler}
-                viewMode={this.state.viewMode}
-              />
-              <p>Une erreur s&aposest produite.</p>
-            </div>
-          </section>
-        </Fragment>
-      );
-    }
-    if (this.state.isLoading) {
-      return (
-        <Fragment>
-          <section className="container-fluid py-4">
-            <div className="container">
-              <SectionTitleViewMode
-                total={this.state.total}
-                label="Projects"
-                viewModeClickHandler={this.viewModeClickHandler}
-                viewMode={this.state.viewMode}
-              />
-              <div className="row justify-content-center py-5 my-5">
-                <GridLoader
-                  color="#cc3d8f"
-                  loading={this.state.isLoading}
-                />
-              </div>
+              {
+                (this.state.total === 0) ? <EmptySection language={this.props.language} /> : null
+              }
+              {
+                (this.state.error) ? <p>Une erreur s&aposest produite.</p> : null
+              }
+              {
+                (this.state.isLoading)
+                  ? (
+                    <div className="row justify-content-center py-5 my-5">
+                      <GridLoader
+                        color="#cc3d8f"
+                        loading={this.state.isLoading}
+                      />
+                    </div>
+                  )
+                  : null
+              }
             </div>
           </section>
         </Fragment>
@@ -302,25 +281,3 @@ Projects.propTypes = {
   language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
 };
-
-// {
-//   (this.state.viewMode === 'list')
-//     ? (
-//       <ProjectList
-//         language={this.props.language}
-//         data={this.state.data}
-//         selectedProject={this.state.selectedProject}
-//         setSelectedProductionHandler={this.setSelectedProductionHandler}
-//       />
-//     )
-//     : (
-//       <ProjectGraphs
-//         language={this.props.language}
-//         activeGraph={this.state.activeGraph}
-//         setActiveGraphHandler={this.setActiveGraphHandler}
-//         graphData={this.state.graphData}
-//         productionType={this.state.productionType}
-//         totalPerType={this.state.totalPerType}
-//       />
-//     )
-// }

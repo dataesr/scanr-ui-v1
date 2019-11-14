@@ -1,0 +1,50 @@
+@import '../../../style.scss';
+
+.LexiconModal {
+  .Header {
+    background-color: $scanrdeepblueColor;
+  }
+
+  .Title {
+    font-size: 1.5rem;
+    color: $scanrlightgreyColor;
+    font-weight: bold;
+    font-family: 'Lato';
+    text-align: center;
+    width: 100%;
+  }
+
+  .Content {
+    background-color: $scanrfooterBgColor;
+  }
+
+  .SearchTermLabel {
+    font-size: 1rem;
+    color: $scanrlightgreyColor;
+    padding: 0;
+    margin: 0;
+  }
+
+  .Terms {
+
+  }
+
+  .Li {
+    list-style: none;
+    color: $scanrlightgreyColor;
+
+    .Term {
+      display: inline-block;
+      padding-left: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  }
+
+
+  .Definition {
+    color: $scanrmiddlegreyColor;
+
+  }
+
+}
