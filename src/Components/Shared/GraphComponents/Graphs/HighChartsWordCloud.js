@@ -41,9 +41,12 @@ export default class HighChartsWordCloud extends Component {
   }
 
   componentDidMount() {
-    let localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
-    if (localData.length > this.max_nb_word) {
-      localData = localData.slice(0, this.max_nb_word);
+    const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
+    const wordData = [];
+    for (let i = 0; i < localData.length; i += 1) {
+      if (localData[i].name.length <= 25 && wordData.length < this.max_nb_word) {
+        wordData.push(localData[i]);
+      }
     }
     const options = {
       credits: {
@@ -57,7 +60,7 @@ export default class HighChartsWordCloud extends Component {
         text: '',
       },
       series: [{
-        data: localData,
+        data: wordData,
         type: 'wordcloud',
         minFontSize: 10,
         rotation: {
