@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
+import '../../../../../../../node_modules/react-input-range/lib/css/index.css';
 
 import classes from './FilterPanel.scss';
 
