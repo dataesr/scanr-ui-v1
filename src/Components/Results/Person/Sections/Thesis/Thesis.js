@@ -11,6 +11,7 @@ import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
 import IsOa from '../../../Production-page/Shared/Oa/OaCard';
+import OaLink from '../../../Production-page/Shared/Oa/OaLink';
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
@@ -50,6 +51,7 @@ class Thesis extends Component {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     const request = {
       pageSize: 500,
+      sourceFields: ['title', 'authors', 'oaEvidence', 'id', 'publicationDate', 'isOa'],
       filters: {
         productionType: {
           type: 'MultiValueSearchFilter',
@@ -147,7 +149,12 @@ class Thesis extends Component {
                 }
                 {
                   (this.state.thesis.title)
-                    ? <div className="p-1 col-md-6"><div className={`p-2 ${classes.isOa}`}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
+                    ? <div className="p-1 col-md-3"><div className={`p-2 ${classes.isOa}`}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
+                    : null
+                }
+                {
+                  (this.state.thesis.title && this.state.thesis.isOa)
+                    ? <div className="p-1 col-md-3"><OaLink className="p-3" language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
                     : null
                 }
               </div>
