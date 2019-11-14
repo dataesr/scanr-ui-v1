@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ButtonToPage from '../Ui/Buttons/ButtonToPage';
+import ButtonToPage from '../Ui/Buttons/ButtonToPage2';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -35,7 +35,7 @@ const CardWithButton = (props) => {
               defaultMessage={props.title}
             />
           </div>
-          <div>
+          <div className="text-right">
             <ButtonToPage
               className={classes.Button}
               url={props.url}

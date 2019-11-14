@@ -9,7 +9,7 @@ import {
   API_PUBLICATIONS_SEARCH_END_POINT,
 } from '../../../config/config';
 
-import LexiconModal from '../LexiconModal/LexiconModal';
+import LexiconModal from '../Lexicon/LexiconModal/LexiconModal';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';

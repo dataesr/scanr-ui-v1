@@ -5,8 +5,24 @@
   margin: 0;
 
   .Content {
-    padding-top: $otherPagesPaddingTop;
-    padding-bottom: $otherPagesPaddingBottom;
+    margin: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    .Li {
+      list-style: none;
+    }
+
+    .Term {
+      color: $scanrdeepblueColor;
+      padding-left: 8px;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .Definition {
+      color: $scanrdeepblueColor;
+    }
   }
   .ThreeCards{
     padding:24px 16px 24px 16px;

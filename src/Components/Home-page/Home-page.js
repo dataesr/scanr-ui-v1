@@ -12,8 +12,6 @@ import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 
-import LexiconModal from '../Shared/LexiconModal/LexiconModal';
-
 import classes from './Home-page.scss';
 
 class HomePage extends Component {
@@ -21,10 +19,6 @@ class HomePage extends Component {
     super(props);
     this.state = {
       isSearchFull: true,
-      lexicon: {
-        show: false,
-        target: null,
-      },
     };
 
     this.handleScroll = this.handleScroll.bind(this);
@@ -111,11 +105,6 @@ class HomePage extends Component {
         />
 
         <Footer language={this.props.language} />
-        <LexiconModal
-          language={this.props.language}
-          show={this.state.lexicon.show}
-          target={this.state.lexicon.target}
-        />
       </div>
     );
   }

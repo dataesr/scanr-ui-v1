@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 
 /* Gestion des langues */
-import messagesPanelFr from './translations/panel/fr.json';
-import messagesPanelEn from './translations/panel/en.json';
+import messagesPanelFr from './translations/fr.json';
+import messagesPanelEn from './translations/en.json';
 
 /* Chargement du lexique */
-import glossaryTerms from './translations/terms/glossary.json';
+import glossaryTerms from '../terms/glossary.json';
 
 /* SCSS */
 import classes from './LexiconModal.scss';
