@@ -45,10 +45,6 @@ class HomePage extends Component {
     }
   }
 
-  lexiconHandler = (lexiconTarget) => {
-    this.setState({ lexicon: { show: true, target: lexiconTarget } });
-  }
-
   render() {
     return (
       <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
