@@ -71,7 +71,7 @@ class Projects extends Component {
     }
   }
 
-  createGraphData = () => {
+  createSankeyData = () => {
     const relations = [];
     for (let i = 0; i < this.state.data.length; i += 1) {
       const currentProject = this.state.data[i].value;
