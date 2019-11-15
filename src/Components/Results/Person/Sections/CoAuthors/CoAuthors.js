@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 import PersonCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
@@ -85,27 +84,12 @@ const CoAuthors = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-id-card"
-              modifyModeHandle={props.modifyModeHandle}
-              modifyModeKey="coAuthors"
-              modifyMode={props.modifyMode}
-            >
-              <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
-            </SectionTitle>
-            {
-              (props.modifyMode)
-                ? (
-                  <SubmitBox
-                    language={props.language}
-                    masterKey="Person/coAuthors"
-                    label="empty"
-                    emptySection
-                    autoLaunch={props.modifyMode}
-                    modifyModeHandle={props.modifyModeHandle}
-                  />
-                )
-                : null
-            }
+              icon="fa-folder-open"
+              objectType="persons"
+              language={props.language}
+              id={props.id}
+              title={messages[props.language]['Person.coAuthors.title']}
+            />
             <ul className={`${classes.noListStyle} d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0`}>
               {CountCard(props.data.length)}
               {(coAuthorsList.length > 7) ? coAuthorsList.slice(-6) : coAuthorsList}
@@ -121,27 +105,12 @@ const CoAuthors = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="participants"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
-          </SectionTitle>
-          {
-            (props.modifyMode)
-              ? (
-                <SubmitBox
-                  language={props.language}
-                  masterKey="Person/coAuthors"
-                  label="empty"
-                  emptySection
-                  autoLaunch={props.modifyMode}
-                  modifyModeHandle={props.modifyModeHandle}
-                />
-              )
-              : null
-          }
+            icon="fa-open"
+            objectType="structures"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Person.coAuthors.title']}
+          />
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Person.coAuthors.noCoAuthors" defaultMessage="Person.coAuthors.noCoAuthors" />
@@ -158,6 +127,5 @@ export default CoAuthors;
 CoAuthors.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };

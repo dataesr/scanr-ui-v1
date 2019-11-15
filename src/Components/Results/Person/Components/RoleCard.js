@@ -8,7 +8,6 @@ import 'moment/locale/fr';
 import PropTypes from 'prop-types';
 
 import classes from './RoleCard.scss';
-import SubmitBox from '../../../Shared/SubmitBox/SubmitBox';
 import ButtonToPage from '../../../Shared/Ui/Buttons/ButtonToPage';
 import messagesFr from '../translations/fr.json';
 import messagesEn from '../translations/en.json';
@@ -43,7 +42,6 @@ const RoleCard = (props) => {
     <Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column pb-1 ${classes.RoleCard}`}>
-          {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={props.allData.fullName} /> : null}
           {logo}
           <div className={classes.Title}>
             {props.data.role}
@@ -85,7 +83,4 @@ RoleCard.propTypes = {
   language: PropTypes.string,
   data: PropTypes.object,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Identity from './SubSections/Identity';
 import Status from './SubSections/Status';
 
@@ -34,27 +34,20 @@ const Informations = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="informations"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Project.informations.title" defaultMessage="Project.informations.title" />
-          </SectionTitle>
+            icon="fa-id-card"
+            objectType="projects"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Project.informations.title']}
+          />
           <div className="d-flex flex-wrap">
             <Identity
               language={props.language}
               data={props.data}
-              masterKey="Project/informations"
-              modifyMode={props.modifyMode}
-              allData={props.data}
             />
             <Status
               language={props.language}
               data={props.data}
-              masterKey="Project/informations"
-              modifyMode={props.modifyMode}
-              allData={props.data}
             />
           </div>
         </div>
@@ -67,7 +60,6 @@ export default Informations;
 
 Informations.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };

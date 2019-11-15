@@ -53,9 +53,6 @@ const Domains = (props) => {
                 language={props.language}
                 maxElements={12}
                 labelListButton="Tous les domaines"
-                masterKey={props.masterKey}
-                modifyMode={props.modifyMode}
-                allData={props.allData}
               />
             </div>
           </div>
@@ -71,7 +68,4 @@ export default Domains;
 Domains.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

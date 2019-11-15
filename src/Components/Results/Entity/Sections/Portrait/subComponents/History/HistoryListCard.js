@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import ButtonWithModal from '../../../../../../Shared/Ui/Buttons/ButtonWithModal';
 
-import getSelectKey from '../../../../../../../Utils/getSelectKey';
-
-import SubmitBox from '../../../../../../Shared/SubmitBox/SubmitBox';
-
 import classes from './History.scss';
 
 /**
@@ -96,7 +92,6 @@ const HistoryListCard = (props) => {
 
   return (
     <div className={classes.HistoryListCard}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       <div className={classes.Logo}>
         <i className="fas fa-clock" />
       </div>
@@ -113,11 +108,7 @@ const HistoryListCard = (props) => {
 export default HistoryListCard;
 
 HistoryListCard.propTypes = {
-  language: PropTypes.string.isRequired,
   list: PropTypes.array,
   title: PropTypes.string,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
