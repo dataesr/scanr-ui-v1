@@ -2,10 +2,6 @@ import React, { Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import getSelectKey from '../../../../../Utils/getSelectKey';
-
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
-
 import classes from './SourceCard.scss';
 
 /* Gestion des langues */
@@ -83,7 +79,6 @@ const SourceCard = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex align-items-center flex-column ${classes.SourceCard}`}>
-        {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
         {publisher}
         {title}
         <div className="d-flex pr-4 pl-4 w-100 justify-content-between">
@@ -101,7 +96,4 @@ export default SourceCard;
 SourceCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

@@ -16,7 +16,11 @@
   }
 
 }
-
+.ErrorMessage {
+  color: red;
+  font-style: italic;
+  font-size: 0.9em;
+}
 
 .Modal {
   color: $scanrdeepblueColor;
@@ -60,4 +64,9 @@
     color: $scanrdeepblueColor;
     font-weight: normal;
   }
+}
+
+.Text {
+  color: $scanrdeepblueColor;
+  font-size: 1.1rem;
 }

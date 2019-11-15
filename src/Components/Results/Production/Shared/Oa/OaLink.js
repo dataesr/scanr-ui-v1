@@ -24,7 +24,7 @@ const messages = {
 const OaLink = (props) => {
   const logo = (props.oaEvidence.pdfUrl) ? <i className="fas fa-file-pdf" aria-hidden /> : <i className="fas fa-download" aria-hidden />;
   return (
-    <p className={classes.OaLink}>
+    <p className={`${classes.OaLink} ${props.className}`}>
       <p className={classes.Title}>
         {
           messages[props.language]['Publication.Oa.OaLink.Title']
@@ -42,4 +42,5 @@ export default OaLink;
 OaLink.propTypes = {
   language: PropTypes.string.isRequired,
   oaEvidence: PropTypes.object.isRequired,
+  className: PropTypes.string,
 };
