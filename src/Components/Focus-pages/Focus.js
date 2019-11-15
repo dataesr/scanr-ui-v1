@@ -30,10 +30,7 @@ export default class FocusList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: null,
-      style: null,
-      meta: null,
-      missing: false,
+      cData: [],
       error: false,
     };
   }
@@ -44,53 +41,52 @@ export default class FocusList extends Component {
     try {
       // eslint-disable-next-line
       params = require(`${filename}`);
-      this.setState({ meta: params });
     } catch (error) {
-      this.setState({ missing: true });
       return;
     }
-    const queryField = params.queryField;
-    const filters = {};
-    filters[queryField] = {
-      type: 'MultiValueSearchFilter',
-      op: 'all',
-      values: params.queryValue,
-    };
-    axios.post(params.url_api,
-      {
-        filters,
-      })
-      .then((res) => {
-        if (this.state.meta.type === 'map') {
-          const mapStyle = {
-            height: '32.5vh',
-            borderTopLeftRadius: '10px',
-            borderTopRightRadius: '10px',
-            borderBottom: '5px solid #ffd138',
-          };
-          this.setState({ style: mapStyle });
 
-
-          const mapdata = [];
-          res.data.results.forEach((e) => {
-            try {
-              const dataElement = {
-                id: e.value.id,
-                position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
-                infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
-              };
-              mapdata.push(dataElement);
-            } catch (error) {
-              // eslint-disable-no-empty
-            }
-          });
-
-          this.setState({ data: mapdata });
-        }
-      })
-      .catch(() => {
-        this.setState({ error: true });
-      });
+    const componentsData = [];
+    params.components.forEach((component) => {
+      const queryField = component.queryField;
+      const filters = {};
+      filters[queryField] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: component.queryValue,
+      };
+      axios.post(component.url_api,
+        {
+          filters,
+        })
+        .then((res) => {
+          if (component.type === 'map') {
+            const mapdata = [];
+            res.data.results.forEach((e) => {
+              try {
+                const dataElement = {
+                  id: e.value.id,
+                  position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
+                  infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
+                };
+                mapdata.push(dataElement);
+              } catch (error) {
+                // eslint-disable-no-empty
+              }
+            });
+            componentsData.push({
+              data: mapdata,
+              type: component.type,
+              title: component.title,
+              subtitle: component.subtitle,
+              label: component.label,
+            });
+            this.setState({ cData: componentsData });
+          }
+        })
+        .catch(() => {
+          this.setState({ error: true });
+        });
+    });
   }
 
   render() {
@@ -111,7 +107,6 @@ export default class FocusList extends Component {
         </div>
       </div>
     );
-    const errorMsg = "Erreur: ce focus n'a pas pu être chargé";
     return (
       <div className={`container-fluid ${classes.HomePage}`} style={{ backgroundColor: '#EBEEF0' }}>
         <Header
@@ -129,42 +124,23 @@ export default class FocusList extends Component {
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
         <div className="container">
-          <div className="row">
-            <div className="col-lg-12">
-              {
-            // const TextComponent = () => (
-            //   <div>
-            //     <p className={`${classes.Text}`}>
-            //       {paramsFile.elems[id].text}
-            //     </p>
-            //     <p>
-            //       {paramsFile.elems[id].subtext}
-            //     </p>
-            //   </div>
-            // );
-          }
-              {this.state.data ? (
-                <div>
+
+          {
+            this.state.cData.map(component => (
+              <div className="row" key={component.label}>
+                <div className="col-lg-12">
                   <GraphComponent
-                    title={this.state.meta.title.fr}
-                    subtitle={this.state.meta.subtitle.fr}
-                    type={this.state.meta.type}
-                    tags={this.state.meta.tags}
-                    data={this.state.data}
-                    style={this.state.style}
+                    title={component.title}
+                    subtitle={component.subtitle}
+                    type={component.type}
+                    data={component.data}
+                    style={component.style}
                     language={this.props.language}
                   />
                 </div>
-              )
-                : [(this.state.missing ? <div>Erreur : ce focus est inexistant.</div> : [this.state.error ? <div>{errorMsg}</div> : <div>Chargement/Loading...</div>])]}
-              {
-                // <GraphComponent
-                //   id={props.match.params.id}
-                //   language={props.language}
-                // />
-              }
-            </div>
-          </div>
+              </div>
+            ))
+          }
           {this.state.error ? null : <TextComponent />}
         </div>
 
