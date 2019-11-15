@@ -45,6 +45,7 @@ class Production extends Component {
       <Publication
         language={this.props.language}
         data={this.state.data}
+        id={this.props.match.params.id}
       />
     </Fragment>
   )
@@ -54,6 +55,7 @@ class Production extends Component {
       <Thesis
         language={this.props.language}
         data={this.state.data}
+        id={this.props.match.params.id}
       />
     </Fragment>
   )

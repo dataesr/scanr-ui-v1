@@ -1,17 +1,16 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
-import IsOa from '../../../Production-page/Shared/Oa/OaCard';
-import OaLink from '../../../Production-page/Shared/Oa/OaLink';
+import IsOa from '../../../Production/Shared/Oa/OaCard';
+import OaLink from '../../../Production/Shared/Oa/OaLink';
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
@@ -120,41 +119,26 @@ class Thesis extends Component {
           <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.props.modifyModeHandle}
-                modifyModeKey="thesis"
-                modifyMode={this.props.modifyMode}
-              >
-                <FormattedHTMLMessage id="Person.thesis.title" defaultMessage="Person.thesis.title" />
-              </SectionTitle>
-              {
-                (this.props.modifyMode)
-                  ? (
-                    <SubmitBox
-                      language={this.props.language}
-                      masterKey="Person/thesis"
-                      label="empty"
-                      emptySection
-                      autoLaunch={this.props.modifyMode}
-                      modifyModeHandle={this.props.modifyModeHandle}
-                    />
-                  )
-                  : null
-              }
+                icon="fa-folder-open"
+                objectType="persons"
+                language={this.props.language}
+                id={this.props.id}
+                title={messages[this.props.language]['Person.thesis.title']}
+              />
               <div className="row d-flex justify-content-stretch">
                 {
                   (this.state.thesis.title)
-                    ? <div className="p-1 col-md-6"><div className={`p-3 ${classes.isOa}`}><PublicationCard small language={this.props.language} data={this.state.thesis} /></div></div>
+                    ? <div className={`col-md-6 ${classes.CardContainer}`}><div className={classes.isOa}><PublicationCard small language={this.props.language} data={this.state.thesis} /></div></div>
                     : null
                 }
                 {
                   (this.state.thesis.title)
-                    ? <div className="p-1 col-md-3"><div className={`p-2 ${classes.isOa}`}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><div className={classes.isOa}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
                     : null
                 }
                 {
                   (this.state.thesis.title && this.state.thesis.isOa)
-                    ? <div className="p-1 col-md-3"><OaLink className="p-3" language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><OaLink className={classes.CardHeight} language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
                     : null
                 }
               </div>
@@ -200,6 +184,5 @@ Thesis.propTypes = {
   language: PropTypes.string.isRequired,
   person: PropTypes.string.isRequired,
   personName: PropTypes.string.isRequired,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
 };

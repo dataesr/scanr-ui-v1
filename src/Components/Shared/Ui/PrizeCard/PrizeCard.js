@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-import SubmitBox from '../../SubmitBox/SubmitBox';
 import PrizeImage from '../../svg/icon-fiche-prix';
 /* SCSS */
 import classes from './PrizeCard.scss';
@@ -33,7 +31,6 @@ const PrizeCard = (props) => {
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
   return (
     <div className={`${classes.SimpleCard}`}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       {date}
       <PrizeImage
         fill={props.color}
@@ -50,8 +47,5 @@ PrizeCard.propTypes = {
   label: PropTypes.string,
   date: PropTypes.string,
   color: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
 // icon: PropTypes.string,
