@@ -65,7 +65,6 @@ const Identity = (props) => {
                 url={`/img/projects/${props.data.type.toLowerCase()}.png`}
                 label={props.data.type.toLowerCase()}
                 cssClass="Height150"
-                allData={props.data}
               />
             </div>
             <div className={classes.W50}>
@@ -75,9 +74,6 @@ const Identity = (props) => {
                 title={messages[props.language]['Project.informations.identifier']}
                 label={props.data.id}
                 tooltip=""
-                masterKey="Project/identifier"
-                modifyMode={props.modifyMode}
-                allData={props.data}
               />
             </div>
             <div className="w-100 p-1">
@@ -87,9 +83,6 @@ const Identity = (props) => {
                 title={messages[props.language]['Project.informations.name']}
                 label={titleAcro}
                 tooltip=""
-                masterKey="Project/title"
-                modifyMode={props.modifyMode}
-                allData={props.data}
               />
             </div>
           </div>
@@ -105,5 +98,4 @@ export default Identity;
 Identity.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyMode: PropTypes.bool.isRequired,
 };

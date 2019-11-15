@@ -59,7 +59,7 @@ class Entity extends Component {
           status: {
             type: 'MultiValueSearchFilter',
             op: 'any',
-            values: ['active'],
+            values: ['active', 'inactive'],
           },
         },
       };
@@ -110,6 +110,7 @@ class Entity extends Component {
           <Portrait
             language={this.props.language}
             data={this.state.data}
+            id={this.props.match.params.id}
           />
         </div>
 
@@ -117,6 +118,7 @@ class Entity extends Component {
           <Network
             language={this.props.language}
             data={this.state.data}
+            id={this.props.match.params.id}
           />
         </div>
 
@@ -124,6 +126,7 @@ class Entity extends Component {
           <Team
             language={this.props.language}
             data={this.state.data}
+            id={this.props.match.params.id}
           />
         </div>
 
@@ -161,6 +164,7 @@ class Entity extends Component {
           <Ecosystem
             language={this.props.language}
             data={this.state.data.graph}
+            id={this.props.match.params.id}
           />
         </div>
 
@@ -168,6 +172,7 @@ class Entity extends Component {
           <Awards
             language={this.props.language}
             data={this.state.data}
+            id={this.props.match.params.id}
           />
         </div>
 

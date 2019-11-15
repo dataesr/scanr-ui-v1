@@ -6,7 +6,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import classes from './PersonNameCard.scss';
-import SubmitBox from '../../../Shared/SubmitBox/SubmitBox';
 import ButtonWithModal from '../../../Shared/Ui/Buttons/ButtonWithModal';
 import messagesFr from '../translations/fr.json';
 import messagesEn from '../translations/en.json';
@@ -49,7 +48,6 @@ const PersonCardName = (props) => {
     <Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className={`d-flex flex-column pb-3 ${classes.PersonCardName}`}>
-          {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={props.allData.fullName} /> : null}
           <div className={classes.Logo}>
             {logo}
           </div>
@@ -93,7 +91,4 @@ PersonCardName.propTypes = {
   language: PropTypes.string,
   data: PropTypes.object,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 
-import SubmitBox from '../../../../../../Shared/SubmitBox/SubmitBox';
 import LeafletMap from '../../../../../../Shared/GraphComponents/Graphs/LeafletMap';
 import getSelectKey from '../../../../../../../Utils/getSelectKey';
 
@@ -75,8 +74,8 @@ const Affiliations = (props) => {
       }
       testAffs[key].push(affiliation);
     });
-    if (props.allData.roles) {
-      props.allData.roles.forEach((role) => {
+    if (props.data.roles) {
+      props.data.roles.forEach((role) => {
         const affiliation = {};
         affiliation.startDate = moment(role.startDate).format('YYYY');
         if (role.endDate) {
@@ -101,7 +100,6 @@ const Affiliations = (props) => {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <React.Fragment>
-          {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
           <section className="container-fluid">
             <div className="row">
               <div className={`col-12 ${classes.CardContainer}`}>
@@ -162,7 +160,4 @@ export default Affiliations;
 Affiliations.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
