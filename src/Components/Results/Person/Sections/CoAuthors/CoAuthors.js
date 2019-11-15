@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import PersonCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
@@ -84,8 +84,8 @@ const CoAuthors = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
-              objectType="structures"
+              icon="fa-folder-open"
+              objectType="persons"
               language={props.language}
               id={props.id}
               title={messages[props.language]['Person.coAuthors.title']}

@@ -40,7 +40,6 @@ const SimpleCard2 = (props) => {
 export default SimpleCard2;
 
 SimpleCard2.propTypes = {
-  language: PropTypes.string.isRequired,
   logo: PropTypes.string,
   title: PropTypes.string,
   label: PropTypes.string,

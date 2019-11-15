@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
 import SimilarCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
 import { API_PERSON_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
@@ -81,13 +81,10 @@ class SimilarPersons extends Component {
           <section className={`container-fluid ${classes.Similar}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fas fa-th"
-                modifyModeHandle={this.props.modifyModeHandle}
-                modifyModeKey=""
-                modifyMode={this.props.modifyMode}
-              >
-                <FormattedHTMLMessage id="Person.similars.title" defaultMessage="Person.similars.title" />
-              </SectionTitle>
+                icon="fa-th"
+                language={this.props.language}
+                title={messages[this.props.language]['Person.similars.title']}
+              />
               <ul className={`row px-2 ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
@@ -114,6 +111,4 @@ export default SimilarPersons;
 SimilarPersons.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.string.isRequired,
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
 
 import classes from './Productions.scss';
@@ -34,7 +34,7 @@ const Productions = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-open"
-              objectType="structures"
+              objectType="projects"
               language={props.language}
               id={props.id}
               title={messages[props.language]['Project.productions.title']}
@@ -61,8 +61,8 @@ const Productions = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fa-open"
-            objectType="structures"
+            icon="fa-th"
+            objectType="projects"
             language={props.language}
             id={props.id}
             title={messages[props.language]['Project.productions.title']}

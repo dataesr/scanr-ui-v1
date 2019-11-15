@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 import ButtonWithModal from '../../../../../../Shared/Ui/Buttons/ButtonWithModal';
 
-import getSelectKey from '../../../../../../../Utils/getSelectKey';
-
 import classes from './History.scss';
 
 /**

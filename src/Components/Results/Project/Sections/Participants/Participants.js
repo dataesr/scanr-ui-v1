@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import ParticipantRow from '../../Components/ParticipantRow';
 import LeafletMap from '../../../../Shared/GraphComponents/Graphs/LeafletMap';
 import getSelectKey from '../../../../../Utils/getSelectKey';
@@ -55,8 +55,8 @@ const Participants = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
-              objectType="structures"
+              icon="fa-th"
+              objectType="projects"
               language={props.language}
               id={props.id}
               title={messages[props.language]['Project.participants.title']}
@@ -102,8 +102,8 @@ const Participants = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fa-open"
-            objectType="structures"
+            icon="fa-folder-open"
+            objectType="projects"
             language={props.language}
             id={props.id}
             title={messages[props.language]['Project.participants.title']}

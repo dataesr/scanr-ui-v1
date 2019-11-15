@@ -2,8 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 
 import classes from './SimpleListCard.scss';
