@@ -28,14 +28,14 @@ const CardWithButton = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className="col-lg" style={{ padding: '0px' }}>
-        <div className={`${classes.CardWithButton} ${bgColor} ${position}`}>
+        <div className={` d-flex flex-column h-100 ${classes.CardWithButton} ${bgColor} ${position}`}>
           <div className={classes.Title}>
             <FormattedHTMLMessage
               id={props.title}
               defaultMessage={props.title}
             />
           </div>
-          <div className="text-right">
+          <div className="text-right mt-auto">
             <ButtonToPage
               className={classes.Button}
               url={props.url}
