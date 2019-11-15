@@ -41,11 +41,25 @@ export default class HighChartsWordCloud extends Component {
   }
 
   componentDidMount() {
-    const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count }));
+    const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count, name_normalized: item.value.normalize('NFD').toLowerCase().replace(/[\u0300-\u036f]/g, '').replace('"', '') }));
+    const r = {};
+    localData.forEach((o) => {
+      if (!(o.name_normalized in ['none'] || o.name_normalized.includes('mot-cle'))) {
+        r[o.name_normalized] = {
+          weight: (r[o.name_normalized] ? r[o.name_normalized].weight + o.weight : o.weight),
+          name: (r[o.name_normalized] ? r[o.name_normalized].name : o.name),
+        };
+      }
+    });
+
+    const result = Object.keys(r).map(k => (
+      { name: r[k].name, weight: r[k].weight }
+    ));
+
     const wordData = [];
-    for (let i = 0; i < localData.length; i += 1) {
-      if (localData[i].name.length <= 25 && wordData.length < this.max_nb_word) {
-        wordData.push(localData[i]);
+    for (let i = 0; i < result.length; i += 1) {
+      if (result[i].name.length <= 25 && wordData.length < this.max_nb_word) {
+        wordData.push(result[i]);
       }
     }
     const options = {
