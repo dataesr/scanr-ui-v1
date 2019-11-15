@@ -35,7 +35,7 @@ class SimilarProjects extends Component {
   getData = () => {
     const url = API_PROJECT_LIKE_END_POINT;
     const data = {
-      fields: ['publications.title', 'description', 'domains.label', 'label'],
+      fields: ['publications.title', 'description', 'title', 'domains.label', 'label'],
       likeIds: [this.props.data.id],
       likeTexts: [],
       lang: 'default',

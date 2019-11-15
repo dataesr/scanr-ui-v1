@@ -27,12 +27,6 @@ import Similars from './Sections/Similars/Similars';
 */
 class Project extends Component {
   state = {
-    modifyModeInformations: false,
-    modifyModeFinancial: false,
-    modifyModePrograms: false,
-    modifyModeDescription: false,
-    modifyModeParticipants: false,
-    modifyModeProductions: false,
     data: {},
   };
 
@@ -49,27 +43,6 @@ class Project extends Component {
         this.setState({ data: response.data });
         /* eslint-disable-next-line */
       }).catch(e => console.log('erreur=>', e));
-  }
-
-  modifyModeHandle = (section) => {
-    if (section === 'informations') {
-      this.setState(prevState => ({ modifyModeInformations: !prevState.modifyModeInformations }));
-    }
-    if (section === 'financial') {
-      this.setState(prevState => ({ modifyModeFinancial: !prevState.modifyModeFinancial }));
-    }
-    if (section === 'programs') {
-      this.setState(prevState => ({ modifyModePrograms: !prevState.modifyModePrograms }));
-    }
-    if (section === 'description') {
-      this.setState(prevState => ({ modifyModeDescription: !prevState.modifyModeDescription }));
-    }
-    if (section === 'participants') {
-      this.setState(prevState => ({ modifyModeParticipants: !prevState.modifyModeParticipants }));
-    }
-    if (section === 'productions') {
-      this.setState(prevState => ({ modifyModeProductions: !prevState.modifyModeProductions }));
-    }
   }
 
   handleChange = (sectionName) => {
@@ -97,48 +70,42 @@ class Project extends Component {
           <Informations
             language={this.props.language}
             data={this.state.data}
-            modifyModeHandle={() => this.modifyModeHandle('informations')}
-            modifyMode={this.state.modifyModeInformations}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Financial">
           <Financial
             language={this.props.language}
             data={this.state.data}
-            modifyModeHandle={() => this.modifyModeHandle('financial')}
-            modifyMode={this.state.modifyModeFinancial}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Programs">
           <Programs
             language={this.props.language}
             data={this.state.data}
-            modifyModeHandle={() => this.modifyModeHandle('programs')}
-            modifyMode={this.state.modifyModePrograms}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Description">
           <Description
             language={this.props.language}
             data={this.state.data.description}
-            modifyModeHandle={() => this.modifyModeHandle('description')}
-            modifyMode={this.state.modifyModeDescription}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Participants">
           <Participants
             language={this.props.language}
             data={this.state.data.participants}
-            modifyModeHandle={() => this.modifyModeHandle('participants')}
-            modifyMode={this.state.modifyModeParticipants}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Productions">
           <Productions
             language={this.props.language}
             data={this.state.data.publications}
-            modifyModeHandle={() => this.modifyModeHandle('productions')}
-            modifyMode={this.state.modifyModeProductions}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Similars">

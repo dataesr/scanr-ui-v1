@@ -21,13 +21,6 @@ import messagesEn from './translations/en.json';
  * Tests unitaires : .
 */
 class History extends Component {
-  state = {
-    modifyMode: false,
-  }
-
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
 
   render() {
     const messages = {
@@ -81,7 +74,4 @@ History.propTypes = {
   creationYear: PropTypes.string,
   language: PropTypes.string.isRequired,
   predecessors: PropTypes.array,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

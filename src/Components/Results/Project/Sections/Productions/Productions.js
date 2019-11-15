@@ -4,7 +4,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 import classes from './Productions.scss';
 import messagesFr from '../../translations/fr.json';
@@ -34,27 +33,12 @@ const Productions = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-id-card"
-              modifyModeHandle={props.modifyModeHandle}
-              modifyModeKey="productions"
-              modifyMode={props.modifyMode}
-            >
-              <FormattedHTMLMessage id="Project.productions.title" defaultMessage="Project.productions.title" />
-            </SectionTitle>
-            {
-              (props.modifyMode)
-                ? (
-                  <SubmitBox
-                    language={props.language}
-                    masterKey="Project/title"
-                    label="empty"
-                    emptySection
-                    autoLaunch={props.modifyMode}
-                    modifyModeHandle={props.modifyModeHandle}
-                  />
-                )
-                : null
-            }
+              icon="fa-open"
+              objectType="structures"
+              language={props.language}
+              id={props.id}
+              title={messages[props.language]['Project.productions.title']}
+            />
             <div className="row">
               {
                 props.data.map(prod => (
@@ -77,27 +61,12 @@ const Productions = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="participants"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Project.productions.title" defaultMessage="Project.productions.title" />
-          </SectionTitle>
-          {
-            (props.modifyMode)
-              ? (
-                <SubmitBox
-                  language={props.language}
-                  masterKey="Project/productions"
-                  label="empty"
-                  emptySection
-                  autoLaunch={props.modifyMode}
-                  modifyModeHandle={props.modifyModeHandle}
-                />
-              )
-              : null
-          }
+            icon="fa-open"
+            objectType="structures"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Project.productions.title']}
+          />
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Project.productions.noProductions" defaultMessage="Project.productions.noProductions" />
@@ -113,7 +82,6 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.array,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };

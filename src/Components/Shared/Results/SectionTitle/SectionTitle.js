@@ -19,51 +19,13 @@ const SectionTitle = props => (
         {props.children}
       </h2>
     </div>
-    <div className="col text-right">
-      {
-        (!props.modifyMode || props.emptySection)
-          ? (
-            <Fragment>
-              <span className={classes.TxtBtn} style={{ color: props.color }}>Enrichir/Modifier</span>
-              <button
-                className={`btn ${classes.btn_dark}`}
-                type="button"
-                onClick={props.modifyModeHandle}
-                style={{ color: props.color }}
-              >
-                <i className="fas fa-pen" />
-              </button>
-            </Fragment>
-          )
-          : (
-            <Fragment>
-              <span className={classes.TxtBtn} style={{ color: props.color }}>J&#39;ai terminé</span>
-              <button
-                className={`btn ${classes.btn_dark}`}
-                type="button"
-                onClick={props.modifyModeHandle}
-                style={{ color: props.color }}
-              >
-                <i className="fas fa-check" />
-              </button>
-            </Fragment>
-          )
-    }
-    </div>
   </div>
 );
 
 export default SectionTitle;
 
-SectionTitle.defaultProps = {
-  emptySection: false,
-};
-
 SectionTitle.propTypes = {
   icon: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  modifyModeHandle: PropTypes.func,
-  modifyMode: PropTypes.bool,
-  emptySection: PropTypes.bool,
   color: PropTypes.string,
 };
