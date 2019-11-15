@@ -74,8 +74,8 @@ const Affiliations = (props) => {
       }
       testAffs[key].push(affiliation);
     });
-    if (props.allData.roles) {
-      props.allData.roles.forEach((role) => {
+    if (props.data.roles) {
+      props.data.roles.forEach((role) => {
         const affiliation = {};
         affiliation.startDate = moment(role.startDate).format('YYYY');
         if (role.endDate) {
@@ -160,5 +160,4 @@ export default Affiliations;
 Affiliations.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  allData: PropTypes.object.isRequired,
 };

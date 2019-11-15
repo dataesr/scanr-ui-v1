@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Leaders from '../../Shared/Leaders/Leaders';
 import TeamComposition from './SubComponents/teamComposition';
 // import Background from '../../../Shared/images/poudre-orange_Fgris-BR.jpg';
@@ -48,7 +48,7 @@ const Team = (props) => {
           <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={props.language}
                 id={props.id}
@@ -75,7 +75,7 @@ const Team = (props) => {
         <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
+              icon="fa-folder-open"
               objectType="structures"
               language={props.language}
               id={props.id}

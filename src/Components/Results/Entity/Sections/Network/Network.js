@@ -4,7 +4,7 @@ import Axios from 'axios';
 import PropTypes from 'prop-types';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCountListCard from '../../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
@@ -37,7 +37,6 @@ class Network extends Component {
   state = {
     dataSupervisorOf: {},
     dataSupervisorOfTotal: 0,
-    modifyMode: false,
   };
 
   componentDidMount() {
@@ -82,7 +81,7 @@ class Network extends Component {
     <Fragment>
       <div className="container">
         <SectionTitle
-          icon="fa-open"
+          icon="fa-network-wired"
           objectType="structures"
           language={this.props.language}
           id={this.props.id}
@@ -98,7 +97,7 @@ class Network extends Component {
         <section className={`container-fluid ${classes.Network}`}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
+              icon="fa-network-wired"
               objectType="structures"
               language={this.props.language}
               id={this.props.id}
@@ -108,9 +107,6 @@ class Network extends Component {
               <div className="col">
                 <EmptySection
                   language={this.props.language}
-                  masterKey="Network"
-                  modifyMode={this.state.modifyMode}
-                  modifyModeHandle={this.modifyModeHandle}
                 />
               </div>
             </div>
@@ -138,9 +134,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.institutions`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -156,9 +149,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.children`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -175,9 +165,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.dataSupervisorOf`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null

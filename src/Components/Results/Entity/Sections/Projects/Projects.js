@@ -47,7 +47,6 @@ class Projects extends Component {
       min: null,
       max: null,
     },
-    modifyMode: false,
   }
 
   componentDidMount() {
@@ -162,10 +161,6 @@ class Projects extends Component {
     });
   }
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
-
   changeTypeHandler = (e) => {
     e.preventDefault();
     if (e.target.value === 'all') {
@@ -212,7 +207,7 @@ class Projects extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.match.params.id}
@@ -250,7 +245,7 @@ class Projects extends Component {
         <section className="container-fluid py-4">
           <div className="container">
             <SectionTitleViewMode
-              icon="fa-open"
+              icon="fa-folder-open"
               objectType="structures"
               language={this.props.language}
               id={this.props.match.params.id}

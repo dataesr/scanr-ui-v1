@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard2';
 
 import classes from './Programs.scss';
@@ -49,10 +49,12 @@ const Programs = (props) => {
           <IntlProvider locale={props.language} messages={messages[props.language]}>
             <div className="container">
               <SectionTitle
-                icon="fas fa-id-card"
-              >
-                <FormattedHTMLMessage id="Project.programs.title" defaultMessage="Project.programs.title" />
-              </SectionTitle>
+                icon="fa-th"
+                objectType="projects"
+                language={props.language}
+                id={props.id}
+                title={messages[props.language]['Project.programs.title']}
+              />
               <div className="row">
                 <div className="d-flex flex-wrap">
                   <div className={classes.W50}>
@@ -112,10 +114,12 @@ const Programs = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-          >
-            <FormattedHTMLMessage id="Project.programs.title" defaultMessage="Project.programs.title" />
-          </SectionTitle>
+            icon="fa-th"
+            objectType="projects"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Project.programs.title']}
+          />
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Project.programs.noPrograms" defaultMessage="Project.programs.noPrograms" />
@@ -131,6 +135,7 @@ export default Programs;
 
 Programs.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
 

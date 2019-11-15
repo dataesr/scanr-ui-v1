@@ -48,7 +48,7 @@ const Portrait = (props) => {
         <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
+              icon="fa-id-card"
               objectType="structures"
               language={props.language}
               id={props.id}

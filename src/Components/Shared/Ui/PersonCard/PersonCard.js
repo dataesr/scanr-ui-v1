@@ -2,8 +2,6 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-
 import classes from './PersonCard.scss';
 
 import logo from '../../svg/icon-fiche-responsable_h.svg';

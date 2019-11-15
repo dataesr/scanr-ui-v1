@@ -84,6 +84,3 @@ Web.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
-
-// modifyModeHandle: PropTypes.func.isRequired,
-// modifyMode: PropTypes.bool.isRequired,
