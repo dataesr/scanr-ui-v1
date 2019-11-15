@@ -4,6 +4,13 @@
   padding: 0;
   margin: 0;
 
+  .SearchInputTitle {
+    display: inline-block;
+    font-size: 1rem;
+    color: $scanrdeepblueColor;
+    padding-left: 8px;
+  }
+
   .Content {
     margin: 0;
     padding-top: 24px;
