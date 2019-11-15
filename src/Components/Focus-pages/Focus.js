@@ -85,6 +85,7 @@ export default class FocusList extends Component {
             title: component.title,
             subtitle: component.subtitle,
             label: component.label,
+            style: { height: '60vh' },
           });
           this.setState({ cData: componentsData });
         })
