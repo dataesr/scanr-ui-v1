@@ -92,21 +92,21 @@ class Glossary extends Component {
                   language={this.props.language}
                   schema="scanrdeepblueColorCards"
                   title="Discover.TalkAboutScanr"
-                  url="https://worldwide.espacenet.com/?locale=fr_EP"
+                  url="/medias"
                   lib_button="Voir"
                 />
                 <CardWithButton
                   language={this.props.language}
                   schema="scanrdeepblueColorCards"
                   title="Discover.Sources"
-                  url="https://worldwide.espacenet.com/?locale=fr_EP"
+                  url="/ressources"
                   lib_button="Voir"
                 />
                 <CardWithButton
                   language={this.props.language}
                   schema="scanrdeepblueColorCards"
                   title="Discover.Team"
-                  url="https://worldwide.espacenet.com/?locale=fr_EP"
+                  url="/l-equipe-et-son-projet"
                   lib_button="Voir"
                 />
               </div>
