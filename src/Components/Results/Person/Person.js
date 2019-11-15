@@ -11,7 +11,7 @@ import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
 import Thesis from './Sections/Thesis/Thesis';
-import Productions from '../Entity/Sections/Productions/Productions';
+import Productions from '../Shared/Productions/Productions';
 
 /**
  * Publication

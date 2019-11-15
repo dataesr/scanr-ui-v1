@@ -5,7 +5,7 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
-import HomePage from './Components/Home-page/Home-page';
+import HomePage from './Components/Home/Home';
 import SearchPage from './Components/Search/Search';
 import EntityPage from './Components/Results/Entity/Entity';
 import ProductionPage from './Components/Results/Production/Production';
@@ -16,17 +16,17 @@ import Focus from './Components/Focus-pages/Focus';
 import CurieHome from './Components/Shared/GraphCurie/CurieHome';
 
 /* Pages froides */
-import AccessibilityPage from './Components/Other-pages/Accessibility/Accessibility';
-import ContributePage from './Components/Other-pages/Contribute/Contribute';
-import ContactPage from './Components/Other-pages/Contact/Contact';
-import FAQPage from './Components/Other-pages/FAQ/FAQ';
-import GlossaryPage from './Components/Other-pages/Glossary/Glossary';
-import LegalNoticePage from './Components/Other-pages/Legal-notice/Legal-notice';
-import MediasPage from './Components/Other-pages/Medias/Medias';
-import Opendata from './Components/Other-pages/Opendata/Opendata';
-import Ressources from './Components/Other-pages/Ressources/Ressources';
-import TeamAndProjectPage from './Components/Other-pages/Team-and-project/Team-and-project';
-import TutorialsPage from './Components/Other-pages/Tutorials/Tutorials';
+import AccessibilityPage from './Components/Abouts/Accessibility/Accessibility';
+import ContributePage from './Components/Abouts/Contribute/Contribute';
+import ContactPage from './Components/Abouts/Contact/Contact';
+import FAQPage from './Components/Abouts/FAQ/FAQ';
+import GlossaryPage from './Components/Abouts/Glossary/Glossary';
+import LegalNoticePage from './Components/Abouts/Legal-notice/Legal-notice';
+import MediasPage from './Components/Abouts/Medias/Medias';
+import Opendata from './Components/Abouts/Opendata/Opendata';
+import Ressources from './Components/Abouts/Ressources/Ressources';
+import TeamAndProjectPage from './Components/Abouts/Team-and-project/Team-and-project';
+import TutorialsPage from './Components/Abouts/Tutorials/Tutorials';
 
 class App extends Component {
   state: {

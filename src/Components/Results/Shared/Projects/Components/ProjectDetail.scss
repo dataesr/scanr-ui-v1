@@ -1,4 +1,4 @@
-@import '../../../../../../style.scss';
+@import '../../../../../style.scss';
 
 .detailTitle{
   color: $scanrdeepblueColor;
@@ -86,25 +86,6 @@
   font-style: italic;
   text-align: center;
   padding-top: 20%;
-}
-
-.thesis {
-  border: 2px solid #fead3f;
-  border-radius: 4px;
-  color: #fead3f;
-  background-color: #fead3f;
-}
-.publication {
-  border: 2px solid $publicationsColor;
-  border-radius: 4px;
-  color: $publicationsColor;
-  background-color: $publicationsColor;
-}
-.patent {
-  border: 2px solid #4D2E3F;
-  border-radius: 4px;
-  color: #4D2E3F;
-  background-color: #4D2E3F;
 }
 
 .BtnWidth {

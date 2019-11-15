@@ -1,9 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InputRange from 'react-input-range';
+import '../../../../../../node_modules/react-input-range/lib/css/index.css';
 
 import classes from './FilterPanel.scss';
-import '../../../../../../../node_modules/react-input-range/lib/css/index.css';
+
+import './inputRange.css';
+
 /**
  * FilterPanel
  * Url : ex: /entite/200711886U
@@ -12,18 +15,6 @@ import '../../../../../../../node_modules/react-input-range/lib/css/index.css';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: {
-    thesis: 'Thèses',
-    publication: 'Publications',
-    patent: 'Brevets',
-  },
-  en: {
-    thesis: 'Thesis',
-    publication: 'Publications',
-    patent: 'Patents',
-  },
-};
 
 const FilterPanel = props => (
   <React.Fragment>
@@ -39,9 +30,12 @@ const FilterPanel = props => (
               onChange={e => props.changeTypeHandler(e)}
               defaultValue={props.selectedType}
             >
+              <option key="all" value="all">
+                {(props.language === 'fr') ? 'Tous' : 'All'}
+              </option>
               {
                 Object.entries(props.totalPerType).map(([type, count]) => (
-                  <option key={type} value={type}>{`${messages[props.language][type]} (${count})`}</option>
+                  <option key={type} value={type}>{`${type} (${count})`}</option>
                 ))
               }
             </select>

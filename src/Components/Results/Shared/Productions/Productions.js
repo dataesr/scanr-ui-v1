@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import { GridLoader } from 'react-spinners';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
+import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
 
-import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitleViewMode from '../../../Shared/SectionTitle';
+import EmptySection from '../../../Shared/Results/EmptySection/EmptySection';
+import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
