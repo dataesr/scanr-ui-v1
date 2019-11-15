@@ -74,25 +74,14 @@ export default class FocusList extends Component {
               }
             });
           } else if (component.type === 'bar') {
-            const entries = [];
-            res.data.results.forEach((e) => {
-              try {
-                entries.push({
-                  value: e.value.id,
-                  count: 1,
-                });
-              } catch (error) {
-                // eslint-disable-no-empty
-              }
-            });
-            data = {
-              id: 'region',
-              entries,
-            };
+            data = res.data.facets.find(el => el.id === 'facet_urban_hits');
           }
+          const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({
             data,
             type: component.type,
+            buttonText: text,
+            href: component.href,
             title: component.title,
             subtitle: component.subtitle,
             label: component.label,
@@ -107,10 +96,10 @@ export default class FocusList extends Component {
 
   render() {
     const TextComponent = () => (
-      <div style={{
-        backgroundColor: 'white', borderRadius: '0 0 15px 15px', marginTop: '-15px', marginBottom: '40px',
-      }}
-      >
+      <div>
+        <p className={`${classes.Title}`}>
+          {params.title}
+        </p>
         <p className={`${classes.Text}`}>
           {params.text}
         </p>
@@ -140,7 +129,11 @@ export default class FocusList extends Component {
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
         <div className="container">
-
+          <div className="row" key="text">
+            <div className="col-lg-12">
+              {this.state.error ? null : <TextComponent />}
+            </div>
+          </div>
           {
             this.state.cData.map(component => (
               <div className="row" key={component.label}>
@@ -151,13 +144,14 @@ export default class FocusList extends Component {
                     type={component.type}
                     data={component.data}
                     style={component.style}
+                    href={component.href}
+                    buttonText={component.buttonText}
                     language={this.props.language}
                   />
                 </div>
               </div>
             ))
           }
-          {this.state.error ? null : <TextComponent />}
         </div>
 
         <LastFocus />
