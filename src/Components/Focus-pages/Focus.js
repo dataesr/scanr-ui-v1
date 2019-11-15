@@ -59,8 +59,8 @@ export default class FocusList extends Component {
           filters,
         })
         .then((res) => {
+          let data = [];
           if (component.type === 'map') {
-            const mapdata = [];
             res.data.results.forEach((e) => {
               try {
                 const dataElement = {
@@ -68,20 +68,36 @@ export default class FocusList extends Component {
                   position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
                   infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
                 };
-                mapdata.push(dataElement);
+                data.push(dataElement);
               } catch (error) {
                 // eslint-disable-no-empty
               }
             });
-            componentsData.push({
-              data: mapdata,
-              type: component.type,
-              title: component.title,
-              subtitle: component.subtitle,
-              label: component.label,
+          } else if (component.type === 'bar') {
+            const entries = [];
+            res.data.results.forEach((e) => {
+              try {
+                entries.push({
+                  value: e.value.id,
+                  count: 1,
+                });
+              } catch (error) {
+                // eslint-disable-no-empty
+              }
             });
-            this.setState({ cData: componentsData });
+            data = {
+              id: 'region',
+              entries,
+            };
           }
+          componentsData.push({
+            data,
+            type: component.type,
+            title: component.title,
+            subtitle: component.subtitle,
+            label: component.label,
+          });
+          this.setState({ cData: componentsData });
         })
         .catch(() => {
           this.setState({ error: true });
