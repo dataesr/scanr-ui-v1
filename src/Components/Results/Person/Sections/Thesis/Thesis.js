@@ -7,7 +7,7 @@ import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config'
 
 import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
 import IsOa from '../../../Production-page/Shared/Oa/OaCard';
 import OaLink from '../../../Production-page/Shared/Oa/OaLink';
@@ -119,8 +119,8 @@ class Thesis extends Component {
           <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fa-open"
-                objectType="structures"
+                icon="fa-folder-open"
+                objectType="persons"
                 language={this.props.language}
                 id={this.props.id}
                 title={messages[this.props.language]['Person.thesis.title']}

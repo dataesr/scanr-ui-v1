@@ -33,7 +33,7 @@ class Contribute extends Component {
   }
 
   handleCloseModal = () => {
-    this.setState({ showModal: false });
+    this.setState({ showModal: false, postError: false });
   }
 
   handleShowModal = () => {
@@ -71,9 +71,11 @@ class Contribute extends Component {
     const now = new Date();
     const postData = { ...this.state.data, created_at: moment(now).format('YYYY-MM-DDThh:mm:ss') };
     Axios.post(url, postData)
-      .then(() => {
+      .then((response) => {
+        // eslint-disable-next-line
+        console.log(response);
         this.handleCloseModal();
-      });
+      }).catch(() => this.setState({ postError: true }));
   }
 
   render() {
@@ -97,11 +99,11 @@ class Contribute extends Component {
                 <div className={`text-center ${classes.Text1}`}>
                   <i className="fas fa-edit" />
                   <span>
-                    <FormattedHTMLMessage id="SubmitBox.mainButton.label" />
+                    <FormattedHTMLMessage id="Contribute.mainButton.label" />
                   </span>
                 </div>
                 <div className={`text-center ${classes.Text2}`}>
-                  <FormattedHTMLMessage id="SubmitBox.text2" />
+                  <FormattedHTMLMessage id="Contribute.text2" />
                 </div>
                 <div className={`text-center ${classes.Text3}`}>
                   <span className={classes.Important}>
@@ -114,13 +116,13 @@ class Contribute extends Component {
                     <div className="form-row">
                       <div className="form-group w-100">
                         <p>
-                          <FormattedHTMLMessage id="SubmitBox.commentInput.label" />
+                          <FormattedHTMLMessage id="Contribute.commentInput.label" />
                         </p>
                         <textarea
                           className="form-control w-100"
                           value={this.state.data.modifications}
                           name="modifications"
-                          title={messages[this.props.language]['SubmitBox.commentInput.label']}
+                          title={messages[this.props.language]['Contribute.commentInput.label']}
                           rows="5"
                           onChange={e => this.commentChangeHandler(e)}
                           required
@@ -131,14 +133,14 @@ class Contribute extends Component {
                     <div className="form-row">
                       <div className="form-group col-md-6">
                         <p>
-                          <FormattedHTMLMessage id="SubmitBox.nameInput.label" />
+                          <FormattedHTMLMessage id="Contribute.nameInput.label" />
                         </p>
                         <input
                           type="text"
                           className="form-control"
                           value={this.state.data.name}
                           name="name"
-                          title={messages[this.props.language]['SubmitBox.nameInput.label']}
+                          title={messages[this.props.language]['Contribute.nameInput.label']}
                           onChange={e => this.nameChangeHandler(e)}
                           required
                         />
@@ -148,26 +150,30 @@ class Contribute extends Component {
                     <div className="form-row">
                       <div className="form-group col-md-6">
                         <p>
-                          <FormattedHTMLMessage id="SubmitBox.emailInput.label" />
+                          <FormattedHTMLMessage id="Contribute.emailInput.label" />
                         </p>
                         <input
                           type="email"
                           className="form-control"
                           value={this.state.data.email}
                           name="email"
-                          title={messages[this.props.language]['SubmitBox.emailInput.label']}
+                          title={messages[this.props.language]['Contribute.emailInput.label']}
                           onChange={e => this.emailChangeHandler(e)}
                           required
                         />
                       </div>
                       <div className="form-group col-md-6" style={{ position: 'relative' }}>
                         <button type="submit" className={`btn ${classes.btn_scanrGrey} ${classes.Submit}`}>
-                          <FormattedHTMLMessage id="SubmitBox.submit.label" />
+                          <FormattedHTMLMessage id="Contribute.submit.label" />
                           <i className="fas fa-paper-plane" />
                         </button>
                         {
                           (this.state.postError)
-                            ? (<span>Erreur lors du post</span>)
+                            ? (
+                              <span className={classes.ErrorMessage}>
+                                {messages[this.props.language]['Contribute.errorMessage']}
+                              </span>
+                            )
                             : null
                         }
                       </div>
@@ -181,7 +187,7 @@ class Contribute extends Component {
           <span className="ml-auto" onClick={this.handleShowModal}>
             <div className="d-flex flex-nowrap align-items-center">
               <p className={`m-0 ${classes.Text}`}>
-                Contribuer
+                {messages[this.props.language]['Contribute.contribute']}
               </p>
               <span className={`ml-2 btn ${classes.SquareButton} ${classes.btn_dark}`}>
                 <i aria-hidden className="fas fa-pen" />
