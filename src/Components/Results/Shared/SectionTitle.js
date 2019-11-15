@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Contribute from '../../Shared/Contribute/Contribute';
+import Contribute from './Contribute/Contribute';
 
 import classes from './SectionTitle.scss';
 

@@ -12,7 +12,8 @@ import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 
-import classes from './Home-page.scss';
+import classes from './Home.scss';
+
 
 class HomePage extends Component {
   constructor(props) {
