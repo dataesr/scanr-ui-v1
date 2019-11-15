@@ -5,7 +5,6 @@ import ReactTooltip from 'react-tooltip';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import ButtonWithModal from '../Buttons/ButtonWithModal';
-import SubmitBox from '../../SubmitBox/SubmitBox';
 
 import classes from './SimpleListCard.scss';
 
@@ -63,7 +62,6 @@ const SimpleListCard = (props) => {
 
   return (
     <div className={classes.SimpleListCard}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       {logoFunction(props.logo)}
       {titleFunction(props.title)}
       {labelFunction(props.label)}
@@ -80,11 +78,7 @@ export default SimpleListCard;
 
 SimpleListCard.propTypes = {
   label: PropTypes.string,
-  language: PropTypes.string.isRequired,
   logo: PropTypes.string,
   title: PropTypes.string,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactImageFallback from 'react-image-fallback';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-import SubmitBox from '../../SubmitBox/SubmitBox';
-
 /* SCSS */
 import classes from './LogoCard.scss';
 
@@ -28,7 +25,6 @@ const LogoCard = (props) => {
 
   return (
     <div className={`${classes.card} ${cssClass}`}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       <a href={props.targetUrl} target="_blank" rel="noopener noreferrer">
         <ReactImageFallback
           src={src}
@@ -45,13 +41,9 @@ const LogoCard = (props) => {
 export default LogoCard;
 
 LogoCard.propTypes = {
-  language: PropTypes.string.isRequired,
   label: PropTypes.string,
   src: PropTypes.string,
   url: PropTypes.string,
   cssClass: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
   targetUrl: PropTypes.string,
 };

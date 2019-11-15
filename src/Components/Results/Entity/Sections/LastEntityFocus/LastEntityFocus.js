@@ -32,9 +32,13 @@ const LastEntityFocus = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className={`container-fluid ${classes.LastEntityFocus}`}>
           <div className="container">
-            <SectionTitle icon="fas fa-compress-arrows-alt">
-              <FormattedHTMLMessage id="Entity.Section.LastEntityFocus.label" />
-            </SectionTitle>
+            <SectionTitle
+              icon="fa-open"
+              objectType="structures"
+              language={props.language}
+              id={props.data.id}
+              title={messages[props.language]['Entity.Section.LastEntityFocus.label']}
+            />
           </div>
         </section>
       </IntlProvider>

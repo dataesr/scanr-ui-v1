@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Axios from 'axios';
@@ -50,35 +50,11 @@ const messages = {
 */
 class Thesis extends Component {
   state = {
-    modifyModePortrait: false,
-    modifyModeOa: false,
-    modifyModeAuthors: false,
-    modifyModeAffiliations: false,
     similarProductions: null,
   };
 
   componentDidMount() {
     this.getSimilarProductions();
-  }
-
-  modifyModeHandlePortrait = () => {
-    this.setState(prevState => ({ modifyModePortrait: !prevState.modifyModePortrait }));
-  }
-
-  modifyModeHandleOa = () => {
-    this.setState(prevState => ({ modifyModeOa: !prevState.modifyModeOa }));
-  }
-
-  modifyModeHandleAuthors = () => {
-    this.setState(prevState => ({ modifyModeAuthors: !prevState.modifyModeAuthors }));
-  }
-
-  modifyModeHandleAffiliations = () => {
-    this.setState(prevState => ({ modifyModeAffiliations: !prevState.modifyModeAffiliations }));
-  }
-
-  modifyModeHandleSimilarProductions = () => {
-    this.setState(prevState => ({ modifyModeSimilarProductions: !prevState.modifyModeSimilarProductions }));
   }
 
   getAuthor = role => (this.props.data.authors.find(person => person.role === role))
@@ -204,13 +180,12 @@ class Thesis extends Component {
           <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle} id="Thesis">
             <div className="container">
               <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.modifyModeHandlePortrait}
-                modifyMode={this.state.modifyModePortrait}
-              >
-                <FormattedHTMLMessage id="Thesis.title" defaultMessage="Thesis.title" />
-              </SectionTitle>
-
+                icon="fa-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.id}
+                title={messages[this.props.language]['Thesis.title']}
+              />
               <div className="row">
                 <div className="col-lg">
                   <div className="row">
@@ -221,9 +196,6 @@ class Thesis extends Component {
                         title={messages[this.props.language]['Publication.publication.title']}
                         label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
                         tooltip=""
-                        masterKey="Publication/title"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
                       />
                     </div>
                   </div>
@@ -236,9 +208,6 @@ class Thesis extends Component {
                           title={messages[this.props.language]['Publication.publication.id']}
                           label={id}
                           tooltip=""
-                          masterKey="Publication/id"
-                          modifyMode={this.state.modifyModePortrait}
-                          allData={this.props.data}
                         />
                       </a>
                     </div>
@@ -249,9 +218,6 @@ class Thesis extends Component {
                         title={messages[this.props.language]['Publication.publication.publicationDate']}
                         label={publicationDate}
                         tooltip=""
-                        masterKey="Publication/publicationDate"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
                       />
                     </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
@@ -261,9 +227,6 @@ class Thesis extends Component {
                         showTitle={false}
                         language={this.props.language}
                         role="author"
-                        masterKey="Publication/mainAuthor"
-                        modifyMode={this.state.modifyModePortrait}
-                        allData={this.props.data}
                       />
                     { /* eslint-enable */ }
                     </div>
@@ -274,10 +237,6 @@ class Thesis extends Component {
                           url="./img/swh-logo.jpg"
                           language={this.props.language}
                           cssClass="Height150"
-                          masterKey="Publication/publicationType"
-                          modifyMode={this.state.modifyModePortrait}
-                          targetUrl={swHeritageLink}
-                          allData={this.props.data}
                         />
                       </div>
                     ) : null
@@ -301,9 +260,6 @@ class Thesis extends Component {
                             label={award.label}
                             icon="prize"
                             color="#fe7747"
-                            masterKey="Publication/award"
-                            modifyMode={this.state.modifyModePortrait}
-                            allData={this.props.data}
                           />
                         </div>
                       ))
@@ -321,9 +277,6 @@ class Thesis extends Component {
                             title={messages[this.props.language]['Publication.summary.title']}
                             text={summary}
                             tooltip=""
-                            masterKey="Publication/summary"
-                            modifyMode={this.state.modifyModePortrait}
-                            allData={this.props.data}
                           />
                         </div>
                       ) : null
@@ -339,9 +292,6 @@ class Thesis extends Component {
                             labelListButton="Autres"
                             tagList={this.props.data.keywords.default}
                             tooltip=""
-                            masterKey="Publication/tags"
-                            modifyMode={this.state.modifyModePortrait}
-                            allData={this.props.data}
                           />
                         </div>
                       ) : null
@@ -354,21 +304,18 @@ class Thesis extends Component {
           <section className={`container-fluid ${classes.OaSection}`} id="AccessType">
             <div className="container">
               <SectionTitle
-                icon={(this.props.data && this.props.data.isOa) ? 'fas fa-lock-open' : 'fas fa-lock'}
-                modifyModeHandle={this.modifyModeHandleOa}
-                modifyMode={this.state.modifyModeOa}
-              >
-                <FormattedHTMLMessage id="Publication.oa.title" defaultMessage="Publication.oa.title" />
-              </SectionTitle>
+                icon="fa-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.id}
+                title={messages[this.props.language]['Publication.oa.title']}
+              />
               <div className="row">
                 <div className={`col-md-3 ${classes.CardContainer}`}>
                   <OaCard
                     language={this.props.language}
                     oa={(this.props.data && this.props.data.isOa) ? this.props.data.isOa : false}
                     oaEvidence={(this.props.data && this.props.data.oaEvidence) ? this.props.data.oaEvidence : false}
-                    masterKey="AccessType/OaCard"
-                    modifyMode={this.state.modifyModeOa}
-                    allData={this.props.data}
                   />
                 </div>
                 {
@@ -387,9 +334,6 @@ class Thesis extends Component {
                       <OaLink
                         language={this.props.language}
                         oaEvidence={this.props.data.oaEvidence}
-                        masterKey="AccessType/OaCard"
-                        modifyMode={this.state.modifyModeOa}
-                        allData={this.props.data}
                       />
                     </div>
                   ) : null
@@ -400,12 +344,12 @@ class Thesis extends Component {
           <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors} id="Authors">
             <div className="container">
               <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.modifyModeHandleAuthors}
-                modifyMode={this.state.modifyModeAuthors}
-              >
-                <FormattedHTMLMessage id="Publication.authors.title" defaultMessage="Publication.authors.title" />
-              </SectionTitle>
+                icon="fa-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.id}
+                title={messages[this.props.language]['Publication.authors.title']}
+              />
               <div className="row">
                 {
                   (this.props.data.authors && this.props.data.authors.length > 1)
@@ -430,9 +374,6 @@ class Thesis extends Component {
                             showTitle={false}
                             language={this.props.language}
                             role={author.role}
-                            masterKey="Publication/person"
-                            modifyMode={this.state.modifyModeAuthors}
-                            allData={this.props.data}
                           />
                         </div>
                       );
@@ -464,12 +405,12 @@ class Thesis extends Component {
                 <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations} id="Affiliations">
                   <div className="container">
                     <SectionTitle
-                      icon="fas fa-id-card"
-                      modifyModeHandle={this.modifyModeHandleAffiliations}
-                      modifyMode={this.state.modifyModeAffiliations}
-                    >
-                      <FormattedHTMLMessage id="Publication.affiliations.title" defaultMessage="Publication.affiliations.title" />
-                    </SectionTitle>
+                      icon="fa-open"
+                      objectType="structures"
+                      language={this.props.language}
+                      id={this.props.id}
+                      title={messages[this.props.language]['Publication.affiliations.title']}
+                    />
                     <div className={`row ${classes.Ul}`}>
                       {
                         this.props.data.affiliations.map(item => (
@@ -492,14 +433,13 @@ class Thesis extends Component {
               ? (
                 <section className={`container-fluid ${classes.SimilarProductions}`} style={sectionStyleSimilarProductions} id="SimilarProductions">
                   <div className="container">
-                    <div className={`row ${classes.SectionTitle}`}>
-                      <div className="col">
-                        <i className="fas fa-th" />
-                        <span className={classes.Label}>
-                          <FormattedHTMLMessage id="Publication.similarProductions.title" defaultMessage="Publication.similarProductions.title" />
-                        </span>
-                      </div>
-                    </div>
+                    <SectionTitle
+                      icon="fa-open"
+                      objectType="structures"
+                      language={this.props.language}
+                      id={this.props.id}
+                      title={messages[this.props.language]['Publication.similarProductions.title']}
+                    />
                     <ul className={`row ${classes.Ul}`}>
                       {
                         this.state.similarProductions.map(item => (
@@ -527,5 +467,6 @@ export default Thesis;
 
 Thesis.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
