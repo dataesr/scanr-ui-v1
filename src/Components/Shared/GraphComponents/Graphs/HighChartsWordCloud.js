@@ -52,9 +52,10 @@ export default class HighChartsWordCloud extends Component {
       }
     });
 
-    const result = Object.keys(r).map(k => (
+    let result = Object.keys(r).map(k => (
       { name: r[k].name, weight: r[k].weight }
     ));
+    result = result.sort((a, b) => b.weight - a.weight);
 
     const wordData = [];
     for (let i = 0; i < result.length; i += 1) {
