@@ -57,7 +57,6 @@ class Productions extends Component {
       min: null,
       max: null,
     },
-    modifyMode: false,
   }
 
   componentDidMount() {
@@ -124,8 +123,8 @@ class Productions extends Component {
           years = years2;
         }
       } catch (err) {
+        this.setState({ error: true });
         // eslint-disable-next-line
-        this.setState({ error: true })
         console.log(err);
       }
       const totalPerType = {};
@@ -182,8 +181,8 @@ class Productions extends Component {
       try {
         years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
       } catch (err) {
+        this.setState({ error: true });
         // eslint-disable-next-line
-        this.setState({ error: true })
         console.log(err);
       }
       const graphData = {};
@@ -199,10 +198,6 @@ class Productions extends Component {
         isLoading: false,
       });
     });
-  }
-
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
   }
 
   changeTypeHandler = (e) => {
@@ -248,7 +243,7 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.match.params.id}
@@ -269,7 +264,7 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.match.params.id}
@@ -290,7 +285,7 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.match.params.id}
@@ -316,7 +311,7 @@ class Productions extends Component {
         <section className="container-fluid py-4">
           <div className="container">
             <SectionTitleViewMode
-              icon="fa-open"
+              icon="fa-folder-open"
               objectType="structures"
               language={this.props.language}
               id={this.props.match.params.id}

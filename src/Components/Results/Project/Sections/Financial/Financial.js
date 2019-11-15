@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCard2 from '../../../../Shared/Ui/SimpleCard/SimpleCard2';
 
 import BudgetCard from '../../Components/Budget';
@@ -31,8 +31,8 @@ const Financial = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
-              objectType="structures"
+              icon="fa-folder-open"
+              objectType="projects"
               language={props.language}
               id={props.id}
               title={messages[props.language]['Project.financial.title']}
@@ -99,8 +99,8 @@ const Financial = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fa-open"
-            objectType="structures"
+            icon="fa-folder-open"
+            objectType="projects"
             language={props.language}
             id={props.id}
             title={messages[props.language]['Project.financial.title']}

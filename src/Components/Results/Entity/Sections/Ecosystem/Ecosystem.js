@@ -14,9 +14,6 @@ import Select from '../../../../Shared/Ui/Select/Select';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import messagesEntityFr from '../../translations/fr.json';
-import messagesEntityEn from '../../translations/en.json';
-
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import classes from './Ecosystem.scss';
@@ -326,11 +323,6 @@ class Ecosystem extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
-
     if (!this.props.data) {
       return (
         <Fragment>
@@ -338,12 +330,12 @@ class Ecosystem extends Component {
             <section className={`container-fluid ${classes.Ecosystem}`}>
               <div className="container">
                 <SectionTitleViewMode
-                  icon="fa-open"
+                  icon="fa-folder-open"
                   objectType="structures"
                   language={this.props.language}
                   id={this.props.id}
                   total
-                  title="EcoSystem"
+                  title={messages[this.props.language]['Entity.ecosystem.title']}
                   viewModeClickHandler={this.viewModeClickHandler}
                   viewMode={this.state.viewMode}
                 />
@@ -369,12 +361,12 @@ class Ecosystem extends Component {
           <section className={`container-fluid ${classes.Ecosystem}`}>
             <div className="container">
               <SectionTitleViewMode
-                icon="fa-open"
+                icon="fa-folder-open"
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.id}
                 total
-                title="EcoSystem"
+                title={messages[this.props.language]['Entity.ecosystem.title']}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Affiliations from './SubSections/Affiliations/Affiliations';
 import Domains from './SubSections/Domains/Domains';
 import Identity from './SubSections/Identity/Identity';
@@ -40,8 +40,8 @@ const Informations = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fa-open"
-            objectType="structures"
+            icon="fa-id-card"
+            objectType="persons"
             language={props.language}
             id={props.id}
             title={messages[props.language]['Person.informations.title']}

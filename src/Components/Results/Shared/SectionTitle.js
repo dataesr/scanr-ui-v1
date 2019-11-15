@@ -68,14 +68,20 @@ const SectionTitle = props => (
           )
           : null
       }
-      <span className="pl-2 ml-auto my-2">
-        <Contribute
-          language={props.language}
-          sectionName={props.title}
-          objectId={props.id}
-          objectType={props.objectType}
-        />
-      </span>
+      {
+        (props.id && props.objectType)
+          ? (
+            <span className="pl-2 ml-auto my-2">
+              <Contribute
+                language={props.language}
+                sectionName={props.title}
+                objectId={props.id}
+                objectType={props.objectType}
+              />
+            </span>
+          )
+          : null
+      }
     </div>
   </div>
 );

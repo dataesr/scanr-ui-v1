@@ -43,7 +43,7 @@ const Awards = (props) => {
           <section className={`container-fluid ${classes.Awards}`}>
             <div className="container">
               <SectionTitle
-                icon="fa-open"
+                icon="fa-th"
                 objectType="structures"
                 language={props.language}
                 id={props.id}
@@ -53,7 +53,6 @@ const Awards = (props) => {
                 <div className="col">
                   <EmptySection
                     language={props.language}
-                    masterKey="Awards"
                     color="#fff"
                   />
                 </div>
@@ -71,7 +70,7 @@ const Awards = (props) => {
         <section className={`container-fluid ${classes.Awards}`}>
           <div className="container">
             <SectionTitle
-              icon="fa-open"
+              icon="fa-th"
               objectType="structures"
               language={props.language}
               id={props.id}
