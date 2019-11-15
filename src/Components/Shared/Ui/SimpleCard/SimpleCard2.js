@@ -2,10 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
-import getSelectKey from '../../../../Utils/getSelectKey';
-
-import SubmitBox from '../../SubmitBox/SubmitBox';
-
 import classes from './SimpleCard2.scss';
 
 /**
@@ -33,7 +29,6 @@ const SimpleCard2 = (props) => {
 
   return (
     <div className={classes.SimpleCard} style={style}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       {logo}
       {title}
       {label}
@@ -45,13 +40,9 @@ const SimpleCard2 = (props) => {
 export default SimpleCard2;
 
 SimpleCard2.propTypes = {
-  language: PropTypes.string.isRequired,
   logo: PropTypes.string,
   title: PropTypes.string,
   label: PropTypes.string,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
   bgColor: PropTypes.string,
 };

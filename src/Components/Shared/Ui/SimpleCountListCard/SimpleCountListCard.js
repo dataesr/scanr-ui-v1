@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 import ButtonWithModal from '../Buttons/ButtonWithModal';
-import SubmitBox from '../../SubmitBox/SubmitBox';
 
 import classes from './SimpleCountListCard.scss';
 
@@ -100,7 +99,6 @@ const SimpleCountListCard = (props) => {
         {modalButton}
       </div>
       {tooltip}
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
     </div>
   );
 };
@@ -109,7 +107,6 @@ export default SimpleCountListCard;
 SimpleCountListCard.defaultProps = {
   count: null,
   masterKey: 'default.default',
-  modifyMode: false,
 };
 
 SimpleCountListCard.propTypes = {
@@ -122,6 +119,4 @@ SimpleCountListCard.propTypes = {
   modalButtonLabel: PropTypes.string,
   modalButtonTitle: PropTypes.string,
   masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

@@ -2,7 +2,7 @@ export default {
   pageSize: 500,
   query: '',
   sourceFields: [
-    'id', 'keywords', 'title', 'subtitle', 'summary', 'authors', 'productionType',
+    'id', 'keywordsEn', 'keywordsFr', 'title', 'subtitle', 'summary', 'authors', 'productionType',
     'alternativeSummary', 'source', 'oaEvidence', 'isOa', 'domains', 'type',
     'publicationDate', 'year',
   ],
@@ -30,7 +30,17 @@ export default {
       },
       size: 50,
     },
-    keywords: {
+    keywordsEn: {
+      field: 'keywords.en',
+      filters: {},
+      min_doc_count: 1,
+      order: {
+        direction: 'DESC',
+        type: 'COUNT',
+      },
+      size: 100,
+    },
+    keywordsFr: {
       field: 'keywords.fr',
       filters: {},
       min_doc_count: 1,

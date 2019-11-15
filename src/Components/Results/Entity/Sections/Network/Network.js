@@ -4,7 +4,7 @@ import Axios from 'axios';
 import PropTypes from 'prop-types';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCountListCard from '../../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
@@ -37,7 +37,6 @@ class Network extends Component {
   state = {
     dataSupervisorOf: {},
     dataSupervisorOfTotal: 0,
-    modifyMode: false,
   };
 
   componentDidMount() {
@@ -73,10 +72,6 @@ class Network extends Component {
     }
   }
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
-
   componentDidCatch(error, info) {
     /* eslint-disable-next-line */
     console.log('catch : ', error, info);
@@ -85,9 +80,13 @@ class Network extends Component {
   renderTitle = () => (
     <Fragment>
       <div className="container">
-        <SectionTitle icon="fas fa-network-wired" modifyModeHandle={this.modifyModeHandle} modifyMode={this.state.modifyMode}>
-          {messagesEntity[this.props.language]['Entity.Section.Network.label']}
-        </SectionTitle>
+        <SectionTitle
+          icon="fa-network-wired"
+          objectType="structures"
+          language={this.props.language}
+          id={this.props.id}
+          title={messagesEntity[this.props.language]['Entity.Section.Network.label']}
+        />
       </div>
     </Fragment>
   );
@@ -98,20 +97,16 @@ class Network extends Component {
         <section className={`container-fluid ${classes.Network}`}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-th"
-              modifyModeHandle={this.modifyModeHandle}
-              modifyMode={this.state.modifyMode}
-              emptySection
-            >
-              {messagesEntity[this.props.language]['Entity.Section.Network.label']}
-            </SectionTitle>
+              icon="fa-network-wired"
+              objectType="structures"
+              language={this.props.language}
+              id={this.props.id}
+              title={messagesEntity[this.props.language]['Entity.Section.Network.label']}
+            />
             <div className="row">
               <div className="col">
                 <EmptySection
                   language={this.props.language}
-                  masterKey="Network"
-                  modifyMode={this.state.modifyMode}
-                  modifyModeHandle={this.modifyModeHandle}
                 />
               </div>
             </div>
@@ -139,9 +134,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.institutions`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -157,9 +149,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.children`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null
@@ -176,9 +165,6 @@ class Network extends Component {
                       tooltip=""
                       modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
                       modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
-                      masterKey={`${this.props.id}.dataSupervisorOf`}
-                      modifyMode={this.state.modifyMode}
-                      allData={this.props.data}
                     />
                   </div>
                 ) : null

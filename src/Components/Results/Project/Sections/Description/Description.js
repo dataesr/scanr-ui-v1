@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
+import SectionTitle from '../../../Shared/SectionTitle';
 
 import classes from './Description.scss';
 
@@ -34,27 +33,12 @@ const Description = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-id-card"
-              modifyModeHandle={props.modifyModeHandle}
-              modifyModeKey="description"
-              modifyMode={props.modifyMode}
-            >
-              <FormattedHTMLMessage id="Project.description.title" defaultMessage="Project.description.title" />
-            </SectionTitle>
-            {
-              (props.modifyMode)
-                ? (
-                  <SubmitBox
-                    language={props.language}
-                    masterKey="Project/description"
-                    label="empty"
-                    emptySection
-                    autoLaunch={props.modifyMode}
-                    modifyModeHandle={props.modifyModeHandle}
-                  />
-                )
-                : null
-            }
+              icon="fa-folder-open"
+              objectType="projects"
+              language={props.language}
+              id={props.id}
+              title={messages[props.language]['Project.description.title']}
+            />
             <div className="row">
               <div className="d-flex pl-4 pr-4">
                 {props.data[props.language] || props.data[AlternativeLanguage] || props.data.default}
@@ -70,27 +54,12 @@ const Description = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="description"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Project.description.title" defaultMessage="Project.description.title" />
-          </SectionTitle>
-          {
-            (props.modifyMode)
-              ? (
-                <SubmitBox
-                  language={props.language}
-                  masterKey="Project/description"
-                  label="empty"
-                  emptySection
-                  autoLaunch={props.modifyMode}
-                  modifyModeHandle={props.modifyModeHandle}
-                />
-              )
-              : null
-          }
+            icon="fa-folder-open"
+            objectType="projects"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Project.description.title']}
+          />
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Project.description.noDescription" defaultMessage="Project.description.noDescription" />
@@ -106,7 +75,6 @@ export default Description;
 
 Description.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };

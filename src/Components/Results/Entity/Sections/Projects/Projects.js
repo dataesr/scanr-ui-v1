@@ -6,7 +6,7 @@ import { GridLoader } from 'react-spinners';
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitleViewMode from './Components/SectionTitleViewMode';
+import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProjectList from './Components/ProjectList';
 import ProjectGraphs from './Components/ProjectGraphs';
@@ -47,7 +47,6 @@ class Projects extends Component {
       min: null,
       max: null,
     },
-    modifyMode: false,
   }
 
   componentDidMount() {
@@ -55,6 +54,9 @@ class Projects extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (prevProps.childs !== this.props.childs) {
+      this.fetchGlobalData();
+    }
     if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
       this.fetchDataByType();
     }
@@ -77,7 +79,11 @@ class Projects extends Component {
   fetchGlobalData = () => {
     const url = API_PROJECTS_SEARCH_END_POINT;
     const preRequest = PreRequest;
-    preRequest.filters['participants.structure.id'].values = [this.props.match.params.id];
+    let allIds = [this.props.match.params.id];
+    if (this.props.childs.length > 0) {
+      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+    }
+    preRequest.filters['participants.structure.id'].values = allIds;
     Axios.post(url, preRequest).then((response) => {
       let years = [2000, 2020];
       try {
@@ -116,10 +122,14 @@ class Projects extends Component {
     const st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
     const en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
     const request = Request;
+    let allIds = [this.props.match.params.id];
+    if (this.props.childs.length > 0) {
+      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+    }
     request.query = this.state.query;
     request.filters.startDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
     request.filters.startDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
-    Request.filters['participants.structure.id'].values = [this.props.match.params.id];
+    Request.filters['participants.structure.id'].values = allIds;
     if (this.state.projectType !== 'all') {
       request.filters.type = {
         type: 'MultiValueSearchFilter',
@@ -140,6 +150,10 @@ class Projects extends Component {
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
       });
+      graphData.keywords = {
+        id: 'keywords',
+        entries: graphData.keywordsFr.entries.concat(graphData.keywordsEn.entries),
+      };
       const data = response.data.results.sort((a, b) => (b.value.year - a.value.year));
       const selectedProject = data.length > 0 ? data[0].value.id : '';
       this.setState({
@@ -149,10 +163,6 @@ class Projects extends Component {
         isLoading: false,
       });
     });
-  }
-
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
   }
 
   changeTypeHandler = (e) => {
@@ -201,8 +211,12 @@ class Projects extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.match.params.id}
                 total={this.state.total}
-                label="Projects"
+                title="Projects"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -235,9 +249,12 @@ class Projects extends Component {
         <section className="container-fluid py-4">
           <div className="container">
             <SectionTitleViewMode
+              icon="fa-folder-open"
+              objectType="structures"
               language={this.props.language}
+              id={this.props.match.params.id}
               total={this.state.total}
-              label="Projects"
+              title="Projects"
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
             />
@@ -288,4 +305,5 @@ export default Projects;
 Projects.propTypes = {
   language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
+  childs: PropTypes.array,
 };

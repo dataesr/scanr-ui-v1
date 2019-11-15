@@ -7,15 +7,12 @@ import { GRAPH_ITEMS_LIST, ECOSYSTEM_LIMIT } from '../../../../../config/config'
 import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Select from '../../../../Shared/Ui/Select/Select';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
-import messagesEntityFr from '../../translations/fr.json';
-import messagesEntityEn from '../../translations/en.json';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
@@ -33,7 +30,6 @@ class Ecosystem extends Component {
   state = {
     data: this.props.data,
     viewMode: 'graph', // list
-    modifyMode: false,
     kindFilter: [],
     kindFilterValue: null,
     frIntFilter: [],
@@ -96,9 +92,6 @@ class Ecosystem extends Component {
     return dataGraph;
   }
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
 
   viewModeClickHandler = (viewMode) => {
     this.setState({ viewMode });
@@ -330,32 +323,26 @@ class Ecosystem extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
-
     if (!this.props.data) {
       return (
         <Fragment>
           <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
             <section className={`container-fluid ${classes.Ecosystem}`}>
               <div className="container">
-                <SectionTitle
-                  icon="fas fa-th"
-                  modifyModeHandle={this.modifyModeHandle}
-                  modifyMode={this.state.modifyMode}
-                  emptySection
-                >
-                  {messagesEntity[this.props.language]['Entity.Section.Ecosystem.label']}
-                </SectionTitle>
+                <SectionTitleViewMode
+                  icon="fa-folder-open"
+                  objectType="structures"
+                  language={this.props.language}
+                  id={this.props.id}
+                  total
+                  title={messages[this.props.language]['Entity.ecosystem.title']}
+                  viewModeClickHandler={this.viewModeClickHandler}
+                  viewMode={this.state.viewMode}
+                />
                 <div className="row">
                   <div className="col">
                     <EmptySection
                       language={this.props.language}
-                      masterKey="Ecosystem"
-                      modifyMode={this.state.modifyMode}
-                      modifyModeHandle={this.modifyModeHandle}
                     />
                   </div>
                 </div>
@@ -373,55 +360,16 @@ class Ecosystem extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.Ecosystem}`}>
             <div className="container">
-              <div className={classes.SectionTitle}>
-                <div className="d-flex flex-wrap align-items-center">
-                  <i className="fas fa-folder-open" />
-                  <span className={`mr-auto my-2 ${classes.Label}`}>
-                    {messagesEntity[this.props.language]['Entity.Section.Ecosystem.label']}
-                  </span>
-                  <div className="d-flex flex-wrap align-items-center">
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewList"
-                      onClick={() => this.viewModeClickHandler('list')}
-                      onKeyPress={() => this.viewModeClickHandler('list')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-list" />
-                        </span>
-                        <p className="m-0" id="productionViewList">
-                          Liste
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      role="button"
-                      tabIndex={0}
-                      aria-labelledby="productionViewGraph"
-                      onClick={() => this.viewModeClickHandler('graph')}
-                      onKeyPress={() => this.viewModeClickHandler('graph')}
-                      className={classes.ViewChangeButton}
-                    >
-                      <div className="mx-3 d-flex flex-nowrap align-items-center">
-                        <span className={`mx-2 btn ${classes.SquareButton} ${(this.state.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
-                          <i aria-hidden className="fas fa-chart-pie" />
-                        </span>
-                        <p className="m-0" id="productionViewGraph">
-                          Visualisation
-                          <br />
-                          des résultats
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* /row */}
+              <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.id}
+                total
+                title={messages[this.props.language]['Entity.ecosystem.title']}
+                viewModeClickHandler={this.viewModeClickHandler}
+                viewMode={this.state.viewMode}
+              />
               <hr />
               {
                 (this.state.viewMode === 'list')
@@ -442,4 +390,5 @@ export default Ecosystem;
 Ecosystem.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
+  id: PropTypes.string.isRequired,
 };

@@ -41,9 +41,6 @@ const Identity = (props) => {
                       title="Domaines de recherche"
                       language={props.language}
                       data={props.data}
-                      masterKey={props.masterKey}
-                      modifyMode={props.modifyMode}
-                      allData={props.allData}
                     />
                   </div>
                   <div className={`col-md-6 col-sm-12 ${classes.NoSpace}`}>
@@ -55,9 +52,6 @@ const Identity = (props) => {
                             title="Status"
                             language={props.language}
                             label={messages[props.language]['Person.informations.identity.researcher']}
-                            masterKey={props.masterKey}
-                            modifyMode={props.modifyMode}
-                            allData={props.allData}
                           />
                         </div>
                       </div>
@@ -79,10 +73,4 @@ export default Identity;
 Identity.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
-
-// modifyModeHandle: PropTypes.func.isRequired,
-// modifyMode: PropTypes.bool.isRequired,

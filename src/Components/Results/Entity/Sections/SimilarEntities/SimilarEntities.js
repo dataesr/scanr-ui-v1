@@ -4,15 +4,13 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 
 import EntityCard from '../../../../Search/SearchResults/ResultCards/EntityCard';
+import SectionTitle from '../../../Shared/SectionTitle';
 import { API_STRUCTURE_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
-import messagesEntityFr from '../../translations/fr.json';
-import messagesEntityEn from '../../translations/en.json';
 
 import classes from './SimilarEntities.scss';
 
@@ -65,11 +63,6 @@ class SimilarEntities extends Component {
       en: messagesEn,
     };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
-
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
     };
@@ -83,14 +76,11 @@ class SimilarEntities extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.SimilarEntities}`} style={sectionStyle}>
             <div className="container">
-              <div className={`row ${classes.SectionTitle}`}>
-                <div className="col">
-                  <i className="fas fa-th" />
-                  <span className={classes.Label}>
-                    {messagesEntity[this.props.language]['Entity.Section.SimilarEntities.label']}
-                  </span>
-                </div>
-              </div>
+              <SectionTitle
+                icon="fa-th"
+                language={this.props.language}
+                title={messages[this.props.language]['Entity.similarEntities.title']}
+              />
               <ul className={`row ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (
