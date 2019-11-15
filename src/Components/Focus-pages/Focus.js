@@ -9,6 +9,7 @@ import Header from '../Shared/Header/Header-homePage';
 import GraphComponent from '../Shared/GraphComponents/GraphComponents';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../Shared/LastFocus/LastFocus';
+import getSelectKey from '../../Utils/getSelectKey';
 
 import classes from './Focus.scss';
 
@@ -30,6 +31,7 @@ export default class FocusList extends Component {
     super(props);
     this.state = {
       data: null,
+      style: null,
       meta: null,
       missing: false,
       error: false,
@@ -47,34 +49,48 @@ export default class FocusList extends Component {
       this.setState({ missing: true });
       return;
     }
-    axios.post(params.url, {
-      query: 'beta',
-    })
+    const queryField = params.queryField;
+    const filters = {};
+    filters[queryField] = {
+      type: 'MultiValueSearchFilter',
+      op: 'all',
+      values: params.queryValue,
+    };
+    axios.post(params.url_api,
+      {
+        filters,
+      })
       .then((res) => {
-        this.setState({ data: res.data.facets });
-        if (params.type === 'map') {
-          this.setState({ data: res.data });
+        if (this.state.meta.type === 'map') {
+          const mapStyle = {
+            height: '32.5vh',
+            borderTopLeftRadius: '10px',
+            borderTopRightRadius: '10px',
+            borderBottom: '5px solid #ffd138',
+          };
+          this.setState({ style: mapStyle });
+
+
+          const mapdata = [];
+          res.data.results.forEach((e) => {
+            try {
+              const dataElement = {
+                id: e.value.id,
+                position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
+                infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
+              };
+              mapdata.push(dataElement);
+            } catch (error) {
+              // eslint-disable-no-empty
+            }
+          });
+
+          this.setState({ data: mapdata });
         }
       })
       .catch(() => {
         this.setState({ error: true });
       });
-    // axios.get(params.url, {
-    //   headers: {
-    //     Authorization: `Basic ${authorization}`,
-    //   },
-    // })
-    //   .then((res) => {
-    //     this.setState({ data: res.data });
-    //     if (params.type !== 'map') {
-    //       this.setState({ data: params.data });
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     this.setState({ error: true });
-    //     console.log(error);
-    //     console.log("Couldn't retrieve API data");
-    //   });
   }
 
   render() {
@@ -130,11 +146,12 @@ export default class FocusList extends Component {
               {this.state.data ? (
                 <div>
                   <GraphComponent
-                    title={this.state.meta.title}
-                    subtitle={this.state.meta.subtitle}
+                    title={this.state.meta.title.fr}
+                    subtitle={this.state.meta.subtitle.fr}
                     type={this.state.meta.type}
                     tags={this.state.meta.tags}
                     data={this.state.data}
+                    style={this.state.style}
                     language={this.props.language}
                   />
                 </div>
