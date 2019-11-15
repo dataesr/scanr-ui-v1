@@ -3,7 +3,7 @@ export default {
   filters: {
     'participants.structure.id': {
       type: 'MultiValueSearchFilter',
-      op: 'all',
+      op: 'any',
       values: [],
     },
   },
