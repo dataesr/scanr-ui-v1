@@ -23,9 +23,6 @@ import Productions from '../Entity/Sections/Productions/Productions';
 */
 class Person extends Component {
   state = {
-    modifyModeInformations: false,
-    modifyModeDescription: false,
-    modifyModeThesis: false,
     data: {},
   };
 
@@ -42,18 +39,6 @@ class Person extends Component {
         this.setState({ data: response.data });
         /* eslint-disable-next-line */
       }).catch(e => console.log('erreur=>', e));
-  }
-
-  modifyModeHandle = (section) => {
-    if (section === 'informations') {
-      this.setState(prevState => ({ modifyModeInformations: !prevState.modifyModeInformations }));
-    }
-    if (section === 'coAuthors') {
-      this.setState(prevState => ({ modifyModeDescription: !prevState.modifyModeDescription }));
-    }
-    if (section === 'thesis') {
-      this.setState(prevState => ({ modifyModeThesis: !prevState.modifyModeThesis }));
-    }
   }
 
   handleChange = (sectionName) => {
@@ -81,8 +66,7 @@ class Person extends Component {
           <Informations
             language={this.props.language}
             data={this.state.data}
-            modifyModeHandle={() => this.modifyModeHandle('informations')}
-            modifyMode={this.state.modifyModeInformations}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Thesis">
@@ -90,14 +74,14 @@ class Person extends Component {
             language={this.props.language}
             person={this.props.match.params.id}
             personName={this.state.data.fullName}
-            modifyModeHandle={() => this.modifyModeHandle('thesis')}
-            modifyMode={this.state.modifyModeDescription}
+            id={this.props.match.params.id}
           />
         </div>
         <div id="Production">
           <Productions
             language={this.props.language}
             match={this.props.match}
+            childs={[]}
             person
           />
         </div>
@@ -105,8 +89,7 @@ class Person extends Component {
           <CoAuthors
             language={this.props.language}
             data={this.state.data.coContributors}
-            modifyModeHandle={() => this.modifyModeHandle('coAuthors')}
-            modifyMode={this.state.modifyModeDescription}
+            id={this.props.match.params.id}
           />
         </div>
         <div>

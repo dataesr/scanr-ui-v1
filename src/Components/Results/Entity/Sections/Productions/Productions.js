@@ -6,7 +6,7 @@ import { GridLoader } from 'react-spinners';
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
-import SectionTitleViewMode from './Components/SectionTitleViewMode';
+import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
@@ -57,14 +57,15 @@ class Productions extends Component {
       min: null,
       max: null,
     },
-    modifyMode: false,
   }
 
   componentDidMount() {
-    this.fetchGlobalData();
   }
 
   componentDidUpdate(prevProps, prevState) {
+    if (prevProps.childs !== this.props.childs) {
+      this.fetchGlobalData();
+    }
     if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
       this.fetchDataByType();
     }
@@ -87,6 +88,10 @@ class Productions extends Component {
 
   fetchGlobalData = () => {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
+    let allIds = [this.props.match.params.id];
+    if (this.props.childs.length > 0) {
+      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+    }
     const preRequest = PreRequest;
     if (this.props.person) {
       preRequest.filters = {
@@ -105,8 +110,8 @@ class Productions extends Component {
       preRequest.filters = {
         'affiliations.id': {
           type: 'MultiValueSearchFilter',
-          op: 'all',
-          values: [this.props.match.params.id],
+          op: 'any',
+          values: allIds,
         },
       };
     }
@@ -118,6 +123,7 @@ class Productions extends Component {
           years = years2;
         }
       } catch (err) {
+        this.setState({ error: true });
         // eslint-disable-next-line
         console.log(err);
       }
@@ -152,6 +158,10 @@ class Productions extends Component {
     request.filters.publicationDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
     request.filters.publicationDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
     request.filters.productionType.values = [this.state.productionType];
+    let allIds = [this.props.match.params.id];
+    if (this.props.childs.length > 0) {
+      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+    }
     if (this.props.person) {
       request.filters['authors.person.id'] = {
         type: 'MultiValueSearchFilter',
@@ -161,8 +171,8 @@ class Productions extends Component {
     } else {
       request.filters['affiliations.id'] = {
         type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [this.props.match.params.id],
+        op: 'any',
+        values: allIds,
       };
     }
     Axios.post(url, request).then((response) => {
@@ -171,6 +181,7 @@ class Productions extends Component {
       try {
         years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
       } catch (err) {
+        this.setState({ error: true });
         // eslint-disable-next-line
         console.log(err);
       }
@@ -178,6 +189,10 @@ class Productions extends Component {
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
       });
+      graphData.keywords = {
+        id: 'keywords',
+        entries: graphData.keywordsFr.entries.concat(graphData.keywordsEn.entries),
+      };
       const data = response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
       const selectedProduction = data.length > 0 ? data[0].value.id : '';
       this.setState({
@@ -187,10 +202,6 @@ class Productions extends Component {
         isLoading: false,
       });
     });
-  }
-
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
   }
 
   changeTypeHandler = (e) => {
@@ -236,8 +247,12 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.match.params.id}
                 total={this.state.total}
-                label="Productions"
+                title="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -253,8 +268,12 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.match.params.id}
                 total={this.state.total}
-                label="Productions"
+                title="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -270,8 +289,12 @@ class Productions extends Component {
           <section className="container-fluid py-4">
             <div className="container">
               <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.match.params.id}
                 total={this.state.total}
-                label="Productions"
+                title="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -292,9 +315,12 @@ class Productions extends Component {
         <section className="container-fluid py-4">
           <div className="container">
             <SectionTitleViewMode
+              icon="fa-folder-open"
+              objectType="structures"
               language={this.props.language}
+              id={this.props.match.params.id}
               total={this.state.total}
-              label="Productions"
+              title="Productions"
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
             />
@@ -344,5 +370,6 @@ export default Productions;
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
+  childs: PropTypes.array.isRequired,
   person: PropTypes.bool,
 };

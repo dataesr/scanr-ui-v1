@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
-import WikidataCard from '../../../../../Shared/Ui/WikidataCard/WikidataCard';
+import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
 import classes from './SocialNetworksFlow.scss';
 

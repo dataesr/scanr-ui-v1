@@ -6,6 +6,7 @@ import Axios from 'axios';
 import SimilarCard from '../../../../Search/SearchResults/ResultCards/ProjectCard';
 import { API_PROJECT_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import SectionTitle from '../../../Shared/SectionTitle';
 
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
@@ -35,7 +36,7 @@ class SimilarProjects extends Component {
   getData = () => {
     const url = API_PROJECT_LIKE_END_POINT;
     const data = {
-      fields: ['publications.title', 'description', 'domains.label', 'label'],
+      fields: ['publications.title', 'description', 'title', 'domains.label', 'label'],
       likeIds: [this.props.data.id],
       likeTexts: [],
       lang: 'default',
@@ -76,14 +77,11 @@ class SimilarProjects extends Component {
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
           <section className={`container-fluid ${classes.Similar}`} style={sectionStyle}>
             <div className="container">
-              <div className={`row ${classes.SectionTitle}`}>
-                <div className="col">
-                  <i className="fas fa-th" />
-                  <span className={classes.Label}>
-                    {messages[this.props.language]['Project.similars.title']}
-                  </span>
-                </div>
-              </div>
+              <SectionTitle
+                icon="fa-th"
+                language={this.props.language}
+                title={messages[this.props.language]['Project.similars.title']}
+              />
               <ul className={`row ${classes.Ul}`}>
                 {
                   this.state.data.map(item => (

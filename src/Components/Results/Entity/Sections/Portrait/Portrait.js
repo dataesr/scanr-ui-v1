@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
@@ -7,7 +7,7 @@ import History from './subComponents/History/History';
 import Identity from './subComponents/Identity/Identity';
 import Leaders from '../../Shared/Leaders/Leaders';
 import Localisation from './subComponents/Localisation/Localisation';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Web from './subComponents/Web/Web';
 // import SocialNetworksFlow from './subComponents/SocialNetworksFlow/SocialNetworksFlow';
 
@@ -34,108 +34,88 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
-class Portrait extends Component {
-  state = {
-    modifyMode: false,
+const Portrait = (props) => {
+  if (!props.data) {
+    return null;
   }
+  const sectionStyle = {
+    backgroundImage: `url(${Background})`,
+  };
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
+  return (
+    <IntlProvider locale={props.language} messages={messages[props.language]}>
+      <Fragment>
+        <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-id-card"
+              objectType="structures"
+              language={props.language}
+              id={props.id}
+              title="Portrait"
+            >
+              <FormattedHTMLMessage id="Entity.Section.Portrait.label" defaultMessage="Entity.Section.Portrait.label" />
+            </SectionTitle>
+            <div className="row">
+              <Identity
+                acronym={props.data.acronym}
+                externalIds={props.data.externalIds || []}
+                links={props.data.links || []}
+                id={props.data.id}
+                language={props.language}
+                description={props.data.description}
+                name={props.data.label}
+                nature={props.data.nature}
+              />
 
-  render() {
-    if (!this.props.data) {
-      return null;
-    }
-    const sectionStyle = {
-      backgroundImage: `url(${Background})`,
-    };
+              <Localisation
+                address={props.data.address}
+                language={props.language}
+              />
 
-    return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <Fragment>
-          <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
-            <div className="container">
-              <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.modifyModeHandle}
-                modifyMode={this.state.modifyMode}
-              >
-                <FormattedHTMLMessage id="Entity.Section.Portrait.label" defaultMessage="Entity.Section.Portrait.label" />
-              </SectionTitle>
-              <div className="row">
-                <Identity
-                  acronym={this.props.data.acronym}
-                  externalIds={this.props.data.externalIds || []}
-                  links={this.props.data.links || []}
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  description={this.props.data.description}
-                  name={this.props.data.label}
-                  nature={this.props.data.nature}
-                  masterKey={`${this.props.id}/identity.Identity`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
+              <History
+                creationYear={props.data.creationYear}
+                id={props.data.id}
+                language={props.language}
+                predecessors={props.data.predecessors}
+              />
+
+              <Leaders
+                id={props.data.id}
+                language={props.language}
+                leaders={props.data.leaders}
+              />
+
+              <ExpertiseField
+                id={props.data.id}
+                language={props.language}
+              />
+
+              <Web
+                id={props.data.id}
+                language={props.language}
+                socialMedias={props.data.socialMedias}
+                websites={props.data.websites}
+                links={props.data.links}
+                externalIds={props.data.externalIds || []}
+              />
+              {
+                /*
+                <SocialNetworksFlow
+                  id={props.data.id}
+                  language={props.language}
+                  socialMedias={props.data.socialMedias}
+                  externalIds={props.data.externalIds || []}
                 />
-
-                <Localisation
-                  address={this.props.data.address}
-                  language={this.props.language}
-                  masterKey={`${this.props.id}/history.History`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
-                />
-
-                <History
-                  creationYear={this.props.data.creationYear}
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  predecessors={this.props.data.predecessors}
-                  masterKey={`${this.props.id}/history.History`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
-                />
-
-                <Leaders
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  leaders={this.props.data.leaders}
-                  masterKey={`${this.props.id}/leaders.Leaders`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
-                />
-
-                <ExpertiseField
-                  id={this.props.data.id}
-                  language={this.props.language}
-                />
-
-                <Web
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  socialMedias={this.props.data.socialMedias}
-                  websites={this.props.data.websites}
-                  links={this.props.data.links}
-                  externalIds={this.props.data.externalIds || []}
-                />
-                {
-                  /*
-                  <SocialNetworksFlow
-                    id={this.props.data.id}
-                    language={this.props.language}
-                    socialMedias={this.props.data.socialMedias}
-                    externalIds={this.props.data.externalIds || []}
-                  />
-                  */
-                }
-              </div>
+                */
+              }
             </div>
-          </section>
-        </Fragment>
-      </IntlProvider>
-    );
-  }
-}
+          </div>
+        </section>
+      </Fragment>
+    </IntlProvider>
+  );
+};
 
 export default Portrait;
 

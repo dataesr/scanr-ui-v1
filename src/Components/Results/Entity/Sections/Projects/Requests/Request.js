@@ -14,7 +14,7 @@ export default {
     },
     'participants.structure.id': {
       type: 'MultiValueSearchFilter',
-      op: 'all',
+      op: 'any',
       values: [],
     },
   },
@@ -39,8 +39,18 @@ export default {
       },
       size: 50,
     },
-    keywords: {
+    keywordsFr: {
       field: 'keywords.fr',
+      filters: {},
+      min_doc_count: 1,
+      order: {
+        direction: 'DESC',
+        type: 'COUNT',
+      },
+      size: 100,
+    },
+    keywordsEn: {
+      field: 'keywords.en',
       filters: {},
       min_doc_count: 1,
       order: {
