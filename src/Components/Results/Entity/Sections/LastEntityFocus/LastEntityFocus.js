@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
@@ -32,9 +32,13 @@ const LastEntityFocus = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className={`container-fluid ${classes.LastEntityFocus}`}>
           <div className="container">
-            <SectionTitle icon="fas fa-compress-arrows-alt">
-              <FormattedHTMLMessage id="Entity.Section.LastEntityFocus.label" />
-            </SectionTitle>
+            <SectionTitle
+              icon="fa-compress-arrows-alt"
+              objectType="structures"
+              language={props.language}
+              id={props.data.id}
+              title={messages[props.language]['Entity.Section.LastEntityFocus.label']}
+            />
           </div>
         </section>
       </IntlProvider>

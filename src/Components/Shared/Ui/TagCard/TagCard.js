@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
-import SubmitBox from '../../SubmitBox/SubmitBox';
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 import ButtonToSearch from '../Buttons/ButtonToSearch';
 
@@ -37,7 +36,6 @@ const TagCard = (props) => {
   ) : null;
   return (
     <div className={`pb-3 ${classes.TagCard}`}>
-      {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={props.allData.fullName} /> : null}
       {logo}
       {title}
       <ul className={`d-flex flex-wrap p-3 ${classes.MyUL}`}>
@@ -71,7 +69,6 @@ TagCard.defaultProps = {
 };
 
 TagCard.propTypes = {
-  language: PropTypes.string,
   logo: PropTypes.string,
   title: PropTypes.string,
   tagStyle: PropTypes.object,
@@ -79,7 +76,4 @@ TagCard.propTypes = {
   maxElements: PropTypes.number,
   tagList: PropTypes.array,
   tooltip: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
