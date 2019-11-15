@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import Affiliations from './SubSections/Affiliations/Affiliations';
@@ -40,13 +40,12 @@ const Informations = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="informations"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Person.informations.title" defaultMessage="Person.informations.title" />
-          </SectionTitle>
+            icon="fa-open"
+            objectType="structures"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Person.informations.title']}
+          />
           <div className="row">
             <div className="col-lg">
               <div className="row">
@@ -54,36 +53,24 @@ const Informations = (props) => {
                   <Identity
                     language={props.language}
                     data={props.data}
-                    masterKey="Person/identity"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 </div>
                 <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Domains
                     language={props.language}
                     data={props.data}
-                    masterKey="Person/domains"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 </div>
                 <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Prizes
                     language={props.language}
                     data={props.data}
-                    masterKey="Person/prizes"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 </div>
                 <div className={`${hasAffiliations} ${classes.NoSpace}`}>
                   <Web
                     language={props.language}
                     data={props.data}
-                    masterKey="Person/web"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 </div>
                 {
@@ -93,9 +80,6 @@ const Informations = (props) => {
                         <Roles
                           language={props.language}
                           data={props.data}
-                          masterKey="Person/roles"
-                          modifyMode={props.modifyMode}
-                          allData={props.data}
                         />
                       </div>
                     )
@@ -112,18 +96,12 @@ const Informations = (props) => {
                         <Affiliations
                           language={props.language}
                           data={props.data.affiliations}
-                          masterKey="Person/affiliation"
-                          modifyMode={props.modifyMode}
-                          allData={props.data}
                         />
                       </div>
                       <div className={`col-12 ${classes.NoSpace}`}>
                         <Roles
                           language={props.language}
                           data={props.data}
-                          masterKey="Person/roles"
-                          modifyMode={props.modifyMode}
-                          allData={props.data}
                         />
                       </div>
                     </div>
@@ -142,7 +120,6 @@ export default Informations;
 
 Informations.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };

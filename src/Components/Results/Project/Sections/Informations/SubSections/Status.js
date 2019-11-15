@@ -72,9 +72,6 @@ const Status = (props) => {
                     title={messages[props.language]['Project.informations.startDate']}
                     label={startDate}
                     tooltip=""
-                    masterKey="Project/startDate"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 )
                 : null
@@ -90,9 +87,6 @@ const Status = (props) => {
                     title={messages[props.language]['Project.informations.endDate']}
                     label={endDate}
                     tooltip=""
-                    masterKey="Project/endDate"
-                    modifyMode={props.modifyMode}
-                    allData={props.data}
                   />
                 )
                 : null
@@ -121,5 +115,4 @@ export default Status;
 Status.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyMode: PropTypes.bool.isRequired,
 };

@@ -4,7 +4,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard2';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 
 import classes from './Programs.scss';
 
@@ -51,8 +50,6 @@ const Programs = (props) => {
             <div className="container">
               <SectionTitle
                 icon="fas fa-id-card"
-                modifyModeHandle={props.modifyModeHandle}
-                modifyMode={props.modifyMode}
               >
                 <FormattedHTMLMessage id="Project.programs.title" defaultMessage="Project.programs.title" />
               </SectionTitle>
@@ -69,9 +66,6 @@ const Programs = (props) => {
                           : null
                       }
                       tooltip=""
-                      masterKey="Project/call"
-                      modifyMode={props.modifyMode}
-                      allData={props.data}
                     />
                   </div>
                   <div className={classes.W50}>
@@ -85,9 +79,6 @@ const Programs = (props) => {
                           : null
                       }
                       tooltip=""
-                      masterKey="Project/action"
-                      modifyMode={props.modifyMode}
-                      allData={props.data}
                     />
                   </div>
                   <div className={classes.W50}>
@@ -97,9 +88,6 @@ const Programs = (props) => {
                       title={messages[props.language]['Project.programs.topic']}
                       label={topics}
                       tooltip=""
-                      masterKey="Project/topic"
-                      modifyMode={props.modifyMode}
-                      allData={props.data}
                     />
                   </div>
                   <div className={classes.W50}>
@@ -109,9 +97,6 @@ const Programs = (props) => {
                       title={messages[props.language]['Project.programs.priorities']}
                       label={priorities}
                       tooltip=""
-                      masterKey="Project/priorities"
-                      modifyMode={props.modifyMode}
-                      allData={props.data}
                     />
                   </div>
                 </div>
@@ -128,25 +113,9 @@ const Programs = (props) => {
         <div className="container">
           <SectionTitle
             icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyMode={props.modifyMode}
           >
             <FormattedHTMLMessage id="Project.programs.title" defaultMessage="Project.programs.title" />
           </SectionTitle>
-          {
-            (props.modifyMode)
-              ? (
-                <SubmitBox
-                  language={props.language}
-                  masterKey="Project/programs"
-                  label="empty"
-                  emptySection
-                  autoLaunch={props.modifyMode}
-                  modifyModeHandle={props.modifyModeHandle}
-                />
-              )
-              : null
-          }
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Project.programs.noPrograms" defaultMessage="Project.programs.noPrograms" />
@@ -163,6 +132,6 @@ export default Programs;
 Programs.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };
+
+// id: PropTypes.string.isRequired,

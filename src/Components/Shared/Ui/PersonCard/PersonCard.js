@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
 
-import SubmitBox from '../../SubmitBox/SubmitBox';
-
 import classes from './PersonCard.scss';
 
 import logo from '../../svg/icon-fiche-responsable_h.svg';
@@ -113,8 +111,6 @@ const PersonCard = (props) => {
             )
             : null
         }
-
-        {(props.modifyMode) ? <SubmitBox language={props.language} masterKey={props.masterKey} label={getSelectKey(props.allData, 'label', props.language, 'fr')} /> : null}
       </div>
     </IntlProvider>
   );
@@ -123,8 +119,6 @@ const PersonCard = (props) => {
 export default PersonCard;
 
 PersonCard.defaultProps = {
-  masterKey: 'default.default',
-  modifyMode: false,
   showTitle: true,
 };
 
@@ -136,8 +130,5 @@ PersonCard.propTypes = {
   language: PropTypes.string,
   lastName: PropTypes.string,
   role: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
   className: PropTypes.object,
 };

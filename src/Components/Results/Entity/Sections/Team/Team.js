@@ -26,93 +26,41 @@ import classes from './Team.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class Team extends Component {
-  state = {
-    modifyMode: false,
-  }
+const Team = (props) => {
+  const messages = {
+    fr: messagesFr,
+    en: messagesEn,
+  };
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
+  const messagesEntity = {
+    fr: messagesEntityFr,
+    en: messagesEntityEn,
+  };
 
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
+  const sectionStyle = {
+    backgroundImage: `url(${Background})`,
+  };
 
-    const messagesEntity = {
-      fr: messagesEntityFr,
-      en: messagesEntityEn,
-    };
-
-    const sectionStyle = {
-      backgroundImage: `url(${Background})`,
-    };
-
-    if (!this.props.data.leaders || this.props.data.leaders.length === 0) {
-      return (
-        <Fragment>
-          <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-            <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
-              <div className="container">
-                <SectionTitle
-                  icon="fas fa-th"
-                  modifyModeHandle={this.modifyModeHandle}
-                  modifyMode={this.state.modifyMode}
-                  emptySection
-                  color="#fff"
-                >
-                  {messagesEntity[this.props.language]['Entity.Section.Team.label']}
-                </SectionTitle>
-                <div className="row">
-                  <div className="col">
-                    <EmptySection
-                      language={this.props.language}
-                      masterKey="Team"
-                      modifyMode={this.state.modifyMode}
-                      modifyModeHandle={this.modifyModeHandle}
-                      color="#fff"
-                    />
-                  </div>
-                </div>
-              </div>
-            </section>
-          </IntlProvider>
-        </Fragment>
-      );
-    }
-
+  if (!props.data.leaders || props.data.leaders.length === 0) {
     return (
       <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <IntlProvider locale={props.language} messages={messages[props.language]}>
           <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fas fa-th"
-                modifyModeHandle={this.modifyModeHandle}
-                modifyMode={this.state.modifyMode}
-                color="#fff"
-              >
-                {messagesEntity[this.props.language]['Entity.Section.Team.label']}
-              </SectionTitle>
+                icon="fa-open"
+                objectType="structures"
+                language={props.language}
+                id={props.id}
+                title={messagesEntity[props.language]['Entity.Section.Team.label']}
+              />
               <div className="row">
-                <Leaders
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  leaders={this.props.data.leaders}
-                  masterKey={`${this.props.id}.Leaders`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
-                />
-                <TeamComposition
-                  id={this.props.data.id}
-                  language={this.props.language}
-                  persons={this.props.data.persons}
-                  masterKey={`${this.props.id}.Persons`}
-                  modifyMode={this.state.modifyMode}
-                  allData={this.props.data}
-                />
+                <div className="col">
+                  <EmptySection
+                    language={props.language}
+                    color="#fff"
+                  />
+                </div>
               </div>
             </div>
           </section>
@@ -120,7 +68,37 @@ class Team extends Component {
       </Fragment>
     );
   }
-}
+
+  return (
+    <Fragment>
+      <IntlProvider locale={props.language} messages={messages[props.language]}>
+        <section className={`container-fluid ${classes.Team}`} style={sectionStyle}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-open"
+              objectType="structures"
+              language={props.language}
+              id={props.id}
+              title={messagesEntity[props.language]['Entity.Section.Team.label']}
+            />
+            <div className="row">
+              <Leaders
+                id={props.data.id}
+                language={props.language}
+                leaders={props.data.leaders}
+              />
+              <TeamComposition
+                id={props.data.id}
+                language={props.language}
+                persons={props.data.persons}
+              />
+            </div>
+          </div>
+        </section>
+      </IntlProvider>
+    </Fragment>
+  );
+};
 
 export default Team;
 
