@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Contribute from '../../../../../Shared/Contribute/Contribute';
+
 import classes from './SectionTitleViewMode.scss';
 
 /**
@@ -28,7 +30,7 @@ class SectionTitleViewMode extends Component {
           <span className={`pl-2 mr-auto my-2 ${classes.Title}`}>
             {(this.props.total) ? this.props.total : null}
             &nbsp;
-            {this.props.label}
+            {this.props.title}
           </span>
           {
             (this.props.total)
@@ -76,6 +78,9 @@ class SectionTitleViewMode extends Component {
               )
               : null
           }
+          <span className="pl-2 ml-auto my-2">
+            <Contribute language={this.props.language} title={this.props.title} id={this.props.match.params.id} />
+          </span>
         </div>
       </div>
     );
@@ -86,8 +91,9 @@ export default SectionTitleViewMode;
 
 SectionTitleViewMode.propTypes = {
   language: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  total: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  match: PropTypes.object.isRequired,
+  total: PropTypes.number,
   viewModeClickHandler: PropTypes.func.isRequired,
   viewMode: PropTypes.string.isRequired,
 };

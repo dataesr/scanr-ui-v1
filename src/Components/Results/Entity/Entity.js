@@ -36,11 +36,39 @@ class Entity extends Component {
     data: {
       projects: null,
     },
+    dataSupervisorOf: [],
   };
 
   componentDidMount() {
     const { id } = this.props.match.params;
     this.getData(id);
+    this.getDataSupervisorOf(id);
+  }
+
+  getDataSupervisorOf = (id) => {
+    if (id) {
+      const url = `${API_STRUCTURES_END_POINT}/search`;
+      const obj = {
+        pageSize: 10000,
+        filters: {
+          'institutions.structure.id': {
+            type: 'MultiValueSearchFilter',
+            op: 'all',
+            values: [`${id}`],
+          },
+          status: {
+            type: 'MultiValueSearchFilter',
+            op: 'any',
+            values: ['active'],
+          },
+        },
+      };
+      Axios.post(url, obj)
+        .then((response) => {
+          const newData = response.data.results.map(item => item.value.id);
+          this.setState({ dataSupervisorOf: newData });
+        });
+    }
   }
 
   getData(id) {
@@ -103,6 +131,7 @@ class Entity extends Component {
           <Projects
             language={this.props.language}
             match={this.props.match}
+            childs={this.state.dataSupervisorOf}
           />
         </div>
 
@@ -117,6 +146,7 @@ class Entity extends Component {
           <Productions
             language={this.props.language}
             match={this.props.match}
+            childs={this.state.dataSupervisorOf}
           />
         </div>
 
