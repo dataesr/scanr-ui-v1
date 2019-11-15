@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import classes from './ProjectList.scss';
 import ProjectDetail from './ProjectDetail';
-import getSelectKey from '../../../../../../Utils/getSelectKey';
+import getSelectKey from '../../../../../Utils/getSelectKey';
 
 /**
  * ProjectList

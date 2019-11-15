@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-import getSelectKey from '../../../../../../Utils/getSelectKey';
-import ButtonToPage from '../../../../../Shared/Ui/Buttons/ButtonToPage';
+import getSelectKey from '../../../../../Utils/getSelectKey';
+import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
 
 import classes from './ProjectDetail.scss';
 
