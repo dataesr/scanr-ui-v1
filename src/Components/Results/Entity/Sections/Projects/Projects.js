@@ -150,6 +150,10 @@ class Projects extends Component {
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
       });
+      graphData.keywords = {
+        id: 'keywords',
+        entries: graphData.keywordsFr.entries.concat(graphData.keywordsEn.entries),
+      };
       const data = response.data.results.sort((a, b) => (b.value.year - a.value.year));
       const selectedProject = data.length > 0 ? data[0].value.id : '';
       this.setState({
