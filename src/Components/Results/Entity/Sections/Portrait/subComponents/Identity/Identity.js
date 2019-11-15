@@ -25,115 +25,90 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-class Identity extends Component {
-  state = {
-    modifyMode: false,
-  }
+const Identity = (props) => {
+  const messages = {
+    fr: messagesFr,
+    en: messagesEn,
+  };
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
+  // nom
+  const name = getSelectKey(props, 'name', props.language, 'fr');
 
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
+  // acronym
+  const acronym = getSelectKey(props, 'acronym', props.language, 'fr');
 
-    // nom
-    const name = getSelectKey(this.props, 'name', this.props.language, 'fr');
+  // label
+  const label = (acronym) ? `${name} (${acronym})` : name;
 
-    // acronym
-    const acronym = getSelectKey(this.props, 'acronym', this.props.language, 'fr');
+  // description
+  const description = getSelectKey(props, 'description', props.language, 'fr');
 
-    // label
-    const label = (acronym) ? `${name} (${acronym})` : name;
-
-    // description
-    const description = getSelectKey(this.props, 'description', this.props.language, 'fr');
-
-    return (
-      <div className="col-md-6">
-        <div className={classes.Identity}>
-          <div className="row">
-            <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[this.props.language]['Entity.portrait.identity.title']} />
-            </div>
-          </div>
-
-          <div className="row">
-            <div className={`col-lg-6 ${classes.CardContainer}`}>
-              <SimpleCard
-                language={this.props.language}
-                logo="fas fa-id-card"
-                title={messages[this.props.language]['Entity.portrait.identity.name']}
-                label={label}
-                tooltip=""
-                masterKey={this.props.masterKey}
-                modifyMode={this.props.modifyMode}
-                allData={this.props.allData}
-              />
-            </div>
-            <div className={`col-lg-6 ${classes.CardContainer}`}>
-              <LogoCard
-                language={this.props.language}
-                src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${this.props.id}.png`}
-                url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${this.props.id}`}
-                cssClass="Height150"
-                masterKey={this.props.masterKey}
-                modifyMode={this.props.modifyMode}
-                allData={this.props.allData}
-                targetUrl={getWebSiteByType(this.props.links, 'main')}
-              />
-            </div>
-            <div className={`col-lg-6 ${classes.CardContainer}`}>
-              <SimpleListCard
-                language={this.props.language}
-                logo="fas fa-qrcode"
-                title={messages[this.props.language]['Entity.portrait.identity.id']}
-                label={this.props.id}
-                list={this.props.externalIds}
-                labelListButton={messages[this.props.language]['Entity.portrait.identity.externalIdsButtons']}
-                tooltip={messages[this.props.language]['Entity.portrait.identity.id.tooltip']}
-                masterKey={this.props.masterKey}
-                modifyMode={this.props.modifyMode}
-                allData={this.props.allData}
-              />
-            </div>
-            <div className={`col-lg-6 ${classes.CardContainer}`}>
-              <SimpleCard
-                language={this.props.language}
-                logo="fas fa-flask"
-                title={messages[this.props.language]['Entity.portrait.identity.nature']}
-                label={this.props.nature || ''}
-                tooltip=""
-                masterKey={this.props.masterKey}
-                modifyMode={this.props.modifyMode}
-                allData={this.props.allData}
-              />
-            </div>
-            {
-              (description)
-                ? (
-                  <div className={`col-lg-12 ${classes.CardContainer}`}>
-                    <DescriptionCard
-                      language={this.props.language}
-                      title={messages[this.props.language]['Entity.portrait.identity.description.title']}
-                      text={`${description}`}
-                      tooltip=""
-                      masterKey={this.props.masterKey}
-                      modifyMode={this.props.modifyMode}
-                      allData={this.props.allData}
-                    />
-                  </div>
-                ) : null
-            }
+  return (
+    <div className="col-md-6">
+      <div className={classes.Identity}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
           </div>
         </div>
+
+        <div className="row">
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <SimpleCard
+              language={props.language}
+              logo="fas fa-id-card"
+              title={messages[props.language]['Entity.portrait.identity.name']}
+              label={label}
+              tooltip=""
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <LogoCard
+              language={props.language}
+              src={`https://scanr.enseignementsup-recherche.gouv.fr/static/logos/${props.id}.png`}
+              url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${props.id}`}
+              cssClass="Height150"
+              targetUrl={getWebSiteByType(props.links, 'main')}
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <SimpleListCard
+              language={props.language}
+              logo="fas fa-qrcode"
+              title={messages[props.language]['Entity.portrait.identity.id']}
+              label={props.id}
+              list={props.externalIds}
+              labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
+              tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <SimpleCard
+              language={props.language}
+              logo="fas fa-flask"
+              title={messages[props.language]['Entity.portrait.identity.nature']}
+              label={props.nature || ''}
+              tooltip=""
+            />
+          </div>
+          {
+            (description)
+              ? (
+                <div className={`col-lg-12 ${classes.CardContainer}`}>
+                  <DescriptionCard
+                    language={props.language}
+                    title={messages[props.language]['Entity.portrait.identity.description.title']}
+                    text={`${description}`}
+                    tooltip=""
+                  />
+                </div>
+              ) : null
+          }
+        </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Identity;
 /* eslint-disable */
@@ -146,7 +121,4 @@ Identity.propTypes = {
   id: PropTypes.string,
   name: PropTypes.object,
   nature: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };

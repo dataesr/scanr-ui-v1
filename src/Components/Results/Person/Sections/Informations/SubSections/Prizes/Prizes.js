@@ -58,9 +58,6 @@ const Prizes = (props) => {
                           label={award.label}
                           icon="prize"
                           color="#fe7747"
-                          masterKey={props.masterKey}
-                          modifyMode={props.modifyMode}
-                          allData={props.allData}
                         />
                       </div>
                     ))
@@ -81,9 +78,6 @@ export default Prizes;
 Prizes.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
-  modifyMode: PropTypes.bool,
-  allData: PropTypes.object.isRequired,
 };
 
 // modifyModeHandle: PropTypes.func.isRequired,

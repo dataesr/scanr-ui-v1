@@ -16,8 +16,8 @@ class Contribute extends Component {
     showModal: false,
     postError: false,
     data: {
-      id: this.props.objectId,
-      type: this.props.objectType,
+      id: null,
+      type: null,
       created_at: new Date().toISOString(),
       email: '',
       name: '',
@@ -25,6 +25,12 @@ class Contribute extends Component {
       modifications: '',
     },
   };
+
+  componentDidUpdate(prevProps) {
+    if (prevProps !== this.props) {
+      this.setState(prevState => ({ data: { ...prevState.data, id: this.props.objectId, type: this.props.objectType } }));
+    }
+  }
 
   handleCloseModal = () => {
     this.setState({ showModal: false });
@@ -36,7 +42,17 @@ class Contribute extends Component {
 
   commentChangeHandler = (e) => {
     e.persist();
-    this.setState(prevState => ({ data: { ...prevState.data, modifications: e.target.value } }));
+    this.setState(prevState => (
+      {
+        data:
+        {
+          ...prevState.data,
+          modifications: e.target.value,
+          id: this.props.objectId,
+          type: this.props.objectType,
+        },
+      }
+    ));
   }
 
   nameChangeHandler = (e) => {

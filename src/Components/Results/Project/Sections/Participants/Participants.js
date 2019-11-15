@@ -5,7 +5,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
 import ParticipantRow from '../../Components/ParticipantRow';
 import LeafletMap from '../../../../Shared/GraphComponents/Graphs/LeafletMap';
-import SubmitBox from '../../../../Shared/SubmitBox/SubmitBox';
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import classes from './Participants.scss';
@@ -56,27 +55,12 @@ const Participants = (props) => {
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-id-card"
-              modifyModeHandle={props.modifyModeHandle}
-              modifyModeKey="participants"
-              modifyMode={props.modifyMode}
-            >
-              <FormattedHTMLMessage id="Project.participants.title" defaultMessage="Project.participants.title" />
-            </SectionTitle>
-            {
-              (props.modifyMode)
-                ? (
-                  <SubmitBox
-                    language={props.language}
-                    masterKey="Project/participants"
-                    label="empty"
-                    emptySection
-                    autoLaunch={props.modifyMode}
-                    modifyModeHandle={props.modifyModeHandle}
-                  />
-                )
-                : null
-            }
+              icon="fa-open"
+              objectType="structures"
+              language={props.language}
+              id={props.id}
+              title={messages[props.language]['Project.participants.title']}
+            />
             <div className="row">
               <div className="px-3 col-12 col-lg-5">
                 <div className={`${classes.participantList}`}>
@@ -118,27 +102,12 @@ const Participants = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <div className="container">
           <SectionTitle
-            icon="fas fa-id-card"
-            modifyModeHandle={props.modifyModeHandle}
-            modifyModeKey="participants"
-            modifyMode={props.modifyMode}
-          >
-            <FormattedHTMLMessage id="Project.participants.title" defaultMessage="Project.participants.title" />
-          </SectionTitle>
-          {
-            (props.modifyMode)
-              ? (
-                <SubmitBox
-                  language={props.language}
-                  masterKey="Project/participants"
-                  label="empty"
-                  emptySection
-                  autoLaunch={props.modifyMode}
-                  modifyModeHandle={props.modifyModeHandle}
-                />
-              )
-              : null
-          }
+            icon="fa-open"
+            objectType="structures"
+            language={props.language}
+            id={props.id}
+            title={messages[props.language]['Project.participants.title']}
+          />
           <div className="row">
             <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
               <FormattedHTMLMessage id="Project.participants.noParticipants" defaultMessage="Project.participants.noParticipants" />
@@ -154,7 +123,6 @@ export default Participants;
 
 Participants.propTypes = {
   language: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   data: PropTypes.array,
-  modifyModeHandle: PropTypes.func.isRequired,
-  modifyMode: PropTypes.bool.isRequired,
 };

@@ -73,10 +73,6 @@ class Network extends Component {
     }
   }
 
-  modifyModeHandle = () => {
-    this.setState(prevState => ({ modifyMode: !prevState.modifyMode }));
-  }
-
   componentDidCatch(error, info) {
     /* eslint-disable-next-line */
     console.log('catch : ', error, info);
@@ -85,9 +81,13 @@ class Network extends Component {
   renderTitle = () => (
     <Fragment>
       <div className="container">
-        <SectionTitle icon="fas fa-network-wired" modifyModeHandle={this.modifyModeHandle} modifyMode={this.state.modifyMode}>
-          {messagesEntity[this.props.language]['Entity.Section.Network.label']}
-        </SectionTitle>
+        <SectionTitle
+          icon="fa-open"
+          objectType="structures"
+          language={this.props.language}
+          id={this.props.id}
+          title={messagesEntity[this.props.language]['Entity.Section.Network.label']}
+        />
       </div>
     </Fragment>
   );
@@ -98,13 +98,12 @@ class Network extends Component {
         <section className={`container-fluid ${classes.Network}`}>
           <div className="container">
             <SectionTitle
-              icon="fas fa-th"
-              modifyModeHandle={this.modifyModeHandle}
-              modifyMode={this.state.modifyMode}
-              emptySection
-            >
-              {messagesEntity[this.props.language]['Entity.Section.Network.label']}
-            </SectionTitle>
+              icon="fa-open"
+              objectType="structures"
+              language={this.props.language}
+              id={this.props.id}
+              title={messagesEntity[this.props.language]['Entity.Section.Network.label']}
+            />
             <div className="row">
               <div className="col">
                 <EmptySection
