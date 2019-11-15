@@ -144,17 +144,17 @@ class Thesis extends Component {
               <div className="row d-flex justify-content-stretch">
                 {
                   (this.state.thesis.title)
-                    ? <div className="p-1 col-md-6"><div className={`p-3 ${classes.isOa}`}><PublicationCard small language={this.props.language} data={this.state.thesis} /></div></div>
+                    ? <div className={`col-md-6 ${classes.CardContainer}`}><div className={classes.isOa}><PublicationCard small language={this.props.language} data={this.state.thesis} /></div></div>
                     : null
                 }
                 {
                   (this.state.thesis.title)
-                    ? <div className="p-1 col-md-3"><div className={`p-2 ${classes.isOa}`}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><div className={classes.isOa}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
                     : null
                 }
                 {
                   (this.state.thesis.title && this.state.thesis.isOa)
-                    ? <div className="p-1 col-md-3"><OaLink className="p-3" language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><OaLink className={classes.CardHeight} language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
                     : null
                 }
               </div>
