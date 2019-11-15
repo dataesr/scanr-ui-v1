@@ -4,9 +4,26 @@
   "text":  "Des structures régionales dédiées",
   "subtext": "Les SATT, Sociétés d’Accélération du Transfert de Technologies, sont des Sociétés par Actions Simplifiées créées par plusieurs établissements de recherche publics dans le cadre du Programme des Investissements d’Avenir (PIA), au sein de l’action « Valorisation ». 856 M€ ont été affectés à la création des SATT dont une part importante est consacrée à la propriété intellectuelle et à la maturation.",
   "tags": ["satt", "transfert", "technologies"],
-  "type": "map",
-         "url_api" : "https://scanr-preprod.sword-group.com/api/v2/structures/search",
-	 "url_scanr": "/recherche/structures?filters=%7B\"badges.code\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"SATT\"%5D%7D%7D",
-         "queryField": "badges.code",
-         "queryValue": ["SATT"]
-  }
+  "components": [
+    {
+      "type": "map",
+      "title": "carte",
+      "subtitle": "carte",
+      "label": "map1",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/structures/search",
+      "url_scanr": "/recherche/structures?filters=%7B\"badges.code\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"SATT\"%5D%7D%7D",
+      "queryField": "badges.code",
+      "queryValue": ["SATT"]
+    },
+    {
+      "type": "map",
+      "title": "carte",
+      "subtitle": "carte",
+      "label": "map1",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/structures/search",
+      "url_scanr": "/recherche/structures?filters=%7B\"badges.code\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"SATT\"%5D%7D%7D",
+      "queryField": "badges.code",
+      "queryValue": ["SATT"]
+    }
+  ]
+}
