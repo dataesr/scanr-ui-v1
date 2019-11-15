@@ -14,7 +14,7 @@ export default {
     },
     'participants.structure.id': {
       type: 'MultiValueSearchFilter',
-      op: 'all',
+      op: 'any',
       values: [],
     },
   },

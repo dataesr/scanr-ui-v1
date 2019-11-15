@@ -7,7 +7,7 @@ import History from './subComponents/History/History';
 import Identity from './subComponents/Identity/Identity';
 import Leaders from '../../Shared/Leaders/Leaders';
 import Localisation from './subComponents/Localisation/Localisation';
-import SectionTitle from '../../../../Shared/Results/SectionTitle/SectionTitle';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Web from './subComponents/Web/Web';
 // import SocialNetworksFlow from './subComponents/SocialNetworksFlow/SocialNetworksFlow';
 
@@ -57,9 +57,11 @@ class Portrait extends Component {
           <section className={`container-fluid ${classes.Portrait}`} style={sectionStyle}>
             <div className="container">
               <SectionTitle
-                icon="fas fa-id-card"
-                modifyModeHandle={this.modifyModeHandle}
-                modifyMode={this.state.modifyMode}
+                icon="fa-open"
+                objectType="structures"
+                language={this.props.language}
+                id={this.props.id}
+                title="Portrait"
               >
                 <FormattedHTMLMessage id="Entity.Section.Portrait.label" defaultMessage="Entity.Section.Portrait.label" />
               </SectionTitle>

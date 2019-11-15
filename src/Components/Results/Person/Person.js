@@ -98,6 +98,7 @@ class Person extends Component {
           <Productions
             language={this.props.language}
             match={this.props.match}
+            childs={[]}
             person
           />
         </div>
