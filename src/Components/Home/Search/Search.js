@@ -43,13 +43,13 @@ class Search extends Component {
   /* eslint-disable */
   renderForm = () => (
     <form onSubmit={this.submitResearch}>
-      <div className="row mt-4 mb-4">
-        <div className="col-md-11 p-0">
+      <div className="row d-flex flex-nowrap my-4">
+        <div className="flex-grow-1 p-0">
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
             { placeholder => <input type="text" className="form-control" id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
-        <div className="col-md-1 pl-1">
+        <div className="pl-1">
           <button
             type="submit"
             className={`btn ${classes.btn_dark}`}

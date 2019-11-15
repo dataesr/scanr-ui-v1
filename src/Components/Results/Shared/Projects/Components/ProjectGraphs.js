@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import BarChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsBar';
-import WorldCloud from '../../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
-import YearChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsLine';
-import SankeyChart from '../../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
+import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
+import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
+import YearChart from '../../../../Shared/GraphComponents/Graphs/HighChartsLine';
+import SankeyChart from '../../../../Shared/GraphComponents/Graphs/HighChartsSankey';
 import classes from './ProjectGraphs.scss';
 
 /**

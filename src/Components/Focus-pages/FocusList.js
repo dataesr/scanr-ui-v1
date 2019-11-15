@@ -11,7 +11,7 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 // import Lexicon from '../Shared/Lexicon/Lexicon';
 // import Search from '../Home-page/Search/Search';
 
-import classes from '../Home-page/Home-page.scss';
+import classes from '../Home/Home.scss';
 // import classes from './FocusList.scss';
 
 /**
