@@ -74,10 +74,10 @@ LastFocus.propTypes = {
 LastFocus.defaultProps = {
   focusList: [
     {
-      tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'La carte des poles de compétitivité en France',
+      tags: ['#satt', '#transfert', '#technonologies'],
+      title: 'La carte des SATT',
       type: 'map',
-      url: '/focus/carte-poles-compet-france-2019',
+      url: '/focus/carte-satt-2019',
       schema: 'entity',
     },
     {
