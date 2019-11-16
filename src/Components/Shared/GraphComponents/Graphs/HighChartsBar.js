@@ -30,6 +30,7 @@ export default class HighChartsBar extends Component {
     this.state = {
       options: null,
     };
+    this.nbBars = 10;
     this.exportChartPdf = this.exportChartPdf.bind(this);
     this.exportChartPng = this.exportChartPng.bind(this);
     this.exportChartCsv = this.exportChartCsv.bind(this);
@@ -61,8 +62,10 @@ export default class HighChartsBar extends Component {
     const labels = [];
     const values = [];
     result.forEach((e) => {
-      labels.push(e.label);
-      values.push(e.count);
+      if (labels.length < this.nbBars) {
+        labels.push(e.label);
+        values.push(e.count);
+      }
     });
     const data = {
       labels,
