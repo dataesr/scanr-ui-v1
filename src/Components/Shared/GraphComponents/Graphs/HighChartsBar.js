@@ -46,9 +46,27 @@ export default class HighChartsBar extends Component {
   }
 
   loadAll() {
+    const localData = this.props.data.entries.map(item => ({ label: item.value, count: item.count, label_normalized: item.value.normalize('NFD').toLowerCase().replace(/[\u0300-\u036f]/g, '').replace('"', '') }));
+    const r = {};
+    localData.forEach((o) => {
+      r[o.label_normalized] = {
+        count: (r[o.label_normalized] ? r[o.label_normalized].count + o.count : o.count),
+        label: (r[o.label_normalized] ? r[o.label_normalized].label : o.label),
+      };
+    });
+    let result = Object.keys(r).map(k => (
+      { label: r[k].label, count: r[k].count }
+    ));
+    result = result.sort((a, b) => b.count - a.count);
+    const labels = [];
+    const values = [];
+    result.forEach((e) => {
+      labels.push(e.label);
+      values.push(e.count);
+    });
     const data = {
-      labels: this.props.data.entries.map(item => (item.value)),
-      values: this.props.data.entries.map(item => (item.count)),
+      labels,
+      values,
     };
 
     const unit = 'unité';
