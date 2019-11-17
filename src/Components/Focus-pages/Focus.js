@@ -59,7 +59,7 @@ export default class FocusList extends Component {
           filters,
         })
         .then((res) => {
-          let data = [];
+          const data = [];
           if (component.type === 'map') {
             res.data.results.forEach((e) => {
               try {
@@ -73,8 +73,18 @@ export default class FocusList extends Component {
                 // eslint-disable-no-empty
               }
             });
-          } else if (component.type === 'bar') {
-            data = res.data.facets.find(el => el.id === 'facet_urban_hits');
+          } else if (component.type === 'timeline') {
+            res.data.results.forEach((e) => {
+              try {
+                const dataElement = {
+                  name: e.value.firstName.concat(' ', e.value.lastName),
+                  label: 'Nobel',
+                };
+                data.push(dataElement);
+              } catch (error) {
+                // eslint-disable-no-empty
+              }
+            });
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({

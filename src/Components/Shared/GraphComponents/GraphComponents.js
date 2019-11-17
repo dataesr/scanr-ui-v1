@@ -22,6 +22,9 @@ export default class DisplayComponent extends Component {
         case 'map':
           GraphComponent = loadable(() => import('./Graphs/LeafletMap'));
           break;
+        case 'timeline':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsTimeline'));
+          break;
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
           break;
