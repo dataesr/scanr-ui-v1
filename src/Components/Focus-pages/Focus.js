@@ -45,8 +45,8 @@ export default class FocusList extends Component {
       return;
     }
 
-    const componentsData = [];
-    params.components.forEach((component) => {
+    let componentsData = [];
+    params.components.forEach((component, position) => {
       const queryField = component.queryField;
       const filters = {};
       filters[queryField] = {
@@ -79,6 +79,7 @@ export default class FocusList extends Component {
           const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({
             data,
+            position,
             type: component.type,
             buttonText: text,
             href: component.href,
@@ -87,6 +88,7 @@ export default class FocusList extends Component {
             label: component.label,
             style: { height: '60vh' },
           });
+          componentsData = componentsData.sort((a, b) => a.position - b.position);
           this.setState({ cData: componentsData });
         })
         .catch(() => {
