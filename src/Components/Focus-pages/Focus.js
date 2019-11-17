@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import moment from 'moment';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -49,17 +50,29 @@ export default class FocusList extends Component {
     params.components.forEach((component, position) => {
       const queryField = component.queryField;
       const filters = {};
+      let aggregations = {};
       filters[queryField] = {
         type: 'MultiValueSearchFilter',
         op: 'all',
         values: component.queryValue,
       };
+      aggregations = {
+        facet: {
+          field: component.facet,
+          filters: {},
+          min_doc_count: 1,
+          order: { direction: 'DESC', type: 'COUNT' },
+          size: 100,
+        },
+      };
       axios.post(component.url_api,
         {
           filters,
+          aggregations,
+          sourceFields: component.sourceFields,
         })
         .then((res) => {
-          const data = [];
+          let data = [];
           if (component.type === 'map') {
             res.data.results.forEach((e) => {
               try {
@@ -76,11 +89,15 @@ export default class FocusList extends Component {
           } else if (component.type === 'timeline') {
             res.data.results.forEach((e) => {
               try {
+                const award = e.value.awards.filter(a => (a.structureName === 'NOBEL'))[0];
+                const awardYear = moment(award.date).format('YYYY');
                 const dataElement = {
                   name: e.value.firstName.concat(' ', e.value.lastName),
-                  label: 'Nobel',
+                  label: award.label.concat(' (', awardYear.toString(), ')'),
+                  year: awardYear,
                 };
                 data.push(dataElement);
+                data = data.sort((a, b) => a.year - b.year);
               } catch (error) {
                 // eslint-disable-no-empty
               }
