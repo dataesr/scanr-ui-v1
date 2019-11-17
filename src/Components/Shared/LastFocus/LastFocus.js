@@ -89,9 +89,9 @@ LastFocus.defaultProps = {
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'Japan Prize: Qui sont les lauréats français ?',
+      title: 'Prix Nobel: Qui sont les lauréats français ?',
       type: 'histoTop',
-      url: '/focus/poles-compet-france-2019',
+      url: '/focus/nobel',
       schema: 'entity',
     },
     {
