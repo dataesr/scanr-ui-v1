@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
+import ButtonToSearch from '../Ui/Buttons/ButtonToSearch';
 
 import classes from './GraphComponents.scss';
 
@@ -20,6 +21,9 @@ export default class DisplayComponent extends Component {
       switch (this.props.type) {
         case 'map':
           GraphComponent = loadable(() => import('./Graphs/LeafletMap'));
+          break;
+        case 'timeline':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsTimeline'));
           break;
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
@@ -51,10 +55,28 @@ export default class DisplayComponent extends Component {
         }
         </div>
       );
+      const FooterComponent = () => (
+        <div className="p-4">
+          {
+                (this.props.href)
+                  ? (
+                    <ButtonToSearch
+                      href={this.props.href}
+                      className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                    >
+                      { this.props.buttonText }
+                    </ButtonToSearch>
+                  )
+                  : null
+              }
+        </div>
+
+      );
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} />
+          <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} style={this.props.style} />
+          { (this.props.href) ? (<FooterComponent />) : null}
           {
           // <TextComponent />
           // <ShareComponent />
@@ -84,4 +106,7 @@ DisplayComponent.propTypes = {
   subtitle: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   data: PropTypes.any,
+  style: PropTypes.any,
+  href: PropTypes.any,
+  buttonText: PropTypes.any,
 };
