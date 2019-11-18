@@ -81,6 +81,7 @@ export default class FocusList extends Component {
         })
         .then((res) => {
           let data = [];
+          let tooltipText = '';
           if (component.type === 'map') {
             res.data.results.forEach((e) => {
               try {
@@ -116,12 +117,18 @@ export default class FocusList extends Component {
                 name: e.value,
                 value: e.count,
               };
-              data.push(dataElement);
+              //data.push(dataElement);
+              data.push( {name: dataElement.name, data: [dataElement]});
             });
+            const series = [];
+            series.push({ name: 'Domaines', data });
+            //data = series;
+            tooltipText = 'thèses soutenues en 2018';
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({
             data,
+            tooltipText,
             position,
             type: component.type,
             buttonText: text,
@@ -189,6 +196,7 @@ export default class FocusList extends Component {
                     subtitle={component.subtitle}
                     type={component.type}
                     data={component.data}
+                    tooltipText={component.tooltipText}
                     style={component.style}
                     href={component.href}
                     buttonText={component.buttonText}
