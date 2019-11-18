@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import InputRange from 'react-input-range';
-
+import YearRangeSlider from '../../../../Shared/YearRangeSlider/YearRangeSlider';
 import classes from './FilterPanel.scss';
-import '../../../../../../node_modules/react-input-range/lib/css/index.css';
+
 /**
  * FilterPanel
  * Url : ex: /entite/200711886U
@@ -27,7 +26,7 @@ const messages = {
 
 const FilterPanel = props => (
   <React.Fragment>
-    <div className={`row align-items-end py-3 ${classes.Filters}`}>
+    <div className={`row align-items-center py-3 ${classes.Filters}`}>
       <div className="col-lg-4">
         <div className="d-flex flex-column">
           <div className={classes.TitleFilter} htmlFor="type-select">
@@ -48,23 +47,13 @@ const FilterPanel = props => (
           </div>
         </div>
       </div>
-      <div className={`col-lg-4 ${classes.RangeSlider}`}>
-        <div className="d-flex flex-column">
-          <div className={classes.TitleFilter} htmlFor="slider">
-            {props.language === 'fr' ? 'Sélectionner une période' : 'Select a period'}
-            <div id="slider" className={classes.Slider}>
-              <InputRange
-                minValue={props.sliderBounds.min}
-                maxValue={props.sliderBounds.max}
-                formatLabel={value => value}
-                value={props.sliderYearPrint}
-                onChange={value => props.sliderChangeHandler(value)}
-                onChangeComplete={value => props.sliderChangeCompleteHandler(value)}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+      <YearRangeSlider
+        language={props.language}
+        data={props.data}
+        min={props.sliderYear.min}
+        max={props.sliderYear.max}
+        handleSingleYearSelection={props.handleSingleYearSelection}
+      />
       <form className="col-lg-4" onSubmit={props.queryChangeHandler}>
         <label className={classes.TitleFilter} htmlFor="inputFilter">
           {props.language === 'fr' ? 'Rechercher dans les publications' : 'Search in publications'}
@@ -94,12 +83,26 @@ FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   totalPerType: PropTypes.object.isRequired,
   selectedType: PropTypes.string.isRequired,
-  sliderBounds: PropTypes.object.isRequired,
-  sliderYearPrint: PropTypes.object.isRequired,
-  sliderChangeHandler: PropTypes.func.isRequired,
-  sliderChangeCompleteHandler: PropTypes.func.isRequired,
+  data: PropTypes.object.isRequired,
+  // sliderBounds: PropTypes.object.isRequired,
+  sliderYear: PropTypes.object.isRequired,
+  // sliderChangeHandler: PropTypes.func.isRequired,
+  // sliderChangeCompleteHandler: PropTypes.func.isRequired,
   currentQueryText: PropTypes.string,
   changeTypeHandler: PropTypes.func.isRequired,
+  handleSingleYearSelection: PropTypes.func.isRequired,
   queryChangeHandler: PropTypes.func.isRequired,
   queryTextChangeHandler: PropTypes.func.isRequired,
 };
+
+// <div id="slider" className={classes.Slider}>
+//
+// </div>
+// <InputRange
+//   minValue={props.sliderBounds.min}
+//   maxValue={props.sliderBounds.max}
+//   formatLabel={value => ''}
+//   value={props.sliderYearPrint}
+//   onChange={value => props.sliderChangeHandler(value)}
+//   onChangeComplete={value => props.sliderChangeCompleteHandler(value)}
+// />
