@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import moment from 'moment';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -45,18 +46,30 @@ export default class FocusList extends Component {
       return;
     }
 
-    const componentsData = [];
-    params.components.forEach((component) => {
+    let componentsData = [];
+    params.components.forEach((component, position) => {
       const queryField = component.queryField;
       const filters = {};
+      let aggregations = {};
       filters[queryField] = {
         type: 'MultiValueSearchFilter',
         op: 'all',
         values: component.queryValue,
       };
+      aggregations = {
+        facet: {
+          field: component.facet,
+          filters: {},
+          min_doc_count: 1,
+          order: { direction: 'DESC', type: 'COUNT' },
+          size: 100,
+        },
+      };
       axios.post(component.url_api,
         {
           filters,
+          aggregations,
+          sourceFields: component.sourceFields,
         })
         .then((res) => {
           let data = [];
@@ -73,30 +86,36 @@ export default class FocusList extends Component {
                 // eslint-disable-no-empty
               }
             });
-          } else if (component.type === 'bar') {
-            const entries = [];
+          } else if (component.type === 'timeline') {
             res.data.results.forEach((e) => {
               try {
-                entries.push({
-                  value: e.value.id,
-                  count: 1,
-                });
+                const award = e.value.awards.filter(a => (a.structureName === 'NOBEL'))[0];
+                const awardYear = moment(award.date).format('YYYY');
+                const dataElement = {
+                  name: e.value.firstName.concat(' ', e.value.lastName),
+                  label: award.label.concat(' (', awardYear.toString(), ')'),
+                  year: awardYear,
+                };
+                data.push(dataElement);
+                data = data.sort((a, b) => a.year - b.year);
               } catch (error) {
                 // eslint-disable-no-empty
               }
             });
-            data = {
-              id: 'region',
-              entries,
-            };
           }
+          const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({
             data,
+            position,
             type: component.type,
+            buttonText: text,
+            href: component.href,
             title: component.title,
             subtitle: component.subtitle,
             label: component.label,
+            style: { height: '60vh' },
           });
+          componentsData = componentsData.sort((a, b) => a.position - b.position);
           this.setState({ cData: componentsData });
         })
         .catch(() => {
@@ -107,10 +126,10 @@ export default class FocusList extends Component {
 
   render() {
     const TextComponent = () => (
-      <div style={{
-        backgroundColor: 'white', borderRadius: '0 0 15px 15px', marginTop: '-15px', marginBottom: '40px',
-      }}
-      >
+      <div>
+        <p className={`${classes.Title}`}>
+          {params.title}
+        </p>
         <p className={`${classes.Text}`}>
           {params.text}
         </p>
@@ -140,7 +159,11 @@ export default class FocusList extends Component {
 
         {/* } <DiscoverDataEsr language={props.language} /> */}
         <div className="container">
-
+          <div className="row" key="text">
+            <div className="col-lg-12">
+              {this.state.error ? null : <TextComponent />}
+            </div>
+          </div>
           {
             this.state.cData.map(component => (
               <div className="row" key={component.label}>
@@ -151,13 +174,14 @@ export default class FocusList extends Component {
                     type={component.type}
                     data={component.data}
                     style={component.style}
+                    href={component.href}
+                    buttonText={component.buttonText}
                     language={this.props.language}
                   />
                 </div>
               </div>
             ))
           }
-          {this.state.error ? null : <TextComponent />}
         </div>
 
         <LastFocus />

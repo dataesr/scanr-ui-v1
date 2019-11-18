@@ -6,8 +6,11 @@ import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
-
+import timelineModule from 'highcharts/modules/timeline';
 import classes from '../GraphComponents.scss';
+
+timelineModule(Highcharts);
+
 
 HCAccessibility(Highcharts);
 HCExporting(Highcharts);
@@ -15,7 +18,7 @@ HCExportingData(Highcharts);
 HCRounded(Highcharts);
 
 /**
- * HighChartsBar
+ * HighChartsTimeline
  * Url : <br/>
  * Description : Composant HighCharts qui rend les barres horizontales <br/>
  * Responsive : . <br/>
@@ -23,114 +26,40 @@ HCRounded(Highcharts);
  * Tests unitaires : . <br/>.
 */
 
-export default class HighChartsBar extends Component {
+export default class HighChartsTimeline extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
+    this.data = this.props.data;
     this.state = {
       options: null,
     };
-    this.nbBars = 10;
     this.exportChartPdf = this.exportChartPdf.bind(this);
     this.exportChartPng = this.exportChartPng.bind(this);
     this.exportChartCsv = this.exportChartCsv.bind(this);
   }
 
   componentDidMount() {
-    this.loadAll();
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.data !== prevProps.data) {
-      this.loadAll();
-    }
-  }
-
-  loadAll() {
-    const localData = this.props.data.entries.map(item => ({ label: item.value, count: item.count, label_normalized: item.value.normalize('NFD').toLowerCase().replace(/[\u0300-\u036f]/g, '').replace('"', '') }));
-    const r = {};
-    localData.forEach((o) => {
-      r[o.label_normalized] = {
-        count: (r[o.label_normalized] ? r[o.label_normalized].count + o.count : o.count),
-        label: (r[o.label_normalized] ? r[o.label_normalized].label : o.label),
-      };
-    });
-    let result = Object.keys(r).map(k => (
-      { label: r[k].label, count: r[k].count }
-    ));
-    result = result.sort((a, b) => b.count - a.count);
-    const labels = [];
-    const values = [];
-    result.forEach((e) => {
-      if (labels.length < this.nbBars) {
-        labels.push(e.label);
-        values.push(e.count);
-      }
-    });
-    const data = {
-      labels,
-      values,
-    };
-
-    const unit = 'unité';
     const options = {
-      chart: {
-        type: 'bar',
-        style: { 'font-family': 'Inter UI' },
-      },
       credits: {
         enabled: false,
       },
+      xAxis: {
+        visible: false,
+      },
+      yAxis: {
+        visible: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+      colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
       title: {
         text: '',
       },
-      xAxis: {
-        minorGridLineWidth: 0,
-        gridLineWidth: 0,
-        lineWidth: 0,
-        tickWidth: 0,
-        categories: data.labels,
-        labels: {
-          style: { color: '#000000' },
-          align: 'right',
-          x: -10,
-        },
-      },
-      yAxis: {
-        gridLineWidth: 0,
-        lineWidth: 0,
-        tickWidth: 0,
-        minorGridLineWidth: 0,
-        title: { text: '' },
-        labels: { enabled: false },
-      },
-      legend: {
-        hide: true,
-        enabled: false,
-        // reversed: true
-      },
-      plotOptions: {
-        series: {
-          stacking: 'normal',
-          pointPadding: 0,
-          // groupPadding: 0.1,
-          dataLabels: {
-            enabled: true,
-            align: 'right',
-            // textAlign: 'right',
-            x: 0,
-            style: { color: '#000000' },
-          },
-        },
-      },
       series: [{
-        color: '#FDD85E',
-        name: unit,
-        data: data.values,
-        borderRadiusTopLeft: '80%',
-        borderRadiusTopRight: '80%',
-        borderRadiusBottomLeft: '80%',
-        borderRadiusBottomRight: '80%',
+        data: this.props.data,
+        type: 'timeline',
       }],
       exporting: {
         filename: this.props.filename,
@@ -230,11 +159,11 @@ export default class HighChartsBar extends Component {
   }
 }
 
-HighChartsBar.defaultProps = {
+HighChartsTimeline.defaultProps = {
   data: { entries: [] },
 };
 
-HighChartsBar.propTypes = {
+HighChartsTimeline.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
