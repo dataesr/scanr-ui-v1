@@ -50,7 +50,6 @@ export default class FocusList extends Component {
     params.components.forEach((component, position) => {
       const queryField = component.queryField;
       const filters = {};
-      let aggregations = {};
       filters[queryField] = {
         type: 'MultiValueSearchFilter',
         op: 'all',
@@ -64,19 +63,28 @@ export default class FocusList extends Component {
           missing: false,
         };
       }
-      aggregations = {
-        facet: {
-          field: component.facet,
+      const aggregations = {};
+      let facets = [];
+      const regex = /\./gi;
+      if (component.facet !== undefined) {
+        facets = component.facet;
+      }
+      facets.forEach((facet) => {
+        const aggregId = facet.replace(regex, '_');
+        aggregations[aggregId] = {
+          field: facet,
           filters: {},
           min_doc_count: 1,
           order: { direction: 'DESC', type: 'COUNT' },
           size: 100,
-        },
-      };
+        };
+      });
+      const pageSize = (component.pageSize) ? (component.pageSize) : 20;
       axios.post(component.url_api,
         {
           filters,
           aggregations,
+          pageSize,
           sourceFields: component.sourceFields,
         })
         .then((res) => {
@@ -112,18 +120,42 @@ export default class FocusList extends Component {
               }
             });
           } else if (component.type === 'packedbubble' && component.dataType === 'these') {
-            res.data.facets[0].entries.forEach((e) => {
-              const dataElement = {
-                name: e.value,
-                value: e.count,
-              };
-              //data.push(dataElement);
-              data.push( {name: dataElement.name, data: [dataElement]});
+            const domainsCount = {};
+            res.data.results.forEach((e) => {
+              const discipline = e.value.domains.find(item => item.type === 'degree discipline').label.fr;
+              if (domainsCount[discipline] === undefined) {
+                domainsCount[discipline] = { TOTALCount: 0, discipline };
+              }
+              e.value.domains.forEach((d) => {
+                if (d.label.fr !== discipline) {
+                  if (domainsCount[discipline][d.label.fr] === undefined) {
+                    domainsCount[discipline][d.label.fr] = { count: 0 };
+                  }
+                  domainsCount[discipline][d.label.fr].count += 1;
+                  domainsCount[discipline].TOTALCount += 1;
+                }
+              });
             });
-            const series = [];
-            series.push({ name: 'Domaines', data });
-            //data = series;
+            Object.keys(domainsCount).forEach((discipline) => {
+              const subdata = [];
+              Object.keys(domainsCount[discipline]).forEach((subdiscipline) => {
+                if (subdiscipline !== 'TOTALCount' && subdiscipline !== 'discipline') {
+                  const subCount = domainsCount[discipline][subdiscipline].count;
+                  if (subCount > 29) {
+                    subdata.push({ name: subdiscipline, value: subCount });
+                  }
+                }
+              });
+              data.push({ name: discipline, data: subdata, total: domainsCount[discipline].TOTALCount });
+            });
+            data = data.sort((a, b) => b.total - a.total).slice(0, 150);
             tooltipText = 'thèses soutenues en 2018';
+          } else if (component.type === 'wordcloud') {
+            const dataEn = res.data.facets.find(item => item.id === 'keywords_en') || { entries: [] };
+            const dataFr = res.data.facets.find(item => item.id === 'keywords_fr') || { entries: [] };
+            data = { entries: dataEn.entries.concat(dataFr.entries) };
+          } else if (component.type === 'bar') {
+            data = res.data.facets[0];
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
           componentsData.push({
