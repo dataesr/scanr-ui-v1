@@ -6,6 +6,37 @@
   border-radius: 8px;
   margin-bottom: 8px;
 }
+.FullBar {
+  background-color: $productionColor;
+  border-left: 0.15em solid white;
+  border-right: 0.15em solid white;
+}
+.RangeBox {
+  height: 4em;
+  width: 100%;
+}
+.sliderBase {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.slider {
+  background-color: $scanrgreyColor;
+  border-radius: 4px;
+  height: 2px;
+}
+.sliderButton {
+  position: relative;
+  background-color: $scanrgreyColor;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+.high {
+  bottom: 30px;
+}
+.low {
+  bottom: 10px;
+}
 
 .Productions {
   padding-top: 20px;
@@ -168,10 +199,6 @@
 
 .RangeSlider {
   .Slider {
-    margin-top: 12px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-bottom: 16px;
   }
 }
 

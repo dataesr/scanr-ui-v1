@@ -12,7 +12,6 @@ import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
 import Request from './Requests/Request';
 import PreRequest from './Requests/PreRequest';
-
 /**
  * Productions
  * Url : .
@@ -27,6 +26,7 @@ class Productions extends Component {
     error: false,
     isLoading: true,
     total: 0,
+    yearsData: {},
     totalPerType: {
       patent: null,
       publication: null,
@@ -57,6 +57,8 @@ class Productions extends Component {
       min: null,
       max: null,
     },
+    // high: 2020,
+    // low: 2010,
   }
 
   componentDidMount() {
@@ -117,8 +119,10 @@ class Productions extends Component {
     }
     Axios.post(url, preRequest).then((response) => {
       let years = [2000, 2020];
+      const yearFacet = response.data.facets.find(facet => facet.id === 'years');
+      const yearFacet2 = { ...yearFacet };
       try {
-        const years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
+        const years2 = yearFacet.entries.map(a => parseInt(a.value, 10));
         if (years2.length > 0) {
           years = years2;
         }
@@ -136,9 +140,12 @@ class Productions extends Component {
         min: Math.min(...years),
         max: Math.max(...years),
       };
+      console.log(yearFacet);
+      console.log(yearFacet2);
       const viewMode = response.data.total > 10 ? 'graph' : 'list';
       this.setState({
         total: response.data.total,
+        yearsData: yearFacet2,
         totalPerType,
         viewMode,
         sliderBounds,
@@ -240,6 +247,24 @@ class Productions extends Component {
     this.setState({ selectedProduction });
   };
 
+  handleChange = ({ high, low }) => {
+    console.log(low);
+    this.setState({
+      high,
+      low,
+    });
+  }
+
+  handleSingleYearSelection = (e) => {
+    const { id } = e.target;
+    this.setState({
+      sliderYear: {
+        min: parseInt(id, 10),
+        max: parseInt(id, 10),
+      },
+    });
+  }
+
   render() {
     if (this.state.total === 0) {
       return (
@@ -326,6 +351,7 @@ class Productions extends Component {
             />
             <FilterPanel
               language={this.props.language}
+              data={this.state.yearsData.entries}
               totalPerType={this.state.totalPerType}
               selectedType={this.state.productionType}
               changeTypeHandler={this.changeTypeHandler}
@@ -334,8 +360,11 @@ class Productions extends Component {
               queryTextChangeHandler={this.queryTextChangeHandler}
               sliderBounds={this.state.sliderBounds}
               sliderYearPrint={this.state.sliderYearPrint}
+              sliderYear={this.state.sliderYear}
               sliderChangeHandler={this.sliderChangeHandler}
               sliderChangeCompleteHandler={this.sliderChangeCompleteHandler}
+              handleChange={this.handleChange}
+              handleSingleYearSelection={this.handleSingleYearSelection}
             />
             {
               (this.state.viewMode === 'list')
