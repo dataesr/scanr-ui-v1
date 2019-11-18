@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 HCmore(Highcharts);
 
+
 const PackedBubbleChart = (props) => {
   const options = {
     chart: {
@@ -30,7 +31,7 @@ const PackedBubbleChart = (props) => {
         },
       },
     },
-    series: props.series,
+    series: props.data,
   };
 
   return (
@@ -44,6 +45,6 @@ const PackedBubbleChart = (props) => {
 export default PackedBubbleChart;
 
 PackedBubbleChart.propTypes = {
-  series: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
   text: PropTypes.string,
 };

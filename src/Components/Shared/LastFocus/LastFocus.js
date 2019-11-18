@@ -81,11 +81,11 @@ LastFocus.defaultProps = {
       schema: 'entity',
     },
     {
-      tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'La carte des projets financés par l\'ANR',
-      type: 'donut',
-      url: '/focus/donut-poles-compet-france-2019',
-      schema: 'project',
+      tags: ['#theses', '#tag2', '#tag3'],
+      title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
+      type: 'bubble',
+      url: '/focus/themes-theses-2018',
+      schema: 'entity',
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
@@ -93,6 +93,13 @@ LastFocus.defaultProps = {
       type: 'histoTop',
       url: '/focus/nobel',
       schema: 'entity',
+    },
+    {
+      tags: ['#tag1', '#tag2', '#tag3'],
+      title: 'La carte des projets financés par l\'ANR',
+      type: 'donut',
+      url: '/focus/donut-poles-compet-france-2019',
+      schema: 'project',
     },
     {
       tags: ['#tag1', '#tag2', '#tag3'],
@@ -107,13 +114,6 @@ LastFocus.defaultProps = {
       type: 'treemap',
       url: '',
       schema: 'person',
-    },
-    {
-      tags: ['#tag1', '#tag2', '#tag3'],
-      title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
-      type: 'bubble',
-      url: '',
-      schema: 'entity',
     },
   ],
 };
