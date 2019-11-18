@@ -307,7 +307,7 @@ class Ecosystem extends Component {
           if (data[graphType].length > 0) {
             return (
               <div className="col-md">
-                <PackedBubbleChart text={graphType} series={data[graphType]} />
+                <PackedBubbleChart text={graphType} data={data[graphType]} />
               </div>
             );
           }
