@@ -50,9 +50,12 @@ const FilterPanel = props => (
       <YearRangeSlider
         language={props.language}
         data={props.data}
-        min={props.sliderYear.min}
-        max={props.sliderYear.max}
-        handleSingleYearSelection={props.handleSingleYearSelection}
+        min={props.lowSliderYear}
+        max={props.highSliderYear}
+        minBound={2012}
+        maxBound={2020}
+        handleSliderRange={props.handleSliderRange}
+        handleSliderSelect={props.handleSliderSelect}
       />
       <form className="col-lg-4" onSubmit={props.queryChangeHandler}>
         <label className={classes.TitleFilter} htmlFor="inputFilter">
@@ -84,25 +87,12 @@ FilterPanel.propTypes = {
   totalPerType: PropTypes.object.isRequired,
   selectedType: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  // sliderBounds: PropTypes.object.isRequired,
-  sliderYear: PropTypes.object.isRequired,
-  // sliderChangeHandler: PropTypes.func.isRequired,
-  // sliderChangeCompleteHandler: PropTypes.func.isRequired,
   currentQueryText: PropTypes.string,
   changeTypeHandler: PropTypes.func.isRequired,
-  handleSingleYearSelection: PropTypes.func.isRequired,
   queryChangeHandler: PropTypes.func.isRequired,
   queryTextChangeHandler: PropTypes.func.isRequired,
+  lowSliderYear: PropTypes.number,
+  highSliderYear: PropTypes.number,
+  handleSliderRange: PropTypes.func.isRequired,
+  handleSliderSelect: PropTypes.func.isRequired,
 };
-
-// <div id="slider" className={classes.Slider}>
-//
-// </div>
-// <InputRange
-//   minValue={props.sliderBounds.min}
-//   maxValue={props.sliderBounds.max}
-//   formatLabel={value => ''}
-//   value={props.sliderYearPrint}
-//   onChange={value => props.sliderChangeHandler(value)}
-//   onChangeComplete={value => props.sliderChangeCompleteHandler(value)}
-// />
