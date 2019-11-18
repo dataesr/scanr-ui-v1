@@ -117,12 +117,12 @@ export default class FocusList extends Component {
                 name: e.value,
                 value: e.count,
               };
-              //data.push(dataElement);
-              data.push( {name: dataElement.name, data: [dataElement]});
+              // data.push(dataElement);
+              data.push({ name: dataElement.name, data: [dataElement] });
             });
             const series = [];
             series.push({ name: 'Domaines', data });
-            //data = series;
+            // data = series;
             tooltipText = 'thèses soutenues en 2018';
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
