@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import SelectFilter from './Filters/SelectFilter';
+import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
@@ -14,6 +14,9 @@ const EntityFilters = (props) => {
   const projectsActiveFilters = props.filters.level || {};
   const projectsFacets = facets.find(item => item.id === 'facet_projects_types') || { entries: [] };
   const kindFacets = facets.find(item => item.id === 'facet_kind') || { entries: [] };
+  const levelOne = ['Secteur Privé', 'Secteur public', 'Structure de recherche'];
+  const kindFacets1 = { entries: kindFacets.entries.filter(entry => levelOne.includes(entry.value)) };
+  const kindFacets2 = { entries: kindFacets.entries.filter(entry => !levelOne.includes(entry.value)) };
   // const mainKindFacets = null;
   // const secondaryKindFacets = null;
   const caractFacetsTest = facets.find(item => item.id === 'facet_badges') || { entries: [] };
@@ -30,9 +33,16 @@ const EntityFilters = (props) => {
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
         />
+        <SelectFilter
+          title="Type d'organisme"
+          facets={kindFacets1.entries}
+          filters={kindActiveFilters}
+          facetID="kind"
+          onSubmit={props.multiValueFilterHandler}
+        />
         <CheckBoxFilter
           title="Type d'organisme"
-          facets={kindFacets.entries}
+          facets={kindFacets2.entries}
           filters={kindActiveFilters}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
