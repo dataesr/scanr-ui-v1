@@ -11,7 +11,7 @@
       "subtitle": "",
       "label": "theme-these",
       "url_api" : "https://scanr-preprod.sword-group.com/api/v2/publications/search",
-      "href": "/recherche/publications?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"NOBEL\"%5D%7D%7D",
+      "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
       "queryField": "productionType",
       "facet": "domains.label.fr",
       "sourceFields": ["productionDate", "domains"],

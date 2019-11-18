@@ -12,6 +12,7 @@ const PackedBubbleChart = (props) => {
     chart: {
       type: 'packedbubble',
     },
+    legend: !(props.data.lengt > 5),
     exporting: { enabled: false },
     credits: { enabled: false },
     title: {
@@ -19,19 +20,16 @@ const PackedBubbleChart = (props) => {
     },
     tooltip: {
       useHTML: true,
-      pointFormat: '<b>{point.name}:</b> {point.value} productions en commun',
-    },
-    plotOptions: {
-      packedbubble: {
-        minSize: '30%',
-        maxSize: '150%',
-        layoutAlgorithm: {
-          splitSeries: false,
-          gravitationalConstant: 0.02,
-        },
-      },
+      pointFormat: '<b>{point.name}:</b> {point.value} '.concat(props.tooltipText),
     },
     series: props.data,
+    plotOptions: {
+      packedbubble: {
+        useSimulation: false,
+        minSize: '10%',
+        maxSize: '100%',
+      },
+    },
   };
 
   return (
@@ -47,4 +45,5 @@ export default PackedBubbleChart;
 PackedBubbleChart.propTypes = {
   data: PropTypes.array.isRequired,
   text: PropTypes.string,
+  tooltipText: PropTypes.string,
 };
