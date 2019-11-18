@@ -155,6 +155,7 @@ export default class FocusList extends Component {
             const dataFr = res.data.facets.find(item => item.id === 'keywords_fr') || { entries: [] };
             data = { entries: dataEn.entries.concat(dataFr.entries) };
           } else if (component.type === 'bar') {
+		  console.log('bar',res.data);
             data = res.data.facets[0];
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
