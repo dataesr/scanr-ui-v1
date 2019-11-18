@@ -25,6 +25,9 @@ export default class DisplayComponent extends Component {
         case 'timeline':
           GraphComponent = loadable(() => import('./Graphs/HighChartsTimeline'));
           break;
+        case 'packedbubble':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsPackedbubble'));
+          break;
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
           break;

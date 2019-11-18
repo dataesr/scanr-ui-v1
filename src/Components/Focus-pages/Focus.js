@@ -56,6 +56,14 @@ export default class FocusList extends Component {
         op: 'all',
         values: component.queryValue,
       };
+      if (component.dataType === 'these') {
+        filters.publicationDate = {
+          type: 'DateRangeFilter',
+          min: new Date(Date.UTC(2018, 1, 1)).toISOString(),
+          max: new Date(Date.UTC(2018, 11, 31)).toISOString(),
+          missing: false,
+        };
+      }
       aggregations = {
         facet: {
           field: component.facet,
@@ -101,6 +109,14 @@ export default class FocusList extends Component {
               } catch (error) {
                 // eslint-disable-no-empty
               }
+            });
+          } else if (component.type === 'packedbubble' && component.dataType === 'these') {
+            res.data.facets[0].entries.forEach((e) => {
+              const dataElement = {
+                name: e.value,
+                value: e.count,
+              };
+              data.push(dataElement);
             });
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
