@@ -86,10 +86,10 @@ export default class FocusList extends Component {
                 // eslint-disable-no-empty
               }
             });
-          } else if (component.type === 'timeline') {
+          } else if (component.type === 'timeline' && component.dataType === 'award') {
             res.data.results.forEach((e) => {
               try {
-                const award = e.value.awards.filter(a => (a.structureName === 'NOBEL'))[0];
+                const award = e.value.awards.filter(a => (a.structureName === component.award))[0];
                 const awardYear = moment(award.date).format('YYYY');
                 const dataElement = {
                   name: e.value.firstName.concat(' ', e.value.lastName),
