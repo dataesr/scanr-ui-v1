@@ -12,7 +12,7 @@ const PackedBubbleChart = (props) => {
     chart: {
       type: 'packedbubble',
     },
-    legend: !(props.data.lengt > 5),
+    legend: true,
     exporting: { enabled: false },
     credits: { enabled: false },
     title: {
