@@ -23,7 +23,7 @@ export default class ProductionJournals extends Component {
           direction: 'DESC',
           type: 'COUNT',
         },
-        size: 10,
+        size: 20,
       },
     },
   }
