@@ -45,20 +45,8 @@ class Productions extends Component {
     viewMode: 'list',
     data: [],
     selectedProduction: '',
-    sliderYear: {
-      min: null,
-      max: null,
-    },
-    sliderYearPrint: {
-      min: null,
-      max: null,
-    },
-    sliderBounds: {
-      min: null,
-      max: null,
-    },
-    // high: 2020,
-    // low: 2010,
+    high: null,
+    low: null,
   }
 
   componentDidMount() {
@@ -68,7 +56,7 @@ class Productions extends Component {
     if (prevProps.childs !== this.props.childs) {
       this.fetchGlobalData();
     }
-    if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
+    if (prevState.low !== this.state.low || prevState.high !== this.state.high) {
       this.fetchDataByType();
     }
     if (prevState.total !== this.state.total) {
@@ -78,11 +66,9 @@ class Productions extends Component {
       this.fetchDataByType();
     }
     if (prevState.query !== this.state.query) {
-      const sliderYear = {
-        min: 2000,
-        max: 2020,
-      };
-      this.setState({ sliderYear });
+      const low = 2000;
+      const high = 2020;
+      this.setState({ low, high });
       this.fetchDataByType();
     }
   }
@@ -118,39 +104,19 @@ class Productions extends Component {
       };
     }
     Axios.post(url, preRequest).then((response) => {
-      let years = [2000, 2020];
       const yearFacet = response.data.facets.find(facet => facet.id === 'years');
-      const yearFacet2 = { ...yearFacet };
-      try {
-        const years2 = yearFacet.entries.map(a => parseInt(a.value, 10));
-        if (years2.length > 0) {
-          years = years2;
-        }
-      } catch (err) {
-        this.setState({ error: true });
-        // eslint-disable-next-line
-        console.log(err);
-      }
       const totalPerType = {};
       // const MaxProduction = '';
       response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
         totalPerType[type.value] = type.count;
       });
-      const sliderBounds = {
-        min: Math.min(...years),
-        max: Math.max(...years),
-      };
-      console.log(yearFacet);
-      console.log(yearFacet2);
+
       const viewMode = response.data.total > 10 ? 'graph' : 'list';
       this.setState({
         total: response.data.total,
-        yearsData: yearFacet2,
+        yearsData: yearFacet,
         totalPerType,
         viewMode,
-        sliderBounds,
-        sliderYear: sliderBounds,
-        sliderYearPrint: sliderBounds,
       });
     });
   }
@@ -158,8 +124,8 @@ class Productions extends Component {
   fetchDataByType = () => {
     this.setState({ isLoading: true });
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
-    const en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
+    const st = this.state.low ? this.state.low : 2000;
+    const en = this.state.high ? this.state.high : 2020;
     const request = Request;
     request.query = this.state.query;
     request.filters.publicationDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
@@ -183,15 +149,6 @@ class Productions extends Component {
       };
     }
     Axios.post(url, request).then((response) => {
-      // eslint-disable-next-line
-      let years2 = [2000, 2020]
-      try {
-        years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
-      } catch (err) {
-        this.setState({ error: true });
-        // eslint-disable-next-line
-        console.log(err);
-      }
       const graphData = {};
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
@@ -234,34 +191,30 @@ class Productions extends Component {
     this.setState({ activeGraph: nextGraph });
   }
 
-  sliderChangeHandler = (value) => {
-    this.setState({ sliderYearPrint: value });
-  }
-
-  sliderChangeCompleteHandler = (value) => {
-    this.setState({ sliderYear: value });
-  }
-
-  // eslint-disable-next-line
   setSelectedProductionHandler = (selectedProduction) => {
     this.setState({ selectedProduction });
   };
 
-  handleChange = ({ high, low }) => {
-    console.log(low);
-    this.setState({
-      high,
-      low,
-    });
+  handleSliderRange = (low, high) => {
+    if (low > high) {
+      this.setState({
+        high: low,
+        low: high,
+      });
+    } else {
+      this.setState({
+        high,
+        low,
+      });
+    }
   }
 
-  handleSingleYearSelection = (e) => {
+  handleSliderSelect = (e) => {
+    e.persist();
     const { id } = e.target;
     this.setState({
-      sliderYear: {
-        min: parseInt(id, 10),
-        max: parseInt(id, 10),
-      },
+      low: parseInt(id, 10),
+      high: parseInt(id, 10),
     });
   }
 
@@ -273,7 +226,7 @@ class Productions extends Component {
             <div className="container">
               <SectionTitleViewMode
                 icon="fa-folder-open"
-                objectType="structures"
+                objectType="publications"
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
@@ -294,7 +247,7 @@ class Productions extends Component {
             <div className="container">
               <SectionTitleViewMode
                 icon="fa-folder-open"
-                objectType="structures"
+                objectType="publications"
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
@@ -315,13 +268,27 @@ class Productions extends Component {
             <div className="container">
               <SectionTitleViewMode
                 icon="fa-folder-open"
-                objectType="structures"
+                objectType="publications"
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
                 title="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
+              />
+              <FilterPanel
+                language={this.props.language}
+                data={this.state.yearsData.entries}
+                totalPerType={this.state.totalPerType}
+                selectedType={this.state.productionType}
+                changeTypeHandler={this.changeTypeHandler}
+                currentQueryText={this.state.currentQueryText}
+                queryChangeHandler={this.queryChangeHandler}
+                queryTextChangeHandler={this.queryTextChangeHandler}
+                lowSliderYear={this.state.low}
+                highSliderYear={this.state.high}
+                handleSliderRange={this.handleSliderRange}
+                handleSliderSelect={this.handleSliderSelect}
               />
               <div className="row justify-content-center py-5 my-5">
                 <GridLoader
@@ -341,7 +308,7 @@ class Productions extends Component {
           <div className="container">
             <SectionTitleViewMode
               icon="fa-folder-open"
-              objectType="structures"
+              objectType="publications"
               language={this.props.language}
               id={this.props.match.params.id}
               total={this.state.total}
@@ -358,13 +325,10 @@ class Productions extends Component {
               currentQueryText={this.state.currentQueryText}
               queryChangeHandler={this.queryChangeHandler}
               queryTextChangeHandler={this.queryTextChangeHandler}
-              sliderBounds={this.state.sliderBounds}
-              sliderYearPrint={this.state.sliderYearPrint}
-              sliderYear={this.state.sliderYear}
-              sliderChangeHandler={this.sliderChangeHandler}
-              sliderChangeCompleteHandler={this.sliderChangeCompleteHandler}
-              handleChange={this.handleChange}
-              handleSingleYearSelection={this.handleSingleYearSelection}
+              lowSliderYear={this.state.low}
+              highSliderYear={this.state.high}
+              handleSliderRange={this.handleSliderRange}
+              handleSliderSelect={this.handleSliderSelect}
             />
             {
               (this.state.viewMode === 'list')
