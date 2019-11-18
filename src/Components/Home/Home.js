@@ -50,7 +50,7 @@ class HomePage extends Component {
     return (
       <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
 
-        <ReactTitle title="scanR, le moteur de la recherche et de l'innovation - Accueil" />
+        <ReactTitle title="ScanR | Moteur de la Recherche et de l'Innovation" />
 
         <Header
           language={this.props.language}
