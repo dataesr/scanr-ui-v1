@@ -9,8 +9,8 @@
   color: #4c6f8b;
 }
 .FullBar {
-  border-left: 0.15em solid white;
-  border-right: 0.15em solid white;
+  border-left: 0.15em solid $scanrlightgreyColor;
+  border-right: 0.15em solid $scanrlightgreyColor;
 }
 
 .Selection {
@@ -20,11 +20,19 @@
   background-color: $scanrlightgreyColor;
 }
 .FullBar:hover {
-  box-shadow: 1px 1px 15px $productionColor;
+  border-bottom: 3px solid $scanrlightgreyColor;
+  cursor: pointer;
+}
+.transparent {
+  background-color: transparent !important;
+  height: 100%;
+}
+.transparent:hover {
+  border-bottom: 3px solid $scanrlightgreyColor;
   cursor: pointer;
 }
 .RangeBox {
-  height: 4em;
+  height: 40px;
   width: 100%;
 }
 .sliderBase {
@@ -56,4 +64,10 @@
 }
 .low {
   bottom: 10px;
+}
+.Years {
+  position: relative;
+  top: 20px;
+  left: -5px;
+  font-size: 0.8em;
 }
