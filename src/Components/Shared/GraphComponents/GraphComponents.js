@@ -28,6 +28,9 @@ export default class DisplayComponent extends Component {
         case 'packedbubble':
           GraphComponent = loadable(() => import('./Graphs/HighChartsPackedbubble'));
           break;
+        case 'wordcloud':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsWordCloud'));
+          break;
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
           break;
