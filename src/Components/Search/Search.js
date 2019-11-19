@@ -23,10 +23,10 @@ class SearchPage extends Component {
 
     this.state = {
       isLoading: false,
-      isSearchFull: true,
       currentQueryText: '',
       api: 'all',
       view: 'list',
+      sliderData: [],
       request: {
         searchFields: null,
         query: '',
@@ -34,7 +34,6 @@ class SearchPage extends Component {
         page: null,
         pageSize: null,
         filters: null,
-        aggregations: null,
       },
       data: {
         results: [],
@@ -66,7 +65,6 @@ class SearchPage extends Component {
         all: 0,
       },
     };
-    this.handleScroll = this.handleScroll.bind(this);
   }
 
   // *******************************************************************
@@ -74,34 +72,25 @@ class SearchPage extends Component {
   // *******************************************************************
   componentDidMount() {
     const newState = this.getParams();
-    this.getCounts(newState);
-    // this.getData(newState);
-    window.addEventListener('scroll', this.handleScroll);
-    window.scrollTo(0, 0);
+    this.setState(newState);
   }
 
-  // componentWillUpdate(nextProps, nextState) {
-  //   if (nextState.request !== this.state.request) {
-  //     return false;
-  //   }
-  //   return true;
-  // }
-
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.location !== this.props.location || (this.state.data.total === 0)) {
+    if (prevProps.location !== this.props.location) {
+      const newState = this.getParams();
+      this.setState(newState);
+    } else if (prevState.request !== this.state.request || (this.state.data.total === 0)) {
       this.setState({
         isLoading: true,
-        data: {},
+        data: { results: [] },
       });
-      const newState = this.getParams();
       // Need to avaid getCount each change
-      if (prevState.request.query !== newState.request.query) {
-        this.getCounts(newState);
-        this.getData(newState);
+      if (this.state.preview.all === 0 || prevState.request.query !== this.state.request.query) {
+        this.getCounts();
+        this.getData();
       } else {
-        this.getData(newState);
+        this.getData();
       }
-      window.scrollTo(0, 0);
     }
   }
 
@@ -110,16 +99,15 @@ class SearchPage extends Component {
   // *******************************************************************
   getParams() {
     // recup params dans url
-    const api = this.props.match.params.api;
     const parsedURL = queryString.parse(this.props.location.search);
+    const filters = (parsedURL.filters) ? JSON.parse(parsedURL.filters) : null;
+    const api = this.props.match.params.api;
     const view = parsedURL.view || 'list';
     const query = parsedURL.query || '';
     const currentQueryText = query;
     const pageSize = parsedURL.pageSize;
     const page = parsedURL.page;
-    const filters = (parsedURL.filters) ? JSON.parse(parsedURL.filters) : parsedURL.filters;
-    const aggregations = (parsedURL.aggregations) ? JSON.parse(parsedURL.aggregations) : parsedURL.aggregations;
-    const sort = (parsedURL.sort) ? JSON.parse(parsedURL.sort) : parsedURL.sort;
+    const sort = (parsedURL.sort) ? JSON.parse(parsedURL.sort) : null;
     const newState = {
       api,
       currentQueryText,
@@ -130,10 +118,9 @@ class SearchPage extends Component {
         page,
         pageSize,
         filters,
-        aggregations,
       },
+      data: { results: [] },
     };
-    this.setState(newState);
     return newState;
   }
 
@@ -143,9 +130,6 @@ class SearchPage extends Component {
     }
     if (request.sort) {
       request.sort = JSON.stringify(request.sort);
-    }
-    if (request.aggregations) {
-      request.aggregations = JSON.stringify(request.aggregations);
     }
     const url = `${this.props.location.pathname}?${queryString.stringify(request)}`;
     return url;
@@ -188,16 +172,6 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
-  handleScroll = () => {
-    if (window.scrollY) {
-      if (this.state.isSearchFull) { this.setState({ isSearchFull: false }); }
-    } else {
-      /* eslint-disable */
-      if (!this.state.isSearchFull && window.scrollY === 0) { this.setState({ isSearchFull: true }); }
-      /* eslint-enable */
-    }
-  }
-
   // *******************************************************************
   // HANDLE FILTERS ACTIONS
   // *******************************************************************
@@ -238,7 +212,20 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
-  // RANGE FILTERS
+  // RANGE FILTER
+  rangeFilterHandler = (min, max, missing = false) => {
+    const newRequest = { ...this.state.request };
+    const key = this.state.api === 'projects' ? 'startDate' : 'publicationDate';
+    newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
+    newRequest.filters[key] = {
+      type: 'DateRangeFilter',
+      max: new Date(Date.UTC(max, 11, 31)).toISOString(),
+      min: new Date(Date.UTC(min, 0, 1)).toISOString(),
+      missing,
+    };
+    const url = this.setURL(newRequest);
+    this.props.history.push(url);
+  }
 
   // FILTERS ACTIONS
   deleteFilter = (key) => {
@@ -279,8 +266,8 @@ class SearchPage extends Component {
   };
 
 
-  getData = (newState) => {
-    if (newState.api === 'all') {
+  getData = () => {
+    if (this.state.api === 'all') {
       const data = {};
       this.setState({
         data,
@@ -288,8 +275,43 @@ class SearchPage extends Component {
       });
       return;
     }
-    const url = `https://scanr-preprod.sword-group.com/api/v2/${newState.api}/search`;
-    Axios.post(url, this.transformRequest(newState.request, newState.api))
+    const url = `https://scanr-preprod.sword-group.com/api/v2/${this.state.api}/search`;
+    const apiWithDateFilters = ['projects', 'publications'];
+    if (apiWithDateFilters.includes(this.state.api)) {
+      const dateRequest = {};
+      const newFilters = {};
+      const stateFilters = { ...this.state.filters };
+      Object.keys(stateFilters).forEach((key) => {
+        if (stateFilters[key] !== 'publicationDate' && stateFilters[key] !== 'startDate') {
+          newFilters[key] = stateFilters[key];
+        }
+      });
+      dateRequest.pageSize = 0;
+      dateRequest.query = this.state.request.query || '';
+      dateRequest.filters = newFilters;
+      dateRequest.aggregations = {
+        years: {
+          field: 'year',
+          filters: {},
+          min_doc_count: 1,
+          order: {
+            direction: 'DESC',
+            type: 'COUNT',
+          },
+          size: 100,
+        },
+      };
+      Axios.post(url, this.transformRequest(dateRequest, this.state.api))
+        .then((response) => {
+          const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
+          this.setState({ sliderData });
+        })
+        .catch((error) => {
+          /* eslint-disable-next-line */
+          console.log(error);
+        });
+    }
+    Axios.post(url, this.transformRequest(this.state.request, this.state.api))
       .then((response) => {
         const data = {
           results: response.data.results,
@@ -307,8 +329,8 @@ class SearchPage extends Component {
       });
   }
 
-  getCounts = (newState) => {
-    const query = { query: newState.request.query };
+  getCounts = () => {
+    const query = { query: this.state.request.query };
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
       const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
@@ -347,8 +369,10 @@ class SearchPage extends Component {
                 facets={this.state.data.facets}
                 generalFacets={this.state.preview[this.state.api].facets}
                 multiValueFilterHandler={this.multiValueFilterHandler}
+                rangeFilterHandler={this.rangeFilterHandler}
                 filters={this.state.request.filters || {}}
                 api={this.state.api}
+                sliderData={this.state.sliderData}
               />
             </div>
             <div className={classes.results}>
@@ -419,7 +443,6 @@ class SearchPage extends Component {
           queryTextChangeHandler={this.queryTextChangeHandler}
           apiChangeHandler={this.apiChangeHandler}
           submitResearch={this.submitResearch}
-          isFull={this.state.isSearchFull}
         />
         <section className={`flex-grow-1 ${classes[bgColor]}`}>
           <SearchObjectTab

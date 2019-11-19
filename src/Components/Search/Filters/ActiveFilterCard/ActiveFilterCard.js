@@ -15,7 +15,13 @@ const ActiveFilterCard = (props) => {
   };
   const filters = (props.filters) ? props.filters : {};
   let count = 0;
-  const activeFilters = Object.keys(filters).map(key => (
+  const filteredFilters = {};
+  Object.keys(filters).forEach((key) => {
+    if (filters[key].type === 'MultiValueSearchFilter') {
+      filteredFilters[key] = filters[key];
+    }
+  });
+  const activeFilters = Object.keys(filteredFilters).map(key => (
     filters[key].values.map((value) => {
       count += 1;
       return (
@@ -29,7 +35,7 @@ const ActiveFilterCard = (props) => {
           <i
             className={`fas fa-times ml-3 ${classes.closeIcon}`}
             onClick={() => props.multiValueFilterHandler(key, value)}
-            onKeypress={() => props.multiValueFilterHandler(key, value)}
+            onKeyPress={() => props.multiValueFilterHandler(key, value)}
             role="button"
             tabIndex={0}
           />
