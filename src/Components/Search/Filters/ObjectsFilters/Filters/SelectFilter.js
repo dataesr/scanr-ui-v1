@@ -135,7 +135,6 @@ export default SelectFilter;
 
 SelectFilter.default = {
   defaultActive: false,
-  nbItemsToShow: 5,
 };
 
 SelectFilter.propTypes = {
@@ -143,8 +142,9 @@ SelectFilter.propTypes = {
   facets: PropTypes.array,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
-  subtitle: PropTypes.string,
-  placeholder: PropTypes.string,
+  defaultActive: PropTypes.bool,
+  // subtitle: PropTypes.string,
+  // placeholder: PropTypes.string,
   // setURL: PropTypes.func.isRequired
   // request: PropTypes.func.isRequired
 };
