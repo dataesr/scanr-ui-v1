@@ -1,14 +1,27 @@
 @import '../../../../../style.scss';
 
-.Labels {
-  font-size: 0.9em;
-  padding-left: 0;
-  padding-bottom: 0;
+.Title {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px;
+  color: $scanrlightgreyColor;
+  background-color: $scanrdeepblueColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ItemsList {
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.Item {
   color: $scanrdeepblueColor;
+  font-size: 0.9rem;
 }
 
 .FacetsCounts {
-  color: $scanrmiddlegreyColor;
+  color: $scanrgreyColor;
   font-size: 0.8em;
   font-style: italic;
 }
@@ -17,18 +30,7 @@
   background-color: transparent !important;
   border: 0;
   margin-left: -40px;
-}
-
-.SearchButton {
   cursor: pointer;
-}
-
-.SearchBar:hover {
-  cursor: pointer;
-}
-
-.SearchButton:focus {
-  outline: none;
 }
 
 .SearchIcon {
@@ -36,19 +38,15 @@
   font-size: 1.2em;
 }
 
-.SearchBar {
-  background-color: $scanrblueColor;
-  color: white;
+.NoStyleButton {
   border: 0;
-  height: 35px;
-  font-size: 1em;
-  border-radius: 8px;
-  width: 100%;
-  cursor: none;
+  background-color: white;
+  cursor: pointer;
+  color: $scanrblueColor;
 }
 
-.SearchBar:focus {
-  outline: none;
+.NoStyleButton:hover, .NoStyleButton:focus {
+  text-decoration: underline;
 }
 
 /* Customize the label (the CheckBox) */
