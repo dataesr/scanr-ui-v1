@@ -91,7 +91,7 @@ LastFocus.defaultProps = {
       tags: ['#prix', '#IUF', '#tag3'],
       title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
       type: 'treemap',
-      url: '/focus/nobel',
+      url: '/focus/iuf',
       schema: 'person',
     },
   ],
