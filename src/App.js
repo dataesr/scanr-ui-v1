@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
+import ReactPiwik from 'react-piwik';
+import { createBrowserHistory } from 'history';
 import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
@@ -55,11 +57,17 @@ class App extends Component {
   }
 
   render() {
+    const piwik = new ReactPiwik({
+      url: 'https://piwik.enseignementsup-recherche.pro',
+      siteId: 37,
+      trackErrors: true,
+    });
+    const customHistory = createBrowserHistory();
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
     return (
       <IntlProvider>
-        <Router>
+        <Router history={piwik.connectToHistory(customHistory)}>
           <React.Fragment>
             <Route
               exact
