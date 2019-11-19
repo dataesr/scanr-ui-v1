@@ -67,10 +67,14 @@ const FocusCard = (props) => {
   return (
     <div className={classes.FocusCard}>
       <div>
-        {componentSvg}
+        <a href={props.url}>
+          {componentSvg}
+        </a>
       </div>
       <div className={classes.Title}>
-        {props.title}
+        <a href={props.url}>
+          {props.title}
+        </a>
       </div>
       <div className={`row ${classes.TagsAndButton}`}>
         <div className="col-lg-8">

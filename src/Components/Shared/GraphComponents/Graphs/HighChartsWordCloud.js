@@ -44,7 +44,7 @@ export default class HighChartsWordCloud extends Component {
     const localData = this.data.entries.map(item => ({ name: item.value, weight: item.count, name_normalized: item.value.normalize('NFD').toLowerCase().replace(/[\u0300-\u036f]/g, '').replace('"', '') }));
     const r = {};
     localData.forEach((o) => {
-      if (!(o.name_normalized in ['none'] || o.name_normalized.includes('mot-cle'))) {
+      if (!(o.name_normalized in ['none', '--', '.'] || o.name_normalized.includes('mot-cle') || (o.name_normalized.length < 4))) {
         r[o.name_normalized] = {
           weight: (r[o.name_normalized] ? r[o.name_normalized].weight + o.weight : o.weight),
           name: (r[o.name_normalized] ? r[o.name_normalized].name : o.name),

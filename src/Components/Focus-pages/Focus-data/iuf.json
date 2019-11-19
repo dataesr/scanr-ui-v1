@@ -1,0 +1,38 @@
+{
+  "title": "Les nominations 2019 à l'Institut Universitaire de France",
+  "text":  "bla",
+  "subtext": "",
+  "tags": ["iuf"],
+  "components": [
+    {
+      "type": "map",
+      "dataType": "opendata",
+      "award": "IUF",
+      "title": "Carte",
+      "subtitle": "",
+      "pageSize": 10,
+      "label": "map1",
+      "url_api" : "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-iuf-les-membres&rows=150&sort=-annee&facet=type_nomination&facet=categorie_nomination&facet=sexe&facet=arborescence_disciplinaire&refine.annee=2019",
+      "href": "/recherche/persons?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"IUF\"%5D%7D%7D",
+      "queryField": "awards.structureName",
+      "sourceFields": ["lastName", "firstName", "awards", "gender"],
+      "facet": ["keywords.en", "keywords.fr"],
+      "queryValue": ["IUF"]
+    },
+    {
+      "type": "wordcloud",
+      "dataType": "award",
+      "award": "IUF",
+      "title": "Mots-clé de leurs publications dans ScanR",
+      "subtitle": "",
+      "pageSize": 10,
+      "label": "map2",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/persons/search",
+      "href": "/recherche/persons?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"IUF\"%5D%7D%7D",
+      "queryField": "awards.structureName",
+      "sourceFields": ["lastName", "firstName", "awards", "gender"],
+      "facet": ["keywords.en", "keywords.fr"],
+      "queryValue": ["IUF"]
+    }
+  ]
+}

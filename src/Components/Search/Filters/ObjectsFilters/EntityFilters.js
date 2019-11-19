@@ -39,6 +39,8 @@ const EntityFilters = (props) => {
           filters={kindActiveFilters}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
+          nbItemsToShow={5}
         />
         <CheckBoxFilter
           title="Type d'organisme"
