@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './SelectFilter.scss';
 
 
 class SelectFilter extends Component {
-  state = { active: false };
+  state = { active: this.props.defaultActive };
 
   selectSuggestion = (e) => {
     this.setState({
@@ -48,64 +48,62 @@ class SelectFilter extends Component {
 
   render() {
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
+    const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
+
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
           {/* eslint-disable-next-line */}
-          <label className={classes.Labels} htmlFor="input">
-            {this.props.title}
-          </label>
-          {/* eslint-disable-next-line */}
-          <label className={classes.Labels} htmlFor="input">
-            {this.props.subtitle}
-          </label>
-          <input
-            readOnly
-            type="text"
-            autoComplete="off"
-            id="input"
-            value="Séléction..."
-            className={`pl-2 ${classes.SearchBar}`}
-            placeholder={this.props.placeholder}
-            onClick={this.switchActive}
-            onFocus={event => event.preventDefault()}
-          />
-          <button
-            type="button"
-            onClick={this.switchActive}
-            className={classes.SearchButton}
-          >
-            <i className={`fas ${caret} ${classes.SearchIcon}`} />
-          </button>
+          <div className={`d-flex flex-row ${classes.Title}`}>
+            {/* eslint-disable-next-line */}
+            <div onClick={this.switchActive}>
+              {this.props.title}
+            </div>
+            <div className="ml-auto">
+              <button
+                type="button"
+                onClick={this.switchActive}
+                className={classes.SearchButton}
+              >
+                <i className={`fas ${caret} ${classes.SearchIcon}`} />
+              </button>
+            </div>
+          </div>
+
           <div
             style={{ display: this.state.active ? 'block' : 'none' }}
-            className={`p-2 mt-2 ${classes.AutocompleteFull}`}
+            className={`p-2 mt-0 ${classes.ItemsList}`}
           >
-            <ul id="facets" className={`d-flex flex-column ${classes.Autocomplete}`}>
+            <div className="form-check">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <input className="form-check-input" type="radio" name={this.props.title} id={`all_${this.props.title}`} checked />
+                  {/* eslint-disable-next-line */}
+                  <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                    Tous
+                  </label>
+                </div>
+                <div className={`ml-auto ${classes.FacetsCounts}`}>
+                  {`(${allCount})`}
+                </div>
+              </div>
               {
                 this.props.facets.map(facet => (
-                  <li
-                    role="option"
-                    aria-selected={false}
-                    key={facet.value}
-                    id={facet.value}
-                    className={`p-1 pl-2 pr-2 ${classes.Suggestion}`}
-                    onClick={() => this.submitWrapper(facet.value)}
-                    onKeyPress={() => this.submitWrapper(facet.value)}
-                    onMouseDown={event => event.preventDefault()}
-                  >
-                    <div className="d-flex flex-row align-items-center">
-                      <div>
+                  <div className="d-flex flex-row align-items-center">
+                    <div>
+                      <input className="form-check-input" type="radio" name={this.props.title} id={facet.value} value={facet.value} onClick={() => this.submitWrapper(facet.value)} />
+                      {/* eslint-disable-next-line */}
+                      <label className={`form-check-label ${classes.Item}`} for={facet.value}>
                         {facet.value}
-                      </div>
-                      <div className={`ml-auto ${classes.FacetsCounts}`}>
-                        {`(${facet.count})`}
-                      </div>
+                      </label>
                     </div>
-                  </li>
+                    <div className={`ml-auto ${classes.FacetsCounts}`}>
+                      {`(${facet.count})`}
+                    </div>
+                  </div>
                 ))
               }
-            </ul>
+            </div>
           </div>
         </form>
       </div>
@@ -114,6 +112,11 @@ class SelectFilter extends Component {
 }
 
 export default SelectFilter;
+
+SelectFilter.default = {
+  defaultActive: false,
+  nbItemsToShow: 5,
+};
 
 SelectFilter.propTypes = {
   onSubmit: PropTypes.func,
