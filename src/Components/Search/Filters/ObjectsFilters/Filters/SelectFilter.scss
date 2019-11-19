@@ -1,10 +1,23 @@
 @import '../../../../../style.scss';
 
-.Labels {
-  font-size: 0.9em;
-  padding-left: 0;
-  padding-bottom: 0;
+.Title {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px;
+  color: $scanrlightgreyColor;
+  background-color: $scanrdeepblueColor;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ItemsList {
+  background-color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.Item {
   color: $scanrdeepblueColor;
+  font-size: 0.9rem;
 }
 
 .FacetsCounts {
@@ -13,10 +26,10 @@
   font-style: italic;
 }
 
+
 .SearchButton {
   background-color: transparent !important;
   border: 0;
-  margin-left: -40px;
 }
 
 .SearchButton {
