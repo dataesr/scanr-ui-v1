@@ -29,6 +29,7 @@ const PublicationsFilters = (props) => {
         <YearRangeSlider
           data={props.sliderData}
           barColor={styles.productionColor}
+          label={props.language === 'fr' ? 'Selection par années' : 'Selection by year'}
           min={(props.filters.publicationDate) ? parseInt(props.filters.publicationDate.min.slice(0, 4), 10) : 2000}
           max={(props.filters.publicationDate) ? parseInt(props.filters.publicationDate.max.slice(0, 4), 10) : new Date().getFullYear()}
           minBound={2000}

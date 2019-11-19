@@ -429,7 +429,6 @@ class SearchPage extends Component {
   // RENDER METHOD
   // *******************************************************************
   render() {
-    const bgColor = `has-background-${this.state.api}`;
     return (
       <div className="d-flex flex-column h-100">
         <Header
@@ -444,7 +443,7 @@ class SearchPage extends Component {
           apiChangeHandler={this.apiChangeHandler}
           submitResearch={this.submitResearch}
         />
-        <section className={`flex-grow-1 ${classes[bgColor]}`}>
+        <section className={`flex-grow-1 ${classes.Search}`}>
           <SearchObjectTab
             language={this.props.language}
             api={this.state.api}

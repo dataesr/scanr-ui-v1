@@ -1,5 +1,9 @@
 @import '../../style.scss';
 
+.Search {
+  background-color: $scanrmiddlegreyColor;
+}
+
 .filters {
   flex: 0 1 calc(33% - 5px);
   align-self: stretch;
