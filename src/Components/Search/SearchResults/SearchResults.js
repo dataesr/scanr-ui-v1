@@ -90,13 +90,17 @@ const SearchResults = (props) => {
       />
     );
   };
+
+  // Couleur relative à l'API utilisée
+  const bgColor = `${props.api}Color`;
+
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className="d-flex flex-column">
-        <div className={`mb-2 ${classes.ActiveFiltersContainer}`}>
+        <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
           <div className={`p-3 ${classes.ResultHeader}`}>
             <span>
-              {`${props.data.total} `}
+              {`${(props.data.total) ? props.data.total.toLocaleString() : ''} `}
             </span>
             <span>
               <FormattedHTMLMessage

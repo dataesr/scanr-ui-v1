@@ -5,6 +5,8 @@ import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
+import classes from './Filters.scss';
+
 
 const EntityFilters = (props) => {
   const facets = props.facets || [];
@@ -28,7 +30,7 @@ const EntityFilters = (props) => {
         <Autocomplete
           title="Localisation"
           subtitle="régions, départements, communes..."
-          placeholder="Chez wam"
+          placeholder="Localisation"
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
@@ -40,7 +42,6 @@ const EntityFilters = (props) => {
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
-          nbItemsToShow={5}
         />
         <CheckBoxFilter
           title="Type d'organisme"
@@ -48,6 +49,7 @@ const EntityFilters = (props) => {
           filters={kindActiveFilters}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
         />
         <CheckBoxFilter
           title="Type de financement public"
@@ -55,13 +57,19 @@ const EntityFilters = (props) => {
           filters={projectsActiveFilters}
           facetID="projects.project.type"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
         />
+        <hr />
+        <div className={classes.FilterHeaders}>
+          Autres filtres
+        </div>
         <CheckBoxFilter
           title="Caractéristiques"
           facets={caractFacetsTest.entries}
           filters={caractActiveFilters}
           facetID="badges.label.fr"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive={false}
         />
       </div>
     </div>

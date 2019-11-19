@@ -115,5 +115,4 @@ FilterPanel.propTypes = {
   lowSliderYear: PropTypes.number,
   highSliderYear: PropTypes.number,
   handleSliderRange: PropTypes.func.isRequired,
-  handleSliderSelect: PropTypes.func.isRequired,
 };
