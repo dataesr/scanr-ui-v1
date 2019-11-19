@@ -25,6 +25,12 @@ export default class DisplayComponent extends Component {
         case 'timeline':
           GraphComponent = loadable(() => import('./Graphs/HighChartsTimeline'));
           break;
+        case 'packedbubble':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsPackedbubble'));
+          break;
+        case 'wordcloud':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsWordCloud'));
+          break;
         case 'bar':
           GraphComponent = loadable(() => import('./Graphs/HighChartsBar'));
           break;
@@ -75,7 +81,7 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} style={this.props.style} />
+          <GraphComponent filename={this.props.title} data={this.props.data} language={this.props.language} style={this.props.style} dataLabels={this.props.dataLabels} tooltipText={this.props.tooltipText} />
           { (this.props.href) ? (<FooterComponent />) : null}
           {
           // <TextComponent />
@@ -106,6 +112,8 @@ DisplayComponent.propTypes = {
   subtitle: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   data: PropTypes.any,
+  dataLabels: PropTypes.any,
+  tooltipText: PropTypes.any,
   style: PropTypes.any,
   href: PropTypes.any,
   buttonText: PropTypes.any,

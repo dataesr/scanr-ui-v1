@@ -1,0 +1,48 @@
+{
+  "title": "Quels sont les thèmes majeurs des thèses aujourd'hui en France ?",
+  "text":  "bl",
+  "subtext":  "bl",
+  "tags": ["theses"],
+  "components": [
+    {
+      "type": "packedbubble",
+      "title": "Principaux domaines de recherche des thèses soutenues en 2018",
+      "dataType": "these",
+      "subtitle": "",
+      "label": "theme-these",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/publications/search",
+      "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
+      "queryField": "productionType",
+      "pageSize": 10000,
+      "facet": ["domains.label.fr"],
+      "sourceFields": ["productionDate", "domains"],
+      "queryValue": ["thesis"]
+    },
+    {
+      "type": "wordcloud",
+      "title": "Nuage de mot-clés des thèses soutenues en 2018",
+      "dataType": "these",
+      "subtitle": "",
+      "label": "theme-these2",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/publications/search",
+      "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
+      "queryField": "productionType",
+      "facet": ["keywords.en", "keywords.fr"],
+      "sourceFields": ["productionDate", "keywords"],
+      "queryValue": ["thesis"]
+    },
+    {
+      "type": "bar",
+      "title": "Nombre de thèses soutenues en 2018 par écoles doctorales (top 10)",
+      "dataType": "these",
+      "subtitle": "",
+      "label": "theme-these3",
+      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/publications/search",
+      "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
+      "queryField": "productionType",
+      "facet": ["affiliations.label.default"],
+      "sourceFields": ["productionDate", "affiliations"],
+      "queryValue": ["thesis"]
+    }
+  ]
+}
