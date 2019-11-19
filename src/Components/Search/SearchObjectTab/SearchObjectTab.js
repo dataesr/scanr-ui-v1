@@ -58,7 +58,7 @@ const SearchObjectTab = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div>
+      <div className={classes.SearchObjectTab}>
         <div className="container">
           <nav className={`row d-flex flex-wrap pt-2 pb-0 ${classes.ObjNav}`}>
             <a
@@ -73,7 +73,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.all}
+                {props.preview.all.toLocaleString()}
                 )
               </div>
             </a>
@@ -89,7 +89,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.structures.count}
+                {props.preview.structures.count.toLocaleString()}
                 )
               </div>
             </a>
@@ -105,7 +105,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.projects.count}
+                {props.preview.projects.count.toLocaleString()}
                 )
               </div>
             </a>
@@ -121,7 +121,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.persons.count}
+                {props.preview.persons.count.toLocaleString()}
                 )
               </div>
             </a>
@@ -137,7 +137,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.publications.count}
+                {props.preview.publications.count.toLocaleString()}
                 )
               </div>
             </a>

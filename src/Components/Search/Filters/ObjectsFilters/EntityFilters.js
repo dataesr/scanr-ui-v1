@@ -5,6 +5,8 @@ import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
+import classes from './Filters.scss';
+
 
 const EntityFilters = (props) => {
   const facets = props.facets || [];
@@ -28,7 +30,7 @@ const EntityFilters = (props) => {
         <Autocomplete
           title="Localisation"
           subtitle="régions, départements, communes..."
-          placeholder="Chez wam"
+          placeholder="Localisation"
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
@@ -57,6 +59,10 @@ const EntityFilters = (props) => {
           onSubmit={props.multiValueFilterHandler}
           defaultActive
         />
+        <hr />
+        <div className={classes.FilterHeaders}>
+          Autres filtres
+        </div>
         <CheckBoxFilter
           title="Caractéristiques"
           facets={caractFacetsTest.entries}
