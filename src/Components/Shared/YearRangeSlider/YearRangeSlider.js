@@ -187,7 +187,6 @@ class YearRangeSlider extends Component {
       let sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
       let sliderHighPosition = this.slider.current.getBoundingClientRect().width - this.highThumb.current.offsetWidth / 2;
       let { min, max } = this.props;
-      console.log(min, max);
       if (!min) {
         min = years[0];
       }
@@ -304,7 +303,6 @@ YearRangeSlider.propTypes = {
   minBound: PropTypes.number,
   maxBound: PropTypes.number,
   handleSliderRange: PropTypes.func.isRequired,
-  handleSliderSelect: PropTypes.func.isRequired,
 };
 YearRangeSlider.defaultProps = {
   data: [],
