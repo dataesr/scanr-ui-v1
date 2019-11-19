@@ -75,23 +75,43 @@ class SelectFilter extends Component {
             className={`p-2 mt-0 ${classes.ItemsList}`}
           >
             <div className="form-check">
-              <div className="d-flex flex-row align-items-center">
-                <div>
-                  <input className="form-check-input" type="radio" name={this.props.title} id={`all_${this.props.title}`} checked />
-                  {/* eslint-disable-next-line */}
-                  <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
-                    Tous
-                  </label>
-                </div>
-                <div className={`ml-auto ${classes.FacetsCounts}`}>
-                  {`(${allCount})`}
-                </div>
-              </div>
+              {
+                (this.props.facets.length > 1)
+                  ? (
+                    <div className="d-flex flex-row align-items-center">
+                      <div>
+                        <input
+                          className="form-check-input"
+                          type="radio"
+                          name={this.props.title}
+                          id={`all_${this.props.title}`}
+                          checked
+                        />
+                        {/* eslint-disable-next-line */}
+                        <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                          Tous
+                        </label>
+                      </div>
+                      <div className={`ml-auto ${classes.FacetsCounts}`}>
+                        {`(${allCount})`}
+                      </div>
+                    </div>
+                  )
+                  : null
+              }
               {
                 this.props.facets.map(facet => (
                   <div className="d-flex flex-row align-items-center">
                     <div>
-                      <input className="form-check-input" type="radio" name={this.props.title} id={facet.value} value={facet.value} onClick={() => this.submitWrapper(facet.value)} />
+                      <input
+                        className="form-check-input"
+                        type="radio"
+                        name={this.props.title}
+                        id={facet.value}
+                        value={facet.value}
+                        onClick={() => this.submitWrapper(facet.value)}
+                        checked={(this.props.facets.length === 1)}
+                      />
                       {/* eslint-disable-next-line */}
                       <label className={`form-check-label ${classes.Item}`} for={facet.value}>
                         {facet.value}
