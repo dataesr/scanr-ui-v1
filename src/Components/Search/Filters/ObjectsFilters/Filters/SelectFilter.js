@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './SelectFilter.scss';
@@ -93,7 +93,7 @@ class SelectFilter extends Component {
                         </label>
                       </div>
                       <div className={`ml-auto ${classes.FacetsCounts}`}>
-                        {`(${allCount})`}
+                        {`(${allCount.toLocaleString()})`}
                       </div>
                     </div>
                   )
@@ -118,7 +118,7 @@ class SelectFilter extends Component {
                       </label>
                     </div>
                     <div className={`ml-auto ${classes.FacetsCounts}`}>
-                      {`(${facet.count})`}
+                      {`(${facet.count.toLocaleString()})`}
                     </div>
                   </div>
                 ))
