@@ -6,11 +6,13 @@ import PropTypes from 'prop-types';
 
 HCmore(Highcharts);
 
+
 const PackedBubbleChart = (props) => {
   const options = {
     chart: {
       type: 'packedbubble',
     },
+    legend: true,
     exporting: { enabled: false },
     credits: { enabled: false },
     title: {
@@ -18,19 +20,16 @@ const PackedBubbleChart = (props) => {
     },
     tooltip: {
       useHTML: true,
-      pointFormat: '<b>{point.name}:</b> {point.value} productions en commun',
+      pointFormat: '<b>{point.name}:</b> {point.value} '.concat(props.tooltipText),
     },
+    series: props.data,
     plotOptions: {
       packedbubble: {
-        minSize: '30%',
-        maxSize: '150%',
-        layoutAlgorithm: {
-          splitSeries: false,
-          gravitationalConstant: 0.02,
-        },
+        useSimulation: false,
+        minSize: '10%',
+        maxSize: '100%',
       },
     },
-    series: props.series,
   };
 
   return (
@@ -44,6 +43,7 @@ const PackedBubbleChart = (props) => {
 export default PackedBubbleChart;
 
 PackedBubbleChart.propTypes = {
-  series: PropTypes.array.isRequired,
+  data: PropTypes.array.isRequired,
   text: PropTypes.string,
+  tooltipText: PropTypes.string,
 };
