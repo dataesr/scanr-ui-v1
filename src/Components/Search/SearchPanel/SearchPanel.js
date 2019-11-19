@@ -7,17 +7,17 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './SearchPanel.scss';
-import BreadCrumb from './BreadCrumb/BreadCrumb';
 
 const SearchPanel = (props) => {
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
-  const bgUrl = `./img/poudre-header-home-${props.api}.jpg`;
-  const headerPosition = (props.isFull) ? 'relative' : 'fixed';
+  // const bgUrl = `./img/poudre-header-home-${props.api}.jpg`;
+  // const headerPosition = (props.isFull) ? 'relative' : 'fixed';
+  const headerPosition = 'fixed';
   const sectionStyle = {
-    backgroundImage: `url(${bgUrl})`,
+    // backgroundImage: `url(${bgUrl})`,
     backgroundSize: '35%',
     position: headerPosition,
     width: '100vw',
@@ -26,12 +26,13 @@ const SearchPanel = (props) => {
 
   const renderForm = (
     <form onSubmit={props.submitResearch}>
-      <div className="row d-flex align-items-end mb-2 mt-1">
+      <div className="row d-flex align-items-end mb-1 mt-1">
         <div className="d-flex flex-column flex-grow-1 pl-0">
+          {/*
           <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
-            {/* eslint-disable-next-line */}
             { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="query">{label}</label> }
           </FormattedMessage>
+          */}
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
             { placeholder => (
               <input
@@ -112,11 +113,10 @@ const SearchPanel = (props) => {
             </FormattedMessage>
           </select>
         </div>
-        <div className="d-flex flex-column pr-0 pl-1">
-          <div />
+        <div className="pl-2">
           <button
             type="submit"
-            className={`btn ${classes.btn_dark} ${classes.btn_dark_margin}`}
+            className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
           >
             <i className="fas fa-search" />
           </button>
@@ -125,34 +125,38 @@ const SearchPanel = (props) => {
     </form>
   );
 
-  const renderFull = (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchBar}`}>
-        <div className="container pt-3">
-          <BreadCrumb
-            language={props.language}
-            label="search"
-            url="#"
-          />
-          {renderForm}
-        </div>
-      </section>
-    </IntlProvider>
-  );
+  // const renderFull = (
+  //   <IntlProvider locale={props.language} messages={messages[props.language]}>
+  //     <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchBar}`}>
+  //       <div className="container pt-3">
+  //         <BreadCrumb
+  //           language={props.language}
+  //           label="search"
+  //           url="#"
+  //         />
+  //         {renderForm}
+  //       </div>
+  //     </section>
+  //   </IntlProvider>
+  // );
 
   const renderMini = (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section style={sectionStyle} className={`animated slideInDown faster ${classes.SearchBar}`}>
         <div className="container pt-3">
-          {renderForm}
+          <div className="row">
+            <div className="col-md">
+              {renderForm}
+            </div>
+          </div>
         </div>
       </section>
     </IntlProvider>
   );
 
-  const content = props.isFull ? renderFull : renderMini;
+  // const content = props.isFull ? renderFull : renderMini;
 
-  return (<Fragment>{content}</Fragment>);
+  return (<Fragment>{renderMini}</Fragment>);
 };
 
 export default SearchPanel;
@@ -164,8 +168,8 @@ SearchPanel.propTypes = {
   queryTextChangeHandler: PropTypes.func,
   apiChangeHandler: PropTypes.func,
   submitResearch: PropTypes.func,
-  isFull: PropTypes.bool,
+  // isFull: PropTypes.bool,
 };
-SearchPanel.defaultProps = {
-  isFull: true,
-};
+// SearchPanel.defaultProps = {
+//   isFull: true,
+// };
