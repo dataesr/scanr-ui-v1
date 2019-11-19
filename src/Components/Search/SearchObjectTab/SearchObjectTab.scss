@@ -18,14 +18,13 @@
 
 .separator {
   background-color: $scanrdeepblueColor;
-  border-radius: 8px;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  border-top-right-radius: 8px;
+  height: 10px;
 }
 
 .ObjetcsNavItem {
   flex: 0 1 calc(15% - 5px);
-  background-color: $scanrmiddlegreyColor;
+  background-color: $scanrlightgreyColor;
   margin-right: 8px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -43,7 +42,8 @@
 .ObjetcsNavItem:hover {
   cursor: pointer;
   margin-right: 8px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   padding-top: 8px;
   padding-bottom: 8px;
   color: $scanrdeepblueColor;
