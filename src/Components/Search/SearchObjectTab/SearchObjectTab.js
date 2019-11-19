@@ -60,7 +60,7 @@ const SearchObjectTab = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div>
         <div className="container">
-          <nav className={`row d-flex flex-wrap pt-2 pb-2 ${classes.ObjNav}`}>
+          <nav className={`row d-flex flex-wrap pt-2 pb-0 ${classes.ObjNav}`}>
             <a
               className={(props.api === 'all')
                 ? `col-lg-2 ${classes.ObjetcsNavItem} ${classes.ObjectsNavItemActive}`
