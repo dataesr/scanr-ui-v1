@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import YearRangeSlider from '../../../../Shared/YearRangeSlider/YearRangeSlider';
 import classes from './FilterPanel.scss';
+import styles from '../../../../../style.scss';
 
 /**
  * FilterPanel
@@ -23,6 +24,11 @@ const messages = {
     patent: 'Patents',
   },
 };
+// {
+//   Object.entries(props.totalPerType).map(([type, count]) => (
+//     <option key={type} value={type}>{`${messages[props.language][type]} (${count})`}</option>
+//   ))
+// }
 
 const FilterPanel = props => (
   <React.Fragment>
@@ -38,25 +44,40 @@ const FilterPanel = props => (
               onChange={e => props.changeTypeHandler(e)}
               defaultValue={props.selectedType}
             >
-              {
-                Object.entries(props.totalPerType).map(([type, count]) => (
-                  <option key={type} value={type}>{`${messages[props.language][type]} (${count})`}</option>
-                ))
-              }
+              <option
+                key="publication"
+                value="publication"
+              >
+                {`${messages[props.language].publication} (${props.totalPerType.publication || 0})`}
+              </option>
+              <option
+                key="thesis"
+                value="thesis"
+              >
+                {`${messages[props.language].thesis} (${props.totalPerType.thesis || 0})`}
+              </option>
+              <option
+                key="patent"
+                value="patent"
+              >
+                {`${messages[props.language].patent} (${props.totalPerType.patent || 0})`}
+              </option>
             </select>
           </div>
         </div>
       </div>
-      <YearRangeSlider
-        language={props.language}
-        data={props.data}
-        min={props.lowSliderYear}
-        max={props.highSliderYear}
-        minBound={2012}
-        maxBound={2020}
-        handleSliderRange={props.handleSliderRange}
-        handleSliderSelect={props.handleSliderSelect}
-      />
+      <div className="col-lg-4">
+        <YearRangeSlider
+          data={props.data}
+          label={props.language === 'fr' ? 'Sélectionner une période' : 'Select a period'}
+          barColor={styles.productionColor}
+          min={props.lowSliderYear}
+          max={props.highSliderYear}
+          minBound={props.selectedType === 'publication' ? 2013 : 1990}
+          maxBound={new Date().getFullYear()}
+          handleSliderRange={props.handleSliderRange}
+        />
+      </div>
       <form className="col-lg-4" onSubmit={props.queryChangeHandler}>
         <label className={classes.TitleFilter} htmlFor="inputFilter">
           {props.language === 'fr' ? 'Rechercher dans les publications' : 'Search in publications'}

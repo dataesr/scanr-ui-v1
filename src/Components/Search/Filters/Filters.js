@@ -71,6 +71,8 @@ class FilterPanel extends Component {
                 generalFacets={this.props.generalFacets}
                 filters={this.props.filters}
                 multiValueFilterHandler={this.props.multiValueFilterHandler}
+                rangeFilterHandler={this.props.rangeFilterHandler}
+                sliderData={this.props.sliderData}
               />
             </div>
           </div>
@@ -86,8 +88,10 @@ export default FilterPanel;
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
+  rangeFilterHandler: PropTypes.func,
   facets: PropTypes.array,
   generalFacets: PropTypes.array,
   filters: PropTypes.object,
   api: PropTypes.string.isRequired,
+  sliderData: PropTypes.array,
 };

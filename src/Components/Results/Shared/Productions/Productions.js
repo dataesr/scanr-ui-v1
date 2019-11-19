@@ -12,6 +12,7 @@ import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
 import Request from './Requests/Request';
 import PreRequest from './Requests/PreRequest';
+import DateRequest from './Requests/DateRequest';
 /**
  * Productions
  * Url : .
@@ -26,7 +27,7 @@ class Productions extends Component {
     error: false,
     isLoading: true,
     total: 0,
-    yearsData: {},
+    sliderData: {},
     totalPerType: {
       patent: null,
       publication: null,
@@ -104,18 +105,20 @@ class Productions extends Component {
       };
     }
     Axios.post(url, preRequest).then((response) => {
-      const yearFacet = response.data.facets.find(facet => facet.id === 'years');
       const totalPerType = {};
-      // const MaxProduction = '';
       response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
         totalPerType[type.value] = type.count;
       });
+      let productionType = 'publication';
+      if (!totalPerType.publication) {
+        productionType = Object.keys(totalPerType)[0];
+      }
 
       const viewMode = response.data.total > 10 ? 'graph' : 'list';
       this.setState({
         total: response.data.total,
-        yearsData: yearFacet,
         totalPerType,
+        productionType,
         viewMode,
       });
     });
@@ -127,10 +130,13 @@ class Productions extends Component {
     const st = this.state.low ? this.state.low : 2000;
     const en = this.state.high ? this.state.high : 2020;
     const request = Request;
+    const dateRequest = DateRequest;
     request.query = this.state.query;
+    dateRequest.query = this.state.query;
+    request.filters.productionType.values = [this.state.productionType];
+    dateRequest.filters.productionType.values = [this.state.productionType];
     request.filters.publicationDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
     request.filters.publicationDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
-    request.filters.productionType.values = [this.state.productionType];
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
       allIds = allIds.concat(this.props.childs).slice(0, 1000);
@@ -141,13 +147,29 @@ class Productions extends Component {
         op: 'all',
         values: [this.props.match.params.id],
       };
+      dateRequest.filters['authors.person.id'] = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [this.props.match.params.id],
+      };
     } else {
       request.filters['affiliations.id'] = {
         type: 'MultiValueSearchFilter',
         op: 'any',
         values: allIds,
       };
+      dateRequest.filters['affiliations.id'] = {
+        type: 'MultiValueSearchFilter',
+        op: 'any',
+        values: allIds,
+      };
     }
+    Axios.post(url, dateRequest).then((response) => {
+      const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
+      this.setState({
+        sliderData,
+      });
+    });
     Axios.post(url, request).then((response) => {
       const graphData = {};
       response.data.facets.forEach((facet) => {
@@ -170,7 +192,12 @@ class Productions extends Component {
 
   changeTypeHandler = (e) => {
     e.preventDefault();
-    this.setState({ productionType: e.target.value, activeGraph: null });
+    this.setState({
+      productionType: e.target.value,
+      activeGraph: null,
+      low: null,
+      high: null,
+    });
   }
 
   viewModeClickHandler = (viewMode) => {
@@ -207,15 +234,6 @@ class Productions extends Component {
         low,
       });
     }
-  }
-
-  handleSliderSelect = (e) => {
-    e.persist();
-    const { id } = e.target;
-    this.setState({
-      low: parseInt(id, 10),
-      high: parseInt(id, 10),
-    });
   }
 
   render() {
@@ -278,7 +296,7 @@ class Productions extends Component {
               />
               <FilterPanel
                 language={this.props.language}
-                data={this.state.yearsData.entries}
+                data={{}}
                 totalPerType={this.state.totalPerType}
                 selectedType={this.state.productionType}
                 changeTypeHandler={this.changeTypeHandler}
@@ -288,7 +306,6 @@ class Productions extends Component {
                 lowSliderYear={this.state.low}
                 highSliderYear={this.state.high}
                 handleSliderRange={this.handleSliderRange}
-                handleSliderSelect={this.handleSliderSelect}
               />
               <div className="row justify-content-center py-5 my-5">
                 <GridLoader
@@ -302,6 +319,13 @@ class Productions extends Component {
       );
     }
 
+    // set tooltip for slider
+    const sliderDataWithTooltip = [];
+    this.state.sliderData.forEach((entry) => {
+      const newEntry = { ...entry };
+      newEntry.tooltip = `${entry.count} ${this.state.productionType} - ${entry.value}`;
+      sliderDataWithTooltip.push(newEntry);
+    });
     return (
       <Fragment>
         <section className="container-fluid py-4">
@@ -318,7 +342,7 @@ class Productions extends Component {
             />
             <FilterPanel
               language={this.props.language}
-              data={this.state.yearsData.entries}
+              data={sliderDataWithTooltip}
               totalPerType={this.state.totalPerType}
               selectedType={this.state.productionType}
               changeTypeHandler={this.changeTypeHandler}
@@ -328,7 +352,6 @@ class Productions extends Component {
               lowSliderYear={this.state.low}
               highSliderYear={this.state.high}
               handleSliderRange={this.handleSliderRange}
-              handleSliderSelect={this.handleSliderSelect}
             />
             {
               (this.state.viewMode === 'list')

@@ -22,11 +22,28 @@ class YearRangeSlider extends Component {
     };
   }
 
+  componentDidMount = () => {
+    this.setHistogram();
+  }
+
   componentDidUpdate = (prevProps) => {
     if (prevProps !== this.props) {
       this.setHistogram();
     }
   }
+
+  handleLowTouchStart = () => {}
+
+  handleHighTouchStart = () => {}
+
+  handleLowTouchMove = () => {}
+
+  handleHighTouchMove = () => {}
+
+  handleLowTouchEnd = () => {}
+
+  handleHighTouchEnd = () => {}
+
 
   handleLowMouseUp = (e) => {
     const { clientX } = e;
@@ -49,7 +66,11 @@ class YearRangeSlider extends Component {
     });
     window.removeEventListener('mousemove', this.handleLowMouseMove);
     window.removeEventListener('mouseup', this.handleLowMouseUp);
-    this.props.handleSliderRange(newYear, highYear);
+    if (newYear > highYear) {
+      this.props.handleSliderRange(highYear, newYear);
+    } else {
+      this.props.handleSliderRange(newYear, highYear);
+    }
   }
 
   handleHighMouseUp = (e) => {
@@ -73,7 +94,11 @@ class YearRangeSlider extends Component {
     });
     window.removeEventListener('mousemove', this.handleHighMouseMove);
     window.removeEventListener('mouseup', this.handleHighMouseUp);
-    this.props.handleSliderRange(lowYear, newYear);
+    if (newYear < lowYear) {
+      this.props.handleSliderRange(newYear, lowYear);
+    } else {
+      this.props.handleSliderRange(lowYear, newYear);
+    }
   }
 
   handleOnDragStart = () => (false)
@@ -148,7 +173,7 @@ class YearRangeSlider extends Component {
         count: 0,
       });
     });
-    return data;
+    return data.filter(year => (year.value <= maxBound && year.value >= minBound));
   }
 
   setHistogram = () => {
@@ -162,6 +187,7 @@ class YearRangeSlider extends Component {
       let sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
       let sliderHighPosition = this.slider.current.getBoundingClientRect().width - this.highThumb.current.offsetWidth / 2;
       let { min, max } = this.props;
+      console.log(min, max);
       if (!min) {
         min = years[0];
       }
@@ -172,9 +198,9 @@ class YearRangeSlider extends Component {
       let lowYear = years[0];
       let highYear = years[years.length - 1];
       sortedData.forEach((entry, index) => {
-        const color = (parseInt(entry.value, 10) >= parseInt(min, 10) && parseInt(entry.value, 10) <= parseInt(max, 10))
-          ? 'Selection'
-          : 'OutSelection';
+        const backgroundColor = (parseInt(entry.value, 10) >= parseInt(min, 10) && parseInt(entry.value, 10) <= parseInt(max, 10))
+          ? this.props.barColor || '#003259'
+          : '#ebeef0';
         const height = Math.round((entry.count / maxCount) * 100);
         if (parseInt(entry.value, 10) === parseInt(min, 10)) {
           lowYear = years[index];
@@ -189,8 +215,8 @@ class YearRangeSlider extends Component {
             <div
               role="button"
               tabIndex={0}
-              onClick={this.props.handleSliderSelect ? this.props.handleSliderSelect : null}
-              onKeyPress={this.props.handleSliderSelect ? this.props.handleSliderSelect : null}
+              onClick={() => this.props.handleSliderRange(entry.value, entry.value)}
+              onKeyPress={() => this.props.handleSliderRange(entry.value, entry.value)}
               key={entry.value}
               id={entry.value}
               data-for={entry.value}
@@ -201,17 +227,17 @@ class YearRangeSlider extends Component {
               <div
                 role="button"
                 tabIndex={0}
-                className={`${classes.FullBar} ${classes[color]}`}
-                style={{ width: `${width / data.length}px`, height: `${height}%` }}
-                onClick={this.props.handleSliderSelect ? this.props.handleSliderSelect : null}
-                onKeyPress={this.props.handleSliderSelect ? this.props.handleSliderSelect : null}
+                className={classes.FullBar}
+                style={{ width: `${width / data.length}px`, height: `${height}%`, backgroundColor }}
+                onClick={() => this.props.handleSliderRange(entry.value, entry.value)}
+                onKeyPress={() => this.props.handleSliderRange(entry.value, entry.value)}
                 id={entry.value}
                 data-for={entry.value}
                 data-tip
               />
             </div>
             <ReactTooltip id={entry.value} type="info">
-              <span>{`${entry.count} publications -- ${entry.value}`}</span>
+              <span>{entry.tooltip}</span>
             </ReactTooltip>
           </React.Fragment>,
         );
@@ -231,10 +257,10 @@ class YearRangeSlider extends Component {
 
   render() {
     return (
-      <div className={`col-lg-4 ${classes.RangeSlider}`}>
+      <div className="w-100 my-4">
         <div className="d-flex flex-column">
           <div className={classes.TitleFilter} htmlFor="slider">
-            {this.props.language === 'fr' ? 'Sélectionner une période' : 'Select a period'}
+            {this.props.label}
             <div className={`d-flex align-items-end ${classes.RangeBox}`}>
               {(this.state.html) ? this.state.html.map(bar => bar) : null}
             </div>
@@ -270,7 +296,8 @@ class YearRangeSlider extends Component {
 }
 
 YearRangeSlider.propTypes = {
-  language: PropTypes.string.isRequired,
+  barColor: PropTypes.string,
+  label: PropTypes.string,
   data: PropTypes.array,
   min: PropTypes.number,
   max: PropTypes.number,
@@ -280,10 +307,7 @@ YearRangeSlider.propTypes = {
   handleSliderSelect: PropTypes.func.isRequired,
 };
 YearRangeSlider.defaultProps = {
-  data: [
-    { value: '2012', count: 4 },
-    { value: '2015', count: 7 },
-  ],
+  data: [],
 };
 
 export default YearRangeSlider;
