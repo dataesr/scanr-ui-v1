@@ -12,9 +12,15 @@
   border: 2px solid $scanrgreyColor;
   outline: none;
 }
+
+.BtnSearch {
+  border-radius: 8px;
+  height: 45px;
+  width: 45px;
+}
 .SearchBar {
   padding-top: $headerHeight;
-  padding-bottom: 16px;
+  padding-bottom: 4px;
   background-color: $scanrblueColor;
   background-repeat: no-repeat;
   background-attachment: relative;
