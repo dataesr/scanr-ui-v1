@@ -62,6 +62,9 @@ class App extends Component {
       siteId: 37,
       trackErrors: true,
     });
+    // track the initial pageview
+    ReactPiwik.push(['trackPageView']);
+
     const customHistory = createBrowserHistory();
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
