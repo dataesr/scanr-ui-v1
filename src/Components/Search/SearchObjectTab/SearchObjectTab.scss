@@ -25,9 +25,10 @@
 
 .ObjetcsNavItem {
   flex: 0 1 calc(15% - 5px);
-  background-color: white;
+  background-color: $scanrmiddlegreyColor;
   margin-right: 8px;
-  border-radius: 8px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding-top: 8px;
   padding-bottom: 8px;
   color: $scanrdeepblueColor !important;
@@ -53,7 +54,7 @@
 .ResultsNavContainer {
   background-color: $scanrdeepblueColor;
   color: white;
-  border-top-left-radius: 20px;
+  border-top-left-radius: 0;
   border-top-right-radius: 20px;
   margin-bottom: 8px;
 }
