@@ -122,33 +122,44 @@ export default class FocusList extends Component {
           } else if (component.type === 'packedbubble' && component.dataType === 'these') {
             const domainsCount = {};
             res.data.results.forEach((e) => {
-              const discipline = e.value.domains.find(item => item.type === 'degree discipline').label.fr;
-              if (domainsCount[discipline] === undefined) {
-                domainsCount[discipline] = { TOTALCount: 0, discipline };
-              }
+              let discipline = 'exclude';
+              const subDisciplines = [];
               e.value.domains.forEach((d) => {
-                if (d.label.fr !== discipline) {
-                  if (domainsCount[discipline][d.label.fr] === undefined) {
-                    domainsCount[discipline][d.label.fr] = { count: 0 };
+                if (d.type === 'dewey') {
+                  if (d.code.indexOf('00') !== -1) {
+                    discipline = d.label.fr.split('(')[0];
+                  } else {
+                    subDisciplines.push(d.label.fr);
                   }
-                  domainsCount[discipline][d.label.fr].count += 1;
-                  domainsCount[discipline].TOTALCount += 1;
                 }
               });
+              if (discipline !== 'exclude') {
+                if (domainsCount[discipline] === undefined) {
+                  domainsCount[discipline] = { TOTALCount: 0 };
+                }
+                subDisciplines.forEach((s) => {
+                  if (domainsCount[discipline][s] === undefined) {
+                    domainsCount[discipline][s] = { count: 0 };
+                  }
+                  domainsCount[discipline][s].count += 1;
+                  domainsCount[discipline].TOTALCount += 1;
+                });
+              }
             });
+
             Object.keys(domainsCount).forEach((discipline) => {
               const subdata = [];
               Object.keys(domainsCount[discipline]).forEach((subdiscipline) => {
                 if (subdiscipline !== 'TOTALCount' && subdiscipline !== 'discipline') {
                   const subCount = domainsCount[discipline][subdiscipline].count;
-                  if (subCount > 29) {
+                  if (subCount > 4) {
                     subdata.push({ name: subdiscipline, value: subCount });
                   }
                 }
               });
               data.push({ name: discipline, data: subdata, total: domainsCount[discipline].TOTALCount });
             });
-            data = data.sort((a, b) => b.total - a.total).slice(0, 150);
+            data = data.sort((a, b) => b.total - a.total).slice(0, 9);
             tooltipText = 'thèses soutenues en 2018';
           } else if (component.type === 'wordcloud') {
             const dataEn = res.data.facets.find(item => item.id === 'keywords_en') || { entries: [] };
