@@ -12,7 +12,7 @@ const PackedBubbleChart = (props) => {
     chart: {
       type: 'packedbubble',
     },
-    legend: !(props.data.lengt > 5),
+    colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
     exporting: { enabled: false },
     credits: { enabled: false },
     title: {
@@ -25,9 +25,15 @@ const PackedBubbleChart = (props) => {
     series: props.data,
     plotOptions: {
       packedbubble: {
-        useSimulation: false,
+        useSimulation: true,
         minSize: '10%',
         maxSize: '100%',
+        layoutAlgorithm: {
+          splitSeries: (props.data.length > 2),
+          seriesInteraction: false,
+          dragBetweenSeries: false,
+          parentNodeLimit: true,
+        },
       },
     },
   };
