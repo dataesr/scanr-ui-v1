@@ -110,7 +110,7 @@ class CheckBoxFilter extends Component {
                             {facet.value}
                           </label>
                           <div className={`ml-auto ${classes.FacetsCounts}`}>
-                            {`(${facet.count})`}
+                            {`(${facet.count.toLocaleString()})`}
                           </div>
                         </div>
                       </li>
@@ -126,7 +126,13 @@ class CheckBoxFilter extends Component {
                       Voir tout
                     </button>
                   </div>
-                ) : null
+                ) : (
+                  <div className="text-right">
+                    <button onClick={this.showAllHandler} type="button" className={classes.NoStyleButton}>
+                      Voir moins
+                    </button>
+                  </div>
+                )
               }
             </ul>
           </div>
