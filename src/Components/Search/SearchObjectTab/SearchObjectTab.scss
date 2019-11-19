@@ -42,13 +42,8 @@
 
 .ObjetcsNavItem:hover {
   cursor: pointer;
-  margin-right: 8px;
-  border-radius: 8px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  color: $scanrdeepblueColor;
-  text-decoration: none;
-  box-shadow: 1px 1px 15px $scanrdeepblueColor
+  background-color: $scanrgreyColor;
+  color: white !important;
 }
 
 .ResultsNavContainer {
