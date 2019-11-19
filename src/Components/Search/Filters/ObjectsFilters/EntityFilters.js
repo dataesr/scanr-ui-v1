@@ -40,7 +40,6 @@ const EntityFilters = (props) => {
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
-          nbItemsToShow={5}
         />
         <CheckBoxFilter
           title="Type d'organisme"
@@ -48,6 +47,7 @@ const EntityFilters = (props) => {
           filters={kindActiveFilters}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
         />
         <CheckBoxFilter
           title="Type de financement public"
@@ -55,6 +55,7 @@ const EntityFilters = (props) => {
           filters={projectsActiveFilters}
           facetID="projects.project.type"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
         />
         <CheckBoxFilter
           title="Caractéristiques"
@@ -62,6 +63,7 @@ const EntityFilters = (props) => {
           filters={caractActiveFilters}
           facetID="badges.label.fr"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive={false}
         />
       </div>
     </div>

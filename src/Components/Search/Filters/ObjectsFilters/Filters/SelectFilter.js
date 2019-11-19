@@ -133,7 +133,7 @@ class SelectFilter extends Component {
 
 export default SelectFilter;
 
-SelectFilter.default = {
+SelectFilter.defaultProps = {
   defaultActive: false,
 };
 
