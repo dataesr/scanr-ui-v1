@@ -124,6 +124,7 @@ class SelectFilter extends Component {
                           value={ele}
                           onClick={() => this.props.onSubmit(this.props.facetID, ele, false)}
                           checked={(count > 0 && (this.props.filters && this.props.filters.values && this.props.filters.values[0] === ele))}
+                          disabled={count === 0}
                         />
                         {/* eslint-disable-next-line */}
                         <label className={`form-check-label ${classes.Item}`} for={ele}>
