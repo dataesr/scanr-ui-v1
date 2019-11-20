@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import moment from 'moment';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -161,28 +160,23 @@ export default class FocusList extends Component {
           } else if (component.type === 'map') {
             res.data.results.forEach((e) => {
               try {
+                let geoElement = {};
+                let infos = [];
+                const ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                if (e.value.address !== undefined) {
+                  geoElement = e.value;
+                  infos = [getSelectKey(geoElement, 'label', this.props.language, 'default')];
+                } else if (ed.length > 0) {
+                  geoElement = ed[0];
+                  infos = ['ED : '.concat(getSelectKey(geoElement, 'label', this.props.language, 'default')), 'Thèse : '.concat(e.value.title.default)];
+                }
+
                 const dataElement = {
-                  id: e.value.id,
-                  position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
-                  infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
+                  id: geoElement.id,
+                  position: [geoElement.address[0].gps.lat, geoElement.address[0].gps.lon],
+                  infos,
                 };
                 data.push(dataElement);
-              } catch (error) {
-                // eslint-disable-no-empty
-              }
-            });
-          } else if (component.type === 'timeline' && component.dataType === 'award') {
-            res.data.results.forEach((e) => {
-              try {
-                const award = e.value.awards.filter(a => (a.structureName === component.award))[0];
-                const awardYear = moment(award.date).format('YYYY');
-                const dataElement = {
-                  name: e.value.firstName.concat(' ', e.value.lastName),
-                  label: award.label.concat(' (', awardYear.toString(), ')'),
-                  year: awardYear,
-                };
-                data.push(dataElement);
-                data = data.sort((a, b) => a.year - b.year);
               } catch (error) {
                 // eslint-disable-no-empty
               }
