@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
-import moment from 'moment';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -55,11 +54,11 @@ export default class FocusList extends Component {
         op: 'all',
         values: component.queryValue,
       };
-      if (component.dataType === 'these') {
+      if (component.yearMin && component.yearMax) {
         filters.publicationDate = {
           type: 'DateRangeFilter',
-          min: new Date(Date.UTC(2018, 1, 1)).toISOString(),
-          max: new Date(Date.UTC(2018, 11, 31)).toISOString(),
+          min: new Date(Date.UTC(component.yearMin, 1, 1)).toISOString(),
+          max: new Date(Date.UTC(component.yearMax, 11, 31)).toISOString(),
           missing: false,
         };
       }
@@ -80,6 +79,12 @@ export default class FocusList extends Component {
         };
       });
       const pageSize = (component.pageSize) ? (component.pageSize) : 20;
+      let opendata = {};
+      if (component.dataType === 'opendata') {
+        const opendataFilename = `./Focus-data/${component.dataFile}`;
+        // eslint-disable-next-line
+        opendata = require(`${opendataFilename}`);
+      }
       axios.post(component.url_api,
         {
           filters,
@@ -90,31 +95,88 @@ export default class FocusList extends Component {
         .then((res) => {
           let data = [];
           let tooltipText = '';
-          if (component.type === 'map') {
-            res.data.results.forEach((e) => {
-              try {
-                const dataElement = {
-                  id: e.value.id,
-                  position: [e.value.address[0].gps.lat, e.value.address[0].gps.lon],
-                  infos: [getSelectKey(e.value, 'label', this.props.language, 'default')],
-                };
-                data.push(dataElement);
-              } catch (error) {
+          if (component.dataType === 'opendata') {
+            if (component.type === 'map' && component.award === 'IUF') {
+              opendata.records.forEach((e) => {
+                try {
+                  const dataElement = {
+                    id: e.fields.numero_national_de_structure_de_recherche,
+                    position: [e.geometry.coordinates[1], e.geometry.coordinates[0]],
+                    infos: ['Etablissement : '.concat(e.fields.lib_uai), 'Structure : '.concat(e.fields.structure_recherche), 'Lauréat.e : '.concat(e.fields.prenom, ' ', e.fields.nom)],
+                  };
+                  data.push(dataElement);
+                } catch (error) {
                 // eslint-disable-no-empty
-              }
-            });
-          } else if (component.type === 'timeline' && component.dataType === 'award') {
+                }
+              });
+            } else if (component.type === 'treemap' && component.award === 'IUF') {
+              data = [{
+                id: 'F',
+                name: 'Femmes',
+                color: '#f75f00',
+              }, {
+                id: 'H',
+                name: 'Hommes',
+                color: '#43ab92',
+              }];
+              const typeNomination = { H: {}, F: {} };
+              opendata.records.forEach((e) => {
+                const nomination = e.fields.type_nomination;
+                const gender = e.fields.sexe.substring(0, 1).toUpperCase();
+                if (typeNomination[gender][nomination] === undefined) {
+                  typeNomination[gender][nomination] = { count: 0 };
+                }
+                typeNomination[gender][nomination].count += 1;
+              });
+              Object.keys(typeNomination).forEach((g) => {
+                Object.keys(typeNomination[g]).forEach((nomin) => {
+                  const subCount = typeNomination[g][nomin].count;
+                  data.push({ name: nomin, value: subCount, parent: g });
+                });
+              });
+            } else if (component.type === 'packedbubble' && component.award === 'IUF') {
+              const disciplines = {};
+              opendata.records.forEach((e) => {
+                const mainDiscipline = e.fields.arborescence_disciplinaire.split('>')[0];
+                if (disciplines[mainDiscipline] === undefined) {
+                  disciplines[mainDiscipline] = {};
+                }
+                const subDiscipline = e.fields.arborescence_disciplinaire.split('>')[2];
+                if (disciplines[mainDiscipline][subDiscipline] === undefined) {
+                  disciplines[mainDiscipline][subDiscipline] = { count: 0 };
+                }
+                disciplines[mainDiscipline][subDiscipline].count += 1;
+              });
+              Object.keys(disciplines).forEach((discipline) => {
+                const subdata = [];
+                Object.keys(disciplines[discipline]).forEach((subdiscipline) => {
+                  const subCount = disciplines[discipline][subdiscipline].count;
+                  subdata.push({ name: subdiscipline, value: subCount });
+                });
+                data.push({ name: discipline, data: subdata });
+              });
+              tooltipText = 'lauréat.e.s IUF en 2019';
+            }
+          } else if (component.type === 'map') {
             res.data.results.forEach((e) => {
               try {
-                const award = e.value.awards.filter(a => (a.structureName === component.award))[0];
-                const awardYear = moment(award.date).format('YYYY');
+                let geoElement = {};
+                let infos = [];
+                const ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                if (e.value.address !== undefined) {
+                  geoElement = e.value;
+                  infos = [getSelectKey(geoElement, 'label', this.props.language, 'default')];
+                } else if (ed.length > 0) {
+                  geoElement = ed[0];
+                  infos = ['ED : '.concat(getSelectKey(geoElement, 'label', this.props.language, 'default')), 'Thèse : '.concat(e.value.title.default)];
+                }
+
                 const dataElement = {
-                  name: e.value.firstName.concat(' ', e.value.lastName),
-                  label: award.label.concat(' (', awardYear.toString(), ')'),
-                  year: awardYear,
+                  id: geoElement.id,
+                  position: [geoElement.address[0].gps.lat, geoElement.address[0].gps.lon],
+                  infos,
                 };
                 data.push(dataElement);
-                data = data.sort((a, b) => a.year - b.year);
               } catch (error) {
                 // eslint-disable-no-empty
               }
@@ -170,13 +232,16 @@ export default class FocusList extends Component {
             data = res.data.facets[0];
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
+          const textExt = (component.hrefExt) ? 'Explorer le jeu opendata' : null;
           componentsData.push({
             data,
             tooltipText,
             position,
             type: component.type,
             buttonText: text,
+            buttonTextExt: textExt,
             href: component.href,
+            hrefExt: component.hrefExt,
             title: component.title,
             subtitle: component.subtitle,
             label: component.label,
@@ -243,7 +308,9 @@ export default class FocusList extends Component {
                     tooltipText={component.tooltipText}
                     style={component.style}
                     href={component.href}
+                    hrefExt={component.hrefExt}
                     buttonText={component.buttonText}
+                    buttonTextExt={component.buttonTextExt}
                     language={this.props.language}
                   />
                 </div>
