@@ -190,14 +190,17 @@ class SearchPage extends Component {
       } else {
         this.deleteMultiValueSearchFilter(key, value);
       }
-    } else {
+    } else if (value) {
       newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
       newRequest.filters[key] = {
         type: 'MultiValueSearchFilter',
         op,
         values: [value],
       };
+    } else {
+      this.deleteMultiValueSearchFilter(key, value);
     }
+
     const url = this.setURL(newRequest);
     this.props.history.push(url);
   }
@@ -207,7 +210,7 @@ class SearchPage extends Component {
     newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
       item !== value
     ));
-    if (newRequest.filters[key].values.length === 0) {
+    if (newRequest.filters[key].values.length === 0 || !value) {
       delete newRequest.filters[key];
     }
     if (Object.entries(newRequest.filters).length === 0) {
