@@ -10,7 +10,12 @@ import SearchResults from './SearchResults/SearchResults';
 import AllResults from './SearchResults/AllResults';
 import FilterPanel from './Filters/Filters';
 import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
-
+import {
+  PersonsAggregations,
+  PublicationsAggregations,
+  StructuresAggregations,
+  ProjectsAggregations,
+} from './Aggregations';
 
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
@@ -185,14 +190,17 @@ class SearchPage extends Component {
       } else {
         this.deleteMultiValueSearchFilter(key, value);
       }
-    } else {
+    } else if (value) {
       newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
       newRequest.filters[key] = {
         type: 'MultiValueSearchFilter',
         op,
         values: [value],
       };
+    } else {
+      this.deleteMultiValueSearchFilter(key, value);
     }
+
     const url = this.setURL(newRequest);
     this.props.history.push(url);
   }
@@ -202,7 +210,7 @@ class SearchPage extends Component {
     newRequest.filters[key].values = newRequest.filters[key].values.filter(item => (
       item !== value
     ));
-    if (newRequest.filters[key].values.length === 0) {
+    if (newRequest.filters[key].values.length === 0 || !value) {
       delete newRequest.filters[key];
     }
     if (Object.entries(newRequest.filters).length === 0) {
@@ -215,12 +223,11 @@ class SearchPage extends Component {
   // RANGE FILTER
   rangeFilterHandler = (min, max, missing = false) => {
     const newRequest = { ...this.state.request };
-    const key = this.state.api === 'projects' ? 'startDate' : 'publicationDate';
     newRequest.filters = (newRequest.filters) ? newRequest.filters : {};
-    newRequest.filters[key] = {
-      type: 'DateRangeFilter',
-      max: new Date(Date.UTC(max, 11, 31)).toISOString(),
-      min: new Date(Date.UTC(min, 0, 1)).toISOString(),
+    newRequest.filters.year = {
+      type: 'LongRangeFilter',
+      max: parseInt(max, 10) + 1,
+      min,
       missing,
     };
     const url = this.setURL(newRequest);
@@ -258,13 +265,22 @@ class SearchPage extends Component {
     }
     if (api === 'publications') {
       req.lang = 'default';
+      req.aggregations = PublicationsAggregations;
+    } else if (api === 'structures') {
+      req.aggregations = StructuresAggregations;
+      req.lang = this.props.language;
+    } else if (api === 'persons') {
+      req.aggregations = PersonsAggregations;
+      req.lang = this.props.language;
+    } else if (api === 'projects') {
+      req.aggregations = ProjectsAggregations;
+      req.lang = this.props.language;
     } else {
       req.lang = this.props.language;
     }
     Object.keys(req).forEach(key => (req[key] === undefined ? delete req[key] : ''));
     return req;
   };
-
 
   getData = () => {
     if (this.state.api === 'all') {
@@ -280,9 +296,9 @@ class SearchPage extends Component {
     if (apiWithDateFilters.includes(this.state.api)) {
       const dateRequest = {};
       const newFilters = {};
-      const stateFilters = { ...this.state.filters };
+      const stateFilters = { ...this.state.request.filters };
       Object.keys(stateFilters).forEach((key) => {
-        if (stateFilters[key] !== 'publicationDate' && stateFilters[key] !== 'startDate') {
+        if (key !== 'year') {
           newFilters[key] = stateFilters[key];
         }
       });
@@ -301,7 +317,7 @@ class SearchPage extends Component {
           size: 100,
         },
       };
-      Axios.post(url, this.transformRequest(dateRequest, this.state.api))
+      Axios.post(url, dateRequest, this.state.api)
         .then((response) => {
           const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
           this.setState({ sliderData });
@@ -339,6 +355,7 @@ class SearchPage extends Component {
           /* eslint-disable-next-line */
           const newCounts = { ...this.state.preview };
           newCounts[api].count = response.data.total;
+          newCounts[api].facets = response.data.facets;
           newCounts[api].data = response.data.results.slice(0, 6);
           newCounts.all = (
             newCounts.structures.count
