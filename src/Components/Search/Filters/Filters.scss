@@ -1,5 +1,9 @@
 @import '../../../style.scss';
 
+.Filters {
+  position: sticky;
+  top: 136px;
+}
 
 .FiltersContainer {
   background-color: $scanrlightgreyColor;
