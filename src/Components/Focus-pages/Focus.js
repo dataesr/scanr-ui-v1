@@ -100,7 +100,7 @@ export default class FocusList extends Component {
               opendata.records.forEach((e) => {
                 try {
                   const dataElement = {
-                    id: e.fields.numero_national_de_structure_de_recherche,
+                    id: e.fields.numero_national_de_structure_de_recherche.concat(' ', e.fields.nom, e.fields.prenom),
                     position: [e.geometry.coordinates[1], e.geometry.coordinates[0]],
                     infos: ['Etablissement : '.concat(e.fields.lib_uai), 'Structure : '.concat(e.fields.structure_recherche), 'Lauréat.e : '.concat(e.fields.prenom, ' ', e.fields.nom)],
                   };
@@ -172,7 +172,7 @@ export default class FocusList extends Component {
                 }
 
                 const dataElement = {
-                  id: geoElement.id,
+                  id: e.id,
                   position: [geoElement.address[0].gps.lat, geoElement.address[0].gps.lon],
                   infos,
                 };
