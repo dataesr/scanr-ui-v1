@@ -185,6 +185,6 @@ HighChartsTreemap.defaultProps = {
 
 HighChartsTreemap.propTypes = {
   filename: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  data: PropTypes.array,
   share: PropTypes.any,
 };
