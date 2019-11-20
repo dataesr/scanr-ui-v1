@@ -127,16 +127,14 @@ class Productions extends Component {
   fetchDataByType = () => {
     this.setState({ isLoading: true });
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
-    const st = this.state.low ? this.state.low : 2000;
-    const en = this.state.high ? this.state.high : 2020;
     const request = Request;
     const dateRequest = DateRequest;
     request.query = this.state.query;
     dateRequest.query = this.state.query;
     request.filters.productionType.values = [this.state.productionType];
     dateRequest.filters.productionType.values = [this.state.productionType];
-    request.filters.publicationDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
-    request.filters.publicationDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
+    request.filters.year.min = this.state.low ? this.state.low : 2000;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
       allIds = allIds.concat(this.props.childs).slice(0, 1000);
@@ -223,17 +221,10 @@ class Productions extends Component {
   };
 
   handleSliderRange = (low, high) => {
-    if (low > high) {
-      this.setState({
-        high: low,
-        low: high,
-      });
-    } else {
-      this.setState({
-        high,
-        low,
-      });
-    }
+    this.setState({
+      high: Math.max(low, high),
+      low: Math.min(low, high),
+    });
   }
 
   render() {

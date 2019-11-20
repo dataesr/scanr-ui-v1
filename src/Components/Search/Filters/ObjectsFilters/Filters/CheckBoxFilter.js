@@ -56,30 +56,36 @@ class CheckBoxFilter extends Component {
   render() {
     const filters = this.props.filters.values || [];
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
-
+    const printSeeAll = (this.props.facets.length > this.props.nbItemsToShow);
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
           {/* eslint-disable-next-line */}
           <div className={`d-flex flex-row ${classes.Title}`}>
             {/* eslint-disable-next-line */}
-            <div onClick={this.switchActive}>
+            <div>
               {this.props.title}
             </div>
-            <div className="ml-auto">
-              <button
-                type="button"
-                onClick={this.switchActive}
-                className={classes.SearchButton}
-              >
-                <i className={`fas ${caret} ${classes.SearchIcon}`} />
-              </button>
-            </div>
+            {
+              (this.props.retractable)
+                ? (
+                  <div className="ml-auto">
+                    <button
+                      type="button"
+                      onClick={this.switchActive}
+                      className={classes.SearchButton}
+                    >
+                      <i className={`fas ${caret} ${classes.SearchIcon}`} />
+                    </button>
+                  </div>
+                )
+                : null
+            }
           </div>
 
           <div
             style={{ display: this.state.active ? 'block' : 'none' }}
-            className={`p-2 mt-0 ${classes.ItemsList}`}
+            className={`pt-1 mt-0 ${classes.ItemsList}`}
           >
             <ul id="facets" className={`d-flex flex-column ${classes.Autocomplete}`}>
               {
@@ -91,13 +97,13 @@ class CheckBoxFilter extends Component {
                         aria-selected={false}
                         key={facet.value}
                         id={facet.value}
-                        className={`p-1 pl-2 pr-2 ${classes.Suggestion}`}
+                        className={`p-1 ${classes.Suggestion}`}
                         onClick={() => this.submitWrapper(facet.value)}
                         onKeyPress={() => this.submitWrapper(facet.value)}
                         onMouseDown={event => event.preventDefault()}
                       >
                         <div className="d-flex flex-row align-items-center">
-                          <div className={`mr-2 ${classes.CheckBox}`}>
+                          <div className={`mr-1 ${classes.CheckBox}`}>
                             <input
                               type="checkbox"
                               id={facet.value}
@@ -106,7 +112,7 @@ class CheckBoxFilter extends Component {
                             <span className={classes.CheckMark} />
                           </div>
                           {/* eslint-disable-next-line */}
-                          <label className={`form-check-label ${classes.Item}`} for={facet.value}>
+                          <label className={`pl-1 form-check-label ${classes.Item}`} for={facet.value}>
                             {facet.value}
                           </label>
                           <div className={`ml-auto ${classes.FacetsCounts}`}>
@@ -120,19 +126,22 @@ class CheckBoxFilter extends Component {
                 })
               }
               {
-                (!this.state.showAll) ? (
+                (!this.state.showAll && printSeeAll) ? (
                   <div className="text-right">
                     <button onClick={this.showAllHandler} type="button" className={classes.NoStyleButton}>
                       Voir tout
                     </button>
                   </div>
-                ) : (
+                ) : null
+              }
+              {
+                (this.state.showAll && printSeeAll) ? (
                   <div className="text-right">
                     <button onClick={this.showAllHandler} type="button" className={classes.NoStyleButton}>
                       Voir moins
                     </button>
                   </div>
-                )
+                ) : null
               }
             </ul>
           </div>
@@ -148,6 +157,7 @@ CheckBoxFilter.defaultProps = {
   filterType: 'any',
   defaultActive: false,
   nbItemsToShow: 4,
+  retractable: false,
 };
 
 CheckBoxFilter.propTypes = {
@@ -156,6 +166,7 @@ CheckBoxFilter.propTypes = {
   filters: PropTypes.object,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
+  retractable: PropTypes.bool,
   // subtitle: PropTypes.string,
   // placeholder: PropTypes.string,
   filterType: PropTypes.string,

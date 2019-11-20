@@ -14,6 +14,8 @@ class YearRangeSlider extends Component {
       sliderLowPosition: null,
       sliderHighPosition: null,
       mouseDown: null,
+      touchDown: null,
+      touchIdentifier: null,
       shiftX: null,
       html: null,
       years: null,
@@ -32,80 +34,123 @@ class YearRangeSlider extends Component {
     }
   }
 
-  handleLowTouchStart = () => {}
-
-  handleHighTouchStart = () => {}
-
-  handleLowTouchMove = () => {}
-
-  handleHighTouchMove = () => {}
-
-  handleLowTouchEnd = () => {}
-
-  handleHighTouchEnd = () => {}
-
-
-  handleLowMouseUp = (e) => {
-    const { clientX } = e;
+  handleActionEnd = (clientX, thumb) => {
     const {
       positions,
       shiftX,
       years,
-      highYear,
     } = this.state;
     const { left } = this.slider.current.getBoundingClientRect();
-    const sliderLowPosition = clientX - shiftX - left;
-    const absPosition = positions.map(position => Math.abs((position - sliderLowPosition - this.lowThumb.current.offsetWidth / 2)));
-    const newPosition = positions[absPosition.indexOf(Math.min(...absPosition))] - this.lowThumb.current.offsetWidth / 2;
+    const sliderPosition = clientX - shiftX - left;
+    const absPosition = positions.map(position => (
+      Math.abs((position - sliderPosition - this[thumb].current.offsetWidth / 2))));
+    const newPosition = positions[
+      absPosition.indexOf(Math.min(...absPosition))]
+      - this[thumb].current.offsetWidth / 2;
     const newYear = years[absPosition.indexOf(Math.min(...absPosition))];
-    this.setState({
-      mouseDown: null,
-      shiftX: null,
-      lowYear: newYear,
-      sliderLowPosition: newPosition,
-    });
-    window.removeEventListener('mousemove', this.handleLowMouseMove);
-    window.removeEventListener('mouseup', this.handleLowMouseUp);
-    if (newYear > highYear) {
-      this.props.handleSliderRange(highYear, newYear);
-    } else {
-      this.props.handleSliderRange(newYear, highYear);
-    }
+    return { newYear, newPosition };
   }
 
-  handleHighMouseUp = (e) => {
-    const { clientX } = e;
-    const {
-      positions,
+  handleLowTouchStart = (e) => {
+    e.preventDefault();
+    const { touches } = e;
+    window.addEventListener('touchmove', this.handleLowTouchMove);
+    window.addEventListener('touchend', this.handleLowEnd);
+    const { mouseDown } = this.state;
+    if (mouseDown) return;
+    if (touches.length > 1) return;
+    const { clientX, identifier } = touches[0];
+    const shiftX = clientX - this.lowThumb.current.getBoundingClientRect().left;
+    this.setState({
+      lowYear: null,
+      mouseDown: null,
+      touchDown: 'low',
+      touchIdentifier: identifier,
       shiftX,
-      years,
-      lowYear,
+    });
+  }
+
+  handleHighTouchStart = (e) => {
+    e.preventDefault();
+    const { touches } = e;
+    window.addEventListener('touchmove', this.handleHighTouchMove);
+    window.addEventListener('touchend', this.handleHighEnd);
+    const { mouseDown } = this.state;
+    if (mouseDown) return;
+    if (touches.length > 1) return;
+    const { clientX, identifier } = touches[0];
+    const shiftX = clientX - this.highThumb.current.getBoundingClientRect().left;
+    this.setState({
+      highYear: null,
+      mouseDown: null,
+      touchDown: 'high',
+      touchIdentifier: identifier,
+      shiftX,
+    });
+  }
+
+  handleLowTouchMove = (e) => {
+    e.preventDefault();
+    const { changedTouches } = e;
+    const {
+      mouseDown,
+      touchDown,
+      touchIdentifier,
+      shiftX,
     } = this.state;
     const { left } = this.slider.current.getBoundingClientRect();
-    const sliderHighPosition = clientX - shiftX - left;
-    const absPosition = positions.map(position => Math.abs((position - sliderHighPosition - this.highThumb.current.offsetWidth / 2)));
-    const newPosition = positions[absPosition.indexOf(Math.min(...absPosition))] - this.highThumb.current.offsetWidth / 2;
-    const newYear = years[absPosition.indexOf(Math.min(...absPosition))];
-    this.setState({
-      mouseDown: null,
-      shiftX: null,
-      highYear: newYear,
-      sliderHighPosition: newPosition,
-    });
-    window.removeEventListener('mousemove', this.handleHighMouseMove);
-    window.removeEventListener('mouseup', this.handleHighMouseUp);
-    if (newYear < lowYear) {
-      this.props.handleSliderRange(newYear, lowYear);
-    } else {
-      this.props.handleSliderRange(lowYear, newYear);
+    if (mouseDown) return;
+    if (touchDown !== 'low') return;
+    for (let i = 0; i < changedTouches.length; i += 1) {
+      const { identifier, clientX } = changedTouches[i];
+      if (identifier === touchIdentifier) {
+        let sliderLowPosition = clientX - shiftX - left;
+        if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
+          sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
+        }
+        const rightEdge = this.slider.current.offsetWidth - this.lowThumb.current.offsetWidth / 2;
+        if (sliderLowPosition > rightEdge) {
+          sliderLowPosition = rightEdge;
+        }
+        this.lowThumb.current.style.left = `${sliderLowPosition}px`;
+      }
     }
   }
 
-  handleOnDragStart = () => (false)
+  handleHighTouchMove = (e) => {
+    e.preventDefault();
+    const { changedTouches } = e;
+    const {
+      mouseDown,
+      touchDown,
+      touchIdentifier,
+      shiftX,
+    } = this.state;
+    const { left } = this.slider.current.getBoundingClientRect();
+    if (mouseDown) return;
+    if (touchDown !== 'high') return;
+    for (let i = 0; i < changedTouches.length; i += 1) {
+      const { identifier, clientX } = changedTouches[i];
+      if (identifier === touchIdentifier) {
+        let sliderHighPosition = clientX - shiftX - left;
+        if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
+          sliderHighPosition = 0 - this.highThumb.current.offsetWidth / 2;
+        }
+        const rightEdge = this.slider.current.offsetWidth - this.highThumb.current.offsetWidth / 2;
+        if (sliderHighPosition > rightEdge) {
+          sliderHighPosition = rightEdge;
+        }
+        this.highThumb.current.style.left = `${sliderHighPosition}px`;
+      }
+    }
+  }
 
   handleLowMouseDown = (e) => {
+    e.preventDefault();
+    const { touchDown } = this.state;
+    if (touchDown) return;
     window.addEventListener('mousemove', this.handleLowMouseMove);
-    window.addEventListener('mouseup', this.handleLowMouseUp);
+    window.addEventListener('mouseup', this.handleLowEnd);
     const { clientX } = e;
     const shiftX = clientX - this.lowThumb.current.getBoundingClientRect().left;
     this.setState({
@@ -116,8 +161,11 @@ class YearRangeSlider extends Component {
   }
 
   handleHighMouseDown = (e) => {
+    e.preventDefault();
+    const { touchDown } = this.state;
+    if (touchDown) return;
     window.addEventListener('mousemove', this.handleHighMouseMove);
-    window.addEventListener('mouseup', this.handleHighMouseUp);
+    window.addEventListener('mouseup', this.handleHighEnd);
     const { clientX } = e;
     const shiftX = clientX - this.highThumb.current.getBoundingClientRect().left;
     this.setState({
@@ -127,11 +175,12 @@ class YearRangeSlider extends Component {
     });
   }
 
-
   handleLowMouseMove = (e) => {
+    e.preventDefault();
     const { clientX } = e;
-    const { mouseDown, shiftX } = this.state;
+    const { mouseDown, touchDown, shiftX } = this.state;
     const { left } = this.slider.current.getBoundingClientRect();
+    if (touchDown) return;
     if (mouseDown !== 'low') return;
     let sliderLowPosition = clientX - shiftX - left;
     if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
@@ -145,9 +194,11 @@ class YearRangeSlider extends Component {
   }
 
   handleHighMouseMove = (e) => {
+    e.preventDefault();
     const { clientX } = e;
-    const { mouseDown, shiftX } = this.state;
+    const { mouseDown, touchDown, shiftX } = this.state;
     const { left } = this.slider.current.getBoundingClientRect();
+    if (touchDown) return;
     if (mouseDown !== 'high') return;
     let sliderHighPosition = clientX - shiftX - left;
     if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
@@ -158,6 +209,66 @@ class YearRangeSlider extends Component {
       sliderHighPosition = rightEdge;
     }
     this.highThumb.current.style.left = `${sliderHighPosition}px`;
+  }
+
+  handleLowEnd = (e) => {
+    e.preventDefault();
+    const { highYear, touchDown, touchIdentifier } = this.state;
+    let clientX = null;
+    if (touchDown) {
+      const { changedTouches } = e;
+      if (changedTouches[changedTouches.length - 1].identifier !== touchIdentifier) return;
+      clientX = changedTouches[changedTouches.length - 1].clientX;
+      window.removeEventListener('touchend', this.handleLowEnd);
+      window.removeEventListener('touchmove', this.handleLowTouchMove);
+    } else {
+      clientX = e.clientX;
+      window.removeEventListener('mousemove', this.handleLowMouseMove);
+      window.removeEventListener('mouseup', this.handleLowEnd);
+    }
+    const { newYear, newPosition } = this.handleActionEnd(clientX, 'lowThumb');
+    this.setState({
+      mouseDown: null,
+      touchDown: null,
+      touchIdentifier: null,
+      shiftX: null,
+      lowYear: newYear,
+      sliderLowPosition: newPosition,
+    });
+    this.props.handleSliderRange(
+      Math.min(highYear, newYear),
+      Math.max(highYear, newYear),
+    );
+  }
+
+  handleHighEnd = (e) => {
+    e.preventDefault();
+    const { lowYear, touchDown, touchIdentifier } = this.state;
+    let clientX = null;
+    if (touchDown) {
+      const { changedTouches } = e;
+      if (changedTouches[changedTouches.length - 1].identifier !== touchIdentifier) return;
+      clientX = changedTouches[changedTouches.length - 1].clientX;
+      window.removeEventListener('touchmove', this.handleHighTouchMove);
+      window.removeEventListener('touchend', this.handleHighEnd);
+    } else {
+      clientX = e.clientX;
+      window.removeEventListener('mousemove', this.handleHighMouseMove);
+      window.removeEventListener('mouseup', this.handleHighEnd);
+    }
+    const { newYear, newPosition } = this.handleActionEnd(clientX, 'highThumb');
+    this.setState({
+      mouseDown: null,
+      touchDown: null,
+      touchIdentifier: null,
+      shiftX: null,
+      highYear: newYear,
+      sliderHighPosition: newPosition,
+    });
+    this.props.handleSliderRange(
+      Math.min(lowYear, newYear),
+      Math.max(lowYear, newYear),
+    );
   }
 
   fillMissingYears = () => {
@@ -199,7 +310,7 @@ class YearRangeSlider extends Component {
       sortedData.forEach((entry, index) => {
         const backgroundColor = (parseInt(entry.value, 10) >= parseInt(min, 10) && parseInt(entry.value, 10) <= parseInt(max, 10))
           ? this.props.barColor || '#003259'
-          : '#ebeef0';
+          : this.props.unselectedBarColor || '#4c6f8b';
         const height = Math.round((entry.count / maxCount) * 100);
         if (parseInt(entry.value, 10) === parseInt(min, 10)) {
           lowYear = years[index];
@@ -220,13 +331,13 @@ class YearRangeSlider extends Component {
               id={entry.value}
               data-for={entry.value}
               data-tip
-              className={`d-flex align-items-end ${classes.transparent}`}
+              className={`d-flex align-items-end ${classes.histogramBar}`}
               style={{ width: `${width / data.length}px` }}
             >
               <div
                 role="button"
                 tabIndex={0}
-                className={classes.FullBar}
+                className={classes.histogramBar}
                 style={{ width: `${width / data.length}px`, height: `${height}%`, backgroundColor }}
                 onClick={() => this.props.handleSliderRange(entry.value, entry.value)}
                 onKeyPress={() => this.props.handleSliderRange(entry.value, entry.value)}
@@ -236,7 +347,7 @@ class YearRangeSlider extends Component {
               />
             </div>
             <ReactTooltip id={entry.value} type="info">
-              <span>{entry.tooltip}</span>
+              <span>{(entry.tooltip) ? entry.tooltip : `${entry.value}: ${entry.count}`}</span>
             </ReactTooltip>
           </React.Fragment>,
         );
@@ -255,38 +366,54 @@ class YearRangeSlider extends Component {
   }
 
   render() {
+    const height = (this.props.height) ? `${this.props.height}px` : '40px';
     return (
       <div className="w-100 my-4">
         <div className="d-flex flex-column">
-          <div className={classes.TitleFilter} htmlFor="slider">
+          <div className={classes.label} htmlFor="slider">
             {this.props.label}
-            <div className={`d-flex align-items-end ${classes.RangeBox}`}>
-              {(this.state.html) ? this.state.html.map(bar => bar) : null}
-            </div>
-            <div className={classes.sliderS}>
-              <div ref={this.slider} className={`${classes.slider}`}>
-                <div
-                  role="button"
-                  tabIndex={0}
-                  className={`${classes.thumb} ${classes.low}`}
-                  style={{ left: `${this.state.sliderLowPosition}px` }}
-                  onMouseDown={this.handleLowMouseDown}
-                  ref={this.lowThumb}
-                >
-                  <div className={classes.Years}>{this.state.lowYear}</div>
-                </div>
-                <div
-                  role="button"
-                  tabIndex={0}
-                  className={`${classes.thumb} ${classes.high}`}
-                  style={{ left: `${this.state.sliderHighPosition}px` }}
-                  onMouseDown={this.handleHighMouseDown}
-                  ref={this.highThumb}
-                >
-                  <div className={classes.Years}>{this.state.highYear}</div>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div className="d-flex align-items-end w-100" style={{ height }}>
+            {(this.state.html) ? this.state.html.map(bar => bar) : null}
+          </div>
+          <div className={classes.slider} ref={this.slider}>
+            <div
+              ref={this.slider}
+              className={classes.slider}
+              style={{
+                backgroundColor: `${this.props.barColor}`,
+                marginLeft: `calc(${this.state.sliderLowPosition}px + 10px)`,
+                marginRight: `calc(100% - ${this.state.sliderHighPosition}px - 10px)`,
+              }}
+            />
+          </div>
+          <div
+            role="button"
+            id="thumbLow"
+            tabIndex={0}
+            className={`${classes.thumb} ${classes.thumbLow}`}
+            style={{ left: `${this.state.sliderLowPosition}px` }}
+            onMouseDown={this.handleLowMouseDown}
+            onTouchStart={this.handleLowTouchStart}
+            ref={this.lowThumb}
+          >
+            <label htmlFor="thumbLow" className={classes.thumbLabel}>
+              {this.state.lowYear}
+            </label>
+          </div>
+          <div
+            role="button"
+            id="thumbHigh"
+            tabIndex={0}
+            className={`${classes.thumb} ${classes.thumbHigh}`}
+            style={{ left: `${this.state.sliderHighPosition}px` }}
+            onMouseDown={this.handleHighMouseDown}
+            onTouchStart={this.handleHighTouchStart}
+            ref={this.highThumb}
+          >
+            <label htmlFor="thumbHigh" className={classes.thumbLabel}>
+              {this.state.highYear}
+            </label>
           </div>
         </div>
       </div>
@@ -295,7 +422,9 @@ class YearRangeSlider extends Component {
 }
 
 YearRangeSlider.propTypes = {
+  height: PropTypes.number,
   barColor: PropTypes.string,
+  unselectedBarColor: PropTypes.string,
   label: PropTypes.string,
   data: PropTypes.array,
   min: PropTypes.number,
