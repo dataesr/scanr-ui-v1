@@ -38,14 +38,6 @@ class SelectFilter extends Component {
     });
   }
 
-  submitWrapper(value) {
-    const filtered = this.props.facets
-      .filter(item => item.value.toLowerCase().includes(value.toLowerCase()));
-    if (filtered[0]) {
-      this.props.onSubmit(this.props.facetID, filtered[0].value);
-    }
-  }
-
   getCountFromKey = (entries, searchedKey, searchedKeyValue, returnKey) => {
     for (let i = 0; i < entries.length; i += 1) {
       if (entries[i][searchedKey] === searchedKeyValue) {
@@ -55,10 +47,23 @@ class SelectFilter extends Component {
     return 0;
   }
 
+  submitWrapper(value) {
+    // const filtered = this.props.facets
+    //   .filter(item => item.value.toLowerCase().includes(value.toLowerCase()));
+    // if (filtered[0]) {
+    //   console.log('filtered[0].value=>', filtered[0].value);
+    //   this.props.onSubmit(this.props.facetID, filtered[0].value);
+    // }
+    this.props.onSubmit(this.props.facetID, value);
+  }
+
   render() {
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
     const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
 
+    if (!this.props.permanentList) {
+      return null;
+    }
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
@@ -91,6 +96,7 @@ class SelectFilter extends Component {
                     type="radio"
                     name={this.props.title}
                     id={`all_${this.props.title}`}
+                    onClick={() => this.props.onSubmit(this.props.facetID, null, false)}
                     checked
                   />
                   {/* eslint-disable-next-line */}
@@ -102,7 +108,6 @@ class SelectFilter extends Component {
                   {`(${allCount.toLocaleString()})`}
                 </div>
               </div>
-
               {
                 // Parcouros de toute la liste permanentList puis check de l'élément renvoyé par l'API
                 this.props.permanentList.map((ele) => {
@@ -117,8 +122,8 @@ class SelectFilter extends Component {
                           name={this.props.title}
                           id={ele}
                           value={ele}
-                          onClick={() => this.submitWrapper(ele)}
-                          checked={(count > 0 && this.props.facets.length === 1)}
+                          onClick={() => this.props.onSubmit(this.props.facetID, ele, false)}
+                          checked={(count > 0 && (this.props.filters && this.props.filters.values && this.props.filters.values[0] === ele))}
                         />
                         {/* eslint-disable-next-line */}
                         <label className={`form-check-label ${classes.Item}`} for={ele}>
@@ -153,6 +158,7 @@ SelectFilter.propTypes = {
   title: PropTypes.string,
   defaultActive: PropTypes.bool,
   permanentList: PropTypes.array,
+  filters: PropTypes.object,
   // subtitle: PropTypes.string,
   // placeholder: PropTypes.string,
   // setURL: PropTypes.func.isRequired
