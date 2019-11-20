@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
 import ButtonToSearch from '../Ui/Buttons/ButtonToSearch';
+import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 
 import classes from './GraphComponents.scss';
 
@@ -24,6 +25,9 @@ export default class DisplayComponent extends Component {
           break;
         case 'timeline':
           GraphComponent = loadable(() => import('./Graphs/HighChartsTimeline'));
+          break;
+        case 'treemap':
+          GraphComponent = loadable(() => import('./Graphs/HighChartsTreemap'));
           break;
         case 'packedbubble':
           GraphComponent = loadable(() => import('./Graphs/HighChartsPackedbubble'));
@@ -62,19 +66,36 @@ export default class DisplayComponent extends Component {
         </div>
       );
       const FooterComponent = () => (
-        <div className="p-4">
+        <div className="row p-4">
           {
                 (this.props.href)
                   ? (
-                    <ButtonToSearch
-                      href={this.props.href}
-                      className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
-                    >
-                      { this.props.buttonText }
-                    </ButtonToSearch>
+                    <div className="col-md-3">
+                      <ButtonToSearch
+                        href={this.props.href}
+                        className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                      >
+                        { this.props.buttonText }
+                      </ButtonToSearch>
+                    </div>
                   )
                   : null
-              }
+          }
+          {
+                (this.props.hrefExt)
+                  ? (
+                    <div className="col-md-3">
+                      <ButtonToPage
+                        url={this.props.hrefExt}
+                        target="_blank"
+                        className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                      >
+                        { this.props.buttonTextExt }
+                      </ButtonToPage>
+                    </div>
+                  )
+                  : null
+          }
         </div>
 
       );
@@ -116,5 +137,7 @@ DisplayComponent.propTypes = {
   tooltipText: PropTypes.any,
   style: PropTypes.any,
   href: PropTypes.any,
+  hrefExt: PropTypes.any,
   buttonText: PropTypes.any,
+  buttonTextExt: PropTypes.any,
 };
