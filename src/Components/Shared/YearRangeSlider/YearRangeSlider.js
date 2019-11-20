@@ -397,6 +397,7 @@ class YearRangeSlider extends Component {
             onTouchStart={this.handleLowTouchStart}
             ref={this.lowThumb}
           >
+            {/* eslint-disable-next-line */}
             <label htmlFor="thumbLow" className={classes.thumbLabel}>
               {this.state.lowYear}
             </label>
@@ -411,6 +412,7 @@ class YearRangeSlider extends Component {
             onTouchStart={this.handleHighTouchStart}
             ref={this.highThumb}
           >
+            {/* eslint-disable-next-line */}
             <label htmlFor="thumbHigh" className={classes.thumbLabel}>
               {this.state.highYear}
             </label>
