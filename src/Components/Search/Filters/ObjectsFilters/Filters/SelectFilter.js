@@ -46,6 +46,15 @@ class SelectFilter extends Component {
     }
   }
 
+  getCountFromKey = (entries, searchedKey, searchedKeyValue, returnKey) => {
+    for (let i = 0; i < entries.length; i += 1) {
+      if (entries[i][searchedKey] === searchedKeyValue) {
+        return entries[i][returnKey];
+      }
+    }
+    return 0;
+  }
+
   render() {
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
     const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
@@ -75,53 +84,53 @@ class SelectFilter extends Component {
             className={`p-2 mt-0 ${classes.ItemsList}`}
           >
             <div className="form-check">
+              <div className="d-flex flex-row align-items-center">
+                <div>
+                  <input
+                    className="form-check-input"
+                    type="radio"
+                    name={this.props.title}
+                    id={`all_${this.props.title}`}
+                    checked
+                  />
+                  {/* eslint-disable-next-line */}
+                  <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                    Tous
+                  </label>
+                </div>
+                <div className={`ml-auto ${classes.FacetsCounts}`}>
+                  {`(${allCount.toLocaleString()})`}
+                </div>
+              </div>
+
               {
-                (this.props.facets.length > 1)
-                  ? (
+                // Parcouros de toute la liste permanentList puis check de l'élément renvoyé par l'API
+                this.props.permanentList.map((ele) => {
+                  // recherche de l'élément en cours dans les facets retournée pour avoir le count et l'élément en cours
+                  const count = this.getCountFromKey(this.props.facets, 'value', ele, 'count');
+                  return (
                     <div className="d-flex flex-row align-items-center">
                       <div>
                         <input
                           className="form-check-input"
                           type="radio"
                           name={this.props.title}
-                          id={`all_${this.props.title}`}
-                          checked
+                          id={ele}
+                          value={ele}
+                          onClick={() => this.submitWrapper(ele)}
+                          checked={(count > 0 && this.props.facets.length === 1)}
                         />
                         {/* eslint-disable-next-line */}
-                        <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
-                          Tous
+                        <label className={`form-check-label ${classes.Item}`} for={ele}>
+                          {ele}
                         </label>
                       </div>
                       <div className={`ml-auto ${classes.FacetsCounts}`}>
-                        {`(${allCount.toLocaleString()})`}
+                        {`(${count.toLocaleString()})`}
                       </div>
                     </div>
-                  )
-                  : null
-              }
-              {
-                this.props.facets.map(facet => (
-                  <div className="d-flex flex-row align-items-center">
-                    <div>
-                      <input
-                        className="form-check-input"
-                        type="radio"
-                        name={this.props.title}
-                        id={facet.value}
-                        value={facet.value}
-                        onClick={() => this.submitWrapper(facet.value)}
-                        checked={(this.props.facets.length === 1)}
-                      />
-                      {/* eslint-disable-next-line */}
-                      <label className={`form-check-label ${classes.Item}`} for={facet.value}>
-                        {facet.value}
-                      </label>
-                    </div>
-                    <div className={`ml-auto ${classes.FacetsCounts}`}>
-                      {`(${facet.count.toLocaleString()})`}
-                    </div>
-                  </div>
-                ))
+                  );
+                })
               }
             </div>
           </div>
@@ -143,6 +152,7 @@ SelectFilter.propTypes = {
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
   defaultActive: PropTypes.bool,
+  permanentList: PropTypes.array,
   // subtitle: PropTypes.string,
   // placeholder: PropTypes.string,
   // setURL: PropTypes.func.isRequired
