@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import SelectFilter from './Filters/SelectFilter';
+import CheckBoxFilter from './Filters/CheckBoxFilter';
 import YearRangeSlider from '../../../Shared/YearRangeSlider/YearRangeSlider';
 import styles from '../../../../style.scss';
 
@@ -12,6 +13,10 @@ const PublicationsFilters = (props) => {
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
   const isOaActiveFilters = props.filters.isOa || {};
   const isOaFacets = generalFacets.find(item => item.id === 'isOa') || { entries: [] };
+
+  const journalFacets = generalFacets.find(item => item.id === 'journal') || { entries: [] };
+  const journalActiveFilters = props.filters.journal || {};
+
 
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -52,12 +57,22 @@ const PublicationsFilters = (props) => {
           }}
         />
         <SelectFilter
-          label="Open Access"
-          title="Type"
+          title="Open Access"
           facets={isOaFacets.entries}
           filters={isOaActiveFilters}
           facetID="isOa"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
+          permanentList={['true', 'false']}
+          request={props.request}
+        />
+        <CheckBoxFilter
+          title="Journaux"
+          facets={journalFacets.entries}
+          filters={journalActiveFilters}
+          facetID="kind"
+          onSubmit={props.multiValueFilterHandler}
+          defaultActive
         />
       </div>
     </div>
