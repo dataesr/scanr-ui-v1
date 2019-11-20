@@ -7,8 +7,8 @@ export default {
     'publicationDate', 'year',
   ],
   filters: {
-    publicationDate: {
-      type: 'DateRangeFilter',
+    year: {
+      type: 'LongRangeFilter',
       max: null,
       min: null,
       missing: false,
