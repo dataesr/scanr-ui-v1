@@ -15,10 +15,20 @@ const PublicationsFilters = (props) => {
 
   const typeActiveFilters = props.filters.productionType || {};
   const typeFacets = props.facets.find(item => item.id === 'facet_production_types') || { entries: [] };
-  console.log(props.filters);
+
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
+        <SelectFilter
+          title="Type d'organisme"
+          facets={typeFacets.entries}
+          filters={typeActiveFilters}
+          facetID="productionType"
+          onSubmit={props.multiValueFilterHandler}
+          defaultActive
+          permanentList={["pattent", "publication", "thesis"]}
+        />
+
         <CheckBoxFilter
           title="Type"
           facets={typeFacets.entries}
