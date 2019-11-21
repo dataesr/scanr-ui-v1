@@ -90,6 +90,10 @@ export default class HighChartsTreemap extends Component {
           title: {
             text: this.props.filename,
           },
+          credits: {
+            enabled: true,
+            text: "Source : ScanR, Moteur de la Recherche et de l'Innovation",
+          },
         },
       },
     };
@@ -180,11 +184,12 @@ export default class HighChartsTreemap extends Component {
 
 HighChartsTreemap.defaultProps = {
   data: [],
-  share: false,
+  share: true,
 };
 
 HighChartsTreemap.propTypes = {
   filename: PropTypes.string.isRequired,
+  filetitle: PropTypes.string,
   data: PropTypes.array,
   share: PropTypes.any,
 };
