@@ -162,7 +162,12 @@ export default class FocusList extends Component {
               try {
                 let geoElement = {};
                 let infos = [];
-                const ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                let ed = [];
+                try {
+                  ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                } catch (error) {
+                  ed = [];
+                }
                 if (e.value.address !== undefined) {
                   geoElement = e.value;
                   infos = [getSelectKey(geoElement, 'label', this.props.language, 'default')];
@@ -228,7 +233,6 @@ export default class FocusList extends Component {
             const dataFr = res.data.facets.find(item => item.id === 'keywords_fr') || { entries: [] };
             data = { entries: dataEn.entries.concat(dataFr.entries) };
           } else if (component.type === 'bar') {
-            // console.log('bar', res.data);
             data = res.data.facets[0];
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
@@ -267,7 +271,7 @@ export default class FocusList extends Component {
         </p>
         <div className="container">
           <div className="row">
-            <p className={`col-8 ${classes.Subtext}`}>
+            <p className={`col-md-12 ${classes.Subtext}`}>
               {params.subtext}
             </p>
           </div>
