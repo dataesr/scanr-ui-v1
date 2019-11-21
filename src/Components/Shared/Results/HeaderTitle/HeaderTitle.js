@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -68,10 +68,22 @@ class HeaderTitle extends Component {
       default:
         break;
     }
+    const pageTitle = 'ScanR | '.concat(this.props.label);
+    const pageDescription = 'TODO';
+    const pageImage = 'TODO';
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
-          <ReactTitle title={this.props.label} />
+          <MetaTags>
+            <title>{pageTitle}</title>
+            <meta id="meta-description" name="description" content={pageDescription} />
+            <meta id="og-title" property="og:title" content={pageTitle} />
+            <meta id="og-image" property="og:image" content={pageImage} />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content={pageTitle} />
+            <meta name="twitter:description" content={pageDescription} />
+            <meta name="twitter:image" content={pageImage} />
+          </MetaTags>
           <div className="container">
             <div className="row">
               <div className="col-md-9">
