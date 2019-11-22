@@ -12,18 +12,18 @@ const PublicationsFilters = (props) => {
   const generalFacets = props.generalFacets || [];
   const typeActiveFilters = props.filters.productionType || {};
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
-  const journalActiveFilters = props.filters['source.title'] || {};
+  // const journalActiveFilters = props.filters['source.title'] || {};
   const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
   const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
   const publiTypeActiveFilters = props.filters.type || {};
   const isOaActiveFilters = props.filters.isOa || {};
   const isOaFacets = facets.find(item => item.id === 'isOa') || { entries: [] };
   const typesLabels = (props.language === 'fr')
-    ? {patent: "Brevets", publication: "Publications", thesis: "Thèses"}
-    : {patent: "Patents", publication: "Publication", thesis: "Thesis"}
+    ? { patent: 'Brevets', publication: 'Publications', thesis: 'Thèses' }
+    : { patent: 'Patents', publication: 'Publication', thesis: 'Thesis' };
   const isOaLabel = (props.language === 'fr')
-    ? {'false': "Accès fermé", 'true': "Accès ouvert"}
-    : {'false': "Closed", 'true': "Open"}
+    ? { false: 'Accès fermé', true: 'Accès ouvert' }
+    : { false: 'Closed', true: 'Open' };
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
@@ -114,6 +114,7 @@ export default PublicationsFilters;
 
 PublicationsFilters.propTypes = {
   request: PropTypes.object,
+  facets: PropTypes.object,
   language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
   rangeFilterHandler: PropTypes.func,

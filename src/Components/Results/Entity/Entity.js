@@ -54,7 +54,7 @@ class Entity extends Component {
             type: 'MultiValueSearchFilter',
             op: 'all',
             values: [`${id}`],
-          }
+          },
         },
       };
       Axios.post(url, obj)
