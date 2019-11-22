@@ -265,6 +265,7 @@ export default class FocusList extends Component {
     const pageTitle = 'Scanr | Focus | '.concat(params.title);
     const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
     const pageImage = '../Shared/svg/logo-scanr-blue.svg';
+    const exporting = true;
     const href1 = './';
     const href2 = './focus';
     const href3 = './focus/'.concat(this.props.match.params.id);
@@ -360,6 +361,7 @@ export default class FocusList extends Component {
                     data={component.data}
                     tooltipText={component.tooltipText}
                     style={component.style}
+                    exporting={exporting}
                     href={component.href}
                     hrefExt={component.hrefExt}
                     buttonText={component.buttonText}
