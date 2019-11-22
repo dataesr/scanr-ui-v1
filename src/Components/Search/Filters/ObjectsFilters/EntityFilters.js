@@ -40,6 +40,7 @@ const EntityFilters = (props) => {
           facets={kindFacets1.entries}
           filters={kindActiveFilters}
           facetID="kind"
+          permanentList={{}}
           onSubmit={props.multiValueFilterHandler}
           defaultActive
         />
