@@ -90,7 +90,7 @@ export const PublicationsAggregations = {
       direction: 'DESC',
       type: 'COUNT',
     },
-    size: 10,
+    size: 1000,
   },
   years: {
     field: 'year',

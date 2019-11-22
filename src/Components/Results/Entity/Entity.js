@@ -49,18 +49,13 @@ class Entity extends Component {
     if (id) {
       const url = `${API_STRUCTURES_END_POINT}/search`;
       const obj = {
-        pageSize: 10000,
+        pageSize: 4095,
         filters: {
           'institutions.structure.id': {
             type: 'MultiValueSearchFilter',
             op: 'all',
             values: [`${id}`],
-          },
-          status: {
-            type: 'MultiValueSearchFilter',
-            op: 'any',
-            values: ['active', 'inactive'],
-          },
+          }
         },
       };
       Axios.post(url, obj)
