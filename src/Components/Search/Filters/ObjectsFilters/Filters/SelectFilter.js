@@ -61,7 +61,7 @@ class SelectFilter extends Component {
     const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
     const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
 
-    if (!this.props.permanentList) {
+    if (Object.keys(this.props.permanentList).length === 0) {
       return null;
     }
     return (
@@ -70,17 +70,8 @@ class SelectFilter extends Component {
           {/* eslint-disable-next-line */}
           <div className={`d-flex flex-row ${classes.Title}`}>
             {/* eslint-disable-next-line */}
-            <div onClick={this.switchActive}>
+            <div>
               {this.props.title}
-            </div>
-            <div className="ml-auto">
-              <button
-                type="button"
-                onClick={this.switchActive}
-                className={classes.SearchButton}
-              >
-                <i className={`fas ${caret} ${classes.SearchIcon}`} />
-              </button>
             </div>
           </div>
 
@@ -89,48 +80,44 @@ class SelectFilter extends Component {
             className={`p-2 mt-0 ${classes.ItemsList}`}
           >
             <div className="form-check">
-              <div className="d-flex flex-row align-items-center">
-                <div>
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name={this.props.title}
-                    id={`all_${this.props.title}`}
-                    onClick={() => this.props.onSubmit(this.props.facetID, null, false)}
-                    checked
-                  />
-                  {/* eslint-disable-next-line */}
-                  <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
-                    Tous
-                  </label>
-                </div>
+              <div className="d-flex flex-row align-items-end">
+                <input
+                  className={`${classes.radioStyle} form-check-input`}
+                  type="radio"
+                  name={this.props.title}
+                  id={`all_${this.props.title}`}
+                  onClick={() => this.props.onSubmit(this.props.facetID, null, false)}
+                  checked
+                />
+                {/* eslint-disable-next-line */}
+                <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                  Tous
+                </label>
                 <div className={`ml-auto ${classes.FacetsCounts}`}>
                   {`(${allCount.toLocaleString()})`}
                 </div>
               </div>
               {
                 // Parcouros de toute la liste permanentList puis check de l'élément renvoyé par l'API
-                this.props.permanentList.map((ele) => {
+                Object.entries(this.props.permanentList).map(([key, val]) => {
                   // recherche de l'élément en cours dans les facets retournée pour avoir le count et l'élément en cours
-                  const count = this.getCountFromKey(this.props.facets, 'value', ele, 'count');
+                  const count = this.getCountFromKey(this.props.facets, 'value', key, 'count');
                   return (
-                    <div className="d-flex flex-row align-items-center">
-                      <div>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name={this.props.title}
-                          id={ele}
-                          value={ele}
-                          onClick={() => this.props.onSubmit(this.props.facetID, ele, false)}
-                          checked={(count > 0 && (this.props.filters && this.props.filters.values && this.props.filters.values[0] === ele))}
-                          disabled={count === 0}
-                        />
-                        {/* eslint-disable-next-line */}
-                        <label className={`form-check-label ${classes.Item}`} for={ele}>
-                          {ele}
-                        </label>
-                      </div>
+                    <div className="d-flex flex-row align-items-end pt-1">
+                      <input
+                        className={`${classes.radioStyle} form-check-input pr-2`}
+                        type="radio"
+                        name={this.props.title}
+                        id={key}
+                        value={key}
+                        onClick={() => this.props.onSubmit(this.props.facetID, key, false)}
+                        checked={(count > 0 && (this.props.filters && this.props.filters.values && this.props.filters.values[0] === key))}
+                        disabled={count === 0}
+                      />
+                      {/* eslint-disable-next-line */}
+                      <label className={`form-check-label ${classes.Item}`} for={key}>
+                        {val}
+                      </label>
                       <div className={`ml-auto ${classes.FacetsCounts}`}>
                         {`(${count.toLocaleString()})`}
                       </div>
@@ -157,6 +144,7 @@ SelectFilter.propTypes = {
   facets: PropTypes.array,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
+  language: PropTypes.string,
   defaultActive: PropTypes.bool,
   permanentList: PropTypes.array,
   filters: PropTypes.object,

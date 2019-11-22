@@ -58,15 +58,19 @@ class Productions extends Component {
       this.fetchGlobalData();
     }
     if (prevState.low !== this.state.low || prevState.high !== this.state.high) {
+      console.log('low', 'high');
       this.fetchDataByType();
     }
     if (prevState.total !== this.state.total) {
+      console.log('total');
       this.fetchDataByType();
     }
     if (prevState.productionType !== this.state.productionType) {
+      console.log('type');
       this.fetchDataByType();
     }
     if (prevState.query !== this.state.query) {
+      console.log('query');
       const low = 2000;
       const high = 2020;
       this.setState({ low, high });
@@ -137,7 +141,8 @@ class Productions extends Component {
     request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      // allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      allIds = allIds.concat(this.props.childs);
     }
     if (this.props.person) {
       request.filters['authors.person.id'] = {
