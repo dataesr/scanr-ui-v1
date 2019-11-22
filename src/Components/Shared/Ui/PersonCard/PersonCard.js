@@ -29,6 +29,7 @@ const PersonCard = (props) => {
   let email = props.data.email;
   let firstName = props.data.firstName;
   let lastName = props.data.lastName;
+  const exists = (props.data.person) ? (props.data.person.fullName !== undefined) : false;
   const role = props.role;
   let url = null;
   if (props.data.person) {
@@ -93,7 +94,7 @@ const PersonCard = (props) => {
           }
         </div>
         {
-          (url)
+          (url && exists)
             ? (
               <div className="mt-auto">
                 <ButtonToPage
