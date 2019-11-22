@@ -50,7 +50,7 @@ class HomePage extends Component {
   render() {
     const pageTitle = "ScanR | Moteur de la Recherche et de l'Innovation";
     const pageDescription = 'TODO';
-    const pageImage = 'TODO';
+    const pageImage = '../../svg/logo-scanr-blue.svg';
     return (
       <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
 
