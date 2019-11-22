@@ -61,12 +61,12 @@ export default class HighChartsPackedbubble extends Component {
         packedbubble: {
           useSimulation: true,
           minSize: '10%',
-          maxSize: '100%',
+          maxSize: '80%',
           layoutAlgorithm: {
             splitSeries: (this.data.length > 2),
-            seriesInteraction: false,
+            seriesInteraction: (this.data.length <= 2),
             dragBetweenSeries: false,
-            parentNodeLimit: true,
+            parentNodeLimit: (this.data.length > 2),
           },
         },
       },
