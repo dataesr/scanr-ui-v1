@@ -230,8 +230,8 @@ export default class FocusList extends Component {
             data = data.sort((a, b) => b.total - a.total).slice(0, 9);
             tooltipText = 'thèses soutenues en 2018';
           } else if (component.type === 'wordcloud') {
-            const dataEn = res.data.facets.find(item => item.id === 'keywords_en') || { entries: [] };
-            const dataFr = res.data.facets.find(item => item.id === 'keywords_fr') || { entries: [] };
+            const dataEn = res.data.facets.find(item => item.id === 'domains_label_fr') || { entries: [] };
+            const dataFr = res.data.facets.find(item => item.id === 'domains_label_en') || { entries: [] };
             data = { entries: dataEn.entries.concat(dataFr.entries) };
           } else if (component.type === 'bar') {
             data = res.data.facets[0];
