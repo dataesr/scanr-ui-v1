@@ -61,6 +61,7 @@ class Person extends Component {
           label={(this.state.data.fullName) ? this.state.data.fullName : ''}
           handleChangeForScroll={this.handleChange}
           idPage="Person"
+          id={this.state.data.id}
         />
         <div id="Informations">
           <Informations

@@ -163,6 +163,7 @@ class Publication extends Component {
             label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
             handleChangeForScroll={this.handleChange}
             idPage="Publication"
+            id={this.props.data.id}
           />
           <section className={`container-fluid ${classes.Publication}`} style={sectionStyle} id="Publication">
             <div className="container">

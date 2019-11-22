@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import MetaTags from 'react-meta-tags';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -261,6 +262,12 @@ export default class FocusList extends Component {
   }
 
   render() {
+    const pageTitle = 'Scanr | Focus | '.concat(params.title);
+    const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
+    const pageImage = '../Shared/svg/logo-scanr-blue.svg';
+    const href1 = './';
+    const href2 = './focus';
+    const href3 = './focus/'.concat(this.props.match.params.id);
     const TextComponent = () => (
       <div>
         <p className={`${classes.Title}`}>
@@ -290,6 +297,48 @@ export default class FocusList extends Component {
           url1="/"
           url2="/focus"
         />
+        <MetaTags>
+          <title>{pageTitle}</title>
+          <meta id="meta-description" name="description" content={pageDescription} />
+          <meta id="og-title" property="og:title" content={pageTitle} />
+          <meta id="og-image" property="og:image" content={pageImage} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:image" content={pageImage} />
+          <ol itemScope itemType="http://schema.org/BreadcrumbList">
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href1}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">ScanR</span></a>
+              <meta itemProp="position" content="1" />
+            </li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href2}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">Focus</span></a>
+              <meta itemProp="position" content="2" />
+            </li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href3}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">{params.title}</span></a>
+              <meta itemProp="position" content="3" />
+            </li>
+          </ol>
+        </MetaTags>
 
         {/* <LastFocus language={props.language} /> */}
 
