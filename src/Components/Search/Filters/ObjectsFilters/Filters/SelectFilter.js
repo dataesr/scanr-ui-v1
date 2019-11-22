@@ -58,7 +58,7 @@ class SelectFilter extends Component {
   }
 
   render() {
-    const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
+    // const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
     const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
 
     if (Object.keys(this.props.permanentList).length === 0) {
@@ -144,7 +144,7 @@ SelectFilter.propTypes = {
   facets: PropTypes.array,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
-  language: PropTypes.string,
+  // language: PropTypes.string,
   defaultActive: PropTypes.bool,
   permanentList: PropTypes.array,
   filters: PropTypes.object,

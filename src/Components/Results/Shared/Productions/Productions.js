@@ -58,19 +58,15 @@ class Productions extends Component {
       this.fetchGlobalData();
     }
     if (prevState.low !== this.state.low || prevState.high !== this.state.high) {
-      console.log('low', 'high');
       this.fetchDataByType();
     }
     if (prevState.total !== this.state.total) {
-      console.log('total');
       this.fetchDataByType();
     }
     if (prevState.productionType !== this.state.productionType) {
-      console.log('type');
       this.fetchDataByType();
     }
     if (prevState.query !== this.state.query) {
-      console.log('query');
       const low = 2000;
       const high = 2020;
       this.setState({ low, high });
