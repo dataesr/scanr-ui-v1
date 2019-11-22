@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -27,8 +27,15 @@ class HeaderTitle extends Component {
 
   render() {
     const list = [];
+    const href1 = './recherche/all?query=';
+    let href2 = '';
+    let href3 = '';
+    let pageType = '';
     switch (this.props.idPage) {
       case 'Entity':
+        href2 = './recherche/structures?query=';
+        href3 = './entite/'.concat(this.props.id);
+        pageType = 'Structures';
         list.push('Portrait');
         list.push('Network');
         list.push('Team');
@@ -40,11 +47,17 @@ class HeaderTitle extends Component {
         list.push('LastEntityFocus');
         break;
       case 'Person':
+        href2 = './recherche/persons?query=';
+        href3 = './person/'.concat(this.props.id);
+        pageType = 'Personnes';
         list.push('Informations');
         list.push('Production');
         list.push('CoAuthors');
         break;
       case 'Project':
+        href2 = './recherche/projects?query=';
+        href3 = './project/'.concat(this.props.id);
+        pageType = 'Projets';
         list.push('Informations');
         list.push('Financial');
         list.push('Programs');
@@ -52,6 +65,9 @@ class HeaderTitle extends Component {
         list.push('Productions');
         break;
       case 'Thesis':
+        href2 = './recherche/publications?query=';
+        href3 = './publication/'.concat(this.props.id);
+        pageType = 'Thèses';
         list.push('Thesis');
         list.push('AccessType');
         list.push('Authors');
@@ -59,6 +75,9 @@ class HeaderTitle extends Component {
         list.push('SimilarProductions');
         break;
       case 'Publication':
+        href2 = './recherche/publications?query=';
+        href3 = './publication/'.concat((this.props.id).split('/').join('%25252f'));
+        pageType = 'Publications';
         list.push('Publication');
         list.push('AccessType');
         list.push('Authors');
@@ -68,10 +87,54 @@ class HeaderTitle extends Component {
       default:
         break;
     }
+    const pageTitle = 'ScanR | '.concat(this.props.label);
+    const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
+    const pageImage = '../../svg/logo-scanr-blue.svg';
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
-          <ReactTitle title={this.props.label} />
+          <MetaTags>
+            <title>{pageTitle}</title>
+            <meta id="meta-description" name="description" content={pageDescription} />
+            <meta id="og-title" property="og:title" content={pageTitle} />
+            <meta id="og-image" property="og:image" content={pageImage} />
+            <meta name="twitter:card" content="summary" />
+            <meta name="twitter:title" content={pageTitle} />
+            <meta name="twitter:description" content={pageDescription} />
+            <meta name="twitter:image" content={pageImage} />
+            <ol itemScope itemType="http://schema.org/BreadcrumbList">
+              <li
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/ListItem"
+              >
+                <a itemProp="item" href={href1}>
+                  {/* eslint-disable-next-line */}
+	         <span itemProp="name">Recherche</span></a>
+                <meta itemProp="position" content="1" />
+              </li>
+              <li
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/ListItem"
+              >
+                <a itemProp="item" href={href2}>
+                  {/* eslint-disable-next-line */}
+	         <span itemProp="name">{pageType}</span></a>
+                <meta itemProp="position" content="2" />
+              </li>
+              <li
+                itemProp="itemListElement"
+                itemScope
+                itemType="http://schema.org/ListItem"
+              >
+                <a itemProp="item" href={href3}>
+                  {/* eslint-disable-next-line */}
+	         <span itemProp="name">{pageTitle}</span></a>
+                <meta itemProp="position" content="3" />
+              </li>
+            </ol>
+          </MetaTags>
           <div className="container">
             <div className="row">
               <div className="col-md-9">
@@ -119,6 +182,7 @@ export default HeaderTitle;
 HeaderTitle.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
   idPage: PropTypes.string.isRequired,
   handleChangeForScroll: PropTypes.func,
 };

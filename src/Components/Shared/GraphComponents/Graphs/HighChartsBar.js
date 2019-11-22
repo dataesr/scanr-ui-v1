@@ -141,7 +141,11 @@ export default class HighChartsBar extends Component {
         },
         chartOptions: {
           title: {
-            text: this.props.filename,
+            text: this.props.filetitle,
+          },
+          credits: {
+            enabled: true,
+            text: "Source : ScanR, Moteur de la Recherche et de l'Innovation",
           },
         },
       },
@@ -236,5 +240,6 @@ HighChartsBar.defaultProps = {
 
 HighChartsBar.propTypes = {
   filename: PropTypes.string.isRequired,
+  filetitle: PropTypes.string,
   data: PropTypes.object,
 };

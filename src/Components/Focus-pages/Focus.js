@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import MetaTags from 'react-meta-tags';
 
 // Composants
 import Footer from '../Shared/Footer/Footer';
@@ -162,7 +163,12 @@ export default class FocusList extends Component {
               try {
                 let geoElement = {};
                 let infos = [];
-                const ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                let ed = [];
+                try {
+                  ed = e.value.affiliations.filter(item => item.nature === 'Ecole doctorale');
+                } catch (error) {
+                  ed = [];
+                }
                 if (e.value.address !== undefined) {
                   geoElement = e.value;
                   infos = [getSelectKey(geoElement, 'label', this.props.language, 'default')];
@@ -224,11 +230,10 @@ export default class FocusList extends Component {
             data = data.sort((a, b) => b.total - a.total).slice(0, 9);
             tooltipText = 'thèses soutenues en 2018';
           } else if (component.type === 'wordcloud') {
-            const dataEn = res.data.facets.find(item => item.id === 'keywords_en') || { entries: [] };
-            const dataFr = res.data.facets.find(item => item.id === 'keywords_fr') || { entries: [] };
+            const dataEn = res.data.facets.find(item => item.id === 'domains_label_fr') || { entries: [] };
+            const dataFr = res.data.facets.find(item => item.id === 'domains_label_en') || { entries: [] };
             data = { entries: dataEn.entries.concat(dataFr.entries) };
           } else if (component.type === 'bar') {
-            // console.log('bar', res.data);
             data = res.data.facets[0];
           }
           const text = (component.href) ? 'Explorer dans ScanR' : null;
@@ -257,6 +262,12 @@ export default class FocusList extends Component {
   }
 
   render() {
+    const pageTitle = 'Scanr | Focus | '.concat(params.title);
+    const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
+    const pageImage = '../Shared/svg/logo-scanr-blue.svg';
+    const href1 = './';
+    const href2 = './focus';
+    const href3 = './focus/'.concat(this.props.match.params.id);
     const TextComponent = () => (
       <div>
         <p className={`${classes.Title}`}>
@@ -267,7 +278,7 @@ export default class FocusList extends Component {
         </p>
         <div className="container">
           <div className="row">
-            <p className={`col-8 ${classes.Subtext}`}>
+            <p className={`col-md-12 ${classes.Subtext}`}>
               {params.subtext}
             </p>
           </div>
@@ -286,6 +297,48 @@ export default class FocusList extends Component {
           url1="/"
           url2="/focus"
         />
+        <MetaTags>
+          <title>{pageTitle}</title>
+          <meta id="meta-description" name="description" content={pageDescription} />
+          <meta id="og-title" property="og:title" content={pageTitle} />
+          <meta id="og-image" property="og:image" content={pageImage} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:image" content={pageImage} />
+          <ol itemScope itemType="http://schema.org/BreadcrumbList">
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href1}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">ScanR</span></a>
+              <meta itemProp="position" content="1" />
+            </li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href2}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">Focus</span></a>
+              <meta itemProp="position" content="2" />
+            </li>
+            <li
+              itemProp="itemListElement"
+              itemScope
+              itemType="http://schema.org/ListItem"
+            >
+              <a itemProp="item" href={href3}>
+                {/* eslint-disable-next-line */}
+               <span itemProp="name">{params.title}</span></a>
+              <meta itemProp="position" content="3" />
+            </li>
+          </ol>
+        </MetaTags>
 
         {/* <LastFocus language={props.language} /> */}
 
