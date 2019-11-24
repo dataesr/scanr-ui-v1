@@ -107,7 +107,7 @@ class CheckBoxFilter extends Component {
                             <input
                               type="checkbox"
                               id={facet.value}
-                              defaultChecked={filters.includes(facet.value)}
+                              checked={filters.includes(facet.value)}
                             />
                             <span className={classes.CheckMark} />
                           </div>
