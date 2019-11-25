@@ -5,12 +5,15 @@ import { GridLoader } from 'react-spinners';
 
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../config/config';
 
+import styles from '../../../../style.scss';
+
 import EmptySection from '../../../Shared/Results/EmptySection/EmptySection';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProjectList from './Components/ProjectList';
 import ProjectGraphs from './Components/ProjectGraphs';
 import Request from './Requests/Request';
+import DateRequest from './Requests/DateRequest';
 import PreRequest from './Requests/PreRequest';
 
 /**
@@ -26,38 +29,32 @@ class Projects extends Component {
     projectType: 'all',
     error: false,
     isLoading: true,
-    total: 0,
+    total: null,
+    sliderData: {},
     totalPerType: {},
     query: '',
     currentQueryText: '',
-    graphData: {},
+    graphData: {
+      isOa: {},
+      journals: {},
+      years: {},
+      keywords: {},
+      types: {},
+    },
     activeGraph: null,
     viewMode: 'list',
     data: [],
     selectedProject: '',
-    sliderYearPrint: {
-      min: null,
-      max: null,
-    },
-    sliderYear: {
-      min: null,
-      max: null,
-    },
-    sliderBounds: {
-      min: null,
-      max: null,
-    },
+    high: null,
+    low: null,
   }
 
-  componentDidMount() {
-    this.fetchGlobalData();
-  }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.childs !== this.props.childs) {
       this.fetchGlobalData();
     }
-    if (prevState.sliderYear.min !== this.state.sliderYear.min || prevState.sliderYear.max !== this.state.sliderYear.max) {
+    if (prevState.low !== this.state.low || prevState.high !== this.state.high) {
       this.fetchDataByType();
     }
     if (prevState.total !== this.state.total) {
@@ -67,11 +64,9 @@ class Projects extends Component {
       this.fetchDataByType();
     }
     if (prevState.query !== this.state.query) {
-      const sliderYear = {
-        min: 2000,
-        max: 2020,
-      };
-      this.setState({ sliderYear });
+      const low = 2000;
+      const high = 2020;
+      this.setState({ low, high });
       this.fetchDataByType();
     }
   }
@@ -81,71 +76,62 @@ class Projects extends Component {
     const preRequest = PreRequest;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      allIds = allIds.concat(this.props.childs).slice(0, 4095);
     }
     preRequest.filters['participants.structure.id'].values = allIds;
     Axios.post(url, preRequest).then((response) => {
-      let years = [2000, 2020];
-      try {
-        const years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
-        if (years2.length > 0) {
-          years = years2;
-        }
-      } catch (err) {
-        // eslint-disable-next-line
-        console.log(err);
-      }
       const totalPerType = {};
-      // const MaxProduction = '';
       response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
         totalPerType[type.value] = type.count;
       });
-      const sliderBounds = {
-        min: Math.min(...years),
-        max: Math.max(...years),
-      };
       const viewMode = response.data.total > 10 ? 'graph' : 'list';
       this.setState({
         total: response.data.total,
         totalPerType,
         viewMode,
-        sliderBounds,
-        sliderYear: sliderBounds,
-        sliderYearPrint: sliderBounds,
       });
     });
   }
 
   fetchDataByType = () => {
+    if (this.state.total === 0) {
+      this.setState({ isLoading: false });
+      return;
+    }
     this.setState({ isLoading: true });
     const url = API_PROJECTS_SEARCH_END_POINT;
-    const st = this.state.sliderYear.min ? this.state.sliderYear.min : 2000;
-    const en = this.state.sliderYear.max ? this.state.sliderYear.max : 2020;
     const request = Request;
-    let allIds = [this.props.match.params.id];
-    if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 1000);
-    }
+    const dateRequest = DateRequest;
     request.query = this.state.query;
-    request.filters.startDate.max = new Date(Date.UTC(en, 11, 31)).toISOString();
-    request.filters.startDate.min = new Date(Date.UTC(st, 0, 1)).toISOString();
-    Request.filters['participants.structure.id'].values = allIds;
+    dateRequest.query = this.state.query;
     if (this.state.projectType !== 'all') {
       request.filters.type = {
         type: 'MultiValueSearchFilter',
         op: 'any',
         values: [this.state.projectType],
       };
+      dateRequest.filters.type = {
+        type: 'MultiValueSearchFilter',
+        op: 'any',
+        values: [this.state.projectType],
+      };
     }
+    request.filters.year.min = this.state.low ? this.state.low : 2000;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
+
+    let allIds = [this.props.match.params.id];
+    if (this.props.childs.length > 0) {
+      allIds = allIds.concat(this.props.childs).slice(0, 4095);
+    }
+    Request.filters['participants.structure.id'].values = allIds;
+    dateRequest.filters['participants.structure.id'].values = allIds;
+    Axios.post(url, dateRequest).then((response) => {
+      const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
+      this.setState({
+        sliderData,
+      });
+    });
     Axios.post(url, request).then((response) => {
-      // eslint-disable-next-line
-      let years2 = [2000, 2020]
-      try {
-        years2 = response.data.facets.find(facet => facet.id === 'years').entries.map(a => parseInt(a.value, 10));
-      } catch (err) {
-        // eslint-disable-next-line
-        console.log(err);
-      }
       const graphData = {};
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
@@ -191,15 +177,13 @@ class Projects extends Component {
     this.setState({ activeGraph: nextGraph });
   }
 
-  sliderChangeHandler = (value) => {
-    this.setState({ sliderYearPrint: value });
+  handleSliderRange = (low, high) => {
+    this.setState({
+      high: Math.max(low, high),
+      low: Math.min(low, high),
+    });
   }
 
-  sliderChangeCompleteHandler = (value) => {
-    this.setState({ sliderYear: value });
-  }
-
-  // eslint-disable-next-line
   setSelectedProjectHandler = (selectedProject) => {
     this.setState({ selectedProject });
   };
@@ -231,7 +215,7 @@ class Projects extends Component {
                   ? (
                     <div className="row justify-content-center py-5 my-5">
                       <GridLoader
-                        color="#cc3d8f"
+                        color={styles.projectsColor}
                         loading={this.state.isLoading}
                       />
                     </div>
@@ -243,6 +227,13 @@ class Projects extends Component {
         </Fragment>
       );
     }
+
+    const sliderDataWithTooltip = [];
+    this.state.sliderData.forEach((entry) => {
+      const newEntry = { ...entry };
+      newEntry.tooltip = `${entry.count} projets - ${entry.value}`;
+      sliderDataWithTooltip.push(newEntry);
+    });
 
     return (
       <Fragment>
@@ -261,15 +252,15 @@ class Projects extends Component {
             <FilterPanel
               language={this.props.language}
               totalPerType={this.state.totalPerType}
-              selectedType={this.state.productionType}
+              selectedType={this.state.projectType}
+              data={sliderDataWithTooltip}
               changeTypeHandler={this.changeTypeHandler}
               currentQueryText={this.state.currentQueryText}
               queryChangeHandler={this.queryChangeHandler}
               queryTextChangeHandler={this.queryTextChangeHandler}
-              sliderBounds={this.state.sliderBounds}
-              sliderYearPrint={this.state.sliderYearPrint}
-              sliderChangeHandler={this.sliderChangeHandler}
-              sliderChangeCompleteHandler={this.sliderChangeCompleteHandler}
+              lowSliderYear={this.state.low}
+              highSliderYear={this.state.high}
+              handleSliderRange={this.handleSliderRange}
             />
             {
               (this.state.viewMode === 'list')
@@ -288,7 +279,7 @@ class Projects extends Component {
                     setActiveGraphHandler={this.setActiveGraphHandler}
                     graphData={this.state.graphData}
                     data={this.state.data}
-                    productionType={this.state.productionType}
+                    projectType={this.state.projectType}
                     totalPerType={this.state.totalPerType}
                   />
                 )
