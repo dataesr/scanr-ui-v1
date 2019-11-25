@@ -370,8 +370,8 @@ class YearRangeSlider extends Component {
   render() {
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
     return (
-      <div className="w-100 my-4">
-        <div className="d-flex flex-column">
+      <div className="w-100">
+        <div className="d-flex flex-column" style={{ marginBottom: '-30px' }}>
           <div className={classes.label} htmlFor="slider">
             {this.props.label}
           </div>
