@@ -53,7 +53,7 @@ class Entity extends Component {
           'institutions.structure.id': {
             type: 'MultiValueSearchFilter',
             op: 'all',
-            values: [`${id}`],
+            values: [id],
           },
         },
       };
