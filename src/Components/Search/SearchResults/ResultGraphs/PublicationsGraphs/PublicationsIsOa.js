@@ -73,7 +73,7 @@ export default class ProductionIsOa extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsDonut
-            filename="openAccess"
+            filename="Taux accès ouvert"
             data={this.state.data}
             language={this.props.language}
           />
