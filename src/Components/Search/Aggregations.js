@@ -40,7 +40,58 @@ export const ProjectsAggregations = {
     size: 500,
   },
 };
-export const StructuresAggregations = {};
+export const StructuresAggregations = {
+  localisations: {
+    field: 'address.localisationSuggestions',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 1000,
+  },
+  kind: {
+    field: 'kind',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 50,
+  },
+  projectTypes: {
+    field: 'projects.project.type',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 50,
+  },
+  badgesFr: {
+    field: 'badges.label.fr',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 20,
+  },
+  badgesEn: {
+    field: 'badges.label.en',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 20,
+  },
+};
 export const PublicationsAggregations = {
   types: {
     field: 'type',
