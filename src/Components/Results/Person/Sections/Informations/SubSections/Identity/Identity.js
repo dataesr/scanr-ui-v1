@@ -43,20 +43,6 @@ const Identity = (props) => {
                       data={props.data}
                     />
                   </div>
-                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace}`}>
-                    <div className="container-fluid">
-                      <div className="row">
-                        <div className={`col-12 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            logo="fas fa-flask"
-                            title="Status"
-                            language={props.language}
-                            label={messages[props.language]['Person.informations.identity.researcher']}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
