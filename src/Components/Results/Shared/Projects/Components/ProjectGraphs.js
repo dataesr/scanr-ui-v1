@@ -89,16 +89,16 @@ const ProjectGraphs = (props) => {
   const graphs = ['types', 'years', 'keywords', 'sankey'];
   const labelFor = {
     fr: {
-      years: 'Par année',
-      keywords: 'Nuage de mots clés',
-      types: 'Types de publications',
-      sankey: 'Caractéristiques',
+      years: 'Projets par année',
+      keywords: 'Nuage de mots clés des projets',
+      types: 'Types de projets',
+      sankey: 'Caractéristiques des projets',
     },
     en: {
-      years: 'By year',
-      keywords: 'Keywords cloud',
-      types: 'Publication types',
-      sankey: 'Caracteristics',
+      years: 'Projects by year',
+      keywords: 'Wordcloud for projects',
+      types: 'Project types',
+      sankey: 'Project caracteristics',
     },
   };
   const active = (props.activeGraph) ? props.activeGraph : 'types';
@@ -106,20 +106,20 @@ const ProjectGraphs = (props) => {
   const renderGraph = () => {
     if (active === 'keywords') {
       const data = createWordCloudData();
-      return <WorldCloud filename={active} data={data} />;
+      return <WorldCloud filename={labelFor[props.language][active]} data={data} />;
     }
     if (active === 'sankey') {
       const data = createSankeyData();
-      return <SankeyChart filename={active} data={data} />;
+      return <SankeyChart filename={labelFor[props.language][active]} data={data} />;
     }
     if (active === 'years') {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={active} data={data} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} />;
     }
     return (
-      <BarChart filename={active} data={props.graphData[active]} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} />
     );
   };
 
