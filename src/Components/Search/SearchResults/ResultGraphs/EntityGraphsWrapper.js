@@ -13,7 +13,6 @@ const EntityGraphsWrapper = props => (
     <EntityCitiesBar language={props.language} request={props.request} />
     <EntityNatureDonut language={props.language} request={props.request} />
     <EntityProjects language={props.language} request={props.request} />
-    <EntityDomains language={props.language} request={props.request} />
   </React.Fragment>
 );
 

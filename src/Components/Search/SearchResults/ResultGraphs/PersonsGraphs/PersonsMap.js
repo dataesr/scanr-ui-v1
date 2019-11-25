@@ -13,7 +13,7 @@ export default class PersonsMap extends Component {
     data: [],
     isLoading: true,
     title: 'Cartographie',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
   }
 
   componentDidMount() {
