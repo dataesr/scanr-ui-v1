@@ -5,6 +5,8 @@ import { GridLoader } from 'react-spinners';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
 
+import styles from '../../../../style.scss';
+
 import EmptySection from '../../../Shared/Results/EmptySection/EmptySection';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
@@ -50,9 +52,6 @@ class Productions extends Component {
     low: null,
   }
 
-  componentDidMount() {
-  }
-
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.childs !== this.props.childs) {
       this.fetchGlobalData();
@@ -79,7 +78,7 @@ class Productions extends Component {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      allIds = allIds.concat(this.props.childs).slice(0, 4095);
     }
     const preRequest = PreRequest;
     if (this.props.person) {
@@ -125,6 +124,10 @@ class Productions extends Component {
   }
 
   fetchDataByType = () => {
+    if (this.state.total === 0) {
+      this.setState({ isLoading: false });
+      return;
+    }
     this.setState({ isLoading: true });
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     const request = Request;
@@ -137,8 +140,7 @@ class Productions extends Component {
     request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      // allIds = allIds.concat(this.props.childs).slice(0, 1000);
-      allIds = allIds.concat(this.props.childs);
+      allIds = allIds.concat(this.props.childs).slice(0, 4095);
     }
     if (this.props.person) {
       request.filters['authors.person.id'] = {
@@ -301,7 +303,7 @@ class Productions extends Component {
               />
               <div className="row justify-content-center py-5 my-5">
                 <GridLoader
-                  color="#cc3d8f"
+                  color={styles.publicationsColor}
                   loading={this.state.isLoading}
                 />
               </div>
