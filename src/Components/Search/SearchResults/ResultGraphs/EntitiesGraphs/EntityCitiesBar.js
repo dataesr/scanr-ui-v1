@@ -57,7 +57,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsBar
-            filename="top10cities"
+            filename="Top 10 des villes"
             data={this.state.data}
             language={this.props.language}
           />
