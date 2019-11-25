@@ -9,6 +9,7 @@ import HeaderTitle from '../../../Shared/Results/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../Shared/SectionTitle';
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
+import SimpleCardWithButton from '../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import SourceCard from './SubComponents/SourceCard';
 import OaCard from '../Shared/Oa/OaCard';
 import OaHost from '../Shared/Oa/OaHost';
@@ -191,15 +192,15 @@ class Publication extends Component {
                     <div className="col-md-5">
                       <div className="row">
                         <div className={`col-md-12 ${classes.CardContainer}`}>
-                          <a href={externalLink} target="_blank" rel="noopener noreferrer">
-                            <SimpleCard
-                              language={this.props.language}
-                              logo="fas fa-calendar-day"
-                              title={idName}
-                              label={id}
-                              tooltip=""
-                            />
-                          </a>
+                          <SimpleCardWithButton
+                            language={this.props.language}
+                            logo="fas fa-calendar-day"
+                            title={idName}
+                            label={id}
+                            url={externalLink}
+                            link="link_publication"
+                            tooltip=""
+                          />
                         </div>
                         <div className={`col-md-12 ${classes.CardContainer}`}>
                           <SimpleCard
