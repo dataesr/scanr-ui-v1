@@ -66,7 +66,7 @@ export default class PersonsMap extends Component {
             subtitle={this.state.subtitle}
           />
           <LeafletMap
-            filename="carto"
+            filename="Localisation des affiliations"
             data={this.state.data}
             language={this.props.language}
           />
