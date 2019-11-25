@@ -1,5 +1,5 @@
 export default {
-  pageSize: 50,
+  pageSize: 10000,
   query: '',
   sourceFields: [
     'id', 'keywords', 'label', 'acronym', 'domains', 'type',
