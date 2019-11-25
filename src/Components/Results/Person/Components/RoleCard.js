@@ -32,6 +32,7 @@ const RoleCard = (props) => {
   const id = props.data.description.split('__')[2];
   const logo = (<div className={classes.Logo}><i className="fas fa-qrcode" aria-hidden="true" /></div>);
   const singleDate = (moment(props.data.startDate).format('YYYY') === moment(props.data.endDate).format('YYYY'));
+  const endDate = (props.data.endDate) ? (moment(props.data.endDate).format('YYYY')) : '';
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
@@ -50,7 +51,7 @@ const RoleCard = (props) => {
             {
               (singleDate)
                 ? moment(props.data.startDate).format('YYYY')
-                : `${moment(props.data.startDate).format('YYYY')} -- ${moment(props.data.endDate).format('YYYY')}`
+                : `${moment(props.data.startDate).format('YYYY')} -- ${endDate}`
             }
           </div>
           <div className={`mt-auto ${classes.Label}`}>

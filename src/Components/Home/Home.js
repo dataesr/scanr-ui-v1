@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ReactTitle } from 'react-meta-tags';
+import MetaTags from 'react-meta-tags';
 
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
@@ -46,11 +46,24 @@ class HomePage extends Component {
     }
   }
 
+
   render() {
+    const pageTitle = "ScanR | Moteur de la Recherche et de l'Innovation";
+    const pageDescription = 'TODO';
+    const pageImage = '../../svg/logo-scanr-blue.svg';
     return (
       <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
 
-        <ReactTitle title="ScanR | Moteur de la Recherche et de l'Innovation" />
+        <MetaTags>
+          <title>{pageTitle}</title>
+          <meta id="meta-description" name="description" content={pageDescription} />
+          <meta id="og-title" property="og:title" content={pageTitle} />
+          <meta id="og-image" property="og:image" content={pageImage} />
+          <meta name="twitter:card" content="summary" />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={pageDescription} />
+          <meta name="twitter:image" content={pageImage} />
+        </MetaTags>
 
         <Header
           language={this.props.language}

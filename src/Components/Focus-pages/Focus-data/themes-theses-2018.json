@@ -1,7 +1,7 @@
 {
-  "title": "Quels sont les thèmes majeurs des thèses aujourd'hui en France ?",
-  "text":  "bl",
-  "subtext":  "bl",
+  "title": "Les thèses soutenues en 2018. Sur quels thèmes ?",
+  "text":  "",
+  "subtext":  "Le moteur de recherche http://theses.fr, produit par l’Agence bibliographique de l’enseignement supérieur (ABES) [http://www.abes.fr/] recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation (STEP) [https://step.theses.fr/], celle dédiée à la gestion du dépôt national des thèses électroniques françaises (STAR) [https://star.theses.fr/] et du catalogue collectif Sudoc [http://sudoc.fr/]. scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises.",
   "tags": ["theses"],
   "components": [
     {
@@ -16,7 +16,7 @@
       "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
       "queryField": "productionType",
       "pageSize": 10000,
-      "facet": ["domains.label.fr"],
+      "facet": ["domains.label.fr", "domains.label.en"],
       "sourceFields": ["productionDate", "domains"],
       "queryValue": ["thesis"]
     },
@@ -31,8 +31,8 @@
       "yearMin": 2018,
       "yearMax": 2018,
       "queryField": "productionType",
-      "facet": ["keywords.en", "keywords.fr"],
-      "sourceFields": ["productionDate", "keywords"],
+      "facet": ["domains.label.fr"],
+      "sourceFields": ["productionDate"],
       "queryValue": ["thesis"]
     },
     {

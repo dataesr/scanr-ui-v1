@@ -1,6 +1,7 @@
 export default {
-  pageSize: 500,
+  pageSize: 50,
   query: '',
+  // sort: {'year': 'DESC'},
   sourceFields: [
     'id', 'keywordsEn', 'keywordsFr', 'title', 'subtitle', 'summary', 'authors', 'productionType',
     'alternativeSummary', 'source', 'oaEvidence', 'isOa', 'domains', 'type',
