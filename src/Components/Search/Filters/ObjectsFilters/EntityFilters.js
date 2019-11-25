@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
@@ -35,8 +34,8 @@ const EntityFilters = (props) => {
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
         />
-        <SelectFilter
-          title="Type d'organisme"
+        <CheckBoxFilter
+          title="Secteur de l'organisme"
           facets={kindFacets1.entries}
           filters={kindActiveFilters}
           facetID="kind"

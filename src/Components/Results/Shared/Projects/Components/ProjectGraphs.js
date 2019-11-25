@@ -27,9 +27,9 @@ const ProjectGraphs = (props) => {
       const type = currentProject.type;
       const year = (currentProject.year) ? (currentProject.year.toString()) : 'NODATA#';
 
-      const duration = (currentProject.duration) ? (currentProject.duration) : 0;
+      const duration = (currentProject.duration) ? (currentProject.duration) : -1;
       let durationKey = 'NODATA#';
-      if (duration <= 6) {
+      if (duration > 0 && duration <= 6) {
         durationKey = '0-6 mois';
       }
       if (duration > 6 && duration <= 12) {

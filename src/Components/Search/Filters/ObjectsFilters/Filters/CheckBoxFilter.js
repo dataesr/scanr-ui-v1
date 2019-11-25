@@ -97,7 +97,7 @@ class CheckBoxFilter extends Component {
                         aria-selected={false}
                         key={facet.value}
                         id={facet.value}
-                        className={`p-1 ${classes.Suggestion}`}
+                        className={`${classes.Suggestion}`}
                         onClick={() => this.submitWrapper(facet.value)}
                         onKeyPress={() => this.submitWrapper(facet.value)}
                         onMouseDown={event => event.preventDefault()}
@@ -107,7 +107,7 @@ class CheckBoxFilter extends Component {
                             <input
                               type="checkbox"
                               id={facet.value}
-                              defaultChecked={filters.includes(facet.value)}
+                              checked={filters.includes(facet.value)}
                             />
                             <span className={classes.CheckMark} />
                           </div>

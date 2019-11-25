@@ -1,22 +1,44 @@
 @import '../../../../../style.scss';
 
 .Title {
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 5px;
-  color: $scanrlightgreyColor;
-  background-color: $scanrdeepblueColor;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: 400;
+  color: $scanrgreyColor;
+  padding-left: 0;
+  padding-bottom: 0;
 }
 
-.ItemsList {
-  background-color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+.radioStyle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  border: 1px solid $scanrgreyColor;
+  background-color: $scanrlightgreyColor;
+  color: $scanrblueColor;
+  height: 22px;
+  width: 22px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-right: 7px;
+  outline: none;
 }
+.radioStyle:checked::before {
+  position: absolute;
+  content: '\25CF';
+  left: 3px;
+  top: -2px;
+  color: $scanrblueColor;
+}
+.radioStyle:hover {
+  background-color: white;
+}
+
+
 .Item {
-  color: $scanrdeepblueColor;
+  color: $scanrgreyColor;
   font-size: 0.9rem;
 }
 
