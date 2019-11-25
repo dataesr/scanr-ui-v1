@@ -6,8 +6,8 @@ export default {
     'participantCount', 'call', 'action', 'year', 'description',
   ],
   filters: {
-    startDate: {
-      type: 'DateRangeFilter',
+    year: {
+      type: 'LongRangeFilter',
       max: null,
       min: null,
       missing: true,
