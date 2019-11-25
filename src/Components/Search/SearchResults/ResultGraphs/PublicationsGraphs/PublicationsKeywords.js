@@ -69,7 +69,7 @@ export default class ProductionKeywords extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsWordCloud
-            filename="top-keywords"
+            filename="Mot-clé des publications"
             data={this.state.data}
             language={this.props.language}
           />
