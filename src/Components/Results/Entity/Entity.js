@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { ReactTitle } from 'react-meta-tags';
 
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
 import getSelectKey from '../../../Utils/getSelectKey';
@@ -49,17 +48,12 @@ class Entity extends Component {
     if (id) {
       const url = `${API_STRUCTURES_END_POINT}/search`;
       const obj = {
-        pageSize: 10000,
+        pageSize: 4095,
         filters: {
           'institutions.structure.id': {
             type: 'MultiValueSearchFilter',
             op: 'all',
             values: [`${id}`],
-          },
-          status: {
-            type: 'MultiValueSearchFilter',
-            op: 'any',
-            values: ['active', 'inactive'],
           },
         },
       };
@@ -92,7 +86,6 @@ class Entity extends Component {
     }
     return (
       <Fragment>
-        <ReactTitle title={getSelectKey(this.state.data, 'label', this.props.language, 'fr')} />
 
         <Header
           language={this.props.language}
@@ -104,6 +97,7 @@ class Entity extends Component {
           label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
           handleChangeForScroll={this.handleChange}
           idPage="Entity"
+          id={this.state.data.id}
         />
 
         <div id="Portrait">

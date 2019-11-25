@@ -65,6 +65,7 @@ class Project extends Component {
           label={getSelectKey(this.state.data, 'label', this.props.language, 'default')}
           handleChangeForScroll={this.handleChange}
           idPage="Project"
+          id={this.state.data.id}
         />
         <div id="Informations">
           <Informations

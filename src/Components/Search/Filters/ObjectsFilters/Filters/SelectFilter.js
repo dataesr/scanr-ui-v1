@@ -38,35 +38,40 @@ class SelectFilter extends Component {
     });
   }
 
-  submitWrapper(value) {
-    const filtered = this.props.facets
-      .filter(item => item.value.toLowerCase().includes(value.toLowerCase()));
-    if (filtered[0]) {
-      this.props.onSubmit(this.props.facetID, filtered[0].value);
+  getCountFromKey = (entries, searchedKey, searchedKeyValue, returnKey) => {
+    for (let i = 0; i < entries.length; i += 1) {
+      if (entries[i][searchedKey] === searchedKeyValue) {
+        return entries[i][returnKey];
+      }
     }
+    return 0;
+  }
+
+  submitWrapper(value) {
+    // const filtered = this.props.facets
+    //   .filter(item => item.value.toLowerCase().includes(value.toLowerCase()));
+    // if (filtered[0]) {
+    //   console.log('filtered[0].value=>', filtered[0].value);
+    //   this.props.onSubmit(this.props.facetID, filtered[0].value);
+    // }
+    this.props.onSubmit(this.props.facetID, value);
   }
 
   render() {
-    const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
+    // const caret = this.state.active ? 'fa-caret-up' : 'fa-caret-down';
     const allCount = this.props.facets.reduce((acc, item) => (acc + item.count), 0);
 
+    if (Object.keys(this.props.permanentList).length === 0) {
+      return null;
+    }
     return (
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
           {/* eslint-disable-next-line */}
           <div className={`d-flex flex-row ${classes.Title}`}>
             {/* eslint-disable-next-line */}
-            <div onClick={this.switchActive}>
+            <div>
               {this.props.title}
-            </div>
-            <div className="ml-auto">
-              <button
-                type="button"
-                onClick={this.switchActive}
-                className={classes.SearchButton}
-              >
-                <i className={`fas ${caret} ${classes.SearchIcon}`} />
-              </button>
             </div>
           </div>
 
@@ -75,53 +80,50 @@ class SelectFilter extends Component {
             className={`p-2 mt-0 ${classes.ItemsList}`}
           >
             <div className="form-check">
+              <div className="d-flex flex-row align-items-end">
+                <input
+                  className={`${classes.radioStyle} form-check-input`}
+                  type="radio"
+                  name={this.props.title}
+                  id={`all_${this.props.title}`}
+                  onClick={() => this.props.onSubmit(this.props.facetID, null, false)}
+                  checked
+                />
+                {/* eslint-disable-next-line */}
+                <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                  Tous
+                </label>
+                <div className={`ml-auto ${classes.FacetsCounts}`}>
+                  {`(${allCount.toLocaleString()})`}
+                </div>
+              </div>
               {
-                (this.props.facets.length > 1)
-                  ? (
-                    <div className="d-flex flex-row align-items-center">
-                      <div>
-                        <input
-                          className="form-check-input"
-                          type="radio"
-                          name={this.props.title}
-                          id={`all_${this.props.title}`}
-                          checked
-                        />
-                        {/* eslint-disable-next-line */}
-                        <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
-                          Tous
-                        </label>
-                      </div>
-                      <div className={`ml-auto ${classes.FacetsCounts}`}>
-                        {`(${allCount.toLocaleString()})`}
-                      </div>
-                    </div>
-                  )
-                  : null
-              }
-              {
-                this.props.facets.map(facet => (
-                  <div className="d-flex flex-row align-items-center">
-                    <div>
+                // Parcouros de toute la liste permanentList puis check de l'élément renvoyé par l'API
+                Object.entries(this.props.permanentList).map(([key, val]) => {
+                  // recherche de l'élément en cours dans les facets retournée pour avoir le count et l'élément en cours
+                  const count = this.getCountFromKey(this.props.facets, 'value', key, 'count');
+                  return (
+                    <div className="d-flex flex-row align-items-end pt-1">
                       <input
-                        className="form-check-input"
+                        className={`${classes.radioStyle} form-check-input pr-2`}
                         type="radio"
                         name={this.props.title}
-                        id={facet.value}
-                        value={facet.value}
-                        onClick={() => this.submitWrapper(facet.value)}
-                        checked={(this.props.facets.length === 1)}
+                        id={key}
+                        value={key}
+                        onClick={() => this.props.onSubmit(this.props.facetID, key, false)}
+                        checked={(count > 0 && (this.props.filters && this.props.filters.values && this.props.filters.values[0] === key))}
+                        disabled={count === 0}
                       />
                       {/* eslint-disable-next-line */}
-                      <label className={`form-check-label ${classes.Item}`} for={facet.value}>
-                        {facet.value}
+                      <label className={`form-check-label ${classes.Item}`} for={key}>
+                        {val}
                       </label>
+                      <div className={`ml-auto ${classes.FacetsCounts}`}>
+                        {`(${count.toLocaleString()})`}
+                      </div>
                     </div>
-                    <div className={`ml-auto ${classes.FacetsCounts}`}>
-                      {`(${facet.count.toLocaleString()})`}
-                    </div>
-                  </div>
-                ))
+                  );
+                })
               }
             </div>
           </div>
@@ -142,7 +144,10 @@ SelectFilter.propTypes = {
   facets: PropTypes.array,
   facetID: PropTypes.string.isRequired,
   title: PropTypes.string,
+  // language: PropTypes.string,
   defaultActive: PropTypes.bool,
+  permanentList: PropTypes.array,
+  filters: PropTypes.object,
   // subtitle: PropTypes.string,
   // placeholder: PropTypes.string,
   // setURL: PropTypes.func.isRequired

@@ -1,38 +1,44 @@
 import React from 'react';
-/* eslint-disable */
 import PropTypes from 'prop-types';
 
+import Autocomplete from './Filters/Autocomplete';
 import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
-import Autocomplete from './Filters/Autocomplete';
 import YearRangeSlider from '../../../Shared/YearRangeSlider/YearRangeSlider';
 import styles from '../../../../style.scss';
 
 const PublicationsFilters = (props) => {
-  // if (!props.facets || props.facets.length === 0) {
-  //   return (<div className="d-flex flex-column mt-1 mb-3 pr-3" />)
-  // }
   const facets = props.facets || [];
   const generalFacets = props.generalFacets || [];
   const typeActiveFilters = props.filters.productionType || {};
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
+  // const journalActiveFilters = props.filters['source.title'] || {};
+  const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
+  const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
+  const publiTypeActiveFilters = props.filters.type || {};
   const isOaActiveFilters = props.filters.isOa || {};
-  const isOaFacets = generalFacets.find(item => item.id === 'isOa') || { entries: [] };
-
-  console.log(props.filters);
+  const isOaFacets = facets.find(item => item.id === 'isOa') || { entries: [] };
+  const typesLabels = (props.language === 'fr')
+    ? { patent: 'Brevets', publication: 'Publications', thesis: 'Thèses' }
+    : { patent: 'Patents', publication: 'Publication', thesis: 'Thesis' };
+  const isOaLabel = (props.language === 'fr')
+    ? { false: 'Accès fermé', true: 'Accès ouvert' }
+    : { false: 'Closed', true: 'Open' };
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
-        <CheckBoxFilter
-          defaultActive
-          retractable={false}
-          nbItemsToShow={10}
-          title="Type"
+        <SelectFilter
+          language={props.language}
+          title="Type d'organisme"
           facets={typeFacets.entries}
           filters={typeActiveFilters}
           facetID="productionType"
           onSubmit={props.multiValueFilterHandler}
+          defaultActive
+          permanentList={typesLabels}
+          request={props.request}
         />
+
         <hr
           style={{
             height: '2px',
@@ -42,6 +48,7 @@ const PublicationsFilters = (props) => {
         />
         <YearRangeSlider
           data={props.sliderData}
+          height={60}
           barColor={styles.productionColor}
           label={props.language === 'fr' ? 'Selection par années' : 'Selection by year'}
           min={(props.filters.year) ? props.filters.year.min : null}
@@ -57,14 +64,47 @@ const PublicationsFilters = (props) => {
             backgroundColor: styles.productionColor,
           }}
         />
-        <SelectFilter
-          label="Open Access"
-          title="Type"
-          facets={isOaFacets.entries}
-          filters={isOaActiveFilters}
-          facetID="isOa"
-          onSubmit={props.multiValueFilterHandler}
-        />
+        {
+          props.filters.productionType && (props.filters.productionType.values.includes('thesis') || props.filters.productionType.values.includes('publication'))
+            ? (
+              <SelectFilter
+                title="Open Access"
+                facets={isOaFacets.entries}
+                filters={isOaActiveFilters}
+                permanentList={isOaLabel}
+                facetID="isOa"
+                onSubmit={props.multiValueFilterHandler}
+                defaultActive
+                request={props.request}
+              />
+            )
+            : null
+        }
+        {
+          props.filters.productionType && (props.filters.productionType.values.includes('publication'))
+            ? (
+              <React.Fragment>
+                <Autocomplete
+                  title="Journal"
+                  placeholder="Journal of ..."
+                  onSubmit={props.multiValueFilterHandler}
+                  facets={journalFacets.entries}
+                  facetID="source.title"
+                />
+                <CheckBoxFilter
+                  title="Type de publication"
+                  facets={publiTypeFacets.entries}
+                  filters={publiTypeActiveFilters}
+                  facetID="type"
+                  onSubmit={props.multiValueFilterHandler}
+                  defaultActive
+                  retractable={false}
+                  nbItemsToShow={6}
+                />
+              </React.Fragment>
+            )
+            : null
+        }
       </div>
     </div>
   );
@@ -73,9 +113,12 @@ const PublicationsFilters = (props) => {
 export default PublicationsFilters;
 
 PublicationsFilters.propTypes = {
-  // language: PropTypes.string.isRequired,
-  // multiValueFilterHandler: PropTypes.func,
-  // facets: PropTypes.array,
-  // generalFacets: PropTypes.array,
-  // filters: PropTypes.object,
+  request: PropTypes.object,
+  facets: PropTypes.object,
+  language: PropTypes.string.isRequired,
+  multiValueFilterHandler: PropTypes.func,
+  rangeFilterHandler: PropTypes.func,
+  sliderData: PropTypes.array,
+  generalFacets: PropTypes.array,
+  filters: PropTypes.object,
 };

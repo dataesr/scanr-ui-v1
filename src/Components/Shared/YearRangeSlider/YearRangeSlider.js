@@ -29,7 +29,7 @@ class YearRangeSlider extends Component {
   }
 
   componentDidUpdate = (prevProps) => {
-    if (prevProps !== this.props) {
+    if (prevProps.data !== this.props.data || prevProps.min !== this.props.min || prevProps.max !== this.props.max) {
       this.setHistogram();
     }
   }
@@ -271,12 +271,14 @@ class YearRangeSlider extends Component {
     );
   }
 
+  range = (start, end) => (new Array(end - start + 1)).fill(undefined).map((_, i) => i + start);
+
   fillMissingYears = () => {
     const data = [...this.props.data];
     const years = data.map(entry => parseInt(entry.value, 10));
     const maxBound = (this.props.maxBound) ? this.props.maxBound : Math.max(...years);
     const minBound = (this.props.minBound) ? this.props.minBound : Math.min(...years);
-    const allYears = [...Array(maxBound).keys()].filter(year => ![...Array(minBound).keys()].includes(year));
+    const allYears = this.range(minBound, maxBound);
     const diffYears = allYears.filter(year => !years.includes(year));
     diffYears.forEach((year) => {
       data.push({
@@ -397,6 +399,7 @@ class YearRangeSlider extends Component {
             onTouchStart={this.handleLowTouchStart}
             ref={this.lowThumb}
           >
+            {/* eslint-disable-next-line */}
             <label htmlFor="thumbLow" className={classes.thumbLabel}>
               {this.state.lowYear}
             </label>
@@ -411,6 +414,7 @@ class YearRangeSlider extends Component {
             onTouchStart={this.handleHighTouchStart}
             ref={this.highThumb}
           >
+            {/* eslint-disable-next-line */}
             <label htmlFor="thumbHigh" className={classes.thumbLabel}>
               {this.state.highYear}
             </label>

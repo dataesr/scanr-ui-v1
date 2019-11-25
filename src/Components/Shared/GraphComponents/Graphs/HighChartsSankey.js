@@ -80,6 +80,10 @@ export default class HighChartsSankey extends Component {
           title: {
             text: this.props.filename,
           },
+          credits: {
+            enabled: true,
+            text: "Source : ScanR, Moteur de la Recherche et de l'Innovation",
+          },
         },
       },
     };
