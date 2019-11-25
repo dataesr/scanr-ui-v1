@@ -26,7 +26,6 @@ const ProjectGraphs = (props) => {
       const currentProject = props.data[i].value;
       const type = currentProject.type;
       const year = (currentProject.year) ? (currentProject.year.toString()) : 'NODATA#';
-
       const duration = (currentProject.duration) ? (currentProject.duration) : -1;
       let durationKey = 'NODATA#';
       if (duration > 0 && duration <= 6) {
@@ -48,7 +47,7 @@ const ProjectGraphs = (props) => {
         durationKey = '48+ mois';
       }
 
-      const nbParticipants = (currentProject.participants) ? (currentProject.participants.length) : 0;
+      const nbParticipants = (currentProject.participantCount) ? (currentProject.participantCount) : 0;
       let participantKey = 'NODATA#';
       if (nbParticipants > 0 && nbParticipants <= 1) {
         participantKey = '1 participant';
@@ -64,9 +63,9 @@ const ProjectGraphs = (props) => {
       }
 
 
-      const key1 = type.concat(';', year);
-      const key2 = year.concat(';', durationKey);
-      const key3 = durationKey.concat(';', participantKey);
+      const key1 = year.concat(';', type);
+      const key2 = type.concat(';', participantKey);
+      const key3 = participantKey.concat(';', durationKey);
       const keys = [key1, key2, key3];
       for (let j = 0; j < keys.length; j += 1) {
         if (keys[j].indexOf('NODATA#') === -1) {
@@ -93,13 +92,13 @@ const ProjectGraphs = (props) => {
       years: 'Par année',
       keywords: 'Nuage de mots clés',
       types: 'Types de publications',
-      sankey: 'sankey',
+      sankey: 'Caractéristiques',
     },
     en: {
       years: 'By year',
       keywords: 'Keywords cloud',
       types: 'Publication types',
-      sankey: 'sankey',
+      sankey: 'Caracteristics',
     },
   };
   const active = (props.activeGraph) ? props.activeGraph : 'types';
