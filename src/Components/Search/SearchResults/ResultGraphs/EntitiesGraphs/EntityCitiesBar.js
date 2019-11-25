@@ -13,7 +13,7 @@ export default class EntityMap extends Component {
     data: { entries: [] },
     isLoading: true,
     title: 'Top 10 des villes',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
     aggregations: {
       cities: {
         field: 'address.urbanUnitLabel',
