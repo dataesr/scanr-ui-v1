@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React, { Component, Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
@@ -7,28 +7,28 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 /* Composants */
-import HomePage from './Components/Home/Home';
-import SearchPage from './Components/Search/Search';
-import EntityPage from './Components/Results/Entity/Entity';
-import ProductionPage from './Components/Results/Production/Production';
-import ProjectPage from './Components/Results/Project/Project';
-import PersonPage from './Components/Results/Person/Person';
-import FocusList from './Components/Focus-pages/FocusList';
-import Focus from './Components/Focus-pages/Focus';
-import CurieHome from './Components/Shared/GraphCurie/CurieHome';
+const HomePage = lazy(() => import('./Components/Home/Home'));
+const SearchPage = lazy(() => import('./Components/Search/Search'));
+const EntityPage = lazy(() => import('./Components/Results/Entity/Entity'));
+const ProductionPage = lazy(() => import('./Components/Results/Production/Production'));
+const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
+const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
+const FocusList = lazy(() => import('./Components/Focus-pages/FocusList'));
+const Focus = lazy(() => import('./Components/Focus-pages/Focus'));
+const CurieHome = lazy(() => import('./Components/Shared/GraphCurie/CurieHome'));
 
 /* Pages froides */
-import AccessibilityPage from './Components/Abouts/Accessibility/Accessibility';
-import ContributePage from './Components/Abouts/Contribute/Contribute';
-import ContactPage from './Components/Abouts/Contact/Contact';
-import FAQPage from './Components/Abouts/FAQ/FAQ';
-import GlossaryPage from './Components/Abouts/Glossary/Glossary';
-import LegalNoticePage from './Components/Abouts/Legal-notice/Legal-notice';
-import MediasPage from './Components/Abouts/Medias/Medias';
-import Opendata from './Components/Abouts/Opendata/Opendata';
-import Ressources from './Components/Abouts/Ressources/Ressources';
-import TeamAndProjectPage from './Components/Abouts/Team-and-project/Team-and-project';
-import TutorialsPage from './Components/Abouts/Tutorials/Tutorials';
+const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
+const ContributePage = lazy(() => import('./Components/Abouts/Contribute/Contribute'));
+const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
+const FAQPage = lazy(() => import('./Components/Abouts/FAQ/FAQ'));
+const GlossaryPage = lazy(() => import('./Components/Abouts/Glossary/Glossary'));
+const LegalNoticePage = lazy(() => import('./Components/Abouts/Legal-notice/Legal-notice'));
+const MediasPage = lazy(() => import('./Components/Abouts/Medias/Medias'));
+const Opendata = lazy(() => import('./Components/Abouts/Opendata/Opendata'));
+const Ressources = lazy(() => import('./Components/Abouts/Ressources/Ressources'));
+const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-project/Team-and-project'));
+const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
   state: {
@@ -71,228 +71,230 @@ class App extends Component {
     return (
       <IntlProvider>
         <Router history={piwik.connectToHistory(customHistory)}>
-          <React.Fragment>
-            <Route
-              exact
-              path="/"
-              component={props => (
-                <HomePage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/recherche/:api"
-              render={props => (
-                <SearchPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/entite/:id"
-              render={props => (
-                <EntityPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/publication/:id"
-              render={props => (
-                <ProductionPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/project/:id"
-              render={props => (
-                <ProjectPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              path="/person/:id"
-              render={props => (
-                <PersonPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/focus"
-              component={props => (
-                <FocusList
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component={props => (
+                  <HomePage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                path="/recherche/:api"
+                render={props => (
+                  <SearchPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                path="/entite/:id"
+                render={props => (
+                  <EntityPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                path="/publication/:id"
+                render={props => (
+                  <ProductionPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                path="/project/:id"
+                render={props => (
+                  <ProjectPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                path="/person/:id"
+                render={props => (
+                  <PersonPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/focus"
+                component={props => (
+                  <FocusList
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            <Route
-              exact
-              path="/focus/:id"
-              component={props => (
-                <Focus
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+              <Route
+                exact
+                path="/focus/:id"
+                component={props => (
+                  <Focus
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            <Route
-              exact
-              path="/curie"
-              component={props => (
-                <CurieHome
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+              <Route
+                exact
+                path="/curie"
+                component={props => (
+                  <CurieHome
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            {/* vvv--------------- other-pages ------------------vvv  */}
-            <Route
-              exact
-              path="/accessibilite"
-              component={props => (
-                <AccessibilityPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/mentions-legales"
-              component={props => (
-                <LegalNoticePage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+              {/* vvv--------------- other-pages ------------------vvv  */}
+              <Route
+                exact
+                path="/accessibilite"
+                component={props => (
+                  <AccessibilityPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/mentions-legales"
+                component={props => (
+                  <LegalNoticePage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            <Route
-              exact
-              path="/l-equipe-et-son-projet"
-              component={props => (
-                <TeamAndProjectPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+              <Route
+                exact
+                path="/l-equipe-et-son-projet"
+                component={props => (
+                  <TeamAndProjectPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            <Route
-              path="/opendata"
-              component={props => (
-                <Opendata
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
+              <Route
+                path="/opendata"
+                component={props => (
+                  <Opendata
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
 
-            <Route
-              path={['/ressources/:id', '/ressources']}
-              component={props => (
-                <Ressources
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/medias"
-              component={props => (
-                <MediasPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/tutoriels"
-              component={props => (
-                <TutorialsPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/faq"
-              component={props => (
-                <FAQPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/contact"
-              component={props => (
-                <ContactPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/glossaire"
-              component={props => (
-                <GlossaryPage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-            <Route
-              exact
-              path="/contribuer"
-              component={props => (
-                <ContributePage
-                  {...props}
-                  language={this.state.language}
-                  switchLanguage={this.switchLanguage}
-                />
-              )}
-            />
-          </React.Fragment>
+              <Route
+                path={['/ressources/:id', '/ressources']}
+                component={props => (
+                  <Ressources
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/medias"
+                component={props => (
+                  <MediasPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/tutoriels"
+                component={props => (
+                  <TutorialsPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/faq"
+                component={props => (
+                  <FAQPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/contact"
+                component={props => (
+                  <ContactPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/glossaire"
+                component={props => (
+                  <GlossaryPage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/contribuer"
+                component={props => (
+                  <ContributePage
+                    {...props}
+                    language={this.state.language}
+                    switchLanguage={this.switchLanguage}
+                  />
+                )}
+              />
+            </Switch>
+          </Suspense>
         </Router>
       </IntlProvider>
     );
