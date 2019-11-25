@@ -13,7 +13,7 @@ export default class EntityMap extends Component {
     data: [],
     isLoading: true,
     title: 'Cartographie nationale',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
   }
 
   componentDidMount() {
