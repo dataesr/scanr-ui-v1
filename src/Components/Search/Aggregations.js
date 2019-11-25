@@ -90,7 +90,7 @@ export const PublicationsAggregations = {
       direction: 'DESC',
       type: 'COUNT',
     },
-    size: 10,
+    size: 1000,
   },
   years: {
     field: 'year',
@@ -113,4 +113,25 @@ export const PublicationsAggregations = {
     size: 3,
   },
 };
-export const PersonsAggregations = {};
+export const PersonsAggregations = {
+  awards: {
+    field: 'awards.label',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 50,
+  },
+  affiliations: {
+    field: 'affiliations.structure.label.fr',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 3000,
+  },
+};

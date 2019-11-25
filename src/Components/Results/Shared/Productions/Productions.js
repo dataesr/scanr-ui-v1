@@ -137,7 +137,8 @@ class Productions extends Component {
     request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      // allIds = allIds.concat(this.props.childs).slice(0, 1000);
+      allIds = allIds.concat(this.props.childs);
     }
     if (this.props.person) {
       request.filters['authors.person.id'] = {

@@ -52,7 +52,7 @@ class FilterPanel extends Component {
     if (ToShow) {
       return (
         <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <div className="d-flex flex-column mb-2">
+          <div className={`d-flex flex-column mb-2 ${classes.Filters}`}>
             <ActiveFilterCard
               language={this.props.language}
               filters={this.props.filters}
