@@ -6,22 +6,33 @@ import Autocomplete from './Filters/Autocomplete';
 
 import classes from './Filters.scss';
 
-
 const EntityFilters = (props) => {
+  // A utiliser en cas de "ET"
   const facets = props.facets || [];
+
+  // A utiliser en cas de "OU"
   // const generalFacets = props.generalFacets || [];
-  const caractActiveFilters = props.filters['badges.label.fr'] || {};
-  const kindActiveFilters = props.filters.kind || {};
-  const projectsActiveFilters = props.filters.level || {};
-  const projectsFacets = facets.find(item => item.id === 'facet_projects_types') || { entries: [] };
-  const kindFacets = facets.find(item => item.id === 'facet_kind') || { entries: [] };
+
+  // Filtre 1 - Localisation
+  const geoFacets = facets.find(item => item.id === 'localisations') || { entries: [] };
+
+  // Filtre 2 - Secteur de l'organisme
+  const kindFacets = facets.find(item => item.id === 'kind') || { entries: [] };
   const levelOne = ['Secteur Privé', 'Secteur public', 'Structure de recherche'];
-  const kindFacets1 = { entries: kindFacets.entries.filter(entry => levelOne.includes(entry.value)) };
-  const kindFacets2 = { entries: kindFacets.entries.filter(entry => !levelOne.includes(entry.value)) };
-  // const mainKindFacets = null;
-  // const secondaryKindFacets = null;
-  const caractFacetsTest = facets.find(item => item.id === 'facet_badges') || { entries: [] };
-  const geoFacets = facets.find(item => item.id === 'facet_localisations') || { entries: [] };
+  const kindActiveFiltersSecteur = props.filters.kind || {};
+  const kindFacetsSecteur = { entries: kindFacets.entries.filter(entry => levelOne.includes(entry.value)) };
+
+  // Filtre 3 - Type d'organisme
+  const kindActiveFiltersOrganisme = props.filters.kind || {};
+  const kindFacetsOrganisme = { entries: kindFacets.entries.filter(entry => !levelOne.includes(entry.value)) };
+
+  // Filtre 4 - Type de financement public
+  const projectsActiveFilters = props.filters['projects.project.type'] || {};
+  const projectsFacets = facets.find(item => item.id === 'projectTypes') || { entries: [] };
+
+  // Filtre 5 - Caractéristiques
+  const caractActiveFilters = props.filters['badges.label.fr'] || {};
+  const caractFacets = facets.find(item => item.id === 'badgesFr') || { entries: [] };
 
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -36,16 +47,16 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           title="Secteur de l'organisme"
-          facets={kindFacets1.entries}
-          filters={kindActiveFilters}
+          facets={kindFacetsSecteur.entries}
+          filters={kindActiveFiltersSecteur}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
         />
         <CheckBoxFilter
           title="Type d'organisme"
-          facets={kindFacets2.entries}
-          filters={kindActiveFilters}
+          facets={kindFacetsOrganisme.entries}
+          filters={kindActiveFiltersOrganisme}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
@@ -64,11 +75,11 @@ const EntityFilters = (props) => {
         </div>
         <CheckBoxFilter
           title="Caractéristiques"
-          facets={caractFacetsTest.entries}
+          facets={caractFacets.entries}
           filters={caractActiveFilters}
           facetID="badges.label.fr"
           onSubmit={props.multiValueFilterHandler}
-          defaultActive={false}
+          defaultActive
         />
       </div>
     </div>
