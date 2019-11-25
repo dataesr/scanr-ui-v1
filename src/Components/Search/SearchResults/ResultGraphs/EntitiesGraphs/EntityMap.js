@@ -58,7 +58,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <LeafletMap
-            filename="carto"
+            filename="Localisations des structures"
             data={this.state.data}
             language={this.props.language}
           />
