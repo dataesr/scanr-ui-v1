@@ -44,18 +44,18 @@ const Identity = (props) => {
                       language={props.language}
                       data={props.data}
                     />
-                  </div>
-                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
                     { (extIdref.length > 0) ? (
                       <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
                         <LogoCard
                           language={props.language}
                           url="/img/logo-idref.png"
                           label="Idref"
-                          cssClass="Height150"
+                          cssClass="Height75"
                         />
                       </a>
                     ) : null }
+                  </div>
+                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
                     { (extOrcid.length > 0) ? (
                       <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
                         <LogoCard
