@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
-import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import LogoCard from '../../../../../../Shared/Ui/LogoCard/LogoCard';
 import PersonNameCard from '../../../../Components/PersonNameCard';
 
 import classes from './Identity.scss';
@@ -24,6 +24,8 @@ const messages = {
  * Tests unitaires : .
 */
 const Identity = (props) => {
+  const extIdref = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'idref')) : [];
+  const extOrcid = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'orcid')) : [];
   if (props.data) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -42,6 +44,28 @@ const Identity = (props) => {
                       language={props.language}
                       data={props.data}
                     />
+                  </div>
+                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
+                    { (extIdref.length > 0) ? (
+                      <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
+                        <LogoCard
+                          language={props.language}
+                          url="/img/logo-idref.png"
+                          label="Idref"
+                          cssClass="Height150"
+                        />
+                      </a>
+                    ) : null }
+                    { (extOrcid.length > 0) ? (
+                      <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
+                        <LogoCard
+                          language={props.language}
+                          url="/img/logo-orcid.svg"
+                          label="Orcid"
+                          cssClass="Height150"
+                        />
+                      </a>
+                    ) : null }
                   </div>
                 </div>
               </div>
