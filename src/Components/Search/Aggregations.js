@@ -71,7 +71,7 @@ export const StructuresAggregations = {
     },
     size: 50,
   },
-  badgesFr: {
+  badgesfr: {
     field: 'badges.label.fr',
     filters: {},
     min_doc_count: 1,
@@ -81,7 +81,7 @@ export const StructuresAggregations = {
     },
     size: 20,
   },
-  badgesEn: {
+  badgesen: {
     field: 'badges.label.en',
     filters: {},
     min_doc_count: 1,
