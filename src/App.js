@@ -6,6 +6,8 @@ import { createBrowserHistory } from 'history';
 import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
+import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
+
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
@@ -71,7 +73,7 @@ class App extends Component {
     return (
       <IntlProvider>
         <Router history={piwik.connectToHistory(customHistory)}>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<LoadingSpinner />}>
             <Switch>
               <Route
                 exact
