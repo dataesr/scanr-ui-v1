@@ -5,7 +5,10 @@ import EntityMap from './EntitiesGraphs/EntityMap';
 import EntityCitiesBar from './EntitiesGraphs/EntityCitiesBar';
 import EntityNatureDonut from './EntitiesGraphs/EntityNatureDonut';
 import EntityProjects from './EntitiesGraphs/EntityProjectsDonut';
-import EntityDomains from './EntitiesGraphs/EntityDomains';
+
+// Del domains for Now
+// import EntityDomains from './EntitiesGraphs/EntityDomains';
+// <EntityDomains language={props.language} request={props.request} />
 
 const EntityGraphsWrapper = props => (
   <React.Fragment>
@@ -22,7 +25,3 @@ EntityGraphsWrapper.propTypes = {
   request: PropTypes.object.isRequired,
   language: PropTypes.string.isRequired,
 };
-// <EntityDomains language={props.language} request={props.request} />
-// <EntityMap language={props.language} request={props.request} />
-// <EntityCitiesBar language={props.language} request={props.request} />
-// <EntityNatureDonut language={props.language} request={props.request} />
