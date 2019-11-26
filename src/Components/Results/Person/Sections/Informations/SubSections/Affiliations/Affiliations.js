@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import moment from 'moment';
 
 import LeafletMap from '../../../../../../Shared/GraphComponents/Graphs/LeafletMap';
 import getSelectKey from '../../../../../../../Utils/getSelectKey';
+import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Affiliations.scss';
 
@@ -102,10 +103,12 @@ const Affiliations = (props) => {
         <React.Fragment>
           <section className="container-fluid">
             <div className="row">
+              <div className={`col ${classes.NoSpace}`}>
+                <CardsTitle title={messages[props.language]['Person.informations.affiliation.title']} />
+              </div>
+            </div>
+            <div className="row">
               <div className={`col-12 ${classes.CardContainer}`}>
-                <div className={classes.SubSectionTitle}>
-                  <FormattedHTMLMessage id="Person.informations.affiliation.title" defaultMessage="Person.informations.affiliation.title" />
-                </div>
                 <div className="w-100">
                   <LeafletMap
                     filename="carto"
