@@ -13,6 +13,8 @@ import Similars from './Sections/Similars/Similars';
 import Thesis from './Sections/Thesis/Thesis';
 import Productions from '../Shared/Productions/Productions';
 
+import Banner from '../../Shared/Banner/Banner';
+
 /**
  * Publication
  * Url : .
@@ -70,6 +72,14 @@ class Person extends Component {
             id={this.props.match.params.id}
           />
         </div>
+
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerDark"
+          url=""
+        />
+
         <div id="Thesis">
           <Thesis
             language={this.props.language}
@@ -93,6 +103,13 @@ class Person extends Component {
             id={this.props.match.params.id}
           />
         </div>
+        <Banner
+          language={this.props.language}
+          labelKey="Appear"
+          cssClass="BannerLight"
+          url=""
+        />
+
         <div>
           <Similars
             language={this.props.language}
