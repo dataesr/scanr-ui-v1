@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 import LogoCard from '../../../../../../Shared/Ui/LogoCard/LogoCard';
 import PersonNameCard from '../../../../Components/PersonNameCard';
+import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Identity.scss';
 
@@ -26,49 +27,64 @@ const messages = {
 const Identity = (props) => {
   const extIdref = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'idref')) : [];
   const extOrcid = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'orcid')) : [];
+  const extIdhal = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'id_hal')) : [];
   if (props.data) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid">
           <div className="row">
-            <div className={`col-12 ${classes.CardContainer}`}>
-              <div className={classes.SubSectionTitle}>
-                <FormattedHTMLMessage id="Person.informations.identity.title" defaultMessage="Person.informations.identity.title" />
-              </div>
-              <div className="container-fluid">
-                <div className="row">
-                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
-                    <PersonNameCard
-                      logo="fas fa-flask"
-                      title="Domaines de recherche"
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={messages[props.language]['Person.informations.identity.title']} />
+            </div>
+          </div>
+          <div className="row">
+            <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
+              <PersonNameCard
+                logo="fas fa-flask"
+                title="Domaines de recherche"
+                language={props.language}
+                data={props.data}
+              />
+            </div>
+            <div className={`col-md-6 col-sm-12 ${classes.NoSpace}`}>
+              {
+                (extIdref.length > 0) ? (
+                  <div className={classes.CardContainer}>
+                    <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
+                      <LogoCard
+                        language={props.language}
+                        url="/img/logo-idref.png"
+                        label="Idref"
+                        cssClass="Height75"
+                      />
+                    </a>
+                  </div>
+                ) : null
+              }
+              { (extOrcid.length > 0) ? (
+                <div className={classes.CardContainer}>
+                  <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
+                    <LogoCard
                       language={props.language}
-                      data={props.data}
+                      url="/img/logo-orcid.svg"
+                      label="Orcid"
+                      cssClass="Height75"
                     />
-                    { (extIdref.length > 0) ? (
-                      <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
-                        <LogoCard
-                          language={props.language}
-                          url="/img/logo-idref.png"
-                          label="Idref"
-                          cssClass="Height75"
-                        />
-                      </a>
-                    ) : null }
-                  </div>
-                  <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
-                    { (extOrcid.length > 0) ? (
-                      <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
-                        <LogoCard
-                          language={props.language}
-                          url="/img/logo-orcid.svg"
-                          label="Orcid"
-                          cssClass="Height150"
-                        />
-                      </a>
-                    ) : null }
-                  </div>
+                  </a>
                 </div>
-              </div>
+              ) : null }
+              { (extIdhal.length > 0) ? (
+                <div className={classes.CardContainer}>
+                  <a href={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')} target="_blank" rel="noopener noreferrer">
+                    <LogoCard
+                      language={props.language}
+                      url="/img/logo-hal.svg"
+                      label="IdHAL"
+                      cssClass="Height75"
+                    />
+                  </a>
+                </div>
+              ) : null }
             </div>
           </div>
         </section>

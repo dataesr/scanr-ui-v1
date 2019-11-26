@@ -43,7 +43,8 @@ const SearchResults = (props) => {
   return (
     Object.keys(CardsComponents).map((section, index) => {
       const BgClass = ([0, 2].includes(index)) ? 'gris' : 'blanc';
-      const cardColor = ([0, 2].includes(index)) ? 'CardWhite' : 'CardGrey';
+      // const cardColor = ([0, 2].includes(index)) ? 'CardWhite' : 'CardGrey';
+      const cardColor = 'CardWhite';
       const CardsToShow = CardsComponents[section];
       const bgUrl = `./img/poudre-${section}_fond_${BgClass}.jpg`;
       const sizes = ['100%', '80%', '75%', '70%'];
@@ -66,7 +67,7 @@ const SearchResults = (props) => {
                 <div className="row d-flex flex-row justify-content-between">
                   <div className={`${classes.headers}`}>
                     <h2>
-                      {`${props.preview[section].count} `}
+                      {`${props.preview[section].count.toLocaleString()} `}
                       <FormattedHTMLMessage
                         id={Title}
                         defaultMessage={Title}
