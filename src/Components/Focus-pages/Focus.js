@@ -76,7 +76,7 @@ export default class FocusList extends Component {
           filters: {},
           min_doc_count: 1,
           order: { direction: 'DESC', type: 'COUNT' },
-          size: 100,
+          size: component.facetSize ? component.facetSize : 50,
         };
       });
       const pageSize = (component.pageSize) ? (component.pageSize) : 20;
@@ -188,30 +188,33 @@ export default class FocusList extends Component {
               }
             });
           } else if (component.type === 'packedbubble' && component.dataType === 'these') {
+            // eslint-disable-next-line
+            const deweydata = require('./Focus-data/dewey.json');
             const domainsCount = {};
-            res.data.results.forEach((e) => {
+            res.data.facets[0].entries.forEach((e) => {
               let discipline = 'exclude';
-              const subDisciplines = [];
-              e.value.domains.forEach((d) => {
-                if (d.type === 'dewey') {
-                  if (d.code.indexOf('00') !== -1) {
-                    discipline = d.label.fr.split('(')[0];
-                  } else {
-                    subDisciplines.push(d.label.fr);
-                  }
-                }
-              });
+              let subDiscipline = 'exclude';
+              let subDisciplineCount = 0;
+              const code = e.value;
+              const label = deweydata[code] ? deweydata[code].fr : 'exclude';
+              if (code.indexOf('00') !== -1) {
+                discipline = label.split('(')[0];
+              } else {
+                subDiscipline = label.split('(')[0];
+                discipline = deweydata[code.substring(0, 1).concat('00')].fr.split('(')[0];
+                subDisciplineCount = e.count;
+              }
+
               if (discipline !== 'exclude') {
                 if (domainsCount[discipline] === undefined) {
                   domainsCount[discipline] = { TOTALCount: 0 };
                 }
-                subDisciplines.forEach((s) => {
-                  if (domainsCount[discipline][s] === undefined) {
-                    domainsCount[discipline][s] = { count: 0 };
+                if (subDiscipline !== 'exclude') {
+                  if (domainsCount[discipline][subDiscipline] === undefined) {
+                    domainsCount[discipline][subDiscipline] = { count: subDisciplineCount };
                   }
-                  domainsCount[discipline][s].count += 1;
-                  domainsCount[discipline].TOTALCount += 1;
-                });
+                  domainsCount[discipline].TOTALCount += subDisciplineCount;
+                }
               }
             });
 
