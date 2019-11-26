@@ -81,7 +81,7 @@ const PersonCardName = (props) => {
                   dataHtml={htmlList}
                 />
               )
-              : props.data.id
+              : null
           }
           {tooltip}
         </div>

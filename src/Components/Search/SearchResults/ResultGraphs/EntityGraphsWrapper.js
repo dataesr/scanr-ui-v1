@@ -5,7 +5,6 @@ import EntityMap from './EntitiesGraphs/EntityMap';
 import EntityCitiesBar from './EntitiesGraphs/EntityCitiesBar';
 import EntityNatureDonut from './EntitiesGraphs/EntityNatureDonut';
 import EntityProjects from './EntitiesGraphs/EntityProjectsDonut';
-import EntityDomains from './EntitiesGraphs/EntityDomains';
 
 const EntityGraphsWrapper = props => (
   <React.Fragment>
