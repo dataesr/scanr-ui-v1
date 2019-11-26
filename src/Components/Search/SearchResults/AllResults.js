@@ -66,7 +66,7 @@ const SearchResults = (props) => {
                 <div className="row d-flex flex-row justify-content-between">
                   <div className={`${classes.headers}`}>
                     <h2>
-                      {`${props.preview[section].count} `}
+                      {`${props.preview[section].count.toLocaleString()} `}
                       <FormattedHTMLMessage
                         id={Title}
                         defaultMessage={Title}
