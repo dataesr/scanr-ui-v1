@@ -59,7 +59,7 @@ export default class ProductionYears extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsLine
-            filename="publicationsYear"
+            filename="Publications par année"
             data={this.state.data}
             language={this.props.language}
           />

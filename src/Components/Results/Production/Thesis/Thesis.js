@@ -9,6 +9,7 @@ import HeaderTitle from '../../../Shared/Results/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../Shared/SectionTitle';
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
+import SimpleCardWithButton from '../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import OaCard from '../Shared/Oa/OaCard';
 import OaHost from '../Shared/Oa/OaHost';
 import OaLink from '../Shared/Oa/OaLink';
@@ -202,15 +203,15 @@ class Thesis extends Component {
                   </div>
                   <div className="row">
                     <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <a href={theseLink} target="_blank" rel="noopener noreferrer">
-                        <SimpleCard
-                          language={this.props.language}
-                          logo="fas fa-id-card"
-                          title={messages[this.props.language]['Publication.publication.id']}
-                          label={id}
-                          tooltip=""
-                        />
-                      </a>
+                      <SimpleCardWithButton
+                        language={this.props.language}
+                        logo="fas fa-id-card"
+                        title={messages[this.props.language]['Publication.publication.id']}
+                        label={id}
+                        tooltip=""
+                        url={theseLink}
+                        link="link_these"
+                      />
                     </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
