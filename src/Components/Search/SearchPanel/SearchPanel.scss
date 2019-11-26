@@ -39,6 +39,15 @@
   display: none !important;
 }
 
+.Select {
+  border: 2px solid $scanrdeepblueColor;
+  background-color: $scanrlightgreyColor;
+  font-size: 1em;
+  color: $scanrdeepblueColor;
+  height: 45px;
+  border-radius: 8px;
+}
+
 @media screen and (max-width: 991px) {
   .onlyMobile {
     display: block !important;
