@@ -15,8 +15,8 @@ const EntityPage = lazy(() => import('./Components/Results/Entity/Entity'));
 const ProductionPage = lazy(() => import('./Components/Results/Production/Production'));
 const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
-const FocusList = lazy(() => import('./Components/Focus-pages/FocusList'));
-const Focus = lazy(() => import('./Components/Focus-pages/Focus'));
+const FocusList = lazy(() => import('./Components/Focus/FocusList'));
+const Focus = lazy(() => import('./Components/Focus/Focus'));
 const CurieHome = lazy(() => import('./Components/Shared/GraphCurie/CurieHome'));
 
 /* Pages froides */
