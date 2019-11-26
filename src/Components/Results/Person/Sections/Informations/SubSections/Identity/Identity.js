@@ -26,6 +26,7 @@ const messages = {
 const Identity = (props) => {
   const extIdref = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'idref')) : [];
   const extOrcid = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'orcid')) : [];
+  const extIdhal = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'id_hal')) : [];
   if (props.data) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -45,7 +46,7 @@ const Identity = (props) => {
                       data={props.data}
                     />
                     { (extIdref.length > 0) ? (
-                      <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
+                      <a href={'http://www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
                         <LogoCard
                           language={props.language}
                           url="/img/logo-idref.png"
@@ -57,12 +58,22 @@ const Identity = (props) => {
                   </div>
                   <div className={`col-md-6 col-sm-12 ${classes.NoSpace} ${classes.CardContainer}`}>
                     { (extOrcid.length > 0) ? (
-                      <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
+                      <a href={'http://www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
                         <LogoCard
                           language={props.language}
                           url="/img/logo-orcid.svg"
                           label="Orcid"
-                          cssClass="Height150"
+                          cssClass="Height75"
+                        />
+                      </a>
+                    ) : null }
+                    { (extIdhal.length > 0) ? (
+                      <a href={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')} target="_blank" rel="noopener noreferrer">
+                        <LogoCard
+                          language={props.language}
+                          url="/img/logo-hal.svg"
+                          label="IdHAL"
+                          cssClass="Height75"
                         />
                       </a>
                     ) : null }
