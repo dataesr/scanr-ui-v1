@@ -57,12 +57,18 @@ const PersonCardName = (props) => {
           <div className={classes.Label}>
             {props.data.fullName}
           </div>
-          <div className={classes.Title}>
-            <FormattedHTMLMessage id="Person.informations.identity.gender" defaultMessage="Person.informations.identity.gender" />
-          </div>
-          <div className={classes.Label}>
-            {props.data.gender}
-          </div>
+          {
+            (props.data.gender) ? (
+              <Fragment>
+                <div className={classes.Title}>
+                  <FormattedHTMLMessage id="Person.informations.identity.gender" defaultMessage="Person.informations.identity.gender" />
+                </div>
+                <div className={classes.Label}>
+                  {props.data.gender}
+                </div>
+              </Fragment>
+            ) : null
+          }
           {
             (props.data.externalIds && props.data.externalIds.length < 0)
               ? (
