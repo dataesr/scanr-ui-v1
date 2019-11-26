@@ -14,6 +14,8 @@ import classes from './Informations.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';
 
+import bg from '../../../../Shared/images/poudre-orange_Fgris-BR.jpg';
+
 const messages = {
   fr: messagesFr,
   en: messagesEn,
@@ -28,12 +30,11 @@ const messages = {
 */
 
 const Informations = (props) => {
-  const bgUrl = './img/poudre-persons_fond_gris.jpg';
+  const bgUrl = bg;
   const sectionStyle = {
     backgroundImage: `url(${bgUrl})`,
   };
   const hasAffiliations = (props.data.affiliations) ? 'col-12' : 'col-lg-6 col-md-12';
-
 
   return (
     <section className={`container-fluid ${classes.Informations}`} style={sectionStyle}>

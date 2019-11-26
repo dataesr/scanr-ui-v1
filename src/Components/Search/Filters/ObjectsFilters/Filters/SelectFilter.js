@@ -98,14 +98,14 @@ class SelectFilter extends Component {
                 </div>
               </div>
               {
-                // Parcouros de toute la liste permanentList puis check de l'élément renvoyé par l'API
+                // Parcours de toute la liste permanentList puis check de l'élément renvoyé par l'API
                 Object.entries(this.props.permanentList).map(([key, val]) => {
                   // recherche de l'élément en cours dans les facets retournée pour avoir le count et l'élément en cours
                   const count = this.getCountFromKey(this.props.facets, 'value', key, 'count');
                   return (
                     <div className="d-flex flex-row align-items-end pt-1">
                       <input
-                        className={`${classes.radioStyle} form-check-input pr-2`}
+                        className={`${classes.radioStyle} ${(count === 0) ? classes.radioStyle_disable : null} form-check-input pr-2`}
                         type="radio"
                         name={this.props.title}
                         id={key}
