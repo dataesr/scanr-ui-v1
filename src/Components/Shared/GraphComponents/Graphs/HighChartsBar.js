@@ -141,7 +141,7 @@ export default class HighChartsBar extends Component {
         },
         chartOptions: {
           title: {
-            text: this.props.filetitle,
+            text: this.props.filename,
           },
           credits: {
             enabled: true,
@@ -240,6 +240,5 @@ HighChartsBar.defaultProps = {
 
 HighChartsBar.propTypes = {
   filename: PropTypes.string.isRequired,
-  filetitle: PropTypes.string,
   data: PropTypes.object,
 };

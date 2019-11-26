@@ -63,7 +63,7 @@ export default class EntityProjects extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsDonut
-            filename="top10natures"
+            filename="Type de projets auxquels ont participé les structures"
             data={this.state.data}
             language={this.props.language}
           />

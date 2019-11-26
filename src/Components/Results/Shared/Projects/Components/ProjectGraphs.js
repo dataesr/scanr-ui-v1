@@ -26,7 +26,6 @@ const ProjectGraphs = (props) => {
       const currentProject = props.data[i].value;
       const type = currentProject.type;
       const year = (currentProject.year) ? (currentProject.year.toString()) : 'NODATA#';
-
       const duration = (currentProject.duration) ? (currentProject.duration) : -1;
       let durationKey = 'NODATA#';
       if (duration > 0 && duration <= 6) {
@@ -48,7 +47,7 @@ const ProjectGraphs = (props) => {
         durationKey = '48+ mois';
       }
 
-      const nbParticipants = (currentProject.participants) ? (currentProject.participants.length) : 0;
+      const nbParticipants = (currentProject.participantCount) ? (currentProject.participantCount) : 0;
       let participantKey = 'NODATA#';
       if (nbParticipants > 0 && nbParticipants <= 1) {
         participantKey = '1 participant';
@@ -64,9 +63,9 @@ const ProjectGraphs = (props) => {
       }
 
 
-      const key1 = type.concat(';', year);
-      const key2 = year.concat(';', durationKey);
-      const key3 = durationKey.concat(';', participantKey);
+      const key1 = year.concat(';', type);
+      const key2 = type.concat(';', participantKey);
+      const key3 = participantKey.concat(';', durationKey);
       const keys = [key1, key2, key3];
       for (let j = 0; j < keys.length; j += 1) {
         if (keys[j].indexOf('NODATA#') === -1) {
@@ -90,16 +89,16 @@ const ProjectGraphs = (props) => {
   const graphs = ['types', 'years', 'keywords', 'sankey'];
   const labelFor = {
     fr: {
-      years: 'Par année',
-      keywords: 'Nuage de mots clés',
-      types: 'Types de publications',
-      sankey: 'sankey',
+      years: 'Projets par année',
+      keywords: 'Nuage de mots clés des projets',
+      types: 'Types de projets',
+      sankey: 'Caractéristiques des projets',
     },
     en: {
-      years: 'By year',
-      keywords: 'Keywords cloud',
-      types: 'Publication types',
-      sankey: 'sankey',
+      years: 'Projects by year',
+      keywords: 'Wordcloud for projects',
+      types: 'Project types',
+      sankey: 'Project caracteristics',
     },
   };
   const active = (props.activeGraph) ? props.activeGraph : 'types';
@@ -107,20 +106,20 @@ const ProjectGraphs = (props) => {
   const renderGraph = () => {
     if (active === 'keywords') {
       const data = createWordCloudData();
-      return <WorldCloud filename={active} data={data} />;
+      return <WorldCloud filename={labelFor[props.language][active]} data={data} />;
     }
     if (active === 'sankey') {
       const data = createSankeyData();
-      return <SankeyChart filename={active} data={data} />;
+      return <SankeyChart filename={labelFor[props.language][active]} data={data} />;
     }
     if (active === 'years') {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={active} data={data} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} />;
     }
     return (
-      <BarChart filename={active} data={props.graphData[active]} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} />
     );
   };
 

@@ -24,16 +24,16 @@ const ProductionGraphs = (props) => {
   };
   const labelFor = {
     fr: {
-      isOa: 'Open Access',
-      years: 'Par année',
-      keywords: 'Nuage de mots clés',
+      isOa: "Taux d'accès ouvert",
+      years: 'Publications par année',
+      keywords: 'Nuage de mots clés des publications',
       journal: 'Top 10 des journaux',
       types: 'Types de publications',
     },
     en: {
       isOa: 'Open Access',
-      years: 'By year',
-      keywords: 'Keywords cloud',
+      years: 'Publications by year',
+      keywords: 'Publiocations wordcloud',
       journal: 'Top 10 journals',
       types: 'Publication types',
     },
@@ -43,7 +43,7 @@ const ProductionGraphs = (props) => {
 
   const renderGraph = () => {
     if (active === 'keywords') {
-      return <WorldCloud filename={active} data={props.graphData[active]} />;
+      return <WorldCloud filename={labelFor[props.language][active]} data={props.graphData[active]} />;
     }
     if (active === 'isOa') {
       const data = { id: 'isOa', entries: [] };
@@ -62,7 +62,7 @@ const ProductionGraphs = (props) => {
           });
         }
       });
-      return <DonutChart filename={active} data={data} />;
+      return <DonutChart filename={labelFor[props.language][active]} data={data} />;
     }
     if (active === 'years') {
       const data = {
@@ -77,10 +77,10 @@ const ProductionGraphs = (props) => {
         type.value = TypeMapping[props.language][entry.value];
         typesData.entries.push(type);
       });
-      return <BarChart filename={active} data={typesData} />;
+      return <BarChart filename={labelFor[props.language][active]} data={typesData} />;
     }
     return (
-      <BarChart filename={active} data={props.graphData[active]} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} />
     );
   };
 
