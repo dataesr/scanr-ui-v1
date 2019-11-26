@@ -26,7 +26,7 @@ const SearchPanel = (props) => {
 
   const renderForm = (
     <form onSubmit={props.submitResearch}>
-      <div className="row d-flex align-items-end my-2">
+      <div className="row d-flex flex-nowrap align-items-end my-2">
         <div className="flex-grow-1">
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
             { placeholder => (
@@ -104,7 +104,7 @@ const SearchPanel = (props) => {
             </FormattedMessage>
           </select>
         </div>
-        <div className="pl-1">
+        <div className="pl-1 pr-3">
           <button
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
