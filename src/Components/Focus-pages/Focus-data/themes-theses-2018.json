@@ -38,19 +38,19 @@
       "queryValue": ["thesis"]
     },
     {
-      "type": "map",
-      "title": "Carte des écoles doctorales des thèses soutenues en 2018",
+      "type": "bar",
+      "title": "Villes ayant le plus de structure d'affiliations des thèses soutenues en 2018",
       "dataType": "these",
       "subtitle": "",
       "label": "theme-these3",
       "yearMin": 2018,
       "yearMax": 2018,
       "pageSize": 10,
-      "facetSize": 100,
+      "facetSize": 20,
       "url_api" : "https://scanr-preprod.sword-group.com/api/v2/publications/search",
       "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
       "queryField": "productionType",
-      "facet": ["affiliations.label.default"],
+      "facet": ["affiliations.address.city"],
       "sourceFields": ["title", "affiliations"],
       "queryValue": ["thesis"]
     }
