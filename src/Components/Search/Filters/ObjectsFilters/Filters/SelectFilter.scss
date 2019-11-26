@@ -35,6 +35,11 @@
 .radioStyle:hover {
   background-color: white;
 }
+.radioStyle_disable:hover {
+  border: 1px solid $scanrgreyColor;
+  background-color: $scanrlightgreyColor;
+  cursor: default;
+}
 
 
 .Item {
