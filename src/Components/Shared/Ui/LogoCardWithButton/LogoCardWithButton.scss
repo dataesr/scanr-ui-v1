@@ -1,0 +1,33 @@
+@import '../../../../style.scss';
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.img {
+  max-width: 100%;
+  height: 50%;
+  padding: 2px;
+}
+
+.Button {
+  max-height: 30px;
+  padding: 4px;
+}
+
+.Height150 {
+  height: 150px;
+}
+.Height75 {
+  height: 75px;
+}
+
+.Image {
+  width: 250px;
+  height: 130px;
+  margin: auto;
+  padding: 10px;
+}
