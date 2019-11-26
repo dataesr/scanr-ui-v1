@@ -28,7 +28,7 @@ const DiscoverDataEsr = (props) => {
                 defaultMessage="DiscoverDataEsr.lib"
               />
             </div>
-            <div className="col-lg-2 text-right">
+            <div className="col-lg-4 text-right">
               <ButtonToPage
                 className={classes.Button}
                 url=""
