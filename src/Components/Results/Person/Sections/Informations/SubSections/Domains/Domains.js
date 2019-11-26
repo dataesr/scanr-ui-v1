@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 
 import TagCard from '../../../../../../Shared/Ui/TagCard/TagCard';
 import getSelectedKey from '../../../../../../../Utils/getSelectKey';
+import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Domains.scss';
 
@@ -41,10 +42,12 @@ const Domains = (props) => {
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid">
           <div className="row">
-            <div className={`col-12 ${classes.CardContainer}`}>
-              <div className={classes.SubSectionTitle}>
-                <FormattedHTMLMessage id="Person.informations.domains.title" defaultMessage="Person.informations.domains.title" />
-              </div>
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={messages[props.language]['Person.informations.domains.title']} />
+            </div>
+          </div>
+          <div className="row">
+            <div className={`col-md ${classes.CardContainer}`}>
               <TagCard
                 logo="fas fa-flask"
                 title="Domaines de recherche"
