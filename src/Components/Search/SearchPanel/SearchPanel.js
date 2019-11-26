@@ -26,13 +26,8 @@ const SearchPanel = (props) => {
 
   const renderForm = (
     <form onSubmit={props.submitResearch}>
-      <div className="row d-flex align-items-end mb-1 mt-1">
-        <div className="d-flex flex-column flex-grow-1 pl-0">
-          {/*
-          <FormattedMessage id="Search.TitleSearchBar" defaultMessage="Search.TitleSearchBar">
-            { label => <label className={`pl-2 ${classes.TitleSearchBar}`} htmlFor="query">{label}</label> }
-          </FormattedMessage>
-          */}
+      <div className="row d-flex align-items-end my-2">
+        <div className="flex-grow-1">
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
             { placeholder => (
               <input
@@ -46,11 +41,7 @@ const SearchPanel = (props) => {
             )}
           </FormattedMessage>
         </div>
-        <div className={`d-flex flex-column pr-1 pl-1 ${classes.onlyMobile}`}>
-          <FormattedMessage id="Search.SearchPerimeter" defaultMessage="Search.SearchPerimeter">
-            {/* eslint-disable-next-line */}
-            { label => <label className={`pl-2 pr-4 ${classes.SearchPerimeter}`} htmlFor="api">{label}</label> }
-          </FormattedMessage>
+        <div className={`pl-1 ${classes.onlyMobile}`}>
           <select
             id="api"
             className={`form-control ${classes.Select}`}
@@ -113,7 +104,7 @@ const SearchPanel = (props) => {
             </FormattedMessage>
           </select>
         </div>
-        <div className="pl-2">
+        <div className="pl-1">
           <button
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
