@@ -26,11 +26,15 @@ const SearchObjectTab = (props) => {
               (props.view === ('list' || null))
                 ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
                     <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
-                    <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                    <span className={classes.TextToHide}>
+                      <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                    </span>
                   </div>
                 : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('list')}>
                     <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
-                    <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                    <span className={classes.TextToHide}>
+                      <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                    </span>
                   </div>
             }
           </a>
@@ -39,11 +43,15 @@ const SearchObjectTab = (props) => {
               (props.view === 'graph')
                 ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
                     <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
-                    <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                    <span className={classes.TextToHide}>
+                      <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                    </span>
                   </div>
                 : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('graph')}>
                     <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
-                    <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                    <span className={classes.TextToHide}>
+                      <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                    </span>
                   </div>
             }
           </a>
