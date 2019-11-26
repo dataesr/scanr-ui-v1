@@ -13,7 +13,7 @@ export default class PersonsMap extends Component {
     data: [],
     isLoading: true,
     title: 'Cartographie',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
   }
 
   componentDidMount() {
@@ -66,7 +66,7 @@ export default class PersonsMap extends Component {
             subtitle={this.state.subtitle}
           />
           <LeafletMap
-            filename="carto"
+            filename="Localisation des affiliations"
             data={this.state.data}
             language={this.props.language}
           />

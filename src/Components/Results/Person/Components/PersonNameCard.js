@@ -63,11 +63,16 @@ const PersonCardName = (props) => {
           <div className={classes.Label}>
             {props.data.gender}
           </div>
-          <div className={`mt-auto pb-2 ${classes.Title}`}>
-            <FormattedHTMLMessage id="Person.informations.identity.identifiers" defaultMessage="Person.informations.identity.identifiers" />
-          </div>
           {
-            (props.data.externalIds && props.data.externalIds.length > 0)
+            (props.data.externalIds && props.data.externalIds.length < 0)
+              ? (
+                <div className={`mt-auto pb-2 ${classes.Title}`}>
+                  <FormattedHTMLMessage id="Person.informations.identity.identifiers" defaultMessage="Person.informations.identity.identifiers" />
+                </div>
+              ) : null
+          }
+          {
+            (props.data.externalIds && props.data.externalIds.length < 0)
               ? (
                 <ButtonWithModal
                   logo="fas fa-qrcode"

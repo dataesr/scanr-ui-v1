@@ -57,7 +57,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsDonut
-            filename="rep10types"
+            filename="Types de projets"
             data={this.state.data}
             language={this.props.language}
           />

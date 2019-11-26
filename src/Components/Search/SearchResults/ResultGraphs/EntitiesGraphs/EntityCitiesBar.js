@@ -13,7 +13,7 @@ export default class EntityMap extends Component {
     data: { entries: [] },
     isLoading: true,
     title: 'Top 10 des villes',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
     aggregations: {
       cities: {
         field: 'address.urbanUnitLabel',
@@ -57,7 +57,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsBar
-            filename="top10cities"
+            filename="Top 10 des villes"
             data={this.state.data}
             language={this.props.language}
           />

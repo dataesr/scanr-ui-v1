@@ -13,7 +13,7 @@ export default class EntityMap extends Component {
     data: [],
     isLoading: true,
     title: 'Cartographie nationale',
-    subtitle: 'des résultats de recheche',
+    subtitle: 'des résultats de recherche',
   }
 
   componentDidMount() {
@@ -58,7 +58,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <LeafletMap
-            filename="carto"
+            filename="Localisations des structures"
             data={this.state.data}
             language={this.props.language}
           />

@@ -57,7 +57,7 @@ export default class ProductionTypes extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsBar
-            filename="top10cities"
+            filename="Types de publications"
             data={this.state.data}
             language={this.props.language}
           />
