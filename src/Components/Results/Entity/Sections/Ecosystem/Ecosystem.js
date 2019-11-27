@@ -9,6 +9,7 @@ import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Select from '../../../../Shared/Ui/Select/Select';
+import DonutChart from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -201,6 +202,11 @@ class Ecosystem extends Component {
       ? `${this.props.data.length} ${this.state.filterValue}`
       : `${this.props.data.length} ${messages[this.props.language]['Entity.ecosystem.selectTypesFilter.placeHolder']}`;
 
+    let acronym = null;
+    if (this.state.selectedCollaboration.structure) {
+      acronym = getSelectKey(this.state.selectedCollaboration.structure, 'acronym', this.props.language, 'default');
+    }
+
     return (
       <Fragment>
         <div className="row">
@@ -238,7 +244,16 @@ class Ecosystem extends Component {
                   <div className={classes.Details}>
                     <div className={classes.detailTitle}>
                       {getSelectKey(this.state.selectedCollaboration.structure, 'label', this.props.language, 'fr')}
+                      {(acronym) ? (` (${acronym})`) : null}
                     </div>
+                    {
+                      (this.state.selectedCollaboration.structure && this.state.selectedCollaboration.structure.address && this.state.selectedCollaboration.structure.address[0])
+                        ? (
+                          <p>
+                            {`${this.state.selectedCollaboration.structure.address[0].address || ''} - ${this.state.selectedCollaboration.structure.address[0].citycode} - ${this.state.selectedCollaboration.structure.address[0].city}`}
+                          </p>
+                        ) : null
+                    }
                     <hr />
                     <div className="row">
                       <div className="col">
@@ -270,21 +285,24 @@ class Ecosystem extends Component {
                     <hr />
                     <div className={classes.Description}>
                       <div className={classes.Content}>
-
-                        nature
-                        isFrench
-                        Adresse
-                        statut (active/old)
-
+                        <DonutChart
+                          filename={`graph_${this.state.selectedCollaboration.structure.id}`}
+                          data={{ entries: [{ value: 'p1', count: this.state.selectedCollaboration.details.publication, color: classes.productionColor }, { value: 'p2', count: this.state.selectedCollaboration.details.Project, color: classes.projectgreenColor }] }}
+                        />
                       </div>
                     </div>
                     <hr />
-                    <ButtonToPage
-                      className={classes.btn_dark}
-                      url=""
-                    >
-                      Voir l entité
-                    </ButtonToPage>
+                    <div className="d-flex flex-row justify-content-between align-items-center">
+                      <div>
+                        nature | isFrench
+                      </div>
+                      <ButtonToPage
+                        className={`ml-auto ${classes.btn_dark}`}
+                        url={`/entite/${this.state.selectedCollaboration.structure.id}`}
+                      >
+                        {messages[this.props.language]['Entity.ecosystem.button']}
+                      </ButtonToPage>
+                    </div>
                   </div>
                 )
                 : (
@@ -334,7 +352,7 @@ class Ecosystem extends Component {
                   objectType="structures"
                   language={this.props.language}
                   id={this.props.id}
-                  total
+                  total={false}
                   title={messages[this.props.language]['Entity.ecosystem.title']}
                   viewModeClickHandler={this.viewModeClickHandler}
                   viewMode={this.state.viewMode}
