@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
-import ComponentToPage from '../Shared/ComponentToPage/ComponentToPage';
-import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
+import Banner from '../Shared/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
@@ -11,10 +10,11 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 // import Lexicon from '../Shared/Lexicon/Lexicon';
 // import Search from '../Home-page/Search/Search';
 
-import classes from '../Home-page/Home-page.scss';
+import classes from '../Home/Home.scss';
+// import classes from './FocusList.scss';
 
 /**
- * List-Home-page component <br/>
+ * FocusList
  * Url : /focus <br/>
  * Description : Page principale des focus (aperçu des différents graphs et résultats) <br/>
  * Responsive : . <br/>
@@ -22,42 +22,33 @@ import classes from '../Home-page/Home-page.scss';
  * Tests
  */
 
-const Focus = props => (
+const FocusList = props => (
   <div className={`container-fluid ${classes.HomePage}`}>
     <Header
       language={props.language}
       switchLanguage={props.switchLanguage}
     />
-
     <HeaderTitle
       language={props.language}
       labelkey="focus"
       url1="/"
       url2="/focus"
     />
-
-
-    {/* <Search language={props.language} /> */}
-
     <LastFocus language={props.language} />
-
-    <ComponentToPage
-      labelKey="HowToAppearInScanR"
+    <Banner
       language={props.language}
-      url=""
+      labelKey="DiscoverDataesr"
+      cssClass="BannerDark"
+      url={`https://data.esr.gouv.fr/${props.language.toUpperCase()}/`}
+      target="_blank"
     />
-
-    <LastFocus language={props.language} />
-
-    <DiscoverDataEsr language={props.language} />
-
     <Footer language={props.language} />
   </div>
 );
 
-export default Focus;
+export default FocusList;
 
-Focus.propTypes = {
+FocusList.propTypes = {
   language: PropTypes.string.isRequired,
   switchLanguage: PropTypes.func.isRequired,
 };
