@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
@@ -33,25 +33,30 @@ const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-proje
 const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
-  state: {
-    language: null,
+  constructor(props) {
+    super(props);
+    this.setDefaultLanguage = this.setDefaultLanguage.bind(this);
+    this.state = { language: this.setDefaultLanguage() };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.setDefaultLanguage();
   }
 
   setDefaultLanguage() {
-    this.setState({ language: navigator.language.split(/[-_]/)[0] });
+    const language = localStorage.getItem('scanr_lang') || navigator.language.split(/[-_]/)[0];
+    this.setState({ language });
   }
 
-  switchLanguage = (lang) => {
-    switch (lang) {
+  switchLanguage = (language) => {
+    switch (language) {
       case 'fr':
-        this.setState({ language: lang });
+        localStorage.setItem('scanr_lang', 'fr');
+        this.setState({ language });
         break;
       case 'en':
-        this.setState({ language: lang });
+        localStorage.setItem('scanr_lang', 'en');
+        this.setState({ language });
         break;
       default:
         this.setDefaultLanguage();

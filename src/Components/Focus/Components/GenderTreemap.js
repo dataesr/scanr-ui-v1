@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GraphSpinner from '../LoadingSpinners/GraphSpinner';
+import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 import classes from './GraphCard.scss';
-import HighChartsTreemap from '../GraphComponents/Graphs/HighChartsTreemap';
-import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
+import HighChartsTreemap from '../../Shared/GraphComponents/Graphs/HighChartsTreemap';
+import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
 
 export default class GenderTreemap extends Component {
   state = {
