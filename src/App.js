@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
@@ -15,8 +15,8 @@ const EntityPage = lazy(() => import('./Components/Results/Entity/Entity'));
 const ProductionPage = lazy(() => import('./Components/Results/Production/Production'));
 const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
-const FocusList = lazy(() => import('./Components/Focus-pages/FocusList'));
-const Focus = lazy(() => import('./Components/Focus-pages/Focus'));
+const FocusList = lazy(() => import('./Components/Focus/FocusList'));
+const Focus = lazy(() => import('./Components/Focus/Focus'));
 const CurieHome = lazy(() => import('./Components/Shared/GraphCurie/CurieHome'));
 
 /* Pages froides */
@@ -64,10 +64,13 @@ class App extends Component {
       siteId: 37,
       trackErrors: true,
     });
-    // track the initial pageview
-    ReactPiwik.push(['trackPageView']);
-
+    // track pageviews except for search where tracking is specific
     const customHistory = createBrowserHistory();
+    if (customHistory.location.pathname.indexOf('/recherche/') === -1) {
+      ReactPiwik.push(['trackPageView']);
+    }
+
+
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
     return (

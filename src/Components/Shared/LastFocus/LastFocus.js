@@ -22,32 +22,29 @@ const LastFocus = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.LastFocus}>
         <div className="container">
-          <div className="row">
-            <div className={`col-lg-10 ${classes.Title}`}>
-              <h2>
-                <FormattedHTMLMessage
-                  id="LastFocus.Title"
-                  defaultMessage="LastFocus.Title"
-                />
-              </h2>
-            </div>
-            <div className={`col-lg-2 ${classes.Button}`}>
-              <ButtonToPage
-                className={classes.MarginTop}
-                url="/focus"
-              >
-                <FormattedHTMLMessage
-                  id="LastFocus.AllFocus"
-                  defaultMessage="LastFocus.AllFocus"
-                />
-              </ButtonToPage>
-            </div>
+          <div className="row d-flex align-items-center px-1 py-4">
+            <h2 className={`flex-grow-1 m-0 ${classes.Title}`}>
+              <FormattedHTMLMessage
+                id="LastFocus.Title"
+                defaultMessage="LastFocus.Title"
+              />
+            </h2>
+            <ButtonToPage
+              className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+              target="_blank"
+              url="/focus"
+            >
+              <FormattedHTMLMessage
+                id="LastFocus.AllFocus"
+                defaultMessage="LastFocus.AllFocus"
+              />
+            </ButtonToPage>
           </div>
 
-          <div className="row">
+          <div className="row pb-4">
             {
               props.focusList.map(oneFocus => (
-                <div className="col-lg-4" key={oneFocus.title}>
+                <div className={`col-lg-4 ${classes.CardContainer}`} key={oneFocus.title}>
                   <FocusCard
                     schema={oneFocus.schema}
                     tags={oneFocus.tags}
@@ -87,12 +84,20 @@ LastFocus.defaultProps = {
       url: '/focus/themes-theses-2018',
       schema: 'publication',
     },
-    {
-      tags: ['#prix', '#IUF', '#tag3'],
-      title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
-      type: 'treemap',
-      url: '/focus/iuf',
-      schema: 'person',
-    },
   ],
 };
+
+// {
+//   tags: ['#theses', '#tag2', '#tag3'],
+//   title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
+//   type: 'bubble',
+//   url: '/focus/themes-theses-2018',
+//   schema: 'publication',
+// },
+// {
+//   tags: ['#prix', '#IUF', '#tag3'],
+//   title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
+//   type: 'treemap',
+//   url: '/focus/iuf',
+//   schema: 'person',
+// },
