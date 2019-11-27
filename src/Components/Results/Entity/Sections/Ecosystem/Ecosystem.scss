@@ -110,7 +110,7 @@
     right: 0;
     width: 100%;
     height: 2em;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
+    // background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
   }
 }
 
@@ -129,6 +129,14 @@
 
 .SectionTitle {
   .Label {
-    font-size: 1.5rem;    
+    font-size: 1.5rem;
   }
+}
+
+.Hr {
+  border: 2px solid $structureColor;
+  border-radius: 4px;
+  color: $structureColor;
+  background-color: $structureColor;
+  width: 100%;
 }
