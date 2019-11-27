@@ -100,7 +100,7 @@ class ScanrToday extends Component {
                   </LexiconModal>
                 </h2>
               </div>
-              <div className="col-lg">
+              <div className={`col-lg ${classes.CardContainer}`}>
                 <a href="recherche/structures">
                   <CounterCardByType
                     schema="entities"
@@ -109,7 +109,7 @@ class ScanrToday extends Component {
                   />
                 </a>
               </div>
-              <div className="col-lg">
+              <div className={`col-lg ${classes.CardContainer}`}>
                 <a href="recherche/persons">
                   <CounterCardByType
                     schema="persons"
@@ -118,7 +118,7 @@ class ScanrToday extends Component {
                   />
                 </a>
               </div>
-              <div className="col-lg">
+              <div className={`col-lg ${classes.CardContainer}`}>
                 <a href="recherche/projects">
                   <CounterCardByType
                     schema="projects"
@@ -127,7 +127,7 @@ class ScanrToday extends Component {
                   />
                 </a>
               </div>
-              <div className="col-lg">
+              <div className={`col-lg ${classes.CardContainer}`}>
                 <a href="recherche/publications">
                   <CounterCardByType
                     schema="publications"
