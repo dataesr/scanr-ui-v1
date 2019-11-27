@@ -1,0 +1,18 @@
+@import '../../../style.scss';
+
+.CounterDataSimple {
+  height: 150px;
+  width: 100%;
+  border: 1px solid $scanrmiddlegreyColor;
+  border-radius: 8px;
+  font-size: 2rem;
+  color: $scanrdeepblueColor;
+  text-align: center;
+  padding: 24px;
+  background-color: $scanrlightgreyColor;
+
+  .Title {
+    font-size: 1.2rem;
+
+  }
+}
