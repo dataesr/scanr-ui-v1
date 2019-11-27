@@ -117,7 +117,7 @@ const ContributePage = props => (
                   defaultMessage="futurScanr.text"
                 />
                 <ButtonToPage
-                  className={`${classes.Button}`}
+                  className={classes.Button}
                   url="#"
                   target="_blank"
                 >

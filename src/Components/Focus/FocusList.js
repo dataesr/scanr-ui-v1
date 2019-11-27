@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
-import DiscoverDataEsr from '../Shared/DiscoverDataEsr/DiscoverDataEsr';
+import Banner from '../Shared/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header-homePage';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
@@ -35,7 +35,13 @@ const FocusList = props => (
       url2="/focus"
     />
     <LastFocus language={props.language} />
-    <DiscoverDataEsr language={props.language} />
+    <Banner
+      language={props.language}
+      labelKey="DiscoverDataesr"
+      cssClass="BannerDark"
+      url={`https://data.esr.gouv.fr/${props.language.toUpperCase()}/`}
+      target="_blank"
+    />
     <Footer language={props.language} />
   </div>
 );

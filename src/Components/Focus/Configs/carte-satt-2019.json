@@ -1,0 +1,42 @@
+{
+  "title": {
+    "fr": "Sociétés d’Accélération du Transfert de Technologies (SATT)",
+    "en": "Companies for Technology Transfert (SATT)"
+  },
+  "text": {
+    "fr": "#### Des structures régionales dédiées \nAu 30 juin 2018, 914 M€ du programme des investissements d'avenir ont été consacré au soutien des SATT et des CVT. [En savoir plus](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf) sur les SATT",
+    "en": "#### Regional structures for Technology Transfert \nAu 30 juin 2018, 914 M€ du programme des investissements d'avenir ont été consacré au soutien des SATT et des CVT. [Read more](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf) on SATT"
+  },
+  "tags": {
+    "fr": ["satt", "transfert", "technologies"],
+    "en": ["satt", "transfert", "technologies"]
+  },
+  "api": "structures",
+  "href": "/recherche/structures",
+  "hrefX": "/recherche/structures",
+  "components": [
+    {
+      "title": {
+        "fr": "Carte des SATT",
+        "en": "Map of SATT"
+      },
+      "subtitle": {
+        "fr": "Les Sociétés d'Accélération du Transfert de Technologies",
+        "en": "Companies for Technology Transfert"
+      },
+      "api" : "structures",
+      "componentType": "EntityMap",
+      "request": {
+        "query": "",
+        "pageSize": 100,
+        "filters": {
+          "badges.code": {
+            "type": "MultiValueSearchFilter",
+            "op": "all",
+            "values": ["SATT"]
+          }
+        }
+      }
+    }
+  ]
+}
