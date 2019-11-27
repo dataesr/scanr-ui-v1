@@ -44,10 +44,16 @@ const HeaderTitle = props => (
         </div>
         <div className="row">
           <div className={classes.title}>
-            <FormattedHTMLMessage
-              id={`Page.title.${props.labelkey}`}
-              defaultMessage={`Page.title.${props.labelkey}`}
-            />
+            {
+              (props.title)
+                ? props.title
+                : (
+                  <FormattedHTMLMessage
+                    id={`Page.title.${props.labelkey}`}
+                    defaultMessage={`Page.title.${props.labelkey}`}
+                  />
+                )
+              }
           </div>
         </div>
       </div>
@@ -60,6 +66,7 @@ export default HeaderTitle;
 HeaderTitle.propTypes = {
   language: PropTypes.string.isRequired,
   labelkey: PropTypes.string.isRequired,
+  title: PropTypes.string,
   url1: PropTypes.string,
   url2: PropTypes.string,
 };
