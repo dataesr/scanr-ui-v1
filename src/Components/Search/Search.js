@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import ReactPiwik from 'react-piwik';
 
 import classes from './Search.scss';
 
@@ -78,12 +79,20 @@ class SearchPage extends Component {
   componentDidMount() {
     const newState = this.getParams();
     this.setState(newState);
+    const category = this.props.location.pathname.split('/')[2];
+    if (category === 'all') {
+      this.sendTracking();
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.location !== this.props.location) {
       const newState = this.getParams();
       this.setState(newState);
+      const category = this.props.location.pathname.split('/')[2];
+      if (category === 'all') {
+        this.sendTracking();
+      }
     } else if (prevState.request !== this.state.request || (this.state.data.total === 0)) {
       this.setState({
         isLoading: true,
@@ -338,6 +347,7 @@ class SearchPage extends Component {
           data,
           isLoading: false,
         });
+        this.sendTracking();
       })
       .catch((error) => {
         /* eslint-disable-next-line */
@@ -440,6 +450,19 @@ class SearchPage extends Component {
         labelKey="Appear"
       />
     );
+  }
+
+  sendTracking = () => {
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    const category = this.props.location.pathname.split('/')[2];
+    const query = this.state.request.query;
+    let nbResults = this.state.data.total;
+    if (category === 'all') {
+      nbResults = this.state.preview.all;
+    }
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    // ReactPiwik.push(['setCustomVariable', 1, "Gender", "Male", "page"]);
+    ReactPiwik.push(['trackSiteSearch', query, category, nbResults]);
   }
 
   // *******************************************************************
