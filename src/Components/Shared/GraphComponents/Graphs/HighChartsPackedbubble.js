@@ -7,8 +7,8 @@ import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
 import HCmore from 'highcharts/highcharts-more.src';
-import classes from '../GraphComponents.scss';
 import ReactPiwik from 'react-piwik';
+import classes from '../GraphComponents.scss';
 
 HCmore(Highcharts);
 
