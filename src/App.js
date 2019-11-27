@@ -1,5 +1,5 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Router, Route, Switch } from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
