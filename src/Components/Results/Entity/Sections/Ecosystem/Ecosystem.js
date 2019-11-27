@@ -9,7 +9,9 @@ import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Select from '../../../../Shared/Ui/Select/Select';
-import DonutChart from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
+// import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
+import CounterDataSimple from '../../../../Shared/CounterDataSimple/CounterDataSimple';
+import FranceFlag from '../../../../Shared/images/france-flag-icon-32.png';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -18,6 +20,11 @@ import messagesEn from './translations/en.json';
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import classes from './Ecosystem.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * Ecosystem
@@ -46,13 +53,55 @@ class Ecosystem extends Component {
     }
   }
 
-  getDataGraph = () => {
-    const dataGraph = [];
-    GRAPH_ITEMS_LIST.forEach((graphType) => {
-      // Recherche des structures qui ont ce libellé dans leur clé "kind"
-      // const structuresListFr = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
-      // const structuresListFo = this.props.data.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+  // getDataGraph = () => {
+  //   const dataGraph = [];
+  //   GRAPH_ITEMS_LIST.forEach((graphType) => {
+  //     const dataSorted = this.props.data.sort((a, b) => {
+  //       const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
+  //       const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
+  //       return prodB - prodA;
+  //     });
+  //     const limitedData = [];
+  //     const limit = (dataSorted.length < ECOSYSTEM_LIMIT) ? dataSorted.length - 1 : ECOSYSTEM_LIMIT;
+  //     for (let i = 0; i <= limit; i += 1) {
+  //       limitedData.push(dataSorted[i]);
+  //     }
 
+  //     const structuresListFr = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+  //     const structuresListFo = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+
+  //     const dataFr = [];
+  //     const dataFo = [];
+  //     structuresListFr.forEach((el) => {
+  //       dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
+  //     });
+  //     structuresListFo.forEach((el) => {
+  //       dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
+  //     });
+
+  //     const objFr = {
+  //       name: `${dataFr.length} françaises`,
+  //       data: dataFr,
+  //       color: '#119fd4',
+  //     };
+  //     const objFo = {
+  //       name: `${dataFo.length} internationales`,
+  //       data: dataFo,
+  //       color: '#4fc4c0',
+  //     };
+
+  //     dataGraph[graphType] = [objFr, objFo];
+  //   });
+
+  //   return dataGraph;
+  // }
+
+  getDataGraph = () => {
+    const dataGraph = ['fr', 'fo'];
+    dataGraph.fr = [];
+    dataGraph.fo = [];
+
+    GRAPH_ITEMS_LIST.forEach((graphType) => {
       const dataSorted = this.props.data.sort((a, b) => {
         const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
         const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
@@ -76,20 +125,39 @@ class Ecosystem extends Component {
         dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
       });
 
+      let color = '';
+      switch (graphType) {
+        case 'Structure de recherche':
+          color = classes.researchstructuresColor;
+          break;
+        case 'Secteur Privée':
+          color = classes.entreprisesColor;
+          break;
+        case 'Secteur public':
+          color = classes.publicsectorColor;
+          break;
+        default:
+          color = '';
+      }
+
       const objFr = {
-        name: `${dataFr.length} françaises`,
+        name: `${dataFr.length} ${graphType}`,
         data: dataFr,
-        color: '#119fd4',
+        color,
       };
       const objFo = {
-        name: `${dataFo.length} internationales`,
+        name: `${dataFo.length} ${graphType}`,
         data: dataFo,
-        color: '#4fc4c0',
+        color,
       };
 
-      dataGraph[graphType] = [objFr, objFo];
+      if (dataFr.length > 0) {
+        dataGraph.fr.push(objFr);
+      }
+      if (dataFo.length > 0) {
+        dataGraph.fo.push(objFo);
+      }
     });
-
     return dataGraph;
   }
 
@@ -108,7 +176,6 @@ class Ecosystem extends Component {
       const data = this.state.data.filter(item => item.structure.isFrench === (frIntFilterValue === 'fr'));
       this.setState({ data });
     } else {
-      // this.setState(prevState => ({ data: prevState.initialData, frIntFilterValue: null }));
       this.setState(prevState => ({ data: prevState.initialData }));
     }
   }
@@ -133,7 +200,6 @@ class Ecosystem extends Component {
       kindFilter.push(obj);
     });
     this.setState({ kindFilter });
-    // this.setState(prevState => ({ viewListFilters: { frInt: prevState.viewListFilters.frInt, kind: typeFilter } }));
   }
 
   createFrIntFilter = () => {
@@ -154,10 +220,9 @@ class Ecosystem extends Component {
     objEn.count = nbEn;
     const listToAdd = [objFr, objEn];
     this.setState({ frIntFilter: listToAdd });
-    // this.setState(prevState => ({ viewListFilters: { kind: prevState.viewListFilters.kind, frInt: listToAdd } }));
   }
 
-  renderViewList = (messages) => {
+  renderViewList = () => {
     if (!this.state.data || this.state.data.length === 0) {
       return (<div>Pas de données</div>);
     }
@@ -167,7 +232,6 @@ class Ecosystem extends Component {
       const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
       return prodB - prodA;
     });
-
 
     const content = dataSorted.map((data) => {
       let selected = '';
@@ -187,7 +251,7 @@ class Ecosystem extends Component {
               {getSelectKey(data.structure, 'label', this.props.language, 'fr')}
             </div>
             <div className={classes.SharedProd}>
-              {`${data.weight} productions en commun`}
+              {`${data.weight} ${messages[this.props.language]['Entity.ecosystem.jointProductions']}`}
             </div>
           </div>
         </Fragment>
@@ -205,6 +269,16 @@ class Ecosystem extends Component {
     let acronym = null;
     if (this.state.selectedCollaboration.structure) {
       acronym = getSelectKey(this.state.selectedCollaboration.structure, 'acronym', this.props.language, 'default');
+    }
+
+    const dataSimple = [];
+    if (this.state.selectedCollaboration) {
+      if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.publication) {
+        dataSimple.push(<div className="col"><CounterDataSimple title="Publications" value={this.state.selectedCollaboration.details.publication} /></div>);
+      }
+      if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.Project) {
+        dataSimple.push(<div className="col"><CounterDataSimple title={(this.props.language === 'fr') ? 'Projets' : 'Projects'} value={this.state.selectedCollaboration.details.Project} /></div>);
+      }
     }
 
     return (
@@ -232,7 +306,6 @@ class Ecosystem extends Component {
           </div>
         </div>
 
-        {`${this.state.data.length} productions communes`}
         <div className="row">
           <div className={`col-md-5 ${classes.List}`}>
             {content}
@@ -241,7 +314,7 @@ class Ecosystem extends Component {
             {
               (this.state.selectedCollaboration.structure)
                 ? (
-                  <div className={classes.Details}>
+                  <div className={`d-flex flex-column h-100 ${classes.Details}`}>
                     <div className={classes.detailTitle}>
                       {getSelectKey(this.state.selectedCollaboration.structure, 'label', this.props.language, 'fr')}
                       {(acronym) ? (` (${acronym})`) : null}
@@ -254,47 +327,29 @@ class Ecosystem extends Component {
                           </p>
                         ) : null
                     }
-                    <hr />
-                    <div className="row">
-                      <div className="col">
-                        <span>
-                          {`${this.state.selectedCollaboration.weight} productions communes`}
-                        </span>
-                      </div>
-                      <div className="col">
-                        {
-                          (this.state.selectedCollaboration.details.publication)
-                            ? (
-                              <div className={classes.Arrow}>
-                                <i className="fas fa-arrow-right" />
-                                {`${this.state.selectedCollaboration.details.publication} publications`}
-                              </div>
-                            ) : null
-                        }
-                        {
-                          (this.state.selectedCollaboration.details.Project)
-                            ? (
-                              <div className={classes.Arrow}>
-                                <i className="fas fa-arrow-right" />
-                                {`${this.state.selectedCollaboration.details.Project} projets`}
-                              </div>
-                            ) : null
-                        }
-                      </div>
-                    </div>
-                    <hr />
+                    <hr className={classes.Hr} />
+                    <h4>
+                      {messages[this.props.language]['Entity.ecosystem.jointProductions']}
+                    </h4>
                     <div className={classes.Description}>
                       <div className={classes.Content}>
-                        <DonutChart
-                          filename={`graph_${this.state.selectedCollaboration.structure.id}`}
-                          data={{ entries: [{ value: 'p1', count: this.state.selectedCollaboration.details.publication, color: classes.productionColor }, { value: 'p2', count: this.state.selectedCollaboration.details.Project, color: classes.projectgreenColor }] }}
-                        />
+                        <div className="row">
+                          {
+                            dataSimple.map(el => (el))
+                          }
+                        </div>
                       </div>
                     </div>
-                    <hr />
+                    <hr className={`mt-auto ${classes.Hr}`} />
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <div>
-                        nature | isFrench
+                        {
+                          (this.state.selectedCollaboration.structure.isFrench === false) ? '' : <img src={FranceFlag} alt="France" />
+                        }
+                        &nbsp;
+                        {
+                          this.state.selectedCollaboration.structure.nature || null
+                        }
                       </div>
                       <ButtonToPage
                         className={`ml-auto ${classes.btn_dark}`}
@@ -320,9 +375,17 @@ class Ecosystem extends Component {
 
   renderViewGraph = data => (
     <div className="row">
+      <div className="col-md">
+        <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.frenchProduction']} data={data.fr} />
+      </div>
+      <div className="col-md">
+        <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.foreignProduction']} data={data.fo} />
+      </div>
       {
+        /*
         GRAPH_ITEMS_LIST.map((graphType) => {
           if (data[graphType].length > 0) {
+            console.log('data', data[graphType]);
             return (
               <div className="col-md">
                 <PackedBubbleChart text={graphType} data={data[graphType]} tooltipText="productions en commun" />
@@ -331,16 +394,12 @@ class Ecosystem extends Component {
           }
           return null;
         })
+        */
       }
     </div>
   );
 
   render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
     if (!this.props.data) {
       return (
         <Fragment>
