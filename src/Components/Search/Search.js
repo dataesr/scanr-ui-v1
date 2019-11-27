@@ -81,7 +81,7 @@ class SearchPage extends Component {
     this.setState(newState);
     const category = this.props.location.pathname.split('/')[2];
     if (category === 'all') {
-      this.sendTracking();
+      this.sendTracking(this.state.request);
     }
   }
 
@@ -91,7 +91,7 @@ class SearchPage extends Component {
       this.setState(newState);
       const category = this.props.location.pathname.split('/')[2];
       if (category === 'all') {
-        this.sendTracking();
+        this.sendTracking(this.state.request);
       }
     } else if (prevState.request !== this.state.request || (this.state.data.total === 0)) {
       this.setState({
@@ -347,7 +347,7 @@ class SearchPage extends Component {
           data,
           isLoading: false,
         });
-        this.sendTracking();
+        this.sendTracking(this.state.request);
       })
       .catch((error) => {
         /* eslint-disable-next-line */
@@ -452,7 +452,7 @@ class SearchPage extends Component {
     );
   }
 
-  sendTracking = () => {
+  sendTracking = (request) => {
     ReactPiwik.push(['setCustomUrl', this.props.match.url]);
     const category = this.props.location.pathname.split('/')[2];
     const query = this.state.request.query;
@@ -461,7 +461,22 @@ class SearchPage extends Component {
       nbResults = this.state.preview.all;
     }
     ReactPiwik.push(['setCustomUrl', this.props.match.url]);
-    // ReactPiwik.push(['setCustomVariable', 1, "Gender", "Male", "page"]);
+    if (request.filters) {
+      const currentFilters = request.filters;
+      const filters = [];
+      Object.keys(currentFilters).forEach((f) => {
+        let filterValue = '';
+        if (currentFilters[f].values) {
+          filterValue = currentFilters[f].values.join(';');
+        } else if (currentFilters[f].min && currentFilters[f].max) {
+          filterValue = ((currentFilters[f].min).toString()).concat('_TO_', (currentFilters[f].max).toString());
+        }
+        const filter = f.concat('__VAL__', filterValue);
+        filters.push(filter);
+      });
+      ReactPiwik.push(['setCustomVariable', 1, 'SearchFilter', filters.join('__FILTERS__'), 'page']);
+      ReactPiwik.push(['trackPageView']);
+    }
     ReactPiwik.push(['trackSiteSearch', query, category, nbResults]);
   }
 
