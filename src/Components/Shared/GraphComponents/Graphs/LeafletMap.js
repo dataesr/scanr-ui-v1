@@ -6,6 +6,7 @@ import {
 import { GeoSearchControl, OpenStreetMapProvider } from 'leaflet-geosearch';
 import PrintControlDefault from 'react-leaflet-easyprint';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
+import ReactPiwik from 'react-piwik';
 import yellowIcon from './MarkerStyle';
 
 import './customLeaflet.scss';
@@ -67,6 +68,7 @@ class LeafletMap extends Component<{}, State> {
   }
 
   exportChartPng() {
+    ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
     this.printControl.printMap('A4Portrait', this.props.filename);
   }
 
@@ -143,7 +145,7 @@ class LeafletMap extends Component<{}, State> {
 export default LeafletMap;
 
 LeafletMap.defaultProps = {
-  share: false,
+  share: true,
 };
 
 LeafletMap.propTypes = {
