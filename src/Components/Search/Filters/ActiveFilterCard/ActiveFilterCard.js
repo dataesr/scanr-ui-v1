@@ -60,7 +60,7 @@ const ActiveFilterCard = (props) => {
       <div className={`p-3 mb-2 ${classes.ActiveFiltersContainer}`}>
         <div className={`d-flex flex-nowrap align-items-center ${classes.FilterHeaders}`}>
           <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
-          <span>{` - (${count})`}</span>
+          <div className="pl-2">{` - ${count}`}</div>
           <button
             type="button"
             onClick={() => props.activateFilters(!props.isActive)}

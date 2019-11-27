@@ -56,11 +56,6 @@ class LeafletMap extends Component<{}, State> {
     super(props);
     this.print = this.print.bind(this);
     this.exportChartPng = this.exportChartPng.bind(this);
-    this.state = {
-      lat: 46.5,
-      lng: 2.618787,
-      zoom: 5,
-    };
   }
 
   print() {
@@ -77,7 +72,7 @@ class LeafletMap extends Component<{}, State> {
       return (<p>Pas de données géographiques.</p>);
     }
     const mapStyle = this.props.style || { height: '40vh' };
-    const position = [this.state.lat, this.state.lng];
+    const position = [this.props.lat, this.props.lng];
     const markers = createMarkers(this.props.data);
     const downloadOptions = {
       position: 'bottomright',
@@ -123,7 +118,7 @@ class LeafletMap extends Component<{}, State> {
 
     return (
       <div className="w-100">
-        <Map zoomControl={false} center={position} zoom={this.state.zoom} style={mapStyle} minZoom={2} maxZoom={19}>
+        <Map zoomControl={false} center={position} zoom={this.props.zoom} style={mapStyle} minZoom={2} maxZoom={19}>
           <TileLayer
             attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
@@ -146,6 +141,9 @@ export default LeafletMap;
 
 LeafletMap.defaultProps = {
   share: true,
+  lat: 46.5,
+  lng: 2.618787,
+  zoom: 5,
 };
 
 LeafletMap.propTypes = {
@@ -153,4 +151,7 @@ LeafletMap.propTypes = {
   filename: PropTypes.string.isRequired,
   style: PropTypes.object,
   share: PropTypes.bool,
+  lat: PropTypes.number,
+  lng: PropTypes.number,
+  zoom: PropTypes.number,
 };
