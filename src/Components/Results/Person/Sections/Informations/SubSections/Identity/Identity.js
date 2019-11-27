@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 
-import LogoCard from '../../../../../../Shared/Ui/LogoCard/LogoCard';
+import LogoCard from '../../../../../../Shared/Ui/LogoCardWithButton/LogoCardWithButton';
 import PersonNameCard from '../../../../Components/PersonNameCard';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
@@ -50,39 +50,39 @@ const Identity = (props) => {
               {
                 (extIdref.length > 0) ? (
                   <div className={classes.CardContainer}>
-                    <a href={'http:///www.idref.fr/'.concat(extIdref[0].id)} target="_blank" rel="noopener noreferrer">
-                      <LogoCard
-                        language={props.language}
-                        url="/img/logo-idref.png"
-                        label="Idref"
-                        cssClass="Height75"
-                      />
-                    </a>
+                    <LogoCard
+                      language={props.language}
+                      url="/img/logo-idref.png"
+                      targetUrl={'http:///www.idref.fr/'.concat(extIdref[0].id)}
+                      label="Idref"
+                      link="link"
+                      cssClass="Height75"
+                    />
                   </div>
                 ) : null
               }
               { (extOrcid.length > 0) ? (
                 <div className={classes.CardContainer}>
-                  <a href={'http:///www.orcid.org/'.concat(extOrcid[0].id)} target="_blank" rel="noopener noreferrer">
-                    <LogoCard
-                      language={props.language}
-                      url="/img/logo-orcid.svg"
-                      label="Orcid"
-                      cssClass="Height75"
-                    />
-                  </a>
+                  <LogoCard
+                    language={props.language}
+                    url="/img/logo-orcid.svg"
+                    targetUrl={'http://www.orcid.org/'.concat(extOrcid[0].id)}
+                    label="Orcid"
+                    link="link"
+                    cssClass="Height75"
+                  />
                 </div>
               ) : null }
               { (extIdhal.length > 0) ? (
                 <div className={classes.CardContainer}>
-                  <a href={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')} target="_blank" rel="noopener noreferrer">
-                    <LogoCard
-                      language={props.language}
-                      url="/img/logo-hal.svg"
-                      label="IdHAL"
-                      cssClass="Height75"
-                    />
-                  </a>
+                  <LogoCard
+                    language={props.language}
+                    url="/img/logo-hal.svg"
+                    targetUrl={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')}
+                    label="IdHAL"
+                    cssClass="Height75"
+                    link="link"
+                  />
                 </div>
               ) : null }
             </div>
