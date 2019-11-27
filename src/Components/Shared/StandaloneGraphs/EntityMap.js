@@ -21,48 +21,31 @@ class EntityMap extends Component {
   getData = () => {
     const request = { ...this.props.request };
     /* eslint-disable-next-line */
-    const mapopendata = require('../../Focus/Data/'.concat(`${this.props.opendata}`));
-    if (this.props.api) {
-      Axios.post(API_STRUCTURES_GEORESULTS_END_POINT, transformRequest(request))
-        .then((response) => {
-          const mapdata = [];
-          if (response.data && response.data.results) {
-            response.data.results.forEach((element) => {
-              try {
-                const dataElement = {
-                  id: element.value.id,
-                  position: [element.value.address[0].gps.lat, element.value.address[0].gps.lon],
-                  infos: [element.value.label.fr || element.value.label.en || ''],
-                };
-                mapdata.push(dataElement);
-              } catch (error) {
-              // eslint-disable-no-empty
-              }
-            });
-          }
-          this.setState({ data: mapdata, isLoading: false });
-        })
-        .catch((error) => {
-          /* eslint-disable-next-line */
-          console.log(error);
-        });
-    } else {
-      const mapdata = [];
-      mapopendata.records.forEach((element) => {
-        try {
-          const dataElement = {
-            id: (element.fields.nom).concat(element.fields.prenom),
-            position: [element.geometry.coordinates[1], element.geometry.coordinates[0]],
-            infos: ['bla'],
-          };
-          mapdata.push(dataElement);
-        } catch (error) {
-        // eslint-disable-no-empty
+    Axios.post(API_STRUCTURES_GEORESULTS_END_POINT, transformRequest(request))
+      .then((response) => {
+        const mapdata = [];
+        if (response.data && response.data.results) {
+          response.data.results.forEach((element) => {
+            try {
+              const dataElement = {
+                id: element.value.id,
+                position: [element.value.address[0].gps.lat, element.value.address[0].gps.lon],
+                infos: [element.value.label.fr || element.value.label.en || ''],
+              };
+              mapdata.push(dataElement);
+            } catch (error) {
+            // eslint-disable-no-empty
+            }
+          });
         }
+        this.setState({ data: mapdata, isLoading: false });
+      })
+      .catch((error) => {
+        /* eslint-disable-next-line */
+        console.log(error);
       });
-      this.setState({ data: mapdata, isLoading: false });
-    }
   }
+
 
   render = () => (
     <div className={`w-100 ${classes.graphCard}`}>
@@ -92,5 +75,4 @@ EntityMap.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
-  api: PropTypes.string,
 };

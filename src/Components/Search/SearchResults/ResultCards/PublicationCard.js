@@ -117,7 +117,7 @@ const PublicationCard = (props) => {
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <article className={`d-flex flex-column h-100 ${classes.ResultCard} ${classes[props.cardColor]}`}>
+        <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
             <a href={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}>
               {getSelectedKey(props.data, 'title', props.language, 'default')}
