@@ -179,8 +179,8 @@ HighChartsPackedbubble.defaultProps = {
 };
 
 HighChartsPackedbubble.propTypes = {
-  filename: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  filename: PropTypes.string,
+  data: PropTypes.array,
   text: PropTypes.string,
   exporting: PropTypes.bool,
   tooltipText: PropTypes.string,
