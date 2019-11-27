@@ -11,10 +11,10 @@ import ButtonToPage from '../Shared/Ui/Buttons/ButtonToPage';
 // import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
 import getSelectKey from '../../Utils/getSelectKey';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
-import EntityMap from './Components/EntityMap';
-import PublicationsKeywords from './Components/PublicationsKeywords';
-import PublicationsPacketBubble from './Components/PublicationsPacketBubble';
-import CitiesBar from './Components/CitiesBar';
+import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
+import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
+import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
+import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import classes from './Focus.scss';
 
@@ -34,7 +34,7 @@ const Components = {
   EntityMap,
   PublicationsKeywords,
   PublicationsPacketBubble,
-  CitiesBar,
+  SimpleAggregationGraph,
 };
 
 export default class Focus extends Component {
@@ -68,6 +68,10 @@ export default class Focus extends Component {
       const properties = {
         request: component.request,
         api: component.api,
+        aggSize: component.aggSize,
+        aggField: component.aggField,
+        filename: component.filenam,
+        graphType: component.graphType,
         title: getSelectKey(component, 'title', this.props.language, 'fr'),
         subtitle: getSelectKey(component, 'subtitle', this.props.language, 'fr'),
         language: this.props.language,
