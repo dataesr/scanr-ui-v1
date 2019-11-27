@@ -126,7 +126,6 @@ export default class HighChartsDonut extends Component {
     this.setState({ options });
   }
 
-
   exportChartPdf() {
     this.chart.current.chart.exportChart({
       type: 'application/pdf',
