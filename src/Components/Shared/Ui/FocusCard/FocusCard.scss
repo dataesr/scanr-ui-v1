@@ -4,14 +4,9 @@
   background-color: rgb(255, 255, 255);
   border-radius: 12px;
   padding: 24px;
-  margin: 15px 0;
+  height: 320px;
 
-  .Img {
-    height: 300px;
-
-  }
   .Title {
-    height: 70px;
     color: $titleColor;
     font-weight: bolder;
     text-decoration: underline;
@@ -20,7 +15,6 @@
   }
 
   .TagsAndButton {
-
     .Tag {
       color: $tagsColor;
       font-size: 0.9em;
@@ -28,28 +22,10 @@
     .Tag:after {
       content: " ";
     }
-
     .Button {
-      font-size: 1.3em;
+      margin: auto;
+      background-color: $scanrdeepblueColor;
+      color: white;
     }
-  }
-
-
-  .Button {
-    background-color: $scanrblueColor;
-    color: white;
-    border-radius: 5px;
-    height: 36px;
-  }
-  .Button:hover {
-    background-color: $scanrgreyColor;
-    color: white;
-  }
-  .Button A {
-    color: white;
-  }
-  .Button A:hover, A:focus, {
-    color: white;
-    text-decoration: none;
   }
 }

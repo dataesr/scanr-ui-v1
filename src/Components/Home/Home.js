@@ -7,7 +7,7 @@ import Header from '../Shared/Header/Header-homePage';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 // import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
-import Newsletter from '../Shared/Newsletter/Newsletter';
+// import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
@@ -104,13 +104,14 @@ class HomePage extends Component {
 
         <LastFocus language={this.props.language} />
 
-        <Newsletter language={this.props.language} />
+        {/* Not for Now */}
+        {/* <Newsletter language={this.props.language} /> */}
 
         <Banner
           language={this.props.language}
           labelKey="DiscoverDataesr"
           cssClass="BannerDark"
-          url="https://data.esr.gouv.fr/FR/"
+          url={`https://data.esr.gouv.fr/${this.props.language.toUpperCase()}/`}
           target="_blank"
         />
 
