@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import ReactPiwik from 'react-piwik';
 
 import classes from './Search.scss';
 
@@ -78,12 +79,20 @@ class SearchPage extends Component {
   componentDidMount() {
     const newState = this.getParams();
     this.setState(newState);
+    const category = this.props.location.pathname.split('/')[2];
+    if (category === 'all') {
+      this.sendTracking(this.state.request);
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.location !== this.props.location) {
       const newState = this.getParams();
       this.setState(newState);
+      const category = this.props.location.pathname.split('/')[2];
+      if (category === 'all') {
+        this.sendTracking(this.state.request);
+      }
     } else if (prevState.request !== this.state.request || (this.state.data.total === 0)) {
       this.setState({
         isLoading: true,
@@ -338,6 +347,7 @@ class SearchPage extends Component {
           data,
           isLoading: false,
         });
+        this.sendTracking(this.state.request);
       })
       .catch((error) => {
         /* eslint-disable-next-line */
@@ -440,6 +450,34 @@ class SearchPage extends Component {
         labelKey="Appear"
       />
     );
+  }
+
+  sendTracking = (request) => {
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    const category = this.props.location.pathname.split('/')[2];
+    const query = this.state.request.query;
+    let nbResults = this.state.data.total;
+    if (category === 'all') {
+      nbResults = this.state.preview.all;
+    }
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    if (request.filters) {
+      const currentFilters = request.filters;
+      const filters = [];
+      Object.keys(currentFilters).forEach((f) => {
+        let filterValue = '';
+        if (currentFilters[f].values) {
+          filterValue = currentFilters[f].values.join(';');
+        } else if (currentFilters[f].min && currentFilters[f].max) {
+          filterValue = ((currentFilters[f].min).toString()).concat('_TO_', (currentFilters[f].max).toString());
+        }
+        const filter = f.concat('__VAL__', filterValue);
+        filters.push(filter);
+      });
+      ReactPiwik.push(['setCustomVariable', 1, 'SearchFilter', filters.join('__FILTERS__'), 'page']);
+      ReactPiwik.push(['trackPageView']);
+    }
+    ReactPiwik.push(['trackSiteSearch', query, category, nbResults]);
   }
 
   // *******************************************************************
