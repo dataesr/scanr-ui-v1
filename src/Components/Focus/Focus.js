@@ -14,6 +14,8 @@ import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
 import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
+import OpendataPackedBubble from '../Shared/StandaloneGraphs/OpendataPackedBubble';
+import GenderTreemap from '../Shared/StandaloneGraphs/GenderTreemap';
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import classes from './Focus.scss';
@@ -34,6 +36,8 @@ const Components = {
   EntityMap,
   PublicationsKeywords,
   PublicationsPacketBubble,
+  OpendataPackedBubble,
+  GenderTreemap,
   SimpleAggregationGraph,
 };
 
@@ -68,6 +72,7 @@ export default class Focus extends Component {
       const properties = {
         request: component.request,
         api: component.api,
+        opendata: component.opendata,
         aggSize: component.aggSize,
         aggField: component.aggField,
         filename: component.filenam,
