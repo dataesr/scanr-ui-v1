@@ -71,7 +71,7 @@ class FAQ extends Component {
                   filteredFaqTerms.map(termObject => (
                     <li key={termObject.key} id={termObject.key} className={classes.Li}>
                       <h3 className={classes.Term}>
-                        <i className="fas fa-bookmark" />
+                        <i className={termObject.icon} />
                         &nbsp;
                         {termObject.label[this.props.language]}
                       </h3>
