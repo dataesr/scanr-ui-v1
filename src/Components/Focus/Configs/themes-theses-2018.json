@@ -68,13 +68,17 @@
       }
     },
     {
-      "componentType": "CitiesBar",
+      "componentType": "SimpleAggregationGraph",
       "title": {
         "fr": "Unités urbaines ayant le plus de structure d'affiliations des thèses soutenues en 2018",
         "en": "UrbanUnits"
       },
       "subtitle": {"fr": "I'm a title", "en": "I'm a title"},
       "api" : "publications",
+      "aggSize": 20,
+      "aggField": "affiliations.address.urbanUnitLabel",
+      "filename": "scanr_exportthesis_urban_unit_label",
+      "graphType": "HighChartsBar",
       "request": {
         "query": "",
         "pageSize": 0,
