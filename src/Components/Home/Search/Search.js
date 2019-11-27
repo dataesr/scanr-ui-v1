@@ -8,7 +8,7 @@ import messagesEn from './translations/en.json';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 // import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
-import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-v2';
+import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
 
 import classes from './Search.scss';
 
@@ -43,16 +43,16 @@ class Search extends Component {
   /* eslint-disable */
   renderForm = () => (
     <form onSubmit={this.submitResearch}>
-      <div className="row d-flex flex-nowrap my-4">
+      <div className="d-flex flex-nowrap mt-3">
         <div className="flex-grow-1 p-0">
           <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
-            { placeholder => <input type="text" className="form-control" id="query" placeholder={placeholder} /> }
+            { placeholder => <input type="text" className={`${classes.inputBar} form-control`} id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
         <div className="pl-1">
           <button
             type="submit"
-            className={`btn ${classes.btn_dark}`}
+            className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
             aria-label="Lancer la recherche"
             >
             <i className="fas fa-search" aria-hidden />
@@ -82,30 +82,19 @@ class Search extends Component {
                 <LogoScanrWhiteSVG fill={color} />
               </h1>
               {this.renderForm()}
-              <div className="row">
-                <div className="col-xs">
-                  <div className={classes.Suggest}>
-                    <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
-                    <ul>
-                      {
-                        this.props.suggests.map(suggest => (
-                          <li>
-                            <a href={`recherche/all?query=${suggest.label}`}>
-                              <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
-                            </a>
-                          </li>
-                        ))
-                      }
-                    </ul>
-                  </div>
-                </div>
-                {/*
-                <div className="col">
-                  <p className={classes.HowTo}>
-                    <FormattedHTMLMessage id="Search.HowTo" defaultMessage="Search.HowTo" />
-                  </p>
-                </div>
-                */}
+              <div className={`pt-1 pl-1 ${classes.Suggest}`}>
+                <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
+                <ul>
+                  {
+                    this.props.suggests.map(suggest => (
+                      <li>
+                        <a href={`recherche/all?query=${suggest.label}`}>
+                          <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
               </div>
             </div>
           </section>
@@ -117,7 +106,7 @@ class Search extends Component {
   renderMini = () => (
     <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
       <section className={`animated slideInDown faster ${classes.SearchMini}`}>
-        <div className="container">
+        <div className="container pb-3">
           {this.renderForm()}
         </div>
       </section>
