@@ -6,6 +6,7 @@ import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
+import ReactPiwik from 'react-piwik';
 
 import classes from '../GraphComponents.scss';
 
@@ -154,18 +155,21 @@ export default class HighChartsBar extends Component {
   }
 
   exportChartPdf() {
+    ReactPiwik.push(['trackEvent', 'Download', 'PDF_'.concat(this.props.filename)]);
     this.chart.current.chart.exportChart({
       type: 'application/pdf',
     });
   }
 
   exportChartPng() {
+    ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
     this.chart.current.chart.exportChart({
       type: 'image/png',
     });
   }
 
   exportChartCsv() {
+    ReactPiwik.push(['trackEvent', 'Download', 'CSV_'.concat(this.props.filename)]);
     this.chart.current.chart.downloadCSV();
   }
 
