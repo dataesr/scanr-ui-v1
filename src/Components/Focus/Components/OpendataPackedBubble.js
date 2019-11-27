@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import GraphSpinner from '../LoadingSpinners/GraphSpinner';
+import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 import classes from './GraphCard.scss';
-import HighChartsPackedbubble from '../GraphComponents/Graphs/HighChartsPackedbubble';
-import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
+import HighChartsPackedbubble from '../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
+import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
 
 export default class OpendataPackedBubble extends Component {
   state = {
