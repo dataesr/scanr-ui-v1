@@ -81,7 +81,7 @@ class SearchPage extends Component {
     this.setState(newState);
     const category = this.props.location.pathname.split('/')[2];
     if (category === 'all') {
-      this.sendTracking(this.state.request);
+      this.sendTracking(newState.request);
     }
   }
 
@@ -455,7 +455,7 @@ class SearchPage extends Component {
   sendTracking = (request) => {
     ReactPiwik.push(['setCustomUrl', this.props.match.url]);
     const category = this.props.location.pathname.split('/')[2];
-    const query = this.state.request.query;
+    const query = request.query;
     let nbResults = this.state.data.total;
     if (category === 'all') {
       nbResults = this.state.preview.all;
