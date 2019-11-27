@@ -64,10 +64,13 @@ class App extends Component {
       siteId: 37,
       trackErrors: true,
     });
-    // track the initial pageview
-    ReactPiwik.push(['trackPageView']);
-
+    // track pageviews except for search where tracking is specific
     const customHistory = createBrowserHistory();
+    if (customHistory.location.pathname.indexOf('/recherche/') === -1) {
+      ReactPiwik.push(['trackPageView']);
+    }
+
+
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
     return (
