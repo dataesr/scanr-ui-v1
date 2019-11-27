@@ -84,6 +84,7 @@ const Participants = (props) => {
               <div className="col-hidden col-lg-7 p-0">
                 <div className={`w-100 ${classes.MapContainer}`}>
                   <LeafletMap
+                    zoom={2}
                     filename="carto"
                     data={mapdata}
                     language={props.language}

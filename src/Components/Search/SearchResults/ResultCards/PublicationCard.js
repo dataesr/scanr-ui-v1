@@ -1,9 +1,10 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import getSelectedKey from '../../../../Utils/getSelectKey';
-
+import moment from 'moment';
+import 'moment/locale/fr';
 /* Gestion des langues */
+import getSelectedKey from '../../../../Utils/getSelectKey';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 import highlightsFr from './translations/highlights_fr.json';
@@ -12,6 +13,7 @@ import highlightsEn from './translations/highlights_en.json';
 import classes from './Cards.scss';
 
 const PublicationCard = (props) => {
+  moment.locale(props.language);
   const messages = {
     fr: messagesFr,
     en: messagesEn,
@@ -19,11 +21,6 @@ const PublicationCard = (props) => {
   const highlights = {
     fr: highlightsFr,
     en: highlightsEn,
-  };
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
   };
 
   const productionType = (props.data.productionType)
@@ -68,7 +65,7 @@ const PublicationCard = (props) => {
           <i aria-hidden="true" className="fas fa-calendar" />
         </div>
         <p p className="m-0">
-          {new Date(props.data.publicationDate).toLocaleDateString('fr-FR', options)}
+          {moment(props.data.publicationDate).format('LL')}
         </p>
       </li>
     )

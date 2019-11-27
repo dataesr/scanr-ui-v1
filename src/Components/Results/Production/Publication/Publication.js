@@ -145,7 +145,7 @@ class Publication extends Component {
       externalLink = 'https://hal.archives-ouvertes.fr/'.concat({ id }.id);
     }
     const publicationDate = moment(this.props.data.publicationDate).format('L');
-    const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
+    const summary = getSelectKey(this.props.data, 'summary', this.props.language, 'default') || getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
     const nbAuthorsToShow = 6;
     const sortedAuthors = this.getSortedAuthors();
     let swHeritageLink = null;
