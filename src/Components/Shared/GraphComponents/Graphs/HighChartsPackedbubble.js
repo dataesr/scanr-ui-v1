@@ -8,6 +8,7 @@ import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
 import HCmore from 'highcharts/highcharts-more.src';
 import classes from '../GraphComponents.scss';
+import ReactPiwik from 'react-piwik';
 
 HCmore(Highcharts);
 
@@ -92,18 +93,21 @@ export default class HighChartsPackedbubble extends Component {
   }
 
   exportChartPdf() {
+    ReactPiwik.push(['trackEvent', 'Download', 'PDF_'.concat(this.props.filename)]);
     this.chart.current.chart.exportChart({
       type: 'application/pdf',
     });
   }
 
   exportChartPng() {
+    ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
     this.chart.current.chart.exportChart({
       type: 'image/png',
     });
   }
 
   exportChartCsv() {
+    ReactPiwik.push(['trackEvent', 'Download', 'CSV_'.concat(this.props.filename)]);
     this.chart.current.chart.downloadCSV();
   }
 
