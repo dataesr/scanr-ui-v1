@@ -65,28 +65,24 @@ const FocusCard = (props) => {
   }
 
   return (
-    <div className={classes.FocusCard}>
-      <div>
-        <a href={props.url}>
-          {componentSvg}
-        </a>
-      </div>
-      <div className={classes.Title}>
-        <a href={props.url}>
-          {props.title}
-        </a>
-      </div>
-      <div className={`row ${classes.TagsAndButton}`}>
-        <div className="col-lg-8">
-          {props.tags.map(tag => (<span className={classes.Tag} key={tag}>{tag}</span>))}
+    <div className={`d-flex flex-column ${classes.FocusCard}`}>
+      <a href={props.url} className="align-self-center">
+        {componentSvg}
+      </a>
+      <a href={props.url} className={classes.Title}>
+        {props.title}
+      </a>
+      <div className={`d-flex align-items-center mt-auto ${classes.TagsAndButton}`}>
+        <div className="d-flex flex-wrap mr-auto">
+          {props.tags.map(tag => (<div className={classes.Tag} key={tag}>{tag}</div>))}
         </div>
-        <div className={`col-lg-4 ${classes.Button}`}>
-          <ButtonToPage
-            url={props.url}
-          >
-            Lire
-          </ButtonToPage>
-        </div>
+        <ButtonToPage
+          className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+          target="_blank"
+          url={props.url}
+        >
+          Lire
+        </ButtonToPage>
       </div>
     </div>
   );
