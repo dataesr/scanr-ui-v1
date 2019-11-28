@@ -234,6 +234,7 @@ class Projects extends Component {
       newEntry.tooltip = `${entry.count} projets - ${entry.value}`;
       sliderDataWithTooltip.push(newEntry);
     });
+    const title = (this.props.language === 'fr') ? 'Projets' : 'Projects';
 
     return (
       <Fragment>
@@ -245,7 +246,7 @@ class Projects extends Component {
               language={this.props.language}
               id={this.props.match.params.id}
               total={this.state.total}
-              title="Projects"
+              title={title}
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
             />
