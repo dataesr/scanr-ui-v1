@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
+import { deburr } from 'lodash';
 import classes from './Autocomplete.scss';
 
 class Autocomplete extends Component {
@@ -60,7 +60,7 @@ class Autocomplete extends Component {
   render() {
     let filtered = [];
     filtered = this.props.facets
-      .filter(item => item.value.toLowerCase().includes(this.state.query.toLowerCase()));
+      .filter(item => deburr(item.value.toLowerCase()).includes(deburr(this.state.query.toLowerCase())));
 
     return (
       <div className="d-flex flex-column mb-3">

@@ -32,6 +32,7 @@ const LogoCardWithButton = (props) => {
   if (props.cssClass) {
     cssClass = classes[`${props.cssClass}`];
   }
+  const defaultText = (props.link) ? (props.link) : 'Website';
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -56,7 +57,7 @@ const LogoCardWithButton = (props) => {
                   >
                     <FormattedHTMLMessage
                       id={props.link}
-                      defaultMessage="Voir le site"
+                      defaultMessage={defaultText}
                     />
                   </ButtonToPage>
                 </div>

@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PersonsMap from './PersonsGraphs/PersonsMap';
-
+import PersonsMap from '../../../Shared/StandaloneGraphs/PersonsMap';
 
 const PersonsGraphsWrapper = props => (
   <React.Fragment>
-    <PersonsMap language={props.language} request={props.request} />
+    <PersonsMap title="T" subtitle="." language={props.language} request={props.request} />
   </React.Fragment>
 );
 

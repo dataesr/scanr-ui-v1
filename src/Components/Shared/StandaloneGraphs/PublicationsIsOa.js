@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { GridLoader } from 'react-spinners';
-
-import classes from '../GraphCard.scss';
-import transformRequest from '../../../../../Utils/transformRequest';
-import HighChartsDonut from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
-import GraphTitles from '../../../../Shared/GraphComponents/Graphs/GraphTitles';
+import GraphSpinner from '../LoadingSpinners/GraphSpinner';
+import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../config/config';
+import classes from './GraphCard.scss';
+import transformRequest from '../../../Utils/transformRequest';
+import HighChartsDonut from '../GraphComponents/Graphs/HighChartsDonut';
+import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
 export default class ProductionIsOa extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
-    title: 'Open Access',
-    subtitle: 'basé sur les résultats de recherche',
     aggregations: {
       facet: {
         field: 'isOa',
@@ -33,10 +31,9 @@ export default class ProductionIsOa extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/search';
     const request = { ...this.props.request };
     request.aggregations = this.state.aggregations;
-    Axios.post(url, transformRequest(request))
+    Axios.post(API_PUBLICATIONS_SEARCH_END_POINT, transformRequest(request))
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
         const data = { id: 'isOa', entries: [] };
@@ -63,41 +60,30 @@ export default class ProductionIsOa extends Component {
       });
   }
 
-  render() {
-    const scanRcolor = '#3778bb';
-    if (this.state.data !== [] && !this.state.isLoading) {
-      return (
-        <div className={`w-100 ${classes.graphCard}`}>
-          <GraphTitles
-            title={this.state.title}
-            subtitle={this.state.subtitle}
-          />
-          <HighChartsDonut
-            filename="Taux accès ouvert"
-            data={this.state.data}
-            language={this.props.language}
-          />
-        </div>
-      );
-    }
-    return (
-      <div className={`w-100 ${classes.graphCard}`}>
-        <GraphTitles
-          title={this.state.title}
-          subtitle={this.state.subtitle}
-        />
-        <div className="row justify-content-center p-4">
-          <GridLoader
-            color={scanRcolor}
-            loading={this.state.isLoading}
-          />
-        </div>
-      </div>
-    );
-  }
+  render = () => (
+    <div className={`w-100 ${classes.graphCard}`}>
+      <GraphTitles
+        title={this.props.title}
+        subtitle={this.props.subtitle}
+      />
+      {
+        (this.state.data !== [] && !this.state.isLoading)
+          ? (
+            <HighChartsDonut
+              filename="publication_is_oa_rate"
+              data={this.state.data}
+              language={this.props.language}
+            />
+          )
+          : (<GraphSpinner />)
+      }
+    </div>
+  );
 }
 
 ProductionIsOa.propTypes = {
   language: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };

@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { GridLoader } from 'react-spinners';
-
+import GraphSpinner from '../LoadingSpinners/GraphSpinner';
+import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../config/config';
 import classes from './GraphCard.scss';
 import transformRequest from '../../../Utils/transformRequest';
-import HighChartsPackedbubble from '../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
-import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
+import HighChartsPackedbubble from '../GraphComponents/Graphs/HighChartsPackedbubble';
+import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
 const deweydata = require('./Utils/dewey.json');
 
@@ -14,6 +14,7 @@ export default class PublicationsPacketBubble extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
+    exporting: true,
     aggregations: {
       domains: {
         field: 'domains.code',
@@ -33,10 +34,9 @@ export default class PublicationsPacketBubble extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/publications/search';
     const request = { ...this.props.request };
     request.aggregations = this.state.aggregations;
-    Axios.post(url, transformRequest(request))
+    Axios.post(API_PUBLICATIONS_SEARCH_END_POINT, transformRequest(request))
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'domains') || { entries: [] };
         this.setState({ data: newStateData, isLoading: false });
@@ -89,42 +89,29 @@ export default class PublicationsPacketBubble extends Component {
       data.push({ name: discipline, data: subdata, total: domainsCount[discipline].TOTALCount });
     });
     return data.sort((a, b) => b.total - a.total).slice(0, 9);
-    // const tooltipText = 'thèses soutenues en 2018';
   }
 
-  render() {
-    const scanRcolor = '#3778bb';
-    if (this.state.data !== [] && !this.state.isLoading) {
-      return (
-        <div className={`w-100 ${classes.graphCard}`}>
-          <GraphTitles
-            title={this.props.title}
-            subtitle={this.props.subtitle}
-          />
-          <HighChartsPackedbubble
-            filename="Mot-clé des publications"
-            data={this.transformData()}
-            language={this.props.language}
-            tooltipText={this.props.language === 'fr' ? 'thèses' : 'thesis'}
-          />
-        </div>
-      );
-    }
-    return (
-      <div className={`w-100 ${classes.graphCard}`}>
-        <GraphTitles
-          title={this.props.title}
-          subtitle={this.props.subtitle}
-        />
-        <div className="row justify-content-center p-4">
-          <GridLoader
-            color={scanRcolor}
-            loading={this.state.isLoading}
-          />
-        </div>
-      </div>
-    );
-  }
+  render = () => (
+    <div className={`w-100 ${classes.graphCard}`}>
+      <GraphTitles
+        title={this.props.title}
+        subtitle={this.props.subtitle}
+      />
+      {
+        (this.state.data !== [] && !this.state.isLoading)
+          ? (
+            <HighChartsPackedbubble
+              filename="Mot-clé des publications"
+              exporting={this.state.exporting}
+              data={this.transformData()}
+              language={this.props.language}
+              tooltipText={this.props.language === 'fr' ? 'thèses soutenues en 2018' : 'thesis defended in 2018'}
+            />
+          )
+          : (<GraphSpinner />)
+      }
+    </div>
+  );
 }
 
 PublicationsPacketBubble.propTypes = {

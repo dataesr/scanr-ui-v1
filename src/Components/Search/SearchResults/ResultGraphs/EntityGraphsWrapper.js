@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import EntityMap from './EntitiesGraphs/EntityMap';
-import EntityCitiesBar from './EntitiesGraphs/EntityCitiesBar';
-import EntityNatureDonut from './EntitiesGraphs/EntityNatureDonut';
-import EntityProjects from './EntitiesGraphs/EntityProjectsDonut';
+import EntityMap from '../../../Shared/StandaloneGraphs/EntityMap';
+// import EntityCitiesBar from './EntitiesGraphs/EntityCitiesBar';
+import SimpleAggregationGraph from '../../../Shared/StandaloneGraphs/SimpleAggregationGraph';
+import EntityProjects from '../../../Shared/StandaloneGraphs/EntityProjectsDonut';
 
 // Del domains for Now
 // import EntityDomains from './EntitiesGraphs/EntityDomains';
@@ -12,10 +12,40 @@ import EntityProjects from './EntitiesGraphs/EntityProjectsDonut';
 
 const EntityGraphsWrapper = props => (
   <React.Fragment>
-    <EntityMap language={props.language} request={props.request} />
-    <EntityCitiesBar language={props.language} request={props.request} />
-    <EntityNatureDonut language={props.language} request={props.request} />
-    <EntityProjects language={props.language} request={props.request} />
+    <EntityMap
+      title="T"
+      subtitle="."
+      language={props.language}
+      request={props.request}
+    />
+    <SimpleAggregationGraph
+      aggField="nature"
+      aggSize={10}
+      filename="scanr_export_structures_natures"
+      graphType="HighChartsDonut"
+      api="structures"
+      title="T"
+      subtitle="."
+      language={props.language}
+      request={props.request}
+    />
+    <SimpleAggregationGraph
+      aggField="address.urbanUnitLabel"
+      aggSize={10}
+      filename="scanr_export_structures_top_10_cities"
+      graphType="HighChartsBar"
+      api="structures"
+      title="T"
+      subtitle="."
+      language={props.language}
+      request={props.request}
+    />
+    <EntityProjects
+      title="T"
+      subtitle="."
+      language={props.language}
+      request={props.request}
+    />
   </React.Fragment>
 );
 

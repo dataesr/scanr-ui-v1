@@ -140,7 +140,7 @@ const ProductionDetail = (props) => {
       </div>
       <hr className={`w-100 mt-auto ${classes[props.data.productionType]}`} />
       <div className="d-flex justify-content-between flex-wrap">
-        <div className={classes.Oa}>
+        <div className={`my-1 ${classes.Oa}`}>
           {(props.data.isOa) ? (
             <div className="d-flex align-items-center">
               <span aria-hidden className={`fa-stack ${classes.isOa}`}>

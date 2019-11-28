@@ -43,7 +43,7 @@ const ProjectCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-calendar" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           {
             new Date(props.data.startDate).toLocaleDateString('fr-FR', options) !== 'Invalid Date'
               ? new Date(props.data.startDate).toLocaleDateString('fr-FR', options)
@@ -60,7 +60,7 @@ const ProjectCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-battery-half" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           <FormattedHTMLMessage id="resultCard.status.running" defaultMessage="resultCard.status.running" />
         </p>
       </li>
@@ -70,7 +70,7 @@ const ProjectCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-battery-full" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           <FormattedHTMLMessage id="resultCard.status.over" defaultMessage="resultCard.status.over" />
         </p>
       </li>
