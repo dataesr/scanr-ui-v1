@@ -12,8 +12,9 @@
     "en": ["iuf"]
   },
   "api": "publications",
-  "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
-  "hrefX": "/recherche/publications",
+  "href": "http://localhost:3000/recherche/persons?filters=%7B%22awards.label%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22Laur%C3%A9at%20de%20l%27Institut%20universitaire%20de%20France%22%5D%7D%7D&query=&sort",
+  "hrefX": "/recherche/persons",
+  "hrefOpendata": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/information/",
   "components": [
     {
       "componentType": "OpendataEntityMap",
