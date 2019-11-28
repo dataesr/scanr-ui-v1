@@ -82,7 +82,6 @@ class ScanrToday extends Component {
     if (!this.props.isFull) {
       sectionStyle.paddingTop = '230px';
     }
-
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section style={sectionStyle} className={classes.ScanrToday}>
@@ -104,7 +103,7 @@ class ScanrToday extends Component {
                 <a href="recherche/structures">
                   <CounterCardByType
                     schema="entities"
-                    value={this.state.data.fullStructures.toLocaleString()}
+                    value={this.state.data.fullStructures.toLocaleString(this.props.language)}
                     language={this.props.language}
                   />
                 </a>
@@ -113,7 +112,7 @@ class ScanrToday extends Component {
                 <a href="recherche/persons">
                   <CounterCardByType
                     schema="persons"
-                    value={this.state.data.fullPersons.toLocaleString()}
+                    value={this.state.data.fullPersons.toLocaleString(this.props.language)}
                     language={this.props.language}
                   />
                 </a>
@@ -122,7 +121,7 @@ class ScanrToday extends Component {
                 <a href="recherche/projects">
                   <CounterCardByType
                     schema="projects"
-                    value={this.state.data.fullProjects.toLocaleString()}
+                    value={this.state.data.fullProjects.toLocaleString(this.props.language)}
                     language={this.props.language}
                   />
                 </a>
@@ -131,7 +130,7 @@ class ScanrToday extends Component {
                 <a href="recherche/publications">
                   <CounterCardByType
                     schema="publications"
-                    value={this.state.data.fullPublications.toLocaleString()}
+                    value={this.state.data.fullPublications.toLocaleString(this.props.language)}
                     language={this.props.language}
                   />
                 </a>
