@@ -115,7 +115,7 @@ class LeafletMap extends Component<{}, State> {
         <Map
           zoomControl={false}
           center={position}
-          zoom={this.state.zoom}
+          zoom={this.props.zoom}
           style={mapStyle}
           minZoom={2}
           maxZoom={19}

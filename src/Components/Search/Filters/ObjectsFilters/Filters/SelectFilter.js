@@ -90,11 +90,11 @@ class SelectFilter extends Component {
                   checked
                 />
                 {/* eslint-disable-next-line */}
-                <label className={`form-check-label ${classes.Item}`} for={`all_${this.props.title}`}>
+                <label className={`form-check-label ${classes.Item}`} htmlFor={`all_${this.props.title}`}>
                   Tous
                 </label>
                 <div className={`ml-auto ${classes.FacetsCounts}`}>
-                  {`(${allCount.toLocaleString()})`}
+                  {`(${allCount.toLocaleString(this.props.language)})`}
                 </div>
               </div>
               {
@@ -103,7 +103,7 @@ class SelectFilter extends Component {
                   // recherche de l'élément en cours dans les facets retournée pour avoir le count et l'élément en cours
                   const count = this.getCountFromKey(this.props.facets, 'value', key, 'count');
                   return (
-                    <div className="d-flex flex-row align-items-end pt-1">
+                    <div className="d-flex flex-row align-items-end pt-1" key={key}>
                       <input
                         className={`${classes.radioStyle} ${(count === 0) ? classes.radioStyle_disable : null} form-check-input pr-2`}
                         type="radio"
@@ -115,11 +115,11 @@ class SelectFilter extends Component {
                         disabled={count === 0}
                       />
                       {/* eslint-disable-next-line */}
-                      <label className={`form-check-label ${classes.Item}`} for={key}>
+                      <label className={`form-check-label ${classes.Item}`} htmlFor={key}>
                         {val}
                       </label>
                       <div className={`ml-auto ${classes.FacetsCounts}`}>
-                        {`(${count.toLocaleString()})`}
+                        {`(${count.toLocaleString(this.props.language)})`}
                       </div>
                     </div>
                   );
@@ -143,10 +143,11 @@ SelectFilter.propTypes = {
   onSubmit: PropTypes.func,
   facets: PropTypes.array,
   facetID: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
   title: PropTypes.string,
   // language: PropTypes.string,
   defaultActive: PropTypes.bool,
-  permanentList: PropTypes.array,
+  permanentList: PropTypes.object,
   filters: PropTypes.object,
   // subtitle: PropTypes.string,
   // placeholder: PropTypes.string,

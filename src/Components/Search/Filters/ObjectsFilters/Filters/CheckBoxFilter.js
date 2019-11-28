@@ -116,7 +116,7 @@ class CheckBoxFilter extends Component {
                             {facet.value}
                           </label>
                           <div className={`ml-auto ${classes.FacetsCounts}`}>
-                            {`(${facet.count.toLocaleString()})`}
+                            {`(${facet.count.toLocaleString(this.props.language)})`}
                           </div>
                         </div>
                       </li>
@@ -165,6 +165,7 @@ CheckBoxFilter.propTypes = {
   facets: PropTypes.array,
   filters: PropTypes.object,
   facetID: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
   title: PropTypes.string,
   retractable: PropTypes.bool,
   // subtitle: PropTypes.string,

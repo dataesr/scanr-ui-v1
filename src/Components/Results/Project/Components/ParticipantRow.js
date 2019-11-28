@@ -61,7 +61,7 @@ const ParticipantRow = props => (
         {
           (props.data.funding)
             ? (
-              <p>{`${parseFloat(props.data.funding).toLocaleString()} €`}</p>
+              <p>{`${parseFloat(props.data.funding).toLocaleString(props.language)} €`}</p>
             )
             : <div />
         }
