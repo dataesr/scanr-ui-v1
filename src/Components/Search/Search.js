@@ -20,7 +20,7 @@ import {
 } from './Aggregations';
 
 import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header-homePage';
+import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
 
 

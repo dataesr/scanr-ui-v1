@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // Composants
 import Banner from '../Shared/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header-homePage';
+import Header from '../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 // import Lexicon from '../Shared/Lexicon/Lexicon';

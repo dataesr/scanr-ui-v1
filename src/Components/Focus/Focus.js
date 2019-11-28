@@ -5,7 +5,7 @@ import Markdown from 'markdown-to-jsx';
 // Composants
 import MetaFocus from '../Shared/MetaTags/MetaFocus';
 import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header-homePage';
+import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
 import ButtonToPage from '../Shared/Ui/Buttons/ButtonToPage';
 // import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';

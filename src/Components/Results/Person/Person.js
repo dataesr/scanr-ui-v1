@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { API_PERSONS_END_POINT } from '../../../config/config';
 
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
