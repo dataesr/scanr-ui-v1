@@ -119,7 +119,7 @@ const ProjectGraphs = (props) => {
       return <YearChart filename={labelFor[props.language][active]} data={data} />;
     }
     return (
-      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />
     );
   };
 
