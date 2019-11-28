@@ -30,7 +30,7 @@ const PersonCard = (props) => {
   let firstName = props.data.firstName;
   let lastName = props.data.lastName;
   const exists = (props.data.person) ? (props.data.person.fullName !== undefined) : false;
-  const role = props.role;
+  const role = (props.role) ? (props.role) : ' ';
   let url = null;
   if (props.data.person) {
     if (props.data.person.email) {
@@ -55,8 +55,8 @@ const PersonCard = (props) => {
             <div>
               <span className={classes.Title}>
                 <FormattedHTMLMessage
-                  id="PersonCard.title"
-                  defaultMessage="PersonCard.title"
+                  id="PersonCard.titleFromData"
+                  defaultMessage={role}
                 />
               </span>
             </div>
