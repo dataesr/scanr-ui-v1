@@ -36,11 +36,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.setDefaultLanguage = this.setDefaultLanguage.bind(this);
-    this.state = { language: this.setDefaultLanguage() };
+    this.state = { language: this.setDefaultLanguage(), piwik: null, customHistory: null };
   }
 
   componentDidMount() {
     this.setDefaultLanguage();
+    const piwik = new ReactPiwik({
+      url: 'https://piwik.enseignementsup-recherche.pro',
+      siteId: 37,
+      trackErrors: true,
+    });
+    const customHistory = createBrowserHistory();
+    ReactPiwik.push(['trackPageView']);
+    ReactPiwik.push(['enableLinkTracking']);
+    this.setState({ piwik, customHistory });
   }
 
   setDefaultLanguage() {
@@ -64,23 +73,25 @@ class App extends Component {
   }
 
   render() {
-    const piwik = new ReactPiwik({
-      url: 'https://piwik.enseignementsup-recherche.pro',
-      siteId: 37,
-      trackErrors: true,
-    });
+    // const piwik = new ReactPiwik({
+    //   url: 'https://piwik.enseignementsup-recherche.pro',
+    //   siteId: 37,
+    //   trackErrors: true,
+    // });
     // track pageviews except for search where tracking is specific
-    const customHistory = createBrowserHistory();
-    if (customHistory.location.pathname.indexOf('/recherche/') === -1) {
-      ReactPiwik.push(['trackPageView']);
-    }
+    // if (this.state.piwik) {
+    //   const customHistory = createBrowserHistory();
+    //   if (customHistory.location.pathname.indexOf('/recherche/') === -1) {
+    //     ReactPiwik.push(['trackPageView']);
+    //   }
+    // }
 
 
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
     return (
       <IntlProvider>
-        <Router history={piwik.connectToHistory(customHistory)}>
+        <Router history={(this.state.piwik) ? this.state.piwik.connectToHistory(this.state.customHistory) : null}>
           <Suspense fallback={<LoadingSpinner />}>
             <Switch>
               <Route
