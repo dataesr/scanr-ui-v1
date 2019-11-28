@@ -50,7 +50,7 @@ const PublicationsFilters = (props) => {
           data={props.sliderData}
           height={60}
           barColor={styles.productionColor}
-          label={props.language === 'fr' ? 'Selection par années' : 'Selection by year'}
+          label={props.language === 'fr' ? 'Sélection par années' : 'Selection by year'}
           min={(props.filters.year) ? props.filters.year.min : null}
           max={(props.filters.year) ? (props.filters.year.max - 1) : null}
           minBound={2000}

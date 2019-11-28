@@ -70,7 +70,7 @@ const ProjectsFilters = (props) => {
           data={props.sliderData}
           barColor={styles.projectsColor}
           height={60}
-          label={props.language === 'fr' ? 'Selection par années' : 'Select by year'}
+          label={props.language === 'fr' ? 'Sélection par années' : 'Select by year'}
           min={(props.filters.year) ? props.filters.year.min : null}
           max={(props.filters.year) ? (props.filters.year.max - 1) : null}
           minBound={2000}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { GridLoader } from 'react-spinners';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -12,7 +11,7 @@ import PersonCard from './ResultCards/PersonCard';
 import ProjectCard from './ResultCards/ProjectCard';
 import PublicationCard from './ResultCards/PublicationCard';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
-
+import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
 import classes from './AllResults.scss';
 
@@ -22,17 +21,7 @@ const SearchResults = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const scanRcolor = '#3778bb';
-  if (props.isLoading) {
-    return (
-      <div className="row justify-content-center pt-5 mt-5">
-        <GridLoader
-          color={scanRcolor}
-          loading={props.isLoading}
-        />
-      </div>
-    );
-  }
+
   const CardsComponents = {
     structures: EntityCard,
     persons: PersonCard,
@@ -59,6 +48,36 @@ const SearchResults = (props) => {
       subTitle = (props.preview[section].count === 0) ? 'searchResults.noResults' : subTitle;
       subTitle = (props.preview[section].count === 1) ? 'searchResults.singleResult' : subTitle;
       const Title = (props.preview[section].count > 1) ? `searchResults.${section}` : `searchResults.singular.${section}`;
+      if (props.preview[section].isLoading) {
+        return (
+          <IntlProvider locale={props.language} messages={messages[props.language]}>
+            <section>
+              <div style={sectionStyle} className={`pt-5 pb-5 ${classes[BgClass]}`}>
+                <div className="container">
+                  <div className="row d-flex flex-row justify-content-between">
+                    <div className={`${classes.headers}`}>
+                      <h2>
+                        {`${props.preview[section].count.toLocaleString()} `}
+                        <FormattedHTMLMessage
+                          id={Title}
+                          defaultMessage={Title}
+                        />
+                      </h2>
+                      <p>
+                        <FormattedHTMLMessage
+                          id={subTitle}
+                          defaultMessage={subTitle}
+                        />
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <GraphSpinner />
+              </div>
+            </section>
+          </IntlProvider>
+        );
+      }
       return (
         <IntlProvider locale={props.language} messages={messages[props.language]}>
           <section>
