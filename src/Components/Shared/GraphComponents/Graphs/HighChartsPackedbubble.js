@@ -32,7 +32,7 @@ export default class HighChartsPackedbubble extends Component {
     super(props);
     this.chart = React.createRef();
     this.data = this.props.data;
-    this.tooltipText = this.props.tooltipText;
+    this.tooltipText = this.props.tooltipText || '';
     this.state = {
       options: null,
     };
@@ -64,10 +64,10 @@ export default class HighChartsPackedbubble extends Component {
           minSize: '10%',
           maxSize: '80%',
           layoutAlgorithm: {
-            splitSeries: (this.data.length > 2),
-            seriesInteraction: (this.data.length <= 2),
+            splitSeries: true,
+            seriesInteraction: false,
             dragBetweenSeries: false,
-            parentNodeLimit: (this.data.length > 2),
+            parentNodeLimit: true,
           },
         },
       },
