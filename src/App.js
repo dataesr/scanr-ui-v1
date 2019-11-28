@@ -33,8 +33,6 @@ const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-proje
 const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
-  static contextType = GlobalContext;
-
   state = {
     piwik: null,
     customHistory: null,
@@ -50,6 +48,8 @@ class App extends Component {
     ReactPiwik.push(['trackPageView']);
     this.setState({ piwik, customHistory });
   }
+
+  static contextType = GlobalContext;
 
   render() {
     addLocaleData([...localeEn, ...localeFr]);
