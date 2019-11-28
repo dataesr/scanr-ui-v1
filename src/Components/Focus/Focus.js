@@ -149,7 +149,7 @@ export default class Focus extends Component {
                           target="_blank"
                           url={this.state.href}
                         >
-                          {(this.props.language === 'fr') ? 'Explorer dans scanR' : 'Explore in scanR'}
+                          {(this.props.language === 'fr') ? 'Explorer les données du focus dans scanR' : 'Explore focus data in scanR'}
                         </ButtonToPage>
                       )
                       : null
@@ -162,7 +162,7 @@ export default class Focus extends Component {
                         <ButtonToPage
                           className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
                           target="_blank"
-                          url={this.state.href}
+                          url={this.state.hrefOpenData}
                         >
                           {(this.props.language === 'fr') ? 'Explorer le jeu Opendata' : 'Explore in Opendata'}
                         </ButtonToPage>
