@@ -47,7 +47,7 @@ export default class HighChartsPie extends Component {
       table.push(
         <tr>
           <td>{this.props.data.labels[i]}</td>
-          <td>{this.props.data.values[i]}</td>
+          <td>{this.props.data.values[i].toFixed(1).concat(' %')}</td>
         </tr>,
       );
     }
