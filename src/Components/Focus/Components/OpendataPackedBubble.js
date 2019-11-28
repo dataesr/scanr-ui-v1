@@ -8,6 +8,7 @@ import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
 export default class OpendataPackedBubble extends Component {
   state = {
     data: [],
+    exporting: true,
     isLoading: true,
   }
 
@@ -55,6 +56,7 @@ export default class OpendataPackedBubble extends Component {
             <HighChartsPackedbubble
               filename="Mot-clé des publications"
               data={this.state.data}
+              exporting={this.state.exporting}
               language={this.props.language}
               tooltipText={this.props.language === 'fr' ? 'lauréat.e.s IUF' : 'laureates'}
             />
