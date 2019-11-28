@@ -48,7 +48,6 @@ class App extends Component {
     });
     const customHistory = createBrowserHistory();
     ReactPiwik.push(['trackPageView']);
-    ReactPiwik.push(['enableLinkTracking']);
     this.setState({ piwik, customHistory });
   }
 
