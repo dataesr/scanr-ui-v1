@@ -20,6 +20,7 @@ class EntityMap extends Component {
 
   getData = () => {
     const request = { ...this.props.request };
+    /* eslint-disable-next-line */
     Axios.post(API_STRUCTURES_GEORESULTS_END_POINT, transformRequest(request))
       .then((response) => {
         const mapdata = [];
@@ -33,7 +34,7 @@ class EntityMap extends Component {
               };
               mapdata.push(dataElement);
             } catch (error) {
-              // eslint-disable-no-empty
+            // eslint-disable-no-empty
             }
           });
         }
@@ -44,6 +45,7 @@ class EntityMap extends Component {
         console.log(error);
       });
   }
+
 
   render = () => (
     <div className={`w-100 ${classes.graphCard}`}>

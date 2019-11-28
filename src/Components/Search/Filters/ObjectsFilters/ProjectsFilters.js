@@ -5,7 +5,14 @@ import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 import YearRangeSlider from '../../../Shared/YearRangeSlider/YearRangeSlider';
 import styles from '../../../../style.scss';
-// import classes from './Filters.scss';
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 const ProjectsFilters = (props) => {
   const facets = props.facets || [];
@@ -19,9 +26,9 @@ const ProjectsFilters = (props) => {
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
         <Autocomplete
-          title="Localisation"
-          subtitle="d'au moins un des participants..."
-          placeholder="Chez wam"
+          title={messages[props.language]['filters.localisation']}
+          subtitle={messages[props.language]['filters.subtitle']}
+          placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
           facetID="participants.structure.address.localisationSuggestions"

@@ -6,11 +6,12 @@ import Axios from 'axios';
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 
 import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
-import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import Background from '../../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import SectionTitle from '../../../Shared/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
 import IsOa from '../../../Production/Shared/Oa/OaCard';
 import OaLink from '../../../Production/Shared/Oa/OaLink';
+
 /* Gestion des langues */
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';

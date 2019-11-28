@@ -49,7 +49,7 @@ const EntityFilters = (props) => {
         <Autocomplete
           title={messages[props.language]['filters.localisation']}
           subtitle={messages[props.language]['filters.subtitle']}
-          placeholder="Localisation"
+          placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"

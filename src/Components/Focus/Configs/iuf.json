@@ -1,62 +1,50 @@
 {
-  "title": "Les nominations 2019 à l'Institut Universitaire de France",
   "text":  "Les membres sont nommés pour une durée de 5 ans et placés à ce titre en position de délégation. Ils continuent à exercer leur activité dans leur université d’appartenance, en bénéficiant d’un allègement de leur service d’enseignement et de crédits de recherche spécifiques. Ils peuvent être nommés en tant que junior (pour les moins de 40 ans) ou sénior. Les membres sénior peuvent être reconduits pour une nouvelle période de 5 ans à la fin de leur délégation.",
-  "subtext": "",
-  "tags": ["iuf"],
+  "title": {
+    "fr": "Les nominations 2019 à l'Institut Universitaire de France",
+    "en": "2018 thesis in france. Which thematics?"
+  },
+  "text":  {
+	  "fr": "Les membres sont nommés pour une durée de 5 ans et placés à ce titre en position de délégation. Ils continuent à exercer leur activité dans leur université d’appartenance, en bénéficiant d’un allègement de leur service d’enseignement et de crédits de recherche spécifiques. Ils peuvent être nommés en tant que junior (pour les moins de 40 ans) ou sénior. Les membres sénior peuvent être reconduits pour une nouvelle période de 5 ans à la fin de leur délégation.",
+    "en": "Search Engin [http://theses.fr](http://theses.fr), produit par l’Agence bibliographique de l’enseignement supérieur [ABES](http://www.abes.fr/) recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation [STEP](https://step.theses.fr/), celle dédiée à la gestion du dépôt national des thèses électroniques françaises (STAR) [https://star.theses.fr/](https://star.theses.fr/) et du catalogue collectif Sudoc ([http://sudoc.fr/](http://sudoc.fr/)). scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises."
+  },
+  "tags": {
+    "fr": ["iuf"],
+    "en": ["iuf"]
+  },
+  "api": "publications",
+  "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
+  "hrefX": "/recherche/publications",
   "components": [
     {
-      "type": "map",
-      "dataType": "opendata",
-      "dataFile": "iuf-2019.json",
-      "award": "IUF",
-      "title": "Carte des nominations à l'IUF en 2019",
-      "subtitle": "",
-      "pageSize": 10,
-      "label": "map1",
-      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/persons/search",
-      "opendata_api" : "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-iuf-les-membres&rows=150&sort=-annee&facet=type_nomination&facet=categorie_nomination&facet=sexe&facet=arborescence_disciplinaire&refine.annee=2019",
-      "href": "/recherche/persons?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"IUF\"%5D%7D%7D",
-      "hrefExt": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/table/?sort=-annee",
-      "queryField": "awards.structureName",
-      "sourceFields": ["lastName"],
-      "facet": ["keywords.en"],
-      "queryValue": ["IUF"]
+      "componentType": "OpendataEntityMap",
+      "opendata": "iuf-2019.json",
+      "title": {
+        "fr": "Carte des nominations à l'IUF en 2019",
+        "en": "Main keywords"
+      },
+      "subtitle": {"fr": "", "en": ""},
+      "opendata" : "iuf-2019.json"
     },
     {
-      "type": "packedbubble",
-      "dataType": "opendata",
-      "dataFile": "iuf-2019.json",
-      "award": "IUF",
-      "title": "Champs disciplinaires des lauréat.e.s à l'IUF en 2019",
-      "subtitle": "",
-      "pageSize": 10,
-      "label": "bubble",
-      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/persons/search",
-      "opendata_api" : "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-iuf-les-membres&rows=150&sort=-annee&facet=type_nomination&facet=categorie_nomination&facet=sexe&facet=arborescence_disciplinaire&refine.annee=2019",
-      "href": "/recherche/persons?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"IUF\"%5D%7D%7D",
-      "hrefExt": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/table/?sort=-annee",
-      "queryField": "awards.structureName",
-      "sourceFields": ["lastName"],
-      "facet": ["keywords.en"],
-      "queryValue": ["IUF"]
+      "componentType": "OpendataPackedBubble",
+      "opendata": "iuf-2019.json",
+      "title": {
+        "fr": "Champs disciplinaires des lauréat.e.s à l'IUF en 2019",
+        "en": "Main keywords"
+      },
+      "subtitle": {"fr": "", "en": ""},
+      "opendata" : "iuf-2019.json"
     },
     {
-      "type": "treemap",
-      "dataType": "opendata",
-      "dataFile": "iuf-2019.json",
-      "award": "IUF",
-      "title": "Nominations par genre des lauréat.e.s à l'IUF en 2019",
-      "subtitle": "",
-      "pageSize": 10,
-      "label": "treemap",
-      "url_api" : "https://scanr-preprod.sword-group.com/api/v2/persons/search",
-      "opendata_api" : "https://data.enseignementsup-recherche.gouv.fr/api/records/1.0/search/?dataset=fr-esr-iuf-les-membres&rows=150&sort=-annee&facet=type_nomination&facet=categorie_nomination&facet=sexe&facet=arborescence_disciplinaire&refine.annee=2019",
-      "href": "/recherche/persons?filters=%7B\"awards.structureName\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"IUF\"%5D%7D%7D",
-      "hrefExt": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/table/?sort=-annee",
-      "queryField": "awards.structureName",
-      "sourceFields": ["lastName"],
-      "facet": ["keywords.en"],
-      "queryValue": ["IUF"]
+      "componentType": "GenderTreemap",
+      "opendata": "iuf-2019.json",
+      "title": {
+        "fr": "Nominations par genre des lauréat.e.s à l'IUF en 2019",
+        "en": "Main keywords"
+      },
+      "subtitle": {"fr": "", "en": ""},
+      "opendata" : "iuf-2019.json"
     }
   ]
 }

@@ -323,13 +323,12 @@ class YearRangeSlider extends Component {
           sliderHighPosition = positions[index] - this.highThumb.current.offsetWidth / 2;
         }
         html.push(
-          <React.Fragment>
+          <React.Fragment key={entry.value}>
             <div
               role="button"
               tabIndex={0}
               onClick={() => this.props.handleSliderRange(entry.value, entry.value)}
               onKeyPress={() => this.props.handleSliderRange(entry.value, entry.value)}
-              key={entry.value}
               id={entry.value}
               data-for={entry.value}
               data-tip

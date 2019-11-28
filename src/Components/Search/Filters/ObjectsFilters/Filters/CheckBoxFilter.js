@@ -112,7 +112,7 @@ class CheckBoxFilter extends Component {
                             <span className={classes.CheckMark} />
                           </div>
                           {/* eslint-disable-next-line */}
-                          <label className={`pl-1 form-check-label ${classes.Item}`} for={facet.value}>
+                          <label className={`pl-1 form-check-label ${classes.Item}`} htmlFor={facet.value}>
                             {facet.value}
                           </label>
                           <div className={`ml-auto ${classes.FacetsCounts}`}>
