@@ -188,12 +188,6 @@ export default class HighChartsBar extends Component {
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-code" title="Intégrer le code" />
-            </button>
-          </div>
           <div className={`pl-3 pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPdf} className={classes.Button}>

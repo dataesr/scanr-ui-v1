@@ -32,7 +32,7 @@ export default class HighChartsPackedbubble extends Component {
     super(props);
     this.chart = React.createRef();
     this.data = this.props.data;
-    this.tooltipText = this.props.tooltipText;
+    this.tooltipText = this.props.tooltipText || '';
     this.state = {
       options: null,
     };
@@ -64,10 +64,10 @@ export default class HighChartsPackedbubble extends Component {
           minSize: '10%',
           maxSize: '80%',
           layoutAlgorithm: {
-            splitSeries: (this.data.length > 2),
-            seriesInteraction: (this.data.length <= 2),
+            splitSeries: true,
+            seriesInteraction: false,
             dragBetweenSeries: false,
-            parentNodeLimit: (this.data.length > 2),
+            parentNodeLimit: true,
           },
         },
       },
@@ -121,12 +121,6 @@ export default class HighChartsPackedbubble extends Component {
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-code" />
-            </button>
-          </div>
         </div>
         <div className="d-flex align-items-center">
           <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
@@ -157,7 +151,6 @@ export default class HighChartsPackedbubble extends Component {
           this.state.options !== null
             ? (
               <div>
-                <hr className={classes.HorizontalBar} />
                 <div className="pl-4">
                   <HighchartsReact
                     highcharts={Highcharts}

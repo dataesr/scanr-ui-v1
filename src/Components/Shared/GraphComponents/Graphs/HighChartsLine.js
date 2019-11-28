@@ -67,6 +67,7 @@ export default class HighChartsLine extends Component {
           style: { color: '#000000' },
           align: 'right',
           x: -10,
+          rotation: -90,
         },
       },
       yAxis: {
@@ -174,12 +175,6 @@ export default class HighChartsLine extends Component {
             <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-share-alt-square" />
-            </button>
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-code" />
             </button>
           </div>
         </div>

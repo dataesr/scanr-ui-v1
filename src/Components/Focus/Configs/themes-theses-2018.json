@@ -4,24 +4,24 @@
     "en": "2018 thesis in france. Which thematics?"
   },
   "text":  {
-    "fr": "#### Le paysage des thèses françaises \nLe moteur de recherche [http://theses.fr](http://theses.fr), produit par l’Agence bibliographique de l’enseignement supérieur [ABES](http://www.abes.fr/) recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation [STEP](https://step.theses.fr/), celle dédiée à la gestion du dépôt national des thèses électroniques françaises (STAR) [https://star.theses.fr/](https://star.theses.fr/) et du catalogue collectif Sudoc ([http://sudoc.fr/](http://sudoc.fr/)). scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises.",
-    "en": "Search Engin [http://theses.fr](http://theses.fr), produit par l’Agence bibliographique de l’enseignement supérieur [ABES](http://www.abes.fr/) recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation [STEP](https://step.theses.fr/), celle dédiée à la gestion du dépôt national des thèses électroniques françaises (STAR) [https://star.theses.fr/](https://star.theses.fr/) et du catalogue collectif Sudoc ([http://sudoc.fr/](http://sudoc.fr/)). scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises."
+    "fr": "#### Le paysage des thèses françaises\nLe moteur de recherche [theses.fr](http://theses.fr), produit par l’Agence bibliographique de l’enseignement supérieur [ABES](http://www.abes.fr/) recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation [STEP](https://step.theses.fr/), celle dédiée à la gestion du dépôt national des thèses électroniques françaises (STAR) [https://star.theses.fr/](https://star.theses.fr/) et du catalogue collectif [Sudoc] (http://sudoc.fr).<br/>scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises.",
+    "en": "#### PhD theses defended in 2018. On which themes?\nThe [theses.fr](http://theses.fr) search engine, produced by the Agence bibliographique de l'enseignement supérieur [ABES](http://www.abes.fr/), lists all the theses defended in France thanks to the reporting work of the staff (research department, doctoral schools, libraries, etc.) of institutions authorised to award the PhD in France and links associated persons and organisations to each of them. The data from theses.fr comes from the source applications that are the application for reporting theses in preparation [STEP](https://step.theses.fr/), the application dedicated to the management of the national repository of French electronic theses [STAR](https://star.theses.fr/) and the [Sudoc union catalogue](http://sudoc.fr/).<br/> scanR, the engine of research and innovation, invites you to discover some visualizations to better understand the landscape of French theses."
   },
   "tags": {
     "fr": ["theses"],
     "en": ["thesis"]
   },
   "api": "publications",
-  "href": "/recherche/publications?filters=%7B\"productionType\"%3A%7B\"type\"%3A\"MultiValueSearchFilter\"%2C\"op\"%3A\"any\"%2C\"values\"%3A%5B\"thesis\"%5D%7D%7D",
+  "href": "/recherche/publications?filters=%7B%22productionType%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22thesis%22%5D%7D%2C%22year%22%3A%7B%22type%22%3A%22LongRangeFilter%22%2C%22max%22%3A2019%2C%22min%22%3A2018%2C%22missing%22%3Afalse%7D%7D&query=&sort",
   "hrefX": "/recherche/publications",
   "components": [
     {
       "componentType": "PublicationsKeywords",
       "title": {
-        "fr": "Principaux mot-clés des thèses soutenues en 2018",
-        "en": "Main keywords"
+        "fr": "Principaux mot-clés des thèses",
+        "en": "Thesis keyword cloud for PhD theses"
       },
-      "subtitle": {"fr": "", "en": ""},
+      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
       "request": {
         "query": "",
@@ -44,10 +44,10 @@
     {
       "componentType": "PublicationsPacketBubble",
       "title": {
-        "fr": "Principaux domaines de recherche des thèses soutenues en 2018",
-        "en": "Main domains"
+        "fr": "Principaux domaines de recherche des thèses",
+        "en": "Main research areas of the PhD theses"
       },
-      "subtitle": {"fr": "I'm a title", "en": "I'm a title"},
+      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
       "request": {
         "query": "",
@@ -70,10 +70,10 @@
     {
       "componentType": "SimpleAggregationGraph",
       "title": {
-        "fr": "Unités urbaines ayant le plus de structure d'affiliations des thèses soutenues en 2018",
-        "en": "UrbanUnits"
+        "fr": "Nombre de thèses par unité urbaine (top 10)",
+        "en": "Number of PhD theses by urban unit (top 10)"
       },
-      "subtitle": {"fr": "I'm a title", "en": "I'm a title"},
+      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
       "aggSize": 20,
       "aggField": "affiliations.address.urbanUnitLabel",

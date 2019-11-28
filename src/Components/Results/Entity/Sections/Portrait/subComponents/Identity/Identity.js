@@ -42,7 +42,12 @@ const Identity = (props) => {
 
   // description
   const description = getSelectKey(props, 'description', props.language, 'fr');
-
+  const externalIdDisplayed = [];
+  for (let i = 0; i < props.externalIds.length; i += 1) {
+    if (props.externalIds[i].type.toLowerCase() !== 'docid') {
+      externalIdDisplayed.push(props.externalIds[i]);
+    }
+  }
   return (
     <div className="col-md-6">
       <div className={classes.Identity}>
@@ -77,7 +82,7 @@ const Identity = (props) => {
               logo="fas fa-qrcode"
               title={messages[props.language]['Entity.portrait.identity.id']}
               label={props.id}
-              list={props.externalIds}
+              list={externalIdDisplayed}
               labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
               tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
             />

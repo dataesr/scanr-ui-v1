@@ -53,49 +53,6 @@ class Ecosystem extends Component {
     }
   }
 
-  // getDataGraph = () => {
-  //   const dataGraph = [];
-  //   GRAPH_ITEMS_LIST.forEach((graphType) => {
-  //     const dataSorted = this.props.data.sort((a, b) => {
-  //       const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
-  //       const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
-  //       return prodB - prodA;
-  //     });
-  //     const limitedData = [];
-  //     const limit = (dataSorted.length < ECOSYSTEM_LIMIT) ? dataSorted.length - 1 : ECOSYSTEM_LIMIT;
-  //     for (let i = 0; i <= limit; i += 1) {
-  //       limitedData.push(dataSorted[i]);
-  //     }
-
-  //     const structuresListFr = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
-  //     const structuresListFo = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
-
-  //     const dataFr = [];
-  //     const dataFo = [];
-  //     structuresListFr.forEach((el) => {
-  //       dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
-  //     });
-  //     structuresListFo.forEach((el) => {
-  //       dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
-  //     });
-
-  //     const objFr = {
-  //       name: `${dataFr.length} françaises`,
-  //       data: dataFr,
-  //       color: '#119fd4',
-  //     };
-  //     const objFo = {
-  //       name: `${dataFo.length} internationales`,
-  //       data: dataFo,
-  //       color: '#4fc4c0',
-  //     };
-
-  //     dataGraph[graphType] = [objFr, objFo];
-  //   });
-
-  //   return dataGraph;
-  // }
-
   getDataGraph = () => {
     const dataGraph = ['fr', 'fo'];
     dataGraph.fr = [];
@@ -107,21 +64,28 @@ class Ecosystem extends Component {
         const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
         return prodB - prodA;
       });
-      const limitedData = [];
-      const limit = (dataSorted.length < ECOSYSTEM_LIMIT) ? dataSorted.length - 1 : ECOSYSTEM_LIMIT;
-      for (let i = 0; i <= limit; i += 1) {
-        limitedData.push(dataSorted[i]);
-      }
 
-      const structuresListFr = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
-      const structuresListFo = limitedData.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+      const structuresListFr = dataSorted.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+      const structuresListFo = dataSorted.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+
+
+      const limitFr = (structuresListFr.length < ECOSYSTEM_LIMIT) ? structuresListFr.length - 1 : ECOSYSTEM_LIMIT - 1;
+      const limitedDataFr = [];
+      for (let i = 0; i <= limitFr; i += 1) {
+        limitedDataFr.push(structuresListFr[i]);
+      }
+      const limitFo = (structuresListFo.length < ECOSYSTEM_LIMIT) ? structuresListFo.length - 1 : ECOSYSTEM_LIMIT - 1;
+      const limitedDataFo = [];
+      for (let i = 0; i <= limitFo; i += 1) {
+        limitedDataFo.push(structuresListFo[i]);
+      }
 
       const dataFr = [];
       const dataFo = [];
-      structuresListFr.forEach((el) => {
+      limitedDataFr.forEach((el) => {
         dataFr.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
       });
-      structuresListFo.forEach((el) => {
+      limitedDataFo.forEach((el) => {
         dataFo.push({ name: getSelectKey(el.structure, 'label', this.props.language, 'fr'), value: el.weight });
       });
 
@@ -130,7 +94,7 @@ class Ecosystem extends Component {
         case 'Structure de recherche':
           color = classes.researchstructuresColor;
           break;
-        case 'Secteur Privée':
+        case 'Secteur Privé':
           color = classes.entreprisesColor;
           break;
         case 'Secteur public':
@@ -141,12 +105,12 @@ class Ecosystem extends Component {
       }
 
       const objFr = {
-        name: `${dataFr.length} ${graphType}`,
+        name: graphType,
         data: dataFr,
         color,
       };
       const objFo = {
-        name: `${dataFo.length} ${graphType}`,
+        name: graphType,
         data: dataFo,
         color,
       };
@@ -194,9 +158,10 @@ class Ecosystem extends Component {
     const kindFilter = [];
     GRAPH_ITEMS_LIST.forEach((graphType) => {
       const listObjects = this.props.data.filter(item => item.structure.kind.find(el => el === graphType));
-      const obj = {};
-      obj.value = graphType;
-      obj.count = listObjects.length;
+      const obj = {
+        value: graphType,
+        count: listObjects.length,
+      };
       kindFilter.push(obj);
     });
     this.setState({ kindFilter });
@@ -212,12 +177,14 @@ class Ecosystem extends Component {
         nbEn += 1;
       }
     });
-    const objFr = {};
-    objFr.value = 'fr';
-    objFr.count = nbFr;
-    const objEn = {};
-    objEn.value = 'en';
-    objEn.count = nbEn;
+    const objFr = {
+      value: 'fr',
+      count: nbFr,
+    };
+    const objEn = {
+      value: 'en',
+      count: nbEn,
+    };
     const listToAdd = [objFr, objEn];
     this.setState({ frIntFilter: listToAdd });
   }
@@ -375,26 +342,27 @@ class Ecosystem extends Component {
 
   renderViewGraph = data => (
     <div className="row">
-      <div className="col-md">
-        <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.frenchProduction']} data={data.fr} />
-      </div>
-      <div className="col-md">
-        <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.foreignProduction']} data={data.fo} />
-      </div>
       {
-        /*
-        GRAPH_ITEMS_LIST.map((graphType) => {
-          if (data[graphType].length > 0) {
-            console.log('data', data[graphType]);
-            return (
-              <div className="col-md">
-                <PackedBubbleChart text={graphType} data={data[graphType]} tooltipText="productions en commun" />
-              </div>
-            );
-          }
-          return null;
-        })
-        */
+        (data.fr.length > 0) ? (
+          <div className="col-md">
+            <PackedBubbleChart
+              text={messages[this.props.language]['Entity.ecosystem.frenchEntities']}
+              data={data.fr}
+              tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
+            />
+          </div>
+        ) : null
+      }
+      {
+        (data.fo.length > 0) ? (
+          <div className="col-md">
+            <PackedBubbleChart
+              text={messages[this.props.language]['Entity.ecosystem.foreignEntities']}
+              data={data.fo}
+              tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
+            />
+          </div>
+        ) : null
       }
     </div>
   );
@@ -411,7 +379,6 @@ class Ecosystem extends Component {
                   objectType="structures"
                   language={this.props.language}
                   id={this.props.id}
-                  total={false}
                   title={messages[this.props.language]['Entity.ecosystem.title']}
                   viewModeClickHandler={this.viewModeClickHandler}
                   viewMode={this.state.viewMode}
@@ -442,7 +409,6 @@ class Ecosystem extends Component {
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.id}
-                total
                 title={messages[this.props.language]['Entity.ecosystem.title']}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
