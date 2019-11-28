@@ -18,7 +18,7 @@ const SectionTitle = props => (
     <div className="d-flex flex-wrap align-items-center flex-grow-1 mx-1">
       <i className={`fas ${props.icon} ${classes.Icon}`} />
       <span className={`pl-2 mr-auto my-2 ${classes.Title}`}>
-        {(props.total) ? (props.total).toLocaleString() : null}
+        {(props.total) ? (props.total).toLocaleString(props.language) : null}
         &nbsp;
         {props.title}
       </span>
