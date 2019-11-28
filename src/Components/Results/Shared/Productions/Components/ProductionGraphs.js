@@ -62,13 +62,13 @@ const ProductionGraphs = (props) => {
           });
         }
       });
-      return <DonutChart filename={labelFor[props.language][active]} data={data} />;
+      return <DonutChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
     }
     if (active === 'years') {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={active} data={data} />;
+      return <YearChart filename={active} data={data} language={props.language} />;
     }
     if (active === 'types') {
       const typesData = { id: 'types', entries: [] };
@@ -77,10 +77,10 @@ const ProductionGraphs = (props) => {
         type.value = TypeMapping[props.language][entry.value];
         typesData.entries.push(type);
       });
-      return <BarChart filename={labelFor[props.language][active]} data={typesData} />;
+      return <BarChart filename={labelFor[props.language][active]} data={typesData} language={props.language} />;
     }
     return (
-      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />
     );
   };
 
