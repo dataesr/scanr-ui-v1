@@ -55,7 +55,7 @@ const Identity = (props) => {
                       url="/img/logo-idref.png"
                       targetUrl={'http:///www.idref.fr/'.concat(extIdref[0].id)}
                       label="Idref"
-                      link="link"
+                      link={extIdref[0].id}
                       cssClass="Height75"
                     />
                   </div>
@@ -68,7 +68,7 @@ const Identity = (props) => {
                     url="/img/logo-orcid.svg"
                     targetUrl={'http://www.orcid.org/'.concat(extOrcid[0].id)}
                     label="Orcid"
-                    link="link"
+                    link={extOrcid[0].id}
                     cssClass="Height75"
                   />
                 </div>
@@ -81,7 +81,7 @@ const Identity = (props) => {
                     targetUrl={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')}
                     label="IdHAL"
                     cssClass="Height75"
-                    link="link"
+                    link={'idHal '.concat(extIdhal[0].id)}
                   />
                 </div>
               ) : null }
