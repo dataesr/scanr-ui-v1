@@ -52,6 +52,7 @@ export default class Focus extends Component {
       text: null,
       href: null,
       hrefX: null,
+      hrefOpendata: null,
       tags: [],
       components: [],
     };
@@ -157,14 +158,14 @@ export default class Focus extends Component {
                 </div>
                 <div className="pl-2">
                   {
-                    (this.state.hrefOpenData)
+                    (this.state.hrefOpendata)
                       ? (
                         <ButtonToPage
                           className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
                           target="_blank"
-                          url={this.state.hrefOpenData}
+                          url={this.state.hrefOpendata}
                         >
-                          {(this.props.language === 'fr') ? 'Explorer le jeu Opendata' : 'Explore in Opendata'}
+                          {(this.props.language === 'fr') ? 'Explorer le jeu Open Data' : 'Explore the Open Data dataset'}
                         </ButtonToPage>
                       )
                       : null
