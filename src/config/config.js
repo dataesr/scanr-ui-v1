@@ -34,5 +34,5 @@ export const PUBLICATION_COLOR = '#cc3d8f';
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
 
 // ecosystem
-export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur privé', 'Secteur public'];
+export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur Privé', 'Secteur public'];
 export const ECOSYSTEM_LIMIT = 100;
