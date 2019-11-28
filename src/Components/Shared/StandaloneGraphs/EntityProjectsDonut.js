@@ -12,8 +12,6 @@ export default class EntityProjects extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
-    title: 'Répartition par type de financement',
-    subtitle: '',
     aggregations: {
       projectTypes: {
         field: 'projects.project.type',
@@ -58,8 +56,8 @@ export default class EntityProjects extends Component {
       return (
         <div className={`w-100 ${classes.graphCard}`}>
           <GraphTitles
-            title={this.state.title}
-            subtitle={this.state.subtitle}
+            title={this.props.title}
+            subtitle={this.props.subtitle}
           />
           <HighChartsDonut
             filename="Type de projets auxquels ont participé les structures"
@@ -72,8 +70,8 @@ export default class EntityProjects extends Component {
     return (
       <div className={`w-100 ${classes.graphCard}`}>
         <GraphTitles
-          title={this.state.title}
-          subtitle={this.state.subtitle}
+          title={this.props.title}
+          subtitle={this.props.subtitle}
         />
         <div className="row justify-content-center p-4">
           <GridLoader
@@ -88,5 +86,7 @@ export default class EntityProjects extends Component {
 
 EntityProjects.propTypes = {
   language: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };

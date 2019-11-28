@@ -26,6 +26,7 @@ const ProjectsFilters = (props) => {
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
         <Autocomplete
+          language={props.language}
           title={messages[props.language]['filters.localisation']}
           subtitle={messages[props.language]['filters.subtitle']}
           placeholder=""
@@ -41,6 +42,7 @@ const ProjectsFilters = (props) => {
           }}
         />
         <CheckBoxFilter
+          language={props.language}
           defaultActive
           retractable={false}
           nbItemsToShow={10}
@@ -58,6 +60,7 @@ const ProjectsFilters = (props) => {
           }}
         />
         <CheckBoxFilter
+          language={props.language}
           defaultActive
           retractable={false}
           title="Actions"

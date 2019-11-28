@@ -2,19 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import EntityMap from '../../../Shared/StandaloneGraphs/EntityMap';
-// import EntityCitiesBar from './EntitiesGraphs/EntityCitiesBar';
 import SimpleAggregationGraph from '../../../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import EntityProjects from '../../../Shared/StandaloneGraphs/EntityProjectsDonut';
 
-// Del domains for Now
-// import EntityDomains from './EntitiesGraphs/EntityDomains';
-// <EntityDomains language={props.language} request={props.request} />
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 const EntityGraphsWrapper = props => (
   <React.Fragment>
     <EntityMap
-      title="T"
-      subtitle="."
+      title={messages[props.language].EntityMapTitle}
+      subtitle={messages[props.language].EntityMapSubtitle}
       language={props.language}
       request={props.request}
     />
@@ -24,8 +27,8 @@ const EntityGraphsWrapper = props => (
       filename="scanr_export_structures_natures"
       graphType="HighChartsDonut"
       api="structures"
-      title="T"
-      subtitle="."
+      title={messages[props.language].EntityNatureTitle}
+      subtitle={messages[props.language].EntityNatureSubtitle}
       language={props.language}
       request={props.request}
     />
@@ -35,14 +38,14 @@ const EntityGraphsWrapper = props => (
       filename="scanr_export_structures_top_10_cities"
       graphType="HighChartsBar"
       api="structures"
-      title="T"
-      subtitle="."
+      title={messages[props.language].EntityUrbanUnitTitle}
+      subtitle={messages[props.language].EntityUrbanUnitSubtitle}
       language={props.language}
       request={props.request}
     />
     <EntityProjects
-      title="T"
-      subtitle="."
+      title={messages[props.language].EntityProjectTypesTitle}
+      subtitle={messages[props.language].EntityProjectTypesSubitle}
       language={props.language}
       request={props.request}
     />

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import MetaTags from 'react-meta-tags';
 import { GlobalContext } from '../../GlobalContext';
 import Footer from '../Shared/Footer/Footer';
@@ -121,10 +120,4 @@ class HomePage extends Component {
     );
   }
 }
-
 export default HomePage;
-
-HomePage.propTypes = {
-  language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
-};

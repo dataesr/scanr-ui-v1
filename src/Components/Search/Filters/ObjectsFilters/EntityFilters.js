@@ -50,11 +50,13 @@ const EntityFilters = (props) => {
           title={messages[props.language]['filters.localisation']}
           subtitle={messages[props.language]['filters.subtitle']}
           placeholder=""
+          language={props.language}
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
         />
         <CheckBoxFilter
+          language={props.language}
           title={messages[props.language]['filters.sectors']}
           facets={kindFacetsSecteur.entries}
           filters={kindActiveFiltersSecteur}
@@ -63,6 +65,7 @@ const EntityFilters = (props) => {
           defaultActive
         />
         <CheckBoxFilter
+          language={props.language}
           title={messages[props.language]['filters.kind']}
           facets={kindFacetsOrganisme.entries}
           filters={kindActiveFiltersOrganisme}
@@ -71,6 +74,7 @@ const EntityFilters = (props) => {
           defaultActive
         />
         <CheckBoxFilter
+          language={props.language}
           title={messages[props.language]['filters.publicFunding']}
           facets={projectsFacets.entries}
           filters={projectsActiveFilters}
@@ -89,6 +93,7 @@ const EntityFilters = (props) => {
           {messages[props.language]['filters.others']}
         </div>
         <CheckBoxFilter
+          language={props.language}
           title={messages[props.language]['filters.caracteristics']}
           facets={caractFacets.entries}
           filters={caractActiveFilters}
