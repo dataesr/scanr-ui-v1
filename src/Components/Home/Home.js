@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MetaTags from 'react-meta-tags';
-
+import { GlobalContext } from '../../GlobalContext';
 import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header-homePage';
+import Header from '../Shared/Header/Header';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 // import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
@@ -16,12 +16,13 @@ import classes from './Home.scss';
 
 
 class HomePage extends Component {
+  static contextType = GlobalContext;
+
   constructor(props) {
     super(props);
     this.state = {
       isSearchFull: true,
     };
-
     this.handleScroll = this.handleScroll.bind(this);
   }
 
@@ -66,56 +67,56 @@ class HomePage extends Component {
         </MetaTags>
 
         <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
+          language={this.context.language}
+          switchLanguage={this.context.switchLanguage}
         />
 
         <Search
           {...this.props}
-          language={this.props.language}
+          language={this.context.language}
           isFull={this.state.isSearchFull}
         />
 
         <ScanrToday
-          language={this.props.language}
+          language={this.context.language}
           isFull={this.state.isSearchFull}
           lexicon={{ target: this.state.lexiconTarget, lexiconHandler: this.lexiconHandler }}
         />
 
         <Banner
-          language={this.props.language}
+          language={this.context.language}
           labelKey="WhatAreOurSources"
           cssClass="BannerLight"
           url="/ressources"
         />
 
         <MostActiveThemes
-          language={this.props.language}
+          language={this.context.language}
           data={['Brain to computer', 'Marathon', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
           lexiconHandler={() => this.lexiconHandler()}
         />
 
         <Banner
-          language={this.props.language}
+          language={this.context.language}
           labelKey="Appear"
           cssClass="BannerLight"
           url=""
         />
 
-        <LastFocus language={this.props.language} />
+        <LastFocus language={this.context.language} />
 
         {/* Not for Now */}
-        {/* <Newsletter language={this.props.language} /> */}
+        {/* <Newsletter language={this.context.language} /> */}
 
         <Banner
-          language={this.props.language}
+          language={this.context.language}
           labelKey="DiscoverDataesr"
           cssClass="BannerDark"
-          url={`https://data.esr.gouv.fr/${this.props.language.toUpperCase()}/`}
+          url={`https://data.esr.gouv.fr/${this.context.language.toUpperCase()}/`}
           target="_blank"
         />
 
-        <Footer language={this.props.language} />
+        <Footer language={this.context.language} />
       </div>
     );
   }

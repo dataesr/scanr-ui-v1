@@ -6,7 +6,7 @@ import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
 // import getSelectKey from '../../../Utils/getSelectKey';
 
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 
 
 import Publication from './Publication/Publication';

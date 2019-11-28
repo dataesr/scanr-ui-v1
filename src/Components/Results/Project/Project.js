@@ -6,7 +6,7 @@ import { API_PROJECTS_END_POINT } from '../../../config/config';
 import getSelectKey from '../../../Utils/getSelectKey';
 
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import Description from './Sections/Description/Description';
 import Participants from './Sections/Participants/Participants';

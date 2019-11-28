@@ -380,7 +380,7 @@ Property | Type | Required | Default value | Description
 :--- | :--- | :--- | :--- | :---
 language|string|yes||
 -----
-**src/Components/Shared/Header/Header-homePage.js**
+**src/Components/Shared/Header/Header.js**
 
 ### 1. Header
 

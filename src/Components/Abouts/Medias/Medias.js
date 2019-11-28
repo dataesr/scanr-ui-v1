@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
 import Background from './poudre-bleu_Fgris-B.jpg';

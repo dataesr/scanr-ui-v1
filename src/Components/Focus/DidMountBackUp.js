@@ -27,7 +27,7 @@
 //
 // // Composants
 // import Footer from '../Shared/Footer/Footer';
-// import Header from '../Shared/Header/Header-homePage';
+// import Header from '../Shared/Header/Header';
 // // import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
 // import GraphComponent from '../Shared/GraphComponents/GraphComponents';
 // import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
