@@ -56,7 +56,7 @@ export default class GenderTreemap extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsTreemap
-              filename="Mot-clé des publications"
+              filename={this.props.title}
               data={this.state.data}
               language={this.props.language}
             />
