@@ -108,7 +108,7 @@ const PublicationCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-calendar" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           {moment(props.data.publicationDate).format('LL')}
         </p>
       </li>
@@ -130,7 +130,7 @@ const PublicationCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-folder-open" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           {props.data.source.title}
         </p>
       </li>

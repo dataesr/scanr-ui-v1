@@ -57,7 +57,7 @@ const SearchResults = (props) => {
                   <div className="row d-flex flex-row justify-content-between">
                     <div className={`${classes.headers}`}>
                       <h2>
-                        {`${props.preview[section].count.toLocaleString()} `}
+                        {`${props.preview[section].count.toLocaleString(props.language)} `}
                         <FormattedHTMLMessage
                           id={Title}
                           defaultMessage={Title}
@@ -86,7 +86,7 @@ const SearchResults = (props) => {
                 <div className="row d-flex flex-row justify-content-between">
                   <div className={`${classes.headers}`}>
                     <h2>
-                      {`${props.preview[section].count.toLocaleString()} `}
+                      {`${props.preview[section].count.toLocaleString(props.language)} `}
                       <FormattedHTMLMessage
                         id={Title}
                         defaultMessage={Title}
@@ -124,7 +124,7 @@ const SearchResults = (props) => {
                 <div className="row d-flex flex-wrap justify-content-between">
                   {
                     props.preview[section].data.map(res => (
-                      <div className={classes.card} key={res.value.id + res.value.label}>
+                      <div className={classes.card} key={JSON.stringify(res)}>
                         <CardsToShow
                           data={res.value}
                           highlights={res.highlights}

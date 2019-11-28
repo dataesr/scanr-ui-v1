@@ -68,6 +68,7 @@ const PublicationsFilters = (props) => {
           props.filters.productionType && (props.filters.productionType.values.includes('thesis') || props.filters.productionType.values.includes('publication'))
             ? (
               <SelectFilter
+                language={props.language}
                 title="Open Access"
                 facets={isOaFacets.entries}
                 filters={isOaActiveFilters}
@@ -85,6 +86,7 @@ const PublicationsFilters = (props) => {
             ? (
               <React.Fragment>
                 <Autocomplete
+                  language={props.language}
                   title="Journal"
                   placeholder="Journal of ..."
                   onSubmit={props.multiValueFilterHandler}
@@ -92,6 +94,7 @@ const PublicationsFilters = (props) => {
                   facetID="source.title"
                 />
                 <CheckBoxFilter
+                  language={props.language}
                   title={props.language === 'fr' ? 'Type de publication' : 'Publication type'}
                   facets={publiTypeFacets.entries}
                   filters={publiTypeActiveFilters}
@@ -114,7 +117,7 @@ export default PublicationsFilters;
 
 PublicationsFilters.propTypes = {
   request: PropTypes.object,
-  facets: PropTypes.object,
+  facets: PropTypes.array,
   language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
   rangeFilterHandler: PropTypes.func,
