@@ -127,7 +127,6 @@ export default class HighChartsDonut extends Component {
     this.setState({ options });
   }
 
-
   exportChartPdf() {
     ReactPiwik.push(['trackEvent', 'Download', 'PDF_'.concat(this.props.filename)]);
     this.chart.current.chart.exportChart({

@@ -71,18 +71,25 @@ LastFocus.propTypes = {
 LastFocus.defaultProps = {
   focusList: [
     {
-      tags: ['#satt', '#transfert', '#technonologies'],
+      tags: ['#SATT', '#transfert', '#technonologies'],
       title: 'La carte des SATT',
       type: 'map',
       url: '/focus/carte-satt-2019',
       schema: 'entity',
     },
     {
-      tags: ['#theses', '#tag2', '#tag3'],
+      tags: ['#Thèses', '#DomainesRecherche', '#EcolesDoctorales'],
       title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
       type: 'bubble',
       url: '/focus/themes-theses-2018',
       schema: 'publication',
+    },
+    {
+      tags: ['#InstitutUniversitaireDeFrance', '#Lauréat.e.s', '#PrixScientifique'],
+      title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
+      type: 'treemap',
+      url: '/focus/iuf',
+      schema: 'person',
     },
   ],
 };
