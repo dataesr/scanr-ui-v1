@@ -5,6 +5,7 @@ import queryString from 'query-string';
 import ReactPiwik from 'react-piwik';
 
 import classes from './Search.scss';
+import { API_BASE_URL } from '../../config/config';
 
 import SearchPanel from './SearchPanel/SearchPanel';
 import SearchResults from './SearchResults/SearchResults';
@@ -81,7 +82,7 @@ class SearchPage extends Component {
     this.setState(newState);
     const category = this.props.location.pathname.split('/')[2];
     if (category === 'all') {
-      this.sendTracking(this.state.request);
+      this.sendTracking(newState.request);
     }
   }
 
@@ -300,7 +301,7 @@ class SearchPage extends Component {
       });
       return;
     }
-    const url = `https://scanr-preprod.sword-group.com/api/v2/${this.state.api}/search`;
+    const url = `${API_BASE_URL}/${this.state.api}/search`;
     const apiWithDateFilters = ['projects', 'publications'];
     if (apiWithDateFilters.includes(this.state.api)) {
       const dateRequest = {};
@@ -359,7 +360,7 @@ class SearchPage extends Component {
     const query = { query: this.state.request.query };
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
-      const url = `https://scanr-preprod.sword-group.com/api/v2/${api}/search`;
+      const url = `${API_BASE_URL}/${api}/search`;
       Axios.post(url, this.transformRequest(query, api))
         .then((response) => {
           /* eslint-disable-next-line */
@@ -455,7 +456,7 @@ class SearchPage extends Component {
   sendTracking = (request) => {
     ReactPiwik.push(['setCustomUrl', this.props.match.url]);
     const category = this.props.location.pathname.split('/')[2];
-    const query = this.state.request.query;
+    const query = request.query;
     let nbResults = this.state.data.total;
     if (category === 'all') {
       nbResults = this.state.preview.all;
