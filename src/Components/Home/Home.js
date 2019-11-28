@@ -15,8 +15,6 @@ import classes from './Home.scss';
 
 
 class HomePage extends Component {
-  static contextType = GlobalContext;
-
   constructor(props) {
     super(props);
     this.state = {
@@ -46,6 +44,7 @@ class HomePage extends Component {
     }
   }
 
+  static contextType = GlobalContext;
 
   render() {
     const pageTitle = "ScanR | Moteur de la Recherche et de l'Innovation";
