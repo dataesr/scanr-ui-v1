@@ -37,6 +37,7 @@ const PersonCard = (props) => {
       .sort((a, b) => b.length - a.length)
       .slice(-4);
   }
+  domains = [...new Set(domains)];
 
   let affiliations;
 
@@ -101,7 +102,7 @@ const PersonCard = (props) => {
         <ul className={`m-0 p-0 ${classes.NoneStyleUL}`}>
           {
             domains.map(d => (
-              <li className={classes.InlineLI}>
+              <li key={d} className={classes.InlineLI}>
                 <a href={`recherche/persons?filters={"domains.label.${props.language}": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${d}"]}}`}>{`#${d} `}</a>
               </li>
             ))

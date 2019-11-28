@@ -23,7 +23,6 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
 
-
 class SearchPage extends Component {
   constructor(props) {
     super(props);
@@ -194,6 +193,27 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
+  handleExports = () => {
+    const newRequest = { ...this.state.request };
+    const transformed = this.transformRequest(newRequest);
+    delete transformed.lang;
+    const url = `${API_BASE_URL}/structures/search/export?request=${btoa(transformed)}`;
+    this.setState({ isLoading: true });
+    Axios({
+      url,
+      method: 'GET',
+      responseType: 'blob',
+    }).then((response) => {
+      const type = response.headers['content-type'];
+      const blob = new Blob([response.data], { type, encoding: 'UTF-8' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = 'scanr_export.xls';
+      link.click();
+    });
+    this.setState({ isLoading: false });
+  }
+
   // *******************************************************************
   // HANDLE FILTERS ACTIONS
   // *******************************************************************
@@ -296,6 +316,7 @@ class SearchPage extends Component {
       req.lang = this.props.language;
     }
     Object.keys(req).forEach(key => (req[key] === undefined ? delete req[key] : ''));
+    Object.keys(req).forEach(key => (req[key] === null ? delete req[key] : ''));
     return req;
   };
 
@@ -421,6 +442,7 @@ class SearchPage extends Component {
                 api={this.state.api}
                 isLoading={this.state.isLoading}
                 paginationHandler={this.paginationHandler}
+                handleExports={this.handleExports}
                 preview={this.state.preview}
               />
             </div>
@@ -494,10 +516,7 @@ class SearchPage extends Component {
   render() {
     return (
       <div className="d-flex flex-column h-100">
-        <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
-        />
+        <Header />
         <SearchPanel
           language={this.props.language}
           api={this.state.api}
@@ -531,5 +550,4 @@ SearchPage.propTypes = {
   location: PropTypes.object,
   match: PropTypes.object,
   history: PropTypes.object,
-  switchLanguage: PropTypes.func.isRequired,
 };

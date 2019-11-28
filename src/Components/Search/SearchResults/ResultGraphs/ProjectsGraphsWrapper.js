@@ -1,21 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 import SimpleAggregationGraph from '../../../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import ProjectsMap from '../../../Shared/StandaloneGraphs/ProjectsMap';
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 const ProjectsGraphsWrapper = props => (
   <React.Fragment>
-    <ProjectsMap title="T" subtitle="." language={props.language} request={props.request} />
+    <ProjectsMap
+      title={messages[props.language].ProjectsMapTitle}
+      subtitle={messages[props.language].ProjectsMapSubtitle}
+      language={props.language}
+      request={props.request}
+    />
     <SimpleAggregationGraph
       aggField="type"
       aggSize={10}
       filename="scanr_export_projects_types"
       graphType="HighChartsDonut"
       api="projects"
-      title="T"
-      subtitle="."
+      title={messages[props.language].ProjectsTypesTitle}
+      subtitle={messages[props.language].ProjectsTypesSubtitle}
       language={props.language}
       request={props.request}
     />

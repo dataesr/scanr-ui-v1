@@ -81,7 +81,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.all.toLocaleString()}
+                {props.preview.all.toLocaleString(props.language)}
                 )
               </div>
             </a>
@@ -97,7 +97,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.structures.count.toLocaleString()}
+                {props.preview.structures.count.toLocaleString(props.language)}
                 )
               </div>
             </a>
@@ -113,7 +113,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.projects.count.toLocaleString()}
+                {props.preview.projects.count.toLocaleString(props.language)}
                 )
               </div>
             </a>
@@ -129,7 +129,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.persons.count.toLocaleString()}
+                {props.preview.persons.count.toLocaleString(props.language)}
                 )
               </div>
             </a>
@@ -145,7 +145,7 @@ const SearchObjectTab = (props) => {
               </div>
               <div>
                 (
-                {props.preview.publications.count.toLocaleString()}
+                {props.preview.publications.count.toLocaleString(props.language)}
                 )
               </div>
             </a>

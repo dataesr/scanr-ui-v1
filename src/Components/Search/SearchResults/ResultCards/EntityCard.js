@@ -52,7 +52,7 @@ const EntityCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-building" />
         </div>
-        <p p className="m-0">
+        <p className="m-0">
           {props.data.kind.join(', ')}
         </p>
       </li>

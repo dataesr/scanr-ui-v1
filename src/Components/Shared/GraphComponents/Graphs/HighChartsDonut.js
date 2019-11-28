@@ -207,5 +207,5 @@ export default class HighChartsDonut extends Component {
 HighChartsDonut.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
-  colors: PropTypes.object.isRequired,
+  colors: PropTypes.object,
 };

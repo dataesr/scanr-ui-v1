@@ -83,7 +83,7 @@ SimpleAggregationGraph.propTypes = {
   graphType: PropTypes.string.isRequired,
   aggField: PropTypes.string.isRequired,
   api: PropTypes.string.isRequired,
-  aggSize: PropTypes.string.isRequired,
+  aggSize: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,

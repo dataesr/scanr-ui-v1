@@ -1,8 +1,7 @@
 import React, { Component, Suspense, lazy } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { GridLoader } from 'react-spinners';
-
+import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -19,15 +18,6 @@ const EntityCard = lazy(() => import('./ResultCards/EntityCard'));
 const PersonCard = lazy(() => import('./ResultCards/PersonCard'));
 const PublicationCard = lazy(() => import('./ResultCards/PublicationCard'));
 const ProjectCard = lazy(() => import('./ResultCards/ProjectCard'));
-
-const loadingSpinner = (
-  <div className="row justify-content-center pt-5 mt-5">
-    <GridLoader
-      color="#3778bb"
-      loading
-    />
-  </div>
-);
 
 class SearchResults extends Component {
   renderListResults = () => {
@@ -60,7 +50,7 @@ class SearchResults extends Component {
           <PublicationCard {...prop} />
         </div>
       ));
-      default: return loadingSpinner;
+      default: return <GraphSpinner />;
     }
   };
 
@@ -72,7 +62,7 @@ class SearchResults extends Component {
       case 'persons': return <PersonsGraphsWrapper {...properties} />;
       case 'projects': return <ProjectsGraphsWrapper {...properties} />;
       case 'publications': return <PublicationsGraphsWrapper {...properties} />;
-      default: return loadingSpinner;
+      default: return <GraphSpinner />;
     }
   };
 
@@ -98,7 +88,7 @@ class SearchResults extends Component {
     switch (this.props.view) {
       case 'list': return this.renderListResults();
       case 'graph': return this.renderGraphResults();
-      default: return loadingSpinner;
+      default: return <GraphSpinner />;
     }
   };
 
@@ -111,22 +101,32 @@ class SearchResults extends Component {
     const bgColor = `${this.props.api}Color`;
 
     if (this.props.isLoading) {
-      return loadingSpinner;
+      return <GraphSpinner />;
     }
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className="d-flex flex-column">
           <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
-            <div className={`p-3 ${classes.ResultHeader}`}>
-              <span>
-                {`${(this.props.data.total) ? this.props.data.total.toLocaleString() : ''} `}
-              </span>
-              <span>
+            <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
+              <div>
+                {`${(this.props.data.total) ? this.props.data.total.toLocaleString(this.props.language) : ''} `}
+              </div>
+              <div>
                 <FormattedHTMLMessage
                   id={numResults}
                   defaultMessage={numResults}
                 />
-              </span>
+              </div>
+              <button
+                onClick={this.props.handleExports}
+                type="button"
+                id="exportbutton"
+                title="Télécharger les résultats en CSV"
+                className={`ml-auto btn ${classes.btn_dark}`}
+              >
+                <i className="fas fa-download" />
+              </button>
+
             </div>
           </div>
           <div className="d-flex flex-wrap justify-content-between">
@@ -153,4 +153,5 @@ SearchResults.propTypes = {
   isLoading: PropTypes.bool,
   request: PropTypes.object,
   paginationHandler: PropTypes.func,
+  handleExports: PropTypes.func,
 };
