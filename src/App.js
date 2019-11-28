@@ -73,20 +73,6 @@ class App extends Component {
   }
 
   render() {
-    // const piwik = new ReactPiwik({
-    //   url: 'https://piwik.enseignementsup-recherche.pro',
-    //   siteId: 37,
-    //   trackErrors: true,
-    // });
-    // track pageviews except for search where tracking is specific
-    // if (this.state.piwik) {
-    //   const customHistory = createBrowserHistory();
-    //   if (customHistory.location.pathname.indexOf('/recherche/') === -1) {
-    //     ReactPiwik.push(['trackPageView']);
-    //   }
-    // }
-
-
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.state.language);
     return (
