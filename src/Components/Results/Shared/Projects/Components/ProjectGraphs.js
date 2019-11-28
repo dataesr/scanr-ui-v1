@@ -116,7 +116,7 @@ const ProjectGraphs = (props) => {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={labelFor[props.language][active]} data={data} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
     }
     return (
       <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />
