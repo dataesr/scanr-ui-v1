@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
-import { GridLoader } from 'react-spinners';
-
+import GraphSpinner from '../LoadingSpinners/GraphSpinner';
+import { API_PERSONS_GEORESULTS_END_POINT } from '../../../config/config';
 import classes from './GraphCard.scss';
 import transformRequest from '../../../Utils/transformRequest';
-import LeafletMap from '../../Shared/GraphComponents/Graphs/LeafletMap';
-import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
+import LeafletMap from '../GraphComponents/Graphs/LeafletMap';
+import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
-class EntityMap extends Component {
+export default class PersonsMap extends Component {
   state = {
     data: [],
     isLoading: true,
@@ -19,20 +19,27 @@ class EntityMap extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/structures/search/georesults';
     const request = { ...this.props.request };
-    Axios.post(url, transformRequest(request))
+    request.pageSize = 500;
+    Axios.post(API_PERSONS_GEORESULTS_END_POINT, transformRequest(request))
       .then((response) => {
         const mapdata = [];
         if (response.data && response.data.results) {
           response.data.results.forEach((element) => {
             try {
-              const dataElement = {
-                id: element.value.id,
-                position: [element.value.address[0].gps.lat, element.value.address[0].gps.lon],
-                infos: [element.value.label.fr || element.value.label.en || ''],
-              };
-              mapdata.push(dataElement);
+              const affiliations = element.value.affiliations;
+              affiliations.forEach((aff) => {
+                try {
+                  const dataElement = {
+                    id: element.value.id + Math.floor(Math.random() * Math.floor(10000000)),
+                    position: [aff.structure.address[0].gps.lat, aff.structure.address[0].gps.lon],
+                    infos: [element.value.fullName, aff.structure.label.fr || aff.structure.label.en || ''],
+                  };
+                  mapdata.push(dataElement);
+                } catch (error) {
+                  // eslint-disable-no-empty
+                }
+              });
             } catch (error) {
               // eslint-disable-no-empty
             }
@@ -61,22 +68,13 @@ class EntityMap extends Component {
               language={this.props.language}
             />
           )
-          : (
-            <div className="row justify-content-center p-4">
-              <GridLoader
-                color="#3778bb"
-                loading={this.state.isLoading}
-              />
-            </div>
-          )
+          : (<GraphSpinner />)
       }
     </div>
   );
 }
 
-export default EntityMap;
-
-EntityMap.propTypes = {
+PersonsMap.propTypes = {
   language: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,

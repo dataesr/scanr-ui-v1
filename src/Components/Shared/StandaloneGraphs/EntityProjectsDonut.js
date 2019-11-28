@@ -2,28 +2,28 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import { GridLoader } from 'react-spinners';
+import { API_STRUCTURES_SEARCH_END_POINT } from '../../../config/config';
+import classes from './GraphCard.scss';
+import transformRequest from '../../../Utils/transformRequest';
+import HighChartsDonut from '../GraphComponents/Graphs/HighChartsDonut';
+import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
-import classes from '../GraphCard.scss';
-import transformRequest from '../../../../../Utils/transformRequest';
-import HighChartsDonut from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
-import GraphTitles from '../../../../Shared/GraphComponents/Graphs/GraphTitles';
-
-export default class EntityMap extends Component {
+export default class EntityProjects extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
-    title: 'Répartition par nature',
-    subtitle: '10 premières uniquement',
+    title: 'Répartition par type de financement',
+    subtitle: '',
     aggregations: {
-      nature: {
-        field: 'nature',
+      projectTypes: {
+        field: 'projects.project.type',
         filters: {},
-        min_doc_count: 1,
+        min_doc_count: 0,
         order: {
           direction: 'DESC',
           type: 'COUNT',
         },
-        size: 10,
+        size: 1000,
       },
     },
   }
@@ -33,12 +33,17 @@ export default class EntityMap extends Component {
   }
 
   getData = () => {
-    const url = 'https://scanr-preprod.sword-group.com/api/v2/structures/search';
     const request = { ...this.props.request };
+    const missingText = (this.props.language === 'fr') ? 'Aucun financement' : 'No support';
     request.aggregations = this.state.aggregations;
-    Axios.post(url, transformRequest(request))
+    Axios.post(API_STRUCTURES_SEARCH_END_POINT, transformRequest(request))
       .then((response) => {
-        const newStateData = response.data.facets.find(item => item.id === 'nature') || { entries: [] };
+        const newStateData = response.data.facets.find(item => item.id === 'projectTypes') || { entries: [] };
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        const hasValue = newStateData.entries.map(facet => (facet.count)).reduce(reducer);
+        if (hasValue !== response.data.total) {
+          newStateData.entries.push({ count: (response.data.total - hasValue), value: missingText });
+        }
         this.setState({ data: newStateData, isLoading: false });
       })
       .catch((error) => {
@@ -57,7 +62,7 @@ export default class EntityMap extends Component {
             subtitle={this.state.subtitle}
           />
           <HighChartsDonut
-            filename="Nature des structures"
+            filename="Type de projets auxquels ont participé les structures"
             data={this.state.data}
             language={this.props.language}
           />
@@ -81,7 +86,7 @@ export default class EntityMap extends Component {
   }
 }
 
-EntityMap.propTypes = {
+EntityProjects.propTypes = {
   language: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };

@@ -29,7 +29,7 @@ const PublicationsFilters = (props) => {
       <div className="p-2">
         <SelectFilter
           language={props.language}
-          title="Type d'organisme"
+          title="Type dorganisme"
           facets={typeFacets.entries}
           filters={typeActiveFilters}
           facetID="productionType"
@@ -92,7 +92,7 @@ const PublicationsFilters = (props) => {
                   facetID="source.title"
                 />
                 <CheckBoxFilter
-                  title="Type de publication"
+                  title={props.language === 'fr' ? 'Type de publication' : 'Publication type'}
                   facets={publiTypeFacets.entries}
                   filters={publiTypeActiveFilters}
                   facetID="type"
