@@ -102,7 +102,15 @@ export default class DisplayComponent extends Component {
       this.BlockComponent = () => (
         <div>
           <TitleComponent />
-          <GraphComponent filename={this.props.title} data={this.props.data} exporting={this.props.exporting} language={this.props.language} style={this.props.style} dataLabels={this.props.dataLabels} tooltipText={this.props.tooltipText} />
+          <GraphComponent
+            filename={this.props.title}
+            data={this.props.data}
+            exporting={this.props.exporting}
+            language={this.props.language}
+            style={this.props.style}
+            dataLabels={this.props.dataLabels}
+            tooltipText={this.props.tooltipText}
+          />
           { (this.props.href) ? (<FooterComponent />) : null}
           {
           // <TextComponent />

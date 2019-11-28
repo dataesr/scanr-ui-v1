@@ -42,6 +42,16 @@ export default class HighChartsPackedbubble extends Component {
   }
 
   componentDidMount() {
+    this.loadData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.text !== this.props.text || prevProps.tooltipText !== this.props.tooltipText) {
+      this.loadData();
+    }
+  }
+
+  loadData = () => {
     const options = {
       credits: {
         enabled: false,
