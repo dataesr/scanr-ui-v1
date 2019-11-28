@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
 import Banner from '../../Shared/Banner/Banner';

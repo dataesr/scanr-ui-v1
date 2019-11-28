@@ -8,7 +8,7 @@ import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import ComponentVideo from '../../Shared/Video/ComponentVideo';
 import Footer from '../../Shared/Footer/Footer';
 import FormContact from '../../Shared/FormContact/FormContact';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 
 
