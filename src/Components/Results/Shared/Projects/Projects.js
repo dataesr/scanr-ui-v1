@@ -200,7 +200,7 @@ class Projects extends Component {
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
-                title="Projects"
+                title={(this.props.language === 'fr') ? 'Projets' : 'Projects'}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />

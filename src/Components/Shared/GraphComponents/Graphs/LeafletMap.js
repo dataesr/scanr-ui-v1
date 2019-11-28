@@ -123,7 +123,15 @@ class LeafletMap extends Component<{}, State> {
 
     return (
       <div className="w-100">
-        <Map zoomControl={false} center={position} zoom={this.state.zoom} style={mapStyle} minZoom={2} maxZoom={19}>
+        <Map
+          zoomControl={false}
+          center={position}
+          zoom={this.state.zoom}
+          style={mapStyle}
+          minZoom={2}
+          maxZoom={19}
+          maxBounds={[[85, -180], [-85, 180]]}
+        >
           <TileLayer
             attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
             url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"

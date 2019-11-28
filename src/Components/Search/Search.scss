@@ -6,19 +6,18 @@
 
 .filters {
   flex: 0 1 calc(33% - 5px);
+  max-width: calc(33% - 5px);
   align-self: stretch;
 }
-@media screen and (max-width: 991px) {
-  .filters {
-    flex: 0 1 100%;
-  }
-}
-
 .results {
   flex: 0 1 calc(67% - 5px);
   align-self: stretch;
 }
 @media screen and (max-width: 991px) {
+  .filters {
+    flex: 0 1 100%;
+    max-width: 100%;
+  }
   .results {
     flex: 0 1 100%;
   }
