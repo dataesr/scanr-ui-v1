@@ -368,7 +368,6 @@ class Ecosystem extends Component {
                   objectType="structures"
                   language={this.props.language}
                   id={this.props.id}
-                  total={false}
                   title={messages[this.props.language]['Entity.ecosystem.title']}
                   viewModeClickHandler={this.viewModeClickHandler}
                   viewMode={this.state.viewMode}
@@ -399,7 +398,6 @@ class Ecosystem extends Component {
                 objectType="structures"
                 language={this.props.language}
                 id={this.props.id}
-                total
                 title={messages[this.props.language]['Entity.ecosystem.title']}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
