@@ -14,6 +14,7 @@ export default class PublicationsPacketBubble extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
+    exporting: true,
     aggregations: {
       domains: {
         field: 'domains.code',
@@ -88,7 +89,6 @@ export default class PublicationsPacketBubble extends Component {
       data.push({ name: discipline, data: subdata, total: domainsCount[discipline].TOTALCount });
     });
     return data.sort((a, b) => b.total - a.total).slice(0, 9);
-    // const tooltipText = 'thèses soutenues en 2018';
   }
 
   render = () => (
@@ -102,9 +102,10 @@ export default class PublicationsPacketBubble extends Component {
           ? (
             <HighChartsPackedbubble
               filename="Mot-clé des publications"
+              exporting={this.state.exporting}
               data={this.transformData()}
               language={this.props.language}
-              tooltipText={this.props.language === 'fr' ? 'thèses' : 'thesis'}
+              tooltipText={this.props.language === 'fr' ? 'thèses soutenues en 2018' : 'thesis defended in 2018'}
             />
           )
           : (<GraphSpinner />)

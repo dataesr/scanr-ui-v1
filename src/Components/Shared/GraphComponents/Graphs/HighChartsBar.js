@@ -72,12 +72,16 @@ export default class HighChartsBar extends Component {
       labels,
       values,
     };
+    const style = { 'font-family': 'Inter UI' };
+    if (this.props.height) {
+      style.height = this.props.height;
+    }
 
     const unit = 'unité';
     const options = {
       chart: {
         type: 'bar',
-        style: { 'font-family': 'Inter UI' },
+        style,
       },
       credits: {
         enabled: false,
@@ -94,6 +98,7 @@ export default class HighChartsBar extends Component {
         labels: {
           style: { color: '#000000' },
           align: 'right',
+          'font-size': '1.2rem',
           x: -10,
         },
       },
@@ -184,31 +189,26 @@ export default class HighChartsBar extends Component {
             </button>
           </div>
           <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer le code</span>
+            <span className={`pr-2 pl-3 ${classes.ShareTexts}`}>Intégrer</span>
             <button type="button" className={classes.Button}>
-              <i className="fas fa-code" />
+              <i className="fas fa-code" title="Intégrer le code" />
             </button>
           </div>
-        </div>
-        <div className="d-flex align-items-center">
-          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
+          <div className={`pl-3 pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
-              <i className="fas fa-file-pdf" />
+              <i className="fas fa-file-pdf" title="export PDF" />
             </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.pdf</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-              <i className="fas fa-image" />
+              <i className="fas fa-image" title="export PNG" />
             </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
-              <i className="fas fa-table" />
+              <i className="fas fa-table" title="export CSV" />
             </button>
-            <span className={classes.ShareTexts}>.csv</span>
           </div>
         </div>
       </div>
@@ -245,4 +245,5 @@ HighChartsBar.defaultProps = {
 HighChartsBar.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
+  height: PropTypes.string,
 };
