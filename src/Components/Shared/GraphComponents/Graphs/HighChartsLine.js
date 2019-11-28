@@ -67,6 +67,7 @@ export default class HighChartsLine extends Component {
           style: { color: '#000000' },
           align: 'right',
           x: -10,
+          rotation: -90,
         },
       },
       yAxis: {
