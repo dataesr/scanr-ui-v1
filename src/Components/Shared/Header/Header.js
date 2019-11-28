@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import PropTypes from 'prop-types';
-
+import { GlobalContext } from '../../../GlobalContext';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -12,9 +11,11 @@ import classes from './Header.scss';
 import LogoScanrWhiteSVG from '../svg/logo-scanr-blue';
 
 
-const Header = (props) => {
-  const frActive = (props.language === 'fr') ? classes.ActiveLink : '';
-  const enActive = (props.language === 'en') ? classes.ActiveLink : '';
+const Header = () => {
+  const context = useContext(GlobalContext);
+
+  const frActive = (context.language === 'fr') ? classes.ActiveLink : '';
+  const enActive = (context.language === 'en') ? classes.ActiveLink : '';
 
   const messages = {
     fr: messagesFr,
@@ -22,7 +23,7 @@ const Header = (props) => {
   };
 
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
+    <IntlProvider locale={context.language} messages={messages[context.language]}>
       <section className={classes.Header}>
         <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
           <a className="navbar-brand" href="/">
@@ -101,8 +102,8 @@ const Header = (props) => {
               <li className="nav-item">
                 <a
                   className={`${classes.Link} ${frActive}`}
-                  onClick={() => props.switchLanguage('fr')}
-                  onKeyPress={() => props.switchLanguage('fr')}
+                  onClick={() => context.switchLanguage('fr')}
+                  onKeyPress={() => context.switchLanguage('fr')}
                   role="button"
                   tabIndex={0}
                 >
@@ -111,8 +112,8 @@ const Header = (props) => {
                 <span className={classes.PipeLink}>|</span>
                 <a
                   className={`${classes.Link} ${enActive}`}
-                  onClick={() => props.switchLanguage('en')}
-                  onKeyPress={() => props.switchLanguage('fr')}
+                  onClick={() => context.switchLanguage('en')}
+                  onKeyPress={() => context.switchLanguage('en')}
                   role="button"
                   tabIndex={0}
                 >
@@ -126,37 +127,4 @@ const Header = (props) => {
     </IntlProvider>
   );
 };
-
-/* class ScrollLogo extends React.Component {
-  handleScroll = (e) => {
-    const element = e.target;
-    if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-      // do something at end of scroll
-    }
-  }
-
-  render() {
-    return (
-      <div className="content-container" onScroll={() => this.handleScroll()}>
-        <img
-          className={`img-thumbnail ${classes.img}`}
-          src="./img/logo-ministere.svg"
-          alt="logo ministère"
-        />
-      </div>
-    );
-  }
-}
-*/
-
-
 export default Header;
-
-Header.propTypes = {
-  language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
-};
-
-// ScrollLogo.propTypes = {
-//   scrollStepInPx: PropTypes.number,
-// };

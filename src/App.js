@@ -7,7 +7,7 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 
 import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
-
+import { GlobalContext } from './GlobalContext';
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
@@ -33,14 +33,14 @@ const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-proje
 const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.setDefaultLanguage = this.setDefaultLanguage.bind(this);
-    this.state = { language: this.setDefaultLanguage(), piwik: null, customHistory: null };
+  static contextType = GlobalContext;
+
+  state = {
+    piwik: null,
+    customHistory: null,
   }
 
   componentDidMount() {
-    this.setDefaultLanguage();
     const piwik = new ReactPiwik({
       url: 'https://piwik.enseignementsup-recherche.pro',
       siteId: 37,
@@ -52,31 +52,11 @@ class App extends Component {
     this.setState({ piwik, customHistory });
   }
 
-  setDefaultLanguage() {
-    const language = localStorage.getItem('scanr_lang') || navigator.language.split(/[-_]/)[0];
-    this.setState({ language });
-  }
-
-  switchLanguage = (language) => {
-    switch (language) {
-      case 'fr':
-        localStorage.setItem('scanr_lang', 'fr');
-        this.setState({ language });
-        break;
-      case 'en':
-        localStorage.setItem('scanr_lang', 'en');
-        this.setState({ language });
-        break;
-      default:
-        this.setDefaultLanguage();
-    }
-  }
-
   render() {
     addLocaleData([...localeEn, ...localeFr]);
-    document.documentElement.setAttribute('lang', this.state.language);
+    document.documentElement.setAttribute('lang', this.context.language);
     return (
-      <IntlProvider>
+      <IntlProvider locale={this.context.language}>
         <Router history={(this.state.piwik) ? this.state.piwik.connectToHistory(this.state.customHistory) : null}>
           <Suspense fallback={<LoadingSpinner />}>
             <Switch>
@@ -86,8 +66,6 @@ class App extends Component {
                 component={props => (
                   <HomePage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
                   />
                 )}
               />
@@ -96,8 +74,7 @@ class App extends Component {
                 render={props => (
                   <SearchPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -106,8 +83,7 @@ class App extends Component {
                 render={props => (
                   <EntityPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -116,8 +92,7 @@ class App extends Component {
                 render={props => (
                   <ProductionPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -126,8 +101,7 @@ class App extends Component {
                 render={props => (
                   <ProjectPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -136,8 +110,7 @@ class App extends Component {
                 render={props => (
                   <PersonPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -147,8 +120,7 @@ class App extends Component {
                 component={props => (
                   <FocusList
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -159,8 +131,7 @@ class App extends Component {
                 component={props => (
                   <Focus
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -171,8 +142,7 @@ class App extends Component {
                 component={props => (
                   <CurieHome
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -184,8 +154,7 @@ class App extends Component {
                 component={props => (
                   <AccessibilityPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -195,8 +164,7 @@ class App extends Component {
                 component={props => (
                   <LegalNoticePage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -207,8 +175,7 @@ class App extends Component {
                 component={props => (
                   <TeamAndProjectPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -218,8 +185,7 @@ class App extends Component {
                 component={props => (
                   <Opendata
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -229,8 +195,7 @@ class App extends Component {
                 component={props => (
                   <Ressources
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -240,8 +205,7 @@ class App extends Component {
                 component={props => (
                   <MediasPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -251,8 +215,7 @@ class App extends Component {
                 component={props => (
                   <TutorialsPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -262,8 +225,7 @@ class App extends Component {
                 component={props => (
                   <FAQPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -273,8 +235,7 @@ class App extends Component {
                 component={props => (
                   <ContactPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -284,8 +245,7 @@ class App extends Component {
                 component={props => (
                   <GlossaryPage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />
@@ -295,8 +255,7 @@ class App extends Component {
                 component={props => (
                   <ContributePage
                     {...props}
-                    language={this.state.language}
-                    switchLanguage={this.switchLanguage}
+                    language={this.context.language}
                   />
                 )}
               />

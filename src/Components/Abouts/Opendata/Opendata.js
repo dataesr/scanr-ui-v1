@@ -3,7 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header-homePage';
+import Header from '../../Shared/Header/Header';
 import CardTwoColumns from './CardTwoColumns';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
