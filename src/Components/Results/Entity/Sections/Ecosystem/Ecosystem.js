@@ -105,12 +105,12 @@ class Ecosystem extends Component {
       }
 
       const objFr = {
-        name: dataFr.length,
+        name: graphType,
         data: dataFr,
         color,
       };
       const objFo = {
-        name: dataFo.length,
+        name: graphType,
         data: dataFo,
         color,
       };
@@ -158,9 +158,10 @@ class Ecosystem extends Component {
     const kindFilter = [];
     GRAPH_ITEMS_LIST.forEach((graphType) => {
       const listObjects = this.props.data.filter(item => item.structure.kind.find(el => el === graphType));
-      const obj = {};
-      obj.value = graphType;
-      obj.count = listObjects.length;
+      const obj = {
+        value: graphType,
+        count: listObjects.length,
+      };
       kindFilter.push(obj);
     });
     this.setState({ kindFilter });
@@ -176,12 +177,14 @@ class Ecosystem extends Component {
         nbEn += 1;
       }
     });
-    const objFr = {};
-    objFr.value = 'fr';
-    objFr.count = nbFr;
-    const objEn = {};
-    objEn.value = 'en';
-    objEn.count = nbEn;
+    const objFr = {
+      value: 'fr',
+      count: nbFr,
+    };
+    const objEn = {
+      value: 'en',
+      count: nbEn,
+    };
     const listToAdd = [objFr, objEn];
     this.setState({ frIntFilter: listToAdd });
   }
@@ -342,14 +345,22 @@ class Ecosystem extends Component {
       {
         (data.fr.length > 0) ? (
           <div className="col-md">
-            <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.frenchProduction']} data={data.fr} />
+            <PackedBubbleChart
+              text={messages[this.props.language]['Entity.ecosystem.frenchEntities']}
+              data={data.fr}
+              tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
+            />
           </div>
         ) : null
       }
       {
         (data.fo.length > 0) ? (
           <div className="col-md">
-            <PackedBubbleChart text={messages[this.props.language]['Entity.ecosystem.foreignProduction']} data={data.fo} />
+            <PackedBubbleChart
+              text={messages[this.props.language]['Entity.ecosystem.foreignEntities']}
+              data={data.fo}
+              tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
+            />
           </div>
         ) : null
       }
