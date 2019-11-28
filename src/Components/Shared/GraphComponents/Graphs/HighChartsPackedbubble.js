@@ -157,7 +157,6 @@ export default class HighChartsPackedbubble extends Component {
           this.state.options !== null
             ? (
               <div>
-                <hr className={classes.HorizontalBar} />
                 <div className="pl-4">
                   <HighchartsReact
                     highcharts={Highcharts}
