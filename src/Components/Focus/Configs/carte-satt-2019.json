@@ -4,15 +4,15 @@
     "en": "Companies for Technology Transfert (SATT)"
   },
   "text": {
-    "fr": "#### Des structures régionales dédiées \nAu 30 juin 2018, 914 M€ du programme des investissements d'avenir ont été consacré au soutien des SATT et des CVT. [En savoir plus](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf) sur les SATT",
-    "en": "#### Regional structures for Technology Transfert \nAu 30 juin 2018, 914 M€ du programme des investissements d'avenir ont été consacré au soutien des SATT et des CVT. [Read more](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf) on SATT"
+    "fr": "Au 30 juin 2018, 914 M€ du programme des investissements d'avenir ont été consacré au soutien des SATT et des CVT. [En savoir plus](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf)",
+    "en": "As at 30 June 2018, €914 million of the future investment programme had been allocated to support SATTs and CVTs. [Read more](https://www.performance-publique.budget.gouv.fr/sites/performance_publique/files/files/documents/jaunes-2019/Jaune2019_investissements_avenir.pdf)"
   },
   "tags": {
     "fr": ["satt", "transfert", "technologies"],
     "en": ["satt", "transfert", "technologies"]
   },
   "api": "structures",
-  "href": "/recherche/structures",
+  "href": "/recherche/structures?filters=%7B%22badges.label.fr%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22SATT%22%5D%7D%7D&query=&sort",
   "hrefX": "/recherche/structures",
   "components": [
     {
@@ -22,7 +22,7 @@
       },
       "subtitle": {
         "fr": "Les Sociétés d'Accélération du Transfert de Technologies",
-        "en": "Companies for Technology Transfert"
+        "en": "French SATT"
       },
       "api" : "structures",
       "componentType": "EntityMap",
