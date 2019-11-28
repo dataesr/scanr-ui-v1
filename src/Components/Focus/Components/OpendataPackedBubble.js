@@ -54,7 +54,7 @@ export default class OpendataPackedBubble extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsPackedbubble
-              filename="Mot-clé des publications"
+              filename={this.props.title}
               data={this.state.data}
               exporting={this.state.exporting}
               language={this.props.language}

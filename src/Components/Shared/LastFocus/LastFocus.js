@@ -78,14 +78,14 @@ LastFocus.defaultProps = {
       schema: 'entity',
     },
     {
-      tags: ['#Thèses', '#DomainesRecherche', '#EcolesDoctorales'],
+      tags: ['#Thèses', '#PhD', '#EcolesDoctorales'],
       title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
       type: 'bubble',
       url: '/focus/themes-theses-2018',
       schema: 'publication',
     },
     {
-      tags: ['#InstitutUniversitaireDeFrance', '#Lauréat.e.s', '#PrixScientifique'],
+      tags: ['#InstitutUniversitaireDeFrance', '#IUF'],
       title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
       type: 'treemap',
       url: '/focus/iuf',

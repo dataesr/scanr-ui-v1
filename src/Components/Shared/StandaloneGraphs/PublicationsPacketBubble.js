@@ -101,7 +101,7 @@ export default class PublicationsPacketBubble extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsPackedbubble
-              filename="Mot-clé des publications"
+              filename={this.props.title}
               exporting={this.state.exporting}
               data={this.transformData()}
               language={this.props.language}
