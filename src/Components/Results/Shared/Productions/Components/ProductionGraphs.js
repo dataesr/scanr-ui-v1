@@ -33,7 +33,7 @@ const ProductionGraphs = (props) => {
     en: {
       isOa: 'Open Access',
       years: 'Publications by year',
-      keywords: 'Publiocations wordcloud',
+      keywords: 'Publications wordcloud',
       journal: 'Top 10 journals',
       types: 'Publication types',
     },
