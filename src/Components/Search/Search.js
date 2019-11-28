@@ -197,7 +197,7 @@ class SearchPage extends Component {
     const newRequest = { ...this.state.request };
     const transformed = this.transformRequest(newRequest);
     delete transformed.lang;
-    const url = `${API_BASE_URL}/structures/search/export?request=${btoa(transformed)}`;
+    const url = `${API_BASE_URL}/structures/search/export?Request=${btoa(transformed)}`;
     this.setState({ isLoading: true });
     Axios({
       url,
