@@ -7,7 +7,16 @@ import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import ReactPiwik from 'react-piwik';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
 import classes from '../GraphComponents.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 HCAccessibility(Highcharts);
 HCExporting(Highcharts);
@@ -26,7 +35,6 @@ export default class HighChartsDonut extends Component {
   constructor(props) {
     super(props);
     this.chart = React.createRef();
-    this.data = this.props.data;
     if (this.props.colors) {
       this.colors = this.props.colors;
     } else {
@@ -41,7 +49,17 @@ export default class HighChartsDonut extends Component {
   }
 
   componentDidMount() {
-    const data = this.data.entries.map(item => ({ name: item.value, y: item.count, color: item.color }));
+    this.loadData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.data !== this.props.data) {
+      this.loadData();
+    }
+  }
+
+  loadData = () => {
+    const data = this.props.data.entries.map(item => ({ name: item.value, y: item.count, color: item.color }));
     const options = {
       chart: {
         plotBackgroundColor: null,
@@ -151,31 +169,32 @@ export default class HighChartsDonut extends Component {
       <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
         <div className="mr-auto d-flex align-items-center">
           <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
+            <span className={`pr-2 ${classes.ShareTexts}`}>
+              {messages[this.props.language].share}
+            </span>
             <button type="button" className={classes.Button}>
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
         </div>
         <div className="d-flex align-items-center">
-          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
+          <div className={`pr-2 ${classes.ShareTexts}`}>
+            {messages[this.props.language].download}
+          </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
-              <i className="fas fa-file-pdf" />
+              <i className="fas fa-file-pdf" title="export PDF" />
             </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.pdf</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-              <i className="fas fa-image" />
+              <i className="fas fa-image" title="export PNG" />
             </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
           </div>
           <div className="pr-1 d-flex align-items-center">
             <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
-              <i className="fas fa-table" />
+              <i className="fas fa-table" title="export CSV" />
             </button>
-            <span className={classes.ShareTexts}>.csv</span>
           </div>
         </div>
       </div>
@@ -205,6 +224,7 @@ export default class HighChartsDonut extends Component {
 
 
 HighChartsDonut.propTypes = {
+  language: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
   colors: PropTypes.object.isRequired,
