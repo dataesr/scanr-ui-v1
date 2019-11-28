@@ -50,21 +50,25 @@ class SearchPage extends Component {
       },
       preview: {
         structures: {
+          isLoading: true,
           count: 0,
           data: [],
           facets: [],
         },
         projects: {
+          isLoading: true,
           count: 0,
           data: [],
           facets: [],
         },
         persons: {
+          isLoading: true,
           count: 0,
           data: [],
           facets: [],
         },
         publications: {
+          isLoading: true,
           count: 0,
           data: [],
           facets: [],
@@ -145,6 +149,9 @@ class SearchPage extends Component {
     }
     if (request.sort) {
       request.sort = JSON.stringify(request.sort);
+    }
+    if (!request.view) {
+      request.view = this.state.view;
     }
     const url = `${this.props.location.pathname}?${queryString.stringify(request)}`;
     return url;
@@ -365,6 +372,7 @@ class SearchPage extends Component {
         .then((response) => {
           /* eslint-disable-next-line */
           const newCounts = { ...this.state.preview };
+          newCounts[api].isLoading = false;
           newCounts[api].count = response.data.total;
           newCounts[api].facets = response.data.facets;
           newCounts[api].data = response.data.results.slice(0, 6);
@@ -425,7 +433,6 @@ class SearchPage extends Component {
         language={this.props.language}
         request={this.state.request}
         api={this.state.api}
-        isLoading={this.state.isLoading}
         preview={this.state.preview}
         apiChangeHandler={this.apiChangeHandler}
       />

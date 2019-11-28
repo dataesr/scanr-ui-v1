@@ -17,10 +17,6 @@ import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPac
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import classes from './Focus.scss';
-
-// const EntityMap = lazy(() => import('./Components/EntityMap'));
-// const authorization = 'YWRtaW46ZGF0YUVTUjIwMTk=';
-
 /**
  * Focus
  * Url : /focus/$id <br/>

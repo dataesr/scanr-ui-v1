@@ -26,6 +26,42 @@ const PublicationCard = (props) => {
     day: 'numeric',
   };
 
+  // Auteurs
+  const maxAuthors = 1;
+  const getAuthors = (data) => {
+    let authors = [];
+    if (data.productionType === 'publication') {
+      authors = data.authors.map((author) => {
+        if (author.person) {
+          return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
+        }
+        return <span key={JSON.stringify(author)}>{author.fullName}</span>;
+      });
+    } else if (data.productionType === 'thesis') {
+      authors = data.authors
+        .filter(author => author.role === 'author')
+        .map((author) => {
+          if (author.person) {
+            return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
+          }
+          return <span key={JSON.stringify(author)}>{author.fullName}</span>;
+        });
+    } else {
+      return null;
+    }
+    return authors;
+  };
+
+  const auth = getAuthors(props.data);
+  const authors = (auth) ? auth.slice(0, maxAuthors) : [];
+  const diff = props.data.authors.length - maxAuthors;
+  let others = '';
+  if (diff === 1) {
+    others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'auteur' : 'author'}`;
+  } else if (diff > 1) {
+    others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? 'auteurs' : 'authors'}`;
+  }
+
   const productionType = (props.data.productionType)
     ? (
       <li className="d-flex">
@@ -39,14 +75,22 @@ const PublicationCard = (props) => {
     )
     : null;
 
-  const coAuthors = (props.data.authors && props.data.authors.length > 0)
+  const coAuthors = (authors && authors.length > 0)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-users" />
         </div>
         <p className="m-0">
-          {`${props.data.authors.length} ${messages[props.language]['resultCard.production.coAuthors']}`}
+          {
+            authors.reduce((prev, curr) => [prev, ', ', curr])
+          }
+          {' '}
+          {
+            (props.data.productionType !== 'thesis')
+              ? others
+              : null
+          }
         </p>
       </li>
     )
