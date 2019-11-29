@@ -23,7 +23,7 @@ const SectionTitle = props => (
         {props.title}
       </span>
       {
-        (props.total && props.viewModeClickHandler && props.viewMode)
+        (props.viewModeClickHandler && props.viewMode)
           ? (
             <div className="d-flex flex-wrap align-items-center">
               <div
