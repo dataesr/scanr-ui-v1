@@ -19,7 +19,7 @@
     {
       "componentType": "OpendataEntityMap",
       "opendata": "iuf-2019.json",
-      "tooltip": "prenom;nom__NEWLINE__type_nomination__NEWLINE__structure_recherche;commune",
+      "tooltipFr": "prenom;nom__NEWLINE__type_nomination__NEWLINE__structure_recherche;commune",
       "title": {
         "fr": "Carte des nominations à l'IUF en 2019",
         "en": "Map of the persons distinguished by the Institut Universitaire de France in 2019"
@@ -35,6 +35,8 @@
         "en": "Main area of research for the persons distinguished by the Institut Universitaire de France in 2019"
       },
       "subtitle": {"fr": "", "en": ""},
+      "tooltipFr": "lauréat·e·s",
+      "tooltipEn": "laureates",
       "opendata" : "iuf-2019.json"
     },
     {
