@@ -29,7 +29,7 @@ const videoPoster = 'img/video-poster/Tai-Ji-gravure-paysage-Chine.gif';
 /**
  * Contribute
  * Url : /contact
- * Description : Page de contribution à ScanR avec avec video et formulaire de contact
+ * Description : Page de contribution à scanR avec avec video et formulaire de contact
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .

@@ -20,11 +20,11 @@ export default class GenderTreemap extends Component {
     const opendata = require('../../Focus/Data/'.concat(`${this.props.opendata}`));
     const data = [{
       id: 'F',
-      name: 'Femmes',
+      name: `${(this.props.language === 'fr') ? 'Femmes' : 'Women'}`,
       color: '#f75f00',
     }, {
       id: 'H',
-      name: 'Hommes',
+      name: `${(this.props.language === 'fr') ? 'Hommes' : 'Men'}`,
       color: '#43ab92',
     }];
     const typeNomination = { H: {}, F: {} };
