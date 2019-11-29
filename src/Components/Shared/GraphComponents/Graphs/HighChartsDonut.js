@@ -5,18 +5,9 @@ import HighchartsReact from 'highcharts-react-official';
 import HCAccessibility from 'highcharts/modules/accessibility';
 import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
-import ReactPiwik from 'react-piwik';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import ShareComponent from './SubComponents/ShareComponent';
 
 import classes from '../GraphComponents.scss';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 HCAccessibility(Highcharts);
 HCExporting(Highcharts);
@@ -43,9 +34,6 @@ export default class HighChartsDonut extends Component {
     this.state = {
       options: null,
     };
-    this.exportChartPdf = this.exportChartPdf.bind(this);
-    this.exportChartPng = this.exportChartPng.bind(this);
-    this.exportChartCsv = this.exportChartCsv.bind(this);
   }
 
   componentDidMount() {
@@ -145,60 +133,7 @@ export default class HighChartsDonut extends Component {
     this.setState({ options });
   }
 
-  exportChartPdf() {
-    ReactPiwik.push(['trackEvent', 'Download', 'PDF_'.concat(this.props.filename)]);
-    this.chart.current.chart.exportChart({
-      type: 'application/pdf',
-    });
-  }
-
-  exportChartPng() {
-    ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
-    this.chart.current.chart.exportChart({
-      type: 'image/png',
-    });
-  }
-
-  exportChartCsv() {
-    ReactPiwik.push(['trackEvent', 'Download', 'CSV_'.concat(this.props.filename)]);
-    this.chart.current.chart.downloadCSV();
-  }
-
   render() {
-    const ShareComponent = () => (
-      <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
-        <div className="mr-auto d-flex align-items-center">
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 ${classes.ShareTexts}`}>
-              {messages[this.props.language].share}
-            </span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-share-alt-square" />
-            </button>
-          </div>
-        </div>
-        <div className="d-flex align-items-center">
-          <div className={`pr-2 ${classes.ShareTexts}`}>
-            {messages[this.props.language].download}
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
-              <i className="fas fa-file-pdf" title="export PDF" />
-            </button>
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-              <i className="fas fa-image" title="export PNG" />
-            </button>
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
-              <i className="fas fa-table" title="export CSV" />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
     return (
       <div>
         {
@@ -212,7 +147,11 @@ export default class HighChartsDonut extends Component {
                 ref={this.chart}
               />
               <hr className={classes.HorizontalBar} />
-              <ShareComponent />
+              <ShareComponent
+                language={this.props.language}
+                filename={this.props.filename}
+                chart={this.chart}
+              />
             </div>
           )
           : <div>Loading...</div>
