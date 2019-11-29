@@ -13,7 +13,7 @@ import classes from './RedirectingLogoCard.scss';
  * Tests unitaires : .
 */
 const RedirectingLogoCard = (props) => {
-  const src = (props.src) ? props.src : `../img/logo-${props.labelKey}.svg`;
+  const src = (props.src) ? props.src : `../img/${props.imageName}`;
   const url = `./ressources/${props.labelKey}`;
   let cssClass = '';
   if (props.cssClass) {
@@ -37,6 +37,7 @@ export default RedirectingLogoCard;
 
 RedirectingLogoCard.propTypes = {
   labelKey: PropTypes.string,
+  imageName: PropTypes.string,
   src: PropTypes.string,
   cssClass: PropTypes.string,
 };
