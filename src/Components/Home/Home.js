@@ -47,7 +47,7 @@ class HomePage extends Component {
   static contextType = GlobalContext;
 
   render() {
-    const pageTitle = "ScanR | Moteur de la Recherche et de l'Innovation";
+    const pageTitle = "scanR | Moteur de la Recherche et de l'Innovation";
     const pageDescription = 'TODO';
     const pageImage = '../../svg/logo-scanr-blue.svg';
     return (
