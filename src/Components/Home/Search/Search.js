@@ -146,7 +146,7 @@ Search.defaultProps = {
     {
       labelFr: 'Changement climatique',
       labelEn: 'Climate change',
-      query: '%22Changement climatique%22 | %22Climate change%22',
+      query: '(changement+climatique) | (climate+change)',
       url: '',
     },
     {
