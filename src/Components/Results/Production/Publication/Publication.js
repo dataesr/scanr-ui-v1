@@ -351,10 +351,11 @@ class Publication extends Component {
                         <CounterListCard
                           language={this.props.language}
                           data={sortedAuthors}
+                          objectType={this.props.data.productionType}
                           limit={nbAuthorsToShow}
                           title=""
                           color="Default"
-                          labelKey="authors"
+                          labelKey="authors-publication"
                         />
                       </div>
                     ) : null
