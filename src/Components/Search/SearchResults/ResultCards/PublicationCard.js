@@ -24,9 +24,19 @@ const PublicationCard = (props) => {
   };
 
   // Auteurs
-  const maxAuthors = 1;
   const getAuthors = (data) => {
+    const maxAuthors = 1;
     let authors = [];
+    if (!data.authors) {
+      return authors;
+    }
+    const diff = data.authors.length - maxAuthors;
+    let others = '';
+    if (diff === 1) {
+      others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'auteur' : 'author'}`;
+    } else if (diff > 1) {
+      others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? 'auteurs' : 'authors'}`;
+    }
     if (data.productionType === 'publication') {
       authors = data.authors.map((author) => {
         if (author.person) {
@@ -46,18 +56,10 @@ const PublicationCard = (props) => {
     } else {
       return null;
     }
-    return authors;
+    const printedAuthors = authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr]);
+    const printedOthers = (props.data.productionType !== 'thesis') ? others : null;
+    return { authors: printedAuthors, others: printedOthers };
   };
-
-  const auth = getAuthors(props.data);
-  const authors = (auth) ? auth.slice(0, maxAuthors) : [];
-  const diff = props.data.authors.length - maxAuthors;
-  let others = '';
-  if (diff === 1) {
-    others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'auteur' : 'author'}`;
-  } else if (diff > 1) {
-    others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? 'auteurs' : 'authors'}`;
-  }
 
   const productionType = (props.data.productionType)
     ? (
@@ -72,22 +74,17 @@ const PublicationCard = (props) => {
     )
     : null;
 
-  const coAuthors = (authors && authors.length > 0)
+  const auth = getAuthors(props.data);
+  const coAuthors = (auth.authors && auth.authors.length > 0)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-users" />
         </div>
         <p className="m-0">
-          {
-            authors.reduce((prev, curr) => [prev, ', ', curr])
-          }
+          {auth.authors}
           {' '}
-          {
-            (props.data.productionType !== 'thesis')
-              ? others
-              : null
-          }
+          {auth.others}
         </p>
       </li>
     )
@@ -169,7 +166,7 @@ const PublicationCard = (props) => {
           </h3>
           <ul className="m-0 p-0">
             {productionType}
-            {coAuthors}
+            {(props.small === 'noAuthors') ? null : coAuthors}
             {publicationDate}
             {journal}
             <hr className={`mb-2 mt-2 ${classes.HighlightProductionSep}`} aria-hidden="true" />

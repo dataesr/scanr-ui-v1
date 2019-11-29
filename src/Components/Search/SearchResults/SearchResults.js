@@ -1,5 +1,4 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
@@ -54,6 +53,46 @@ class SearchResults extends Component {
     }
   };
 
+  renderSortOptions = () => {
+    switch (this.props.api) {
+      case 'structures': return (
+        <React.Fragment>
+          <option key="alphabetical" value="label.fr">
+            {(this.props.language === 'fr') ? 'Nom' : 'Name'}
+          </option>
+        </React.Fragment>
+      );
+      case 'persons': return (
+        <React.Fragment>
+          <option key="alphabetical" value="lastName">
+            {(this.props.language === 'fr') ? 'Nom' : 'Name'}
+          </option>
+        </React.Fragment>
+      );
+      case 'projects': return (
+        <React.Fragment>
+          <option key="score" value="score">
+            {(this.props.language === 'fr') ? 'Pertinance' : 'Score'}
+          </option>
+          <option key="date" value="startDate">
+            {(this.props.language === 'fr') ? 'Date de début' : 'Start Date'}
+          </option>
+          <option key="budget" value="budgetTotal">
+            {(this.props.language === 'fr') ? 'Budget' : 'Budget'}
+          </option>
+        </React.Fragment>
+      );
+      case 'publications': return (
+        <React.Fragment>
+          <option key="alphabetical" value="publicationDate">
+            {(this.props.language === 'fr') ? 'Plus récents' : 'Most recent'}
+          </option>
+        </React.Fragment>
+      );
+      default: return null;
+    }
+  };
+
   renderGraphResults = () => {
     const { language, request } = this.props;
     const properties = { request, language };
@@ -73,7 +112,7 @@ class SearchResults extends Component {
           <Pagination
             language={this.props.language}
             data={this.props.data}
-            paginationHandler={this.props.paginationHandler}
+            handlePagination={this.props.handlePagination}
             currentPage={parseInt(this.props.request.page, 0)}
             currentPageSize={parseInt(this.props.request.pageSize, 0)}
             totalDocuments={parseInt(this.props.data.total, 0)}
@@ -104,41 +143,48 @@ class SearchResults extends Component {
       return <GraphSpinner />;
     }
     return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <section className="d-flex flex-column">
-          <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
-            <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
-              <div>
-                {`${(this.props.data.total) ? this.props.data.total.toLocaleString(this.props.language) : ''} `}
-              </div>
-              <div>
-                <FormattedHTMLMessage
-                  id={numResults}
-                  defaultMessage={numResults}
-                />
-              </div>
+      <section className="d-flex flex-column">
+        <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
+          <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
+            <div className="mr-auto">
+              {`${(this.props.data.total) ? this.props.data.total.toLocaleString(this.props.language) : ''} ${messages[this.props.language][numResults]}`}
+            </div>
+            <div className="px-1">
+              <select
+                name="type"
+                id="type-select"
+                className={`form-control ${classes.Select}`}
+                onChange={e => this.props.handleSortResults(e)}
+                defaultValue={(this.props.activeSortValue) ? Object.keys(this.props.activeSortValue)[0] : 'score'}
+              >
+                <option key="score" value="score">
+                  {(this.props.language === 'fr') ? 'Pertinance' : 'Score'}
+                </option>
+                {this.renderSortOptions()}
+              </select>
+            </div>
+            <div>
               <button
                 onClick={this.props.handleExports}
                 type="button"
                 id="exportbutton"
                 title="Télécharger les résultats en CSV"
-                className={`ml-auto btn ${classes.btn_dark}`}
+                className={`btn ${classes.btn_dark}`}
               >
                 <i className="fas fa-download" />
               </button>
-
             </div>
           </div>
-          <div className="d-flex flex-wrap justify-content-between">
-            <Suspense fallback={null}>
-              {this.renderResults()}
-            </Suspense>
-          </div>
+        </div>
+        <div className="d-flex flex-wrap justify-content-between">
           <Suspense fallback={null}>
-            {this.renderPagination()}
+            {this.renderResults()}
           </Suspense>
-        </section>
-      </IntlProvider>
+        </div>
+        <Suspense fallback={null}>
+          {this.renderPagination()}
+        </Suspense>
+      </section>
     );
   }
 }
@@ -152,6 +198,8 @@ SearchResults.propTypes = {
   data: PropTypes.object,
   isLoading: PropTypes.bool,
   request: PropTypes.object,
-  paginationHandler: PropTypes.func,
+  activeSortValue: PropTypes.string,
+  handlePagination: PropTypes.func,
   handleExports: PropTypes.func,
+  handleSortResults: PropTypes.func,
 };
