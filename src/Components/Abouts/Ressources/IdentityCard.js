@@ -11,7 +11,7 @@ import classes from './IdentityCard.scss';
 import metadata from './metadata.json';
 
 const IdentityCard = (props) => {
-  const logo = `../img/logo-${props.labelKey}.svg`;
+  const logo = `../img/${props.imageName}`;
   const logopart = (logo) ? (
     <Fragment>
       <div className={`row ${classes.Logo}`}>
@@ -115,4 +115,5 @@ export default IdentityCard;
 
 IdentityCard.propTypes = {
   labelKey: PropTypes.string,
+  imageName: PropTypes.string,
 };
