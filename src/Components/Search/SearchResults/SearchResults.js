@@ -149,7 +149,7 @@ class SearchResults extends Component {
             <div className="mr-auto">
               {`${(this.props.data.total) ? this.props.data.total.toLocaleString(this.props.language) : ''} ${messages[this.props.language][numResults]}`}
             </div>
-            <div className="px-1">
+            <div className="px-2">
               <select
                 name="type"
                 id="type-select"
@@ -169,7 +169,7 @@ class SearchResults extends Component {
                 type="button"
                 id="exportbutton"
                 title="Télécharger les résultats en CSV"
-                className={`btn ${classes.btn_dark}`}
+                className={`btn ${classes.btn_dark} ${classes.SquareButton}`}
               >
                 <i className="fas fa-download" />
               </button>
