@@ -115,6 +115,9 @@ class Projects extends Component {
         op: 'any',
         values: [this.state.projectType],
       };
+    } else {
+      delete request.filters.type;
+      delete dateRequest.filters.type;
     }
     request.filters.year.min = this.state.low ? this.state.low : 2000;
     request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
