@@ -122,7 +122,7 @@ class Localisation extends Component {
                               type="button"
                               onClick={this.switchShowAround}
                             >
-                              Entités à proximité
+                              {this.props.language === 'fr' ? 'Entités à proximité' : 'Entities nearby'}
                             </button>
                           )
                           : null
