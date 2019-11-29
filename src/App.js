@@ -33,6 +33,7 @@ const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-proje
 const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
+  // eslint-disable-next-line
   static contextType = GlobalContext;
 
   state = {
