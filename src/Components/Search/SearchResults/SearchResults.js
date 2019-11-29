@@ -155,7 +155,7 @@ class SearchResults extends Component {
                 defaultValue={(this.props.activeSortValue) ? Object.keys(this.props.activeSortValue)[0] : 'score'}
               >
                 <option key="score" value="score">
-                  {(this.props.language === 'fr') ? 'Pertinance' : 'Score'}
+                  {(this.props.language === 'fr') ? 'Pertinence' : 'Score'}
                 </option>
                 {this.renderSortOptions()}
               </select>
