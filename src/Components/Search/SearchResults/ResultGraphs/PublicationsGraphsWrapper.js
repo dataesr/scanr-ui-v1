@@ -28,17 +28,21 @@ const PublicationsGraphsWrapper = props => (
       language={props.language}
       request={props.request}
     />
-    <SimpleAggregationGraph
-      aggField="source.title"
-      aggSize={15}
-      filename="scanr_export_publications_journals"
-      graphType="HighChartsBar"
-      api="publications"
-      title={messages[props.language].PublicationsJournalTitle}
-      subtitle={messages[props.language].PublicationsJournalSubtitle}
-      language={props.language}
-      request={props.request}
-    />
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'publication') ? (
+        <SimpleAggregationGraph
+          aggField="source.title"
+          aggSize={15}
+          filename="scanr_export_publications_journals"
+          graphType="HighChartsBar"
+          api="publications"
+          title={messages[props.language].PublicationsJournalTitle}
+          subtitle={messages[props.language].PublicationsJournalSubtitle}
+          language={props.language}
+          request={props.request}
+        />
+      ) : null
+    }
     <YearTimeLine
       api="publications"
       filterLow={1990}
