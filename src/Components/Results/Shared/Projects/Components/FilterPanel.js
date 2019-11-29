@@ -56,7 +56,7 @@ const FilterPanel = props => (
       </div>
       <form className="col-lg-4" onSubmit={props.queryChangeHandler}>
         <label className={classes.TitleFilter} htmlFor="inputFilter">
-          {props.language === 'fr' ? 'Rechercher dans les publications' : 'Search in publications'}
+          {props.language === 'fr' ? 'Rechercher dans les projets' : 'Search in projects'}
           <input
             type="text"
             autoComplete="off"
