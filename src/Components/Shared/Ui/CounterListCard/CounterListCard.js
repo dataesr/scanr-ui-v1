@@ -42,13 +42,14 @@ const CounterListCard = (props) => {
         </div>
       );
     }
+    const itemRole = item.role.concat('-', `${props.objectType}`);
     return (
       <li className="d-flex m-2" key={item}>
         <p className={`mr-auto ${classes.ModalLabel}`}>
           {item.fullName}
         </p>
         <p className={classes.Role}>
-          {messages[props.language][item.role]}
+          {messages[props.language][itemRole]}
         </p>
         {bt}
       </li>
@@ -90,5 +91,6 @@ CounterListCard.propTypes = {
   limit: PropTypes.number,
   title: PropTypes.string,
   labelKey: PropTypes.string,
+  objectType: PropTypes.string,
   color: PropTypes.string,
 };
