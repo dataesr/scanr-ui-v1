@@ -115,12 +115,17 @@ export default class HighChartsPackedbubble extends Component {
                   />
                 </div>
                 <hr className={classes.HorizontalBar} />
-                { this.props.exporting ? (
-                  <ShareComponent
-                    language={this.props.language}
-                    filename={this.props.filename}
-                    chart={this.chart}
-                  />) : null }
+                {
+                  this.props.exporting
+                    ? (
+                      <ShareComponent
+                        language={this.props.language}
+                        filename={this.props.filename}
+                        chart={this.chart}
+                      />
+                    )
+                    : null
+                  }
               </div>
             )
             : <div>Loading...</div>
