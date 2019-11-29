@@ -45,8 +45,8 @@ const MostActiveThemes = props => (
               {
                 props.data.map(item => (
                   <li>
-                    <ButtonToSearch key={item} href={`/recherche/all?query=${item}`} className={classes.Tags}>
-                      {item}
+                    <ButtonToSearch key={item.labelFr} href={`/recherche/all?query=${item.query}`} className={classes.Tags}>
+                      {(props.language === 'fr') ? item.labelFr : item.labelEn}
                     </ButtonToSearch>
                   </li>
                 ))

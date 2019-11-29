@@ -91,7 +91,43 @@ class HomePage extends Component {
 
         <MostActiveThemes
           language={this.context.language}
-          data={['Brain to computer', 'Marathon', 'Biotechnologie', 'Fusion nucléaire', 'Brain content', 'Cryptographie', 'Matériaux', 'Machine learning', 'Intelligence artificielle', 'Réalité virtuelle']}
+          data={[
+            {
+              labelFr: 'Brain to computer',
+              labelEn: 'Brain to computer',
+              query: 'Brain to computer',
+            },
+            {
+              labelFr: 'Biotechnologie',
+              labelEn: 'Biotechnology',
+              query: 'Biotechnologie | Biotechnology',
+            },
+            {
+              labelFr: 'Intelligence artificielle',
+              labelEn: 'Artificial intelligence',
+              query: 'Intelligence artificielle | Artificial intelligence',
+            },
+            {
+              labelFr: 'Réalité virtuelle',
+              labelEn: 'Virtual reality',
+              query: 'Réalité virtuelle | Virtual reality',
+            },
+            {
+              labelFr: 'Cryptographie',
+              labelEn: 'Cryptography',
+              query: 'Cryptographie | Cryptography',
+            },
+            {
+              labelFr: 'Marathon',
+              labelEn: 'Marathon',
+              query: 'Marathon',
+            },
+            {
+              labelFr: 'Migrations',
+              labelEn: 'Migrations',
+              query: 'Migrations',
+            },
+          ]}
           lexiconHandler={() => this.lexiconHandler()}
         />
 
