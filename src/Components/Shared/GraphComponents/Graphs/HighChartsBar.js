@@ -160,7 +160,7 @@ export default class HighChartsBar extends Component {
           },
           credits: {
             enabled: true,
-            text: "Source : ScanR, Moteur de la Recherche et de l'Innovation",
+            text: "Source : scanR, Moteur de la Recherche et de l'Innovation",
           },
         },
       },
