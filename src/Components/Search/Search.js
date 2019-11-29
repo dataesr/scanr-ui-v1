@@ -226,13 +226,15 @@ class SearchPage extends Component {
     e.preventDefault();
     const { value } = e.target;
     const { request } = this.state;
-    if (value && value !== 'score') {
-      request.sort = {};
-      request.sort[value] = 'DESC';
+    if (value && value === 'score') {
+      request.sort = null;
       const url = this.setURL(request);
       this.props.history.push(url);
-    } else if (value && value === 'score') {
-      request.sort = null;
+    } else if (value && value !== 'score') {
+      request.sort = {};
+      const key = value.split('__')[0];
+      const order = value.split('__')[1];
+      request.sort[key] = order;
       const url = this.setURL(request);
       this.props.history.push(url);
     }
