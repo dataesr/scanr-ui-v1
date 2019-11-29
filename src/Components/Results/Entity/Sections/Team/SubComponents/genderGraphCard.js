@@ -23,11 +23,12 @@ const genderGraphCard = (props) => {
   const nbMalesPct = 100 * props.nbMales / total;
   const nbFemalesPct = 100 * props.nbFemales / total;
   const nbUnknownPct = 100 * props.nbUnknown / total;
+  const labels = (props.language === 'fr') ? ['Hommes', 'Femmes', 'Inconnu'] : ['Men', 'Women', 'Unknown'];
 
   const data = {
     percentage: true,
     values: [nbMalesPct, nbFemalesPct, nbUnknownPct],
-    labels: ['Hommes', 'Femmes', 'Inconnus'],
+    labels,
     colors: ['#fe7747', '#96462a', '#aaaaaa'],
   };
 

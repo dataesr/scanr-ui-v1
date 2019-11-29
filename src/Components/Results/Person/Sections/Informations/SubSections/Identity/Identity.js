@@ -41,7 +41,7 @@ const Identity = (props) => {
             <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
               <PersonNameCard
                 logo="fas fa-flask"
-                title="Domaines de recherche"
+                title={(props.language === 'fr') ? 'Domaines de recherche' : 'Research domains'}
                 language={props.language}
                 data={props.data}
               />

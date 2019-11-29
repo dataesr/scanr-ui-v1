@@ -88,8 +88,10 @@ class Search extends Component {
                   {
                     this.props.suggests.map(suggest => (
                       <li>
-                        <a href={`recherche/all?query=${suggest.label}`}>
-                          <ButtonMiniDarkToSearch key={suggest.label}>{suggest.label}</ButtonMiniDarkToSearch>
+                        <a href={`recherche/all?query=${suggest.query}`}>
+
+			    {(this.props.language === 'fr') ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>) 
+			    : (<ButtonMiniDarkToSearch key={suggest.labelEn}>{suggest.labelEn}</ButtonMiniDarkToSearch>)}
                         </a>
                       </li>
                     ))
@@ -136,19 +138,27 @@ Search.defaultProps = {
   isFull: true,
   suggests: [
     {
-      label: '5G',
+      labelFr: '5G',
+      labelEn: '5G',
+      query: '5G',
       url: '',
     },
     {
-      label: 'Réchauffement climatique',
+      labelFr: 'Changement climatique',
+      labelEn: 'Climate change',
+      query: '(changement+climatique) | (climate+change)',
       url: '',
     },
     {
-      label: 'Biotechnologie',
+      labelFr: 'Biotechnologie',
+      labelEn: 'Biotechnology',
+      query: 'Biotechnologie | Biotechnology',
       url: '',
     },
     {
-      label: 'Ebola',
+      labelEn: 'Ebola',
+      labelFr: 'Ebola',
+      query: 'Ebola',
       url: '',
     },
   ],

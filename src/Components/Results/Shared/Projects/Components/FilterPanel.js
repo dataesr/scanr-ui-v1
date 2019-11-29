@@ -22,7 +22,7 @@ const FilterPanel = props => (
       <div className="col-lg-4">
         <div className="d-flex flex-column">
           <div className={classes.TitleFilter} htmlFor="type-select">
-            {props.language === 'fr' ? 'Type de productions' : 'Production type'}
+            {props.language === 'fr' ? 'Type de projet' : 'Project type'}
             <select
               name="type"
               id="type-select"
@@ -56,7 +56,7 @@ const FilterPanel = props => (
       </div>
       <form className="col-lg-4" onSubmit={props.queryChangeHandler}>
         <label className={classes.TitleFilter} htmlFor="inputFilter">
-          {props.language === 'fr' ? 'Rechercher dans les publications' : 'Search in publications'}
+          {props.language === 'fr' ? 'Rechercher dans les projets' : 'Search in projects'}
           <input
             type="text"
             autoComplete="off"
