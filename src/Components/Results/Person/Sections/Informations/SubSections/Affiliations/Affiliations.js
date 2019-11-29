@@ -113,6 +113,7 @@ const Affiliations = (props) => {
                   <LeafletMap
                     filename="carto"
                     data={mapdata}
+                    share={false}
                     language={props.language}
                     style={mapStyle}
                   />

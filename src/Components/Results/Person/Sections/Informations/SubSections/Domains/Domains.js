@@ -50,7 +50,7 @@ const Domains = (props) => {
             <div className={`col-md ${classes.CardContainer}`}>
               <TagCard
                 logo="fas fa-flask"
-                title="Domaines de recherche"
+                title={(props.language === 'fr') ? 'Domaines de recherche' : 'Research domains'}
                 tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
                 tagList={tagList}
                 language={props.language}
