@@ -43,7 +43,7 @@ class WikidataCard extends Component {
     Axios.get(url).then((response) => {
       const title = response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`].title;
       if (response.data && response.data.entities && response.data.entities[this.props.id] && response.data.entities[this.props.id].sitelinks && response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`]) {
-        const urlText = `https://fr.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${title}&origin=*`;
+        const urlText = `https://${this.props.language}.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${title}&origin=*`;
         Axios.get(urlText).then((responseText) => {
           if (responseText.data && responseText.data.query && responseText.data.query.pages) {
             for (const item in responseText.data.query.pages) {
@@ -89,7 +89,7 @@ class WikidataCard extends Component {
 
 
   render() {
-    const wikiLink = `https://fr.wikipedia.org/wiki/${this.state.title}`;
+    const wikiLink = `https://${this.props.language}.wikipedia.org/wiki/${this.state.title}`;
     return (
       <div className={classes.WikidataCard}>
         <div className={`d-flex  justify-content-between ${classes.Header}`}>
