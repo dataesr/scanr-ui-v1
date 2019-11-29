@@ -57,35 +57,32 @@ class SearchResults extends Component {
     switch (this.props.api) {
       case 'structures': return (
         <React.Fragment>
-          <option key="alphabetical" value="label.fr">
+          <option key="alphabetical" value="label.fr__ASC">
             {(this.props.language === 'fr') ? 'Nom' : 'Name'}
           </option>
         </React.Fragment>
       );
       case 'persons': return (
         <React.Fragment>
-          <option key="alphabetical" value="lastName">
+          <option key="alphabetical" value="lastName__ASC">
             {(this.props.language === 'fr') ? 'Nom' : 'Name'}
           </option>
         </React.Fragment>
       );
       case 'projects': return (
         <React.Fragment>
-          <option key="score" value="score">
-            {(this.props.language === 'fr') ? 'Pertinance' : 'Score'}
-          </option>
-          <option key="date" value="startDate">
+          <option key="date" value="startDate__DESC">
             {(this.props.language === 'fr') ? 'Date de début' : 'Start Date'}
           </option>
-          <option key="budget" value="budgetTotal">
+          <option key="budget" value="budgetTotal__DESC">
             {(this.props.language === 'fr') ? 'Budget' : 'Budget'}
           </option>
         </React.Fragment>
       );
       case 'publications': return (
         <React.Fragment>
-          <option key="alphabetical" value="publicationDate">
-            {(this.props.language === 'fr') ? 'Plus récents' : 'Most recent'}
+          <option key="alphabetical" value="publicationDate__DESC">
+            {(this.props.language === 'fr') ? 'Récence' : 'Most recent'}
           </option>
         </React.Fragment>
       );
