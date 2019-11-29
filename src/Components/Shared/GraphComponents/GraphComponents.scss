@@ -13,11 +13,12 @@
 }
 
 .ShareComponent {
-  color: $scanrgreyColor
+  color: $scanrgreyColor;
+  background-color: white;
 }
 
 .Title {
-  color: #003259;
+  color: $scanrdeepblueColor;
   font-family: "lato";
   font-size: 1.5em;
   font-weight: bold;
@@ -25,7 +26,7 @@
 
 .Subtitle {
   display: inline-block;
-  color: #4C6F8B;
+  color: $scanrgreyColor;
 }
 
 .Button {
@@ -47,7 +48,7 @@
 
 .BtnTxt {
   display: inline-block;
-  color: #4C6F8B;
+  color: $scanrgreyColor;
   padding-right: 2px;
   font-weight: 600;
 }
