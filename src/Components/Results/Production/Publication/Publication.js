@@ -61,7 +61,7 @@ class Publication extends Component {
   getAuthors = role => (this.props.data.authors.filter(person => person.role === role))
 
   getSortedAuthors = () => {
-    const orderAuthors = ['author', 'directeurthese', 'presidentjury', 'membrejury', 'rapporteur'];
+    const orderAuthors = ['author', 'directeurthese', 'rapporteur', 'presidentjury', 'membrejury'];
     const sortedAuthors = [];
     orderAuthors.forEach((role) => {
       const authors = this.getAuthors(role);
