@@ -24,11 +24,10 @@ const PublicationCard = (props) => {
   };
 
   // Auteurs
-  const getAuthors = (data) => {
-    const maxAuthors = 1;
+  const getAuthors = (data, maxAuthors) => {
     let authors = [];
     if (!data.authors) {
-      return authors;
+      return { authors: null, others: null };
     }
     const diff = data.authors.length - maxAuthors;
     let others = '';
@@ -54,9 +53,9 @@ const PublicationCard = (props) => {
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
     } else {
-      return null;
+      return { authors: null, others: null };
     }
-    const printedAuthors = authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr]);
+    const printedAuthors = authors;
     const printedOthers = (props.data.productionType !== 'thesis') ? others : null;
     return { authors: printedAuthors, others: printedOthers };
   };
@@ -74,7 +73,8 @@ const PublicationCard = (props) => {
     )
     : null;
 
-  const auth = getAuthors(props.data);
+  const maxAuthors = 1;
+  const auth = getAuthors(props.data, maxAuthors);
   const coAuthors = (auth.authors && auth.authors.length > 0)
     ? (
       <li className="d-flex">
@@ -82,7 +82,7 @@ const PublicationCard = (props) => {
           <i aria-hidden="true" className="fas fa-users" />
         </div>
         <p className="m-0">
-          {auth.authors}
+          {auth.authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr])}
           {' '}
           {auth.others}
         </p>
