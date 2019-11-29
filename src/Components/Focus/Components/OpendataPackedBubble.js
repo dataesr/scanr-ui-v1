@@ -58,7 +58,7 @@ export default class OpendataPackedBubble extends Component {
               data={this.state.data}
               exporting={this.state.exporting}
               language={this.props.language}
-              tooltipText={this.props.language === 'fr' ? 'lauréat.e.s IUF' : 'laureates'}
+              tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
             />
           )
           : (<GraphSpinner />)
@@ -71,4 +71,6 @@ OpendataPackedBubble.propTypes = {
   language: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
+  tooltipEn: PropTypes.string.isRequired,
+  tooltipFr: PropTypes.string.isRequired,
 };

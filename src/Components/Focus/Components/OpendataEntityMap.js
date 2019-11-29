@@ -20,11 +20,21 @@ class OpendataEntityMap extends Component {
     const opendata = require('../../Focus/Data/'.concat(`${this.props.opendata}`));
     const mapdata = [];
     opendata.records.forEach((element) => {
+      const tooltipInfosLine = (this.props.tooltipFr) ? this.props.tooltipFr.split('__NEWLINE__') : [];
+      const tooltip = [];
+      for (let k = 0; k < tooltipInfosLine.length; k += 1) {
+        const lineInfo = tooltipInfosLine[k].split(';');
+        let currentLine = '';
+        for (let j = 0; j < lineInfo.length; j += 1) {
+          currentLine = currentLine.concat(element.fields[lineInfo[j]], ' ');
+        }
+        tooltip.push(currentLine);
+      }
       try {
         const dataElement = {
           id: (element.fields.nom).concat(element.fields.prenom),
           position: [element.geometry.coordinates[1], element.geometry.coordinates[0]],
-          infos: ['bla'],
+          infos: tooltip,
         };
         mapdata.push(dataElement);
       } catch (error) {
@@ -62,4 +72,5 @@ OpendataEntityMap.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   opendata: PropTypes.string,
+  tooltipFr: PropTypes.string,
 };

@@ -74,7 +74,9 @@ export default class Focus extends Component {
         opendata: component.opendata,
         aggSize: component.aggSize,
         aggField: component.aggField,
-        filename: component.filenam,
+        filename: component.filename,
+        tooltipEn: component.tooltipEn,
+        tooltipFr: component.tooltipFr,
         graphType: component.graphType,
         title: getSelectKey(component, 'title', this.props.language, 'fr'),
         subtitle: getSelectKey(component, 'subtitle', this.props.language, 'fr'),
@@ -91,7 +93,7 @@ export default class Focus extends Component {
       return null;
     }
     const htmlList = this.buildFocusFromConfig();
-    const pageTitle = 'Scanr | Focus | '.concat(getSelectKey(this.state, 'title', this.props.language, 'fr'));
+    const pageTitle = 'scanR | Focus | '.concat(getSelectKey(this.state, 'title', this.props.language, 'fr'));
     const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
     const pageImage = '../Shared/svg/logo-scanr-blue.svg';
     // const exporting = true;
