@@ -17,6 +17,7 @@ import OpendataPackedBubble from './Components/OpendataPackedBubble';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
+import GridMap from '../Shared/StandaloneGraphs/GridMap';
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import classes from './Focus.scss';
@@ -30,6 +31,7 @@ import classes from './Focus.scss';
 */
 
 const Components = {
+  GridMap,
   EntityMap,
   PublicationsKeywords,
   PublicationsPacketBubble,
