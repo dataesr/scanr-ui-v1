@@ -87,8 +87,8 @@ class HeaderTitle extends Component {
       default:
         break;
     }
-    const pageTitle = 'ScanR | '.concat(this.props.label);
-    const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
+    const pageTitle = 'scanR | '.concat(this.props.label);
+    const pageDescription = "scanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
     const pageImage = '../../svg/logo-scanr-blue.svg';
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
