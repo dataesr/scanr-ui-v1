@@ -70,7 +70,7 @@ const Portrait = (props) => {
 
               <Localisation
                 address={props.data.address}
-                geaNear={props.geoNear}
+                geoNear={props.geoNear}
                 language={props.language}
               />
 
