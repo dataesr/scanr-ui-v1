@@ -390,9 +390,10 @@ class Thesis extends Component {
                         <CounterListCard
                           language={this.props.language}
                           data={sortedAuthors}
+                          objectType={this.props.data.productionType}
                           limit={nbAuthorsToShow}
                           title=""
-                          labelKey="authors"
+                          labelKey="authors-thesis"
                           color="Default"
                         />
                       </div>
