@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
-import WorldCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
+import WordCloud from '../../../../Shared/GraphComponents/Graphs/HighChartsWordCloud';
 import YearChart from '../../../../Shared/GraphComponents/Graphs/HighChartsLine';
 import DonutChart from '../../../../Shared/GraphComponents/Graphs/HighChartsDonut';
 import TypeMapping from '../Utils/TypeMapping';
@@ -43,7 +43,7 @@ const ProductionGraphs = (props) => {
 
   const renderGraph = () => {
     if (active === 'keywords') {
-      return <WorldCloud filename={labelFor[props.language][active]} data={props.graphData[active]} />;
+      return <WordCloud filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />;
     }
     if (active === 'isOa') {
       const data = { id: 'isOa', entries: [] };
@@ -68,7 +68,7 @@ const ProductionGraphs = (props) => {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={active} data={data} language={props.language} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
     }
     if (active === 'types') {
       const typesData = { id: 'types', entries: [] };
