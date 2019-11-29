@@ -29,7 +29,7 @@ import classes from './Thesis.scss';
 class Thesis extends Component {
   state= {
     thesis: {},
-    juryMember: [],
+    rapporteur: [],
     direction: [],
     empty: false,
     loading: true,
@@ -69,7 +69,7 @@ class Thesis extends Component {
       const result = response.data.results;
       const empty = (result.length === 0);
       let thesis = {};
-      const juryMember = [];
+      const rapporteur = [];
       const direction = [];
       if (result && result.length > 0) {
         result.forEach((thes, i) => {
@@ -78,14 +78,14 @@ class Thesis extends Component {
               thesis = result[i].value;
             } else if (author.role === 'directeurthese' && author.fullName === this.props.personName) {
               direction.push(result[i].value);
-            } else if (author.fullName === this.props.personName) {
-              juryMember.push(result[i].value);
+            } else if (author.role === 'rapporteur' && author.fullName === this.props.personName) {
+              rapporteur.push(result[i].value);
             }
           });
         });
       }
       this.setState({
-        juryMember,
+        rapporteur,
         thesis,
         direction,
         empty,
@@ -158,13 +158,13 @@ class Thesis extends Component {
                     : null
                 }
                 {
-                  (this.state.juryMember && this.state.juryMember.length > 0)
+                  (this.state.rapporteur && this.state.rapporteur.length > 0)
                     ? (
                       <div className="p-1 col-md-6">
                         <ThesisParticipationsCard
-                          title={(this.props.language === 'fr') ? 'participation à des jury' : 'jury participations'}
+                          title={(this.props.language === 'fr') ? 'participations à des jury en tant que rapporteur' : 'jury participations as a reviewer'}
                           buttonLabel={(this.props.language === 'fr') ? 'Voir toutes' : 'All'}
-                          dataHtml={this.state.juryMember.map(these => (<PublicationCard small language={this.props.language} data={these} />))}
+                          dataHtml={this.state.rapporteur.map(these => (<PublicationCard small language={this.props.language} data={these} />))}
                         />
                       </div>
                     )

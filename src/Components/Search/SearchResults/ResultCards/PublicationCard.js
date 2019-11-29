@@ -31,10 +31,14 @@ const PublicationCard = (props) => {
     }
     const diff = data.authors.length - maxAuthors;
     let others = '';
+    const personsFr = (data.productionType === 'publication') ? 'auteurs' : 'personnes';
+    const personsEn = (data.productionType === 'publication') ? 'authors' : 'persons';
+    const personFr = (data.productionType === 'publication') ? 'auteur' : 'personne';
+    const personEn = (data.productionType === 'publication') ? 'author' : 'person';
     if (diff === 1) {
-      others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'auteur' : 'author'}`;
+      others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? `${personFr}` : `${personEn}`}`;
     } else if (diff > 1) {
-      others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? 'auteurs' : 'authors'}`;
+      others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? `${personsFr}` : `${personsEn}`}`;
     }
     if (data.productionType === 'publication') {
       authors = data.authors.map((author) => {
@@ -49,6 +53,15 @@ const PublicationCard = (props) => {
         .map((author) => {
           if (author.person) {
             return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
+          }
+          return <span key={JSON.stringify(author)}>{author.fullName}</span>;
+        });
+    } else if (data.authors.length > 0) {
+      authors = data.authors
+        .filter(author => author.role === 'author')
+        .map((author) => {
+          if (author.person) {
+            return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
           }
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
