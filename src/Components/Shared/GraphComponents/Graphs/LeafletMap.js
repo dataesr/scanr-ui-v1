@@ -13,6 +13,15 @@ import './customLeaflet.scss';
 
 import classes from '../GraphComponents.scss';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
 const PrintControl = withLeaflet(PrintControlDefault);
 
 class Search extends MapControl {
@@ -89,19 +98,22 @@ class LeafletMap extends Component<{}, State> {
           <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
             <div className="mr-auto d-flex align-items-center">
               <div className="pr-1 d-flex align-items-center">
-                <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
+                <span className={`pr-2 ${classes.ShareTexts}`}>
+                  {messages[this.props.language].share}
+                </span>
                 <button type="button" className={classes.Button}>
                   <i className="fas fa-share-alt-square" />
                 </button>
               </div>
             </div>
             <div className="d-flex align-items-center">
-              <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
+              <div className={`pr-2 ${classes.ShareTexts}`}>
+                {messages[this.props.language].download}
+              </div>
               <div className="pr-1 d-flex align-items-center">
                 <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-                  <i className="fas fa-image" />
+                  <i className="fas fa-image" title="export PNG" />
                 </button>
-                <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
               </div>
             </div>
           </div>
@@ -129,7 +141,6 @@ class LeafletMap extends Component<{}, State> {
             {markers}
           </MarkerClusterGroup>
           <ZoomControl position="bottomleft" />
-          {/* <PrintControl ref={(ref) => { this.printControl = ref; }} {...printOptions} /> */}
           <PrintControl style={{ display: 'none' }} ref={(ref) => { this.printControl = ref; }} {...downloadOptions} />
           <GeoSearch />
         </Map>
@@ -149,6 +160,7 @@ LeafletMap.defaultProps = {
 };
 
 LeafletMap.propTypes = {
+  language: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
   filename: PropTypes.string.isRequired,
   style: PropTypes.object,

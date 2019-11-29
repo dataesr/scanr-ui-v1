@@ -7,7 +7,8 @@ import HCExporting from 'highcharts/modules/exporting';
 import HCExportingData from 'highcharts/modules/export-data';
 import HCRounded from 'highcharts-rounded-corners';
 import HCmore from 'highcharts/highcharts-more.src';
-import ReactPiwik from 'react-piwik';
+import ShareComponent from './SubComponents/ShareComponent';
+
 import classes from '../GraphComponents.scss';
 
 HCmore(Highcharts);
@@ -36,9 +37,6 @@ export default class HighChartsPackedbubble extends Component {
     this.state = {
       options: null,
     };
-    this.exportChartPdf = this.exportChartPdf.bind(this);
-    this.exportChartPng = this.exportChartPng.bind(this);
-    this.exportChartCsv = this.exportChartCsv.bind(this);
   }
 
   componentDidMount() {
@@ -102,59 +100,7 @@ export default class HighChartsPackedbubble extends Component {
     this.setState({ options });
   }
 
-  exportChartPdf() {
-    ReactPiwik.push(['trackEvent', 'Download', 'PDF_'.concat(this.props.filename)]);
-    this.chart.current.chart.exportChart({
-      type: 'application/pdf',
-    });
-  }
-
-  exportChartPng() {
-    ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
-    this.chart.current.chart.exportChart({
-      type: 'image/png',
-    });
-  }
-
-  exportChartCsv() {
-    ReactPiwik.push(['trackEvent', 'Download', 'CSV_'.concat(this.props.filename)]);
-    this.chart.current.chart.downloadCSV();
-  }
-
   render() {
-    const ShareComponent = () => (
-      <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
-        <div className="mr-auto d-flex align-items-center">
-          <div className="pr-1 d-flex align-items-center">
-            <span className={`pr-2 ${classes.ShareTexts}`}>Partager</span>
-            <button type="button" className={classes.Button}>
-              <i className="fas fa-share-alt-square" />
-            </button>
-          </div>
-        </div>
-        <div className="d-flex align-items-center">
-          <div className={`pr-2 ${classes.ShareTexts}`}>Télécharger:</div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartPdf} className={classes.Button}>
-              <i className="fas fa-file-pdf" />
-            </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.pdf</span>
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartPng} className={classes.Button}>
-              <i className="fas fa-image" />
-            </button>
-            <span className={`pr-1 ${classes.ShareTexts}`}>.png</span>
-          </div>
-          <div className="pr-1 d-flex align-items-center">
-            <button type="button" onClick={this.exportChartCsv} className={classes.Button}>
-              <i className="fas fa-table" />
-            </button>
-            <span className={classes.ShareTexts}>.csv</span>
-          </div>
-        </div>
-      </div>
-    );
     return (
       <div>
         {
@@ -170,7 +116,11 @@ export default class HighChartsPackedbubble extends Component {
                 </div>
                 <hr className={classes.HorizontalBar} />
                 { this.props.exporting ? (
-                  <ShareComponent />) : null }
+                  <ShareComponent
+                    language={this.props.language}
+                    filename={this.props.filename}
+                    chart={this.chart}
+                  />) : null }
               </div>
             )
             : <div>Loading...</div>
@@ -186,6 +136,7 @@ HighChartsPackedbubble.defaultProps = {
 };
 
 HighChartsPackedbubble.propTypes = {
+  language: PropTypes.string.isRequired,
   filename: PropTypes.string,
   data: PropTypes.array,
   text: PropTypes.string,
