@@ -106,11 +106,11 @@ const ProjectGraphs = (props) => {
   const renderGraph = () => {
     if (active === 'keywords') {
       const data = createWordCloudData();
-      return <WorldCloud filename={labelFor[props.language][active]} data={data} />;
+      return <WorldCloud filename={labelFor[props.language][active]} data={data} language={props.language} />;
     }
     if (active === 'sankey') {
       const data = createSankeyData();
-      return <SankeyChart filename={labelFor[props.language][active]} data={data} />;
+      return <SankeyChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
     }
     if (active === 'years') {
       const data = {
