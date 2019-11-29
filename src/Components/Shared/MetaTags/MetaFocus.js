@@ -21,7 +21,7 @@ const MetaFocus = props => (
       >
         <a itemProp="item" href={props.href1}>
           {/* eslint-disable-next-line */}
-         <span itemProp="name">ScanR</span></a>
+         <span itemProp="name">scanR</span></a>
         <meta itemProp="position" content="1" />
       </li>
       <li
