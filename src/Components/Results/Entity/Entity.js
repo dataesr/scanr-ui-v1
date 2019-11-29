@@ -36,12 +36,24 @@ class Entity extends Component {
       projects: null,
     },
     dataSupervisorOf: [],
+    geoNear: [],
   };
 
   componentDidMount() {
     const { id } = this.props.match.params;
     this.getData(id);
     this.getDataSupervisorOf(id);
+    this.getNearStructures(id);
+  }
+
+  getNearStructures = (id) => {
+    if (id) {
+      const url = `${API_STRUCTURES_END_POINT}/near/${id}?distance=${10}`;
+      Axios.get(url)
+        .then((response) => {
+          this.setState({ geoNear: response.data });
+        });
+    }
   }
 
   getDataSupervisorOf = (id) => {
@@ -104,6 +116,7 @@ class Entity extends Component {
           <Portrait
             language={this.props.language}
             data={this.state.data}
+            geoNear={this.state.geoNear}
             id={this.props.match.params.id}
           />
         </div>
