@@ -8,6 +8,14 @@
   border-bottom-right-radius: 8px;
 }
 
+.Select {
+  background-color: white;
+  color: $scanrdeepblueColor;
+  height: 45px;
+  border-radius: 8px;
+  border: 2px solid $scanrdeepblueColor;
+}
+
 .ResultHeader {
   font-size: 1.3em;
   height: 63px;

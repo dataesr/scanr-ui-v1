@@ -22,7 +22,7 @@ class Pagination extends Component {
   }
 
 
-  ShouldDisabled = (position, lastIndex) => {
+  shouldHideButton = (position, lastIndex) => {
     if (position === 'previous' && this.state.nextPage < 2) {
       return classes.NoDisplay;
     }
@@ -32,7 +32,7 @@ class Pagination extends Component {
     return '';
   }
 
-  HandlePageInputChange = (e) => {
+  handlePageInputChange = (e) => {
     this.setState({ nextPage: e.target.value });
   }
 
@@ -43,20 +43,20 @@ class Pagination extends Component {
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={`row mb-3 p-3 d-flex flex-row justify-content-around ${classes.Section}`}>
           <div
-            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.ShouldDisabled('previous', lastIndex)} ${classes.Buttons}`}
-            onClick={() => this.props.paginationHandler(currentPage - 1)}
-            onKeyPress={() => this.props.paginationHandler(currentPage - 1)}
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.shouldHideButton('previous', lastIndex)} ${classes.Buttons}`}
+            onClick={() => this.props.handlePagination(currentPage - 1)}
+            onKeyPress={() => this.props.handlePagination(currentPage - 1)}
             role="button"
             tabIndex={0}
           >
             <i aria-label="previous page" className="fas fa-chevron-left mr-3" />
             <FormattedHTMLMessage id="pagination.previous" defaultMessage="pagination.previous" />
           </div>
-          <form className="mr-3 ml-3 d-flex align-items-center" onSubmit={() => this.props.paginationHandler(this.state.nextPage)}>
+          <form className="mr-3 ml-3 d-flex align-items-center" onSubmit={() => this.props.handlePagination(this.state.nextPage)}>
             <input
               className={`mr-1 ${classes.PageInput}`}
               value={this.state.nextPage}
-              onChange={e => this.HandlePageInputChange(e)}
+              onChange={e => this.handlePageInputChange(e)}
             />
             <div className={`mr-1 ${classes.MaxPage}`}>
               /
@@ -66,9 +66,9 @@ class Pagination extends Component {
             </div>
           </form>
           <div
-            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.ShouldDisabled('next', lastIndex)} ${classes.Buttons}`}
-            onClick={() => this.props.paginationHandler(currentPage + 1)}
-            onKeyPress={() => this.props.paginationHandler(currentPage + 1)}
+            className={`row d-flex justify-content-center align-items-center m-1 pl-2 pr-2 ${this.shouldHideButton('next', lastIndex)} ${classes.Buttons}`}
+            onClick={() => this.props.handlePagination(currentPage + 1)}
+            onKeyPress={() => this.props.handlePagination(currentPage + 1)}
             role="button"
             tabIndex={0}
           >
@@ -88,5 +88,5 @@ Pagination.propTypes = {
   currentPage: PropTypes.number,
   currentPageSize: PropTypes.number,
   totalDocuments: PropTypes.number,
-  paginationHandler: PropTypes.func,
+  handlePagination: PropTypes.func,
 };

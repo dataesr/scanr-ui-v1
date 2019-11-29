@@ -46,6 +46,7 @@ const Productions = (props) => {
                     <PublicationCard
                       language={props.language}
                       data={prod}
+                      small="noAuthors"
                     />
                   </div>
                 ))
