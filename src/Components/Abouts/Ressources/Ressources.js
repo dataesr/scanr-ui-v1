@@ -113,6 +113,11 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
+              labelKey="bso"
+              imageName="logo-bso.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
               labelKey="wikipedia"
               imageName="logo-wikipedia.svg"
               cssClass="CardLogo"
@@ -332,6 +337,7 @@ class Ressources extends Component {
 
   renderOneRessource = () => {
     const ressource = this.props.match.params.id;
+    const imageName = metadata[`${ressource}.ImageName`];
     const message = messages[this.props.language];
     const source = (metadata[`${ressource}.Source`]) ? (
       <a href={metadata[`${ressource}.Source`]} target="_blank" rel="noopener noreferrer">
@@ -383,6 +389,7 @@ class Ressources extends Component {
             <div className={classes.SourceCardTitle}>
               <FormattedHTMLMessage
                 id={`Ressource.Utilisation1.${ressource}`}
+                imageName={imageName}
                 defaultMessage="contentTexte"
               />
             </div>
@@ -476,6 +483,7 @@ class Ressources extends Component {
               <div className="col-sm-4">
                 <IdentityCard
                   labelKey={ressource}
+                  imageName={imageName}
                   /* webSite={metadata[`${ressource}.website`]} */
                 />
               </div>
