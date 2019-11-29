@@ -70,6 +70,7 @@ const Portrait = (props) => {
 
               <Localisation
                 address={props.data.address}
+                geaNear={props.geoNear}
                 language={props.language}
               />
 
@@ -122,5 +123,6 @@ export default Portrait;
 Portrait.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
+  geoNear: PropTypes.array,
   id: PropTypes.string.isRequired,
 };

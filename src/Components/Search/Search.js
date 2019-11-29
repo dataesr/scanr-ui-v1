@@ -12,6 +12,8 @@ import SearchResults from './SearchResults/SearchResults';
 import AllResults from './SearchResults/AllResults';
 import FilterPanel from './Filters/Filters';
 import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
+import ExportingSpinner from '../Shared/LoadingSpinners/ExportingSpinner';
+
 import {
   PersonsAggregations,
   PublicationsAggregations,
@@ -29,6 +31,7 @@ class SearchPage extends Component {
 
     this.state = {
       isLoading: false,
+      isExporting: false,
       currentQueryText: '',
       api: 'all',
       view: 'list',
@@ -194,11 +197,13 @@ class SearchPage extends Component {
   }
 
   handleExports = () => {
+    this.setState({ isExporting: true });
     const newRequest = { ...this.state.request };
     const transformed = this.transformRequest(newRequest);
     delete transformed.lang;
-    const url = `${API_BASE_URL}/structures/search/export?Request=${btoa(transformed)}`;
-    this.setState({ isLoading: true });
+    const base64Query = btoa(JSON.stringify(transformed));
+    const url = `${API_BASE_URL}/${this.state.api}/search/export?request=${base64Query}`;
+    const filename = `CSV_${this.state.api}_${base64Query}.xls`;
     Axios({
       url,
       method: 'GET',
@@ -208,10 +213,13 @@ class SearchPage extends Component {
       const blob = new Blob([response.data], { type, encoding: 'UTF-8' });
       const link = document.createElement('a');
       link.href = window.URL.createObjectURL(blob);
-      link.download = 'scanr_export.xls';
+      link.download = filename;
       link.click();
+      this.setState({ isExporting: false });
+      ReactPiwik.push(['trackEvent', 'Download', filename]);
+    }).catch(() => {
+      this.setState({ isExporting: false });
     });
-    this.setState({ isLoading: false });
   }
 
   handleSortResults = (e) => {
@@ -534,6 +542,7 @@ class SearchPage extends Component {
   render() {
     return (
       <div className="d-flex flex-column h-100">
+        <ExportingSpinner visible={this.state.isExporting} />
         <Header />
         <SearchPanel
           language={this.props.language}
