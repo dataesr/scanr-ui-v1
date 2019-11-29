@@ -195,7 +195,7 @@ SearchResults.propTypes = {
   data: PropTypes.object,
   isLoading: PropTypes.bool,
   request: PropTypes.object,
-  activeSortValue: PropTypes.string,
+  activeSortValue: PropTypes.object,
   handlePagination: PropTypes.func,
   handleExports: PropTypes.func,
   handleSortResults: PropTypes.func,
