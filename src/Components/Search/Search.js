@@ -36,7 +36,7 @@ class SearchPage extends Component {
       request: {
         searchFields: null,
         query: '',
-        sort: null,
+        sort: {},
         page: null,
         pageSize: null,
         filters: null,
@@ -186,7 +186,7 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
-  paginationHandler = (value) => {
+  handlePagination = (value) => {
     const newRequest = { ...this.state.request };
     newRequest.page = value;
     const url = this.setURL(newRequest);
@@ -212,6 +212,22 @@ class SearchPage extends Component {
       link.click();
     });
     this.setState({ isLoading: false });
+  }
+
+  handleSortResults = (e) => {
+    e.preventDefault();
+    const { value } = e.target;
+    const { request } = this.state;
+    if (value && value !== 'score') {
+      request.sort = {};
+      request.sort[value] = 'DESC';
+      const url = this.setURL(request);
+      this.props.history.push(url);
+    } else if (value && value === 'score') {
+      request.sort = null;
+      const url = this.setURL(request);
+      this.props.history.push(url);
+    }
   }
 
   // *******************************************************************
@@ -441,8 +457,10 @@ class SearchPage extends Component {
                 view={this.state.view}
                 api={this.state.api}
                 isLoading={this.state.isLoading}
-                paginationHandler={this.paginationHandler}
+                handlePagination={this.handlePagination}
                 handleExports={this.handleExports}
+                handleSortResults={this.handleSortResults}
+                activeSortValue={this.state.request.sort}
                 preview={this.state.preview}
               />
             </div>
