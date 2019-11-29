@@ -30,7 +30,7 @@ class Projects extends Component {
     error: false,
     isLoading: true,
     total: null,
-    sliderData: {},
+    sliderData: [],
     totalPerType: {},
     query: '',
     currentQueryText: '',
@@ -126,9 +126,9 @@ class Projects extends Component {
     Request.filters['participants.structure.id'].values = allIds;
     dateRequest.filters['participants.structure.id'].values = allIds;
     Axios.post(url, dateRequest).then((response) => {
-      const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
+      const sliderData = response.data.facets.find(facet => facet.id === 'years') || {};
       this.setState({
-        sliderData,
+        sliderData: sliderData.entries || [],
       });
     });
     Axios.post(url, request).then((response) => {
