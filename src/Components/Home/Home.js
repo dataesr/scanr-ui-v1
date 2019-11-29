@@ -15,6 +15,7 @@ import classes from './Home.scss';
 
 
 class HomePage extends Component {
+  // eslint-disable-next-line
   static contextType = GlobalContext;
 
   constructor(props) {
