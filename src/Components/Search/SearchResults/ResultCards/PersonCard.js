@@ -21,7 +21,7 @@ const PersonCard = (props) => {
   };
 
   const affiliation = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
-    ? props.data.affiliations.sort((a, b) => a.endDate > b.endDate)[0].structure
+    ? props.data.affiliations.sort((a, b) => b.endDate - a.endDate)[0].structure
     : null;
 
   const address = (affiliation && affiliation.address && affiliation.address.length > 0)
