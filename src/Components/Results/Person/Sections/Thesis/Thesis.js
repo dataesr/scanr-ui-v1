@@ -74,11 +74,11 @@ class Thesis extends Component {
       if (result && result.length > 0) {
         result.forEach((thes, i) => {
           thes.value.authors.forEach((author) => {
-            if (author.role === 'author' && author.fullName === this.props.personName) {
+            if (author.role === 'author' && author.person && author.person.id === this.props.id) {
               thesis = result[i].value;
-            } else if (author.role === 'directeurthese' && author.fullName === this.props.personName) {
+            } else if (author.role === 'directeurthese' && author.person && author.person.id === this.props.id) {
               direction.push(result[i].value);
-            } else if (author.role === 'rapporteur' && author.fullName === this.props.personName) {
+            } else if (author.role === 'rapporteur' && author.person && author.person.id === this.props.id) {
               rapporteur.push(result[i].value);
             }
           });
