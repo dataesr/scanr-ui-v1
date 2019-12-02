@@ -28,7 +28,7 @@ const FAQ = props => (
     </section>
     <section className={classes.Content}>
       <div className="container">
-        <div className="accordion" id="accordionExample">
+        <div className="accordion" id="accordion">
           {
             faqTerms.map((termObject, i) => (
               <div className="card">
@@ -43,7 +43,7 @@ const FAQ = props => (
                     </button>
                   </h2>
                 </div>
-                <div id={termObject.key} className={`collapse ${(i === 0) ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div id={termObject.key} className={`collapse ${(i === 0) ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#accordion">
                   <div className="card-body">
                     <p className={classes.Definition}>
                       <Markdown>
