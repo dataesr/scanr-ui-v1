@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import Markdown from 'markdown-to-jsx';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
@@ -13,7 +14,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 /* Chargement du lexique */
-import glossaryTerms from '../../Shared/Lexicon/terms/glossary.json';
+import glossaryTerms from '../../Shared/terms/glossary.json';
 
 /* SCSS */
 import classes from './Glossary.scss';
@@ -76,7 +77,9 @@ class Glossary extends Component {
                         {termObject.label[this.props.language]}
                       </h3>
                       <p className={classes.Definition}>
-                        {termObject.definition[this.props.language]}
+                        <Markdown>
+                          {termObject.definition[this.props.language]}
+                        </Markdown>
                       </p>
                       <hr />
                     </li>
