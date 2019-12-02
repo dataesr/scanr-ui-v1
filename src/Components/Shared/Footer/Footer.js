@@ -71,10 +71,12 @@ const Footer = props => (
                 />
               </li>
               <li>
-                <FormattedHTMLMessage
-                  id="Footer.link.faq"
-                  defaultMessage="Footer.link.faq"
-                />
+                <a href="/faq">
+                  <FormattedHTMLMessage
+                    id="Footer.link.faq"
+                    defaultMessage="Footer.link.faq"
+                  />
+                </a>
               </li>
               <li>
                 <a href="/glossaire">
