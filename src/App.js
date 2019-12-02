@@ -17,7 +17,6 @@ const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
 const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
-const CurieHome = lazy(() => import('./Components/Shared/GraphCurie/CurieHome'));
 
 /* Pages froides */
 const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
@@ -130,17 +129,6 @@ class App extends Component {
                 path="/focus/:id"
                 component={props => (
                   <Focus
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-
-              <Route
-                exact
-                path="/curie"
-                component={props => (
-                  <CurieHome
                     {...props}
                     language={this.context.language}
                   />
