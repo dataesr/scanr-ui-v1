@@ -9,7 +9,7 @@ import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 
 /* Chargement du lexique */
-import faqTerms from '../../Shared/Lexicon/terms/faq.json';
+import faqTerms from '../../Shared/terms/faq.json';
 
 /* SCSS */
 import classes from './FAQ.scss';
