@@ -75,7 +75,7 @@ SVG.propTypes = {
 
 SVG.defaultProps = {
   style: {},
-  fill: '#000',
+  fill: '#3778bb',
   height: '100%',
   width: '100%',
   className: '',
