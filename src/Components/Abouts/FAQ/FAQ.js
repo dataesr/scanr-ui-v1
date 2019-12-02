@@ -36,7 +36,7 @@ const FAQ = props => (
                   <h2 className="mb-0">
                     <button className="btn btn-link" type="button" data-toggle="collapse" data-target={`#${termObject.key}`} aria-expanded="true" aria-controls="collapseOne">
                       <h3 className={classes.Term}>
-                        <i className="fas fa-bookmark" />
+                        <i className={termObject.icon} />
                         &nbsp;
                         {termObject.label[props.language]}
                       </h3>
