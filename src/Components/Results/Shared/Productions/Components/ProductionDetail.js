@@ -152,7 +152,7 @@ const ProductionDetail = (props) => {
                 url={props.data.oaEvidence.url}
                 target="_blank"
               >
-                Aller au PDF
+                {(props.language === 'fr') ? 'Accéder à la publication' : 'Access the publication'}
               </ButtonToPage>
             </div>
           ) : (

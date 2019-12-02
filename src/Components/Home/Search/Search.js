@@ -7,7 +7,6 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
-// import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
 
 import classes from './Search.scss';
@@ -40,7 +39,6 @@ class Search extends Component {
     this.props.history.push(`/recherche/all?query=${query}`);
   }
 
-  /* eslint-disable */
   renderForm = () => (
     <form onSubmit={this.submitResearch}>
       <div className="d-flex flex-nowrap mt-3">
@@ -54,14 +52,13 @@ class Search extends Component {
             type="submit"
             className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
             aria-label="Lancer la recherche"
-            >
+          >
             <i className="fas fa-search" aria-hidden />
           </button>
         </div>
       </div>
     </form>
   );
-  /* eslint-enable */
 
   renderFull = () => {
     const randomNumber = Math.floor(Math.random() * 4);
@@ -73,36 +70,34 @@ class Search extends Component {
       backgroundImage: `url(${bgUrl})`,
       backgroundSize: '500px',
     };
-    /* eslint-disable */
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
-            <div className="container">
-              <h1 className={classes.Logo} aria-label="scanr, le moteur de la recherche et de l'innovation">
-                <LogoScanrWhiteSVG fill={color} />
-              </h1>
-              {this.renderForm()}
-              <div className={`pt-1 pl-1 ${classes.Suggest}`}>
-                <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
-                <ul>
-                  {
-                    this.props.suggests.map(suggest => (
-                      <li>
-                        <a href={`recherche/all?query=${suggest.query}`}>
-
-			    {(this.props.language === 'fr') ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>) 
-			    : (<ButtonMiniDarkToSearch key={suggest.labelEn}>{suggest.labelEn}</ButtonMiniDarkToSearch>)}
-                        </a>
-                      </li>
-                    ))
+        <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
+          <div className="container">
+            <h1 className={classes.Logo} aria-label="scanr, le moteur de la recherche et de l'innovation">
+              <LogoScanrWhiteSVG fill={color} width="280px" />
+            </h1>
+            {this.renderForm()}
+            <div className={`pt-1 pl-1 ${classes.Suggest}`}>
+              <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
+              <ul>
+                {
+                  this.props.suggests.map(suggest => (
+                    <li>
+                      <a href={`recherche/all?query=${suggest.query}`}>
+                        {(this.props.language === 'fr') ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>)
+                          : (<ButtonMiniDarkToSearch key={suggest.labelEn}>{suggest.labelEn}</ButtonMiniDarkToSearch>)}
+                      </a>
+                    </li>
+                  ))
                   }
-                </ul>
-              </div>
+              </ul>
             </div>
-          </section>
+          </div>
+        </section>
       </IntlProvider>
     );
-    /* eslint-enable */
   }
 
   renderMini = () => (

@@ -28,7 +28,7 @@ import classes from './Thesis.scss';
 */
 class Thesis extends Component {
   state= {
-    thesis: {},
+    theses: [],
     rapporteur: [],
     direction: [],
     empty: false,
@@ -68,14 +68,14 @@ class Thesis extends Component {
     Axios.post(url, request).then((response) => {
       const result = response.data.results;
       const empty = (result.length === 0);
-      let thesis = {};
+      const theses = [];
       const rapporteur = [];
       const direction = [];
       if (result && result.length > 0) {
         result.forEach((thes, i) => {
           thes.value.authors.forEach((author) => {
             if (author.role === 'author' && author.person && author.person.id === this.props.id) {
-              thesis = result[i].value;
+              theses.push(result[i].value);
             } else if (author.role === 'directeurthese' && author.person && author.person.id === this.props.id) {
               direction.push(result[i].value);
             } else if (author.role === 'rapporteur' && author.person && author.person.id === this.props.id) {
@@ -86,7 +86,7 @@ class Thesis extends Component {
       }
       this.setState({
         rapporteur,
-        thesis,
+        theses,
         direction,
         empty,
         loading: false,
@@ -126,23 +126,33 @@ class Thesis extends Component {
                 id={this.props.id}
                 title={messages[this.props.language]['Person.thesis.title']}
               />
-              <div className="row d-flex justify-content-stretch">
-                {
-                  (this.state.thesis.title)
-                    ? <div className={`col-md-6 ${classes.CardContainer}`}><div className={classes.isOa}><PublicationCard small language={this.props.language} data={this.state.thesis} /></div></div>
+              {
+                (this.state.theses && this.state.theses.length > 0)
+                  ? (
+                    /* eslint-disable-next-line */
+                    this.state.theses.map((currentThesis) => {
+                      return (
+                        <div className="row d-flex justify-content-stretch">
+                          {
+                  (currentThesis.title)
+                    ? <div className={`col-md-6 ${classes.CardContainer}`}><div className={classes.isOa}><PublicationCard small language={this.props.language} data={currentThesis} /></div></div>
                     : null
                 }
-                {
-                  (this.state.thesis.title)
-                    ? <div className={`col-md-3 ${classes.CardContainer}`}><div className={classes.isOa}><IsOa className="p-3" language={this.props.language} oa={this.state.thesis.isOa} /></div></div>
+                          {
+                  (currentThesis.title)
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><div className={classes.isOa}><IsOa className="p-3" language={this.props.language} oa={currentThesis.isOa} /></div></div>
                     : null
                 }
-                {
-                  (this.state.thesis.title && this.state.thesis.isOa)
-                    ? <div className={`col-md-3 ${classes.CardContainer}`}><OaLink className={classes.CardHeight} language={this.props.language} oaEvidence={this.state.thesis.oaEvidence} /></div>
+                          {
+                  (currentThesis.title && currentThesis.isOa)
+                    ? <div className={`col-md-3 ${classes.CardContainer}`}><OaLink className={classes.CardHeight} language={this.props.language} oaEvidence={currentThesis.oaEvidence} /></div>
                     : null
                 }
-              </div>
+                        </div>
+                      );
+                    })
+                  ) : null
+              }
               <div className="row">
                 {
                   (this.state.direction && this.state.direction.length > 0)
