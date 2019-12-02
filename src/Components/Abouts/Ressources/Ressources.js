@@ -222,7 +222,7 @@ class Ressources extends Component {
           <div className={`row ${classes.SourcesPart}`}>
             <div className={classes.SourcesCard}>
               <div className={classes.Title}>
-                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE DES PARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF PARTICIPANTS IN H2020 PROJECTS' }
+                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE De LEUR PROPRES ARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF THEIR OWN PARTICIPANTS IN H2020 PROJECTS' }
               </div>
             </div>
             <RedirectingLogoCard
