@@ -9,12 +9,12 @@ import messagesPanelFr from './translations/fr.json';
 import messagesPanelEn from './translations/en.json';
 
 /* Chargement du lexique */
-import glossaryTerms from '../../terms/glossary.json';
+import terms from '../../terms/faq.json';
 
 /* SCSS */
-import classes from './LexiconModal.scss';
+import classes from './FAQModal.scss';
 
-class LexiconModal extends Component {
+class FAQModal extends Component {
   state={
     showModal: false,
   };
@@ -34,22 +34,22 @@ class LexiconModal extends Component {
     };
 
     if (this.props.target) {
-      const termObject = glossaryTerms.find(el => el.key === this.props.target);
-      const term = termObject.label[this.props.language];
-      const definition = termObject.definition[this.props.language];
+      const termObject = terms.find(el => el.key === this.props.target);
+      const term = (termObject) ? termObject.label[this.props.language] : null;
+      const definition = (termObject) ? termObject.definition[this.props.language] : null;
       return (
         <IntlProvider locale={this.props.language} messages={messagesPanel[this.props.language]}>
           <Fragment>
             <Modal
               show={this.state.showModal}
               onHide={this.handleCloseModal}
-              className={classes.LexiconModal}
+              className={classes.FAQModal}
               size="lg"
             >
               <Modal.Header closeButton className={classes.Header}>
                 <p className={classes.Title}>
-                  <i className="fas fa-bookmark" />
-                  <FormattedHTMLMessage id="lexicon" />
+                  <i className="fas fa-question-circle" />
+                  <FormattedHTMLMessage id="faq" />
                 </p>
               </Modal.Header>
               <Modal.Body className={classes.Content}>
@@ -63,8 +63,8 @@ class LexiconModal extends Component {
                 </p>
               </Modal.Body>
               <Modal.Footer className={classes.Footer}>
-                <a href="/glossaire" target="_blank" rel="noopener noreferrer">
-                  <FormattedHTMLMessage id="fullLexicon" />
+                <a href="/faq" target="_blank" rel="noopener noreferrer">
+                  <FormattedHTMLMessage id="fullFaq" />
                   &nbsp;
                   <i className="fas fa-external-link-alt" />
                 </a>
@@ -82,9 +82,9 @@ class LexiconModal extends Component {
   }
 }
 
-export default LexiconModal;
+export default FAQModal;
 
-LexiconModal.propTypes = {
+FAQModal.propTypes = {
   language: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
   target: PropTypes.string.isRequired,

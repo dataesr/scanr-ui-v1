@@ -16,7 +16,7 @@ import classes from './SimpleCountListCard.scss';
  * Tests unitaires : .
 */
 const SimpleCountListCard = (props) => {
-  const MAX_LIST = 2;
+  const MAX_LIST = (props.maxList) ? (props.maxList) : 5;
   const shortLi = props.data.map((item, i) => {
     // Identification du Label
     const label = (item.label)
@@ -113,6 +113,7 @@ SimpleCountListCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
   count: PropTypes.number,
+  maxList: PropTypes.number,
   title: PropTypes.string,
   label: PropTypes.string,
   tooltip: PropTypes.string,
