@@ -10,6 +10,7 @@ import {
 } from '../../../config/config';
 
 import LexiconModal from '../Lexicon/LexiconModal/LexiconModal';
+import FAQModal from '../FAQ/FAQModal/FAQModal';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -97,6 +98,9 @@ class ScanrToday extends Component {
                   <LexiconModal language={this.props.language} target="ScanrToday">
                     <i className="fa fa-info-circle" />
                   </LexiconModal>
+                  <FAQModal language={this.props.language} target="q1">
+                    <i className="fa fa-info-circle" />
+                  </FAQModal>
                 </h2>
               </div>
               <div className={`col-lg ${classes.CardContainer}`}>
