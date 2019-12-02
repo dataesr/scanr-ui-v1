@@ -4,7 +4,6 @@ import { GlobalContext } from '../../GlobalContext';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import LastFocus from '../Shared/LastFocus/LastFocus';
-// import LexiconPanel from '../Shared/Lexicon/LexiconPanel';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
