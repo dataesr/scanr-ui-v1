@@ -133,6 +133,7 @@ class Entity extends Component {
           <Team
             language={this.props.language}
             data={this.state.data}
+            childs={this.state.dataSupervisorOf}
             id={this.props.match.params.id}
           />
         </div>
