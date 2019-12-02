@@ -128,6 +128,7 @@ class Network extends Component {
                   <div className={`col-md-4 ${classes.NoSpace}`}>
                     <SimpleCountListCard
                       language={this.props.language}
+                      maxList={10}
                       data={this.props.data.institutions}
                       title={messages[this.props.language]['Entity.network.supervisors.title']}
                       label={(this.props.data.institutions.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
@@ -144,6 +145,7 @@ class Network extends Component {
                     <SimpleCountListCard
                       language={this.props.language}
                       data={this.props.data.children}
+                      maxList={5}
                       title={messages[this.props.language]['Entity.network.headOf.title']}
                       label={(this.props.data.children.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
                       tooltip=""
@@ -159,6 +161,7 @@ class Network extends Component {
                     <SimpleCountListCard
                       language={this.props.language}
                       data={this.state.dataSupervisorOf}
+                      maxList={5}
                       count={this.state.dataSupervisorOfTotal}
                       title={messages[this.props.language]['Entity.network.supervisorOf.title']}
                       label={(this.state.dataSupervisorOf.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
