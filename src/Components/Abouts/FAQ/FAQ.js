@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import React from 'react';
 import PropTypes from 'prop-types';
+import Markdown from 'markdown-to-jsx';
 
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
@@ -8,122 +8,92 @@ import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
 /* Chargement du lexique */
 import faqTerms from '../../Shared/Lexicon/terms/faq.json';
 
 /* SCSS */
 import classes from './FAQ.scss';
 
-
-class FAQ extends Component {
-  state = {
-    filter: null,
-  };
-
-  onInputChangeHandler = (e) => {
-    this.setState({ filter: e.target.value });
-  }
-
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
-    let filteredFaqTerms = faqTerms;
-    if (this.state.filter) {
-      filteredFaqTerms = faqTerms.filter(el => (el.label[this.props.language].toLowerCase().indexOf(this.state.filter.toLowerCase()) !== -1));
-    }
-
-    return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className={`container-fluid ${classes.FAQ}`}>
-          <Header
-            language={this.props.language}
-            switchLanguage={this.props.switchLanguage}
-          />
-          <section>
-            <HeaderTitle
-              language={this.props.language}
-              labelkey="faq"
-            />
-          </section>
-          <section className={classes.Content}>
-            <div className="container">
-              <div>
-                <i className="fas fa-search" />
-                <h2 className={classes.SearchInputTitle}><FormattedHTMLMessage id="searchInputTitle" /></h2>
-              </div>
-              <div>
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={this.onInputChangeHandler}
-                />
-              </div>
-
-              <ul className={classes.Content}>
-                {
-                  filteredFaqTerms.map(termObject => (
-                    <li key={termObject.key} id={termObject.key} className={classes.Li}>
+const FAQ = props => (
+  <div className={`container-fluid ${classes.FAQ}`}>
+    <Header
+      language={props.language}
+      switchLanguage={props.switchLanguage}
+    />
+    <section>
+      <HeaderTitle
+        language={props.language}
+        labelkey="faq"
+      />
+    </section>
+    <section className={classes.Content}>
+      <div className="container">
+        <div className="accordion" id="accordionExample">
+          {
+            faqTerms.map((termObject, i) => (
+              <div className="card">
+                <div className="card-header" id="headingOne">
+                  <h2 className="mb-0">
+                    <button className="btn btn-link" type="button" data-toggle="collapse" data-target={`#${termObject.key}`} aria-expanded="true" aria-controls="collapseOne">
                       <h3 className={classes.Term}>
                         <i className="fas fa-bookmark" />
                         &nbsp;
-                        {termObject.label[this.props.language]}
+                        {termObject.label[props.language]}
                       </h3>
-                      <p className={classes.Definition}>
-                        {termObject.definition[this.props.language]}
-                      </p>
-                      <hr />
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </section>
-          <aside className={classes.ThreeCards}>
-            <div className="container">
-              <div className="row">
-                <CardWithButton
-                  language={this.props.language}
-                  schema="scanrdeepblueColorCards"
-                  title="Discover.TalkAboutScanr"
-                  url="/medias"
-                  lib_button="Voir"
-                />
-                <CardWithButton
-                  language={this.props.language}
-                  schema="scanrdeepblueColorCards"
-                  title="Discover.Sources"
-                  url="/ressources"
-                  lib_button="Voir"
-                />
-                <CardWithButton
-                  language={this.props.language}
-                  schema="scanrdeepblueColorCards"
-                  title="Discover.Team"
-                  url="/l-equipe-et-son-projet"
-                  lib_button="Voir"
-                />
+                    </button>
+                  </h2>
+                </div>
+                <div id={termObject.key} className={`collapse ${(i === 0) ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div className="card-body">
+                    <p className={classes.Definition}>
+                      <Markdown>
+                        {termObject.definition[props.language]}
+                      </Markdown>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </aside>
-          <Banner
-            language={this.props.language}
-            labelKey="Appear"
-            cssClass="BannerDark"
-            url=""
-          />
-          <Footer language={this.props.language} />
+            ))
+          }
         </div>
-      </IntlProvider>
-    );
-  }
-}
+      </div>
+    </section>
+    <aside className={classes.ThreeCards}>
+      <div className="container">
+        <div className="row">
+          <CardWithButton
+            language={props.language}
+            schema="scanrdeepblueColorCards"
+            title="Discover.TalkAboutScanr"
+            url="/medias"
+            lib_button="Voir"
+          />
+          <CardWithButton
+            language={props.language}
+            schema="scanrdeepblueColorCards"
+            title="Discover.Sources"
+            url="/ressources"
+            lib_button="Voir"
+          />
+          <CardWithButton
+            language={props.language}
+            schema="scanrdeepblueColorCards"
+            title="Discover.Team"
+            url="/l-equipe-et-son-projet"
+            lib_button="Voir"
+          />
+        </div>
+      </div>
+    </aside>
+    <Banner
+      language={props.language}
+      labelKey="Appear"
+      cssClass="BannerDark"
+      url=""
+    />
+    <Footer language={props.language} />
+  </div>
+);
 
 export default FAQ;
 
