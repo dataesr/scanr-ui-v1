@@ -128,11 +128,6 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="cnrs"
-              imageName="logo-cnrs.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
               labelKey="europe"
               imageName="logo-europe.svg"
               cssClass="CardLogo"
@@ -140,16 +135,6 @@ class Ressources extends Component {
             <RedirectingLogoCard
               labelKey="hceres"
               imageName="logo-hceres.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="ilab"
-              imageName="logo-ilab.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="innovation2030"
-              imageName="logo-innovation2030.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
@@ -163,48 +148,13 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="inra"
-              imageName="logo-inra.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="inserm"
-              imageName="logo-inserm.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="institutdefrance"
-              imageName="logo-institutdefrance.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="minrecherche"
-              imageName="logo-minrecherche.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="minsante"
-              imageName="logo-minsante.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
               labelKey="core"
               imageName="logo-core.png"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="etalab"
-              imageName="logo-etalab.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
               labelKey="datainfogreffe"
               imageName="logo-datainfogreffe.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="obssts"
-              imageName="logo-obssts.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
@@ -254,28 +204,8 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="agoranov"
-              imageName="logo-agoranov.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
               labelKey="asrc"
               imageName="logo-asrc.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="audiar"
-              imageName="logo-audiar.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="cea"
-              imageName="logo-cea.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
-              labelKey="cradar"
-              imageName="logo-cradar.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
@@ -288,9 +218,36 @@ class Ressources extends Component {
               imageName="logo-simv.svg"
               cssClass="CardLogo"
             />
+          </div>
+          <div className={`row ${classes.SourcesPart}`}>
+            <div className={classes.SourcesCard}>
+              <div className={classes.Title}>
+                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE DES PARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF PARTICIPANTS IN H2020 PROJECTS' }
+              </div>
+            </div>
             <RedirectingLogoCard
-              labelKey="univ-droit"
-              imageName="logo-univ-droit.svg"
+              labelKey="inra"
+              imageName="logo-inra.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="inria"
+              imageName="logo-inria.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="cnrs"
+              imageName="logo-cnrs.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="onera"
+              imageName="logo-onera.png"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="cea"
+              imageName="logo-cea.svg"
               cssClass="CardLogo"
             />
           </div>
