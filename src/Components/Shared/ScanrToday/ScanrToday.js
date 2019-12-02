@@ -98,7 +98,7 @@ class ScanrToday extends Component {
                   <LexiconModal language={this.props.language} target="ScanrToday">
                     <i className="fa fa-info-circle" />
                   </LexiconModal>
-                  <FAQModal language={this.props.language} target="ScanrToday">
+                  <FAQModal language={this.props.language} target="q1">
                     <i className="fa fa-info-circle" />
                   </FAQModal>
                 </h2>

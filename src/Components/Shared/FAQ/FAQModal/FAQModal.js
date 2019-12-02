@@ -9,7 +9,7 @@ import messagesPanelFr from './translations/fr.json';
 import messagesPanelEn from './translations/en.json';
 
 /* Chargement du lexique */
-import glossaryTerms from '../../terms/faq.json';
+import terms from '../../terms/faq.json';
 
 /* SCSS */
 import classes from './FAQModal.scss';
@@ -34,9 +34,9 @@ class FAQModal extends Component {
     };
 
     if (this.props.target) {
-      const termObject = glossaryTerms.find(el => el.key === this.props.target);
-      const term = termObject.label[this.props.language];
-      const definition = termObject.definition[this.props.language];
+      const termObject = terms.find(el => el.key === this.props.target);
+      const term = (termObject) ? termObject.label[this.props.language] : null;
+      const definition = (termObject) ? termObject.definition[this.props.language] : null;
       return (
         <IntlProvider locale={this.props.language} messages={messagesPanel[this.props.language]}>
           <Fragment>
@@ -63,8 +63,8 @@ class FAQModal extends Component {
                 </p>
               </Modal.Body>
               <Modal.Footer className={classes.Footer}>
-                <a href="/glossaire" target="_blank" rel="noopener noreferrer">
-                  <FormattedHTMLMessage id="fullLexicon" />
+                <a href="/faq" target="_blank" rel="noopener noreferrer">
+                  <FormattedHTMLMessage id="fullFaq" />
                   &nbsp;
                   <i className="fas fa-external-link-alt" />
                 </a>
