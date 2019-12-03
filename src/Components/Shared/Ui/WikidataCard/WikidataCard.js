@@ -28,6 +28,7 @@ class WikidataCard extends Component {
   state= {
     // eslint-disable-next-line
     title: null,
+    displayWiki: false,
     extract: null,
     urlImageOnServer: null,
   }
@@ -41,8 +42,11 @@ class WikidataCard extends Component {
     /* eslint-disable */
     const url = `https://www.wikidata.org/w/api.php?action=wbgetentities&ids=${this.props.id}&sitefilter=enwiki%7Cfrwiki&props=sitelinks&format=json&origin=*`;
     Axios.get(url).then((response) => {
-      const title = response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`].title;
-      if (response.data && response.data.entities && response.data.entities[this.props.id] && response.data.entities[this.props.id].sitelinks && response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`]) {
+        if (response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`] === undefined) {
+          this.setState({ displayWiki: false });
+	} else if (response.data && response.data.entities && response.data.entities[this.props.id] && response.data.entities[this.props.id].sitelinks && response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`]) {
+        const title = response.data.entities[this.props.id].sitelinks[`${this.props.language}wiki`].title;
+        this.setState({ displayWiki: true });
         const urlText = `https://${this.props.language}.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro&explaintext&redirects=1&titles=${title}&origin=*`;
         Axios.get(urlText).then((responseText) => {
           if (responseText.data && responseText.data.query && responseText.data.query.pages) {
@@ -90,7 +94,7 @@ class WikidataCard extends Component {
 
   render() {
     const wikiLink = `https://${this.props.language}.wikipedia.org/wiki/${this.state.title}`;
-    return (
+    return (this.state.displayWiki) ? (
       <div className={classes.WikidataCard}>
         <div className={`d-flex  justify-content-between ${classes.Header}`}>
           <p className={classes.Title}>
@@ -119,7 +123,7 @@ class WikidataCard extends Component {
           </a>
         </p>
       </div>
-    );
+    ) : null;
   }
 }
 

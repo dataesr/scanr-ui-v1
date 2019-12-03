@@ -35,6 +35,7 @@ class Entity extends Component {
   state = {
     data: {
       projects: null,
+      relations: [],
     },
     dataSupervisorOf: [],
     geoNear: [],
@@ -44,6 +45,7 @@ class Entity extends Component {
     const { id } = this.props.match.params;
     this.getData(id);
     this.getDataSupervisorOf(id);
+    this.setState({ data: this.props.data });
     this.getNearStructures(id);
   }
 
@@ -229,5 +231,6 @@ export default Entity;
 Entity.propTypes = {
   language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
+  data: PropTypes.object,
   switchLanguage: PropTypes.func.isRequired,
 };
