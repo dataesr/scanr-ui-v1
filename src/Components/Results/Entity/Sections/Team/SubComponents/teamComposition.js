@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import Axios from 'axios';
 
 import { API_PERSONS_SEARCH_END_POINT } from '../../../../../../config/config';
@@ -30,10 +31,12 @@ const messages = {
 
 class TeamComposition extends Component {
   state = {
+    personsRecent: [],
     nbPersons: 0,
     nbMales: 0,
     nbFemales: 0,
     nbUnknown: 0,
+    displayGender: false,
   };
 
   componentDidMount() {
@@ -50,6 +53,14 @@ class TeamComposition extends Component {
   }
 
   getData = () => {
+    const lastAffiliationDateForTeam = '2018-01-01';
+    moment.locale(this.props.language);
+    const personsRecent = [];
+    for (let i = 0; i < this.props.persons.length; i += 1) {
+      if (moment(this.props.persons[i].endDate).format('YYYY-MM-DD') >= lastAffiliationDateForTeam) {
+        personsRecent.push(this.props.persons[i]);
+      }
+    }
     // Récupération des données par api search
     const url = API_PERSONS_SEARCH_END_POINT;
     const data = {
@@ -59,6 +70,11 @@ class TeamComposition extends Component {
           type: 'MultiValueSearchFilter',
           op: 'all',
           values: [this.props.id],
+        },
+        'affiliations.endDate': {
+          type: 'DateRangeFilter',
+          min: lastAffiliationDateForTeam,
+          missing: true,
         },
       },
       aggregations: {
@@ -83,7 +99,8 @@ class TeamComposition extends Component {
       }
       const nbUnknown = response.data.total - nbMales - nbFemales;
       this.setState({
-        nbPersons: response.data.total,
+        personsRecent,
+        nbPersons: personsRecent.length,
         nbMales,
         nbFemales,
         nbUnknown,
@@ -91,11 +108,12 @@ class TeamComposition extends Component {
     });
   }
 
+
   render() {
     const teamModalData = (
       <ul className={`${classes.noListStyle} d-flex flex-column justify-content-between align-content-stretch p-0 m-0`}>
         {
-          this.props.persons.map(person => (
+          this.state.personsRecent.map(person => (
             <li key={person.id} className={`${classes.OneFourth} ${classes.noListStyle}`}>
               <PersonCard
                 language={this.props.language}
@@ -125,9 +143,16 @@ class TeamComposition extends Component {
             </div>
           </div>
           <div className="row">
+            <div className={`col-md-5 ${classes.NoSpace}`}>
+              <NbPersonsCard
+                language={this.props.language}
+                nbPersons={this.state.nbPersons}
+                personsModalList={teamModalData}
+              />
+            </div>
             <div className={`col-md-7 ${classes.NoSpace}`}>
               {
-                (this.state.nbMales > 0 || this.state.nbFemales > 0 || this.state.nbFemales > 0) ? (
+                ((this.state.nbMales > 0 || this.state.nbFemales > 0) && (this.state.displayGender)) ? (
                   <GenderGraphCard
                     language={this.props.language}
                     nbMales={this.state.nbMales}
@@ -136,13 +161,6 @@ class TeamComposition extends Component {
                   />
                 ) : null
               }
-            </div>
-            <div className={`col-md-5 ${classes.NoSpace}`}>
-              <NbPersonsCard
-                language={this.props.language}
-                nbPersons={this.state.nbPersons}
-                personsModalList={teamModalData}
-              />
             </div>
           </div>
         </div>

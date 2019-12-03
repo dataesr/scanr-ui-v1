@@ -133,7 +133,7 @@ class SearchResults extends Component {
       fr: messagesFr,
       en: messagesEn,
     };
-    const numResults = (this.props.data.total < 2) ? 'searchResults.result' : 'searchResults.results';
+    const numResults = (this.props.data.total < 2) ? 'searchResults.result'.concat('-', this.props.api) : 'searchResults.results'.concat('-', this.props.api);
     const bgColor = `${this.props.api}Color`;
 
     if (this.props.isLoading) {
