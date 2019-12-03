@@ -12,7 +12,6 @@ import FormContact from '../../Shared/FormContact/FormContact';
 /* SCSS */
 import classes from './Contact.scss';
 
-
 /**
  * Contact
  * Url : /contact
@@ -21,7 +20,6 @@ import classes from './Contact.scss';
  * Accessible : .
  * Tests unitaires : .
  */
-
 const Contact = props => (
   <React.Fragment>
     <Header />
@@ -32,7 +30,7 @@ const Contact = props => (
       url2="#"
     />
     <section className="container py-4">
-      <FormContact language={props.language} />
+      <FormContact language={props.language} apiName="contact" />
     </section>
 
     <section className={classes.Cards}>
@@ -80,7 +78,7 @@ const Contact = props => (
       target="_blank"
     />
 
-    <Footer language={props.language} />
+    <Footer />
   </React.Fragment>
 );
 
