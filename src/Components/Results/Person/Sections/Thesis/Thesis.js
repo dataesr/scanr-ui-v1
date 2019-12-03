@@ -31,7 +31,6 @@ class Thesis extends Component {
     theses: [],
     rapporteur: [],
     direction: [],
-    empty: false,
     loading: true,
   };
 
@@ -67,7 +66,7 @@ class Thesis extends Component {
     };
     Axios.post(url, request).then((response) => {
       const result = response.data.results;
-      const empty = (result.length === 0);
+      // const empty = (result.length === 0);
       const theses = [];
       const rapporteur = [];
       const direction = [];
@@ -84,11 +83,12 @@ class Thesis extends Component {
           });
         });
       }
+      const displaySection = (rapporteur.length > 0) || (theses.length > 0) || (direction.length > 0);
       this.setState({
         rapporteur,
         theses,
         direction,
-        empty,
+        displaySection,
         loading: false,
       });
     });
@@ -111,7 +111,8 @@ class Thesis extends Component {
     if (this.state.loading) {
       // return ('hello world');
     }
-    if (!this.state.loading && this.state.empty) {
+    if (!this.state.loading && !this.state.displaySection) {
+      return null;
       // return ('hello again');
     }
     return (
