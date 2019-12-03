@@ -42,6 +42,7 @@ class Network extends Component {
 
   componentDidMount() {
     this.getDataSupervisorOf();
+    this.getLinksOf();
     if (this.props.data.relations) {
       const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
       this.setState({ satt });
@@ -51,7 +52,7 @@ class Network extends Component {
       this.setState({ carnot });
       const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
       this.setState({ spinoff });
-      const rachete = this.props.data.relations.filter(item => item.type.indexOf('rachete') !== -1);
+      const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
       this.setState({ rachete });
     }
   }
@@ -85,6 +86,43 @@ class Network extends Component {
         });
     }
   }
+
+  getLinksOf = () => {
+    if (this.props.data.id) {
+      const url = `${API_STRUCTURES_END_POINT}/search`;
+      const obj = {
+        filters: {
+          'relations.structure.id': {
+            type: 'MultiValueSearchFilter',
+            op: 'all',
+            values: [`${this.props.data.id}`],
+          },
+        },
+        sourceFields: ['relations', 'label', 'id'],
+        pageSize: 10000,
+      };
+      Axios.post(url, obj)
+        .then((response) => {
+          const newData = response.data.results.map((item) => {
+            const o = {
+              label: getSelectKey(item.value, 'label', this.props.language, 'fr'),
+              id: item.value.id,
+              relations: item.value.relations.filter(r => r.structure && r.structure.id === this.props.data.id),
+            };
+            return o;
+          });
+          const appartientCarnot = newData.filter(r => r.relations[0].type === 'membre_carnot');
+          const actionnaireSatt = newData.filter(r => r.relations[0].type === 'satt_actionnaire');
+          const aRachete = newData.filter(r => r.relations[0].type === 'rachete_par');
+          const aIncube = newData.filter(r => r.relations[0].type === 'incubateur_public');
+          const spinoffFrom = newData.filter(r => r.relations[0].type.indexOf('spinoff') !== -1);
+          const inverseRelations = [].concat(appartientCarnot, actionnaireSatt, aRachete, aIncube, spinoffFrom);
+          const hasNoInverseRelation = (inverseRelations.length === 0) ? true : false;
+          this.setState({ appartientCarnot, actionnaireSatt, aRachete, spinoffFrom, aIncube, hasNoInverseRelation });
+        });
+    }
+  }
+
 
   componentDidCatch(error, info) {
     /* eslint-disable-next-line */
@@ -271,6 +309,91 @@ class Network extends Component {
                   </div>
                 ) : null
               }
+              {
+                (this.state.aRachete && this.state.aRachete.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.aRachete}
+                      maxList={5}
+                      count={this.state.aRachete.length}
+                      title={messages[this.props.language]['Entity.network.aRachete.title']}
+                      label={(this.state.aRachete.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.aIncube && this.state.aIncube.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.aIncube}
+                      maxList={5}
+                      count={this.state.aIncube.length}
+                      title={messages[this.props.language]['Entity.network.aIncube.title']}
+                      label={(this.state.aIncube.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.appartientCarnot && this.state.appartientCarnot.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.appartientCarnot}
+                      maxList={5}
+                      count={this.state.appartientCarnot.length}
+                      title={messages[this.props.language]['Entity.network.appartientCarnot.title']}
+                      label={(this.state.appartientCarnot.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.actionnaireSatt && this.state.actionnaireSatt.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.actionnaireSatt}
+                      maxList={5}
+                      count={this.state.actionnaireSatt.length}
+                      title={messages[this.props.language]['Entity.network.actionnaireSatt.title']}
+                      label={(this.state.actionnaireSatt.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.spinoffFrom && this.state.spinoffFrom.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.spinoffFrom}
+                      maxList={5}
+                      count={this.state.spinoffFrom.length}
+                      title={messages[this.props.language]['Entity.network.spinoffFrom.title']}
+                      label={(this.state.spinoffFrom.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
             </div>
           </div>
         </section>
@@ -286,7 +409,7 @@ class Network extends Component {
     };
 
     const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
-    const relationsHasNoData = (!this.props.data.relations || this.props.data.relations.length === 0);
+    const relationsHasNoData = ((!this.props.data.relations || this.props.data.relations.length === 0)) && (this.state.hasNoInverseRelation);
     const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
