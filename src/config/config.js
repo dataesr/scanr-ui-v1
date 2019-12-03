@@ -1,4 +1,5 @@
 
+export const API_SCANR_ADMIN = '/api';
 export const API_BASE_URL = 'https://scanr-preprod.sword-group.com/api/v2';
 // Get
 export const API_STRUCTURES_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/structures';
