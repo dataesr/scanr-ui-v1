@@ -1,13 +1,26 @@
 import { useState } from 'react';
+import Axios from 'axios';
+import { API_SCANR_ADMIN } from '../config/config';
 
-const useForm = (callback) => {
-  const [inputs, setInputs] = useState({});
+const useForm = (apiName, defaultInputs = {}) => {
+  const [inputs, setInputs] = useState(defaultInputs);
+  const [sent, setSent] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState(false);
+
 
   const handleSubmit = (event) => {
-    if (event) {
-      event.preventDefault();
-    }
-    callback();
+    event.preventDefault();
+    setIsSending(true);
+    Axios.post(`${API_SCANR_ADMIN}/${apiName}`, inputs)
+      .then((response) => {
+        // eslint-disable-next-line
+        console.log(response);
+        setSent(true);
+        setIsSending(false);
+      }).catch(() => setError(true));
+    setIsSending(false);
+    setInputs(defaultInputs);
   };
 
   const handleInputChange = (event) => {
@@ -19,6 +32,9 @@ const useForm = (callback) => {
     handleSubmit,
     handleInputChange,
     inputs,
+    sent,
+    isSending,
+    error,
   };
 };
 export default useForm;

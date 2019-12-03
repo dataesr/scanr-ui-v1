@@ -1,72 +1,9 @@
 @import '../../../../style.scss';
 
-.SubmitBox {
-  position: absolute;
-  border: 4px dashed $scanrdeepblueColor;
-  border-radius: 8px;
-  background: rgba($scanrblueColor, 0.5);
-  width: 100%;
-  height: 100%;
-  z-index: 1001;
-
-  BUTTON {
-    margin: auto;
-    background-color: $scanrdeepblueColor;
-    color: white;
-  }
-
-}
-.ErrorMessage {
-  color: red;
-  font-style: italic;
-  font-size: 0.9em;
-}
-
 .Modal {
-  color: $scanrdeepblueColor;
   z-index: 1002;
-
-  BUTTON {
-    width: 150px;
-    margin-left: 8px;
-    margin-right: 8px;
-  }
-
-  .Text1 {
-    color: $scanrgreyColor;
-    SPAN {
-      font-style: italic;
-      display: block;
-      padding-top: 8px;
-    }
-  }
-  .Text2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
-  .Text3 {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    font-size: 1.2rem;
-
-    .Important {
-      font-weight: bold;
-    }
-  }
-
-  .Submit {
-    position: absolute;
-    bottom: 0;
-    right: 8px;
-  }
-
-  LABEL {
-    color: $scanrdeepblueColor;
-    font-weight: normal;
-  }
 }
 
 .Text {
   color: $scanrdeepblueColor;
-  font-size: 1.1rem;
 }

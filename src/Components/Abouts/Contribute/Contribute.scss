@@ -1,7 +1,14 @@
 @import '../../../style.scss';
 
+.Cards {
+  background-color: white;
+  background-image: url("./poudre-bleu_Fblanc-A.jpg");
+  background-position: 50px 1000px ;
+}
+
 .Contribute{
 
+  background-color: $scanrlightgreyColor;
 .Content{
     padding: 50px 0;
     background-color: $scanrlightgreyColor;
