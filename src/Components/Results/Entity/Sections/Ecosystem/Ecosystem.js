@@ -65,8 +65,8 @@ class Ecosystem extends Component {
         return prodB - prodA;
       });
 
-      const structuresListFr = dataSorted.filter(el => (el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
-      const structuresListFo = dataSorted.filter(el => (el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
+      const structuresListFr = dataSorted.filter(el => (el.structure.kind && el.structure.kind.find(item => item === graphType) && el.structure.isFrench));
+      const structuresListFo = dataSorted.filter(el => (el.structure.kind && el.structure.kind.find(item => item === graphType) && !el.structure.isFrench));
 
 
       const limitFr = (structuresListFr.length < ECOSYSTEM_LIMIT) ? structuresListFr.length - 1 : ECOSYSTEM_LIMIT - 1;
@@ -157,7 +157,7 @@ class Ecosystem extends Component {
   createKindFilter = () => {
     const kindFilter = [];
     GRAPH_ITEMS_LIST.forEach((graphType) => {
-      const listObjects = this.props.data.filter(item => item.structure.kind.find(el => el === graphType));
+      const listObjects = this.props.data.filter(item => item.structure.kind && item.structure.kind.find(el => el === graphType));
       const obj = {
         value: graphType,
         count: listObjects.length,
