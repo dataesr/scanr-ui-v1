@@ -104,7 +104,7 @@ class HomePage extends Component {
             {
               labelFr: 'Intelligence artificielle',
               labelEn: 'Artificial intelligence',
-              query: 'Intelligence artificielle | Artificial intelligence',
+              query: '(Intelligence artificielle) | (Artificial intelligence)',
             },
             {
               labelFr: 'Réalité virtuelle',
@@ -112,9 +112,19 @@ class HomePage extends Component {
               query: 'Réalité virtuelle | Virtual reality',
             },
             {
+              labelFr: 'Sécurité alimentaire',
+              labelEn: 'Food security',
+              query: '(Sécurité alimentaire | Food security)',
+            },
+            {
               labelFr: 'Cryptographie',
               labelEn: 'Cryptography',
               query: 'Cryptographie | Cryptography',
+            },
+            {
+              labelFr: 'Humanités numériques',
+              labelEn: 'Digital humanities',
+              query: '(humanités numériques) | (digital humanities) | (humanités digitales)',
             },
             {
               labelFr: 'Marathon',
