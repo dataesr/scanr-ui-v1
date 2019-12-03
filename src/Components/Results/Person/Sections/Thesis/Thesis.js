@@ -109,10 +109,10 @@ class Thesis extends Component {
       backgroundImage: `url(${Background})`,
     };
     if (this.state.loading) {
-      return ('hello world');
+      // return ('hello world');
     }
     if (!this.state.loading && this.state.empty) {
-      return ('hello again');
+      // return ('hello again');
     }
     return (
       <Fragment>
