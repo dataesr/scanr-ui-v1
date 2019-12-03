@@ -37,6 +37,30 @@
           }
         }
       }
+    },
+    {
+      "title": {
+        "fr": "Actionnaires des SATT",
+        "en": "Shareholders of the French technology transfer offices"
+      },
+      "subtitle": {
+        "fr": "Sociétés d’Accélération du Transfert de Technologies",
+        "en": "(SATT, Sociétés d’Accélération du Transfert de Technologies)"
+      },
+      "api" : "structures",
+      "componentType": "EntityNetwork",
+      "request": {
+        "query": "",
+        "pageSize": 100,
+        "sourceFields": ["id", "relations", "label", "acronym"],
+        "filters": {
+          "badges.code": {
+            "type": "MultiValueSearchFilter",
+            "op": "all",
+            "values": ["SATT"]
+          }
+	}
+      }
     }
   ]
 }

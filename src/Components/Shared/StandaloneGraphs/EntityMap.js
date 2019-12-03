@@ -57,8 +57,9 @@ class EntityMap extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <LeafletMap
-              filename="Localisations des structures"
+              filename={this.props.title}
               data={this.state.data}
+              style={this.props.style}
               language={this.props.language}
             />
           )
@@ -73,6 +74,7 @@ export default EntityMap;
 EntityMap.propTypes = {
   language: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  style: PropTypes.object,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
 };
