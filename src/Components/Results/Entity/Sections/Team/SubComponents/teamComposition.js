@@ -134,7 +134,7 @@ class TeamComposition extends Component {
       };
     }
 
-    return (
+    return (this.state.nbPersons > 0) ? (
       <div className="col-md-6" style={styleCss}>
         <div className={classes.TeamComposition}>
           <div className="row">
@@ -165,7 +165,7 @@ class TeamComposition extends Component {
           </div>
         </div>
       </div>
-    );
+    ) : null;
   }
 }
 
