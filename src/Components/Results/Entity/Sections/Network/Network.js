@@ -117,8 +117,10 @@ class Network extends Component {
           const aIncube = newData.filter(r => r.relations[0].type === 'incubateur_public');
           const spinoffFrom = newData.filter(r => r.relations[0].type.indexOf('spinoff') !== -1);
           const inverseRelations = [].concat(appartientCarnot, actionnaireSatt, aRachete, aIncube, spinoffFrom);
-          const hasNoInverseRelation = (inverseRelations.length === 0) ? true : false;
-          this.setState({ appartientCarnot, actionnaireSatt, aRachete, spinoffFrom, aIncube, hasNoInverseRelation });
+          const hasNoInverseRelation = (inverseRelations.length === 0);
+          this.setState({
+            appartientCarnot, actionnaireSatt, aRachete, spinoffFrom, aIncube, hasNoInverseRelation,
+          });
         });
     }
   }

@@ -14,6 +14,7 @@ import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
 import OpendataPackedBubble from './Components/OpendataPackedBubble';
+import EntityNetwork from '../Shared/StandaloneGraphs/EntityNetwork';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
@@ -33,6 +34,7 @@ import classes from './Focus.scss';
 const Components = {
   GridMap,
   EntityMap,
+  EntityNetwork,
   PublicationsKeywords,
   PublicationsPacketBubble,
   OpendataPackedBubble,
@@ -72,6 +74,7 @@ export default class Focus extends Component {
     this.state.components.forEach((component) => {
       const properties = {
         request: component.request,
+        style: { height: '60vh' },
         api: component.api,
         opendata: component.opendata,
         aggSize: component.aggSize,
