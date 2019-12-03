@@ -73,8 +73,10 @@ class Production extends Component {
     let content = null;
     if (this.state.data.productionType === 'publication') {
       content = this.renderPublication();
-    } else if (this.state.data.productionType === 'thesis') {
+    } else if (this.state.data.productionType === 'thesis' && this.state.data.id.indexOf('these') !== -1) {
       content = this.renderThesis();
+    } else if (this.state.data.productionType === 'thesis' && this.state.data.id.indexOf('these') === -1) {
+      content = this.renderPublication();
     } else if (this.state.data.productionType === 'pattent') {
       content = this.renderPattent();
     }
