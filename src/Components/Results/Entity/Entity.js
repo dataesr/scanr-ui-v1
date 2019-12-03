@@ -10,6 +10,7 @@ import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
+import Evaluations from './Sections/Evaluations/Evaluations';
 import Team from './Sections/Team/Team';
 import Projects from '../Shared/Projects/Projects';
 import Productions from '../Shared/Productions/Productions';
@@ -98,7 +99,6 @@ class Entity extends Component {
     }
     return (
       <Fragment>
-
         <Header
           language={this.props.language}
           switchLanguage={this.props.switchLanguage}
@@ -117,6 +117,14 @@ class Entity extends Component {
             language={this.props.language}
             data={this.state.data}
             geoNear={this.state.geoNear}
+            id={this.props.match.params.id}
+          />
+        </div>
+
+        <div id="Evaluations">
+          <Evaluations
+            language={this.props.language}
+            data={this.state.data}
             id={this.props.match.params.id}
           />
         </div>
