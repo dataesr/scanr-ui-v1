@@ -33,8 +33,8 @@ const PersonCard = (props) => {
     domains = props.data.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
       .filter(txt => (txt.length > 1))
-      .filter(txt => (txt.length < 20))
-      .sort((a, b) => b.length - a.length)
+      .filter(txt => (txt.length < 18))
+      .sort((a, b) => a.length - b.length)
       .slice(-4);
   }
   domains = [...new Set(domains)];
