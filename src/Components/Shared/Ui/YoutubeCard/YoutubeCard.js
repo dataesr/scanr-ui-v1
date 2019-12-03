@@ -41,6 +41,8 @@ class YoutubeCard extends Component {
       const regex = /.*=/gi;
       const userYoutube = youtubeUrl.replace(regex, '');
       urlIframe = 'https://www.youtube.com/embed/'.concat(userYoutube);
+    } else if (youtubeUrl.indexOf('youtube.com/embed') !== -1) {
+      urlIframe = youtubeUrl;
     }
     this.setState({ urlIframe });
   }
