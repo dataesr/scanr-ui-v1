@@ -34,7 +34,7 @@ const Contact = (props) => {
     sent,
     isSending,
     error,
-  } = useForms(props.api, props.defaultInputs);
+  } = useForms(props.apiName, props.defaultInputs);
 
   let disabled = false;
   if (isSending || sent) {
@@ -196,5 +196,5 @@ export default Contact;
 Contact.propTypes = {
   language: PropTypes.string.isRequired,
   defaultInputs: PropTypes.object,
-  api: PropTypes.string,
+  apiName: PropTypes.string,
 };

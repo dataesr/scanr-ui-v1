@@ -116,7 +116,7 @@ const ContributePage = props => (
 
       <section className={classes.FormContact}>
         <div className="container py-4">
-          <FormContact language={props.language} />
+          <FormContact language={props.language} apiName="contact" />
         </div>
       </section>
       <section className={classes.Cards}>

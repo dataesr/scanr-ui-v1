@@ -28,18 +28,17 @@ const Contribute = (props) => {
           show={isActive}
           onHide={handleSwitchModal}
           size="lg"
-          className={classes.Modal}
         >
           <Modal.Header closeButton />
           <Modal.Body>
-            <div className={`d-flex flex-column align-items-center ${classes.Modal}`}>
+            <div className={`d-flex flex-column align-items-center p-4 ${classes.Modal}`}>
               <i className="fas fa-lg-edit" />
               <FormattedHTMLMessage id="Contribute.mainButton.label" />
               {props.sectionName}
             </div>
             <FormContact
               language={props.language}
-              api={props.objectType}
+              apiName="contribute"
               defaultInputs={{ ...props }}
             />
           </Modal.Body>
@@ -48,7 +47,7 @@ const Contribute = (props) => {
         <span className="ml-auto" onClick={handleSwitchModal}>
           <div className="d-flex flex-nowrap align-items-center">
             <p className={`m-0 ${classes.Text}`}>
-              {messages[props.language]['Contribute.contribute']}
+              <FormattedHTMLMessage id="Contribute.contribute" defaultMessage="Contribute.contribute" />
             </p>
             <span className={`ml-2 btn ${classes.SquareButton} ${classes.btn_dark}`}>
               <i aria-hidden className="fas fa-pen" />
@@ -65,6 +64,6 @@ export default Contribute;
 Contribute.propTypes = {
   language: PropTypes.string.isRequired,
   sectionName: PropTypes.string.isRequired,
-  objectId: PropTypes.string.isRequired,
-  objectType: PropTypes.string,
+  // objectId: PropTypes.string.isRequired,
+  // objectType: PropTypes.string,
 };
