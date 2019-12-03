@@ -123,7 +123,7 @@ const Footer = props => (
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/contact">
                   <FormattedHTMLMessage
                     id="Footer.link.contact"
                     defaultMessage="Footer.link.contact"
