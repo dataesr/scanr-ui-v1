@@ -1,0 +1,37 @@
+@import '../../../../../style.scss';
+
+.Evaluations {
+  padding-bottom: 24px;
+  background-color: $scanrmiddlegreyColor;
+
+  .EvaluationCard {
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+  }
+
+  .TitleYear {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    padding-top: 8px;
+  }
+
+  .NbReports {
+    color: $scanrdeepblueColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .ReportsLabel {
+    color: $scanrdeepblueColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .InnerListItem {
+    border-bottom: 2px solid $scanrdeepblueColor;
+  }
+}
