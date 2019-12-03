@@ -36,11 +36,24 @@ const messagesEntity = {
 class Network extends Component {
   state = {
     dataSupervisorOf: {},
+    satt: [],
     dataSupervisorOfTotal: 0,
   };
 
   componentDidMount() {
     this.getDataSupervisorOf();
+    if (this.props.data.relations) {
+      const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
+      this.setState({ satt });
+      const incubateur = this.props.data.relations.filter(item => item.type === 'incubateur_public');
+      this.setState({ incubateur });
+      const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
+      this.setState({ carnot });
+      const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
+      this.setState({ spinoff });
+      const rachete = this.props.data.relations.filter(item => item.type.indexOf('rachete') !== -1);
+      this.setState({ rachete });
+    }
   }
 
   componentDidUpdate(prevProps) {
@@ -173,6 +186,91 @@ class Network extends Component {
                   </div>
                 ) : null
               }
+              {
+                (this.state.satt && this.state.satt.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.satt}
+                      maxList={5}
+                      count={this.state.satt.length}
+                      title={messages[this.props.language]['Entity.network.satt.title']}
+                      label={(this.state.satt.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.carnot && this.state.carnot.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.carnot}
+                      maxList={5}
+                      count={this.state.carnot.length}
+                      title={messages[this.props.language]['Entity.network.carnot.title']}
+                      label={(this.state.carnot.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.incubateur && this.state.incubateur.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.incubateur}
+                      maxList={5}
+                      count={this.state.incubateur.length}
+                      title={messages[this.props.language]['Entity.network.incubateur.title']}
+                      label={(this.state.incubateur.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.spinoff && this.state.spinoff.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.spinoff}
+                      maxList={5}
+                      count={this.state.spinoff.length}
+                      title={messages[this.props.language]['Entity.network.spinoff.title']}
+                      label={(this.state.spinoff.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
+              {
+                (this.state.rachete && this.state.rachete.length > 0) ? (
+                  <div className={`col-md-4 ${classes.NoSpace}`}>
+                    <SimpleCountListCard
+                      language={this.props.language}
+                      data={this.state.rachete}
+                      maxList={5}
+                      count={this.state.rachete.length}
+                      title={messages[this.props.language]['Entity.network.rachete.title']}
+                      label={(this.state.rachete.length > 1) ? messages[this.props.language]['Entity.network.supervisors.label.plural'] : messages[this.props.language]['Entity.network.supervisors.label.singular']}
+                      tooltip=""
+                      modalButtonLabel={messages[this.props.language]['Entity.network.supervisors.SimpleCountListCard.label']}
+                      modalButtonTitle={messages[this.props.language]['Entity.network.entities.SimpleCountListCard.title']}
+                    />
+                  </div>
+                ) : null
+              }
             </div>
           </div>
         </section>
@@ -188,10 +286,12 @@ class Network extends Component {
     };
 
     const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
+    const relationsHasNoData = (!this.props.data.relations || this.props.data.relations.length === 0);
     const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
         && childrenHasNoData
+        && relationsHasNoData
         && institutionsHasNoData)) {
       return this.renderEmptySection(messages);
     }
@@ -204,6 +304,6 @@ export default Network;
 
 Network.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired,
 };
