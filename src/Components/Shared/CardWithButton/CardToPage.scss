@@ -4,27 +4,10 @@
   padding-bottom: 10px ;
   border-radius: 5px  ;
   width: 100%;
-  height: 8rem;
-  margin: auto;
+  height: 10rem;
   border: none;
 
-
   .Title {
-    font-size: 1.1em;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin:auto;
-  }
-
-  .Button {
-    margin: auto;
-    width: 6rem;
-  }
-}
-
-
-@media (min-width: 20px) and (max-width: 991.98px) {
-  .CardToPage {
-  margin: auto;
+    font-size: 1.4em;
   }
 }

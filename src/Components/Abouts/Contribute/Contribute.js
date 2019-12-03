@@ -36,12 +36,9 @@ const videoPoster = 'img/video-poster/Tai-Ji-gravure-paysage-Chine.gif';
  */
 
 const ContributePage = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div className={`container-fluid ${classes.Contribute}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
+  <IntlProvider messages={messages[props.language]}>
+    <React.Fragment>
+      <Header />
 
       <HeaderTitle
         language={props.language}
@@ -50,16 +47,9 @@ const ContributePage = props => (
         url2="#"
       />
 
-      <section className={classes.Content}>
+      <section className={`${classes.Contribute} ${classes.Content}`}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-9">
-              <FormattedHTMLMessage
-                id="howToContribute"
-                defaultMessage="howToContribute"
-              />
-            </div>
-            <div className="w-100" />
+          <div className="row pt-4">
             <div className={`card col-lg ${classes.Card} ${classes.card_light}`}>
               <i className={`fas fa-pencil-alt ${classes.Logo}`} />
               <div className={classes.Text}>
@@ -73,18 +63,14 @@ const ContributePage = props => (
                 />
               </div>
               <i className={`fas fa-caret-right text-right ${classes.ArrowRight}`} />
-
             </div>
             <div className={`card col-lg p-0 ${classes.Card} ${classes.card_dark} `}>
-
               <ComponentVideo
                 url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
                 poster={videoPoster}
                 language={props.language}
               />
-
             </div>
-
             <div className="w-100" />
             <div className={`card col-lg ${classes.Card} ${classes.card_darkdark}`}>
 
@@ -94,18 +80,14 @@ const ContributePage = props => (
                   id="newSource.title"
                   defaultMessage="newSource.title"
                 />
-
                 <FormattedHTMLMessage
                   id="newSource.text"
                   defaultMessage="newSource.text"
                 />
               </div>
-
               <i className={`fas fa-caret-down text-bottom ${classes.ArrowDown}`} />
             </div>
-
             <div className={`card col-lg ${classes.Card} ${classes.card_light}`}>
-
               <img src="./img/logo-Framasoft.svg" className={classes.Logo} alt="logo_framasoft" />
               <div className={classes.Text}>
                 <FormattedHTMLMessage
@@ -127,32 +109,20 @@ const ContributePage = props => (
                   />
                 </ButtonToPage>
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
 
       <section className={classes.FormContact}>
-        <div className="container">
-          <FormContact
-            language={props.language}
-            name="name"
-            organisation="organisation"
-            fonction="fonction"
-            email="email"
-            message="message"
-            text="text"
-            btnText="btnText"
-          />
+        <div className="container py-4">
+          <FormContact language={props.language} />
         </div>
       </section>
-
       <section className={classes.Cards}>
-        <div className="container">
-          <div className="row py-5">
-            <div className="col-lg">
+        <div className="container py-3">
+          <div className="row">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="consultFAQ"
@@ -162,7 +132,7 @@ const ContributePage = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="whatAreOurSources"
@@ -172,7 +142,7 @@ const ContributePage = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg ">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="openData"
@@ -194,9 +164,9 @@ const ContributePage = props => (
         target="_blank"
       />
 
-      <Footer language={props.language} />
+      <Footer />
 
-    </div>
+    </React.Fragment>
   </IntlProvider>
 );
 
@@ -205,5 +175,4 @@ export default ContributePage;
 
 ContributePage.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.string.isRequired,
 };

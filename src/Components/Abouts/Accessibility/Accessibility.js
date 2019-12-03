@@ -21,17 +21,12 @@ const messages = {
 const Accessibility = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.Accessibility}`}>
-      <Header
+      <Header />
+      <HeaderTitle
         language={props.language}
-        switchLanguage={props.switchLanguage}
+        label="accessibility"
       />
-      <section>
-        <HeaderTitle
-          language={props.language}
-          label="accessibility"
-        />
 
-      </section>
       <Footer language={props.language} />
     </div>
   </IntlProvider>
@@ -41,5 +36,4 @@ export default Accessibility;
 
 Accessibility.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };

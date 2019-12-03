@@ -1,14 +1,17 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { SyncLoader } from 'react-spinners';
 import PropTypes from 'prop-types';
 import useForms from '../../../Hooks/useForms';
+
+
+/* SCSS */
+import classes from './FormContact.scss';
+import styles from '../../../style.scss';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-
-/* SCSS */
-import classes from './FormContact.scss';
 
 const messages = {
   fr: messagesFr,
@@ -18,13 +21,25 @@ const messages = {
 /**
  * FormContact component
  * Url :
- * Description : Formulaire de contact : label, input, textarea, btn submit,reCaptcha, text
+ * Description : Formulaire de contact : label, input, textarea, btn submit,text
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
  */
 const Contact = (props) => {
-  const { inputs, handleInputChange, handleSubmit } = useForms();
+  const {
+    handleSubmit,
+    handleInputChange,
+    inputs,
+    sent,
+    isSending,
+    error,
+  } = useForms(props.api, props.defaultInputs);
+
+  let disabled = false;
+  if (isSending || sent) {
+    disabled = true;
+  }
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -135,7 +150,7 @@ const Contact = (props) => {
           </div>
         </div>
         <div className="row">
-          <div className={`col-lg-5 ${classes.FormContact}`}>
+          <div className="col-lg-5">
             <div className={classes.Texte}>
               <FormattedHTMLMessage
                 id="text"
@@ -143,16 +158,31 @@ const Contact = (props) => {
               />
             </div>
           </div>
-          <div className="col-lg-7">
+          <div className="col-lg-7 d-flex align-items-center justify-content-end">
+            {
+              (error) ? <div className={classes.Texte}>Une erreur est survenue</div> : null
+            }
+            {
+              (sent) ? <div className={classes.Texte}>Merci de votre contribution</div> : null
+            }
             <button
               type="submit"
-              className={` ml-auto btn py-2 px-3 d-flex flex-nowrap align-items-center ${classes.btn_scanrGrey}`}
+              className={`ml-3 btn py-2 px-3 d-flex flex-nowrap align-items-center ${classes.btn_scanrGrey}`}
+              disabled={disabled}
             >
-              <FormattedHTMLMessage
-                id="btnText"
-                defaultMessage="btnText"
-              />
-              <i className="fas fa-paper-plane pl-2" color="white" />
+              {
+              (isSending)
+                ? (<SyncLoader color={styles.$scanrdeepblueColor} />)
+                : (
+                  <React.Fragment>
+                    <FormattedHTMLMessage
+                      id="btnText"
+                      defaultMessage="btnText"
+                    />
+                    <i className="fas fa-paper-plane pl-2" color="white" />
+                  </React.Fragment>
+                )
+            }
             </button>
           </div>
         </div>
@@ -165,4 +195,6 @@ export default Contact;
 
 Contact.propTypes = {
   language: PropTypes.string.isRequired,
+  defaultInputs: PropTypes.object,
+  api: PropTypes.string,
 };
