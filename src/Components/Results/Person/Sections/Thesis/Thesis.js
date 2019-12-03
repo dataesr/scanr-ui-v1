@@ -67,7 +67,7 @@ class Thesis extends Component {
     Axios.post(url, request).then((response) => {
       const result = response.data.results;
       // const empty = (result.length === 0);
-      const theses = [];
+      let theses = [];
       const rapporteur = [];
       const direction = [];
       if (result && result.length > 0) {
@@ -82,6 +82,12 @@ class Thesis extends Component {
             }
           });
         });
+      }
+      if (theses.length > 0) {
+        const thesesOnly = theses.filter(t => (t.id).indexOf('these') !== -1);
+        if (thesesOnly.length !== 0) {
+          theses = thesesOnly;
+        }
       }
       const displaySection = (rapporteur.length > 0) || (theses.length > 0) || (direction.length > 0);
       this.setState({
