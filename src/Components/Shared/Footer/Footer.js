@@ -149,13 +149,7 @@ const Footer = props => (
             </div>
             <ul className={classes.SocialNetworkItems}>
               <li className={classes.SocialNetworkItem}>
-                <a href="#"><i className="fab fa-twitter" /></a>
-              </li>
-              <li className={classes.SocialNetworkItem}>
-                <a href="#"><i className="fab fa-facebook-f" /></a>
-              </li>
-              <li className={classes.SocialNetworkItem}>
-                <a href="#"><i className="fab fa-instagram" /></a>
+                <a href="https://twitter.com/ScanrM"><i className="fab fa-twitter" /></a>
               </li>
             </ul>
           </div>

@@ -33,49 +33,22 @@ const messages = {
 
 const Contact = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
-    <div className={`container-fluid ${classes.Contact}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
-
+    <React.Fragment>
+      <Header />
       <HeaderTitle
         language={props.language}
         labelkey="contact"
         url1="/"
         url2="#"
       />
-
-      <section className={classes.Content}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <div className={classes.Texte}>
-                <FormattedHTMLMessage
-                  id="scanrTexte"
-                  defaultMessage="scanrTexte"
-                />
-              </div>
-            </div>
-          </div>
-
-          <FormContact
-            language={props.language}
-            name="name"
-            organisation="organisation"
-            fonction="fonction"
-            email="email"
-            message="message"
-            text="text"
-            btnText="btnText"
-          />
-        </div>
+      <section className="container py-4">
+        <FormContact language={props.language} />
       </section>
 
       <section className={classes.Cards}>
-        <div className="container">
-          <div className="row py-5">
-            <div className="col-lg">
+        <div className="container py-3">
+          <div className="row">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="contributeScanr"
@@ -85,7 +58,7 @@ const Contact = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="whatAreOurSources"
@@ -95,7 +68,7 @@ const Contact = props => (
                 target="_blank"
               />
             </div>
-            <div className="col-lg">
+            <div className={`col-lg ${classes.CardContainer}`}>
               <CardToPage
                 cssClass="card_lightdark"
                 labelKey="openData"
@@ -118,7 +91,7 @@ const Contact = props => (
       />
 
       <Footer language={props.language} />
-    </div>
+    </React.Fragment>
   </IntlProvider>
 );
 
