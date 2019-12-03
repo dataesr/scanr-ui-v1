@@ -60,6 +60,7 @@ class Network extends Component {
             values: [`${this.props.data.id}`],
           },
         },
+        pageSize: 10000,
       };
       Axios.post(url, obj)
         .then((response) => {

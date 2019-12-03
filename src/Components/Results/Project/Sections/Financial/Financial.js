@@ -47,7 +47,7 @@ const Financial = (props) => {
                           language={props.language}
                           logo="fas fa-euro-sign"
                           title={messages[props.language]['Project.financial.total']}
-                          label={props.data.budgetTotal.toLocaleString(props.language)}
+                          label={Math.round(props.data.budgetTotal).toLocaleString(props.language)}
                           tooltip=""
                           bgColor="#e9ecf1"
                         />
