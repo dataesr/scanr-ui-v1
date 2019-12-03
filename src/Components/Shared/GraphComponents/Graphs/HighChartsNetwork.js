@@ -76,7 +76,7 @@ export default class HighChartsNetwork extends Component {
           enabled: true,
           allowOverlap: true,
           textPath: {
-            enabled: true,
+            enabled: false,
           },
           linkFormat: '',
           filter: {
