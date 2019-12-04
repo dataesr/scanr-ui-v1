@@ -96,18 +96,17 @@ const ProjectCard = (props) => {
     )
     : null;
 
-
+  let cardTitle = (getSelectedKey(props.data, 'label', props.language, 'default')) ? getSelectedKey(props.data, 'label', props.language, 'default') : getSelectedKey(props.data, 'acronym', props.language, 'default');
+  if (!cardTitle) {
+    cardTitle = props.data.id;
+  }
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle}`}>
             <a href={`project/${props.data.id}`}>
-              {
-                (getSelectedKey(props.data, 'label', props.language, 'default'))
-                  ? getSelectedKey(props.data, 'label', props.language, 'default')
-                  : getSelectedKey(props.data, 'acronym', props.language, 'default')
-              }
+              { cardTitle }
             </a>
           </h3>
           <ul className="m-0 p-0">
