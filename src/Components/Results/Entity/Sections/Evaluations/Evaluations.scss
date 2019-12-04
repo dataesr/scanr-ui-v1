@@ -8,6 +8,7 @@
     background-color: white;
     border-radius: 8px;
     padding: 8px;
+    min-height: 270px;
   }
 
   .TitleYear {
@@ -19,7 +20,7 @@
 
   .NbReports {
     color: $scanrdeepblueColor;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
     margin: 0;
   }
@@ -30,8 +31,15 @@
     font-weight: bold;
     margin: 0;
   }
+}
 
-  .InnerListItem {
-    border-bottom: 2px solid $scanrdeepblueColor;
-  }
+.EvaluationLabel {
+  color: $scanrdeepblueColor;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.InnerListItem {
+  border-bottom: 2px solid $scanrlightgreyColor;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
