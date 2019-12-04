@@ -54,6 +54,9 @@ export default class HighChartsLine extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       xAxis: {
         minorGridLineWidth: 0,
         gridLineWidth: 0,
@@ -183,4 +186,5 @@ HighChartsLine.propTypes = {
   language: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
+  subtitle: PropTypes.string,
 };
