@@ -73,6 +73,17 @@ const PublicationCard = (props) => {
     return { authors: printedAuthors, others: printedOthers };
   };
 
+  const getInventors = (data) => {
+    // const inventeursFR = (props.language === 'fr') ? 'inventeur' : 'inventor';
+    // const deposantsEn = (props.language === 'fr') ? 'déposant' : 'suscriber';
+    if (!data.authors || data.authors.length === 0) {
+      return { inventeurs: null, deposants: null };
+    }
+    const inventeurs = data.authors.filter(auth => (auth.role === 'inventeur')).length;
+    const deposants = data.authors.filter(auth => (auth.role === 'deposant')).length;
+    return `${inventeurs} inventeurs, ${deposants} déposants`;
+  };
+
   const productionType = (props.data.productionType)
     ? (
       <li className="d-flex">
@@ -87,30 +98,45 @@ const PublicationCard = (props) => {
     : null;
 
   const maxAuthors = 1;
-  const auth = getAuthors(props.data, maxAuthors);
-  const coAuthors = (auth.authors && auth.authors.length > 0)
-    ? (
+  let coAuthors = null;
+  if (props.data.productionType === 'publication' || props.data.productionType === 'thesis') {
+    const auth = getAuthors(props.data, maxAuthors);
+    coAuthors = (auth.authors && auth.authors.length > 0)
+      ? (
+        <li className="d-flex">
+          <div className={classes.Icons}>
+            <i aria-hidden="true" className="fas fa-users" />
+          </div>
+          <p className="m-0">
+            {auth.authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr])}
+            {' '}
+            {auth.others}
+          </p>
+        </li>
+      )
+      : (
+        <li className="d-flex">
+          <div className={classes.Icons}>
+            <i aria-hidden="true" className="fas fa-users" />
+          </div>
+          <p className={`m-0 ${classes.UnknownData}`}>
+            {messages[props.language]['resultCard.production.noAuthors']}
+          </p>
+        </li>
+      );
+  } else {
+    coAuthors = (
       <li className="d-flex">
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-users" />
         </div>
         <p className="m-0">
-          {auth.authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr])}
-          {' '}
-          {auth.others}
-        </p>
-      </li>
-    )
-    : (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-users" />
-        </div>
-        <p className={`m-0 ${classes.UnknownData}`}>
-          {messages[props.language]['resultCard.production.noAuthors']}
+          {getInventors(props.data)}
         </p>
       </li>
     );
+  }
+  // const inventors = getInventors(props.data);
 
   const publicationDate = (props.data.publicationDate)
     ? (
