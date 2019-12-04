@@ -70,7 +70,7 @@ export default class ProductionIsOa extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsDonut
-              filename="publication_is_oa_rate"
+              filename={this.props.title}
               data={this.state.data}
               language={this.props.language}
             />
