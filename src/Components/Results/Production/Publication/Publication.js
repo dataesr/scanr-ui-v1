@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
-import Axios from 'axios';
-import { API_PUBLICATIONS_LIKE_END_POINT } from '../../../../config/config';
 
 import HeaderTitle from '../../../Shared/Results/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../Shared/SectionTitle';
@@ -19,13 +17,12 @@ import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 
 import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
-import ProductionCard from '../../../Search/SearchResults/ResultCards/PublicationCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import BackgroundAffiliations from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-
+import Similars from '../Shared/Similars/Similars';
 import classes from './Publication.scss';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
@@ -48,14 +45,6 @@ const messages = {
  * Tests unitaires : .
 */
 class Publication extends Component {
-  state = {
-    similarProductions: null,
-  };
-
-  componentDidMount() {
-    this.getSimilarProductions();
-  }
-
   getAuthor = role => (this.props.data.authors.find(person => person.role === role))
 
   getAuthors = role => (this.props.data.authors.filter(person => person.role === role))
@@ -70,41 +59,6 @@ class Publication extends Component {
       }
     });
     return sortedAuthors;
-  }
-
-  getSimilarProductions = () => {
-    const url = API_PUBLICATIONS_LIKE_END_POINT;
-    const searchTab = [];
-    if (this.props.data.title && this.props.data.title.default) {
-      searchTab.push(this.props.data.title.default);
-    }
-    if (this.props.data.summary && this.props.data.summary.default) {
-      searchTab.push(this.props.data.summary.default);
-    }
-    if (this.props.data.keywords && this.props.data.keywords.default) {
-      searchTab.push(this.props.data.keywords.default.join(' '));
-    }
-
-    const data = {
-      fields: ['title', 'summary', 'keywords'],
-      likeIds: [],
-      likeTexts: searchTab,
-      lang: 'default',
-    };
-    Axios.post(url, data).then((response) => {
-      if (response.data.total > 0) {
-        const data6 = [];
-        for (let i = 0; i < response.data.total; i += 1) {
-          if (response.data.results[i].value.id !== this.props.data.id) {
-            data6.push(response.data.results[i]);
-          }
-          if (data6.length === 6) {
-            break;
-          }
-        }
-        this.setState({ similarProductions: data6 });
-      }
-    });
   }
 
   handleChange = (sectionName) => {
@@ -125,9 +79,9 @@ class Publication extends Component {
     const sectionStyleAffiliations = {
       backgroundImage: `url(${BackgroundAffiliations})`,
     };
-    const sectionStyleSimilarProductions = {
-      backgroundImage: `url(${Background})`,
-    };
+    // const sectionStyleSimilarProductions = {
+    //   backgroundImage: `url(${Background})`,
+    // };
 
     let id = this.props.data.id;
     let idName = 'Identifiant';
@@ -392,33 +346,7 @@ class Publication extends Component {
                 </section>
               ) : null
           }
-          {
-            (this.state.similarProductions)
-              ? (
-                <section className={`container-fluid ${classes.SimilarProductions}`} style={sectionStyleSimilarProductions} id="SimilarProductions">
-                  <div className="container">
-                    <SectionTitle
-                      icon="fa-folder-open"
-                      language={this.props.language}
-                      title={messages[this.props.language]['Publication.similarProductions.title']}
-                    />
-                    <ul className={`row ${classes.Ul}`}>
-                      {
-                        this.state.similarProductions.map(item => (
-                          <li key={item} className={`col-md-4 ${classes.Li}`}>
-                            <ProductionCard
-                              data={item.value}
-                              small
-                              language={this.props.language}
-                            />
-                          </li>
-                        ))
-                      }
-                    </ul>
-                  </div>
-                </section>
-              ) : null
-          }
+          <Similars id={this.props.id} language={this.props.language} />
         </Fragment>
       </IntlProvider>
     );
