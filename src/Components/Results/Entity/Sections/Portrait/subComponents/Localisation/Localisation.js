@@ -57,11 +57,18 @@ class Localisation extends Component {
   };
 
   render() {
+    // if (!this.props.address || (!this.props.address[0].address && !this.props.address[0].city || !this.props.address[0].country)) {
     // eslint-disable-next-line
-    if (!this.props.address || (!this.props.address[0].address && !this.props.address[0].city || !this.props.address[0].country)) {
+    if (!this.props.address) {
       return null;
     }
-
+    let displayedAddress = '';
+    if (this.props.address[0].address) {
+      const displayedCity = (this.props.address[0].city) ? (this.props.address[0].city) : '';
+      const displayedCountry = (this.props.address[0].country) ? (this.props.address[0].country) : '';
+      const displayedSep = (this.props.address[0].city) ? ' - ' : '';
+      displayedAddress = displayedCity.concat(displayedSep, displayedCountry);
+    }
     let mapProps = {};
     if (this.props.address[0].gps && this.props.address[0].gps.lat && this.props.address[0].gps.lon) {
       mapProps = { maxZoom: 17, center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 14 };
@@ -132,7 +139,7 @@ class Localisation extends Component {
                   <div className={classes.Address}>
                     {this.props.address[0].address}
                     <br />
-                    {`${this.props.address[0].city} - ${this.props.address[0].country}`}
+                    {`${displayedAddress}`}
                   </div>
                 </div>
               </div>
