@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import SectionTitle from '../../../Shared/SectionTitle';
-
-// import getSelectKey from '../../../../../Utils/getSelectKey';
+import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -49,8 +48,6 @@ const Evaluations = (props) => {
   /* eslint-disable-next-line */
   for (const evaluator of evaluators) {
     const listOfEvaluations = evaluations.filter(ev => ev.evaluator.split('__')[0] === evaluator);
-    console.log('listOfEvaluations/', evaluator);
-    console.log('listOfEvaluations=>', listOfEvaluations);
 
     // 2) Groupement par année
     const years = [];
@@ -63,18 +60,17 @@ const Evaluations = (props) => {
     // Plus récentes en premier
     years.sort((a, b) => b - a);
 
-    console.log('listOfEvaluations', years);
     const jsx = years.map((year) => {
       let finalList = evaluations.filter(ev => ev.evaluator.split('__')[0] === evaluator && ev.year === year);
       const counter = finalList.length;
       let miniListJSX = null;
       let listJSX = null;
-      if (counter < 4) {
+      if (counter < 3) {
         miniListJSX = finalList.map((el) => {
           const labels = el.evaluator.split('__');
           return (
             <div>
-              <div>
+              <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
               <div className="d-flex flex-row">
@@ -95,7 +91,7 @@ const Evaluations = (props) => {
           const labels = el.evaluator.split('__');
           return (
             <div className={classes.InnerListItem}>
-              <div>
+              <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
               <div className="d-flex flex-row">
@@ -123,15 +119,31 @@ const Evaluations = (props) => {
                   {messages[props.language].report}
                   {(counter > 1) ? 's' : null}
                 </p>
+                <div className="h-100">
+                  {(finalList) ? (
+                    <div className="h-100 d-flex align-items-center justify-content-center">
+                      <ButtonWithModal
+                        logo="fas fa-landmark"
+                        title={messages[props.language].title}
+                        buttonLabel={messages[props.language].listLabel}
+                        dataHtml={listJSX}
+                      />
+                    </div>
+                  ) : (
+                    <div>
+                      <hr />
+                      <div className="text-left">
+                        {miniListJSX}
+                      </div>
+                    </div>
+                  )}
+                </div>
               </p>
               <div className="ml-auto">
                 <img src={logo} alt="Evaluator logo" />
               </div>
             </div>
-            <div>
-              {miniListJSX}
-              {(finalList) ? (<div>{listJSX}</div>) : null}
-            </div>
+
           </div>
         </div>
       );
