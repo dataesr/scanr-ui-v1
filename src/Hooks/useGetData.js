@@ -3,7 +3,6 @@ import Axios from 'axios';
 import { API_ERRORS_SCANR } from '../config/config';
 
 function useGetData(BASE_URL, id) {
-  console.log('fre', id);
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
@@ -23,6 +22,6 @@ function useGetData(BASE_URL, id) {
   useEffect(() => {
     getData();
   }, []);
-  return [data, isLoading, isError];
+  return { data, isLoading, isError };
 }
 export default useGetData;
