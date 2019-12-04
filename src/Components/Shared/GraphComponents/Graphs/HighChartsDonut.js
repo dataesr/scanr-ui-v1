@@ -55,6 +55,9 @@ export default class HighChartsDonut extends Component {
         plotShadow: false,
       },
       title: { text: '' },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       colors: this.colors,
       credits: false,
       legend: {
@@ -167,4 +170,5 @@ HighChartsDonut.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
   colors: PropTypes.object,
+  subtitle: PropTypes.string,
 };

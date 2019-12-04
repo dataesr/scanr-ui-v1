@@ -65,6 +65,9 @@ export default class HighChartsPackedbubble extends Component {
       title: {
         text: (this.props.text) ? (this.props.text) : '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       series: this.data,
       plotOptions: {
         packedbubble: {
@@ -147,4 +150,5 @@ HighChartsPackedbubble.propTypes = {
   text: PropTypes.string,
   exporting: PropTypes.bool,
   tooltipText: PropTypes.string,
+  subtitle: PropTypes.string,
 };

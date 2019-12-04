@@ -58,6 +58,9 @@ export default class HighChartsTreemap extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       series: [{
         type: 'treemap',
         layoutAlgorithm: 'stripes',
@@ -140,4 +143,5 @@ HighChartsTreemap.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.array,
   share: PropTypes.any,
+  subtitle: PropTypes.string,
 };
