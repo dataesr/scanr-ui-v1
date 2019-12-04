@@ -73,6 +73,9 @@ export default class HighChartsWordCloud extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       series: [{
         data: wordData,
         type: 'wordcloud',
@@ -141,4 +144,5 @@ HighChartsWordCloud.propTypes = {
   language: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
+  subtitle: PropTypes.string,
 };

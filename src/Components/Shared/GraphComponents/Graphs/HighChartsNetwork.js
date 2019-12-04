@@ -71,6 +71,9 @@ export default class HighChartsNetwork extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       series: [{
         dataLabels: {
           enabled: true,
@@ -148,4 +151,5 @@ HighChartsNetwork.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
   nodes: PropTypes.object,
+  subtitle: PropTypes.string,
 };
