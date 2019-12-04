@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
+import Errors from '../Shared/Errors/Errors';
 import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 import Banner from '../Shared/Banner/Banner';
 import Footer from '../Shared/Footer/Footer';
@@ -26,13 +27,13 @@ import classes from './Focus.scss';
 const FocusList = (props) => {
   const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus');
   if (isError) {
-    return <div>ERROR...</div>;
+    return <Errors />;
   }
   if (isLoading) {
     return <Loader />;
   }
   if (!data.data) {
-    return <div>NO DATA</div>;
+    return <Errors />;
   }
   return (
     <React.Fragment>
