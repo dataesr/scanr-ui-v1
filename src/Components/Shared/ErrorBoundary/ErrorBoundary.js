@@ -1,11 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Logo from '../svg/logo-scanr-blue';
-import styles from '../../../style.scss';
-import classes from './ErrorBoundary.scss';
+import Axios from 'axios';
+import { API_ERRORS_SCANR } from '../../../config/config';
+import Errors from '../Errors/Errors';
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -18,32 +15,22 @@ class ErrorBoundary extends Component {
     return { hasError: true };
   }
 
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, info) {
     // Vous pouvez aussi enregistrer l'erreur au sein d'un service de rapport.
-    // logErrorToMyService(error, errorInfo);
-    /* eslint-disable */
-    console.log(JSON.stringify(error, Object.getOwnPropertyNames(error)));
-    console.log(JSON.stringify(errorInfo, Object.getOwnPropertyNames(errorInfo)));
-    /* eslint-enable */
+    const errorJSON = {
+      type: 'React boundary',
+      url: window.location.href.toString(),
+      agent: window.navigator.userAgent.toString(),
+      msg: error.toString(),
+      info: info.componentStack,
+    };
+    Axios.post(API_ERRORS_SCANR, errorJSON);
   }
 
   render() {
     if (this.state.hasError) {
-      // Vous pouvez afficher n'importe quelle UI de repli.
-      return (
-        <Fragment>
-          <Header />
-          <div className={`d-flex flex-column align-items-center justify-content-center ${classes.Error}`}>
-            <Logo fill={styles.scanrdeepblueColor} width="300px" height="90px" />
-            <div className={classes.FourOFour}>
-              Oops... Une erreur est survenue.
-            </div>
-          </div>
-          <Footer />
-        </Fragment>
-      );
+      return <Errors />;
     }
-
     return this.props.children;
   }
 }

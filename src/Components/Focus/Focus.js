@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
+
+import Errors from '../Shared/Errors/Errors';
 // Composants
 import MetaFocus from '../Shared/MetaTags/MetaFocus';
 import Footer from '../Shared/Footer/Footer';
@@ -72,7 +74,7 @@ const buildFocusFromConfig = (components, lang) => {
 const Focus = (props) => {
   const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
   if (isError) {
-    return <div>ERROR...</div>;
+    return <Errors />;
   }
   if (isLoading) {
     return <Loader />;
