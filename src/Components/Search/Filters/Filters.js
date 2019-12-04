@@ -1,11 +1,7 @@
-import React, { Component, Suspense, lazy } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import React, { Suspense, lazy, useState } from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
+import useWindowSize from '../../../Hooks/useWindowSize';
 import classes from './Filters.scss';
 
 const EntityFilters = lazy(() => import('./ObjectsFilters/EntityFilters'));
@@ -14,78 +10,52 @@ const ProjectsFilters = lazy(() => import('./ObjectsFilters/ProjectsFilters'));
 const PublicationsFilters = lazy(() => import('./ObjectsFilters/PublicationsFilters'));
 const ActiveFilterCard = lazy(() => import('./ActiveFilterCard/ActiveFilterCard'));
 
-class FilterPanel extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      isActive: true,
-      isMobile: (window.innerWidth < 992),
-    };
+const renderApiFilter = (props) => {
+  switch (props.api) {
+    case 'structures': return <EntityFilters {...props} />;
+    case 'persons': return <PersonsFilters {...props} />;
+    case 'projects': return <ProjectsFilters {...props} />;
+    case 'publications': return <PublicationsFilters {...props} />;
+    default: return null;
   }
+};
 
-  componentDidMount() {
-    if (window.innerWidth < 992) {
-      this.setState({ isActive: false });
-    }
-  }
+renderApiFilter.propTypes = {
+  api: PropTypes.string.isRequired,
+};
 
-  activateFilters = (isActive) => {
-    this.setState({ isActive });
-  }
 
-  renderApiFilter = () => {
-    const properties = {
-      language: this.props.language,
-      facets: this.props.facets,
-      generalFacets: this.props.generalFacets,
-      filters: this.props.filters,
-      multiValueFilterHandler: this.props.multiValueFilterHandler,
-      rangeFilterHandler: this.props.rangeFilterHandler,
-      sliderData: this.props.sliderData,
-    };
-    switch (this.props.api) {
-      case 'structures': return <EntityFilters {...properties} />;
-      case 'persons': return <PersonsFilters {...properties} />;
-      case 'projects': return <ProjectsFilters {...properties} />;
-      case 'publications': return <PublicationsFilters {...properties} />;
-      default: return null;
-    }
-  }
+const FilterPanel = (props) => {
+  const windowSize = useWindowSize();
+  const [isActive, setActive] = useState((windowSize.width > 992));
 
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
-    return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className={`d-flex flex-column mb-2 ${classes.Filters}`}>
-          <ActiveFilterCard
-            language={this.props.language}
-            filters={this.props.filters}
-            multiValueFilterHandler={this.props.multiValueFilterHandler}
-            isMobile={this.state.isMobile}
-            isActive={this.state.isActive}
-            activateFilters={this.activateFilters}
-          />
-          <div className={`p-3 mb-2 ${classes.FiltersContainer} ${classes[(this.state.isActive) ? 'Visible' : 'Hidden']}`}>
-            <div className={classes.FilterHeaders}>
-              <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
-            </div>
-            <Suspense fallback={<div />}>
-              {this.renderApiFilter()}
-            </Suspense>
-          </div>
+  return (
+    <div className={`d-flex flex-column mb-2 ${classes.Filters}`}>
+      <ActiveFilterCard
+        language={props.language}
+        filters={props.filters}
+        multiValueFilterHandler={props.multiValueFilterHandler}
+        isMobile={(windowSize.width < 992)}
+        isActive={isActive}
+        activateFilters={() => setActive(!isActive)}
+      />
+      <div className={`p-3 mb-2 ${classes.FiltersContainer} ${classes[(isActive) ? 'Visible' : 'Hidden']}`}>
+        <div className={classes.FilterHeaders}>
+          <FormattedHTMLMessage id="filterPanel.filterBy" defaultMessage="filterPanel.filterBy" />
         </div>
-      </IntlProvider>
-    );
-  }
-}
+        <Suspense fallback={<div />}>
+          {renderApiFilter({ ...props })}
+        </Suspense>
+      </div>
+    </div>
+  );
+};
 
 export default FilterPanel;
 
+/* eslint-disable */
+// disabledReason: Props are passed as { ...props }
+// avoid props in never used linter error
 FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
@@ -96,3 +66,4 @@ FilterPanel.propTypes = {
   api: PropTypes.string.isRequired,
   sliderData: PropTypes.array,
 };
+/* eslint-enable */

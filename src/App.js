@@ -16,7 +16,7 @@ const ProductionPage = lazy(() => import('./Components/Results/Production/Produc
 const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
 const FocusList = lazy(() => import('./Components/Focus/FocusList'));
-const Focus = lazy(() => import('./Components/Focus/Focus'));
+const Focus = lazy(() => import('./Components/Focus/FocusTest'));
 
 /* Pages froides */
 const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));

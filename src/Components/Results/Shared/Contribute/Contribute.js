@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 // import Axios from 'axios';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 // import moment from 'moment';
 import Modal from 'react-bootstrap/Modal';
-import useModal from '../../../../Hooks/useModals';
 import FormContact from '../../../Shared/FormContact/FormContact';
 
 /* SCSS */
@@ -20,13 +19,13 @@ const messages = {
 };
 
 const Contribute = (props) => {
-  const { handleSwitchModal, isActive } = useModal();
+  const [isActive, setActive] = useState(false);
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <Fragment>
         <Modal
           show={isActive}
-          onHide={handleSwitchModal}
+          onHide={() => setActive(!isActive)}
           size="lg"
         >
           <Modal.Header closeButton />
@@ -39,12 +38,12 @@ const Contribute = (props) => {
             <FormContact
               language={props.language}
               apiName="contribute"
-              defaultInputs={{ ...props }}
+              defaultInputs={{ id: props.objectId, type: props.objectType, section: props.sectionName }}
             />
           </Modal.Body>
         </Modal>
         {/* eslint-disable-next-line */}
-        <span className="ml-auto" onClick={handleSwitchModal}>
+        <span className="ml-auto" onClick={() => setActive(!isActive)}>
           <div className="d-flex flex-nowrap align-items-center">
             <p className={`m-0 ${classes.Text}`}>
               <FormattedHTMLMessage id="Contribute.contribute" defaultMessage="Contribute.contribute" />
@@ -64,6 +63,6 @@ export default Contribute;
 Contribute.propTypes = {
   language: PropTypes.string.isRequired,
   sectionName: PropTypes.string.isRequired,
-  // objectId: PropTypes.string.isRequired,
-  // objectType: PropTypes.string,
+  objectId: PropTypes.string.isRequired,
+  objectType: PropTypes.string,
 };
