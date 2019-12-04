@@ -1,5 +1,10 @@
+// api du site
+export const API_FOCUS_SCANR = 'http://66.70.222.205/api/focus';
+export const API_CONTRIBUTE_SCANR = 'http://66.70.222.205/api/contribute';
+export const API_CONTACT_SCANR = 'http://66.70.222.205/api/contact';
+export const API_ERRORS_SCANR = 'http://66.70.222.205/api/errors';
+export const API_BASE_SCANR = 'http://66.70.222.205/api';
 
-export const API_SCANR_ADMIN = '/api';
 export const API_BASE_URL = 'https://scanr-preprod.sword-group.com/api/v2';
 // Get
 export const API_STRUCTURES_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/structures';
@@ -35,5 +40,5 @@ export const PUBLICATION_COLOR = '#cc3d8f';
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
 
 // ecosystem
-export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur Privé', 'Secteur public'];
+export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur privé', 'Secteur public', 'Organization internationale'];
 export const ECOSYSTEM_LIMIT = 100;
