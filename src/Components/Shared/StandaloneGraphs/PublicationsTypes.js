@@ -66,7 +66,7 @@ export default class ProductionTypes extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsBar
-              filename="Top 10 des villes"
+              filename={this.props.title}
               data={this.state.data}
               language={this.props.language}
             />

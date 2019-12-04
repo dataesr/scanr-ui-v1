@@ -58,7 +58,7 @@ export default class ProductionYears extends Component {
         (this.state.data !== [] && !this.state.isLoading)
           ? (
             <HighChartsLine
-              filename="publication_is_oa_rate"
+              filename={this.props.title}
               data={this.state.data}
               language={this.props.language}
             />
