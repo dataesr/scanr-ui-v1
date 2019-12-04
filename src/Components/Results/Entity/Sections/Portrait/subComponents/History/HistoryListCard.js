@@ -34,10 +34,12 @@ const additionalListFunction = (allProps) => {
     }
 
     const data = {};
-    data.type = listByYear[i].eventType;
-    data.id = listByYear[i].structure.id;
-    data.label = listByYear[i].structure.label.fr;
-    objYear.data.push(data);
+    if (listByYear[i].eventType && listByYear[i].structure && listByYear[i].structure.id && listByYear[i].structure.label && listByYear[i].structure.label.fr) {
+      data.type = listByYear[i].eventType;
+      data.id = listByYear[i].structure.id;
+      data.label = listByYear[i].structure.label.fr;
+      objYear.data.push(data);
+    }
   }
 
   // sorting by types
@@ -66,8 +68,6 @@ const additionalListFunction = (allProps) => {
     );
   });
 
-  // const items = <li>toto</li>;
-  // const itemsHtml = <ul className="list-group list-group-flush">{items}</ul>;
   return (
     <ButtonWithModal
       logo={allProps.logo}
