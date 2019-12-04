@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import Axios from 'axios';
+import Axios from 'axios';
 import Markdown from 'markdown-to-jsx';
 // Composants
 import MetaFocus from '../Shared/MetaTags/MetaFocus';
@@ -60,6 +60,10 @@ export default class Focus extends Component {
 
   componentDidMount() {
     const filename = `./Configs/${this.props.match.params.id}.json`;
+    Axios.get(`http://66.70.222.205/api/focus?where={"id":"${this.props.match.params.id}"}`)
+      .then((res) => {
+        console.log(res);
+      });
     try {
       // eslint-disable-next-line
       const params = require(`${filename}`);

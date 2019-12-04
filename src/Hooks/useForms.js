@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Axios from 'axios';
-import { API_SCANR_ADMIN } from '../config/config';
+import { API_BASE_SCANR } from '../config/config';
 
 const useForm = (apiName, defaultInputs = {}) => {
   const [inputs, setInputs] = useState(defaultInputs);
@@ -12,7 +12,7 @@ const useForm = (apiName, defaultInputs = {}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setIsSending(true);
-    Axios.post(`${API_SCANR_ADMIN}/${apiName}`, inputs)
+    Axios.post(`${API_BASE_SCANR}/${apiName}`, inputs)
       .then((response) => {
         // eslint-disable-next-line
         console.log(response);
