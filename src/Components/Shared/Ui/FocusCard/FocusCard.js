@@ -22,18 +22,18 @@ import {
 import classes from './FocusCard.scss';
 
 const FocusCard = (props) => {
-  let color = '#ff0000';
+  let color = '#ffffff';
   switch (props.schema) {
-    case 'entity':
+    case 'structures':
       color = ENTITY_COLOR;
       break;
-    case 'person':
+    case 'persons':
       color = PERSON_COLOR;
       break;
-    case 'project':
+    case 'projects':
       color = PROJECT_COLOR;
       break;
-    case 'publication':
+    case 'publications':
       color = PUBLICATION_COLOR;
       break;
     default:
