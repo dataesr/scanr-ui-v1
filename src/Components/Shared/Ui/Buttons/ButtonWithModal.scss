@@ -5,19 +5,20 @@
 }
 
 .Logo {
-  color: grey;
+  color: $scanrgreyColor;
+  font-size: 1.2rem;
 }
 
 .Title {
-  color: grey;
+  color: $scanrgreyColor;
   font-style: italic;
+  text-transform: capitalize;
 }
 .Content {
   margin-top: 36px;
 
 }
 .ButtonWithModal {
-
   .Button {
     color: $colorCardButton;
     background-color: $bgColorCardButton;
@@ -35,8 +36,4 @@ UL {
   text-align: left;
   font-size: 0.9rem;
   color: $scanrdeepblueColor;
-
-  // I {
-  //   color: $scanrblueColor
-  // }
 }
