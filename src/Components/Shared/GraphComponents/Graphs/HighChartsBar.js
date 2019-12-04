@@ -85,6 +85,9 @@ export default class HighChartsBar extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       xAxis: {
         minorGridLineWidth: 0,
         gridLineWidth: 0,
@@ -194,4 +197,5 @@ HighChartsBar.propTypes = {
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
   height: PropTypes.string,
+  subtitle: PropTypes.string,
 };

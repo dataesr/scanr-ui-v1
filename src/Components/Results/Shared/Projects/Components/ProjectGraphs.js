@@ -102,24 +102,25 @@ const ProjectGraphs = (props) => {
     },
   };
   const active = (props.activeGraph) ? props.activeGraph : 'types';
+  const subtitle = (props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter. Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect. They cannot be used for assessment purposes.');
 
   const renderGraph = () => {
     if (active === 'keywords') {
       const data = createWordCloudData();
-      return <WorldCloud filename={labelFor[props.language][active]} data={data} language={props.language} />;
+      return <WorldCloud filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'sankey') {
       const data = createSankeyData();
-      return <SankeyChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
+      return <SankeyChart filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'years') {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     return (
-      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} subtitle={subtitle} />
     );
   };
 

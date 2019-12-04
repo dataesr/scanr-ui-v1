@@ -59,6 +59,9 @@ export default class HighChartsSankey extends Component {
       title: {
         text: '',
       },
+      subtitle: {
+        text: (this.props.subtitle) ? (this.props.subtitle) : '',
+      },
       colors: [classes.sanKey1, classes.sanKey2],
       tooltip: {
         pointFormat: '{point.fromNode.name} → {point.toNode.name}: <b>{point.weight}',
@@ -127,4 +130,5 @@ HighChartsSankey.propTypes = {
   language: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
   data: PropTypes.object,
+  subtitle: PropTypes.string,
 };

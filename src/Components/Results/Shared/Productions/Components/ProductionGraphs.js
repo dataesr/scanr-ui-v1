@@ -40,10 +40,11 @@ const ProductionGraphs = (props) => {
   };
 
   const active = (props.activeGraph) ? props.activeGraph : graphFor[props.productionType][0];
+  const subtitle = (props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter. Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect. They cannot be used for assessment purposes.');
 
   const renderGraph = () => {
     if (active === 'keywords') {
-      return <WordCloud filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />;
+      return <WordCloud filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'isOa') {
       const data = { id: 'isOa', entries: [] };
@@ -62,13 +63,13 @@ const ProductionGraphs = (props) => {
           });
         }
       });
-      return <DonutChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
+      return <DonutChart filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'years') {
       const data = {
         entries: props.graphData[active].entries.sort((a, b) => (a.value - b.value)),
       };
-      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} />;
+      return <YearChart filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'types') {
       const typesData = { id: 'types', entries: [] };
@@ -77,10 +78,10 @@ const ProductionGraphs = (props) => {
         type.value = TypeMapping[props.language][entry.value];
         typesData.entries.push(type);
       });
-      return <BarChart filename={labelFor[props.language][active]} data={typesData} language={props.language} />;
+      return <BarChart filename={labelFor[props.language][active]} data={typesData} language={props.language} subtitle={subtitle} />;
     }
     return (
-      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} />
+      <BarChart filename={labelFor[props.language][active]} data={props.graphData[active]} language={props.language} subtitle={subtitle} />
     );
   };
 

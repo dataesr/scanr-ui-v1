@@ -21,7 +21,7 @@ const ProjectsGraphsWrapper = props => (
     <SimpleAggregationGraph
       aggField="type"
       aggSize={10}
-      filename="scanr_export_projects_types"
+      filename={messages[props.language].ProjectsTypesTitle}
       graphType="HighChartsDonut"
       api="projects"
       title={messages[props.language].ProjectsTypesTitle}
