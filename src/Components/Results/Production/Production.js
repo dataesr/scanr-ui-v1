@@ -13,6 +13,7 @@ import Publication from './Publication/Publication';
 import Patent from './Patent/Patent';
 import Thesis from './Thesis/Thesis';
 
+import styles from '../../../style.scss';
 /**
  * Production
  * Url : .
@@ -40,7 +41,7 @@ const Production = (props) => {
   const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, props.match.params.id);
 
   if (isLoading) {
-    return <Loader />;
+    return <Loader color={styles.productionsColor} />;
   }
   if (isError) {
     return <Errors />;
