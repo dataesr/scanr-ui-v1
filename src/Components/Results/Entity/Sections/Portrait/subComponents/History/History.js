@@ -62,7 +62,7 @@ const History = (props) => {
 export default History;
 
 History.propTypes = {
-  creationYear: PropTypes.string,
+  creationYear: PropTypes.any,
   language: PropTypes.string.isRequired,
   predecessors: PropTypes.array,
 };
