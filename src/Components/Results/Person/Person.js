@@ -12,8 +12,9 @@ import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
 import Thesis from './Sections/Thesis/Thesis';
 import Productions from '../Shared/Productions/Productions';
-
 import Banner from '../../Shared/Banner/Banner';
+import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
+import styles from '../../../style.scss';
 
 /**
  * Publication
@@ -50,7 +51,7 @@ class Person extends Component {
 
   render() {
     if (!this.state.data) {
-      return <Fragment>Chargement ...</Fragment>;
+      return <Loader color={styles.personsColor} />;
     }
     return (
       <Fragment>

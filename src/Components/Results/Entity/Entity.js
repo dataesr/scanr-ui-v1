@@ -18,9 +18,9 @@ import Ecosystem from './Sections/Ecosystem/Ecosystem';
 import Awards from './Sections/Awards/Awards';
 import SimilarEntities from './Sections/SimilarEntities/SimilarEntities';
 import LastEntityFocus from './Sections/LastEntityFocus/LastEntityFocus';
-
 import Banner from '../../Shared/Banner/Banner';
-
+import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
+import styles from '../../../style.scss';
 // import DataSample from './dataSample.json';
 
 /**
@@ -33,10 +33,7 @@ import Banner from '../../Shared/Banner/Banner';
 */
 class Entity extends Component {
   state = {
-    data: {
-      projects: null,
-      relations: [],
-    },
+    data: {},
     dataSupervisorOf: [],
     geoNear: [],
   };
@@ -45,7 +42,6 @@ class Entity extends Component {
     const { id } = this.props.match.params;
     this.getData(id);
     this.getDataSupervisorOf(id);
-    this.setState({ data: this.props.data });
     this.getNearStructures(id);
   }
 
@@ -97,14 +93,11 @@ class Entity extends Component {
 
   render() {
     if (!this.state.data) {
-      return <Fragment>Chargement ...</Fragment>;
+      return <Loader color={styles.entityColor} />;
     }
     return (
       <Fragment>
-        <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
-        />
+        <Header />
 
         <HeaderTitle
           language={this.props.language}
@@ -220,7 +213,7 @@ class Entity extends Component {
           url=""
         />
 
-        <Footer language={this.props.language} />
+        <Footer />
       </Fragment>
     );
   }
@@ -231,6 +224,4 @@ export default Entity;
 Entity.propTypes = {
   language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
-  data: PropTypes.object,
-  switchLanguage: PropTypes.func.isRequired,
 };

@@ -231,7 +231,7 @@ class Productions extends Component {
   }
 
   render() {
-    if (this.state.total === 0) {
+    if (this.state.total === 0 || this.state.error || this.state.isLoading) {
       return (
         <Fragment>
           <section className="container-fluid py-4">
