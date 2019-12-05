@@ -193,7 +193,6 @@ const PublicationCard = (props) => {
     )
     : null;
 
-
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
