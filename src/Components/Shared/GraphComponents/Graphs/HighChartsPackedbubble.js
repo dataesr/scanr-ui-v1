@@ -144,7 +144,7 @@ HighChartsPackedbubble.defaultProps = {
 };
 
 HighChartsPackedbubble.propTypes = {
-  language: PropTypes.string.isRequired,
+  language: PropTypes.string,
   filename: PropTypes.string,
   data: PropTypes.array,
   text: PropTypes.string,
