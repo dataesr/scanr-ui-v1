@@ -1,0 +1,47 @@
+{
+  "title": {
+    "fr": "YY",
+    "en": "YY"
+  },
+  "text": {
+    "fr": "YY",
+    "en": "YY"
+  },
+  "tags": {
+    "fr": ["satt", "transfert", "technologies"],
+    "en": ["satt", "transfert", "technologies"]
+  },
+  "api": "persons",
+  "href": "/recherche/structures?filters=%7B%22badges.label.fr%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22SATT%22%5D%7D%7D&query=&sort",
+  "hrefX": "/recherche/persons",
+  "components": [
+    {
+      "title": {
+    "fr": "YY",
+    "en": "YY"
+      },
+      "subtitle": {
+    "fr": "YY",
+    "en": "YY"
+      },
+      "api" : "persons",
+      "componentType": "EntityMap",
+      "request": {
+        "query": "",
+        "pageSize": 100,
+        "filters": {
+          "links.type": {
+            "type": "MultiValueSearchFilter",
+            "op": "any",
+            "values": ["youtube", "Youtube"]
+          },
+          "awards.structureName": {
+            "type": "MultiValueSearchFilter",
+            "op": "not_all",
+            "values": ["Ma thèse en 180 secondes"]
+          }
+        }
+      }
+    }
+  ]
+}
