@@ -340,7 +340,7 @@ class Ecosystem extends Component {
   }
 
 
-  renderViewGraph = data => (
+  renderViewGraph = (data, subtitle) => (
     <div className="row">
       {
         (data.fr.length > 0) ? (
@@ -348,6 +348,7 @@ class Ecosystem extends Component {
             <PackedBubbleChart
               text={messages[this.props.language]['Entity.ecosystem.frenchEntities']}
               data={data.fr}
+              subtitle={subtitle}
               tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
             />
           </div>
@@ -359,6 +360,7 @@ class Ecosystem extends Component {
             <PackedBubbleChart
               text={messages[this.props.language]['Entity.ecosystem.foreignEntities']}
               data={data.fo}
+              subtitle={subtitle}
               tooltipText={messages[this.props.language]['Entity.ecosystem.jointProductions']}
             />
           </div>
@@ -398,6 +400,7 @@ class Ecosystem extends Component {
     }
 
     const dataGraph = this.getDataGraph();
+    const subtitle = (this.props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter.<br/>Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect.<br/>They cannot be used for assessment purposes.');
 
     return (
       <Fragment>
@@ -417,7 +420,7 @@ class Ecosystem extends Component {
               {
                 (this.state.viewMode === 'list')
                   ? this.renderViewList(messages)
-                  : this.renderViewGraph(dataGraph)
+                  : this.renderViewGraph(dataGraph, subtitle)
               }
             </div>
           </section>
