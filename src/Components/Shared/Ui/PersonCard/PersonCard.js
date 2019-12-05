@@ -129,5 +129,5 @@ PersonCard.propTypes = {
   language: PropTypes.string,
   lastName: PropTypes.string,
   role: PropTypes.string,
-  className: PropTypes.object,
+  className: PropTypes.any,
 };

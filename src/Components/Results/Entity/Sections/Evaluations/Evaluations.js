@@ -69,7 +69,7 @@ const Evaluations = (props) => {
         miniListJSX = finalList.map((el) => {
           const labels = el.evaluator.split('__');
           return (
-            <div>
+            <div key={el.url}>
               <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
