@@ -35,7 +35,6 @@ const Awards = (props) => {
     fr: messagesEntityFr,
     en: messagesEntityEn,
   };
-
   if (!props.data || !props.data.badges) {
     return (
       <Fragment>
@@ -63,8 +62,9 @@ const Awards = (props) => {
       </Fragment>
     );
   }
+  const nonNetworkBadges = props.data.badges.filter(b => !(['carnot', 'gican', 'gifas', 'gicat', 'rescurie', 'allenvi', 'itagricole', 'irt', 'polecompetitivite', 'satt'].includes(b.code.toLowerCase())));
 
-  return (
+  return (nonNetworkBadges.length > 0) ? (
     <Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className={`container-fluid ${classes.Awards}`}>
@@ -78,7 +78,7 @@ const Awards = (props) => {
             />
             <div className="row">
               {
-                props.data.badges.map(badge => (
+                nonNetworkBadges.map(badge => (
                   <div className={`col-md-4 ${classes.CardContainer}`}>
                     <PrizeCard
                       date={null}
@@ -95,7 +95,7 @@ const Awards = (props) => {
         </section>
       </IntlProvider>
     </Fragment>
-  );
+  ) : null;
 };
 
 export default Awards;

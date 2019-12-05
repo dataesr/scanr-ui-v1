@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCountListCard from '../../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
+import PrizeCard from '../../../../Shared/Ui/PrizeCard/PrizeCard';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
@@ -37,6 +38,7 @@ class Network extends Component {
   state = {
     dataSupervisorOf: {},
     satt: [],
+    networkBadges: [],
     dataSupervisorOfTotal: 0,
   };
 
@@ -59,6 +61,10 @@ class Network extends Component {
         this.setState({ spinoff });
         const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
         this.setState({ rachete });
+      }
+      if (this.props.data.badges) {
+        const networkBadges = this.props.data.badges.filter(b => ['carnot', 'gican', 'gifas', 'gicat', 'rescurie', 'allenvi', 'itagricole', 'irt', 'polecompetitivite', 'satt'].includes(b.code.toLowerCase()));
+        this.setState({ networkBadges });
       }
     }
   }
@@ -397,6 +403,22 @@ class Network extends Component {
                 ) : null
               }
             </div>
+          </div>
+          <div className="row">
+            {
+              this.state.networkBadges.map(badge => (
+                <div className={`col-md-4 ${classes.CardContainer}`}>
+                  <PrizeCard
+                    date={null}
+                    title={(this.props.language === 'fr') ? 'Réseau' : 'Network'}
+                    language={this.props.language}
+                    label={getSelectKey(badge, 'label', this.props.language, 'fr')}
+                    icon="prize"
+                    color="#fe7747"
+                  />
+                </div>
+              ))
+            }
           </div>
         </section>
       </IntlProvider>
