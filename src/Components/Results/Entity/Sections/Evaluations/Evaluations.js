@@ -90,7 +90,7 @@ const Evaluations = (props) => {
         listJSX = finalList.map((el) => {
           const labels = el.evaluator.split('__');
           return (
-            <div className={classes.InnerListItem}>
+            <div className={classes.InnerListItem} key={el.url}>
               <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
@@ -109,7 +109,7 @@ const Evaluations = (props) => {
       }
 
       return (
-        <div className={`col-md-6 ${classes.NoSpace} ${classes.CardContainer}`}>
+        <div className={`col-md-6 ${classes.NoSpace} ${classes.CardContainer}`} key={year}>
           <div className={classes.EvaluationCard}>
             <div className="d-flex flex-row">
               <div className="w-100 text-center">
