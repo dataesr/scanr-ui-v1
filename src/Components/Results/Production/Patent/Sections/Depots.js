@@ -73,7 +73,9 @@ const PatentsApplications = (props) => {
             {item.id}
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
-            <p className="m-0">{item.country}</p>
+            <p className="m-0">
+              {`${messages[props.language]['Patent.depots.country']}${item.country}`}
+            </p>
           </div>
         </div>
       </React.Fragment>
@@ -89,7 +91,7 @@ const PatentsApplications = (props) => {
             objectType="productions"
             language={props.language}
             id={props.id}
-            title={messages[props.language]['Patent.Depots.title']}
+            title={messages[props.language]['Patent.depots.title']}
             viewModeClickHandler={view => setViewMode(view)}
             viewMode={viewMode}
           />
@@ -110,24 +112,24 @@ const PatentsApplications = (props) => {
                         <a href={`http://worldwide.espacenet.com/${selected.id}`}>{props.name}</a>
                         <p>
                           {
-                            `Déposé le ${moment(selected.url).format('DD-MM-YYYY')}`
+                            `${messages[props.language]['Patent.depots.date']}${moment(selected.url).format('DD-MM-YYYY')}`
                           }
                         </p>
                         <p>
                           {
-                            `Pays du dépot: ${selected.country}`
+                            `${messages[props.language]['Patent.depots.country']}${selected.country}`
                           }
                         </p>
                         <p>
                           {
-                            `Type de dépot: ${patentType[props.language][selected.type]}`
+                            `${messages[props.language]['Patent.depots.type']}${patentType[props.language][selected.type]}`
                           }
                         </p>
                         <p>
                           {
                             (selected.label === 'not_priority')
-                              ? `Dépot : ${selected.label}`
-                              : null
+                              ? messages[props.language]['Patent.depots.isntPriority']
+                              : messages[props.language]['Patent.depots.isPriority']
                           }
                         </p>
                       </div>
