@@ -8,8 +8,8 @@ function useGetData(BASE_URL, id) {
   const [isError, setError] = useState(false);
   async function getData() {
     const url = (id) ? `${BASE_URL}/${id}` : BASE_URL;
-    const response = await Axios.get(url);
     try {
+      const response = await Axios.get(url);
       const res = await response.data;
       setData(res);
       setLoading(false);
