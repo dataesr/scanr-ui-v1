@@ -6,21 +6,20 @@
  * Resultat (ex) : getSelectKey(globalObj, 'label', 'en', 'fr') => "label en"
 */
 export default function getSelectKey(globalObj, key, searchedKey, defaultKey) {
-  /* eslint-disable */
+  let res = '';
   if (globalObj[key]) {
     if (globalObj[key][searchedKey]) {
-      return globalObj[key][searchedKey];
+      res = globalObj[key][searchedKey];
     } else if (globalObj[key][defaultKey]) {
-      return globalObj[key][defaultKey];
+      res = globalObj[key][defaultKey];
     } else {
-      /* Renvoi de la première clé trouvée */
-      for (let prop in globalObj[key]) {
-        return globalObj[key][prop];
-      }
+      /* Renvoi de la dernière clé trouvée */
+      Object.entries(globalObj[key]).forEach((entry) => {
+        if (entry[1]) {
+          res = globalObj[key][entry[0]];
+        }
+      });
     }
-
   }
-
-  return '';
-  /* eslint-enable */
+  return res;
 }
