@@ -38,6 +38,6 @@ export default SimpleCard;
 SimpleCard.propTypes = {
   logo: PropTypes.string,
   title: PropTypes.string,
-  label: PropTypes.string,
+  label: PropTypes.any,
   tooltip: PropTypes.string,
 };

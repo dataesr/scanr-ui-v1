@@ -43,7 +43,7 @@ const Leaders = (props) => {
         <div className="row">
           {
             props.leaders.map(leader => (
-              <div className={`col-6 ${classes.CardContainer}`}>
+              <div className={`col-6 ${classes.CardContainer}`} key={leader.lastName}>
                 <PersonCard
                   data={leader}
                   email={leader.email}
