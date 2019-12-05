@@ -122,6 +122,11 @@ class HomePage extends Component {
               query: 'Cryptographie | Cryptography',
             },
             {
+              labelFr: 'Réforme des retraites',
+              labelEn: 'Pension reform',
+              query: '(réforme des retraites) | (pension)',
+            },
+            {
               labelFr: 'Humanités numériques',
               labelEn: 'Digital humanities',
               query: '(humanités numériques) | (digital humanities) | (humanités digitales)',
