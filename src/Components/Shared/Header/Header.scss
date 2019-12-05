@@ -8,13 +8,14 @@
   width: 100%;
 
   .ActiveLink {
-    color: $scanrdeepblueColor;
     font-weight: bold;
+    display: inline-block;
+    border-bottom: 4px solid $scanrblueColor;
   }
   .PipeLink {
     display: inline-block;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .img {
     z-index: -1;
@@ -29,8 +30,12 @@
     color: $scanrblueColor;
     font-weight: 600;
     display: inline-block;
-    margin: 8px 16px;
+    margin: 8px 8px;
     cursor: pointer;
+
+    A {
+      color: $scanrblueColor;
+    }
   }
   .Link:hover, .link:focus {
     text-decoration: none;

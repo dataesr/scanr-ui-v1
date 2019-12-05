@@ -69,7 +69,7 @@ const Evaluations = (props) => {
         miniListJSX = finalList.map((el) => {
           const labels = el.evaluator.split('__');
           return (
-            <div>
+            <div key={el.url}>
               <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
@@ -90,7 +90,7 @@ const Evaluations = (props) => {
         listJSX = finalList.map((el) => {
           const labels = el.evaluator.split('__');
           return (
-            <div className={classes.InnerListItem}>
+            <div className={classes.InnerListItem} key={el.url}>
               <div className={classes.EvaluationLabel}>
                 {labels[1]}
               </div>
@@ -109,10 +109,10 @@ const Evaluations = (props) => {
       }
 
       return (
-        <div className={`col-md-6 ${classes.NoSpace} ${classes.CardContainer}`}>
+        <div className={`col-md-6 ${classes.NoSpace} ${classes.CardContainer}`} key={year}>
           <div className={classes.EvaluationCard}>
             <div className="d-flex flex-row">
-              <p className="w-100 text-center">
+              <div className="w-100 text-center">
                 <p className={classes.TitleYear}>{year}</p>
                 <p className={classes.NbReports}>{counter}</p>
                 <p className={classes.ReportsLabel}>
@@ -138,7 +138,7 @@ const Evaluations = (props) => {
                     </div>
                   )}
                 </div>
-              </p>
+              </div>
               <div className="ml-auto">
                 <img src={logo} alt="Evaluator logo" />
               </div>
