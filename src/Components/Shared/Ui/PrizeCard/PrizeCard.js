@@ -27,7 +27,7 @@ const PrizeCard = (props) => {
   //   prize: PrizeImage,
   // };
   const year = (props.date) ? new Date(props.date).toLocaleDateString('fr-FR', options) : '';
-  const date = <p className={classes.Title}>{`${messages[props.language]} ${year}`}</p>;
+  const date = (props.title) ? (<p className={classes.Title}>{`${props.title} ${year}`}</p>) : (<p className={classes.Title}>{`${messages[props.language]} ${year}`}</p>);
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
   return (
     <div className={`${classes.SimpleCard}`}>
@@ -45,6 +45,7 @@ export default PrizeCard;
 PrizeCard.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string,
+  title: PropTypes.string,
   date: PropTypes.string,
   color: PropTypes.string,
 };
