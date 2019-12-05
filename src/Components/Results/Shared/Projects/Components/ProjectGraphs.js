@@ -178,6 +178,6 @@ ProjectGraphs.propTypes = {
   setActiveGraphHandler: PropTypes.func.isRequired,
   graphData: PropTypes.object.isRequired,
   data: PropTypes.object,
-  ProjectType: PropTypes.string.isRequired,
+  ProjectType: PropTypes.string,
   totalPerType: PropTypes.object.isRequired,
 };
