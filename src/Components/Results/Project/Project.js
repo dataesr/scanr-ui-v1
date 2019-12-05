@@ -15,7 +15,8 @@ import Informations from './Sections/Informations/Informations';
 import Financial from './Sections/Financial/Financial';
 import Programs from './Sections/Programs/Programs';
 import Similars from './Sections/Similars/Similars';
-
+import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
+import styles from '../../../style.scss';
 
 /**
  * Publication
@@ -52,7 +53,7 @@ class Project extends Component {
 
   render() {
     if (!this.state.data) {
-      return <Fragment>Chargement ...</Fragment>;
+      return <Loader color={styles.projectsColor} />;
     }
     return (
       <Fragment>
