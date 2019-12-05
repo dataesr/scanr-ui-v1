@@ -114,7 +114,7 @@ class TeamComposition extends Component {
       <ul className={`${classes.noListStyle} d-flex flex-column justify-content-between align-content-stretch p-0 m-0`}>
         {
           this.state.personsRecent.map(person => (
-            <li key={person.id} className={`${classes.OneFourth} ${classes.noListStyle}`}>
+            <li key={person.person.id} className={`${classes.OneFourth} ${classes.noListStyle}`}>
               <PersonCard
                 language={this.props.language}
                 data={person.person}
