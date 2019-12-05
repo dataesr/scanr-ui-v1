@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCountListCard from '../../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
+import PrizeCard from '../../../../Shared/Ui/PrizeCard/PrizeCard';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 
@@ -37,29 +38,34 @@ class Network extends Component {
   state = {
     dataSupervisorOf: {},
     satt: [],
+    networkBadges: [],
     dataSupervisorOfTotal: 0,
   };
 
   componentDidMount() {
     this.getDataSupervisorOf();
     this.getLinksOf();
-    if (this.props.data.relations) {
-      const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
-      this.setState({ satt });
-      const incubateur = this.props.data.relations.filter(item => item.type === 'incubateur_public');
-      this.setState({ incubateur });
-      const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
-      this.setState({ carnot });
-      const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
-      this.setState({ spinoff });
-      const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
-      this.setState({ rachete });
-    }
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.data.id !== this.props.data.id) {
       this.getDataSupervisorOf();
+      if (this.props.data.relations) {
+        const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
+        this.setState({ satt });
+        const incubateur = this.props.data.relations.filter(item => item.type === 'incubateur_public');
+        this.setState({ incubateur });
+        const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
+        this.setState({ carnot });
+        const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
+        this.setState({ spinoff });
+        const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
+        this.setState({ rachete });
+      }
+      if (this.props.data.badges) {
+        const networkBadges = this.props.data.badges.filter(b => ['carnot', 'gican', 'gifas', 'gicat', 'rescurie', 'allenvi', 'itagricole', 'irt', 'polecompetitivite', 'satt'].includes(b.code.toLowerCase()));
+        this.setState({ networkBadges });
+      }
     }
   }
 
@@ -397,6 +403,22 @@ class Network extends Component {
                 ) : null
               }
             </div>
+          </div>
+          <div className="row">
+            {
+              this.state.networkBadges.map(badge => (
+                <div className={`col-md-4 ${classes.CardContainer}`}>
+                  <PrizeCard
+                    date={null}
+                    title={(this.props.language === 'fr') ? 'Réseau' : 'Network'}
+                    language={this.props.language}
+                    label={getSelectKey(badge, 'label', this.props.language, 'fr')}
+                    icon="prize"
+                    color="#fe7747"
+                  />
+                </div>
+              ))
+            }
           </div>
         </section>
       </IntlProvider>

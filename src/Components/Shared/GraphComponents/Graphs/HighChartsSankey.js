@@ -129,6 +129,6 @@ HighChartsSankey.defaultProps = {
 HighChartsSankey.propTypes = {
   language: PropTypes.string.isRequired,
   filename: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  data: PropTypes.array,
   subtitle: PropTypes.string,
 };

@@ -27,7 +27,7 @@ const Header = () => {
       <section className={classes.Header}>
         <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
           <a className="navbar-brand" href="/">
-            <LogoScanrWhiteSVG fill="#003259" height="40px" width="160px" />
+            <LogoScanrWhiteSVG fill={classes.scanrdeepblueColor} height="40px" width="160px" />
           </a>
           <button
             className="navbar-toggler"
@@ -85,23 +85,17 @@ const Header = () => {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className={classes.Link} href="#">
-                  <FormattedHTMLMessage
-                    id="Header.link.cookies"
-                    defaultMessage="Header.link.cookies"
-                  />
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className={classes.Link} href="#">
+                  <i className="fas fa-share-alt" />
+                  &nbsp;
                   <FormattedHTMLMessage
                     id="Header.link.share"
                     defaultMessage="Header.link.share"
                   />
                 </a>
               </li>
-              <li className="nav-item">
+              <li className={`nav-item ${classes.Link}`}>
                 <a
-                  className={`${classes.Link} ${frActive}`}
+                  className={frActive}
                   onClick={() => context.switchLanguage('fr')}
                   onKeyPress={() => context.switchLanguage('fr')}
                   role="button"
@@ -111,7 +105,7 @@ const Header = () => {
                 </a>
                 <span className={classes.PipeLink}>|</span>
                 <a
-                  className={`${classes.Link} ${enActive}`}
+                  className={enActive}
                   onClick={() => context.switchLanguage('en')}
                   onKeyPress={() => context.switchLanguage('en')}
                   role="button"
