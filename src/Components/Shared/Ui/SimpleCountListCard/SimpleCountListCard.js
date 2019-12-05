@@ -72,19 +72,8 @@ const SimpleCountListCard = (props) => {
     </Fragment>
   ) : null;
 
-  // const submitBox = (
-  //   <div className={`d-flex align-self-center ${classes.SubmitBox}`}>
-  //     <button className="btn" type="button">
-  //       Enrichir/Corriger
-  //     </button>
-  //   </div>
-  // );
-
   return (
-    <div
-      className={`d-flex flex-column ${classes.SimpleCountListCard} ${props.masterKey.split('.')[0]}`}
-      dataKey={props.masterKey.split('.')[1]}
-    >
+    <div className={`d-flex flex-column ${classes.SimpleCountListCard}`}>
       <div className={classes.Title}>
         {props.title}
       </div>
@@ -106,7 +95,6 @@ const SimpleCountListCard = (props) => {
 export default SimpleCountListCard;
 SimpleCountListCard.defaultProps = {
   count: null,
-  masterKey: 'default.default',
 };
 
 SimpleCountListCard.propTypes = {
@@ -119,5 +107,4 @@ SimpleCountListCard.propTypes = {
   tooltip: PropTypes.string,
   modalButtonLabel: PropTypes.string,
   modalButtonTitle: PropTypes.string,
-  masterKey: PropTypes.string, // Utilisée pour le mode modifier/enrichir
 };
