@@ -132,9 +132,9 @@ class HomePage extends Component {
               query: 'Marathon',
             },
             {
-              labelFr: 'Migrations',
-              labelEn: 'Migrations',
-              query: 'Migrations',
+              labelFr: 'Migrations internationales',
+              labelEn: 'International migrations',
+              query: '(Migrations internationales) | (international migrations)',
             },
           ]}
           lexiconHandler={() => this.lexiconHandler()}
