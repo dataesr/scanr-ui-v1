@@ -43,7 +43,7 @@ const PatentParticipants = (props) => {
             objectType="publications"
             language={props.language}
             id={props.id}
-            title={messages[props.language]['Publication.authors.title']}
+            title={messages[props.language]['Patents.inventors.title']}
           />
           <div className="row">
             {
@@ -53,7 +53,7 @@ const PatentParticipants = (props) => {
                     <CounterCard
                       counter={inventors.length}
                       title=""
-                      label={messages[props.language]['Publication.publication.persons']}
+                      label={messages[props.language]['Patents.inventors.inventor']}
                       color="Persons"
                     />
                   </div>
@@ -66,7 +66,7 @@ const PatentParticipants = (props) => {
                     <CounterCard
                       counter={deposants.length}
                       title=""
-                      label={messages[props.language]['Publication.publication.persons']}
+                      label={messages[props.language]['Patents.inventors.applicant']}
                       color="Persons"
                     />
                   </div>
