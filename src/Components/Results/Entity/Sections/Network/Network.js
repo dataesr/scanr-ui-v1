@@ -43,23 +43,23 @@ class Network extends Component {
   componentDidMount() {
     this.getDataSupervisorOf();
     this.getLinksOf();
-    if (this.props.data.relations) {
-      const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
-      this.setState({ satt });
-      const incubateur = this.props.data.relations.filter(item => item.type === 'incubateur_public');
-      this.setState({ incubateur });
-      const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
-      this.setState({ carnot });
-      const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
-      this.setState({ spinoff });
-      const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
-      this.setState({ rachete });
-    }
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.data.id !== this.props.data.id) {
       this.getDataSupervisorOf();
+      if (this.props.data.relations) {
+        const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
+        this.setState({ satt });
+        const incubateur = this.props.data.relations.filter(item => item.type === 'incubateur_public');
+        this.setState({ incubateur });
+        const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
+        this.setState({ carnot });
+        const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
+        this.setState({ spinoff });
+        const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
+        this.setState({ rachete });
+      }
     }
   }
 
