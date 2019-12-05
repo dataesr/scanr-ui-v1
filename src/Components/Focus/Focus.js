@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 
-import Errors from '../Shared/Errors/Errors';
+// import Errors from '../Shared/Errors/Errors';
 // Composants
 import MetaFocus from '../Shared/MetaTags/MetaFocus';
 import Footer from '../Shared/Footer/Footer';
@@ -72,13 +72,19 @@ const buildFocusFromConfig = (components, lang) => {
 
 
 const Focus = (props) => {
-  const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
+  let { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
   if (isError) {
-    return <Errors />;
+    const filename = `./Configs/${props.match.params.id}.json`;
+    // eslint-disable-next-line
+    data = require(`${filename}`); 
+    isLoading = false;
+    isError = true;
+    // return <Errors />;
   }
   if (isLoading) {
     return <Loader />;
   }
+
   if (data) {
     const htmlList = buildFocusFromConfig(data.components, props.language);
     const pageTitle = 'scanR | Focus | '.concat(getSelectKey(data, 'title', props.language, 'fr'));
