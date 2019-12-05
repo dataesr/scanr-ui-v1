@@ -83,8 +83,9 @@ class SimilarEntities extends Component {
               />
               <ul className={`row ${classes.Ul}`}>
                 {
-                  this.state.data.map(item => (
-                    <li key={item.value} className={`col-md-4 ${classes.Li}`}>
+                  this.state.data.map((item, i) => (
+                    /* eslint-disable-next-line */
+                    <li key={`${item.value}_${i}`} className={`col-md-4 ${classes.Li}`}>
                       <EntityCard
                         data={item.value}
                         small
