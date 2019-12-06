@@ -21,6 +21,7 @@ import OpendataPackedBubble from './Components/OpendataPackedBubble';
 import EntityNetwork from '../Shared/StandaloneGraphs/EntityNetwork';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
+import EntityList from './Components/EntityList';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
 import GridMap from '../Shared/StandaloneGraphs/GridMap';
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
@@ -37,6 +38,7 @@ import classes from './Focus.scss';
 const GraphTypes = {
   GridMap,
   EntityMap,
+  EntityList,
   EntityNetwork,
   PublicationsKeywords,
   PublicationsPacketBubble,
