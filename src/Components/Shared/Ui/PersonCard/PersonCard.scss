@@ -4,7 +4,7 @@
   background-color: white;
   border-radius: 8px;
   text-align: center;
-  // min-height: 224px;
+  justify-content: space-around;
   min-height: 160px;
 
   .Title {
@@ -28,6 +28,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    text-transform: capitalize;
   }
 
   .Role {
