@@ -8,7 +8,7 @@
   background-attachment: relative;
   -webkit-background-size: cover; /* pour anciens Chrome et Safari */
   background-size: 50%; /* version standardisée */
-  background-color: white;
+  background-color: $scanrlightgreyColor;
   background-position: right 0 bottom 0;
 }
 
@@ -44,7 +44,7 @@
   }
   .Item {
     direction: ltr;
-    background-color: $scanrlightgreyColor;
+    background-color: white;
     padding-left: 12px;
     color: $scanrdeepblueColor;
     cursor: pointer;
@@ -56,31 +56,6 @@
       font-style: italic;
       font-size: 0.85rem;
       border-bottom: 1px solid $scanrmiddlegreyColor;
-
-      .publication {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 5px;
-        background-color: $productionpublicationColor;
-        margin-right: 5px;
-      }
-      .these {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 5px;
-        background-color: $productionthesesColor;
-        margin-right: 5px;
-      }
-      .brevet {
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius: 5px;
-        background-color: $productionbrevetsColor;
-        margin-right: 5px;
-      }
     }
   }
   .Item:hover {
@@ -110,8 +85,8 @@
   right: 0;
   width: 100%;
   height: 2em;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
 }
+// background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 75%);
 
 .Selected {
   background-color: $scanrblueColor !important;
