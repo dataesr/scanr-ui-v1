@@ -11,6 +11,7 @@
     "fr": ["theses"],
     "en": ["thesis"]
   },
+  "type": "bubble",
   "api": "publications",
   "href": "/recherche/publications?filters=%7B%22productionType%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22thesis%22%5D%7D%2C%22year%22%3A%7B%22type%22%3A%22LongRangeFilter%22%2C%22max%22%3A2019%2C%22min%22%3A2018%2C%22missing%22%3Afalse%7D%7D&query=&sort",
   "hrefX": "/recherche/publications",

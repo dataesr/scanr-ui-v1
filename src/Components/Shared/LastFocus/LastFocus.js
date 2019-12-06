@@ -46,9 +46,9 @@ const LastFocus = (props) => {
               props.focusList.map(oneFocus => (
                 <div className={`col-lg-4 ${classes.CardContainer}`} key={oneFocus.title}>
                   <FocusCard
-                    schema={oneFocus.schema}
-                    tags={oneFocus.tags}
-                    title={oneFocus.title}
+                    schema={oneFocus.api}
+                    tags={oneFocus.tags[props.language]}
+                    title={oneFocus.title[props.language]}
                     type={oneFocus.type}
                     url={oneFocus.url}
                   />
@@ -71,40 +71,56 @@ LastFocus.propTypes = {
 LastFocus.defaultProps = {
   focusList: [
     {
-      tags: ['#SATT', '#transfert', '#technonologies'],
-      title: 'La carte des SATT',
+      tags: {
+        fr: ['#satt', '#transfert', '#technologies'],
+        en: ['#satt', '#transfert', '#technologies'],
+      },
+      title: {
+        fr: 'Sociétés d’Accélération du Transfert de Technologies (SATT)',
+        en: 'French technology transfer offices (SATT, Sociétés d’Accélération du Transfert de Technologies)',
+      },
       type: 'map',
       url: '/focus/carte-satt-2019',
-      schema: 'structures',
+      api: 'structures',
     },
     {
-      tags: ['#Thèses', '#PhD', '#EcolesDoctorales'],
-      title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
+      tags: {
+        fr: ['Thèses', '#EcolesDoctorales'],
+        en: ['PhD', '#DoctoralSchools'],
+      },
+      title: {
+        fr: 'Les thèses soutenues en 2018. Sur quels thèmes ?',
+        en: '2018 thesis in france. Which thematics?',
+      },
       type: 'bubble',
       url: '/focus/themes-theses-2018',
-      schema: 'publications',
+      api: 'publications',
     },
     {
-      tags: ['#InstitutUniversitaireDeFrance', '#IUF'],
-      title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
+      tags: {
+        fr: ['#InstitutUniversitaireDeFrance', '#IUF'],
+        en: ['#InstitutUniversitaireDeFrance', '#IUF'],
+      },
+      title: {
+        fr: "Les nominations 2019 à l'Institut Universitaire de France",
+        en: 'Persons distinguished by the Institut Universitaire de France in 2019',
+      },
       type: 'treemap',
       url: '/focus/iuf',
-      schema: 'persons',
+      api: 'persons',
+    },
+    {
+      tags: {
+        fr: ['#youtube', '#vulgarisation'],
+        en: ['#youtube', '#popularization'],
+      },
+      title: {
+        fr: 'Chaînes scientifiques sur Youtube dans scanR',
+        en: 'Scientific Youtube channels in scanR',
+      },
+      type: 'youtube',
+      url: '/focus/youtube',
+      api: 'persons',
     },
   ],
 };
-
-// {
-//   tags: ['#theses', '#tag2', '#tag3'],
-//   title: 'Quels sont les thèmes majeurs des thèses en France aujourd\'hui',
-//   type: 'bubble',
-//   url: '/focus/themes-theses-2018',
-//   schema: 'publication',
-// },
-// {
-//   tags: ['#prix', '#IUF', '#tag3'],
-//   title: "Lauréats de l'Institut Universitaire de France: Qui sont ils ?",
-//   type: 'treemap',
-//   url: '/focus/iuf',
-//   schema: 'person',
-// },

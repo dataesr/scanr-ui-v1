@@ -56,7 +56,7 @@ class YoutubeCard extends Component {
             (this.state.urlIframe)
               ? (
                 <iframe
-                  title="xx"
+                  title="youtubeIframe"
                   type="text/html"
                   width="100%"
                   height="492px"
