@@ -46,32 +46,39 @@ const PatentParticipants = (props) => {
             title={messages[props.language]['Patents.inventors.title']}
           />
           <div className="row">
-            {
-              (inventors && inventors.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={inventors.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.inventor']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
-            {
-              (deposants && deposants.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={deposants.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.applicant']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className={classes.GridHeader}>Inventeurs</div>
+              {
+                (inventors && inventors.length > 0)
+                  ? (
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <CounterCard
+                        counter={inventors.length}
+                        title=""
+                        label={messages[props.language]['Patents.inventors.inventor']}
+                        color="Persons"
+                      />
+                    </div>
+                  )
+                  : null
+              }
+            </div>
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className={classes.GridHeader}>Déposants</div>
+              {
+                (deposants && deposants.length > 0)
+                  ? (
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <CounterCard
+                        counter={deposants.length}
+                        title=""
+                        label={messages[props.language]['Patents.inventors.applicant']}
+                        color="Persons"
+                      />
+                    </div>
+                  ) : null
+              }
+            </div>
           </div>
         </div>
       </section>
