@@ -91,6 +91,13 @@ LastFocus.defaultProps = {
       url: '/focus/iuf',
       schema: 'persons',
     },
+    {
+      tags: ['#youtube', '#vulgarisation'],
+      title: 'Vulgarisation scientifique sur Youtube',
+      type: 'youtube',
+      url: '/focus/youtube',
+      schema: 'persons',
+    },
   ],
 };
 

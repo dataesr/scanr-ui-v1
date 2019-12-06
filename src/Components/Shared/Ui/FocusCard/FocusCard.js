@@ -7,6 +7,7 @@ import DonutSVG from '../../svg/icon-focus-donut';
 import HistoTopSVG from '../../svg/icon-focus-histoTop';
 import MapSVG from '../../svg/icon-focus-map';
 import TreemapSVG from '../../svg/icon-focus-treemap';
+import YoutubeSVG from '../../svg/icon-focus-youtube';
 
 import ButtonToPage from '../Buttons/ButtonToPage';
 
@@ -56,6 +57,9 @@ const FocusCard = (props) => {
       break;
     case 'map':
       componentSvg = <MapSVG fill={color} />;
+      break;
+    case 'youtube':
+      componentSvg = <YoutubeSVG fill={color} />;
       break;
     case 'treemap':
       componentSvg = <TreemapSVG fill={color} />;
