@@ -34,6 +34,11 @@
             "type": "MultiValueSearchFilter",
             "op": "all",
             "values": ["SATT"]
+          },
+          "id": {
+            "type": "MultiValueSearchFilter",
+            "op": "not_all",
+            "values": ["793372525"]
           }
         }
       }
@@ -58,8 +63,41 @@
             "type": "MultiValueSearchFilter",
             "op": "all",
             "values": ["SATT"]
+          },
+          "id": {
+            "type": "MultiValueSearchFilter",
+            "op": "not_all",
+            "values": ["793372525"]
           }
 	}
+      }
+    },
+    {
+      "title": {
+        "fr": "Liste des SATT",
+        "en": "List of the French technology transfer offices"
+      },
+      "subtitle": {
+        "fr": "Sociétés d’Accélération du Transfert de Technologies",
+        "en": "(SATT, Sociétés d’Accélération du Transfert de Technologies)"
+      },
+      "api" : "structures",
+      "componentType": "EntityList",
+      "request": {
+        "query": "",
+        "pageSize": 100,
+        "filters": {
+          "badges.code": {
+            "type": "MultiValueSearchFilter",
+            "op": "all",
+            "values": ["SATT"]
+          },
+          "id": {
+            "type": "MultiValueSearchFilter",
+            "op": "not_all",
+            "values": ["793372525"]
+          }
+        }
       }
     }
   ]
