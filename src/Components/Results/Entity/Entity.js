@@ -32,17 +32,30 @@ import styles from '../../../style.scss';
  * Tests unitaires : .
 */
 class Entity extends Component {
-  state = {
-    data: {},
-    dataSupervisorOf: [],
-    geoNear: [],
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: {},
+      dataSupervisorOf: [],
+      geoNear: [],
+      isFull: true,
+    };
+    this.handleScroll = this.handleScroll.bind(this);
+  }
 
   componentDidMount() {
     const { id } = this.props.match.params;
     this.getData(id);
     this.getDataSupervisorOf(id);
     this.getNearStructures(id);
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isSearchFull !== this.state.isSearchFull) {
+      return true;
+    }
+    return false;
   }
 
   getNearStructures = (id) => {
@@ -86,6 +99,16 @@ class Entity extends Component {
       }).catch(e => console.log('erreur=>', e));
   }
 
+  handleScroll = () => {
+    if (window.scrollY) {
+      if (this.state.isFull) { this.setState({ isFull: false }); }
+    } else {
+      /* eslint-disable */
+      if (!this.state.isFull && window.scrollY === 0) { this.setState({ isFull: true }); }
+      /* eslint-enable */
+    }
+  }
+
   handleChange = (sectionName) => {
     document.getElementById(sectionName).scrollIntoView(true);
     window.scrollBy({ top: -120, behavior: 'smooth' });
@@ -96,7 +119,7 @@ class Entity extends Component {
       return <Loader color={styles.entityColor} />;
     }
     return (
-      <Fragment>
+      <div onScroll={this.handleScroll}>
         <Header />
 
         <HeaderTitle
@@ -105,7 +128,10 @@ class Entity extends Component {
           handleChangeForScroll={this.handleChange}
           idPage="Entity"
           id={this.state.data.id}
+          isFull={this.state.isFull}
         />
+
+        <div style={(this.state.isFull === false) ? { height: '170px' } : null} />
 
         <div id="Portrait">
           <Portrait
@@ -214,7 +240,7 @@ class Entity extends Component {
         />
 
         <Footer />
-      </Fragment>
+      </div>
     );
   }
 }
