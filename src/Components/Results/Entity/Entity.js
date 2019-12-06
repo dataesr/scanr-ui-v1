@@ -109,11 +109,6 @@ class Entity extends Component {
     }
   }
 
-  handleChange = (sectionName) => {
-    document.getElementById(sectionName).scrollIntoView(true);
-    window.scrollBy({ top: -120, behavior: 'smooth' });
-  };
-
   render() {
     if (!this.state.data) {
       return <Loader color={styles.entityColor} />;
@@ -125,7 +120,6 @@ class Entity extends Component {
         <HeaderTitle
           language={this.props.language}
           label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
-          handleChangeForScroll={this.handleChange}
           idPage="Entity"
           id={this.state.data.id}
           isFull={this.state.isFull}

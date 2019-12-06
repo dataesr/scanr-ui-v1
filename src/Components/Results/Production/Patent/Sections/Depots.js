@@ -4,10 +4,13 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Carto from '../Components/Carto';
+import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
+import SimpleCardWithButton from '../../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import classes from './Depots.scss';
 /* Gestion des langues */
 import messagesFr from '../translations/fr.json';
 import messagesEn from '../translations/en.json';
+import countries from '../countries.json';
 import patentType from './patentType.json';
 
 
@@ -15,6 +18,7 @@ const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
+
 
 /**
  * Patent
@@ -74,7 +78,7 @@ const PatentsApplications = (props) => {
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {`${messages[props.language]['Patent.depots.country']}${item.country}`}
+              {countries[props.language][item.country]}
             </p>
           </div>
         </div>
@@ -108,30 +112,54 @@ const PatentsApplications = (props) => {
                       </div>
                     </div>
                     <div className="col-lg-7">
-                      <div>
-                        <a href={`http://worldwide.espacenet.com/${selected.id}`}>{props.name}</a>
-                        <p>
-                          {
-                            `${messages[props.language]['Patent.depots.date']}${moment(selected.url).format('DD-MM-YYYY')}`
-                          }
-                        </p>
-                        <p>
-                          {
-                            `${messages[props.language]['Patent.depots.country']}${selected.country}`
-                          }
-                        </p>
-                        <p>
-                          {
-                            `${messages[props.language]['Patent.depots.type']}${patentType[props.language][selected.type]}`
-                          }
-                        </p>
-                        <p>
-                          {
-                            (selected.label === 'not_priority')
-                              ? messages[props.language]['Patent.depots.isntPriority']
-                              : messages[props.language]['Patent.depots.isPriority']
-                          }
-                        </p>
+                      <div className="row">
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCardWithButton
+                            language={props.language}
+                            logo="fas fa-id-card"
+                            title={messages[props.language]['Patent.patent.id']}
+                            label={selected.id}
+                            tooltip=""
+                            url={'https://worldwide.espacenet.com/patent/search?q='.concat(selected.id)}
+                            link="link_patent"
+                          />
+                        </div>
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={props.language}
+                            logo="fas fa-calendar-day"
+                            title={messages[props.language]['Patent.depots.date']}
+                            label={moment(selected.url).format('DD-MM-YYYY')}
+                            tooltip=""
+                          />
+                        </div>
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={props.language}
+                            logo="fas fa-calendar-day"
+                            title={messages[props.language]['Patent.depots.country']}
+                            label={countries[props.language][selected.country]}
+                            tooltip=""
+                          />
+                        </div>
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={props.language}
+                            logo="fas fa-clipboard-list"
+                            title={messages[props.language]['Patent.depots.type']}
+                            label={patentType[props.language][selected.type]}
+                            tooltip=""
+                          />
+                        </div>
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={props.language}
+                            logo="fas fa-clipboard-list"
+                            title={messages[props.language]['Patent.depots.isPriority']}
+                            label={(selected.label === 'priority') ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+                            tooltip=""
+                          />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -149,6 +177,5 @@ export default PatentsApplications;
 PatentsApplications.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
 };
