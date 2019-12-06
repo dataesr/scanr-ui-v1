@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
-import Carto from '../Components/Map';
+import Carto from '../Components/Carto';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
 import SimpleCardWithButton from '../../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import classes from './Depots.scss';
@@ -102,7 +102,7 @@ const PatentsApplications = (props) => {
           <hr />
           {
             (viewMode === 'graph')
-              ? <Carto />
+              ? <Carto data={patents} />
               : (
                 <React.Fragment>
                   <div className="row">
