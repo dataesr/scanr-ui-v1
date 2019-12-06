@@ -48,7 +48,12 @@ const Patent = (props) => {
           id={props.id}
         />
         <Identity language={props.language} data={props.data} id={props.id} />
-        <Participants language={props.language} data={props.data.authors || []} id={props.id} />
+        <Participants
+          language={props.language}
+          data={props.data.authors || []}
+          affiliations={props.data.affiliations || []}
+          id={props.id}
+        />
         <Depots language={props.language} data={props.data.links || []} id={props.id} name={name} />
         <Similars language={props.language} id={props.id} />
       </React.Fragment>
