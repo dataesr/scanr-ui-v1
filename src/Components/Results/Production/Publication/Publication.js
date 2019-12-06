@@ -61,11 +61,6 @@ class Publication extends Component {
     return sortedAuthors;
   }
 
-  handleChange = (sectionName) => {
-    document.getElementById(sectionName).scrollIntoView(true);
-    window.scrollBy({ top: -120, behavior: 'smooth' });
-  };
-
   render() {
     if (!this.props.data) {
       return null;
@@ -116,7 +111,6 @@ class Publication extends Component {
           <HeaderTitle
             language={this.props.language}
             label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
-            handleChangeForScroll={this.handleChange}
             idPage="Publication"
             id={this.props.data.id}
           />

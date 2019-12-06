@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
-import Axios from 'axios';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { API_PROJECTS_END_POINT } from '../../../config/config';
-import getSelectKey from '../../../Utils/getSelectKey';
 
+import getSelectKey from '../../../Utils/getSelectKey';
+import useGetData from '../../../Hooks/useGetData';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
@@ -16,6 +16,8 @@ import Financial from './Sections/Financial/Financial';
 import Programs from './Sections/Programs/Programs';
 import Similars from './Sections/Similars/Similars';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
+import Errors from '../../Shared/Errors/Errors';
+
 import styles from '../../../style.scss';
 
 /**
@@ -26,101 +28,81 @@ import styles from '../../../style.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class Project extends Component {
-  state = {
-    data: {},
-  };
 
-  componentDidMount() {
-    this.getData(this.props.match.params.id);
+
+const Project = (props) => {
+  const { data, isLoading, isError } = useGetData(API_PROJECTS_END_POINT, props.match.params.id);
+
+  if (isLoading) {
+    return <Loader color={styles.productionsColor} />;
   }
-
-  getData(id) {
-    // Récupéraion des données de l'entité
-    const url = `${API_PROJECTS_END_POINT}/${id}`;
-    // https://scanr-preprod.sword-group.com/api/v2/publications/doi10.10072%2525F978-3-319-24195-1_10
-    Axios.get(url)
-      .then((response) => {
-        this.setState({ data: response.data });
-        /* eslint-disable-next-line */
-      }).catch(e => console.log('erreur=>', e));
+  if (isError) {
+    return <Errors />;
   }
-
-  handleChange = (sectionName) => {
-    document.getElementById(sectionName).scrollIntoView(true);
-    window.scrollBy({ top: -120, behavior: 'smooth' });
-  };
-
-  render() {
-    if (!this.state.data) {
-      return <Loader color={styles.projectsColor} />;
-    }
-    return (
-      <Fragment>
-        <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
+  return (
+    <React.Fragment>
+      <Header
+        language={props.language}
+        switchLanguage={props.switchLanguage}
+      />
+      <HeaderTitle
+        language={props.language}
+        label={getSelectKey(data, 'label', props.language, 'default')}
+        idPage="Project"
+        id={data.id}
+      />
+      <div id="Informations">
+        <Informations
+          language={props.language}
+          data={data}
+          id={props.match.params.id}
         />
-        <HeaderTitle
-          language={this.props.language}
-          label={getSelectKey(this.state.data, 'label', this.props.language, 'default')}
-          handleChangeForScroll={this.handleChange}
-          idPage="Project"
-          id={this.state.data.id}
+      </div>
+      <div id="Financial">
+        <Financial
+          language={props.language}
+          data={data}
+          id={props.match.params.id}
         />
-        <div id="Informations">
-          <Informations
-            language={this.props.language}
-            data={this.state.data}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Financial">
-          <Financial
-            language={this.props.language}
-            data={this.state.data}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Programs">
-          <Programs
-            language={this.props.language}
-            data={this.state.data}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Description">
-          <Description
-            language={this.props.language}
-            data={this.state.data.description}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Participants">
-          <Participants
-            language={this.props.language}
-            data={this.state.data.participants}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Productions">
-          <Productions
-            language={this.props.language}
-            data={this.state.data.publications}
-            id={this.props.match.params.id}
-          />
-        </div>
-        <div id="Similars">
-          <Similars
-            language={this.props.language}
-            data={this.state.data}
-          />
-        </div>
-        <Footer language={this.props.language} />
-      </Fragment>
-    );
-  }
-}
+      </div>
+      <div id="Programs">
+        <Programs
+          language={props.language}
+          data={data}
+          id={props.match.params.id}
+        />
+      </div>
+      <div id="Description">
+        <Description
+          language={props.language}
+          data={data.description}
+          id={props.match.params.id}
+        />
+      </div>
+      <div id="Participants">
+        <Participants
+          language={props.language}
+          data={data.participants}
+          id={props.match.params.id}
+        />
+      </div>
+      <div id="Productions">
+        <Productions
+          language={props.language}
+          data={data.publications}
+          id={props.match.params.id}
+        />
+      </div>
+      <div id="Similars">
+        <Similars
+          language={props.language}
+          data={data}
+        />
+      </div>
+      <Footer language={props.language} />
+    </React.Fragment>
+  );
+};
 
 export default Project;
 

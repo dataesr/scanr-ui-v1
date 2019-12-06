@@ -5,6 +5,7 @@ import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
+import countries from '../countries.json';
 
 /* Gestion des langues */
 import messagesFr from '../translations/fr.json';
@@ -31,8 +32,14 @@ const PatentParticipants = (props) => {
     backgroundImage: `url(${BackgroundAuthors})`,
   };
 
-  const inventors = props.data.filter(auth => auth.role === 'inventeur');
+  const inventors = props.data.filter(auth => auth.role === 'inventeur').map((auth) => {
+    const [name, country] = auth.fullName.split('__');
+    return { name, country: countries[props.language][country] };
+  });
   const deposants = props.data.filter(auth => auth.role === 'deposant');
+  const nbDeposants = deposants.length;
+  const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0))
+
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -46,32 +53,36 @@ const PatentParticipants = (props) => {
             title={messages[props.language]['Patents.inventors.title']}
           />
           <div className="row">
-            {
-              (inventors && inventors.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={inventors.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.inventor']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
-            {
-              (deposants && deposants.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={deposants.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.applicant']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className={classes.GridHeader}>Inventeurs</div>
+              {
+                (inventors && inventors.length > 0)
+                  ? (
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <div>
+                        {inventors[0].name}
+                      </div>
+                    </div>
+                  )
+                  : null
+              }
+            </div>
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className={classes.GridHeader}>Déposants</div>
+              {
+                (deposants && deposants.length > 0)
+                  ? (
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <CounterCard
+                        counter={nbDeposants}
+                        title=""
+                        label={messages[props.language]['Patents.inventors.applicant']}
+                        color="Persons"
+                      />
+                    </div>
+                  ) : null
+              }
+            </div>
           </div>
         </div>
       </section>
@@ -85,4 +96,5 @@ PatentParticipants.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
+  affiliations: PropTypes.array,
 };
