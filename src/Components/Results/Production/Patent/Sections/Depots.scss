@@ -21,8 +21,9 @@
   overflow-y: scroll;
 
   .Title {
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: 500;
+    margin: 0;
   }
 
   .TitleYear {
@@ -51,9 +52,9 @@
     .Type {
       display: block;
       text-align: right;
-      padding: 1px 12px;
+      padding: 0 8px;
       font-style: italic;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       border-bottom: 1px solid $scanrmiddlegreyColor;
 
       .publication {
