@@ -1,7 +1,6 @@
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
-import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
 import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
@@ -41,8 +40,8 @@ const PatentParticipants = (props) => {
     const [fullName, country] = auth.fullName.split('__');
     return { fullName, country: countries[props.language][country] };
   });
-  const nbDeposants = deposants.length;
-  const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0))
+  // const nbDeposants = deposants.length;
+  // const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0));
 
 
   return (
@@ -112,5 +111,5 @@ PatentParticipants.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
-  affiliations: PropTypes.array,
+  // affiliations: PropTypes.array,
 };
