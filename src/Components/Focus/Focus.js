@@ -22,6 +22,7 @@ import EntityNetwork from '../Shared/StandaloneGraphs/EntityNetwork';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
 import EntityList from './Components/EntityList';
+import YoutubeList from './Components/YoutubeList';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
 import GridMap from '../Shared/StandaloneGraphs/GridMap';
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
@@ -46,6 +47,7 @@ const GraphTypes = {
   GenderTreemap,
   SimpleAggregationGraph,
   OpendataEntityMap,
+  YoutubeList,
 };
 
 const buildFocusFromConfig = (components, lang) => {

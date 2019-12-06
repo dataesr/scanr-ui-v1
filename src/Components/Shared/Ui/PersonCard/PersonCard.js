@@ -27,10 +27,12 @@ const PersonCard = (props) => {
   };
 
   let email = props.data.email;
+  const country = props.data.country;
   let firstName = props.data.firstName;
   let lastName = props.data.lastName;
+  let fullName = props.data.fullName;
   const exists = (props.data.person) ? (props.data.person.fullName !== undefined) : false;
-  const role = (props.role) ? (props.role) : ' ';
+  const role = (props.role) ? (props.role) : null;
   let url = null;
   if (props.data.person) {
     if (props.data.person.email) {
@@ -39,12 +41,18 @@ const PersonCard = (props) => {
     if (props.data.person.firstName) {
       firstName = props.data.person.firstName;
     }
+    if (props.data.person.fullName) {
+      fullName = props.data.person.fullName;
+    }
     if (props.data.person.lastName) {
       lastName = props.data.person.lastName;
     }
     if (props.data.person.id) {
       url = `/person/${props.data.person.id}`;
     }
+  }
+  if (!fullName) {
+    fullName = `${firstName} ${lastName}`;
   }
 
   return (
@@ -68,12 +76,19 @@ const PersonCard = (props) => {
           </div>
         </div>
         <div className={classes.Name}>
-          {`${firstName} ${lastName}`}
+          {fullName}
         </div>
         <div>
           {(role) ? (
             <span className={classes.Role}>
               {messages[props.language][role]}
+            </span>
+          ) : null}
+        </div>
+        <div>
+          {(country) ? (
+            <span className={classes.Role}>
+              {country}
             </span>
           ) : null}
         </div>

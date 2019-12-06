@@ -1,10 +1,12 @@
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
-import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
+import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
+import EntityCard from '../../../../Shared/Ui/EntityCard/EntityCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
+import countries from '../countries.json';
 
 /* Gestion des langues */
 import messagesFr from '../translations/fr.json';
@@ -31,8 +33,17 @@ const PatentParticipants = (props) => {
     backgroundImage: `url(${BackgroundAuthors})`,
   };
 
-  const inventors = props.data.filter(auth => auth.role === 'inventeur');
-  const deposants = props.data.filter(auth => auth.role === 'deposant');
+  const inventors = props.data.filter(auth => auth.role === 'inventeur').map((auth) => {
+    const [fullName, country] = auth.fullName.split('__');
+    return { fullName, country: countries[props.language][country] };
+  });
+  const deposants = props.data.filter(auth => auth.role === 'deposant').map((auth) => {
+    const [label, country] = auth.fullName.split('__');
+    return { label, country: countries[props.language][country] };
+  });
+  // const nbDeposants = deposants.length;
+  // const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0));
+
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -46,32 +57,48 @@ const PatentParticipants = (props) => {
             title={messages[props.language]['Patents.inventors.title']}
           />
           <div className="row">
-            {
-              (inventors && inventors.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={inventors.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.inventor']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
-            {
-              (deposants && deposants.length > 0)
-                ? (
-                  <div className={`col-md-3 ${classes.CardContainer}`}>
-                    <CounterCard
-                      counter={deposants.length}
-                      title=""
-                      label={messages[props.language]['Patents.inventors.applicant']}
-                      color="Persons"
-                    />
-                  </div>
-                ) : null
-            }
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className="container">
+                <div className={`row ${classes.GridHeader}`}>
+                  {messages[props.language]['Patents.inventors.inventor']}
+                </div>
+                <div className="row">
+                  {
+                    (inventors && inventors.length > 0)
+                      ? inventors.map(inventor => (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <PersonCard
+                            data={inventor}
+                            showTitle={false}
+                          />
+                        </div>
+                      ))
+                      : null
+                  }
+                </div>
+              </div>
+            </div>
+            <div className={`col-md-6 ${classes.CardContainer}`}>
+              <div className="container">
+                <div className={`row ${classes.GridHeader}`}>
+                  {messages[props.language]['Patents.inventors.applicant']}
+                </div>
+                <div className="row">
+                  {
+                    (deposants && deposants.length > 0)
+                      ? deposants.map(dep => (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <EntityCard
+                            data={dep}
+                            showTitle={false}
+                          />
+                        </div>
+                      ))
+                      : null
+                  }
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -85,4 +112,5 @@ PatentParticipants.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
+  // affiliations: PropTypes.array,
 };
