@@ -2,6 +2,7 @@ import React from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
+import EntityCard from '../../../../Shared/Ui/EntityCard/EntityCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
@@ -37,8 +38,8 @@ const PatentParticipants = (props) => {
     return { fullName, country: countries[props.language][country] };
   });
   const deposants = props.data.filter(auth => auth.role === 'deposant').map((auth) => {
-    const [fullName, country] = auth.fullName.split('__');
-    return { fullName, country: countries[props.language][country] };
+    const [label, country] = auth.fullName.split('__');
+    return { label, country: countries[props.language][country] };
   });
   // const nbDeposants = deposants.length;
   // const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0));
@@ -87,7 +88,7 @@ const PatentParticipants = (props) => {
                     (deposants && deposants.length > 0)
                       ? deposants.map(dep => (
                         <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <PersonCard
+                          <EntityCard
                             data={dep}
                             showTitle={false}
                           />
