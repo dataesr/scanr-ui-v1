@@ -22,6 +22,7 @@ import EntityNetwork from '../Shared/StandaloneGraphs/EntityNetwork';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
 import EntityList from './Components/EntityList';
+import PublicationList from './Components/PublicationList';
 import YoutubeList from './Components/YoutubeList';
 import EntityMap from '../Shared/StandaloneGraphs/EntityMap';
 import GridMap from '../Shared/StandaloneGraphs/GridMap';
@@ -41,6 +42,7 @@ const GraphTypes = {
   EntityMap,
   EntityList,
   EntityNetwork,
+  PublicationList,
   PublicationsKeywords,
   PublicationsPacketBubble,
   OpendataPackedBubble,
@@ -77,10 +79,10 @@ const buildFocusFromConfig = (components, lang) => {
 
 const Focus = (props) => {
   let { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
-  if (isError) {
+  if (isError || data.length === 0) {
     const filename = `./Configs/${props.match.params.id}.json`;
     // eslint-disable-next-line
-    data = require(`${filename}`); 
+    data = require(`${filename}`);
     isLoading = false;
     isError = true;
     // return <Errors />;
