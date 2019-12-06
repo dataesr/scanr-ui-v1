@@ -35,6 +35,13 @@ const FocusList = (props) => {
   if (!data.data) {
     return <Errors />;
   }
+  let focusList = [];
+  const useApi = false;
+  if (!useApi) {
+    focusList = props.focusList;
+  } else {
+    focusList = data.data;
+  }
   return (
     <React.Fragment>
       <Header
@@ -51,7 +58,7 @@ const FocusList = (props) => {
         <div className="container">
           <div className="row py-3">
             {
-              data.data.map(oneFocus => (
+              focusList.map(oneFocus => (
                 <div className={`col-lg-4 ${classes.CardContainer}`} key={oneFocus.title.fr}>
                   {/* eslint-disable */}
                   {/* disableReason: Does not accept _id */}
@@ -59,8 +66,8 @@ const FocusList = (props) => {
                     schema={oneFocus.api}
                     tags={oneFocus.tags[props.language]}
                     title={oneFocus.title[props.language]}
-                    type="bubble"
-                    url={`/focus/${oneFocus._id}`}
+                    type={(oneFocus.type) ? (oneFocus.type) : 'bubble'}
+                    url={(useApi) ? (`/focus/${oneFocus._id}`) : (oneFocus.url)}
                   />
                 {/* eslint-enable */}
                 </div>
@@ -85,5 +92,62 @@ export default FocusList;
 
 FocusList.propTypes = {
   language: PropTypes.string.isRequired,
+  focusList: PropTypes.array,
   switchLanguage: PropTypes.func.isRequired,
+};
+FocusList.defaultProps = {
+  focusList: [
+    {
+      tags: {
+        fr: ['#satt', '#transfert', '#technologies'],
+        en: ['#satt', '#transfert', '#technologies'],
+      },
+      title: {
+        fr: 'Sociétés d’Accélération du Transfert de Technologies (SATT)',
+        en: 'French technology transfer offices (SATT, Sociétés d’Accélération du Transfert de Technologies)',
+      },
+      type: 'map',
+      url: '/focus/carte-satt-2019',
+      api: 'structures',
+    },
+    {
+      tags: {
+        fr: ['Thèses', '#EcolesDoctorales'],
+        en: ['PhD', '#DoctoralSchools'],
+      },
+      title: {
+        fr: 'Les thèses soutenues en 2018. Sur quels thèmes ?',
+        en: '2018 thesis in france. Which thematics?',
+      },
+      type: 'bubble',
+      url: '/focus/themes-theses-2018',
+      api: 'publications',
+    },
+    {
+      tags: {
+        fr: ['#InstitutUniversitaireDeFrance', '#IUF'],
+        en: ['#InstitutUniversitaireDeFrance', '#IUF'],
+      },
+      title: {
+        fr: "Les nominations 2019 à l'Institut Universitaire de France",
+        en: 'Persons distinguished by the Institut Universitaire de France in 2019',
+      },
+      type: 'treemap',
+      url: '/focus/iuf',
+      api: 'persons',
+    },
+    {
+      tags: {
+        fr: ['#youtube', '#vulgarisation'],
+        en: ['#youtube', '#popularization'],
+      },
+      title: {
+        fr: 'Chaînes scientifiques sur Youtube dans scanR',
+        en: 'Scientific Youtube channels in scanR',
+      },
+      type: 'youtube',
+      url: '/focus/youtube',
+      api: 'persons',
+    },
+  ],
 };
