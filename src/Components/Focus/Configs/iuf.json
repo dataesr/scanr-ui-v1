@@ -11,6 +11,7 @@
     "fr": ["iuf"],
     "en": ["iuf"]
   },
+  "type": "treemap",
   "api": "publications",
   "href": "http://localhost:3000/recherche/persons?filters=%7B%22awards.label%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22Laur%C3%A9at%20de%20l%27Institut%20universitaire%20de%20France%22%5D%7D%7D&query=&sort",
   "hrefX": "/recherche/persons",

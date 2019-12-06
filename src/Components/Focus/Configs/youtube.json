@@ -1,33 +1,35 @@
 {
   "title": {
-    "fr": "YY",
-    "en": "YY"
+    "fr": "Chaînes scientifiques sur Youtube dans scanR",
+    "en": "Scientific Youtube channels in scanR"
   },
   "text": {
-    "fr": "YY",
-    "en": "YY"
+    "fr": "Plusieurs personnes avec une chaîne Youtube sont indexées dans scanR, chercheurs, auteurs ou vulgarisateurs. Bien d'autres chaînes culturelles et scientifiques existent (voir notamment <a href='https://www.culture.gouv.fr/content/download/200193/file/350%20chaines%20Youtube.pdf' target='_blank'>ce rapport du Ministère de la Culture</a>), mais seules celles dont l'auteur est indexé dans scanR (via son <a href='http://www.idref.fr' target='_blank'>idref</a>) sont présentées.",
+    "en": "Several people with a Youtube channel are indexed in scanR, researchers, authors or popularizers. Many other cultural and scientific channels exist (see in particular <a href='https://www.culture.gouv.fr/content/download/200193/file/350%20chaines%20Youtube.pdf' target='_blank'>this report of the Ministry of Culture</a>), but only those whose author is indexed in scanR (via its <a href='http://www.idref.fr' target='_blank'>idref</a>) are presented."
   },
   "tags": {
-    "fr": ["satt", "transfert", "technologies"],
-    "en": ["satt", "transfert", "technologies"]
+    "fr": ["youtube", "vulgarisation"],
+    "en": ["youtube", "popularization"]
   },
+  "type": "youtube",
   "api": "persons",
-  "href": "/recherche/structures?filters=%7B%22badges.label.fr%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22SATT%22%5D%7D%7D&query=&sort",
+  "href": "/recherche/persons?filters=%7B%22links.type%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22youtube%22,%22Youtube%22%5D%7D%7D&query=&sort",
   "hrefX": "/recherche/persons",
   "components": [
     {
       "title": {
-    "fr": "YY",
-    "en": "YY"
+    "fr": "Chaînes scientifiques sur Youtube dans scanR",
+    "en": "Scientific Youtube channels in scanR"
       },
       "subtitle": {
-    "fr": "YY",
-    "en": "YY"
+    "fr": "",
+    "en": ""
       },
       "api" : "persons",
-      "componentType": "EntityMap",
+      "componentType": "YoutubeList",
       "request": {
         "query": "",
+        "sourceFields": ["lastName", "id", "firstName", "domains", "affiliations", "links"],
         "pageSize": 100,
         "filters": {
           "links.type": {
