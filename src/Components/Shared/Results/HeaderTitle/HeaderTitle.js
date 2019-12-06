@@ -215,6 +215,10 @@ class HeaderTitle extends Component {
 
 export default HeaderTitle;
 
+HeaderTitle.defaultProps = {
+  isFull: true,
+};
+
 HeaderTitle.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
