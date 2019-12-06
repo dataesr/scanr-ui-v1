@@ -47,8 +47,13 @@ const PatentIdentity = (props) => {
   const publicationDate = moment(props.data.publicationDate).format('L');
   const submissionDate = moment(props.data.submissionDate).format('L');
   const summary = getSelectKey(props.data, 'summary', props.language, 'default');
-  const patentLink = 'https://worldwide.espacenet.com/'.concat({ id }.id);
+  const patentLink = 'https://worldwide.espacenet.com/patent/search?q='.concat({ id }.id);
   const keywords = props.data.domains.filter(dom => dom.level === 'classe').map(el => el.label.default);
+  const isInternational = (props.data.certifications.filter(cert => cert.label === 'international'));
+  const isOEB = (props.data.certifications.filter(cert => cert.label === 'oeb'));
+  const grantedInfo = (props.data.certifications.filter(cert => cert.label === 'granted'))
+    ? props.data.certifications.filter(cert => cert.label === 'granted')
+    : null;
 
 
   return (
@@ -101,7 +106,40 @@ const PatentIdentity = (props) => {
                     language={props.language}
                     logo="fas fa-calendar-day"
                     title={messages[props.language]['Patent.patent.publicationDate']}
-                    label={publicationDate}
+                    label={(publicationDate)}
+                    tooltip=""
+                  />
+                </div>
+                {
+                  (grantedInfo)
+                    ? (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <SimpleCard
+                          language={props.language}
+                          logo="fas fa-calendar-day"
+                          title={messages[props.language]['Patent.depots.granted']}
+                          label={moment(grantedInfo.date).format('L')}
+                          tooltip=""
+                        />
+                      </div>
+                    )
+                    : null
+                }
+                <div className={`col-md-6 ${classes.CardContainer}`}>
+                  <SimpleCard
+                    language={props.language}
+                    logo="fas fa-clipboard-list"
+                    title={messages[props.language]['Patent.depots.oeb']}
+                    label={(isOEB) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+                    tooltip=""
+                  />
+                </div>
+                <div className={`col-md-6 ${classes.CardContainer}`}>
+                  <SimpleCard
+                    language={props.language}
+                    logo="fas fa-clipboard-list"
+                    title={messages[props.language]['Patent.depots.international']}
+                    label={(isInternational) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
                     tooltip=""
                   />
                 </div>
