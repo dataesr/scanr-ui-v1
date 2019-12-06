@@ -38,7 +38,7 @@ const Patent = (props) => {
         <HeaderTitle
           language={props.language}
           label={name}
-          idPage="Thesis"
+          idPage="Patent"
           id={props.id}
         />
         <Identity language={props.language} data={props.data} id={props.id} />
