@@ -78,7 +78,7 @@ const ProductionDetail = (props) => {
   if (diff === 1) {
     others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'autre auteur' : 'more author'}`;
   } else if (diff > 1) {
-    others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? 'autre auteur' : 'more author'}`;
+    others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? 'autres auteurs' : 'more authors'}`;
   }
 
 
