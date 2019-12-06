@@ -1,0 +1,37 @@
+@import '../../../../style.scss';
+
+.PersonCard {
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: space-around;
+  min-height: 160px;
+
+
+  .Logo {
+    height: 60px;
+    padding-top: 8px;
+  }
+
+
+  .Name {
+    color: $scanrdeepblueColor;
+    font-size: 1.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+
+  .Role {
+    color: $scanrgreyColor;
+    font-size: 0.9rem;
+  }
+
+  .Button {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+}
