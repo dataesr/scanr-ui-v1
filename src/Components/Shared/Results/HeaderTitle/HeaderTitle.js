@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import MetaTags from 'react-meta-tags';
@@ -90,51 +90,87 @@ class HeaderTitle extends Component {
     const pageTitle = 'scanR | '.concat(this.props.label);
     const pageDescription = "scanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
     const pageImage = '../../svg/logo-scanr-blue.svg';
+
+    const metaTags = (
+      <MetaTags>
+        <title>{pageTitle}</title>
+        <meta id="meta-description" name="description" content={pageDescription} />
+        <meta id="og-title" property="og:title" content={pageTitle} />
+        <meta id="og-image" property="og:image" content={pageImage} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <ol itemScope itemType="http://schema.org/BreadcrumbList">
+          <li
+            itemProp="itemListElement"
+            itemScope
+            itemType="http://schema.org/ListItem"
+          >
+            <a itemProp="item" href={href1}>
+              {/* eslint-disable-next-line */}
+       <span itemProp="name">Recherche</span></a>
+            <meta itemProp="position" content="1" />
+          </li>
+          <li
+            itemProp="itemListElement"
+            itemScope
+            itemType="http://schema.org/ListItem"
+          >
+            <a itemProp="item" href={href2}>
+              {/* eslint-disable-next-line */}
+       <span itemProp="name">{pageType}</span></a>
+            <meta itemProp="position" content="2" />
+          </li>
+          <li
+            itemProp="itemListElement"
+            itemScope
+            itemType="http://schema.org/ListItem"
+          >
+            <a itemProp="item" href={href3}>
+              {/* eslint-disable-next-line */}
+       <span itemProp="name">{pageTitle}</span></a>
+            <meta itemProp="position" content="3" />
+          </li>
+        </ol>
+      </MetaTags>
+    );
+    // si mini
+    if (!this.props.isFull) {
+      return (
+        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+          <section className={classes.HeaderTitle} style={{ position: 'fixed', zIndex: 1002, width: '100%' }}>
+            {metaTags}
+            <div className="container">
+              <div className="row">
+                <div className="col-md-9">
+                  <div className={classes.Title}>
+                    {this.props.label}
+                  </div>
+                </div>
+                <div className={`col pr-0 ${classes.ColToDelete}`}>
+                  <div className={`form-group ${classes.NavBox}`}>
+                    <select id="headerTitleSelect" className="form-control" onChange={this.handleChange} value={this.state.selectedOption}>
+                      {
+                        list.map(item => (
+                          <option value={item} key={item}>{messages[this.props.language][`${this.props.idPage}.${item}`]}</option>
+                        ))
+                      }
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </IntlProvider>
+      );
+    }
+
+    // sinon full
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section className={classes.HeaderTitle}>
-          <MetaTags>
-            <title>{pageTitle}</title>
-            <meta id="meta-description" name="description" content={pageDescription} />
-            <meta id="og-title" property="og:title" content={pageTitle} />
-            <meta id="og-image" property="og:image" content={pageImage} />
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:title" content={pageTitle} />
-            <meta name="twitter:description" content={pageDescription} />
-            <meta name="twitter:image" content={pageImage} />
-            <ol itemScope itemType="http://schema.org/BreadcrumbList">
-              <li
-                itemProp="itemListElement"
-                itemScope
-                itemType="http://schema.org/ListItem"
-              >
-                <a itemProp="item" href={href1}>
-                  {/* eslint-disable-next-line */}
-	         <span itemProp="name">Recherche</span></a>
-                <meta itemProp="position" content="1" />
-              </li>
-              <li
-                itemProp="itemListElement"
-                itemScope
-                itemType="http://schema.org/ListItem"
-              >
-                <a itemProp="item" href={href2}>
-                  {/* eslint-disable-next-line */}
-	         <span itemProp="name">{pageType}</span></a>
-                <meta itemProp="position" content="2" />
-              </li>
-              <li
-                itemProp="itemListElement"
-                itemScope
-                itemType="http://schema.org/ListItem"
-              >
-                <a itemProp="item" href={href3}>
-                  {/* eslint-disable-next-line */}
-	         <span itemProp="name">{pageTitle}</span></a>
-                <meta itemProp="position" content="3" />
-              </li>
-            </ol>
-          </MetaTags>
+          {metaTags}
           <div className="container">
             <div className="row">
               <div className="col-md-9">
@@ -185,4 +221,5 @@ HeaderTitle.propTypes = {
   id: PropTypes.string.isRequired,
   idPage: PropTypes.string.isRequired,
   handleChangeForScroll: PropTypes.func,
+  isFull: PropTypes.bool,
 };
