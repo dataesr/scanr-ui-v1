@@ -177,6 +177,5 @@ export default PatentsApplications;
 PatentsApplications.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
 };
