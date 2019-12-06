@@ -10,6 +10,7 @@ import classes from './Depots.scss';
 /* Gestion des langues */
 import messagesFr from '../translations/fr.json';
 import messagesEn from '../translations/en.json';
+import countries from '../countries.json';
 import patentType from './patentType.json';
 
 
@@ -17,6 +18,7 @@ const messages = {
   fr: messagesFr,
   en: messagesEn,
 };
+
 
 /**
  * Patent
@@ -76,7 +78,7 @@ const PatentsApplications = (props) => {
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {`${messages[props.language]['Patent.depots.country']}${item.country}`}
+              {countries[props.language][item.country]}
             </p>
           </div>
         </div>
@@ -136,7 +138,7 @@ const PatentsApplications = (props) => {
                             language={props.language}
                             logo="fas fa-calendar-day"
                             title={messages[props.language]['Patent.depots.country']}
-                            label={selected.country}
+                            label={countries[props.language][selected.country]}
                             tooltip=""
                           />
                         </div>
