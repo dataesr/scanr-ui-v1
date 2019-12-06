@@ -122,5 +122,18 @@ LastFocus.defaultProps = {
       url: '/focus/youtube',
       api: 'persons',
     },
+    {
+      tags: {
+        fr: ['#youtube', '#vulgarisation'],
+        en: ['#youtube', '#popularization'],
+      },
+      title: {
+        fr: 'Chaînes scientifiques sur Youtube dans scanR',
+        en: 'Scientific Youtube channels in scanR',
+      },
+      type: 'bubble',
+      url: '/focus/software_heritage',
+      api: 'publications',
+    },
   ],
 };

@@ -1,0 +1,66 @@
+{
+  "title": {
+    "fr": "Productions avec un lien Software Heritage dans scanR",
+    "en": "Productions with a link to Software Heritage in scanR"
+  },
+  "text": {
+  },
+  "tags": {
+    "fr": ["SoftwareHeritage"],
+    "en": ["SoftwareHeritage"]
+  },
+  "type": "softwareHeritage",
+  "api": "publications",
+  "href": "/recherche/publications?filters=%7B%22links.type%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22software_heritage%22%5D%7D%7D&query=&sort",
+  "hrefX": "/recherche/publications",
+  "components": [
+    {
+      "title": {
+    "fr": "Mot-clés des productions avec un lien Software Heritage dans scanR",
+    "en": "Keywords of the productions with a link to Software Heritage in scanR"
+      },
+      "subtitle": {
+    "fr": "",
+    "en": ""
+      },
+      "api" : "publications",
+      "componentType": "PublicationsKeywords",
+      "request": {
+        "query": "",
+        "sourceFields": ["authors", "id", "title", "domains", "affiliations", "links", "productionType", "publicationDate", "isOa"],
+        "pageSize": 10000,
+        "filters": {
+          "links.type": {
+            "type": "MultiValueSearchFilter",
+            "op": "any",
+            "values": ["software_heritage"]
+          }
+        }
+      }
+    },
+    {
+      "title": {
+    "fr": "Liste des productions avec un lien Software Heritage dans scanR",
+    "en": "List of the productions with a link to Software Heritage in scanR"
+      },
+      "subtitle": {
+    "fr": "",
+    "en": ""
+      },
+      "api" : "publications",
+      "componentType": "PublicationList",
+      "request": {
+        "query": "",
+        "sourceFields": ["authors", "id", "title", "domains", "affiliations", "links", "productionType", "publicationDate", "isOa"],
+        "pageSize": 10000,
+        "filters": {
+          "links.type": {
+            "type": "MultiValueSearchFilter",
+            "op": "any",
+            "values": ["software_heritage"]
+          }
+        }
+      }
+    }
+  ]
+}
