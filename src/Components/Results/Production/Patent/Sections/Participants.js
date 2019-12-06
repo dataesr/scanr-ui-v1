@@ -2,6 +2,7 @@ import React from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
+import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
@@ -33,10 +34,13 @@ const PatentParticipants = (props) => {
   };
 
   const inventors = props.data.filter(auth => auth.role === 'inventeur').map((auth) => {
-    const [name, country] = auth.fullName.split('__');
-    return { name, country: countries[props.language][country] };
+    const [fullName, country] = auth.fullName.split('__');
+    return { fullName, country: countries[props.language][country] };
   });
-  const deposants = props.data.filter(auth => auth.role === 'deposant');
+  const deposants = props.data.filter(auth => auth.role === 'deposant').map((auth) => {
+    const [fullName, country] = auth.fullName.split('__');
+    return { fullName, country: countries[props.language][country] };
+  });
   const nbDeposants = deposants.length;
   const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0))
 
@@ -54,34 +58,46 @@ const PatentParticipants = (props) => {
           />
           <div className="row">
             <div className={`col-md-6 ${classes.CardContainer}`}>
-              <div className={classes.GridHeader}>Inventeurs</div>
-              {
-                (inventors && inventors.length > 0)
-                  ? (
-                    <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <div>
-                        {inventors[0].name}
-                      </div>
-                    </div>
-                  )
-                  : null
-              }
+              <div className="container">
+                <div className={`row ${classes.GridHeader}`}>
+                  {messages[props.language]['Patents.inventors.inventor']}
+                </div>
+                <div className="row">
+                  {
+                    (inventors && inventors.length > 0)
+                      ? inventors.map(inventor => (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <PersonCard
+                            data={inventor}
+                            showTitle={false}
+                          />
+                        </div>
+                      ))
+                      : null
+                  }
+                </div>
+              </div>
             </div>
             <div className={`col-md-6 ${classes.CardContainer}`}>
-              <div className={classes.GridHeader}>Déposants</div>
-              {
-                (deposants && deposants.length > 0)
-                  ? (
-                    <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <CounterCard
-                        counter={nbDeposants}
-                        title=""
-                        label={messages[props.language]['Patents.inventors.applicant']}
-                        color="Persons"
-                      />
-                    </div>
-                  ) : null
-              }
+              <div className="container">
+                <div className={`row ${classes.GridHeader}`}>
+                  {messages[props.language]['Patents.inventors.applicant']}
+                </div>
+                <div className="row">
+                  {
+                    (deposants && deposants.length > 0)
+                      ? deposants.map(dep => (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <PersonCard
+                            data={dep}
+                            showTitle={false}
+                          />
+                        </div>
+                      ))
+                      : null
+                  }
+                </div>
+              </div>
             </div>
           </div>
         </div>

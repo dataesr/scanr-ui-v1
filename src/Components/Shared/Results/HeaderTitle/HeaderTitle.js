@@ -192,7 +192,6 @@ const HeaderTitle = (props) => {
             </div>
             <div className={`col pr-0 ${classes.ColToDelete}`}>
               <div className={`form-group ${classes.NavBox}`}>
-                {/* eslint-disable-next-line */}
                 <label htmlFor="headerTitleSelect">
                   <FormattedHTMLMessage id="HeaderTitle.label1" />
                   <select
