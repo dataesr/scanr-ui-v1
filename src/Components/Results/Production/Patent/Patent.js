@@ -27,11 +27,6 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
-const handleChange = (sectionName) => {
-  document.getElementById(sectionName).scrollIntoView(true);
-  window.scrollBy({ top: -120, behavior: 'smooth' });
-};
-
 const Patent = (props) => {
   if (!props.data) {
     return <div>null</div>;
@@ -43,7 +38,6 @@ const Patent = (props) => {
         <HeaderTitle
           language={props.language}
           label={name}
-          handleChangeForScroll={handleChange}
           idPage="Thesis"
           id={props.id}
         />
