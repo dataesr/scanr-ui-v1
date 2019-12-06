@@ -56,6 +56,7 @@ class OpendataEntityMap extends Component {
             <LeafletMap
               filename="Localisations des structures"
               data={this.state.data}
+              style={this.props.style}
               language={this.props.language}
             />
           )
@@ -72,5 +73,6 @@ OpendataEntityMap.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   opendata: PropTypes.string,
+  style: PropTypes.object,
   tooltipFr: PropTypes.string,
 };
