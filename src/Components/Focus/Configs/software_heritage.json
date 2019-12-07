@@ -4,10 +4,12 @@
     "en": "Productions with a link to Software Heritage in scanR"
   },
   "text": {
+    "fr": "Les publications sont parfois accompagnées d'un code source. Cela permet notamment d'améliorer la reproductibilité du travail scientifique, d'être plus transparent et de préserver les connaissances. <a href='https://www.softwareheritage.org/' target='_blank'>Software Heritage</a> est un projet d'archive logicielle qui a pour but de collecter et préserver le code source des logiciels. scanR a aussi retrouvé des liens entre publications et archive dans Software Heritage. Aucune exhaustivité n'est garantie.",
+    "en": "Publications are sometimes accompanied by source code. This improves the reproducibility of scientific work, makes it more transparent and preserves knowledge. <a href='https://www.softwareheritage.org/' target='_blank'>Software Heritage</a> is a software archive project that aims to collect and preserve the source code of software. scanR has also found links between publications and archives in Software Heritage. No exhaustiveness is guaranteed"
   },
   "tags": {
-    "fr": ["SoftwareHeritage"],
-    "en": ["SoftwareHeritage"]
+    "fr": ["SoftwareHeritage", "CodeSource"],
+    "en": ["SoftwareHeritage", "SourceCode"]
   },
   "type": "softwareHeritage",
   "api": "publications",
