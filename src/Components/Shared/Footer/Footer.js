@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import CookieConsent from 'react-cookie-consent';
 import { GlobalContext } from '../../../GlobalContext';
 
 /* Style */
@@ -20,6 +21,39 @@ const Footer = () => {
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
       <section className={classes.Footer}>
+        <CookieConsent
+          location="bottom"
+          buttonText={
+            (
+              <FormattedHTMLMessage
+                id="Footer.consentOk"
+                defaultMessage="Footer.consentOk"
+              />
+            )
+          }
+          declineButtonText={
+            (
+              <FormattedHTMLMessage
+                id="Footer.consentKo"
+                defaultMessage="Footer.consentKo"
+              />
+            )
+          }
+          cookieName="scanr"
+          style={{ background: '#2B373B' }}
+          buttonStyle={{ color: '#4e503b', fontSize: '13px' }}
+          expires={150}
+          /* eslint-disable-next-line */
+          onAccept={() => { var _paq = window._paq || []; _paq.push(['rememberConsentGiven']); }}
+          enableDeclineButton
+          /* eslint-disable-next-line */
+          onDecline={() => { var _paq = window._paq || []; _paq.push(['forgetConsentGiven']); }}
+        >
+          <FormattedHTMLMessage
+            id="Footer.consentInfo"
+            defaultMessage="Footer.consentInfo"
+          />
+        </CookieConsent>
         <div className="container">
           <div className="row">
             <div className={`col-md ${classes.Col}`}>

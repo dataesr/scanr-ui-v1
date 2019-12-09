@@ -47,6 +47,7 @@ class App extends Component {
       trackErrors: true,
     });
     const customHistory = createBrowserHistory();
+    ReactPiwik.push(['requireConsent']);
     ReactPiwik.push(['trackPageView']);
     this.setState({ piwik, customHistory });
   }
