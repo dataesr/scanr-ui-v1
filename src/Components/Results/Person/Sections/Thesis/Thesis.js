@@ -35,15 +35,7 @@ class Thesis extends Component {
   };
 
   componentDidMount() {
-    if (!this.props.personName) {
-      this.getData();
-    }
-  }
-
-  componentDidUpdate() {
-    if (!this.props.personName) {
-      this.getData();
-    }
+    this.getData();
   }
 
   getData = () => {
