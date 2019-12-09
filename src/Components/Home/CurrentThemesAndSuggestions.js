@@ -1,4 +1,4 @@
-const currentThemes = [
+export const currentThemes = [
   {
     labelFr: 'Brain to computer',
     labelEn: 'Brain to computer',
@@ -51,4 +51,30 @@ const currentThemes = [
   },
 ];
 
-export default currentThemes;
+
+export const suggestions = [
+  {
+    labelFr: '5G',
+    labelEn: '5G',
+    query: '5G',
+    url: '',
+  },
+  {
+    labelFr: 'Changement climatique',
+    labelEn: 'Climate change',
+    query: '(changement+climatique) | (climate+change)',
+    url: '',
+  },
+  {
+    labelFr: 'Biotechnologie',
+    labelEn: 'Biotechnology',
+    query: 'Biotechnologie | Biotechnology',
+    url: '',
+  },
+  {
+    labelEn: 'Ebola',
+    labelFr: 'Ebola',
+    query: 'Ebola',
+    url: '',
+  },
+];

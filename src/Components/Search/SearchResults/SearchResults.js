@@ -1,10 +1,12 @@
 import React, { Component, Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+
 import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 import classes from './SearchResults.scss';
 
 const Pagination = lazy(() => import('./Pagination/Pagination'));
@@ -129,11 +131,6 @@ class SearchResults extends Component {
   };
 
   render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-    const numResults = (this.props.data.total < 2) ? 'searchResults.result'.concat('-', this.props.api) : 'searchResults.results'.concat('-', this.props.api);
     const bgColor = `${this.props.api}Color`;
     const activeSortValue = (this.props.activeSortValue)
       ? `${Object.keys(this.props.activeSortValue)[0]}__${Object.values(this.props.activeSortValue)[0]}`
@@ -142,49 +139,62 @@ class SearchResults extends Component {
     if (this.props.isLoading) {
       return <GraphSpinner />;
     }
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
     return (
-      <section className="d-flex flex-column">
-        <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
-          <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
-            <div className="mr-auto">
-              {`${(this.props.data.total) ? this.props.data.total.toLocaleString(this.props.language) : ''} ${messages[this.props.language][numResults]}`}
-            </div>
-            <div className="px-2">
-              <select
-                name="type"
-                id="type-select"
-                className={`form-control ${classes.Select}`}
-                onChange={e => this.props.handleSortResults(e)}
-                defaultValue={activeSortValue}
-              >
-                <option key="score" value="score">
-                  {(this.props.language === 'fr') ? 'Pertinence' : 'Relevance'}
-                </option>
-                {this.renderSortOptions()}
-              </select>
-            </div>
-            <div>
-              <button
-                onClick={this.props.handleExports}
-                type="button"
-                id="exportbutton"
-                title="Télécharger les résultats en CSV"
-                className={`btn ${classes.btn_dark} ${classes.SquareButton}`}
-              >
-                <i className="fas fa-download" />
-              </button>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <section className="d-flex flex-column">
+          <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
+            <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
+              <div className="mr-auto">
+                <FormattedHTMLMessage
+                  id={`searchResults.${this.props.api}.results`}
+                  values={{ count: this.props.data.total }}
+                />
+              </div>
+              <div className="px-2">
+                <select
+                  name="type"
+                  id="type-select"
+                  className={`form-control ${classes.Select}`}
+                  onChange={e => this.props.handleSortResults(e)}
+                  defaultValue={activeSortValue}
+                >
+                  <option key="score" value="score">
+                    {(this.props.language === 'fr') ? 'Pertinence' : 'Relevance'}
+                  </option>
+                  {this.renderSortOptions()}
+                </select>
+              </div>
+              <div>
+                <FormattedHTMLMessage id="searchResults.download">
+                  { download => (
+                    <button
+                      onClick={this.props.handleExports}
+                      type="button"
+                      id="exportbutton"
+                      title={download}
+                      className={`btn ${classes.btn_dark} ${classes.SquareButton}`}
+                    >
+                      <i className="fas fa-download" />
+                    </button>
+                  )}
+                </FormattedHTMLMessage>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="d-flex flex-wrap justify-content-between">
+          <div className="d-flex flex-wrap justify-content-between">
+            <Suspense fallback={null}>
+              {this.renderResults()}
+            </Suspense>
+          </div>
           <Suspense fallback={null}>
-            {this.renderResults()}
+            {this.renderPagination()}
           </Suspense>
-        </div>
-        <Suspense fallback={null}>
-          {this.renderPagination()}
-        </Suspense>
-      </section>
+        </section>
+      </IntlProvider>
     );
   }
 }
