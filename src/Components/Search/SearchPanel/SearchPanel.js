@@ -3,8 +3,8 @@ import { IntlProvider, FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import classes from './SearchPanel.scss';
 
@@ -47,7 +47,7 @@ const SearchPanel = (props) => {
             className={`form-control ${classes.Select}`}
             onChange={props.apiChangeHandler}
           >
-            <FormattedMessage id="Search.Select.All" defaultMessage="Search.Select.All">
+            <FormattedMessage id="Search.All" defaultMessage="Search.All">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -58,7 +58,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Select.Entities" defaultMessage="Search.Select.Entities">
+            <FormattedMessage id="Search.Entities" defaultMessage="Search.Entities">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -69,7 +69,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Select.Persons" defaultMessage="Search.Select.Persons">
+            <FormattedMessage id="Search.Persons" defaultMessage="Search.Persons">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -80,7 +80,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Select.Projects" defaultMessage="Search.Select.Projects">
+            <FormattedMessage id="Search.Projects" defaultMessage="Search.Projects">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -91,7 +91,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Select.Publications" defaultMessage="Search.Select.Publications">
+            <FormattedMessage id="Search.Publications" defaultMessage="Search.Publications">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -115,21 +115,6 @@ const SearchPanel = (props) => {
       </div>
     </form>
   );
-
-  // const renderFull = (
-  //   <IntlProvider locale={props.language} messages={messages[props.language]}>
-  //     <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchBar}`}>
-  //       <div className="container pt-3">
-  //         <BreadCrumb
-  //           language={props.language}
-  //           label="search"
-  //           url="#"
-  //         />
-  //         {renderForm}
-  //       </div>
-  //     </section>
-  //   </IntlProvider>
-  // );
 
   const renderMini = (
     <IntlProvider locale={props.language} messages={messages[props.language]}>

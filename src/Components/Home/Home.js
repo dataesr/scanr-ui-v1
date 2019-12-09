@@ -7,7 +7,7 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
-import currentThemes from './CurrentMostActiveThemes';
+import { currentThemes } from './CurrentThemesAndSuggestions';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
