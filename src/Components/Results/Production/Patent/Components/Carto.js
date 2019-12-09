@@ -67,7 +67,7 @@ class Carto extends Component {
     if (this.props.data.find((el) => {
       if (el.country === currentCountry) {
         patentDate = el.url;
-        numPatent = el.id;
+        numPatent = el.id || null;
         return true;
       }
       return false;
@@ -77,15 +77,17 @@ class Carto extends Component {
     }
 
     // Formatage de la date en fonction de la langue choisie
-    let dateFormated;
-    if (this.props.language === 'fr') {
-      dateFormated = moment(patentDate).format('DD/MM/YYYY');
-    } else {
-      dateFormated = moment(patentDate).format('YYYY/MM/DD');
+    let dateFormated = null;
+    if (patentDate) {
+      if (this.props.language === 'fr') {
+        dateFormated = moment(patentDate).format('DD/MM/YYYY');
+      } else {
+        dateFormated = moment(patentDate).format('YYYY/MM/DD');
+      }
     }
 
     // Ajout de la popup su chaque pays
-    const popupContent = ` <Popup><pre>${feature.properties.name}<hr />${numPatent}<br />${(dateFormated || '')}</pre></Popup>`;
+    const popupContent = ` <Popup><pre>${feature.properties.name}<hr />${numPatent || ''}<br />${(dateFormated || '')}</pre></Popup>`;
     layer.bindPopup(popupContent);
   };
 
