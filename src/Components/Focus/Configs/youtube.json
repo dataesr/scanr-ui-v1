@@ -13,7 +13,7 @@
   },
   "type": "youtube",
   "api": "persons",
-  "href": "/recherche/persons?filters=%7B%22links.type%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22youtube%22,%22Youtube%22%5D%7D%7D&query=&sort",
+  "href": "/recherche/persons?filters=%7B%22links.type%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22youtube%22,%22Youtube%22%5D%7D%2C%22awards.label%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22not_all%22%2C%22values%22%3A%5B%22Finaliste%20du%20concours%20Ma%20th%C3%A8se%20en%20180%20secondes%22%5D%7D%7D&query=&sort&view=list",
   "hrefX": "/recherche/persons",
   "components": [
     {
