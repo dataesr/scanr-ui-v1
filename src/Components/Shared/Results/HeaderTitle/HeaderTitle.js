@@ -20,8 +20,8 @@ const HeaderTitle = (props) => {
   const SectionsList = {
     entity: ['Portrait', 'Network', 'Team', 'Projects', 'Productions',
       'Ecosystem', 'Awards', 'SimilarEntities', 'LastEntityFocus'],
-    projects: ['Informations', 'Financial', 'Programs', 'Participants', 'Productions'],
-    persons: ['Informations', 'Production', 'CoAuthors'],
+    project: ['Informations', 'Financial', 'Programs', 'Participants', 'Productions'],
+    person: ['Informations', 'Production', 'CoAuthors'],
     publication: ['Publication', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
     thesis: ['Thesis', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
     patent: ['Famille de brevets', 'Inventeurs', 'Déposants', 'Dépots'],
