@@ -12,7 +12,6 @@ const SVG = props => (
     className={`svg-icon ${props.className || ''}`}
     fontFamily="Roboto"
     fontSize={14}
-    textAnchor="middle"
     {...props}
   >
     <defs>

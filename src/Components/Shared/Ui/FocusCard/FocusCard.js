@@ -8,6 +8,7 @@ import HistoTopSVG from '../../svg/icon-focus-histoTop';
 import MapSVG from '../../svg/icon-focus-map';
 import TreemapSVG from '../../svg/icon-focus-treemap';
 import YoutubeSVG from '../../svg/icon-focus-youtube';
+import MT180SVG from '../../svg/icon-focus-mt180';
 import SoftwareHeritageSVG from '../../svg/icon-focus-software-heritage';
 
 import ButtonToPage from '../Buttons/ButtonToPage';
@@ -43,6 +44,7 @@ const FocusCard = (props) => {
   }
 
   let componentSvg = null;
+  const marginMT = { 'margin-bottom': '28px' };
   switch (props.type) {
     case 'bubble':
       componentSvg = <BubbleSVG fill={color} />;
@@ -61,6 +63,9 @@ const FocusCard = (props) => {
       break;
     case 'youtube':
       componentSvg = <YoutubeSVG fill={color} />;
+      break;
+    case 'mt180':
+      componentSvg = <MT180SVG fill={color} style={marginMT} />;
       break;
     case 'software-heritage':
       componentSvg = <SoftwareHeritageSVG fill={color} />;
