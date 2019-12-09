@@ -40,7 +40,7 @@ const PatentsApplications = (props) => {
     patents.push(newPatent);
   });
 
-  const [viewMode, setViewMode] = useState('list');
+  const [viewMode, setViewMode] = useState('graph');
   const [selected, setSelected] = useState((patents.length) ? patents[0] : {});
 
 
@@ -102,7 +102,7 @@ const PatentsApplications = (props) => {
           <hr />
           {
             (viewMode === 'graph')
-              ? <Carto data={patents} />
+              ? <Carto data={patents} language={props.language} />
               : (
                 <React.Fragment>
                   <div className="row">
