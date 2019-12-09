@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
@@ -51,36 +50,34 @@ const Web = (props) => {
     }
   }
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className="container-fluid">
-        {
-          (wikidataId || twitterUrl || youtubeUrl) ? (
-            <div className="row">
-              <div className={`col ${classes.NoSpace}`}>
-                <CardsTitle title={messages[props.language]['Person.web.title']} />
-              </div>
+    <section className="container-fluid">
+      {
+        (wikidataId || twitterUrl || youtubeUrl) ? (
+          <div className="row">
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={messages[props.language]['Person.web.title']} />
             </div>
-          ) : null
-        }
-        <div className="row">
-          { (wikidataId) ? (
-            <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-              <WikidataCard language={props.language} id={wikidataId} />
-            </div>
-          ) : null }
-          { (twitterUrl) ? (
-            <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-              <TwitterTimelineEmbed url={twitterUrl} autoHeight />
-            </div>
-          ) : null }
-          { (youtubeUrl) ? (
-            <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-              <YoutubeCard url={youtubeUrl} autoHeight />
-            </div>
-          ) : null }
-        </div>
-      </section>
-    </IntlProvider>
+          </div>
+        ) : null
+      }
+      <div className="row">
+        { (wikidataId) ? (
+          <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+            <WikidataCard language={props.language} id={wikidataId} />
+          </div>
+        ) : null }
+        { (twitterUrl) ? (
+          <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+            <TwitterTimelineEmbed url={twitterUrl} autoHeight />
+          </div>
+        ) : null }
+        { (youtubeUrl) ? (
+          <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+            <YoutubeCard url={youtubeUrl} autoHeight />
+          </div>
+        ) : null }
+      </div>
+    </section>
   );
 };
 
