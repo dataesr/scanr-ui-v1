@@ -19,7 +19,7 @@ const RedirectingLogoCard = (props) => {
   if (props.cssClass) {
     cssClass = classes[`${props.cssClass}`];
   }
-  return (
+  return (props.labelKey) ? (
     <a href={url}>
       <div className={`${classes.card} ${cssClass}`}>
         <img
@@ -29,6 +29,14 @@ const RedirectingLogoCard = (props) => {
         />
       </div>
     </a>
+  ) : (
+    <div className={`${classes.card} ${cssClass}`}>
+      <img
+        src={src}
+        alt={props.imageName}
+        className={`img-fluid ${classes.img}`}
+      />
+    </div>
   );
 };
 

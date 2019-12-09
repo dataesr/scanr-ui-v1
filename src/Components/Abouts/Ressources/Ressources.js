@@ -153,7 +153,7 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="softwareheritage"
+              labelKey="swh"
               imageName="swh-logo.jpg"
               cssClass="CardLogo"
             />
@@ -199,27 +199,22 @@ class Ressources extends Component {
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="3cr"
               imageName="logo-3cr.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="afssi"
               imageName="logo-afssi.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="asrc"
               imageName="logo-asrc.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="irstea"
               imageName="logo-irstea.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="simv"
               imageName="logo-simv.svg"
               cssClass="CardLogo"
             />
@@ -231,27 +226,22 @@ class Ressources extends Component {
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="inra"
               imageName="logo-inra.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="inria"
               imageName="logo-inria.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="cnrs"
               imageName="logo-cnrs.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="onera"
               imageName="logo-onera.png"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="cea"
               imageName="logo-cea.svg"
               cssClass="CardLogo"
             />

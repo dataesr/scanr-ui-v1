@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import { GlobalContext } from '../../../GlobalContext';
 import CookieConsent from 'react-cookie-consent';
+import { GlobalContext } from '../../../GlobalContext';
 
 /* Style */
 import logo from '../svg/logo-ministere.svg';
