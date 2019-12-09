@@ -43,12 +43,19 @@
   "Ressource.Perimetre.hal": "Publications with a French affiliation, published since 2013",
   "Ressource.Retraitements.hal": "<li>Alignment of authors' names on the IdRef</li><li>Affiliation alignment on the reference systems used, in particular RNSR, Sirene, Grid and BCE</li>",
   "Ressource.Retraitements2.hal" : "<li>DOI detection using Unpaywall if the publication has a DOI that is not mentioned on the HAL</li> record",
- "Ressource.Description.datainfogreffe": "Datainfogreffe was created by the G.I.E. Infogreffe to enable the clerks of the Commercial Courts, public officials and ministers, to ensure a wider dissemination of legal information on companies",
+
+   "Ressource.Description.datainfogreffe": "Datainfogreffe was created by the G.I.E. Infogreffe to enable the clerks of the Commercial Courts, public officials and ministers, to ensure a wider dissemination of legal information on companies",
   "Ressource.Role.datainfogreffe": "Data portal of the registries of the Commercial Courts",
   "Ressource.Perimetre.datainfogreffe":"",
   "Ressource.Utilisation1.datainfogreffe": "Consolidation of company identification information referenced in scanR",
   "Ressource.Utilisation2.datainfogreffe":"",
   "Ressource.Producteur.Nom.datainfogreffe": "Infogreffe",
+
+  "Ressource.Role.opendata" : "Ministerial Open Data Platform",
+  "Ressource.Description.opendata" : "By facilitating access to its data for citizens, researchers, students, journalists, developers, companies, etc., it supports and accompanies innovative projects adapted to major societal challenges.",
+  "Ressource.Perimetre.opendata" : "Datasets available on the platform",
+  "Ressource.Utilisation1.opendata" : "Enrichment of the metadata of entities and persons",
+  "Ressource.Producteur.Nom.opendata" : "MESRI",
 
   "Ressource.Role.insee": "SIRENE: The Sirene® database thus gathers economic and legal information on 28 million establishments, including 11 million active ones, belonging to all sectors of activity.",
   "Ressource.Description.insee": "In accordance with Articles R.123-220 to R.123-234 of the French Commercial Code, the Sirene register registers the civil status of all companies and their establishments: whatever their legal form; whatever their sector of activity (industrialists, traders, craftsmen, liberal professions, farmers, local authorities, banks, insurance companies, associations, etc.), located in metropolitan France (including Corsica), as well as in Guadeloupe, Martinique, Guyana, La Réunion, Mayotte, Saint-Barthélémy, Saint-Martin and Saint-Pierre et Miquelon. Public or private organizations and foreign companies that have a representation or activity in France are also listed",
@@ -89,7 +96,7 @@
   "Ressource.Role.thesesfr": "Theses.fr: portal of theses produced in France",
   "Ressource.Description.thesesfr": "Theses defended in France. The portal provides a number of metadata, including the identification of the thesis directorate, rapporteurs and jury, as well as the electronic location of open theses",
   "Ressource.Perimetre.thesesfr": "All theses defended since 1990 and available on theses.fr",
-  "Ressource.Utilisation1.thesesfr": "Description of the perimeter theses",
+  "Ressource.Utilisation1.thesesfr": "Description of the thesis in the scope",
   "Ressource.Producteur.Nom.thesesfr": "ABES",
 
   "Ressource.Role.bso": "BSO : French Open Science Barometer",
@@ -111,6 +118,24 @@
   "Ressource.Utilisation1.orcid": "Person ID",
   "Ressource.Utilisation2.orcid": "Enrichment of person files",
   "Ressource.Producteur.Nom.orcid": "ORCID",
+  
+  "Ressource.Role.patstat" : "Patent Statistical Database",
+  "Ressource.Description.patstat" : "PATSTAT is the worldwide patent statistical database created and maintained by the European Patent Office.",
+  "Ressource.Perimetre.patstat" : "",
+  "Ressource.Utilisation1.patstat" : "",
+  "Ressource.Producteur.Nom.patstat" : "European Patent Office",
+  
+  "Ressource.Role.inpi" : "French National Institute of Industrial Property (INPI)",
+  "Ressource.Description.inpi" : "",
+  "Ressource.Perimetre.inpi" : "",
+  "Ressource.Utilisation1.inpi" : "",
+  "Ressource.Producteur.Nom.inpi" : "INPI",
+  
+  "Ressource.Role.europe" : "",
+  "Ressource.Description.europe" : "",
+  "Ressource.Perimetre.europe" : "",
+  "Ressource.Utilisation1.europe" : "",
+  "Ressource.Producteur.Nom.europe" : "",
 
   "Ressource.Role.idref": "IDRef : Identifiers and Referentials for higher education and research in France",
   "Ressource.Description.idref": "Unique identifier of researchers and scientists, allowing in particular to identify people in an unambiguous and sustainable way.",
@@ -120,6 +145,18 @@
   "Ressource.Use3.idref": "Structure identifier",
   "Ressource.Reprocessing.idref": "Identification of production authors (publications, theses and patents).",
   "Ressource.Producteur.Nom.idref": "ABES",
+
+    "Ressource.Role.hceres": "High Council for the Evaluation of Research and Higher Education",
+  "Ressource.Description.hceres": "Le Hcéres is an independent French administrative authority responsible for the evaluation of higher education and public research.",
+  "Ressource.Perimetre.hceres": "Entities that have been evaluated by the Hceres.",
+  "Ressource.Utilisation1.hceres": "Links to evaluation reports available on the HCERES HAL portal.",
+  "Ressource.Producteur.Nom.hceres": "HCERES",
+
+  "Ressource.Role.swh": "Software Heritage",
+  "Ressource.Description.swh": "Software Heritage is a software archive project that aims to collect and preserve the source code of software.",
+  "Ressource.Perimetre.swh": "Productions for which a link to Software Heritage has been established",
+  "Ressource.Utilisation1.swh": "When a link has been established between a publication and a code stored on Software Heritage, the link to Software Heritage is mentioned on the scanR page of the publication. ",
+  "Ressource.Producteur.Nom.swh": "Software Heritage",
 
   "Ressource.Role.anr": "Projects funded by the National Research Agency",
   "Ressource.Description.anr": "The ANR offers, in the form of descriptive sheets, access to the main information relating to the projects it has financed. This application covers most of the calls for projects corresponding to the ANR's own activity (in particular excluding projects managed by the ANR as part of the Programme des investissements d'avenir)",
