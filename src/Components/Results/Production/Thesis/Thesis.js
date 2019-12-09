@@ -3,7 +3,6 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Similars from '../Shared/Similars/Similars';
-import HeaderTitle from '../../../Shared/Results/HeaderTitle/HeaderTitle';
 import SectionTitle from '../../Shared/SectionTitle';
 import SummaryCard from '../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../Shared/Ui/SimpleCard/SimpleCard';
@@ -117,12 +116,6 @@ class Thesis extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <HeaderTitle
-            language={this.props.language}
-            label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
-            idPage="Thesis"
-            id={this.props.data.id}
-          />
           <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle} id="Thesis">
             <div className="container">
               <SectionTitle

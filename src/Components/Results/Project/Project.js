@@ -1,10 +1,17 @@
+// Packages
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Hooks
+import useGetData from '../../../Hooks/useGetData';
+import useScrollY from '../../../Hooks/UseScrollY';
+
+// Config
 import { API_PROJECTS_END_POINT } from '../../../config/config';
 
+// Components
+import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import getSelectKey from '../../../Utils/getSelectKey';
-import useGetData from '../../../Hooks/useGetData';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
@@ -18,8 +25,8 @@ import Similars from './Sections/Similars/Similars';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 
+// scss styles
 import styles from '../../../style.scss';
-
 /**
  * Publication
  * Url : .
@@ -28,9 +35,8 @@ import styles from '../../../style.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-
-
 const Project = (props) => {
+  const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PROJECTS_END_POINT, props.match.params.id);
 
   if (isLoading) {
@@ -41,15 +47,19 @@ const Project = (props) => {
   }
   return (
     <React.Fragment>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
+      <ScanRMeta
+        title={getSelectKey(data, 'label', props.language, 'default')}
+        href2="./recherche/projects?query="
+        href2Title="Projets"
+        href3={`./project/${props.match.params.id}`}
       />
+      <Header />
       <HeaderTitle
         language={props.language}
         label={getSelectKey(data, 'label', props.language, 'default')}
-        idPage="Project"
+        idPage="project"
         id={data.id}
+        isFull={scrollY === 0}
       />
       <div id="Informations">
         <Informations
@@ -99,7 +109,7 @@ const Project = (props) => {
           data={data}
         />
       </div>
-      <Footer language={props.language} />
+      <Footer />
     </React.Fragment>
   );
 };
@@ -108,6 +118,5 @@ export default Project;
 
 Project.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
   match: PropTypes.object.isRequired,
 };
