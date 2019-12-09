@@ -52,8 +52,12 @@ class Productions extends Component {
     low: null,
   }
 
+  componentDidMount() {
+    this.fetchGlobalData();
+  }
+
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.childs !== this.props.childs) {
+    if (prevProps.childs.length !== this.props.childs.length) {
       this.fetchGlobalData();
     }
     if (prevState.low !== this.state.low || prevState.high !== this.state.high) {
