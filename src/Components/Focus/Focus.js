@@ -13,7 +13,7 @@ import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 
 // import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
 import getSelectKey from '../../Utils/getSelectKey';
-import useGetData from '../../Hooks/useGetData';
+// import useGetData from '../../Hooks/useGetData';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
@@ -78,7 +78,10 @@ const buildFocusFromConfig = (components, lang) => {
 
 
 const Focus = (props) => {
-  let { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
+  let isError = true;
+  let isLoading = true;
+  let data = [];
+  // let { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
   if (isError || data.length === 0) {
     const filename = `./Configs/${props.match.params.id}.json`;
     // eslint-disable-next-line
