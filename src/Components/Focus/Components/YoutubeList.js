@@ -63,7 +63,6 @@ export default class YoutubeList extends Component {
                 <PersonCard
                   data={item.data.value}
                   url={item.url}
-                  small
                   language={this.props.language}
                 />
               </div>

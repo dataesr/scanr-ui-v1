@@ -153,6 +153,11 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
+              labelKey="softwareheritage"
+              imageName="swh-logo.jpg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
               labelKey="datainfogreffe"
               imageName="logo-datainfogreffe.svg"
               cssClass="CardLogo"
