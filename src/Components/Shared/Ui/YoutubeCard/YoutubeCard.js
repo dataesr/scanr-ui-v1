@@ -44,6 +44,7 @@ class YoutubeCard extends Component {
     } else if (youtubeUrl.indexOf('youtube.com/embed') !== -1) {
       urlIframe = youtubeUrl;
     }
+    urlIframe = urlIframe.replace('youtube.com', 'youtube-nocookie.com');
     this.setState({ urlIframe });
   }
 
