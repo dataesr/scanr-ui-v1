@@ -38,6 +38,10 @@ $projectdarkgreenColor : rgb(32,118,121);
 $productionColor : rgb(204,61,143);
 $productionpublicationColor : rgb(204,61,143);
 $productionbrevetsColor : rgb(254,101,91);
+$productionbrevets100Color : $scanrmiddlegreyColor;
+$productionbrevets70Color : rgba(64,26,23,0.4);
+$productionbrevets40Color : rgba(64,26,23,0.7);
+$productionbrevets10Color : rgba(64,26,23,1);
 $productionthesesColor : rgb(254,173,64);
 
 /* couleurs dataviz ecosystem */
@@ -99,6 +103,10 @@ $sanKey2 : #90ee7e;
   productionColor: $productionColor;
   productionpublicationColor: $productionpublicationColor;
   productionbrevetsColor: $productionbrevetsColor;
+  productionbrevets100Color: $productionbrevets100Color;
+  productionbrevets70Color: $productionbrevets70Color;
+  productionbrevets40Color: $productionbrevets40Color;
+  productionbrevets10Color: $productionbrevets10Color;
   productionthesesColor: $productionthesesColor;
   frenchentityColor: $frenchentityColor;
   internationalentityColor: $internationalentityColor;
