@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
 import getSelectKey from '../../../Utils/getSelectKey';
 
+import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
@@ -21,7 +22,6 @@ import LastEntityFocus from './Sections/LastEntityFocus/LastEntityFocus';
 import Banner from '../../Shared/Banner/Banner';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import styles from '../../../style.scss';
-// import DataSample from './dataSample.json';
 
 /**
  * Entity
@@ -115,12 +115,18 @@ class Entity extends Component {
     }
     return (
       <div onScroll={this.handleScroll}>
+        <ScanRMeta
+          title={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
+          href2="./recherche/structures?query="
+          href2Title="Structures"
+          href3={`./entite/${this.props.match.params.id}`}
+        />
         <Header />
 
         <HeaderTitle
           language={this.props.language}
           label={getSelectKey(this.state.data, 'label', this.props.language, 'fr')}
-          idPage="Entity"
+          idPage="entity"
           id={this.state.data.id}
           isFull={this.state.isFull}
         />

@@ -6,7 +6,6 @@ import Similars from '../Shared/Similars/Similars';
 import Participants from './Sections/Participants';
 import Identity from './Sections/Identity';
 import Depots from './Sections/Depots';
-import HeaderTitle from '../../../Shared/Results/HeaderTitle/HeaderTitle';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
 
@@ -35,12 +34,6 @@ const Patent = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <React.Fragment>
-        <HeaderTitle
-          language={props.language}
-          label={name}
-          idPage="Patent"
-          id={props.id}
-        />
         <Identity language={props.language} data={props.data} id={props.id} />
         <Participants
           language={props.language}

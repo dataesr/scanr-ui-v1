@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { API_PERSONS_END_POINT } from '../../../config/config';
-
 import useGetData from '../../../Hooks/useGetData';
+import useScrollY from '../../../Hooks/UseScrollY';
+import getSelectKey from '../../../Utils/getSelectKey';
+
+import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
@@ -27,6 +29,7 @@ import styles from '../../../style.scss';
  * Tests unitaires : .
 */
 const Person = (props) => {
+  const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
 
   if (isLoading) {
@@ -37,12 +40,19 @@ const Person = (props) => {
   }
   return (
     <React.Fragment>
+      <ScanRMeta
+        title={getSelectKey(data, 'fullName', props.language, 'fr')}
+        href2="./recherche/persons?query="
+        href2Title="Persons"
+        href3={`./person/${props.match.params.id}`}
+      />
       <Header />
       <HeaderTitle
         language={props.language}
         label={(data.fullName) ? data.fullName : ''}
         idPage="Person"
         id={props.match.params.id}
+        isFull={scrollY === 0}
       />
       <div id="Informations">
         <Informations
