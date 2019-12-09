@@ -135,5 +135,18 @@ LastFocus.defaultProps = {
       url: '/focus/software_heritage',
       api: 'publications',
     },
+    {
+      tags: {
+        fr: ['#MaThèseEn180s', '#MT180', '#vulgarisation'],
+        en: ['#MaThèseEn180s', '#MT180', '#popularization'],
+      },
+      title: {
+        fr: "Finalistes et lauréat du concours 'Ma Thèse en 180s' dans scanR",
+        en: "Finalists and winner of the competition 'Ma Thèse en 180s' in scanR",
+      },
+      type: 'mt180',
+      url: '/focus/mt180',
+      api: 'persons',
+    },
   ],
 };

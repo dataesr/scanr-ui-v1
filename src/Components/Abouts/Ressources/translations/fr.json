@@ -24,7 +24,7 @@
   "Ressource.Utilisation1.rnsr" : "Identification des structures de recherche (unités propres, mixtes, équipes d’accueil, fédérations) qui constituent une partie du champ de scanR",
   "Ressource.Utilisation2.rnsr" : "Accès aux métadonnées associées aux structures (informations géographiques et institutionnelles, thématiques scientifiques)",
   "Ressource.Producteur.Nom.rnsr" : "Ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation",
-  "Ressource.Perimetre.rnsr" : "Unité en activité en 2016",
+  "Ressource.Perimetre.rnsr" : "Unités en activité",
   "Ressource.Retraitements.rnsr" : "<li>Mise à jour de la casse des libellés</li><li>Ajout de libellés multilingues</li><li>Enrichissement des acronymes</li><li>Décomposition des adresses</li>",
   "Ressource.Retraitements2.rnsr" : "<li>Géocodage</li><li>Curation de données pour la hiérarchie et l'historique des structures</li><li>Curation de données pour les sites web</li>",
 
@@ -106,6 +106,48 @@
   "Ressource.Perimetre.core" : "Toutes les publications avec un DOI et disponibles sur CORE",
   "Ressource.Utilisation1.core" : "Enrichissement des méta-données des publications, notamment l'abstract quand il est disponible.",
   "Ressource.Producteur.Nom.core" : "The Open University",
+  
+  "Ressource.Role.opendata" : "Plateforme Open Data du ministérielle",
+  "Ressource.Description.opendata" : "En facilitant l'accès de ses données aux citoyens, chercheurs, étudiants, journalistes, développeurs, entreprises, etc.,  il soutient et accompagne les projets innovants adaptés aux grands enjeux sociétaux.",
+  "Ressource.Perimetre.opendata" : "Jeux de données disponibles sur la plate-forme",
+  "Ressource.Utilisation1.opendata" : "Enrichissement des méta-données des entités et des personnes",
+  "Ressource.Producteur.Nom.opendata" : "MESRI",
+  
+  "Ressource.Role.hceres" : "Haut Conseil de l’évaluation de la recherche et de l’enseignement supérieur",
+  "Ressource.Description.hceres" : "Le Hcéres est une autorité administrative indépendante française, chargée de l’évaluation de l’enseignement supérieur et de la recherche publique.",
+  "Ressource.Perimetre.hceres" : "Entités ayant été évaluées par le Hcéres.",
+  "Ressource.Utilisation1.hceres" : "Liens vers les rapports d'évaluations disponibles sur le portail HAL du Hcéres.",
+  "Ressource.Producteur.Nom.hceres" : "HCERES",
+  
+  "Ressource.Role.swh" : "Software Heritage",
+  "Ressource.Description.swh" : "Software Heritage est un projet d'archive logicielle qui a pour but de collecter et préserver le code source des logiciels.",
+  "Ressource.Perimetre.swh" : "Productions pour lesquelles un lien vers Software Heritage a pu être établi",
+  "Ressource.Utilisation1.swh" : "Lorsqu'un lien a pu être établi entre une publication et un code archivé sur Software Heritage, le lien vers Software Heritage est mentionné sur la page scanR de la publication. ",
+  "Ressource.Producteur.Nom.swh" : "Software Heritage",
+  
+  "Ressource.Role.patstat" : "Patent Statistical Database",
+  "Ressource.Description.patstat" : "PATSTAT est la base de données statistiques mondiale sur les brevets créée et tenue à jour par l'Office européen des brevets.",
+  "Ressource.Perimetre.patstat" : "",
+  "Ressource.Utilisation1.patstat" : "",
+  "Ressource.Producteur.Nom.patsta" : "Office européen des brevets",
+  
+  "Ressource.Role.inpi" : "Institut national de la propriété industrielle (INPI)",
+  "Ressource.Description.inpi" : "",
+  "Ressource.Perimetre.inpi" : "",
+  "Ressource.Utilisation1.inpi" : "",
+  "Ressource.Producteur.Nom.inpi" : "INPI",
+  
+  "Ressource.Role.europe" : "Commission européenne",
+  "Ressource.Description.europe" : "",
+  "Ressource.Perimetre.europe" : "",
+  "Ressource.Utilisation1.europe" : "",
+  "Ressource.Producteur.Nom.europe" : "Commission européenne",
+
+  "Ressource.Role.adresse" : "adresse.data.gouv.fr",
+  "Ressource.Description.adresse" : " ",
+  "Ressource.Perimetre.adresse" : "Entités de scanR",
+  "Ressource.Utilisation1.adresse" : "Géocodage des adresses des entités",
+  "Ressource.Producteur.Nom.adresse" : "Etalab",
 
   "Ressource.Role.orcid" : "ORCID : Open Researcher and Contributor ID, soit « identifiant ouvert pour chercheur et contributeur »",
   "Ressource.Description.orcid" : "Identifiant unique de chercheurs et scientifiques, permettant notamment d'identifier les personnes de façon non ambigüe et pérenne.",

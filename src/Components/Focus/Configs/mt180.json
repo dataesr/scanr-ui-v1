@@ -1,0 +1,50 @@
+{
+  "title": {
+    "fr": "Finalistes et lauréat du concours 'Ma Thèse en 180s' dans scanR",
+    "en": "Finalists and winner of the competition 'Ma Thèse en 180s' in scanR"
+  },
+  "text": {
+    "fr": "<a href='http://www.mt180.fr' target='_blank'>Ma thèse en 180 secondes</a> permet aux doctorants de présenter leur sujet de recherche, en français et en termes simples, à un auditoire profane et diversifié. Chaque étudiant ou étudiante doit faire, en trois minutes, un exposé clair, concis et néanmoins convaincant sur son projet de recherche. Le tout avec l’appui d’une seule diapositive ! En France, le concours est organisé par la Conférence des présidents d'université (CPU) et le CNRS.<br/> Ce focus s'appuie sur scanR et le <a href='https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/' target='_blank'>jeu de données Open Data</a> et ne présente que les vidéos que scanR a retrouvées et réussi à lier à leurs auteurs, sans garantie d'exhaustivité.",
+   "en": "<a href='http://www.mt180.fr' target='_blank'>My thesis in 180 seconds</a> allows doctoral students to present their research topic, in French and in simple terms, to a lay and diversified audience. Each student must make a clear, concise and yet convincing presentation on their research project in three minutes. All with the support of a single slide! In France, the competition is organized by the Conference of University Presidents (CPU) and the CNRS. <br/> This focus is based on scanR and the <a href='https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/' target='_blank'>open dataset</a> and only presents videos that scanR has found and successfully linked to their authors. No exhaustiveness is guaranteed."
+  },
+  "tags": {
+    "fr": ["MaThèseEn180s", "vulgarisation"],
+    "en": ["MaThèseEn180s", "popularization"]
+  },
+  "type": "mt180",
+  "api": "persons",
+  "href": "/recherche/persons?filters=%7B%22links.type%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22youtube%22,%22Youtube%22%5D%7D%2C%22awards.label%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22Finaliste%20du%20concours%20Ma%20th%C3%A8se%20en%20180%20secondes%22%5D%7D%7D&query=&sort&view=list",
+  "hrefOpendata": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/",
+  "hrefX": "/recherche/persons",
+  "components": [
+    {
+      "title": {
+    "fr": "Finalistes et lauréat du concours 'Ma Thèse en 180s' dans scanR",
+    "en": "Finalists and winner of the competition 'Ma Thèse en 180s' in scanR"
+      },
+      "subtitle": {
+    "fr": "",
+    "en": ""
+      },
+      "api" : "persons",
+      "componentType": "YoutubeList",
+      "request": {
+        "query": "",
+        "sourceFields": ["lastName", "id", "firstName", "domains", "affiliations", "links", "keywords"],
+        "pageSize": 100,
+        "filters": {
+          "links.type": {
+            "type": "MultiValueSearchFilter",
+            "op": "any",
+            "values": ["youtube", "Youtube"]
+          },
+          "awards.structureName": {
+            "type": "MultiValueSearchFilter",
+            "op": "all",
+            "values": ["Ma thèse en 180 secondes"]
+          }
+        }
+      }
+    }
+  ]
+}
