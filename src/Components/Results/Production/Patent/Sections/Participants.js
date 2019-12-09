@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 import EntityCard from '../../../../Shared/Ui/EntityCard/EntityCard';
 import SectionTitle from '../../../Shared/SectionTitle';
+import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
+
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
 import countries from '../countries.json';
@@ -50,53 +52,55 @@ const PatentParticipants = (props) => {
       <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors} id="Authors">
         <div className="container">
           <SectionTitle
-            icon="fa-open-folder"
+            icon="fa-user-friends"
             objectType="publications"
             language={props.language}
             id={props.id}
             title={messages[props.language]['Patents.inventors.title']}
           />
           <div className="row">
-            <div className={`col-md-6 ${classes.CardContainer}`}>
-              <div className="container">
-                <div className={`row ${classes.GridHeader}`}>
-                  {messages[props.language]['Patents.inventors.inventor']}
-                </div>
-                <div className="row">
-                  {
-                    (inventors && inventors.length > 0)
-                      ? inventors.map(inventor => (
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <PersonCard
-                            data={inventor}
-                            showTitle={false}
-                          />
-                        </div>
-                      ))
-                      : null
-                  }
+            <div className="col-md-6">
+              <div className="row">
+                <div className={`col ${classes.NoSpace}`}>
+                  <CardsTitle title={messages[props.language]['Patents.inventors.inventor']} />
                 </div>
               </div>
+
+              <div className="row">
+                {
+                  (inventors && inventors.length > 0)
+                    ? inventors.map(inventor => (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <PersonCard
+                          data={inventor}
+                          showTitle={false}
+                        />
+                      </div>
+                    ))
+                    : null
+                }
+              </div>
+
             </div>
-            <div className={`col-md-6 ${classes.CardContainer}`}>
-              <div className="container">
-                <div className={`row ${classes.GridHeader}`}>
-                  {messages[props.language]['Patents.inventors.applicant']}
+            <div className="col-md-6">
+              <div className="row">
+                <div className={`col ${classes.NoSpace}`}>
+                  <CardsTitle title={messages[props.language]['Patents.inventors.applicant']} />
                 </div>
-                <div className="row">
-                  {
-                    (deposants && deposants.length > 0)
-                      ? deposants.map(dep => (
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <EntityCard
-                            data={dep}
-                            showTitle={false}
-                          />
-                        </div>
-                      ))
-                      : null
-                  }
-                </div>
+              </div>
+              <div className="row">
+                {
+                  (deposants && deposants.length > 0)
+                    ? deposants.map(dep => (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <EntityCard
+                          data={dep}
+                          showTitle={false}
+                        />
+                      </div>
+                    ))
+                    : null
+                }
               </div>
             </div>
           </div>
