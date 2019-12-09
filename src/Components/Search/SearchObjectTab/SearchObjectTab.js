@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import classes from './SearchObjectTab.scss';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 
 const SearchObjectTab = (props) => {
@@ -16,6 +16,7 @@ const SearchObjectTab = (props) => {
   };
 
 /* eslint-disable */
+/* Correct all of it and reduce code with a map over the api. */
 
   const ShouldRenderView = () => {
     if (props.api !== 'all') {
@@ -27,13 +28,13 @@ const SearchObjectTab = (props) => {
                 ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
                     <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
                     <span className={classes.TextToHide}>
-                      <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                      <FormattedHTMLMessage id="Search.resultList" defaultMessage="Search.resultList" />
                     </span>
                   </div>
                 : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('list')}>
                     <i className={`fas fa-list-ul ${classes.ResultsNavItemIcon}`} />
                     <span className={classes.TextToHide}>
-                      <FormattedHTMLMessage id="nav.resultList" defaultMessage="nav.resultList" />
+                      <FormattedHTMLMessage id="Search.resultList" defaultMessage="Search.resultList" />
                     </span>
                   </div>
             }
@@ -44,13 +45,13 @@ const SearchObjectTab = (props) => {
                 ? <div className={`${classes.ResultsNavItem} ${classes.ResultsNavItemActive}`}>
                     <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
                     <span className={classes.TextToHide}>
-                      <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                      <FormattedHTMLMessage id="Search.resultGraph" defaultMessage="Search.resultGraph" />
                     </span>
                   </div>
                 : <div className={classes.ResultsNavItem} onClick={() => props.viewChangeHandler('graph')}>
                     <i className={`fas fa-chart-pie ${classes.ResultsNavItemIcon}`} />
                     <span className={classes.TextToHide}>
-                      <FormattedHTMLMessage id="nav.resultGraph" defaultMessage="nav.resultGraph" />
+                      <FormattedHTMLMessage id="Search.resultGraph" defaultMessage="Search.resultGraph" />
                     </span>
                   </div>
             }
@@ -77,7 +78,7 @@ const SearchObjectTab = (props) => {
               onClick={() => props.apiChangeHandler('all')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.all" defaultMessage="nav.all" />
+                <FormattedHTMLMessage id="Search.All" defaultMessage="Search.All" />
               </div>
               <div>
                 (
@@ -93,7 +94,7 @@ const SearchObjectTab = (props) => {
               onClick={() => props.apiChangeHandler('structures')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.structures" defaultMessage="nav.structures" />
+                <FormattedHTMLMessage id="Search.Entities" defaultMessage="Search.Entities" />
               </div>
               <div>
                 (
@@ -109,7 +110,7 @@ const SearchObjectTab = (props) => {
               onClick={() => props.apiChangeHandler('projects')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.projects" defaultMessage="nav.projects" />
+                <FormattedHTMLMessage id="Search.Projects" defaultMessage="Search.Projects" />
               </div>
               <div>
                 (
@@ -125,7 +126,7 @@ const SearchObjectTab = (props) => {
               onClick={() => props.apiChangeHandler('persons')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.persons" defaultMessage="nav.persons" />
+                <FormattedHTMLMessage id="Search.Persons" defaultMessage="Search.Persons" />
               </div>
               <div>
                 (
@@ -141,7 +142,7 @@ const SearchObjectTab = (props) => {
               onClick={() => props.apiChangeHandler('publications')}
             >
               <div className="font-weight-bold">
-                <FormattedHTMLMessage id="nav.publications" defaultMessage="nav.publications" />
+                <FormattedHTMLMessage id="Search.Publications" defaultMessage="Search.Publications" />
               </div>
               <div>
                 (

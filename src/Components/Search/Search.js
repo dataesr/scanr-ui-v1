@@ -336,7 +336,8 @@ class SearchPage extends Component {
     } else if (api === 'persons') {
       req.aggregations = PersonsAggregations;
       req.lang = this.props.language;
-      req.sourceFields = ['id', 'affiliations', 'fullName', 'firstName', 'lastName', 'gender', 'externalIds', 'domains'];
+      req.sourceFields = ['id', 'affiliations', 'fullName', 'firstName',
+        'lastName', 'gender', 'externalIds', 'domains'];
     } else if (api === 'projects') {
       req.aggregations = ProjectsAggregations;
       req.lang = this.props.language;

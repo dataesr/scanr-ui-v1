@@ -3,11 +3,12 @@ import { IntlProvider, FormattedMessage, FormattedHTMLMessage } from 'react-intl
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
+import { suggestions } from '../CurrentThemesAndSuggestions';
 
 import classes from './Search.scss';
 
@@ -43,18 +44,22 @@ class Search extends Component {
     <form onSubmit={this.submitResearch}>
       <div className="d-flex flex-nowrap mt-3">
         <div className="flex-grow-1 p-0">
-          <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
+          <FormattedMessage id="Search.PlaceHolder">
             { placeholder => <input type="text" className={`${classes.inputBar} form-control`} id="query" placeholder={placeholder} /> }
           </FormattedMessage>
         </div>
         <div className="pl-1">
-          <button
-            type="submit"
-            className={`btn ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
-            aria-label="Lancer la recherche"
-          >
-            <i className="fas fa-search" aria-hidden />
-          </button>
+          <FormattedMessage id="Search.LaunchNew">
+            { launch => (
+              <button
+                type="submit"
+                className={`btn ${classes.btn_dark} ${classes.BtnSearch}`}
+                aria-label={launch}
+              >
+                <i className="fas fa-search" aria-hidden />
+              </button>
+            )}
+          </FormattedMessage>
         </div>
       </div>
     </form>
@@ -75,9 +80,14 @@ class Search extends Component {
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
           <div className="container">
-            <h1 className={classes.Logo} aria-label="scanr, le moteur de la recherche et de l'innovation">
-              <LogoScanrWhiteSVG fill={color} width="280px" />
-            </h1>
+            <FormattedMessage id="Search.Logo.aria">
+              { label => (
+                <h1 className={classes.Logo} aria-label={label}>
+                  <LogoScanrWhiteSVG fill={color} width="280px" />
+                </h1>
+              )}
+            </FormattedMessage>
+
             {this.renderForm()}
             <div className={`pt-1 pl-1 ${classes.Suggest}`}>
               <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
@@ -131,30 +141,5 @@ Search.propTypes = {
 };
 Search.defaultProps = {
   isFull: true,
-  suggests: [
-    {
-      labelFr: '5G',
-      labelEn: '5G',
-      query: '5G',
-      url: '',
-    },
-    {
-      labelFr: 'Changement climatique',
-      labelEn: 'Climate change',
-      query: '(changement+climatique) | (climate+change)',
-      url: '',
-    },
-    {
-      labelFr: 'Biotechnologie',
-      labelEn: 'Biotechnology',
-      query: 'Biotechnologie | Biotechnology',
-      url: '',
-    },
-    {
-      labelEn: 'Ebola',
-      labelFr: 'Ebola',
-      query: 'Ebola',
-      url: '',
-    },
-  ],
+  suggests: suggestions,
 };

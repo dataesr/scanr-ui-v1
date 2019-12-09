@@ -3,8 +3,8 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 import EntityCard from './ResultCards/EntityCard';
 import PersonCard from './ResultCards/PersonCard';
@@ -44,39 +44,8 @@ const SearchResults = (props) => {
         backgroundPosition: positions[index],
         backgroundRepeat: 'no-repeat',
       };
-      let subTitle = 'searchResults.relevance';
-      subTitle = (props.preview[section].count === 0) ? 'searchResults.noResults' : subTitle;
-      subTitle = (props.preview[section].count === 1) ? 'searchResults.singleResult' : subTitle;
-      const Title = (props.preview[section].count > 1) ? `searchResults.${section}` : `searchResults.singular.${section}`;
       if (props.preview[section].isLoading) {
-        return (
-          <IntlProvider locale={props.language} messages={messages[props.language]}>
-            <section>
-              <div style={sectionStyle} className={`pt-5 pb-5 ${classes[BgClass]}`}>
-                <div className="container">
-                  <div className="row d-flex flex-row justify-content-between">
-                    <div className={`${classes.headers}`}>
-                      <h2>
-                        {`${props.preview[section].count.toLocaleString(props.language)} `}
-                        <FormattedHTMLMessage
-                          id={Title}
-                          defaultMessage={Title}
-                        />
-                      </h2>
-                      <p>
-                        <FormattedHTMLMessage
-                          id={subTitle}
-                          defaultMessage={subTitle}
-                        />
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <GraphSpinner />
-              </div>
-            </section>
-          </IntlProvider>
-        );
+        return <GraphSpinner />;
       }
       return (
         <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -86,17 +55,22 @@ const SearchResults = (props) => {
                 <div className="row d-flex flex-row justify-content-between">
                   <div className={`${classes.headers}`}>
                     <h2>
-                      {`${props.preview[section].count.toLocaleString(props.language)} `}
                       <FormattedHTMLMessage
-                        id={Title}
-                        defaultMessage={Title}
+                        id={`searchResults.${section}.results`}
+                        values={{ count: props.preview[section].count }}
                       />
                     </h2>
                     <p>
-                      <FormattedHTMLMessage
-                        id={subTitle}
-                        defaultMessage={subTitle}
-                      />
+                      {
+                        (props.preview[section].count !== 0)
+                          ? (
+                            <FormattedHTMLMessage
+                              id="searchResults.subtitles"
+                              values={{ count: props.preview[section].count }}
+                            />
+                          )
+                          : null
+                      }
                     </p>
                   </div>
                   {
