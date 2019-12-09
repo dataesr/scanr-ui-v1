@@ -5,8 +5,8 @@ import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
@@ -24,8 +24,8 @@ const PersonsFilters = (props) => {
       <div className="p-2">
         <Autocomplete
           language={props.language}
-          title={messages[props.language]['filters.localisation']}
-          subtitle={messages[props.language]['filters.subtitle']}
+          title={messages[props.language]['filterPanel.localisation']}
+          subtitle={messages[props.language]['filterPanel.subtitle']}
           placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={structFacets.entries}
@@ -36,7 +36,7 @@ const PersonsFilters = (props) => {
           defaultActive
           retractable={false}
           nbItemsToShow={5}
-          title="Prix et distinction"
+          title={messages[props.language]['filterPanel.awards']}
           facets={awardsFacets.entries}
           filters={awardsActiveFilters}
           facetID="awards.label"

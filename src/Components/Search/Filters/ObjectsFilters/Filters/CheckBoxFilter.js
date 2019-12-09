@@ -3,6 +3,17 @@ import PropTypes from 'prop-types';
 
 import classes from './CheckBoxFilter.scss';
 
+const messages = {
+  en: {
+    more: 'More',
+    less: 'Less',
+  },
+  fr: {
+    more: 'Voir plus',
+    less: 'Voir moins',
+  },
+};
+
 
 class CheckBoxFilter extends Component {
   state = {
@@ -129,7 +140,7 @@ class CheckBoxFilter extends Component {
                 (!this.state.showAll && printSeeAll) ? (
                   <div className="text-right">
                     <button onClick={this.showAllHandler} type="button" className={classes.NoStyleButton}>
-                      Voir tout
+                      {messages[this.props.language].more}
                     </button>
                   </div>
                 ) : null
@@ -138,7 +149,7 @@ class CheckBoxFilter extends Component {
                 (this.state.showAll && printSeeAll) ? (
                   <div className="text-right">
                     <button onClick={this.showAllHandler} type="button" className={classes.NoStyleButton}>
-                      Voir moins
+                      {messages[this.props.language].less}
                     </button>
                   </div>
                 ) : null
@@ -168,11 +179,7 @@ CheckBoxFilter.propTypes = {
   language: PropTypes.string.isRequired,
   title: PropTypes.string,
   retractable: PropTypes.bool,
-  // subtitle: PropTypes.string,
-  // placeholder: PropTypes.string,
   filterType: PropTypes.string,
   defaultActive: PropTypes.bool,
   nbItemsToShow: PropTypes.number,
-  // setURL: PropTypes.func.isRequired
-  // request: PropTypes.func.isRequired
 };
