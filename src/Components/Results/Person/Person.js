@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { API_PERSONS_END_POINT } from '../../../config/config';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/UseScrollY';
-import getSelectKey from '../../../Utils/getSelectKey';
 
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
@@ -31,7 +30,6 @@ import styles from '../../../style.scss';
 const Person = (props) => {
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
-
   if (isLoading) {
     return <Loader color={styles.productionsColor} />;
   }
@@ -41,7 +39,7 @@ const Person = (props) => {
   return (
     <React.Fragment>
       <ScanRMeta
-        title={getSelectKey(data, 'fullName', props.language, 'fr')}
+        title={(data.fullName) ? data.fullName : ''}
         href2="./recherche/persons?query="
         href2Title="Persons"
         href3={`./person/${props.match.params.id}`}
@@ -50,7 +48,7 @@ const Person = (props) => {
       <HeaderTitle
         language={props.language}
         label={(data.fullName) ? data.fullName : ''}
-        idPage="Person"
+        idPage="person"
         id={props.match.params.id}
         isFull={scrollY === 0}
       />
