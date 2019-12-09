@@ -87,18 +87,3 @@
 .Danger {
   color: $scanrgreyColor;
 }
-
-.GridHeader {
-  display: flex;
-  align-items: center;
-  color: white;
-  background-color: $scanrdeepblueColor;
-  height: 45px;
-  padding-left: 15px;
-  margin-left: -12px;
-  margin-right: -12px;
-  font-size: 1.2em;
-  font-weight: 500;
-  border-radius: 6px;
-  text-transform: capitalize;
-}
