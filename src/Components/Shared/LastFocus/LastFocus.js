@@ -122,5 +122,18 @@ LastFocus.defaultProps = {
       url: '/focus/youtube',
       api: 'persons',
     },
+    {
+      tags: {
+        fr: ['#SoftwareHeritage', '#CodeSource'],
+        en: ['#SoftwareHeritage', '#SourceCode'],
+      },
+      title: {
+        fr: 'Productions avec un lien Software Heritage dans scanR',
+        en: 'Productions with a link to Software Heritage in scanR',
+      },
+      type: 'software-heritage',
+      url: '/focus/software_heritage',
+      api: 'publications',
+    },
   ],
 };

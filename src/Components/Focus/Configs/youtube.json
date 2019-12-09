@@ -29,7 +29,7 @@
       "componentType": "YoutubeList",
       "request": {
         "query": "",
-        "sourceFields": ["lastName", "id", "firstName", "domains", "affiliations", "links"],
+        "sourceFields": ["lastName", "id", "firstName", "domains", "affiliations", "links", "keywords"],
         "pageSize": 100,
         "filters": {
           "links.type": {

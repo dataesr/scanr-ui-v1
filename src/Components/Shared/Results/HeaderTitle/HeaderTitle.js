@@ -80,6 +80,15 @@ const HeaderTitle = (props) => {
       list.push('Affiliations');
       list.push('SimilarProductions');
       break;
+    case 'Patent':
+      href2 = './recherche/publications?query=';
+      href3 = './publication/'.concat(props.id);
+      pageType = 'Patent';
+      list.push('Famille de brevets');
+      list.push('Inventeurs');
+      list.push('Déposants');
+      list.push('Dépots');
+      break;
     default:
       break;
   }
