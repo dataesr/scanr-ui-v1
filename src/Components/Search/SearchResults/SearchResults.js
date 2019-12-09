@@ -135,6 +135,9 @@ class SearchResults extends Component {
     };
     const numResults = (this.props.data.total < 2) ? 'searchResults.result'.concat('-', this.props.api) : 'searchResults.results'.concat('-', this.props.api);
     const bgColor = `${this.props.api}Color`;
+    const activeSortValue = (this.props.activeSortValue)
+      ? `${Object.keys(this.props.activeSortValue)[0]}__${Object.values(this.props.activeSortValue)[0]}`
+      : 'score';
 
     if (this.props.isLoading) {
       return <GraphSpinner />;
@@ -152,7 +155,7 @@ class SearchResults extends Component {
                 id="type-select"
                 className={`form-control ${classes.Select}`}
                 onChange={e => this.props.handleSortResults(e)}
-                defaultValue={(this.props.activeSortValue) ? Object.keys(this.props.activeSortValue)[0] : 'score'}
+                defaultValue={activeSortValue}
               >
                 <option key="score" value="score">
                   {(this.props.language === 'fr') ? 'Pertinence' : 'Relevance'}
