@@ -4,7 +4,7 @@ import Markdown from 'markdown-to-jsx';
 
 // import Errors from '../Shared/Errors/Errors';
 // Composants
-import MetaFocus from '../Shared/MetaTags/MetaFocus';
+import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
@@ -93,23 +93,13 @@ const Focus = (props) => {
 
   if (data) {
     const htmlList = buildFocusFromConfig(data.components, props.language);
-    const pageTitle = 'scanR | Focus | '.concat(getSelectKey(data, 'title', props.language, 'fr'));
-    const pageDescription = "ScanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
-    const pageImage = '../Shared/svg/logo-scanr-blue.svg';
-    // const exporting = true;
-    const href1 = './';
-    const href2 = './focus';
-    const href3 = './focus/'.concat(props.match.params.id);
     return (
       <div className="d-flex flex-column h-100">
-        <MetaFocus
-          pageDescription={pageDescription}
-          pageTitle={pageTitle}
-          pageImage={pageImage}
-          href1={href1}
-          href2={href2}
-          href3={href3}
+        <ScanRMeta
           title={getSelectKey(data, 'title', props.language, 'fr')}
+          href2="/focus"
+          href2Title="Focus"
+          href3={`/focus/${props.match.params.id}`}
         />
         <Header />
         <HeaderTitle
