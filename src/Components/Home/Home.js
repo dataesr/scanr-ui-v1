@@ -1,10 +1,13 @@
-import React, { Component } from 'react';
-import MetaTags from 'react-meta-tags';
+import React, { useContext } from 'react';
 import { GlobalContext } from '../../GlobalContext';
+import useScrollY from '../../Hooks/UseScrollY';
+
+import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import MostActiveThemes from '../Shared/MostActiveThemes/MostActiveThemes';
+import currentThemes from './CurrentMostActiveThemes';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from '../Shared/ScanrToday/ScanrToday';
 import Search from './Search/Search';
@@ -12,162 +15,60 @@ import Banner from '../Shared/Banner/Banner';
 
 import classes from './Home.scss';
 
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
-class HomePage extends Component {
-  // eslint-disable-next-line
-  static contextType = GlobalContext;
+const msg = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isSearchFull: true,
-    };
-    this.handleScroll = this.handleScroll.bind(this);
-  }
+const HomePage = (props) => {
+  const context = useContext(GlobalContext);
+  const scrollY = useScrollY();
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
+  return (
+    <div className={`container-fluid ${classes.HomePage}`}>
+      <ScanRMeta title={msg[context.language].title} />
+      <Header />
+      <Search
+        {...props}
+        language={context.language}
+        isFull={scrollY === 0}
+      />
+      <ScanrToday
+        language={context.language}
+        isFull={scrollY === 0}
+      />
+      <Banner
+        language={context.language}
+        labelKey="WhatAreOurSources"
+        cssClass="BannerLight"
+        url="/ressources"
+      />
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.isSearchFull !== this.state.isSearchFull) {
-      return true;
-    }
-    return false;
-  }
-
-  handleScroll = () => {
-    if (window.scrollY) {
-      if (this.state.isSearchFull) { this.setState({ isSearchFull: false }); }
-    } else {
-      /* eslint-disable */
-      if (!this.state.isSearchFull && window.scrollY === 0) { this.setState({ isSearchFull: true }); }
-      /* eslint-enable */
-    }
-  }
-
-  render() {
-    const pageTitle = "scanR | Moteur de la Recherche et de l'Innovation";
-    const pageDescription = 'TODO';
-    const pageImage = '../../svg/logo-scanr-blue.svg';
-    return (
-      <div className={`container-fluid ${classes.HomePage}`} onScroll={this.handleScroll}>
-
-        <MetaTags>
-          <title>{pageTitle}</title>
-          <meta id="meta-description" name="description" content={pageDescription} />
-          <meta id="og-title" property="og:title" content={pageTitle} />
-          <meta id="og-image" property="og:image" content={pageImage} />
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:title" content={pageTitle} />
-          <meta name="twitter:description" content={pageDescription} />
-          <meta name="twitter:image" content={pageImage} />
-        </MetaTags>
-
-        <Header
-          language={this.context.language}
-          switchLanguage={this.context.switchLanguage}
-        />
-
-        <Search
-          {...this.props}
-          language={this.context.language}
-          isFull={this.state.isSearchFull}
-        />
-
-        <ScanrToday
-          language={this.context.language}
-          isFull={this.state.isSearchFull}
-          lexicon={{ target: this.state.lexiconTarget, lexiconHandler: this.lexiconHandler }}
-        />
-
-        <Banner
-          language={this.context.language}
-          labelKey="WhatAreOurSources"
-          cssClass="BannerLight"
-          url="/ressources"
-        />
-
-        <MostActiveThemes
-          language={this.context.language}
-          data={[
-            {
-              labelFr: 'Brain to computer',
-              labelEn: 'Brain to computer',
-              query: 'Brain to computer',
-            },
-            {
-              labelFr: 'Biotechnologie',
-              labelEn: 'Biotechnology',
-              query: 'Biotechnologie | Biotechnology',
-            },
-            {
-              labelFr: 'Intelligence artificielle',
-              labelEn: 'Artificial intelligence',
-              query: '(Intelligence artificielle) | (Artificial intelligence)',
-            },
-            {
-              labelFr: 'Réalité virtuelle',
-              labelEn: 'Virtual reality',
-              query: 'Réalité virtuelle | Virtual reality',
-            },
-            {
-              labelFr: 'Sécurité alimentaire',
-              labelEn: 'Food security',
-              query: '(Sécurité alimentaire | Food security)',
-            },
-            {
-              labelFr: 'Cryptographie',
-              labelEn: 'Cryptography',
-              query: 'Cryptographie | Cryptography',
-            },
-            {
-              labelFr: 'Réforme des retraites',
-              labelEn: 'Pension reform',
-              query: '(réforme des retraites) | (pension)',
-            },
-            {
-              labelFr: 'Humanités numériques',
-              labelEn: 'Digital humanities',
-              query: '(humanités numériques) | (digital humanities) | (humanités digitales)',
-            },
-            {
-              labelFr: 'Marathon',
-              labelEn: 'Marathon',
-              query: 'Marathon',
-            },
-            {
-              labelFr: 'Migrations internationales',
-              labelEn: 'International migrations',
-              query: '(Migrations internationales) | (international migrations)',
-            },
-          ]}
-          lexiconHandler={() => this.lexiconHandler()}
-        />
-
-        <Banner
-          language={this.context.language}
-          labelKey="Appear"
-          cssClass="BannerLight"
-          url=""
-        />
-
-        <LastFocus language={this.context.language} />
-
-        {/* Not for Now */}
-        {/* <Newsletter language={this.context.language} /> */}
-
-        <Banner
-          language={this.context.language}
-          labelKey="DiscoverDataesr"
-          cssClass="BannerDark"
-          url={`https://data.esr.gouv.fr/${this.context.language.toUpperCase()}/`}
-          target="_blank"
-        />
-
-        <Footer language={this.context.language} />
-      </div>
-    );
-  }
-}
+      <MostActiveThemes
+        language={context.language}
+        data={currentThemes}
+      />
+      <Banner
+        language={context.language}
+        labelKey="Appear"
+        cssClass="BannerLight"
+        url=""
+      />
+      <LastFocus language={context.language} />
+      {/* Not for Now */}
+      {/* <Newsletter language={this.context.language} /> */}
+      <Banner
+        language={context.language}
+        labelKey="DiscoverDataesr"
+        cssClass="BannerDark"
+        url="https://data.esr.gouv.fr/"
+        target="_blank"
+      />
+      <Footer />
+    </div>
+  );
+};
 export default HomePage;

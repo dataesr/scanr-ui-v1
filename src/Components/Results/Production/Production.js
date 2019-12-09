@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
+import useScrollY from '../../../Hooks/UseScrollY';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
-
 import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
+import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
+import getSelectKey from '../../../Utils/getSelectKey';
 
+import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 
@@ -38,6 +41,7 @@ const Production = (props) => {
     }
   };
 
+  const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, props.match.params.id);
 
   if (isLoading) {
@@ -48,7 +52,20 @@ const Production = (props) => {
   }
   return (
     <React.Fragment>
+      <ScanRMeta
+        title={getSelectKey(data, 'title', props.language, 'fr')}
+        href2="./recherche/publications?query="
+        href2Title={data.productionType || 'patent'}
+        href3={`./publication/${props.match.params.id}`}
+      />
       <Header />
+      <HeaderTitle
+        language={props.language}
+        label={getSelectKey(data, 'title', props.language, 'fr')}
+        idPage={data.productionType || 'patent'}
+        id={props.match.params.id}
+        isFull={scrollY === 0}
+      />
       {renderContent({ ...props, data })}
       <Footer />
     </React.Fragment>
@@ -58,6 +75,6 @@ const Production = (props) => {
 export default Production;
 
 Production.propTypes = {
-  // language: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
 };

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // Composants
+import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Errors from '../Shared/Errors/Errors';
 import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 import Banner from '../Shared/Banner/Banner';
@@ -23,7 +24,6 @@ import classes from './Focus.scss';
  * Accessible : . <br/>
  * Tests
  */
-
 const FocusList = (props) => {
   const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus');
   if (isError) {
@@ -44,10 +44,12 @@ const FocusList = (props) => {
   }
   return (
     <React.Fragment>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
+      <ScanRMeta
+        title="Focus"
+        href2="/focus"
+        href2Title="Focus"
       />
+      <Header />
       <HeaderTitle
         language={props.language}
         labelkey="focus"
@@ -93,7 +95,6 @@ export default FocusList;
 FocusList.propTypes = {
   language: PropTypes.string.isRequired,
   focusList: PropTypes.array,
-  switchLanguage: PropTypes.func.isRequired,
 };
 FocusList.defaultProps = {
   focusList: [
