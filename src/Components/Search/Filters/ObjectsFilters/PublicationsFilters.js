@@ -6,6 +6,15 @@ import SelectFilter from './Filters/SelectFilter';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import YearRangeSlider from '../../../Shared/YearRangeSlider/YearRangeSlider';
 import styles from '../../../../style.scss';
+/* Gestion des langues */
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
 
 const PublicationsFilters = (props) => {
   const facets = props.facets || [];
@@ -18,12 +27,15 @@ const PublicationsFilters = (props) => {
   const publiTypeActiveFilters = props.filters.type || {};
   const isOaActiveFilters = props.filters.isOa || {};
   const isOaFacets = facets.find(item => item.id === 'isOa') || { entries: [] };
-  const typesLabels = (props.language === 'fr')
-    ? { patent: 'Brevets', publication: 'Publications', thesis: 'Thèses' }
-    : { patent: 'Patents', publication: 'Publication', thesis: 'Thesis' };
-  const isOaLabel = (props.language === 'fr')
-    ? { false: 'Accès fermé', true: 'Accès ouvert' }
-    : { false: 'Closed', true: 'Open' };
+  const typesLabels = {
+    patent: messages[props.language]['filterPanel.patent'],
+    publication: messages[props.language]['filterPanel.publication'],
+    thesis: messages[props.language]['filterPanel.thesis'],
+  };
+  const isOaLabel = {
+    false: messages[props.language]['filterPanel.openAccess.close'],
+    true: messages[props.language]['filterPanel.openAccess.open'],
+  };
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
@@ -50,7 +62,7 @@ const PublicationsFilters = (props) => {
           data={props.sliderData}
           height={60}
           barColor={styles.productionColor}
-          label={props.language === 'fr' ? 'Sélection par années' : 'Selection by year'}
+          label={messages[props.language]['filterPanel.yearFilter']}
           min={(props.filters.year) ? props.filters.year.min : null}
           max={(props.filters.year) ? (props.filters.year.max - 1) : null}
           minBound={2000}
@@ -69,7 +81,7 @@ const PublicationsFilters = (props) => {
             ? (
               <SelectFilter
                 language={props.language}
-                title="Open Access"
+                title={messages[props.language]['filterPanel.openAccess']}
                 facets={isOaFacets.entries}
                 filters={isOaActiveFilters}
                 permanentList={isOaLabel}
@@ -87,15 +99,14 @@ const PublicationsFilters = (props) => {
               <React.Fragment>
                 <Autocomplete
                   language={props.language}
-                  title="Journal"
-                  placeholder="Journal of ..."
+                  title={messages[props.language]['filterPanel.journal']}
                   onSubmit={props.multiValueFilterHandler}
                   facets={journalFacets.entries}
                   facetID="source.title"
                 />
                 <CheckBoxFilter
                   language={props.language}
-                  title={props.language === 'fr' ? 'Type de publication' : 'Publication type'}
+                  title={messages[props.language]['filterPanel.publicationType']}
                   facets={publiTypeFacets.entries}
                   filters={publiTypeActiveFilters}
                   facetID="type"

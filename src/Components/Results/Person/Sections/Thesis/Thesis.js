@@ -193,6 +193,5 @@ export default Thesis;
 Thesis.propTypes = {
   language: PropTypes.string.isRequired,
   person: PropTypes.string.isRequired,
-  personName: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
