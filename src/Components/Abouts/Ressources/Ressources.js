@@ -153,7 +153,7 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="softwareheritage"
+              labelKey="swh"
               imageName="swh-logo.jpg"
               cssClass="CardLogo"
             />
@@ -187,7 +187,7 @@ class Ressources extends Component {
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="adresse-data-gouv"
+              labelKey="adresse"
               imageName="logo-adresse-data-gouv.svg"
               cssClass="CardLogo"
             />
@@ -199,27 +199,22 @@ class Ressources extends Component {
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="3cr"
               imageName="logo-3cr.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="afssi"
               imageName="logo-afssi.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="asrc"
               imageName="logo-asrc.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="irstea"
               imageName="logo-irstea.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="simv"
               imageName="logo-simv.svg"
               cssClass="CardLogo"
             />
@@ -227,31 +222,26 @@ class Ressources extends Component {
           <div className={`row ${classes.SourcesPart}`}>
             <div className={classes.SourcesCard}>
               <div className={classes.Title}>
-                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE De LEUR PROPRES ARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF THEIR OWN PARTICIPANTS IN H2020 PROJECTS' }
+                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE DE LEUR PROPRES ARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF THEIR OWN PARTICIPANTS IN H2020 PROJECTS' }
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="inra"
               imageName="logo-inra.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="inria"
               imageName="logo-inria.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="cnrs"
               imageName="logo-cnrs.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="onera"
               imageName="logo-onera.png"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="cea"
               imageName="logo-cea.svg"
               cssClass="CardLogo"
             />
@@ -378,7 +368,7 @@ class Ressources extends Component {
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
             id="Ressource.Retraitements.Titre"
-            defaultMessage="s"
+            defaultMessage=" "
           />
         </div>
         <div className={`row ${classes.Utilisation}`}>
@@ -400,13 +390,13 @@ class Ressources extends Component {
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
             id="Ressource.Perimetre.Titre"
-            defaultMessage="s"
+            defaultMessage=" "
           />
         </div>
         <div className={classes.SourceTextenormal}>
           <FormattedHTMLMessage
             id={`Ressource.Perimetre.${ressource}`}
-            defaultMessage="s"
+            defaultMessage=" "
           />
         </div>
       </Fragment>
@@ -416,13 +406,13 @@ class Ressources extends Component {
         <div className={classes.SourceTitre}>
           <FormattedHTMLMessage
             id="Ressource.Actualisation.Titre"
-            defaultMessage="s"
+            defaultMessage=" "
           />
         </div>
         <div className={classes.SourceTextenormal}>
           <FormattedHTMLMessage
             id={`Ressource.Actualisation.${ressource}`}
-            defaultMessage="s"
+            defaultMessage=" "
           />
         </div>
       </Fragment>
@@ -453,13 +443,13 @@ class Ressources extends Component {
                 <div className={classes.SourceTitre}>
                   <FormattedHTMLMessage
                     id="Ressource.Role.Titre"
-                    defaultMessage="s"
+                    defaultMessage=" "
                   />
                 </div>
                 <div className={classes.SourceTexteGras}>
                   <FormattedHTMLMessage
                     id={`Ressource.Role.${ressource}`}
-                    defaultMessage="s"
+                    defaultMessage=" "
                   />
                 </div>
                 {/* /row */}
@@ -467,13 +457,13 @@ class Ressources extends Component {
                 <div className={classes.SourceTitre}>
                   <FormattedHTMLMessage
                     id="Ressource.Description.Titre"
-                    defaultMessage="s"
+                    defaultMessage=" "
                   />
                 </div>
                 <div className={classes.SourceTextenormal}>
                   <FormattedHTMLMessage
                     id={`Ressource.Description.${ressource}`}
-                    defaultMessage="s"
+                    defaultMessage=" "
                   />
                 </div>
                 {source}
