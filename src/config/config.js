@@ -42,3 +42,8 @@ export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
 // ecosystem
 export const GRAPH_ITEMS_LIST = ['Structure de recherche', 'Secteur privé', 'Secteur public', 'Organization internationale'];
 export const ECOSYSTEM_LIMIT = 100;
+
+// Patents
+export const EP = ['AL', 'AT', 'BA', 'BE', 'BG', 'CH', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR', 'GB', 'GR', 'HR', 'HU', 'IE', 'IS', 'IT', 'LI', 'LT', 'LU', 'LV', 'MC', 'ME', 'MK', 'MT', 'NL', 'NO', 'PL', 'PT', 'RO', 'RS', 'SE', 'SI', 'SK', 'SM', 'TR'];
+export const EA = ['AM', 'AZ', 'BY', 'KG', 'KZ', 'RU', 'TJ', 'TM'];
+export const WO = ['AE', 'AG', 'AL', 'AM', 'AO', 'AT', 'AU', 'AZ', 'BA', 'BB', 'BE', 'BF', 'BG', 'BH', 'BJ', 'BN', 'BR', 'BW', 'BY', 'BZ', 'CA', 'CF', 'CG', 'CH', 'CI', 'CL', 'CM', 'CN', 'CO', 'CR', 'CU', 'CY', 'CZ', 'DE', 'DJ', 'DK', 'DM', 'DO', 'DZ', 'EC', 'EE', 'EG', 'ES', 'FI', 'FR', 'GA', 'GB', 'GD', 'GE', 'GH', 'GM', 'GN', 'GQ', 'GR', 'GT', 'GW', 'HN', 'HR', 'HU', 'ID', 'IE', 'IL', 'IN', 'IR', 'IS', 'IT', 'JO', 'JP', 'KE', 'KG', 'KH', 'KM', 'KN', 'KP', 'KR', 'KW', 'KZ', 'LA', 'LC', 'LI', 'LK', 'LR', 'LS', 'LT', 'LU', 'LV', 'LY', 'MA', 'MC', 'MD', 'ME', 'MG', 'MK', 'ML', 'MN', 'MR', 'MT', 'MW', 'MX', 'MY', 'MZ', 'NA', 'NE', 'NG', 'NI', 'NL', 'NO', 'NZ', 'OM', 'PA', 'PE', 'PG', 'PH', 'PL', 'PT', 'QA', 'RO', 'RS', 'RU', 'RW', 'SA', 'SC', 'SD', 'SE', 'SG', 'SI', 'SK', 'SL', 'SM', 'SN', 'ST', 'SV', 'SY', 'SZ', 'TD', 'TG', 'TH', 'TJ', 'TM', 'TN', 'TR', 'TT', 'TZ', 'UA', 'UG', 'US', 'UZ', 'VC', 'VN', 'WS', 'ZA', 'ZM', 'ZW'];
