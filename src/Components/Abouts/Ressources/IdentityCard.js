@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+// import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 
 
 /* SCSS */
@@ -95,17 +95,6 @@ const IdentityCard = (props) => {
       </div>
       {webprodpart}
       {webprodwikipediapart}
-      <div className={classes.PositionButton}>
-        <ButtonToPage
-          className={classes.Button}
-          url=""
-        >
-          <FormattedHTMLMessage
-            id="Identity.Button.Tiltle"
-            defaultMessage="contentTexte"
-          />
-        </ButtonToPage>
-      </div>
     </div>
   );
 };
