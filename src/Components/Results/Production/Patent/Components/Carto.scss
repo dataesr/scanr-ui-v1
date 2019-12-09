@@ -1,7 +1,33 @@
 @import '../../../../../style.scss';
 
+.Carto {
+  border-radius: 24px;
+  background-color: white;
+  padding: 16px;
+}
 
 .MapBox {
+  border: 1px solid $scanrmiddlegreyColor;
   border-radius: 24px;
-  border: 2px solid $scanrdeepblueColor;
+}
+
+.Title {
+  color: $scanrdeepblueColor;
+  font-family: "lato";
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.SubTitle {
+  color: $scanrdeepblueColor;
+  font-style: italic;
+}
+
+.Bullet {
+  background-color: $productionbrevetsColor;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
+  display: inline-block;
 }
