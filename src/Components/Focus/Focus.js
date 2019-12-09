@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+
 
 // import Errors from '../Shared/Errors/Errors';
 // Composants
@@ -29,6 +31,9 @@ import GridMap from '../Shared/StandaloneGraphs/GridMap';
 import SimpleAggregationGraph from '../Shared/StandaloneGraphs/SimpleAggregationGraph';
 import LastFocus from '../Shared/LastFocus/LastFocus';
 import classes from './Focus.scss';
+
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 /**
  * Focus
  * Url : /focus/$id <br/>
@@ -37,6 +42,11 @@ import classes from './Focus.scss';
  * Accessible : . <br/>
  * Tests unitaires : . <br/>.
 */
+const msg = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
 const GraphTypes = {
   GridMap,
   EntityMap,
@@ -97,83 +107,85 @@ const Focus = (props) => {
   if (data) {
     const htmlList = buildFocusFromConfig(data.components, props.language);
     return (
-      <div className="d-flex flex-column h-100">
-        <ScanRMeta
-          title={getSelectKey(data, 'title', props.language, 'fr')}
-          href2="/focus"
-          href2Title="Focus"
-          href3={`/focus/${props.match.params.id}`}
-        />
-        <Header />
-        <HeaderTitle
-          language={props.language}
-          title={getSelectKey(data, 'title', props.language, 'fr')}
-          labelkey="focus"
-          url1="/"
-          url2="/focus"
-        />
-        <section className={classes.FocusSection}>
-          <div className="container d-flex flex-column pb-4">
-            <div className="py-3 px-2">
-              <Markdown>{getSelectKey(data, 'text', props.language, 'fr')}</Markdown>
-              <div className="container d-flex py-1 align-items-center">
-                <div className="flex-grow-1">
-                  {
-                    (data.tags)
-                      ? getSelectKey(
-                        data,
-                        'tags',
-                        props.language,
-                        'fr',
-                      ).map(tag => <a key={tag} href={`/recherche/all?query=${tag}`} className="pr-1">{`#${tag} `}</a>)
-                      : null
-                  }
-                </div>
-                <div className="pl-2">
-                  {
-                    (data.href)
-                      ? (
-                        <ButtonToPage
-                          className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
-                          target="_blank"
-                          url={data.href}
-                        >
-                          {(props.language === 'fr') ? 'Explorer les données du focus dans scanR' : 'Explore focus data in scanR'}
-                        </ButtonToPage>
-                      )
-                      : null
-                  }
-                </div>
-                <div className="pl-2">
-                  {
-                    (data.hrefOpendata)
-                      ? (
-                        <ButtonToPage
-                          className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
-                          target="_blank"
-                          url={data.hrefOpendata}
-                        >
-                          {(props.language === 'fr') ? 'Explorer le jeu Open Data' : 'Explore the Open Data dataset'}
-                        </ButtonToPage>
-                      )
-                      : null
-                  }
+      <IntlProvider locale={props.language} messages={msg[props.language]}>
+        <div className="d-flex flex-column h-100">
+          <ScanRMeta
+            title={getSelectKey(data, 'title', props.language, 'fr')}
+            href2="/focus"
+            href2Title="Focus"
+            href3={`/focus/${props.match.params.id}`}
+          />
+          <Header />
+          <HeaderTitle
+            language={props.language}
+            title={getSelectKey(data, 'title', props.language, 'fr')}
+            labelkey="focus"
+            url1="/"
+            url2="/focus"
+          />
+          <section className={classes.FocusSection}>
+            <div className="container d-flex flex-column pb-4">
+              <div className="py-3 px-2">
+                <Markdown>{getSelectKey(data, 'text', props.language, 'fr')}</Markdown>
+                <div className="container d-flex py-1 align-items-center">
+                  <div className="flex-grow-1">
+                    {
+                      (data.tags)
+                        ? getSelectKey(
+                          data,
+                          'tags',
+                          props.language,
+                          'fr',
+                        ).map(tag => <a key={tag} href={`/recherche/all?query=${tag}`} className="pr-1">{`#${tag} `}</a>)
+                        : null
+                    }
+                  </div>
+                  <div className="pl-2">
+                    {
+                      (data.href)
+                        ? (
+                          <ButtonToPage
+                            className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                            target="_blank"
+                            url={data.href}
+                          >
+                            <FormattedHTMLMessage id="Focus.button.explorScanr" />
+                          </ButtonToPage>
+                        )
+                        : null
+                    }
+                  </div>
+                  <div className="pl-2">
+                    {
+                      (data.hrefOpendata)
+                        ? (
+                          <ButtonToPage
+                            className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                            target="_blank"
+                            url={data.hrefOpendata}
+                          >
+                            <FormattedHTMLMessage id="Focus.button.explorOpenData" />
+                          </ButtonToPage>
+                        )
+                        : null
+                    }
+                  </div>
                 </div>
               </div>
+              {htmlList.map(elem => elem)}
             </div>
-            {htmlList.map(elem => elem)}
-          </div>
-        </section>
-        <Banner
-          language={props.language}
-          labelKey="Explore"
-          cssClass="BannerDark"
-          url={data.hrefX}
-          target="_blank"
-        />
-        <LastFocus language={props.language} />
-        <Footer />
-      </div>
+          </section>
+          <Banner
+            language={props.language}
+            labelKey="Explore"
+            cssClass="BannerDark"
+            url={data.hrefX}
+            target="_blank"
+          />
+          <LastFocus language={props.language} />
+          <Footer />
+        </div>
+      </IntlProvider>
     );
   }
   return (<div>PROBLEM</div>);

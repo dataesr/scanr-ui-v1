@@ -3,8 +3,8 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
 
 import classes from './ActiveFilterCard.scss';
 
