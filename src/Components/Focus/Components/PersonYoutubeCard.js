@@ -2,13 +2,13 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import getSelectedKey from '../../../Utils/getSelectKey';
-import highlightsFr from '../../Search/SearchResults/ResultCards/translations/highlights_fr.json';
-import highlightsEn from '../../Search/SearchResults/ResultCards/translations/highlights_en.json';
+import highlightsFr from '../../Search/Results/ResultCards/translations/highlights_fr.json';
+import highlightsEn from '../../Search/Results/ResultCards/translations/highlights_en.json';
 /* Gestion des langues */
-import messagesFr from '../../Search/SearchResults/ResultCards/translations/fr.json';
-import messagesEn from '../../Search/SearchResults/ResultCards/translations/en.json';
+import messagesFr from '../../Search/Results/ResultCards/translations/fr.json';
+import messagesEn from '../../Search/Results/ResultCards/translations/en.json';
 
-import classes from '../../Search/SearchResults/ResultCards/Cards.scss';
+import classes from '../../Search/Results/ResultCards/Cards.scss';
 
 const PersonCard = (props) => {
   const messages = {

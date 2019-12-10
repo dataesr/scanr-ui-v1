@@ -4,7 +4,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
-import PersonCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
+import PersonCard from '../../../../Search/Results/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
 import messagesFr from '../../translations/fr.json';
 import messagesEn from '../../translations/en.json';

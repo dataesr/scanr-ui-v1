@@ -1,19 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 import { GRAPH_ITEMS_LIST } from '../../../../config/config';
-/* Gestion des langues */
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
 
 import classes from './Filters.scss';
 
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const EntityFilters = (props) => {
   // A utiliser en cas de "ET"
@@ -46,8 +40,8 @@ const EntityFilters = (props) => {
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
         <Autocomplete
-          title={messages[props.language]['filterPanel.localisation']}
-          subtitle={messages[props.language]['filterPanel.subtitle']}
+          title={<FormattedHTMLMessage id="Search.Filters.localisation" />}
+          subtitle={<FormattedHTMLMessage id="Search.Filters.localisation.subtitle" />}
           placeholder=""
           language={props.language}
           onSubmit={props.multiValueFilterHandler}
@@ -56,7 +50,7 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           language={props.language}
-          title={messages[props.language]['filterPanel.sectors']}
+          title={<FormattedHTMLMessage id="Search.Filters.sectors" />}
           facets={kindFacetsSecteur.entries}
           filters={kindActiveFiltersSecteur}
           facetID="kind"
@@ -65,7 +59,7 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           language={props.language}
-          title={messages[props.language]['filterPanel.kind']}
+          title={<FormattedHTMLMessage id="Search.Filters.kind" />}
           facets={kindFacetsOrganisme.entries}
           filters={kindActiveFiltersOrganisme}
           facetID="kind"
@@ -74,7 +68,7 @@ const EntityFilters = (props) => {
         />
         <CheckBoxFilter
           language={props.language}
-          title={messages[props.language]['filterPanel.publicFunding']}
+          title={<FormattedHTMLMessage id="Search.Filters.publicFunding" />}
           facets={projectsFacets.entries}
           filters={projectsActiveFilters}
           facetID="projects.project.type"
@@ -89,11 +83,11 @@ const EntityFilters = (props) => {
           }}
         />
         <div className={classes.FilterHeaders}>
-          {messages[props.language]['filterPanel.others']}
+          {<FormattedHTMLMessage id="Search.Filters.others" />}
         </div>
         <CheckBoxFilter
           language={props.language}
-          title={messages[props.language]['filterPanel.caracteristics']}
+          title={<FormattedHTMLMessage id="Search.Filters.caracteristics" />}
           facets={caractFacets.entries}
           filters={caractActiveFilters}
           facetID="badges.label.fr"

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import SectionTitle from '../../../Shared/SectionTitle';
-import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
+import PublicationCard from '../../../../Search/Results/ResultCards/PublicationCard';
 
 import classes from './Productions.scss';
 import messagesFr from '../../translations/fr.json';

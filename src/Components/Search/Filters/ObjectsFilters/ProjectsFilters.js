@@ -1,18 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 import YearRangeSlider from '../../../Shared/YearRangeSlider/YearRangeSlider';
 import styles from '../../../../style.scss';
-/* Gestion des langues */
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const ProjectsFilters = (props) => {
   const facets = props.facets || [];
@@ -27,8 +20,8 @@ const ProjectsFilters = (props) => {
       <div className="p-2">
         <Autocomplete
           language={props.language}
-          title={messages[props.language]['filterPanel.localisation']}
-          subtitle={messages[props.language]['filterPanel.subtitle']}
+          title={<FormattedHTMLMessage id="Search.Filters.localisation" />}
+          subtitle={<FormattedHTMLMessage id="Search.Filters.localisation.subtitle" />}
           placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={geoFacets.entries}
@@ -46,7 +39,7 @@ const ProjectsFilters = (props) => {
           defaultActive
           retractable={false}
           nbItemsToShow={10}
-          title={messages[props.language]['filterPanel.FundingType']}
+          title={<FormattedHTMLMessage id="Search.Filters.fundingType" />}
           facets={typeFacets.entries}
           filters={typeActiveFilters}
           facetID="type"
@@ -63,7 +56,7 @@ const ProjectsFilters = (props) => {
           language={props.language}
           defaultActive
           retractable={false}
-          title={messages[props.language]['filterPanel.actions']}
+          title={<FormattedHTMLMessage id="Search.Filters.actions" />}
           facets={domainsFacets.entries}
           filters={typeActiveFilters}
           facetID="domains.label.default"
@@ -80,7 +73,7 @@ const ProjectsFilters = (props) => {
           data={props.sliderData}
           barColor={styles.projectsColor}
           height={60}
-          label={messages[props.language]['filterPanel.yearFilter']}
+          label={<FormattedHTMLMessage id="Search.Filters.yearFilter" />}
           min={(props.filters.year) ? props.filters.year.min : null}
           max={(props.filters.year) ? (props.filters.year.max - 1) : null}
           minBound={2000}

@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
-import SimilarCard from '../../../../Search/SearchResults/ResultCards/PersonCard';
+import SimilarCard from '../../../../Search/Results/ResultCards/PersonCard';
 import { API_PERSON_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
 import SectionTitle from '../../../Shared/SectionTitle';

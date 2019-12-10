@@ -1,16 +1,12 @@
 import React, { Component, Suspense, lazy } from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
-import classes from './SearchResults.scss';
+import classes from './Results.scss';
 
 const Pagination = lazy(() => import('./Pagination/Pagination'));
-
 const EntityGraphsWrapper = lazy(() => import('./ResultGraphs/EntityGraphsWrapper'));
 const ProjectsGraphsWrapper = lazy(() => import('./ResultGraphs/ProjectsGraphsWrapper'));
 const PublicationsGraphsWrapper = lazy(() => import('./ResultGraphs/PublicationsGraphsWrapper'));
@@ -59,33 +55,43 @@ class SearchResults extends Component {
     switch (this.props.api) {
       case 'structures': return (
         <React.Fragment>
-          <option key="alphabetical" value="label.fr__ASC">
-            {(this.props.language === 'fr') ? 'Nom' : 'Name'}
-          </option>
+          <FormattedHTMLMessage id="Search.Results.sort.name">
+            { option => (
+              <option key="alphabetical" value="label.fr__ASC">{option}</option>
+            )}
+          </FormattedHTMLMessage>
         </React.Fragment>
       );
       case 'persons': return (
         <React.Fragment>
-          <option key="alphabetical" value="lastName__ASC">
-            {(this.props.language === 'fr') ? 'Nom' : 'Name'}
-          </option>
+          <FormattedHTMLMessage id="Search.Results.sort.name">
+            { option => (
+              <option key="alphabetical" value="lastName__ASC">{option}</option>
+            )}
+          </FormattedHTMLMessage>
         </React.Fragment>
       );
       case 'projects': return (
         <React.Fragment>
-          <option key="date" value="startDate__DESC">
-            {(this.props.language === 'fr') ? 'Date de début' : 'Start Date'}
-          </option>
-          <option key="budget" value="budgetTotal__DESC">
-            {(this.props.language === 'fr') ? 'Budget' : 'Budget'}
-          </option>
+          <FormattedHTMLMessage id="Search.Results.sort.startDate">
+            { option => (
+              <option key="date" value="startDate__DESC">{option}</option>
+            )}
+          </FormattedHTMLMessage>
+          <FormattedHTMLMessage id="Search.Results.sort.budget">
+            { option => (
+              <option key="budget" value="budgetTotal__DESC">{option}</option>
+            )}
+          </FormattedHTMLMessage>
         </React.Fragment>
       );
       case 'publications': return (
         <React.Fragment>
-          <option key="alphabetical" value="publicationDate__DESC">
-            {(this.props.language === 'fr') ? 'Récence' : 'Most recent'}
-          </option>
+          <FormattedHTMLMessage id="Search.Results.sort.recency">
+            { option => (
+              <option key="alphabetical" value="publicationDate__DESC">{option}</option>
+            )}
+          </FormattedHTMLMessage>
         </React.Fragment>
       );
       default: return null;
@@ -139,62 +145,58 @@ class SearchResults extends Component {
     if (this.props.isLoading) {
       return <GraphSpinner />;
     }
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
     return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <section className="d-flex flex-column">
-          <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
-            <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
-              <div className="mr-auto">
-                <FormattedHTMLMessage
-                  id={`searchResults.${this.props.api}.results`}
-                  values={{ count: this.props.data.total }}
-                />
-              </div>
-              <div className="px-2">
-                <select
-                  name="type"
-                  id="type-select"
-                  className={`form-control ${classes.Select}`}
-                  onChange={e => this.props.handleSortResults(e)}
-                  defaultValue={activeSortValue}
-                >
-                  <option key="score" value="score">
-                    {(this.props.language === 'fr') ? 'Pertinence' : 'Relevance'}
-                  </option>
-                  {this.renderSortOptions()}
-                </select>
-              </div>
-              <div>
-                <FormattedHTMLMessage id="searchResults.download">
-                  { download => (
-                    <button
-                      onClick={this.props.handleExports}
-                      type="button"
-                      id="exportbutton"
-                      title={download}
-                      className={`btn ${classes.btn_dark} ${classes.SquareButton}`}
-                    >
-                      <i className="fas fa-download" />
-                    </button>
+      <section className="d-flex flex-column">
+        <div className={`mb-2 ${classes.ActiveFiltersContainer}`} style={{ backgroundColor: classes[bgColor] }}>
+          <div className={`px-3 py-2 d-flex align-items-center ${classes.ResultHeader}`}>
+            <div className="mr-auto">
+              <FormattedHTMLMessage
+                id={`Search.Results.${this.props.api}.results`}
+                values={{ count: this.props.data.total }}
+              />
+            </div>
+            <div className="px-2">
+              <select
+                name="type"
+                id="type-select"
+                className={`form-control ${classes.Select}`}
+                onChange={e => this.props.handleSortResults(e)}
+                defaultValue={activeSortValue}
+              >
+                <FormattedHTMLMessage id="Search.Results.sort.relevance">
+                  { option => (
+                    <option key="score" value="score">{option}</option>
                   )}
                 </FormattedHTMLMessage>
-              </div>
+                {this.renderSortOptions()}
+              </select>
+            </div>
+            <div>
+              <FormattedHTMLMessage id="Search.Results.download">
+                { download => (
+                  <button
+                    onClick={this.props.handleExports}
+                    type="button"
+                    id="exportbutton"
+                    title={download}
+                    className={`btn ${classes.btn_dark} ${classes.SquareButton}`}
+                  >
+                    <i className="fas fa-download" />
+                  </button>
+                )}
+              </FormattedHTMLMessage>
             </div>
           </div>
-          <div className="d-flex flex-wrap justify-content-between">
-            <Suspense fallback={null}>
-              {this.renderResults()}
-            </Suspense>
-          </div>
+        </div>
+        <div className="d-flex flex-wrap justify-content-between">
           <Suspense fallback={null}>
-            {this.renderPagination()}
+            {this.renderResults()}
           </Suspense>
-        </section>
-      </IntlProvider>
+        </div>
+        <Suspense fallback={null}>
+          {this.renderPagination()}
+        </Suspense>
+      </section>
     );
   }
 }
