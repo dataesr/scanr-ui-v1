@@ -1,5 +1,21 @@
 @import '../../../style.scss';
 
+.ribbon{
+  z-index: 100;
+  width: 200px;
+  // background-color:$scanrelectricblueColor;
+  background-color:$warningColor;
+  position: absolute;
+  top: 15px;
+  left: -70px;
+  text-align: center;
+  line-height: 25px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
 .Header {
   background-color: #fff;
   box-shadow: 0px 15px 15px 0px rgba(33, 72, 103, 0.5) !important;
