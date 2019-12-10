@@ -45,7 +45,7 @@ const Similars = (props) => {
   if (isError) {
     return (<Errors />);
   }
-  if (data.length > 0) {
+  if (data.length) {
     return (
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <section className="container-fluid py-3" style={sectionStyle} id="SimilarProductions">
