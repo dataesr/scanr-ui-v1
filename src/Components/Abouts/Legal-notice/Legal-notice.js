@@ -331,38 +331,41 @@ const LegalNoticePage = props => (
           <div className="row">
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
           </div>
         </div>
       </section>
 
-      <Banner
+      { /* <Banner
         language={props.language}
         labelKey="Appear"
         cssClass="BannerDark"
         url=""
-      />
+      /> */ }
 
       <Footer language={props.language} />
 
