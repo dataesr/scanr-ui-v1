@@ -86,7 +86,7 @@ const FAQ = (props) => {
               schema="scanrdeepblueColorCards"
               title="Discover.TalkAboutScanr"
               url="/medias"
-              lib_button="Voir"
+              lib_button="Discover"
             />
             <CardWithButton
               language={context.language}
@@ -94,7 +94,7 @@ const FAQ = (props) => {
               schema="scanrdeepblueColorCards"
               title="Discover.Sources"
               url="/ressources"
-              lib_button="Voir"
+              lib_button="Discover"
             />
             <CardWithButton
               language={context.language}
@@ -102,7 +102,7 @@ const FAQ = (props) => {
               schema="scanrdeepblueColorCards"
               title="Discover.Team"
               url="/l-equipe-et-son-projet"
-              lib_button="Voir"
+              lib_button="Discover"
             />
           </div>
         </div>
