@@ -42,7 +42,7 @@ class Thesis extends Component {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     const request = {
       pageSize: 500,
-      sourceFields: ['title', 'authors', 'oaEvidence', 'id', 'publicationDate', 'isOa'],
+      sourceFields: ['title', 'authors', 'oaEvidence', 'id', 'publicationDate', 'isOa', 'productionType'],
       filters: {
         productionType: {
           type: 'MultiValueSearchFilter',
