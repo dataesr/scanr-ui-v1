@@ -5,6 +5,8 @@ import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 import EntityCard from '../../../../Shared/Ui/EntityCard/EntityCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
+import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
+import CounterListCard from '../../../../Shared/Ui/CounterListCard/CounterListCard';
 
 import BackgroundAuthors from '../../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
 import classes from '../Patents.scss';
@@ -43,9 +45,8 @@ const PatentParticipants = (props) => {
     const [label, country] = auth.fullName.split('__');
     return { label, country: countries[props.language][country] };
   });
-  // const nbDeposants = deposants.length;
-  // const nonIdentifiedDeposants = deposants.filter(dep => (!dep.affiliations || dep.affiliations.length === 0));
 
+  const nbInventorsToShow = 4;
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -68,16 +69,49 @@ const PatentParticipants = (props) => {
 
               <div className="row">
                 {
-                  (inventors && inventors.length > 0)
-                    ? inventors.map(inventor => (
+                  (inventors.length > 1)
+                    ? (
                       <div className={`col-md-6 ${classes.CardContainer}`}>
-                        <PersonCard
-                          data={inventor}
-                          showTitle={false}
+                        <CounterCard
+                          counter={inventors.length}
+                          title=""
+                          label={messages[props.language]['Patents.inventors.inventor']}
+                          color="Persons"
                         />
                       </div>
-                    ))
-                    : null
+                    ) : null
+                }
+                {
+                  inventors.map((inventor, index) => {
+                    if (index < nbInventorsToShow) {
+                      return (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <PersonCard
+                            data={inventor}
+                            showTitle={false}
+                          />
+                        </div>
+                      );
+                    }
+                    return null;
+                  })
+                }
+                {
+                  (inventors.length > nbInventorsToShow)
+                    ? (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <CounterListCard
+                          language={props.language}
+                          data={inventors}
+                          objectType="author"
+                          limit={nbInventorsToShow}
+                          roleKey="inventor"
+                          labelKey="other-inventors"
+                          modalTitleKey="inventors-modal-title"
+                          color="Default"
+                        />
+                      </div>
+                    ) : null
                 }
               </div>
 
@@ -90,16 +124,50 @@ const PatentParticipants = (props) => {
               </div>
               <div className="row">
                 {
-                  (deposants && deposants.length > 0)
-                    ? deposants.map(dep => (
+                  (deposants.length > 1)
+                    ? (
                       <div className={`col-md-6 ${classes.CardContainer}`}>
-                        <EntityCard
-                          data={dep}
-                          showTitle={false}
+                        <CounterCard
+                          counter={deposants.length}
+                          title=""
+                          label={messages[props.language]['Patents.inventors.applicant']}
+                          color="Entity"
                         />
                       </div>
-                    ))
-                    : null
+                    ) : null
+                }
+                {
+                  deposants.map((dep, index) => {
+                    if (index < nbInventorsToShow) {
+                      return (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <EntityCard
+                            data={dep}
+                            showTitle={false}
+                          />
+                        </div>
+                      );
+                    }
+                    return null;
+                  })
+                }
+                {
+                  (deposants.length > nbInventorsToShow)
+                    ? (
+                      <div className={`col-md-6 ${classes.CardContainer}`}>
+                        <CounterListCard
+                          language={props.language}
+                          data={deposants}
+                          objectType="author"
+                          limit={nbInventorsToShow}
+                          roleKey="applicant"
+                          labelKey="other-applicants"
+                          modalTitleKey="applicants-modal-title"
+                          color="Default"
+                          isEntity
+                        />
+                      </div>
+                    ) : null
                 }
               </div>
             </div>
