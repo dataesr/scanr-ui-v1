@@ -8,7 +8,7 @@ import { API_PERSONS_SEARCH_END_POINT } from '../../../../../../config/config';
 import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import NbPersonsCard from './nbPersonsCard';
 import GenderGraphCard from './genderGraphCard';
-import PersonCard from '../../../../../Search/SearchResults/ResultCards/PersonCard';
+import PersonCard from '../../../../../Search/Results/ResultCards/PersonCard';
 
 import classes from '../Team.scss';
 

@@ -13,7 +13,7 @@ import OaLink from '../Shared/Oa/OaLink';
 import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
-import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
+import AffiliationCard from '../../../Search/Results/ResultCards/EntityCard';
 import TagCard from '../../../Shared/Ui/TagCard/TagCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 import YoutubeCard from '../../../Shared/Ui/YoutubeCard/YoutubeCard';

@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import { IntlProvider } from 'react-intl';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import ReactPiwik from 'react-piwik';
 
-import classes from './Search.scss';
 import { API_BASE_URL } from '../../config/config';
-
-import SearchPanel from './SearchPanel/SearchPanel';
-import SearchResults from './SearchResults/SearchResults';
-import AllResults from './SearchResults/AllResults';
-import FilterPanel from './Filters/Filters';
-import SearchObjectTab from './SearchObjectTab/SearchObjectTab';
 import ExportingSpinner from '../Shared/LoadingSpinners/ExportingSpinner';
+
+import LocalHeader from './Header/Header';
+import Results from './Results/Results';
+import AllResults from './Results/AllResults';
+import Filters from './Filters/Filters';
+import Nav from './Nav/Nav';
+
+import classes from './Search.scss';
+
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
 import {
   PersonsAggregations,
@@ -24,6 +29,11 @@ import {
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 class SearchPage extends Component {
   constructor(props) {
@@ -157,6 +167,37 @@ class SearchPage extends Component {
     }
     const url = `${this.props.location.pathname}?${queryString.stringify(request)}`;
     return url;
+  }
+
+  // *******************************************************************
+  // Tracker MATOMO
+  // *******************************************************************
+  sendTracking = (request) => {
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    const category = this.props.location.pathname.split('/')[2];
+    const query = request.query;
+    let nbResults = this.state.data.total;
+    if (category === 'all') {
+      nbResults = this.state.preview.all;
+    }
+    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
+    if (request.filters) {
+      const currentFilters = request.filters;
+      const filters = [];
+      Object.keys(currentFilters).forEach((f) => {
+        let filterValue = '';
+        if (currentFilters[f].values) {
+          filterValue = currentFilters[f].values.join(';');
+        } else if (currentFilters[f].min && currentFilters[f].max) {
+          filterValue = ((currentFilters[f].min).toString()).concat('_TO_', (currentFilters[f].max).toString());
+        }
+        const filter = f.concat('__VAL__', filterValue);
+        filters.push(filter);
+      });
+      ReactPiwik.push(['setCustomVariable', 1, 'SearchFilter', filters.join('__FILTERS__'), 'page']);
+      ReactPiwik.push(['trackPageView']);
+    }
+    ReactPiwik.push(['trackSiteSearch', query, category, nbResults]);
   }
 
   // *******************************************************************
@@ -450,7 +491,7 @@ class SearchPage extends Component {
         <div className="container">
           <div className="row d-flex flex-wrap justify-content-between">
             <div className={classes.filters}>
-              <FilterPanel
+              <Filters
                 language={this.props.language}
                 facets={this.state.data.facets}
                 generalFacets={this.state.preview[this.state.api].facets}
@@ -462,7 +503,7 @@ class SearchPage extends Component {
               />
             </div>
             <div className={classes.results}>
-              <SearchResults
+              <Results
                 {...this.props}
                 language={this.props.language}
                 data={this.state.data}
@@ -513,64 +554,38 @@ class SearchPage extends Component {
     );
   }
 
-  sendTracking = (request) => {
-    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
-    const category = this.props.location.pathname.split('/')[2];
-    const query = request.query;
-    let nbResults = this.state.data.total;
-    if (category === 'all') {
-      nbResults = this.state.preview.all;
-    }
-    ReactPiwik.push(['setCustomUrl', this.props.match.url]);
-    if (request.filters) {
-      const currentFilters = request.filters;
-      const filters = [];
-      Object.keys(currentFilters).forEach((f) => {
-        let filterValue = '';
-        if (currentFilters[f].values) {
-          filterValue = currentFilters[f].values.join(';');
-        } else if (currentFilters[f].min && currentFilters[f].max) {
-          filterValue = ((currentFilters[f].min).toString()).concat('_TO_', (currentFilters[f].max).toString());
-        }
-        const filter = f.concat('__VAL__', filterValue);
-        filters.push(filter);
-      });
-      ReactPiwik.push(['setCustomVariable', 1, 'SearchFilter', filters.join('__FILTERS__'), 'page']);
-      ReactPiwik.push(['trackPageView']);
-    }
-    ReactPiwik.push(['trackSiteSearch', query, category, nbResults]);
-  }
-
   // *******************************************************************
   // RENDER METHOD
   // *******************************************************************
   render() {
     return (
-      <div className="d-flex flex-column h-100">
-        <ExportingSpinner visible={this.state.isExporting} />
-        <Header />
-        <SearchPanel
-          language={this.props.language}
-          api={this.state.api}
-          currentQueryText={this.state.currentQueryText}
-          queryTextChangeHandler={this.queryTextChangeHandler}
-          apiChangeHandler={this.apiChangeHandler}
-          submitResearch={this.submitResearch}
-        />
-        <section className={`flex-grow-1 ${classes.Search}`}>
-          <SearchObjectTab
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <div className="d-flex flex-column h-100">
+          <ExportingSpinner visible={this.state.isExporting} />
+          <Header />
+          <LocalHeader
             language={this.props.language}
             api={this.state.api}
+            currentQueryText={this.state.currentQueryText}
+            queryTextChangeHandler={this.queryTextChangeHandler}
             apiChangeHandler={this.apiChangeHandler}
-            view={this.state.view}
-            viewChangeHandler={this.viewChangeHandler}
-            preview={this.state.preview}
+            submitResearch={this.submitResearch}
           />
-          {this.WhichResults()}
-        </section>
-        {this.WhichBanner()}
-        <Footer language={this.props.language} />
-      </div>
+          <section className={`flex-grow-1 ${classes.Search}`}>
+            <Nav
+              language={this.props.language}
+              api={this.state.api}
+              apiChangeHandler={this.apiChangeHandler}
+              view={this.state.view}
+              viewChangeHandler={this.viewChangeHandler}
+              preview={this.state.preview}
+            />
+            {this.WhichResults()}
+          </section>
+          {this.WhichBanner()}
+          <Footer language={this.props.language} />
+        </div>
+      </IntlProvider>
     );
   }
 }

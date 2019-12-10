@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import { API_STRUCTURES_SEARCH_END_POINT } from '../../../config/config';
-import EntityCard from '../../Search/SearchResults/ResultCards/EntityCard';
+import EntityCard from '../../Search/Results/ResultCards/EntityCard';
 import transformRequest from '../../../Utils/transformRequest';
 import classes from './GraphCard.scss';
 import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';

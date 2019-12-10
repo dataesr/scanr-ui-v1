@@ -5,7 +5,7 @@ import Background from '../../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import useLikeApi from '../../../../../Hooks/useLikeApi';
 import classes from './Similars.scss';
 import SectionTitle from '../../../Shared/SectionTitle';
-import ProductionCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
+import ProductionCard from '../../../../Search/Results/ResultCards/PublicationCard';
 import SectionLoader from '../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../Shared/Errors/Errors';
 
