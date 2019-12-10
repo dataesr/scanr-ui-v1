@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
 import Backgroundblanc from '../../Shared/images/poudre-bleu_Fblanc-A.jpg';
@@ -253,6 +253,7 @@ class Ressources extends Component {
           <div className="row">
             <CardWithButton
               language={this.props.language}
+              messages={messages}
               title="Discover.TalkAboutScanr"
               url="./medias"
               lib_button="Découvrir"
@@ -261,6 +262,7 @@ class Ressources extends Component {
             />
             <CardWithButton
               language={this.props.language}
+              messages={messages}
               title="Discover.Opendata"
               url="./opendata"
               lib_button="Découvrir"
@@ -269,6 +271,7 @@ class Ressources extends Component {
             />
             <CardWithButton
               language={this.props.language}
+              messages={messages}
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
               lib_button="Découvrir"
@@ -278,11 +281,6 @@ class Ressources extends Component {
           </div>
         </div>
       </section>
-      <Banner
-        language={this.props.language}
-        labelKey="Appear"
-        cssClass="BannerDark"
-      />
       <Footer language={this.props.language} />
     </div>
   )
@@ -482,36 +480,31 @@ class Ressources extends Component {
             <div className="row">
               <CardWithButton
                 language={this.props.language}
-                title="Discover.Github"
-                url=""
-                lib_button="Découvrir"
+                title="Discover.FAQ"
+                url="/faq"
+                lib_button="Voir"
                 position="CardCenter"
-                schema="card_lightdark"
+                schema="card_dark"
               />
               <CardWithButton
                 language={this.props.language}
                 title="Discover.Opendata"
-                url="../opendata"
+                url="/opendata"
                 lib_button="Découvrir"
                 position="CardCenter"
-                schema="card_lightdark"
+                schema="card_dark"
               />
               <CardWithButton
                 language={this.props.language}
                 title="Discover.Team"
-                url="../l-equipe-et-son-projet"
+                url="/l-equipe-et-son-projet"
                 lib_button="Découvrir"
                 position="CardCenter"
-                schema="card_lightdark"
+                schema="card_dark"
               />
             </div>
           </div>
         </section>
-        <Banner
-          language={this.props.language}
-          labelKey="Appear"
-          cssClass="BannerDark"
-        />
         <Footer language={this.props.language} />
       </div>
     );
