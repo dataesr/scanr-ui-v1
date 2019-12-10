@@ -4,17 +4,8 @@ import PropTypes from 'prop-types';
 
 import ButtonToPage from '../Ui/Buttons/ButtonToPage2';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
 /* SCSS */
 import classes from './CardWithButton.scss';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const CardWithButton = (props) => {
   let bgColor = '';
@@ -26,7 +17,7 @@ const CardWithButton = (props) => {
     position = classes[`${props.position}`];
   }
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
+    <IntlProvider locale={props.language} messages={props.messages[props.language]}>
       <div className="col-lg" style={{ padding: '0px' }}>
         <div className={` d-flex flex-column h-100 ${classes.CardWithButton} ${bgColor} ${position}`}>
           <div className={classes.Title}>
@@ -58,6 +49,7 @@ export default CardWithButton;
 
 CardWithButton.propTypes = {
   language: PropTypes.string.isRequired,
+  messages: PropTypes.object.isRequired,
   schema: PropTypes.string,
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
