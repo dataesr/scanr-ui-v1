@@ -1,25 +1,13 @@
-import React, { Fragment } from 'react';
-import { IntlProvider, FormattedMessage } from 'react-intl';
+import React from 'react';
+import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
-
-import classes from './SearchPanel.scss';
+import classes from './Header.scss';
 
 const SearchPanel = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
-  // const bgUrl = `./img/poudre-header-home-${props.api}.jpg`;
-  // const headerPosition = (props.isFull) ? 'relative' : 'fixed';
-  const headerPosition = 'fixed';
   const sectionStyle = {
-    // backgroundImage: `url(${bgUrl})`,
     backgroundSize: '35%',
-    position: headerPosition,
+    position: 'fixed',
     width: '100vw',
     zIndex: '1001',
   };
@@ -28,7 +16,7 @@ const SearchPanel = (props) => {
     <form onSubmit={props.submitResearch}>
       <div className="row d-flex flex-nowrap align-items-end my-2">
         <div className="flex-grow-1">
-          <FormattedMessage id="Search.PlaceHolder" defaultMessage="Search.PlaceHolder">
+          <FormattedMessage id="Search.Header.PlaceHolder" defaultMessage="Search.Header.PlaceHolder">
             { placeholder => (
               <input
                 type="text"
@@ -47,7 +35,7 @@ const SearchPanel = (props) => {
             className={`form-control ${classes.Select}`}
             onChange={props.apiChangeHandler}
           >
-            <FormattedMessage id="Search.All" defaultMessage="Search.All">
+            <FormattedMessage id="Search.Global.All" defaultMessage="Search.Global.All">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -58,7 +46,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Entities" defaultMessage="Search.Entities">
+            <FormattedMessage id="Search.Global.Entities" defaultMessage="Search.Global.Entities">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -69,7 +57,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Persons" defaultMessage="Search.Persons">
+            <FormattedMessage id="Search.Global.Persons" defaultMessage="Search.Global.Persons">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -80,7 +68,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Projects" defaultMessage="Search.Projects">
+            <FormattedMessage id="Search.Global.Projects" defaultMessage="Search.Global.Projects">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -91,7 +79,7 @@ const SearchPanel = (props) => {
                 </option>
               )}
             </FormattedMessage>
-            <FormattedMessage id="Search.Publications" defaultMessage="Search.Publications">
+            <FormattedMessage id="Search.Global.Publications" defaultMessage="Search.Global.Publications">
               { option => (
                 <option
                   className={classes.btn_dark}
@@ -116,36 +104,25 @@ const SearchPanel = (props) => {
     </form>
   );
 
-  const renderMini = (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section style={sectionStyle} className={`animated slideInDown faster ${classes.SearchBar}`}>
-        <div className="container pt-3">
-          <div className="row">
-            <div className="col-md">
-              {renderForm}
-            </div>
+  return (
+    <section style={sectionStyle} className={`animated slideInDown faster ${classes.SearchBar}`}>
+      <div className="container pt-3">
+        <div className="row">
+          <div className="col-md">
+            {renderForm}
           </div>
         </div>
-      </section>
-    </IntlProvider>
+      </div>
+    </section>
   );
-
-  // const content = props.isFull ? renderFull : renderMini;
-
-  return (<Fragment>{renderMini}</Fragment>);
 };
 
 export default SearchPanel;
 
 SearchPanel.propTypes = {
-  language: PropTypes.string.isRequired,
   currentQueryText: PropTypes.string,
   api: PropTypes.string,
   queryTextChangeHandler: PropTypes.func,
   apiChangeHandler: PropTypes.func,
   submitResearch: PropTypes.func,
-  // isFull: PropTypes.bool,
 };
-// SearchPanel.defaultProps = {
-//   isFull: true,
-// };

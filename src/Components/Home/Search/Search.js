@@ -1,14 +1,10 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider, FormattedMessage, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
-import { suggestions } from '../CurrentThemesAndSuggestions';
+import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
 import classes from './Search.scss';
 
@@ -20,10 +16,6 @@ import {
   PUBLICATION_COLOR,
 } from '../../../config/config';
 
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * Search
@@ -44,12 +36,19 @@ class Search extends Component {
     <form onSubmit={this.submitResearch}>
       <div className="d-flex flex-nowrap mt-3">
         <div className="flex-grow-1 p-0">
-          <FormattedMessage id="Search.PlaceHolder">
-            { placeholder => <input type="text" className={`${classes.inputBar} form-control`} id="query" placeholder={placeholder} /> }
-          </FormattedMessage>
+          <FormattedHTMLMessage id="Home.Search.placeholder">
+            { placeholder => (
+              <input
+                type="text"
+                className={`${classes.inputBar} form-control`}
+                id="query"
+                placeholder={placeholder}
+              />
+            )}
+          </FormattedHTMLMessage>
         </div>
         <div className="pl-1">
-          <FormattedMessage id="Search.LaunchNew">
+          <FormattedHTMLMessage id="Home.Search.launchNew">
             { launch => (
               <button
                 type="submit"
@@ -59,7 +58,7 @@ class Search extends Component {
                 <i className="fas fa-search" aria-hidden />
               </button>
             )}
-          </FormattedMessage>
+          </FormattedHTMLMessage>
         </div>
       </div>
     </form>
@@ -77,47 +76,45 @@ class Search extends Component {
     };
 
     return (
-      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
-          <div className="container">
-            <FormattedMessage id="Search.Logo.aria">
-              { label => (
-                <h1 className={classes.Logo} aria-label={label}>
-                  <LogoScanrWhiteSVG fill={color} width="280px" />
-                </h1>
-              )}
-            </FormattedMessage>
+      <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
+        <div className="container">
+          <FormattedHTMLMessage id="Home.Search.logo.aria">
+            { label => (
+              <h1 className={classes.Logo} aria-label={label}>
+                <LogoScanrWhiteSVG fill={color} width="280px" />
+              </h1>
+            )}
+          </FormattedHTMLMessage>
 
-            {this.renderForm()}
-            <div className={`pt-1 pl-1 ${classes.Suggest}`}>
-              <FormattedHTMLMessage id="Search.Suggest" defaultMessage="Search.Suggest" />
-              <ul>
-                {
-                  this.props.suggests.map(suggest => (
-                    <li>
-                      <a href={`recherche/all?query=${suggest.query}`}>
-                        {(this.props.language === 'fr') ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>)
+          {this.renderForm()}
+          <div className={`pt-1 pl-1 ${classes.Suggest}`}>
+            <FormattedHTMLMessage id="Home.Search.suggest" />
+            <ul>
+              {
+                suggestions.map(suggest => (
+                  <li>
+                    <a href={`recherche/all?query=${suggest.query}`}>
+                      {
+                        (this.props.language === 'fr')
+                          ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>)
                           : (<ButtonMiniDarkToSearch key={suggest.labelEn}>{suggest.labelEn}</ButtonMiniDarkToSearch>)}
-                      </a>
-                    </li>
-                  ))
-                  }
-              </ul>
-            </div>
+                    </a>
+                  </li>
+                ))
+                }
+            </ul>
           </div>
-        </section>
-      </IntlProvider>
+        </div>
+      </section>
     );
   }
 
   renderMini = () => (
-    <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-      <section className={`animated slideInDown faster ${classes.SearchMini}`}>
-        <div className="container pb-3">
-          {this.renderForm()}
-        </div>
-      </section>
-    </IntlProvider>
+    <section className={`animated slideInDown faster ${classes.SearchMini}`}>
+      <div className="container pb-3">
+        {this.renderForm()}
+      </div>
+    </section>
   );
 
   render() {
@@ -137,9 +134,4 @@ Search.propTypes = {
   history: PropTypes.object.isRequired,
   language: PropTypes.string.isRequired,
   isFull: PropTypes.bool,
-  suggests: PropTypes.array,
-};
-Search.defaultProps = {
-  isFull: true,
-  suggests: suggestions,
 };

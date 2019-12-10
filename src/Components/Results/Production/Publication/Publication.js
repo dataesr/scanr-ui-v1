@@ -15,7 +15,7 @@ import PersonCard from '../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../Shared/Ui/CounterListCard/CounterListCard';
 
-import AffiliationCard from '../../../Search/SearchResults/ResultCards/EntityCard';
+import AffiliationCard from '../../../Search/Results/ResultCards/EntityCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';

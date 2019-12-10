@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 
-import PublicationCard from '../../../../Search/SearchResults/ResultCards/PublicationCard';
+import PublicationCard from '../../../../Search/Results/ResultCards/PublicationCard';
 import Background from '../../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
 import SectionTitle from '../../../Shared/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';

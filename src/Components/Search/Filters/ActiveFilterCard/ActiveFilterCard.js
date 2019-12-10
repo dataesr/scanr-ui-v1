@@ -1,18 +1,11 @@
 import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-/* Gestion des langues */
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
 
 import classes from './ActiveFilterCard.scss';
 
 const ActiveFilterCard = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
   const filters = (props.filters) ? props.filters : {};
   let count = 0;
   const filteredFilters = {};
@@ -56,29 +49,26 @@ const ActiveFilterCard = (props) => {
     return null;
   };
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`p-3 mb-2 ${classes.ActiveFiltersContainer}`}>
-        <div className={`d-flex flex-nowrap align-items-center ${classes.FilterHeaders}`}>
-          <FormattedHTMLMessage id="filterPanel.activeFilters" defaultMessage="filterPanel.activeFilters" />
-          <div className="pl-2">{` - ${count}`}</div>
-          <button
-            type="button"
-            onClick={() => props.activateFilters(!props.isActive)}
-            className={`ml-auto mr-2 ${classes.ActivateFiltersBtn} ${classes[(props.isMobile) ? 'Visible' : 'Hidden']}`}
-          >
-            <i className={`fas fa-angle-${(props.isActive) ? 'down' : 'up'}`} />
-          </button>
-        </div>
-        {shouldPrintActiveFilters(count)}
+    <div className={`p-3 mb-2 ${classes.ActiveFiltersContainer}`}>
+      <div className={`d-flex flex-nowrap align-items-center ${classes.FilterHeaders}`}>
+        <FormattedHTMLMessage id="Search.Filters.activeFilters" />
+        <div className="pl-2">{` - ${count}`}</div>
+        <button
+          type="button"
+          onClick={() => props.activateFilters(!props.isActive)}
+          className={`ml-auto mr-2 ${classes.ActivateFiltersBtn} ${classes[(props.isMobile) ? 'Visible' : 'Hidden']}`}
+        >
+          <i className={`fas fa-angle-${(props.isActive) ? 'down' : 'up'}`} />
+        </button>
       </div>
-    </IntlProvider>
+      {shouldPrintActiveFilters(count)}
+    </div>
   );
 };
 
 export default ActiveFilterCard;
 
 ActiveFilterCard.propTypes = {
-  language: PropTypes.string.isRequired,
   multiValueFilterHandler: PropTypes.func,
   filters: PropTypes.object,
   isActive: PropTypes.bool.isRequired,

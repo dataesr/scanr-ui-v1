@@ -116,28 +116,3 @@ EntityCard.propTypes = {
   cardColor: PropTypes.string,
   small: PropTypes.bool,
 };
-
-
-// <div className={`pt-2 pr-3 pl-4 pb-4 d-none d-lg-flex align-items-center ${classes.CardFooter}`}>
-//   <div className={classes.Icons}>
-//     <i aria-hidden="true" className="fas fa-question" />
-//   </div>
-//   <div className="col-6">
-//     <u><FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" /></u>
-//   </div>
-//   <div className="ml-auto">
-//     <a href={`entite/${props.data.id}`}>
-//       <div className="container">
-//         <div className={`row d-flex align-items-center ${classes.ButtonToPage}`}>
-//           <div className={`col float-left ${classes.Text}`}>
-//             <FormattedHTMLMessage id="resultCard.toPage" defaultMessage="resultCard.toPage" />
-//           </div>
-//           <div className={`col float-right ${classes.Text}`}>
-//             <i aria-hidden="true" className="fas fa-chevron-right" />
-//           </div>
-//         </div>
-//       </div>
-//     </a>
-//   </div>
-// </div>
-//
