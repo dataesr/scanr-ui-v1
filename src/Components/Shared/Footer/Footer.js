@@ -81,14 +81,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <FormattedHTMLMessage
                     id="Footer.link.contribute"
                     defaultMessage="Footer.link.contribute"
                   />
-                </li>
+                </li> */}
                 <li>
-                  <a href="https://github.com/jerem1508/scanr-v2-demo" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/MinistereSupRecherche" target="_blank" rel="noopener noreferrer">
                     <FormattedHTMLMessage
                       id="Footer.link.gitHub"
                       defaultMessage="Footer.link.gitHub"
@@ -99,12 +99,12 @@ const Footer = () => {
             </div>
             <div className={`col-md ${classes.Col}`}>
               <ul>
-                <li>
+                {/* <li>
                   <FormattedHTMLMessage
                     id="Footer.link.accessibility"
                     defaultMessage="Footer.link.accessibility"
                   />
-                </li>
+                </li> */}
                 <li>
                   <a href="/faq">
                     <FormattedHTMLMessage
@@ -141,14 +141,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/tutoriels">
                     <FormattedHTMLMessage
                       id="Footer.link.tutorial"
                       defaultMessage="Footer.link.tutorial"
                     />
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href="/l-equipe-et-son-projet">
                     <FormattedHTMLMessage
@@ -157,25 +157,25 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                <li>
+                {/* <li>
                   <a href="/contact">
                     <FormattedHTMLMessage
                       id="Footer.link.contact"
                       defaultMessage="Footer.link.contact"
                     />
                   </a>
-                </li>
+                </li> */}
               </ul>
             </div>
             <div className={`col-md ${classes.Col}`}>
-              <div>
+              { /* <div>
                 <a href="#">
                   <FormattedHTMLMessage
                     id="Footer.link.ourBlog"
                     defaultMessage="Footer.link.ourBlog"
                   />
                 </a>
-              </div>
+              </div> */}
               <div className={classes.SocialNetworks}>
                 <FormattedHTMLMessage
                   id="Footer.string.followUs"
@@ -184,7 +184,7 @@ const Footer = () => {
               </div>
               <ul className={classes.SocialNetworkItems}>
                 <li className={classes.SocialNetworkItem}>
-                  <a href="https://twitter.com/ScanrM"><i className="fab fa-twitter" /></a>
+                  <a href="https://twitter.com/ScanrM" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter" /></a>
                 </li>
               </ul>
             </div>
