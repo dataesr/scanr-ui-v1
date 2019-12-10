@@ -65,24 +65,27 @@ const TeamAndProjectPage = props => (
             <div className="col-lg-3">
               <CardToPage
                 cssClass="card_light"
-                labelKey="theyTalkAboutScanR"
+                labelKey="Discover.TalkAboutScanr"
                 language={props.language}
+                messages={messages}
                 url="/medias"
-                btnText="discover"
+                btnText="Discover"
               />
               <CardToPage
                 cssClass="card_light"
-                labelKey="whatAreOurSources"
+                labelKey="Discover.Sources"
                 language={props.language}
+                messages={messages}
                 url="/ressources"
-                btnText="discover"
+                btnText="Discover"
               />
               <CardToPage
                 cssClass="card_light"
-                labelKey="consultFAQ"
+                labelKey="Discover.FAQ"
                 language={props.language}
+                messages={messages}
                 url="/faq"
-                btnText="discover"
+                btnText="Discover"
               />
             </div>
           </div>
