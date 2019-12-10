@@ -4,18 +4,13 @@ import { FormattedHTMLMessage } from 'react-intl';
 
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
+import background from '../../../images/img/poudre-blanche_Fbleu-A.jpg';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
 import classes from './Search.scss';
 
 /* COULEURS */
-import {
-  ENTITY_COLOR,
-  PERSON_COLOR,
-  PROJECT_COLOR,
-  PUBLICATION_COLOR,
-} from '../../../config/config';
-
+import styles from '../../../style.scss';
 
 /**
  * Search
@@ -65,14 +60,9 @@ class Search extends Component {
   );
 
   renderFull = () => {
-    const randomNumber = Math.floor(Math.random() * 4);
-    const schemasPowders = ['entities', 'persons', 'projects', 'publications'];
-    const schemasColors = [ENTITY_COLOR, PERSON_COLOR, PROJECT_COLOR, PUBLICATION_COLOR];
-    const color = schemasColors[randomNumber];
-    const bgUrl = `./img/poudre-header-home-${schemasPowders[randomNumber]}.jpg`;
     const sectionStyle = {
-      backgroundImage: `url(${bgUrl})`,
-      backgroundSize: '500px',
+      backgroundImage: `url(${background})`,
+      backgroundSize: '900px',
     };
 
     return (
@@ -81,7 +71,7 @@ class Search extends Component {
           <FormattedHTMLMessage id="Home.Search.logo.aria">
             { label => (
               <h1 className={classes.Logo} aria-label={label}>
-                <LogoScanrWhiteSVG fill={color} width="280px" />
+                <LogoScanrWhiteSVG fill={styles.entityColor} width="280px" />
               </h1>
             )}
           </FormattedHTMLMessage>
