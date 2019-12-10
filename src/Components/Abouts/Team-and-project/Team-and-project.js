@@ -8,7 +8,7 @@ import Banner from '../../Shared/Banner/Banner';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
-import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
+// import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
 /* Gestion des langues */
@@ -67,32 +67,27 @@ const TeamAndProjectPage = props => (
                 cssClass="card_light"
                 labelKey="theyTalkAboutScanR"
                 language={props.language}
-                url=""
+                url="/medias"
                 btnText="discover"
               />
               <CardToPage
                 cssClass="card_light"
                 labelKey="whatAreOurSources"
                 language={props.language}
-                url=""
+                url="/ressources"
                 btnText="discover"
               />
               <CardToPage
                 cssClass="card_light"
                 labelKey="consultFAQ"
                 language={props.language}
-                url=""
+                url="/faq"
                 btnText="discover"
               />
             </div>
           </div>
         </div>
       </section>
-
-      <DiscoverScanR
-        labelKey="title"
-        language={props.language}
-      />
 
       <Banner
         cssClass="BannerLight"
