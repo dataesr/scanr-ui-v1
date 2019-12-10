@@ -133,7 +133,6 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              labelKey="europe"
               imageName="logo-europe.svg"
               cssClass="CardLogo"
             />
