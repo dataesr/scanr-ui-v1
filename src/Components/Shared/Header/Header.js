@@ -59,8 +59,24 @@ const Header = () => {
                   />
                 </a>
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a className="dropdown-item" href="#">Action</a>
-                  <a className="dropdown-item" href="#">Another action</a>
+                  <a className="dropdown-item" href="/faq">
+                    <FormattedHTMLMessage
+                      id="Header.link.faq"
+                      defaultMessage="Header.link.faq"
+                    />
+                  </a>
+                  <a className="dropdown-item" href="/ressources">
+                    <FormattedHTMLMessage
+                      id="Header.link.sources"
+                      defaultMessage="Header.link.sources"
+                    />
+                  </a>
+                  <a className="dropdown-item" href="/l-equipe-et-son-projet">
+                    <FormattedHTMLMessage
+                      id="Header.link.team"
+                      defaultMessage="Header.link.team"
+                    />
+                  </a>
                   <div className="dropdown-divider" />
                   <a className="dropdown-item" href="#">Something else here</a>
                 </div>
