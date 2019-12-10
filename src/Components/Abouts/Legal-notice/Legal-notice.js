@@ -2,7 +2,7 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+// import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
