@@ -90,6 +90,11 @@ class Ressources extends Component {
               imageName="logo-wikidata.svg"
               cssClass="CardLogo"
             />
+            <RedirectingLogoCard
+              labelKey="cpc"
+              imageName="logo-cpc.jpg"
+              cssClass="CardLogo"
+            />
           </div>
           <div className={`row ${classes.SourcesPart}`}>
             <div className={classes.SourcesCard}>
@@ -480,6 +485,7 @@ class Ressources extends Component {
             <div className="row">
               <CardWithButton
                 language={this.props.language}
+                messages={messages}
                 title="Discover.FAQ"
                 url="/faq"
                 lib_button="Voir"
@@ -488,17 +494,19 @@ class Ressources extends Component {
               />
               <CardWithButton
                 language={this.props.language}
+                messages={messages}
                 title="Discover.Opendata"
                 url="/opendata"
-                lib_button="Découvrir"
+                lib_button="Voir"
                 position="CardCenter"
                 schema="card_dark"
               />
               <CardWithButton
                 language={this.props.language}
+                messages={messages}
                 title="Discover.Team"
                 url="/l-equipe-et-son-projet"
-                lib_button="Découvrir"
+                lib_button="Voir"
                 position="CardCenter"
                 schema="card_dark"
               />
