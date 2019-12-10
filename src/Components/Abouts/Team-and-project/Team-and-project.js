@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
@@ -65,36 +65,32 @@ const TeamAndProjectPage = props => (
             <div className="col-lg-3">
               <CardToPage
                 cssClass="card_light"
-                labelKey="theyTalkAboutScanR"
+                labelKey="Discover.TalkAboutScanr"
                 language={props.language}
+                messages={messages}
                 url="/medias"
-                btnText="discover"
+                btnText="Discover"
               />
               <CardToPage
                 cssClass="card_light"
-                labelKey="whatAreOurSources"
+                labelKey="Discover.Sources"
                 language={props.language}
+                messages={messages}
                 url="/ressources"
-                btnText="discover"
+                btnText="Discover"
               />
               <CardToPage
                 cssClass="card_light"
-                labelKey="consultFAQ"
+                labelKey="Discover.FAQ"
                 language={props.language}
+                messages={messages}
                 url="/faq"
-                btnText="discover"
+                btnText="Discover"
               />
             </div>
           </div>
         </div>
       </section>
-
-      <Banner
-        cssClass="BannerLight"
-        labelKey="Appear"
-        url=""
-        language={props.language}
-      />
 
       <Footer language={props.language} />
     </div>

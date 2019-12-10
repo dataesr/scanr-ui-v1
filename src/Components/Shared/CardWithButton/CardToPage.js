@@ -3,22 +3,13 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
 import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 
 /* SCSS */
 import classes from './CardToPage.scss';
 
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 const CardToPage = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
+  <IntlProvider locale={props.language} messages={props.messages[props.language]}>
     <div className={`d-flex flex-column align-items-center justify-content-end py-3 px-4 ${classes.CardToPage} ${classes[props.cssClass]}`}>
       <div className={`my-auto ${classes.Title}`}>
         <FormattedHTMLMessage
@@ -46,6 +37,7 @@ export default CardToPage;
 CardToPage.propTypes = {
   cssClass: PropTypes.string.isRequired,
   language: PropTypes.string.isRequired,
+  messages: PropTypes.object.isRequired,
   labelKey: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   target: PropTypes.string.isRequired,

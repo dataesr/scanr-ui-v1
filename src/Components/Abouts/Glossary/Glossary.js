@@ -6,7 +6,7 @@ import Markdown from 'markdown-to-jsx';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 
 /* Gestion des langues */
@@ -93,6 +93,7 @@ class Glossary extends Component {
               <div className="row">
                 <CardWithButton
                   language={this.props.language}
+                  messages={messages}
                   schema="scanrdeepblueColorCards"
                   title="Discover.TalkAboutScanr"
                   url="/medias"
@@ -100,6 +101,7 @@ class Glossary extends Component {
                 />
                 <CardWithButton
                   language={this.props.language}
+                  messages={messages}
                   schema="scanrdeepblueColorCards"
                   title="Discover.Sources"
                   url="/ressources"
@@ -107,6 +109,7 @@ class Glossary extends Component {
                 />
                 <CardWithButton
                   language={this.props.language}
+                  messages={messages}
                   schema="scanrdeepblueColorCards"
                   title="Discover.Team"
                   url="/l-equipe-et-son-projet"
@@ -115,12 +118,12 @@ class Glossary extends Component {
               </div>
             </div>
           </aside>
-          <Banner
+          { /* <Banner
             language={this.props.language}
             labelKey="Appear"
             cssClass="BannerDark"
             url=""
-          />
+          /> */}
           <Footer language={this.props.language} />
         </div>
       </IntlProvider>

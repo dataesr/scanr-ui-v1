@@ -39,9 +39,10 @@ $productionColor : rgb(204,61,143);
 $productionpublicationColor : rgb(204,61,143);
 $productionbrevetsColor : rgb(254,101,91);
 $productionbrevets100Color : $scanrmiddlegreyColor;
-$productionbrevets70Color : rgba(64,26,23,0.4);
-$productionbrevets40Color : rgba(64,26,23,0.7);
-$productionbrevets10Color : rgba(64,26,23,1);
+$productionbrevets75Color : rgba(64,26,23,0.25);
+$productionbrevets50Color : rgba(64,26,23,0.5);
+$productionbrevets25Color : rgba(64,26,23,0.75);
+$productionbrevets0Color : rgba(64,26,23,1);
 $productionthesesColor : rgb(254,173,64);
 
 /* couleurs dataviz ecosystem */
@@ -104,9 +105,10 @@ $sanKey2 : #90ee7e;
   productionpublicationColor: $productionpublicationColor;
   productionbrevetsColor: $productionbrevetsColor;
   productionbrevets100Color: $productionbrevets100Color;
-  productionbrevets70Color: $productionbrevets70Color;
-  productionbrevets40Color: $productionbrevets40Color;
-  productionbrevets10Color: $productionbrevets10Color;
+  productionbrevets75Color: $productionbrevets75Color;
+  productionbrevets50Color: $productionbrevets50Color;
+  productionbrevets25Color: $productionbrevets25Color;
+  productionbrevets0Color: $productionbrevets0Color;
   productionthesesColor: $productionthesesColor;
   frenchentityColor: $frenchentityColor;
   internationalentityColor: $internationalentityColor;

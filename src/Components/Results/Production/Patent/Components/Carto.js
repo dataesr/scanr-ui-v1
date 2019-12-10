@@ -5,7 +5,9 @@ import moment from 'moment';
 import 'moment/locale/fr';
 
 import worldGeoJSON from './custom.geo.json';
-import { EP, EA, WO } from '../../../../../config/config';
+import {
+  EP, EA, AP, WO,
+} from '../../../../../config/config';
 
 // import styles from '../../../../../style.scss';
 
@@ -30,10 +32,22 @@ const messages = {
 */
 class Carto extends Component {
   state = {
-    coloringEP: true,
-    // coloringEA: false,
-    // coloringWO: false,
+    existEP: false,
+    existEA: false,
+    existAP: false,
+    existWO: false,
   };
+
+  componentDidMount() {
+    const existEP = this.props.data.find(el => el.country === 'EP');
+    const existEA = this.props.data.find(el => el.country === 'EA');
+    const existAP = this.props.data.find(el => el.country === 'AP');
+    const existWO = this.props.data.find(el => el.country === 'WO');
+
+    this.setState({
+      existEP, existEA, existAP, existWO,
+    });
+  }
 
   onEachFeature = (feature: Object, layer: Object) => {
     const currentCountry = feature.properties.iso_a2;
@@ -42,22 +56,28 @@ class Carto extends Component {
 
     // Est-ce que le pays appartient à un groupe ?
     //  EP demande de brevet européen
-    //  WO demande internationale selon le PCT (patent cooperation treaty)
     //  EA demande de brevet eurasien
+    //  AP ARIPO : ORGANISATION RÉGIONALE AFRICAINE DE LA PROPRIÉTÉ INTELLECTUELLE
+    //  WO demande internationale selon le PCT (patent cooperation treaty)
     let gradient = 100;
-    if (this.state.coloringEP) {
+    if (this.state.existEP) {
       if (EP.includes(currentCountry)) {
-        gradient -= 30;
+        gradient -= 25;
       }
     }
-    if (this.state.coloringEP) {
+    if (this.state.existEA) {
       if (EA.includes(currentCountry)) {
-        gradient -= 30;
+        gradient -= 25;
       }
     }
-    if (this.state.coloringEP) {
+    if (this.state.existAP) {
+      if (AP.includes(currentCountry)) {
+        gradient -= 25;
+      }
+    }
+    if (this.state.existWO) {
       if (WO.includes(currentCountry)) {
-        gradient -= 30;
+        gradient -= 25;
       }
     }
 
