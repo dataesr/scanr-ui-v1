@@ -19,9 +19,9 @@ const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
 
 /* Pages froides */
-const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
-const ContributePage = lazy(() => import('./Components/Abouts/Contribute/Contribute'));
-const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
+// const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
+// const ContributePage = lazy(() => import('./Components/Abouts/Contribute/Contribute'));
+// const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
 const FAQPage = lazy(() => import('./Components/Abouts/FAQ/FAQ'));
 const GlossaryPage = lazy(() => import('./Components/Abouts/Glossary/Glossary'));
 const LegalNoticePage = lazy(() => import('./Components/Abouts/Legal-notice/Legal-notice'));
@@ -29,7 +29,7 @@ const MediasPage = lazy(() => import('./Components/Abouts/Medias/Medias'));
 const Opendata = lazy(() => import('./Components/Abouts/Opendata/Opendata'));
 const Ressources = lazy(() => import('./Components/Abouts/Ressources/Ressources'));
 const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-project/Team-and-project'));
-const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
+// const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
   // eslint-disable-next-line
@@ -137,6 +137,7 @@ class App extends Component {
               />
 
               {/* vvv--------------- other-pages ------------------vvv  */}
+              { /*
               <Route
                 exact
                 path="/accessibilite"
@@ -146,7 +147,7 @@ class App extends Component {
                     language={this.context.language}
                   />
                 )}
-              />
+              /> */}
               <Route
                 exact
                 path="/mentions-legales"
@@ -198,6 +199,7 @@ class App extends Component {
                   />
                 )}
               />
+              { /*
               <Route
                 exact
                 path="/tutoriels"
@@ -207,7 +209,7 @@ class App extends Component {
                     language={this.context.language}
                   />
                 )}
-              />
+              /> */}
               <Route
                 exact
                 path="/faq"
@@ -218,6 +220,7 @@ class App extends Component {
                   />
                 )}
               />
+              { /*
               <Route
                 exact
                 path="/contact"
@@ -227,7 +230,7 @@ class App extends Component {
                     language={this.context.language}
                   />
                 )}
-              />
+              /> */}
               <Route
                 exact
                 path="/glossaire"
@@ -238,6 +241,7 @@ class App extends Component {
                   />
                 )}
               />
+              { /*
               <Route
                 exact
                 path="/contribuer"
@@ -247,7 +251,7 @@ class App extends Component {
                     language={this.context.language}
                   />
                 )}
-              />
+              /> */}
             </Switch>
           </Suspense>
         </Router>
