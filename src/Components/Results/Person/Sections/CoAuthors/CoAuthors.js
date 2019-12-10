@@ -1,22 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import PersonCard from '../../../../Search/Results/ResultCards/PersonCard';
 import classes from './CoAuthors.scss';
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
 
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 /**
  * CoAuthors
- * Url : .
- * Description : .
+ * Url : /person/:id
+ * Description : A Section that present all coAuthors of the person.
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
@@ -43,10 +36,6 @@ const SeeMoreCard = (coAuthorsList, coAuthorsHtlm) => (
 );
 
 const CoAuthors = (props) => {
-  const bgUrl = './img/poudre-persons_fond_gris.jpg';
-  const sectionStyle = {
-    backgroundImage: `url(${bgUrl})`,
-  };
   if (props.data) {
     const coAuthorsList = props.data.map(coAuthors => (
       <li key={coAuthors.id} className={classes.OneFourth}>
@@ -80,45 +69,19 @@ const CoAuthors = (props) => {
       }
     }
     return (
-      <section className={`container-fluid ${classes.CoAuthors}`} style={sectionStyle}>
-        <IntlProvider locale={props.language} messages={messages[props.language]}>
-          <div className="container">
-            <SectionTitle
-              icon="fa-folder-open"
-              objectType="persons"
-              language={props.language}
-              id={props.id}
-              title={messages[props.language]['Person.coAuthors.title']}
-            />
-            <ul className={`${classes.noListStyle} d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0`}>
-              {CountCard(props.data.length)}
-              {(coAuthorsList.length > 7) ? coAuthorsList.slice(-6) : coAuthorsList}
-              {(coAuthorsList.length > 7) ? SeeMoreCard(coAuthorsList, coAuthorsListModal) : null}
-            </ul>
-          </div>
-        </IntlProvider>
-      </section>
+      <ul className={`${classes.noListStyle} d-flex flex-wrap justify-content-between align-content-stretch p-0 m-0`}>
+        {CountCard(props.data.length)}
+        {(coAuthorsList.length > 7) ? coAuthorsList.slice(-6) : coAuthorsList}
+        {(coAuthorsList.length > 7) ? SeeMoreCard(coAuthorsList, coAuthorsListModal) : null}
+      </ul>
     );
   }
   return (
-    <section className={`container-fluid ${classes.CoAuthors}`} style={sectionStyle}>
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className="container">
-          <SectionTitle
-            icon="fa-open"
-            objectType="structures"
-            language={props.language}
-            id={props.id}
-            title={messages[props.language]['Person.coAuthors.title']}
-          />
-          <div className="row">
-            <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
-              <FormattedHTMLMessage id="Person.coAuthors.noCoAuthors" defaultMessage="Person.coAuthors.noCoAuthors" />
-            </div>
-          </div>
-        </div>
-      </IntlProvider>
-    </section>
+    <div className="row">
+      <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
+        <FormattedHTMLMessage id="Person.coAuthors.noCoAuthors" defaultMessage="Person.coAuthors.noCoAuthors" />
+      </div>
+    </div>
   );
 };
 
@@ -127,5 +90,4 @@ export default CoAuthors;
 CoAuthors.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
-  id: PropTypes.string.isRequired,
 };
