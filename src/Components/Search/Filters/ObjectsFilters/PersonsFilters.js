@@ -1,17 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
-
-/* Gestion des langues */
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const PersonsFilters = (props) => {
   const facets = props.facets || [];
@@ -24,8 +16,8 @@ const PersonsFilters = (props) => {
       <div className="p-2">
         <Autocomplete
           language={props.language}
-          title={messages[props.language]['filterPanel.localisation']}
-          subtitle={messages[props.language]['filterPanel.subtitle']}
+          title={<FormattedHTMLMessage id="Search.Filters.localisation" />}
+          subtitle={<FormattedHTMLMessage id="Search.Filters.localisation.subtitle" />}
           placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={structFacets.entries}
@@ -36,7 +28,7 @@ const PersonsFilters = (props) => {
           defaultActive
           retractable={false}
           nbItemsToShow={5}
-          title={messages[props.language]['filterPanel.awards']}
+          title={<FormattedHTMLMessage id="Search.Filters.awards" />}
           facets={awardsFacets.entries}
           filters={awardsActiveFilters}
           facetID="awards.label"

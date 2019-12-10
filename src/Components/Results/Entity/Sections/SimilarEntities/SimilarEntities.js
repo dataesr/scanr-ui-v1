@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 
-import EntityCard from '../../../../Search/SearchResults/ResultCards/EntityCard';
+import EntityCard from '../../../../Search/Results/ResultCards/EntityCard';
 import SectionTitle from '../../../Shared/SectionTitle';
 import { API_STRUCTURE_LIKE_END_POINT } from '../../../../../config/config';
 import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
