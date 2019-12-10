@@ -84,7 +84,7 @@ const Medias = props => (
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
@@ -93,7 +93,7 @@ const Medias = props => (
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
@@ -102,7 +102,7 @@ const Medias = props => (
               schema="card_dark"
               title="Discover.FAQ"
               url="./faq"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
           </div>
