@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { API_PERSONS_END_POINT } from '../../../config/config';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/UseScrollY';
 
+import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
@@ -18,11 +20,17 @@ import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 
 import styles from '../../../style.scss';
+import InfoBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
+import coAuthorsBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
+import ThesisBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 /**
- * Publication
- * Url : .
- * Description : .
+ * Person
+ * Url : /person/:id
+ * Description : A page that presents a person in scanR.
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
@@ -36,76 +44,99 @@ const Person = (props) => {
   if (isError) {
     return <Errors />;
   }
+  const messages = {
+    fr: messagesFr,
+    en: messagesEn,
+  };
   return (
-    <React.Fragment>
-      <ScanRMeta
-        title={(data.fullName) ? data.fullName : ''}
-        href2="./recherche/persons?query="
-        href2Title="Persons"
-        href3={`./person/${props.match.params.id}`}
-      />
-      <Header />
-      <HeaderTitle
-        language={props.language}
-        label={(data.fullName) ? data.fullName : ''}
-        idPage="person"
-        id={props.match.params.id}
-        isFull={scrollY === 0}
-      />
-      <div id="Informations">
-        <Informations
+    <IntlProvider locale={props.language} messages={messages[props.language]}>
+      <React.Fragment>
+        <ScanRMeta
+          title={(data.fullName) ? data.fullName : ''}
+          href2="./recherche/persons?query="
+          href2Title="Persons"
+          href3={`./person/${props.match.params.id}`}
+        />
+        <Header />
+        <HeaderTitle
           language={props.language}
-          data={data}
+          label={(data.fullName) ? data.fullName : ''}
+          idPage="person"
           id={props.match.params.id}
+          isFull={scrollY === 0}
         />
-      </div>
 
-      <Banner
-        language={props.language}
-        labelKey="Appear"
-        cssClass="BannerDark"
-        url=""
-      />
-
-      <div id="Thesis">
-        <Thesis
+        <Banner
           language={props.language}
-          person={props.match.params.id}
-          personName={data.fullName}
-          id={props.match.params.id}
+          labelKey="Appear"
+          cssClass="BannerDark"
+          url=""
         />
-      </div>
-      <div id="Production">
-        <Productions
+        <section id="Thesis" style={{ background: ThesisBackground }}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-id-card"
+              objectType="persons"
+              language={props.language}
+              id={props.match.params.id}
+              title={<FormattedHTMLMessage id="Person.thesis.title" />}
+            />
+            <Thesis
+              language={props.language}
+              person={props.match.params.id}
+              personName={data.fullName}
+              id={props.match.params.id}
+            />
+          </div>
+        </section>
+        <div id="Production">
+          <Productions
+            language={props.language}
+            match={props.match}
+            childs={[]}
+            person
+          />
+        </div>
+        <section id="CoAuthors" style={{ background: coAuthorsBackground }}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-folder-open"
+              objectType="persons"
+              language={props.language}
+              id={props.match.params.id}
+              title={<FormattedHTMLMessage id="Person.coAuthors.title" />}
+            />
+            <CoAuthors
+              language={props.language}
+              data={data.coContributors}
+              id={props.match.params.id}
+            />
+          </div>
+        </section>
+        <Banner
           language={props.language}
-          match={props.match}
-          childs={[]}
-          person
+          labelKey="Appear"
+          cssClass="BannerLight"
+          url=""
         />
-      </div>
-      <div id="CoAuthors">
-        <CoAuthors
-          language={props.language}
-          data={data.coContributors}
-          id={props.match.params.id}
-        />
-      </div>
-      <Banner
-        language={props.language}
-        labelKey="Appear"
-        cssClass="BannerLight"
-        url=""
-      />
-
-      <div>
-        <Similars
-          language={props.language}
-          data={data}
-        />
-      </div>
-
-      <Footer language={props.language} />
-    </React.Fragment>
+        <section style={{ background: coAuthorsBackground }}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-th"
+              language={props.language}
+              id={props.match.params.id}
+              title={<FormattedHTMLMessage id="Person.similars.title" />}
+            />
+            <Similars
+              language={props.language}
+              coContributors={data.coContributors}
+              id={props.match.params.id}
+            />
+          </div>
+        </section>
+        <Footer />
+      </React.Fragment>
+    </IntlProvider>
   );
 };
 
