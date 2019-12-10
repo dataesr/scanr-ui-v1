@@ -47,12 +47,17 @@
   color: white;
   background-color: $personColor !important;
 }
+.Entity {
+  color: $entitiesColor;
+  background-color: $scanrgreyColor !important;
+}
 
 .ModalLabel {
   color: $scanrdeepblueColor;
   font-weight: bold;
   font-size: 1rem;
   padding: 6px 0 0 0;
+  text-transform: capitalize;
 }
 .Role {
   padding: 6px 8px 0 0;
