@@ -1,114 +1,77 @@
-import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
+import React from 'react';
 import PropTypes from 'prop-types';
-import Axios from 'axios';
+import useLikeApi from '../../../../../Hooks/useLikeApi';
+import SectionLoader from '../../../../Shared/LoadingSpinners/GraphSpinner';
+import Errors from '../../../../Shared/Errors/Errors';
 
-import SimilarCard from '../../../../Search/Results/ResultCards/PersonCard';
-import { API_PERSON_LIKE_END_POINT } from '../../../../../config/config';
-import Background from '../../../../Shared/images/poudre-jaune_Fgris-B.jpg';
-import SectionTitle from '../../../Shared/SectionTitle';
-
-/* Gestion des langues */
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
+import PersonCard from '../../../../Search/Results/ResultCards/PersonCard';
 
 import classes from './Similars.scss';
 
 /**
- * SimilarEntities
- * Url : .
- * Description : .
+ * Similars
+ * Url : /person/:id
+ * Description : A section that present similar authors for a person
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
-class SimilarPersons extends Component {
-  state= {
-    data: null,
-  };
-
-  componentDidUpdate(prevProps) {
-    if (prevProps.data !== this.props.data) {
-      this.getData();
-    }
-  }
-
-  getData = () => {
-    const url = API_PERSON_LIKE_END_POINT;
-    const request = {
-      fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
-      likeIds: [this.props.data.id],
-      likeTexts: [],
-      lang: 'default',
-      pageSize: 100,
-    };
-    Axios.post(url, request).then((response) => {
-      const forbiddenSimilars = (this.props.data.coContributors) ? this.props.data.coContributors.map(co => co.id) : [];
-      if (response.data.total && response.data.total > 0) {
-        const pushData = [];
-        for (let i = 0; i < Math.min(response.data.total, 10); i += 1) {
-          const isCo = forbiddenSimilars.includes(response.data.results[i].value.id);
-          if (response.data.results[i].value.id !== this.props.data.id && !isCo) {
-            pushData.push(response.data.results[i]);
-          }
-          if (pushData.length === 4) {
-            break;
-          }
+const SimilarPersons = (props) => {
+  const filtercoContributors = (d) => {
+    console.log(d);
+    const forbiddenSimilars = (props.coContributors) ? props.coContributors.map(co => co.id) : [];
+    const pushData = [];
+    if (d.length) {
+      for (let i = 0; i < Math.min(d.length, 10); i += 1) {
+        const isCo = forbiddenSimilars.includes(d[i].value.id);
+        if (d[i].value.id !== props.id && !isCo) {
+          pushData.push(d[i]);
         }
-        this.setState({ data: pushData });
+        if (pushData.length === 8) {
+          break;
+        }
       }
-    });
-  }
-
-  render() {
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
-
-
-    const sectionStyle = {
-      backgroundImage: `url(${Background})`,
-    };
-
-    if (!this.props.data || !this.state.data || this.state.data.length === 0) {
-      return null;
+      return pushData;
     }
-
-    return (
-      <Fragment>
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <section className={`container-fluid ${classes.Similar}`} style={sectionStyle}>
-            <div className="container">
-              <SectionTitle
-                icon="fa-th"
-                language={this.props.language}
-                title={messages[this.props.language]['Person.similars.title']}
-              />
-              <ul className={`row px-2 ${classes.Ul}`}>
-                {
-                  this.state.data.map(item => (
-                    <li key={item.value} className={`col-sm-6 col-lg-3 ${classes.Li}`}>
-                      <SimilarCard
-                        data={item.value}
-                        small
-                        language={this.props.language}
-                      />
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </section>
-        </IntlProvider>
-      </Fragment>
-    );
+    return [];
+  };
+  const request = {
+    fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
+    likeIds: [props.id],
+    likeTexts: [],
+    lang: 'default',
+    pageSize: 10,
+  };
+  const { data, isLoading, isError } = useLikeApi('persons', request);
+  if (isLoading) {
+    return (<SectionLoader />);
   }
-}
+  if (isError) {
+    return (<Errors />);
+  }
+  const filteredData = filtercoContributors(data);
+  console.log(filteredData);
+  return (
+    <ul className={`row px-2 ${classes.Ul}`}>
+      {
+        filteredData.map(item => (
+          <li key={item.value} className={`col-sm-6 col-lg-3 ${classes.Li}`}>
+            <PersonCard
+              data={item.value}
+              small
+              language={props.language}
+            />
+          </li>
+        ))
+      }
+    </ul>
+  );
+};
 
 export default SimilarPersons;
 
 SimilarPersons.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  id: PropTypes.string.isRequired,
+  coContributors: PropTypes.array.isRequired,
 };
