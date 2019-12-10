@@ -8,7 +8,7 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
