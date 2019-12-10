@@ -6,14 +6,23 @@ import { GlobalContext } from '../../../GlobalContext';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 
 /* Chargement du lexique */
 import faqTerms from '../../Shared/terms/faq.json';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
 /* SCSS */
 import classes from './FAQ.scss';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 const FAQ = (props) => {
   const context = useContext(GlobalContext);
@@ -73,6 +82,7 @@ const FAQ = (props) => {
           <div className="row">
             <CardWithButton
               language={context.language}
+              messages={messages}
               schema="scanrdeepblueColorCards"
               title="Discover.TalkAboutScanr"
               url="/medias"
@@ -80,6 +90,7 @@ const FAQ = (props) => {
             />
             <CardWithButton
               language={context.language}
+              messages={messages}
               schema="scanrdeepblueColorCards"
               title="Discover.Sources"
               url="/ressources"
@@ -87,6 +98,7 @@ const FAQ = (props) => {
             />
             <CardWithButton
               language={context.language}
+              messages={messages}
               schema="scanrdeepblueColorCards"
               title="Discover.Team"
               url="/l-equipe-et-son-projet"
@@ -95,12 +107,12 @@ const FAQ = (props) => {
           </div>
         </div>
       </aside>
-      <Banner
+      {/* <Banner
         language={context.language}
         labelKey="Appear"
         cssClass="BannerDark"
         url=""
-      />
+      /> */ }
       <Footer language={context.language} />
     </div>
   );

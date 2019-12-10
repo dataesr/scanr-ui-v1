@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import Background from './poudre-bleu_Fgris-B.jpg';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import MediasCard from '../../Shared/CardWithButton/MediasCard';
@@ -35,7 +35,7 @@ const Medias = props => (
       />
       <HeaderTitle
         language={props.language}
-        label="media"
+        labelkey="media"
       />
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
@@ -45,6 +45,7 @@ const Medias = props => (
           <div className="row">
             <MediasCard
               language={props.language}
+              messages={messages}
               article="Medias.article1"
               url="https://punktokomo.abes.fr/2017/11/27/quand-scanr-et-idref-sassocient-pour-identifier-les-acteurs-de-la-recherche-et-de-linnovation/"
             />
@@ -54,17 +55,20 @@ const Medias = props => (
           </div>
           <div className="row">
             <MediasCard
+              messages={messages}
               language={props.language}
               article="Medias.article2"
               url="https://www.lagazettedescommunes.com/472571/estelle-grelier-lopen-data-rapproche-laction-publique-des-citoyens/"
             />
             <MediasCard
               language={props.language}
+              messages={messages}
               article="Medias.article3"
               url="https://www.lemoniteur.fr/article/place-a-la-mise-en-uvre-de-la-loi-pour-une-republique-numerique.1332739"
             />
             <MediasCard
               language={props.language}
+              messages={messages}
               article="Medias.article4"
               url="https://politiques-innovation.org/scanr-un-moteur-de-lopen-innovation-en-france/"
             />
@@ -76,6 +80,7 @@ const Medias = props => (
           <div className="row">
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
@@ -84,6 +89,7 @@ const Medias = props => (
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
@@ -92,6 +98,7 @@ const Medias = props => (
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.FAQ"
               url="./faq"
@@ -101,12 +108,12 @@ const Medias = props => (
           </div>
         </div>
       </section>
-      <Banner
+      { /* <Banner
         language={props.language}
         labelKey="Appear"
         cssClass="BannerDark"
         url=""
-      />
+      /> */}
       <Footer language={props.language} />
     </div>
   </IntlProvider>
