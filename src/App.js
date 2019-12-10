@@ -213,7 +213,7 @@ class App extends Component {
               /> */}
               <Route
                 exact
-                path="/faq"
+                path={['/faq/:id', '/faq']}
                 component={props => (
                   <FAQPage
                     {...props}
