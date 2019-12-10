@@ -42,14 +42,23 @@ const CounterListCard = (props) => {
         </div>
       );
     }
-    const itemRole = item.role.concat('-', `${props.objectType}`);
+
+    let itemRole = props.roleKey;
+    if (item.role) {
+      itemRole = item.role.concat('-', `${props.objectType}`);
+    }
+
     return (
       <li className="d-flex m-2" key={item}>
         <p className={`mr-auto ${classes.ModalLabel}`}>
-          {item.fullName}
+          {
+            (props.isEntity) ? item.label : item.fullName
+          }
         </p>
         <p className={classes.Role}>
-          {messages[props.language][itemRole]}
+          {
+            (props.isEntity) ? item.country : messages[props.language][itemRole]
+          }
         </p>
         {bt}
       </li>
@@ -63,6 +72,7 @@ const CounterListCard = (props) => {
       <p className={classes.Label}>
         <p className={classes.Counter}>
           <span>{messages[props.language].and}</span>
+          &nbsp;
           {itemsToShow.length}
         </p>
         <div>
@@ -73,7 +83,7 @@ const CounterListCard = (props) => {
       <div className="mt-auto">
         <div className={classes.Button}>
           <ButtonWithModal
-            title={messages[props.language]['authors.modal.title']}
+            title={messages[props.language][props.modalTitleKey]}
             buttonLabel={messages[props.language]['authors.button.label']}
             dataHtml={itemsHtml}
           />
@@ -85,12 +95,22 @@ const CounterListCard = (props) => {
 
 export default CounterListCard;
 
+CounterListCard.defaultProps = {
+  title: '',
+  roleKey: '',
+  modalTitleKey: 'authors.modal.title',
+  isEntity: false,
+};
+
 CounterListCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string,
   limit: PropTypes.number,
   title: PropTypes.string,
+  modalTitleKey: PropTypes.string,
   labelKey: PropTypes.string,
   objectType: PropTypes.string,
+  roleKey: PropTypes.string,
   color: PropTypes.string,
+  isEntity: PropTypes.bool,
 };
