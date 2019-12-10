@@ -2,13 +2,13 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
+// import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -69,13 +69,16 @@ const LegalNoticePage = props => (
                   defaultMessage="Section.title.service"
                 />
               </div>
-              <div className={`row ${classes.buttonsRow}`}>
+              { /* <div className={`row ${classes.buttonsRow}`}>
                 <div className="col-lg-4">
                   <ButtonToPage
                     className={classes.MarginTop}
                     url="#"
                   >
-                    Voir le site
+                    <FormattedHTMLMessage
+                      id="Voir"
+                      defaultMessage="Voir"
+                    />
                   </ButtonToPage>
                 </div>
                 <div className="col-lg-4">
@@ -86,15 +89,19 @@ const LegalNoticePage = props => (
                     Contactez-nous
                   </ButtonToPage>
                 </div>
-              </div>
+              </div> */ }
             </div>
-            <div className="col-lg-4">
-              <LogoCard
-                label="scanr-blue"
-              />
-              <LogoCard
-                label="ministere"
-              />
+            <div className={`col-lg-4 ${classes.CardContainer}`}>
+              <div className={`${classes.CardContainer}`}>
+                <LogoCard
+                  label="scanr-blue"
+                />
+              </div>
+              <div className={`${classes.CardContainer}`}>
+                <LogoCard
+                  label="ministere"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -130,13 +137,6 @@ const LegalNoticePage = props => (
                   defaultMessage="Section.title.actor2"
                 />
               </div>
-              <div>
-                <img
-                  src="./img/logo-cradar.png"
-                  alt="logo C-Radar"
-                  className={`img-fluid ${classes.img}`}
-                />
-              </div>
               <div className={classes.light}>
                 <FormattedHTMLMessage
                   id="Section.text.actor2.light"
@@ -149,7 +149,7 @@ const LegalNoticePage = props => (
                   defaultMessage="Section.text.actor2.bold"
                 />
               </div>
-              <div className={classes.address}>
+              { /* <div className={classes.address}>
                 <FormattedHTMLMessage
                   id="Section.text.actor2.address"
                   defaultMessage="Section.text.actor2.address"
@@ -160,7 +160,7 @@ const LegalNoticePage = props => (
                 url="#"
               >
                 Voir le site
-              </ButtonToPage>
+              </ButtonToPage> */}
             </div>
             <div className="col-lg-4">
               <div className={classes.title}>
@@ -181,7 +181,7 @@ const LegalNoticePage = props => (
                   defaultMessage="Section.text.actor3.bold"
                 />
               </div>
-              <div className={classes.address}>
+              { /* <div className={classes.address}>
                 <FormattedHTMLMessage
                   id="Section.text.actor3.address"
                   defaultMessage="Section.text.actor3.address"
@@ -192,7 +192,7 @@ const LegalNoticePage = props => (
                 url="#"
               >
                 Voir le site
-              </ButtonToPage>
+              </ButtonToPage> */}
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ const LegalNoticePage = props => (
                   />
                 </div>
               </div>
-              <div className={classes.paragraph}>
+              { /* <div className={classes.paragraph}>
                 <div className={classes.bold}>
                   <FormattedHTMLMessage
                     id="Section.text.team.bold2"
@@ -235,7 +235,7 @@ const LegalNoticePage = props => (
                     defaultMessage="Section.text.team.light2"
                   />
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -264,19 +264,19 @@ const LegalNoticePage = props => (
                 />
               </div>
             </div>
-            <div className="col-lg-4">
+            { /* <div className="col-lg-4">
               <div className={classes.title}>
                 <FormattedHTMLMessage
                   id="Section.title.data2"
                   defaultMessage="Section.title.data2"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
 
-      <section className={classes.LegalSectionGris}>
+      { /* <section className={classes.LegalSectionGris}>
         <div className="container">
           <div className={`row ${classes.row}`}>
             <div className="col-lg-8">
@@ -289,9 +289,9 @@ const LegalNoticePage = props => (
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      { /* <section>
         <div className="container">
           <div className={`row ${classes.row}`}>
             <div className="col-lg-8">
@@ -324,45 +324,48 @@ const LegalNoticePage = props => (
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section style={sectionStyle} className={classes.LegalSectionPoudre}>
         <div className="container">
           <div className="row">
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
           </div>
         </div>
       </section>
 
-      <Banner
+      { /* <Banner
         language={props.language}
         labelKey="Appear"
         cssClass="BannerDark"
         url=""
-      />
+      /> */ }
 
       <Footer language={props.language} />
 

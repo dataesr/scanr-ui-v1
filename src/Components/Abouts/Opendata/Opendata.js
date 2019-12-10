@@ -55,6 +55,7 @@ const Opendata = props => (
             <div className="row" style={{ padding: '0px' }}>
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="entitiesCards"
                 title={messages[props.language]['Opendata.StructuresActives']}
                 url="http://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-structures-recherche-publiques-actives/"
@@ -63,6 +64,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="entitiesCards"
                 title={messages[props.language]['Opendata.PrincipauxEtab']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/information/?disjunctive.type_d_etablissement"
@@ -71,6 +73,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="publicationsCards"
                 title={messages[props.language]['Opendata.BSO']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/open-access-monitor-france/information/?disjunctive.oa_host_type&disjunctive.year"
@@ -79,6 +82,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="publicationsCards"
                 title={messages[props.language]['Opendata.CIR']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-cir-et-cii-organismes-et-bureaux-de-style-agrees/information/"
@@ -91,6 +95,7 @@ const Opendata = props => (
             <div className="row">
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 title={messages[props.language]['Opendata.AppelANR']}
                 schema="projectsCards"
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-aap-anr-projets-retenus-participants-identifies/information/?disjunctive.identifiant_de_partenaire"
@@ -99,6 +104,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="projectsCards"
                 title={messages[props.language]['Opendata.ParticipationsH2020']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-h2020_participations-dans-les-contrats-signes/information/"
@@ -107,6 +113,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="entitiesCards"
                 title={messages[props.language]['Opendata.iLAB']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-laureats-concours-national-i-lab/information/"
@@ -115,6 +122,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="personsCards"
                 title={messages[props.language]['Opendata.MT180']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/"
@@ -127,6 +135,7 @@ const Opendata = props => (
             <div className="row">
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="personsCards"
                 title={messages[props.language]['Opendata.etoiles']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-etoile-de-l-europe/information/"
@@ -135,6 +144,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="entitiesCards"
                 title={messages[props.language]['Opendata.RNSR']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-repertoire-national-structures-recherche/information/"
@@ -143,6 +153,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="entitiesCards"
                 title={messages[props.language]['Opendata.ED']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-ecoles_doctorales_annuaire/information/"
@@ -151,6 +162,7 @@ const Opendata = props => (
               />
               <CardWithButton
                 language={props.language}
+                messages={messages}
                 schema="personsCards"
                 title={messages[props.language]['Opendata.IUF']}
                 url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/information/"
@@ -184,15 +196,17 @@ const Opendata = props => (
             </CardTwoColumns>
             <CardWithButton
               language={props.language}
+              messages={messages}
               title={messages[props.language]['Opendata.DocuApi']}
               // url="http://scanr-api.enseignementsup-recherche.gouv.fr/swagger-ui"
               target="_blank"
               url="https://scanr-preprod.sword-group.com/api/swagger-ui.html"
-              lib_button="Accéder"
+              lib_button="Acceder"
               schema="card_dark"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               title={messages[props.language]['Opendata.EnSavoirPlusApi']}
               url="https://fr.wikipedia.org/wiki/Interface_de_programmation"
               lib_button="Lire"
@@ -207,26 +221,29 @@ const Opendata = props => (
           <div className="row">
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
               language={props.language}
+              messages={messages}
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
           </div>

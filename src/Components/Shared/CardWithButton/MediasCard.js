@@ -3,19 +3,12 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 import classes from './MediasCard.scss';
 
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 const CardWithButton = props => (
-  <IntlProvider locale={props.language} messages={messages[props.language]}>
+  <IntlProvider locale={props.language} messages={props.messages[props.language]}>
     <div className={`col-lg-6 ${classes.MediasCard}`}>
       <div className={classes.Content}>
         <div className={`container ${classes.TopCard} `}>
@@ -67,6 +60,7 @@ export default CardWithButton;
 
 CardWithButton.propTypes = {
   language: PropTypes.string.isRequired,
+  messages: PropTypes.object.isRequired,
   article: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
