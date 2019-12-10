@@ -8,6 +8,10 @@ import ReactPiwik from 'react-piwik';
 import { API_BASE_URL } from '../../config/config';
 import ExportingSpinner from '../Shared/LoadingSpinners/ExportingSpinner';
 
+import Footer from '../Shared/Footer/Footer';
+import Header from '../Shared/Header/Header';
+import Banner from '../Shared/Banner/Banner';
+
 import LocalHeader from './Header/Header';
 import Results from './Results/Results';
 import AllResults from './Results/AllResults';
@@ -26,9 +30,6 @@ import {
   ProjectsAggregations,
 } from './Aggregations';
 
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
-import Banner from '../Shared/Banner/Banner';
 
 const messages = {
   fr: messagesFr,
