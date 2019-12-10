@@ -38,7 +38,7 @@ const DiscoverScanR = props => (
               defaultMessage={`DiscoverScanR.${props.labelKey}`}
             />
             <ComponentVideo
-              url="https://media.w3.org/2010/05/sintel/trailer_hd.mp4"
+              url="http://www.dailymotion.com/embed/video/x4jp8mu"
               poster={videoPoster}
             />
           </div>
