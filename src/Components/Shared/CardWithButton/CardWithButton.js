@@ -39,6 +39,7 @@ const CardWithButton = (props) => {
             <ButtonToPage
               className={classes.Button}
               url={props.url}
+              target={props.target}
             >
               <FormattedHTMLMessage
                 id={props.lib_button}
@@ -62,4 +63,5 @@ CardWithButton.propTypes = {
   url: PropTypes.string.isRequired,
   lib_button: PropTypes.string.isRequired,
   position: PropTypes.string,
+  target: PropTypes.string,
 };

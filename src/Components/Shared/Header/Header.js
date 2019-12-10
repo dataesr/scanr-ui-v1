@@ -71,6 +71,12 @@ const Header = () => {
                       defaultMessage="Header.link.sources"
                     />
                   </a>
+                  <a className="dropdown-item" href="/opendata">
+                    <FormattedHTMLMessage
+                      id="Header.link.opendata"
+                      defaultMessage="Header.link.opendata"
+                    />
+                  </a>
                   <a className="dropdown-item" href="/l-equipe-et-son-projet">
                     <FormattedHTMLMessage
                       id="Header.link.team"
@@ -78,7 +84,12 @@ const Header = () => {
                     />
                   </a>
                   <div className="dropdown-divider" />
-                  <a className="dropdown-item" href="#">Something else here</a>
+                  <a className="dropdown-item" href="https://data.esr.gouv.fr/FR/" target="_blank" rel="noopener noreferrer">
+                    <FormattedHTMLMessage
+                      id="Header.link.dataesr"
+                      defaultMessage="Header.link.dataesr"
+                    />
+                  </a>
                 </div>
               </li>
               <li className="nav-item">
