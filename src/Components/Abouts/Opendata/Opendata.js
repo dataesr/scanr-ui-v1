@@ -201,7 +201,7 @@ const Opendata = props => (
               // url="http://scanr-api.enseignementsup-recherche.gouv.fr/swagger-ui"
               target="_blank"
               url="https://scanr-preprod.sword-group.com/api/swagger-ui.html"
-              lib_button="Accéder"
+              lib_button="Acceder"
               schema="card_dark"
             />
             <CardWithButton
@@ -225,7 +225,7 @@ const Opendata = props => (
               schema="card_dark"
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
@@ -234,7 +234,7 @@ const Opendata = props => (
               schema="card_dark"
               title="Discover.Sources"
               url="./ressources"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
             <CardWithButton
@@ -243,7 +243,7 @@ const Opendata = props => (
               schema="card_dark"
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Voir"
               position="CardCenter"
             />
           </div>

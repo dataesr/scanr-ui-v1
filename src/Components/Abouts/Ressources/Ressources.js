@@ -256,7 +256,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Découvrir"
+              lib_button="Discover"
               position="CardCenter"
               schema="card_dark"
             />
@@ -265,7 +265,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.Opendata"
               url="./opendata"
-              lib_button="Découvrir"
+              lib_button="Discover"
               position="CardCenter"
               schema="card_dark"
             />
@@ -274,7 +274,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Découvrir"
+              lib_button="Discover"
               position="CardCenter"
               schema="card_dark"
             />
