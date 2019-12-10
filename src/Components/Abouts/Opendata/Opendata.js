@@ -38,99 +38,124 @@ const Opendata = props => (
       />
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
-          <div className="row" style={{ padding: '0px' }}>
-            <CardTwoColumns
-              language={props.language}
-              title="Opendata.TitleOpendata"
-            >
-              <FormattedHTMLMessage
-                id="Opendata.TitleOpendata.content"
-                defaultMessage="Opendata.TitleOpendata.content"
+          <div className={` ${classes.CardContainer}`}>
+            <div className="row" style={{ padding: '0px' }}>
+              <CardTwoColumns
+                language={props.language}
+                title="Opendata.TitleOpendata"
+              >
+                <FormattedHTMLMessage
+                  id="Opendata.TitleOpendata.content"
+                  defaultMessage="Opendata.TitleOpendata.content"
+                />
+              </CardTwoColumns>
+            </div>
+          </div>
+          <div className={`${classes.CardContainer}`}>
+            <div className="row" style={{ padding: '0px' }}>
+              <CardWithButton
+                language={props.language}
+                schema="entitiesCards"
+                title={messages[props.language]['Opendata.StructuresActives']}
+                url="http://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-structures-recherche-publiques-actives/"
+                lib_button="Voir"
+                target="_blank"
               />
-            </CardTwoColumns>
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card01"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card02"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
+              <CardWithButton
+                language={props.language}
+                schema="entitiesCards"
+                title={messages[props.language]['Opendata.PrincipauxEtab']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/information/?disjunctive.type_d_etablissement"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="publicationsCards"
+                title={messages[props.language]['Opendata.BSO']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/open-access-monitor-france/information/?disjunctive.oa_host_type&disjunctive.year"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="publicationsCards"
+                title={messages[props.language]['Opendata.CIR']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-cir-et-cii-organismes-et-bureaux-de-style-agrees/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
+            </div>
           </div>
-          <div className="row">
-            <CardWithButton
-              language={props.language}
-              schema="projectsCards"
-              title="Opendata.card03"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="projectsCards"
-              title="Opendata.card04"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card05"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="personsCards"
-              title="Opendata.card06"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-          </div>
-          <div className="row">
-            <CardWithButton
-              language={props.language}
-              schema="personsCards"
-              title="Opendata.card07"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card08"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card09"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-            <CardWithButton
-              language={props.language}
-              schema="entitiesCards"
-              title="Opendata.card10"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
-              lib_button="Voir"
-            />
-          </div>
-          <div className="row">
-            <div className="col-lg-3" style={{ padding: '0px' }}>
+          <div className={`${classes.CardContainer}`}>
+            <div className="row">
+              <CardWithButton
+                language={props.language}
+                title={messages[props.language]['Opendata.AppelANR']}
+                schema="projectsCards"
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-aap-anr-projets-retenus-participants-identifies/information/?disjunctive.identifiant_de_partenaire"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="projectsCards"
+                title={messages[props.language]['Opendata.ParticipationsH2020']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-h2020_participations-dans-les-contrats-signes/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="entitiesCards"
+                title={messages[props.language]['Opendata.iLAB']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-laureats-concours-national-i-lab/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
               <CardWithButton
                 language={props.language}
                 schema="personsCards"
-                title="Opendata.card11"
-                url="https://worldwide.espacenet.com/?locale=fr_EP"
+                title={messages[props.language]['Opendata.MT180']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/"
                 lib_button="Voir"
+                target="_blank"
+              />
+            </div>
+          </div>
+          <div className={`${classes.CardContainer}`}>
+            <div className="row">
+              <CardWithButton
+                language={props.language}
+                schema="personsCards"
+                title={messages[props.language]['Opendata.etoiles']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-etoile-de-l-europe/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="entitiesCards"
+                title={messages[props.language]['Opendata.RNSR']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-repertoire-national-structures-recherche/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="entitiesCards"
+                title={messages[props.language]['Opendata.ED']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-ecoles_doctorales_annuaire/information/"
+                lib_button="Voir"
+                target="_blank"
+              />
+              <CardWithButton
+                language={props.language}
+                schema="personsCards"
+                title={messages[props.language]['Opendata.IUF']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-iuf-les-membres/information/"
+                lib_button="Voir"
+                target="_blank"
               />
             </div>
           </div>
@@ -159,16 +184,19 @@ const Opendata = props => (
             </CardTwoColumns>
             <CardWithButton
               language={props.language}
-              title="Opendata.DocuApi"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              title={messages[props.language]['Opendata.DocuApi']}
+              // url="http://scanr-api.enseignementsup-recherche.gouv.fr/swagger-ui"
+              target="_blank"
+              url="https://scanr-preprod.sword-group.com/api/swagger-ui.html"
               lib_button="Accéder"
               schema="card_dark"
             />
             <CardWithButton
               language={props.language}
-              title="Opendata.EnSavoirPlusApi"
-              url="https://worldwide.espacenet.com/?locale=fr_EP"
+              title={messages[props.language]['Opendata.EnSavoirPlusApi']}
+              url="https://fr.wikipedia.org/wiki/Interface_de_programmation"
               lib_button="Lire"
+              target="_blank"
               schema="card_dark"
             />
           </div>
@@ -204,12 +232,13 @@ const Opendata = props => (
           </div>
         </div>
       </section>
+      { /*
       <Banner
         language={props.language}
         labelKey="Appear"
         cssClass="BannerDark"
         url=""
-      />
+      /> */}
       <Footer language={props.language} />
     </div>
   </IntlProvider>
