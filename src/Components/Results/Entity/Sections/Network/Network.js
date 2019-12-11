@@ -3,7 +3,7 @@ import { IntlProvider } from 'react-intl';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 
-import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/SectionTitle';
 import SimpleCountListCard from '../../../../Shared/Ui/SimpleCountListCard/SimpleCountListCard';
 import PrizeCard from '../../../../Shared/Ui/PrizeCard/PrizeCard';

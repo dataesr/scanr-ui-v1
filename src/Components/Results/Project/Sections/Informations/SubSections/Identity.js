@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
 import LogoCard from '../../../../../Shared/Ui/LogoCard/LogoCard';
 import getSelectKey from '../../../../../../Utils/getSelectKey';
 
 import classes from './SubSectionsStyles.scss';
-
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 /**
  * Informations
  * Url : .
@@ -42,52 +34,37 @@ const Identity = (props) => {
       : '';
     const titleAcro = title + acro;
     return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className={`p-0 ${classes.W50}`}>
-          <div className={classes.SubSectionTitle}>
-            <FormattedHTMLMessage
-              id="Project.informations.identity.title"
-              defaultMessage="Project.informations.identity.title"
-            >
-              {
-                txt => (
-                  <h3 className={classes.Title}>
-                    {txt}
-                  </h3>
-                )
-              }
-            </FormattedHTMLMessage>
+      <div className="col-6">
+        <div className="row">
+          <h3 className={`col-12 ${classes.SubSectionTitle}`}>
+            {<FormattedHTMLMessage id="Project.Informations.Identity.title" />}
+          </h3>
+          <div className={`col-6 ${classes.CardContainer}`}>
+            <LogoCard
+              language={props.language}
+              url={`/img/projects/${props.data.type.toLowerCase()}.png`}
+              label={props.data.type.toLowerCase()}
+              cssClass="Height150"
+            />
           </div>
-          <div className="d-flex flex-wrap">
-            <div className={classes.W50}>
-              <LogoCard
-                language={props.language}
-                url={`/img/projects/${props.data.type.toLowerCase()}.png`}
-                label={props.data.type.toLowerCase()}
-                cssClass="Height150"
-              />
-            </div>
-            <div className={classes.W50}>
-              <SimpleCard
-                language={props.language}
-                logo="fas fa-qrcode"
-                title={messages[props.language]['Project.informations.identifier']}
-                label={props.data.id}
-                tooltip=""
-              />
-            </div>
-            <div className="w-100 p-1">
-              <SimpleCard
-                language={props.language}
-                logo="fas fa-calendar-day"
-                title={messages[props.language]['Project.informations.name']}
-                label={titleAcro}
-                tooltip=""
-              />
-            </div>
+          <div className={`col-6 ${classes.CardContainer}`}>
+            <SimpleCard
+              language={props.language}
+              logo="fas fa-qrcode"
+              title={<FormattedHTMLMessage id="Project.Informations.Identity.identifier" />}
+              label={props.data.id}
+            />
           </div>
-        </section>
-      </IntlProvider>
+          <div className={`col-12 ${classes.CardContainer}`}>
+            <SimpleCard
+              language={props.language}
+              logo="fas fa-calendar-day"
+              title={<FormattedHTMLMessage id="Project.Informations.Identity.name" />}
+              label={titleAcro}
+            />
+          </div>
+        </div>
+      </div>
     );
   }
   return null;
