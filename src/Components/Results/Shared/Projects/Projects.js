@@ -7,7 +7,7 @@ import { API_PROJECTS_SEARCH_END_POINT } from '../../../../config/config';
 
 import styles from '../../../../style.scss';
 
-import EmptySection from '../../../Shared/Results/EmptySection/EmptySection';
+import EmptySection from '../EmptySection/EmptySection';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProjectList from './Components/ProjectList';
