@@ -247,6 +247,7 @@ class Productions extends Component {
                 id={this.props.match.params.id}
                 total={this.state.total}
                 title="Productions"
+                lexicon="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -268,6 +269,7 @@ class Productions extends Component {
                 id={this.props.match.params.id}
                 total={this.state.total}
                 title="Productions"
+                lexicon="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -289,6 +291,7 @@ class Productions extends Component {
                 id={this.props.match.params.id}
                 total={this.state.total}
                 title="Productions"
+                lexicon="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -335,6 +338,7 @@ class Productions extends Component {
               id={this.props.match.params.id}
               total={this.state.total}
               title="Productions"
+              lexicon="Productions"
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
             />

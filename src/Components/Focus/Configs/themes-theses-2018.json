@@ -24,6 +24,7 @@
       },
       "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
+      "lexicon" : "FocusTheseKeyword",
       "request": {
         "query": "",
         "pageSize": 0,
@@ -50,6 +51,7 @@
       },
       "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
+      "lexicon" : "FocusTheseDomain",
       "request": {
         "query": "",
         "pageSize": 0,
@@ -76,6 +78,7 @@
       },
       "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
       "api" : "publications",
+      "lexicon" : "FocusTheseCity",
       "aggSize": 20,
       "aggField": "affiliations.address.urbanUnitLabel",
       "filename": "scanr_exportthesis_urban_unit_label",
