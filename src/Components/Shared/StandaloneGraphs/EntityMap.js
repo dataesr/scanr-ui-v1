@@ -51,6 +51,8 @@ class EntityMap extends Component {
     <div className={`w-100 ${classes.graphCard}`}>
       <GraphTitles
         title={this.props.title}
+        language={this.props.language}
+        lexicon={this.props.lexicon}
         subtitle={this.props.subtitle}
       />
       {
@@ -77,4 +79,5 @@ EntityMap.propTypes = {
   style: PropTypes.object,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
+  lexicon: PropTypes.string,
 };

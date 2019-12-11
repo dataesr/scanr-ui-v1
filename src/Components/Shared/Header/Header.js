@@ -25,6 +25,7 @@ const Header = () => {
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
       <section className={classes.Header}>
+        <div className={classes.ribbon}>Bêta</div>
         <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
           <a className="navbar-brand" href="/">
             <LogoScanrWhiteSVG fill={classes.scanrdeepblueColor} height="40px" width="160px" />

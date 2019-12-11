@@ -32,6 +32,8 @@ export default class PublicationList extends Component {
   render = () => (
     <div className={`w-100 ${classes.graphCard}`}>
       <GraphTitles
+        lexicon={this.props.lexicon}
+        language={this.props.language}
         title={this.props.title}
         subtitle={this.props.subtitle}
       />
@@ -60,4 +62,5 @@ PublicationList.propTypes = {
   title: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
   subtitle: PropTypes.string.isRequired,
+  lexicon: PropTypes.string,
 };
