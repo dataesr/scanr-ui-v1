@@ -20,7 +20,8 @@ const HeaderTitle = (props) => {
   const SectionsList = {
     entity: ['Portrait', 'Network', 'Team', 'Projects', 'Productions',
       'Ecosystem', 'Awards', 'SimilarEntities', 'LastEntityFocus'],
-    projects: ['Informations', 'Financial', 'Programs', 'Participants', 'Productions'],
+    projects: ['Informations', 'Financial', 'Programs',
+      'Description', 'Participants', 'Productions'],
     persons: ['Informations', 'Production', 'CoAuthors'],
     publication: ['Publication', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
     thesis: ['Thesis', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
@@ -29,71 +30,59 @@ const HeaderTitle = (props) => {
 
   if (selected) {
     document.getElementById(selected).scrollIntoView(true);
+    setSelected(null);
     window.scrollBy({ top: -120, behavior: 'smooth' });
   }
 
-  const renderPageNavigation = () => (
-    <div className={`col pr-0 ${classes.ColToDelete}`}>
-      <div className={`form-group ${classes.NavBox}`}>
-        <select
-          id="headerTitleSelect"
-          className="form-control"
-          onChange={e => setSelected(e.target.value)}
-          value={selected}
-        >
-          {
-            SectionsList[props.idPage].map(item => (
-              <option value={item} key={item}>{messages[props.language][`${props.idPage}.${item}`]}</option>
-            ))
-          }
-        </select>
-      </div>
+  const renderBread = () => (
+    <div className="col-12">
+      <nav aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li className={classes['breadcrumb-item']}>
+            <a href="/">{messages[props.language].Home}</a>
+          </li>
+          <li className={classes['breadcrumb-item']}>
+            <a href="/recherche/all">{messages[props.language].Search}</a>
+          </li>
+          <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>{messages[props.language][props.idPage]}</li>
+        </ol>
+      </nav>
     </div>
   );
 
-  // si mini
+  let style = {};
   if (!props.isFull) {
-    return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className={classes.HeaderTitle} style={{ position: 'fixed', zIndex: 1002, width: '100%' }}>
-          <div className="container">
-            <div className="row">
-              <div className="col-md-9">
-                <div className={classes.Title}>
-                  {props.label}
-                </div>
-              </div>
-              {renderPageNavigation()}
-            </div>
-          </div>
-        </section>
-      </IntlProvider>
-    );
+    style = { position: 'fixed', zIndex: 1002, width: '100%' };
   }
-
   // sinon full
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={classes.HeaderTitle}>
+      <section className={classes.HeaderTitle} style={style}>
         <div className="container">
-          <div className="row">
-            <div className="col-md-9">
-              <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
-                  <li className={classes['breadcrumb-item']}>
-                    <a href="/">{messages[props.language].Home}</a>
-                  </li>
-                  <li className={classes['breadcrumb-item']}>
-                    <a href="/recherche/all">{messages[props.language].Search}</a>
-                  </li>
-                  <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>{messages[props.language][props.idPage]}</li>
-                </ol>
-              </nav>
-              <div className={classes.Title}>
-                {props.label}
-              </div>
+          {props.isFull ? renderBread() : null}
+          <div className="row d-flex flex-nowrap justify-content-between align-items-center">
+            <div className={classes.Title}>
+              {props.label}
             </div>
-            {renderPageNavigation()}
+            <div className={`form-group ${classes.NavBox}`}>
+              <select
+                id="headerTitleSelect"
+                className="form-control"
+                onChange={e => setSelected(e.target.value)}
+                value={selected}
+              >
+                {
+                  SectionsList[props.idPage].map(item => (
+                    <option
+                      value={item}
+                      key={item}
+                    >
+                      {messages[props.language][`${props.idPage}.${item}`]}
+                    </option>
+                  ))
+                }
+              </select>
+            </div>
           </div>
         </div>
       </section>
