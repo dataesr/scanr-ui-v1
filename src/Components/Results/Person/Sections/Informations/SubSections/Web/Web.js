@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
@@ -7,15 +8,6 @@ import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard'
 import YoutubeCard from '../../../../../../Shared/Ui/YoutubeCard/YoutubeCard';
 
 import classes from './Web.scss';
-
-import messagesFr from '../../../../translations/fr.json';
-import messagesEn from '../../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 /**
  * Affiliations
  * Url : .
@@ -25,59 +17,45 @@ const messages = {
  * Tests unitaires : .
 */
 const Web = (props) => {
-  let youtubeUrl = null;
+  let wikidataId = {};
+  let twitterUrl = {};
+  let youtubeUrl = {};
   if (props.data.links && props.data.links.length > 0) {
-    for (let i = 0; i < props.data.links.length; i += 1) {
-      if (props.data.links[i].type.toLowerCase() === 'youtube') {
-        youtubeUrl = props.data.links[i].url;
-      }
-    }
+    youtubeUrl = props.data.links.find(link => (link.type.toLowerCase() === 'youtube')) || {};
+    twitterUrl = props.data.links.find(link => (link.type.toLowerCase() === 'twitter')) || {};
   }
-  let wikidataId = null;
   if (props.data.externalIds && props.data.externalIds.length > 0) {
-    for (let i = 0; i < props.data.externalIds.length; i += 1) {
-      if (props.data.externalIds[i].type.toLowerCase() === 'wikidata') {
-        wikidataId = props.data.externalIds[i].id;
-      }
-    }
-  }
-  let twitterUrl = null;
-  if (props.data.links && props.data.links.length > 0) {
-    for (let i = 0; i < props.data.links.length; i += 1) {
-      if (props.data.links[i].type.toLowerCase() === 'twitter') {
-        twitterUrl = props.data.links[i].url;
-      }
-    }
+    wikidataId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'wikidata')) || {};
   }
   return (
-    <section className="container-fluid">
+    <div className="container-fluid">
       {
-        (wikidataId || twitterUrl || youtubeUrl) ? (
+        (wikidataId.id || twitterUrl.url || youtubeUrl.url) ? (
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[props.language]['Person.web.title']} />
+              <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Web.title" />} />
             </div>
           </div>
         ) : null
       }
       <div className="row">
-        { (wikidataId) ? (
+        { (wikidataId.id) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-            <WikidataCard language={props.language} id={wikidataId} />
+            <WikidataCard language={props.language} id={wikidataId.id} />
           </div>
         ) : null }
-        { (twitterUrl) ? (
+        { (twitterUrl.url) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-            <TwitterTimelineEmbed url={twitterUrl} autoHeight />
+            <TwitterTimelineEmbed url={twitterUrl.url} autoHeight />
           </div>
         ) : null }
-        { (youtubeUrl) ? (
+        { (youtubeUrl.url) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-            <YoutubeCard url={youtubeUrl} autoHeight />
+            <YoutubeCard url={youtubeUrl.url} autoHeight />
           </div>
         ) : null }
       </div>
-    </section>
+    </div>
   );
 };
 

@@ -62,7 +62,7 @@ export default Contribute;
 
 Contribute.propTypes = {
   language: PropTypes.string.isRequired,
-  sectionName: PropTypes.string.isRequired,
+  sectionName: PropTypes.any.isRequired,
   objectId: PropTypes.string.isRequired,
   objectType: PropTypes.string,
 };

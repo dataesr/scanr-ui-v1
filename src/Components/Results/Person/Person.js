@@ -20,9 +20,8 @@ import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 
 import styles from '../../../style.scss';
-import InfoBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
-import coAuthorsBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
-import ThesisBackground from '../../Shared/images/poudre-orange_Fgris-BR.jpg';
+import OrangeBackground from '../../../images/img/poudre-orange_Fgris-BR.jpg';
+import FuschiaBackground from '../../../images/img/poudre-fuschia_Fgris-B.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -48,6 +47,19 @@ const Person = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
+  const BG = {
+    padding: '1em 0px',
+    backgroundSize: '40%',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: styles.scanrlightgreyColor,
+    backgroundPosition: 'bottom 0 right 0',
+  };
+  const ThesisBG = {
+    ...BG,
+    backgroundImage: `url(${FuschiaBackground})`,
+    backgroundPosition: 'bottom 0 left 0',
+  };
+  const InformationBG = { ...BG, backgroundImage: `url(${OrangeBackground})` };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <React.Fragment>
@@ -61,32 +73,42 @@ const Person = (props) => {
         <HeaderTitle
           language={props.language}
           label={(data.fullName) ? data.fullName : ''}
-          idPage="person"
+          idPage="persons"
           id={props.match.params.id}
           isFull={scrollY === 0}
         />
-
-        <Banner
-          language={props.language}
-          labelKey="Appear"
-          cssClass="BannerDark"
-          url=""
-        />
-        <section id="Thesis" style={{ background: ThesisBackground }}>
+        <section id="Informations" style={InformationBG}>
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
               objectType="persons"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.thesis.title" />}
+              title={<FormattedHTMLMessage id="Person.informations" />}
             />
-            <Thesis
+
+            <Informations
               language={props.language}
-              person={props.match.params.id}
-              personName={data.fullName}
-              id={props.match.params.id}
+              data={data}
             />
+          </div>
+        </section>
+        <Banner
+          language={props.language}
+          labelKey="Appear"
+          cssClass="BannerDark"
+          url=""
+        />
+        <section id="Thesis" style={ThesisBG}>
+          <div className="container">
+            <SectionTitle
+              icon="fa-id-card"
+              objectType="persons"
+              language={props.language}
+              id={props.match.params.id}
+              title={<FormattedHTMLMessage id="Person.thesis" />}
+            />
+            <Thesis language={props.language} id={props.match.params.id} />
           </div>
         </section>
         <div id="Production">
@@ -97,7 +119,7 @@ const Person = (props) => {
             person
           />
         </div>
-        <section id="CoAuthors" style={{ background: coAuthorsBackground }}>
+        <section id="CoAuthors" style={InformationBG}>
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
@@ -119,13 +141,13 @@ const Person = (props) => {
           cssClass="BannerLight"
           url=""
         />
-        <section style={{ background: coAuthorsBackground }}>
+        <section style={InformationBG}>
           <div className="container">
             <SectionTitle
               icon="fa-th"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.similars.title" />}
+              title={<FormattedHTMLMessage id="Person.similars" />}
             />
             <Similars
               language={props.language}
