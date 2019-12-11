@@ -4,13 +4,16 @@
   background-color: $bgHeaderTitle;
   border-bottom: solid rgb(0, 33, 59);
   padding-top: 75px;
+
   .Title {
-    font-size: $sizeHeaderTitle;
+    font-size: 2em;
     color: $colorHeaderTitle;
     font-weight: bold ;
-    display: inline-block;
-    // padding-bottom: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding-left: 16px;
+    flex-shrink: 2;
   }
   .img {
     position: absolute;
