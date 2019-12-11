@@ -157,6 +157,7 @@ const Evaluations = (props) => {
     <div className={classes.Evaluations}>
       <div className="container">
         <SectionTitle
+          lexicon="EntityEvaluation"
           icon="fa-landmark"
           objectType="structures"
           language={props.language}

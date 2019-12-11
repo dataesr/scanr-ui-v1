@@ -207,6 +207,7 @@ class Publication extends Component {
           <section className={`container-fluid ${classes.OaSection}`} id="AccessType">
             <div className="container">
               <SectionTitle
+                lexicon="PublicationOA"
                 icon="fa-folder-open"
                 objectType="publications"
                 language={this.props.language}
@@ -248,6 +249,7 @@ class Publication extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-folder-open"
+                lexicon="PublicationAuthor"
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
@@ -310,6 +312,7 @@ class Publication extends Component {
                 <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations} id="Affiliations">
                   <div className="container">
                     <SectionTitle
+                      lexicon="PublicationAffiliation"
                       icon="fa-folder-open"
                       objectType="publications"
                       language={this.props.language}

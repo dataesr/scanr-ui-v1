@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './CardsTitle.scss';
+import LexiconModal from '../../Lexicon/LexiconModal/LexiconModal';
 
 /**
  * CardsTitle
@@ -14,11 +15,18 @@ import classes from './CardsTitle.scss';
 const CardsTitle = props => (
   <h2 className={classes.CardsTitle}>
     {props.title}
+    &nbsp;
+    {(props.lexicon) ? (
+      <LexiconModal target={props.lexicon}>
+        <i className="fa fa-info-circle" />
+      </LexiconModal>
+    ) : null }
   </h2>
 );
 
 export default CardsTitle;
 
 CardsTitle.propTypes = {
-  title: PropTypes.any.isRequired,
+  title: PropTypes.string.isRequired,
+  lexicon: PropTypes.string,
 };

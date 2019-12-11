@@ -40,12 +40,8 @@ const SimilarPersons = (props) => {
     likeTexts: [],
   };
   const { data, isLoading, isError } = useLikeApi('persons', request);
-  if (isLoading) {
-    return (<SectionLoader />);
-  }
-  if (isError) {
-    return (<Errors />);
-  }
+  if (isLoading) return <SectionLoader />;
+  if (isError) return <Errors />;
   const filteredData = filtercoContributors(data);
   return (
     <ul className={`row px-2 ${classes.Ul}`}>

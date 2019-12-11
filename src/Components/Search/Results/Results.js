@@ -3,6 +3,7 @@ import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
+import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 
 import classes from './Results.scss';
 
@@ -185,6 +186,10 @@ class SearchResults extends Component {
                   </button>
                 )}
               </FormattedHTMLMessage>
+              &nbsp;
+              <LexiconModal language={this.props.language} target="Download">
+                <i className="fa fa-info-circle" />
+              </LexiconModal>
             </div>
           </div>
         </div>
