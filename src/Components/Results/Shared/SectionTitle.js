@@ -91,10 +91,10 @@ export default SectionTitle;
 SectionTitle.propTypes = {
   language: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  id: PropTypes.object,
+  title: PropTypes.any.isRequired,
+  id: PropTypes.string,
   objectType: PropTypes.string,
   total: PropTypes.number,
-  viewModeClickHandler: PropTypes.func.isRequired,
-  viewMode: PropTypes.string.isRequired,
+  viewModeClickHandler: PropTypes.func,
+  viewMode: PropTypes.string,
 };

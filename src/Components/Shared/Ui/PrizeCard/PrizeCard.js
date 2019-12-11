@@ -46,7 +46,7 @@ PrizeCard.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string,
-  date: PropTypes.string,
+  date: PropTypes.any,
   color: PropTypes.string,
 };
 // icon: PropTypes.string,

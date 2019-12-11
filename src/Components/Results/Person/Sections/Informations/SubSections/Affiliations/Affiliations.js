@@ -1,21 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
 import moment from 'moment';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import LeafletMap from '../../../../../../Shared/GraphComponents/Graphs/LeafletMap';
 import getSelectKey from '../../../../../../../Utils/getSelectKey';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Affiliations.scss';
-
-import messagesFr from '../../../../translations/fr.json';
-import messagesEn from '../../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
+import styles from '../../../../../../../style.scss';
 
 /**
  * Affiliations
@@ -48,7 +41,7 @@ const Affiliations = (props) => {
       height: '32.5vh',
       borderTopLeftRadius: '10px',
       borderTopRightRadius: '10px',
-      borderBottom: '5px solid #ffd138',
+      borderBottom: `5px solid ${styles.entityColor}`,
     };
     const testAffs = {};
     /*
@@ -99,61 +92,59 @@ const Affiliations = (props) => {
     }
     const orderedYears = Object.keys(testAffs).sort((a, b) => b.replace('-', '') - a.replace('-', ''));
     return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <React.Fragment>
-          <section className="container-fluid">
-            <div className="row">
-              <div className={`col ${classes.NoSpace}`}>
-                <CardsTitle title={messages[props.language]['Person.informations.affiliation.title']} />
-              </div>
+      <React.Fragment>
+        <section className="container-fluid">
+          <div className="row">
+            <div className={`col ${classes.NoSpace}`}>
+              <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Affiliations.title" />} />
             </div>
-            <div className="row">
-              <div className={`col-12 ${classes.CardContainer}`}>
-                <div className="w-100">
-                  <LeafletMap
-                    filename="carto"
-                    data={mapdata}
-                    share={false}
-                    language={props.language}
-                    style={mapStyle}
-                  />
-                </div>
-                <div className={`w-100 ${classes.AffiliationsList}`}>
-                  {
-                    orderedYears.map(year => (
-                      <div className="d-flex" key={year}>
-                        <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
-                          {year}
-                        </div>
-                        <div className={`${classes.vl}`} />
-                        <div className={`d-flex flex-column pt-3 pb-3 w-100 ${classes.AffiliationItem}`}>
-                          {
-                            testAffs[year].map(struct => (
-                              <div key={JSON.stringify(struct)} className="d-flex pl-2 pr-2 pb-2 align-items-center">
-                                <div className="d-flex flex-column mr-auto">
-                                  <p className={`m-0 ${classes.AffiliationTitle}`}>
-                                    {getSelectKey(struct.structure, 'label', props.language, 'default')}
-                                  </p>
-                                  <p className={`m-0 ${classes.AffiliationYears}`}>
-                                    {`${struct.subLabel}`}
-                                  </p>
-                                </div>
-                                <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
-                                  <i className="fas fa-arrow-right" aria-hidden="true" />
-                                </a>
-                              </div>
-                            ))
-                          }
-                        </div>
+          </div>
+          <div className="row">
+            <div className={`col-12 ${classes.CardContainer}`}>
+              <div className="w-100">
+                <LeafletMap
+                  filename="carto"
+                  data={mapdata}
+                  share={false}
+                  language={props.language}
+                  style={mapStyle}
+                />
+              </div>
+              <div className={`w-100 ${classes.AffiliationsList}`}>
+                {
+                  orderedYears.map(year => (
+                    <div className="d-flex" key={year}>
+                      <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
+                        {year}
                       </div>
-                    ))
-                  }
-                </div>
+                      <div className={`${classes.vl}`} />
+                      <div className={`d-flex flex-column pt-3 pb-3 w-100 ${classes.AffiliationItem}`}>
+                        {
+                          testAffs[year].map(struct => (
+                            <div key={JSON.stringify(struct)} className="d-flex pl-2 pr-2 pb-2 align-items-center">
+                              <div className="d-flex flex-column mr-auto">
+                                <p className={`m-0 ${classes.AffiliationTitle}`}>
+                                  {getSelectKey(struct.structure, 'label', props.language, 'default')}
+                                </p>
+                                <p className={`m-0 ${classes.AffiliationYears}`}>
+                                  {`${struct.subLabel}`}
+                                </p>
+                              </div>
+                              <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
+                                <i className="fas fa-arrow-right" aria-hidden="true" />
+                              </a>
+                            </div>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  ))
+                }
               </div>
             </div>
-          </section>
-        </React.Fragment>
-      </IntlProvider>
+          </div>
+        </section>
+      </React.Fragment>
     );
   }
   return null;
@@ -163,5 +154,5 @@ export default Affiliations;
 
 Affiliations.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  data: PropTypes.array,
 };
