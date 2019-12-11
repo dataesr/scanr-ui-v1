@@ -51,12 +51,12 @@ const HomePage = (props) => {
         language={context.language}
         data={currentThemes}
       />
-      <Banner
+      { /* <Banner
         language={context.language}
         labelKey="Appear"
         cssClass="BannerLight"
         url=""
-      />
+      /> */}
       <LastFocus language={context.language} />
       {/* Not for Now */}
       {/* <Newsletter language={this.context.language} /> */}
