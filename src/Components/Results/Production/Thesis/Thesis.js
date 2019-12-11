@@ -244,6 +244,7 @@ class Thesis extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
+                lexicon="ThesisOA"
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
@@ -284,6 +285,7 @@ class Thesis extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
+                lexicon="ThesisAuthor"
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
@@ -346,6 +348,7 @@ class Thesis extends Component {
                   <div className="container">
                     <SectionTitle
                       icon="fa-open-folder"
+                      lexicon="ThesisAffiliation"
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}

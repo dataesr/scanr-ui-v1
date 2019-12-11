@@ -82,6 +82,7 @@ class SimilarPersons extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-th"
+                lexicon="PersonSimilar"
                 language={this.props.language}
                 title={messages[this.props.language]['Person.similars.title']}
               />

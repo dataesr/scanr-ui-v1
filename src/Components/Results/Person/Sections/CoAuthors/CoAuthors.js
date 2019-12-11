@@ -85,6 +85,7 @@ const CoAuthors = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
+              lexicon="PersonCollab"
               objectType="persons"
               language={props.language}
               id={props.id}

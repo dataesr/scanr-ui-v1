@@ -43,7 +43,11 @@ const Domains = (props) => {
         <section className="container-fluid">
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[props.language]['Person.informations.domains.title']} />
+              <CardsTitle
+                title={messages[props.language]['Person.informations.domains.title']}
+                lexicon="PersonThematics"
+                language={props.language}
+              />
             </div>
           </div>
           <div className="row">
