@@ -2,16 +2,18 @@
 
 .ribbon{
   z-index: 100;
-  width: 200px;
+  width: 80px;
   // background-color:$scanrelectricblueColor;
   background-color:$warningColor;
-  position: absolute;
-  top: 15px;
-  left: -70px;
+  background: linear-gradient(#F70505 0%, #8F0808 100%);
+  position: fixed;
+  top: 7px;
+  left: -20px;
   text-align: center;
-  line-height: 25px;
+  line-height: 20px;
   letter-spacing: 1px;
   color: #f0f0f0;
+  font-size: 12px;
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
