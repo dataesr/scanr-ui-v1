@@ -30,7 +30,7 @@ const LastFocus = (props) => {
                 defaultMessage="LastFocus.Title"
               />
               &nbsp;
-              <LexiconModal language={props.language} target="ScanrToday">
+              <LexiconModal language={props.language} target="LastFocus">
                 <i className="fa fa-info-circle" />
               </LexiconModal>
             </h2>
