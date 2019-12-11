@@ -10,7 +10,6 @@ import {
 } from '../../../config/config';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
-import FAQModal from '../../Shared/FAQ/FAQModal/FAQModal';
 import CounterCardByType from './CounterCards/CounterCardByType';
 import Background from '../../../images/img/poudre-bleu_Fgris-B.jpg';
 
@@ -39,12 +38,9 @@ const ScanrToday = (props) => {
             <h2 className={classes.Title}>
               <FormattedHTMLMessage id="Home.ScanrToday.title" />
               &nbsp;
-              <LexiconModal target="ScanrToday">
+              <LexiconModal language={props.language} target="ScanrToday">
                 <i className="fa fa-info-circle" />
               </LexiconModal>
-              <FAQModal target="q1">
-                <i className="fa fa-info-circle" />
-              </FAQModal>
             </h2>
           </div>
           <div className={`col-lg ${classes.CardContainer}`}>
@@ -92,6 +88,7 @@ export default ScanrToday;
 
 ScanrToday.propTypes = {
   isFull: PropTypes.bool,
+  language: PropTypes.string,
 };
 
 // <hr style={{ marginBottom: '8px' }} />

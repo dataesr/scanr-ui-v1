@@ -41,6 +41,7 @@ const HomePage = (props) => {
           isFull={scrollY === 0}
         />
         <ScanrToday
+          language={context.language}
           isFull={scrollY === 0}
         />
         <Banner
