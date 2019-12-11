@@ -8,6 +8,7 @@ import messagesEn from './translations/en.json';
 
 import ButtonToPage from '../Ui/Buttons/ButtonToPage';
 import FocusCard from '../Ui/FocusCard/FocusCard';
+import LexiconModal from '../Lexicon/LexiconModal/LexiconModal';
 
 /* SCSS */
 import classes from './LastFocus.scss';
@@ -28,6 +29,10 @@ const LastFocus = (props) => {
                 id="LastFocus.Title"
                 defaultMessage="LastFocus.Title"
               />
+              &nbsp;
+              <LexiconModal language={props.language} target="ScanrToday">
+                <i className="fa fa-info-circle" />
+              </LexiconModal>
             </h2>
             <ButtonToPage
               className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
