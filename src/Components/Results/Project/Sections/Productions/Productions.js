@@ -34,6 +34,7 @@ const Productions = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-open"
+              lexicon="ProjectProduction"
               objectType="projects"
               language={props.language}
               id={props.id}

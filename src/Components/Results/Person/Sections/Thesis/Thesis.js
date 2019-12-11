@@ -120,6 +120,7 @@ class Thesis extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-folder-open"
+                lexicon="PersonThesis"
                 objectType="persons"
                 language={this.props.language}
                 id={this.props.id}

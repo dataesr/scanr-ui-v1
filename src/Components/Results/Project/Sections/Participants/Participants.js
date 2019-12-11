@@ -56,6 +56,7 @@ const Participants = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-th"
+              lexicon="ProjectParticipant"
               objectType="projects"
               language={props.language}
               id={props.id}
@@ -104,6 +105,7 @@ const Participants = (props) => {
         <div className="container">
           <SectionTitle
             icon="fa-folder-open"
+            lexicon="ProjectParticipant"
             objectType="projects"
             language={props.language}
             id={props.id}

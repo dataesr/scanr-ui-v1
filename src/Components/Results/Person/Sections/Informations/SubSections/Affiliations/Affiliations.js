@@ -104,7 +104,11 @@ const Affiliations = (props) => {
           <section className="container-fluid">
             <div className="row">
               <div className={`col ${classes.NoSpace}`}>
-                <CardsTitle title={messages[props.language]['Person.informations.affiliation.title']} />
+                <CardsTitle
+                  title={messages[props.language]['Person.informations.affiliation.title']}
+                  lexicon="PersonAffiliation"
+                  language={props.language}
+                />
               </div>
             </div>
             <div className="row">
