@@ -78,6 +78,7 @@ class SimilarEntities extends Component {
             <div className="container">
               <SectionTitle
                 icon="fa-th"
+                lexicon="EntitySimilar"
                 language={this.props.language}
                 title={messages[this.props.language]['Entity.similarEntities.title']}
               />

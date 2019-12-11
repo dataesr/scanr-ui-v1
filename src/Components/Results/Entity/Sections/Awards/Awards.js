@@ -42,6 +42,7 @@ const Awards = (props) => {
           <section className={`container-fluid ${classes.Awards}`}>
             <div className="container">
               <SectionTitle
+                lexicon="EntityAward"
                 icon="fa-th"
                 objectType="structures"
                 language={props.language}

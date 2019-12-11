@@ -97,6 +97,7 @@ const Person = (props) => {
             <SectionTitle
               icon="fa-id-card"
               objectType="persons"
+              lexicon="PersonThesis"
               language={props.language}
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Person.thesis" />}
@@ -118,6 +119,7 @@ const Person = (props) => {
               icon="fa-folder-open"
               objectType="persons"
               language={props.language}
+              lexicon="PersonCollab"
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Person.coAuthors.title" />}
             />
@@ -139,6 +141,7 @@ const Person = (props) => {
             <SectionTitle
               icon="fa-th"
               language={props.language}
+              lexicon="PersonSimilar"
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Person.similars" />}
             />

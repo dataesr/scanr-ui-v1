@@ -177,9 +177,9 @@ class Entity extends Component {
 
         <Banner
           language={this.props.language}
-          labelKey="Appear"
+          labelKey="WhatAreOurSources"
           cssClass="BannerDark"
-          url=""
+          url="/ressources"
         />
 
         <div id="Productions">
@@ -192,9 +192,9 @@ class Entity extends Component {
 
         <Banner
           language={this.props.language}
-          labelKey="Appear"
+          labelKey="Opendata"
           cssClass="BannerDeep"
-          url=""
+          url="/opendata"
         />
 
         <div id="Ecosystem">
@@ -232,12 +232,12 @@ class Entity extends Component {
             ) : null
         }
 
-        <Banner
+        { /* <Banner
           language={this.props.language}
           labelKey="Appear"
           cssClass="BannerLight"
           url=""
-        />
+        /> */ }
 
         <Footer />
       </div>
