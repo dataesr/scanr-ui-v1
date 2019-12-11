@@ -62,7 +62,7 @@ const Person = (props) => {
 
       <Banner
         language={props.language}
-        labelKey="Appear"
+        labelKey="WhatAreOurSources"
         cssClass="BannerDark"
         url=""
       />
@@ -90,12 +90,12 @@ const Person = (props) => {
           id={props.match.params.id}
         />
       </div>
-      <Banner
+      { /* <Banner
         language={props.language}
         labelKey="Appear"
         cssClass="BannerLight"
         url=""
-      />
+      /> */ }
 
       <div>
         <Similars

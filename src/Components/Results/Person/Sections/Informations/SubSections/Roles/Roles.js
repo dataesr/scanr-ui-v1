@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 import RoleCard from '../../../../Components/RoleCard';
+import LexiconModal from '../../../../../../Shared/Lexicon/LexiconModal/LexiconModal';
 
 import classes from './Roles.scss';
 
@@ -34,6 +35,10 @@ const Roles = (props) => {
                   id="Person.informations.roles.title"
                   defaultMessage="Person.informations.roles.title"
                 />
+                &nbsp;
+                <LexiconModal language={props.language} target="PersonRole">
+                  <i className="fa fa-info-circle" />
+                </LexiconModal>
               </div>
               <div className="container-fluid">
                 <div className="row">
