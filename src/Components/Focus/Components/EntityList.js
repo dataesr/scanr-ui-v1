@@ -32,7 +32,9 @@ export default class EntityList extends Component {
   render = () => (
     <div className={`w-100 ${classes.graphCard}`}>
       <GraphTitles
+        lexicon={this.props.lexicon}
         title={this.props.title}
+        language={this.props.language}
         subtitle={this.props.subtitle}
       />
       <div className="container">
@@ -60,4 +62,5 @@ EntityList.propTypes = {
   title: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
   subtitle: PropTypes.string.isRequired,
+  lexicon: PropTypes.string,
 };
