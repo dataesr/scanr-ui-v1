@@ -36,7 +36,9 @@ const ExpertiseField = (props) => {
       <div className={classes.ExpertiseField}>
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.expertiseField.title']} />
+            <CardsTitle
+              title={messages[props.language]['Entity.portrait.expertiseField.title']}
+            />
           </div>
         </div>
       </div>

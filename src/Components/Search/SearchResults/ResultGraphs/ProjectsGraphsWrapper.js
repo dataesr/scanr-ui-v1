@@ -16,6 +16,7 @@ const ProjectsGraphsWrapper = props => (
       title={messages[props.language].ProjectsMapTitle}
       subtitle={messages[props.language].ProjectsMapSubtitle}
       language={props.language}
+      lexicon="ProjectMapSearch"
       request={props.request}
     />
     <SimpleAggregationGraph
@@ -27,6 +28,7 @@ const ProjectsGraphsWrapper = props => (
       title={messages[props.language].ProjectsTypesTitle}
       subtitle={messages[props.language].ProjectsTypesSubtitle}
       language={props.language}
+      lexicon="ProjectTypeSearch"
       request={props.request}
     />
   </React.Fragment>

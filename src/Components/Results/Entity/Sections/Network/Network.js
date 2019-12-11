@@ -141,6 +141,7 @@ class Network extends Component {
     <Fragment>
       <div className="container">
         <SectionTitle
+          lexicon="EntityNetwork"
           icon="fa-network-wired"
           objectType="structures"
           language={this.props.language}

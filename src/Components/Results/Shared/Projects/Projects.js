@@ -208,6 +208,7 @@ class Projects extends Component {
                 id={this.props.match.params.id}
                 total={this.state.total}
                 title={(this.props.language === 'fr') ? 'Projets' : 'Projects'}
+                lexicon="Projects"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
@@ -254,6 +255,7 @@ class Projects extends Component {
               id={this.props.match.params.id}
               total={this.state.total}
               title={title}
+              lexicon="Projects"
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
             />
