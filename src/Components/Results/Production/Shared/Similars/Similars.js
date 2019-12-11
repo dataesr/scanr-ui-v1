@@ -52,6 +52,7 @@ const Similars = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
+              lexicon="PublicationSimilar"
               language={props.language}
               title={messages[props.language]['Similar.productions.title']}
             />

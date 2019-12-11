@@ -138,6 +138,7 @@ const Project = (props) => {
             <SectionTitle
               icon="fa-folder-open"
               objectType="projects"
+              lexicon="ProjectParticipant"
               language={props.language}
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Project.participants" />}
@@ -155,6 +156,7 @@ const Project = (props) => {
               icon="fa-folder-open"
               objectType="projects"
               language={props.language}
+              lexicon="ProjectProduction"
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Project.productions" />}
             />

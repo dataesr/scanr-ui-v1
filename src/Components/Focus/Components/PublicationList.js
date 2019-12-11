@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../config/config';
@@ -6,6 +7,7 @@ import PublicationCard from '../../Search/Results/ResultCards/PublicationCard';
 import transformRequest from '../../../Utils/transformRequest';
 import classes from './GraphCard.scss';
 import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
+import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 
 export default class PublicationList extends Component {
   state = {
@@ -37,6 +39,21 @@ export default class PublicationList extends Component {
         title={this.props.title}
         subtitle={this.props.subtitle}
       />
+      <div className="col-md-6">
+        {
+          (this.props.href)
+            ? (
+              <ButtonToPage
+                className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                target="_blank"
+                url={this.props.href}
+              >
+                <FormattedHTMLMessage id="Focus.button.explorScanr" />
+              </ButtonToPage>
+            )
+            : null
+        }
+      </div>
       <div className="container">
         <ul className={`row ${classes.Ul}`}>
           {
@@ -63,4 +80,5 @@ PublicationList.propTypes = {
   request: PropTypes.object.isRequired,
   subtitle: PropTypes.string.isRequired,
   lexicon: PropTypes.string,
+  href: PropTypes.string,
 };

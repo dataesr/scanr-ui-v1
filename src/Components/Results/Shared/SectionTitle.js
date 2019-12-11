@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Contribute from './Contribute/Contribute';
+import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 
 import classes from './SectionTitle.scss';
 
@@ -21,6 +22,12 @@ const SectionTitle = props => (
         {(props.total) ? (props.total).toLocaleString(props.language) : null}
         &nbsp;
         {props.title}
+        &nbsp;
+        {(props.lexicon) ? (
+          <LexiconModal language={props.language} target={props.lexicon}>
+            <i className="fa fa-info-circle" />
+          </LexiconModal>
+        ) : null }
       </span>
       {
         (props.viewModeClickHandler && props.viewMode)
@@ -90,6 +97,7 @@ export default SectionTitle;
 
 SectionTitle.propTypes = {
   language: PropTypes.string.isRequired,
+  lexicon: PropTypes.string,
   icon: PropTypes.string.isRequired,
   title: PropTypes.any.isRequired,
   id: PropTypes.string,
