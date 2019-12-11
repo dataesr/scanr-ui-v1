@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 import 'moment/locale/fr';
 
@@ -10,13 +10,6 @@ import PileCard from '../../../Components/PileCard';
 
 import classes from './SubSectionsStyles.scss';
 
-import messagesFr from '../../../translations/fr.json';
-import messagesEn from '../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 /**
  * Informations
  * Url : .
@@ -45,68 +38,55 @@ const Status = (props) => {
     );
   }
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`p-0 ${classes.W50}`}>
-        <div className={classes.SubSectionTitle}>
-          <FormattedHTMLMessage
-            id="Project.informations.status.title"
-            defaultMessage="Project.informations.status.title"
-          >
-            {
-              txt => (
-                <h3 className={classes.Title}>
-                  {txt}
-                </h3>
+    <div className="col-6">
+      <div className="row">
+        <h3 className={`col-12 ${classes.SubSectionTitle}`}>
+          {<FormattedHTMLMessage id="Project.Informations.Status.title" />}
+        </h3>
+        <div className={`col-6 ${classes.CardContainer}`}>
+          {
+            (startDate)
+              ? (
+                <SimpleCard
+                  language={props.language}
+                  logo="fas fa-qrcode"
+                  title={<FormattedHTMLMessage id="Project.Informations.Status.startDate" />}
+                  label={startDate}
+                  tooltip=""
+                />
               )
-            }
-          </FormattedHTMLMessage>
+              : null
+          }
         </div>
-        <div className="d-flex flex-wrap">
-          <div className={classes.W50}>
-            {
-              (startDate)
-                ? (
-                  <SimpleCard
-                    language={props.language}
-                    logo="fas fa-qrcode"
-                    title={messages[props.language]['Project.informations.startDate']}
-                    label={startDate}
-                    tooltip=""
-                  />
-                )
-                : null
-            }
-          </div>
-          <div className={classes.W50}>
-            {
-              (endDate)
-                ? (
-                  <SimpleCard
-                    language={props.language}
-                    logo="fas fa-qrcode"
-                    title={messages[props.language]['Project.informations.endDate']}
-                    label={endDate}
-                    tooltip=""
-                  />
-                )
-                : null
-            }
-          </div>
-          <div className={classes.W50}>
-            {
-              (percents)
-                ? (
-                  <PileCard
-                    language={props.language}
-                    percents={percents}
-                  />
-                )
-                : null
-            }
-          </div>
+        <div className={`col-6 ${classes.CardContainer}`}>
+          {
+            (endDate)
+              ? (
+                <SimpleCard
+                  language={props.language}
+                  logo="fas fa-qrcode"
+                  title={<FormattedHTMLMessage id="Project.Informations.Status.endDate" />}
+                  label={endDate}
+                  tooltip=""
+                />
+              )
+              : null
+          }
         </div>
-      </section>
-    </IntlProvider>
+        <div className={`col-6 ${classes.CardContainer}`}>
+          {
+            (percents)
+              ? (
+                <PileCard
+                  language={props.language}
+                  percents={percents}
+                />
+              )
+              : null
+          }
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -2,19 +2,16 @@
 
 
 .SubSectionTitle {
-  margin: 0.25em;
-  padding: 10px;
+  display: flex;
+  align-items: center;
   border-radius: 8px;
   background-color: $scanrmiddlegreyColor;
   color: $scanrdeepblueColor;
-
-  .Title {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
-  }
+  height: 45px;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-left: .5em;
 }
 
 .Pile {
@@ -23,7 +20,6 @@
   padding: 0.25em;
   height: 5em;
   width: 13em;
-
 }
 
 .PileExtend {
@@ -33,6 +29,7 @@
   width: 15px;
   border-radius: 3px;
 }
+
 .PileFill {
   height: 100%;
   background-color: $projectgreenColor;
