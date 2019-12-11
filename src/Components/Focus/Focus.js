@@ -77,6 +77,7 @@ const buildFocusFromConfig = (components, lang) => {
       tooltipFr: component.tooltipFr,
       graphType: component.graphType,
       lexicon: component.lexicon,
+      href: component.href,
       title: getSelectKey(component, 'title', lang, 'fr'),
       subtitle: getSelectKey(component, 'subtitle', lang, 'fr'),
       language: lang,
