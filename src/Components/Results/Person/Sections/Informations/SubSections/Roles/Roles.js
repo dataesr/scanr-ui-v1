@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
 
 import RoleCard from '../../../../Components/RoleCard';
+import LexiconModal from '../../../../../../Shared/Lexicon/LexiconModal/LexiconModal';
+
 import classes from './Roles.scss';
 
 
@@ -22,6 +24,10 @@ const Roles = (props) => {
           <div className={`col-12 ${classes.CardContainer}`}>
             <div className={classes.SubSectionTitle}>
               <FormattedHTMLMessage id="Person.Informations.Roles.title" />
+              &nbsp;
+              <LexiconModal target="PersonRole">
+                <i className="fa fa-info-circle" />
+              </LexiconModal>
             </div>
             <div className="container-fluid">
               <div className="row">

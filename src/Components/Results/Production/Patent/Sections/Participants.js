@@ -54,6 +54,7 @@ const PatentParticipants = (props) => {
         <div className="container">
           <SectionTitle
             icon="fa-user-friends"
+            lexicon="PatentParticipant"
             objectType="publications"
             language={props.language}
             id={props.id}

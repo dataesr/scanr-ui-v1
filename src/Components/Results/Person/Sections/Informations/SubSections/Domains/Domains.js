@@ -34,7 +34,10 @@ const Domains = (props) => {
       <div className="container-fluid">
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Domains.title" />} />
+            <CardsTitle
+              title={<FormattedHTMLMessage id="Person.Informations.Domains.title" />}
+              lexicon="PersonThematics"
+            />
           </div>
         </div>
         <div className="row">

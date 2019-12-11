@@ -95,6 +95,7 @@ const PatentsApplications = (props) => {
             objectType="productions"
             language={props.language}
             id={props.id}
+            lexicon="PatentDepot"
             title={messages[props.language]['Patent.depots.title']}
             viewModeClickHandler={view => setViewMode(view)}
             viewMode={viewMode}
