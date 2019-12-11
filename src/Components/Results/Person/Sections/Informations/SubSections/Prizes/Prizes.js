@@ -1,18 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import PrizeCard from '../../../../../../Shared/Ui/PrizeCard/PrizeCard';
-
+import styles from '../../../../../../../style.scss';
 import classes from './Prizes.scss';
-
-import messagesFr from '../../../../translations/fr.json';
-import messagesEn from '../../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * Affiliations
@@ -37,37 +29,34 @@ const Prizes = (props) => {
     });
 
     return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className="container-fluid">
-          <div className="row">
-            <div className={`col-12 ${classes.CardContainer}`}>
-              <div className={classes.SubSectionTitle}>
-                <FormattedHTMLMessage
-                  id="Person.informations.prizes.title"
-                  defaultMessage="Person.informations.prizes.title"
-                />
-              </div>
-              <div className="container-fluid">
-                <div className="row">
-                  {
-                    newAwards.map(award => (
-                      <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
-                        <PrizeCard
-                          date={award.date}
-                          language={props.language}
-                          label={award.label}
-                          icon="prize"
-                          color="#fe7747"
-                        />
-                      </div>
-                    ))
-                  }
-                </div>
+      <section className="container-fluid">
+        <div className="row">
+          <div className={`col-12 ${classes.CardContainer}`}>
+            <div className={classes.SubSectionTitle}>
+              <FormattedHTMLMessage
+                id="Person.Informations.Prizes.title"
+              />
+            </div>
+            <div className="container-fluid">
+              <div className="row">
+                {
+                  newAwards.map(award => (
+                    <div key={award.label} className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
+                      <PrizeCard
+                        date={award.date}
+                        language={props.language}
+                        label={award.label}
+                        icon="prize"
+                        color={styles.personColor}
+                      />
+                    </div>
+                  ))
+                }
               </div>
             </div>
           </div>
-        </section>
-      </IntlProvider>
+        </div>
+      </section>
     );
   }
   return null;

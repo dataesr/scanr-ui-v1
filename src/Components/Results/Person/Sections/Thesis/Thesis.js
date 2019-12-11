@@ -1,21 +1,18 @@
-import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
+import React from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 import useSearchAPI from '../../../../../Hooks/useSearchAPI';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config';
 import SectionLoader from '../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../Shared/Errors/Errors';
+
 import PublicationCard from '../../../../Search/Results/ResultCards/PublicationCard';
-import Background from '../../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
-import SectionTitle from '../../../Shared/SectionTitle';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
 import IsOa from '../../../Production/Shared/Oa/OaCard';
 import OaLink from '../../../Production/Shared/Oa/OaLink';
 
-
 import classes from './Thesis.scss';
-
 /**
  * SimilarEntities
  * Url : .
@@ -24,11 +21,13 @@ import classes from './Thesis.scss';
  * Accessible : .
  * Tests unitaires : .
 */
+
+// Parse thesis data for printing
 const parseThesisData = (d, id) => {
   let theses = [];
   const rapporteur = [];
   const direction = [];
-  if (d && d.length > 0) {
+  if (d.length > 0) {
     d.forEach((thes, i) => {
       thes.value.authors.forEach((author) => {
         if (author.role === 'author' && author.person && author.person.id === id) {
@@ -53,7 +52,8 @@ const parseThesisData = (d, id) => {
 const Thesis = (props) => {
   const request = {
     pageSize: 500,
-    sourceFields: ['title', 'authors', 'oaEvidence', 'id', 'publicationDate', 'isOa', 'productionType'],
+    sourceFields: ['title', 'authors', 'oaEvidence',
+      'id', 'publicationDate', 'isOa', 'productionType'],
     filters: {
       productionType: {
         type: 'MultiValueSearchFilter',
@@ -68,15 +68,69 @@ const Thesis = (props) => {
     },
   };
   const { data, isLoading, isError } = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
-  if (isLoading) {
-    return (<SectionLoader />);
-  }
-  if (isError) {
-    return (<Errors />);
-  }
-  const { rapporteur, theses, direction } = parseThesisData(data);
+  if (isLoading) return <SectionLoader />;
+  if (isError) return <Errors />;
+  const { rapporteur, theses, direction } = parseThesisData(data.results, props.id);
   return (
-    <div>{JSON.strigify(theses)}</div>
+    <React.Fragment>
+      {
+        (theses.length)
+          ? (
+            theses.map(thesis => (
+              <div className="row" key={thesis.id}>
+                <div className={`col-md-6 ${classes.CardContainer}`}>
+                  <div className={classes.isOa}>
+                    <PublicationCard small language={props.language} data={thesis} />
+                  </div>
+                </div>
+                <div className={`col-md-3 ${classes.CardContainer}`}>
+                  <div className={classes.isOa}>
+                    <IsOa className="p-3" language={props.language} oa={thesis.isOa} />
+                  </div>
+                </div>
+                {
+                  (thesis.isOa)
+                    ? (
+                      <div className={`col-md-3 ${classes.CardContainer}`}>
+                        <OaLink className={classes.CardHeight} language={props.language} oaEvidence={thesis.oaEvidence} />
+                      </div>
+                    )
+                    : null
+                }
+              </div>
+            ))
+          )
+          : null
+      }
+      <div className="row">
+        {
+          (direction.length)
+            ? (
+              <div className="p-1 col-md-6">
+                <ThesisParticipationsCard
+                  title={<FormattedHTMLMessage id="Person.Thesis.directed" />}
+                  buttonLabel={<FormattedHTMLMessage id="Person.Global.seeAll" />}
+                  dataHtml={direction.map(these => (<PublicationCard key={these.id} small language={props.language} data={these} />))}
+                />
+              </div>
+            )
+            : null
+        }
+        {
+          (rapporteur.length)
+            ? (
+              <div className="p-1 col-md-6">
+                <ThesisParticipationsCard
+                  title={<FormattedHTMLMessage id="Person.Thesis.rapporteur" />}
+                  buttonLabel={<FormattedHTMLMessage id="Person.Global.seeAll" />}
+                  dataHtml={rapporteur.map(these => (<PublicationCard key={these.id} small language={props.language} data={these} />))}
+                />
+              </div>
+            )
+            : null
+        }
+      </div>
+    </React.Fragment>
   );
 };
 

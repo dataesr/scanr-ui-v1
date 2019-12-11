@@ -29,7 +29,7 @@ class Productions extends Component {
     error: false,
     isLoading: true,
     total: 0,
-    sliderData: {},
+    sliderData: [],
     totalPerType: {
       patent: null,
       publication: null,
