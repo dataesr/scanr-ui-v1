@@ -149,7 +149,7 @@ const Project = (props) => {
             />
           </div>
         </section>
-        <section id="Participants" style={BG}>
+        <section id="Productions" style={BG}>
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
