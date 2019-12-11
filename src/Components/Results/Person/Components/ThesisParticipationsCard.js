@@ -63,7 +63,7 @@ export default ThesisParticipations;
 
 ThesisParticipations.propTypes = {
   language: PropTypes.string,
-  dataHtml: PropTypes.object,
+  dataHtml: PropTypes.any,
   title: PropTypes.object,
   buttonLabel: PropTypes.object,
   tooltip: PropTypes.string,

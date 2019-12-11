@@ -18,11 +18,10 @@ import classes from './Similars.scss';
 */
 const SimilarPersons = (props) => {
   const filtercoContributors = (d) => {
-    console.log(d);
     const forbiddenSimilars = (props.coContributors) ? props.coContributors.map(co => co.id) : [];
     const pushData = [];
     if (d.length) {
-      for (let i = 0; i < Math.min(d.length, 10); i += 1) {
+      for (let i = 0; i < Math.min(d.length, 100); i += 1) {
         const isCo = forbiddenSimilars.includes(d[i].value.id);
         if (d[i].value.id !== props.id && !isCo) {
           pushData.push(d[i]);
@@ -39,8 +38,6 @@ const SimilarPersons = (props) => {
     fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
     likeIds: [props.id],
     likeTexts: [],
-    lang: 'default',
-    pageSize: 10,
   };
   const { data, isLoading, isError } = useLikeApi('persons', request);
   if (isLoading) {
@@ -50,12 +47,11 @@ const SimilarPersons = (props) => {
     return (<Errors />);
   }
   const filteredData = filtercoContributors(data);
-  console.log(filteredData);
   return (
     <ul className={`row px-2 ${classes.Ul}`}>
       {
         filteredData.map(item => (
-          <li key={item.value} className={`col-sm-6 col-lg-3 ${classes.Li}`}>
+          <li key={item.value.id} className={`col-sm-6 col-lg-3 ${classes.Li}`}>
             <PersonCard
               data={item.value}
               small

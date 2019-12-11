@@ -24,12 +24,12 @@ const SeeMoreCard = (coAuthorsList, coAuthorsHtlm) => (
   <li className={`p-3 mb-2 d-flex flex-column ${classes.SeeMoreCard} ${classes.Card} ${classes.OneFourth}`}>
     <p className={classes.SeeMore}>
       {coAuthorsList.length - 6}
-      <FormattedHTMLMessage id="Person.more" defaultMessage="Person.more" />
+      <FormattedHTMLMessage id="Person.coAuthors.more" defaultMessage="Person.coAuthors.more" />
     </p>
     <ButtonWithModal
       logo="fas fa-expand"
-      title={<FormattedHTMLMessage id="Person.coAuthors.all" defaultMessage="Person.coAuthors.all" />}
-      buttonLabel={<FormattedHTMLMessage id="Person.seeAll" defaultMessage="Person.seeAll" />}
+      title={<FormattedHTMLMessage id="Person.coAuthors.all" />}
+      buttonLabel={<FormattedHTMLMessage id="Person.Global.seeAll" />}
       dataHtml={coAuthorsHtlm}
     />
   </li>

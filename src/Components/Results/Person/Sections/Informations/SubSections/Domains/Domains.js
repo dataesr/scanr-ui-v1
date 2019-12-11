@@ -1,20 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import TagCard from '../../../../../../Shared/Ui/TagCard/TagCard';
 import getSelectedKey from '../../../../../../../Utils/getSelectKey';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Domains.scss';
-
-import messagesFr from '../../../../translations/fr.json';
-import messagesEn from '../../../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * Affiliations
@@ -35,32 +27,30 @@ const Domains = (props) => {
         .sort((a, b) => b.length - a.length);
     }
     const domains = [...new Set(tags)];
-    const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'fr'))];
+    const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'default'))];
     const tagL = keywords.concat(domains);
     const tagList = [...new Set(tagL)];
     return (
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <section className="container-fluid">
-          <div className="row">
-            <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[props.language]['Person.informations.domains.title']} />
-            </div>
+      <div className="container-fluid">
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Domains.title" />} />
           </div>
-          <div className="row">
-            <div className={`col-md ${classes.CardContainer}`}>
-              <TagCard
-                logo="fas fa-flask"
-                title={(props.language === 'fr') ? 'Domaines de recherche' : 'Research domains'}
-                tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
-                tagList={tagList}
-                language={props.language}
-                maxElements={12}
-                labelListButton="Tous les domaines"
-              />
-            </div>
+        </div>
+        <div className="row">
+          <div className={`col-md ${classes.CardContainer}`}>
+            <TagCard
+              logo="fas fa-flask"
+              title={<FormattedHTMLMessage id="Person.Informations.Domains.domainCard" />}
+              tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
+              tagList={tagList}
+              language={props.language}
+              maxElements={12}
+              labelListButton="Tous les domaines"
+            />
           </div>
-        </section>
-      </IntlProvider>
+        </div>
+      </div>
     );
   }
   return null;

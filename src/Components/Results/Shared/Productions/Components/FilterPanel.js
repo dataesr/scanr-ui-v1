@@ -107,7 +107,7 @@ FilterPanel.propTypes = {
   language: PropTypes.string.isRequired,
   totalPerType: PropTypes.object.isRequired,
   selectedType: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.array.isRequired,
   currentQueryText: PropTypes.string,
   changeTypeHandler: PropTypes.func.isRequired,
   queryChangeHandler: PropTypes.func.isRequired,
