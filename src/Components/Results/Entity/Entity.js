@@ -8,7 +8,7 @@ import getSelectKey from '../../../Utils/getSelectKey';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
-import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
 import Evaluations from './Sections/Evaluations/Evaluations';

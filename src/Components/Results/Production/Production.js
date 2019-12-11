@@ -5,10 +5,10 @@ import useScrollY from '../../../Hooks/UseScrollY';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
+
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import getSelectKey from '../../../Utils/getSelectKey';
-
-import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 

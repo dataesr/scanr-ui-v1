@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
+// import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';

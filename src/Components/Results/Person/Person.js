@@ -9,7 +9,7 @@ import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
-import HeaderTitle from '../../Shared/Results/HeaderTitle/HeaderTitle';
+import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
 import Similars from './Sections/Similars/Similars';
@@ -37,16 +37,9 @@ import messagesEn from './translations/en.json';
 const Person = (props) => {
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
-  if (isLoading) {
-    return <Loader color={styles.productionsColor} />;
-  }
-  if (isError) {
-    return <Errors />;
-  }
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
+  if (isLoading) return <Loader color={styles.productionsColor} />;
+  if (isError) return <Errors />;
+  const messages = { fr: messagesFr, en: messagesEn };
   const BG = {
     padding: '1em 0px',
     backgroundSize: '40%',

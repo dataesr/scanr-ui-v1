@@ -6,6 +6,7 @@ import useSearchAPI from '../../../../../Hooks/useSearchAPI';
 
 import SectionLoader from '../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../Shared/Errors/Errors';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
 import PublicationCard from '../../../../Search/Results/ResultCards/PublicationCard';
 import ThesisParticipationsCard from '../../Components/ThesisParticipationsCard';
@@ -70,6 +71,7 @@ const Thesis = (props) => {
   const { data, isLoading, isError } = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors />;
+  if (!data) return <EmptySection />;
   const { rapporteur, theses, direction } = parseThesisData(data.results, props.id);
   return (
     <React.Fragment>
