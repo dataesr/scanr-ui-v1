@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
 import SectionTitle from '../../../Shared/SectionTitle';
 import PrizeCard from '../../../../Shared/Ui/PrizeCard/PrizeCard';
 

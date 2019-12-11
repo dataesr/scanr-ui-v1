@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider } from 'react-intl';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import classes from './PileCard.scss';
+// import styles from '../../../../style.scss';
 /**
  * PileCard
  * Url : .
@@ -12,16 +12,6 @@ import classes from './PileCard.scss';
  * Tests unitaires : .
 */
 const PileCard = (props) => {
-  const messages = {
-    fr: {
-      running: 'En cours',
-      over: 'Terminé',
-    },
-    en: {
-      running: 'Ongoing',
-      over: 'Over',
-    },
-  };
   const percent = `${props.percents}%`;
   let color = '#5dd99d';
   let status = 'running';
@@ -31,25 +21,22 @@ const PileCard = (props) => {
   }
 
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={classes.card}>
-        <div className={classes.Title}>
-          {messages[props.language][status]}
-        </div>
-        <div className="d-flex align-items-center justify-content-center">
-          <div className={classes.Pile} style={{ borderColor: color }}>
-            <div className={classes.PileFill} style={{ width: percent, backgroundColor: color }} />
-          </div>
-          <div className={classes.PileExtend} style={{ backgroundColor: color }} />
-        </div>
+    <div className={classes.card}>
+      <div className={classes.Title}>
+        {<FormattedHTMLMessage id={`Project.PileCard.${status}`} />}
       </div>
-    </IntlProvider>
+      <div className="d-flex align-items-center justify-content-center">
+        <div className={classes.Pile} style={{ borderColor: color }}>
+          <div className={classes.PileFill} style={{ width: percent, backgroundColor: color }} />
+        </div>
+        <div className={classes.PileExtend} style={{ backgroundColor: color }} />
+      </div>
+    </div>
   );
 };
 
 export default PileCard;
 
 PileCard.propTypes = {
-  language: PropTypes.string.isRequired,
   percents: PropTypes.number.isRequired,
 };

@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { GRAPH_ITEMS_LIST, ECOSYSTEM_LIMIT } from '../../../../../config/config';
 
 import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
-import EmptySection from '../../../../Shared/Results/EmptySection/EmptySection';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Select from '../../../../Shared/Ui/Select/Select';

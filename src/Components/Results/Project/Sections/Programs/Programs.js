@@ -1,19 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 
-import SectionTitle from '../../../Shared/SectionTitle';
-import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard2';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
+import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
 
 import classes from './Programs.scss';
-
-import messagesFr from '../../translations/fr.json';
-import messagesEn from '../../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 /**
  * Programs
  * Url : .
@@ -24,110 +16,69 @@ const messages = {
 */
 
 const Programs = (props) => {
-  if (props.data) {
-    let priorities = '';
-    if (props.data.domains) {
-      props.data.domains.filter(dom => (
-        dom.type === 'priorities'
-      )).forEach((prio) => {
-        if (priorities && prio.label.default) {
-          priorities += ` / ${prio.label.default}`;
-        }
-        priorities += (prio.label.default);
-      });
-    }
-    const pretopics = (props.data.domains)
-      ? props.data.domains.filter(dom => (
-        dom.type === 'topic'
-      ))
-      : [];
-    const topics = (pretopics.length > 0) ? pretopics[0].label.default : null;
-    const call = (props.data.call && props.data.call.label) ? props.data.call.label : { label: null };
-    if (topics || priorities || call.label) {
-      return (
-        <section className={`container-fluid ${classes.Programs}`}>
-          <IntlProvider locale={props.language} messages={messages[props.language]}>
-            <div className="container">
-              <SectionTitle
-                icon="fa-th"
-                objectType="projects"
-                language={props.language}
-                id={props.id}
-                title={messages[props.language]['Project.programs.title']}
-              />
-              <div className="row">
-                <div className="d-flex flex-wrap">
-                  <div className={classes.W50}>
-                    <SimpleCard
-                      language={props.language}
-                      logo="fas fa-calendar-day"
-                      title={`${messages[props.language]['Project.programs.call']} - ${props.data.year}`}
-                      label={
-                        (props.data.call)
-                          ? props.data.call.label
-                          : null
-                      }
-                      tooltip=""
-                    />
-                  </div>
-                  <div className={classes.W50}>
-                    <SimpleCard
-                      language={props.language}
-                      logo="fas fa-calendar-day"
-                      title={messages[props.language]['Project.programs.action']}
-                      label={
-                        (props.data.action && props.data.action.label)
-                          ? props.data.action.label.default
-                          : null
-                      }
-                      tooltip=""
-                    />
-                  </div>
-                  <div className={classes.W50}>
-                    <SimpleCard
-                      language={props.language}
-                      logo="fas fa-calendar-day"
-                      title={messages[props.language]['Project.programs.topic']}
-                      label={topics}
-                      tooltip=""
-                    />
-                  </div>
-                  <div className={classes.W50}>
-                    <SimpleCard
-                      language={props.language}
-                      logo="fas fa-calendar-day"
-                      title={messages[props.language]['Project.programs.priorities']}
-                      label={priorities}
-                      tooltip=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </IntlProvider>
-        </section>
-      );
-    }
+  if (!props.data) return <EmptySection />;
+  let priorities = '';
+  if (props.data.domains) {
+    props.data.domains.filter(dom => (
+      dom.type === 'priorities'
+    )).forEach((prio) => {
+      if (priorities && prio.label.default) {
+        priorities += ` / ${prio.label.default}`;
+      }
+      priorities += (prio.label.default);
+    });
   }
+  const pretopics = (props.data.domains)
+    ? props.data.domains.filter(dom => (
+      dom.type === 'topic'
+    ))
+    : [];
+  const topics = (pretopics.length > 0) ? pretopics[0].label.default : null;
+  const call = (props.data.call && props.data.call.label) ? props.data.call.label : { label: null };
+  if (!topics && !priorities && !call.label) return <EmptySection />;
   return (
-    <section className={`container-fluid ${classes.Programs}`}>
-      <IntlProvider locale={props.language} messages={messages[props.language]}>
-        <div className="container">
-          <SectionTitle
-            icon="fa-th"
-            objectType="projects"
-            language={props.language}
-            id={props.id}
-            title={messages[props.language]['Project.programs.title']}
-          />
-          <div className="row">
-            <div className={`d-flex pl-4 pr-4 ${classes.noDataOnSection}`}>
-              <FormattedHTMLMessage id="Project.programs.noPrograms" defaultMessage="Project.programs.noPrograms" />
-            </div>
-          </div>
-        </div>
-      </IntlProvider>
-    </section>
+    <div className="row">
+      <div className={`col-6 ${classes.CardContainer}`}>
+        <SimpleCard
+          language={props.language}
+          logo="fas fa-calendar-day"
+          title={<FormattedHTMLMessage id="Project.Programs.call" value={{ year: props.data.year }} />}
+          label={
+            (props.data.call)
+              ? props.data.call.label
+              : null
+          }
+        />
+      </div>
+      <div className={`col-6 ${classes.CardContainer}`}>
+        <SimpleCard
+          language={props.language}
+          logo="fas fa-calendar-day"
+          title={<FormattedHTMLMessage id="Project.Programs.action" />}
+          label={
+            (props.data.action && props.data.action.label)
+              ? props.data.action.label.default
+              : null
+          }
+        />
+      </div>
+      <div className={`col-6 ${classes.CardContainer}`}>
+        <SimpleCard
+          language={props.language}
+          logo="fas fa-calendar-day"
+          title={<FormattedHTMLMessage id="Project.Programs.topic" />}
+          label={topics}
+        />
+      </div>
+      <div className={`col-6 ${classes.CardContainer}`}>
+        <SimpleCard
+          language={props.language}
+          logo="fas fa-calendar-day"
+          title={<FormattedHTMLMessage id="Project.Programs.priorities" />}
+          label={priorities}
+        />
+      </div>
+    </div>
   );
 };
 
@@ -135,7 +86,6 @@ export default Programs;
 
 Programs.propTypes = {
   language: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
 
