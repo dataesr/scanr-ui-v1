@@ -15,6 +15,7 @@ const PersonsGraphsWrapper = props => (
       title={messages[props.language].PersonsMapTitle}
       subtitle={messages[props.language].PersonsMapSubtitle}
       language={props.language}
+      lexicon="PersonMapSearch"
       request={props.request}
     />
   </React.Fragment>

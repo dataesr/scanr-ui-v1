@@ -139,7 +139,11 @@ class TeamComposition extends Component {
         <div className={classes.TeamComposition}>
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[this.props.language]['Entity.team.teamComposition.title']} />
+              <CardsTitle
+                title={messages[this.props.language]['Entity.team.teamComposition.title']}
+                language={this.props.language}
+                lexicon="EntityTeam"
+              />
             </div>
           </div>
           <div className="row">
