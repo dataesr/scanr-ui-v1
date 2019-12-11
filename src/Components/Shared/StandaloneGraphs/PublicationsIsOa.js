@@ -63,7 +63,9 @@ export default class ProductionIsOa extends Component {
   render = () => (
     <div className={`w-100 ${classes.graphCard}`}>
       <GraphTitles
+        lexicon={this.props.lexicon}
         title={this.props.title}
+        language={this.props.language}
         subtitle={this.props.subtitle}
       />
       {
@@ -86,4 +88,5 @@ ProductionIsOa.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
+  lexicon: PropTypes.string,
 };

@@ -19,6 +19,7 @@ const EntityGraphsWrapper = props => (
       title={messages[props.language].EntityMapTitle}
       subtitle={messages[props.language].EntityMapSubtitle}
       language={props.language}
+      lexicon="EntityMapSearch"
       request={props.request}
     />
     <SimpleAggregationGraph
@@ -30,6 +31,7 @@ const EntityGraphsWrapper = props => (
       title={messages[props.language].EntityNatureTitle}
       subtitle={messages[props.language].EntityNatureSubtitle}
       language={props.language}
+      lexicon="EntityTypeSearch"
       request={props.request}
     />
     <SimpleAggregationGraph
@@ -41,12 +43,14 @@ const EntityGraphsWrapper = props => (
       title={messages[props.language].EntityUrbanUnitTitle}
       subtitle={messages[props.language].EntityUrbanUnitSubtitle}
       language={props.language}
+      lexicon="EntityCitySearch"
       request={props.request}
     />
     <EntityProjects
       title={messages[props.language].EntityProjectTypesTitle}
       subtitle={messages[props.language].EntityProjectTypesSubitle}
       language={props.language}
+      lexicon="EntityFundingSearch"
       request={props.request}
     />
   </React.Fragment>

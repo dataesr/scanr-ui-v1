@@ -52,6 +52,8 @@ class GridMap extends Component {
     <div className={`w-100 ${classes.graphCard}`}>
       <GraphTitles
         title={this.props.title}
+        lexicon={this.props.lexicon}
+        language={this.props.language}
         subtitle={this.props.subtitle}
       />
       {
@@ -77,4 +79,5 @@ GridMap.propTypes = {
   api: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   request: PropTypes.object.isRequired,
+  lexicon: PropTypes.string,
 };
