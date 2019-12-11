@@ -37,7 +37,11 @@ const Leaders = (props) => {
       <div className={classes.Leaders}>
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.leaders.title']} />
+            <CardsTitle
+              title={messages[props.language]['Entity.portrait.leaders.title']}
+              language={props.language}
+              lexicon="EntityDirection"
+            />
           </div>
         </div>
         <div className="row">

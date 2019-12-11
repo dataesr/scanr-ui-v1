@@ -20,12 +20,14 @@ const PublicationsGraphsWrapper = props => (
       title={messages[props.language].PublicationsIsOaTitle}
       subtitle={messages[props.language].PublicationsIsOaSubtitle}
       language={props.language}
+      lexicon="PublicationOASearch"
       request={props.request}
     />
     <PublicationKeywords
       title={messages[props.language].PublicationsKeywordsTitle}
       subtitle={messages[props.language].PublicationsKeywordsSubtitle}
       language={props.language}
+      lexicon="PublicationKeywordSearch"
       request={props.request}
     />
     {
@@ -36,6 +38,7 @@ const PublicationsGraphsWrapper = props => (
           filename="scanr_export_publications_journals"
           graphType="HighChartsBar"
           api="publications"
+          lexicon="PublicationJournalSearch"
           title={messages[props.language].PublicationsJournalTitle}
           subtitle={messages[props.language].PublicationsJournalSubtitle}
           language={props.language}
@@ -48,6 +51,7 @@ const PublicationsGraphsWrapper = props => (
       filterLow={1990}
       filterHigh={2019}
       title={messages[props.language].PublicationsYearsTitle}
+      lexicon="PublicationYearSearch"
       subtitle={messages[props.language].PublicationsYearsSubtitle}
       language={props.language}
       request={props.request}
@@ -57,6 +61,7 @@ const PublicationsGraphsWrapper = props => (
       title={messages[props.language].PublicationsTypesTitle}
       subtitle={messages[props.language].PublicationsTypesSubtitle}
       language={props.language}
+      lexicon="PublicationTypeSearch"
       request={props.request}
     />
   </React.Fragment>
