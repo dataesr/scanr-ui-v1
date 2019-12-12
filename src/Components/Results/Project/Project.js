@@ -52,9 +52,7 @@ import messagesEn from './translations/en.json';
 */
 const Project = (props) => {
   const scrollY = useScrollY();
-  const { data, isLoading, isError } = useGetData(
-    API_PROJECTS_END_POINT, props.match.params.id,
-  );
+  const { data, isLoading, isError } = useGetData(API_PROJECTS_END_POINT, props.match.params.id);
   if (isLoading) return <Loader color={styles.productionsColor} />;
   if (isError) return <Errors error={500} />;
   const msg = { en: messagesEn, fr: messagesFr };
