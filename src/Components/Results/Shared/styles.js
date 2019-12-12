@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import styles from '../../../style.scss';
 
+// -------------------------------------
+// Just a start rewrite section propelly.
+// -------------------------------------
+
 import OrangeBackground from '../../../images/img/poudre-orange_Fgris-BR.jpg';
 import FuschiaBackground from '../../../images/img/poudre-fuschia_Fgris-B.jpg';
 import GreenGreyBackground from '../../../images/img/poudre-vert_Fgris-A.jpg';
