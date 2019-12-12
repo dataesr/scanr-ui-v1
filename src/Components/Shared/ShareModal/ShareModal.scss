@@ -1,0 +1,36 @@
+@import '../../../style.scss';
+
+.Link {
+  color: $scanrblueColor;
+  font-weight: 600;
+  display: inline-block;
+  margin: 8px 8px;
+  cursor: pointer;
+}
+.Link:hover, .link:focus {
+  color: $scanrdeepblueColor;
+  text-decoration: underline;
+}
+
+.Title {
+  color: $scanrdeepblueColor;
+  font-size: 1.5rem;
+}
+
+.Socials{
+  color: $scanrblueColor;
+  font-size: 4rem;
+}
+
+.ButtonNoStyled {
+  padding: 0;
+ border: none;
+ outline: none;
+ font: inherit;
+ color: inherit;
+ background: none
+}
+.ButtonNoStyled:hover, .ButtonNoStyleds:focus{
+  color: $scanrdeepblueColor;
+  cursor: pointer;
+}
