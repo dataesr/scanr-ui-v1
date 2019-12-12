@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../../GlobalContext';
+import ShareModal from '../ShareModal/ShareModal';
+
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -112,14 +114,7 @@ const Header = () => {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className={classes.Link} href="#">
-                  <i className="fas fa-share-alt" />
-                  &nbsp;
-                  <FormattedHTMLMessage
-                    id="Header.link.share"
-                    defaultMessage="Header.link.share"
-                  />
-                </a>
+                <ShareModal />
               </li>
               <li className={`nav-item ${classes.Link}`}>
                 <a
