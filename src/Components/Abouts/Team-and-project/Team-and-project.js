@@ -57,12 +57,12 @@ const TeamAndProjectPage = props => (
               />
               <div className={classes.Texte}>
                 <FormattedHTMLMessage
-                  id="contentTexte"
+                  id="topoScanR"
                   defaultMessage="contentTexte"
                 />
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className={` ${classes.CardContainer} col-lg-3`}>
               <CardToPage
                 cssClass="card_light"
                 labelKey="Discover.TalkAboutScanr"
@@ -87,6 +87,51 @@ const TeamAndProjectPage = props => (
                 url="/faq"
                 btnText="Discover"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={classes.Content2}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-9 my-4">
+              <div className={classes.Texte}>
+                <FormattedHTMLMessage
+                  id="newVersion"
+                  defaultMessage="newVersion"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={classes.Content3}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className={classes.Texte}>
+                <FormattedHTMLMessage
+                  id="project"
+                  defaultMessage="project"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={classes.Content4}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 my-4">
+              <div className={classes.Texte}>
+                <FormattedHTMLMessage
+                  id="team"
+                  defaultMessage="contentTexte"
+                />
+              </div>
             </div>
           </div>
         </div>
