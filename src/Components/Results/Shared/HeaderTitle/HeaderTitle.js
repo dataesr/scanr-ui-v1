@@ -27,11 +27,11 @@ const HeaderTitle = (props) => {
     thesis: ['Thesis', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
     patent: ['Identity', 'Participants', 'Depots', 'Similars'],
   };
-
+  const scrollTop = (props.isFull) ? -350 : -120;
   if (selected) {
     document.getElementById(selected).scrollIntoView(true);
+    window.scrollBy({ top: scrollTop, behavior: 'smooth' });
     setSelected(null);
-    window.scrollBy({ top: -120, behavior: 'smooth' });
   }
 
   const renderBread = () => (
