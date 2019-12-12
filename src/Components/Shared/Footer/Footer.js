@@ -157,14 +157,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
-                {/* <li>
+                <li>
                   <a href="/contact">
                     <FormattedHTMLMessage
                       id="Footer.link.contact"
                       defaultMessage="Footer.link.contact"
                     />
                   </a>
-                </li> */}
+                </li>
               </ul>
             </div>
             <div className={`col-md ${classes.Col}`}>

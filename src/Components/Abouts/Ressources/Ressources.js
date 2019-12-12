@@ -56,8 +56,8 @@ class Ressources extends Component {
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="crossref"
-              imageName="logo-crossref.svg"
+              labelKey="doi"
+              imageName="logo-doi.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
@@ -168,8 +168,18 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
+              labelKey="casdar"
+              imageName="logo-casdar.png"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
               labelKey="anr"
               imageName="logo-anr.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="phc"
+              imageName="logo-phc.svg"
               cssClass="CardLogo"
             />
           </div>
@@ -261,7 +271,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.TalkAboutScanr"
               url="./medias"
-              lib_button="Discover"
+              lib_button="Voir"
               position="CardCenter"
               schema="card_dark"
             />
@@ -270,7 +280,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.Opendata"
               url="./opendata"
-              lib_button="Discover"
+              lib_button="Voir"
               position="CardCenter"
               schema="card_dark"
             />
@@ -279,7 +289,7 @@ class Ressources extends Component {
               messages={messages}
               title="Discover.Team"
               url="./l-equipe-et-son-projet"
-              lib_button="Discover"
+              lib_button="Voir"
               position="CardCenter"
               schema="card_dark"
             />
