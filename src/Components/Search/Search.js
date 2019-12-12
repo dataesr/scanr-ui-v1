@@ -118,7 +118,7 @@ class SearchPage extends Component {
         data: { results: [] },
       });
       // Need to avaid getCount each change
-      if (prevState.request.query !== this.state.request.query) {
+      if (this.state.preview.all === 0 || prevState.request.query !== this.state.request.query) {
         this.getCounts();
         this.getData();
       } else {
