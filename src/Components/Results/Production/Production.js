@@ -43,26 +43,21 @@ const Production = (props) => {
 
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, props.match.params.id);
-
-  if (isLoading) {
-    return <Loader color={styles.productionsColor} />;
-  }
-  if (isError) {
-    return <Errors />;
-  }
+  if (isLoading) return <Loader color={styles.productionsColor} />;
+  if (isError) return <Errors />;
   return (
     <React.Fragment>
       <ScanRMeta
         title={getSelectKey(data, 'title', props.language, 'fr')}
         href2="./recherche/publications?query="
-        href2Title={data.productionType || 'patent'}
+        href2Title={data.productionType}
         href3={`./publication/${props.match.params.id}`}
       />
       <Header />
       <HeaderTitle
         language={props.language}
         label={getSelectKey(data, 'title', props.language, 'fr')}
-        idPage={data.productionType || 'patent'}
+        idPage={data.productionType}
         id={props.match.params.id}
         isFull={scrollY === 0}
       />

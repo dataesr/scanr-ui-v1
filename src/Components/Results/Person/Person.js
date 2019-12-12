@@ -20,8 +20,9 @@ import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 
 import styles from '../../../style.scss';
-import OrangeBackground from '../../../images/img/poudre-orange_Fgris-BR.jpg';
-import FuschiaBackground from '../../../images/img/poudre-fuschia_Fgris-B.jpg';
+
+import { SectionPersons, SectionProductions } from '../Shared/styles';
+
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -40,19 +41,6 @@ const Person = (props) => {
   if (isLoading) return <Loader color={styles.productionsColor} />;
   if (isError) return <Errors />;
   const messages = { fr: messagesFr, en: messagesEn };
-  const BG = {
-    padding: '1em 0px',
-    backgroundSize: '40%',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: styles.scanrlightgreyColor,
-    backgroundPosition: 'bottom 0 right 0',
-  };
-  const ThesisBG = {
-    ...BG,
-    backgroundImage: `url(${FuschiaBackground})`,
-    backgroundPosition: 'bottom 0 left 0',
-  };
-  const InformationBG = { ...BG, backgroundImage: `url(${OrangeBackground})` };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <React.Fragment>
@@ -70,7 +58,7 @@ const Person = (props) => {
           id={props.match.params.id}
           isFull={scrollY === 0}
         />
-        <section id="Informations" style={InformationBG}>
+        <SectionPersons id="Informations">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -85,14 +73,14 @@ const Person = (props) => {
               data={data}
             />
           </div>
-        </section>
+        </SectionPersons>
         <Banner
           language={props.language}
           labelKey="Appear"
           cssClass="BannerDark"
           url=""
         />
-        <section id="Thesis" style={ThesisBG}>
+        <SectionProductions id="Thesis">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -104,7 +92,7 @@ const Person = (props) => {
             />
             <Thesis language={props.language} id={props.match.params.id} />
           </div>
-        </section>
+        </SectionProductions>
         <div id="Production">
           <Productions
             language={props.language}
@@ -113,7 +101,7 @@ const Person = (props) => {
             person
           />
         </div>
-        <section id="CoAuthors" style={InformationBG}>
+        <SectionPersons id="CoAuthors">
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
@@ -129,14 +117,14 @@ const Person = (props) => {
               id={props.match.params.id}
             />
           </div>
-        </section>
+        </SectionPersons>
         <Banner
           language={props.language}
           labelKey="Appear"
           cssClass="BannerLight"
           url=""
         />
-        <section style={InformationBG}>
+        <SectionPersons id="Similars">
           <div className="container">
             <SectionTitle
               icon="fa-th"
@@ -151,7 +139,7 @@ const Person = (props) => {
               id={props.match.params.id}
             />
           </div>
-        </section>
+        </SectionPersons>
         <Footer />
       </React.Fragment>
     </IntlProvider>
