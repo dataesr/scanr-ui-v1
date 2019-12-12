@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
+// import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonToSearch from '../../Shared/Ui/Buttons/ButtonToSearch';
 
 /* SCSS */
@@ -19,10 +19,10 @@ const MostActiveThemes = props => (
               id="Home.MostActiveThemes.lib"
               defaultMessage="Home.MostActiveThemes.lib"
             />
-            &nbsp;
+            { /* &nbsp;
             <LexiconModal language={props.language} target="top10">
               <i className="fa fa-info-circle" />
-            </LexiconModal>
+            </LexiconModal> */ }
           </div>
           <div className={classes.Lib2}>
             <FormattedHTMLMessage
