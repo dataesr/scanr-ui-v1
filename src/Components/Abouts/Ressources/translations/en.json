@@ -31,11 +31,13 @@
   "Ressource.Producteur.Nom.rnsr" : "French Ministry of Higher Education, Research and Innovation",
   "Ressource.Perimetre.rnsr" : "Active units",
   "Ressource.Retraitements.rnsr" : "<li> Updating the case of labels</li><li>Adding multilingual labels</li><li>Enriching acronyms</li><li>Decomposing addresses</li>",
-  "Ressource.Retraitements2.rnsr" : "<li>Geocoding</li><li>Data storage for hierarchy and structure history</li><li>Data curation for websites and social networks</li>",
+  "Ressource.Retraitements2.rnsr" : "<li>Geocoding</li><li>Data storage for hierarchy and structure history</li><li>Data curation for websites and social networks</li><li>Enrichment of social accounts</li><li>Enrichment of Wikipedia pages</li><li>Enrichment of Wikidata identifiers</li>",
 
   "Ressource.Role.grid" : "Global Research Identifier Database (GRID)",
   "Ressource.Description.grid" : "GRID is a global directory of institutions of all types active in academic research (higher education and research institutions, government agencies, companies, non-profit institutions, institutions with an archiving function, health institutions, large facilities, etc.). A unique identifier is assigned to each referenced institution; a set of metadata is associated with it. The metadata proposed by GRID allows in particular a mapping of the GRID identifier with ISNI, Wikidata or linked to national archiving systems and to follow the filiation links between the structures. Finally, GRID allows you to associate a website with most of the referenced institutions",
   "Ressource.Utilisation1.grid" : "Assignment of a GRID identifier to foreign partners identified in productions and projects associated with French structures",
+  "Ressource.Utilisation2.grid": "Reuse of metadata on foreign entities (Web, geolocation, entity typology, associated codes, names)",
+  "Ressource.Utilisation3.grid": "For French entities, referenced in GRID, alignment of GRID identifiers with the national identifiers of these entities. This processing is not yet systematic (perimeter problem and identification difficulties)",
   "Ressource.Producteur.Nom.grid" : "Digital Science & Research Ltd",
   "Ressource.Perimetre.grid" : "Not French entities",
 
@@ -52,7 +54,7 @@
    "Ressource.Description.datainfogreffe": "Datainfogreffe was created by the G.I.E. Infogreffe to enable the clerks of the Commercial Courts, public officials and ministers, to ensure a wider dissemination of legal information on companies",
   "Ressource.Role.datainfogreffe": "Data portal of the registries of the Commercial Courts",
   "Ressource.Perimetre.datainfogreffe":"",
-  "Ressource.Utilisation1.datainfogreffe": "Consolidation of company identification information referenced in scanR",
+  "Ressource.Utilisation1.datainfogreffe": "Improving information on the open/closed status of legal entities",
   "Ressource.Utilisation2.datainfogreffe":"",
   "Ressource.Producteur.Nom.datainfogreffe": "Infogreffe",
 
@@ -183,12 +185,30 @@
   "Ressource.Perimetre.swh": "Productions for which a link to Software Heritage has been established",
   "Ressource.Utilisation1.swh": "When a link has been established between a publication and a code stored on Software Heritage, the link to Software Heritage is mentioned on the scanR page of the publication. ",
   "Ressource.Producteur.Nom.swh": "Software Heritage",
+  
+  "Ressource.Role.phc" : "Projects funded under the Hubert Curien Partnerships (PHC)",
+  "Ressource.Description.phc" : "In France, the Hubert Curien Partnerships (PHC) are implemented and funded by the Ministry of Europe and Foreign Affairs (MEAE), with the support of the Ministry of Higher Education, Research and Innovation (MESRI). The management of most of these partnerships has been entrusted to Campus France.",
+  "Ressource.Perimetre.phc" : "All the projects financed as part of the Hubert Curien Partnerships presented on the Campus France website",
+  "Ressource.Utilisation1.phc" : "Link to scanR entities in projects funded through the PHCs in which they participate",
+  "Ressource.Producteur.Nom.phc" : "Campus France",
+  
+  "Ressource.Role.casdar" : "Projects financed by the Trust Account for Agricultural and Rural Development (CASDAR)",
+  "Ressource.Description.casdar" : "The special purpose account for agricultural and rural development (CASDAR) was created by Act No. 2005-1719 of 30 December 2005, the Finance Act for 2006. The purpose of CASDAR is to finance agricultural and rural development measures as defined by Articles L. 820-1 to 3 and R. 822-1 of the Rural and Maritime Fisheries Code and in accordance with the priorities set by the PNDAR.",
+  "Ressource.Perimetre.casdar" : "All projects financed by CASDAR referenced on the Agricultural R&D platform",
+  "Ressource.Utilisation1.casdar" : "Link to scanR entities of the CASDAR-funded projects in which they participate",
+  "Ressource.Producteur.Nom.casdar" : "Agricultural R&D platform",
+  
+  "Ressource.Role.doi" : "Digital Object Identifier",
+  "Ressource.Description.doi" : "Main identifier of publications with a DOI",
+  "Ressource.Perimetre.doi" : "All publications in scanR with a DOI",
+  "Ressource.Utilisation1.doi" : "Main identifier of publications with a DOI",
+  "Ressource.Utilisation2.doi" : "Redirection URL to the publication webpage",
+  "Ressource.Producteur.Nom.doi" : "DOI",
 
   "Ressource.Role.anr": "Projects funded by the National Research Agency",
   "Ressource.Description.anr": "The ANR offers, in the form of descriptive sheets, access to the main information relating to the projects it has financed. This application covers most of the calls for projects corresponding to the ANR's own activity (in particular excluding projects managed by the ANR as part of the Programme des investissements d'avenir)",
   "Ressource.Perimetre.anr": "Exploitation of projects financed by the ANR between 2005 and 2018",
   "Ressource.Utilisation1.anr": "Association with scanR entities of ANR-funded projects in which they participate",
-  "Ressource.Utilisation2.anr": "Establishment of a repository of labels, acronyms and codes for projects funded by the ANR to carry out an automated identification of the projects mentioned above",
   "Ressource.Producteur.Nom.anr" : "French National Research Agency (ANR)"
 }
 
