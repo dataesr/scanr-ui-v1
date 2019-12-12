@@ -31,12 +31,13 @@
   "Ressource.Producteur.Nom.rnsr" : "Ministère de l'Enseignement supérieur, de la Recherche et de l'Innovation",
   "Ressource.Perimetre.rnsr" : "Unités en activité",
   "Ressource.Retraitements.rnsr" : "<li>Mise à jour de la casse des libellés</li><li>Ajout de libellés multilingues</li><li>Enrichissement des acronymes</li><li>Décomposition des adresses</li>",
-  "Ressource.Retraitements2.rnsr" : "<li>Géocodage</li><li>Curation de données pour la hiérarchie et l'historique des structures</li><li>Curation de données pour les sites web</li>",
+  "Ressource.Retraitements2.rnsr" : "<li>Géocodage</li><li>Curation de données pour la hiérarchie et l'historique des structures</li><li>Curation de données pour les sites web</li><li>Enrichissement des comptes sociaux</li><li>Enrichissement des pages Wikipedia</li><li>Enrichissement des identifiants Wikidata</li>",
 
   "Ressource.Role.grid" : "Global Research Identifier Database (GRID)",
   "Ressource.Description.grid" : "GRID est un répertoire mondial d’institutions de tous types actives en matière de recherche académique (établissements d’enseignement supérieur et de recherche, agences gouvernementales, entreprises, institution sans but lucratif, institution ayant une fonction d’archivage, institutions de santé, grands équipements, etc.). Un identifiant unique est attribué à chaque institution référencée ; un ensemble de métadonnées y est associé. Les métadonnées proposées par GRID permettent notamment une mise en correspondance de l’identifiant GRID avec des identifiants ISNI, WIKIDATA ou liés aux systèmes nationaux d’archivage et de suivre les liens de filiation entre les structures. Enfin, GRID permet d’associer un site web à la plupart des institutions référencées.",
   "Ressource.Utilisation1.grid" : "Attribution d’un identifiant GRID aux partenaires étrangers identifiés dans les productions et projets associés aux structures françaises",
-  "Ressource.Utilisation2.grid" : "Identification des sites web associés aux structures étrangères associées à des partenaires français",
+  "Ressource.Utilisation2.grid" : "Réutilisation des métadonnées sur les entités étrangères (Web, géolocalisation, typologie d'entité, codes associés, dénominations)",
+  "Ressource.Utilisation3.grid": "Pour les entités françaises, référencées dans GRID, alignement des identifiants GRID avec les identifiants nationaux de ces entités. Ce traitement n'est pas encore systématique (problème de périmètre et difficultés de repérage)",
   "Ressource.Producteur.Nom.grid" : "Digital Science & Research Ltd",
   "Ressource.Perimetre.grid" : "Hors entités françaises",
 
@@ -53,7 +54,7 @@
   "Ressource.Description.datainfogreffe" : "Datainfogreffe a été créé par le G.I.E. Infogreffe pour permettre aux greffiers des Tribunaux de commerce, officiers publics et ministériels, d´assurer une plus large diffusion de l´information légale sur les entreprises.",
   "Ressource.Role.datainfogreffe" : "Portail de données des greffes des Tribunaux de commerce",
   "Ressource.Perimetre.datainfogreffe" : "",
-  "Ressource.Utilisation1.datainfogreffe" : "Consolidation des informations d'identification des entreprises référencées dans scanR",
+  "Ressource.Utilisation1.datainfogreffe" : "Amélioration de l'information sur le statut ouvert/fermé des entités légales",
   "Ressource.Utilisation2.datainfogreffe" : "",
   "Ressource.Producteur.Nom.datainfogreffe" : "Infogreffe",
 
@@ -63,7 +64,7 @@
   "Ressource.Utilisation1.insee" : "Utilisation des métadonnées (information géographique, secteur d’activité, statut juridique et indicateurs économiques généraux) associées aux institutions présentées dans scanR qui disposent d’un identifiant SIRENE",
   "Ressource.Utilisation2.insee" : "Utilisation de traitement réalisés par l’Insee (SIRUS) permettant de distinguer, au sein de la population des entreprises, les très petites entreprises (TPE), les petites et moyennes entreprises (PME), les entreprises de taille intermédiaire (ETI), les grandes entreprises.",
   "Ressource.Retraitements.insee" : "Géocodage",
-  "Ressource.Actualisation.insee" : "Annuelle",
+  "Ressource.Actualisation.insee" : "Infra-annuelle",
   "Ressource.Producteur.Nom.insee" : "Institut national de la statistique et des études économiques (Insee)",
 
   "Ressource.Role.wikidata" : "Wikidata : base de connaissances libre et éditée de manière collaborative",
@@ -167,6 +168,25 @@
   "Ressource.Perimetre.adresse" : "Entités de scanR",
   "Ressource.Utilisation1.adresse" : "Géocodage des adresses des entités",
   "Ressource.Producteur.Nom.adresse" : "Etalab",
+  
+  "Ressource.Role.phc" : "Projets financés dans le cadre des Partenariats Hubert Curien (PHC)",
+  "Ressource.Description.phc" : "En France, les Partenariats Hubert Curien (PHC) sont mis en œuvre et financés par le ministère de l'Europe et des Affaires étrangères (MEAE), avec le soutien du ministère de l'Enseignement supérieur, de la Recherche et de l’Innovation (MESRI). La gestion de la plupart de ces partenariats a été confiée à Campus France.",
+  "Ressource.Perimetre.phc" : "Ensemble des projets financés dans le cadre des Partenariats Hubert Curien exposés sur le site de Campus France",
+  "Ressource.Utilisation1.phc" : "Association aux entités scanR des projets financés via les PHC auxquels elles participent",
+  "Ressource.Producteur.Nom.phc" : "Campus France",
+  
+  "Ressource.Role.casdar" : "Projets financés par le Compte d’affectation spéciale développement agricole et rural (CASDAR)",
+  "Ressource.Description.casdar" : "Le compte d’affectation spéciale développement agricole et rural (CASDAR) a été créé par la loi no 2005-1719 du 30 décembre 2005, loi de finances pour 2006. Le CASDAR a pour objet de financer les actions de développement agricole et rural telles que définies par les articles L.820-1 à 3 et R.822-1 du code rural et de la pêche maritime et selon les priorités fixées par le PNDAR",
+  "Ressource.Perimetre.casdar" : "Ensemble des projets financés par le CASDAR référencés sur la plate-forme de la R&D Agricole",
+  "Ressource.Utilisation1.casdar" : "Association aux entités scanR des projets financés par le CASDAR auxquels elles participent",
+  "Ressource.Producteur.Nom.casdar" : "Plate-forme de la R&D agricole",
+  
+  "Ressource.Role.doi" : "Digital Object Identifier (DOI)",
+  "Ressource.Description.doi" : "Identifiant principal despublications avec un DOI",
+  "Ressource.Perimetre.doi" : "Publications avec un DOI présentes dans scanR",
+  "Ressource.Utilisation1.doi" : "Identifiant principal des publications avec DOI",
+  "Ressource.Utilisation2.doi" : "Redirection URL vers la page web de la publication",
+  "Ressource.Producteur.Nom.doi" : "DOI",
 
   "Ressource.Role.orcid" : "ORCID : Open Researcher and Contributor ID, soit « identifiant ouvert pour chercheur et contributeur »",
   "Ressource.Description.orcid" : "Identifiant unique de chercheurs et scientifiques, permettant notamment d'identifier les personnes de façon non ambigüe et pérenne.",
@@ -185,9 +205,8 @@
   "Ressource.Producteur.Nom.idref" : "ABES",
 
   "Ressource.Role.anr" : "Projets financés par l'Agence nationale de la recherche",
-  "Ressource.Description.anr" : "L’ANR propose, sous forme de fiches descriptives, un accès aux principales informations relatives aux projets qu’elle a financés. Cette application couvre l’essentiel des appels à projets correspondant à l’activité propre de l’ANR (notamment hors projets gérés par l’ANR dans le cadre du Programme des investissements d’avenir).",
+  "Ressource.Description.anr" : "L’ANR propose, sous forme de fiches descriptives, un accès aux principales informations relatives aux projets qu’elle a financés. Cette application couvre l’essentiel des appels à projets correspondant à l’activité historique de l’ANR et à son activité dans le cadre du Programme des investissements d’avenir.",
   "Ressource.Perimetre.anr" : "Exploitation des projets financés par l’ANR entre 2005 et 2018",
   "Ressource.Utilisation1.anr" : "Association aux entités scanR des projets financés par l’ANR auxquels elles participent",
-  "Ressource.Utilisation2.anr" : "Constitution d’un référentiel des libellés, acronymes et codes des projets financés par l’ANR pour effectuer un repérage automatisé des projets mentionnés sur les sites internet des entités inscrites dans le périmètre de scanR",
   "Ressource.Producteur.Nom.anr" : "Agence nationale de la recherche (ANR)"
 }
