@@ -56,7 +56,7 @@ const Project = (props) => {
     API_PROJECTS_END_POINT, props.match.params.id,
   );
   if (isLoading) return <Loader color={styles.productionsColor} />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   const msg = { en: messagesEn, fr: messagesFr };
   return (
     <IntlProvider locale={props.language} messages={msg[props.language]}>

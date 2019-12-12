@@ -24,7 +24,7 @@ const SimilarProjects = (props) => {
   };
   const { data, isLoading, isError } = useLikeApi('projects', request);
   if (isLoading) return <SectionLoader />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   return (
     <ul className={`row px-2 ${classes.Ul}`}>
       {

@@ -41,7 +41,7 @@ const SimilarPersons = (props) => {
   };
   const { data, isLoading, isError } = useLikeApi('persons', request);
   if (isLoading) return <SectionLoader />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   const filteredData = filtercoContributors(data);
   return (
     <ul className={`row px-2 ${classes.Ul}`}>

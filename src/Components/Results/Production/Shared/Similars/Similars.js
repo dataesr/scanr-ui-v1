@@ -25,7 +25,7 @@ const Similars = (props) => {
   };
   const { data, isLoading, isError } = useLikeApi('publications', request);
   if (isLoading) return <SectionLoader />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   if (data.length) {
     return (
       <div className="row">
