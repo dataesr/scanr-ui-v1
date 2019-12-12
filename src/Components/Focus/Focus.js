@@ -100,7 +100,7 @@ const Focus = (props) => {
     data = require(`${filename}`);
     isLoading = false;
     isError = true;
-    // return <Errors />;
+    // return <Errors error={500} />;
   }
   if (isLoading) {
     return <Loader />;

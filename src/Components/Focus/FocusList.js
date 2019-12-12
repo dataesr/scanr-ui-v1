@@ -27,13 +27,13 @@ import classes from './Focus.scss';
 const FocusList = (props) => {
   const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus');
   if (isError) {
-    return <Errors />;
+    return <Errors error={500} />;
   }
   if (isLoading) {
     return <Loader />;
   }
   if (!data.data) {
-    return <Errors />;
+    return <Errors error={500} />;
   }
   let focusList = [];
   const useApi = false;
