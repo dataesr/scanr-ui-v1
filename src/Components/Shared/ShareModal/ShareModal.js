@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import queryString from 'query-string';
 import Modal from 'react-bootstrap/Modal';
 
 import classes from './ShareModal.scss';
@@ -10,8 +11,18 @@ basesUrls.facebook = 'https://www.facebook.com/sharer.php?u=';
 
 const share = (socialMedia) => {
   const urlSite = window.location.href;
-  const fistPartUrl = urlSite.split('/').slice(2, 4).join('/');
-  const target = `${basesUrls[socialMedia]}https://${fistPartUrl}`;
+  const splitedUrl = urlSite.split('/');
+  const protocole = `${splitedUrl[0]}//`;
+  const domaine = splitedUrl[2];
+  const route = splitedUrl[3];
+  let params = splitedUrl[4];
+
+  if (route === 'recherche' && params.split('?')[1]) {
+    const parsedURL = queryString.parse(params.split('?')[1]);
+    params = `${params.split('?')[0]}?query=${parsedURL.query}`;
+  }
+
+  const target = `${basesUrls[socialMedia]}${protocole}${domaine}/${route}${params ? '/' : ''}${params || ''}`;
 
   const win = window.open(target, '_blank');
   win.focus();
@@ -33,13 +44,13 @@ const ShareModal = () => {
 
         <Modal.Body>
           <div className={`d-flex justify-content-around ${classes.Socials}`}>
-            <button type="button" className={classes.ButtonNoStyled} onClick={() => share('linkedin')}>
+            <button type="button" className={classes.ButtonNoStyled} onClick={() => { share('linkedin'); setShowModal(false); }}>
               <i className="fab fa-linkedin" title="" />
             </button>
-            <button type="button" className={classes.ButtonNoStyled} onClick={() => share('twitter')}>
+            <button type="button" className={classes.ButtonNoStyled} onClick={() => { share('twitter'); setShowModal(false); }}>
               <i className="fab fa-twitter-square" title="" />
             </button>
-            <button type="button" className={classes.ButtonNoStyled} onClick={() => share('facebook')}>
+            <button type="button" className={classes.ButtonNoStyled} onClick={() => { share('facebook'); setShowModal(false); }}>
               <i className="fab fa-facebook-square" title="" />
             </button>
           </div>
