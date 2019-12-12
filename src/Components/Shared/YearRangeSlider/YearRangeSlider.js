@@ -25,11 +25,13 @@ class YearRangeSlider extends Component {
   }
 
   componentDidMount = () => {
-    this.setHistogram();
+    if (this.props.data.length) {
+      this.setHistogram();
+    }
   }
 
   componentDidUpdate = (prevProps) => {
-    if (prevProps.data !== this.props.data || prevProps.min !== this.props.min || prevProps.max !== this.props.max) {
+    if ((prevProps.data !== this.props.data && this.props.data.length) || prevProps.min !== this.props.min || prevProps.max !== this.props.max) {
       this.setHistogram();
     }
   }
@@ -367,6 +369,7 @@ class YearRangeSlider extends Component {
   }
 
   render() {
+    if (!this.props.data.length) return null;
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
     return (
       <div className="w-100">
