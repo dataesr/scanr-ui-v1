@@ -70,7 +70,7 @@ const Thesis = (props) => {
   };
   const { data, isLoading, isError } = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
   if (isLoading) return <SectionLoader />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   if (!data) return <EmptySection />;
   const { rapporteur, theses, direction } = parseThesisData(data.results, props.id);
   return (
