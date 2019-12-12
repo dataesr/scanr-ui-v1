@@ -39,7 +39,7 @@ const Person = (props) => {
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
   if (isLoading) return <Loader color={styles.productionsColor} />;
-  if (isError) return <Errors />;
+  if (isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
