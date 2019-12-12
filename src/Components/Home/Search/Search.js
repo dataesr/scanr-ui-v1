@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
 
+import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
 import background from '../../../images/img/poudre-blanche_Fbleu-A.jpg';
@@ -54,6 +55,10 @@ class Search extends Component {
               </button>
             )}
           </FormattedHTMLMessage>
+          &nbsp;
+          <LexiconModal language={this.props.language} target="Search">
+            <i className="fa fa-info-circle" />
+          </LexiconModal>
         </div>
       </div>
     </form>
