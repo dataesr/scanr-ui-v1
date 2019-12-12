@@ -1,23 +1,13 @@
 import React, { useState } from 'react';
-import { IntlProvider } from 'react-intl';
+import { FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import Carto from '../Components/Carto';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
 import SimpleCardWithButton from '../../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import classes from './Depots.scss';
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
 import countries from '../countries.json';
 import patentType from './patentType.json';
-
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 
 /**
@@ -29,10 +19,6 @@ const messages = {
  * Tests unitaires : .
 */
 const PatentsApplications = (props) => {
-  if (!props.data) {
-    return <div>null</div>;
-  }
-
   const patents = [];
   props.data.forEach((patent) => {
     const [country, type] = patent.type.split('__');
@@ -40,7 +26,6 @@ const PatentsApplications = (props) => {
     patents.push(newPatent);
   });
 
-  const [viewMode, setViewMode] = useState('graph');
   const [selected, setSelected] = useState((patents.length) ? patents[0] : {});
 
 
@@ -87,89 +72,74 @@ const PatentsApplications = (props) => {
   });
 
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <section className={`container-fluid ${classes.DepotSection}`} id="Authors">
-        <div className="container">
-          <SectionTitleViewMode
-            icon="fa-folder-open"
-            objectType="productions"
-            language={props.language}
-            id={props.id}
-            lexicon="PatentDepot"
-            title={messages[props.language]['Patent.depots.title']}
-            viewModeClickHandler={view => setViewMode(view)}
-            viewMode={viewMode}
-          />
-          <hr />
-          {
-            (viewMode === 'graph')
-              ? <Carto data={patents} language={props.language} />
-              : (
-                <React.Fragment>
+    <React.Fragment>
+      {
+        (props.viewMode === 'graph')
+          ? <Carto data={patents} language={props.language} />
+          : (
+            <React.Fragment>
+              <div className="row">
+                <div className="col-lg-5">
+                  <div className={classes.ListOfProductions}>
+                    {(content.length > 0) ? content : null}
+                  </div>
+                </div>
+                <div className="col-lg-7">
                   <div className="row">
-                    <div className="col-lg-5">
-                      <div className={classes.ListOfProductions}>
-                        {(content.length > 0) ? content : null}
-                      </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCardWithButton
+                        language={props.language}
+                        logo="fas fa-id-card"
+                        title={<FormattedHTMLMessage id="Patent.patent.id" />}
+                        label={selected.id}
+                        tooltip=""
+                        url={'https://worldwide.espacenet.com/patent/search?q='.concat(selected.id)}
+                        link="link_patent"
+                      />
                     </div>
-                    <div className="col-lg-7">
-                      <div className="row">
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <SimpleCardWithButton
-                            language={props.language}
-                            logo="fas fa-id-card"
-                            title={messages[props.language]['Patent.patent.id']}
-                            label={selected.id}
-                            tooltip=""
-                            url={'https://worldwide.espacenet.com/patent/search?q='.concat(selected.id)}
-                            link="link_patent"
-                          />
-                        </div>
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            language={props.language}
-                            logo="fas fa-calendar-day"
-                            title={messages[props.language]['Patent.depots.date']}
-                            label={moment(selected.url).format('DD-MM-YYYY')}
-                            tooltip=""
-                          />
-                        </div>
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            language={props.language}
-                            logo="fas fa-calendar-day"
-                            title={messages[props.language]['Patent.depots.country']}
-                            label={countries[props.language][selected.country]}
-                            tooltip=""
-                          />
-                        </div>
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            language={props.language}
-                            logo="fas fa-clipboard-list"
-                            title={messages[props.language]['Patent.depots.type']}
-                            label={patentType[props.language][selected.type]}
-                            tooltip=""
-                          />
-                        </div>
-                        <div className={`col-md-6 ${classes.CardContainer}`}>
-                          <SimpleCard
-                            language={props.language}
-                            logo="fas fa-clipboard-list"
-                            title={messages[props.language]['Patent.depots.isPriority']}
-                            label={(selected.label === 'priority') ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
-                            tooltip=""
-                          />
-                        </div>
-                      </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCard
+                        language={props.language}
+                        logo="fas fa-calendar-day"
+                        title={<FormattedHTMLMessage id="Patent.depots.date" />}
+                        label={moment(selected.url).format('DD-MM-YYYY')}
+                        tooltip=""
+                      />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCard
+                        language={props.language}
+                        logo="fas fa-calendar-day"
+                        title={<FormattedHTMLMessage id="Patent.depots.country" />}
+                        label={countries[props.language][selected.country]}
+                        tooltip=""
+                      />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCard
+                        language={props.language}
+                        logo="fas fa-clipboard-list"
+                        title={<FormattedHTMLMessage id="Patent.depots.type" />}
+                        label={patentType[props.language][selected.type]}
+                        tooltip=""
+                      />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCard
+                        language={props.language}
+                        logo="fas fa-clipboard-list"
+                        title={<FormattedHTMLMessage id="Patent.depots.isPriority" />}
+                        label={(selected.label === 'priority') ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+                        tooltip=""
+                      />
                     </div>
                   </div>
-                </React.Fragment>
-              )
-          }
-        </div>
-      </section>
-    </IntlProvider>
+                </div>
+              </div>
+            </React.Fragment>
+          )
+      }
+    </React.Fragment>
   );
 };
 
@@ -177,6 +147,6 @@ export default PatentsApplications;
 
 PatentsApplications.propTypes = {
   language: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
+  viewMode: PropTypes.string.isRequired,
 };

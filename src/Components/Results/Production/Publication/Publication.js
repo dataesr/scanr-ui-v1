@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
@@ -25,7 +25,7 @@ import Similars from '../Shared/Similars/Similars';
 import classes from './Publication.scss';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
-
+import styles from '../../../../style.scss';
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -66,6 +66,8 @@ class Publication extends Component {
     }
     const sectionStyle = {
       backgroundImage: `url(${Background})`,
+      backgroundRepeat: 'no-repeat',
+      backgroundColor: styles.scanrlightgreyColor,
     };
     const sectionStyleAuthors = {
       backgroundImage: `url(${BackgroundAuthors})`,
@@ -73,9 +75,6 @@ class Publication extends Component {
     const sectionStyleAffiliations = {
       backgroundImage: `url(${BackgroundAffiliations})`,
     };
-    // const sectionStyleSimilarProductions = {
-    //   backgroundImage: `url(${Background})`,
-    // };
 
     let id = this.props.data.id;
     let idName = 'Identifiant';
@@ -107,14 +106,14 @@ class Publication extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <section className={`container-fluid ${classes.Publication}`} style={sectionStyle} id="Publication">
+          <section className="py-3" style={sectionStyle} id="Publication">
             <div className="container">
               <SectionTitle
                 icon="fa-id-card"
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Publication.title']}
+                title={<FormattedHTMLMessage id="Publication.title" />}
               />
               <div className="row">
                 <div className="col-lg">
@@ -123,7 +122,7 @@ class Publication extends Component {
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-id-card"
-                        title={messages[this.props.language]['Publication.publication.title']}
+                        title={<FormattedHTMLMessage id="Publication.publication.title" />}
                         label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
                         tooltip=""
                       />
@@ -147,7 +146,7 @@ class Publication extends Component {
                           <SimpleCard
                             language={this.props.language}
                             logo="fas fa-calendar-day"
-                            title={messages[this.props.language]['Publication.publication.publicationDate']}
+                            title={<FormattedHTMLMessage id="Publication.publication.publicationDate" />}
                             label={publicationDate}
                             tooltip=""
                           />
@@ -170,7 +169,7 @@ class Publication extends Component {
                         <div className={`col-12 ${classes.CardContainer}`}>
                           <SummaryCard
                             language={this.props.language}
-                            title={messages[this.props.language]['Publication.summary.title']}
+                            title={<FormattedHTMLMessage id="Publication.summary.title" />}
                             text={summary}
                             tooltip=""
                           />
@@ -181,8 +180,8 @@ class Publication extends Component {
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-bookmark"
-                        title={messages[this.props.language]['Publication.publication.type']}
-                        label={messages[this.props.language][`Publication.publication.type.${this.props.data.type}`]}
+                        title={<FormattedHTMLMessage id="Publication.publication.type" />}
+                        label={<FormattedHTMLMessage id={`Publication.publication.type.${this.props.data.type}`} />}
                         tooltip=""
                       />
                     </div>
@@ -204,7 +203,7 @@ class Publication extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.OaSection}`} id="AccessType">
+          <section className="py-3" id="AccessType">
             <div className="container">
               <SectionTitle
                 lexicon="PublicationOA"
@@ -212,7 +211,7 @@ class Publication extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Publication.oa.title']}
+                title={<FormattedHTMLMessage id="Publication.oa.title" />}
               />
               <div className="row">
                 <div className={`col-md-3 ${classes.CardContainer}`}>
@@ -245,7 +244,7 @@ class Publication extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors} id="Authors">
+          <section className="py-3" style={sectionStyleAuthors} id="Authors">
             <div className="container">
               <SectionTitle
                 icon="fa-folder-open"
@@ -253,7 +252,7 @@ class Publication extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Publication.authors.title']}
+                title={<FormattedHTMLMessage id="Publication.authors.title" />}
               />
               <div className="row">
                 {
@@ -263,7 +262,7 @@ class Publication extends Component {
                         <CounterCard
                           counter={this.props.data.authors.length}
                           title=""
-                          label={messages[this.props.language]['Publication.publication.persons']}
+                          label={<FormattedHTMLMessage id="Publication.publication.persons" />}
                           color="Persons"
                           className={classes.PersonCardHeight}
                         />
@@ -309,7 +308,7 @@ class Publication extends Component {
           {
             (this.props.data && this.props.data.affiliations)
               ? (
-                <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations} id="Affiliations">
+                <section style={sectionStyleAffiliations} className="py-2" id="Affiliations">
                   <div className="container">
                     <SectionTitle
                       lexicon="PublicationAffiliation"
@@ -317,7 +316,7 @@ class Publication extends Component {
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}
-                      title={messages[this.props.language]['Publication.affiliations.title']}
+                      title={<FormattedHTMLMessage id="Publication.affiliations.title" />}
                     />
                     <ul className={`row ${classes.Ul}`}>
                       {
@@ -336,7 +335,17 @@ class Publication extends Component {
                 </section>
               ) : null
           }
-          <Similars id={this.props.id} language={this.props.language} />
+          <section id="Similars" className="py-3">
+            <div className="container">
+              <SectionTitle
+                icon="fa-folder-open"
+                lexicon="PublicationSimilar"
+                language={this.props.language}
+                title={<FormattedHTMLMessage id="Publication.similars" />}
+              />
+              <Similars language={this.props.language} id={this.props.id} />
+            </div>
+          </section>
         </Fragment>
       </IntlProvider>
     );

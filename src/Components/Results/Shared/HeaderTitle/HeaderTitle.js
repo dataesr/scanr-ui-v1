@@ -25,7 +25,7 @@ const HeaderTitle = (props) => {
     persons: ['Informations', 'Production', 'CoAuthors'],
     publication: ['Publication', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
     thesis: ['Thesis', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
-    patent: ['Famille de brevets', 'Inventeurs', 'Déposants', 'Dépots'],
+    patent: ['Identity', 'Participants', 'Depots', 'Similars'],
   };
 
   if (selected) {

@@ -29,7 +29,7 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      return <Errors />;
+      return <Errors error={500} />;
     }
     return this.props.children;
   }

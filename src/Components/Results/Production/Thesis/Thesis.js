@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import Similars from '../Shared/Similars/Similars';
@@ -116,14 +116,14 @@ class Thesis extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <section className={`container-fluid ${classes.Thesis}`} style={sectionStyle} id="Thesis">
+          <section style={sectionStyle} id="Identity">
             <div className="container">
               <SectionTitle
                 icon="fa-id-card"
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Thesis.title']}
+                title={<FormattedHTMLMessage id="Thesis.identity" />}
               />
               <div className="row">
                 <div className="col-lg">
@@ -132,7 +132,7 @@ class Thesis extends Component {
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-id-card"
-                        title={messages[this.props.language]['Publication.publication.title']}
+                        title={<FormattedHTMLMessage id="Thesis.Identity.title" />}
                         label={getSelectKey(this.props.data, 'title', this.props.language, 'default')}
                         tooltip=""
                       />
@@ -143,7 +143,7 @@ class Thesis extends Component {
                       <SimpleCardWithButton
                         language={this.props.language}
                         logo="fas fa-id-card"
-                        title={messages[this.props.language]['Publication.publication.id']}
+                        title={<FormattedHTMLMessage id="Thesis.Identity.id" />}
                         label={id}
                         tooltip=""
                         url={theseLink}
@@ -154,7 +154,7 @@ class Thesis extends Component {
                       <SimpleCard
                         language={this.props.language}
                         logo="fas fa-calendar-day"
-                        title={messages[this.props.language]['Publication.publication.publicationDate']}
+                        title={<FormattedHTMLMessage id="Thesis.Identity.publicationDate" />}
                         label={publicationDate}
                         tooltip=""
                       />
@@ -213,7 +213,7 @@ class Thesis extends Component {
                         <div className={`col-12 ${classes.CardContainer}`}>
                           <SummaryCard
                             language={this.props.language}
-                            title={messages[this.props.language]['Publication.summary.title']}
+                            title={<FormattedHTMLMessage id="Thesis.Identity.summary" />}
                             text={summary}
                             tooltip=""
                           />
@@ -226,7 +226,7 @@ class Thesis extends Component {
                           <TagCard
                             language={this.props.language}
                             logo="fas fa-clipboard-list"
-                            title={messages[this.props.language]['Publication.publication.tags']}
+                            title={<FormattedHTMLMessage id="Thesis.Identity.tags" />}
                             tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
                             labelListButton="Autres"
                             tagList={this.props.data.keywords.default}
@@ -240,7 +240,7 @@ class Thesis extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.OaSection}`} id="AccessType">
+          <section id="AccessType">
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
@@ -248,7 +248,7 @@ class Thesis extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Publication.oa.title']}
+                title={<FormattedHTMLMessage id="Thesis.accessType" />}
               />
               <div className="row">
                 <div className={`col-md-3 ${classes.CardContainer}`}>
@@ -281,7 +281,7 @@ class Thesis extends Component {
               </div>
             </div>
           </section>
-          <section className={`container-fluid ${classes.AuthorsSection}`} style={sectionStyleAuthors} id="Authors">
+          <section style={sectionStyleAuthors} id="Authors">
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
@@ -289,7 +289,7 @@ class Thesis extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={messages[this.props.language]['Publication.authors.title']}
+                title={<FormattedHTMLMessage id="Thesis.authors" />}
               />
               <div className="row">
                 {
@@ -299,7 +299,7 @@ class Thesis extends Component {
                         <CounterCard
                           counter={this.props.data.authors.length}
                           title=""
-                          label={messages[this.props.language]['Publication.publication.persons']}
+                          label={<FormattedHTMLMessage id="Thesis.Authors.personsCounter" />}
                           color="Persons"
                         />
                       </div>
@@ -344,7 +344,7 @@ class Thesis extends Component {
           {
             (this.props.data && this.props.data.affiliations)
               ? (
-                <section className={`container-fluid ${classes.AffiliationsSection}`} style={sectionStyleAffiliations} id="Affiliations">
+                <section style={sectionStyleAffiliations} id="Affiliations">
                   <div className="container">
                     <SectionTitle
                       icon="fa-open-folder"
@@ -352,7 +352,7 @@ class Thesis extends Component {
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}
-                      title={messages[this.props.language]['Publication.affiliations.title']}
+                      title={<FormattedHTMLMessage id="Thesis.affiliations" />}
                     />
                     <div className={`row ${classes.Ul}`}>
                       {
@@ -371,7 +371,17 @@ class Thesis extends Component {
                 </section>
               ) : null
           }
-          <Similars id={this.props.id} language={this.props.language} />
+          <section id="Similars">
+            <div className="container">
+              <SectionTitle
+                icon="fa-folder-open"
+                lexicon="PublicationSimilar"
+                language={this.props.language}
+                title={<FormattedHTMLMessage id="Thesis.similars" />}
+              />
+              <Similars language={this.props.language} id={this.props.id} />
+            </div>
+          </section>
         </Fragment>
       </IntlProvider>
     );
