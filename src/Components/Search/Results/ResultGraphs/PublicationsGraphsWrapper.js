@@ -57,13 +57,17 @@ const PublicationsGraphsWrapper = props => (
       request={props.request}
     />
 
-    <PublicationTypes
-      title={messages[props.language].PublicationsTypesTitle}
-      subtitle={messages[props.language].PublicationsTypesSubtitle}
-      language={props.language}
-      lexicon="PublicationTypeSearch"
-      request={props.request}
-    />
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'publication') ? (
+        <PublicationTypes
+          title={messages[props.language].PublicationsTypesTitle}
+          subtitle={messages[props.language].PublicationsTypesSubtitle}
+          language={props.language}
+          lexicon="PublicationTypeSearch"
+          request={props.request}
+        />
+      ) : null
+    }
   </React.Fragment>
 );
 
