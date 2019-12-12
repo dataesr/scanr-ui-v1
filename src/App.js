@@ -21,7 +21,7 @@ const Focus = lazy(() => import('./Components/Focus/Focus'));
 /* Pages froides */
 // const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
 // const ContributePage = lazy(() => import('./Components/Abouts/Contribute/Contribute'));
-// const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
+const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
 const FAQPage = lazy(() => import('./Components/Abouts/FAQ/FAQ'));
 const GlossaryPage = lazy(() => import('./Components/Abouts/Glossary/Glossary'));
 const LegalNoticePage = lazy(() => import('./Components/Abouts/Legal-notice/Legal-notice'));
@@ -221,7 +221,6 @@ class App extends Component {
                   />
                 )}
               />
-              { /*
               <Route
                 exact
                 path="/contact"
@@ -231,7 +230,7 @@ class App extends Component {
                     language={this.context.language}
                   />
                 )}
-              /> */}
+              />
               <Route
                 exact
                 path="/glossaire"
