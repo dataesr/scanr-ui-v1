@@ -54,9 +54,9 @@ export const currentThemes = [
 
 export const suggestions = [
   {
-    labelFr: '5G',
-    labelEn: '5G',
-    query: '5G',
+    labelFr: 'SIDA',
+    labelEn: 'AIDS',
+    query: 'SIDA | AIDS | HIV',
     url: '',
   },
   {
@@ -66,9 +66,9 @@ export const suggestions = [
     url: '',
   },
   {
-    labelFr: 'Biotechnologie',
-    labelEn: 'Biotechnology',
-    query: 'Biotechnologie | Biotechnology',
+    labelFr: 'Bonheur',
+    labelEn: 'Happiness',
+    query: 'bonheur | happiness',
     url: '',
   },
   {
