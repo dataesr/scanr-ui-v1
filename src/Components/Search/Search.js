@@ -114,6 +114,7 @@ class SearchPage extends Component {
     } else if (prevState.request !== this.state.request || (this.state.data.total === 0)) {
       this.setState({
         isLoading: true,
+        sliderData: [],
         data: { results: [] },
       });
       // Need to avaid getCount each change
@@ -441,7 +442,7 @@ class SearchPage extends Component {
         const data = {
           results: response.data.results,
           facets: response.data.facets,
-          total: response.data.total,
+          total: response.data.total || null,
         };
         this.setState({
           data,
@@ -456,14 +457,14 @@ class SearchPage extends Component {
   }
 
   getCounts = () => {
-    const query = { query: this.state.request.query };
+    const query = { query: this.state.request.query, pageSize: 6 };
     const apis = ['structures', 'persons', 'publications', 'projects'];
     apis.forEach((api) => {
       const url = `${API_BASE_URL}/${api}/search`;
+      const newCounts = { ...this.state.preview };
+      newCounts[api].isLoading = true;
       Axios.post(url, this.transformRequest(query, api))
         .then((response) => {
-          /* eslint-disable-next-line */
-          const newCounts = { ...this.state.preview };
           newCounts[api].isLoading = false;
           newCounts[api].count = response.data.total;
           newCounts[api].facets = response.data.facets;
