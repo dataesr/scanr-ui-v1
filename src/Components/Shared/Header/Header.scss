@@ -54,12 +54,13 @@
     A {
       color: $scanrblueColor;
     }
+    A:hover, A:focus {
+      color: $scanrdeepblueColor;
+    }
   }
-  .Link:hover, .link:focus {
-    text-decoration: none;
+  .Link:hover, .Link:focus {
     color: $scanrdeepblueColor;
   }
-
 }
 
 @media (max-width: 991px) {
