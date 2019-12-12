@@ -36,7 +36,6 @@ const Contact = props => (
       language={props.language}
       labelkey="contact"
       url1="/"
-      url2="#"
     />
     <section className="container py-4">
       <FormContact language={props.language} apiName="contact" />

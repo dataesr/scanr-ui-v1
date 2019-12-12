@@ -41,6 +41,7 @@ const FAQ = (props) => {
       />
       <section>
         <HeaderTitle
+          url1="/"
           language={context.language}
           labelkey="faq"
         />
