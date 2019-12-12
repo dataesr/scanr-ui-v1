@@ -12,7 +12,6 @@ import { API_PROJECTS_END_POINT } from '../../../config/config';
 // Components
 import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
-import getSelectKey from '../../../Utils/getSelectKey';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
@@ -26,18 +25,30 @@ import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 import EmptySection from '../Shared/EmptySection/EmptySection';
 
-/* Gestion des langues */
+// Utils
+import getSelectKey from '../../../Utils/getSelectKey';
+
+// Styles
+import {
+  SectionProjects,
+  SectionProductions,
+  SectionWhite,
+  SectionGrey,
+} from '../Shared/styles';
+import styles from '../../../style.scss';
+
+// Languages
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-// scss styles
-import styles from '../../../style.scss';
+
 /**
- * Publication
- * Url : .
- * Description : .
- * Responsive : .
- * Accessible : .
- * Tests unitaires : .
+ * Project Page
+ * Url : /project/:id
+ * Description : This page is responsible for fetching project data and displaying
+ *               global Project page Layout, passing data to every section as props.
+ * Responsive : true
+ * Accessible : ?
+ * Tests unitaires : false
 */
 const Project = (props) => {
   const scrollY = useScrollY();
@@ -47,14 +58,6 @@ const Project = (props) => {
   if (isLoading) return <Loader color={styles.productionsColor} />;
   if (isError) return <Errors />;
   const msg = { en: messagesEn, fr: messagesFr };
-  const BG = {
-    padding: '1em 0px',
-    backgroundSize: '40%',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: styles.scanrlightgreyColor,
-    backgroundPosition: 'bottom 0 right 0',
-  };
-
   return (
     <IntlProvider locale={props.language} messages={msg[props.language]}>
       <React.Fragment>
@@ -72,7 +75,7 @@ const Project = (props) => {
           id={data.id}
           isFull={scrollY === 0}
         />
-        <section id="Informations" style={BG}>
+        <SectionProjects id="Informations">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -86,8 +89,8 @@ const Project = (props) => {
               data={data}
             />
           </div>
-        </section>
-        <section id="Financial" style={BG}>
+        </SectionProjects>
+        <SectionWhite id="Financial">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -101,8 +104,8 @@ const Project = (props) => {
               data={data}
             />
           </div>
-        </section>
-        <section id="Programs" style={BG}>
+        </SectionWhite>
+        <SectionGrey id="Programs">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -116,8 +119,8 @@ const Project = (props) => {
               data={data}
             />
           </div>
-        </section>
-        <section id="Description" style={BG}>
+        </SectionGrey>
+        <SectionProjects id="Description" alternative>
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
@@ -132,25 +135,8 @@ const Project = (props) => {
               </div>
             </div>
           </div>
-        </section>
-        <section id="Participants" style={BG}>
-          <div className="container">
-            <SectionTitle
-              icon="fa-folder-open"
-              objectType="projects"
-              lexicon="ProjectParticipant"
-              language={props.language}
-              id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.participants" />}
-            />
-            <Participants
-              language={props.language}
-              data={data.participants}
-              id={props.match.params.id}
-            />
-          </div>
-        </section>
-        <section id="Productions" style={BG}>
+        </SectionProjects>
+        <SectionProductions id="Productions">
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
@@ -166,8 +152,25 @@ const Project = (props) => {
               id={props.match.params.id}
             />
           </div>
-        </section>
-        <section id="Similars" style={BG}>
+        </SectionProductions>
+        <SectionWhite id="Participants">
+          <div className="container">
+            <SectionTitle
+              icon="fa-folder-open"
+              objectType="projects"
+              lexicon="ProjectParticipant"
+              language={props.language}
+              id={props.match.params.id}
+              title={<FormattedHTMLMessage id="Project.participants" />}
+            />
+            <Participants
+              language={props.language}
+              data={data.participants}
+              id={props.match.params.id}
+            />
+          </div>
+        </SectionWhite>
+        <SectionProjects id="Similars">
           <div className="container">
             <SectionTitle
               icon="fa-th"
@@ -181,7 +184,7 @@ const Project = (props) => {
               id={props.match.params.id}
             />
           </div>
-        </section>
+        </SectionProjects>
         <Footer />
       </React.Fragment>
     </IntlProvider>

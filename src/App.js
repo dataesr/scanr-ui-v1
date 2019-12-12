@@ -29,7 +29,7 @@ const MediasPage = lazy(() => import('./Components/Abouts/Medias/Medias'));
 const Opendata = lazy(() => import('./Components/Abouts/Opendata/Opendata'));
 const Ressources = lazy(() => import('./Components/Abouts/Ressources/Ressources'));
 const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-project/Team-and-project'));
-const NoPage = lazy(() => import('./Components/Abouts/NoPage/NoPage'));
+const Errors = lazy(() => import('./Components/Shared/Errors/Errors'));
 // const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
@@ -254,12 +254,7 @@ class App extends Component {
                 )}
               /> */}
               <Route
-                component={props => (
-                  <NoPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
+                component={() => (<Errors error={404} />)}
               />
             </Switch>
           </Suspense>

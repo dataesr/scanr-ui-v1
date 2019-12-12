@@ -33,42 +33,6 @@ const Contact = props => (
       <FormContact language={props.language} apiName="contact" />
     </section>
 
-    <section className={classes.Cards}>
-      <div className="container py-3">
-        <div className="row">
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="contributeScanr"
-              language={props.language}
-              btnText="discover"
-              url=""
-              target="_blank"
-            />
-          </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="whatAreOurSources"
-              language={props.language}
-              btnText="discover"
-              url=""
-              target="_blank"
-            />
-          </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <CardToPage
-              cssClass="card_lightdark"
-              labelKey="openData"
-              language={props.language}
-              btnText="discover"
-              url=""
-              target="_blank"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
 
     <Banner
       cssClass="BannerDark"

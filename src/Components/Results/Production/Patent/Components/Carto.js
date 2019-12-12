@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 import { Map, GeoJSON } from 'react-leaflet';
 import moment from 'moment';
 import 'moment/locale/fr';
@@ -9,18 +10,7 @@ import {
   EP, EA, AP, WO,
 } from '../../../../../config/config';
 
-// import styles from '../../../../../style.scss';
-
 import classes from './Carto.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * Cartographie
@@ -115,11 +105,11 @@ class Carto extends Component {
     return (
       <div className={classes.Carto}>
         <h3 className={classes.Title}>
-          {messages[this.props.language].title}
+          {<FormattedHTMLMessage id="Patent.Carto.title" />}
         </h3>
         <p className={classes.SubTitle}>
           <span className={classes.Bullet} />
-          {messages[this.props.language].depot}
+          {<FormattedHTMLMessage id="Patent.Carto.depot" />}
         </p>
         <Map
           className={classes.MapBox}
