@@ -39,7 +39,6 @@ const LegalNoticePage = props => (
         language={props.language}
         labelkey="legal"
         url1="/"
-        url2="#"
       />
       <section style={sectionStyle} className={classes.LegalSectionPoudre}>
         <div className="container">
