@@ -25,7 +25,7 @@ const Roles = (props) => {
             <div className={classes.SubSectionTitle}>
               <FormattedHTMLMessage id="Person.Informations.Roles.title" />
               &nbsp;
-              <LexiconModal target="PersonRole">
+              <LexiconModal language={props.language} target="PersonRole">
                 <i className="fa fa-info-circle" />
               </LexiconModal>
             </div>
@@ -55,4 +55,5 @@ export default Roles;
 
 Roles.propTypes = {
   data: PropTypes.object,
+  language: PropTypes.string,
 };
