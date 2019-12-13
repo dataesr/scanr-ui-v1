@@ -540,7 +540,7 @@ class SearchPage extends Component {
       return (
         <Banner
           cssClass="deep"
-          url="..."
+          url="/ressources"
           language={this.props.language}
           labelKey="WhatAreOurSources"
         />
@@ -549,9 +549,9 @@ class SearchPage extends Component {
     return (
       <Banner
         cssClass="deep"
-        url="..."
+        url="/ressources"
         language={this.props.language}
-        labelKey="Appear"
+        labelKey="WhatAreOurSources"
       />
     );
   }
