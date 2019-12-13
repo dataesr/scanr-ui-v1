@@ -1,5 +1,9 @@
 @import '../../../../style.scss';
 
+.NavBox {
+  min-width: 15%;
+  margin-left: 1em;
+}
 .HeaderTitle {
   background-color: $bgHeaderTitle;
   border-bottom: solid rgb(0, 33, 59);
