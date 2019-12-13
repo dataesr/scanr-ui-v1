@@ -37,6 +37,7 @@ const Domains = (props) => {
             <CardsTitle
               title={<FormattedHTMLMessage id="Person.Informations.Domains.title" />}
               lexicon="PersonThematics"
+              language={props.language}
             />
           </div>
         </div>
