@@ -105,11 +105,11 @@ class Carto extends Component {
     return (
       <div className={classes.Carto}>
         <h3 className={classes.Title}>
-          {<FormattedHTMLMessage id="Patent.Carto.title" />}
+          <FormattedHTMLMessage id="Patent.Carto.title" />
         </h3>
         <p className={classes.SubTitle}>
           <span className={classes.Bullet} />
-          {<FormattedHTMLMessage id="Patent.Carto.depot" />}
+          <FormattedHTMLMessage id="Patent.Carto.depot" />
         </p>
         <Map
           className={classes.MapBox}
