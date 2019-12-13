@@ -6,11 +6,6 @@ import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 
 import classes from './Leaders.scss';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-
 /**
  * Leaders
  * Url : ex: /entite/200711886U
@@ -19,10 +14,6 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const Leaders = (props) => {
   let styleCss = null;
