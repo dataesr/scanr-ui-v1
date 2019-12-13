@@ -35,7 +35,7 @@ const messages = {
 class Ecosystem extends Component {
   state = {
     data: this.props.data,
-    viewMode: 'list', // graph
+    viewMode: 'graph', // list
     kindFilter: [],
     frIntFilter: [],
     selectedCollaboration: {},
