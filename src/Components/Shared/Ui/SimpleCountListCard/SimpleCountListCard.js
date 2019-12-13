@@ -51,14 +51,20 @@ const SimpleCountListCard = (props) => {
     );
   });
   const dataHtmlList = <ul className="fa-ul">{FullLi}</ul>;
-
+  const buttonLabel = (
+    <React.Fragment>
+      {props.modalButtonLabel}
+      &nbsp;
+      {props.data.length}
+    </React.Fragment>
+  );
   let modalButton = null;
   if (props.data.length > MAX_LIST) {
     modalButton = (
       <ButtonWithModal
         logo="fas fa-qrcode"
         title={props.modalButtonTitle}
-        buttonLabel={`${props.modalButtonLabel} (${props.data.length})`}
+        buttonLabel={buttonLabel}
         dataHtml={dataHtmlList}
       />
     );
