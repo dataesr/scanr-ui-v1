@@ -103,6 +103,7 @@ const Entity = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
+              lexicon="EntityNetwork"
               objectType="structures"
               language={props.language}
               id={id}
@@ -156,6 +157,7 @@ const Entity = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-th"
+              lexicon="EntityAward"
               objectType="structures"
               language={props.language}
               id={id}
@@ -173,6 +175,7 @@ const Entity = (props) => {
             <SectionTitle
               icon="fa-id-card"
               objectType="structures"
+              lexicon="EntityEvaluation"
               language={props.language}
               id={id}
               title={<FormattedHTMLMessage id="Entity.evaluations" />}
@@ -197,6 +200,7 @@ const Entity = (props) => {
             <SectionTitle
               icon="fa-id-card"
               objectType="structures"
+              lexicon="EntitySimilar"
               language={props.language}
               id={id}
               title={<FormattedHTMLMessage id="Entity.similars" />}
@@ -210,7 +214,7 @@ const Entity = (props) => {
         <Banner
           language={props.language}
           labelKey="Opendata"
-          cssClass="BannerDeep"
+          cssClass="BannerLight"
           url="/opendata"
         />
 
