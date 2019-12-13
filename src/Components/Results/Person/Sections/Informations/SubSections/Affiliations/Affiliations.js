@@ -99,6 +99,7 @@ const Affiliations = (props) => {
               <CardsTitle
                 title={<FormattedHTMLMessage id="Person.Informations.Affiliations.title" />}
                 lexicon="PersonAffiliation"
+                language={props.language}
               />
             </div>
           </div>
