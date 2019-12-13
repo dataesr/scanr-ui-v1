@@ -15,19 +15,25 @@ import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
-// import Network from './Sections/Network/Network';
+import Network from './Sections/Network/Network';
 import Evaluations from './Sections/Evaluations/Evaluations';
 import Team from './Sections/Team/Team';
 import Projects from '../Shared/Projects/Projects';
 import Productions from '../Shared/Productions/Productions';
 import Ecosystem from './Sections/Ecosystem/Ecosystem';
-// import Awards from './Sections/Awards/Awards';
+import Awards from './Sections/Awards/Awards';
 import SimilarEntities from './Sections/SimilarEntities/SimilarEntities';
 import Banner from '../../Shared/Banner/Banner';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import styles from '../../../style.scss';
 
-import { SectionEntity, SectionGrey, SectionPersonsBlue } from '../Shared/styles';
+import {
+  SectionEntity,
+  SectionGrey,
+  SectionPersonsBlue,
+  SectionBlue,
+  SectionWhite,
+} from '../Shared/styles';
 
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -84,10 +90,8 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title="Portrait"
-            >
-              <FormattedHTMLMessage id="Entity.portrait" />
-            </SectionTitle>
+              title={<FormattedHTMLMessage id="Entity.portrait" />}
+            />
             <Portrait
               language={props.language}
               data={data}
@@ -95,24 +99,22 @@ const Entity = (props) => {
             />
           </div>
         </SectionEntity>
-        <SectionGrey id="Evaluations">
+        <SectionWhite id="Networks">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
               objectType="structures"
               language={props.language}
               id={id}
-              title="Portrait"
-            >
-              <FormattedHTMLMessage id="Entity.evaluations" />
-            </SectionTitle>
-            <Evaluations
+              title={<FormattedHTMLMessage id="Entity.network" />}
+            />
+            <Network
               language={props.language}
               data={data}
               id={id}
             />
           </div>
-        </SectionGrey>
+        </SectionWhite>
         <SectionPersonsBlue id="Team">
           <div className="container">
             <SectionTitle
@@ -120,22 +122,14 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title="Portrait"
-            >
-              <FormattedHTMLMessage id="Entity.team" />
-            </SectionTitle>
-            {
-              (!supervisorOf.IsLoading && !supervisorOf.isError)
-                ? (
-                  <Team
-                    language={props.language}
-                    data={data}
-                    childs={supervisorOf.data.results || []}
-                    id={id}
-                  />
-                )
-                : null
-            }
+              title={<FormattedHTMLMessage id="Entity.team" />}
+            />
+            <Team
+              language={props.language}
+              data={data}
+              childs={supervisorOf.data.results || []}
+              id={id}
+            />
           </div>
         </SectionPersonsBlue>
         <div id="Projects">
@@ -145,19 +139,57 @@ const Entity = (props) => {
             childs={supervisorOf.data.results || []}
           />
         </div>
-
         <Banner
           language={props.language}
           labelKey="WhatAreOurSources"
           cssClass="BannerDark"
           url="/ressources"
         />
-
         <div id="Productions">
           <Productions
             language={props.language}
             match={props.match}
             childs={supervisorOf.data.results || []}
+          />
+        </div>
+        <SectionBlue id="Awards">
+          <div className="container">
+            <SectionTitle
+              icon="fa-th"
+              objectType="structures"
+              language={props.language}
+              id={id}
+              title={<FormattedHTMLMessage id="Entity.awards" />}
+            />
+            <Awards
+              language={props.language}
+              data={data}
+              id={id}
+            />
+          </div>
+        </SectionBlue>
+        <SectionGrey id="Evaluations">
+          <div className="container">
+            <SectionTitle
+              icon="fa-id-card"
+              objectType="structures"
+              language={props.language}
+              id={id}
+              title={<FormattedHTMLMessage id="Entity.evaluations" />}
+            />
+
+            <Evaluations
+              language={props.language}
+              data={data}
+              id={id}
+            />
+          </div>
+        </SectionGrey>
+        <div id="Ecosystem">
+          <Ecosystem
+            language={props.language}
+            data={data.graph}
+            id={id}
           />
         </div>
         <SectionEntity id="SimilarEntities">
@@ -167,63 +199,20 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title="Portrait"
-            >
-              <FormattedHTMLMessage id="Entity.similars" />
-            </SectionTitle>
+              title={<FormattedHTMLMessage id="Entity.similars" />}
+            />
             <SimilarEntities
               language={props.language}
               id={id}
             />
           </div>
         </SectionEntity>
-
-        <div id="Ecosystem">
-          <Ecosystem
-            language={props.language}
-            data={data.graph}
-            id={id}
-          />
-        </div>
-
-        { /*
-        <div id="Network">
-          <Network
-            language={this.props.language}
-            data={this.state.data}
-            id={this.props.match.params.id}
-          />
-        </div>
-
         <Banner
-          language={this.props.language}
+          language={props.language}
           labelKey="Opendata"
           cssClass="BannerDeep"
           url="/opendata"
         />
-
-        <div id="Ecosystem">
-          <Ecosystem
-            language={this.props.language}
-            data={this.state.data.graph}
-            id={this.props.match.params.id}
-          />
-        </div>
-
-        <div id="Awards">
-          <Awards
-            language={this.props.language}
-            data={this.state.data}
-            id={this.props.match.params.id}
-          />
-        </div>
-
-         <Banner
-          language={this.props.language}
-          labelKey="Appear"
-          cssClass="BannerLight"
-          url=""
-        /> */ }
 
         <Footer />
       </React.Fragment>

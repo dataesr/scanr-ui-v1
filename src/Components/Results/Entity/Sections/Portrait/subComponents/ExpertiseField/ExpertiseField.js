@@ -1,13 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './ExpertiseField.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 
 /**
@@ -18,11 +14,6 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 const ExpertiseField = (props) => {
   let styleCss = null;
   if (props.data.length === 0) {
@@ -37,7 +28,7 @@ const ExpertiseField = (props) => {
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
             <CardsTitle
-              title={messages[props.language]['Entity.portrait.expertiseField.title']}
+              title={<FormattedHTMLMessage id="Entity.Portrait.ExpertiseField.title" />}
             />
           </div>
         </div>
@@ -51,6 +42,5 @@ ExpertiseField.defaultProps = {
   data: [],
 };
 ExpertiseField.propTypes = {
-  language: PropTypes.string.isRequired,
   data: PropTypes.array,
 };

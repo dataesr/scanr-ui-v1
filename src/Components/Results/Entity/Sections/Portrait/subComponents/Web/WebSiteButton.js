@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import classes from './Web.scss';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 /**
  * WebSiteButton
@@ -15,10 +12,6 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const WebSiteButton = (props) => {
   let logo = null;
@@ -34,7 +27,7 @@ const WebSiteButton = (props) => {
     case 'wikipedia':
       logo = <img src="./img/Wikipedia-logo.png" alt="logo wikipedia" />;
       UsedClasse = classes.WikipediaLogo;
-      label = messages[props.language]['Entity.portrait.web.wikipedia.label'];
+      label = <FormattedHTMLMessage id="Entity.Portrait.Web.WebSiteButton.wikipedia" />;
       break;
     case 'Hypothese':
       logo = <img src="./img/hypotheses_baselineEN.png" alt="logo Hypothese" />;
@@ -58,7 +51,6 @@ const WebSiteButton = (props) => {
 export default WebSiteButton;
 
 WebSiteButton.propTypes = {
-  language: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
 };

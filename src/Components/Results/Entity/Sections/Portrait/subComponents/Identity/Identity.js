@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import LogoCard from '../../../../../../Shared/Ui/LogoCard/LogoCard';
 import SimpleCard from '../../../../../../Shared/Ui/SimpleCard/SimpleCard';
@@ -12,11 +12,6 @@ import getWebSiteByType from '../../../../../../../Utils/getWebSiteByType';
 
 import classes from './Identity.scss';
 
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-
 /**
  * Identity
  * Url : ex: /entite/200711886U
@@ -26,11 +21,6 @@ import messagesEn from './translations/en.json';
  * Tests unitaires : .
 */
 const Identity = (props) => {
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
-
   // nom
   const name = getSelectKey(props, 'name', props.language, 'fr');
 
@@ -53,7 +43,7 @@ const Identity = (props) => {
       <div className={classes.Identity}>
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.identity.title']} />
+            <CardsTitle title={<FormattedHTMLMessage id="Entity.Portrait.Identity.title" />} />
           </div>
         </div>
 
@@ -62,7 +52,7 @@ const Identity = (props) => {
             <SimpleCard
               language={props.language}
               logo="fas fa-id-card"
-              title={messages[props.language]['Entity.portrait.identity.name']}
+              title={<FormattedHTMLMessage id="Entity.Portrait.Identity.name" />}
               label={label}
               tooltip=""
             />
@@ -80,18 +70,18 @@ const Identity = (props) => {
             <SimpleListCard
               language={props.language}
               logo="fas fa-qrcode"
-              title={messages[props.language]['Entity.portrait.identity.id']}
+              title={<FormattedHTMLMessage id="Entity.Portrait.Identity.id" />}
               label={props.id}
               list={externalIdDisplayed}
-              labelListButton={messages[props.language]['Entity.portrait.identity.externalIdsButtons']}
-              tooltip={messages[props.language]['Entity.portrait.identity.id.tooltip']}
+              labelListButton={<FormattedHTMLMessage id="Entity.Portrait.Identity.externalIdsButtons" />}
+              tooltip={<FormattedHTMLMessage id="Entity.Portrait.Identity.id.tooltip" />}
             />
           </div>
           <div className={`col-lg-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
               logo="fas fa-flask"
-              title={messages[props.language]['Entity.portrait.identity.nature']}
+              title={<FormattedHTMLMessage id="Entity.Portrait.Identity.nature" />}
               label={props.nature || ''}
               tooltip=""
             />
@@ -102,7 +92,7 @@ const Identity = (props) => {
                 <div className={`col-lg-12 ${classes.CardContainer}`}>
                   <DescriptionCard
                     language={props.language}
-                    title={messages[props.language]['Entity.portrait.identity.description.title']}
+                    title={<FormattedHTMLMessage id="Entity.Portrait.Identity.description.title" />}
                     text={`${description}`}
                     tooltip=""
                   />
