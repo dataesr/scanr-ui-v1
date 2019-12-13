@@ -36,6 +36,7 @@ const Medias = props => (
       <HeaderTitle
         language={props.language}
         labelkey="media"
+        url1="/"
       />
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
