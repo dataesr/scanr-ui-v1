@@ -38,7 +38,15 @@ import messagesEn from './translations/en.json';
 const Person = (props) => {
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
-  if (isLoading) return <Loader color={styles.productionsColor} />;
+  if (isLoading) {
+    return (
+      <React.Fragment>
+        <Header />
+        <Loader color={styles.personColor} />
+        <Footer />
+      </React.Fragment>
+    );
+  }
   if (isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
