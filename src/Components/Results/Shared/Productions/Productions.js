@@ -53,6 +53,7 @@ class Productions extends Component {
   }
 
   componentDidMount() {
+    console.log('fre', this.props.childs);
     this.fetchGlobalData();
   }
 
@@ -82,7 +83,8 @@ class Productions extends Component {
     const url = API_PUBLICATIONS_SEARCH_END_POINT;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 4095);
+      const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
+      allIds = allIds.concat(childs);
     }
     const preRequest = PreRequest;
     if (this.props.person) {
@@ -107,6 +109,7 @@ class Productions extends Component {
         },
       };
     }
+    console.log('fre', preRequest);
     Axios.post(url, preRequest).then((response) => {
       const totalPerType = {};
       response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
@@ -144,7 +147,8 @@ class Productions extends Component {
     request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 4095);
+      const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
+      allIds = allIds.concat(childs);
     }
     if (this.props.person) {
       request.filters['authors.person.id'] = {
