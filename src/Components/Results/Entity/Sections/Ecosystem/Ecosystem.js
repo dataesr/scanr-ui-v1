@@ -8,8 +8,6 @@ import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
 import EmptySection from '../../../Shared/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
-import Select from '../../../../Shared/Ui/Select/Select';
-// import BarChart from '../../../../Shared/GraphComponents/Graphs/HighChartsBar';
 import CounterDataSimple from '../../../../Shared/CounterDataSimple/CounterDataSimple';
 import FranceFlag from '../../../../Shared/images/france-flag-icon-32.png';
 
@@ -37,11 +35,9 @@ const messages = {
 class Ecosystem extends Component {
   state = {
     data: this.props.data,
-    viewMode: 'graph', // list
+    viewMode: 'list', // graph
     kindFilter: [],
-    kindFilterValue: null,
     frIntFilter: [],
-    // frIntFilterValue: null,
     selectedCollaboration: {},
   }
 
@@ -134,24 +130,38 @@ class Ecosystem extends Component {
     this.setState({ selectedCollaboration });
   }
 
-  setFrIntFilter = (frIntFilterValue) => {
-    if (frIntFilterValue !== 'all') {
+  setFrIntFilter = (e) => {
+    // Reset filtre types
+    document.getElementById('typeSelect').value = 'all';
+
+    if (e.target.value !== 'all') {
       /* eslint-disable-next-line */
-      const data = this.state.data.filter(item => item.structure.isFrench === (frIntFilterValue === 'fr'));
-      this.setState({ data });
+      const data = this.props.data.filter(item => item.structure.isFrench === (e.target.value === 'fr'));
+      this.setState({ data, selectedCollaboration: {} });
     } else {
-      this.setState(prevState => ({ data: prevState.initialData }));
+      this.setState({ data: this.props.data, selectedCollaboration: {} });
     }
   }
 
-  setKindFilter = (filterValue) => {
-    if (filterValue !== 'all') {
-      /* eslint-disable-next-line */
-      const data = this.state.data.filter(item => item.structure.kind.find(el => el === filterValue));
-      this.setState({ data });
+  setKindFilter = (e) => {
+    // Reset filtre frInt
+    document.getElementById('frIntSelect').value = 'all';
+
+    if (e.target.value !== 'all') {
+      /* eslint-disable */
+      const data = this.props.data.filter((item) => {
+        if (item.structure && item.structure.kind && item.structure.kind.length > 1) {
+          return (item.structure.kind.find(el => el === e.target.value));
+        } else if (item.structure.kind) {
+          return (item.structure.kind[0] === e.target.value);
+        }
+        return false;
+      });
+      this.setState({ data, selectedCollaboration: {} });
     } else {
-      this.setState({ data: this.props.data, kindFilterValue: null });
+      this.setState({ data: this.props.data, kindFilterValue: null, selectedCollaboration: {} });
     }
+    /* eslint-enable */
   }
 
   createKindFilter = () => {
@@ -200,11 +210,18 @@ class Ecosystem extends Component {
       return prodB - prodA;
     });
 
-    const content = dataSorted.map((data) => {
+    const content = dataSorted.map((data, index) => {
+      const jointProductions = (data.details.publication || 0) + (data.details.Project || 0);
       let selected = '';
       if (data === this.state.selectedCollaboration) {
         selected = classes.Selected;
       }
+
+      // Selection du premier élément par défaut
+      if (!this.state.selectedCollaboration.structure && index === 0) {
+        this.setSelectedCollaborationHandler(data);
+      }
+
       return (
         <Fragment key={data.structure.id}>
           <div
@@ -218,20 +235,12 @@ class Ecosystem extends Component {
               {getSelectKey(data.structure, 'label', this.props.language, 'fr')}
             </div>
             <div className={classes.SharedProd}>
-              {`${data.weight} ${messages[this.props.language]['Entity.ecosystem.jointProductions']}`}
+              {`${jointProductions} ${messages[this.props.language]['Entity.ecosystem.jointProductions']}`}
             </div>
           </div>
         </Fragment>
       );
     });
-
-    const kindFilterPlaceHolder = (this.state.kindFilterValue)
-      ? `${this.props.data.length} ${this.state.kindFilterValue}`
-      : `${this.props.data.length} ${messages[this.props.language]['Entity.ecosystem.selectTypesFilter.placeHolder']}`;
-
-    const frIntFilterPlaceHolder = (this.state.filterValue)
-      ? `${this.props.data.length} ${this.state.filterValue}`
-      : `${this.props.data.length} ${messages[this.props.language]['Entity.ecosystem.selectTypesFilter.placeHolder']}`;
 
     let acronym = null;
     if (this.state.selectedCollaboration.structure) {
@@ -250,29 +259,34 @@ class Ecosystem extends Component {
 
     return (
       <Fragment>
-        <div className="row">
+        <div className={`row ${classes.FiltersRow}`}>
           <div className="col-md">
-            <Select
-              allLabel={messages[this.props.language]['Entity.ecosystem.selectTypesFilter.allLabel']}
-              count={this.props.data.length}
-              title={messages[this.props.language]['Entity.ecosystem.selectTypesFilter.title']}
-              placeHolder={kindFilterPlaceHolder}
-              data={this.state.kindFilter || []}
-              onSubmit={this.setKindFilter}
-            />
+            <h3 className={classes.SelectTitle}>{messages[this.props.language]['Entity.ecosystem.selectTypesFilter.title']}</h3>
+            <select id="typeSelect" className={`form-control ${classes.Select}`} onChange={this.setKindFilter}>
+              <option value="all">{messages[this.props.language]['Entity.ecosystem.selectTypesFilter.allLabel']}</option>
+              {
+                this.state.kindFilter.map(item => (
+                  <option key={item.value} value={item.value}>
+                    {`${item.value} (${item.count})`}
+                  </option>
+                ))
+              }
+            </select>
           </div>
           <div className="col-md">
-            <Select
-              allLabel={messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.allLabel']}
-              count={this.props.data.length}
-              title={messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.title']}
-              placeHolder={frIntFilterPlaceHolder}
-              data={this.state.frIntFilter || []}
-              onSubmit={this.setFrIntFilter}
-            />
+            <h3 className={classes.SelectTitle}>{messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.title']}</h3>
+            <select id="frIntSelect" className={`form-control ${classes.Select}`} onChange={this.setFrIntFilter}>
+              <option value="all">{messages[this.props.language]['Entity.ecosystem.selectFrIntFilter.allLabel']}</option>
+              {
+                this.state.frIntFilter.map(item => (
+                  <option key={item.value} value={item.value}>
+                    {`${item.value} (${item.count})`}
+                  </option>
+                ))
+              }
+            </select>
           </div>
         </div>
-
         <div className="row">
           <div className={`col-md-5 ${classes.List}`}>
             {content}
