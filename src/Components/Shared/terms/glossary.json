@@ -327,24 +327,24 @@
     "key": "EntityDirection",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Direction de l'entité",
+      "en": "Entity direction"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des responsables de l'entité. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur leur site web. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
+      "en": "List of the entity's managers. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on their websites. FAQ related questions: <br/><li><a href='/faq/q40' target='_blank'>How the 'Team' section of an entity record is fed into scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Can there be errors in scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use research organizations' directories?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
     }
   },
   {
     "key": "EntityTeam",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Auteurs identifiés dans la structure",
+      "en": "Authors identified in the structure"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des auteurs que scanR a retrouvé comme étant affilié à cette structure sur les deux dernières années (via les publications). Cette liste n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li> ",
+      "en": "List of authors that scanR has found as being affiliated to this structure over the last two years. This list is not exhaustive. FAQ related questions: <br/><li><a href='/faq/q40' target='_blank'>How the 'Team' section of an entity record is fed into scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Can there be errors in scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use research organizations' directories?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li> "
     }
   },
   {
@@ -387,24 +387,24 @@
     "key": "EntityEcosystem",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Ecosystème de l'entité",
+      "en": "Entity ecosystem"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section présente les autres entités qui ont des travaux communs (publications, projets ou brevets) avec l'entité de la page regardée. La taille des bulle est liée au nombre de travaux en commun, indiquant ainsi un degré de collaboration élevé. Les bulles sont séparées par type d'entités, en distinguant les entités françaises des entités à l'étranger. Questions liées dans la FAQ : <br/><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section presents the other entities that have common work (publications, projects or patents) with the entity on the page being viewed. The size of the bubbles is related to the number of joint works, indicating a high degree of collaboration. The bubbles are separated by type of entity, distinguishing between French and foreign entities. FAQ related questions: <br/><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
     }
   },
   {
     "key": "EntityAward",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Prix et certifications",
+      "en": "Certifications and awards"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section regroupe les prix et certifications recues directement par l'entité. Ne sont pas référencés ici les prix reçus par les personnes affiliées à l'entité. Questions liées dans la FAQ : <br/><li><a href='/faq/q25' target='_blank'>Pourquoi la page de ma structure n'indique pas qu'une des personnes de la structure a obtenu un prix scientifique ?</a></li><li><a href='/faq/q23' target='_blank'>Quelles sources sont utilisées pour les prix et distinctions?</a></li><li><a href='/faq/q24' target='_blank'>Il manque certains prix et distinctions. Que faire ?</a></li>",
+      "en": "This section contains the awards and certifications received directly by the entity. Prices received by persons affiliated with the entity are not referenced here. Related questions in the FAQ: <br/><li><a href='/faq/q25' target='_blank'>Why doesn't the page of my structure indicate that one of the people in the structure has received a scientific award?</a></li><li><a href='/faq/q23' target='_blank'>Which sources are used for awards and distinctions?</a></li><li><a href='/faq/q24' target='_blank'>Some awards and distinctions are missing. What to do ?</a></li>"
     }
   },
   {
@@ -435,216 +435,192 @@
     "key": "PersonAffiliation",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Affiliations retrouvées dans les publications",
+      "en": "Affiliations found in the publications"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des affiliations de l'auteur retrouvées dans ces publications. Cette liste n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q41' target='_blank'>Comment est construite la chronologie des affiliations d'un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
+      "en": "List of the author's affiliations found in these publications. This list is not exhaustive. Related questions in the FAQ: <br/><li><a href='/faq/q41' target='_blank'>How is the chronology of an author's affiliations constructed? ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
     }
   },
   {
     "key": "PersonRole",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Rôles occupés par l'auteur",
+      "en": "Roles occupied by the author"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des rôles occupés par l'auteur. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur le web. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
+      "en": "List of roles held by the author. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on the web. Related questions in the FAQ: <br/><li><a href='/faq/q40' target='_blank' >How the'Team' section of an entity record is populated in scanR ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors occur in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
     }
   },
   {
     "key": "PersonThematics",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Thématiques de recherche",
+      "en": "Research areas"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des thématiques de recherche retrouvées dans les publications de l'auteur. Seule une partie est affichée directement, il faut cliquer sur le bouton 'Tous les domaines' pour voir la liste entière. Cette liste est donc directement liées aux productions retrouvées pour l'auteur. Questions liées dans la FAQ : <br/><li><a href='/faq/q34' target='_blank'>Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "List of research themes found in the author's publications. Only one part is displayed directly, you have to click on the button 'All domains' to see the whole list. This list is therefore directly linked to the productions found for the author. Related questions in the FAQ: <br/><li><a href='/faq/q34' target='_blank'>Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
     }
   },
   {
     "key": "PersonThesis",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Thèses",
+      "en": "Thesis"
       },
     "definition": {
-      "fr": "",
-      "en": ""
-    }
-  },
-  {
-    "key": "PersonProduction",
-    "icon": "fas fa-flask",
-    "label": {
-      "fr": "",
-      "en": ""
-      },
-    "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste la thèse de l'auteur, ainsi que les thèses que l'auteur a encadrées ou dont il a été rapporteur. Seules les thèses soutenues après 1990 et disponibles sur le portail theses.fr sont affichées. Questions liées dans la FAQ : <br/></li><li><a href='/faq/q34' target='_blank' >Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q35' target='_blank' >Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?</a></li>",
+      "en": "This section lists the author's thesis, as well as the theses that the author supervised or for which he was rapporteur.  Only theses defended after 1990 and available on the theses.fr portal are displayed. Related questions in the FAQ: <br/></li><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q35' target='_blank' >How is the opening status of a research publication referenced in scanR ?</a></li>"
     }
   },
   {
     "key": "PersonCollab",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Collaborations",
+      "en": "Collaborations"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les auteurs avec qui l'auteur de la page regardée a co-écrit une production ou participé à une même thèse (par exemple l'un étant membre du jury, l'autre étant auteur de la thèse). Une collaboration est affichée dès lors que scanR a pu repérer (via leur idref) les auteurs dans une production commune ou une thèse. Ainsi, cette liste de collaboration n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li>",
+      "en": "This section lists the authors with whom the author of the page being examined has co-written a production or participated in the same thesis (for example, one being a member of the jury, the other being the author of the thesis). A collaboration is displayed as soon as scanR has been able to identify (via their idref) the authors in a joint production or thesis. Thus, this list of collaborations is not exhaustive. Related questions in the FAQ: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li>"
     }
   },
   {
     "key": "PersonSimilar",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Auteurs ayant travaillé sur des sujets de recherche liés",
+      "en": "Persons who have worked on related research topics"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste des auteurs ayant travaillé sur des sujets de recherche liés, c'est-à-dire ayant des productions ou projet partageant les mêmes thématiques de recherche. Le calcul de proximité est basé uniquement sur les mots du contenus des metadonnées, mais pas sur le full-text ni sur des liens de co-écriture ou de citations. Tous les auteurs figurant déjà dans la sections 'Collaborations' sont exclus de cette section.",
+      "en": "This section lists authors who have worked on related research topics, i.e. who have productions or projects that share the same research themes. Proximity calculation is based only on the words of the metadata content, but not on the full-text or on co-writing or citation links. All authors already listed in the 'Collaborations' section are excluded from this section."
     }
   },
   {
     "key": "ProjectParticipant",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Participants du projet",
+      "en": "Project participants"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des participants du projet. Lorsqu'un participant est identifié, c'est-à-dire que scanR a pu l'identifier dans ses référentiels, le participant est géolocalisé et un lien vers la page de l'entité est proposé. Seuls les participants identifiés sont géolocalisés. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q37' target='_blank' >Quels sont les référentiels d'entités utilisés dans scanR ?</a></li>",
+      "en": "List of project participants. When a participant is identified, i.e. scanR has been able to identify it in its repositories, the participant is geolocated and a link to the entity's page is provided. Only identified participants are geolocated. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q37' target='_blank' >What are the entity repositories used in scanR ? </a></li>"
     }
   },
   {
     "key": "ProjectProduction",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Productions issues du projet",
+      "en": "Productions from the project"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des productions issues du projet. Cette liste n'est pas exhaustive, et seules les productions que scanR a pu lier au projet sont affichées. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li>",
+      "en": "List of productions resulting from the project. This list is not exhaustive, and only the productions that scanR may have linked to the project are displayed. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases? </a></li>"
     }
   },
   {
     "key": "ProjectSimilar",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Projets similaires",
+      "en": "Similar projects"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste des projets partageant des thématiques de recherche communes. Le calcul de proximité est basé uniquement sur les mots du contenus des metadonnées (titre, résumé ...) mais pas sur des liens de participants ou de financement.",
+      "en": "This section lists projects that share common research themes. The proximity calculation is based only on the words of the metadata content (title, abstract...) but not on participant or funding links."
     }
   },
   {
     "key": "PublicationOA",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Accès à la production",
+      "en": "Access to the production"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section indique si la production est en accès ouvert ou fermé. Si l'accès est ouvert, le type d'hébergement principal est indiqué (chez l'éditeur ou archive ouverte), avec une priorité pour l'hébergement chez l'éditeur en cas d'hébergement multiple. Le lien de téléchargement est aussi disponible. Questions liées dans la FAQ : <br/> <li><a href='/faq/q35' target='_blank'> Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section indicates whether the production is in open or closed access. If access is open, the main type of hosting is indicated (with the publisher or open archive), with priority for hosting with the publisher in case of multiple hosting. The download link is also available. FAQ related questions: <br/> <li><a href='/faq/q35' target='_blank'> How is the opening status of a research publication referenced in scanR determined? </a></li><li><a href='/faq/q7' target='_blank'>May be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "PublicationAuthor",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Auteurs de la publication",
+      "en": "Publication authors"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des auteurs de la publication. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. scanR étant multi-sources, des doublons peuvent apparaître, ainsi que des erreurs en cas d'erreur dans la source. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "List of authors of the publication. When scanR has identified an author, a link to his author page is indicated. As scanR is multi-source, duplicates can appear, as well as errors in case of errors in the source. FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "PublicationAffiliation",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Affiliations de la publication",
+      "en": "Publication affiliations"
       },
     "definition": {
-      "fr": "",
-      "en": ""
-    }
-  },
-  {
-    "key": "ThesisOA",
-    "icon": "fas fa-flask",
-    "label": {
-      "fr": "",
-      "en": ""
-      },
-    "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des affiliations de la publication. Seules les affiliations identifiées (c'est-à-dire que scanR a pu retrouver parmi ses référentiels) sont affichées. Les pages web des publications, les métadonnées ouvertes et les portails HAL des organismes et laboratoires sont utilisés pour reconstituer cette information. Cette liste n'est pas exhaustive et peut contenir des erreurs, notamment en cas d'erreur dans les données source. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "List of affiliations of the publication. Only identified affiliations (i.e. scanR was able to find among its repositories) are displayed. Publication web pages, open metadata and HAL portals of organizations and laboratories are used to reconstruct this information. This list is not exhaustive and may contain errors, particularly in the event of errors in the source data. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking?</a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases ?</a></li><li><a href='/faq/q7' target='_blank' >May there be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "ThesisAuthor",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Personnes liées à la thèse",
+      "en": "Persons related to the thesis"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les personnes en lien avec la thèse. Son auteur évidemment, ainsi que son ou ses encadrants. Sont aussi mentionnées les rapporteurs et membre du jury de thèse. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section lists the people related to the thesis. Its author of course, as well as its supervisor(s). The rapporteurs and member of the thesis jury are also mentioned. When scanR has identified an author, a link to his author page is indicated. FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
     }
   },
   {
-    "key": "ThesisAffiliation",
+    "key": "PatentFamily",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Famille de brevets",
+      "en": "Patent family"
       },
     "definition": {
-      "fr": "",
-      "en": ""
-    }
-  },
-  {
-    "key": "PatentDepot",
-    "icon": "fas fa-flask",
-    "label": {
-      "fr": "",
-      "en": ""
-      },
-    "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet. Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'est-ce qu'une famille de brevets ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une famille ?</a></li><li><a href='/faq/q49' target='_blank' >A quoi correspond la date de première publication d'une famille ?</a></li>",
+      "en": "A patent is only valid in a specific territory. Thus, it is necessary to file a patent application in all the areas where one wishes to be protected. Procedures facilitate the process, but in the end they give rise to a series of applications in various national or regional offices, which are grouped together in what is known as a family of patents. A patent family is therefore a group of related patent applications. The simple family includes all documents with exactly the same priority or combination of priorities and therefore those that refer to the same invention, with identical technical content. The extended family (Inpadoc) includes all documents that have at least one priority in common. The documents of this family can therefore be linked together indirectly. It therefore represents more a technology than an invention, as differences may appear between the technical content of the different requests. In most cases, simple and extended families overlap and submit the same patent applications. Related questions in the FAQ: <br/><li><a href='/faq/q45' target='_blank' >What is a patent family? </a></li><li><a href='/faq/q47' target='_blank' >What is the difference between a patent and a patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the first application date of a family? </a></li><li><a href='/faq/q49' target='_blank' >What is the first publication date of a family ?</a></li>"
     }
   },
   {
     "key": "PatentParticipant",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Déposants et inventeurs",
+      "en": "Applicants and inventors"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des déposants et inventeurs. Lorsqu'un déposant est identifié, un lien vers sa page est indiqué. Questions liées dans la FAQ : <br/><li><a href='/faq/q46' target='_blank' >Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?</a></li><li><a href='/faq/q52' target='_blank' >Quelles sont les sources utilisées pour les brevets ?</a></li>  ",
+      "en": "List of applicants and inventors. When an applicant is identified, a link to his page is indicated. FAQ related questions: <br/><li><a href='/faq/q46' target='_blank' >Why participants appear in duplicate in the same patent family ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li> "
+    }
+  },
+  {
+    "key": "PatentDepot",
+    "icon": "fas fa-flask",
+    "label": {
+      "fr": "Dépôts de brevets",
+      "en": "Patents applications"
+      },
+    "definition": {
+      "fr": "La liste des dépôts de brevets de la famille représente toutes les demandes de protection déposées concernant l'invention. Cette section présente cette liste sous forme cartographique et tabulaire. Questions liées dans la FAQ : <br/><li><a href='/faq/q51' target='_blank' >A quoi correspond la liste des dépôts ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li>",
+      "en": "The list of the family patent applications represents all the applications for protection filed for the invention. This section presents this list in both cartographic and tabular form. FAQ related questions: <br/><li><a href='/faq/q51' target='_blank' >What is the list of deposits ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li>"
     }
   },
   {
@@ -655,8 +631,8 @@
       "en": "Similar productions"
       },
     "definition": {
-      "fr": "Cette section propose des productions qui utilisent des mots en commun, dans les différentes méta-données disponibles (titre, résumé, mot-clé ...). La similarité est calculée uniquement sur le contenu et pas sur des liens de co-écriture ou de citations.",
-      "en": "This section proposes productions that use common words in the various available metadata (title, abstract, keyword, etc.). Similarity is calculated only on content and not on co-written links or citations."
+      "fr": "Cette section propose des productions qui utilisent des mots en commun, dans les différentes méta-données disponibles (titre, résumé, mot-clé ...). La similarité est calculée uniquement sur le contenu et pas sur des liens de co-écriture ou de citations ni sur le full-text.",
+      "en": "This section proposes productions that use common words in the various available metadata (title, abstract, keyword, etc.). Similarity is calculated only on content and not on co-written links or citations or full-text."
     }
   },
   {
