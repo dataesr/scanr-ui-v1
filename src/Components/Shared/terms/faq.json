@@ -1,690 +1,637 @@
 [
   {
     "key": "q1",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi sert scanR ?",
-      "en": "A quoi sert scanR ?"
+      "en": "What is scanR for?"
     },
     "definition": {
       "fr": "scanR est un outil d'exploration du paysage de la recherche et de l'innovation en France. Il a pour ambition d'aider à comprendre qui sont les acteurs de la recherche et de l'innovation en France, à mettre en valeur leur travail. scanR s'adresse à l'ensemble de la société française dans une logique de transparence de travaux largement soutenus par les crédits publics. Il vise également à favoriser l'appropriation par tous des dernières avancées de la recherche et de l'innovation pour alimenter le débat public. Enfin, scanR entend contribuer à l'intensification de liens entre différents acteurs (appartenant à des champs de recherche ou de statut différent), vecteur de dynamisation de cette activité.",
-      "en": "scanR est un outil d'exploration du paysage de la recherche et de l'innovation en France. Il a pour ambition d'aider à comprendre qui sont les acteurs de la recherche et de l'innovation en France, à mettre en valeur leur travail. scanR s'adresse à l'ensemble de la société française dans une logique de transparence de travaux largement soutenus par les crédits publics. Il vise également à favoriser l'appropriation par tous des dernières avancées de la recherche et de l'innovation pour alimenter le débat public. Enfin, scanR entend contribuer à l'intensification de liens entre différents acteurs (appartenant à des champs de recherche ou de statut différent), vecteur de dynamisation de cette activité."
+      "en": "scanR is a tool for exploring the research and innovation landscape in France. It aims to help understand who are the actors of research and innovation in France, to promote their work. scanR is intended for the entire French society in a logic of transparency of work largely supported by public funds. It also aims to promote access for all to the latest research and innovation developments in order to stimulate public debate. Finally, scanR intends to contribute to the intensification of links between different actors (belonging to different fields of research or status) which are an important vector for boosting this activity."
     }
   },
   {
     "key": "q2",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Que lien y'a-t-il entre scanR et le Baromètre de la Science Ouverte ?",
-      "en": "Que lien y'a-t-il entre scanR et le Baromètre de la Science Ouverte ?"
+      "fr": "Quelle est la nature du lien entre scanR et le Baromètre de la Science Ouverte ?",
+      "en": "What is the link between scanR and the Open Science Barometer?"
     },
     "definition": {
       "fr": "Le baromètre de la science ouverte (BSO) a pour objectif de mesurer les progrès de l’accès ouvert aux ressources scientifiques : publications, données, code. Publié pour la première fois par le ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation en 2019, il se concentre à ce jour sur les seules publications scientifiques disposant d'un DOI. Pour les travaux avec DOI, scanR reprend l'information sur le statut d'ouverture utilisée pour le BSO \n*Le périmètre des travaux de recherche restitués dans scanR est plus large* puisqu'il couvre également les thèses soutenues depuis 1990 (theses.fr), les ouvrages et monographies (SUDOC) parus depuis 2013 ainsi que toutes les publications déposées dans HAL (et publiées après 2013), notamment celles sans DOI. La multiplicité d'identifiants engendrée peut ainsi être à la source de doublons dans scanR, mais c'est au bénéfice de la couverture et donc de l'exploration possible dans scanR.",
-      "en": "Le baromètre de la science ouverte (BSO) a pour objectif de mesurer les progrès de l’accès ouvert aux ressources scientifiques : publications, données, code. Publié pour la première fois par le ministère de l’Enseignement supérieur, de la Recherche et de l’Innovation en 2019, il se concentre à ce jour sur les seules publications scientifiques disposant d'un DOI. Pour les travaux avec DOI, scanR reprend l'information sur le statut d'ouverture utilisée pour le BSO \n*Le périmètre des travaux de recherche restitués dans scanR est plus large* puisqu'il couvre également les thèses soutenues depuis 1990 (theses.fr), les ouvrages et monographies (SUDOC) parus depuis 2013 ainsi que toutes les publications déposées dans HAL (et publiées après 2013), notamment celles sans DOI. La multiplicité d'identifiants engendrée peut ainsi être à la source de doublons dans scanR, mais c'est au bénéfice de la couverture et donc de l'exploration possible dans scanR."
+      "en": "The Open Science Barometer (OSB) aims to measure progress in open access to scientific resources: publications, data, code. First published by the Ministry of Higher Education, Research and Innovation in 2019, it focuses to date only on scientific publications with a DOI. For research publications with DOI, scanR includes the opening status information used for the BSO \n*The scope of the research work returned in scanR is broader* since it also covers PhD thesis defended since 1990 (theses.fr), books and monographs (SUDOC) published since 2013 as well as all publications uploaded in HAL (and published after 2013), particularly those without DOI. The multiplicity of identifiers generated can thus be at the source of duplicates in scanR, but this is to the benefit of coverage and user experience in scanR."
     }
   },
   {
     "key": "q3",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il exhaustif ?",
-      "en": "scanR est-il exhaustif ?"
+      "en": "is scanR exhaustive?"
     },
     "definition": {
       "fr": "*Non*, scanR n'est pas exhaustif dans ses repérages. scanR peut comporter des erreurs et des omissions (voir FAQ \"Peut-il y avoir des erreurs dans scanR ?\") et ne traite que des sources ouvertes et réutilisables.",
-      "en": "*Non*, scanR n'est pas exhaustif dans ses repérages. scanR peut comporter des erreurs et des omissions (voir FAQ \"Peut-il y avoir des erreurs dans scanR ?\") et ne traite que des sources ouvertes et réutilisables."
+      "en": "*No*, scanR is not exhaustive in its tracking. scanR may contain errors and omissions (see FAQ \"Can there be errors in scanR?\") and only deals with open and reusable sources."
     }
   },
   {
     "key": "q4",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Que trouve-t-on dans scanR ?",
-      "en": "Que trouve-t-on dans scanR ?"
+      "en": "What is in scanR?"
     },
     "definition": {
       "fr": "scanR s'intéresse à 4 types d' \"Objets\" principaux : les *entités*, les *projets*, les *auteurs* et les *productions* (publications, thèses et brevets).\nParmi les \"entités\", scanR couvre l'ensemble des structures de recherche référencées dans le Répertoire national des structures de recherche (RNSR) ainsi que leur tutelle. Il couvre également, de la manière la plus complète possible, l'ensemble des institutions publiques ou privées, avec ou sans but lucratif mentionnées dans les principales sources mobilisées.\nscanR couvre un ensemble de \"Projets\" qui correspondent à des travaux de recherche qui ont fait l'objet d'un financement public français ou non dans la mesure où une source ouverte et réutilisable existe (voir FAQ \"Quels sont les financements recensés dans scanR ?\").\nscanR couvre les auteurs disposant d'un identifiant Idref (voir FAQ \"Quels auteurs  disposent d'un profil-auteur dans scanR ?\") pour lesquels au moins un lien vers une autre source (RNSR, production, projet) a pu être établi. Pour éviter les erreurs, scanR exclut les auteurs homonymes. Sur demande et en disposant d'informations complémentaires, scanR pourra les introduire individuellement.\nscanR couvre les publications (voir FAQ \"Quels est le périmètre des publications de recherche (articles, thèses, monographies) présenté dans scanR ?\") depuis 2013, une sélection d'ouvrages et de monographies, les thèses depuis 1990, les brevets depuis 2013.",
-      "en": "scanR s'intéresse à 4 types d' \"Objets\" principaux : les *entités*, les *projets*, les *auteurs* et les *productions* (publications, thèses et brevets).\nParmi les \"entités\", scanR couvre l'ensemble des structures de recherche référencées dans le Répertoire national des structures de recherche (RNSR) ainsi que leur tutelle. Il couvre également, de la manière la plus complète possible, l'ensemble des institutions publiques ou privées, avec ou sans but lucratif mentionnées dans les principales sources mobilisées.\nscanR couvre un ensemble de \"Projets\" qui correspondent à des travaux de recherche qui ont fait l'objet d'un financement public français ou non dans la mesure où une source ouverte et réutilisable existe (voir FAQ \"Quels sont les financements recensés dans scanR ?\").\nscanR couvre les auteurs disposant d'un identifiant Idref (voir FAQ \"Quels auteurs  disposent d'un profil-auteur dans scanR ?\") pour lesquels au moins un lien vers une autre source (RNSR, production, projet) a pu être établi. Pour éviter les erreurs, scanR exclut les auteurs homonymes. Sur demande et en disposant d'informations complémentaires, scanR pourra les introduire individuellement.\nscanR couvre les publications (voir FAQ \"Quels est le périmètre des publications de recherche (articles, thèses, monographies) présenté dans scanR ?\") depuis 2013, une sélection d'ouvrages et de monographies, les thèses depuis 1990, les brevets depuis 2013."
+      "en": "scanR focuses on 4 main types of \"Objects\": *entities*, *projects*, *persons* and *productions* (publications, PhD thesis and patents).\nAmong the \"entities\", scanR covers all the research structures referenced in the National Directory of Research Structures (RNSR) as well as their institutions. It also covers, in the most comprehensive way possible, all public or private institutions, whether profit-making or not, mentioned in the main sources mobilized.\nscanR covers a set of \"Projects\" that correspond to research works that have been the subject of French public funding or not insofar as an open and reusable source exists (see FAQ \"What are the funding identified in scanR?\").\nscanR covers authors with an Idref identifier (see FAQ \"Which authors have an author profile in scanR?\") for whom at least one link to another source (RNSR, production, project) could be established. To avoid errors, scanR excludes homonymous authors. On request and with additional information, scanR can introduce them individually.\nscanR covers publications (see FAQ \"What is the scope of research publications (articles, theses, monographs) presented in scanR?\") since 2013, a selection of books and monographs, theses since 1990, patents since 2013."
     }
   },
   {
     "key": "q5",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Puis-je utiliser scanR pour évaluer une entité ou un auteur ?",
-      "en": "Puis-je utiliser scanR pour évaluer une entité ou un auteur ?"
+      "en": "Can I use scanR to evaluate an entity or author?"
     },
     "definition": {
-      "fr": "*Non*, car scanR est conçu avant tout comme un outil d'exploration de la recherche et de l'innovation en France. scanR est un outil ouvert, accessible à tous y compris aux institutions en charge de l'évaluation ou de l'allocation de crédits. Dans la limite de ses moyens, scanR est transparent sur les conditions d'élaboration de l'information et considère ses utilisateurs comme responsables des usages qu'ils font de la solution proposée (voir FAQ, gloassaire et éléments d'information sur chaque page de l'application).\nL'équipe en charge de scanR estime que l'application ne peut que constituer un outil de dialogue qualitatif et personnalisé sur les activités de recherche et d'innovation d'une entité ou d'un auteur.",
-      "en": "*Non*, car scanR est conçu avant tout comme un outil d'exploration de la recherche et de l'innovation en France. scanR est un outil ouvert, accessible à tous y compris aux institutions en charge de l'évaluation ou de l'allocation de crédits. Dans la limite de ses moyens, scanR est transparent sur les conditions d'élaboration de l'information et considère ses utilisateurs comme responsables des usages qu'ils font de la solution proposée (voir FAQ, gloassaire et éléments d'information sur chaque page de l'application).\nL'équipe en charge de scanR estime que l'application ne peut que constituer un outil de dialogue qualitatif et personnalisé sur les activités de recherche et d'innovation d'une entité ou d'un auteur."
+      "fr": "*Non*, car scanR est conçu avant tout comme un outil d'exploration de la recherche et de l'innovation en France. scanR est un outil ouvert, accessible à tous y compris aux institutions en charge de l'évaluation ou de l'allocation de crédits. Dans la limite de ses moyens, scanR est transparent sur les conditions d'élaboration de l'information et considère ses utilisateurs comme responsables des usages qu'ils font de la solution proposée (voir FAQ, glossaire et éléments d'information sur chaque page de l'application).\nL'équipe en charge de scanR estime que l'application ne peut que constituer un outil de dialogue qualitatif et personnalisé sur les activités de recherche et d'innovation d'une entité ou d'un auteur.",
+      "en": "*No*, because scanR is designed above all as a tool for exploring research and innovation in France. scanR is an open tool, accessible to everyone, including institutions in charge of evaluation or funding. Within the limits of its resources, scanR is transparent about the conditions under which the information is prepared and considers its users to be responsible for the uses they make of the proposed solution (see FAQ, glossary and information elements on each page of the application).\nThe scanR team believes that the application can only be a tool for qualitative and personalized dialogue on the research and innovation activities of an entity or author."
     }
   },
   {
     "key": "q6",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles précautions prendre pour bien interpréter les informations et les chiffres restitués dans scanR ?",
-      "en": "Quelles précautions prendre pour bien interpréter les informations et les chiffres restitués dans scanR ?"
+      "en": "What precautions should be taken to properly interpret the information and figures returned in scanR?"
     },
     "definition": {
       "fr": "*scanR ne garantit pas l'exhaustivité de ses repérages*. En conséquence, les différents dénombrements proposés au fil des pages de l'application ne donnent des indications que sur le volume détecté par scanR. Même si ces dénombrements peuvent se rapprocher de l'exhaustivité, scanR ne garantit pas et ne garantira jamais l'exhaustivité de la couverture.",
-      "en": "*scanR ne garantit pas l'exhaustivité de ses repérages*. En conséquence, les différents dénombrements proposés au fil des pages de l'application ne donnent des indications que sur le volume détecté par scanR. Même si ces dénombrements peuvent se rapprocher de l'exhaustivité, scanR ne garantit pas et ne garantira jamais l'exhaustivité de la couverture."
+      "en": "*scanR does not guarantee the comprehensiveness of its tracking. Consequently, the different counts offered over the pages of the application only give indications of the volume detected by scanR. Although these counts may be close to completeness, scanR does not and will never guarantee completeness of coverage."
     }
   },
   {
     "key": "q7",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Peut-il y avoir des erreurs dans scanR ?",
-      "en": "Peut-il y avoir des erreurs dans scanR ?"
+      "en": "Can there be errors in scanR?"
     },
     "definition": {
       "fr": "*Oui*, il peut y en avoir. Comme tout outil mobilisant une quantité massive d'informations hétérogènes, scanR peut présenter des erreurs, des omissions, des imprécisions. Celles-ci peuvent provenir de différentes origines (internes, liées aux sources ou aux référentiels, voir FAQ \"D'où proviennent les erreurs que l'on peut constater dans scanR ?\"). Cependant, l'objectif de scanR n'est pas la production de métriques. scanR vise à fournir, sur la base d'informations ouvertes et réutilisables, des indications proches de la réalité sur les orientations des laboratoires et institutions publiques, des entreprises en matière de recherche et d'innovation. Il s'agit de valoriser les travaux conduits dans les laboratories, de rendre compte à tous de travaux largement conduits sur la base de financements publics, de contribuer à l'appropriation par tous, notamment dans le débat public, des connaissances scientifiques actuelles, de faciliter les mises en relations pour dynamiser cette activité en France. Dans ces conditions, l'erreur, assumée et traitée, est tolérée. Cette visibilité de l'erreur est ainsi perçue comme facteur d'amélioration de la qualité.\nEn soumettant aux utilisateurs, souvent les meilleurs connaisseurs des réalités de terrain, l'information telle qu'elle est et non telle qu'on s'attend à ce qu'elle soit, et en leur donnant la possibilité d'effectuer des signalements, il s'agit : \n(1) d'inciter l'équipe de scanR à demeurer dans une démarche d'amélioration continue de ses processus\n(2) de contribuer à l'amélioration des sources et référentiels eux-mêmes.\nAinsi, les signalements réalisés par les utilisateurs de scanR sont traités systématiquement. Quand l'erreur relève de la qualité des sources et référentiels, suivant le cas, le signalement est reporté directement au responsable de la source ou l'utilisateur est orienté vers le responsable de la source ou un correspondant local qui effectuera les ajustements nécessaires ou accompagnera l'utilisateur pour les réaliser.\nVous avez constaté une erreur ? Dites le nous !",
-      "en": "*Oui*, il peut y en avoir. Comme tout outil mobilisant une quantité massive d'informations hétérogènes, scanR peut présenter des erreurs, des omissions, des imprécisions. Celles-ci peuvent provenir de différentes origines (internes, liées aux sources ou aux référentiels, voir FAQ \"D'où proviennent les erreurs que l'on peut constater dans scanR ?\"). Cependant, l'objectif de scanR n'est pas la production de métriques. scanR vise à fournir, sur la base d'informations ouvertes et réutilisables, des indications proches de la réalité sur les orientations des laboratoires et institutions publiques, des entreprises en matière de recherche et d'innovation. Il s'agit de valoriser les travaux conduits dans les laboratories, de rendre compte à tous de travaux largement conduits sur la base de financements publics, de contribuer à l'appropriation par tous, notamment dans le débat public, des connaissances scientifiques actuelles, de faciliter les mises en relations pour dynamiser cette activité en France. Dans ces conditions, l'erreur, assumée et traitée, est tolérée. Cette visibilité de l'erreur est ainsi perçue comme facteur d'amélioration de la qualité.\nEn soumettant aux utilisateurs, souvent les meilleurs connaisseurs des réalités de terrain, l'information telle qu'elle est et non telle qu'on s'attend à ce qu'elle soit, et en leur donnant la possibilité d'effectuer des signalements, il s'agit : \n(1) d'inciter l'équipe de scanR à demeurer dans une démarche d'amélioration continue de ses processus\n(2) de contribuer à l'amélioration des sources et référentiels eux-mêmes.\nAinsi, les signalements réalisés par les utilisateurs de scanR sont traités systématiquement. Quand l'erreur relève de la qualité des sources et référentiels, suivant le cas, le signalement est reporté directement au responsable de la source ou l'utilisateur est orienté vers le responsable de la source ou un correspondant local qui effectuera les ajustements nécessaires ou accompagnera l'utilisateur pour les réaliser.\nVous avez constaté une erreur ? Dites le nous !"
+      "en": "*Yes*, there may be. Like any tool that mobilizes a massive amount of heterogeneous information, scanR can contain errors, omissions and inaccuracies. These can come from different origins (internal, source-related or repository-related, see FAQ\" \"Where do the errors in scanR come from?\"\"). However, the objective of scanR is not the production of metrics. scanR aims to provide, on the basis of open and reusable information, realistic indications on the orientations of public laboratories and institutions, companies in terms of research and innovation. The aim is to enhance the value of the work carried out in the laboratories, to report to everyone on work largely carried out on the basis of public funding, to make current scientific knowledge accessible to everyone, particularly in the public debate, and to facilitate networking to boost this activity in France. Under these conditions, the error, assumed and processed, is tolerated. This visibility of error is thus perceived as a factor in improving quality.\nscanR offers its users, often the best experts in the field, information as it is and not as it is expected to be. By giving them the opportunity to report, the goal is: \n(1) to encourage the scanR team to remain in a process of continuous improvement of its processes\n(2) to contribute to the improvement of the sources and repositories themselves.\nThus, reports made by scanR users are systematically processed. When the error is related to the quality of sources and repositories, as the case may be, the report is reported directly to the source manager or the user is directed to the source manager or a local correspondent who will make the necessary adjustments or accompany the user to make them.\nDid you notice an error? Tell us about it!"
     }
   },
   {
     "key": "q8",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il producteur de données ?",
-      "en": "scanR est-il producteur de données ?"
+      "en": "Is scanR a data producer?"
     },
     "definition": {
-      "fr": "scanR ne produit pas directement de données, mais les consomme depuis une multiplicité de sources, les nettoie, les croise et les concentre pour rendre l'information la plus accessible.",
-      "en": "scanR ne produit pas directement de données, mais les consomme depuis une multiplicité de sources, les nettoie, les croise et les concentre pour rendre l'information la plus accessible."
+      "fr": "scanR ne produit pas directement de données, mais les consomme. scanR traite une multiplicité de sources, les nettoie, les croise et les concentre pour rendre l'information plus accessible et de meilleure qualité.",
+      "en": "scanR does not directly produce data, but consumes it. scanR processes a variety of sources, cleans, crosses and concentrates them to make information more accessible and of better quality."
     }
   },
   {
     "key": "q9",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment se positionne scanR dans le cycle de vie des données ?",
-      "en": "Comment se positionne scanR dans le cycle de vie des données ?"
+      "en": "How is scanR positioned in the data life cycle?"
     },
     "definition": {
       "fr": "scanR étant un consommateur plutôt qu'un producteur de données, en cas d'erreur, il est préférable de corriger la donnée le plus en amont, à savoir dans la (ou les) sources consommées par scanR plutôt que seulement dans scanR.",
-      "en": "scanR étant un consommateur plutôt qu'un producteur de données, en cas d'erreur, il est préférable de corriger la donnée le plus en amont, à savoir dans la (ou les) sources consommées par scanR plutôt que seulement dans scanR."
+      "en": "scanR being a consumer rather than a data producer, in case of error, it is preferable to correct the most upstream data, i.e. in the source(s) used by scanR rather than only in scanR."
     }
   },
   {
     "key": "q10",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "D'où proviennent les erreurs que l'on peut constater dans scanR ?",
-      "en": "D'où proviennent les erreurs que l'on peut constater dans scanR ?"
+      "en": "Where do the errors in scanR come from?"
     },
     "definition": {
       "fr": "Trois principaux facteurs d'erreurs, d'imprécision et d'omission influencent la qualité des données de scanR : la qualité des traitements réalisés par scanR, celle des sources et celles des référentiels qui décrivent les \"objets\" présentés dans scanR  (entités, auteurs, projets, productions).\nMême si scanR s'attache en permanence à adapter ses méthodes et outils pour limiter ses erreurs internes, palier des difficultés nouvellement identifiées, des erreurs de codage, des particularités non identifiées peuvent entraîner des erreurs ou des omissions dans les données restituées.\nMais les erreurs de scanR peuvent provenir de deux autres origines, indépendantes des travaux de traitement de l'information réalisés par scanR : \n(1) la qualité des sources : rares sont les sources mobilisées par scanR qui intègrent systématiquement un identifiant interopérable. Quand c'est le cas, elles peuvent, elles aussi, comporter des erreurs et des omissions. Au-delà de la présence insuffisante des identifiants, l'information portée par certains enregistrements des sources peut être très imprécise, incomplète, ambigüe ou tronquée ;\n(2) la qualité des référentiels.  les référentiels sont également porteurs d'erreurs, d'imprécisions, d'omissions. Des objets peuvent en être absents. Les chaînes de caractères relatives au nommage des objets (entités, auteurs, projets, productions) peuvent être incomplètes, ambigües, tronquées, erronnées. L'historique des objets dans les référentiels peut n'être que partiellement renseigné. Les référentiels peuvent évoluer avec retard par rapport à la réalité dont ils doivent rendre compte.",
-      "en": "Trois principaux facteurs d'erreurs, d'imprécision et d'omission influencent la qualité des données de scanR : la qualité des traitements réalisés par scanR, celle des sources et celles des référentiels qui décrivent les \"objets\" présentés dans scanR  (entités, auteurs, projets, productions).\nMême si scanR s'attache en permanence à adapter ses méthodes et outils pour limiter ses erreurs internes, palier des difficultés nouvellement identifiées, des erreurs de codage, des particularités non identifiées peuvent entraîner des erreurs ou des omissions dans les données restituées.\nMais les erreurs de scanR peuvent provenir de deux autres origines, indépendantes des travaux de traitement de l'information réalisés par scanR : \n(1) la qualité des sources : rares sont les sources mobilisées par scanR qui intègrent systématiquement un identifiant interopérable. Quand c'est le cas, elles peuvent, elles aussi, comporter des erreurs et des omissions. Au-delà de la présence insuffisante des identifiants, l'information portée par certains enregistrements des sources peut être très imprécise, incomplète, ambigüe ou tronquée ;\n(2) la qualité des référentiels.  les référentiels sont également porteurs d'erreurs, d'imprécisions, d'omissions. Des objets peuvent en être absents. Les chaînes de caractères relatives au nommage des objets (entités, auteurs, projets, productions) peuvent être incomplètes, ambigües, tronquées, erronnées. L'historique des objets dans les référentiels peut n'être que partiellement renseigné. Les référentiels peuvent évoluer avec retard par rapport à la réalité dont ils doivent rendre compte."
+      "en": "Three main factors of errors, inaccuracies and omissions influence the quality of scanR data: the quality of the processing performed by scanR, the quality of the sources and the quality of the repositories that describe the \"objects\" presented in scanR (entities, persons, projects, productions).\nEven if scanR constantly adapts its methods and tools to limit its internal errors, newly identified difficulties, coding errors, unidentified features can lead to errors or omissions in the returned data.\nBut scanR errors can come from two other sources, independent of the information processing work performed by scanR: \n(1) Source quality: few sources mobilized by scanR systematically integrate an interoperable identifier. When this is the case, they may also contain errors and omissions. Beyond the insufficient presence of identifiers, the information provided by some source records can be very imprecise, incomplete, ambiguous or truncated;\n(2) the quality of the repositories. the repositories also contain errors, inaccuracies and omissions. Objects may be missing. Strings relating to the naming of objects (entities, persons, projects, productions) may be incomplete, ambiguous, truncated, erroneous. The history of objects in repositories may only be partially filled in. Repositories can evolve with delay in relation to the reality they must report on."
     }
   },
   {
     "key": "q11",
-    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment affiner une recherche dans scanR avec des opérateurs ?",
-      "en": "Comment affiner une recherche dans scanR avec des opérateurs ?"
+      "en": "How to refine a search in scanR with operators?"
     },
     "definition": {
-      "fr": "scanR utilise le moteur de recherche Elasticsearch. Il est possible à l'utilisateur de construire une requête complexe pour générer des résultats plus adaptés à une question spécifique.\nLes opérateurs disponibles sont le \"+\" (et), le \"-\" (négation) et le \"ou\" (|). Par exemple, pour faire une recherche bilingue sur le changement climatique, la requête (changement+climatique) | (climate+change) pourra être utilisée. Concernant la négation, le \"-\" doit être placé directement avant le mot interdit, sans espace.",
-      "en": "scanR utilise le moteur de recherche Elasticsearch. Il est possible à l'utilisateur de construire une requête complexe pour générer des résultats plus adaptés à une question spécifique.\nLes opérateurs disponibles sont le \"+\" (et), le \"-\" (négation) et le \"ou\" (|). Par exemple, pour faire une recherche bilingue sur le changement climatique, la requête (changement+climatique) | (climate+change) pourra être utilisée. Concernant la négation, le \"-\" doit être placé directement avant le mot interdit, sans espace."
+      "fr": "scanR utilise le moteur de recherche Elasticsearch (https://www.elastic.co/]. Il est possible à l'utilisateur de construire une requête complexe pour générer des résultats plus adaptés à une question spécifique.\nLes opérateurs disponibles sont le \"+\" (et), le \"-\" (négation) et le \"ou\" (|). Par exemple, pour faire une recherche bilingue sur le changement climatique, la requête (changement+climatique) | (climate+change) pourra être utilisée. Concernant la négation, le \"-\" doit être placé directement avant le mot interdit, sans espace.",
+      "en": "scanR uses the Elasticsearch search engine [https://www.elastic.co/]. It is possible for the user to build a complex query to generate results that are more relevant to a specific question.\nThe available operators are \"+\" (and), \"-\" ( negation) and \"or\" (|). For example, to do a bilingual research on climate change, the query (changement+climatique) | (climate+change) could be used. Concerning the negation, the \"-\" must be placed directly before the forbidden word, without space."
     }
   },
   {
     "key": "q12",
-    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment sont ordonnés les résultats d'une recherche dans scanR ?",
-      "en": "Comment sont ordonnés les résultats d'une recherche dans scanR ?"
+      "en": "How are the results of a search in scanR ordered?"
     },
     "definition": {
       "fr": "En réponse à une requête d'un utilisateur, scanR propose pour chaque type d'objets une liste ordonnée de résultats. A données identiques, cette liste est identique et indépendante du nombre de fois où cette requête est jouée. Elle est également indépendante des actions des utilisateurs à partir des résultats de cette requête. Cette liste n'est ainsi pas liée aux actions des utilisateurs. La liste des résultats est ordonnée, par défaut, par pertinence. C'est ainsi la fréquence d'apparition des termes de la requête pondérée par le type de document dans lesquels ils figurent qui détermine l'ordre d'apparition des résultats. Suivant les objets, les résultats peuvent aussi être triés par récence ou par ordre alphabétique quand c'est pertinent.\nLes champs (et leur pondération) utilisés pour ordonner les résultats d'une requête sont propres à chaque type d' \"objets\" de scanR (entités, auteurs, financement, production). Le tableau suivant [TODO Insérer Tableau] présente, pour chacun d'eux, leur méthode de pondération",
-      "en": "En réponse à une requête d'un utilisateur, scanR propose pour chaque type d'objets une liste ordonnée de résultats. A données identiques, cette liste est identique et indépendante du nombre de fois où cette requête est jouée. Elle est également indépendante des actions des utilisateurs à partir des résultats de cette requête. Cette liste n'est ainsi pas liée aux actions des utilisateurs. La liste des résultats est ordonnée, par défaut, par pertinence. C'est ainsi la fréquence d'apparition des termes de la requête pondérée par le type de document dans lesquels ils figurent qui détermine l'ordre d'apparition des résultats. Suivant les objets, les résultats peuvent aussi être triés par récence ou par ordre alphabétique quand c'est pertinent.\nLes champs (et leur pondération) utilisés pour ordonner les résultats d'une requête sont propres à chaque type d' \"objets\" de scanR (entités, auteurs, financement, production). Le tableau suivant [TODO Insérer Tableau] présente, pour chacun d'eux, leur méthode de pondération"
+      "en": "In response to a user's request, scanR provides an ordered list of results for each type of object. With identical data, this list is identical and independent of the number of times this request is played. It is also independent of users' actions based on the results of this query. This list is therefore not linked to users' actions. The list of results is ordered, by default, by relevance. It is thus the frequency of appearance of the query terms weighted by the type of document in which they appear that determines the order in which the results appear. Depending on the objects, the results can also be sorted by recency or alphabetically when relevant.\nThe fields (and their weighting) used to order the results of a query are specific to each type of scanR \"objects\" (entities, persons, projects, production). The following table[TODO Insert Table] shows, for each of them, their weighting method."
     }
   },
   {
     "key": "q13",
-    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Sur la base de quelles informations le moteur de recherche de scanR fonctionne-t-il ?",
-      "en": "Sur la base de quelles informations le moteur de recherche de scanR fonctionne-t-il ?"
+      "en": "What information does the scanR search engine use?"
     },
     "definition": {
       "fr": "Le moteur de recherche de scanR indexe titres et résumés (si disponibles) des publications de recherche, thèses, monographies, ouvrages et brevets (mais pas les textes intégraux), les titres et résumés des financements sur appels à projets, les auteurs des publications, les inventeurs et déposants de brevets ainsi que le contenu des sites web qui ont pu être associés aux entités référencées dans scanR. Dans la mesure du possible, les partenaires internationaux des acteurs français de la recherche sont identifiés et associés à leurs partenaires français.",
-      "en": "Le moteur de recherche de scanR indexe titres et résumés (si disponibles) des publications de recherche, thèses, monographies, ouvrages et brevets (mais pas les textes intégraux), les titres et résumés des financements sur appels à projets, les auteurs des publications, les inventeurs et déposants de brevets ainsi que le contenu des sites web qui ont pu être associés aux entités référencées dans scanR. Dans la mesure du possible, les partenaires internationaux des acteurs français de la recherche sont identifiés et associés à leurs partenaires français."
+      "en": "The scanR search engine indexes titles and abstracts (if available) of research publications, PhD thesis, monographs, books and patents (but not full texts), titles and abstracts of funding on calls for proposals, authors of publications, inventors and patent applicants as well as the content of websites that may have been associated with the entities referenced in scanR. As far as possible, the international partners of French research actors are identified and associated with their French partners."
     }
   },
   {
     "key": "q14",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les entités référencées dans scanR ?",
-      "en": "Quelles sont les entités référencées dans scanR ?"
+      "en": "Which entities are referenced in scanR?"
     },
     "definition": {
       "fr": "scanR couvre l'ensemble des structures de recherche actives référencées dans le répertoire national des structures de recherche (RNSR), leurs institutions de tutelle, les écoles doctorales en activité, les entreprises et autres institutions publiques qui ont pu être associées à au moins une source révélant une activité de recherche et ou d'innovation. Une institution peut ne pas être référencée dans scanR mais conduire une activité intense de recherche et d'innovation. Vous êtes dans cette situation, contactez-nous ?",
-      "en": "scanR couvre l'ensemble des structures de recherche actives référencées dans le répertoire national des structures de recherche (RNSR), leurs institutions de tutelle, les écoles doctorales en activité, les entreprises et autres institutions publiques qui ont pu être associées à au moins une source révélant une activité de recherche et ou d'innovation. Une institution peut ne pas être référencée dans scanR mais conduire une activité intense de recherche et d'innovation. Vous êtes dans cette situation, contactez-nous ?"
+      "en": "scanR covers all active research structures referenced in the National Directory of Research Structures (RNSR), their institutions of affiliation, active doctoral schools, companies and other public institutions that may have been associated with at least one source revealing research and/or innovation activity. An institution may not be listed in scanR but may carry out intensive research and innovation activities. You are in this situation and you want to be included in scanR, contact us?"
     }
   },
   {
     "key": "q15",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi scanR comporte-il des doublons ?",
-      "en": "Pourquoi scanR comporte-il des doublons ?"
+      "en": "Why does scanR have duplicates?"
     },
     "definition": {
       "fr": "Malgré les efforts de scanR, des doublons peuvent de manière marginale exister. Une même entité ou une même production peut apparaitre ainsi plusieurs fois dans des résultats de recherche. Quelle est l'origine de cette situation ? \nLes différents acteurs de la recherche relèvent de structures de nature juridique variable, de niveaux de granularitées très différents. Ils relèvent de différents référentiels non mutuellement exclusifs. Une entité ou une production peut ainsi apparaître dans plusieurs référentiels. Dans la gestion de ces référentiels, scanR veille au maximum à éviter ces doublons et à identifier les zones de recouvrement. Cependant, leur détection est parfois complexe compte tenu des spécificités des différents référentiels d'où l'existence de certains doublons.\nVous en avez identifiés ? Dites le nous, nous ajusterons nos données ?",
-      "en": "Malgré les efforts de scanR, des doublons peuvent de manière marginale exister. Une même entité ou une même production peut apparaitre ainsi plusieurs fois dans des résultats de recherche. Quelle est l'origine de cette situation ? \nLes différents acteurs de la recherche relèvent de structures de nature juridique variable, de niveaux de granularitées très différents. Ils relèvent de différents référentiels non mutuellement exclusifs. Une entité ou une production peut ainsi apparaître dans plusieurs référentiels. Dans la gestion de ces référentiels, scanR veille au maximum à éviter ces doublons et à identifier les zones de recouvrement. Cependant, leur détection est parfois complexe compte tenu des spécificités des différents référentiels d'où l'existence de certains doublons.\nVous en avez identifiés ? Dites le nous, nous ajusterons nos données ?"
+      "en": "Despite the efforts of scanR, duplicates may exist in a marginal way. The same entity or production may thus appear several times in search results. What is the origin of this situation? \nThe various research actors have different legal structures and very different levels of granularity. They are subject to different, not mutually exclusive, repositories. An entity or a production can thus appear in several repositories. In managing these repositories, scanR takes great care to avoid these duplicates and to identify overlapping areas. However, their detection is sometimes complex given the specificities of the different repositories.\nHave you identified any of them? Tell us, will we adjust our data?"
     }
   },
   {
     "key": "q16",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?",
-      "en": "Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?"
+      "fr": "Pourquoi scanR n'utilise-t-il pas les annuaires des organismes de recherche, des universités et des écoles ?",
+      "en": "Why doesn't scanR use directories from research organizations, universities and other higher education and research institutions?"
     },
     "definition": {
-      "fr": "scanR n'utilise pas les annuaires car ils ne sont pas rendus publics sous une forme exploitable par les institutions d'enseignement supérieur et de recherche. Pourtant, le Décret n° 2018-1117 du 10 décembre 2018 de la loi n° 2016-1321 du 7 octobre 2016 pour une République numérique prévoit, dans son article 1 premier alinea, une exception au principe général d'anonymisation pour \"les documents nécessaires à l'information du public relatifs aux conditions d'organisation de l'administration, notamment les organigrammes, les annuaires des administrations et la liste des personnes inscrites à un tableau d'avancement ou sur une liste d'aptitude pour l'accès à un échelon, un grade ou un corps ou cadre d'emplois de la fonction publique\".\nLes traitements réalisés par scanR verraient, avec l'utilisation de ce type d'informaiton, leur efficacité considérablement progresser.",
-      "en": "scanR n'utilise pas les annuaires car ils ne sont pas rendus publics sous une forme exploitable par les institutions d'enseignement supérieur et de recherche. Pourtant, le Décret n° 2018-1117 du 10 décembre 2018 de la loi n° 2016-1321 du 7 octobre 2016 pour une République numérique prévoit, dans son article 1 premier alinea, une exception au principe général d'anonymisation pour \"les documents nécessaires à l'information du public relatifs aux conditions d'organisation de l'administration, notamment les organigrammes, les annuaires des administrations et la liste des personnes inscrites à un tableau d'avancement ou sur une liste d'aptitude pour l'accès à un échelon, un grade ou un corps ou cadre d'emplois de la fonction publique\".\nLes traitements réalisés par scanR verraient, avec l'utilisation de ce type d'informaiton, leur efficacité considérablement progresser."
+      "fr": "scanR n'utilise pas les annuaires car ils ne sont pas rendus publics sous une forme exploitable par les institutions d'enseignement supérieur et de recherche. Pourtant, le Décret n° 2018-1117 du 10 décembre 2018 de la loi n° 2016-1321 du 7 octobre 2016 pour une République numérique prévoit, dans son article 1 premier alinea, une exception au principe général d'anonymisation pour \"les documents nécessaires à l'information du public relatifs aux conditions d'organisation de l'administration, notamment les organigrammes, les annuaires des administrations et la liste des personnes inscrites à un tableau d'avancement ou sur une liste d'aptitude pour l'accès à un échelon, un grade ou un corps ou cadre d'emplois de la fonction publique\".\nLes traitements réalisés par scanR verraient, avec l'utilisation de ce type d'information, leur efficacité considérablement progresser.",
+      "en": "scanR does not use directories because they are not made public in a form that can be used by higher education and research institutions. However, Decree No. 2018-1117 of 10 December 2018 of Act No. 2016-1321 of 7 October 2016 Pour une République numérique provides, in its first paragraph of article 1, an exception to the general principle of anonymization for \"documents necessary for informing the public about the conditions for organizing the administration, including organisation charts, administrative directories and the list of persons registered in a promotion table or on a list of suitable candidates for access to a specific position in the civil service\".\nThe processing carried out by scanR would be more efficient with the use of this type of information."
     }
   },
   {
     "key": "q17",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment contribuer, proposer des modifications et contacter l'équipe scanR ?",
-      "en": "Comment contribuer, proposer des modifications et contacter l'équipe scanR ?"
+      "en": "How to contribute, propose changes and contact the scanR team?"
     },
     "definition": {
-      "fr": "nan",
-      "en": "nan"
+      "fr": "Deux solutions pour contribuer à l'amélioration de scanR : \n- Vous avez identifié une erreur, une omission sur une fiche entité, auteur, production ou financement particulière ? Utilisez le bouton \"Contribuer\" pour nous contacter !\n- Des remarques générales sur scanR, des idées de sources à intégrer, de propositions d'évolutions de l'interface, des envies de partenriats et de collaboration avec l'équipe ? Rendez-vous à la rubrique \"Contact\" [Insérer lien].",
+      "en": "Two solutions to contribute to the improvement of scanR: \n- Have you identified an error or omission on a particular entity, author, production or funding record? Use the \"Contribute\" button to contact us!\n- General remarks on scanR, ideas of sources to integrate, proposals for evolutions of the interface, desires of partnerships and collaboration with the team? Go to the \"Contact\" section [Insert link]."
     }
   },
   {
     "key": "q18",
-    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels sont les financements recensés dans scanR ?",
-      "en": "Quels sont les financements recensés dans scanR ?"
+      "en": "What are the funding identified in scanR?"
     },
     "definition": {
       "fr": "scanR fédère les données issues des financements ANR, du programme des investissements d'avenir, des programmes européens de recherche et d'innovation (FP7 et H2020), des programmes du Ministère en charge de l'agriculture et de l'alimentation (CASDAR), du Programme hospitalier de recherche clinique, du Ministère en charge de la santé et des affaires sociales (PHRC), des partenariats Hubert Curien. Pour chacun des projets bénéficiant d'une subvention publique, scanR identifie les partenaires associés.",
-      "en": "scanR fédère les données issues des financements ANR, du programme des investissements d'avenir, des programmes européens de recherche et d'innovation (FP7 et H2020), des programmes du Ministère en charge de l'agriculture et de l'alimentation (CASDAR), du Programme hospitalier de recherche clinique, du Ministère en charge de la santé et des affaires sociales (PHRC), des partenariats Hubert Curien. Pour chacun des projets bénéficiant d'une subvention publique, scanR identifie les partenaires associés."
+      "en": "scanR brings together data from ANR funding, the programme of future investments, the European research and innovation programmes (FP7 and H2020), the programmes of the Ministry of Agriculture and Food (CASDAR), the Hospital Clinical Research Programme, the Ministry of Health and Social Affairs (PHRC) and Hubert Curien partnerships. For each of the projects receiving public funding, scanR identifies, if possible, the associated partners."
     }
   },
   {
     "key": "q19",
-    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?",
-      "en": "Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?"
+      "en": "Why are not all public funding referenced?"
     },
     "definition": {
-      "fr": "Toutes les données sur les financements publics de la recherche sur appel à projet ne sont pas accessibles. scanR valorise et intègre toutes les données auxquelles il accède.\n Si les résultats d'une agence de financement n'y figure pas c'est que scanR n'accède pas à ces données.",
-      "en": "Toutes les données sur les financements publics de la recherche sur appel à projet ne sont pas accessibles. scanR valorise et intègre toutes les données auxquelles il accède.\n Si les résultats d'une agence de financement n'y figure pas c'est que scanR n'accède pas à ces données."
+      "fr": "En contradiction avec les termes de la loi n° 2016-1321 of 7 octobre 2016 Pour une République numérique, toutes les données sur les financements publics de la recherche sur appel à projet ne sont pas accessibles. scanR valorise et intègre toutes les données auxquelles il accède. Dans certains cas, l'information est accessible via des bases de données ou des API mises à disposition par le producteur de la donnée. Dans d'autres cas, scanR ne dispose que de l'information diffusée de manière ouverte sur le site web de l'institution en charge du financement.\nSi les résultats d'une agence de financement n'y figure pas c'est que scanR n'accède pas à ces données ou que, compte tenu de la qualité de l'information disponible, le coût de traitement de l'information accessible est trop élevé.",
+      "en": "In contradiction with the terms of Law n° 2016-1321 of 7 October 2016 Pour une République numérique, not all data on public funding of research on a call for projects are accessible. scanR values and integrates all the data it accesses. In some cases, the information is accessible via databases or APIs made available by the data producer. In other cases, scanR only has access to information that is openly disseminated on the website of the funding institution.\n If a funding agency's results are not included, it is because scanR does not access this data at all or, given the quality of the information available, the cost of processing is too high."
     }
   },
   {
     "key": "q20",
-    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Les contrats associant une équipe de la recherche publique et un partenaire (sans financement d'une agence publique comme l'ANR) sont ils présents dans scanR ?",
-      "en": "Les contrats associant une équipe de la recherche publique et un partenaire (sans financement d'une agence publique comme l'ANR) sont ils présents dans scanR ?"
+      "fr": "Les contrats associant une équipe de la recherche publique et un partenaire (sans financement d'une agence publique comme l'ANR) sont-ils présents dans scanR ?",
+      "en": "Are contracts involving a public research team and a partner (without funding from a public agency such as the ANR) present in scanR?"
     },
     "definition": {
       "fr": "scanR ne présente que les projets de recherche bénéficiant d'une subvention publique dans le cadre d'un programme de financement. Les contrats bilatéraux associant directement un laboratoire de recherche et un tiers (entreprises, organisme ou service public) ne figurent pas dans scanR. scanR ne dispose pas de ce type de données non soumises aux obligations de transaprence sur les bénéficiaires de subvention publique.",
-      "en": "scanR ne présente que les projets de recherche bénéficiant d'une subvention publique dans le cadre d'un programme de financement. Les contrats bilatéraux associant directement un laboratoire de recherche et un tiers (entreprises, organisme ou service public) ne figurent pas dans scanR. scanR ne dispose pas de ce type de données non soumises aux obligations de transaprence sur les bénéficiaires de subvention publique."
+      "en": "scanR only presents research projects that have received a public grant as part of a funding programme. Bilateral contracts directly involving a research laboratory and a third party (companies, organisations or public services) are not included in scanR. scanR does not have this type of data not subject to the transaprence obligations on beneficiaries of public subsidies."
     }
   },
   {
     "key": "q21",
-    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Comment faire apparaître les financements d'une nouvelle agence de financement de la recherche, d'une collectivité territoriale, d'une fondation ou de tout autre institution ?",
-      "en": "Comment faire apparaître les financements d'une nouvelle agence de financement de la recherche, d'une collectivité territoriale, d'une fondation ou de tout autre institution ?"
+      "fr": "Comment faire apparaître dans scanR les financements d'une nouvelle agence de financement de la recherche, d'une collectivité territoriale, d'une fondation ou de tout autre institution publique ou privée ?",
+      "en": "How can the funding of a new research funding agency, a local authority, a foundation or any other public or private institution be included in scanR?"
     },
     "definition": {
       "fr": "Vous êtes une institution publique, un délégataire de service public, une fondation, ou toute institution, vous attribuez des fonds sur appel à projet ? Vous souhaitez rendre visible votre soutien aux acteurs de la recherche dans un souci de respect du Décret n° 2017-779 du 5 mai 2017 relatif à l'accès sous forme électronique aux données essentielles des conventions de subvention de la Loi n° 2016-1321 du 7 octobre 2016 pour une République numérique, de transparence à l'égard de vos donateurs ou de suivi des équipes soutenues ? Contactez nous et nous travaillerons ensemble pour intégrer les résultats de vos appels à projet dans scanR.",
-      "en": "Vous êtes une institution publique, un délégataire de service public, une fondation, ou toute institution, vous attribuez des fonds sur appel à projet ? Vous souhaitez rendre visible votre soutien aux acteurs de la recherche dans un souci de respect du Décret n° 2017-779 du 5 mai 2017 relatif à l'accès sous forme électronique aux données essentielles des conventions de subvention de la Loi n° 2016-1321 du 7 octobre 2016 pour une République numérique, de transparence à l'égard de vos donateurs ou de suivi des équipes soutenues ? Contactez nous et nous travaillerons ensemble pour intégrer les résultats de vos appels à projet dans scanR."
-    }
-  },
-  {
-    "key": "q22",
-    "groupkey": "projects",
-    "icon": "fas fa-question-circle",
-    "label": {
-      "fr": "Pourquoi certaines données PIA semblent incomplètes ?",
-      "en": "Pourquoi certaines données PIA semblent incomplètes ?"
-    },
-    "definition": {
-      "fr": "nan",
-      "en": "nan"
+      "en": "Are you a public institution, a public service delegate, a foundation, or any other institution? Do you allocate funds on a call for projects?  Do you wish to make your support visible to research actors in order to comply with Decree No. 2017-779 of 5 May 2017 on access in electronic form to the essential data of the grant agreements of Law No. 2016-1321 of 7 October 2016 for a digital Republic? Do you want to make your support visible to research actors in order to enhance the value of your action, transparency towards your donors or follow-up of the teams supported?  Contact us and we will work together to integrate the results of your calls for projects into scanR."
     }
   },
   {
     "key": "q23",
-    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sources sont utilisées pour les prix et distinctions?",
-      "en": "Quelles sources sont utilisées pour les prix et distinctions?"
+      "en": "What sources are used for scientific awards?"
     },
     "definition": {
-      "fr": "scanR constitue l'information sur les prix et distinctions sur la seule base d'un repérage manuel. Il est donc loin d'être exhaustif, ne couvre pas de manière uniforme suivant les thématiques de recherche.",
-      "en": "scanR constitue l'information sur les prix et distinctions sur la seule base d'un repérage manuel. Il est donc loin d'être exhaustif, ne couvre pas de manière uniforme suivant les thématiques de recherche."
+      "fr": "scanR constitue l'information sur les prix et distinctions sur la seule base d'un repérage manuel. Il est donc loin d'être exhaustif et ne couvre pas de manière uniforme suivant les thématiques de recherche.",
+      "en": "scanR constitutes information on scientific prizes on the sole basis of manual tracking. It is therefore far from exhaustive and does not cover in a uniform way according to the research themes."
     }
   },
   {
     "key": "q24",
-    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Il manque certains prix et distinctions. Que faire ?",
-      "en": "Il manque certains prix et distinctions. Que faire ?"
+      "en": "Some scientific prizes are missing. What to do about it?"
     },
     "definition": {
-      "fr": "Vous avez été reçu un prix ou une distinction pour vos travaux de recherche mais scanR ne mentionne pas cette récompense ? Signalez-le nous et aidez nous à convaincre l'institution qui vous l'a décerné de verser régulièrement la liste de ses lauréats à scanR !\nVotre entreprise, fondation, association, institution publique décerne des prix et distinctions à des acteurs de la recherche ? Vous souhaitez apparaître dans scanR pour renforcer la reconnaissance de votre action au côté de la recherche française ? Contactez-nous !",
-      "en": "Vous avez été reçu un prix ou une distinction pour vos travaux de recherche mais scanR ne mentionne pas cette récompense ? Signalez-le nous et aidez nous à convaincre l'institution qui vous l'a décerné de verser régulièrement la liste de ses lauréats à scanR !\nVotre entreprise, fondation, association, institution publique décerne des prix et distinctions à des acteurs de la recherche ? Vous souhaitez apparaître dans scanR pour renforcer la reconnaissance de votre action au côté de la recherche française ? Contactez-nous !"
+      "fr": "Vous avez reçu un prix ou une distinction pour vos travaux de recherche mais scanR ne mentionne pas cette récompense ? Signalez-le nous [lien rubrique contact] et aidez nous à convaincre l'institution qui vous l'a décerné de verser régulièrement la liste de ses lauréats à scanR !\nVotre entreprise, fondation, association, institution publique décerne des prix et distinctions à des acteurs de la recherche ? Vous souhaitez apparaître dans scanR pour renforcer la reconnaissance de votre action au côté de la recherche française ? Contactez-nous [lien rubrique contact]  !",
+      "en": "You have received a scientific prize but scanR does not mention this award? Please let us know[link to contact section] and help us convince the institution that awarded you to regularly send the list of its winners to scanR!\nDoes your company, foundation, association, public institution award prizes and distinctions to research actors? Would you like to appear in scanR to strengthen the recognition of your action alongside French research? Contact us[link contact section] !"
     }
   },
   {
     "key": "q25",
-    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi la page de ma structure n'indique pas qu'une des personnes de la structure a obtenu un prix scientifique ?",
-      "en": "Pourquoi la page de ma structure n'indique pas qu'une des personnes de la structure a obtenu un prix scientifique ?"
+      "en": "Why doesn't the page in my laboratory indicate that one of its researchers has received a scientific award?"
     },
     "definition": {
-      "fr": "Les prix scientifiques attribués aux personnes sont référencés dans les pages personnes. Les règles à appliquer pour afficher l'information aux niveaux des entités nous paraissant floues ( remonter à la structure de recherche ou aux tutelles, dates d'affiliations parfois non disponibles ...) nous avons préféré laisser l'information au niveau de la personne qui a effectivement reçu le prix.",
-      "en": "Les prix scientifiques attribués aux personnes sont référencés dans les pages personnes. Les règles à appliquer pour afficher l'information aux niveaux des entités nous paraissant floues ( remonter à la structure de recherche ou aux tutelles, dates d'affiliations parfois non disponibles ...) nous avons préféré laisser l'information au niveau de la personne qui a effectivement reçu le prix."
+      "fr": "Les prix scientifiques attribués aux personnes sont référencés dans les pages \"Personnes\". Quand l'affiliation du lauréat au moment de l'attribution du prix est connue, scanR fait figurer le prix au niveau de l'institution d'affiliation. Malheureusement cette information n'est pas toujours disponible.",
+      "en": "The scientific prizes awarded to individuals are listed in the \"People\" pages. When the winner's affiliation at the time of awarding the prize is known, scanR includes the prize at the level of the affiliated institution or lab. Unfortunately, this information is not always available.\nContact us[link contact section] !"
     }
   },
   {
     "key": "q26",
-    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels prix de thèse et prix scientifiques sont-ils référencés dans scanR ?",
-      "en": "Quels prix de thèse et prix scientifiques sont-ils référencés dans scanR ?"
+      "en": "Which thesis and scientific awards are referenced in scanR?"
     },
     "definition": {
-      "fr": "scanR souhaite mettre en lumière le soutien apporté à la recherche et à l'innovation par les fondations et institutions récompensant régulièrement les chercheurs, jeunes ou confirmés, pour la qualité de leurs travaux. mais ces soutiens sont nombreux et dispersés. scanR en a identifié une infime partie compte tenu de ses ressources limitées. Ce repérage s'améliorera au fil du temps.\nVous attribuez des prix et récompenses à des travaux de recherche et d'innovation et vous ne figurez pas encore dans scanR ? Contactez-nous et travaillons ensemble à valoriser votre implication au côté de la recherche française !",
-      "en": "scanR souhaite mettre en lumière le soutien apporté à la recherche et à l'innovation par les fondations et institutions récompensant régulièrement les chercheurs, jeunes ou confirmés, pour la qualité de leurs travaux. mais ces soutiens sont nombreux et dispersés. scanR en a identifié une infime partie compte tenu de ses ressources limitées. Ce repérage s'améliorera au fil du temps.\nVous attribuez des prix et récompenses à des travaux de recherche et d'innovation et vous ne figurez pas encore dans scanR ? Contactez-nous et travaillons ensemble à valoriser votre implication au côté de la recherche française !"
+      "fr": "En identifiant les prix e distinctions scientifiques, scanR souhaite mettre en lumière la qualité des travaux des chercheurs affiliés à des institutions françaises. scanR souhaite également valoriser le soutien apporté à la recherche et à l'innovation par les fondations et institutions récompensant régulièrement les chercheurs, jeunes ou confirmés, pour la qualité de leurs travaux. Mais ces soutiens sont nombreux et dispersés. scanR en a identifié une infime partie compte tenu de ses ressources limitées. Ce repérage s'améliorera au fil du temps.\nVous attribuez des prix et récompenses à des travaux de recherche et d'innovation et vous ne figurez pas encore dans scanR ? Contactez-nous [lien rubrique contact]  et travaillons ensemble à valoriser votre implication au côté de la recherche française !",
+      "en": "By identifying the scientific prizes, scanR wishes to highlight the quality of the work of researchers affiliated with French institutions. scanR also wishes to highlight the support provided to research and innovation by foundations and institutions that regularly reward young or experienced researchers for the quality of their work. But these supports are numerous and scattered. scanR has identified a very small part of them given its limited resources. This tracking will improve over time.\nDo you award prizes and awards for research and innovation work? Are you not yet listed in scanR? Contact us[link contact section] and let's work together to promote your involvement in French research!"
     }
   },
   {
     "key": "q27",
-    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels auteurs  disposent d'un profil-auteur dans scanR ?",
-      "en": "Quels auteurs  disposent d'un profil-auteur dans scanR ?"
+      "en": "Which authors have an author profile in scanR?"
     },
     "definition": {
       "fr": "Seuls les auteurs disposant d'un identifiant-auteur IdRef auxquel scanR a pu associer, avec un bon niveau de certitude, au moins une production disposent d'un profil-auteur dans scanR.",
-      "en": "Seuls les auteurs disposant d'un identifiant-auteur IdRef auxquel scanR a pu associer, avec un bon niveau de certitude, au moins une production disposent d'un profil-auteur dans scanR."
+      "en": "Only authors with an IdRef author ID to whom scanR could associate, with a good level of certainty, at least one production have an author profile in scanR."
     }
   },
   {
     "key": "q28",
-    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment apparaître dans scanR ?",
-      "en": "Comment apparaître dans scanR ?"
+      "en": "How to appear in scanR?"
     },
     "definition": {
-      "fr": "nan",
-      "en": "nan"
+      "fr": "scanR ne comporte pas de fiche auteur à votre nom alors que vous publiez ? Communiquez-nous votre nom, votre Idref ainsi que la liste des DOI de vos travaux et nous ajouterons une fiche-auteur à votre nom ! Rendez-vous à la rubrique \"Contact\" [Lien rubrique contact] !",
+      "en": "scanR does not have an author record in your name while you are publishing? Tell us your name, your Idref and the list of DOIs of your work and we will add an author profile to your name! Go to the \"Contact\" section[Link to contact section] !"
     }
   },
   {
     "key": "q29",
-    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment ne plus apparaître dans scanR ?",
-      "en": "Comment ne plus apparaître dans scanR ?"
+      "en": "How to stop appearing in scanR?"
     },
     "definition": {
-      "fr": "Vous souhaitez ne plus figurer en tant qu'auteur dans scanR ? \n- Parce que scanR ne référence que trop peu de vos travaux ? Nous pouvons arranger cela ensemble : \nContactez nous en copiant/collant l'adresse scanR de votre page à partir de votre navigateur, communiquez nous la liste des DOI de vos publications ou encore leur identifiant HAL ou la référence dans SUDOC ou dans theses.fr et nous ferons le nécessaire. \n- Pour une toute autre raison, vous ne souhaitez plus faire apparaître votre profil auteur dans scanR. Dans ce cas, nous supprimerons votre profil. Vos travaux resteront cependant accessibles via une recherche mais ils ne seront plus associés à un profil auteur à votre nom.",
-      "en": "Vous souhaitez ne plus figurer en tant qu'auteur dans scanR ? \n- Parce que scanR ne référence que trop peu de vos travaux ? Nous pouvons arranger cela ensemble : \nContactez nous en copiant/collant l'adresse scanR de votre page à partir de votre navigateur, communiquez nous la liste des DOI de vos publications ou encore leur identifiant HAL ou la référence dans SUDOC ou dans theses.fr et nous ferons le nécessaire. \n- Pour une toute autre raison, vous ne souhaitez plus faire apparaître votre profil auteur dans scanR. Dans ce cas, nous supprimerons votre profil. Vos travaux resteront cependant accessibles via une recherche mais ils ne seront plus associés à un profil auteur à votre nom."
+      "fr": "Vous souhaitez ne plus figurer en tant qu'auteur dans scanR ? \n- Parce que scanR ne référence que trop peu de vos travaux ? Nous pouvons arranger cela ensemble. Contactez nous en copiant/collant l'adresse scanR de votre page à partir de votre navigateur, communiquez nous la liste des DOI de vos publications ou encore leur identifiant HAL ou la référence dans SUDOC ou dans theses.fr. Nous ferons le nécessaire. \n- Pour une toute autre raison, vous ne souhaitez plus faire apparaître votre profil auteur dans scanR. Dans ce cas, nous supprimerons votre profil. Vos travaux resteront cependant accessibles via une recherche mais ils ne seront plus associés à un profil auteur à votre nom.",
+      "en": "Do you no longer want to have an author profile in scanR? \n- Because scanR only refers to too little of your work? We can arrange this together. Contact us by copying and pasting the scanR address of your page from your browser, give us the list of DOIs of your publications or their HAL identifier or the reference in SUDOC or in theses.fr. We will handle it. \n- For another reason, you no longer want your author profile to appear in scanR. In this case, we will delete your profile. However, your works will remain accessible via a search but they will no longer be associated with an author profile in your name."
     }
   },
   {
     "key": "q30",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Que signifie la présence d'entreprises dans certains profils de laboratoire ?",
-      "en": "Que signifie la présence d'entreprises dans certains profils de laboratoire ?"
+      "fr": "Entreprises issues ou liées aux laboratoires de reherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?",
+      "en": "nan"
     },
     "definition": {
-      "fr": "nan",
-      "en": "nan"
+      "fr": "Via différentes sources (iLab, universités et établissement d'enseignement supérieur et de recherche ou d'organismes, veille, ...), scanR identifie certaines entreprises créées par les personnels d'un laboratoire ou utilisant les connaissances et technologies qui y sont développées. Ce repérage n'est pas exhaustif et s'améliorera grâce à vos retours et signalements ! Contactez-nous [lien rubrique contact] !",
+      "en": "Via different sources (iLab, universities and higher education and research institutions or organizations, monitoring,...), scanR identifies certain companies created by laboratory staff or using the knowledge and technologies developed in a laboratory. This tracking is not exhaustive and will improve thanks to your feedback and reports! Contact us[link contact section] !"
     }
   },
   {
     "key": "q31",
-    "groupkey": "publications",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels est le périmètre des publications de recherche (articles, thèses, monographies) présenté dans scanR ?",
-      "en": "Quels est le périmètre des publications de recherche (articles, thèses, monographies) présenté dans scanR ?"
+      "en": "What is the scope of research publications (articles, theses, monographs) presented in scanR?"
     },
     "definition": {
       "fr": "scanR indexe plusieurs types de publications : les thèses présentes dans theses.fr et soutenues depuis 1990 ; les publications publiées depuis 2013 et dont au moins un auteur a une affiliation française (en utilisant les données du Baromètre de la Science Ouverte pour les publications avec un DOI et HAL pour les autres) ; enfin sont aussi indexées les monographies extraites du SUDOC, publiées depuis 2013 et ayant un éditeur scientifique ou universitaire.",
-      "en": "scanR indexe plusieurs types de publications : les thèses présentes dans theses.fr et soutenues depuis 1990 ; les publications publiées depuis 2013 et dont au moins un auteur a une affiliation française (en utilisant les données du Baromètre de la Science Ouverte pour les publications avec un DOI et HAL pour les autres) ; enfin sont aussi indexées les monographies extraites du SUDOC, publiées depuis 2013 et ayant un éditeur scientifique ou universitaire."
+      "en": "scanR indexes several types of publications: PhD thesis present in theses.fr and defended since 1990; research publications published since 2013 and for which at least one author has a French affiliation (using data from the Open Science Barometer for publications with a DOI and HAL for others); finally, monographs extracted from SUDOC, published since 2013 and having a scientific or academic publisher are also indexed."
     }
   },
   {
     "key": "q32",
-    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Que recouvre le terme \"Productions\" dans scanR ?",
-      "en": "Que recouvre le terme \"Productions\" dans scanR ?"
+      "en": "What means \"Productions\" in scanR?"
     },
     "definition": {
       "fr": "Sous le terme \"Productions\", scanR entend à ce jour les articles de recherche, les ouvrages et monographies, les thèses, les brevets, les logiciels. Pour l'ensemble de ces \"Productions\", scanR ne garantit pas l'exhaustivité du recensement mais veille à son amélioration continue. La qualité de ce référencement dépend du travail de l'équipe en charge de l'application mais également de la qualité et de l'exhaustivité des sources qui sont mobilisées.",
-      "en": "Sous le terme \"Productions\", scanR entend à ce jour les articles de recherche, les ouvrages et monographies, les thèses, les brevets, les logiciels. Pour l'ensemble de ces \"Productions\", scanR ne garantit pas l'exhaustivité du recensement mais veille à son amélioration continue. La qualité de ce référencement dépend du travail de l'équipe en charge de l'application mais également de la qualité et de l'exhaustivité des sources qui sont mobilisées."
+      "en": "By \" Productions \", scanR means to date research articles, books and monographs, theses, patents, software. For all these \"Productions\", scanR does not guarantee the exhaustiveness of the census but ensures its continuous improvement. The quality of this referencing depends on the work of the team in charge of the application but also on the quality and exhaustiveness of the sources that are mobilized."
     }
   },
   {
     "key": "q33",
-    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?",
-      "en": "Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?"
+      "en": "Why are some research works not presented in scanR?"
     },
     "definition": {
       "fr": "scanR analyse toutes les publications avec un DOI publiées depuis 2013 et n'affiche que celles où une affiliation française est détectée à partir de la page web de la publication. Par ailleurs les publications issues de HAL avec une affiliation française et publiées après 2013 sont aussi indexées, ainsi que certaines monographie du SUDOC, toujours depuis 2013, en fonction de l'éditeur (éditeur scientifique ou universitaire). Il est donc possible que certains travaux ne soient pas moissonnés et indexés, s'ils sont absents de nos sources ou si nous n'avons pas repéré d'affiliation française. Contactez-nous et nous travaillerons ensemble pour intégrer les travaux manquants.",
-      "en": "scanR analyse toutes les publications avec un DOI publiées depuis 2013 et n'affiche que celles où une affiliation française est détectée à partir de la page web de la publication. Par ailleurs les publications issues de HAL avec une affiliation française et publiées après 2013 sont aussi indexées, ainsi que certaines monographie du SUDOC, toujours depuis 2013, en fonction de l'éditeur (éditeur scientifique ou universitaire). Il est donc possible que certains travaux ne soient pas moissonnés et indexés, s'ils sont absents de nos sources ou si nous n'avons pas repéré d'affiliation française. Contactez-nous et nous travaillerons ensemble pour intégrer les travaux manquants."
+      "en": "scanR analyzes all research publications with a DOI published since 2013 and only displays those where a French affiliation is detected from the publication's web page. In addition, publications from HAL with a French affiliation and published after 2013 are also indexed, as well as some SUDOC monographs, again since 2013, depending on the publisher (scientific or academic publisher). It is therefore possible that some works may not be harvested and indexed, if they are absent from our sources or if we have not identified a French affiliation. Contact us and we will work together to integrate the missing work."
     }
   },
   {
     "key": "q34",
-    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?",
-      "en": "Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?"
+      "fr": "Pourquoi toutes mes \"Productions\" ne sont-elles pas associées à mon profil-auteur ?",
+      "en": "Why are not all my \"Productions\" associated with my author profile?"
     },
     "definition": {
       "fr": "Articles de recherche, ouvrages et monographies, thèses, brevets et logiciels sont référencés dans différentes sources (par exemple HAL, Sudoc, theses.fr, patstat, ...). Ces sources n'intègrent pas forcément ou pas encore systématiquement des identifiants permettant d'associer des travaux à un profil-auteur de manière non-ambigüe. Cette situation explique l'absence de certaines références dans vos travaux.\nscanR a réalisé d'importants travaux d'enrichissement sur les articles de recherche en introduisant l'identifiant auteur Idref de l'Abes. Mais de nombreuses difficultés compliquent cette tâche : des homonymies, des référentiels-auteurs incomplets, des sources proposant des données incomplètes ou de mauvaise qualité, ... Parallèlement, HAL, Archives ouvertes investit dans l'intégration d'identifiants-auteurs interopérables. L'Abes veille à fiabiliser et étendre la couverture de ses identifiants-auteurs (Idref) et à les rendre interopérables avec d'autres (ORCID, BNF, ARK, ISNI par exemple).\nAvec le temps, l'amélioration des systèmes d'information et surtout l'implication de tous, auteurs/scientifiques et professionnels de la gestion de l'information scientifique et technique, la situation ne peut que s'améliorer !",
-      "en": "Articles de recherche, ouvrages et monographies, thèses, brevets et logiciels sont référencés dans différentes sources (par exemple HAL, Sudoc, theses.fr, patstat, ...). Ces sources n'intègrent pas forcément ou pas encore systématiquement des identifiants permettant d'associer des travaux à un profil-auteur de manière non-ambigüe. Cette situation explique l'absence de certaines références dans vos travaux.\nscanR a réalisé d'importants travaux d'enrichissement sur les articles de recherche en introduisant l'identifiant auteur Idref de l'Abes. Mais de nombreuses difficultés compliquent cette tâche : des homonymies, des référentiels-auteurs incomplets, des sources proposant des données incomplètes ou de mauvaise qualité, ... Parallèlement, HAL, Archives ouvertes investit dans l'intégration d'identifiants-auteurs interopérables. L'Abes veille à fiabiliser et étendre la couverture de ses identifiants-auteurs (Idref) et à les rendre interopérables avec d'autres (ORCID, BNF, ARK, ISNI par exemple).\nAvec le temps, l'amélioration des systèmes d'information et surtout l'implication de tous, auteurs/scientifiques et professionnels de la gestion de l'information scientifique et technique, la situation ne peut que s'améliorer !"
+      "en": "Research articles, books and monographs, PhD thesis, patents and software are referenced in different sources (e. g. HAL, Sudoc, theses.fr, patstat,...). These sources do not necessarily or not yet systematically include identifiers that allow work to be associated with an author profile in a non-ambiguous way. This situation explains the absence of some references in your work.\nscanR has carried out important enrichment work on research articles by introducing the Idref de l'Abes author ID. But many difficulties complicate this task: homonymies, incomplete author-references, sources offering incomplete or poor quality data,... At the same time, HAL, Open Archives is investing in the integration of interoperable author-identifiers. The Abes ensures that its author identifiers (Idref) are reliable and extend their coverage and that they are interoperable with others (ORCID, BNF, ARK, ISNI for example).\nOver time, with the improvement of information systems and with especially the involvement of all, authors/scientists and professionals in the management of scientific and technical information, the situation can only improve!"
     }
   },
   {
     "key": "q35",
-    "groupkey": "publications",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?",
-      "en": "Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?"
+      "en": "How is the open access status of a research publication referenced in scanR determined?"
     },
     "definition": {
       "fr": "Une thèse est réputée ouverte si un lien de téléchargement est proposé sur le site theses.fr. Pour une publication de recherche comportant un DOI, c'est le service Unpaywall qui détermine son statut d'ouverture en moissonnant régulièrement plusieurs dizaines de milliers d'entrepots de travaux en Open Access de par le monde. Le service proposé par Unpaywall permet de suivre dans le temps le statut d'ouverture. scanR actualise donc régulièrement cette information. Pour les travaux sans DOI référencés dans scanR, c'est HAL qui apporte cette information. Enfin, quand aucune source n'informe du statut d'ouverture d'une production, scanR considère que son accès est fermé.",
-      "en": "Une thèse est réputée ouverte si un lien de téléchargement est proposé sur le site theses.fr. Pour une publication de recherche comportant un DOI, c'est le service Unpaywall qui détermine son statut d'ouverture en moissonnant régulièrement plusieurs dizaines de milliers d'entrepots de travaux en Open Access de par le monde. Le service proposé par Unpaywall permet de suivre dans le temps le statut d'ouverture. scanR actualise donc régulièrement cette information. Pour les travaux sans DOI référencés dans scanR, c'est HAL qui apporte cette information. Enfin, quand aucune source n'informe du statut d'ouverture d'une production, scanR considère que son accès est fermé."
+      "en": "A thesis is considered open if a download link is provided on the theses.fr website. For a research publication with a DOI, it is the Unpaywall service that determines its opening status by regularly harvesting tens of thousands of Open Access work warehouses around the world. The service offered by Unpaywall allows you to track the opening status over time. scanR therefore regularly updates this information. For work without DOIs referenced in scanR, HAL provides this information. Finally, when no source informs about the opening status of a production, scanR considers that its access is closed."
     }
   },
   {
     "key": "q36",
     "icon": "fas fa-question-circle",
-    "groupkey": "publications",
     "label": {
       "fr": "Mes publications sont référencées mais je n'ai pas de profil-auteur dans scanR. Comment changer cette situation ?",
-      "en": "Mes publications sont référencées mais je n'ai pas de profil-auteur dans scanR. Comment changer cette situation ?"
+      "en": "My publications are referenced but I don't have an author profile in scanR. How can this situation be changed?"
     },
     "definition": {
       "fr": "scanR peut référencer une publication mais être dans l'incapacité de la relier à un profil-auteur. Homonymies et absence de profil dans les référentiels constituent les principales causes de cette situation. \nSi vous avez un homonyme, communiquez nous votre identifiant idref et, si possible, la liste des DOI de vos travaux (ou encore leur identifiants Sudoc) et nous ferons le nécessaire.\nSi vous ne disposez pas d'un identifiant Idref, adressez-vous à votre correspondant \"Information scientifique\" en bibliothèque universitaire ou dans votre centre de documentation. Et pensez par la même occasion à créer votre identifiant-auteur international ORCID et à relier votre profil ORCID à votre nouvel identifiant Idref !",
-      "en": "scanR peut référencer une publication mais être dans l'incapacité de la relier à un profil-auteur. Homonymies et absence de profil dans les référentiels constituent les principales causes de cette situation. \nSi vous avez un homonyme, communiquez nous votre identifiant idref et, si possible, la liste des DOI de vos travaux (ou encore leur identifiants Sudoc) et nous ferons le nécessaire.\nSi vous ne disposez pas d'un identifiant Idref, adressez-vous à votre correspondant \"Information scientifique\" en bibliothèque universitaire ou dans votre centre de documentation. Et pensez par la même occasion à créer votre identifiant-auteur international ORCID et à relier votre profil ORCID à votre nouvel identifiant Idref !"
+      "en": "scanR can reference a publication but be unable to link it to an author profile. Homonymies and lack of author-profile in the repositories are the main causes of this situation. \nIf you have a homonym, provide us with your idref identifier and, if possible, the list of DOIs for your work (or their Sudoc identifiers) and we will do the necessary.\nIf you do not have an Idref identifier, contact your correspondent \"Scientific Information\" in the university library or in your documentation centre. And at the same time, think about creating your international ORCID author ID and linking your ORCID profile to your new Idref ID!"
     }
   },
   {
     "key": "q37",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels sont les référentiels d'entités utilisés dans scanR ?",
-      "en": "Quels sont les référentiels d'entités utilisés dans scanR ?"
+      "en": "What are the entity repositories used in scanR?"
     },
     "definition": {
       "fr": "Pour couvrir l'ensemble des entités actives en matière de recherche et d'innovation en France, scanR s'appuie essentiellement sur 3 référentiels complémentaires : le Répertoire national des structures de recherche (RNSR) pour les laboratoires publics de recherche essentiellement, SIRENE pour les autres entités légales françaises et Grid pour les partenaires étrangers. La Base centrale des établissements est également mobilisée mais de manière beaucoup plus marginale pour les composantes des établissements d'enseignement supérieur qui n'ont pas d'existence juridique.\nComme ces différents référentiels se recouvrent partiellement, certaines entités scanR disposent de différents identifiants relevant de ces différents référentiels. A la marge, ce recouvrement partiel des référentiels est à l'origine de doublons non encore détectés. Aidez nous à les trouver en nous les signalant !",
-      "en": "Pour couvrir l'ensemble des entités actives en matière de recherche et d'innovation en France, scanR s'appuie essentiellement sur 3 référentiels complémentaires : le Répertoire national des structures de recherche (RNSR) pour les laboratoires publics de recherche essentiellement, SIRENE pour les autres entités légales françaises et Grid pour les partenaires étrangers. La Base centrale des établissements est également mobilisée mais de manière beaucoup plus marginale pour les composantes des établissements d'enseignement supérieur qui n'ont pas d'existence juridique.\nComme ces différents référentiels se recouvrent partiellement, certaines entités scanR disposent de différents identifiants relevant de ces différents référentiels. A la marge, ce recouvrement partiel des référentiels est à l'origine de doublons non encore détectés. Aidez nous à les trouver en nous les signalant !"
+      "en": "To cover all entities active in research and innovation in France, scanR relies essentially on 3 complementary repositories: the Répertoire national des structures de recherche (RNSR) for public research laboratories, essentially, SIRENE for other French legal entities and Grid for foreign partners. The Base centrale des établissements is also mobilized but in a much more marginal way for the sub-parts of higher education institutions that do not have a legal existence.\nAs these different repositories partially overlap, some scanR entities have different identifiers within these different repositories. At the margin, this partial recovery of the repositories leads to duplications that have not yet been detected. Help us find them by reporting them to us!"
     }
   },
   {
     "key": "q38",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Puis-je réutiliser les données de scanR ?",
-      "en": "Puis-je réutiliser les données de scanR ?"
+      "en": "Can I reuse the scanR data?"
     },
     "definition": {
       "fr": "A l'exception des données crawlée sur les sites web des entités référencées dans scanR qui ne sont pas communicables, les données présentées dans scanR sont réutilisables librement selon les termes de la licence ouverte Etalab 2.0 [https://www.etalab.gouv.fr/licence-ouverte-open-licence]",
-      "en": "A l'exception des données crawlée sur les sites web des entités référencées dans scanR qui ne sont pas communicables, les données présentées dans scanR sont réutilisables librement selon les termes de la licence ouverte Etalab 2.0 [https://www.etalab.gouv.fr/licence-ouverte-open-licence]"
+      "en": "Except for data crawled on the websites of entities referenced in scanR which are not communicable, the data presented in scanR are freely reusable under the terms of the open license Etalab 2.0[https://www.etalab.gouv.fr/licence-ouverte-open-licence]"
     }
   },
   {
     "key": "q39",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Sous quelles formes les données de scanR sont-elles accessibles ?",
-      "en": "Sous quelles formes les données de scanR sont-elles accessibles ?"
+      "en": "In what formats are scanR data accessible?"
     },
     "definition": {
       "fr": "Les données présentées dans scanR sont accessibles de différentes manières. Des fonctions d'exportation sont associées aux graphiques et aux listes. Les données sont également accessibles via la plate-forme de données ouvertes proposées par le Ministère de l'enseignement supérieur, de la recherche et de l'innovation (et indéxées sur le ortail interministériel de données ouvertes https://www.data.gouv.fr). Elles sont proposées sous formes tabulaires, exportables sous différents formats (csv, xls, json essentiellement) ou mobilisables via des API. Enfin, scanR fonctionne grâce à un ensemble d'API qui sont publiquement exposées [insérer lien]. Ces API sont par ailleurs référencées sur https://api.gouv.fr/",
-      "en": "Les données présentées dans scanR sont accessibles de différentes manières. Des fonctions d'exportation sont associées aux graphiques et aux listes. Les données sont également accessibles via la plate-forme de données ouvertes proposées par le Ministère de l'enseignement supérieur, de la recherche et de l'innovation (et indéxées sur le ortail interministériel de données ouvertes https://www.data.gouv.fr). Elles sont proposées sous formes tabulaires, exportables sous différents formats (csv, xls, json essentiellement) ou mobilisables via des API. Enfin, scanR fonctionne grâce à un ensemble d'API qui sont publiquement exposées [insérer lien]. Ces API sont par ailleurs référencées sur https://api.gouv.fr/"
+      "en": "The data presented in scanR are accessible in different ways. Export functions are associated with graphics and lists. The data are also accessible via the open data platform proposed by the Ministry of Higher Education, Research and Innovation (and indexed on the inter-ministerial open data portail https://www.data.gouv.fr). They are available in tabular form, exportable in different formats (mainly csv, xls, json) or mobilized via APIs. Finally, scanR works with a set of APIs that are publicly exposed[insert link]. These APIs are also referenced on https://api.gouv.fr/"
     }
   },
   {
     "key": "q40",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment la section \"Equipe\" d'une fiche entité est alimentée dans scanR ?",
-      "en": "Comment la section \"Equipe\" d'une fiche entité est alimentée dans scanR ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "L'équipe de direction des structures de recherche est identifiée grâce au Répertoire national des structures de recherche. Pour alimenter la section \"Auteurs associés à cette entité\", scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. C'est cette information qui est utilisée pour identifier les auteurs qui ont au moins une fois dans leur parcours scientifique. Cette section ne donne donc aucune indication sur la taille et la composition de l'équipe de l'entité.",
-      "en": "L'équipe de direction des structures de recherche est identifiée grâce au Répertoire national des structures de recherche. Pour alimenter la section \"Auteurs associés à cette entité\", scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. C'est cette information qui est utilisée pour identifier les auteurs qui ont au moins une fois dans leur parcours scientifique. Cette section ne donne donc aucune indication sur la taille et la composition de l'équipe de l'entité."
+      "en": "nan"
     }
   },
   {
     "key": "q41",
-    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment est construite la chronologie des affiliations d'une auteur ?",
-      "en": "Comment est construite la chronologie des affiliations d'une auteur ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. L'exhaustivité du repérage dépend de la capacité de scanR à associer un texte libre figurant sur une production à une entité référencée dans scanR. Des erreurs sont possibles mais scanR peut les corriger. Contactez-nous ?",
-      "en": "scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. L'exhaustivité du repérage dépend de la capacité de scanR à associer un texte libre figurant sur une production à une entité référencée dans scanR. Des erreurs sont possibles mais scanR peut les corriger. Contactez-nous ?"
+      "en": "nan"
     }
   },
   {
     "key": "q42",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il exhaustif dans ses repérages ?",
-      "en": "scanR est-il exhaustif dans ses repérages ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "L'information mobilisée dans scanR provient de multiples sources de qualité très hétérogène. Ces sources sont associées à des référentiels qui leur sont souvent propres. scanR met en oeuvre un ensemble de processus pour fédérer autour d'\"Objets\" précis (entités, projets, auteurs, production) un maximum d'informations relatives à l'activité de recherche et d'innovation et tisser des liens entre ces \"Objets\". Il est impossible de garantir l'exhaustivité et l'absolue qualité des repérages et associations d' \"Objets\" réalisés dans scanR. Mais scanR cherche constamment à s'améliorer. Alors, aidez-nous à l'améliorer, signalez-nous les erreurs manifestes, les \"bizareries\" et autres bugs !",
-      "en": "L'information mobilisée dans scanR provient de multiples sources de qualité très hétérogène. Ces sources sont associées à des référentiels qui leur sont souvent propres. scanR met en oeuvre un ensemble de processus pour fédérer autour d'\"Objets\" précis (entités, projets, auteurs, production) un maximum d'informations relatives à l'activité de recherche et d'innovation et tisser des liens entre ces \"Objets\". Il est impossible de garantir l'exhaustivité et l'absolue qualité des repérages et associations d' \"Objets\" réalisés dans scanR. Mais scanR cherche constamment à s'améliorer. Alors, aidez-nous à l'améliorer, signalez-nous les erreurs manifestes, les \"bizareries\" et autres bugs !"
+      "en": "nan"
     }
   },
   {
     "key": "q43",
-    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR utilise-t-il des informations issues de bases de données commerciales ?",
-      "en": "scanR utilise-t-il des informations issues de bases de données commerciales ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "*Non*, scanR ne mobilise que des sources ouvertes. scanR ne rediffuse aucune information issue de bases de données commerciales. scanR n'utilise dans ses processus d'enrichissement et de nettoyage de l'information aucune information issue de bases de données commerciales.",
-      "en": "*Non*, scanR ne mobilise que des sources ouvertes. scanR ne rediffuse aucune information issue de bases de données commerciales. scanR n'utilise dans ses processus d'enrichissement et de nettoyage de l'information aucune information issue de bases de données commerciales."
+      "en": "nan"
     }
   },
   {
     "key": "q44",
-    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la place des informations issues des sites web des entités dans scanR ?",
-      "en": "Quelle est la place des informations issues des sites web des entités dans scanR ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "Ces informations permettent au moteur de recherche de remonter des entités pour lesquelles nous n'avons pas d'informations structurées, mais dont le site web mentionne les mots clé de recherche.",
-      "en": "Ces informations permettent au moteur de recherche de remonter des entités pour lesquelles nous n'avons pas d'informations structurées, mais dont le site web mentionne les mots clé de recherche."
+      "en": "nan"
     }
   },
   {
     "key": "q45",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce qu'une famille de brevets ?",
-      "en": "Qu'est-ce qu'une famille de brevets ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet.\nDans ScanR le choix a été fait de présenter les résultats de recherche concernant les demandes de brevets par famille simple. Les informations concernant une éventuelle famille élargie sont tout de même accessibles dans la partie \"familles liées\".",
-      "en": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet.\nDans ScanR le choix a été fait de présenter les résultats de recherche concernant les demandes de brevets par famille simple. Les informations concernant une éventuelle famille élargie sont tout de même accessibles dans la partie \"familles liées\"."
+      "en": "nan"
     }
   },
   {
     "key": "q46",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?",
-      "en": "Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "Les informations concernant les déposants et inventeurs remontent dans Patstat au niveau des dépôts de demandes de brevets et à partir des différents offices nationaux ou régionaux. Les noms d'inventeurs ou d'entreprises sont souvent traduits à partir de leur langue d'origine et des différences dans l'orthographe des participants sont fréquentes. Même si des corrections ont été apportées dans ScanR, des doublons apparaissent encore. La liste complète de tous les déposants et inventeurs des différents dépôts de la famille est affichée car ces informations peuvent différer à la marge d'un dépôt à l'autre.",
-      "en": "Les informations concernant les déposants et inventeurs remontent dans Patstat au niveau des dépôts de demandes de brevets et à partir des différents offices nationaux ou régionaux. Les noms d'inventeurs ou d'entreprises sont souvent traduits à partir de leur langue d'origine et des différences dans l'orthographe des participants sont fréquentes. Même si des corrections ont été apportées dans ScanR, des doublons apparaissent encore. La liste complète de tous les déposants et inventeurs des différents dépôts de la famille est affichée car ces informations peuvent différer à la marge d'un dépôt à l'autre."
+      "en": "nan"
     }
   },
   {
     "key": "q47",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la différence entre un brevet et un dépôt de brevet ?",
-      "en": "Quelle est la différence entre un brevet et un dépôt de brevet ?"
+      "en": "nan"
     },
     "definition": {
-      "fr": "nan",
+      "fr": "Un dépôt de brevet est un dossier de demande de protection par un brevet d'invention. Le brevet correspond au brevet délivré qui assure la protection de l'invention sur un territoire donné. Sont répertoriés sur ScanR tous les dépôts de brevets, qu'ils aient été délivrés ou non, prsésentés par famille.",
       "en": "nan"
     }
   },
   {
     "key": "q48",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la date de premier dépôt d'une famille ?",
-      "en": "A quoi correspond la date de premier dépôt d'une famille ?"
+      "en": "nan"
     },
     "definition": {
-      "fr": "La date de premier dépôt d'une famille correspond à la date de dépôt de dossier de la première demande de propriété industrielle concernant l'invention de cette famille.",
-      "en": "La date de premier dépôt d'une famille correspond à la date de dépôt de dossier de la première demande de propriété industrielle concernant l'invention de cette famille."
+      "fr": "La date de premier dépôt d'une famille correspond à la date de dépôt de dossier de demande de brevet la plus ancienne parmi tous les dépôts de la famille.",
+      "en": "nan"
     }
   },
   {
     "key": "q49",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la date de première publication d'une famille ?",
-      "en": "A quoi correspond la date de première publication d'une famille ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "La date de première publication d'une famille correspond à la date de publication de l'invention la plus ancienne de la famille. Cela correspond à la date où l'invention a été publiée et donc rendue publique. Cette publication intervient en général 18 mois après le premier dépôt.",
-      "en": "La date de première publication d'une famille correspond à la date de publication de l'invention la plus ancienne de la famille. Cela correspond à la date où l'invention a été publiée et donc rendue publique. Cette publication intervient en général 18 mois après le premier dépôt."
+      "en": "nan"
     }
   },
   {
     "key": "q50",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi je ne trouve pas mon brevet dans ScanR ? Quel est le périmètre ?",
-      "en": "Pourquoi je ne trouve pas mon brevet dans ScanR ? Quel est le périmètre ?"
+      "en": "nan"
     },
     "definition": {
-      "fr": "Le périmètre des brevets dans ScanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est supérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019.",
-      "en": "Le périmètre des brevets dans ScanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est supérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019."
+      "fr": "Le périmètre des brevets dans ScanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est postérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019.",
+      "en": "nan"
     }
   },
   {
     "key": "q51",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la liste des dépôts ?",
-      "en": "A quoi correspond la liste des dépôts ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "La liste des dépôts de brevets de la famille représente toutes les demandes de protection déposées concernant l'invention : les dépôts nationaux mais aussi les dépôts internationaux par la procédure du PCT (Patent Cooperation Treaty) ainsi que les dépôts régionaux (européens et eurasiens). Diverses informations sont disponibles concernant ces dépôts : le code et la date de dépôt, la date de délivrance du brevet, le type de propriété industrielle (dans certains cas des familles ont fait l'objet d'une ou plusieurs demandes de protection sous d'autres formes que le brevet d'invention), ainsi que l'information concernant la priorité ou non au sein de la famille de dépôts. D'autres informations plus détaillées et à jour sur l'aspect juridique de la demande en question sont disponible en suivant le lien affiché vers sa fiche Espacenet. Espacenet est un service de l'OEB qui offre un accès gratuit aux informations relatives aux inventions et aux développements techniques de 1782 à nos jours.",
-      "en": "La liste des dépôts de brevets de la famille représente toutes les demandes de protection déposées concernant l'invention : les dépôts nationaux mais aussi les dépôts internationaux par la procédure du PCT (Patent Cooperation Treaty) ainsi que les dépôts régionaux (européens et eurasiens). Diverses informations sont disponibles concernant ces dépôts : le code et la date de dépôt, la date de délivrance du brevet, le type de propriété industrielle (dans certains cas des familles ont fait l'objet d'une ou plusieurs demandes de protection sous d'autres formes que le brevet d'invention), ainsi que l'information concernant la priorité ou non au sein de la famille de dépôts. D'autres informations plus détaillées et à jour sur l'aspect juridique de la demande en question sont disponible en suivant le lien affiché vers sa fiche Espacenet. Espacenet est un service de l'OEB qui offre un accès gratuit aux informations relatives aux inventions et aux développements techniques de 1782 à nos jours."
+      "en": "nan"
     }
   },
   {
     "key": "q52",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les sources utilisées pour les brevets ?",
-      "en": "Quelles sont les sources utilisées pour les brevets ?"
+      "en": "nan"
     },
     "definition": {
       "fr": "Deux sources sont utilisées pour alimenter les données sur les dépôts de brevets : la base de données Patstat de l'OEB ( Organisation européenne des brevets) et les données de l'INPI (Institut National de la Propriété Industrielle).\nPATSTAT contient des données bibliographiques sur plus de 100 millions de documents brevets provenant de grands pays industrialisés et en développement. Ces données sont extraites des base de données de l'OEB.\nLes données source de l'INPI proviennent quant à elles des fichiers XML de création et mise à jour des dossiers de dépôts de brevets à l'INPI ainsi que des fichiers de traductions en français des résumés de demandes de brevets déposés à l'OEB en anglais ou allemand.",
-      "en": "Deux sources sont utilisées pour alimenter les données sur les dépôts de brevets : la base de données Patstat de l'OEB ( Organisation européenne des brevets) et les données de l'INPI (Institut National de la Propriété Industrielle).\nPATSTAT contient des données bibliographiques sur plus de 100 millions de documents brevets provenant de grands pays industrialisés et en développement. Ces données sont extraites des base de données de l'OEB.\nLes données source de l'INPI proviennent quant à elles des fichiers XML de création et mise à jour des dossiers de dépôts de brevets à l'INPI ainsi que des fichiers de traductions en français des résumés de demandes de brevets déposés à l'OEB en anglais ou allemand."
+      "en": "nan"
     }
   },
   {
     "key": "q53",
-    "groupkey": "patent",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce qu'une priorité ?",
-      "en": "Qu'est-ce qu'une priorité ?"
+      "en": "nan"
     },
     "definition": {
-      "fr": "nan",
+      "fr": "Le déposant d’une demande de brevet dispose d’un droit de priorité. Ce droit éphémère doit être exercé dans un délai d’un an à compter du dépôt de la première demande. Il permet à un déposant de déposer une autre demande pour la même invention en réclamant la priorité de la première demande. Si la demande de priorité est validée, la date de dépôt de la première demande est considérée comme la date effective de dépôt de la deuxième demande.\nLa priorité d’une demande précédente peut être revendiquée au sein du même office de dépôt (priorité interne) ou dans un office différent (priorité externe).",
+      "en": "nan"
+    }
+  },
+  {
+    "key": "q54",
+    "icon": "fas fa-question-circle",
+    "label": {
+      "fr": "Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale selon le PCT ?",
+      "en": "nan"
+    },
+    "definition": {
+      "fr": "Une demande de brevet nationale est effectuée au sein d'un office national et délivre des brevets nationaux, protégeant sur le territoire national.\nUne demande de brevet internationale est une procédure de dépôt de brevet unique pour tous les pays contractants du Patent Cooperation Treaty (PCT). Avant la mise en place de cette procédure, il fallait déposer une demande dans chacun des pays où l'on souhaitait se protéger. Ce système permet la centralisation des dépôts, des recherches d'antériorité et de l'examen des demandes lors de la phase internationale : cela simplifie les démarches et les rend plus efficaces et moins coûteuses. Ce n'est cependant pas un système permettant une délivrance à l'international : à la suite de la phase internationale, des phases nationales ou régionales ont lieu pour permettre la délivrance du brevet.\nUne demande régionale est une demande effectuée auprès d'un office régional : la demande peut être effectuée directement auprès de l'office régional ou bien elle est faite par désignation lors de la procédure du PCT.",
       "en": "nan"
     }
   }
