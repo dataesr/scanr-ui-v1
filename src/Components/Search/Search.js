@@ -375,6 +375,19 @@ class SearchPage extends Component {
       req.aggregations = PublicationsAggregations;
     } else if (api === 'structures') {
       req.aggregations = StructuresAggregations;
+      if (!req.filters) {
+        req.filters = {};
+      }
+      req.filters.status = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: ['active'],
+      };
+      req.filters.isFrench = {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: [true],
+      };
       req.lang = this.props.language;
     } else if (api === 'persons') {
       req.aggregations = PersonsAggregations;

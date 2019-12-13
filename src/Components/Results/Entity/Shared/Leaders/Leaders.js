@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 
@@ -38,7 +38,7 @@ const Leaders = (props) => {
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
             <CardsTitle
-              title={messages[props.language]['Entity.portrait.leaders.title']}
+              title={<FormattedHTMLMessage id="Entity.Shared.Leaders.title" />}
               language={props.language}
               lexicon="EntityDirection"
             />

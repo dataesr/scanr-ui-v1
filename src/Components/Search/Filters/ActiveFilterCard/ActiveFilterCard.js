@@ -8,17 +8,13 @@ import classes from './ActiveFilterCard.scss';
 const ActiveFilterCard = (props) => {
   const filters = (props.filters) ? props.filters : {};
   let count = 0;
-  const filteredFilters = {};
   Object.keys(filters).forEach((key) => {
-    if (filters[key].type === 'MultiValueSearchFilter') {
-      filteredFilters[key] = filters[key];
-    } else {
+    if (filters[key].type === 'MultiValueSearchFilter' && !['status', 'isFrench'].includes(key)) {
+      count += filters[key].values.length;
+    } else if (filters[key].type !== 'MultiValueSearchFilter') {
       count += 1;
     }
   });
-  Object.keys(filteredFilters).map(key => (
-    filters[key].values.forEach(() => { count += 1; })
-  ));
 
 
   return (
