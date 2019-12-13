@@ -20,7 +20,7 @@ const Banner = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <section className={`${classes.Banner} ${classes[props.cssClass]}`}>
       <div className="container">
-        <div className="row d-flex flex-row justify-content-between align-items-center pt-4 pb-4">
+        <div className="row d-flex flex-row flex-nowrap justify-content-between align-items-center pt-4 pb-4">
           <p className="m-0">
             <FormattedHTMLMessage
               id={`Banner.title.${props.labelKey}`}
