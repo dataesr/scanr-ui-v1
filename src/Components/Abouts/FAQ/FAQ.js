@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { Fragment, useContext } from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import { GlobalContext } from '../../../GlobalContext';
@@ -6,8 +6,9 @@ import { GlobalContext } from '../../../GlobalContext';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-// import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
+
+import { GROUPKEY_ORDERED } from '../../../config/config';
 
 /* Chargement du lexique */
 import faqTerms from '../../Shared/terms/faq.json';
@@ -26,13 +27,47 @@ const messages = {
 
 const FAQ = (props) => {
   const context = useContext(GlobalContext);
-  let idxQuestion = 0;
-  if (props.match.params.id) {
-    idxQuestion = faqTerms.findIndex(term => term.key === props.match.params.id);
-  }
-  if (idxQuestion < 0) {
-    idxQuestion = 0;
-  }
+  const orderedContent = GROUPKEY_ORDERED.map((groupkey) => {
+    const terms = faqTerms.filter(faqTerm => faqTerm.groupkey === groupkey);
+    const termsJSX = terms.map(termObject => (
+      <div className="card">
+        <div className="card-header" id="headingOne">
+          <h3 className="mb-0">
+            <button className="btn btn-link" type="button" data-toggle="collapse" data-target={`#${termObject.key}`} aria-expanded="true" aria-controls="collapseOne">
+              <h4 className={classes.Term}>
+                <i className={termObject.icon} />
+                &nbsp;
+                {termObject.label[context.language]}
+              </h4>
+            </button>
+          </h3>
+        </div>
+        <div id={termObject.key} className={`collapse ${(termObject.key === props.match.params.id) ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#accordion">
+          <div className="card-body">
+            <p className={classes.Definition}>
+              <Markdown>
+                {termObject.definition[context.language]}
+              </Markdown>
+            </p>
+          </div>
+        </div>
+      </div>
+    ));
+
+    const contentJSX = (
+      <Fragment>
+        <h2 className={classes.Title}>
+          {messages[context.language][groupkey]}
+        </h2>
+        <div>
+          {termsJSX}
+        </div>
+      </Fragment>
+    );
+
+    return contentJSX;
+  });
+
   return (
     <div className={`container-fluid ${classes.FAQ}`}>
       <Header
@@ -49,32 +84,7 @@ const FAQ = (props) => {
       <section className={classes.Content}>
         <div className="container">
           <div className="accordion" id="accordion">
-            {
-              faqTerms.map((termObject, i) => (
-                <div className="card">
-                  <div className="card-header" id="headingOne">
-                    <h2 className="mb-0">
-                      <button className="btn btn-link" type="button" data-toggle="collapse" data-target={`#${termObject.key}`} aria-expanded="true" aria-controls="collapseOne">
-                        <h3 className={classes.Term}>
-                          <i className={termObject.icon} />
-                          &nbsp;
-                          {termObject.label[context.language]}
-                        </h3>
-                      </button>
-                    </h2>
-                  </div>
-                  <div id={termObject.key} className={`collapse ${(i === idxQuestion) ? 'show' : ''}`} aria-labelledby="headingOne" data-parent="#accordion">
-                    <div className="card-body">
-                      <p className={classes.Definition}>
-                        <Markdown>
-                          {termObject.definition[context.language]}
-                        </Markdown>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))
-            }
+            {orderedContent}
           </div>
         </div>
       </section>
