@@ -351,36 +351,36 @@
     "key": "Projects",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Projets liés",
+      "en": "Linked projects"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les projets qui on pu être liés à une entité. Questions liées dans la FAQ : <br/><li><a href='/faq/q18' target='_blank'>Quels sont les financements recensés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This sections lists the projects that have been linked to an entity. Related questions in FAQ: <br/><li><a href='/faq/q18' target='_blank'>What funding is identified in scanR ?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
     }
   },
   {
     "key": "Productions",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Productions liées",
+      "en": "Linked productions"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les productions qui on pu être liées à une entité ou une personne. Questions liées dans la FAQ : <br/><li><a href='/faq/q34' target='_blank'>Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section lists the productions that may have been linked to an entity or person. Related questions in the FAQ: <br/><li><a href='/faq/q34' target='_blank'>Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
     }
   },
   {
     "key": "EntityEvaluation",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Evaluations",
+      "en": "Evaluations"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les rapports d'évaluations du Hcéres qui ont été moissonnés à partir du <a href='https://hal-hceres.archives-ouvertes.fr/' target = '_blank'>portail HAL du Hcéres</a>.",
+      "en": "This section lists the evaluation reports that were harvested from the <a href='https://hal-hceres.archives-ouvertes.fr/' target = '_blank'>Hcéres HAL portal</a>"
     }
   },
   {
@@ -411,24 +411,24 @@
     "key": "EntityNetwork",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Appartenance et réseau",
+      "en": "Membership and network"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les relations de l'entité : ses tutelles, les entités qui dépendent d'elles, les relations d'actionnariat, réseaux Carnot, incubation, spin-off ... Cette liste n'est pas exhaustive et ne représente que le liens que scanR a réussi à établir.",
+      "en": "This section lists the entity's relationships: its supervisors, the entities under its supervision, shareholder relationships, Carnot networks, incubation, spin-offs... This list is not exhaustive and represents only the links that scanR has been able to establish."
     }
   },
   {
     "key": "EntitySimilar",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Entités travaillant sur des thématiques similaires",
+      "en": "Entities working on similar thematics"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste des entités travaillant sur des thématiques similaires. Ces rapprochements sont faits via les projets et productions liés aux entités, ainsi qu'au contenu de leur site web.",
+      "en": "This section lists entities working on similar themes. These links are made via projects and productions related to the entities, as well as to the content of their website."
     }
   },
   {
@@ -651,24 +651,24 @@
     "key": "PublicationSimilar",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Productions similaires",
+      "en": "Similar productions"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section propose des productions qui utilisent des mots en commun, dans les différentes méta-données disponibles (titre, résumé, mot-clé ...). La similarité est calculée uniquement sur le contenu et pas sur des liens de co-écriture ou de citations.",
+      "en": "This section proposes productions that use common words in the various available metadata (title, abstract, keyword, etc.). Similarity is calculated only on content and not on co-written links or citations."
     }
   },
   {
     "key": "Download",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Export",
+      "en": "Export"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Les résultats de recherche sont exportables au format xls. Pour des raisons de performances, seuls les 1 000 premiers résultats sont exportés.",
+      "en": "Search results can be exported in xls format. For performance reasons, only the first 1,000 results are exported."
     }
   }
 ]
