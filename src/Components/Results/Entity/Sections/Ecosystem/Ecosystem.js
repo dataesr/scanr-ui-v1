@@ -164,27 +164,32 @@ class Ecosystem extends Component {
 
   createKindFilter = () => {
     const kindFilter = [];
-    GRAPH_ITEMS_LIST.forEach((graphType) => {
-      const listObjects = this.props.data.filter(item => item.structure.kind && item.structure.kind.find(el => el === graphType));
-      const obj = {
-        value: graphType,
-        count: listObjects.length,
-      };
-      kindFilter.push(obj);
-    });
+    if (this.props.data) {
+      GRAPH_ITEMS_LIST.forEach((graphType) => {
+        const listObjects = this.props.data.filter(item => item.structure.kind && item.structure.kind.find(el => el === graphType));
+        const obj = {
+          value: graphType,
+          count: listObjects.length,
+        };
+        kindFilter.push(obj);
+      });
+    }
+
     this.setState({ kindFilter });
   }
 
   createFrIntFilter = () => {
     let nbFr = 0;
     let nbEn = 0;
-    this.props.data.forEach((item) => {
-      if (item.structure.isFrench) {
-        nbFr += 1;
-      } else {
-        nbEn += 1;
-      }
-    });
+    if (this.props.data) {
+      this.props.data.forEach((item) => {
+        if (item.structure.isFrench) {
+          nbFr += 1;
+        } else {
+          nbEn += 1;
+        }
+      });
+    }
     const objFr = {
       value: 'fr',
       count: nbFr,
@@ -413,7 +418,7 @@ class Ecosystem extends Component {
     }
 
     const dataGraph = this.getDataGraph();
-    const subtitle = (this.props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter.<br/>Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect.<br/>They cannot be used for assessment purposes.');
+    const subtitle = (this.props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter.<br/>Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data represent only what scanR managed to collect.<br/>They cannot be used for assessment purposes.');
 
     return (
       <Fragment>
