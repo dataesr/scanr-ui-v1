@@ -76,9 +76,9 @@ const Person = (props) => {
         </SectionPersons>
         <Banner
           language={props.language}
-          labelKey="Appear"
+          labelKey="WhatAreOurSources"
           cssClass="BannerDark"
-          url=""
+          url="/ressources"
         />
         <SectionProductions id="Thesis">
           <div className="container">
@@ -120,9 +120,9 @@ const Person = (props) => {
         </SectionPersons>
         <Banner
           language={props.language}
-          labelKey="Appear"
+          labelKey="WhatAreOurSources"
           cssClass="BannerLight"
-          url=""
+          url="/ressources"
         />
         <SectionPersons id="Similars">
           <div className="container">

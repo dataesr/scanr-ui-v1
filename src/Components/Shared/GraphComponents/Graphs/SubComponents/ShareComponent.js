@@ -44,7 +44,7 @@ const ShareComponent = (props) => {
   return (
     <div className={classes.ShareComponent}>
       <div className={`d-flex flex-wrap pl-4 pr-4 p-3 ${classes.ShareComponent}`}>
-        <div className="mr-auto d-flex align-items-center">
+        { /* <div className="mr-auto d-flex align-items-center">
           <div className="pr-1 d-flex align-items-center">
             <span className={`pr-2 ${classes.ShareTexts}`}>
               {messages[props.language].share}
@@ -53,7 +53,7 @@ const ShareComponent = (props) => {
               <i className="fas fa-share-alt-square" />
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="d-flex align-items-center">
           <div className={`pr-2 ${classes.ShareTexts}`}>
             {messages[props.language].download}
