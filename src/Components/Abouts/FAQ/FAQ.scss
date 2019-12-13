@@ -4,11 +4,11 @@
   padding: 0;
   margin: 0;
 
-  .SearchInputTitle {
-    display: inline-block;
-    font-size: 1rem;
+  .Title {
+    margin-top: 24px;
+    font-weight: bold;
+    font-size: 1.8rem;
     color: $scanrdeepblueColor;
-    padding-left: 8px;
   }
 
   .Content {
