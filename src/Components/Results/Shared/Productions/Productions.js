@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
-import { GridLoader } from 'react-spinners';
+import Loader from '../../../Shared/LoadingSpinners/GraphSpinner';
+import Errors from '../../../Shared/Errors/Errors';
 
 import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
 
@@ -178,6 +179,10 @@ class Productions extends Component {
       });
     });
     Axios.post(url, request).then((response) => {
+      const totalPerType = {};
+      response.data.facets.find(facet => facet.id === 'productionTypes').entries.forEach((type) => {
+        totalPerType[type.value] = type.count;
+      });
       const graphData = {};
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
@@ -191,6 +196,7 @@ class Productions extends Component {
       this.setState({
         data,
         selectedProduction,
+        totalPerType,
         graphData,
         isLoading: false,
       });
@@ -253,69 +259,30 @@ class Productions extends Component {
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
-              <EmptySection language={this.props.language} />
-            </div>
-          </section>
-        </Fragment>
-      );
-    }
-    if (this.state.error) {
-      return (
-        <Fragment>
-          <section className="container-fluid py-4">
-            <div className="container">
-              <SectionTitleViewMode
-                icon="fa-folder-open"
-                objectType="publications"
-                language={this.props.language}
-                id={this.props.match.params.id}
-                total={this.state.total}
-                title="Productions"
-                lexicon="Productions"
-                viewModeClickHandler={this.viewModeClickHandler}
-                viewMode={this.state.viewMode}
-              />
-              <p>Une erreur s&aposest produite.</p>
-            </div>
-          </section>
-        </Fragment>
-      );
-    }
-    if (this.state.isLoading) {
-      return (
-        <Fragment>
-          <section className="container-fluid py-4">
-            <div className="container">
-              <SectionTitleViewMode
-                icon="fa-folder-open"
-                objectType="publications"
-                language={this.props.language}
-                id={this.props.match.params.id}
-                total={this.state.total}
-                title="Productions"
-                lexicon="Productions"
-                viewModeClickHandler={this.viewModeClickHandler}
-                viewMode={this.state.viewMode}
-              />
-              <FilterPanel
-                language={this.props.language}
-                data={{}}
-                totalPerType={this.state.totalPerType}
-                selectedType={this.state.productionType}
-                changeTypeHandler={this.changeTypeHandler}
-                currentQueryText={this.state.currentQueryText}
-                queryChangeHandler={this.queryChangeHandler}
-                queryTextChangeHandler={this.queryTextChangeHandler}
-                lowSliderYear={this.state.low}
-                highSliderYear={this.state.high}
-                handleSliderRange={this.handleSliderRange}
-              />
-              <div className="row justify-content-center py-5 my-5">
-                <GridLoader
-                  color={styles.publicationsColor}
-                  loading={this.state.isLoading}
-                />
-              </div>
+              {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
+              {(this.state.error) ? <Errors error={500} /> : null}
+              {
+                (this.state.isLoading)
+                  ? (
+                    <React.Fragment>
+                      <FilterPanel
+                        language={this.props.language}
+                        data={[]}
+                        totalPerType={this.state.totalPerType}
+                        selectedType={this.state.productionType}
+                        changeTypeHandler={this.changeTypeHandler}
+                        currentQueryText={this.state.currentQueryText}
+                        queryChangeHandler={this.queryChangeHandler}
+                        queryTextChangeHandler={this.queryTextChangeHandler}
+                        lowSliderYear={this.state.low}
+                        highSliderYear={this.state.high}
+                        handleSliderRange={this.handleSliderRange}
+                      />
+                      <Loader color={styles.publicationsColor} />
+                    </React.Fragment>
+                  )
+                  : null
+              }
             </div>
           </section>
         </Fragment>

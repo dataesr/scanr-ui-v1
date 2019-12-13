@@ -17,7 +17,18 @@ import classes from './ScanrToday.scss';
 
 const ScanrToday = (props) => {
   const request = { query: '' };
-  const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, request);
+  const entityRequest = { query: '', filters: {} };
+  entityRequest.filters.status = {
+    type: 'MultiValueSearchFilter',
+    op: 'all',
+    values: ['active'],
+  };
+  entityRequest.filters.isFrench = {
+    type: 'MultiValueSearchFilter',
+    op: 'all',
+    values: [true],
+  };
+  const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
   const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
   const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
   const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
