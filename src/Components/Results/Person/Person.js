@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { API_PERSONS_END_POINT } from '../../../config/config';
 import useGetData from '../../../Hooks/useGetData';
-import useScrollY from '../../../Hooks/UseScrollY';
+import useScrollY from '../../../Hooks/useScrollY';
 
 import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';

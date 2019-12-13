@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
   Map, Marker, TileLayer, Tooltip,
 } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import { yellowIcon, greenIcon } from './icons';
-
-
+import useGetData from '../../../../../../../Hooks/useGetData';
+import { API_STRUCTURES_END_POINT } from '../../../../../../../config/config';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 /* Gestion des langues */
@@ -28,18 +28,10 @@ const messages = {
   en: messagesEn,
 };
 
-class Localisation extends Component {
-  state = {
-    showEntityAround: false,
-  }
-
-  switchShowAround = () => {
-    this.setState(prevState => ({ showEntityAround: !prevState.showEntityAround }));
-  }
-
-  createMarkers = () => {
-    const markers = [];
-    this.props.geoNear.forEach((element) => {
+const createMarkers = (address, data = []) => {
+  const markers = [];
+  if (data) {
+    data.forEach((element) => {
       try {
         markers.push(
           <Marker icon={greenIcon} position={element.address[0].gps} key={element.id}>
@@ -50,111 +42,112 @@ class Localisation extends Component {
         // eslint-disable-no-empty
       }
     });
-    markers.push(
-      <Marker position={this.props.address[0].gps} icon={yellowIcon} key="1" />,
-    );
-    return markers;
-  };
+  }
+  markers.push(
+    <Marker position={address} icon={yellowIcon} key="1" />,
+  );
+  return markers;
+};
 
-  render() {
-    // if (!this.props.address || (!this.props.address[0].address && !this.props.address[0].city || !this.props.address[0].country)) {
-    // eslint-disable-next-line
-    if (!this.props.address) {
-      return null;
-    }
-    let displayedAddress = '';
-    if (this.props.address[0].address) {
-      const displayedCity = (this.props.address[0].city) ? (this.props.address[0].city) : '';
-      const displayedCountry = (this.props.address[0].country) ? (this.props.address[0].country) : '';
-      const displayedSep = (this.props.address[0].city) ? ' - ' : '';
-      displayedAddress = displayedCity.concat(displayedSep, displayedCountry);
-    }
-    let mapProps = {};
-    if (this.props.address[0].gps && this.props.address[0].gps.lat && this.props.address[0].gps.lon) {
-      mapProps = { maxZoom: 17, center: [this.props.address[0].gps.lat, this.props.address[0].gps.lon], zoom: 14 };
-    }
-    let markers = null;
-    if (this.props.geoNear) {
-      markers = this.createMarkers();
-    }
+const Localisation = (props) => {
+  const [showEntityAround, setEntityAround] = useState(false);
+  const url = `${API_STRUCTURES_END_POINT}/near/${props.id}?distance=${10}`;
+  const { data } = useGetData(url);
 
-    return (
-      <div className="col-md-6">
-        <div className={classes.Localisation}>
-          <div className="row">
-            <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle title={messages[this.props.language]['Entity.portrait.localisation.title']} />
-            </div>
+  // if (!props.address || (!props.address[0].address && !props.address[0].city || !props.address[0].country)) {
+  // eslint-disable-next-line
+  if (!props.address) {
+    return null;
+  }
+  let displayedAddress = '';
+  if (props.address[0].address) {
+    const displayedCity = (props.address[0].city) ? (props.address[0].city) : '';
+    const displayedCountry = (props.address[0].country) ? (props.address[0].country) : '';
+    const displayedSep = (props.address[0].city) ? ' - ' : '';
+    displayedAddress = displayedCity.concat(displayedSep, displayedCountry);
+  }
+  let mapProps = {};
+  if (props.address[0].gps && props.address[0].gps.lat && props.address[0].gps.lon) {
+    mapProps = { maxZoom: 17, center: [props.address[0].gps.lat, props.address[0].gps.lon], zoom: 14 };
+  }
+  const markers = createMarkers(props.address[0].gps, data);
+
+  return (
+    <div className="col-md-6">
+      <div className={classes.Localisation}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={messages[props.language]['Entity.portrait.localisation.title']} />
           </div>
-          <div className="row">
-            <div className={`col-lg ${classes.NoSpace}`}>
-              <div className={classes.MapContainer}>
-                <Map
-                  className={classes.Map}
-                  {...mapProps}
-                >
-                  <TileLayer
-                    attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                    url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
-                  />
-                  {
-                    (this.state.showEntityAround && markers)
-                      ? (
-                        <MarkerClusterGroup maxClusterRadius={20}>
-                          {markers}
-                        </MarkerClusterGroup>
-                      )
-                      : (
-                        <Marker
-                          position={this.props.address[0].gps}
-                          icon={yellowIcon}
-                        />
-                      )
-                  }
-                </Map>
-              </div>
-              <div className={classes.AddressContainer}>
-                <div className={classes.Title}>
-                  <div className="d-flex align-items-center">
-                    <div>
-                      <i className="fas fa-map-marker" />
-                      Localisation
-                    </div>
-                    <div className="px-2 ml-auto">
-                      {
-                        (this.props.geoNear)
-                          ? (
-                            <button
-                              className={`btn ${classes.btn_scanrBlue} ${classes.ButtonRectangle}`}
-                              type="button"
-                              onClick={this.switchShowAround}
-                            >
-                              {this.props.language === 'fr' ? 'Entités à proximité' : 'Entities nearby'}
-                            </button>
-                          )
-                          : null
-                      }
-                    </div>
+        </div>
+        <div className="row">
+          <div className={`col-lg ${classes.NoSpace}`}>
+            <div className={classes.MapContainer}>
+              <Map
+                className={classes.Map}
+                {...mapProps}
+              >
+                <TileLayer
+                  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+                />
+                {
+                  (showEntityAround && markers)
+                    ? (
+                      <MarkerClusterGroup maxClusterRadius={20}>
+                        {markers}
+                      </MarkerClusterGroup>
+                    )
+                    : (
+                      <Marker
+                        position={props.address[0].gps}
+                        icon={yellowIcon}
+                      />
+                    )
+                }
+              </Map>
+            </div>
+            <div className={classes.AddressContainer}>
+              <div className={classes.Title}>
+                <div className="d-flex align-items-center">
+                  <div>
+                    <i className="fas fa-map-marker" />
+                    Localisation
                   </div>
-                  <div className={classes.Address}>
-                    {this.props.address[0].address}
-                    <br />
-                    {`${displayedAddress}`}
+                  <div className="px-2 ml-auto">
+                    {
+                      (markers.length)
+                        ? (
+                          <button
+                            className={`btn ${classes.btn_scanrBlue} ${classes.ButtonRectangle}`}
+                            type="button"
+                            onClick={() => setEntityAround(!showEntityAround)}
+                          >
+                            {props.language === 'fr' ? 'Entités à proximité' : 'Entities nearby'}
+                          </button>
+                        )
+                        : null
+                    }
                   </div>
+                </div>
+                <div className={classes.Address}>
+                  {props.address[0].address}
+                  <br />
+                  {`${displayedAddress}`}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Localisation;
 
 Localisation.propTypes = {
   address: PropTypes.object.isRequired,
-  geoNear: PropTypes.array,
+  id: PropTypes.array,
   language: PropTypes.string.isRequired,
 };
