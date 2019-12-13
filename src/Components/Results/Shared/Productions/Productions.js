@@ -53,7 +53,6 @@ class Productions extends Component {
   }
 
   componentDidMount() {
-    console.log('fre', this.props.childs);
     this.fetchGlobalData();
   }
 
