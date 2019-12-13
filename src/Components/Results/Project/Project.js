@@ -115,6 +115,7 @@ const Project = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
+              lexicon="ProjectProgram"
               objectType="projects"
               language={props.language}
               id={props.match.params.id}
