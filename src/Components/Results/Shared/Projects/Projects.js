@@ -1,7 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
-import { GridLoader } from 'react-spinners';
+import Errors from '../../../Shared/Errors/Errors';
+import Loader from '../../../Shared/LoadingSpinners/GraphSpinner';
 
 import { API_PROJECTS_SEARCH_END_POINT } from '../../../../config/config';
 
@@ -214,21 +215,27 @@ class Projects extends Component {
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
-              {
-                (this.state.total === 0) ? <EmptySection language={this.props.language} /> : null
-              }
-              {
-                (this.state.error) ? <p>Une erreur s&aposest produite.</p> : null
-              }
+              {(this.state.total === 0) ? <EmptySection /> : null}
+              {(this.state.error) ? <Errors error={500} /> : null}
               {
                 (this.state.isLoading)
                   ? (
-                    <div className="row justify-content-center py-5 my-5">
-                      <GridLoader
-                        color={styles.projectsColor}
-                        loading={this.state.isLoading}
+                    <React.Fragment>
+                      <FilterPanel
+                        language={this.props.language}
+                        totalPerType={this.state.totalPerType}
+                        selectedType={this.state.projectType}
+                        data={[]}
+                        changeTypeHandler={this.changeTypeHandler}
+                        currentQueryText={this.state.currentQueryText}
+                        queryChangeHandler={this.queryChangeHandler}
+                        queryTextChangeHandler={this.queryTextChangeHandler}
+                        lowSliderYear={this.state.low}
+                        highSliderYear={this.state.high}
+                        handleSliderRange={this.handleSliderRange}
                       />
-                    </div>
+                      <Loader color={styles.projectsColor} />
+                    </React.Fragment>
                   )
                   : null
               }
