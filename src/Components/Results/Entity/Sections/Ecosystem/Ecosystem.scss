@@ -12,6 +12,31 @@
     font-family: 'Lato', sans-serif;
   }
 
+  .FiltersRow {
+    padding-bottom: 16px;
+  }
+
+  .SelectTitle {
+    font-size: 0.9em;
+    display: inline-block;
+    padding-left: 16px;
+    padding-bottom: 0;
+    color: $scanrgreyColor;
+  }
+
+  .Select {
+    background-color: $scanrblueColor;
+    color: white;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .Select:focus {
+    border: 2px solid $scanrgreyColor;
+    background-color: $scanrblueColor;
+    color: white;
+  }
+
   .List {
     height: 515px;
     direction: rtl;
