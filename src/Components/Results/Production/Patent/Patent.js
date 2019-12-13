@@ -41,6 +41,7 @@ const Patent = (props) => {
             <SectionTitle
               icon="fa-id-card"
               objectType="productions"
+              lexicon="PatentFamily"
               language={props.language}
               id={props.id}
               title={<FormattedHTMLMessage id="Patent.identity" />}
