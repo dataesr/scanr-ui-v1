@@ -43,7 +43,15 @@ const Production = (props) => {
 
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, props.match.params.id);
-  if (isLoading) return <Loader color={styles.productionsColor} />;
+  if (isLoading) {
+    return (
+      <React.Fragment>
+        <Header />
+        <Loader color={styles.productionColor} />
+        <Footer />
+      </React.Fragment>
+    );
+  }
   if (isError) return <Errors error={500} />;
   return (
     <React.Fragment>

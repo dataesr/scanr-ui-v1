@@ -63,7 +63,15 @@ const Entity = (props) => {
   };
   const { data, isLoading, isError } = useGetData(url, id);
   const supervisorOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, request);
-  if (isLoading || supervisorOf.isLoading) return <Loader color={styles.productionsColor} />;
+  if (isLoading || supervisorOf.isLoading) {
+    return (
+      <React.Fragment>
+        <Header />
+        <Loader color={styles.entityColor} />
+        <Footer />
+      </React.Fragment>
+    );
+  }
   if (isError || supervisorOf.isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
