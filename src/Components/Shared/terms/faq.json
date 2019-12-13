@@ -1,6 +1,7 @@
 [
   {
     "key": "q1",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi sert scanR ?",
@@ -13,6 +14,7 @@
   },
   {
     "key": "q2",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la nature du lien entre scanR et le Baromètre de la Science Ouverte ?",
@@ -25,6 +27,7 @@
   },
   {
     "key": "q3",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il exhaustif ?",
@@ -37,6 +40,7 @@
   },
   {
     "key": "q4",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Que trouve-t-on dans scanR ?",
@@ -49,6 +53,7 @@
   },
   {
     "key": "q5",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Puis-je utiliser scanR pour évaluer une entité ou un auteur ?",
@@ -61,6 +66,7 @@
   },
   {
     "key": "q6",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles précautions prendre pour bien interpréter les informations et les chiffres restitués dans scanR ?",
@@ -73,6 +79,7 @@
   },
   {
     "key": "q7",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Peut-il y avoir des erreurs dans scanR ?",
@@ -85,6 +92,7 @@
   },
   {
     "key": "q8",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il producteur de données ?",
@@ -97,6 +105,7 @@
   },
   {
     "key": "q9",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment se positionne scanR dans le cycle de vie des données ?",
@@ -109,6 +118,7 @@
   },
   {
     "key": "q10",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "D'où proviennent les erreurs que l'on peut constater dans scanR ?",
@@ -121,6 +131,7 @@
   },
   {
     "key": "q11",
+    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment affiner une recherche dans scanR avec des opérateurs ?",
@@ -133,6 +144,7 @@
   },
   {
     "key": "q12",
+    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment sont ordonnés les résultats d'une recherche dans scanR ?",
@@ -145,6 +157,7 @@
   },
   {
     "key": "q13",
+    "groupkey": "search",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Sur la base de quelles informations le moteur de recherche de scanR fonctionne-t-il ?",
@@ -157,6 +170,7 @@
   },
   {
     "key": "q14",
+    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les entités référencées dans scanR ?",
@@ -169,6 +183,7 @@
   },
   {
     "key": "q15",
+    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi scanR comporte-il des doublons ?",
@@ -181,6 +196,7 @@
   },
   {
     "key": "q16",
+    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi scanR n'utilise-t-il pas les annuaires des organismes de recherche, des universités et des écoles ?",
@@ -193,18 +209,20 @@
   },
   {
     "key": "q17",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment contribuer, proposer des modifications et contacter l'équipe scanR ?",
       "en": "How to contribute, propose changes and contact the scanR team?"
     },
     "definition": {
-      "fr": "Deux solutions pour contribuer à l'amélioration de scanR : \n- Vous avez identifié une erreur, une omission sur une fiche entité, auteur, production ou financement particulière ? Utilisez le bouton \"Contribuer\" pour nous contacter !\n- Des remarques générales sur scanR, des idées de sources à intégrer, de propositions d'évolutions de l'interface, des envies de partenriats et de collaboration avec l'équipe ? Rendez-vous à la rubrique \"Contact\" [Insérer lien].",
-      "en": "Two solutions to contribute to the improvement of scanR: \n- Have you identified an error or omission on a particular entity, author, production or funding record? Use the \"Contribute\" button to contact us!\n- General remarks on scanR, ideas of sources to integrate, proposals for evolutions of the interface, desires of partnerships and collaboration with the team? Go to the \"Contact\" section [Insert link]."
+      "fr": "Deux solutions pour contribuer à l'amélioration de scanR : \n- Vous avez identifié une erreur, une omission sur une fiche entité, auteur, production ou financement particulière ? Utilisez le bouton \"Contribuer\" pour nous contacter !\n- Des remarques générales sur scanR, des idées de sources à intégrer, de propositions d'évolutions de l'interface, des envies de partenriats et de collaboration avec l'équipe ? Rendez-vous à la rubrique <a href='/contact'>Contact</a>.",
+      "en": "Two solutions to contribute to the improvement of scanR: \n- Have you identified an error or omission on a particular entity, author, production or funding record? Use the \"Contribute\" button to contact us!\n- General remarks on scanR, ideas of sources to integrate, proposals for evolutions of the interface, desires of partnerships and collaboration with the team? Go to the <a href='/contact'>Contact</a> section."
     }
   },
   {
     "key": "q18",
+    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels sont les financements recensés dans scanR ?",
@@ -217,6 +235,7 @@
   },
   {
     "key": "q19",
+    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?",
@@ -229,6 +248,7 @@
   },
   {
     "key": "q20",
+    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Les contrats associant une équipe de la recherche publique et un partenaire (sans financement d'une agence publique comme l'ANR) sont-ils présents dans scanR ?",
@@ -241,6 +261,7 @@
   },
   {
     "key": "q21",
+    "groupkey": "projects",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment faire apparaître dans scanR les financements d'une nouvelle agence de financement de la recherche, d'une collectivité territoriale, d'une fondation ou de tout autre institution publique ou privée ?",
@@ -253,6 +274,7 @@
   },
   {
     "key": "q23",
+    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sources sont utilisées pour les prix et distinctions?",
@@ -265,6 +287,7 @@
   },
   {
     "key": "q24",
+    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Il manque certains prix et distinctions. Que faire ?",
@@ -277,6 +300,7 @@
   },
   {
     "key": "q25",
+    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi la page de ma structure n'indique pas qu'une des personnes de la structure a obtenu un prix scientifique ?",
@@ -289,6 +313,7 @@
   },
   {
     "key": "q26",
+    "groupkey": "prizes",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels prix de thèse et prix scientifiques sont-ils référencés dans scanR ?",
@@ -301,6 +326,7 @@
   },
   {
     "key": "q27",
+    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels auteurs  disposent d'un profil-auteur dans scanR ?",
@@ -313,6 +339,7 @@
   },
   {
     "key": "q28",
+    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment apparaître dans scanR ?",
@@ -325,6 +352,7 @@
   },
   {
     "key": "q29",
+    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment ne plus apparaître dans scanR ?",
@@ -337,6 +365,7 @@
   },
   {
     "key": "q30",
+    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Entreprises issues ou liées aux laboratoires de reherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?",
@@ -349,6 +378,7 @@
   },
   {
     "key": "q31",
+    "groupkey": "publications",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels est le périmètre des publications de recherche (articles, thèses, monographies) présenté dans scanR ?",
@@ -361,6 +391,7 @@
   },
   {
     "key": "q32",
+    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Que recouvre le terme \"Productions\" dans scanR ?",
@@ -373,6 +404,7 @@
   },
   {
     "key": "q33",
+    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?",
@@ -385,6 +417,7 @@
   },
   {
     "key": "q34",
+    "groupkey": "productions",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi toutes mes \"Productions\" ne sont-elles pas associées à mon profil-auteur ?",
@@ -397,6 +430,7 @@
   },
   {
     "key": "q35",
+    "groupkey": "publications",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?",
@@ -409,6 +443,7 @@
   },
   {
     "key": "q36",
+    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Mes publications sont référencées mais je n'ai pas de profil-auteur dans scanR. Comment changer cette situation ?",
@@ -421,6 +456,7 @@
   },
   {
     "key": "q37",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quels sont les référentiels d'entités utilisés dans scanR ?",
@@ -433,6 +469,7 @@
   },
   {
     "key": "q38",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Puis-je réutiliser les données de scanR ?",
@@ -445,6 +482,7 @@
   },
   {
     "key": "q39",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Sous quelles formes les données de scanR sont-elles accessibles ?",
@@ -457,6 +495,7 @@
   },
   {
     "key": "q40",
+    "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment la section \"Equipe\" d'une fiche entité est alimentée dans scanR ?",
@@ -469,6 +508,7 @@
   },
   {
     "key": "q41",
+    "groupkey": "persons",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment est construite la chronologie des affiliations d'une auteur ?",
@@ -481,6 +521,7 @@
   },
   {
     "key": "q42",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il exhaustif dans ses repérages ?",
@@ -493,6 +534,7 @@
   },
   {
     "key": "q43",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR utilise-t-il des informations issues de bases de données commerciales ?",
@@ -505,6 +547,7 @@
   },
   {
     "key": "q44",
+    "groupkey": "general",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la place des informations issues des sites web des entités dans scanR ?",
@@ -517,42 +560,46 @@
   },
   {
     "key": "q45",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce qu'une famille de brevets ?",
       "en": "nan"
     },
     "definition": {
-      "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet.\nDans ScanR le choix a été fait de présenter les résultats de recherche concernant les demandes de brevets par famille simple. Les informations concernant une éventuelle famille élargie sont tout de même accessibles dans la partie \"familles liées\".",
+      "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet.\nDans scanR le choix a été fait de présenter les résultats de recherche concernant les demandes de brevets par famille simple. Les informations concernant une éventuelle famille élargie sont tout de même accessibles dans la partie \"familles liées\".",
       "en": "nan"
     }
   },
   {
     "key": "q46",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?",
       "en": "nan"
     },
     "definition": {
-      "fr": "Les informations concernant les déposants et inventeurs remontent dans Patstat au niveau des dépôts de demandes de brevets et à partir des différents offices nationaux ou régionaux. Les noms d'inventeurs ou d'entreprises sont souvent traduits à partir de leur langue d'origine et des différences dans l'orthographe des participants sont fréquentes. Même si des corrections ont été apportées dans ScanR, des doublons apparaissent encore. La liste complète de tous les déposants et inventeurs des différents dépôts de la famille est affichée car ces informations peuvent différer à la marge d'un dépôt à l'autre.",
+      "fr": "Les informations concernant les déposants et inventeurs remontent dans Patstat au niveau des dépôts de demandes de brevets et à partir des différents offices nationaux ou régionaux. Les noms d'inventeurs ou d'entreprises sont souvent traduits à partir de leur langue d'origine et des différences dans l'orthographe des participants sont fréquentes. Même si des corrections ont été apportées dans scanR, des doublons apparaissent encore. La liste complète de tous les déposants et inventeurs des différents dépôts de la famille est affichée car ces informations peuvent différer à la marge d'un dépôt à l'autre.",
       "en": "nan"
     }
   },
   {
     "key": "q47",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la différence entre un brevet et un dépôt de brevet ?",
       "en": "nan"
     },
     "definition": {
-      "fr": "Un dépôt de brevet est un dossier de demande de protection par un brevet d'invention. Le brevet correspond au brevet délivré qui assure la protection de l'invention sur un territoire donné. Sont répertoriés sur ScanR tous les dépôts de brevets, qu'ils aient été délivrés ou non, prsésentés par famille.",
+      "fr": "Un dépôt de brevet est un dossier de demande de protection par un brevet d'invention. Le brevet correspond au brevet délivré qui assure la protection de l'invention sur un territoire donné. Sont répertoriés sur scanR tous les dépôts de brevets, qu'ils aient été délivrés ou non, prsésentés par famille.",
       "en": "nan"
     }
   },
   {
     "key": "q48",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la date de premier dépôt d'une famille ?",
@@ -565,6 +612,7 @@
   },
   {
     "key": "q49",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la date de première publication d'une famille ?",
@@ -577,18 +625,20 @@
   },
   {
     "key": "q50",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Pourquoi je ne trouve pas mon brevet dans ScanR ? Quel est le périmètre ?",
+      "fr": "Pourquoi je ne trouve pas mon brevet dans scanR ? Quel est le périmètre ?",
       "en": "nan"
     },
     "definition": {
-      "fr": "Le périmètre des brevets dans ScanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est postérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019.",
+      "fr": "Le périmètre des brevets dans scanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est postérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019.",
       "en": "nan"
     }
   },
   {
     "key": "q51",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "A quoi correspond la liste des dépôts ?",
@@ -601,6 +651,7 @@
   },
   {
     "key": "q52",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les sources utilisées pour les brevets ?",
@@ -613,6 +664,7 @@
   },
   {
     "key": "q53",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce qu'une priorité ?",
@@ -625,6 +677,7 @@
   },
   {
     "key": "q54",
+    "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale selon le PCT ?",
