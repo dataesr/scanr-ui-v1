@@ -109,7 +109,6 @@ class Productions extends Component {
         },
       };
     }
-    console.log('fre', preRequest);
     Axios.post(url, preRequest).then((response) => {
       const totalPerType = {};
       response.data.facets.find(facet => facet.id === 'types').entries.forEach((type) => {
