@@ -35,31 +35,32 @@ const SimpleCardWithButton = (props) => {
   ) : null;
 
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={classes.SimpleCardWithButton}>
-        {logo}
-        {title}
-        {label}
-        {tooltip}
-        {
-            (url)
-              ? (
-                <div className="mt-auto">
-                  <ButtonToPage
-                    className={`${classes.Button} ${classes.btn_scanrBlue}`}
-                    url={url}
-                    target="_blank"
-                  >
+    <div className={classes.SimpleCardWithButton}>
+      {logo}
+      {title}
+      {label}
+      {tooltip}
+      {
+          (url)
+            ? (
+              <div className="mt-auto">
+                <ButtonToPage
+                  className={`${classes.Button} ${classes.btn_scanrBlue}`}
+                  url={url}
+                  target="_blank"
+                >
+                  <IntlProvider locale={props.language} messages={messages[props.language]}>
                     <FormattedHTMLMessage
                       id={props.link}
                       defaultMessage="Voir le site"
                     />
-                  </ButtonToPage>
-                </div>
-              ) : null
+                  </IntlProvider>
+                </ButtonToPage>
+              </div>
+            )
+            : null
         }
-      </div>
-    </IntlProvider>
+    </div>
   );
 };
 
