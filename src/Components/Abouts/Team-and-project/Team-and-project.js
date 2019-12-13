@@ -44,7 +44,6 @@ const TeamAndProjectPage = props => (
         language={props.language}
         labelkey="team"
         url1="/"
-        url2="#"
       />
 
       <section className={classes.Content}>
