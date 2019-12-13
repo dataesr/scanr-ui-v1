@@ -19,17 +19,17 @@ import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 import YoutubeCard from '../../../Shared/Ui/YoutubeCard/YoutubeCard';
 import PrizeCard from '../../../Shared/Ui/PrizeCard/PrizeCard';
 
-import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
-import BackgroundAuthors from '../../../../images/img/poudre-orange-Fbleu-BR.jpg';
-import BackgroundAffiliations from '../../../../images/img/poudre-jaune_Fgris-B.jpg';
 
 import classes from './Thesis.scss';
+import styles from '../../../../style.scss';
 
 import getSelectKey from '../../../../Utils/getSelectKey';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+
+import StyledSection from '../../Shared/StyledSection';
 
 const messages = {
   fr: messagesFr,
@@ -62,19 +62,6 @@ class Thesis extends Component {
   }
 
   render() {
-    if (!this.props.data) {
-      return <div>null</div>;
-    }
-    const sectionStyle = {
-      backgroundImage: `url(${Background})`,
-    };
-    const sectionStyleAuthors = {
-      backgroundImage: `url(${BackgroundAuthors})`,
-    };
-    const sectionStyleAffiliations = {
-      backgroundImage: `url(${BackgroundAffiliations})`,
-    };
-
     const id = (this.props.data.id.substring(0, 5) === 'these') ? this.props.data.id.substring(5) : this.props.data.id;
     const publicationDate = moment(this.props.data.publicationDate).format('L');
     const summary = (this.props.language === 'fr') ? getSelectKey(this.props.data, 'summary', this.props.language, 'default') : getSelectKey(this.props.data, 'alternativeSummary', this.props.language, 'default');
@@ -116,7 +103,7 @@ class Thesis extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <section style={sectionStyle} id="Identity">
+          <StyledSection object="productions" color="lightgrey" position="top" id="Identity">
             <div className="container">
               <SectionTitle
                 icon="fa-id-card"
@@ -198,7 +185,7 @@ class Thesis extends Component {
                             language={this.props.language}
                             label={award.label}
                             icon="prize"
-                            color="#fe7747"
+                            color={styles.personColor}
                           />
                         </div>
                       ))
@@ -239,8 +226,8 @@ class Thesis extends Component {
                 </div>
               </div>
             </div>
-          </section>
-          <section id="AccessType">
+          </StyledSection>
+          <StyledSection color="white" id="AccessType">
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
@@ -280,8 +267,8 @@ class Thesis extends Component {
                 }
               </div>
             </div>
-          </section>
-          <section style={sectionStyleAuthors} id="Authors">
+          </StyledSection>
+          <StyledSection object="persons" color="blue" position="left" id="Authors">
             <div className="container">
               <SectionTitle
                 icon="fa-open-folder"
@@ -340,11 +327,11 @@ class Thesis extends Component {
                 }
               </div>
             </div>
-          </section>
+          </StyledSection>
           {
             (this.props.data && this.props.data.affiliations)
               ? (
-                <section style={sectionStyleAffiliations} id="Affiliations">
+                <StyledSection object="entity" color="lightgrey" position="top" id="Affiliations">
                   <div className="container">
                     <SectionTitle
                       icon="fa-open-folder"
@@ -368,10 +355,10 @@ class Thesis extends Component {
                       }
                     </div>
                   </div>
-                </section>
+                </StyledSection>
               ) : null
           }
-          <section id="Similars">
+          <StyledSection object="productions" color="lightgrey" position="top" id="Similars">
             <div className="container">
               <SectionTitle
                 icon="fa-folder-open"
@@ -381,7 +368,7 @@ class Thesis extends Component {
               />
               <Similars language={this.props.language} id={this.props.id} />
             </div>
-          </section>
+          </StyledSection>
         </Fragment>
       </IntlProvider>
     );
