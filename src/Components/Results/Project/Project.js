@@ -173,6 +173,7 @@ const Project = (props) => {
             <SectionTitle
               icon="fa-th"
               language={props.language}
+              lexicon="ProjectSimilar"
               id={props.match.params.id}
               title={<FormattedHTMLMessage id="Project.similars" />}
             />
