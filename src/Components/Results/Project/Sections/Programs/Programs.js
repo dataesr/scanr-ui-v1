@@ -45,7 +45,7 @@ const Programs = (props) => {
               <SimpleCard
                 language={props.language}
                 logo="fas fa-calendar-day"
-                title={<FormattedHTMLMessage id="Project.Programs.call" value={{ year: props.data.year || ' ' }} />}
+                title={<FormattedHTMLMessage id="Project.Programs.call" values={{ year: props.data.year || ' ' }} />}
                 label={props.data.call.label}
               />
             </div>
