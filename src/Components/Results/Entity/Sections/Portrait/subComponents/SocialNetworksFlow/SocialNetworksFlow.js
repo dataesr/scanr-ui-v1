@@ -1,19 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
 
 import classes from './SocialNetworksFlow.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * SocialNetworksFlow
@@ -72,7 +64,7 @@ class SocialNetworksFlow extends Component {
                     <div className={`col ${classes.NoSpace}`}>
                       <div className={`d-flex justify-content-between ${classes.CardsTitle}`}>
                         <h2>
-                          {messages[this.props.language]['Entity.portrait.socialNetworksFlow.title']}
+                          {<FormattedHTMLMessage id="Entity.Portrait.SocialNetworksFlow.title" />}
                         </h2>
                         <div className={classes.Button}>
                           <button

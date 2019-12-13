@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
+
 import {
   Map, Marker, TileLayer, Tooltip,
 } from 'react-leaflet';
@@ -8,10 +10,6 @@ import { yellowIcon, greenIcon } from './icons';
 import useGetData from '../../../../../../../Hooks/useGetData';
 import { API_STRUCTURES_END_POINT } from '../../../../../../../config/config';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 import classes from './Localisation.scss';
 
@@ -23,11 +21,6 @@ import classes from './Localisation.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 const createMarkers = (address, data = []) => {
   const markers = [];
   if (data) {
@@ -77,7 +70,7 @@ const Localisation = (props) => {
       <div className={classes.Localisation}>
         <div className="row">
           <div className={`col ${classes.NoSpace}`}>
-            <CardsTitle title={messages[props.language]['Entity.portrait.localisation.title']} />
+            <CardsTitle title={<FormattedHTMLMessage id="Entity.Portrait.Localisation.title" />} />
           </div>
         </div>
         <div className="row">
@@ -123,7 +116,7 @@ const Localisation = (props) => {
                             type="button"
                             onClick={() => setEntityAround(!showEntityAround)}
                           >
-                            {props.language === 'fr' ? 'Entités à proximité' : 'Entities nearby'}
+                            {<FormattedHTMLMessage id="Entity.Portrait.Localisation.nearby" />}
                           </button>
                         )
                         : null

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 import Axios from 'axios';
 
@@ -12,10 +13,6 @@ import PersonCard from '../../../../../Search/Results/ResultCards/PersonCard';
 
 import classes from '../Team.scss';
 
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
-
 /**
  * TeamComposition
  * Url : ex: /entite/200711886U
@@ -24,11 +21,6 @@ import messagesEn from '../translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-
 class TeamComposition extends Component {
   state = {
     personsRecent: [],
@@ -140,7 +132,7 @@ class TeamComposition extends Component {
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
               <CardsTitle
-                title={messages[this.props.language]['Entity.team.teamComposition.title']}
+                title={<FormattedHTMLMessage id="Entity.Team.TeamComposition.title" />}
                 language={this.props.language}
                 lexicon="EntityTeam"
               />

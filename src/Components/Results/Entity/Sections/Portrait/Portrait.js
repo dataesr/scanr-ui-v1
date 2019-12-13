@@ -11,7 +11,7 @@ import Web from './subComponents/Web/Web';
 
 /**
  * Portrait
- * Url : ex: /entite/200711886U
+ * Url : ex: /entite/:id#Portrait
  * Description : Correspond à la section Portrait d'une entité
  * Responsive : .
  * Accessible : .
