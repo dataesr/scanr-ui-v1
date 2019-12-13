@@ -80,7 +80,7 @@ class Network extends Component {
             values: [`${this.props.data.id}`],
           },
         },
-        pageSize: 10000,
+        pageSize: 100,
       };
       Axios.post(url, obj)
         .then((response) => {
@@ -129,12 +129,6 @@ class Network extends Component {
           });
         });
     }
-  }
-
-
-  componentDidCatch(error, info) {
-    /* eslint-disable-next-line */
-    console.log('catch : ', error, info);
   }
 
   renderTitle = () => (

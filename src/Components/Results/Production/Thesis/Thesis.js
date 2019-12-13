@@ -20,8 +20,8 @@ import YoutubeCard from '../../../Shared/Ui/YoutubeCard/YoutubeCard';
 import PrizeCard from '../../../Shared/Ui/PrizeCard/PrizeCard';
 
 import Background from '../../../Shared/images/poudre-bleu_Fgris-B.jpg';
-import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
-import BackgroundAffiliations from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import BackgroundAuthors from '../../../../images/img/poudre-orange-Fbleu-BR.jpg';
+import BackgroundAffiliations from '../../../../images/img/poudre-jaune_Fgris-B.jpg';
 
 import classes from './Thesis.scss';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
-import useScrollY from '../../../Hooks/UseScrollY';
+import useScrollY from '../../../Hooks/useScrollY';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 import Errors from '../../Shared/Errors/Errors';
 import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
