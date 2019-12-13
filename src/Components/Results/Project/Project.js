@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 // Hooks
 import useGetData from '../../../Hooks/useGetData';
-import useScrollY from '../../../Hooks/UseScrollY';
+import useScrollY from '../../../Hooks/useScrollY';
 
 // Config
 import { API_PROJECTS_END_POINT } from '../../../config/config';

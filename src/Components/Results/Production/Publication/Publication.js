@@ -19,8 +19,8 @@ import AffiliationCard from '../../../Search/Results/ResultCards/EntityCard';
 import LogoCard from '../../../Shared/Ui/LogoCard/LogoCard';
 
 import Background from '../../../Shared/images/poudre-fuschia_Fgris-B.jpg';
-import BackgroundAuthors from '../../../Shared/images/poudre-orange-Fbleu-BR.jpg';
-import BackgroundAffiliations from '../../../Shared/images/poudre-jaune_Fgris-B.jpg';
+import BackgroundAuthors from '../../../../images/img/poudre-orange-Fbleu-BR.jpg';
+import BackgroundAffiliations from '../../../../images/img/poudre-jaune_Fgris-B.jpg';
 import Similars from '../Shared/Similars/Similars';
 import classes from './Publication.scss';
 

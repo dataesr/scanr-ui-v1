@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import SectionTitle from '../../../Shared/SectionTitle';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 // import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
@@ -154,22 +153,10 @@ const Evaluations = (props) => {
 
 
   return (
-    <div className={classes.Evaluations}>
-      <div className="container">
-        <SectionTitle
-          lexicon="EntityEvaluation"
-          icon="fa-landmark"
-          objectType="structures"
-          language={props.language}
-          id={props.id}
-          title={messages[props.language].title}
-        />
-        <div className="row">
-          {
-            JSXcontents.map(card => card)
-          }
-        </div>
-      </div>
+    <div className="row">
+      {
+        JSXcontents.map(card => card)
+      }
     </div>
   );
 };
@@ -179,5 +166,4 @@ export default Evaluations;
 Evaluations.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
 };
