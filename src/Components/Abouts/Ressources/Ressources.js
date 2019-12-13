@@ -441,6 +441,8 @@ class Ressources extends Component {
           <HeaderTitle
             language={this.props.language}
             labelkey="ressources"
+            url1="/"
+            url2="/ressources"
           />
         </section>
         <section style={sectionStyle} className={classes.Content}>
