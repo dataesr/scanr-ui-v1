@@ -451,8 +451,8 @@
       "en": "Roles occupied by the author"
       },
     "definition": {
-      "fr": "Liste des rôles occupés par l'auteur. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur leur site web. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
-      "en": "List of roles held by the author. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on their websites. Related questions in the FAQ: <br/><li><a href='/faq/q40' target='_blank' >How the'Team' section of an entity record is populated in scanR ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors occur in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
+      "fr": "Liste des rôles occupés par l'auteur. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur le web. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
+      "en": "List of roles held by the author. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on the web. Related questions in the FAQ: <br/><li><a href='/faq/q40' target='_blank' >How the'Team' section of an entity record is populated in scanR ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors occur in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
     }
   },
   {
@@ -507,36 +507,36 @@
     "key": "ProjectParticipant",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Participants du projet",
+      "en": "Project participants"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des participants du projet. Lorsqu'un participant est identifié, c'est-à-dire que scanR a pu l'identifier dans ses référentiels, le participant est géolocalisé et un lien vers la page de l'entité est proposé. Seuls les participants identifiés sont géolocalisés. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q37' target='_blank' >Quels sont les référentiels d'entités utilisés dans scanR ?</a></li>",
+      "en": "List of project participants. When a participant is identified, i.e. scanR has been able to identify it in its repositories, the participant is geolocated and a link to the entity's page is provided. Only identified participants are geolocated. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q37' target='_blank' >What are the entity repositories used in scanR ? </a></li>"
     }
   },
   {
     "key": "ProjectProduction",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Productions issues du projet",
+      "en": "Productions from the project"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des productions issues du projet. Cette liste n'est pas exhaustive, et seules les productions que scanR a pu lier au projet sont affichées. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li>",
+      "en": "List of productions resulting from the project. This list is not exhaustive, and only the productions that scanR may have linked to the project are displayed. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q43' target='_blank' >scanR uses information from commercial databases? </a></li>"
     }
   },
   {
     "key": "ProjectSimilar",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Projets similaires",
+      "en": "Similar projects"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste des projets partageant des thématiques de recherche communes. Le calcul de proximité est basé uniquement sur les mots du contenus des metadonnées (titre, résumé ...) mais pas sur des liens de participants ou de financement.",
+      "en": "This section lists projects that share common research themes. The proximity calculation is based only on the words of the metadata content (title, abstract...) but not on participant or funding links."
     }
   },
   {
