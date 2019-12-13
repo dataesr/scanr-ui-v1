@@ -487,7 +487,7 @@
       "en": "Collaborations"
       },
     "definition": {
-      "fr": "Cette section liste les auteurs avec qui l'auteur de la page regardée a co-écrit une production ou participé à une même thèse (par exemple l'un étant membre du jury, l'autre étant auteur de la thèse). Une collaboration est affichée dès lors que scanR a pu repérer (via leur idref) les auteurs dans une production commune ou une thèse. Ainsi, cette liste de collaboration n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs  disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li>",
+      "fr": "Cette section liste les auteurs avec qui l'auteur de la page regardée a co-écrit une production ou participé à une même thèse (par exemple l'un étant membre du jury, l'autre étant auteur de la thèse). Une collaboration est affichée dès lors que scanR a pu repérer (via leur idref) les auteurs dans une production commune ou une thèse. Ainsi, cette liste de collaboration n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li>",
       "en": "This section lists the authors with whom the author of the page being examined has co-written a production or participated in the same thesis (for example, one being a member of the jury, the other being the author of the thesis). A collaboration is displayed as soon as scanR has been able to identify (via their idref) the authors in a joint production or thesis. Thus, this list of collaborations is not exhaustive. Related questions in the FAQ: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li>"
     }
   },
@@ -524,7 +524,7 @@
       },
     "definition": {
       "fr": "Liste des productions issues du projet. Cette liste n'est pas exhaustive, et seules les productions que scanR a pu lier au projet sont affichées. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li>",
-      "en": "List of productions resulting from the project. This list is not exhaustive, and only the productions that scanR may have linked to the project are displayed. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q43' target='_blank' >scanR uses information from commercial databases? </a></li>"
+      "en": "List of productions resulting from the project. This list is not exhaustive, and only the productions that scanR may have linked to the project are displayed. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases? </a></li>"
     }
   },
   {
@@ -543,96 +543,84 @@
     "key": "PublicationOA",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Accès à la production",
+      "en": "Access to the production"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section indique si la production est en accès ouvert ou fermé. Si l'accès est ouvert, le type d'hébergement principal est indiqué (chez l'éditeur ou archive ouverte), avec une priorité pour l'hébergement chez l'éditeur en cas d'hébergement multiple. Le lien de téléchargement est aussi disponible. Questions liées dans la FAQ : <br/> <li><a href='/faq/q35' target='_blank'> Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section indicates whether the production is in open or closed access. If access is open, the main type of hosting is indicated (with the publisher or open archive), with priority for hosting with the publisher in case of multiple hosting. The download link is also available. FAQ related questions: <br/> <li><a href='/faq/q35' target='_blank'> How is the opening status of a research publication referenced in scanR determined? </a></li><li><a href='/faq/q7' target='_blank'>May be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "PublicationAuthor",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Auteurs de la publication",
+      "en": "Publication authors"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des auteurs de la publication. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. scanR étant multi-sources, des doublons peuvent apparaître, ainsi que des erreurs en cas d'erreur dans la source. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "List of authors of the publication. When scanR has identified an author, a link to his author page is indicated. As scanR is multi-source, duplicates can appear, as well as errors in case of errors in the source. FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "PublicationAffiliation",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Affiliations de la publication",
+      "en": "Publication affiliations"
       },
     "definition": {
-      "fr": "",
-      "en": ""
-    }
-  },
-  {
-    "key": "ThesisOA",
-    "icon": "fas fa-flask",
-    "label": {
-      "fr": "",
-      "en": ""
-      },
-    "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des affiliations de la publication. Seules les affiliations identifiées (c'est-à-dire que scanR a pu retrouver parmi ses référentiels) sont affichées. Les pages web des publications, les métadonnées ouvertes et les portails HAL des organismes et laboratoires sont utilisés pour reconstituer cette information. Cette liste n'est pas exhaustive et peut contenir des erreurs, notamment en cas d'erreur dans les données source. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "List of affiliations of the publication. Only identified affiliations (i.e. scanR was able to find among its repositories) are displayed. Publication web pages, open metadata and HAL portals of organizations and laboratories are used to reconstruct this information. This list is not exhaustive and may contain errors, particularly in the event of errors in the source data. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking?</a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases ?</a></li><li><a href='/faq/q7' target='_blank' >May there be errors in scanR ?</a></li>"
     }
   },
   {
     "key": "ThesisAuthor",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Personnes liées à la thèse",
+      "en": "Persons related to the thesis"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Cette section liste les personnes en lien avec la thèse. Son auteur évidemment, ainsi que son ou ses encadrants. Sont aussi mentionnées les rapporteurs et membre du jury de thèse. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
+      "en": "This section lists the people related to the thesis. Its author of course, as well as its supervisor(s). The rapporteurs and member of the thesis jury are also mentioned. When scanR has identified an author, a link to his author page is indicated. FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
     }
   },
   {
-    "key": "ThesisAffiliation",
+    "key": "PatentFamily",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Famille de brevets",
+      "en": "Patent family"
       },
     "definition": {
-      "fr": "",
-      "en": ""
-    }
-  },
-  {
-    "key": "PatentDepot",
-    "icon": "fas fa-flask",
-    "label": {
-      "fr": "",
-      "en": ""
-      },
-    "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet. Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'est-ce qu'une famille de brevets ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une famille ?</a></li><li><a href='/faq/q49' target='_blank' >A quoi correspond la date de première publication d'une famille ?</a></li>",
+      "en": "A patent is only valid in a specific territory. Thus, it is necessary to file a patent application in all the areas where one wishes to be protected. Procedures facilitate the process, but in the end they give rise to a series of applications in various national or regional offices, which are grouped together in what is known as a family of patents. A patent family is therefore a group of related patent applications. The simple family includes all documents with exactly the same priority or combination of priorities and therefore those that refer to the same invention, with identical technical content. The extended family (Inpadoc) includes all documents that have at least one priority in common. The documents of this family can therefore be linked together indirectly. It therefore represents more a technology than an invention, as differences may appear between the technical content of the different requests. In most cases, simple and extended families overlap and submit the same patent applications. Related questions in the FAQ: <br/><li><a href='/faq/q45' target='_blank' >What is a patent family? </a></li><li><a href='/faq/q47' target='_blank' >What is the difference between a patent and a patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the first application date of a family? </a></li><li><a href='/faq/q49' target='_blank' >What is the first publication date of a family ?</a></li>"
     }
   },
   {
     "key": "PatentParticipant",
     "icon": "fas fa-flask",
     "label": {
-      "fr": "",
-      "en": ""
+      "fr": "Déposants et inventeurs",
+      "en": "Applicants and inventors"
       },
     "definition": {
-      "fr": "",
-      "en": ""
+      "fr": "Liste des déposants et inventeurs. Lorsqu'un déposant est identifié, un lien vers sa page est indiqué. Questions liées dans la FAQ : <br/><li><a href='/faq/q46' target='_blank' >Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?</a></li><li><a href='/faq/q52' target='_blank' >Quelles sont les sources utilisées pour les brevets ?</a></li>  ",
+      "en": "List of applicants and inventors. When an applicant is identified, a link to his page is indicated. FAQ related questions: <br/><li><a href='/faq/q46' target='_blank' >Why participants appear in duplicate in the same patent family ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li> "
+    }
+  },
+  {
+    "key": "PatentDepot",
+    "icon": "fas fa-flask",
+    "label": {
+      "fr": "Dépôts de brevets",
+      "en": "Patents applications"
+      },
+    "definition": {
+      "fr": "La liste des dépôts de brevets de la famille représente toutes les demandes de protection déposées concernant l'invention. Cette section présente cette liste sous forme cartographique et tabulaire. Questions liées dans la FAQ : <br/><li><a href='/faq/q51' target='_blank' >A quoi correspond la liste des dépôts ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li>",
+      "en": "The list of the family patent applications represents all the applications for protection filed for the invention. This section presents this list in both cartographic and tabular form. FAQ related questions: <br/><li><a href='/faq/q51' target='_blank' >What is the list of deposits ?</a></li><li><a href='/faq/q52' target='_blank' >What are the sources used for patents ?</a></li>"
     }
   },
   {
