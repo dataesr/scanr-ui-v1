@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
-// import EmptySection from '../../../Shared/EmptySection/EmptySection';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
 import classes from './Evaluations.scss';
 import logo from '../../../../Shared/images/hceres-logo.png';
@@ -22,13 +18,8 @@ import logo from '../../../../Shared/images/hceres-logo.png';
 const Evaluations = (props) => {
   // Test des données
   if (!props.data || !props.data.evaluations || !props.data.evaluations.length > 0) {
-    return null;
+    return <EmptySection />;
   }
-
-  const messages = {
-    fr: messagesFr,
-    en: messagesEn,
-  };
 
   const evaluations = props.data.evaluations;
 
@@ -116,7 +107,7 @@ const Evaluations = (props) => {
                 <p className={classes.TitleYear}>{year}</p>
                 <p className={classes.NbReports}>{counter}</p>
                 <p className={classes.ReportsLabel}>
-                  {messages[props.language].report}
+                  {<FormattedHTMLMessage id="Entity.Evaluations.report" />}
                   {(counter > 1) ? 's' : null}
                 </p>
                 <div className="h-100">
@@ -124,8 +115,8 @@ const Evaluations = (props) => {
                     <div className="h-100 d-flex align-items-center justify-content-center">
                       <ButtonWithModal
                         logo="fas fa-landmark"
-                        title={messages[props.language].title}
-                        buttonLabel={messages[props.language].listLabel}
+                        title={<FormattedHTMLMessage id="Entity.Evaluations.title" />}
+                        buttonLabel={<FormattedHTMLMessage id="Entity.Evaluations.listLabel" />}
                         dataHtml={listJSX}
                       />
                     </div>
@@ -164,6 +155,5 @@ const Evaluations = (props) => {
 export default Evaluations;
 
 Evaluations.propTypes = {
-  language: PropTypes.string.isRequired,
   data: PropTypes.string.isRequired,
 };

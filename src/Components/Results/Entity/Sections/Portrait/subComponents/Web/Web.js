@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
+import { FormattedHTMLMessage } from 'react-intl';
 
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import MainWebSiteButton from './MainWebSiteButton';
@@ -13,15 +14,6 @@ import getWebSiteByType from '../../../../../../../Utils/getWebSiteByType';
 import { OTHER_WEBSITES } from '../../../../../../../config/config';
 
 import classes from './Web.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * Web
@@ -164,7 +156,7 @@ const Web = (props) => {
               <div className={classes.Web}>
                 <div className="row">
                   <div className={`col ${classes.NoSpace}`}>
-                    <CardsTitle title={messages[props.language]['Entity.portrait.web.title']} />
+                    <CardsTitle title={<FormattedHTMLMessage id="Entity.Portrait.Web.title" />} />
                   </div>
                 </div>
 

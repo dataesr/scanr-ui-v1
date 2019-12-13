@@ -1,11 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import classes from './Web.scss';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
 
 /**
  * MainWebSiteButton
@@ -15,10 +11,6 @@ import messagesEn from './translations/en.json';
  * Accessible : .
  * Tests unitaires : .
 */
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 const MainWebSiteButton = props => (
   <a href={props.url} className={classes.MainWebSiteButton} target="_blank" rel="noopener noreferrer">
@@ -26,7 +18,7 @@ const MainWebSiteButton = props => (
       <i className="fas fa-mouse-pointer" />
     </div>
     <div>
-      {messages[props.language]['Entity.portrait.web.mainWebSiteButton.label']}
+      {<FormattedHTMLMessage id="Entity.Portrait.Web.MainWebSiteButton.label" />}
     </div>
   </a>
 );
@@ -34,6 +26,5 @@ const MainWebSiteButton = props => (
 export default MainWebSiteButton;
 
 MainWebSiteButton.propTypes = {
-  language: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
 };
