@@ -103,7 +103,7 @@ class Thesis extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
-          <StyledSection object="productions" color="lightgrey" position="top" id="Identity">
+          <StyledSection object="productions" color="lightgrey" position="bottomleft" id="Identity">
             <div className="container">
               <SectionTitle
                 icon="fa-id-card"
