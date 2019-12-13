@@ -11,7 +11,7 @@ import { GlobalContext } from './GlobalContext';
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
-const EntityPage = lazy(() => import('./Components/Results/Entity/Entity'));
+const EntityPage = lazy(() => import('./Components/Results/Entity/Entity2'));
 const ProductionPage = lazy(() => import('./Components/Results/Production/Production'));
 const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));

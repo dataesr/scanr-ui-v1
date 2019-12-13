@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../GlobalContext';
-import useScrollY from '../../Hooks/UseScrollY';
+import useScrollY from '../../Hooks/useScrollY';
 
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
