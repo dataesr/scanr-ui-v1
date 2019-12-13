@@ -31,6 +31,16 @@ export default {
       },
       size: 50,
     },
+    productionTypes: {
+      field: 'productionType',
+      filters: {},
+      min_doc_count: 1,
+      order: {
+        direction: 'DESC',
+        type: 'COUNT',
+      },
+      size: 100,
+    },
     keywordsEn: {
       field: 'keywords.en',
       filters: {},
