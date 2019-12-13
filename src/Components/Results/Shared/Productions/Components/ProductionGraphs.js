@@ -40,7 +40,7 @@ const ProductionGraphs = (props) => {
   };
 
   const active = (props.activeGraph) ? props.activeGraph : graphFor[props.productionType][0];
-  const subtitle = (props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter. Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect. They cannot be used for assessment purposes.');
+  const subtitle = (props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter. Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data represent only what scanR managed to collect. They cannot be used for assessment purposes.');
 
   const renderGraph = () => {
     if (active === 'keywords') {

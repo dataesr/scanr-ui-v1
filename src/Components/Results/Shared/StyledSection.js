@@ -18,12 +18,12 @@ import GreenWhiteBackground from '../../../images/img/poudre-vert_Fblanc-A.jpg';
 import BlueOrangeBackground from '../../../images/img/poudre-orange-Fbleu-BR.jpg';
 
 const positions = {
-  top: 'top',
+  top: '-50% -50%',
   bottom: 'bottom',
-  bottomleft: '-25% 100%',
+  bottomleft: 'bottom -950px left -1600px',
   bottomright: '75% 100%',
   topleft: '10% -30%',
-  topright: '10% -30%',
+  topright: '50% 50%',
   left: '10% -30%',
   right: '10% -30%',
 };
@@ -63,13 +63,10 @@ const colors = {
 };
 
 const Section = styled.section`
-  padding-top: 1.25em;
-  padding-bottom: 1.25em;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
   background-repeat: no-repeat;
-  background-attachment: relative;
-  -webkit-background-size: cover;
   background-color: ${props => props.theme.backgroundColor};
-  background-size: 50%;
   background-position: ${props => props.theme.imagePosition};
   background-image: url(${props => props.theme.backgroundImage});
 `;

@@ -80,7 +80,8 @@ class Projects extends Component {
     const preRequest = PreRequest;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 4095);
+      const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
+      allIds = allIds.concat(childs);
     }
     preRequest.filters['participants.structure.id'].values = allIds;
     Axios.post(url, preRequest).then((response) => {
@@ -128,7 +129,8 @@ class Projects extends Component {
 
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
-      allIds = allIds.concat(this.props.childs).slice(0, 4095);
+      const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
+      allIds = allIds.concat(childs);
     }
     Request.filters['participants.structure.id'].values = allIds;
     dateRequest.filters['participants.structure.id'].values = allIds;
