@@ -41,12 +41,10 @@ class Ecosystem extends Component {
     selectedCollaboration: {},
   }
 
-  componentDidUpdate = (prevProps) => {
-    if (prevProps.data !== this.props.data) {
-      this.setState({ data: this.props.data });
-      this.createKindFilter();
-      this.createFrIntFilter();
-    }
+  componentDidMount() {
+    this.setState({ data: this.props.data });
+    this.createKindFilter();
+    this.createFrIntFilter();
   }
 
   getDataGraph = () => {
