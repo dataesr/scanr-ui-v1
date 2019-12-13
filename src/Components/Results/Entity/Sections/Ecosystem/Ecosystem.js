@@ -413,7 +413,7 @@ class Ecosystem extends Component {
     }
 
     const dataGraph = this.getDataGraph();
-    const subtitle = (this.props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter.<br/>Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data are represent only what scanR managed to collect.<br/>They cannot be used for assessment purposes.');
+    const subtitle = (this.props.language === 'fr') ? ("Avertissement : Ces données ne représentent que ce que scanR a réussi à collecter.<br/>Elles ne doivent pas être utilisées à des fins d'évaluation.") : ('Disclaimer: These data represent only what scanR managed to collect.<br/>They cannot be used for assessment purposes.');
 
     return (
       <Fragment>
