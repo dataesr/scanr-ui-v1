@@ -24,7 +24,7 @@ const Domains = (props) => {
         .filter(txt => (txt))
         .filter(txt => (txt.length > 1))
         .filter(txt => (txt.length < 20))
-        .sort((a, b) => b.length - a.length);
+        .sort((a, b) => a.length - b.length);
     }
     const domains = [...new Set(tags)];
     const keywords = [...new Set(getSelectedKey(props.data, 'keywords', props.language, 'default'))];
