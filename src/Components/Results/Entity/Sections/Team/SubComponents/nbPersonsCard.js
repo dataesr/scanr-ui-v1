@@ -1,19 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { FormattedHTMLMessage } from 'react-intl';
 import ButtonWithModal from '../../../../../Shared/Ui/Buttons/ButtonWithModal';
 import classes from './nbPersonsCard.scss';
 
 import logo from '../../../../../Shared/svg/icon-fiche-responsable_h.svg';
-
-/* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
 
 /**
  * nbPersonsCard
@@ -39,8 +30,8 @@ const nbPersonsCard = props => (
     <div className="mt-auto" style={{ marginBottom: '8px' }}>
       <ButtonWithModal
         logo="fas fa-expand"
-        title={messages[props.language].allTeamLabel}
-        buttonLabel={messages[props.language].showAll}
+        title={<FormattedHTMLMessage id="Entity.Team.NbPersonsCard.allTeamLabel" />}
+        buttonLabel={<FormattedHTMLMessage id="Entity.Team.NbPersonsCard.showAll" />}
         dataHtml={props.personsModalList}
       />
     </div>
@@ -50,7 +41,6 @@ const nbPersonsCard = props => (
 export default nbPersonsCard;
 
 nbPersonsCard.propTypes = {
-  language: PropTypes.string.isRequired,
   nbPersons: PropTypes.number.isRequired,
   personsModalList: PropTypes.any,
 };
