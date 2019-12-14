@@ -116,7 +116,7 @@ const Localisation = (props) => {
                             type="button"
                             onClick={() => setEntityAround(!showEntityAround)}
                           >
-                            {<FormattedHTMLMessage id="Entity.Portrait.Localisation.nearby" />}
+                            <FormattedHTMLMessage id="Entity.Portrait.Localisation.nearby" />
                           </button>
                         )
                         : null

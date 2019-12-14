@@ -21,7 +21,7 @@ const ParticipantRow = props => (
           <div className="d-flex justify-content-start align-items-bottom pr-2">
             <span className={classes.yellowBullet} />
             <p className={classes.Funding}>
-              {<FormattedHTMLMessage id="Project.ParticipantsRow.coordinator" />}
+              <FormattedHTMLMessage id="Project.ParticipantsRow.coordinator" />
             </p>
           </div>
         )

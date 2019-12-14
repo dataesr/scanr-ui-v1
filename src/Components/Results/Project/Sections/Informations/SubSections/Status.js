@@ -41,7 +41,7 @@ const Status = (props) => {
     <div className="col-6">
       <div className="row">
         <h3 className={`col-12 ${classes.SubSectionTitle}`}>
-          {<FormattedHTMLMessage id="Project.Informations.Status.title" />}
+          <FormattedHTMLMessage id="Project.Informations.Status.title" />
         </h3>
         <div className={`col-6 ${classes.CardContainer}`}>
           {
