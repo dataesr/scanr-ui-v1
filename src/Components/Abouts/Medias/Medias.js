@@ -8,7 +8,7 @@ import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
 import Background from './poudre-bleu_Fgris-B.jpg';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
-import MediasCard from '../../Shared/CardWithButton/MediasCard';
+import MediasCard from '../../Shared/CardWithButton/MediasCard2';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -25,6 +25,10 @@ const messages = {
 const sectionStyle = {
   backgroundImage: `url(${Background})`,
 };
+// eslint-disable-next-line
+const filename = './data.json';
+// eslint-disable-next-line
+const data = require(`${filename}`).medias;
 
 const Medias = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
@@ -40,39 +44,21 @@ const Medias = props => (
       />
       <section style={sectionStyle} className={classes.Content}>
         <div className="container">
-          <div className={`row ${classes.periode}`}>
-               en 2017
-          </div>
           <div className="row">
-            <MediasCard
-              language={props.language}
-              messages={messages}
-              article="Medias.article1"
-              url="https://punktokomo.abes.fr/2017/11/27/quand-scanr-et-idref-sassocient-pour-identifier-les-acteurs-de-la-recherche-et-de-linnovation/"
-            />
-          </div>
-          <div className={`row ${classes.periode}`}>
-             en 2016
-          </div>
-          <div className="row">
-            <MediasCard
-              messages={messages}
-              language={props.language}
-              article="Medias.article2"
-              url="https://www.lagazettedescommunes.com/472571/estelle-grelier-lopen-data-rapproche-laction-publique-des-citoyens/"
-            />
-            <MediasCard
-              language={props.language}
-              messages={messages}
-              article="Medias.article3"
-              url="https://www.lemoniteur.fr/article/place-a-la-mise-en-uvre-de-la-loi-pour-une-republique-numerique.1332739"
-            />
-            <MediasCard
-              language={props.language}
-              messages={messages}
-              article="Medias.article4"
-              url="https://politiques-innovation.org/scanr-un-moteur-de-lopen-innovation-en-france/"
-            />
+            {
+              data.map(media => (
+                <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
+                  <MediasCard
+                    language={props.language}
+                    messages={messages}
+                    title={media.title}
+                    source={media.source}
+                    date={media.date}
+                    url={media.url}
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </section>
