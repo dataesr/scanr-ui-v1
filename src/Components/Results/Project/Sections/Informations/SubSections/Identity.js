@@ -37,7 +37,7 @@ const Identity = (props) => {
       <div className="col-6">
         <div className="row">
           <h3 className={`col-12 ${classes.SubSectionTitle}`}>
-            {<FormattedHTMLMessage id="Project.Informations.Identity.title" />}
+            <FormattedHTMLMessage id="Project.Informations.Identity.title" />
           </h3>
           <div className={`col-6 ${classes.CardContainer}`}>
             <LogoCard

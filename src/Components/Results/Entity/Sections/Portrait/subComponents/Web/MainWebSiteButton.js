@@ -18,7 +18,7 @@ const MainWebSiteButton = props => (
       <i className="fas fa-mouse-pointer" />
     </div>
     <div>
-      {<FormattedHTMLMessage id="Entity.Portrait.Web.MainWebSiteButton.label" />}
+      <FormattedHTMLMessage id="Entity.Portrait.Web.MainWebSiteButton.label" />
     </div>
   </a>
 );

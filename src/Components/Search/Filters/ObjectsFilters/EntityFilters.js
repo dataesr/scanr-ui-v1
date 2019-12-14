@@ -83,7 +83,7 @@ const EntityFilters = (props) => {
           }}
         />
         <div className={classes.FilterHeaders}>
-          {<FormattedHTMLMessage id="Search.Filters.others" />}
+          <FormattedHTMLMessage id="Search.Filters.others" />
         </div>
         <CheckBoxFilter
           language={props.language}

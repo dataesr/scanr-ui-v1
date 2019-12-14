@@ -64,7 +64,7 @@ class SocialNetworksFlow extends Component {
                     <div className={`col ${classes.NoSpace}`}>
                       <div className={`d-flex justify-content-between ${classes.CardsTitle}`}>
                         <h2>
-                          {<FormattedHTMLMessage id="Entity.Portrait.SocialNetworksFlow.title" />}
+                          <FormattedHTMLMessage id="Entity.Portrait.SocialNetworksFlow.title" />
                         </h2>
                         <div className={classes.Button}>
                           <button
