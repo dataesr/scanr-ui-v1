@@ -23,7 +23,7 @@ const PileCard = (props) => {
   return (
     <div className={classes.card}>
       <div className={classes.Title}>
-        {<FormattedHTMLMessage id={`Project.PileCard.${status}`} />}
+        <FormattedHTMLMessage id={`Project.PileCard.${status}`} />
       </div>
       <div className="d-flex align-items-center justify-content-center">
         <div className={classes.Pile} style={{ borderColor: color }}>
