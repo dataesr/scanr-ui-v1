@@ -10,6 +10,7 @@ import wordCloudModule from 'highcharts/modules/wordcloud';
 import ShareComponent from './SubComponents/ShareComponent';
 
 import classes from '../GraphComponents.scss';
+import styles from '../../../../style.scss';
 
 wordCloudModule(Highcharts);
 
@@ -69,7 +70,7 @@ export default class HighChartsWordCloud extends Component {
       tooltip: {
         enabled: false,
       },
-      colors: ['#43ab92', '#f75f00', '#c93838', '#512c62', '#8f4426', '#64ccda', '#5f6769', '#ff78ae', '#00818a', '#0c093c'],
+      colors: [styles.scanrdeepblueColor, styles.warningColor, styles.scanrelectricblueColor, styles.entityColor, styles.personColor, styles.productionColor, styles.projectgreenColor],
       title: {
         text: '',
       },
