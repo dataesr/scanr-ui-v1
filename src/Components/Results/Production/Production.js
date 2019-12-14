@@ -32,7 +32,15 @@ const Production = (props) => {
       data: prop.data,
       id: prop.match.params.id,
     };
-    switch (prop.data.productionType) {
+    let displayType = '';
+    if (prop.data.productionType === 'patent') {
+      displayType = 'patent';
+    } else if (prop.data.id.indexOf('these') !== -1) {
+      displayType = 'thesis';
+    } else {
+      displayType = 'publication';
+    }
+    switch (displayType) {
       case 'patent': return <Patent {...properties} />;
       case 'thesis': return <Thesis {...properties} />;
       case 'publication': return <Publication {...properties} />;
