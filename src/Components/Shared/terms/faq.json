@@ -138,8 +138,8 @@
       "en": "How to refine a search in scanR with operators?"
     },
     "definition": {
-      "fr": "scanR utilise le moteur de recherche Elasticsearch (https://www.elastic.co/]. Il est possible à l'utilisateur de construire une requête complexe pour générer des résultats plus adaptés à une question spécifique.\nLes opérateurs disponibles sont le \"+\" (et), le \"-\" (négation) et le \"ou\" (|). Par exemple, pour faire une recherche bilingue sur le changement climatique, la requête (changement+climatique) | (climate+change) pourra être utilisée. Concernant la négation, le \"-\" doit être placé directement avant le mot interdit, sans espace.",
-      "en": "scanR uses the Elasticsearch search engine [https://www.elastic.co/]. It is possible for the user to build a complex query to generate results that are more relevant to a specific question.\nThe available operators are \"+\" (and), \"-\" ( negation) and \"or\" (|). For example, to do a bilingual research on climate change, the query (changement+climatique) | (climate+change) could be used. Concerning the negation, the \"-\" must be placed directly before the forbidden word, without space."
+      "fr": "scanR utilise le moteur de recherche <a href='https://www.elastic.co/' target='_blank'>Elasticsearch</a>. Il est possible à l'utilisateur de construire une requête complexe pour générer des résultats plus adaptés à une question spécifique.\nLes opérateurs disponibles sont le \"+\" (et), le \"-\" (négation) et le \"|\" (ou). Par exemple, pour faire une recherche bilingue sur le changement climatique, la requête (changement+climatique) | (climate+change) pourra être utilisée. Concernant la négation, le \"-\" doit être placé directement avant le mot interdit, sans espace.",
+      "en": "scanR uses the <a href='https://www.elastic.co/' target='_blank'>Elasticsearch</a> search engine. It is possible for the user to build a complex query to generate results that are more relevant to a specific question.\nThe available operators are \"+\" (and), \"-\" ( negation) and \"|\" (or). For example, to do a bilingual research on climate change, the query (changement+climatique) | (climate+change) could be used. Concerning the negation, the \"-\" must be placed directly before the forbidden word, without space."
     }
   },
   {
@@ -499,11 +499,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment la section \"Equipe\" d'une fiche entité est alimentée dans scanR ?",
-      "en": "nan"
+      "en": "How is the \"Team\" section of an entity record populated in scanR?"
     },
     "definition": {
-      "fr": "L'équipe de direction des structures de recherche est identifiée grâce au Répertoire national des structures de recherche. Pour alimenter la section \"Auteurs associés à cette entité\", scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. C'est cette information qui est utilisée pour identifier les auteurs qui ont au moins une fois dans leur parcours scientifique. Cette section ne donne donc aucune indication sur la taille et la composition de l'équipe de l'entité.",
-      "en": "nan"
+      "fr": "L'équipe de direction des structures de recherche est identifiée grâce au Répertoire national des structures de recherche. Pour alimenter la section \"Auteurs identifiés dans la structure depuis 2018\", scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. C'est cette information qui est utilisée pour identifier les auteurs qui ont au moins une fois au cours des deux dernières années été associés à cette entité via une production. Cette section ne donne donc aucune indication sur la taille et la composition de l'équipe de l'entité.",
+      "en": "The management team of research structures is identified through the National Directory of Research Structures (RNSR). To feed the \"Authors identified in the structure since 2018\" section, scanR carries out an analysis of the affiliations of the authors mentioned in the productions it covers.  This analysis makes it possible to associate an author, an affiliation and a year of publication. It is this information that is used to identify authors who, over the past two years, have been associated with this entity through production at least once. This section therefore gives no indication of the size and composition of the entity's team."
     }
   },
   {
@@ -512,11 +512,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Comment est construite la chronologie des affiliations d'une auteur ?",
-      "en": "nan"
+      "en": "How is the chronology of an author's affiliations constructed?"
     },
     "definition": {
-      "fr": "scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. L'exhaustivité du repérage dépend de la capacité de scanR à associer un texte libre figurant sur une production à une entité référencée dans scanR. Des erreurs sont possibles mais scanR peut les corriger. Contactez-nous ?",
-      "en": "nan"
+      "fr": "scanR procède à une analyse des affiliations des auteurs mentionnées dans les productions qu'il couvre. Cette analyse permet d'associer un auteur, une affiliation et une année de publication. L'exhaustivité du repérage dépend de la capacité de scanR à associer un texte libre figurant sur une production à une entité référencée dans scanR. Des erreurs sont possibles mais scanR peut les corriger. Contactez-nous !",
+      "en": "scanR carries out an analysis of the affiliations of the authors mentioned in the productions it covers. This analysis makes it possible to associate an author, an affiliation and a year of publication. The completeness of the tracking depends on scanR's ability to associate free text on a production with an entity referenced in scanR. Errors are possible but scanR can correct them. Contact us!"
     }
   },
   {
@@ -525,11 +525,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR est-il exhaustif dans ses repérages ?",
-      "en": "nan"
+      "en": "Is scanR comprehensive in its tracking?"
     },
     "definition": {
       "fr": "L'information mobilisée dans scanR provient de multiples sources de qualité très hétérogène. Ces sources sont associées à des référentiels qui leur sont souvent propres. scanR met en oeuvre un ensemble de processus pour fédérer autour d'\"Objets\" précis (entités, projets, auteurs, production) un maximum d'informations relatives à l'activité de recherche et d'innovation et tisser des liens entre ces \"Objets\". Il est impossible de garantir l'exhaustivité et l'absolue qualité des repérages et associations d' \"Objets\" réalisés dans scanR. Mais scanR cherche constamment à s'améliorer. Alors, aidez-nous à l'améliorer, signalez-nous les erreurs manifestes, les \"bizareries\" et autres bugs !",
-      "en": "nan"
+      "en": "The information mobilized in scanR comes from multiple sources of very heterogeneous quality. These sources are often associated with their own repositories. scanR implements a set of processes to federate around specific \"Objects\" (entities, projects, persons, production) a maximum of information relating to the research and innovation activity and to establish links between these \"Objects\". It is impossible to guarantee the completeness and absolute quality of the tracking and associations of \"Objects\" made in scanR. But scanR is constantly looking to improve. So, help us improve it, report obvious errors, \"weird\" and other bugs!"
     }
   },
   {
@@ -538,11 +538,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "scanR utilise-t-il des informations issues de bases de données commerciales ?",
-      "en": "nan"
+      "en": "Does scanR use information from commercial databases?"
     },
     "definition": {
       "fr": "*Non*, scanR ne mobilise que des sources ouvertes. scanR ne rediffuse aucune information issue de bases de données commerciales. scanR n'utilise dans ses processus d'enrichissement et de nettoyage de l'information aucune information issue de bases de données commerciales.",
-      "en": "nan"
+      "en": "*No*, scanR only uses open sources. scanR does not redistribute any information from commercial databases. scanR does not use any information from commercial databases in its enrichment and cleaning processes."
     }
   },
   {
@@ -551,11 +551,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la place des informations issues des sites web des entités dans scanR ?",
-      "en": "nan"
+      "en": "What is the place of information from entities' websites in scanR?"
     },
     "definition": {
-      "fr": "Ces informations permettent au moteur de recherche de remonter des entités pour lesquelles nous n'avons pas d'informations structurées, mais dont le site web mentionne les mots clé de recherche.",
-      "en": "nan"
+      "fr": "L'information extraite des sites web permet d'alimenter le moteur de moteur de recherche en complément des informations issues de bases de données. Cette méthode permet notamment de remonter dans les résultats de recherche des entités pour lesquelles aucune ou peu d'information est disponible, mais dont le site web mentionne les mots clé de recherche. Elle permet également de proposer un service de recherche plus réactif dans la mesure où les sites web mentionnent des événements qui n'apparaissent pas ou avec retard dans les productions de l'entité.",
+      "en": "The information extracted from the websites is used to feed the search engine engine in addition to the information from databases. This method makes it possible to retrieve in the search results entities for which no or little information is available, but whose website mentions the key search words. It also makes it possible to offer a more responsive search service insofar as websites mention events that do not appear or with delay in the entity's productions."
     }
   },
   {
@@ -685,6 +685,19 @@
     },
     "definition": {
       "fr": "Une demande de brevet nationale est effectuée au sein d'un office national et délivre des brevets nationaux, protégeant sur le territoire national.\nUne demande de brevet internationale est une procédure de dépôt de brevet unique pour tous les pays contractants du Patent Cooperation Treaty (PCT). Avant la mise en place de cette procédure, il fallait déposer une demande dans chacun des pays où l'on souhaitait se protéger. Ce système permet la centralisation des dépôts, des recherches d'antériorité et de l'examen des demandes lors de la phase internationale : cela simplifie les démarches et les rend plus efficaces et moins coûteuses. Ce n'est cependant pas un système permettant une délivrance à l'international : à la suite de la phase internationale, des phases nationales ou régionales ont lieu pour permettre la délivrance du brevet.\nUne demande régionale est une demande effectuée auprès d'un office régional : la demande peut être effectuée directement auprès de l'office régional ou bien elle est faite par désignation lors de la procédure du PCT.",
+      "en": "nan"
+    }
+  },
+  {
+    "key": "q55",
+    "groupkey": "projects",
+    "icon": "fas fa-question-circle",
+    "label": {
+      "fr": "Qu'est-ce que le programme H2020 ?",
+      "en": "nan"
+    },
+    "definition": {
+      "fr": "H2020 est le programme européen de soutien à la Recherche, au développement et à l’innovation (RDI). Il intègre l’ex-PCRDT, l’Institut européen d’innovation et de technologie et les actions innovations du Programme-cadre pour la compétitivité et l'innovation (CIP). Il s’articule principalement autour de 3 grands « Piliers » : « Excellence scientifique » orienté plus recherche fondamentale, « Primauté industrielle » et « Défis sociétaux » orientés plus applicatifs. Il est mis en œuvre essentiellement au travers de projets collaboratifs et européens, mais il est possible pour les PME innovantes d’obtenir des financements individuels.\nLe programme H2020 est doté d’un budget de 80 milliards d’€ sur la période 2014 - 2020\n<a href='https://bit.ly/2LKOWW6' target='_blank'>En savoir plus sur H2020</a> \n<a href='https://bit.ly/38qctFD' target='_blank'>En savoir plus sur les Work Programme</a>",
       "en": "nan"
     }
   }
