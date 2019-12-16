@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import Similars from '../Shared/Similars/Similars';
@@ -11,7 +11,6 @@ import getSelectKey from '../../../../Utils/getSelectKey';
 
 // Styles
 import { SectionGrey, SectionWhite, SectionProductions } from '../../Shared/styles';
-
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -44,7 +43,7 @@ const Patent = (props) => {
               lexicon="PatentFamily"
               language={props.language}
               id={props.id}
-              title={<FormattedHTMLMessage id="Patent.identity" />}
+              title={messages[props.language]['Patent.identity']}
             />
             <Identity language={props.language} data={props.data} id={props.id} />
           </div>
@@ -57,7 +56,7 @@ const Patent = (props) => {
               objectType="publications"
               language={props.language}
               id={props.id}
-              title={<FormattedHTMLMessage id="Patents.participants" />}
+              title={messages[props.language]['Patent.participants']}
             />
             <Participants
               language={props.language}
@@ -75,7 +74,7 @@ const Patent = (props) => {
               language={props.language}
               id={props.id}
               lexicon="PatentDepot"
-              title={<FormattedHTMLMessage id="Patent.depots" />}
+              title={messages[props.language]['Patent.depots']}
               viewModeClickHandler={view => setDepotsViewMode(view)}
               viewMode={depotsViewMode}
             />
@@ -94,7 +93,7 @@ const Patent = (props) => {
               icon="fa-folder-open"
               lexicon="PublicationSimilar"
               language={props.language}
-              title={<FormattedHTMLMessage id="Patents.similars" />}
+              title={messages[props.language]['Patent.similars']}
             />
             <Similars language={props.language} id={props.id} />
           </div>

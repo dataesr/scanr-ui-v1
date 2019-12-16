@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
-import EntityCard from '../../../../Shared/Ui/EntityCard/EntityCard';
+import EntityCard from '../../../../Shared/Ui/DeposantCard/DeposantCard';
 import CardsTitle from '../../../../Shared/Ui/CardsTitle/CardsTitle';
 import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../../Shared/Ui/CounterListCard/CounterListCard';
