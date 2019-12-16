@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 // Hooks
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -88,7 +88,7 @@ const Project = (props) => {
               objectType="projects"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.informations" />}
+              title={msg[props.language]['Project.informations']}
             />
             <Informations
               language={props.language}
@@ -103,7 +103,7 @@ const Project = (props) => {
               objectType="projects"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.financial" />}
+              title={msg[props.language]['Project.financial']}
             />
             <Financial
               language={props.language}
@@ -119,7 +119,7 @@ const Project = (props) => {
               objectType="projects"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.programs" />}
+              title={msg[props.language]['Project.programs']}
             />
             <Programs
               language={props.language}
@@ -134,7 +134,7 @@ const Project = (props) => {
               objectType="projects"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.description" />}
+              title={msg[props.language]['Project.description']}
             />
             <div className="row">
               <div className="col-12">
@@ -151,7 +151,7 @@ const Project = (props) => {
               language={props.language}
               lexicon="ProjectProduction"
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.productions" />}
+              title={msg[props.language]['Project.productions']}
             />
             <Productions
               language={props.language}
@@ -168,7 +168,7 @@ const Project = (props) => {
               lexicon="ProjectParticipant"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.participants" />}
+              title={msg[props.language]['Project.participants']}
             />
             <Participants
               language={props.language}
@@ -184,7 +184,7 @@ const Project = (props) => {
               language={props.language}
               lexicon="ProjectSimilar"
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Project.similars" />}
+              title={msg[props.language]['Project.similars']}
             />
             <Similars
               language={props.language}

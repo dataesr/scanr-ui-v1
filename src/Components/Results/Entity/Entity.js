@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -98,7 +98,7 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.portrait" />}
+              title={messages[props.language]['Entity.portrait']}
             />
             <Portrait
               language={props.language}
@@ -107,7 +107,7 @@ const Entity = (props) => {
             />
           </div>
         </SectionEntity>
-        <SectionWhite id="Networks">
+        <SectionWhite id="Network">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -115,7 +115,7 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.network" />}
+              title={messages[props.language]['Entity.network']}
             />
             <Network
               language={props.language}
@@ -131,7 +131,7 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.team" />}
+              title={messages[props.language]['Entity.team']}
             />
             <Team
               language={props.language}
@@ -169,7 +169,7 @@ const Entity = (props) => {
               objectType="structures"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.awards" />}
+              title={messages[props.language]['Entity.awards']}
             />
             <Awards
               language={props.language}
@@ -186,7 +186,7 @@ const Entity = (props) => {
               lexicon="EntityEvaluation"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.evaluations" />}
+              title={messages[props.language]['Entity.evaluations']}
             />
 
             <Evaluations
@@ -203,7 +203,7 @@ const Entity = (props) => {
             id={id}
           />
         </div>
-        <SectionEntity id="SimilarEntities">
+        <SectionEntity id="Similars">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -211,7 +211,7 @@ const Entity = (props) => {
               lexicon="EntitySimilar"
               language={props.language}
               id={id}
-              title={<FormattedHTMLMessage id="Entity.similars" />}
+              title={messages[props.language]['Entity.similars']}
             />
             <SimilarEntities
               language={props.language}

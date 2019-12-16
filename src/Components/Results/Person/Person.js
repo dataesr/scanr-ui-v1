@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { API_PERSONS_END_POINT } from '../../../config/config';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -73,7 +73,7 @@ const Person = (props) => {
               objectType="persons"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.informations" />}
+              title={messages[props.language]['Person.informations']}
             />
 
             <Informations
@@ -96,7 +96,7 @@ const Person = (props) => {
               lexicon="PersonThesis"
               language={props.language}
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.thesis" />}
+              title={messages[props.language]['Person.thesis']}
             />
             <Thesis language={props.language} id={props.match.params.id} />
           </div>
@@ -117,7 +117,7 @@ const Person = (props) => {
               language={props.language}
               lexicon="PersonCollab"
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.coAuthors.title" />}
+              title={messages[props.language]['Person.coAuthors']}
             />
             <CoAuthors
               language={props.language}
@@ -139,7 +139,7 @@ const Person = (props) => {
               language={props.language}
               lexicon="PersonSimilar"
               id={props.match.params.id}
-              title={<FormattedHTMLMessage id="Person.similars" />}
+              title={messages[props.language]['Person.similars']}
             />
             <Similars
               language={props.language}
