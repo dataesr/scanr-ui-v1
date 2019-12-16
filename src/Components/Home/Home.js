@@ -14,6 +14,7 @@ import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
 import ScanrToday from './ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
+import logo from '../Shared/svg/logo-ministere.svg';
 
 import classes from './Home.scss';
 
@@ -58,6 +59,11 @@ const HomePage = (props) => {
           </Modal.Body>
         </Modal>
         <div className={`container-fluid ${classes.HomePage}`}>
+          <img
+            src={logo}
+            alt="Logo MESRI"
+            className={classes.Logo}
+          />
           <FormattedHTMLMessage id="Home.title">
             {logoLabel => (<ScanRMeta title={logoLabel} />)}
           </FormattedHTMLMessage>
