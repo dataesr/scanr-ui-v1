@@ -32,7 +32,7 @@ const PersonCard = (props) => {
   let lastName = props.data.lastName;
   let fullName = props.data.fullName;
   const exists = (props.data.person) ? (props.data.person.fullName !== undefined) : false;
-  const role = (props.role) ? (props.role) : null;
+  const role = (props.role) ? (props.role) : ' ';
   let url = null;
   if (props.data.person) {
     if (props.data.person.email) {
@@ -54,7 +54,6 @@ const PersonCard = (props) => {
   if (!fullName) {
     fullName = `${firstName} ${lastName}`;
   }
-
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
