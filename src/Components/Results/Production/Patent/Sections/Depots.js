@@ -29,7 +29,7 @@ const PatentsApplications = (props) => {
   const [selected, setSelected] = useState((patents.length) ? patents[0] : {});
 
 
-  const content = patents.map((item, i) => {
+  const content = patents.sort((a, b) => moment(a.url).format('YYYYMMDD') - moment(b.url).format('YYYYMMDD')).map((item, i) => {
     let first = false;
     if (i > 0) {
       first = (moment(props.data[i - 1].url).format('DD-MM-YYYY') !== moment(item.url).format('DD-MM-YYYY'));
@@ -59,11 +59,11 @@ const PatentsApplications = (props) => {
           tabIndex={0}
         >
           <p className={classes.Title}>
-            {item.id}
+            {countries[props.language][item.country]}
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {countries[props.language][item.country]}
+              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />) : ''}
             </p>
           </div>
         </div>
@@ -90,7 +90,7 @@ const PatentsApplications = (props) => {
                       <SimpleCardWithButton
                         language={props.language}
                         logo="fas fa-id-card"
-                        title={<FormattedHTMLMessage id="Patent.patent.id" />}
+                        title={<FormattedHTMLMessage id="Patent.Depots.id" />}
                         label={selected.id}
                         tooltip=""
                         url={'https://worldwide.espacenet.com/patent/search?q='.concat(selected.id)}
@@ -101,7 +101,7 @@ const PatentsApplications = (props) => {
                       <SimpleCard
                         language={props.language}
                         logo="fas fa-calendar-day"
-                        title={<FormattedHTMLMessage id="Patent.depots.date" />}
+                        title={<FormattedHTMLMessage id="Patent.Depots.date" />}
                         label={moment(selected.url).format('DD-MM-YYYY')}
                         tooltip=""
                       />
@@ -110,7 +110,7 @@ const PatentsApplications = (props) => {
                       <SimpleCard
                         language={props.language}
                         logo="fas fa-calendar-day"
-                        title={<FormattedHTMLMessage id="Patent.depots.country" />}
+                        title={<FormattedHTMLMessage id="Patent.Depots.country" />}
                         label={countries[props.language][selected.country]}
                         tooltip=""
                       />
@@ -119,7 +119,7 @@ const PatentsApplications = (props) => {
                       <SimpleCard
                         language={props.language}
                         logo="fas fa-clipboard-list"
-                        title={<FormattedHTMLMessage id="Patent.depots.type" />}
+                        title={<FormattedHTMLMessage id="Patent.Depots.type" />}
                         label={patentType[props.language][selected.type]}
                         tooltip=""
                       />
@@ -128,7 +128,7 @@ const PatentsApplications = (props) => {
                       <SimpleCard
                         language={props.language}
                         logo="fas fa-clipboard-list"
-                        title={<FormattedHTMLMessage id="Patent.depots.isPriority" />}
+                        title={<FormattedHTMLMessage id="Patent.Depots.isPriority" />}
                         label={(selected.label === 'priority') ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
                         tooltip=""
                       />
