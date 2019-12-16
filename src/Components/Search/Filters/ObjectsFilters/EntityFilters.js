@@ -25,14 +25,18 @@ const EntityFilters = (props) => {
   const kindFacetsSecteur = { entries: kindFacets.entries.filter(entry => GRAPH_ITEMS_LIST.includes(entry.value)) };
 
   // Filtre 3 - Type d'organisme
-  const kindActiveFiltersOrganisme = props.filters.kind || {};
-  const kindFacetsOrganisme = { entries: kindFacets.entries.filter(entry => !GRAPH_ITEMS_LIST.includes(entry.value)) };
+  const levelActiveFiltersOrganisme = props.filters.level || {};
+  const levelFacetsOrganisme = facets.find(item => item.id === 'level') || { entries: [] };
 
-  // Filtre 4 - Type de financement public
+  // Filtre 4 - Tutelles
+  // const tutActiveFiltersOrganisme = props.filters['institutions.structure.label.fr']
+  const tutFacetsOrganisme = facets.find(item => item.id === 'tutelles') || { entries: [] };
+
+  // Filtre 5 - Type de financement public
   const projectsActiveFilters = props.filters['projects.project.type'] || {};
   const projectsFacets = facets.find(item => item.id === 'projectTypes') || { entries: [] };
 
-  // Filtre 5 - Caractéristiques
+  // Filtre 6 - Caractéristiques
   const caractActiveFilters = props.filters[`badges.label[${props.language}]`] || {};
   const caractFacets = facets.find(item => item.id === `badges${props.language}`) || { entries: [] };
 
@@ -60,11 +64,20 @@ const EntityFilters = (props) => {
         <CheckBoxFilter
           language={props.language}
           title={<FormattedHTMLMessage id="Search.Filters.kind" />}
-          facets={kindFacetsOrganisme.entries}
-          filters={kindActiveFiltersOrganisme}
+          facets={levelFacetsOrganisme.entries}
+          filters={levelActiveFiltersOrganisme}
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
+        />
+        <Autocomplete
+          title={<FormattedHTMLMessage id="Search.Filters.tutelles" />}
+          subtitle={<FormattedHTMLMessage id="Search.Filters.tutelles.subtitle" />}
+          placeholder=""
+          language={props.language}
+          onSubmit={props.multiValueFilterHandler}
+          facets={tutFacetsOrganisme.entries}
+          facetID="institutions.structure.label.fr"
         />
         <CheckBoxFilter
           language={props.language}

@@ -4,9 +4,8 @@ import { FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 import SummaryCard from '../../Shared/SummaryCard/SummaryCard';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
-import SimpleCardWithButton from '../../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
 import TagCard from '../../../../Shared/Ui/TagCard/TagCard';
-
+import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
 import classes from '../Patents.scss';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
@@ -20,14 +19,14 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
  * Tests unitaires : .
 */
 const PatentIdentity = (props) => {
-  const id = props.data.id;
   const publicationDate = moment(props.data.publicationDate).format('L');
   const submissionDate = moment(props.data.submissionDate).format('L');
   const summary = getSelectKey(props.data, 'summary', props.language, 'default');
-  const patentLink = 'https://worldwide.espacenet.com/patent/search?q='.concat({ id }.id);
   let keywords = [];
   if (props.data.domains) {
-    keywords = props.data.domains.filter(dom => dom.level === 'classe').map(el => el.label.default);
+    keywords = props.data.domains.filter(dom => dom.level === 'classe').map(el => (
+      { tag: `${el.label.default} (${el.code})`, href: `/recherche/publications?filters=%7B"domains.code"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"any"%2C"values"%3A%5B"${el.code}"%5D%7D%2C"productionType"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"all"%2C"values"%3A%5B"patent"%5D%7D%7D` }
+    ));
   }
   let isInternational = null;
   let isOEB = null;
@@ -56,17 +55,6 @@ const PatentIdentity = (props) => {
         </div>
         <div className="row">
           <div className={`col-md-6 ${classes.CardContainer}`}>
-            <SimpleCardWithButton
-              language={props.language}
-              logo="fas fa-id-card"
-              title={<FormattedHTMLMessage id="Patent.Identity.identifier" />}
-              label={id}
-              tooltip=""
-              url={patentLink}
-              link="link_patent"
-            />
-          </div>
-          <div className={`col-md-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
               logo="fas fa-calendar-day"
@@ -84,27 +72,41 @@ const PatentIdentity = (props) => {
               tooltip=""
             />
           </div>
-          {
-            (grantedInfo)
-              ? (
-                <div className={`col-md-6 ${classes.CardContainer}`}>
+        </div>
+        {
+          (grantedInfo.length)
+            ? (
+              <div className="row">
+                <div className={`col-12 ${classes.CardContainer}`}>
                   <SimpleCard
                     language={props.language}
-                    logo="fas fa-calendar-day"
+                    logo="fas fa-id-card"
                     title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
-                    label={moment(grantedInfo.date).format('L')}
+                    label={<FormattedHTMLMessage id="Patent.Identity.depots.grantedDate" values={{ date: moment(grantedInfo[0].date).format('L') }} />}
                     tooltip=""
                   />
                 </div>
-              )
-              : null
-          }
+              </div>
+            )
+            : null
+        }
+        <div className="row">
+          <div className={`col-md-6 ${classes.CardContainer}`}>
+            <CounterCard
+              counter={props.data.links.length}
+              title=""
+              color="Productions"
+              language={props.language}
+              label={<FormattedHTMLMessage id="Patent.Identity.depots.number" values={{ count: props.data.links.length }} />}
+              className={classes.PersonCardHeight}
+            />
+          </div>
           <div className={`col-md-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.oeb" />}
-              label={(isOEB) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isOEB.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -113,7 +115,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.international" />}
-              label={(isInternational) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isInternational.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -143,7 +145,6 @@ const PatentIdentity = (props) => {
                   tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
                   labelListButton="Autres"
                   tagList={keywords}
-                  tooltip=""
                 />
               </div>
             ) : null
@@ -158,6 +159,22 @@ export default PatentIdentity;
 
 PatentIdentity.propTypes = {
   language: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
+
+
+// {
+//   (grantedInfo.length)
+//     ? (
+//       <div className={`col-md-6 ${classes.CardContainer}`}>
+//         <SimpleCard
+//           language={props.language}
+//           logo="fas fa-calendar-day"
+//           title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
+//           label={moment(grantedInfo[0].date).format('L')}
+//           tooltip=""
+//         />
+//       </div>
+//     )
+//     : null
+// }

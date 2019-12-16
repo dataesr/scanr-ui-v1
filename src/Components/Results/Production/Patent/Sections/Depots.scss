@@ -1,5 +1,13 @@
 @import '../../../../../style.scss';
 
+.Success {
+  color: $projectmiddlegreenColor;
+}
+.Danger {
+  color: $scanrgreyColor;
+}
+
+
 .DepotSection {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -53,6 +61,7 @@
       display: block;
       text-align: right;
       padding: 0 8px;
+      min-height: 20px;
       font-style: italic;
       font-size: 0.85rem;
       border-bottom: 1px solid $scanrmiddlegreyColor;

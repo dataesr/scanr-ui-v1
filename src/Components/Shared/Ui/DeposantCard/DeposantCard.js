@@ -2,9 +2,9 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import getSelectKey from '../../../../Utils/getSelectKey';
-import classes from './EntityCard.scss';
+import classes from './DeposantCard.scss';
 
-import logo from './icon-entities.svg';
+// import logo from './icon-entities.svg';
 import ButtonToPage from '../Buttons/ButtonToPage2';
 
 
@@ -43,7 +43,7 @@ const PersonCard = (props) => {
       <div className={`d-flex flex-column ${classes.PersonCard}`}>
         <div>
           <div className={classes.Logo}>
-            <img src={logo} alt="" />
+            <i className="fas fa-folder fa-4x" alt="" />
           </div>
         </div>
         <div className={classes.Name}>
