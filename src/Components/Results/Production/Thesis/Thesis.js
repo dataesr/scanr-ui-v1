@@ -110,7 +110,7 @@ class Thesis extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Thesis.identity" />}
+                title={messages[this.props.language]['Thesis.identity']}
               />
               <div className="row">
                 <div className="col-lg">
@@ -235,7 +235,7 @@ class Thesis extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Thesis.accessType" />}
+                title={messages[this.props.language]['Thesis.accessType']}
               />
               <div className="row">
                 <div className={`col-md-3 ${classes.CardContainer}`}>
@@ -276,7 +276,7 @@ class Thesis extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Thesis.authors" />}
+                title={messages[this.props.language]['Thesis.authors']}
               />
               <div className="row">
                 {
@@ -339,7 +339,7 @@ class Thesis extends Component {
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}
-                      title={<FormattedHTMLMessage id="Thesis.affiliations" />}
+                      title={messages[this.props.language]['Thesis.affiliations']}
                     />
                     <div className={`row ${classes.Ul}`}>
                       {
@@ -364,7 +364,7 @@ class Thesis extends Component {
                 icon="fa-folder-open"
                 lexicon="PublicationSimilar"
                 language={this.props.language}
-                title={<FormattedHTMLMessage id="Thesis.similars" />}
+                title={messages[this.props.language]['Thesis.similars']}
               />
               <Similars language={this.props.language} id={this.props.id} />
             </div>
