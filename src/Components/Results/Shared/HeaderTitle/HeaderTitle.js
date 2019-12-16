@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
 /* Gestion des langues */
@@ -16,15 +16,14 @@ const messages = {
 
 const HeaderTitle = (props) => {
   const [selected, setSelected] = useState();
-
   const SectionsList = {
     entity: ['Portrait', 'Network', 'Team', 'Projects', 'Productions',
-      'Ecosystem', 'Awards', 'SimilarEntities', 'LastEntityFocus'],
+      'Awards', 'Evaluations', 'Ecosystem', 'Similars'],
     projects: ['Informations', 'Financial', 'Programs',
-      'Description', 'Participants', 'Productions'],
-    persons: ['Informations', 'Production', 'CoAuthors'],
-    publication: ['Publication', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
-    thesis: ['Thesis', 'AccessType', 'Authors', 'Affiliations', 'SimilarProductions'],
+      'Description', 'Productions', 'Participants', 'Similars'],
+    persons: ['Informations', 'Production', 'CoAuthors', 'Similars'],
+    publication: ['Publication', 'AccessType', 'Authors', 'Affiliations', 'Similars'],
+    thesis: ['Identity', 'AccessType', 'Authors', 'Affiliations', 'Similars'],
     patent: ['Identity', 'Participants', 'Depots', 'Similars'],
   };
   const scrollTop = (props.isFull) ? -350 : -120;
@@ -42,9 +41,13 @@ const HeaderTitle = (props) => {
             <a href="/">{messages[props.language].Home}</a>
           </li>
           <li className={classes['breadcrumb-item']}>
-            <a href="/recherche/all">{messages[props.language].Search}</a>
+            <a href="/recherche/all">
+              <FormattedHTMLMessage id="Search" />
+            </a>
           </li>
-          <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>{messages[props.language][props.idPage]}</li>
+          <li className={`${classes['breadcrumb-item']} ${classes.ItemActive}`}>
+            <FormattedHTMLMessage id={props.idPage} />
+          </li>
         </ol>
       </nav>
     </div>
@@ -70,7 +73,15 @@ const HeaderTitle = (props) => {
                 className="form-control"
                 onChange={e => setSelected(e.target.value)}
                 value={selected}
+                defaultValue="nav"
               >
+                <option
+                  key="nav"
+                  value="nav"
+                  disabled
+                >
+                  {messages[props.language]['HeaderTitle.label1']}
+                </option>
                 {
                   SectionsList[props.idPage].map(item => (
                     <option

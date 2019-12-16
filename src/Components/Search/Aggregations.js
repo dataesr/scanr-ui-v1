@@ -71,6 +71,26 @@ export const StructuresAggregations = {
     },
     size: 50,
   },
+  tutelles: {
+    field: 'institutions.structure.label.fr',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 1500,
+  },
+  level: {
+    field: 'level',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 1500,
+  },
   badgesfr: {
     field: 'badges.label.fr',
     filters: {},
