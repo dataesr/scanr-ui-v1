@@ -2,6 +2,8 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
+
 import classes from './Header.scss';
 
 const SearchPanel = (props) => {
@@ -99,6 +101,10 @@ const SearchPanel = (props) => {
           >
             <i className="fas fa-search" />
           </button>
+          &nbsp;
+          <LexiconModal language={props.language} target="Search">
+            <i className="fa fa-info-circle" />
+          </LexiconModal>
         </div>
       </div>
     </form>
@@ -122,6 +128,7 @@ export default SearchPanel;
 SearchPanel.propTypes = {
   currentQueryText: PropTypes.string,
   api: PropTypes.string,
+  language: PropTypes.string,
   queryTextChangeHandler: PropTypes.func,
   apiChangeHandler: PropTypes.func,
   submitResearch: PropTypes.func,
