@@ -113,7 +113,7 @@ class Publication extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Publication.title" />}
+                title={messages[this.props.language]['Publication.title']}
               />
               <div className="row">
                 <div className="col-lg">
@@ -211,7 +211,7 @@ class Publication extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Publication.oa.title" />}
+                title={messages[this.props.language]['Publication.oa.title']}
               />
               <div className="row">
                 <div className={`col-md-3 ${classes.CardContainer}`}>
@@ -252,7 +252,7 @@ class Publication extends Component {
                 objectType="publications"
                 language={this.props.language}
                 id={this.props.id}
-                title={<FormattedHTMLMessage id="Publication.authors.title" />}
+                title={messages[this.props.language]['Publication.authors.title']}
               />
               <div className="row">
                 {
@@ -316,7 +316,7 @@ class Publication extends Component {
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}
-                      title={<FormattedHTMLMessage id="Publication.affiliations.title" />}
+                      title={messages[this.props.language]['Publication..affiliations.title']}
                     />
                     <ul className={`row ${classes.Ul}`}>
                       {
@@ -341,7 +341,7 @@ class Publication extends Component {
                 icon="fa-folder-open"
                 lexicon="PublicationSimilar"
                 language={this.props.language}
-                title={<FormattedHTMLMessage id="Publication.similars" />}
+                title={messages[this.props.language]['Publication.similars']}
               />
               <Similars language={this.props.language} id={this.props.id} />
             </div>

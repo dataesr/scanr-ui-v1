@@ -22,8 +22,8 @@ const TagCard = (props) => {
   const labelListButton = props.labelListButton;
   const htmlList = props.tagList.map(tag => (
     <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag}`} style={props.tagStyle} key={tag}>
-      <ButtonToSearch href={`/recherche/all?query=${tag}`}>
-        {tag}
+      <ButtonToSearch href={tag.href}>
+        {tag.tag}
       </ButtonToSearch>
     </li>
   ));
