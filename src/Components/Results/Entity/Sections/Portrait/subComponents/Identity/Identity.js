@@ -74,7 +74,7 @@ const Identity = (props) => {
               label={props.id}
               list={externalIdDisplayed}
               labelListButton={<FormattedHTMLMessage id="Entity.Portrait.Identity.externalIdsButtons" />}
-              tooltip={<FormattedHTMLMessage id="Entity.Portrait.Identity.id.tooltip" />}
+              tooltip=""
             />
           </div>
           <div className={`col-lg-6 ${classes.CardContainer}`}>
