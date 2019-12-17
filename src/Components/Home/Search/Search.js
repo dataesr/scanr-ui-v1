@@ -1,11 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
-import background from '../../../images/img/poudre-blanche_Fbleu-A.jpg';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
 import classes from './Search.scss';
@@ -64,14 +63,9 @@ class Search extends Component {
     </form>
   );
 
-  renderFull = () => {
-    const sectionStyle = {
-      backgroundImage: `url(${background})`,
-      backgroundSize: '900px',
-    };
-
+  render() {
     return (
-      <section style={sectionStyle} className={`animated fadeIn faster ${classes.SearchFull}`}>
+      <section className={`animated fadeIn faster ${classes.SearchFull}`}>
         <div className="container">
           <FormattedHTMLMessage id="Home.Search.logo.aria">
             { label => (
@@ -103,24 +97,6 @@ class Search extends Component {
       </section>
     );
   }
-
-  renderMini = () => (
-    <section className={`animated slideInDown faster ${classes.SearchMini}`}>
-      <div className="container pb-3">
-        {this.renderForm()}
-      </div>
-    </section>
-  );
-
-  render() {
-    const content = (this.props.isFull) ? (this.renderFull()) : (this.renderMini());
-
-    return (
-      <Fragment>
-        {content}
-      </Fragment>
-    );
-  }
 }
 
 export default Search;
@@ -128,5 +104,4 @@ export default Search;
 Search.propTypes = {
   history: PropTypes.object.isRequired,
   language: PropTypes.string.isRequired,
-  isFull: PropTypes.bool,
 };
