@@ -10,6 +10,7 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 // import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from './ScanrToday/ScanrToday';
+import ScanrIs from './ScanrIs/ScanrIs';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 import WelcomeModal from './WelcomeModal';
@@ -38,10 +39,12 @@ const HomePage = (props) => {
           {...props}
           language={context.language}
         />
+        <ScanrIs />
         <ScanrToday language={context.language} />
+        {/* <ScanrToday language={context.language} />
 
 
-        {/* <Banner
+        <Banner
           language={context.language}
           labelKey="WhatAreOurSources"
           cssClass="BannerLight"
@@ -56,8 +59,8 @@ const HomePage = (props) => {
           labelKey="Appear"
           cssClass="BannerLight"
           url=""
+          <LastFocus language={context.language} />
         /> */}
-        <LastFocus language={context.language} />
         {/* Not for Now */}
         {/* <Newsletter language={this.context.language} /> */}
         <Banner
