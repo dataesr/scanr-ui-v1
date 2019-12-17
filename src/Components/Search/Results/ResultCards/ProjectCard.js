@@ -82,16 +82,20 @@ const ProjectCard = (props) => {
     // previousHighlight = [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ');
     for (let i = 0; i < props.highlights.length; i += 1) {
       const currentH = props.highlights[i];
-      const source = highlights[props.language][currentH.type];
+      const source = highlights[props.language][currentH.type] || currentH.type;
       let value = currentH.value;
+      let firstSource = '';
       if (value.length > 50) {
         value = value.concat('...');
       }
       if (i === 0) {
         allHighlights = source.concat(' : ', value, '<br/>');
+        firstSource = source;
       } else if (i === 1) {
         let otherHighlights = [...new Set(props.highlights.slice(1).map(h => (highlights[props.language][h.type] || h.type)))];
-        otherHighlights = otherHighlights.slice(1);
+        if (otherHighlights.length > 0 && otherHighlights[0] === firstSource) {
+          otherHighlights = otherHighlights.slice(1);
+        }
         if (otherHighlights.length > 0) {
           allHighlights = allHighlights.concat(messages[props.language]['resultCard.found.other'], otherHighlights.join(', '));
         }
