@@ -56,7 +56,7 @@ const SearchResults = (props) => {
                       (props.preview[section].count !== 0)
                         ? (
                           <FormattedHTMLMessage
-                            id="Search.Results.subtitles"
+                            id={`Search.Results.${section}.subtitles`}
                             values={{ count: props.preview[section].count }}
                           />
                         )
