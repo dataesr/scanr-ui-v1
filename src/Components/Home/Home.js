@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../GlobalContext';
-import useScrollY from '../../Hooks/useScrollY';
 
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
@@ -13,6 +12,8 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 import ScanrToday from './ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
+import logo from '../Shared/svg/logo-ministere.svg';
+import WelcomeModal from './WelcomeModal';
 
 import classes from './Home.scss';
 
@@ -26,19 +27,17 @@ const msg = {
 
 const HomePage = (props) => {
   const context = useContext(GlobalContext);
-  const scrollY = useScrollY();
-
   return (
     <IntlProvider locale={context.language} messages={msg[context.language]}>
       <div className={`container-fluid ${classes.HomePage}`}>
         <FormattedHTMLMessage id="Home.title">
           {logoLabel => (<ScanRMeta title={logoLabel} />)}
         </FormattedHTMLMessage>
+        <WelcomeModal />
         <Header />
         <Search
           {...props}
           language={context.language}
-          isFull={scrollY === 0}
         />
         <ScanrToday language={context.language} />
 
