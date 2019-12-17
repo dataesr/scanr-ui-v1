@@ -1,5 +1,17 @@
 @import '../../../style.scss';
 
+.mainTitle {
+  color: $scanrdeepblueColor;
+  font-size: 2rem;
+  font-family: "Helvetica";
+  align-self: center;
+  display: flex;
+  justify-content: around;
+  align-items: center;
+  line-height: 3rem;
+  font-weight: bold;
+  width: 70%;
+}
 .inputBar {
   background-color: white;
   border: 2px solid $scanrdeepblueColor;
