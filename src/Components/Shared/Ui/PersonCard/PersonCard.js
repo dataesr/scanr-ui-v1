@@ -32,7 +32,7 @@ const PersonCard = (props) => {
   let lastName = props.data.lastName;
   let fullName = props.data.fullName;
   const exists = (props.data.person) ? (props.data.person.fullName !== undefined) : false;
-  const role = (props.role) ? (props.role) : ' ';
+  const role = (props.role) ? (props.role) : null;
   let url = null;
   if (props.data.person) {
     if (props.data.person.email) {

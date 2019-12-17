@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../../GlobalContext';
 import ShareModal from '../ShareModal/ShareModal';
+import useScrollY from '../../../Hooks/useScrollY';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -15,6 +16,7 @@ import LogoScanrWhiteSVG from '../svg/logo-scanr-blue';
 
 const Header = () => {
   const context = useContext(GlobalContext);
+  const scrollY = useScrollY();
 
   const frActive = (context.language === 'fr') ? classes.ActiveLink : '';
   const enActive = (context.language === 'en') ? classes.ActiveLink : '';
@@ -26,7 +28,7 @@ const Header = () => {
 
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
-      <section className={classes.Header}>
+      <section className={`${classes.Header} ${(scrollY !== 0) ? classes.HeaderScroll : null}`}>
         <div className={classes.ribbon}>Bêta</div>
         <nav className={`navbar navbar-expand-lg navbar-light bg-light ${classes['has-background-white']}`}>
           <a className="navbar-brand" href="/">
@@ -118,7 +120,7 @@ const Header = () => {
               </li>
               <li className={`nav-item ${classes.Link}`}>
                 <a
-                  className={frActive}
+                  className={`px-1 ${frActive}`}
                   onClick={() => context.switchLanguage('fr')}
                   onKeyPress={() => context.switchLanguage('fr')}
                   role="button"
@@ -128,7 +130,7 @@ const Header = () => {
                 </a>
                 <span className={classes.PipeLink}>|</span>
                 <a
-                  className={enActive}
+                  className={`pl-1 ${enActive}`}
                   onClick={() => context.switchLanguage('en')}
                   onKeyPress={() => context.switchLanguage('en')}
                   role="button"

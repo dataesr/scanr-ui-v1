@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
-import PropTypes from 'prop-types';
 import useSearchAPI from '../../../Hooks/useSearchAPI';
 import {
   API_STRUCTURES_SEARCH_END_POINT,
@@ -11,11 +10,10 @@ import {
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import CounterCardByType from './CounterCards/CounterCardByType';
-import Background from '../../../images/img/poudre-bleu_Fgris-B.jpg';
 
 import classes from './ScanrToday.scss';
 
-const ScanrToday = (props) => {
+const ScanrToday = () => {
   const request = { query: '' };
   const entityRequest = { query: '', filters: {} };
   entityRequest.filters.status = {
@@ -33,23 +31,15 @@ const ScanrToday = (props) => {
   const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
   const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
 
-  const sectionStyle = {
-    backgroundImage: `url(${Background})`,
-    backgroundPosition: 'bottom 0 left 0',
-  };
-
-  if (!props.isFull) {
-    sectionStyle.paddingTop = '230px';
-  }
   return (
-    <section style={sectionStyle} className={classes.ScanrToday}>
+    <section className={classes.ScanrToday}>
       <div className="container">
         <div className="row">
           <div className="col-lg">
             <h2 className={classes.Title}>
               <FormattedHTMLMessage id="Home.ScanrToday.title" />
               &nbsp;
-              <LexiconModal language={props.language} target="ScanrToday">
+              <LexiconModal target="ScanrToday">
                 <i className="fa fa-info-circle" />
               </LexiconModal>
             </h2>
@@ -96,49 +86,3 @@ const ScanrToday = (props) => {
   );
 };
 export default ScanrToday;
-
-ScanrToday.propTypes = {
-  isFull: PropTypes.bool,
-  language: PropTypes.string,
-};
-
-// <hr style={{ marginBottom: '8px' }} />
-// <div className="row">
-//   <div className="col-lg">
-//     <span className={classes.SubTitle}>
-//       <FormattedHTMLMessage
-//         id="ScanrToday.string.evolution"
-//         defaultMessage="ScanrToday.string.evolution"
-//       />
-//     </span>
-//   </div>
-//   <div className="col-lg">
-//     <EvolutionCardByType
-//       schema="entities"
-//       value="-2"
-//       language={this.props.language}
-//     />
-//   </div>
-//   <div className="col-lg">
-//     <EvolutionCardByType
-//       schema="persons"
-//       value="+154"
-//       language={this.props.language}
-//     />
-//   </div>
-//   <div className="col-lg">
-//     <EvolutionCardByType
-//       schema="projects"
-//       value="+45"
-//       language={this.props.language}
-//     />
-//   </div>
-//   <div className="col-lg">
-//     <EvolutionCardByType
-//       schema="publications"
-//       value="+26"
-//       language={this.props.language}
-//     />
-//   </div>
-// </div>
-// <hr style={{ marginTop: '0px' }} />
