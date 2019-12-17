@@ -1,17 +1,31 @@
 @import '../../../style.scss';
 
 .mainTitle {
-  color: $scanrdeepblueColor;
-  font-size: 2rem;
-  font-family: "Helvetica";
-  align-self: center;
   display: flex;
-  justify-content: around;
-  align-items: center;
-  line-height: 3rem;
-  font-weight: bold;
+  align-self: center;
   width: 70%;
+  text-align: center;
+  > span {
+    line-height: 3rem;
+    font-weight: bold;
+    color: $scanrdeepblueColor;
+    font-size: 2rem;
+    font-family: "Helvetica";
+  }
 }
+.subTitle {
+  display: flex;
+  align-self: center;
+  width: 90%;
+  text-align: center;
+  > span {
+    line-height: 2rem;
+    color: $scanrdeepblueColor;
+    font-size: 1rem;
+    font-family: "Helvetica";
+  }
+}
+
 .inputBar {
   background-color: white;
   border: 2px solid $scanrdeepblueColor;
@@ -71,7 +85,7 @@ LABEL {
 }
 
 .HowTo {
-  color: white;
+  color: $scanrdeepblueColor;
   text-decoration: underline;
   font-size: 0.8rem;
   font-weight: bold;
@@ -79,7 +93,7 @@ LABEL {
 }
 
 .Suggest {
-  color: white;
+  color: $scanrdeepblueColor;
   font-size: 0.8rem;
 
   span {
