@@ -18,7 +18,7 @@ import classes from './CoAuthors.scss';
 const CountCard = coAuthorsCount => (
   <li className={`p-3 mb-2 d-flex flex-column ${classes.CountCard} ${classes.Card} ${classes.OneFourth}`}>
     {coAuthorsCount}
-    <FormattedHTMLMessage id="Person.coAuthors.title" defaultMessage="Person.coAuthors.title" />
+    <FormattedHTMLMessage id="Person.coAuthors.card" defaultMessage="Person.coAuthors.card" />
   </li>
 );
 const SeeMoreCard = (coAuthorsList, coAuthorsHtlm) => (

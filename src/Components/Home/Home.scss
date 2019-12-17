@@ -6,6 +6,50 @@
   position:relative;
 }
 
+.Logo{
+ width:200px;
+ position:fixed;
+ top:100px;
+ left:15px;
+ z-index:1000;
+}
+
 .HomePageLexiconPanelTop{
   top: 80px;
 }
+
+  .Header {
+    background-color: $scanrlightgreyColor;
+    I {
+      display: inline-block;
+      padding-right: 16px;
+    }
+  }
+
+  .Title {
+    font-size: 1.8rem;
+    color: $scanrfooterBgColor;
+    font-weight: bold;
+    font-family: 'Lato';
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .Content {
+    background-color: $scanrfooterBgColor;
+  }
+
+  .Term {
+    color: $scanrlightgreyColor;
+    padding-left: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .Definition {
+    color: $scanrmiddlegreyColor;
+  }
+
+  .Footer {
+    background-color: $scanrlightgreyColor;
+  }
