@@ -1,8 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { useContext, useState, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import Modal from 'react-bootstrap/Modal';
 import Markdown from 'markdown-to-jsx';
+
+import { GlobalContext } from '../../../../GlobalContext';
 
 /* Gestion des langues */
 import messagesPanelFr from './translations/fr.json';
@@ -14,78 +16,61 @@ import glossaryTerms from '../../terms/glossary.json';
 /* SCSS */
 import classes from './LexiconModal.scss';
 
-class LexiconModal extends Component {
-  state={
-    showModal: false,
-  };
+const LexiconModal = (props) => {
+  const context = useContext(GlobalContext);
+  const [isActive, setActive] = useState(false);
 
-  handleCloseModal = () => {
-    this.setState({ showModal: false });
-  }
+  const messagesPanel = { fr: messagesPanelFr, en: messagesPanelEn };
 
-  handleShowModal = () => {
-    this.setState({ showModal: true });
-  }
+  const termObject = glossaryTerms.find(el => el.key === props.target);
+  const term = termObject.label[context.language];
+  const definition = termObject.definition[context.language];
 
-  render() {
-    const messagesPanel = {
-      fr: messagesPanelFr,
-      en: messagesPanelEn,
-    };
-
-    if (this.props.target) {
-      const termObject = glossaryTerms.find(el => el.key === this.props.target);
-      const term = termObject.label[this.props.language];
-      const definition = termObject.definition[this.props.language];
-      return (
-        <IntlProvider locale={this.props.language} messages={messagesPanel[this.props.language]}>
-          <Fragment>
-            <Modal
-              show={this.state.showModal}
-              onHide={this.handleCloseModal}
-              className={classes.LexiconModal}
-              size="lg"
-            >
-              <Modal.Header closeButton className={classes.Header}>
-                <p className={classes.Title}>
-                  <i className="fas fa-bookmark" />
-                  <FormattedHTMLMessage id="lexicon" />
-                </p>
-              </Modal.Header>
-              <Modal.Body className={classes.Content}>
-                <p className={classes.Term}>
-                  {term}
-                </p>
-                <p className={classes.Definition}>
-                  <Markdown>
-                    {definition}
-                  </Markdown>
-                </p>
-              </Modal.Body>
-              <Modal.Footer className={classes.Footer}>
-                <a href="/glossaire" target="_blank" rel="noopener noreferrer">
-                  <FormattedHTMLMessage id="fullLexicon" />
-                  &nbsp;
-                  <i className="fas fa-external-link-alt" />
-                </a>
-              </Modal.Footer>
-            </Modal>
-            {/* eslint-disable-next-line */}
-            <span onClick={this.handleShowModal}>
-              {this.props.children}
-            </span>
-          </Fragment>
-        </IntlProvider>
-      );
-    }
-    return null;
-  }
-}
+  return (
+    <IntlProvider locale={context.language} messages={messagesPanel[context.language]}>
+      <Fragment>
+        <Modal
+          show={isActive}
+          onHide={() => setActive(!isActive)}
+          className={classes.LexiconModal}
+          size="lg"
+        >
+          <Modal.Header closeButton className={classes.Header}>
+            <p className={classes.Title}>
+              <i className="fas fa-bookmark" />
+              <FormattedHTMLMessage id="lexicon" />
+            </p>
+          </Modal.Header>
+          <Modal.Body className={classes.Content}>
+            <p className={classes.Term}>
+              {term}
+            </p>
+            <p className={classes.Definition}>
+              <Markdown>
+                {definition}
+              </Markdown>
+            </p>
+          </Modal.Body>
+          <Modal.Footer className={classes.Footer}>
+            <a href="/glossaire" target="_blank" rel="noopener noreferrer">
+              <FormattedHTMLMessage id="fullLexicon" />
+              &nbsp;
+              <i className="fas fa-external-link-alt" />
+            </a>
+          </Modal.Footer>
+        </Modal>
+        {/* eslint-disable-next-line */}
+        <span onClick={() => setActive(!isActive)}>
+          {props.children}
+        </span>
+      </Fragment>
+    </IntlProvider>
+  );
+};
 
 export default LexiconModal;
 
 LexiconModal.propTypes = {
-  language: PropTypes.string.isRequired,
   children: PropTypes.any.isRequired,
   target: PropTypes.string.isRequired,
 };

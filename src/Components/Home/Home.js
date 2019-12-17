@@ -7,8 +7,8 @@ import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import LastFocus from '../Shared/LastFocus/LastFocus';
-import MostActiveThemes from './MostActiveThemes/MostActiveThemes';
-import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
+// import MostActiveThemes from './MostActiveThemes/MostActiveThemes';
+// import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from './ScanrToday/ScanrToday';
 import Search from './Search/Search';
@@ -40,22 +40,20 @@ const HomePage = (props) => {
           language={context.language}
           isFull={scrollY === 0}
         />
-        <ScanrToday
-          language={context.language}
-          isFull={scrollY === 0}
-        />
-        <Banner
+        <ScanrToday language={context.language} />
+
+
+        {/* <Banner
           language={context.language}
           labelKey="WhatAreOurSources"
           cssClass="BannerLight"
           url="/ressources"
         />
-
         <MostActiveThemes
           language={context.language}
           data={currentThemes}
         />
-        {/* <Banner
+        <Banner
           language={context.language}
           labelKey="Appear"
           cssClass="BannerLight"
