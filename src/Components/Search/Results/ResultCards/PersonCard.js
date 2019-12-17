@@ -112,6 +112,28 @@ const PersonCard = (props) => {
     )
     : null;
 
+  // let previousHighlight = '';
+  let allHighlights = '';
+  if (props.highlights && props.highlights.length > 0) {
+    // previousHighlight = [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ');
+    for (let i = 0; i < props.highlights.length; i += 1) {
+      const currentH = props.highlights[i];
+      const source = highlights[props.language][currentH.type];
+      let value = currentH.value;
+      if (value.length > 50) {
+        value = value.concat('...');
+      }
+      if (i === 0) {
+        allHighlights = source.concat(' : ', value, '<br/>');
+      } else if (i === 1) {
+        let otherHighlights = [...new Set(props.highlights.slice(1).map(h => (highlights[props.language][h.type] || h.type)))];
+        otherHighlights = otherHighlights.slice(1);
+        if (otherHighlights.length > 0) {
+          allHighlights = allHighlights.concat(messages[props.language]['resultCard.found.other'], otherHighlights.join(', '));
+        }
+      }
+    }
+  }
   const highlight = (props.highlights && props.highlights.length > 0)
     ? (
       <li className="d-flex">
@@ -123,9 +145,7 @@ const PersonCard = (props) => {
             <FormattedHTMLMessage id="resultCard.foundIn" defaultMessage="resultCard.foundIn" />
           </p>
           <p className={`d-flex m-0 ${classes.Highlights}`}>
-            {
-              [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ')
-            }
+            <FormattedHTMLMessage defaultMessage={allHighlights} id="cardHighlight" />
           </p>
         </div>
       </li>
