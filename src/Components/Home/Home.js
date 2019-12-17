@@ -12,7 +12,6 @@ import LastFocus from '../Shared/LastFocus/LastFocus';
 import ScanrToday from './ScanrToday/ScanrToday';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
-import logo from '../Shared/svg/logo-ministere.svg';
 import WelcomeModal from './WelcomeModal';
 
 import classes from './Home.scss';
