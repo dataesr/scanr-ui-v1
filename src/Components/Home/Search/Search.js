@@ -4,8 +4,9 @@ import { FormattedHTMLMessage } from 'react-intl';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
-import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-white';
+import LogoScanrWhiteSVG from '../../Shared/svg/logo-scanr-blue';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
+import logoMinistere from '../../Shared/svg/logo-ministere.svg';
 
 import classes from './Search.scss';
 
@@ -55,7 +56,7 @@ class Search extends Component {
             )}
           </FormattedHTMLMessage>
           &nbsp;
-          <LexiconModal language={this.props.language} target="Search">
+          <LexiconModal target="Search">
             <i className="fa fa-info-circle" />
           </LexiconModal>
         </div>
@@ -65,15 +66,30 @@ class Search extends Component {
 
   render() {
     return (
-      <section className={`animated fadeIn faster ${classes.SearchFull}`}>
+      <section className={classes.SearchFull}>
         <div className="container">
-          <FormattedHTMLMessage id="Home.Search.logo.aria">
-            { label => (
-              <h1 className={classes.Logo} aria-label={label}>
-                <LogoScanrWhiteSVG fill={styles.entityColor} width="280px" />
+          <div className="d-flex flex-column pb-5 pt-3 px-5">
+            <div className="d-flex flex-wrap py-5">
+              <FormattedHTMLMessage id="Home.Search.logo.aria">
+                { label => (
+                  <LogoScanrWhiteSVG fill={styles.scanrdeepblueColor} width="50%" height="70px" aria-label={label} />
+                )}
+              </FormattedHTMLMessage>
+              <FormattedHTMLMessage id="Home.Search.logoministere.aria">
+                { label => (
+                  <img src={logoMinistere} height="70px" alt={label} />
+                )}
+              </FormattedHTMLMessage>
+            </div>
+            <div className="d-flex flex-column px-5">
+              <h1 className={classes.mainTitle}>
+                <FormattedHTMLMessage id="Home.Search.title" />
               </h1>
-            )}
-          </FormattedHTMLMessage>
+              <p className={classes.subTitle}>
+                <FormattedHTMLMessage id="Home.Search.subtitle" />
+              </p>
+            </div>
+          </div>
 
           {this.renderForm()}
           <div className={`pt-1 pl-1 ${classes.Suggest}`}>

@@ -58,7 +58,7 @@ const PersonCard = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
         {
-          (props.showTitle) ? (
+          (props.showTitle && role) ? (
             <div>
               <span className={classes.Title}>
                 <FormattedHTMLMessage
