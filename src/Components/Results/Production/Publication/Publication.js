@@ -316,7 +316,7 @@ class Publication extends Component {
                       objectType="publications"
                       language={this.props.language}
                       id={this.props.id}
-                      title={messages[this.props.language]['Publication..affiliations.title']}
+                      title={messages[this.props.language]['Publication.affiliations.title']}
                     />
                     <ul className={`row ${classes.Ul}`}>
                       {
