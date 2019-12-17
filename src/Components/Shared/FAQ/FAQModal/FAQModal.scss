@@ -31,6 +31,14 @@
 
   .Definition {
     color: $scanrmiddlegreyColor;
+    A {
+      color: white;
+      font-weight: bold;
+    }
+    A:hover, A:focus {
+      color: $scanrblueColor;
+      font-weight: bold;
+    }
   }
 
   .Footer {
