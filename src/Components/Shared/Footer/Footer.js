@@ -54,6 +54,11 @@ const Footer = () => {
             defaultMessage="Footer.consentInfo"
           />
         </CookieConsent>
+        <div className={classes.feedback}>
+          <button type="button" className={classes.feedbackButton}>
+            <i className="far fa-2x fa-comment-dots" />
+          </button>
+        </div>
         <div className="container">
           <div className="row">
             <div className={`col-md ${classes.Col}`}>

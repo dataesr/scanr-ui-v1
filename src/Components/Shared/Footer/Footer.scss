@@ -3,6 +3,7 @@
 $linkColor: rgb(255, 255, 255);
 $linkColorHover: rgb(255, 255, 255);
 
+
 .Footer {
   background-color: $bgFooter;
   // min-height: $footerHeight; deleted by fred TODO check
@@ -15,6 +16,21 @@ $linkColorHover: rgb(255, 255, 255);
   LI {
     list-style: none;
   }
+
+  .feedback {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+}
+
+.feedbackButton {
+  background-color : $projectgreenColor;
+  color: white;
+  padding: 15px 15px;
+  border-radius: 50%;
+  border-color : $projectgreenColor;
+}
+
 
   .Logo {
     height: 50px;
