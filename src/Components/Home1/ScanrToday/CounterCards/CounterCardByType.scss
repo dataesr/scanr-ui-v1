@@ -1,0 +1,28 @@
+@import '../../../../style.scss';
+
+.CounterCardByType {
+  height: 200px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 8px 16px 16px 16px;
+  text-align: center;
+
+  .Value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $titleColor;
+  }
+
+  .Label {
+    font-size: 1em;
+    font-weight: bold;
+    color: $titleColor;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .CounterCardByType {
+    margin-bottom: 16px;
+  }
+}

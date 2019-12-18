@@ -1,0 +1,42 @@
+ @import '../../../style.scss';
+
+.MostActiveThemes {
+  color: #fff;
+  margin:0;
+  padding: 32px 0;
+  background-color: $bgHomePageSearch;
+  box-shadow: inset 0px 15px 15px 0px rgba(33, 72, 103, 0.5) !important;
+
+  .Lib {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 32px;
+  }
+  .Lib2 {
+    margin-top: 16px;
+    line-height: 20px;
+  }
+
+  LI {
+    list-style: none;
+    display: inline;
+  }
+}
+
+.Tags {
+  padding: 6px;
+  margin: 6px;
+  background-color: white;
+  color: $scanrdeepblueColor;
+  border-radius: 6px;
+  A,SPAN {
+    color: $scanrdeepblueColor;
+  }
+  A:hover, SPAN:hover {
+    color: $scanrdeepblueColor;
+  }
+}
+.Tags:hover {
+  background-color: $scanrdeepblueColor;
+  color: white;
+}
