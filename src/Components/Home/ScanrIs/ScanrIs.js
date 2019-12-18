@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedHTMLMessage } from 'react-intl';
 import logoMinistere from '../../Shared/svg/logo-ministere.svg';
 import {
   Grid,
@@ -16,7 +17,7 @@ const ScanrIs = () => (
     <div className="container py-3">
       <div className="row">
         <div className="col-lg-4 d-flex flex-column py-1">
-          <TitleLeft>scanR, c&apos;est quoi ?</TitleLeft>
+          <TitleLeft><FormattedHTMLMessage id="Home.ScanrIs.main.title" /></TitleLeft>
           <div className="d-flex">
             <Separator color="entity" />
             <Separator color="person" />
@@ -24,11 +25,11 @@ const ScanrIs = () => (
             <Separator color="production" />
           </div>
           <DescriptiveText>
-            Moteur de recherche, scanR permet de rechercher dans 4 types d&apos;objets, les entitées et structures, les autheurs et chercheurs, les financements et projets et les productions au travers des thèses, des publications et des brevets.
+            <FormattedHTMLMessage id="Home.ScanrIs.main.text" />
           </DescriptiveText>
           <div className="mt-auto">
             <DescriptiveText>
-              scanR est un service proposé par le Ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
+              <FormattedHTMLMessage id="Home.ScanrIs.main.ministry" />
             </DescriptiveText>
             <img src={logoMinistere} height="60px" alt="" aria-hidden />
           </div>
@@ -37,38 +38,43 @@ const ScanrIs = () => (
           <Grid minWidth={300}>
             <div className="d-flex flex-column">
               <Icon className="fas fa-database" aria-hidden />
-              <Title>Des données enrichies et reliées entre elles</Title>
+              <Title><FormattedHTMLMessage id="Home.ScanrIs.section.first.title" /></Title>
               <DescriptiveText>
-                scanR permet d&apos;effectuer une recherche sur différents types d&apos;objets, allant des structures de recherche aux projets de financements, en passant par les auteurs et leurs productions (publications, thèses et brevets).
-                La mise en relation de tous ces objets permet d&apos;obtenir des résultats de recherche contextualisés et de les caractériser dans le paysage complexe du monde de la recherche et de l&apos;innovation.
+                <FormattedHTMLMessage id="Home.ScanrIs.section.first.text" />
               </DescriptiveText>
-              <LearnMore href="/">Accèder à la recherche</LearnMore>
+              <LearnMore href="/recherche/all">
+                <FormattedHTMLMessage id="Home.ScanrIs.learnMore.goToSearch" />
+              </LearnMore>
             </div>
             <div className="d-flex flex-column">
               <Icon className="fas fa-search-plus" aria-hidden />
-              <Title>Des focus, pour approfondir des sujets précis</Title>
+              <Title><FormattedHTMLMessage id="Home.ScanrIs.section.second.title" /></Title>
               <DescriptiveText>
-                De nouveaux focus sont ajoutés régulièrement. Une contextualisation et des data-visualisations spécifiques sont réalisées. Pour chacun des focus, les données sous-jacentes sont disponibles, ou bien directement dans scanR, ou bien dans un jeu de données en open data.
+                <FormattedHTMLMessage id="Home.ScanrIs.section.second.text" />
               </DescriptiveText>
-              <LearnMore href="/">Voir tous les focus</LearnMore>
+              <LearnMore href="/focus">
+                <FormattedHTMLMessage id="Home.ScanrIs.learnMore.goToFocus" />
+              </LearnMore>
             </div>
             <div className="d-flex flex-column">
               <Icon className="fas fa-chart-area" aria-hidden />
-              <Title>Des outils pour tirer parti aux mieux des données proposées</Title>
+              <Title><FormattedHTMLMessage id="Home.ScanrIs.section.third.title" /></Title>
               <DescriptiveText>
-              scanR offre des possibilités de découverte, de visualisations et d&apos;exploitation massive
-              Par exemple, pour chaque type d&apos;objet, scanR met en avant des objets similaires, en lien avec les mêmes thématiques de recherche
-              De plus, des outils de visualisations sont disponibles à la fois sur chaque page de résultats de recherche comme sur les fiches de caractérisation des entités, projets, auteurs et publications.
+                <FormattedHTMLMessage id="Home.ScanrIs.section.third.text" />
               </DescriptiveText>
-              <LearnMore href="/">En savoir plus</LearnMore>
+              <LearnMore href="/tutorial">
+                <FormattedHTMLMessage id="Home.ScanrIs.learnMore.howtoScanr" />
+              </LearnMore>
             </div>
             <div className="d-flex flex-column">
               <Icon className="fas fa-lock-open" aria-hidden />
-              <Title>Des données ouvertes et réutilisables</Title>
+              <Title><FormattedHTMLMessage id="Home.ScanrIs.section.forth.title" /></Title>
               <DescriptiveText>
-                Les données utilisées par scanR sont en libre accès sous licence de réutilisation via des API et des jeux de données sont sur la plateforme Opendata du ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
+                <FormattedHTMLMessage id="Home.ScanrIs.section.forth.text" />
               </DescriptiveText>
-              <LearnMore href="/">En savoir plus</LearnMore>
+              <LearnMore href="/opendata">
+                <FormattedHTMLMessage id="Home.ScanrIs.learnMore.learn" />
+              </LearnMore>
             </div>
           </Grid>
         </div>
