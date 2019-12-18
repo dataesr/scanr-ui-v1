@@ -1,5 +1,5 @@
-
 import styled from 'styled-components';
+import styles from '../../../style.scss';
 
 export const Separator = styled.div`
   background-color: ${props => (props.color ? styles[`${props.color}Color`] : styles.scanrelectricblueColor)};
