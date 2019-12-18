@@ -28,6 +28,9 @@
       padding-left: 16px;
     }
   }
+  .Button:hover, .Button:focus {
+    background-color: $scanrgreyColor;
+  }
 
 }
 
