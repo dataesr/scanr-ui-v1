@@ -20,13 +20,21 @@ const TagCard = (props) => {
   const logo = (props.logo) ? <div className={classes.Logo}><i className={props.logo} aria-hidden="true" /></div> : null;
   const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
   const labelListButton = props.labelListButton;
-  const htmlList = props.tagList.map(tag => (
-    <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag}`} style={props.tagStyle} key={tag}>
-      <ButtonToSearch href={tag.href}>
-        {tag.tag}
-      </ButtonToSearch>
-    </li>
-  ));
+  const htmlList = props.tagList.map((tag) => {
+    let encodedTag = tag;
+    if (!tag.href) {
+      encodedTag = encodeURIComponent(tag.trim());
+    }
+    const href = tag.href || `/recherche/all?query=%22${encodedTag}%22&view=list`;
+
+    return (
+      <li className={`pb-1 pt-1 pl-2 pr-2 mr-1 mb-1 ${classes.Tag} ${classes.Li}`} key={tag}>
+        <ButtonToSearch href={href}>
+          {tag.tag || tag }
+        </ButtonToSearch>
+      </li>
+    );
+  });
 
   const tooltip = (props.tooltip) ? (
     <Fragment>
