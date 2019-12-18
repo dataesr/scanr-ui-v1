@@ -79,7 +79,6 @@ TagCard.defaultProps = {
 TagCard.propTypes = {
   logo: PropTypes.string,
   title: PropTypes.any,
-  tagStyle: PropTypes.object,
   labelListButton: PropTypes.string,
   maxElements: PropTypes.number,
   tagList: PropTypes.array,
