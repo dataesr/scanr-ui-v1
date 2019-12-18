@@ -85,7 +85,11 @@ $linkColorHover: rgb(255, 255, 255);
   color: white;
   padding: 15px 15px;
   border-radius: 50%;
-  border-color : $projectgreenColor;
+  border:none;
+}
+
+.feedbackButton:hover {
+	background-color : $projectmiddlegreenColor;
 }
 
 .feedback:focus {
