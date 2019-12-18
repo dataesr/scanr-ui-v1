@@ -34,7 +34,7 @@ const PublicationsFilters = (props) => {
       <div className="p-2">
         <SelectFilter
           language={props.language}
-          title={<FormattedHTMLMessage id="Search.Filters.kind" />}
+          title={<FormattedHTMLMessage id="Search.Filters.publicationType" />}
           facets={typeFacets.entries}
           filters={typeActiveFilters}
           facetID="productionType"
