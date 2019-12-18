@@ -36,7 +36,7 @@ const ScanrIs = () => (
         <div className="col-lg-8 py-1">
           <Grid minWidth={300}>
             <div className="d-flex flex-column">
-              <Icon className="fas fa-database" aria-hidden/>
+              <Icon className="fas fa-database" aria-hidden />
               <Title>Des données enrichies et reliées entre elles</Title>
               <DescriptiveText>
                 scanR permet d&apos;effectuer une recherche sur différents types d&apos;objets, allant des structures de recherche aux projets de financements, en passant par les auteurs et leurs productions (publications, thèses et brevets).
@@ -45,7 +45,7 @@ const ScanrIs = () => (
               <LearnMore href="/">Accèder à la recherche</LearnMore>
             </div>
             <div className="d-flex flex-column">
-              <Icon className="fas fa-search-plus" aria-hidden/>
+              <Icon className="fas fa-search-plus" aria-hidden />
               <Title>Des focus, pour approfondir des sujets précis</Title>
               <DescriptiveText>
                 De nouveaux focus sont ajoutés régulièrement. Une contextualisation et des data-visualisations spécifiques sont réalisées. Pour chacun des focus, les données sous-jacentes sont disponibles, ou bien directement dans scanR, ou bien dans un jeu de données en open data.
@@ -53,7 +53,7 @@ const ScanrIs = () => (
               <LearnMore href="/">Voir tous les focus</LearnMore>
             </div>
             <div className="d-flex flex-column">
-              <Icon className="fas fa-chart-area" aria-hidden/>
+              <Icon className="fas fa-chart-area" aria-hidden />
               <Title>Des outils pour tirer parti aux mieux des données proposées</Title>
               <DescriptiveText>
               scanR offre des possibilités de découverte, de visualisations et d&apos;exploitation massive
@@ -63,7 +63,7 @@ const ScanrIs = () => (
               <LearnMore href="/">En savoir plus</LearnMore>
             </div>
             <div className="d-flex flex-column">
-              <Icon className="fas fa-lock-open" aria-hidden/>
+              <Icon className="fas fa-lock-open" aria-hidden />
               <Title>Des données ouvertes et réutilisables</Title>
               <DescriptiveText>
                 Les données utilisées par scanR sont en libre accès sous licence de réutilisation via des API et des jeux de données sont sur la plateforme Opendata du ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
