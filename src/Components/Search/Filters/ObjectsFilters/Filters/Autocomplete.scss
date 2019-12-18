@@ -1,5 +1,13 @@
 @import '../../../../../style.scss';
 
+.Title {
+  font-size: 0.9em;
+  font-style: italic;
+  font-weight: bold;
+  color: $scanrgreyColor;
+  padding-left: 0;
+  padding-bottom: 0;
+}
 .Labels {
   font-size: 0.9em;
   font-style: italic;
