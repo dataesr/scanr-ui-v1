@@ -4,6 +4,56 @@ $linkColor: rgb(255, 255, 255);
 $linkColorHover: rgb(255, 255, 255);
 
 
+
+.FeedbackModal {
+  .Header {
+    background-color: $scanrlightgreyColor;
+    I {
+      display: inline-block;
+      padding-right: 16px;
+    }
+  }
+
+  .Title {
+    font-size: 1.8rem;
+    color: $scanrfooterBgColor;
+    font-weight: bold;
+    font-family: 'Lato';
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .Content {
+    background-color: $scanrfooterBgColor;
+    span {
+      color: $scanrlightgreyColor;
+    }
+  }
+
+  .Term {
+    color: $scanrlightgreyColor;
+    padding-left: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .Definition {
+    color: $scanrmiddlegreyColor;
+    A {
+      color: white;
+      font-weight: bold;
+    }
+    A:hover, A:focus {
+      color: $scanrblueColor;
+      font-weight: bold;
+    }
+  }
+
+  .Footer {
+    background-color: $scanrlightgreyColor;
+  }
+}
+
 .Footer {
   background-color: $bgFooter;
   // min-height: $footerHeight; deleted by fred TODO check
@@ -25,10 +75,18 @@ $linkColorHover: rgb(255, 255, 255);
 
 .feedbackButton {
   background-color : $projectgreenColor;
+  cursor: pointer;
   color: white;
   padding: 15px 15px;
   border-radius: 50%;
   border-color : $projectgreenColor;
+}
+
+.feedback:focus {
+  outline: none !important;
+}
+.feedbackButton:focus {
+  outline: none !important;
 }
 
 
