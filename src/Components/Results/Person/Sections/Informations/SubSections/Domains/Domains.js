@@ -49,7 +49,6 @@ const Domains = (props) => {
               tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
               tagList={tagList}
               language={props.language}
-              maxElements={12}
               labelListButton="Tous les domaines"
             />
           </div>
