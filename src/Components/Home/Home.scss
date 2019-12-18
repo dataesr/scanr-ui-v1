@@ -1,17 +1,22 @@
 @import '../../style.scss';
 
-.HomePage{
+.HomePage {
   padding: 0;
   background-color: #fff;
   position:relative;
 }
 
-.Logo{
- width:200px;
- position:fixed;
+.LogoHome {
+ width:250px;
+ position:absolute;
  top:100px;
  left:15px;
  z-index:1000;
+}
+@media screen and (max-width: 1000px){
+  .LogoHome {
+    visibility: hidden;
+  }
 }
 
 .HomePageLexiconPanelTop{
