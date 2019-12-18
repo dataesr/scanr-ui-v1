@@ -38,6 +38,13 @@ const Identity = (props) => {
       externalIdDisplayed.push(props.externalIds[i]);
     }
   }
+  const mainIds = [];
+  mainIds.push(props.id);
+  for (let i = 0; i < props.externalIds.length; i += 1) {
+    if (props.externalIds[i].type.toLowerCase() === 'label_numero') {
+      mainIds.push(props.externalIds[i].id);
+    }
+  }
   return (
     <div className="col-md-6">
       <div className={classes.Identity}>
@@ -71,7 +78,8 @@ const Identity = (props) => {
               language={props.language}
               logo="fas fa-qrcode"
               title={<FormattedHTMLMessage id="Entity.Portrait.Identity.id" />}
-              label={props.id}
+              // label={props.id}
+              multipleLabels={mainIds}
               list={externalIdDisplayed}
               labelListButton={<FormattedHTMLMessage id="Entity.Portrait.Identity.externalIdsButtons" />}
               tooltip=""

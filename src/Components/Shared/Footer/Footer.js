@@ -1,7 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import CookieConsent from 'react-cookie-consent';
+import ReactTooltip from 'react-tooltip';
+import Modal from 'react-bootstrap/Modal';
 import { GlobalContext } from '../../../GlobalContext';
+import FormContact from '../FormContact/FormContact';
 
 /* Style */
 import logo from '../svg/logo-ministere.svg';
@@ -18,6 +21,7 @@ const messages = {
 
 const Footer = () => {
   const context = useContext(GlobalContext);
+  const [isActive, setActive] = useState(false);
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
       <section className={classes.Footer}>
@@ -55,10 +59,31 @@ const Footer = () => {
           />
         </CookieConsent>
         <div className={classes.feedback}>
-          <button type="button" className={classes.feedbackButton}>
-            <i className="far fa-2x fa-comment-dots" />
+          <button type="button" className={`btn ${classes.feedbackButton}`} onClick={() => setActive(!isActive)} data-tip={messages[context.language]['Feedback.Tooltip']}>
+            {(isActive) ? (<i className="far fa-2x fa-window-close" />) : (<i className="far fa-2x fa-envelope-open" />)}
           </button>
+          <ReactTooltip html />
         </div>
+        <Fragment>
+          <Modal
+            show={isActive}
+            onHide={() => setActive(!isActive)}
+            className={classes.FeedbackModal}
+            size="lg"
+          >
+            <Modal.Header closeButton className={classes.Header}>
+              <p className={classes.Title}>
+                <i className="far fa-envelope-open" />
+                <FormattedHTMLMessage id="Feedback.Title" />
+              </p>
+            </Modal.Header>
+            <Modal.Body className={classes.Content}>
+              <FormContact
+                language={context.language}
+              />
+            </Modal.Body>
+          </Modal>
+        </Fragment>
         <div className="container">
           <div className="row">
             <div className={`col-md ${classes.Col}`}>
