@@ -5,6 +5,8 @@ import { FormattedHTMLMessage } from 'react-intl';
 import CheckBoxFilter from './Filters/CheckBoxFilter';
 import Autocomplete from './Filters/Autocomplete';
 
+import classes from './Filters.scss';
+
 const PersonsFilters = (props) => {
   const facets = props.facets || [];
   const structFacets = facets.find(item => item.id === 'affiliations') || { entries: [] };
@@ -16,12 +18,19 @@ const PersonsFilters = (props) => {
       <div className="p-2">
         <Autocomplete
           language={props.language}
-          title={<FormattedHTMLMessage id="Search.Filters.localisation" />}
-          subtitle={<FormattedHTMLMessage id="Search.Filters.localisation.subtitle" />}
+          title={<FormattedHTMLMessage id="Search.Filters.affiliation" />}
+          subtitle={<FormattedHTMLMessage id="Search.Filters.affiliation.subtitle" />}
           placeholder=""
           onSubmit={props.multiValueFilterHandler}
           facets={structFacets.entries}
           facetID="affiliations.structure.label.fr"
+        />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.personColor,
+            backgroundColor: classes.personColor,
+          }}
         />
         <CheckBoxFilter
           language={props.language}
