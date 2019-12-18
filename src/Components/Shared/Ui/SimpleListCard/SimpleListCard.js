@@ -26,6 +26,14 @@ const labelFunction = label => (
   (label) ? <p className={classes.Label}>{label}</p> : null
 );
 
+const labelFunctionSpan = label => (
+  (label) ? <span className={classes.Label}>{label.concat(' ')}</span> : null
+);
+
+const multipleLabelsFunction = labels => (
+  labels.map(label => (labelFunctionSpan(label)))
+);
+
 const additionalListFunction = (allProps) => {
   const items = allProps.list.map(item => (
     <li key={item.type} className="list-group-item">
@@ -62,7 +70,8 @@ const SimpleListCard = (props) => {
     <div className={classes.SimpleListCard}>
       {logoFunction(props.logo)}
       {titleFunction(props.title)}
-      {labelFunction(props.label)}
+      {(props.label) ? labelFunction(props.label) : null }
+      {(props.multipleLabels) ? multipleLabelsFunction(props.multipleLabels) : null}
 
       {tooltip}
 
@@ -76,6 +85,7 @@ export default SimpleListCard;
 
 SimpleListCard.propTypes = {
   label: PropTypes.string,
+  multipleLabels: PropTypes.array,
   logo: PropTypes.string,
   title: PropTypes.string,
   tooltip: PropTypes.string,
