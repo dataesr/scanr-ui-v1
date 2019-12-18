@@ -10,7 +10,6 @@ import {
 } from '../../../config/config';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
-import CounterCardByType from './CounterCards/CounterCardByType';
 
 import entityLogo from '../../../images/svg/icon-entities.svg';
 import personLogo from '../../../images/svg/icon-persons.svg';
