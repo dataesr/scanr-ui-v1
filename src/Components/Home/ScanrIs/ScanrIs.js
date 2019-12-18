@@ -2,7 +2,6 @@ import React from 'react';
 import logoMinistere from '../../Shared/svg/logo-ministere.svg';
 import {
   Grid,
-  Button,
   Title,
   DescriptiveText,
   Section,
@@ -30,7 +29,7 @@ const ScanrIs = () => (
             <DescriptiveText>
               scanR est un service proposé par le Ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
             </DescriptiveText>
-            <img src={logoMinistere} height="60px" />
+            <img src={logoMinistere} height="60px" alt="Logo Ministère" />
           </div>
         </div>
         <div className="col-8">
