@@ -66,7 +66,7 @@ class Autocomplete extends Component {
       <div className="d-flex flex-column mb-3">
         <form id="searchForm">
           {/* eslint-disable-next-line */}
-          <label className={classes.Labels} htmlFor="input">
+          <label className={classes.Title} htmlFor="input">
             {this.props.title}
           </label>
           <br />

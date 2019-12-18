@@ -116,11 +116,11 @@ const PersonCard = (props) => {
   let allHighlights = '';
   if (props.highlights && props.highlights.length > 0) {
     // previousHighlight = [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ');
+    let firstSource = '';
     for (let i = 0; i < props.highlights.length; i += 1) {
       const currentH = props.highlights[i];
       const source = highlights[props.language][currentH.type] || currentH.type;
       let value = currentH.value;
-      let firstSource = '';
       if (value.length > 50) {
         value = value.concat('...');
       }

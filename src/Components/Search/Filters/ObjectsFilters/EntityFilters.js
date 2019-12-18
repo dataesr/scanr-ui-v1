@@ -52,6 +52,13 @@ const EntityFilters = (props) => {
           facets={geoFacets.entries}
           facetID="address.localisationSuggestions"
         />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.entityColor,
+            backgroundColor: classes.entityColor,
+          }}
+        />
         <CheckBoxFilter
           language={props.language}
           title={<FormattedHTMLMessage id="Search.Filters.sectors" />}
@@ -60,6 +67,13 @@ const EntityFilters = (props) => {
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
+        />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.entityColor,
+            backgroundColor: classes.entityColor,
+          }}
         />
         <CheckBoxFilter
           language={props.language}
@@ -70,6 +84,13 @@ const EntityFilters = (props) => {
           onSubmit={props.multiValueFilterHandler}
           defaultActive
         />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.entityColor,
+            backgroundColor: classes.entityColor,
+          }}
+        />
         <Autocomplete
           title={<FormattedHTMLMessage id="Search.Filters.tutelles" />}
           subtitle={<FormattedHTMLMessage id="Search.Filters.tutelles.subtitle" />}
@@ -78,6 +99,13 @@ const EntityFilters = (props) => {
           onSubmit={props.multiValueFilterHandler}
           facets={tutFacetsOrganisme.entries}
           facetID="institutions.structure.label.fr"
+        />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.entityColor,
+            backgroundColor: classes.entityColor,
+          }}
         />
         <CheckBoxFilter
           language={props.language}
