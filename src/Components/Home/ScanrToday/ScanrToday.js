@@ -1,12 +1,12 @@
 import React from 'react';
-import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
-import useSearchAPI from '../../../Hooks/useSearchAPI';
-import {
-  API_STRUCTURES_SEARCH_END_POINT,
-  API_PERSONS_SEARCH_END_POINT,
-  API_PROJECTS_SEARCH_END_POINT,
-  API_PUBLICATIONS_SEARCH_END_POINT,
-} from '../../../config/config';
+// import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
+// import useSearchAPI from '../../../Hooks/useSearchAPI';
+// import {
+//   API_STRUCTURES_SEARCH_END_POINT,
+//   API_PERSONS_SEARCH_END_POINT,
+//   API_PROJECTS_SEARCH_END_POINT,
+//   API_PUBLICATIONS_SEARCH_END_POINT,
+// } from '../../../config/config';
 
 // import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import entityLogo from '../../../images/svg/icon-entities.svg';
@@ -19,7 +19,7 @@ import classes from './ScanrToday.scss';
 
 
 const ScanrToday = () => {
-  const request = { query: '' };
+  // const request = { query: '' };
   const entityRequest = { query: '', filters: {} };
   entityRequest.filters.status = {
     type: 'MultiValueSearchFilter',
