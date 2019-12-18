@@ -8,10 +8,15 @@ import {
   API_PUBLICATIONS_SEARCH_END_POINT,
 } from '../../../config/config';
 
-import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
-import CounterCardByType from './CounterCards/CounterCardByType';
+// import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
+import entityLogo from '../../../images/svg/icon-entities.svg';
+import personLogo from '../../../images/svg/icon-persons.svg';
+import projectLogo from '../../../images/svg/icon-projects.svg';
+import productionLogo from '../../../images/svg/icon-publications.svg';
 
+import { Container, DatabaseText } from './styles';
 import classes from './ScanrToday.scss';
+
 
 const ScanrToday = () => {
   const request = { query: '' };
@@ -31,57 +36,46 @@ const ScanrToday = () => {
   const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
   const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
 
+  // Use entities.data, persons.data etc. for search counts.
+
   return (
     <section className={classes.ScanrToday}>
-      <div className="container">
-        <div className="row">
-          <div className="col-lg">
-            <h2 className={classes.Title}>
-              <FormattedHTMLMessage id="Home.ScanrToday.title" />
-              &nbsp;
-              <LexiconModal target="ScanrToday">
-                <i className="fa fa-info-circle" />
-              </LexiconModal>
-            </h2>
+      <Container>
+        <div className={`row py-3 px-5 ${classes.database}`}>
+          <div className="col-3 d-flex align-items-center">
+            <img
+              src={entityLogo}
+              alt="Logo MESRI"
+              aria-hidden
+            />
+            <DatabaseText>Recherchez parmis plus de 35 000 structures publiques et privés</DatabaseText>
           </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <a href="recherche/structures">
-              <CounterCardByType
-                logo="entities"
-                title={<FormattedHTMLMessage id="Home.ScanrToday.entities" />}
-                count={<FormattedNumber value={entities.data.total} />}
-              />
-            </a>
+          <div className="col-3 d-flex align-items-center">
+            <img
+              src={personLogo}
+              alt="Logo MESRI"
+              aria-hidden
+            />
+            <DatabaseText>Recherchez parmis plus de 450 000 auteurs</DatabaseText>
           </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <a href="recherche/persons">
-              <CounterCardByType
-                logo="persons"
-                title={<FormattedHTMLMessage id="Home.ScanrToday.persons" />}
-                count={<FormattedNumber value={persons.data.total} />}
-              />
-            </a>
+          <div className="col-3 d-flex align-items-center">
+            <img
+              src={projectLogo}
+              alt="Logo MESRI"
+              aria-hidden
+            />
+            <DatabaseText>Recherchez parmis les 80 000 projets et financements</DatabaseText>
           </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <a href="recherche/projects">
-              <CounterCardByType
-                logo="projects"
-                title={<FormattedHTMLMessage id="Home.ScanrToday.projects" />}
-                count={<FormattedNumber value={projects.data.total} />}
-              />
-            </a>
-          </div>
-          <div className={`col-lg ${classes.CardContainer}`}>
-            <a href="recherche/publications">
-              <CounterCardByType
-                logo="publications"
-                title={<FormattedHTMLMessage id="Home.ScanrToday.productions" />}
-                count={<FormattedNumber value={productions.data.total} />}
-              />
-            </a>
+          <div className="col-3 d-flex align-items-center">
+            <img
+              src={productionLogo}
+              alt="Logo MESRI"
+              aria-hidden
+            />
+            <DatabaseText>Recherchez parmis les 2 000 000 de publications francaises</DatabaseText>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

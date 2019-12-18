@@ -1,48 +1,75 @@
 import React from 'react';
-import searchImage from '../../../images/img/search.png';
-import entityImage from '../../../images/img/entityPage.png';
-import ecosystemImage from '../../../images/img/ecosystem.png';
-import focusImage from '../../../images/img/focus.png';
+import logoMinistere from '../../Shared/svg/logo-ministere.svg';
+import {
+  Grid,
+  Button,
+  Title,
+  DescriptiveText,
+  Section,
+  Separator,
+  TitleLeft,
+  Icon,
+} from './styles';
 
-const style = { borderRadius: '16px' }
 const ScanrIs = () => (
-  <div className="container flex-column p-5">
-    <div className="d-flex flex-nowrap py-4">
-      <img style={style} src={searchImage} height="300px" aria-hidden alt="" />
-      <div className="d-flex flex-column align-items-center justify-content-center px-4">
-        <h3>scanR, un moteur de recherche</h3>
-        <p>
-          Moteur de recherche, scanR permet de rechercher dans 4 types d&apos;objets, les entitées et structures, les autheurs et chercheurs, les financements et projets et les productions au travers des thèses, des publications et des brevets.
-        </p>
+  <Section>
+    <div className="container py-5">
+      <div className="row">
+        <div className="col-4 d-flex flex-column">
+          <TitleLeft>scanR, c&apos;est quoi ?</TitleLeft>
+          <div className="d-flex">
+            <Separator color="entity" />
+            <Separator color="person" />
+            <Separator color="projects" />
+            <Separator color="production" />
+          </div>
+          <DescriptiveText>
+            Moteur de recherche, scanR permet de rechercher dans 4 types d&apos;objets, les entitées et structures, les autheurs et chercheurs, les financements et projets et les productions au travers des thèses, des publications et des brevets.
+          </DescriptiveText>
+          <div className="mt-auto">
+            <DescriptiveText>
+              scanR est un service proposé par le Ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
+            </DescriptiveText>
+            <img src={logoMinistere} height="60px" />
+          </div>
+        </div>
+        <div className="col-8">
+          <Grid minWidth={300}>
+            <div className="d-flex flex-column">
+              <Icon className="fas fa-folder" />
+              <Title>Explorer des données enrichies et reliées entre elles...</Title>
+              <DescriptiveText>
+                scanR permet d&apos;effectuer une recherche sur différents types d&apos;objets, allant des structures de recherche aux projets de financements, en passant par les auteurs et leurs productions (publications, thèses et brevets).
+                La mise en relation de tous ces objets permet d&apos;obtenir des résultats de recherche contextualisés et de les caractériser dans le paysage complexe du monde de la recherche et de l&apos;innovation.
+              </DescriptiveText>
+            </div>
+            <div className="d-flex flex-column">
+              <Icon className="fas fa-folder" />
+              <Title>Des focus, pour approfondir des sujets précis</Title>
+              <DescriptiveText>
+                De nouveaux focus sont ajoutés régulièrement. Une contextualisation et des data-visualisations spécifiques sont réalisées. Pour chacun des focus, les données sous-jacentes sont disponibles, ou bien directement dans scanR, ou bien dans un jeu de données en open data.
+              </DescriptiveText>
+            </div>
+            <div className="d-flex flex-column">
+              <Icon className="fas fa-folder" />
+              <Title>Des outils pour tirer parti aux mieux des données proposées</Title>
+              <DescriptiveText>
+              scanR offre des possibilités de découverte, de visualisations et d&apos;exploitation massive
+              Par exemple, pour chaque type d&apos;objet, scanR met en avant des objets similaires, en lien avec les mêmes thématiques de recherche
+              De plus, des outils de visualisations sont disponibles à la fois sur chaque page de résultats de recherche comme sur les fiches de caractérisation des entités, projets, auteurs et publications.
+              </DescriptiveText>
+            </div>
+            <div className="d-flex flex-column">
+              <Icon className="fas fa-folder" />
+              <Title>Des données ouvertes et réutilisables</Title>
+              <DescriptiveText>
+                Les données utilisées par scanR sont en libre accès sous licence de réutilisation via des API et des jeux de données sont sur la plateforme Opendata du ministère de l&apos;enseignement supérieur, de la recherche et de l&apos;innovation
+              </DescriptiveText>
+            </div>
+          </Grid>
+        </div>
       </div>
     </div>
-    <div className="d-flex flex-nowrap">
-      <div className="d-flex flex-column align-items-center justify-content-center px-4">
-        <h3>scanR connecte...</h3>
-        <p>
-        scanR lie tout ces objets les uns aux autres. Il associe les projets de recherche aux laboratoires qui en bénéficient, des publications à leurs auteurs, etc. scanR fait aussi des liens avec des structures étrangères et permet de voir les collaborations international des acteurs. Ces liens sont retrouvés par scanR et ne sauraient être exhaustifs.
-        </p>
-      </div>
-      <img src={ecosystemImage} height="250px" aria-hidden alt="" />
-    </div>
-    <div className="d-flex flex-nowrap">
-      <img src={entityImage} height="250px" aria-hidden alt="" />
-      <div className="d-flex flex-column align-items-center justify-content-center px-4">
-        <h3>scanR restitue de l&apos;information</h3>
-        <p>
-          scanR aide à la caractérisation des objets qu&apos;il contient, en structurant l&apos;information sur des pages de présentation et en proposant des visualisations et en synthétisant l&apos;information.
-        </p>
-      </div>
-    </div>
-    <div className="d-flex flex-nowrap">
-      <div className="d-flex flex-column align-items-center justify-content-center px-4">
-        <h3>scanR synthétse de l&apos;information</h3>
-        <p>
-          scanR propose des vues sythétiques sur des sujets divers, souvent en lien avec l&apos;actialité au travers des focus.
-        </p>
-      </div>
-      <img src={focusImage} height="250px" aria-hidden alt="" />
-    </div>
-  </div>
+  </Section>
 );
 export default ScanrIs;

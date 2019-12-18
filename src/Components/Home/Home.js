@@ -9,8 +9,7 @@ import Header from '../Shared/Header/Header';
 // import MostActiveThemes from './MostActiveThemes/MostActiveThemes';
 // import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
 // import Newsletter from '../Shared/Newsletter/Newsletter';
-import ScanrToday from './ScanrToday2/ScanrToday';
-import ScanrIs2 from './ScanrIs2/ScanrIs';
+import ScanrToday from './ScanrToday/ScanrToday';
 import ScanrIs from './ScanrIs/ScanrIs';
 import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
@@ -40,9 +39,8 @@ const HomePage = (props) => {
           {...props}
           language={context.language}
         />
-        <ScanrToday language={context.language} />
-        <ScanrIs2 />
         <ScanrIs />
+        <ScanrToday language={context.language} />
         {/* <ScanrToday language={context.language} />
 
 
