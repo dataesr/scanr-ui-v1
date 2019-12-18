@@ -39,8 +39,8 @@ const HomePage = (props) => {
           {...props}
           language={context.language}
         />
+        <ScanrToday />
         <ScanrIs />
-        <ScanrToday language={context.language} />
         {/* <ScanrToday language={context.language} />
 
 
