@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
 
@@ -8,8 +8,6 @@ import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
 import classes from './Search.scss';
 
-/* COULEURS */
-import styles from '../../../style.scss';
 
 /**
  * Search
@@ -24,7 +22,7 @@ const Search = (props) => {
     e.preventDefault();
     const query = e.target.query.value;
     props.history.push(`/recherche/all?query=${query}`);
-  }
+  };
   return (
     <section className={classes.SearchFull}>
       <div className="container py-4">
@@ -86,7 +84,7 @@ const Search = (props) => {
       </div>
     </section>
   );
-}
+};
 
 export default Search;
 
