@@ -15,6 +15,8 @@ import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 import WelcomeModal from './WelcomeModal';
 
+import logo from '../Shared/svg/logo-ministere.svg';
+
 import classes from './Home.scss';
 
 import messagesFr from './translations/fr.json';
@@ -35,6 +37,13 @@ const HomePage = (props) => {
         </FormattedHTMLMessage>
         <WelcomeModal />
         <Header />
+            <div className={`col-md ${classes.LogoHome}`}>
+              <img
+                src={logo}
+                alt="Logo MESRI"
+                className={classes.Logo}
+              />
+            </div>
         <Search
           {...props}
           language={context.language}
