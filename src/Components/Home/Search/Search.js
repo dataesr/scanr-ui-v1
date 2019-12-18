@@ -1,15 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import { FormattedHTMLMessage } from 'react-intl';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
-import { Separator } from './styles'
+import { Separator } from './styles';
 import classes from './Search.scss';
-import styles from '../../../style.scss';
 
 /**
  * Search
