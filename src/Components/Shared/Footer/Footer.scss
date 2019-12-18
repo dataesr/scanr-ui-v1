@@ -28,6 +28,12 @@ $linkColorHover: rgb(255, 255, 255);
     span {
       color: $scanrlightgreyColor;
     }
+    button {
+      background-color: $scanrblueColor;
+    }
+    button:hover {
+      background-color: $scanrelectricblueColor;
+    }
   }
 
   .Term {
