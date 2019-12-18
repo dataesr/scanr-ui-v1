@@ -34,7 +34,7 @@ const PublicationsFilters = (props) => {
       <div className="p-2">
         <SelectFilter
           language={props.language}
-          title={<FormattedHTMLMessage id="Search.Filters.publicationType" />}
+          title={<FormattedHTMLMessage id="Search.Filters.productionType" />}
           facets={typeFacets.entries}
           filters={typeActiveFilters}
           facetID="productionType"
@@ -96,6 +96,13 @@ const PublicationsFilters = (props) => {
                   onSubmit={props.multiValueFilterHandler}
                   facets={journalFacets.entries}
                   facetID="source.title"
+                />
+                <hr
+                  style={{
+                    height: '2px',
+                    color: styles.productionColor,
+                    backgroundColor: styles.productionColor,
+                  }}
                 />
                 <CheckBoxFilter
                   language={props.language}
