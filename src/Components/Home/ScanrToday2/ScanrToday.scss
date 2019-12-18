@@ -1,0 +1,18 @@
+@import '../../../style.scss';
+
+.ScanrToday {
+  background-color: $scanrdeepblueColor;
+  padding: 0.25em;
+
+  .Title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $titleColor;
+  }
+
+  .SubTitle {
+    font-size: 0.9em;
+    color: $titleColor;
+  }
+
+}

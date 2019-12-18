@@ -1,0 +1,23 @@
+@import '../../../../style.scss';
+
+.EvolutionCardByType {
+  width: 100%;
+  border-radius: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-align: center;
+
+
+  .Value {
+    color: $titleColor;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+}
+
+@media (min-width: 0px) and (max-width: 991.98px) {
+  .EvolutionCardByType {
+    margin-bottom: 16px;
+  }
+}
