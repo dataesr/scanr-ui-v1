@@ -35,3 +35,13 @@
 .MyUL {
   margin-bottom: 0px;
 }
+
+.Li {
+  background-color: $scanrblueColor;
+  color: white;
+}
+
+.Li:hover,.Li:focus, {
+  background-color: $scanrgreyColor;
+  A{color: white;}
+}
