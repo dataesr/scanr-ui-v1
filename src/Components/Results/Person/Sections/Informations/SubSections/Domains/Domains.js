@@ -46,10 +46,8 @@ const Domains = (props) => {
             <TagCard
               logo="fas fa-flask"
               title={<FormattedHTMLMessage id="Person.Informations.Domains.domainCard" />}
-              tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
               tagList={tagList}
               language={props.language}
-              maxElements={12}
               labelListButton="Tous les domaines"
             />
           </div>

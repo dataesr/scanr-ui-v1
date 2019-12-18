@@ -142,7 +142,6 @@ const PatentIdentity = (props) => {
                   language={props.language}
                   logo="fas fa-clipboard-list"
                   title={<FormattedHTMLMessage id="Patent.Identity.tags" />}
-                  tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
                   labelListButton="Autres"
                   tagList={keywords}
                 />

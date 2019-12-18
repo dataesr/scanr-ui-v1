@@ -214,7 +214,6 @@ class Thesis extends Component {
                             language={this.props.language}
                             logo="fas fa-clipboard-list"
                             title={<FormattedHTMLMessage id="Thesis.Identity.tags" />}
-                            tagStyle={{ backgroundColor: '#3778bb', color: 'white' }}
                             labelListButton="Autres"
                             tagList={this.props.data.keywords.default}
                             tooltip=""

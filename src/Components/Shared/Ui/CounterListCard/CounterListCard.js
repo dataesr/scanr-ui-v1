@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ButtonWithModal from '../Buttons/ButtonWithModal';
-import ButtonToPage from '../Buttons/ButtonToPage';
+import PersonCard from '../../../Search/Results/ResultCards/PersonCard';
+import AffiliationCard from '../../../Search/Results/ResultCards/EntityCard';
 
 import classes from './CounterListCard.scss';
 
@@ -29,43 +30,32 @@ const CounterListCard = (props) => {
   }
   const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
   const items = itemsToShow.map((item) => {
-    let bt = null;
-    if (item.person && item.person.id) {
-      bt = (
-        <div>
-          <ButtonToPage
-            className={classes.Component_dark}
-            url={`/person/${item.person.id}`}
-          >
-            {messages[props.language]['authors.buttonToPage.label']}
-          </ButtonToPage>
-        </div>
+    if (props.isPerson) {
+      return (
+        <li key={item}>
+          <PersonCard
+            language={props.language}
+            data={item}
+            small
+          />
+        </li>
       );
     }
-
-    let itemRole = props.roleKey;
-    if (item.role) {
-      itemRole = item.role.concat('-', `${props.objectType}`);
+    if (props.isEntity) {
+      return (
+        <li key={item}>
+          <AffiliationCard
+            language={props.language}
+            data={item}
+            small
+          />
+        </li>
+      );
     }
-
-    return (
-      <li className="d-flex m-2" key={item}>
-        <p className={`mr-auto ${classes.ModalLabel}`}>
-          {
-            (props.isEntity) ? item.label : item.fullName
-          }
-        </p>
-        <p className={classes.Role}>
-          {
-            (props.isEntity) ? item.country : messages[props.language][itemRole]
-          }
-        </p>
-        {bt}
-      </li>
-    );
+    return null;
   });
 
-  const itemsHtml = <ul className="list-group list-group-flush">{items}</ul>;
+  const itemsHtml = <ul className={`list-group list-group-flush ${classes.Ul}`}>{items}</ul>;
   return (
     <div className={`d-flex flex-column ${classes.CounterListCard} ${classes[props.color]}`}>
       {title}
@@ -97,9 +87,10 @@ export default CounterListCard;
 
 CounterListCard.defaultProps = {
   title: '',
-  roleKey: '',
+  // roleKey: '',
   modalTitleKey: 'authors.modal.title',
   isEntity: false,
+  isPerson: false,
 };
 
 CounterListCard.propTypes = {
@@ -109,8 +100,9 @@ CounterListCard.propTypes = {
   title: PropTypes.string,
   modalTitleKey: PropTypes.string,
   labelKey: PropTypes.string,
-  objectType: PropTypes.string,
-  roleKey: PropTypes.string,
+  // objectType: PropTypes.string,
+  // roleKey: PropTypes.string,
   color: PropTypes.string,
   isEntity: PropTypes.bool,
+  isPerson: PropTypes.bool,
 };
