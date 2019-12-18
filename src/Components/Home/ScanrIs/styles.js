@@ -7,28 +7,6 @@ export const Grid = styled.div`
   grid-gap: 32px;
 `;
 
-export const Button = styled.button`
-  margin: auto;
-  display: flex;
-  padding: 0.5em;
-  height: 2.3rem;
-  align-items: center;
-  background-color: ${styles.scanrblueColor};
-  border-radius: 8px;
-  &:hover {
-    background-color: ${styles.scanrgreyColor}
-  }
-  > p {
-    color: white;
-    margin: 0;
-  }
-  > i {
-    color: white;
-    font-size: 1.2em;
-    margin-left: 16px;
-  }
-`;
-
 export const Title = styled.h2`
   color: ${styles.scanrdeepblueColor}
   font-size: 1.3rem;
@@ -48,6 +26,17 @@ export const Section = styled.div`
   background-color: aliceblue;
   padding-top: 0.75em;
   padding-bottom: 0.75em;
+`;
+
+export const LearnMore = styled.a`
+  color: ${styles.scanrdeepblueColor};
+  margin-left: auto;
+  margin-top: -0.5em;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
 `;
 
 export const Separator = styled.div`

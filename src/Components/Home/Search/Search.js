@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import { FormattedHTMLMessage } from 'react-intl';
 
 import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
+import { Separator } from './styles'
 import classes from './Search.scss';
-
+import styles from '../../../style.scss';
 
 /**
  * Search
@@ -26,10 +28,16 @@ const Search = (props) => {
   return (
     <section className={classes.SearchFull}>
       <div className="container py-4">
-        <div className="d-flex flex-column py-5">
+        <div className="d-flex flex-column pt-5 pb-2">
           <h1 className={classes.mainTitle}>
             <FormattedHTMLMessage id="Home.Search.title" />
           </h1>
+        </div>
+        <div className="d-flex w-50 m-auto">
+          <Separator color="entity" />
+          <Separator color="person" />
+          <Separator color="projects" />
+          <Separator color="production" />
         </div>
         <form onSubmit={submitResearch}>
           <div className="d-flex flex-nowrap mt-3 px-5">
