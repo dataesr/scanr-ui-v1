@@ -1,8 +1,9 @@
 @import '../../../style.scss';
 
 .ScanrToday {
-  background-color: $scanrdeepblueColor;
+  background-color: $scanrmiddlegreyColor;
   padding: 0.25em;
+  padding: 0;
 
   .Title {
     font-size: 1.5em;
@@ -14,5 +15,24 @@
     font-size: 0.9em;
     color: $titleColor;
   }
+
+.chevron {
+  display: inline-block;
+  //max-height: 100px;
+  min-width: 150px;
+  text-align: center;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  margin-right: -60px;
+  background: $scanrdeepblueColor;
+  -webkit-clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 20% 50%);
+  clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 20% 50%);
+}
+
+.database{
+padding:0px 0 !important;
+}
 
 }

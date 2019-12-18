@@ -31,10 +31,10 @@ const ScanrToday = () => {
     op: 'all',
     values: [true],
   };
-  const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
-  const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
-  const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
-  const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
+  // const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
+  // const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
+  // const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
+  // const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
 
   // Use entities.data, persons.data etc. for search counts.
 
@@ -42,37 +42,37 @@ const ScanrToday = () => {
     <section className={classes.ScanrToday}>
       <Container>
         <div className={`row py-3 px-5 ${classes.database}`}>
-          <div className="col-3 d-flex align-items-center">
-            <img
-              src={entityLogo}
-              alt="Logo MESRI"
-              aria-hidden
-            />
-            <DatabaseText>Recherchez parmis plus de 35 000 structures publiques et privés</DatabaseText>
+          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
+                <img
+                  src={entityLogo}
+                  alt="Logo MESRI"
+                  aria-hidden
+                />
+                <DatabaseText>Plus de 35&nbsp;000 entités publiques et privées</DatabaseText>
           </div>
-          <div className="col-3 d-flex align-items-center">
+          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
             <img
               src={personLogo}
               alt="Logo MESRI"
               aria-hidden
             />
-            <DatabaseText>Recherchez parmis plus de 450 000 auteurs</DatabaseText>
+            <DatabaseText>Plus de 450&nbsp;000 auteurs</DatabaseText>
           </div>
-          <div className="col-3 d-flex align-items-center">
+          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
             <img
               src={projectLogo}
               alt="Logo MESRI"
               aria-hidden
             />
-            <DatabaseText>Recherchez parmis les 80 000 projets et financements</DatabaseText>
+            <DatabaseText>80&nbsp;000 projets et financements</DatabaseText>
           </div>
-          <div className="col-3 d-flex align-items-center">
+          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
             <img
               src={productionLogo}
               alt="Logo MESRI"
               aria-hidden
             />
-            <DatabaseText>Recherchez parmis les 2 000 000 de publications francaises</DatabaseText>
+            <DatabaseText>Plus de 2&nbsp;000&nbsp;000 de productions</DatabaseText>
           </div>
         </div>
       </Container>
