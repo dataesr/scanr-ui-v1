@@ -1,6 +1,7 @@
 import React, { useContext, useState, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import CookieConsent from 'react-cookie-consent';
+import ReactTooltip from 'react-tooltip';
 import Modal from 'react-bootstrap/Modal';
 import { GlobalContext } from '../../../GlobalContext';
 import FormContact from '../FormContact/FormContact';
@@ -58,9 +59,10 @@ const Footer = () => {
           />
         </CookieConsent>
         <div className={classes.feedback}>
-          <button type="button" className={classes.feedbackButton} onClick={() => setActive(!isActive)}>
+          <button type="button" className={`btn ${classes.feedbackButton}`} onClick={() => setActive(!isActive)} data-tip={messages[context.language]['Feedback.Tooltip']}>
             {(isActive) ? (<i className="far fa-2x fa-window-close" />) : (<i className="far fa-2x fa-envelope-open" />)}
           </button>
+          <ReactTooltip html />
         </div>
         <Fragment>
           <Modal
