@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-import Banner from '../../Shared/Banner/Banner';
+// import Banner from '../../Shared/Banner/Banner';
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
@@ -81,13 +81,13 @@ const Contact = props => (
       </div>
     </section>
 
-    <Banner
+    { /* <Banner
       cssClass="BannerDark"
       labelKey="Appear"
       language={props.language}
       url=""
       target="_blank"
-    />
+    /> */ }
 
     <Footer />
   </React.Fragment>
