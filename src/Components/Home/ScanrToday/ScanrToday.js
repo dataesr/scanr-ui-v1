@@ -60,7 +60,7 @@ const ScanrToday = () => {
                 alt="Logo Entity scanR"
                 aria-hidden
               />
-              <DatabaseText>Plus de 35&nbsp;000 entités publiques et privées</DatabaseText>
+              <DatabaseText>35&nbsp;000 entités publiques et privées</DatabaseText>
             </a>
           </span>
         </div>
@@ -72,7 +72,7 @@ const ScanrToday = () => {
                 alt="Logo person scanR"
                 aria-hidden
               />
-              <DatabaseText>Plus de 450&nbsp;000 auteurs</DatabaseText>
+              <DatabaseText>450&nbsp;000 fiches auteurs</DatabaseText>
             </a>
           </span>
         </div>
@@ -96,7 +96,7 @@ const ScanrToday = () => {
                 alt="Logo productions scanR"
                 aria-hidden
               />
-              <DatabaseText>Plus de 2&nbsp;000&nbsp;000 de productions</DatabaseText>
+              <DatabaseText>2&nbsp;000&nbsp;000 de productions</DatabaseText>
             </a>
           </span>
         </div>
