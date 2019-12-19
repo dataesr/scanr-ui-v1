@@ -16,6 +16,32 @@ import {
 const focusList = [
   {
     tags: {
+      fr: ['#satt', '#transfert', '#technologies'],
+      en: ['#satt', '#transfert', '#technologies'],
+    },
+    title: {
+      fr: 'Sociétés d’Accélération du Transfert de Technologies (SATT)',
+      en: 'French technology transfer offices (SATT, Sociétés d’Accélération du Transfert de Technologies)',
+    },
+    type: 'map',
+    url: '/focus/carte-satt-2019',
+    api: 'structures',
+  },
+  {
+    tags: {
+      fr: ['#InstitutUniversitaireDeFrance', '#IUF'],
+      en: ['#InstitutUniversitaireDeFrance', '#IUF'],
+    },
+    title: {
+      fr: "Les nominations 2019 à l'Institut Universitaire de France",
+      en: 'Persons distinguished by the Institut Universitaire de France in 2019',
+    },
+    type: 'treemap',
+    url: '/focus/iuf',
+    api: 'persons',
+  },
+  {
+    tags: {
       fr: ['#youtube', '#vulgarisation'],
       en: ['#youtube', '#popularization'],
     },
@@ -111,7 +137,7 @@ const ScanrIs = () => (
             </div>
           </Grid>
         </div>
-        <div className="col-lg-4 py-1">
+        <div className="col-lg-4 py-1" style={{ backgroundColor:'#fff', borderRadius: '8px' }}>
           <div className="d-flex flex-column">
             <Icon className="fas fa-search-plus" aria-hidden />
             <Title><FormattedHTMLMessage id="Home.ScanrIs.section.second.title" /></Title>
