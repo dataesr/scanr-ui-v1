@@ -6,7 +6,7 @@ import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import ButtonMiniDarkToSearch from '../../Shared/Ui/Buttons/ButtonMiniDarkToSearch';
 import { suggestions } from '../../../config/CurrentThemesAndSuggestions';
 
-import { Separator } from './styles';
+import Separator from './styles';
 import classes from './Search.scss';
 
 /**
@@ -26,7 +26,7 @@ const Search = (props) => {
   return (
     <section className={classes.SearchFull}>
       <div className="container py-4">
-        <div className="d-flex flex-column pt-5 pb-2">
+        <div className="d-flex flex-column pt-5 pb-3">
           <h1 className={classes.mainTitle}>
             <FormattedHTMLMessage id="Home.Search.title" />
           </h1>
@@ -38,7 +38,7 @@ const Search = (props) => {
           <Separator color="production" />
         </div>
         <form onSubmit={submitResearch}>
-          <div className="d-flex flex-nowrap mt-3 px-5">
+          <div className="d-flex flex-nowrap mt-4 px-5">
             <div className="flex-grow-1 p-0">
               <FormattedHTMLMessage id="Home.Search.placeholder">
                 { placeholder => (
@@ -70,7 +70,7 @@ const Search = (props) => {
             </div>
           </div>
         </form>
-        <div className={`pt-1 px-5 ${classes.Suggest}`}>
+        <div className={`py-1 px-5 ${classes.Suggest}`}>
           <FormattedHTMLMessage id="Home.Search.suggest" />
           <ul>
             {

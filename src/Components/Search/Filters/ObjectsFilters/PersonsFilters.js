@@ -12,6 +12,8 @@ const PersonsFilters = (props) => {
   const structFacets = facets.find(item => item.id === 'affiliations') || { entries: [] };
   const awardsActiveFilters = props.filters.awards || {};
   const awardsFacets = facets.find(item => item.id === 'awards') || { entries: [] };
+  const rolesActiveFilters = props.filters.roles || {};
+  const rolesFacets = facets.find(item => item.id === 'roles') || { entries: [] };
 
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -41,6 +43,24 @@ const PersonsFilters = (props) => {
           facets={awardsFacets.entries}
           filters={awardsActiveFilters}
           facetID="awards.label"
+          onSubmit={props.multiValueFilterHandler}
+        />
+        <hr
+          style={{
+            height: '2px',
+            color: classes.personColor,
+            backgroundColor: classes.personColor,
+          }}
+        />
+        <CheckBoxFilter
+          language={props.language}
+          defaultActive
+          retractable={false}
+          nbItemsToShow={5}
+          title={<FormattedHTMLMessage id="Search.Filters.roles" />}
+          facets={rolesFacets.entries}
+          filters={rolesActiveFilters}
+          facetID="roles.role"
           onSubmit={props.multiValueFilterHandler}
         />
       </div>
