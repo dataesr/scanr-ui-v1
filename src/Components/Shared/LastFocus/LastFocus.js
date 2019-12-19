@@ -7,7 +7,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import ButtonToPage from '../Ui/Buttons/ButtonToPage';
-import FocusCard from '../Ui/FocusMiniCard/FocusMiniCard';
+import FocusCard from '../Ui/FocusCard/FocusCard';
 import LexiconModal from '../Lexicon/LexiconModal/LexiconModal';
 
 /* SCSS */
