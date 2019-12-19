@@ -368,8 +368,8 @@
     "groupkey": "entities",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Entreprises issues ou liées aux laboratoires de reherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?",
-      "en": "nan"
+      "fr": "Entreprises issues ou liées aux laboratoires de recherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?",
+      "en": "Companies from or related to research laboratories, what does the presence of companies in certain laboratory profiles mean?"
     },
     "definition": {
       "fr": "Via différentes sources (iLab, universités et établissement d'enseignement supérieur et de recherche ou d'organismes, veille, ...), scanR identifie certaines entreprises créées par les personnels d'un laboratoire ou utilisant les connaissances et technologies qui y sont développées. Ce repérage n'est pas exhaustif et s'améliorera grâce à vos retours et signalements ! Contactez-nous [lien rubrique contact] !",
@@ -563,12 +563,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Qu'est-ce qu'une famille de brevets ?",
-      "en": "nan"
+      "fr": "Qu'entend-on par invention ?",
+      "en": "What do we mean by invention?"
     },
     "definition": {
-      "fr": "Un brevet n'est valable que sur un territoire déterminé. Ainsi il faut déposer une demande de brevet dans toutes les zones où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle une famille de brevets. Une famille de brevets est donc un groupe de dépôts de brevets apparentés. La famille simple regroupe tous les documents ayant exactement la même priorité ou combinaison de priorité et donc ceux qui font référence à une même invention, avec un contenu technique identique. La famille élargie (Inpadoc) regroupe tous les documents qui ont au moins une priorité en commun. Les documents de cette famille peuvent donc être liés entre eux indirectement. Elle représente donc plus une technologie qu'une invention, des différences pouvant apparaître entre les contenus techniques des différentes demandes. Dans la majorité des cas, familles simple et élargie se recoupent et présentent les mêmes demandes de brevet.\nDans scanR le choix a été fait de présenter les résultats de recherche concernant les demandes de brevets par famille simple. Les informations concernant une éventuelle famille élargie sont tout de même accessibles dans la partie \"familles liées\".",
-      "en": "nan"
+      "fr": "Les inventions correspondent ici aux familles de brevets simples au sens de l’OEB. Une famille de brevets simple est une collection de dépôts de brevets considérés comme couvrant une seule invention : leur contenu technique est réputé identique et ils ont tous exactement les mêmes priorités.\nEn effet, un brevet ne protégeant que sur un territoire déterminé, il est nécessaire de déposer une demande de brevet dans toutes les juridictions où l'on souhaite être protégé. Des procédures facilitent la démarche, mais au final elles donnent lieu à un ensemble de dépôts dans divers offices nationaux ou régionaux, que l'on regroupe dans ce que l'on appelle la famille de brevets.\n<a href='https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families_fr.html' target='_blank'>En savoir plus sur les familles de brevets</a>",
+      "en": "The inventions here mean EPO’s simple patent families. A simple patent family is a collection of patent documents that are considered to cover a single invention : their technical content is considered to be identical and they all have exactly the same priorities.\nIndeed, patent protection is territorial and inventors and investors may have to seek protection in various different jurisdictions. Procedures facilitate the process, but ultimately they give rise to a set of filings in various national or regional offices, which are grouped in what is called the patent family.\n<a href='https://www.epo.org/searching-for-patents/helpful-resources/first-time-here/patent-families_fr.html' target='_blank'>Learn more about patent families</a>"
     }
   },
   {
@@ -576,12 +576,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Pourquoi des participants apparaissent en doublon dans une même famille de brevets ?",
-      "en": "nan"
+      "fr": "Pourquoi des participants apparaissent en doublon pour une même invention ?",
+      "en": "Why there is sometimes duplication between participants ?"
     },
     "definition": {
-      "fr": "Les informations concernant les déposants et inventeurs remontent dans Patstat au niveau des dépôts de demandes de brevets et à partir des différents offices nationaux ou régionaux. Les noms d'inventeurs ou d'entreprises sont souvent traduits à partir de leur langue d'origine et des différences dans l'orthographe des participants sont fréquentes. Même si des corrections ont été apportées dans scanR, des doublons apparaissent encore. La liste complète de tous les déposants et inventeurs des différents dépôts de la famille est affichée car ces informations peuvent différer à la marge d'un dépôt à l'autre.",
-      "en": "nan"
+      "fr": "Les données concernant les déposants et inventeurs sont issues de sources hétérogènes émanant de divers offices et souvent traduites à partir de la langue d'origine de dépôt. Un effort important a été consacré à la normalisation des noms de participants, mais des doublons peuvent persister.",
+      "en": "The data concerning applicants and inventors come from heterogeneous sources from various offices and often translated from the original language of the application. Significant effort has been devoted to standardizing the names of participants, but duplicates may persist."
     }
   },
   {
@@ -590,11 +590,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelle est la différence entre un brevet et un dépôt de brevet ?",
-      "en": "nan"
+      "en": "What is the difference between patent and patent application ?"
     },
     "definition": {
-      "fr": "Un dépôt de brevet est un dossier de demande de protection par un brevet d'invention. Le brevet correspond au brevet délivré qui assure la protection de l'invention sur un territoire donné. Sont répertoriés sur scanR tous les dépôts de brevets, qu'ils aient été délivrés ou non, prsésentés par famille.",
-      "en": "nan"
+      "fr": "Un dépôt de brevet ou demande de brevet est une demande visant à protéger une invention par un brevet. Elle peut être déposée auprès de l’INPI, de l'OEB ou d'un autre office de brevets. Un brevet est un titre juridique qui confère à un inventeur le droit d'empêcher autrui de fabriquer, d'utiliser ou de vendre son invention sans son consentement dans les pays pour lesquels le brevet a été délivré. Ce droit n'est accordé que pour une durée limitée (en général 20 ans). Sont répertoriés dans scanR tous les dépôts de brevets publiés, qu'ils aient donné lieu à une délivrance ou non.",
+      "en": "A patent application is a request for patent protection for an invention filed with the EPO or other patent office. A patent is a form of intellectual property that gives inventors the right, for a limited period (usually 20 years), to prevent others from making, using or selling their invention without their permission in the countries for which the patent has been granted. All published patent applications are listed in scanR, whether or not they have been granted."
     }
   },
   {
@@ -602,12 +602,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "A quoi correspond la date de premier dépôt d'une famille ?",
-      "en": "nan"
+      "fr": "A quoi correspond la date de premier dépôt d'une invention ?",
+      "en": "What is the date of the first filing of an invention?"
     },
     "definition": {
-      "fr": "La date de premier dépôt d'une famille correspond à la date de dépôt de dossier de demande de brevet la plus ancienne parmi tous les dépôts de la famille.",
-      "en": "nan"
+      "fr": "La date de premier dépôt d'une invention correspond à la date de dépôt de demande de brevet la plus ancienne parmi tous les dépôts de la famille de brevets.",
+      "en": "The first filing date of an invention is the earliest patent filing date of all the family's applications."
     }
   },
   {
@@ -615,12 +615,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "A quoi correspond la date de première publication d'une famille ?",
-      "en": "nan"
+      "fr": "A quoi correspond la date de première publication d'une invention ?",
+      "en": "What is the date of the first publication of an invention?"
     },
     "definition": {
-      "fr": "La date de première publication d'une famille correspond à la date de publication de l'invention la plus ancienne de la famille. Cela correspond à la date où l'invention a été publiée et donc rendue publique. Cette publication intervient en général 18 mois après le premier dépôt.",
-      "en": "nan"
+      "fr": "La date de première publication d'une invention correspond à la date où l'invention a été publiée et donc rendue publique pour la première fois. Cette publication intervient en général 18 mois après le premier dépôt.",
+      "en": "The first publication date of an invention corresponds to the date on which the invention was published and therefore made public for the first time. This publication generally takes place 18 months after the first filing date."
     }
   },
   {
@@ -629,11 +629,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Pourquoi je ne trouve pas mon brevet dans scanR ? Quel est le périmètre ?",
-      "en": "nan"
+      "en": "Why can't I find my patent in scanR ? What is the scope ?"
     },
     "definition": {
       "fr": "Le périmètre des brevets dans scanR correspond à toutes les demandes de propriété industrielle rattachées aux familles simples comprenant au moins un dépôt de brevet avec déposant français et dont la date de premier dépôt est postérieure au 1er janvier 2010. Les dernières actualisations concernent les demandes publiées au 25/07/2019.",
-      "en": "nan"
+      "en": "The scope of patents in scanR corresponds to all requests for industrial property titles attached to simple families comprising at least one patent application with a French applicant and whose date of first filing is after January 1, 2010. The latest updates concern the applications published on 07/25/2019."
     }
   },
   {
@@ -641,12 +641,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "A quoi correspond la liste des dépôts ?",
-      "en": "nan"
+      "fr": "A quoi correspond la liste des dépôts de brevets ?",
+      "en": "What is the list of patent applications ?"
     },
     "definition": {
-      "fr": "La liste des dépôts de brevets de la famille représente toutes les demandes de protection déposées concernant l'invention : les dépôts nationaux mais aussi les dépôts internationaux par la procédure du PCT (Patent Cooperation Treaty) ainsi que les dépôts régionaux (européens et eurasiens). Diverses informations sont disponibles concernant ces dépôts : le code et la date de dépôt, la date de délivrance du brevet, le type de propriété industrielle (dans certains cas des familles ont fait l'objet d'une ou plusieurs demandes de protection sous d'autres formes que le brevet d'invention), ainsi que l'information concernant la priorité ou non au sein de la famille de dépôts. D'autres informations plus détaillées et à jour sur l'aspect juridique de la demande en question sont disponible en suivant le lien affiché vers sa fiche Espacenet. Espacenet est un service de l'OEB qui offre un accès gratuit aux informations relatives aux inventions et aux développements techniques de 1782 à nos jours.",
-      "en": "nan"
+      "fr": "La liste des dépôts de brevets représente toutes les demandes de protection déposées concernant l'invention appartenant à la même famille de brevets (cf « Qu’entend-on par invention? ») : les dépôts nationaux mais aussi les dépôts internationaux par la procédure du PCT (Patent Cooperation Treaty) ainsi que les dépôts régionaux. Diverses informations sont disponibles concernant ces dépôts : les offices de dépôt, le code et la date de dépôt, la date de délivrance du brevet s’il y a lieu, le type de propriété industrielle (dans certaines familles il y a eu des demandes de protection sous d'autres formes que le brevet d'invention), ainsi que l'information concernant la priorité ou non au sein de la famille de dépôts. D'autres informations plus détaillées et à jour sur l'aspect juridique de la demande en question sont disponibles en suivant le lien affiché vers sa fiche Espacenet. Espacenet est un service de l'OEB qui offre un accès gratuit aux informations relatives aux inventions et aux développements techniques de 1782 à nos jours.",
+      "en": "The list of patent applications represents all the industrial property titles applications filed concerning the invention belonging to the same family of patents (cf. “What do we mean by invention?”): National applications but also international applications by the PCT (Patent Cooperation Treaty) procedure as well as regional applications. Various information is available concerning these filings : the filing offices, the code and the date of filing, the granted patent date if so, the type of industrial property title (in some families there have been requests for protection in other forms than the patent), as well as information concerning priority or not within the family of applications. Other more detailed and up-to-date information on the legal aspect of the request is available by following the link displayed towards its Espacenet file. Espacenet is a service of the EPO which offers free access to information relating to inventions and technical developments from 1782 to the present day."
     }
   },
   {
@@ -655,11 +655,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Quelles sont les sources utilisées pour les brevets ?",
-      "en": "nan"
+      "en": "What sources are used for patents?"
     },
     "definition": {
       "fr": "Deux sources sont utilisées pour alimenter les données sur les dépôts de brevets : la base de données Patstat de l'OEB ( Organisation européenne des brevets) et les données de l'INPI (Institut National de la Propriété Industrielle).\nPATSTAT contient des données bibliographiques sur plus de 100 millions de documents brevets provenant de grands pays industrialisés et en développement. Ces données sont extraites des base de données de l'OEB.\nLes données source de l'INPI proviennent quant à elles des fichiers XML de création et mise à jour des dossiers de dépôts de brevets à l'INPI ainsi que des fichiers de traductions en français des résumés de demandes de brevets déposés à l'OEB en anglais ou allemand.",
-      "en": "nan"
+      "en": "Two sources are used to provide data on patent filings: the EPO Patstat database (European Patent Office) and the INPI (National Institute of Industrial Property) data. \nPATSTAT contains bibliographical data relating to more than 100 million patent documents from leading industrialised and developing countries. It also includes the legal status data from more than 40 patent authorities contained in the EPO worldwide legal status database.\nThe INPI's source data comes from XML files for creating and updating patent applications at INPI as well as French translation files for abstract of patent applications filed at the EPO in English or German."
     }
   },
   {
@@ -668,11 +668,11 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce qu'une priorité ?",
-      "en": "nan"
+      "en": "What is a priority?"
     },
     "definition": {
-      "fr": "Le déposant d’une demande de brevet dispose d’un droit de priorité. Ce droit éphémère doit être exercé dans un délai d’un an à compter du dépôt de la première demande. Il permet à un déposant de déposer une autre demande pour la même invention en réclamant la priorité de la première demande. Si la demande de priorité est validée, la date de dépôt de la première demande est considérée comme la date effective de dépôt de la deuxième demande.\nLa priorité d’une demande précédente peut être revendiquée au sein du même office de dépôt (priorité interne) ou dans un office différent (priorité externe).",
-      "en": "nan"
+      "fr": "Le déposant d’une demande de brevet dispose d’un droit de priorité. Ce droit éphémère doit être exercé dans un délai d’un an à compter du dépôt de la première demande. Il permet à un déposant de déposer une autre demande pour la même invention en réclamant la priorité de la première demande. Si la demande de priorité est validée, la date de dépôt de la première demande est considérée comme la date effective de dépôt de la deuxième demande.",
+      "en": "The patent applicant has a right of priority . This temporary right must be exercised within the time-limit of twelve months after the first filing. It allows an applicant to file another application for the same invention by claiming the priority of the first application. If the priority request is validated, the filing date of the first application is considered to be the effective filing date of the second application."
     }
   },
   {
@@ -680,12 +680,12 @@
     "groupkey": "patents",
     "icon": "fas fa-question-circle",
     "label": {
-      "fr": "Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale selon le PCT ?",
-      "en": "nan"
+      "fr": "Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale ?",
+      "en": "What are the differences between national or regional patent applications and international application?"
     },
     "definition": {
-      "fr": "Une demande de brevet nationale est effectuée au sein d'un office national et délivre des brevets nationaux, protégeant sur le territoire national.\nUne demande de brevet internationale est une procédure de dépôt de brevet unique pour tous les pays contractants du Patent Cooperation Treaty (PCT). Avant la mise en place de cette procédure, il fallait déposer une demande dans chacun des pays où l'on souhaitait se protéger. Ce système permet la centralisation des dépôts, des recherches d'antériorité et de l'examen des demandes lors de la phase internationale : cela simplifie les démarches et les rend plus efficaces et moins coûteuses. Ce n'est cependant pas un système permettant une délivrance à l'international : à la suite de la phase internationale, des phases nationales ou régionales ont lieu pour permettre la délivrance du brevet.\nUne demande régionale est une demande effectuée auprès d'un office régional : la demande peut être effectuée directement auprès de l'office régional ou bien elle est faite par désignation lors de la procédure du PCT.",
-      "en": "nan"
+      "fr": "Une demande de brevet nationale est effectuée au sein d'un office national et délivre des brevets  protégeant sur le territoire national.\nLe PCT est un traité international qui compte plus de 150 États contractants. Ce traité permet d’obtenir simultanément la protection d’une invention dans un grand nombre de pays en déposant une demande “internationale” unique au lieu de déposer plusieurs demandes de brevet nationales ou régionales distinctes. La délivrance des brevets reste sous le contrôle des offices de brevets nationaux ou régionaux dans ce qu’il est convenu d’appeler la “phase nationale”.\nUne demande régionale est une demande effectuée auprès d'un office régional : la demande peut être effectuée directement auprès de l'office régional ou bien elle est faite par désignation lors de la procédure du PCT.\n<a href='https://www.wipo.int/pct/en/faqs/faqs.html' target='_blank'>En savoir plus sur la procédure PCT</a>",
+      "en": "A national patent application is filed at a national office and grants patents protecting on the national territory.\nThe PCT is an international treaty with more than 150 Contracting States. The PCT makes it possible to seek patent protection for an invention simultaneously in a large number of countries by filing a single “international” patent application instead of filing several separate national or regional patent applications. The granting of patents remains under the control of the national or regional patent Offices in what is called the “national phase”.\nA regional application is an application filed with a regional office: the application may be filed directly with the regional office or it may be filed by designation during the PCT procedure.\n<a href='https://www.wipo.int/pct/en/faqs/faqs.html' target='_blank'>Learn more about the International Patent System</a>"
     }
   },
   {
@@ -694,11 +694,24 @@
     "icon": "fas fa-question-circle",
     "label": {
       "fr": "Qu'est-ce que le programme H2020 ?",
-      "en": "nan"
+      "en": "What is the H2020 program?"
     },
     "definition": {
       "fr": "H2020 est le programme européen de soutien à la Recherche, au développement et à l’innovation (RDI). Il intègre l’ex-PCRDT, l’Institut européen d’innovation et de technologie et les actions innovations du Programme-cadre pour la compétitivité et l'innovation (CIP). Il s’articule principalement autour de 3 grands « Piliers » : « Excellence scientifique » orienté plus recherche fondamentale, « Primauté industrielle » et « Défis sociétaux » orientés plus applicatifs. Il est mis en œuvre essentiellement au travers de projets collaboratifs et européens, mais il est possible pour les PME innovantes d’obtenir des financements individuels.\nLe programme H2020 est doté d’un budget de 80 milliards d’€ sur la période 2014 - 2020\n<a href='https://bit.ly/2LKOWW6' target='_blank'>En savoir plus sur H2020</a> \n<a href='https://bit.ly/38qctFD' target='_blank'>En savoir plus sur les Work Programme</a>",
-      "en": "nan"
+      "en": "H2020 is the European programme to support Research, Development and Innovation (RDI). It integrates the former FP7, the European Institute of Innovation and Technology and the innovation actions of the Competitiveness and Innovation Framework Programme (CIP). It is mainly structured around 3 main \"Pillars\": \"Scientific excellence\" oriented more fundamental research, \"Industrial primacy\" and \"Societal challenges\" oriented more applicative. It is implemented mainly through collaborative and European projects, but it is possible for innovative SMEs to obtain individual financing.\nThe H2020 programme has a budget of €80 billion for the period 2014 - 2020\n<a href='https://bit.ly/2LKOWW6' target='_blank'>Learn more about H2020</a> \n<a href='https://bit.ly/38qctFD' target='_blank'>Learn more about Work Programmes</a>"
+    }
+  },
+  {
+    "key": "q56",
+    "groupkey": "search",
+    "icon": "fas fa-question-circle",
+    "label": {
+      "fr": "Comment bien formuler une requête dans le moteur de recherche ?",
+      "en": "How to properly formulate a query in the search engine?"
+    },
+    "definition": {
+      "fr": "Le moteur de recherche indexe le contenu des différents objets de scanR. Ce contenu, suivant les sources et les objets peut-être en français ou en anglais. Il est donc recommandé, notamment pour les recherches liées à une thématique, d'effectuer une recherche bilingue. Cela peut se faire grâce à l'opérateur \"|\" (ou) (cf la question \"Comment affiner une recherche avec des opérateurs ?\"",
+      "en": "The search engine indexes the content of the different scanR objects. This content, depending on the sources and objects, may be in French or English. It is therefore recommended, particularly for research related to a theme, to conduct a bilingual research. This can be done using the operator \"|\" (or) (see the question \"How to refine a search with operators?\""
     }
   }
 ]
