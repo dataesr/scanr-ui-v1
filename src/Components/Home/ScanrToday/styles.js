@@ -19,11 +19,13 @@ export const ChevronContainer = styled.div`
   @media (max-width: 650px) {
     grid-template-columns: 1fr;
     margin-left: 0;
-    margin-bottom: calc(1em - 4px);
+    margin-top: calc(1em - 4px);
   }
 `;
 
 export const Chevron = styled.div`
+  border: 0;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,12 +37,13 @@ export const Chevron = styled.div`
   clip-path: polygon(0 0, calc(100% - 2em) 0, 100% 50%, calc(100% - 2em) 100%, 0 100%, 2em 50%);
   &:hover {
     background-color: ${styles.scanrelectricblueColor};
+
   }
   @media (max-width: 650px) {
     -webkit-clip-path: polygon(0 0, 0 calc(100% - 1em), 50% 100%, 100% calc(100% - 1em), 100% 0, 50% 1em);
     clip-path: polygon(0 0, 0 calc(100% - 1em), 50% 100%, 100% calc(100% - 1em), 100% 0, 50% 1em);
-    padding: 1em 2em;
-    margin-bottom: calc(4px - 1em);
+    padding: 1em 0.5em;
+    margin-top: calc(4px-1em);
   }
 
 `;
@@ -48,6 +51,10 @@ export const Chevron = styled.div`
 export const ChevronStart = styled(Chevron)`
   -webkit-clip-path: polygon(0 0, calc(100% - 2em) 0, 100% 50%, calc(100% - 2em) 100%, 0 100%, 0 50%);
   clip-path: polygon(0 0, calc(100% - 2em) 0, 100% 50%, calc(100% - 2em) 100%, 0 100%, 0 50%);
+  &:hover {
+    background-color: ${styles.scanrdeepblueColor};
+
+  }
 `;
 
 export const ChevronEnd = styled(Chevron)`
