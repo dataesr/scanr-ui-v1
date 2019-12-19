@@ -85,11 +85,6 @@ const FocusMiniCard = (props) => {
           {props.title}
         </a>
       </div>
-      <div className={`align-items-center mt-auto ${classes.TagsAndButton}`}>
-        <div className="d-flex flex-wrap mr-auto">
-          {props.tags.map(tag => (<div className={classes.Tag} key={tag}>{tag}</div>))}
-        </div>
-      </div>
     </div>
   );
 };
@@ -97,7 +92,6 @@ const FocusMiniCard = (props) => {
 export default FocusMiniCard;
 
 FocusMiniCard.propTypes = {
-  tags: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   schema: PropTypes.string.isRequired,
