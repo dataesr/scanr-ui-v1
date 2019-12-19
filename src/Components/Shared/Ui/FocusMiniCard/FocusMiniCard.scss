@@ -1,0 +1,33 @@
+@import '../../../../style.scss';
+
+.FocusMiniCard {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 24px;
+  height: 120px;
+  box-shadow: 0px 0px 8px $scanrmiddlegreyColor;
+
+  .Title {
+    color: $titleColor;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-decoration-color: $tagsColor;
+    line-height: 18px;
+    padding-left: 24px;
+  }
+
+  .TagsAndButton {
+    .Tag {
+      color: $tagsColor;
+      font-size: 0.9em;
+    }
+    .Tag:after {
+      content: " ";
+    }
+    .Button {
+      margin: auto;
+      background-color: $scanrdeepblueColor;
+      color: white;
+    }
+  }
+}
