@@ -1,12 +1,12 @@
 import React from 'react';
 import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
-// import useSearchAPI from '../../../Hooks/useSearchAPI';
-// import {
-//   API_STRUCTURES_SEARCH_END_POINT,
-//   API_PERSONS_SEARCH_END_POINT,
-//   API_PROJECTS_SEARCH_END_POINT,
-//   API_PUBLICATIONS_SEARCH_END_POINT,
-// } from '../../../config/config';
+ import useSearchAPI from '../../../Hooks/useSearchAPI';
+ import {
+   API_STRUCTURES_SEARCH_END_POINT,
+   API_PERSONS_SEARCH_END_POINT,
+   API_PROJECTS_SEARCH_END_POINT,
+   API_PUBLICATIONS_SEARCH_END_POINT,
+ } from '../../../config/config';
 
 // import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import entityLogo from '../../../images/svg/icon-entities.svg';
@@ -20,7 +20,6 @@ import classes from './ScanrToday.scss';
 
 
 const ScanrToday = () => {
-  // const request = { query: '' };
   const entityRequest = { query: '', filters: {} };
   entityRequest.filters.status = {
     type: 'MultiValueSearchFilter',
@@ -32,10 +31,11 @@ const ScanrToday = () => {
     op: 'all',
     values: [true],
   };
-  // const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
-  // const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
-  // const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
-  // const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
+  const request = { query: '' };
+  const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
+  const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
+  const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
+  const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
 
   // Use entities.data, persons.data etc. for search counts.
 
@@ -60,7 +60,10 @@ const ScanrToday = () => {
                 alt="Logo Entity scanR"
                 aria-hidden
               />
-              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardEntity" /></DatabaseText>
+              <DatabaseText>
+                <FormattedNumber value={entities.data.total} />
+                <FormattedHTMLMessage id="Home.ScanrToday.cardEntity" />
+              </DatabaseText>
             </a>
           </span>
         </div>
@@ -72,7 +75,10 @@ const ScanrToday = () => {
                 alt="Logo person scanR"
                 aria-hidden
               />
-              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" /></DatabaseText>
+              <DatabaseText>
+                <FormattedNumber value={persons.data.total} />
+                <FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" />
+              </DatabaseText>
             </a>
           </span>
         </div>
@@ -84,7 +90,10 @@ const ScanrToday = () => {
                 alt="Logo projets scanR"
                 aria-hidden
               />
-              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardProject" /></DatabaseText>
+              <DatabaseText>
+                <FormattedNumber value={projects.data.total} />
+                <FormattedHTMLMessage id="Home.ScanrToday.cardProject" />
+              </DatabaseText>
             </a>
           </span>
         </div>
@@ -96,7 +105,10 @@ const ScanrToday = () => {
                 alt="Logo productions scanR"
                 aria-hidden
               />
-              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardProduction" /></DatabaseText>
+              <DatabaseText>
+                <FormattedNumber value={productions.data.total} />
+                <FormattedHTMLMessage id="Home.ScanrToday.cardProduction" />
+              </DatabaseText>
             </a>
           </span>
         </div>
