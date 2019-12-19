@@ -1,12 +1,13 @@
 import React from 'react';
-// import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
-// import useSearchAPI from '../../../Hooks/useSearchAPI';
-// import {
-//   API_STRUCTURES_SEARCH_END_POINT,
-//   API_PERSONS_SEARCH_END_POINT,
-//   API_PROJECTS_SEARCH_END_POINT,
-//   API_PUBLICATIONS_SEARCH_END_POINT,
-// } from '../../../config/config';
+import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
+import useSearchAPI from '../../../Hooks/useSearchAPI';
+import {
+  API_STRUCTURES_SEARCH_END_POINT,
+  API_PERSONS_SEARCH_END_POINT,
+  API_PROJECTS_SEARCH_END_POINT,
+  API_PUBLICATIONS_SEARCH_END_POINT,
+} from '../../../config/config';
+
 // import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import entityLogo from '../../../images/svg/icon-entities.svg';
 import personLogo from '../../../images/svg/icon-persons.svg';
@@ -23,7 +24,6 @@ import {
 
 
 const ScanrToday = () => {
-  // const request = { query: '' };
   const entityRequest = { query: '', filters: {} };
   entityRequest.filters.status = {
     type: 'MultiValueSearchFilter',
@@ -35,11 +35,12 @@ const ScanrToday = () => {
     op: 'all',
     values: [true],
   };
-  // const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
-  // const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
-  // const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
-  // const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
-  // Use entities.data, persons.data etc. for search counts.
+  const request = { query: '' };
+  const entities = useSearchAPI(API_STRUCTURES_SEARCH_END_POINT, entityRequest);
+  const persons = useSearchAPI(API_PERSONS_SEARCH_END_POINT, request);
+  const projects = useSearchAPI(API_PROJECTS_SEARCH_END_POINT, request);
+  const productions = useSearchAPI(API_PUBLICATIONS_SEARCH_END_POINT, request);
+
   return (
     <section>
       <ChevronContainer>
@@ -50,9 +51,11 @@ const ScanrToday = () => {
             aria-hidden
             style={{ maxHeight: '70px' }}
           />
-          <DatabaseText>35&nbsp;000 entités publiques et privées</DatabaseText>
+          <DatabaseText>
+            <FormattedHTMLMessage id="Home.ScanrToday.scanrData" />
+          </DatabaseText>
         </ChevronStart>
-        <Chevron>
+        <Chevron as="a" href="/recherche/strtuctures">
           <img
             src={entityLogo}
             alt=""
@@ -60,10 +63,11 @@ const ScanrToday = () => {
             style={{ maxHeight: '70px' }}
           />
           <DatabaseText>
-            35&nbsp;000 entités publiques et privées
+            <FormattedNumber value={entities.data.total} />
+            <FormattedHTMLMessage id="Home.ScanrToday.cardEntity" />
           </DatabaseText>
         </Chevron>
-        <Chevron>
+        <Chevron as="a" href="/recherche/persons">
           <img
             src={personLogo}
             alt=""
@@ -71,10 +75,11 @@ const ScanrToday = () => {
             style={{ maxHeight: '70px' }}
           />
           <DatabaseText>
-            35&nbsp;000 entités publiques et privées
+            <FormattedNumber value={persons.data.total} />
+            <FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" />
           </DatabaseText>
         </Chevron>
-        <Chevron>
+        <Chevron as="a" href="/recherche/projects">
           <img
             src={projectLogo}
             alt=""
@@ -82,10 +87,11 @@ const ScanrToday = () => {
             style={{ maxHeight: '70px' }}
           />
           <DatabaseText>
-            35&nbsp;000 entités publiques et privées
+            <FormattedNumber value={projects.data.total} />
+            <FormattedHTMLMessage id="Home.ScanrToday.cardProject" />
           </DatabaseText>
         </Chevron>
-        <ChevronEnd>
+        <ChevronEnd as="a" href="/recherche/publications">
           <img
             src={productionLogo}
             alt=""
@@ -93,7 +99,8 @@ const ScanrToday = () => {
             style={{ maxHeight: '70px' }}
           />
           <DatabaseText>
-            35&nbsp;000 entités publiques et privées
+            <FormattedNumber value={productions.data.total} />
+            <FormattedHTMLMessage id="Home.ScanrToday.cardProduction" />
           </DatabaseText>
         </ChevronEnd>
       </ChevronContainer>
