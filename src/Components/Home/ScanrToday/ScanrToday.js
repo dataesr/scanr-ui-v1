@@ -1,5 +1,5 @@
 import React from 'react';
-// import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
+import { FormattedHTMLMessage, FormattedNumber } from 'react-intl';
 // import useSearchAPI from '../../../Hooks/useSearchAPI';
 // import {
 //   API_STRUCTURES_SEARCH_END_POINT,
@@ -49,7 +49,7 @@ const ScanrToday = () => {
               alt="Logo Entity scanR"
               aria-hidden
             />
-            <DatabaseText>Les données que scanR relie entre elles</DatabaseText>
+            <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.scanrData" /></DatabaseText>
           </span>
         </div>
         <div className={`col-auto  ${classes.chevron}`}>
@@ -60,7 +60,7 @@ const ScanrToday = () => {
                 alt="Logo Entity scanR"
                 aria-hidden
               />
-              <DatabaseText>35&nbsp;000 entités publiques et privées</DatabaseText>
+              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardEntity" /></DatabaseText>
             </a>
           </span>
         </div>
@@ -72,7 +72,7 @@ const ScanrToday = () => {
                 alt="Logo person scanR"
                 aria-hidden
               />
-              <DatabaseText>450&nbsp;000 fiches auteurs</DatabaseText>
+              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" /></DatabaseText>
             </a>
           </span>
         </div>
@@ -84,7 +84,7 @@ const ScanrToday = () => {
                 alt="Logo projets scanR"
                 aria-hidden
               />
-              <DatabaseText>80&nbsp;000 projets et financements</DatabaseText>
+              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardProject" /></DatabaseText>
             </a>
           </span>
         </div>
@@ -96,7 +96,7 @@ const ScanrToday = () => {
                 alt="Logo productions scanR"
                 aria-hidden
               />
-              <DatabaseText>2&nbsp;000&nbsp;000 de productions</DatabaseText>
+              <DatabaseText><FormattedHTMLMessage id="Home.ScanrToday.cardProduction" /></DatabaseText>
             </a>
           </span>
         </div>
