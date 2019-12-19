@@ -195,6 +195,16 @@ export const PersonsAggregations = {
     },
     size: 50,
   },
+  roles: {
+    field: 'roles.role',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 50,
+  },
   affiliations: {
     field: 'affiliations.structure.label.fr',
     filters: {},
