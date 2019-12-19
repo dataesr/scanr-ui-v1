@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const SVG = props => (
   <svg
-    width={120}
-    height={120}
+    width={props.width}
+    height={props.width}
     style={props.style}
     {...props}
     xmlns="http://www.w3.org/2000/svg"
