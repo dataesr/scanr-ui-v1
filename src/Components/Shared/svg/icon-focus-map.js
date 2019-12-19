@@ -6,6 +6,7 @@ const SVG = props => (
     width={props.width}
     style={props.style}
     height={props.width}
+    viewBox="0 0 120 100"
     xmlns="http://www.w3.org/2000/svg"
     className={`svg-icon ${props.className || ''}`}
     xmlnsXlink="http://www.w3.org/1999/xlink"
