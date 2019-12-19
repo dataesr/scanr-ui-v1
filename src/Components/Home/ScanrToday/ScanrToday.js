@@ -13,8 +13,9 @@ import entityLogo from '../../../images/svg/icon-entities.svg';
 import personLogo from '../../../images/svg/icon-persons.svg';
 import projectLogo from '../../../images/svg/icon-projects.svg';
 import productionLogo from '../../../images/svg/icon-publications.svg';
+import scanRLogo from '../../Shared/svg/logo-scanr-white.svg';
 
-import { Container, DatabaseText } from './styles';
+import { DatabaseText } from './styles';
 import classes from './ScanrToday.scss';
 
 
@@ -40,42 +41,66 @@ const ScanrToday = () => {
 
   return (
     <section className={classes.ScanrToday}>
-      <Container>
-        <div className={`row py-3 px-5 ${classes.database}`}>
-          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
-                <img
-                  src={entityLogo}
-                  alt="Logo MESRI"
-                  aria-hidden
-                />
-                <DatabaseText>Plus de 35&nbsp;000 entités publiques et privées</DatabaseText>
-          </div>
-          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
+      <div className={`d-flex flex-wrap justify-content-between ${classes.database}`}>
+        <div className={`p-2 ${classes.chevronStart}`}>
+          <span>
             <img
-              src={personLogo}
-              alt="Logo MESRI"
+              src={scanRLogo}
+              alt="Logo Entity scanR"
               aria-hidden
             />
-            <DatabaseText>Plus de 450&nbsp;000 auteurs</DatabaseText>
-          </div>
-          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
-            <img
-              src={projectLogo}
-              alt="Logo MESRI"
-              aria-hidden
-            />
-            <DatabaseText>80&nbsp;000 projets et financements</DatabaseText>
-          </div>
-          <div className={`col-3 d-flex align-items-center  ${classes.chevron}`}>
-            <img
-              src={productionLogo}
-              alt="Logo MESRI"
-              aria-hidden
-            />
-            <DatabaseText>Plus de 2&nbsp;000&nbsp;000 de productions</DatabaseText>
-          </div>
+            <DatabaseText>Les données que scanR relie entre elles</DatabaseText>
+          </span>
         </div>
-      </Container>
+        <div className={`col-auto  ${classes.chevron}`}>
+          <span>
+            <a href="/recherche/structures">
+              <img
+                src={entityLogo}
+                alt="Logo Entity scanR"
+                aria-hidden
+              />
+              <DatabaseText>Plus de 35&nbsp;000 entités publiques et privées</DatabaseText>
+            </a>
+          </span>
+        </div>
+        <div className={`col-auto ${classes.chevron}`}>
+          <span>
+            <a href="/recherche/persons">
+              <img
+                src={personLogo}
+                alt="Logo person scanR"
+                aria-hidden
+              />
+              <DatabaseText>Plus de 450&nbsp;000 auteurs</DatabaseText>
+            </a>
+          </span>
+        </div>
+        <div className={`col-auto ${classes.chevron}`}>
+          <span>
+            <a href="/recherche/projects">
+              <img
+                src={projectLogo}
+                alt="Logo projets scanR"
+                aria-hidden
+              />
+              <DatabaseText>80&nbsp;000 projets et financements</DatabaseText>
+            </a>
+          </span>
+        </div>
+        <div className={`col-auto ${classes.chevronEnd}`}>
+          <span>
+            <a href="/recherche/publications">
+              <img
+                src={productionLogo}
+                alt="Logo productions scanR"
+                aria-hidden
+              />
+              <DatabaseText>Plus de 2&nbsp;000&nbsp;000 de productions</DatabaseText>
+            </a>
+          </span>
+        </div>
+      </div>
     </section>
   );
 };
