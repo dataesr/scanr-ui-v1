@@ -20,8 +20,8 @@ const SVG = props => (
     <use xlinkHref="#prefix__A" x={0.5} y={0.5} />
     <symbol id="prefix__A" overflow="visible">
       <svg
-        width={120}
-        height={120}
+        width={props.width}
+        height={props.width}
         style={props.style}
         viewBox="0 0 60 60"
         stroke="initial"
