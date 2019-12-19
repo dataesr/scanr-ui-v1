@@ -137,7 +137,7 @@ const ScanrIs = () => (
             </div>
           </Grid>
         </div>
-        <div className="col-lg-4 py-1" style={{ backgroundColor:'#fff', borderRadius: '8px' }}>
+        <div className="col-lg-4 py-1" style={{ backgroundColor: '#fff', borderRadius: '8px' }}>
           <div className="d-flex flex-column">
             <Icon className="fas fa-search-plus" aria-hidden />
             <Title><FormattedHTMLMessage id="Home.ScanrIs.section.second.title" /></Title>
