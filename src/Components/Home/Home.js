@@ -37,13 +37,13 @@ const HomePage = (props) => {
         </FormattedHTMLMessage>
         <WelcomeModal />
         <Header />
-            <div className={`col-md ${classes.LogoHome}`}>
-              <img
-                src={logo}
-                alt="Logo MESRI"
-                className={classes.Logo}
-              />
-            </div>
+        <div className={`col-md ${classes.LogoHome}`}>
+          <img
+            src={logo}
+            alt="Logo MESRI"
+            className={classes.Logo}
+          />
+        </div>
         <Search
           {...props}
           language={context.language}

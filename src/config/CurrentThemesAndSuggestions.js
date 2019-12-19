@@ -54,27 +54,27 @@ export const currentThemes = [
 
 export const suggestions = [
   {
-    labelFr: 'SIDA',
-    labelEn: 'AIDS',
-    query: 'SIDA | AIDS | HIV',
-    url: '',
-  },
-  {
     labelFr: 'Changement climatique',
     labelEn: 'Climate change',
-    query: '(changement+climatique) | (climate+change)',
+    query: '("changement climatique") | ("climate change")',
     url: '',
   },
   {
-    labelFr: 'Bonheur',
-    labelEn: 'Happiness',
-    query: 'bonheur | happiness',
+    labelFr: 'Réalité virtuelle',
+    labelEn: 'Virtual reality',
+    query: '("réalité virtuelle") | ("virtual reality")',
     url: '',
   },
   {
-    labelEn: 'Ebola',
-    labelFr: 'Ebola',
-    query: 'Ebola',
+    labelEn: 'Digital humanities',
+    labelFr: 'Humanités numériques',
+    query: '(humanités numériques) | (digital humanities) | (humanités digitales)',
+    url: '',
+  },
+  {
+    labelFr: 'Migrations internationales',
+    labelEn: 'International migrations',
+    query: '(Migrations internationales) | (international migrations)',
     url: '',
   },
 ];
