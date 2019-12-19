@@ -81,13 +81,13 @@ const Contact = props => (
       </div>
     </section>
 
-    <Banner
+    { /* <Banner
       cssClass="BannerDark"
       labelKey="Appear"
       language={props.language}
       url=""
       target="_blank"
-    />
+    /> */ }
 
     <Footer />
   </React.Fragment>
