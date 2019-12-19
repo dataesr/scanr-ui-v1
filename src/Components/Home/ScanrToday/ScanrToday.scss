@@ -1,7 +1,7 @@
 @import '../../../style.scss';
 
 .ScanrToday {
-  background-color: $scanrmiddlegreyColor;
+  background-color: $scanrhomelightblueColor;
   padding: 0;
 
 
@@ -33,7 +33,7 @@
   @media screen and (max-width: 1300px){
     padding: 10px 10px 10px 10px;
     width: 50%;
-    border: 2px solid $scanrmiddlegreyColor;
+    border: 2px solid $scanrhomelightblueColor;
   }
 }
 
@@ -63,7 +63,7 @@
   @media screen and (max-width: 1300px){
     width: 100%;
     padding: 10px 10px 10px 10px;
-    border: 2px solid $scanrmiddlegreyColor;
+    border: 2px solid $scanrhomelightblueColor;
   }
 }
 
@@ -84,7 +84,7 @@
   @media screen and (max-width: 1300px){
     width: 50%;
     padding: 10px 10px 10px 10px;
-    border: 2px solid $scanrmiddlegreyColor;
+    border: 2px solid $scanrhomelightblueColor;
   }
 }
 
