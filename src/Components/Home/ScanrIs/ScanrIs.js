@@ -16,12 +16,12 @@ import {
 const focusList = [
   {
     tags: {
-      fr: ['#youtube', '#vulgarisation'],
-      en: ['#youtube', '#popularization'],
+      fr: [],
+      en: [],
     },
     title: {
-      fr: 'Chaînes scientifiques sur Youtube dans scanR',
-      en: 'Scientific Youtube channels in scanR',
+      fr: 'Chaînes Youtube dans scanR',
+      en: 'Youtube channels in scanR',
     },
     type: 'youtube',
     url: '/focus/youtube',
@@ -29,28 +29,28 @@ const focusList = [
   },
   {
     tags: {
-      fr: ['#SoftwareHeritage', '#CodeSource'],
-      en: ['#SoftwareHeritage', '#SourceCode'],
+      fr: [],
+      en: [],
     },
     title: {
-      fr: 'Productions avec un lien Software Heritage dans scanR',
-      en: 'Productions with a link to Software Heritage in scanR',
+      fr: 'SATT dans scanR',
+      en: 'French SATT in scanR',
     },
-    type: 'software-heritage',
-    url: '/focus/software_heritage',
-    api: 'publications',
+    type: 'map',
+    url: '/focus/carte-satt-2019',
+    api: 'structures',
   },
   {
     tags: {
-      fr: ['#MaThèseEn180s', '#MT180', '#vulgarisation'],
-      en: ['#MaThèseEn180s', '#MT180', '#popularization'],
+      fr: [],
+      en: [],
     },
     title: {
-      fr: "Finalistes et lauréat du concours 'Ma Thèse en 180s' dans scanR",
-      en: "Finalists and winner of the competition 'Ma Thèse en 180s' in scanR",
+      fr: 'Nominations IUF 2019',
+      en: 'Persons distinguished by the IUF in 2019',
     },
-    type: 'mt180',
-    url: '/focus/mt180',
+    type: 'treemap',
+    url: '/focus/iuf',
     api: 'persons',
   },
 ];
