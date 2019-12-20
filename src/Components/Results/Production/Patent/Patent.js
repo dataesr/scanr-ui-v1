@@ -40,7 +40,7 @@ const Patent = (props) => {
             <SectionTitle
               icon="fa-id-card"
               objectType="productions"
-              lexicon="PatentFamily"
+              lexicon="InventionPortrait"
               language={props.language}
               id={props.id}
               title={messages[props.language]['Patent.identity']}
@@ -91,7 +91,7 @@ const Patent = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
-              lexicon="PublicationSimilar"
+              lexicon="PatentSimilar"
               language={props.language}
               title={messages[props.language]['Patent.similars']}
             />
