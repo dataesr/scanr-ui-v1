@@ -2,6 +2,7 @@ import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import logoMinistere from '../../Shared/svg/logo-ministere.svg';
 import FocusCard from '../../Shared/Ui/FocusMiniCard/FocusMiniCard';
+import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
 import {
   Grid,
   Title,
@@ -12,6 +13,8 @@ import {
   LearnMore,
   Icon,
 } from './styles';
+
+import classes from './ScanrIs.scss';
 
 const focusList = [
   {
@@ -57,7 +60,7 @@ const focusList = [
 
 const ScanrIs = () => (
   <Section>
-    <div className="container py-3">
+    <div className="container py-4">
       <div className="row">
         <div className="col-lg-3 d-flex flex-column py-1">
           <TitleLeft><FormattedHTMLMessage id="Home.ScanrIs.main.title" /></TitleLeft>
@@ -77,7 +80,7 @@ const ScanrIs = () => (
             <img src={logoMinistere} height="60px" alt="" aria-hidden />
           </div>
         </div>
-        <div className="col-lg-6 py-1">
+        <div className="col-lg-5 py-1">
           <Grid minWidth={300}>
             <div className="d-flex flex-column">
               <Icon className="fas fa-database" aria-hidden />
@@ -111,10 +114,18 @@ const ScanrIs = () => (
             </div>
           </Grid>
         </div>
-        <div className="col-lg-3 py-1" style={{ backgroundColor: '#fff', borderRadius: '8px' }}>
+        <div className={`col-lg-3 py-1 ${classes.FocusBox}`}>
           <div className="d-flex flex-column">
-            <Icon className="fas fa-search-plus" aria-hidden />
-            <Title><FormattedHTMLMessage id="Home.ScanrIs.section.second.title" /></Title>
+            <div className={classes.cardHeader}>
+              { /* <Icon className="fas fa-search-plus" aria-hidden /> */ }
+              <Title>
+                <FormattedHTMLMessage id="Home.ScanrIs.section.second.title" />
+                &nbsp;
+                <LexiconModal target="Focus">
+                  <i className="fa fa-info-circle" />
+                </LexiconModal>
+              </Title>
+            </div>
             <DescriptiveText>
               <FormattedHTMLMessage id="Home.ScanrIs.section.second.text" />
             </DescriptiveText>
