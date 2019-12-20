@@ -10,9 +10,9 @@ import classes from './Filters.scss';
 const PersonsFilters = (props) => {
   const facets = props.facets || [];
   const structFacets = facets.find(item => item.id === 'affiliations') || { entries: [] };
-  const awardsActiveFilters = props.filters.awards || {};
+  const awardsActiveFilters = props.filters['awards.label'] || {};
   const awardsFacets = facets.find(item => item.id === 'awards') || { entries: [] };
-  const rolesActiveFilters = props.filters.roles || {};
+  const rolesActiveFilters = props.filters['roles.role'] || {};
   const rolesFacets = facets.find(item => item.id === 'roles') || { entries: [] };
 
   return (
