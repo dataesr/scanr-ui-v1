@@ -45,63 +45,73 @@ const ScanrToday = () => {
     <section>
       <ChevronContainer>
         <ChevronStart>
-          <img
-            src={scanRLogo}
-            alt="Logo Entity scanR"
-            aria-hidden
-            style={{ maxHeight: '70px' }}
-          />
-          <DatabaseText>
-            <FormattedHTMLMessage id="Home.ScanrToday.scanrData" />
-          </DatabaseText>
+          <div className="text-center">
+            <img
+              src={scanRLogo}
+              alt="Logo Entity scanR"
+              aria-hidden
+              style={{ maxHeight: '70px' }}
+            />
+            <DatabaseText>
+              <FormattedHTMLMessage id="Home.ScanrToday.scanrData" />
+            </DatabaseText>
+          </div>
         </ChevronStart>
         <Chevron as="a" href="/recherche/strtuctures">
-          <img
-            src={entityLogo}
-            alt=""
-            aria-hidden
-            style={{ maxHeight: '70px' }}
-          />
-          <DatabaseText>
-            <FormattedNumber value={entities.data.total} />
-            <FormattedHTMLMessage id="Home.ScanrToday.cardEntity" />
-          </DatabaseText>
+          <div className="text-center">
+            <img
+              src={entityLogo}
+              alt=""
+              aria-hidden
+              style={{ maxHeight: '70px' }}
+            />
+            <DatabaseText>
+              <FormattedNumber value={entities.data.total} />
+              <FormattedHTMLMessage id="Home.ScanrToday.cardEntity" />
+            </DatabaseText>
+          </div>
         </Chevron>
         <Chevron as="a" href="/recherche/persons">
-          <img
-            src={personLogo}
-            alt=""
-            aria-hidden
-            style={{ maxHeight: '70px' }}
-          />
-          <DatabaseText>
-            <FormattedNumber value={persons.data.total} />
-            <FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" />
-          </DatabaseText>
+          <div className="text-center">
+            <img
+              src={personLogo}
+              alt=""
+              aria-hidden
+              style={{ maxHeight: '70px' }}
+            />
+            <DatabaseText>
+              <FormattedNumber value={persons.data.total} />
+              <FormattedHTMLMessage id="Home.ScanrToday.cardAuthor" />
+            </DatabaseText>
+          </div>
         </Chevron>
         <Chevron as="a" href="/recherche/projects">
-          <img
-            src={projectLogo}
-            alt=""
-            aria-hidden
-            style={{ maxHeight: '70px' }}
-          />
-          <DatabaseText>
-            <FormattedNumber value={projects.data.total} />
-            <FormattedHTMLMessage id="Home.ScanrToday.cardProject" />
-          </DatabaseText>
+          <div className="text-center">
+            <img
+              src={projectLogo}
+              alt=""
+              aria-hidden
+              style={{ maxHeight: '70px' }}
+            />
+            <DatabaseText>
+              <FormattedNumber value={projects.data.total} />
+              <FormattedHTMLMessage id="Home.ScanrToday.cardProject" />
+            </DatabaseText>
+          </div>
         </Chevron>
         <ChevronEnd as="a" href="/recherche/publications">
-          <img
-            src={productionLogo}
-            alt=""
-            aria-hidden
-            style={{ maxHeight: '70px' }}
-          />
-          <DatabaseText>
-            <FormattedNumber value={productions.data.total} />
-            <FormattedHTMLMessage id="Home.ScanrToday.cardProduction" />
-          </DatabaseText>
+          <div className="text-center">
+            <img
+              src={productionLogo}
+              alt=""
+              aria-hidden
+              style={{ maxHeight: '70px' }}
+            />
+            <DatabaseText>
+              <FormattedNumber value={productions.data.total} />
+              <FormattedHTMLMessage id="Home.ScanrToday.cardProduction" />
+            </DatabaseText>
+          </div>
         </ChevronEnd>
       </ChevronContainer>
     </section>
