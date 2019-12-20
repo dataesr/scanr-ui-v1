@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 const SVG = props => (
   <svg
+    style={props.style}
     fill="#fff"
     fillRule="evenodd"
     stroke="#000"
@@ -22,7 +23,6 @@ const SVG = props => (
       <svg
         width={props.width}
         height={props.width}
-        style={props.style}
         viewBox="0 0 60 60"
         stroke="initial"
         fill="initial"
