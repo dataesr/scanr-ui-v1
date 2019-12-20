@@ -16,6 +16,8 @@ const PublicationsFilters = (props) => {
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
   // const journalActiveFilters = props.filters['source.title'] || {};
   const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
+  const certificationsActiveFilters = props.filters['certifications.label'] || {};
+  const certificationsFacets = facets.find(item => item.id === 'certifications') || { entries: [] };
   const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
   const publiTypeActiveFilters = props.filters.type || {};
   const isOaActiveFilters = props.filters.isOa || {};
@@ -82,6 +84,23 @@ const PublicationsFilters = (props) => {
                 onSubmit={props.multiValueFilterHandler}
                 defaultActive
                 request={props.request}
+              />
+            )
+            : null
+        }
+        {
+          props.filters.productionType && (props.filters.productionType.values.includes('patent'))
+            ? (
+              <CheckBoxFilter
+                language={props.language}
+                title={<FormattedHTMLMessage id="Search.Filters.publicationType" />}
+                facets={certificationsFacets.entries}
+                filters={certificationsActiveFilters}
+                facetID="certifications.label"
+                onSubmit={props.multiValueFilterHandler}
+                defaultActive
+                retractable={false}
+                nbItemsToShow={3}
               />
             )
             : null
