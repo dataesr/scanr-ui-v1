@@ -74,14 +74,13 @@ const PublicationCard = (props) => {
   };
 
   const getInventors = (data) => {
-    // const inventeursFR = (props.language === 'fr') ? 'inventeur' : 'inventor';
-    // const deposantsEn = (props.language === 'fr') ? 'déposant' : 'suscriber';
     if (!data.authors || data.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
     const inventeurs = data.authors.filter(auth => (auth.role === 'inventeur')).length;
     const deposants = data.authors.filter(auth => (auth.role === 'deposant')).length;
-    return `${inventeurs} inventeurs, ${deposants} déposants`;
+    const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
+    return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
   };
 
   const productionType = (props.data.productionType)
@@ -138,7 +137,7 @@ const PublicationCard = (props) => {
   }
   // const inventors = getInventors(props.data);
 
-  const publicationDate = (props.data.publicationDate)
+  let publicationDate = (props.data.publicationDate)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -159,6 +158,19 @@ const PublicationCard = (props) => {
         </p>
       </li>
     );
+
+  if (props.data.productionType === 'patent') {
+    publicationDate = (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-calendar" />
+        </div>
+        <p className="m-0">
+          {moment(props.data.submissionDate).format('LL')}
+        </p>
+      </li>
+    );
+  }
 
   const journal = (props.data.source && props.data.source.title && !props.small)
     ? (

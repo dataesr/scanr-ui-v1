@@ -133,6 +133,16 @@ export const PublicationsAggregations = {
     },
     size: 4,
   },
+  certifications: {
+    field: 'certifications.label',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 4,
+  },
   keywordsEn: {
     field: 'keywords.en',
     filters: {},
