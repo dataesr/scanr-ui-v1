@@ -30,13 +30,13 @@ const PatentIdentity = (props) => {
   }
   let isInternational = null;
   let isOEB = null;
-  let grantedInfo = null;
+  let grantedInfo = [];
   if (props.data.certifications) {
     isInternational = (props.data.certifications.filter(cert => cert.label === 'international'));
     isOEB = (props.data.certifications.filter(cert => cert.label === 'oeb'));
     grantedInfo = (props.data.certifications.filter(cert => cert.label === 'granted'))
       ? props.data.certifications.filter(cert => cert.label === 'granted')
-      : null;
+      : [];
   }
 
   return (
@@ -74,7 +74,7 @@ const PatentIdentity = (props) => {
           </div>
         </div>
         {
-          (grantedInfo.length)
+          (grantedInfo && grantedInfo.length)
             ? (
               <div className="row">
                 <div className={`col-12 ${classes.CardContainer}`}>
@@ -106,7 +106,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.oeb" />}
-              label={(isOEB.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isOEB && isOEB.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -115,7 +115,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.international" />}
-              label={(isInternational.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isInternational && isInternational.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
