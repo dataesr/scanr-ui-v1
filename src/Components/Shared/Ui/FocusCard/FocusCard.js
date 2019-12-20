@@ -44,34 +44,34 @@ const FocusCard = (props) => {
   }
 
   let componentSvg = null;
-  const marginMT = { 'margin-bottom': '28px' };
+  const style = { 'margin-bottom': '24px', height: '100px' };
   switch (props.type) {
     case 'bubble':
-      componentSvg = <BubbleSVG fill={color} />;
+      componentSvg = <BubbleSVG fill={color} width="100px" style={style} />;
       break;
     case 'bubbleTop':
-      componentSvg = <BubbleTopSVG fill={color} />;
+      componentSvg = <BubbleTopSVG fill={color} width="100px" style={style} />;
       break;
     case 'donut':
-      componentSvg = <DonutSVG fill={color} />;
+      componentSvg = <DonutSVG fill={color} width="100px" style={style} />;
       break;
     case 'histoTop':
-      componentSvg = <HistoTopSVG fill={color} />;
+      componentSvg = <HistoTopSVG fill={color} width="100px" style={style} />;
       break;
     case 'map':
-      componentSvg = <MapSVG fill={color} />;
+      componentSvg = <MapSVG fill={color} width="100px" style={style} />;
       break;
     case 'youtube':
-      componentSvg = <YoutubeSVG fill={color} />;
+      componentSvg = <YoutubeSVG fill={color} width="100px" style={style} />;
       break;
     case 'mt180':
-      componentSvg = <MT180SVG fill={color} style={marginMT} />;
+      componentSvg = <MT180SVG fill={color} width="100px" style={style} />;
       break;
     case 'software-heritage':
-      componentSvg = <SoftwareHeritageSVG fill={color} />;
+      componentSvg = <SoftwareHeritageSVG fill={color} width="100px" style={style} />;
       break;
     case 'treemap':
-      componentSvg = <TreemapSVG fill={color} />;
+      componentSvg = <TreemapSVG fill={color} width="100px" style={style} />;
       break;
     default:
       componentSvg = null;
