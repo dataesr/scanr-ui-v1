@@ -1,8 +1,14 @@
 @import '../../../style.scss';
 
+  .Container {
+	  padding: 20px 180px 20px 180px !important;
+	  padding: 20px 10% 20px 10% !important;
+  }
+
   .FocusBox {
-	  background-color: $scanrmiddlegreyColor;
-	  border-radius: 8px;
+     background-color: white;
+     border-radius: 8px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
   }
   
   .scanrIsContainer{
