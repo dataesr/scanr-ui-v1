@@ -1,4 +1,21 @@
 
+## Deploiement sur PHM
+
+- Se connecter en ssh
+ssh -l ejeangirard@default@pr-mgl-web01.magical.in.phm.education.gouv.fr:ejeangirard ssh.in.phm.education.gouv.fr
+- sudo su scanr && cd /home/scanr
+- git clone https://github.com/jerem1508/scanr-v2.git && cd scanr-v2
+- npm install && npm run build
+- /bin/cp -rf /home/scanr/scanr-v2/build/ /www/.
+- cd /www
+- chown -Rf nginx:nginx build (utile ?)
+- sudo service nginx restart (utile ?)
+- sudo chmod -R 755 build
+
+gestion du cache de nginx ??
+
+
+
 
 ## Steps to deploy React App on Github Pages with Circle CI
 

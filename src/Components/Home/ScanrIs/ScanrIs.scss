@@ -1,15 +1,31 @@
 @import '../../../style.scss';
 
+  .Container {
+	  padding: 20px 180px 20px 180px !important;
+	  padding: 20px 10% 20px 10% !important;
+  }
+
+  .FocusBox {
+     background-color: white;
+     border-radius: 8px;
+    -webkit-box-shadow: 0 0 20px 0 rgba(0,0,0,.1);
+  }
+  
   .scanrIsContainer{
     padding: 0 120px 0 120px;
   }
 
-  span {
+  .cardHeader {
     h2 {
-	    display: inline;
+//	    display: inline;
 	    padding-left: 5px;
+	    font-size: 1.6rem;
+	    // text-align: right;
     }
     i {
 	 padding-bottom: 2px !important;
     }
+    padding: 20px 20px 20px 0px;
+    // background-color: $scanrgreyColor;
+    // border-radius: 8px 8px 0 0;
   }
