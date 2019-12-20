@@ -20,7 +20,7 @@ export const DescriptiveText = styled.p`
   font-size: 0.9rem;
   padding-bottom: 0.5em;
   margin: 0;
-  text-align: justify;
+  // text-align: justify;
 `;
 
 export const Section = styled.div`
