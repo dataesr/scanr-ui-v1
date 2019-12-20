@@ -80,7 +80,7 @@ const EntityFilters = (props) => {
           title={<FormattedHTMLMessage id="Search.Filters.kind" />}
           facets={levelFacetsOrganisme.entries}
           filters={levelActiveFiltersOrganisme}
-          facetID="kind"
+          facetID="level"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
         />
