@@ -57,7 +57,7 @@ const ScanrToday = () => {
             </DatabaseText>
           </div>
         </ChevronStart>
-        <Chevron as="a" href="/recherche/strtuctures">
+        <Chevron as="a" href="/recherche/structures">
           <div className="text-center">
             <img
               src={entityLogo}
