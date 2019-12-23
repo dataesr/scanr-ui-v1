@@ -18,8 +18,8 @@ import {
 } from '../../Shared/styles';
 
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
 
 const messages = { fr: messagesFr, en: messagesEn };
 
@@ -75,7 +75,7 @@ const Publication = props => (
             objectType="publications"
             language={props.language}
             id={props.id}
-            title={messages[props.language]['Publication.authors.title']}
+            title={messages[props.language]['Authors.title']}
           />
           <Authors
             language={props.language}
