@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 import classes from './SourceCard.scss';
 
 /* Gestion des langues */
-import messagesFr from '../translations/fr.json';
-import messagesEn from '../translations/en.json';
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
 
 const messages = {
   fr: messagesFr,
