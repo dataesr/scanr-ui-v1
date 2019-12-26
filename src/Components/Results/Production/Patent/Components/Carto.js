@@ -49,29 +49,32 @@ class Carto extends Component {
     //  EA demande de brevet eurasien
     //  AP ARIPO : ORGANISATION RÉGIONALE AFRICAINE DE LA PROPRIÉTÉ INTELLECTUELLE
     //  WO demande internationale selon le PCT (patent cooperation treaty)
-    let gradient = 100;
+    let find = false;
     if (this.state.existEP) {
       if (EP.includes(currentCountry)) {
-        gradient -= 25;
+        find = true;
       }
     }
     if (this.state.existEA) {
       if (EA.includes(currentCountry)) {
-        gradient -= 25;
+        find = true;
       }
     }
     if (this.state.existAP) {
       if (AP.includes(currentCountry)) {
-        gradient -= 25;
+        find = true;
       }
     }
     if (this.state.existWO) {
       if (WO.includes(currentCountry)) {
-        gradient -= 25;
+        find = true;
       }
     }
-
-    layer.setStyle({ fillColor: classes[`productionbrevets${gradient}Color`] });
+    if (find) {
+      layer.setStyle({ fillColor: classes.PatentsInternationalDepots });
+    } else {
+      layer.setStyle({ fillColor: classes.PatentsNoDepot });
+    }
 
     // Recherche du pays
     if (this.props.data.find((el) => {
@@ -83,7 +86,7 @@ class Carto extends Component {
       return false;
     })) {
       // Si trouvé, on colore la pays
-      layer.setStyle({ fillColor: classes.productionbrevetsColor });
+      layer.setStyle({ fillColor: classes.PatentsNationalDepots });
     }
 
     // Formatage de la date en fonction de la langue choisie
@@ -108,8 +111,14 @@ class Carto extends Component {
           <FormattedHTMLMessage id="Patent.Carto.title" />
         </h3>
         <p className={classes.SubTitle}>
-          <span className={classes.Bullet} />
-          <FormattedHTMLMessage id="Patent.Carto.depot" />
+          <span className={`${classes.Bullet} ${classes.nationalDepots}`} />
+          <FormattedHTMLMessage id="Patent.Carto.nationalDepots" />
+
+          <span className={`${classes.Bullet} ${classes.internationalDepots}`} />
+          <FormattedHTMLMessage id="Patent.Carto.internationalDepots" />
+
+          <span className={`${classes.Bullet} ${classes.noDepot}`} />
+          <FormattedHTMLMessage id="Patent.Carto.noDepot" />
         </p>
         <Map
           className={classes.MapBox}
