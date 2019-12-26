@@ -24,10 +24,19 @@
 }
 
 .Bullet {
-  background-color: $productionbrevetsColor;
   border-radius: 50%;
   width: 12px;
   height: 12px;
-  margin-right: 8px;
+  margin: 0 8px;
   display: inline-block;
+}
+
+.nationalDepots {
+  background-color: $PatentsNationalDepots;
+}
+.internationalDepots {
+  background-color: $PatentsInternationalDepots;
+}
+.noDepot {
+  background-color: $PatentsNoDepot;
 }

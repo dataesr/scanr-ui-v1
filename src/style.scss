@@ -38,12 +38,9 @@ $projectdarkgreenColor : rgb(32,118,121);
 
 $productionColor : rgb(204,61,143);
 $productionpublicationColor : rgb(204,61,143);
-$productionbrevetsColor : rgb(254,101,91);
-$productionbrevets100Color : $scanrmiddlegreyColor;
-$productionbrevets75Color : rgba(64,26,23,0.25);
-$productionbrevets50Color : rgba(64,26,23,0.5);
-$productionbrevets25Color : rgba(64,26,23,0.75);
-$productionbrevets0Color : rgba(64,26,23,1);
+$PatentsNationalDepots : rgb(254,101,91);
+$PatentsInternationalDepots : rgba(64,26,23,0.6);
+$PatentsNoDepot : $scanrmiddlegreyColor;
 $productionthesesColor : rgb(254,173,64);
 
 /* couleurs dataviz ecosystem */
@@ -104,12 +101,11 @@ $sanKey2 : #90ee7e;
   projectdarkgreenColor: $projectdarkgreenColor;
   productionColor: $productionColor;
   productionpublicationColor: $productionpublicationColor;
-  productionbrevetsColor: $productionbrevetsColor;
-  productionbrevets100Color: $productionbrevets100Color;
-  productionbrevets75Color: $productionbrevets75Color;
-  productionbrevets50Color: $productionbrevets50Color;
-  productionbrevets25Color: $productionbrevets25Color;
-  productionbrevets0Color: $productionbrevets0Color;
+
+  PatentsNationalDepots: $PatentsNationalDepots;
+  PatentsInternationalDepots: $PatentsInternationalDepots;
+  PatentsNoDepot: $PatentsNoDepot;
+
   productionthesesColor: $productionthesesColor;
   frenchentityColor: $frenchentityColor;
   internationalentityColor: $internationalentityColor;
