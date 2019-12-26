@@ -19,11 +19,11 @@ import countries from '../countries.json';
  * Tests unitaires : .
 */
 const PatentParticipants = (props) => {
-  const inventors = props.data.filter(auth => auth.role === 'inventeur').map((auth) => {
+  const inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
     const [fullName, country] = auth.fullName.split('__');
     return { fullName, country: countries[props.language][country] };
   });
-  const deposants = props.data.filter(auth => auth.role === 'deposant').map((auth) => {
+  const deposants = props.data.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
     const [label, country] = auth.fullName.split('__');
     return { label, country: countries[props.language][country] };
   });
