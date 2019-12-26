@@ -87,7 +87,6 @@ export default CounterListCard;
 
 CounterListCard.defaultProps = {
   title: '',
-  // roleKey: '',
   modalTitleKey: 'authors.modal.title',
   isEntity: false,
   isPerson: false,
@@ -100,8 +99,6 @@ CounterListCard.propTypes = {
   title: PropTypes.string,
   modalTitleKey: PropTypes.string,
   labelKey: PropTypes.string,
-  // objectType: PropTypes.string,
-  // roleKey: PropTypes.string,
   color: PropTypes.string,
   isEntity: PropTypes.bool,
   isPerson: PropTypes.bool,
