@@ -77,8 +77,8 @@ const PublicationCard = (props) => {
     if (!data.authors || data.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
-    const inventeurs = data.authors.filter(auth => (auth.role === 'inventeur')).length;
-    const deposants = data.authors.filter(auth => (auth.role === 'deposant')).length;
+    const inventeurs = data.authors.filter(auth => (auth.role.indexOf('__inventeur') >= 0)).length;
+    const deposants = data.authors.filter(auth => (auth.role.indexOf('__deposant') >= 0)).length;
     const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
     return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
   };
