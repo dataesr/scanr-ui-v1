@@ -61,6 +61,7 @@ const PatentParticipants = (props) => {
                     <PersonCard
                       data={inventor}
                       showTitle={false}
+                      className={classes.BGLightGrey}
                     />
                   </div>
                 );
@@ -80,7 +81,7 @@ const PatentParticipants = (props) => {
                     roleKey="inventor"
                     labelKey="other-inventors"
                     modalTitleKey="inventors-modal-title"
-                    color="Default"
+                    color="MiddleGrey"
                   />
                 </div>
               ) : null
@@ -103,7 +104,7 @@ const PatentParticipants = (props) => {
                     counter={deposants.length}
                     title=""
                     label={<FormattedHTMLMessage id="Patents.Participants.applicant" />}
-                    color="Entity"
+                    color="ScanRBlue"
                   />
                 </div>
               ) : null
@@ -116,6 +117,7 @@ const PatentParticipants = (props) => {
                     <EntityCard
                       data={dep}
                       showTitle={false}
+                      className={classes.BGLightGrey}
                     />
                   </div>
                 );
@@ -135,7 +137,7 @@ const PatentParticipants = (props) => {
                     roleKey="applicant"
                     labelKey="other-applicants"
                     modalTitleKey="applicants-modal-title"
-                    color="Default"
+                    color="MiddleGrey"
                     isEntity
                   />
                 </div>

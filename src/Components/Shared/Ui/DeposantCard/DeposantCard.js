@@ -40,7 +40,7 @@ const PersonCard = (props) => {
 
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
-      <div className={`d-flex flex-column ${classes.PersonCard}`}>
+      <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
         <div>
           <div className={classes.Logo}>
             <i className="fas fa-folder fa-4x" alt="" />
@@ -83,4 +83,5 @@ export default PersonCard;
 PersonCard.propTypes = {
   data: PropTypes.object,
   language: PropTypes.string,
+  className: PropTypes.any,
 };
