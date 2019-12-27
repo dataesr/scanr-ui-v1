@@ -77,8 +77,12 @@ class Carto extends Component {
     }
 
     // Recherche du pays
+    let researchCountry = currentCountry;
+    if (currentCountry === 'GL') {
+      researchCountry = 'DK';
+    }
     if (this.props.data.find((el) => {
-      if (el.country === currentCountry) {
+      if (el.country === researchCountry) {
         patentDate = el.url;
         numPatent = el.id || null;
         return true;
