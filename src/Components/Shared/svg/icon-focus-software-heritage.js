@@ -13,6 +13,7 @@ const SVG = props => (
     className={`svg-icon ${props.className || ''}`}
     fontFamily="Roboto"
     fontSize={14}
+    height="50px"
     {...props}
   >
     <defs>
@@ -23,7 +24,7 @@ const SVG = props => (
       <svg
         width={props.width}
         height={props.width}
-        viewBox="0 0 60 60"
+        viewBox="0 0 50 50"
         stroke="initial"
         fill="initial"
         fillRule="initial"
