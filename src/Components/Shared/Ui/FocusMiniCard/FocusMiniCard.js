@@ -81,9 +81,11 @@ const FocusMiniCard = (props) => {
         <a href={props.url} className="align-self-left">
           {componentSvg}
         </a>
-        <a href={props.url} className={classes.Title}>
-          {props.title}
-        </a>
+        <div className="d-flex align-items-center">
+          <a href={props.url} className={classes.Title}>
+            {props.title}
+          </a>
+        </div>
       </div>
     </div>
   );
