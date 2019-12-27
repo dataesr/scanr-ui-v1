@@ -11,14 +11,6 @@ import YoutubeSVG from '../../svg/icon-focus-youtube';
 import MT180SVG from '../../svg/icon-focus-mt180';
 import SoftwareHeritageSVG from '../../svg/icon-focus-software-heritage';
 
-/* COULEURS */
-import {
-  ENTITY_COLOR,
-  PERSON_COLOR,
-  PROJECT_COLOR,
-  PUBLICATION_COLOR,
-} from '../../../../config/config';
-
 /* SCSS */
 import classes from './FocusMiniCard.scss';
 
@@ -26,19 +18,19 @@ const FocusMiniCard = (props) => {
   let color = '#ffffff';
   switch (props.schema) {
     case 'structures':
-      color = ENTITY_COLOR;
+      color = classes.entityColor;
       break;
     case 'persons':
-      color = PERSON_COLOR;
+      color = classes.personColor;
       break;
     case 'projects':
-      color = PROJECT_COLOR;
+      color = classes.projectgreenColor;
       break;
     case 'publications':
-      color = PUBLICATION_COLOR;
+      color = classes.productionColor;
       break;
     default:
-      color = '#000000';
+      color = classes.scanrblueColor;
   }
 
   let componentSvg = null;

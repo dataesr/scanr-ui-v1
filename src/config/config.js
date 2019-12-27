@@ -30,12 +30,6 @@ export const API_PUBLICATIONS_LIKE_END_POINT = 'https://scanr-preprod.sword-grou
 export const API_PROJECT_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/projects/like';
 export const API_PERSON_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/persons/like';
 
-// Couleurs du site
-export const ENTITY_COLOR = '#ebc034';
-export const PERSON_COLOR = '#fe7747';
-export const PROJECT_COLOR = '#5dd99d';
-export const PUBLICATION_COLOR = '#cc3d8f';
-
 // portrait
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
 
