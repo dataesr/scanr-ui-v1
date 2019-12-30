@@ -5,6 +5,7 @@ import SimpleAggregationGraph from '../../../Shared/StandaloneGraphs/SimpleAggre
 import PublicationKeywords from '../../../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationTypes from '../../../Shared/StandaloneGraphs/PublicationsTypes';
 import PublicationIsOa from '../../../Shared/StandaloneGraphs/PublicationsIsOa';
+import PatentsIsInternational from '../../../Shared/StandaloneGraphs/PatentsIsInternational';
 import YearTimeLine from '../../../Shared/StandaloneGraphs/YearsTimeLine';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -16,20 +17,28 @@ const messages = {
 
 const PublicationsGraphsWrapper = props => (
   <React.Fragment>
-    <PublicationIsOa
-      title={messages[props.language].PublicationsIsOaTitle}
-      subtitle={messages[props.language].PublicationsIsOaSubtitle}
-      language={props.language}
-      lexicon="PublicationOASearch"
-      request={props.request}
-    />
-    <PublicationKeywords
-      title={messages[props.language].PublicationsKeywordsTitle}
-      subtitle={messages[props.language].PublicationsKeywordsSubtitle}
-      language={props.language}
-      lexicon="PublicationKeywordSearch"
-      request={props.request}
-    />
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] !== 'patent') ? (
+        <PublicationIsOa
+          title={messages[props.language].PublicationsIsOaTitle}
+          subtitle={messages[props.language].PublicationsIsOaSubtitle}
+          language={props.language}
+          lexicon="PublicationOASearch"
+          request={props.request}
+        />
+      ) : null
+    }
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] !== 'patent') ? (
+        <PublicationKeywords
+          title={messages[props.language].PublicationsKeywordsTitle}
+          subtitle={messages[props.language].PublicationsKeywordsSubtitle}
+          language={props.language}
+          lexicon="PublicationKeywordSearch"
+          request={props.request}
+        />
+      ) : null
+    }
     {
       (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'publication') ? (
         <SimpleAggregationGraph
@@ -64,6 +73,31 @@ const PublicationsGraphsWrapper = props => (
           subtitle={messages[props.language].PublicationsTypesSubtitle}
           language={props.language}
           lexicon="PublicationTypeSearch"
+          request={props.request}
+        />
+      ) : null
+    }
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'patent') ? (
+        <SimpleAggregationGraph
+          aggField="affiliations.label.default"
+          aggSize={15}
+          filename="scanr_export_top_affiliations"
+          graphType="HighChartsBar"
+          api="publications"
+          title={messages[props.language].PatentTopAffiliationsTitle}
+          subtitle={messages[props.language].PatentTopAffiliationsSubtitle}
+          language={props.language}
+          request={props.request}
+        />
+      ) : null
+    }
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'patent') ? (
+        <PatentsIsInternational
+          title={messages[props.language].PatentsIsInternationalTitle}
+          subtitle={messages[props.language].PatentsIsInternationalSubtitle}
+          language={props.language}
           request={props.request}
         />
       ) : null
