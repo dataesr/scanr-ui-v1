@@ -19,6 +19,7 @@ const PublicationsFilters = (props) => {
   const certificationsActiveFilters = props.filters['certifications.label'] || {};
   const certificationsFacets = facets.find(item => item.id === 'certifications') || { entries: [] };
   const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
+  const patentDomainsFacets = facets.find(item => item.id === 'domains') || { entries: [] };
   const publiTypeActiveFilters = props.filters.type || {};
   const isOaActiveFilters = props.filters.isOa || {};
   const isOaFacets = facets.find(item => item.id === 'isOa') || { entries: [] };
@@ -101,6 +102,19 @@ const PublicationsFilters = (props) => {
                 defaultActive
                 retractable={false}
                 nbItemsToShow={3}
+              />
+            )
+            : null
+        }
+        {
+          props.filters.productionType && (props.filters.productionType.values.includes('patent'))
+            ? (
+              <Autocomplete
+                language={props.language}
+                title={<FormattedHTMLMessage id="Search.Filters.classifications" />}
+                onSubmit={props.multiValueFilterHandler}
+                facets={patentDomainsFacets.entries}
+                facetID="domains.label.default"
               />
             )
             : null
