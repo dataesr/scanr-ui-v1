@@ -193,6 +193,16 @@ export const PublicationsAggregations = {
     },
     size: 3,
   },
+  domains: {
+    field: 'domains.label.default',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 10000,
+  },
 };
 export const PersonsAggregations = {
   awards: {
