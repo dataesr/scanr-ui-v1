@@ -45,7 +45,7 @@ class App extends Component {
   componentDidMount() {
     const piwik = new ReactPiwik({
       url: 'https://piwik.enseignementsup-recherche.pro',
-      siteId: 37,
+      siteId: process.env.REACT_APP_PIWIK_SITE,
       trackErrors: true,
     });
     const customHistory = createBrowserHistory();
