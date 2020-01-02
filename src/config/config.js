@@ -1,4 +1,5 @@
 // api du site
+<<<<<<< HEAD
 export const API_FOCUS_SCANR = 'http://66.70.222.205/api/focus';
 export const API_CONTRIBUTE_SCANR = 'http://66.70.222.205/api/contribute';
 export const API_CONTACT_SCANR = 'http://66.70.222.205/api/contact';
@@ -29,6 +30,38 @@ export const API_STRUCTURE_LIKE_END_POINT = 'https://scanr-preprod.sword-group.c
 export const API_PUBLICATIONS_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/publications/like';
 export const API_PROJECT_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/projects/like';
 export const API_PERSON_LIKE_END_POINT = 'https://scanr-preprod.sword-group.com/api/v2/persons/like';
+=======
+export const API_BASE_SCANR = process.env.REACT_APP_API_BASE_SCANR;
+export const API_FOCUS_SCANR = API_BASE_SCANR.concat('/focus');
+export const API_CONTRIBUTE_SCANR = API_BASE_SCANR.concat('/contribute');
+export const API_CONTACT_SCANR = API_BASE_SCANR.concat('/contact');
+export const API_ERRORS_SCANR = API_BASE_SCANR.concat('/errors');
+
+export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+// Get
+export const API_STRUCTURES_END_POINT = API_BASE_URL.concat('/structures');
+export const API_PUBLICATIONS_END_POINT = API_BASE_URL.concat('/publications');
+export const API_PROJECTS_END_POINT = API_BASE_URL.concat('/projects');
+export const API_PERSONS_END_POINT = API_BASE_URL.concat('/persons');
+
+// Search
+export const API_STRUCTURES_SEARCH_END_POINT = API_BASE_URL.concat('/structures/search');
+export const API_PERSONS_SEARCH_END_POINT = API_BASE_URL.concat('/persons/search');
+export const API_PROJECTS_SEARCH_END_POINT = API_BASE_URL.concat('/projects/search');
+export const API_PUBLICATIONS_SEARCH_END_POINT = API_BASE_URL.concat('/publications/search');
+
+// GeoResults
+export const API_STRUCTURES_GEORESULTS_END_POINT = API_BASE_URL.concat('/structures/search/georesults');
+export const API_PERSONS_GEORESULTS_END_POINT = API_BASE_URL.concat('/persons/search/georesults');
+export const API_PROJECTS_GEORESULTS_END_POINT = API_BASE_URL.concat('/projects/search/georesults');
+export const API_PUBLICATIONS_GEORESULTS_END_POINT = API_BASE_URL.concat('/publications/search/georesults');
+
+// Like
+export const API_STRUCTURE_LIKE_END_POINT = API_BASE_URL.concat('/structures/like');
+export const API_PUBLICATIONS_LIKE_END_POINT = API_BASE_URL.concat('/publications/like');
+export const API_PROJECT_LIKE_END_POINT = API_BASE_URL.concat('/projects/like');
+export const API_PERSON_LIKE_END_POINT = API_BASE_URL.concat('/persons/like');
+>>>>>>> a9fbd1b489123ee96ce7919a20f4a992b65f6943
 
 // portrait
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
