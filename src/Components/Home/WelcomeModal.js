@@ -10,7 +10,8 @@ const WelcomeModal = () => {
   if (visited) {
     displayWelcomeModal = false;
   } else {
-    localStorage.alreadyVisitedScanR = true;
+    // localStorage.alreadyVisitedScanR = true;
+    displayWelcomeModal = false;
   }
   return (
     <Modal
