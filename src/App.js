@@ -10,7 +10,6 @@ import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
 import { GlobalContext } from './GlobalContext';
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
-const Home1 = lazy(() => import('./Components/Home1/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
 const EntityPage = lazy(() => import('./Components/Results/Entity/Entity'));
 const ProductionPage = lazy(() => import('./Components/Results/Production/Production'));
@@ -67,15 +66,6 @@ class App extends Component {
                 path="/"
                 component={props => (
                   <HomePage
-                    {...props}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/home1"
-                component={props => (
-                  <Home1
                     {...props}
                   />
                 )}
