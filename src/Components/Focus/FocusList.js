@@ -131,11 +131,7 @@ FocusList.defaultProps = {
       },
       title: {
         fr: "Les nominations 2019 à l'Institut Universitaire de France",
-<<<<<<< HEAD
         en: '2019 new members of the Institut Universitaire de France',
-=======
-        en: 'Persons distinguished by the Institut Universitaire de France in 2019',
->>>>>>> a9fbd1b489123ee96ce7919a20f4a992b65f6943
       },
       type: 'treemap',
       url: '/focus/iuf',
