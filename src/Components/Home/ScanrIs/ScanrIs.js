@@ -64,7 +64,11 @@ const focusList = [
     },
     title: {
       fr: 'Nominations IUF 2019',
+<<<<<<< HEAD
       en: 'IUF new members in 2019',
+=======
+      en: 'Persons distinguished by the IUF in 2019',
+>>>>>>> a9fbd1b489123ee96ce7919a20f4a992b65f6943
     },
     type: 'treemap',
     url: '/focus/iuf',
