@@ -4,6 +4,7 @@ import moment from 'moment';
 
 import classes from './ProductionList.scss';
 import ProductionDetail from './ProductionDetail';
+import getSelectKey from '../../../../../Utils/getSelectKey';
 
 /**
  * ProductionList
@@ -46,7 +47,7 @@ const ProductionList = (props) => {
           tabIndex={0}
         >
           <p className={classes.Title}>
-            {item.value.title.default}
+            {getSelectKey(item.value, 'title', props.language, 'default')}
           </p>
           <div className={`d-flex align-items-center ${classes.Type}`}>
             <div className="mr-auto" />

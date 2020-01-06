@@ -25,7 +25,7 @@ const PatentIdentity = (props) => {
   let keywords = [];
   if (props.data.domains) {
     keywords = props.data.domains.filter(dom => dom.level === 'ss_classe').map(el => (
-      { tag: `${el.label.default} (${el.code})`, href: `/recherche/publications?filters=%7B"domains.code"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"any"%2C"values"%3A%5B"${el.code}"%5D%7D%2C"productionType"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"all"%2C"values"%3A%5B"patent"%5D%7D%7D` }
+      { tag: `${el.label.default} (${el.code})`, href: `/recherche/publications?filters=%7B"domains.label.default"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"any"%2C"values"%3A%5B"${el.label.default}"%5D%7D%2C"productionType"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"all"%2C"values"%3A%5B"patent"%5D%7D%7D` }
     ));
   }
   let isInternational = null;

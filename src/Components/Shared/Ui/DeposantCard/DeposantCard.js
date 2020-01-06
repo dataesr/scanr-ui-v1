@@ -29,13 +29,13 @@ const PersonCard = (props) => {
   let label = props.data.label;
   const country = props.data.country;
   if (props.data.structure) {
-    if (props.data.person.label) {
+    if (props.data.person && props.data.person.label) {
       label = getSelectKey(props.data.structure, 'label', props.language, 'default');
     }
   }
   let url = '';
   if (props.data.structure && props.data.structure.id) {
-    url = `/structure/${props.data.structure.id}`;
+    url = `/entite/${props.data.structure.id}`;
   }
 
   return (
@@ -65,8 +65,8 @@ const PersonCard = (props) => {
                   url={url}
                 >
                   <FormattedHTMLMessage
-                    id="PersonCard.ButtonToPage.label"
-                    defaultMessage="PersonCard.ButtonToPage.label"
+                    id="DeposantCard.ButtonToPage.label"
+                    defaultMessage="DeposantCard.ButtonToPage.label"
                   />
                 </ButtonToPage>
               </div>
