@@ -55,17 +55,31 @@ const PublicationsGraphsWrapper = props => (
         />
       ) : null
     }
-    <YearTimeLine
-      api="publications"
-      filterLow={1990}
-      filterHigh={2019}
-      title={messages[props.language].PublicationsYearsTitle}
-      lexicon="PublicationYearSearch"
-      subtitle={messages[props.language].PublicationsYearsSubtitle}
-      language={props.language}
-      request={props.request}
-    />
-
+    {
+      (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'patent') ? (
+        <YearTimeLine
+          api="publications"
+          filterLow={1990}
+          filterHigh={2019}
+          title={messages[props.language].PatentYearsTitle}
+          lexicon="PublicationYearSearch"
+          subtitle={messages[props.language].PatentYearsSubtitle}
+          language={props.language}
+          request={props.request}
+        />
+      ) : (
+        <YearTimeLine
+          api="publications"
+          filterLow={1990}
+          filterHigh={2019}
+          title={messages[props.language].PublicationsYearsTitle}
+          lexicon="PublicationYearSearch"
+          subtitle={messages[props.language].PublicationsYearsSubtitle}
+          language={props.language}
+          request={props.request}
+        />
+      )
+    }
     {
       (props.request && props.request.filters && props.request.filters.productionType && props.request.filters.productionType.values && props.request.filters.productionType.values[0] === 'publication') ? (
         <PublicationTypes
