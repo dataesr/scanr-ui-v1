@@ -114,6 +114,9 @@ const Affiliations = (props) => {
                   style={mapStyle}
                 />
               </div>
+              <div className={`w-100 ${classes.AffiliationsAlert}`}>
+                <FormattedHTMLMessage id="Person.Informations.Affiliations.warning" />
+              </div>
               <div className={`w-100 ${classes.AffiliationsList}`}>
                 {
                   orderedYears.map(year => (
