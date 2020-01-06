@@ -1,5 +1,8 @@
 @import '../../../../style.scss';
 
+.lexiconButton {
+  cursor: pointer;
+}
 .LexiconModal {
   .Header {
     background-color: $scanrlightgreyColor;

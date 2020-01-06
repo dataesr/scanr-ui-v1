@@ -60,7 +60,7 @@ const LexiconModal = (props) => {
           </Modal.Footer>
         </Modal>
         {/* eslint-disable-next-line */}
-        <span onClick={() => setActive(!isActive)}>
+        <span onClick={() => setActive(!isActive)} className={classes.lexiconButton}>
           {props.children}
         </span>
       </Fragment>
