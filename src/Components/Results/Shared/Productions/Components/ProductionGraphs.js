@@ -20,7 +20,7 @@ const ProductionGraphs = (props) => {
   const graphFor = {
     thesis: ['isOa', 'years', 'keywords'],
     publication: ['isOa', 'years', 'keywords', 'journal', 'types'],
-    patent: ['isOa'],
+    patent: ['years'],
   };
   const labelFor = {
     fr: {

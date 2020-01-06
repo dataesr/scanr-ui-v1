@@ -179,10 +179,6 @@ class Productions extends Component {
       });
     });
     Axios.post(url, request).then((response) => {
-      const totalPerType = {};
-      response.data.facets.find(facet => facet.id === 'productionTypes').entries.forEach((type) => {
-        totalPerType[type.value] = type.count;
-      });
       const graphData = {};
       response.data.facets.forEach((facet) => {
         graphData[facet.id] = facet;
@@ -196,7 +192,6 @@ class Productions extends Component {
       this.setState({
         data,
         selectedProduction,
-        totalPerType,
         graphData,
         isLoading: false,
       });
