@@ -19,13 +19,23 @@ import countries from '../countries.json';
  * Tests unitaires : .
 */
 const PatentParticipants = (props) => {
-  const inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+  let inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
     const [fullName, country] = auth.fullName.split('__');
     return { fullName, country: countries[props.language][country] };
   });
-  const deposants = props.data.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
+  inventors = [...new Set(inventors.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
+
+  let depos = props.data.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
     const [label, country] = auth.fullName.split('__');
-    return { label, country: countries[props.language][country] };
+    return { label, country: countries[props.language][country], id: (auth.affiliations && auth.affiliations.length) && auth.affiliations[0].structure };
+  });
+  depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
+  const deposants = [];
+  depos.forEach((dep) => {
+    const newdep = { ...dep };
+    const structure = props.affiliations.find(aff => aff.id === dep.id);
+    newdep.structure = structure;
+    deposants.push(newdep);
   });
 
   const nbInventorsToShow = 4;
@@ -118,6 +128,7 @@ const PatentParticipants = (props) => {
                       data={dep}
                       showTitle={false}
                       className={classes.BGLightGrey}
+                      language={props.language}
                     />
                   </div>
                 );
@@ -154,5 +165,5 @@ export default PatentParticipants;
 PatentParticipants.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
-  // affiliations: PropTypes.array,
+  affiliations: PropTypes.array,
 };

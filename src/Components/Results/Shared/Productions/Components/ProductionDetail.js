@@ -46,6 +46,25 @@ const ProductionDetail = (props) => {
   keywords = [...new Set(keywords)];
 
   // Auteurs
+  const getInventors = (data) => {
+    if (!data.authors || data.authors.length === 0) {
+      return { inventeurs: null, deposants: null };
+    }
+    let inventeurs = data.authors.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+      const [fullName, country] = auth.fullName.split('__');
+      return { fullName, country };
+    });
+    inventeurs = [...new Set(inventeurs.map(i => JSON.stringify(i)))].length;
+
+    let deposants = data.authors.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
+      const [label, country] = auth.fullName.split('__');
+      return { label, country };
+    });
+    deposants = [...new Set(deposants.map(i => JSON.stringify(i)))].length;
+    const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
+    return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
+  };
+
   const maxAuthors = 2;
   const getAuthors = (data) => {
     let authors = [];
@@ -66,7 +85,7 @@ const ProductionDetail = (props) => {
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
     } else {
-      return null;
+      return [getInventors(data)];
     }
     return authors;
   };
@@ -92,11 +111,7 @@ const ProductionDetail = (props) => {
           authors.reduce((prev, curr) => [prev, ', ', curr])
         }
         {' '}
-        {
-          (props.data.productionType !== 'thesis')
-            ? others
-            : null
-        }
+        {props.data.productionType === 'publication' && others}
       </p>
       <div>
         <p className={classes.Grey}>
