@@ -26,7 +26,14 @@
   height: auto;
 }
 
-
+.AffiliationsAlert {
+  background-color: white;
+  color: $scanrgreyColor;
+  font-style: italic;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 0.9em;
+}
 .AffiliationsList {
   background-color: white;
 }
