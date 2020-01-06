@@ -21,8 +21,10 @@ import patentType from './patentType.json';
 const PatentsApplications = (props) => {
   const patents = [];
   props.data.forEach((patent) => {
-    const [country, type] = patent.type.split('__');
-    const newPatent = { ...patent, country, type };
+    const [country, type, delivrance] = patent.type.split('__');
+    const newPatent = {
+      ...patent, country, type, delivrance,
+    };
     patents.push(newPatent);
   });
 
@@ -63,7 +65,8 @@ const PatentsApplications = (props) => {
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />) : ''}
+              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />) : ' '}
+              {(item.delivrance) && (<FormattedHTMLMessage id="Patent.Depots.delivered" />)}
             </p>
           </div>
         </div>
@@ -106,6 +109,19 @@ const PatentsApplications = (props) => {
                         tooltip=""
                       />
                     </div>
+                    {
+                      (selected.delivrance) && (
+                        <div className={`col-md-6 ${classes.CardContainer}`}>
+                          <SimpleCard
+                            language={props.language}
+                            logo="fas fa-id-card"
+                            title={<FormattedHTMLMessage id="Patent.Depots.granted" />}
+                            label={<FormattedHTMLMessage id="Patent.Depots.grantedDate" values={{ date: moment(selected.delivrance).format('DD-MM-YYYY') }} />}
+                            tooltip=""
+                          />
+                        </div>
+                      )
+                    }
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={props.language}
