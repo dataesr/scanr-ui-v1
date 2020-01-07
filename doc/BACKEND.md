@@ -88,6 +88,8 @@ L'application dans son ensemble peut être lancé via un fichier docker-compose.
 - *Missions*: Collecte de données, Exposition API de données
 - *Dépendances interne*: aucune
 - *Dépendances externe*: Base de donnée du RNSR.
+- *Fonctionnalité(s)*:
+  - Expose les données du RNSR en JSON
 
 Ce service récupère les données des structures de recherche du Répertoire National des structures de recherche (RNSR ci-après) directement via une connexion à la base de donnée RNSR. Cette connexion passe par un tunnel SSH mis en place par la DNE entre le serveur applicatif et le serveur du RNSR. La connexion est sécurisé par identifiant et mot de passe coté RNSR.
 
@@ -199,6 +201,8 @@ L'application expose plusieurs routes permettant de récupérer des informations
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données
 - *Dépendances interne*: aucune
 - *Dépendances externe*: API SIRENE.
+- *Fonctionnalité(s)*:
+  - Expose les données du répertoire SIRENE en JSON
 
 
 Ce service récupère les données des organisations présentes dans le répertoire Sirene via l'[API](https://api.insee.fr/) mise en place par l'insee.
@@ -210,7 +214,100 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
 
   ```json
   {
-    "name": "blah"
+  	"id": {
+  		"description": "Sirene id",
+  		"type": "string",
+  		"regex": REGEX_SIRENE
+  	},
+  	"dates": {
+  		"type": "dict",
+  		"schema": {
+  			"start_date": {
+  				"type": "datetime",
+  				"nullable": true
+  			},
+  			"end_date": {
+  				"description": "Closing date",
+  				"type": "datetime",
+  				"nullable": true
+  			}
+  		}
+  	},
+  	"level": {
+  		"description": "Level of the structure",
+  		"type": "string"
+  	},
+  	"type": {
+  		"description": "Level of the structure",
+  		"type": "string"
+  	},
+  	"nature": {
+  		"description": "Nature of structure's supervision",
+  		"type": "string"
+  	},
+  	"name": {
+  		"type": "dict",
+  		"schema": {
+  			"label": {
+  				"description": "Structure's name",
+  				"type": "string",
+  				"nullable": True
+  			},
+  			"acronym": {
+  				"description": "Structure's acronym",
+  				"type": "string",
+                  "nullable": True
+  			}
+  		}
+  	},
+  	"human_ressources": {
+  		"type": "dict",
+  		"nullable": True,
+  		"schema": {
+  			"employees_slice": {
+  				"description": "Structure's name",
+  				"type": "string",
+  				"nullable": true
+  			},
+  			"date": {
+  				"description": "Structure's acronym",
+  				"type": "string",
+                  "nullable": true
+  			}
+  		}
+  	},
+  	"aliasses": {
+  		"type": "list",
+  		"schema": {
+  			"type": "string",
+  			"nullable": true
+  		}
+  	},
+  	"input_address": {
+  		"type": "string",
+  	},
+  	"city_code": {
+  		"type": "string",
+  	},
+  	"category": {
+  		"type": "string",
+  	},
+  	"siren": {
+  		"type": "string"
+  	},
+  	"headquarter": {
+  		"type": "boolean"
+  	},
+  	"siret": {
+  		"type": "string"
+  	},
+  	"legal_category": {
+  		"type": "string",
+
+  	},
+  	"naf_code": {
+  			"type": "string"
+  	}
   }
   ```
 </details>
@@ -229,6 +326,8 @@ Voir sur: [*Github Repos*](http://https://github.com/dataesr/geocoder), [*Docker
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données
 - *Dépendances interne*: aucune
 - *Dépendances externe*: adresses.gouv.fr, openstreetmap.
+- *Fonctionnalité(s)*:
+  - Géocode une adresse d'entrée et renvoi une adresse complète et propre avec coordonnées (si trouvées).
 
 Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr.
 
@@ -237,7 +336,63 @@ Ce service expose une API de géocodage, qui utilise les services de adresse.gou
 
   ```json
   {
-    "name": "blah"
+    "input_address": {
+      "type": "string",
+      "description": "Adresse renseignée dans le champs 'location' de l'API"
+    },
+    "housenumber": {
+      "type": "string",
+      "description": "Numéro de rue",
+    },
+    "street": {
+      "type": "string",
+      "description": "Nome de la voie",
+    },
+    "post_code": {
+      "type": "string",
+      "description": "Code postal",
+    },
+    "city_code": {
+      "type": "string",
+      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ville",
+    },
+    "country": {
+      "type": "string",
+      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
+    },
+    "geocoded": {
+      "type": "boolean",
+      "description": "Un booléen -- True si le géocodage est un succès",
+    },
+    "score": {
+      "type": "numeric",
+      "description": "Score du géocodeur",
+    },
+    "precision": {
+      "type": "string",
+      "description": "Précision du résultat -- housenumber, street etc.",
+    },
+    "provider": {
+      "type": "string",
+      "description": "Fournisseur du service",
+    },
+    "coordinates": {
+      "type": "object",
+      "schema": {
+        "lat": {
+          "type": "numeric",
+          "description": "latitude"
+        },
+        "lon": {
+          "type": "numeric",
+          "description": "longitude"
+        }
+      }
+    }
   }
   ```
 </details>
@@ -259,20 +414,799 @@ Application dédiée aux organisations dans #dataesr. Elle est en charge:
 2. de l'exposition d'une API pour les données des organisations, et pour des fonction (notamment de matching d'organisation)
 3. de l'export de ces données en une version compatible avec l'application scanR,
 
-#### APIs
-
-Cette application expose une API RESTful de la collection 'organizations' qui est un ensemble de documents représentant des organisations. Le modèle de donnée retenu pour ces documents permet de gérer à la fois un historique des données et des conflits liés à la mise à jour de source que l'application n'a pas pu résoudre avec les règles métiers établies. Il appartient aux administrateurs des données de venir régler les conflits dans l'interface utilisateur, ou via des scripts utilisant l'API.
-
-
-
-
-L'application expose aussi une API de matching, permettant d'identifier un document de la collection organisation à partir d'un nom d'organisation. Cette API combine moteur de recherche, et règles métiers afin de fournir (ou de ne pas fournir) un matching le plus qualitatif possible.
-
-#### Workflow de mise à jour
+#### 3.4.1 Workflow de mise à jour et traitement des données.
 
 de récupérer les données depuis les sources, d'identifier les changements apportés aux données dans es sources (via l'utilisation de snapshot des documents sources) et de mettre à jour les documents liés aux organisations en respectant des règles métier.
 
-#### Export
+
+#### 3.4.2 APIs et export
+
+Cette application expose une API RESTful de la collection 'organizations' qui est un ensemble de documents représentant des organisations. Le modèle de donnée retenu pour ces documents permet de gérer à la fois un historique des données et des conflits liés à la mise à jour de source que l'application n'a pas pu résoudre avec les règles métiers établies. Il appartient aux administrateurs des données de venir régler les conflits dans l'interface utilisateur, ou via des scripts utilisant l'API. Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
+
+<details>
+  <summary>Voir le modèle de donnée complets</summary>
+
+  ```json
+  {
+    "status": {
+        "description": "status of the organizations",
+        "type": "string",
+        "unique": True
+    },
+    "id": {
+        "description": "#dataESR organization identifier",
+        "type": "string",
+        "unique": True,
+        "nullable": False
+    },
+    "bce": {
+        "description": "UAI id",
+        "type": "string",
+        "regex": REGEX_UAI,
+        "unique": True,
+        "nullable": True
+    },
+    "grid": {
+        "description": "grid.ac id",
+        "type": "string",
+        "regex": REGEX_GRID,
+        "unique": True,
+        "nullable": True
+    },
+    "rnsr": {
+        "description": "RNSR id",
+        "type": "string",
+        "regex": REGEX_NNS,
+        "unique": True,
+        "nullable": True
+    },
+    "ed": {
+        "description": "Doctoral School id",
+        "type": "string",
+        "regex": REGEX_ED,
+        "unique": True,
+        "nullable": True
+    },
+    "sirene": {
+        "description": "Sirene id",
+        "type": "string",
+        "unique": True,
+        "regex": REGEX_SIRENE,
+        "nullable": True
+    },
+    "headquarter": {
+        "type": "string"
+    },
+    "dataesr": {
+        "description": "ESR id for additional organizations",
+        "type": "string",
+        "unique": True,
+    },
+    "rnsr_key": {
+        "description": "ESR id for additional organizations",
+        "type": "string",
+        "unique": True,
+    },
+    "active": {
+        "description": "is organization active?",
+        "type": "boolean",
+    },
+    "foreign": {
+        "description": "Is organization foreign?",
+        "type": "boolean",
+        "default": False
+    },
+    "types": {
+        "description": "Organization's types",
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "forbidden_types": {
+        "description": "All types forbidden for that organization.",
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "dates": {
+        "description": "Start and closing dates",
+        "type": "list",
+        "schema": dates
+    },
+    "comment": {
+        "description": "Commentaire sur la Organization",
+        "type": "string",
+        "example": "Peut être un doublon avec 199712586Y"
+    },
+    "names": {
+        "description": "Names (fr, en) of the Organizations, associated \
+            with its acronym -- Has history",
+        "type": "list",
+        "schema": name
+    },
+    "descriptions": {
+        "description": "Descriptions (fr, en) -- Has history",
+        "type": "list",
+        "schema": description
+    },
+    "addresses": {
+        "description": "Organization's addresses -- Has history",
+        "type": "list",
+        "schema": address
+    },
+    "alias": {
+        "description": "Regroups all names, acronyms, and identifiers that \
+            reference the Organization, either now or in the past",
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "keywords_en": {
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "keywords_fr": {
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "code_numbers": {
+        "type": "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "logo": {
+        "type": "string"
+    },
+    "nature_group": {
+        "description": "Only for UAI organizations.",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "value": {
+                    "description": "",
+                    "type": "string",
+                    "required": True,
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "legal_category": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "value": {
+                    "type": "string",
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "nature": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "value": {
+                    "description": "",
+                    "example": "",
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "sector": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "value": {
+                    "type": "string",
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "websites": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "url": {
+                    "description": "Organization's main website",
+                    "example": "http://www.beta-umr7522.fr",
+                    "type": "string",
+                    "required": True,
+                },
+                "language": {
+                    "description": "website language",
+                    "type": "string",
+                    "default": "fr",
+                    "example": "en"
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "alive": {
+                    "type": "boolean"
+                },
+                "meta": meta
+            }
+        }
+    },
+    "website_check": {
+        "type": "dict",
+        "schema": {
+            "checked": {
+                "type": "boolean"
+            },
+            "last_check": {
+                "type": "datetime"
+            }
+        }
+    },
+    "emails": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "email": {
+                    "description": "Organization's contact email",
+                    "example": "blabla@unistra.fr",
+                    "type": "string",
+                    "required": True,
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "phones": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "phone": {
+                    "description": "Organization's phone number",
+                    "example": "03.88.xx.xx.xx",
+                    "type": "string",
+                    "required": True,
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "social_medias": {
+        "description": "Organizations's social medias accounts",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "account": {
+                    "description": "Account Id for the social media",
+                    "type": "string",
+                    "example": "beta_economics"
+                },
+                "social_media": {
+                    "description": "Name of the social media",
+                    "type": "string",
+                    "example": "twitter"
+                },
+                "url": {
+                    "description": "url of the social media page",
+                    "type": "string",
+                    "example": "https://twitter.com/beta_economics"
+                },
+                "language": {
+                    "description": "social media language",
+                    "type": "string",
+                    "default": "fr",
+                    "example": "en"
+                },
+                "status": {
+                    "description": "Activity status of the Organization",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "default": "conflict",
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "contract": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "value": {
+                    "type": "string",
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "thematics": {
+        "description": '''#dataESR domains''',
+        "type": "list",
+        "schema": thematics
+    },
+    "badges": {
+        "description": '''Specific markers for the Organization''',
+        "type":  "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "focus": {
+        "description": '''Specific markers for the Organization''',
+        "type":  "list",
+        "schema": {
+            "type": "string"
+        }
+    },
+    "panels": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "code": {
+                    "type": "string",
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "start_date": {
+                    "type": "datetime"
+                },
+                "end_date": {
+                    "type": "datetime"
+                },
+                "meta": meta
+            }
+        }
+    },
+    "nace": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "code": {
+                    "type": "string",
+                },
+                "status": {
+                    "type": "string",
+                    "allowed": ["main", "valid", "conflict"],
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "human_ressources": {
+        "description": "Human and financial informations on the Organization",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "num_employees": {
+                    "description": "Number of employees",
+                    "type": "string",
+                },
+                "num_employees_slice": {
+                    "description": "Number of employees",
+                    "type": "string",
+                },
+                "num_researchers": {
+                    "description": "Number of ...",
+                    "type": "string",
+                },
+                "date": {
+                    "description": "data validity date",
+                    "type": "datetime"
+                },
+                "meta": meta
+            }
+        }
+    },
+    "external_links": {
+        "description": "Organizations's external link",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "url": {
+                    "description": "External url describing the ressource",
+                    "type": "string",
+                    "nullable": False
+                },
+                "type": {
+                    "description": "Type of the external link",
+                    "type": "string",
+                },
+                "language": {
+                    "description": "Language of the website",
+                    "type": "string",
+                    "default": "fr"
+                },
+                "meta": meta
+            }
+        }
+    },
+    "external_ids": {
+        "description": "Organizations's external ids",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "id": {
+                    "description": "External id",
+                    "type": "string",
+                    "nullable": False
+                },
+                "type": {
+                    "description": "Type of the external link",
+                    "type": "string",
+                    "nullable": False
+                },
+                "meta": meta
+            }
+        }
+    },
+    "evaluations": {
+        "description": "Organizations's evaluations",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "evaluator": {
+                    "description": "Entity that evaluated the Organization",
+                    "type": "string",
+                    "example": "HCERES"
+                },
+                "url": {
+                    "description": "Url of the evaluation report",
+                    "type": "string",
+                    "example": "https://www.hceres.fr/content/ \
+                        download/31935/488476/file/ \
+                        C2018-EV-0673021V-DER-PUR180015254-019890-RF.pdf"
+                },
+                "year": {
+                    "description": "Year of the avaluation",
+                    "type": "string",
+                    "example": "2017-2018"
+                },
+                "label": {
+                    "description": "Label of the evaluation",
+                    "type": "string",
+                    "example": "Vague B"
+                },
+                "meta": meta
+            }
+        }
+    },
+    "leaders": {
+        "type": "list",
+        "description": "",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "id": {
+                    "type": "string",
+                },
+                "href": {
+                    "type": "string",
+                },
+                "identified": {
+                    "type": "boolean"
+                },
+                "start_date": {
+                    "type": "datetime"
+                },
+                "end_date": {
+                    "type": "datetime"
+                },
+                "role": {
+                    "type": "string"
+                },
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                },
+                "source_code": {
+                    "type": "string"
+                },
+                "status": {
+                    "description": "data status",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "predecessors": {
+        "type": "list",
+        "description": "List of Organization's higher level relations",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "id": {
+                    "type": "string",
+                },
+                "href": {
+                    "type": "string",
+                },
+                "identified": {
+                    "type": "boolean"
+                },
+                "source_code": {
+                    "type": "string",
+                },
+                "name": {
+                    "type": "string",
+                },
+                "succession_date": {
+                    "type": "datetime"
+                },
+                "succession_type": {
+                    "type": "string"
+                },
+                "status": {
+                    "description": "Data status.",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "supervisors": {
+        "type": "list",
+        "description": "List of Organization's higher level relations",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "id": {
+                    "type": "string",
+                },
+                "href": {
+                    "type": "string"
+                },
+                "start_date": {
+                    "type": "datetime"
+                },
+                "end_date": {
+                    "type": "datetime"
+                },
+                "supervision_type": {
+                    "type": "string"
+                },
+                "source_code": {
+                    "type": "string",
+                },
+                "identified": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string",
+                },
+                "status": {
+                    "description": "Activity status of the Organization",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "parents": {
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "start_date": {
+                    "type": "datetime"
+                },
+                "end_date": {
+                    "type": "datetime"
+                },
+                "id": {
+                    "type": "string",
+                },
+                "href": {
+                    "type": "string",
+                },
+                "identified": {
+                    "type": "boolean"
+                },
+                "source_code": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "exclusive": {
+                    "type": "boolean"
+                },
+                "status": {
+                    "description": "Activity status of the Organization",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    },
+    "certifications": {
+        "description": "",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "meta": meta,
+                "certification_name": {
+                    "description": "",
+                    "type": "string",
+                },
+                "certification_type": {
+                    "description": "",
+                    "type": "string",
+                },
+                "certification_start_date": {
+                    "description": "",
+                    "type": "datetime",
+                },
+                "certification_end_date": {
+                    "description": "",
+                    "type": "datetime",
+                }
+            }
+        }
+    },
+    "prizes": {
+        "description": "",
+        "type": "list",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "meta": meta,
+                "prize_name": {
+                    "description": "",
+                    "type": "string"
+                },
+                "prize_institution": {
+                    "description": "",
+                    "type": "string"
+                },
+                "prize_url": {
+                    "description": "",
+                    "type": "string"
+                },
+                "prize_description": {
+                    "description": "",
+                    "type": "string"
+                },
+                "prize_date": {
+                    "description": "",
+                    "type": "datetime",
+                },
+                "prize_amount": {
+                    "description": "",
+                    "type": "float"
+                },
+            }
+        }
+    },
+    "relations": {
+        "type": "list",
+        "description": "",
+        "schema": {
+            "type": "dict",
+            "schema": {
+                "id": {
+                    "type": "string",
+                },
+                "href": {
+                    "type": "string",
+                },
+                "identified": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "string",
+                },
+                "source_code": {
+                    "type": "string",
+                },
+                "name": {
+                    "type": "string",
+                },
+                "start_date": {
+                    "type": "datetime"
+                },
+                "end_date": {
+                    "type": "datetime"
+                },
+                "status": {
+                    "description": "Activity status of the Organization",
+                    "type": "string",
+                    "allowed": ["valid", "conflict"],
+                    "example": "valid",
+                    "required": True,
+                },
+                "meta": meta
+            }
+        }
+    }
+}
+  ```
+</details>
+<br/>
+
+L'application expose aussi une API de matching, permettant d'identifier un document de la collection organisation à partir d'un nom d'organisation. Cette API combine moteur de recherche, et règles métiers afin de fournir (ou de ne pas fournir) un matching le plus qualitatif possible.
+
+Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
 
 
 ### 3. UI
