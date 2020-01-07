@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
+import Mapping from '../../Mapping/Mapping';
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 
 import classes from './SimpleListCard.scss';
@@ -26,22 +27,20 @@ const labelFunction = label => (
   (label) ? <p className={classes.Label}>{label}</p> : null
 );
 
-const labelFunctionSpan = label => (
-  (label) ? <span className={classes.Label}>{label.concat(' ')}</span> : null
-);
-
 const multipleLabelsFunction = labels => (
-  labels.map(label => (labelFunctionSpan(label)))
+  labels.map(label => (labelFunction(label)))
 );
 
 const additionalListFunction = (allProps) => {
   const items = allProps.list.map(item => (
     <li key={item.type} className="list-group-item">
-      <div className="row">
-        <div className="col">
-          <span className={classes.Key}>{item.type}</span>
+      <div className="d-flex flew-row">
+        <div>
+          <span className={classes.Key}>
+            <Mapping id={item.type} />
+          </span>
         </div>
-        <div className="col-8">
+        <div className="ml-auto">
           <span className={classes.Value}>{item.id}</span>
         </div>
       </div>
@@ -72,9 +71,7 @@ const SimpleListCard = (props) => {
       {titleFunction(props.title)}
       {(props.label) ? labelFunction(props.label) : null }
       {(props.multipleLabels) ? multipleLabelsFunction(props.multipleLabels) : null}
-
       {tooltip}
-
       {additionalListFunction(props)}
     </div>
   );
