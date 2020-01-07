@@ -1,18 +1,12 @@
 ---
 title: "scanR data layer documentation"
 authors: "A2_4"
-date: "Now"
-output:
-  html_document:
-     css: font-awesome-4.4.0/css/font-awesome.css
-     self_contained: no
-
+date: "06-01-2020"
 ---
-<i class="fa fa-renren fa-5x"></i>
 
 # scanR data layer documentation.
 
-## Introduction.
+## 1. Introduction.
 
 scanR est une application web permettant d'explorer la recherche et l'innovation française. Plus précisément, il s'agit d'une combinaison de quatre moteurs de recherche respectivement construit en indexant des données structurées et semi-structurées relatives à quatre types d'objets:
   - des organisations accueillant, favorisant ou finançant de la R&D (ci-après structures ou organisations),
@@ -29,7 +23,7 @@ L'application globale se décompose en trois couches principales.
   3. dataESR, l'application chargée de collecter les données, de les transformer, de les enrichir, de les corriger et de les exposer. Cette couche, plus générale que les deux autres exclusivement dévolue à scanR, est décrite plus en détail dans le présent document.
 
 
-## Architecture générale.
+## 2. Architecture générale.
 
 L'application est segmentée en plusieurs services conteneurisés et stocke les données sur une instance mongoDB.
 Chaque micro-service a une responsabilité limité à son propre périmètre et la défaillance d'un service ne provoque pas la destruction de toute l'application. Néanmoins, certains services interconnectés peuvent ne pas être complètement opérationnel si un service dépendant est indisponible.
@@ -45,15 +39,30 @@ Chaque service peut avoir une ou plusieurs missions parmis les suivantes:
 Aucune donnée stocké par l'application
 
 
-### Base de données.
+### 2.1 Base de données.
 
 L'application stocke l'intégralité de ses données sur une instance mongoDB. Cette instance peut être distante ou installée sur la même machine (comme c'est le cas sur notre serveur). La configuration de connexion à cette instance mongoDB se fait grâce au fichier .env des services qui l'utilisent. Chaque service, s'il a besoin de stocker des données, est responsable d'une ou plusieurs collection auxquelles il est le seul à pouvoir accéder. Il propose si nécessaire des API pour que d'autres processus ou d'autres services puisse modifier ou lire ses données. La base de donnée n'est donc pas directement accessible depuis l'extérieur.
 
-### Services.
+### 2.2 Services de l'application.
 
-L'application dans son ensemble peut être lancé via un fichier docker-compose.yml sur une seule machine avec la commande ```docker-compose up -d```. Un serveur nginx faisant office de reverse-proxy est lancé également, permettant à tous les services d'être accessible sur le port 80 (et/ou 443) d'une machine.
+L'application comporte 13 services qui sont détaillées dans la partie 3 de ce document:
+  - nginx -- reverse proxy pour les autres applications
+  - geocoder --  Permet le geocodage d'adresses
+  - persons -- Gère les personnes/auteurs
+  - organizations -- Gère les organisations
+  - publications -- Gère les publications
+  - patents -- Gère les brevets/inventions
+  - projects -- Gère les projets/financements
+  - rnsr-fetcher -- 
+  - sirene-fetcher
+  - ui -- Interface utilisateur d'administration de données et monitoring
+  - filebeat -- ETL pour les logs des applications
+  - metricbeat -- ETL pour les metriques des applications
+  - elasticsearch -- stockage et API pour les logs et les métriques
 
-### Technologies utilisées.
+
+
+### 2.3 Technologies utilisées.
 
 Python, avec [flask](https://flask.palletsprojects.com/en/1.1.x/) pour les services web, [celery](http://www.celeryproject.org/) pour les services asyncrones. Les API utilisent le framework [EVE](http://docs.python-eve.org/en/stable/) pour exposer les données de façon 'RESTful'.
 
@@ -64,14 +73,16 @@ ReactJS pour les interfaces utilisateur.
 Elasticsearch stock et les métriques d'utilisation et les logs des applications fourni par Metricbeat et Filebeat
 
 
+### 2.3 Instructions de lancement des services
 
-## Description des services.
+L'application dans son ensemble peut être lancé via un fichier docker-compose.yml sur une seule machine avec la commande ```docker-compose up -d```. Un serveur nginx faisant office de reverse-proxy est lancé également, permettant à tous les services d'être accessible sur le port 80 (et/ou 443) d'une machine.
 
-### RNSR fetcher
 
-- [*Github Repos*](http://https://github.com/dataesr/RNSR)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/rnsr-fetcher)
-- [*Documentation*](http://185.161.45.213/fetchers/rnsr/doc)
+## 3. Description des services.
+
+### 3.1 RNSR fetcher
+[*Github*](http://https://github.com/dataesr/RNSR), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/rnsr-fetcher), [*Swagger*](http://185.161.45.213/fetchers/rnsr/doc)
+
 - *Stockage de données*: NON
 - *Acces mongo*: NON
 - *Missions*: Collecte de données, Exposition API de données
@@ -123,9 +134,17 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
       "traitement": null
     },
     "dates": {
-      "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "traitement": null
+      "type": "object",
+      "object": {
+        "start_date": {
+          "description": "9 chiffres plus 1 lettre majuscule",
+          "traitement": null
+        }
+        "end_date": {
+          "description": "9 chiffres plus 1 lettre majuscule",
+          "traitement": null
+        }
+      }
     },
     "email": {
       "type": "string",
@@ -170,7 +189,7 @@ Certaines données sont nettoyées avant l'exposition par l'API. Des dates sont 
 L'application expose plusieurs routes permettant de récupérer des informations sur les structures de recherche, dans un format JSON adéquat pour l'application #dataesr. Des routes permettent également de récupérer les données pour une mise en forme CSV pour les jeux RNSR opendata. Pour plus de détails sur l'utilisation de l'API, rendez-vous sur la [documentation swagger](http://185.161.45.213/fetchers/rnsr/doc)
 
 
-### Sirene fetcher
+### 3.2 Sirene fetcher
 
 ![image](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)[*Github*](http://https://github.com/dataesr/sirene), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/sirene-fetcher), [*Swagger*](http://185.161.45.213/fetchers/sirene/doc)
 
@@ -202,8 +221,8 @@ Les données sont transformées dans une format plus 'lisible' et adéquat pour 
 L'application expose plusieurs routes permettant de récupérer des informations sur les organisations présentes dans le répertoire sirene, dans un format JSON adequat pour l'application #dataesr. Pour plus de détails, voir la [documentation swagger](http://185.161.45.213/fetchers/sirene/doc)
 
 
-### Geocoder
-[*Github Repos*](http://https://github.com/dataesr/geocoder), [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/geocoder), [*Documentation*](http://185.161.45.213/geocode/doc)
+### 3.3 Geocoder
+Voir sur: [*Github Repos*](http://https://github.com/dataesr/geocoder), [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/geocoder), [*Documentation*](http://185.161.45.213/geocode/doc)
 - *Stockage de données*: NON
 - *Acces mongo*: NON
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données
@@ -224,79 +243,22 @@ Ce service expose une API de géocodage, qui utilise les services de adresse.gou
 <br/>
 
 
-### Organisations
-[*Github*](http://https://github.com/dataesr/organizations), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/organizations), [*Swagger*](http://185.161.45.213/organizations/doc)
+### 3.4 Organisations
+
+Voir sur [*Github*](http://https://github.com/dataesr/organizations), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/organizations), [*Swagger*](http://185.161.45.213/organizations/doc)
 
 - *Stockage de données*: OUI
 - *Acces mongo*: OUI
+- *Collections Mongo*: organizations, tasks, scanr, snapshots_{fetcher}, grid
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
 - *Dépendances interne*: aucune.
 - *Dépendances externe*: Persons, Geocoder, Datastore.
 
-Application qui gère les organisations dans #dataesr. Elle ingère les données depuis
-
-#### Collecte de données
-
-#### Transformation de données
-
-#### Exposition API de données
-
-#### Export de données
+Application dédiée aux organisations dans #dataesr.
 
 
-### Persons
 
-- [*Github Repos*](http://https://github.com/dataesr/persons)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/persons)
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Mission*: Reverse proxy
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: aucune.
-
-### Projects
-
-- [*Github Repos*](http://https://github.com/dataesr/projects)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/projects)
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Mission*: Reverse proxy
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: aucune.
-
-### Publications
-
-- [*Github Repos*](http://https://github.com/dataesr/publications)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/publications)
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Mission*: Reverse proxy
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: aucune.
-
-### Patents
-
-- [*Github Repos*](http://https://github.com/dataesr/patents)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/patents)
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Mission*: Reverse proxy
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: aucune.
-
-
-### Datastore
-
-- [*Github Repos*](http://https://github.com/dataesr/datastore)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/datastore)
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Mission*: Reverse proxy
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: aucune.
-
-
-### UI
+### 3. UI
 
 - [*Github Repos*](http://https://github.com/dataesr/nginx)
 - [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/nginx)
