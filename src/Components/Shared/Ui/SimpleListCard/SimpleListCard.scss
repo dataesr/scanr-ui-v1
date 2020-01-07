@@ -6,6 +6,7 @@
   border-radius: 8px;
   text-align: center;
   min-height: 150px;
+  padding-bottom: 8px;
 
   .Logo {
     color: $scanrgreyColor;
@@ -21,10 +22,10 @@
 
   .Label {
     color: $scanrdeepblueColor;
-    font-size: 1.1rem;
     font-weight: bold;
     margin: 0;
   }
+
 }
 
 .Key {
