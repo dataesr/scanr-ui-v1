@@ -53,7 +53,7 @@ L'application comporte 13 services qui sont détaillées dans la partie 3 de ce 
   - publications -- Gère les publications
   - patents -- Gère les brevets/inventions
   - projects -- Gère les projets/financements
-  - rnsr-fetcher -- 
+  - rnsr-fetcher --
   - sirene-fetcher
   - ui -- Interface utilisateur d'administration de données et monitoring
   - filebeat -- ETL pour les logs des applications
@@ -97,6 +97,7 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
   <summary>Voir le modèle de données complet</summary>
 
   ```json
+  TODO
   {
     "id": {
       "type": "string",
@@ -191,7 +192,7 @@ L'application expose plusieurs routes permettant de récupérer des informations
 
 ### 3.2 Sirene fetcher
 
-![image](https://assets-cdn.github.com/images/modules/logos_page/GitHub-Mark.png)[*Github*](http://https://github.com/dataesr/sirene), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/sirene-fetcher), [*Swagger*](http://185.161.45.213/fetchers/sirene/doc)
+[*Github*](http://https://github.com/dataesr/sirene), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/sirene-fetcher), [*Swagger*](http://185.161.45.213/fetchers/sirene/doc)
 
 - *Stockage de données*: NON
 - *Acces mongo*: NON
@@ -249,24 +250,41 @@ Voir sur [*Github*](http://https://github.com/dataesr/organizations), [*Docker*]
 
 - *Stockage de données*: OUI
 - *Acces mongo*: OUI
-- *Collections Mongo*: organizations, tasks, scanr, snapshots_{fetcher}, grid
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
 - *Dépendances interne*: aucune.
 - *Dépendances externe*: Persons, Geocoder, Datastore.
 
-Application dédiée aux organisations dans #dataesr.
+Application dédiée aux organisations dans #dataesr. Elle est en charge:
+1. du workflow de mise à jour automatique des documents liées aux organisations,
+2. de l'exposition d'une API pour les données des organisations, et pour des fonction (notamment de matching d'organisation)
+3. de l'export de ces données en une version compatible avec l'application scanR,
 
+#### APIs
+
+Cette application expose une API RESTful de la collection 'organizations' qui est un ensemble de documents représentant des organisations. Le modèle de donnée retenu pour ces documents permet de gérer à la fois un historique des données et des conflits liés à la mise à jour de source que l'application n'a pas pu résoudre avec les règles métiers établies. Il appartient aux administrateurs des données de venir régler les conflits dans l'interface utilisateur, ou via des scripts utilisant l'API.
+
+
+
+
+L'application expose aussi une API de matching, permettant d'identifier un document de la collection organisation à partir d'un nom d'organisation. Cette API combine moteur de recherche, et règles métiers afin de fournir (ou de ne pas fournir) un matching le plus qualitatif possible.
+
+#### Workflow de mise à jour
+
+de récupérer les données depuis les sources, d'identifier les changements apportés aux données dans es sources (via l'utilisation de snapshot des documents sources) et de mettre à jour les documents liés aux organisations en respectant des règles métier.
+
+#### Export
 
 
 ### 3. UI
 
-- [*Github Repos*](http://https://github.com/dataesr/nginx)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/nginx)
+[*Github Repos*](http://https://github.com/dataesr/nginx), [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/nginx)
 - *Stockage de données*: NON
 - *Acces mongo*: NON
-- *Mission*: Interface utilisateurs, Interface monitoring, Enrichissement de données
+- *Missions*: Interface utilisateurs, Interface monitoring, Enrichissement de données
 - *Dépendances interne*: Organisations, Persons, Publications, Patents, Projects, Datastore, Elasticsearch.
 - *Dépendances externe*: aucune.
+
+Interface utilisateur de l'application. Permet l'intervention sur certaines données afin de les enrichir ou de les corriger manuellement. Actuellement, l'intervention est possible principalement sur les organisations. Les autres corrections manuelles sont remontées à l'API via fichiers et scripts. Cette interface permet aussi de rechercher et d'explorer les données, de voir les données de monitoring et de log, de voir la documentation swagger des API et de lancer des tâches asyncrones.
 
 
 ### Elasticsearch, Filebeat, Metricbeat
