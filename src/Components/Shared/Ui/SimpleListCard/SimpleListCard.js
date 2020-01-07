@@ -26,12 +26,8 @@ const labelFunction = label => (
   (label) ? <p className={classes.Label}>{label}</p> : null
 );
 
-const labelFunctionSpan = label => (
-  (label) ? <span className={classes.Label}>{label.concat(' ')}</span> : null
-);
-
 const multipleLabelsFunction = labels => (
-  labels.map(label => (labelFunctionSpan(label)))
+  labels.map(label => (labelFunction(label)))
 );
 
 const additionalListFunction = (allProps) => {
@@ -72,7 +68,6 @@ const SimpleListCard = (props) => {
       {titleFunction(props.title)}
       {(props.label) ? labelFunction(props.label) : null }
       {(props.multipleLabels) ? multipleLabelsFunction(props.multipleLabels) : null}
-
       {tooltip}
 
       {additionalListFunction(props)}
