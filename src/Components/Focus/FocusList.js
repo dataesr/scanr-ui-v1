@@ -10,7 +10,7 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import FocusCard from '../Shared/Ui/FocusCard/FocusCard';
-import useGetData from '../../Hooks/useGetData';
+// import useGetData from '../../Hooks/useGetData';
 
 // import Lexicon from '../Shared/Lexicon/Lexicon';
 // import Search from '../Home-page/Search/Search';
