@@ -81,7 +81,7 @@ L'application dans son ensemble peut être lancé via un fichier docker-compose.
 ## 3. Description des services.
 
 ### 3.1 RNSR fetcher
-[*Github*](http://https://github.com/dataesr/RNSR), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/rnsr-fetcher), [*Swagger*](http://185.161.45.213/fetchers/rnsr/doc)
+[*Github*](https://github.com/dataesr/RNSR), [*Docker*](https://hub.docker.com/repository/docker/dataesr/rnsr-fetcher), [*Swagger*](http://185.161.45.213/fetchers/rnsr/doc)
 
 - *Stockage de données*: NON
 - *Acces mongo*: NON
@@ -332,7 +332,7 @@ L'application expose plusieurs routes permettant de récupérer des informations
 
 ### 3.2 Sirene fetcher
 
-[*Github*](http://https://github.com/dataesr/sirene), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/sirene-fetcher), [*Swagger*](http://185.161.45.213/fetchers/sirene/doc)
+[*Github*](https://github.com/dataesr/sirene), [*Docker*](https://hub.docker.com/repository/docker/dataesr/sirene-fetcher), [*Swagger*](http://185.161.45.213/fetchers/sirene/doc)
 
 - *Stockage de données*: NON
 - *Acces mongo*: NON
@@ -455,7 +455,7 @@ L'application expose plusieurs routes permettant de récupérer des informations
 
 
 ### 3.3 Geocoder
-Voir sur: [*Github Repos*](http://https://github.com/dataesr/geocoder), [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/geocoder), [*Documentation*](http://185.161.45.213/geocode/doc)
+Voir sur: [*Github Repos*](https://github.com/dataesr/geocoder), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/geocoder), [*Documentation*](http://185.161.45.213/geocode/doc)
 - *Stockage de données*: NON
 - *Acces mongo*: NON
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données
@@ -536,13 +536,16 @@ Ce service expose une API de géocodage, qui utilise les services de adresse.gou
 
 ### 3.4 Organisations
 
-Voir sur [*Github*](http://https://github.com/dataesr/organizations), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/organizations), [*Swagger*](http://185.161.45.213/organizations/doc)
+Voir sur [*Github*](https://github.com/dataesr/organizations), [*Docker*](https://hub.docker.com/repository/docker/dataesr/organizations), [*Swagger*](http://185.161.45.213/organizations/doc)
 
 - *Stockage de données*: OUI
 - *Acces mongo*: OUI
 - *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: Persons, Geocoder, Datastore.
+- *Dépendances interne*: Persons, Geocoder, Datastore.
+- *Dépendances externe*: aucune.
+- *Fonctionnalité(s)*:
+  - .
+
 
 Application dédiée aux organisations dans #dataesr. Elle est en charge:
 1. du workflow de mise à jour automatique des documents liées aux organisations,
@@ -574,703 +577,706 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
 
   ```json
   {
-    "id": {
-      "type": "string",
-      "description": "Identifiant"
-    },
-    "status": {
-      "type": "string",
-      "description": "Status de l'organisation"
-    },
-    "bce": {
-      "type": "string",
-      "description": "Identifiant UAI de la BCE (si existant)"
-    },
-    "grid": {
-      "type": "string",
-      "description": "Identifiant dans la Base GRID.ac (si existant)"
-    },
-    "rnsr": {
-      "type": "string",
-      "description": "Identifiant dans le RNSR (si existant)"
-    },
-    "ed": {
-      "type": "string",
-      "description": "Identifiant d'école doctorale (si existant)"
-    },
-    "sirene": {
-      "type": "string",
-      "description": "Identifiant Sirene (si existant)"
-    },
-    "headquarter": {
-      "type": "string",
-      "description": "Est-ce un siège ? (complété uniquement pour les organisations ayant un sirene)"
-    },
-    "dataesr": {
-      "type": "string",
-      "description": "Identifiant dataesr pour les organisation non présentes dans une base source (si existant)"
-    },
-    "rnsr_key": {
-      "type": "string",
-      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles (si existant)"
-    },
-    "active": {
-      "type": "boolean",
-      "description": "true si l'organisation est active?"
-    },
-    "foreign": {
-      "type": "boolean",
-      "description": "true si l'organisation est étrangère"
-    },
-    "types": {
-      "description": "Liste de secteur",
-      "type": "list",
-      "schema": {
-        "type": "string",
-        "description": "Secteur de l'organisation"
-      }
-    },
-    "forbidden_types": {
-      "description": "Liste de secteurs non autorisés pour une structure",
-      "type": "list",
-      "schema": {
-        "type": "string"
-      }
-    },
-    "dates": {
-      "description": "Dates de début et fin d'une structure. ",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "start_date": {
-            "type": "datetime",
-            "description": "Date de début de la structure"
-          },
-          "end_date": {
-            "type": "datetime",
-            "description": "Date de fin de la structure"
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit"
-          }
-        }
-      }
-    },
-    "comment": {
-      "type": "string",
-      "description": "Commentaire admin sur l'organisation"
-    },
-    "names": {
-      "type": "list",
-      "description": "Noms (fr, en) de l'organisations",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "start_date": {
-            "type": "datetime",
-            "description": "Date de début de validité du nom"
-          },
-          "end_date": {
-            "type": "datetime",
-            "description": "Date de fin de validité du nom"
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit"
-          },
-          "name_fr": {
-            "type": "string",
-            "description": "Nom français de la structure"
-          },
-          "name_en": {
-            "type": "string",
-            "description": "Nom anglais de la structure"
-          },
-          "acronym_fr": {
-            "type": "string",
-            "description": "Acronyme français de la structure"
-          },
-          "acronym_en": {
-            "type": "string",
-            "description": "Acronyme anglais de la structure"
-          },
-        }
-      }
-    },
-    "descriptions": {
-      "description": "Descriptions (fr, en)",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "start_date": {
-            "type": "datetime",
-            "description": "Date de début de validité de la description"
-          },
-          "end_date": {
-            "type": "datetime",
-            "description": "Date de fin de validité de la description"
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit"
-          },
-          "description_fr": {
-            "type": "string",
-            "description": "Description françaiss de la structure"
-          },
-          "description_en": {
-            "type": "string",
-            "description": "Description anglaise de la structure"
-          }
-        }
-      }
-    },
-    "addresses": {
-      "description": "Adresse de l'organisation",
-      "type": "list",
-      "schema": "address"
-    },
-    "alias": {
-      "description": "Regroupe tousles nom, acronymes et identifiant de l'organisation",
-      "type": "list",
-      "schema": {
-        "type": "string"
-      }
-    },
-    "keywords_en": {
-      "type": "list",
-      "description": "Une liste de mot clés anglais",
-      "schema": {
-          "type": "string"
-      }
-    },
-    "keywords_fr": {
-      "type": "list",
-      "description": "Une liste de mot clés français",
-      "schema": {
-        "type": "string"
-      }
-    },
-    "code_numbers": {
-      "type": "list",
-      "description": "Une liste de label numéros. Uniquement pour les structures de recherche",
-      "schema": {
-        "type": "string"
-      }
-    },
-    "logo": {
-      "type": "string",
-      "description": "Url du logo de l'organisation"
-    },
-    "legal_category": {
-      "type": "list",
-      "description": "Catégorie Juridique de l'organisation",
-      "schema": {
-        "type": "dict",
-        "schema": {
-          "value": {
-            "type": "string",
-            "description": "Code de catégorie juridique"
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit"
-          }
-        }
-      }
-    },
-    "websites": {
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "url": {
-            "description": "Site web de l'organisation",
-            "type": "string",
-          },
-          "language": {
-            "description": "Language du site web",
-            "type": "string",
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit et les sites web secondaires"
-          },
-          "alive": {
-            "type": "boolean",
-            "description": "true if website has been tested alive"
-          }
-        }
-      }
-    },
-    "website_check": {
-      "type": "object",
-      "description": "Dernière fois que l'existence d'un site à été recherché",
-      "schema": {
-        "checked": {
-          "type": "boolean"
-        },
-        "last_check": {
-          "type": "datetime"
-        }
-      }
-    },
-    "emails": {
-      "type": "list",
-      "description": "Emails de contact de l'organisation",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "email": {
-            "description": "Email de contact",
-            "type": "string",
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit et les emails secondaires"
-          }
-        }
-      }
-    },
-    "phones": {
-      "type": "list",
-      "description": "Numéro de téléphone de contact de l'organisation",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "phone": {
-            "description": "Téléphone",
-            "type": "string",
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit et les téléphones secondaires"
-          }
-        }
-      }
-    },
-    "social_medias": {
-      "description": "Réseaux sociaux des organisations",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "account": {
-            "description": "Compte de l'organisation",
-            "type": "string",
-          },
-          "social_media": {
-            "description": "Réseau social",
-            "type": "string",
-          },
-          "url": {
-            "description": "Url de l'organisation sur le réseau social",
-            "type": "string",
-          },
-          "language": {
-            "description": "Language du réseau social",
-            "type": "string",
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit et les réseaux sociaux secondaires"
-          }
-        }
-      }
-    },
-    "thematics": {
-        "description": "#dataESR domains",
-        "type": "list",
-        "schema": "thematics"
-    },
-    "badges": {
-      "description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
-      "type":  "list",
-      "schema": {
-          "type": "string"
-      }
-    },
-    "focus": {
-      "description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
-      "type":  "list",
-      "schema": {
-          "type": "string"
-      }
-    },
-    "panels": {
-      "type": "list",
-      "description": "Liste de panel ERC",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "code": {
-            "type": "string",
-        },
-        "status": {
-          "type": "string",
-          "description": "Status de la donnée permettant la gestion de conflit et les panels secondaires"
-        },
-        "start_date": {
-          "type": "datetime"
-        },
-        "end_date": {
-          "type": "datetime"
-        }
-      }
-    }
-    },
-    "nace": {
-      "type": "list",
-      "schema": {
-        "type": "dict",
-        "schema": {
-          "code": {
-            "type": "string",
-        },
-        "status": {
-          "type": "string",
-          "description": "Status de la donnée permettant la gestion de conflit"
-        }
-    },
-    "human_ressources": {
-      "description": "Information sur les effectifs",
-      "type": "list",
-      "schema": {
-        "type": "dict",
-        "schema": {
-          "num_employees": {
-            "description": "Nombre d'employés",
-            "type": "string",
-          },
-          "num_employees_slice": {
-            "description": "Nombre d'employés (tranche d'effectif)",
-            "type": "string",
-          },
-          "num_researchers": {
-            "description": "Nombre de chercheurs",
-            "type": "string",
-          },
-          "date": {
-            "description": "Date de validité des données",
-            "type": "datetime"
-          }
-        }
-      }
-    },
-    "external_links": {
-      "description": "Liens externes de l'organisation (portail HAL)",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "url": {
-            "description": "URL",
-            "type": "string"
-          },
-          "type": {
-            "description": "Type de lien",
-            "type": "string"
-          },
-          "language": {
-            "description": "langue du lien",
-            "type": "string"
-          },
-        }
-      }
-    },
-    "external_ids": {
-      "description": "Identifiants externes",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "id": {
-            "description": "Identifiant externe",
-            "type": "string",
-          },
-          "type": {
-            "description": "Type d'identifiant",
-            "type": "string",
-          }
-        }
-      }
-    },
-    "evaluations": {
-      "description": "Rapport d'évaluation des organisations",
-      "type": "list",
-      "schema": {
-        "type": "object",
-        "schema": {
-          "evaluator": {
-            "description": "Agence d'évaluation",
-            "type": "string"
-          },
-          "url": {
-            "description": "Lien du rapport d'évaluation",
-            "type": "string"
-          },
-          "year": {
-            "description": "Année de l'évaluation",
-            "type": "string"
-          },
-          "label": {
-            "description": "Label de l'évaluation",
-            "type": "string"
-          }
-        }
-      }
-    },
-    "leaders": {
-      "type": "list",
-      "description": "",
-      "schema": {
-        "type": "dict",
-        "schema": {
-          "id": {
-            "type": "string",
-          },
-          "identified": {
-            "type": "boolean"
-          },
-          "start_date": {
-            "type": "datetime"
-          },
-          "end_date": {
-            "type": "datetime"
-          },
-          "role": {
-            "type": "string"
-          },
-          "first_name": {
-            "type": "string"
-          },
-          "last_name": {
-            "type": "string"
-          },
-          "source_code": {
-            "type": "string"
-          },
-          "status": {
-            "type": "string",
-            "description": "Status de la donnée permettant la gestion de conflit"
-          }
-        }
-      }
-    },
-    "predecessors": {
-        "type": "list",
-        "description": "List of Organization's higher level relations",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {
-                    "type": "string",
-                },
-                "href": {
-                    "type": "string",
-                },
-                "identified": {
-                    "type": "boolean"
-                },
-                "source_code": {
-                    "type": "string",
-                },
-                "name": {
-                    "type": "string",
-                },
-                "succession_date": {
-                    "type": "datetime"
-                },
-                "succession_type": {
-                    "type": "string"
-                },
-                "status": {
-                    "description": "Data status.",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "example": "valid",
-                }
-            }
-        }
-    },
-    "supervisors": {
-        "type": "list",
-        "description": "List of Organization's higher level relations",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {
-                    "type": "string",
-                },
-                "href": {
-                    "type": "string"
-                },
-                "start_date": {
-                    "type": "datetime"
-                },
-                "end_date": {
-                    "type": "datetime"
-                },
-                "supervision_type": {
-                    "type": "string"
-                },
-                "source_code": {
-                    "type": "string",
-                },
-                "identified": {
-                    "type": "boolean"
-                },
-                "name": {
-                    "type": "string",
-                },
-                "status": {
-                    "description": "Activity status of the Organization",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "example": "valid",
-                }
-            }
-        }
-    },
-    "parents": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "start_date": {
-                    "type": "datetime"
-                },
-                "end_date": {
-                    "type": "datetime"
-                },
-                "id": {
-                    "type": "string",
-                },
-                "href": {
-                    "type": "string",
-                },
-                "identified": {
-                    "type": "boolean"
-                },
-                "source_code": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                },
-                "exclusive": {
-                    "type": "boolean"
-                },
-                "status": {
-                    "description": "Activity status of the Organization",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "example": "valid",
-                    "required": true,
-                }
-            }
-        }
-    },
-    "certifications": {
-        "description": "",
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "certification_name": {
-                    "description": "",
-                    "type": "string",
-                },
-                "certification_type": {
-                    "description": "",
-                    "type": "string",
-                },
-                "certification_start_date": {
-                    "description": "",
-                    "type": "datetime",
-                },
-                "certification_end_date": {
-                    "description": "",
-                    "type": "datetime",
-                }
-            }
-        }
-    },
-    "prizes": {
-        "description": "",
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "prize_name": {
-                    "description": "",
-                    "type": "string"
-                },
-                "prize_institution": {
-                    "description": "",
-                    "type": "string"
-                },
-                "prize_url": {
-                    "description": "",
-                    "type": "string"
-                },
-                "prize_description": {
-                    "description": "",
-                    "type": "string"
-                },
-                "prize_date": {
-                    "description": "",
-                    "type": "datetime",
-                },
-                "prize_amount": {
-                    "description": "",
-                    "type": "float"
-                },
-            }
-        }
-    },
-    "relations": {
-        "type": "list",
-        "description": "",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {
-                    "type": "string",
-                },
-                "href": {
-                    "type": "string",
-                },
-                "identified": {
-                    "type": "boolean"
-                },
-                "type": {
-                    "type": "string",
-                },
-                "source_code": {
-                    "type": "string",
-                },
-                "name": {
-                    "type": "string",
-                },
-                "start_date": {
-                    "type": "datetime"
-                },
-                "end_date": {
-                    "type": "datetime"
-                },
-                "status": {
-                    "description": "Activity status of the Organization",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "example": "valid",
-                }
-            }
-        }
-    }
+  	"id": {
+  		"type": "string",
+  		"description": "Identifiant"
+  	},
+  	"status": {
+  		"type": "string",
+  		"description": "Status de l'organisation"
+  	},
+  	"bce": {
+  		"type": "string",
+  		"description": "Identifiant UAI de la BCE (si existant)"
+  	},
+  	"grid": {
+  		"type": "string",
+  		"description": "Identifiant dans la Base GRID.ac (si existant)"
+  	},
+  	"rnsr": {
+  		"type": "string",
+  		"description": "Identifiant dans le RNSR (si existant)"
+  	},
+  	"ed": {
+  		"type": "string",
+  		"description": "Identifiant d'école doctorale (si existant)"
+  	},
+  	"sirene": {
+  		"type": "string",
+  		"description": "Identifiant Sirene (si existant)"
+  	},
+  	"headquarter": {
+  		"type": "string",
+  		"description": "Est-ce un siège ? (complété uniquement pour les organisations ayant un sirene)"
+  	},
+  	"dataesr": {
+  		"type": "string",
+  		"description": "Identifiant dataesr pour les organisation non présentes dans une base source (si existant)"
+  	},
+  	"rnsr_key": {
+  		"type": "string",
+  		"description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles (si existant)"
+  	},
+  	"active": {
+  		"type": "boolean",
+  		"description": "true si l'organisation est active?"
+  	},
+  	"foreign": {
+  		"type": "boolean",
+  		"description": "true si l'organisation est étrangère"
+  	},
+  	"types": {
+  		"description": "Liste de secteur",
+  		"type": "list",
+  		"schema": {
+  			"type": "string",
+  			"description": "Secteur de l'organisation"
+  		}
+  	},
+  	"forbidden_types": {
+  		"description": "Liste de secteurs non autorisés pour une structure",
+  		"type": "list",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"dates": {
+  		"description": "Dates de début et fin d'une structure. ",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"start_date": {
+  					"type": "datetime",
+  					"description": "Date de début de la structure"
+  				},
+  				"end_date": {
+  					"type": "datetime",
+  					"description": "Date de fin de la structure"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				}
+  			}
+  		}
+  	},
+  	"comment": {
+  		"type": "string",
+  		"description": "Commentaire admin sur l'organisation"
+  	},
+  	"names": {
+  		"type": "list",
+  		"description": "Noms (fr, en) de l'organisations",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"start_date": {
+  					"type": "datetime",
+  					"description": "Date de début de validité du nom"
+  				},
+  				"end_date": {
+  					"type": "datetime",
+  					"description": "Date de fin de validité du nom"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				},
+  				"name_fr": {
+  					"type": "string",
+  					"description": "Nom français de la structure"
+  				},
+  				"name_en": {
+  					"type": "string",
+  					"description": "Nom anglais de la structure"
+  				},
+  				"acronym_fr": {
+  					"type": "string",
+  					"description": "Acronyme français de la structure"
+  				},
+  				"acronym_en": {
+  					"type": "string",
+  					"description": "Acronyme anglais de la structure"
+  				}
+  			}
+  		}
+  	},
+  	"descriptions": {
+  		"description": "Descriptions (fr, en)",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"start_date": {
+  					"type": "datetime",
+  					"description": "Date de début de validité de la description"
+  				},
+  				"end_date": {
+  					"type": "datetime",
+  					"description": "Date de fin de validité de la description"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				},
+  				"description_fr": {
+  					"type": "string",
+  					"description": "Description françaiss de la structure"
+  				},
+  				"description_en": {
+  					"type": "string",
+  					"description": "Description anglaise de la structure"
+  				}
+  			}
+  		}
+  	},
+  	"addresses": {
+  		"description": "Adresse de l'organisation",
+  		"type": "list",
+  		"schema": "address"
+  	},
+  	"alias": {
+  		"description": "Regroupe tousles nom, acronymes et identifiant de l'organisation",
+  		"type": "list",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"keywords_en": {
+  		"type": "list",
+  		"description": "Une liste de mot clés anglais",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"keywords_fr": {
+  		"type": "list",
+  		"description": "Une liste de mot clés français",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"code_numbers": {
+  		"type": "list",
+  		"description": "Une liste de label numéros. Uniquement pour les structures de recherche",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"logo": {
+  		"type": "string",
+  		"description": "Url du logo de l'organisation"
+  	},
+  	"legal_category": {
+  		"type": "list",
+  		"description": "Catégorie Juridique de l'organisation",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"value": {
+  					"type": "string",
+  					"description": "Code de catégorie juridique"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				}
+  			}
+  		}
+  	},
+  	"websites": {
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"url": {
+  					"description": "Site web de l'organisation",
+  					"type": "string"
+  				},
+  				"language": {
+  					"description": "Language du site web",
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit et les sites web secondaires"
+  				},
+  				"alive": {
+  					"type": "boolean",
+  					"description": "true if website has been tested alive"
+  				}
+  			}
+  		}
+  	},
+  	"website_check": {
+  		"type": "object",
+  		"description": "Dernière fois que l'existence d'un site à été recherché",
+  		"schema": {
+  			"checked": {
+  				"type": "boolean"
+  			},
+  			"last_check": {
+  				"type": "datetime"
+  			}
+  		}
+  	},
+  	"emails": {
+  		"type": "list",
+  		"description": "Emails de contact de l'organisation",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"email": {
+  					"description": "Email de contact",
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit et les emails secondaires"
+  				}
+  			}
+  		}
+  	},
+  	"phones": {
+  		"type": "list",
+  		"description": "Numéro de téléphone de contact de l'organisation",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"phone": {
+  					"description": "Téléphone",
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit et les téléphones secondaires"
+  				}
+  			}
+  		}
+  	},
+  	"social_medias": {
+  		"description": "Réseaux sociaux des organisations",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"account": {
+  					"description": "Compte de l'organisation",
+  					"type": "string"
+  				},
+  				"social_media": {
+  					"description": "Réseau social",
+  					"type": "string"
+  				},
+  				"url": {
+  					"description": "Url de l'organisation sur le réseau social",
+  					"type": "string"
+  				},
+  				"language": {
+  					"description": "Language du réseau social",
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit et les réseaux sociaux secondaires"
+  				}
+  			}
+  		}
+  	},
+  	"thematics": {
+  		"description": "#dataESR domains",
+  		"type": "list",
+  		"schema": "thematics"
+  	},
+  	"badges": {
+  		"description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
+  		"type": "list",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"focus": {
+  		"description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
+  		"type": "list",
+  		"schema": {
+  			"type": "string"
+  		}
+  	},
+  	"panels": {
+  		"type": "list",
+  		"description": "Liste de panel ERC",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"code": {
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit et les panels secondaires"
+  				},
+  				"start_date": {
+  					"type": "datetime"
+  				},
+  				"end_date": {
+  					"type": "datetime"
+  				}
+  			}
+  		}
+  	},
+  	"nace": {
+  		"type": "list",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"code": {
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				}
+  			}
+  		}
+  	},
+  	"human_ressources": {
+  		"description": "Information sur les effectifs",
+  		"type": "list",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"num_employees": {
+  					"description": "Nombre d'employés",
+  					"type": "string"
+  				},
+  				"num_employees_slice": {
+  					"description": "Nombre d'employés (tranche d'effectif)",
+  					"type": "string"
+  				},
+  				"num_researchers": {
+  					"description": "Nombre de chercheurs",
+  					"type": "string"
+  				},
+  				"date": {
+  					"description": "Date de validité des données",
+  					"type": "datetime"
+  				}
+  			}
+  		}
+  	},
+  	"external_links": {
+  		"description": "Liens externes de l'organisation (portail HAL)",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"url": {
+  					"description": "URL",
+  					"type": "string"
+  				},
+  				"type": {
+  					"description": "Type de lien",
+  					"type": "string"
+  				},
+  				"language": {
+  					"description": "langue du lien",
+  					"type": "string"
+  				}
+  			}
+  		}
+  	},
+  	"external_ids": {
+  		"description": "Identifiants externes",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"id": {
+  					"description": "Identifiant externe",
+  					"type": "string"
+  				},
+  				"type": {
+  					"description": "Type d'identifiant",
+  					"type": "string"
+  				}
+  			}
+  		}
+  	},
+  	"evaluations": {
+  		"description": "Rapport d'évaluation des organisations",
+  		"type": "list",
+  		"schema": {
+  			"type": "object",
+  			"schema": {
+  				"evaluator": {
+  					"description": "Agence d'évaluation",
+  					"type": "string"
+  				},
+  				"url": {
+  					"description": "Lien du rapport d'évaluation",
+  					"type": "string"
+  				},
+  				"year": {
+  					"description": "Année de l'évaluation",
+  					"type": "string"
+  				},
+  				"label": {
+  					"description": "Label de l'évaluation",
+  					"type": "string"
+  				}
+  			}
+  		}
+  	},
+  	"leaders": {
+  		"type": "list",
+  		"description": "",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"id": {
+  					"type": "string"
+  				},
+  				"identified": {
+  					"type": "boolean"
+  				},
+  				"start_date": {
+  					"type": "datetime"
+  				},
+  				"end_date": {
+  					"type": "datetime"
+  				},
+  				"role": {
+  					"type": "string"
+  				},
+  				"first_name": {
+  					"type": "string"
+  				},
+  				"last_name": {
+  					"type": "string"
+  				},
+  				"source_code": {
+  					"type": "string"
+  				},
+  				"status": {
+  					"type": "string",
+  					"description": "Status de la donnée permettant la gestion de conflit"
+  				}
+  			}
+  		}
+  	},
+  	"predecessors": {
+  		"type": "list",
+  		"description": "List of Organization's higher level relations",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"id": {
+  					"type": "string"
+  				},
+  				"identified": {
+  					"type": "boolean"
+  				},
+  				"source_code": {
+  					"type": "string"
+  				},
+  				"name": {
+  					"type": "string"
+  				},
+  				"succession_date": {
+  					"type": "datetime"
+  				},
+  				"succession_type": {
+  					"type": "string"
+  				},
+  				"status": {
+  					"description": "Data status.",
+  					"type": "string"
+  				}
+  			}
+  		}
+  	},
+  	"supervisors": {
+  		"type": "list",
+  		"description": "List of Organization's higher level relations",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"id": {
+  					"type": "string"
+  				},
+  				"start_date": {
+  					"type": "datetime"
+  				},
+  				"end_date": {
+  					"type": "datetime"
+  				},
+  				"supervision_type": {
+  					"type": "string"
+  				},
+  				"source_code": {
+  					"type": "string"
+  				},
+  				"identified": {
+  					"type": "boolean"
+  				},
+  				"name": {
+  					"type": "string"
+  				},
+  				"status": {
+  					"description": "Activity status of the Organization",
+  					"type": "string",
+  					"allowed": [
+  						"valid",
+  						"conflict"
+  					],
+  					"example": "valid"
+  				}
+  			}
+  		}
+  	},
+  	"parents": {
+  		"type": "list",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"start_date": {
+  					"type": "datetime"
+  				},
+  				"end_date": {
+  					"type": "datetime"
+  				},
+  				"id": {
+  					"type": "string"
+  				},
+  				"href": {
+  					"type": "string"
+  				},
+  				"identified": {
+  					"type": "boolean"
+  				},
+  				"source_code": {
+  					"type": "string"
+  				},
+  				"name": {
+  					"type": "string"
+  				},
+  				"exclusive": {
+  					"type": "boolean"
+  				},
+  				"status": {
+  					"description": "Activity status of the Organization",
+  					"type": "string",
+  					"allowed": [
+  						"valid",
+  						"conflict"
+  					],
+  					"example": "valid",
+  					"required": true
+  				}
+  			}
+  		}
+  	},
+  	"certifications": {
+  		"description": "",
+  		"type": "list",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"certification_name": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"certification_type": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"certification_start_date": {
+  					"description": "",
+  					"type": "datetime"
+  				},
+  				"certification_end_date": {
+  					"description": "",
+  					"type": "datetime"
+  				}
+  			}
+  		}
+  	},
+  	"prizes": {
+  		"description": "",
+  		"type": "list",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"prize_name": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"prize_institution": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"prize_url": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"prize_description": {
+  					"description": "",
+  					"type": "string"
+  				},
+  				"prize_date": {
+  					"description": "",
+  					"type": "datetime"
+  				},
+  				"prize_amount": {
+  					"description": "",
+  					"type": "float"
+  				}
+  			}
+  		}
+  	},
+  	"relations": {
+  		"type": "list",
+  		"description": "",
+  		"schema": {
+  			"type": "dict",
+  			"schema": {
+  				"id": {
+  					"type": "string"
+  				},
+  				"href": {
+  					"type": "string"
+  				},
+  				"identified": {
+  					"type": "boolean"
+  				},
+  				"type": {
+  					"type": "string"
+  				},
+  				"source_code": {
+  					"type": "string"
+  				},
+  				"name": {
+  					"type": "string"
+  				},
+  				"start_date": {
+  					"type": "datetime"
+  				},
+  				"end_date": {
+  					"type": "datetime"
+  				},
+  				"status": {
+  					"description": "Activity status of the Organization",
+  					"type": "string",
+  					"allowed": [
+  						"valid",
+  						"conflict"
+  					],
+  					"example": "valid"
+  				}
+  			}
+  		}
+  	}
   }
   ```
 </details>
@@ -1281,9 +1287,232 @@ L'application expose aussi une API de matching, permettant d'identifier un docum
 Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD. L'export utilise certaines nomenclatures présentes dans l'application Datastore.
 
 
+### 3.4 Projects
+Voir sur: [*Github Repos*](https://github.com/dataesr/projects), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/projects), [*Documentation*](http://185.161.45.213/projects/doc)
+- *Stockage de données*: OUI
+- *Acces mongo*: OUI
+- *Missions*: Transformation de données, Exposition API de données
+- *Dépendances interne*: aucune
+- *Dépendances externe*: Organizations
+- *Fonctionnalité(s)*:
+  - Expose les données de projets. Relie les participants à une organisation de #dataesr.
+
+Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr. Les champs renvoyé sont un mapping des champs revoyés par les adresse.gouv.fr et/ou openstreetmap.
+
+<details>
+  <summary>Voir le modèle de donnée des projets</summary>
+
+  ```json
+  {
+    "input_address": {
+      "type": "string",
+      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
+    },
+    "housenumber": {
+      "type": "string",
+      "description": "Numéro de rue",
+    },
+    "street": {
+      "type": "string",
+      "description": "Nome de la voie",
+    },
+    "post_code": {
+      "type": "string",
+      "description": "Code postal",
+    },
+    "city_code": {
+      "type": "string",
+      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ville",
+    },
+    "country": {
+      "type": "string",
+      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
+    },
+    "geocoded": {
+      "type": "boolean",
+      "description": "Un booléen -- True si le géocodage est un succès",
+    },
+    "score": {
+      "type": "numeric",
+      "description": "Score du géocodeur",
+    },
+    "precision": {
+      "type": "string",
+      "description": "Précision du résultat -- housenumber, street etc.",
+    },
+    "provider": {
+      "type": "string",
+      "description": "Fournisseur du service",
+    },
+    "coordinates": {
+      "type": "object",
+      "schema": {
+        "lat": {
+          "type": "numeric",
+          "description": "latitude"
+        },
+        "lon": {
+          "type": "numeric",
+          "description": "longitude"
+        }
+      }
+    }
+  }
+  ```
+</details>
+<details>
+  <summary>Voir le modèle de donnée des participations</summary>
+
+  ```json
+  {
+    "input_address": {
+      "type": "string",
+      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
+    },
+    "housenumber": {
+      "type": "string",
+      "description": "Numéro de rue",
+    },
+    "street": {
+      "type": "string",
+      "description": "Nome de la voie",
+    },
+    "post_code": {
+      "type": "string",
+      "description": "Code postal",
+    },
+    "city_code": {
+      "type": "string",
+      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ville",
+    },
+    "country": {
+      "type": "string",
+      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
+    },
+    "geocoded": {
+      "type": "boolean",
+      "description": "Un booléen -- True si le géocodage est un succès",
+    },
+    "score": {
+      "type": "numeric",
+      "description": "Score du géocodeur",
+    },
+    "precision": {
+      "type": "string",
+      "description": "Précision du résultat -- housenumber, street etc.",
+    },
+    "provider": {
+      "type": "string",
+      "description": "Fournisseur du service",
+    },
+    "coordinates": {
+      "type": "object",
+      "schema": {
+        "lat": {
+          "type": "numeric",
+          "description": "latitude"
+        },
+        "lon": {
+          "type": "numeric",
+          "description": "longitude"
+        }
+      }
+    }
+  }
+  ```
+</details>
+
+
+### 3.5 Projects
+Voir sur: [*Github Repos*](https://github.com/dataesr/patents), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/patents), [*Documentation*](http://185.161.45.213/patents/doc)
+- *Stockage de données*: OUI
+- *Acces mongo*: OUI
+- *Missions*: Transformation de données, Exposition API de données
+- *Dépendances interne*: aucune
+- *Dépendances externe*: Organizations
+- *Fonctionnalité(s)*:
+  - Expose les données d'inventions. Relie les participants à une organisation de #dataesr.
+
+Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr. Les champs renvoyé sont un mapping des champs revoyés par les adresse.gouv.fr et/ou openstreetmap.
+
+<details>
+  <summary>Voir le modèle de donnée des participations</summary>
+
+  ```json
+  {
+    "input_address": {
+      "type": "string",
+      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
+    },
+    "housenumber": {
+      "type": "string",
+      "description": "Numéro de rue",
+    },
+    "street": {
+      "type": "string",
+      "description": "Nome de la voie",
+    },
+    "post_code": {
+      "type": "string",
+      "description": "Code postal",
+    },
+    "city_code": {
+      "type": "string",
+      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
+    },
+    "city": {
+      "type": "string",
+      "description": "Ville",
+    },
+    "country": {
+      "type": "string",
+      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
+    },
+    "geocoded": {
+      "type": "boolean",
+      "description": "Un booléen -- True si le géocodage est un succès",
+    },
+    "score": {
+      "type": "numeric",
+      "description": "Score du géocodeur",
+    },
+    "precision": {
+      "type": "string",
+      "description": "Précision du résultat -- housenumber, street etc.",
+    },
+    "provider": {
+      "type": "string",
+      "description": "Fournisseur du service",
+    },
+    "coordinates": {
+      "type": "object",
+      "schema": {
+        "lat": {
+          "type": "numeric",
+          "description": "latitude"
+        },
+        "lon": {
+          "type": "numeric",
+          "description": "longitude"
+        }
+      }
+    }
+  }
+  ```
+</details>
+
+
 ### 3. UI
 
-[*Github Repos*](http://https://github.com/dataesr/nginx), [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/nginx)
+[*Github Repos*](//https://github.com/dataesr/nginx), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/nginx)
 - *Stockage de données*: NON
 - *Acces mongo*: NON
 - *Missions*: Interface utilisateurs, Interface monitoring, Enrichissement de données
@@ -1300,8 +1529,8 @@ Ces trois process sont chargés de la récupération et du stockage de métrique
 
 ### Nginx
 
-- [*Github Repos*](http://https://github.com/dataesr/nginx)
-- [*Docker image*](http://https://hub.docker.com/repository/docker/dataesr/nginx)
+- [*Github Repos*](https://github.com/dataesr/nginx)
+- [*Docker image*](https://hub.docker.com/repository/docker/dataesr/nginx)
 - *Stockage de données*: NON
 - *Acces mongo*: NON
 - *Mission*: Reverse proxy
