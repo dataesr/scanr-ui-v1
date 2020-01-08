@@ -551,7 +551,17 @@ Application dédiée aux organisations dans #dataesr. Elle est en charge:
 
 #### 3.4.1 Workflow de mise à jour et traitement des données.
 
-de récupérer les données depuis les sources, d'identifier les changements apportés aux données dans es sources (via l'utilisation de snapshot des documents sources) et de mettre à jour les documents liés aux organisations en respectant des règles métier.
+La mise à jour d'un document relatif à une orgnanisation se fait avec le point d'entré *_update* qui prend un identifiant comme paramètre. Si une seule source de donnée est identifiée pour cette organisation, la mise à jour est simplifiée et les logiques de traitement métier permettent une mise à jour sans conflit (par exemple, le code de catégorie juridique pour une organisation n'ayant qu'un sirene sera mis à jour directement avec les données sirene). Les données précédentes seront conservés avec une date de fin correspondante à la date de la mise à jour. Ainsi, on peut garder un hstorique des changements opérés sur la base source. Si plusieurs source fournissent des données pour la même orgnaisation, une gestion de conflit existe. Elle peut être soit automatique (par exemple, le secteur fourni par sirene est systematiquement préféré à celui fourni par grid) soit marquée comme conflictuelle grace aux champs `status`. Une intervention est alors nécéssaire de la part d'un administrateur de donnée (les addresses des deux sources ne coincident pas. Faut-il en privilégier une ? Faut-il garder la deuxième comme addresse secondaire ?). Ces opération peuvent être faite via l'interface utilisateur ou directement via l'API.
+
+Des traitements sont appliqués et modifient les données source dans certains cas.
+Lorsque c'est possible, un effort est fait pour dédoublonner certaines liste (par exemple si une organisation a deux fois une tutelle identique avec des dates successives, une jointure est faite entre les deux elements).
+Les addresses sont géocodées grâce à l'application Geocoder mais l'addresse brut est conservée.
+Enfin, certains champs avec relations à d'autre structures ou à des personnes sont automatiquement rattaché l'objet correspondant dans #dataesr, lorsque cette opération est possible. Pour les `leaders` l'application utilise le point d'entré *_match* de l'application Persons afin de retrouver l'identifiant idref du leader. Les données bruts de la source sont conservées.
+Ces opérations permettent ensuite à scanR de proposer une navigation fluide entre ses propres objets et d'aggréger ces données pour des visualisations plus éclairantes.
+
+Ces processus de mise à jour peuvent également et opérés en 'batch', et lancées depuis l'interface utilisateur. Par example, 'Raffaraichir RNSR' provoque un update de toutes les organizations ayant un identifiant RNSR et ajoute les nouvelles structures.
+La même chose peut etre fait avec SIRENE et GRID.
+
 
 
 #### 3.4.2 APIs et export
@@ -565,7 +575,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   {
     "id": {
       "type": "string",
-      "description": "Identifiant #dataesr"
+      "description": "Identifiant"
     },
     "status": {
       "type": "string",
@@ -585,7 +595,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
     },
     "ed": {
       "type": "string",
-      "description": "Identifiant d'école doctorale",
+      "description": "Identifiant d'école doctorale"
     },
     "sirene": {
       "type": "string",
@@ -597,19 +607,19 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
     },
     "dataesr": {
       "type": "string",
-      "description": "Identifiant dataesr pour les organisation non présentes dans une base source",
+      "description": "Identifiant dataesr pour les organisation non présentes dans une base source"
     },
     "rnsr_key": {
-      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles",
       "type": "string",
+      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles"
     },
     "active": {
-      "description": "true si l'organisation est active?",
       "type": "boolean",
+      "description": "true si l'organisation est active?"
     },
     "foreign": {
-      "description": "true si l'organisation est étrangère",
       "type": "boolean",
+      "description": "true si l'organisation est étrangère"
     },
     "types": {
       "description": "Liste de secteur",
@@ -620,368 +630,334 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
       }
     },
     "forbidden_types": {
-        "description": "Liste de secteurs non autorisés pour une structure",
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
-    },
-    "dates": {
-        "description": "Dates de début et fin d'une structure",
-        "type": "list",
-        "schema": {
-          "type": "object",
-          "schema": {
-            "start_date": {
-              "type": "datetime",
-
-            }
-          }
-        }
-    },
-    "comment": {
-        "description": "Commentaire sur l'organisation",
-        "type": "string",
-        "example": "Peut être un doublon avec 199712586Y"
-    },
-    "names": {
-        "description": "Names (fr, en) of the Organizations, associated \
-            with its acronym -- Has history",
-        "type": "list",
-        "schema": name
-    },
-    "descriptions": {
-        "description": "Descriptions (fr, en) -- Has history",
-        "type": "list",
-        "schema": description
-    },
-    "addresses": {
-        "description": "Organization's addresses -- Has history",
-        "type": "list",
-        "schema": address
-    },
-    "alias": {
-        "description": "Regroups all names, acronyms, and identifiers that \
-            reference the Organization, either now or in the past",
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
-    },
-    "keywords_en": {
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
-    },
-    "keywords_fr": {
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
-    },
-    "code_numbers": {
+      "description": "Liste de secteurs non autorisés pour une structure",
       "type": "list",
       "schema": {
         "type": "string"
       }
     },
-    "logo": {
-      "type": "string"
-    },
-    "nature_group": {
-        "description": "Only for UAI organizations.",
-        "type": "list",
+    "dates": {
+      "description": "Dates de début et fin d'une structure. ",
+      "type": "list",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "value": {
-                    "description": "",
-                    "type": "string",
-                    "required": True,
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
+          "start_date": {
+            "type": "datetime",
+            "description": "Date de début de la structure"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Date de fin de la structure"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit"
+          }
         }
+      }
+    },
+    "comment": {
+      "type": "string",
+      "description": "Commentaire admin sur l'organisation"
+    },
+    "names": {
+      "type": "list",
+      "description": "Noms (fr, en) de l'organisations",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "start_date": {
+            "type": "datetime",
+            "description": "Date de début de validité du nom"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Date de fin de validité du nom"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit"
+          },
+          "name_fr": {
+            "type": "string",
+            "description": "Nom français de la structure"
+          },
+          "name_en": {
+            "type": "string",
+            "description": "Nom anglais de la structure"
+          },
+          "acronym_fr": {
+            "type": "string",
+            "description": "Acronyme français de la structure"
+          },
+          "acronym_en": {
+            "type": "string",
+            "description": "Acronyme anglais de la structure"
+          },
+        }
+      }
+    },
+    "descriptions": {
+      "description": "Descriptions (fr, en)",
+      "type": "list",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "start_date": {
+            "type": "datetime",
+            "description": "Date de début de validité de la description"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Date de fin de validité de la description"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit"
+          },
+          "description_fr": {
+            "type": "string",
+            "description": "Description françaiss de la structure"
+          },
+          "description_en": {
+            "type": "string",
+            "description": "Description anglaise de la structure"
+          }
+        }
+      }
+    },
+    "addresses": {
+      "description": "Adresse de l'organisation",
+      "type": "list",
+      "schema": "address"
+    },
+    "alias": {
+      "description": "Regroupe tousles nom, acronymes et identifiant de l'organisation",
+      "type": "list",
+      "schema": {
+        "type": "string"
+      }
+    },
+    "keywords_en": {
+      "type": "list",
+      "description": "Une liste de mot clés anglais",
+      "schema": {
+          "type": "string"
+      }
+    },
+    "keywords_fr": {
+      "type": "list",
+      "description": "Une liste de mot clés français",
+      "schema": {
+        "type": "string"
+      }
+    },
+    "code_numbers": {
+      "type": "list",
+      "description": "Une liste de label numéros. Uniquement pour les structures de recherche",
+      "schema": {
+        "type": "string"
+      }
+    },
+    "logo": {
+      "type": "string",
+      "description": "Url du logo de l'organisation"
     },
     "legal_category": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "value": {
-                    "type": "string",
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
-        }
-    },
-    "nature": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "value": {
-                    "description": "",
-                    "example": "",
-                    "type": "string"
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
-        }
-    },
-    "sector": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "value": {
-                    "type": "string",
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
-        }
-    },
-    "websites": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "url": {
-                    "description": "Organization's main website",
-                    "example": "http://www.beta-umr7522.fr",
-                    "type": "string",
-                    "required": True,
-                },
-                "language": {
-                    "description": "website language",
-                    "type": "string",
-                    "default": "fr",
-                    "example": "en"
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "alive": {
-                    "type": "boolean"
-                },
-                "meta": meta
-            }
-        }
-    },
-    "website_check": {
+      "type": "list",
+      "description": "Catégorie Juridique de l'organisation",
+      "schema": {
         "type": "dict",
         "schema": {
-            "checked": {
-                "type": "boolean"
-            },
-            "last_check": {
-                "type": "datetime"
-            }
+          "value": {
+            "type": "string",
+            "description": "Code de catégorie juridique"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit"
+          }
         }
+      }
+    },
+    "websites": {
+      "type": "list",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "url": {
+            "description": "Site web de l'organisation",
+            "type": "string",
+          },
+          "language": {
+            "description": "Language du site web",
+            "type": "string",
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit et les sites web secondaires"
+          },
+          "alive": {
+            "type": "boolean",
+            "description": "true if website has been tested alive"
+          }
+        }
+      }
+    },
+    "website_check": {
+      "type": "object",
+      "description": "Dernière fois que l'existence d'un site à été recherché",
+      "schema": {
+        "checked": {
+          "type": "boolean"
+        },
+        "last_check": {
+          "type": "datetime"
+        }
+      }
     },
     "emails": {
-        "type": "list",
+      "type": "list",
+      "description": "Emails de contact de l'organisation",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "email": {
-                    "description": "Organization's contact email",
-                    "example": "blabla@unistra.fr",
-                    "type": "string",
-                    "required": True,
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
+          "email": {
+            "description": "Email de contact",
+            "type": "string",
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit et les emails secondaires"
+          }
         }
+      }
     },
     "phones": {
-        "type": "list",
+      "type": "list",
+      "description": "Numéro de téléphone de contact de l'organisation",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "phone": {
-                    "description": "Organization's phone number",
-                    "example": "03.88.xx.xx.xx",
-                    "type": "string",
-                    "required": True,
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
+          "phone": {
+            "description": "Téléphone",
+            "type": "string",
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit et les téléphones secondaires"
+          }
         }
+      }
     },
     "social_medias": {
-        "description": "Organizations's social medias accounts",
-        "type": "list",
+      "description": "Réseaux sociaux des organisations",
+      "type": "list",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "account": {
-                    "description": "Account Id for the social media",
-                    "type": "string",
-                    "example": "beta_economics"
-                },
-                "social_media": {
-                    "description": "Name of the social media",
-                    "type": "string",
-                    "example": "twitter"
-                },
-                "url": {
-                    "description": "url of the social media page",
-                    "type": "string",
-                    "example": "https://twitter.com/beta_economics"
-                },
-                "language": {
-                    "description": "social media language",
-                    "type": "string",
-                    "default": "fr",
-                    "example": "en"
-                },
-                "status": {
-                    "description": "Activity status of the Organization",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "default": "conflict",
-                    "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
-            }
+          "account": {
+            "description": "Compte de l'organisation",
+            "type": "string",
+          },
+          "social_media": {
+            "description": "Réseau social",
+            "type": "string",
+          },
+          "url": {
+            "description": "Url de l'organisation sur le réseau social",
+            "type": "string",
+          },
+          "language": {
+            "description": "Language du réseau social",
+            "type": "string",
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit et les réseaux sociaux secondaires"
+          }
         }
-    },
-    "contract": {
-        "type": "list",
-        "schema": {
-            "type": "dict",
-            "schema": {
-                "value": {
-                    "type": "string",
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
-        }
+      }
     },
     "thematics": {
-        "description": '''#dataESR domains''',
+        "description": "#dataESR domains",
         "type": "list",
-        "schema": thematics
+        "schema": "thematics"
     },
     "badges": {
-        "description": '''Specific markers for the Organization''',
-        "type":  "list",
-        "schema": {
-            "type": "string"
-        }
+      "description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
+      "type":  "list",
+      "schema": {
+          "type": "string"
+      }
     },
     "focus": {
-        "description": '''Specific markers for the Organization''',
-        "type":  "list",
-        "schema": {
-            "type": "string"
-        }
+      "description": "Une liste permettant de marquer les organisations pour grouper le requêtage",
+      "type":  "list",
+      "schema": {
+          "type": "string"
+      }
     },
     "panels": {
-        "type": "list",
+      "type": "list",
+      "description": "Liste de panel ERC",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "code": {
-                    "type": "string",
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "start_date": {
-                    "type": "datetime"
-                },
-                "end_date": {
-                    "type": "datetime"
-                },
-                "meta": meta
-            }
+          "code": {
+            "type": "string",
+        },
+        "status": {
+          "type": "string",
+          "description": "Status de la donnée permettant la gestion de conflit et les panels secondaires"
+        },
+        "start_date": {
+          "type": "datetime"
+        },
+        "end_date": {
+          "type": "datetime"
         }
+      }
+    }
     },
     "nace": {
-        "type": "list",
+      "type": "list",
+      "schema": {
+        "type": "dict",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "code": {
-                    "type": "string",
-                },
-                "status": {
-                    "type": "string",
-                    "allowed": ["main", "valid", "conflict"],
-                    "required": True,
-                },
-                "meta": meta
-            }
+          "code": {
+            "type": "string",
+        },
+        "status": {
+          "type": "string",
+          "description": "Status de la donnée permettant la gestion de conflit"
         }
     },
     "human_ressources": {
-        "description": "Human and financial informations on the Organization",
-        "type": "list",
+      "description": "Information sur les effectifs",
+      "type": "list",
+      "schema": {
+        "type": "dict",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "num_employees": {
-                    "description": "Number of employees",
-                    "type": "string",
-                },
-                "num_employees_slice": {
-                    "description": "Number of employees",
-                    "type": "string",
-                },
-                "num_researchers": {
-                    "description": "Number of ...",
-                    "type": "string",
-                },
-                "date": {
-                    "description": "data validity date",
-                    "type": "datetime"
-                },
-                "meta": meta
-            }
+          "num_employees": {
+            "description": "Nombre d'employés",
+            "type": "string",
+          },
+          "num_employees_slice": {
+            "description": "Nombre d'employés (tranche d'effectif)",
+            "type": "string",
+          },
+          "num_researchers": {
+            "description": "Nombre de chercheurs",
+            "type": "string",
+          },
+          "date": {
+            "description": "Date de validité des données",
+            "type": "datetime"
+          }
         }
+      }
     },
     "external_links": {
         "description": "Organizations's external link",
@@ -992,7 +968,6 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                 "url": {
                     "description": "External url describing the ressource",
                     "type": "string",
-                    "nullable": False
                 },
                 "type": {
                     "description": "Type of the external link",
@@ -1003,7 +978,6 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "default": "fr"
                 },
-                "meta": meta
             }
         }
     },
@@ -1016,14 +990,11 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                 "id": {
                     "description": "External id",
                     "type": "string",
-                    "nullable": False
                 },
                 "type": {
                     "description": "Type of the external link",
                     "type": "string",
-                    "nullable": False
-                },
-                "meta": meta
+                }
             }
         }
     },
@@ -1054,8 +1025,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "description": "Label of the evaluation",
                     "type": "string",
                     "example": "Vague B"
-                },
-                "meta": meta
+                }
             }
         }
     },
@@ -1097,10 +1067,8 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "allowed": ["valid", "conflict"],
                     "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
-            }
+                }
+              }
         }
     },
     "predecessors": {
@@ -1135,9 +1103,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "allowed": ["valid", "conflict"],
                     "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
+                }
             }
         }
     },
@@ -1176,9 +1142,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "allowed": ["valid", "conflict"],
                     "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
+                }
             }
         }
     },
@@ -1216,9 +1180,8 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "allowed": ["valid", "conflict"],
                     "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
+                    "required": true,
+                }
             }
         }
     },
@@ -1228,7 +1191,6 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
         "schema": {
             "type": "dict",
             "schema": {
-                "meta": meta,
                 "certification_name": {
                     "description": "",
                     "type": "string",
@@ -1254,7 +1216,6 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
         "schema": {
             "type": "dict",
             "schema": {
-                "meta": meta,
                 "prize_name": {
                     "description": "",
                     "type": "string"
@@ -1317,98 +1278,19 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
                     "type": "string",
                     "allowed": ["valid", "conflict"],
                     "example": "valid",
-                    "required": True,
-                },
-                "meta": meta
+                }
             }
         }
     }
-}
+  }
   ```
 </details>
 <br/>
 
 L'application expose aussi une API de matching, permettant d'identifier un document de la collection organisation à partir d'un nom d'organisation. Cette API combine moteur de recherche, et règles métiers afin de fournir (ou de ne pas fournir) un matching le plus qualitatif possible.
 
-Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
+Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD. L'export utilise certaines nomenclatures présentes dans l'application Datastore.
 
-### 3.5 Publications
-
-Voir sur [*Github*](http://https://github.com/dataesr/publications), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/publications), [*Swagger*](http://185.161.45.213/publications/doc)
-
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: Persons, Projects, Organizations, Datastore, API de HAL.
-
-Application dédiée aux publications dans #dataesr. Elle est en charge:
-1. de l'exposition d'une API pour les données des publications (avec notamment la mise à jour des données venant de Unpaywall et de HAL)
-2. de l'export de ces données en une version compatible avec l'application scanR,
-
-#### 3.5.1 APIs et export
-
-Cette application expose une API RESTful pour les collections suivantes : 
- - 'publications' qui est un ensemble de documents représentant des publications. 
- - 'notices_publications' qui contient le code HTML des pages web scrappées pour chaque doi
- - 'unpwayll_dump' qui contient les données issues du feed hebdomadaire de Unpaywall
- - 'openapc_dump' dump, pas utilisé à ce jour
- - 'opencitations_dump' dump, pas utilisé à ce jour
-Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
-
-De plus, deux points d'entrées spécifiques existent :
- - /hal_publication pour la collecte / mise à jour d'une publication venant de HAL (utilise l'API de HAL)
- - /unpaywall_publication pour la collecte / mise à jour d'une publication venant de Unpaywall (à partir de la collection 'unpaywall_dump')
-
-Pour ces deux points d'entrées, les méta-données de publications sont collectées et transformées dans un format compatible avec le modèle de données des publications dans dataESR.
-De plus, quand la page web du DOI a été scrappée (présente dans la collection 'notices_publications'), le code HTML est parsé (avec BeautifulSoup) pour enrichir les meta-données de la publication concernant les affiliations.
-
-Enfin, le point d'entrée /update permet de fusionner toutes les informations disponibles concernant la publication. Ainsi, pour une publication déjà en base, par exemple si une donnée supplémentaire concernant les affiliations arrive (par l'un des deux endpoints précédents), la route 'update' se charge d'ajouter l'information sans pour autant créer de doublons. Par défaut, les routes 'hal_publication' et 'unpaywall_publication' appellent déjà la route 'update'.
- 
-
-<details>
-  <summary>Voir le modèle de donnée des publications</summary>
-
-  ```json
-  ```
-</details>
-<br/>
-
-Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'publications' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
-
-### 3.6 Personnes
-
-Voir sur [*Github*](http://https://github.com/dataesr/persons), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/persons), [*Swagger*](http://185.161.45.213/persons/doc)
-
-- *Stockage de données*: OUI
-- *Acces mongo*: OUI
-- *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
-- *Dépendances interne*: aucune.
-- *Dépendances externe*: API Idref, API ORCID
-
-Application dédiée aux personnes dans #dataesr. Elle est en charge:
-1. de l'exposition d'une API pour les données des personnes (avec notamment la mise à jour des données venant de IdRef et ORCID)
-2. de l'export de ces données en une version compatible avec l'application scanR,
-
-#### 3.5.1 APIs et export
-
-Cette application expose une API RESTful pour les collections suivantes : 
- - 'persons' qui est un ensemble de documents représentant des personnes. 
- - 'notices_persons' qui contient le code XML des notices IdRef et Orcid
-Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
-
-De plus, un point d'entrée pour le matching existe :
- 
-
-<details>
-  <summary>Voir le modèle de donnée des persons</summary>
-
-  ```json
-  ```
-</details>
-<br/>
-
-Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'persons' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
 
 ### 3. UI
 
