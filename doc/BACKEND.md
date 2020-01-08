@@ -73,7 +73,7 @@ ReactJS pour les interfaces utilisateur.
 Elasticsearch stock et les métriques d'utilisation et les logs des applications fourni par Metricbeat et Filebeat
 
 
-### 2.3 Instructions de lancement des services
+### 2.4 Instructions de lancement des services
 
 L'application dans son ensemble peut être lancé via un fichier docker-compose.yml sur une seule machine avec la commande ```docker-compose up -d```. Un serveur nginx faisant office de reverse-proxy est lancé également, permettant à tous les services d'être accessible sur le port 80 (et/ou 443) d'une machine.
 
@@ -1994,7 +1994,7 @@ Une collection scanR est également exposée. Cette dernière est une vue des do
 </details>
 
 
-### 3. UI
+### 3.8 UI
 
 [*Github Repos*](//https://github.com/dataesr/nginx), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/nginx)
 - *Stockage de données*: NON
@@ -2006,12 +2006,12 @@ Une collection scanR est également exposée. Cette dernière est une vue des do
 Interface utilisateur de l'application. Permet l'intervention sur certaines données afin de les enrichir ou de les corriger manuellement. Actuellement, l'intervention est possible principalement sur les organisations. Les autres corrections manuelles sont remontées à l'API via fichiers et scripts. Cette interface permet aussi de rechercher et d'explorer les données, de voir les données de monitoring et de log, de voir la documentation swagger des API et de lancer des tâches asyncrones.
 
 
-### Elasticsearch, Filebeat, Metricbeat
+### 3.9 Elasticsearch, Filebeat, Metricbeat
 
 Ces trois process sont chargés de la récupération et du stockage de métriques et de logs concernant l'application.
 
 
-### Nginx
+### 3.10 Nginx
 
 - [*Github Repos*](https://github.com/dataesr/nginx)
 - [*Docker image*](https://hub.docker.com/repository/docker/dataesr/nginx)
