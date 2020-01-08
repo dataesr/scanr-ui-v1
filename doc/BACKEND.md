@@ -103,85 +103,223 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
   {
     "id": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule.",
-      "traitement": null
+      "description": "Identifiant RNSR de la structure de recherche",
+      "regex": "^([0-9]{9}[A-Z]{1})$"
     },
     "description": {
       "type": "string",
-      "description": "Description d'une structure de recherche.",
-      "traitement": null
+      "description": "Description d'une structure de recherche."
     },
     "website": {
       "type": "string",
-      "description": "Une URL du site web de la structure",
-      "traitement": null
+      "description": "Une URL du site web de la structure"
     },
     "type": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "traitement": null
+      "description": "Secteur de la structure (toujours Structure de recherche ici)",
+      "traitement": "Dérivé du code_nature suivant un mapping propre à #dataesr"
     },
     "level": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "traitement": null
+      "description": "Type de structure",
+      "traitement": "Dérivé du code_nature suivant un mapping propre à #dataesr"
     },
     "input_address": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
+      "description": "Adresse de la structure",
       "traitement": null
     },
     "name": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
+      "description": "Nom de la structure",
       "traitement": null
     },
     "dates": {
       "type": "object",
       "object": {
         "start_date": {
-          "description": "9 chiffres plus 1 lettre majuscule",
-          "traitement": null
-        }
+          "description": "Date de début de la structure",
+          "traitement": "Les années de début des données sources sont remplacées une date (1 jan)"
+        },
         "end_date": {
-          "description": "9 chiffres plus 1 lettre majuscule",
-          "traitement": null
+          "description": "Date de fin de la structure",
+          "traitement": "Les années de début des données sources sont remplacées une date (31 déc)"
         }
       }
     },
     "email": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "traitement": null
+      "description": "Mail de contact de la structure",
     },
     "phone": {
       "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
+      "description": "Téléphone de contact de la structure",
       "traitement": null
     },
     "code_numbers": {
-      "type": "list(string)",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "traitement": null
+      "type": "list",
+      "schema": {
+        "type": "string",
+        "description": "Label numéro d'une structure"
+      }
     },
     "rnsr_domains": {
-      "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "source": "table: struct, champ: num_nat_struct",
-      "traitement": null
+      "type": "list",
+      "schema": {
+        "type": "string",
+        "description": "Domains de recherche des structures provenant des domaines scientifiques"
+      }
     },
     "rnsr_themes": {
-      "type": "string",
-      "description": "9 chiffres plus 1 lettre majuscule",
-      "source": "table: struct, champ: num_nat_struct",
-      "traitement": null
+      "type": "list",
+      "schema": {
+        "type": "string",
+        "description": "Domains de recherche des structures provenant des domaines d'application"
+      }
     },
-    "panels": fields.List(fields.Nested(activities)),
-    "predecessors": fields.List(fields.Nested(predecessors)),
-    "doctoral_schools": fields.List(fields.Nested(doctoral_schools)),
-    "supervisors": fields.List(fields.Nested(supervisors)),
-    "parents": fields.List(fields.Nested(parents)),
-    "leaders": fields.List(fields.Nested(leaders))
+    "panels": {
+      "type": "list",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "code": {
+            "type": "string",
+            "description": "Code de panel ERC"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Panel ERC n'est plus associé à la structure depuis..."
+          },
+          "start_date": {
+            "type": "datetime",
+            "description": "Panel ERC associé à la structure depuis..."
+          }
+        }
+        }
+    },
+    "leaders": {
+      "type": "list",
+      "description": "Dirigeants de la structure",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "rnsr_key": {
+            "type": "string",
+            "description": "Identifiant du leader dans le RNSR"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Début d'exercice du leader"
+          },
+          "start_date": {
+            "type": "datetime",
+            "description": "Fin d'exercice du leader"
+          },
+          "role": {
+            "type": "datetime",
+            "description": "Role dans la structure"
+          }
+        }
+      }
+    },
+    "predecessors": {
+      "type": "list",
+      "description": "Prédécesseur de la structure",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "succession_type": {
+            "type": "string",
+            "description": "Type de succession"
+          },
+          "succession_date": {
+            "type": "datetime",
+            "description": "Date à laquelle s'est passé la succession"
+          },
+          "id": {
+            "type": "string",
+            "regex": "^([0-9]{9}[A-Z]{1})$",
+            "description": "Identifiant RNSR du prédécesseur"
+          }
+        }
+        }
+    },
+    "parents": {
+      "type": "list",
+      "description": "Parents de la structure",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "id": {
+            "type": "string",
+            "regex": "^([0-9]{9}[A-Z]{1})$",
+            "description": "Identifiant RNSR du parent"
+          },
+          "start_date": {
+            "type": "datetime",
+            "description": "Début de la relation"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Fin de la relation"
+          },
+          "exclusive": {
+            "type": "boolean",
+            "description": "true si la relation est exclusive"
+          }
+        }
+      }
+    },
+    "supervisors": {
+      "type": "list",
+      "description": "Tutelles de la structure",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "rnsr_key": {
+            "type": "string",
+            "description": "Identifiant RNSR de la tutelle"
+          },
+          "start_date": {
+            "type": "datetime",
+            "description": "Début de la relation"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Fin de la relation"
+          },
+          "supervision_type": {
+            "type": "string",
+            "description": "Type de supervision"
+          },
+          "name": {
+            "type": "string",
+            "description": "Nom de la tutelle"
+          }
+        }
+      }
+    },
+    "doctoral_schools": {
+      "type": "list",
+      "description": "Ecole doctorales rattachées à la structure",
+      "schema": {
+        "type": "object",
+        "schema": {
+          "id": {
+            "type": "string",
+            "description": "Identifiant du l'école doctorale"
+          },
+          "end_date": {
+            "type": "datetime",
+            "description": "Fin de la relation"
+          },
+          "start_date": {
+            "type": "datetime",
+            "description": "Début de la relation"
+          }
+        }
+      }
+    }
   }
   ```
 </details>
@@ -207,72 +345,70 @@ L'application expose plusieurs routes permettant de récupérer des informations
 
 Ce service récupère les données des organisations présentes dans le répertoire Sirene via l'[API](https://api.insee.fr/) mise en place par l'insee.
 
-Le service récupère toute les données d'intéret pour scanR. Cela comprend les méta données de base des structures (label, identifiants, adresse), ainsi que des codes et libellés de nomenclatures (ie. catégories juridiques, code APE).
+Le service récupère toute les données d'intéret pour scanR. Cela comprend les méta données de base des structures (label, identifiants, adresse), ainsi que des codes et libellés de nomenclatures (ie. catégories juridiques, code APE). Le modèle est détaillé ci-après.
 
 <details>
   <summary>Voir le modèle de donnée complets</summary>
 
   ```json
   {
-  	"id": {
-  		"description": "Sirene id",
+  	"siren": {
+  		"description": "Numéro d'identification siren",
   		"type": "string",
-  		"regex": REGEX_SIRENE
+  		"regex": "^([0-9]{9})$"
+  	},
+  	"siren": {
+  		"description": "Numéro d'identification siret (siret du siège au niveau du siren)",
+  		"type": "string",
+  		"regex": "^([0-9]{14})$"
   	},
   	"dates": {
   		"type": "dict",
   		"schema": {
   			"start_date": {
   				"type": "datetime",
-  				"nullable": true
+          "description": "Date de début de l'organisation",
   			},
   			"end_date": {
   				"description": "Closing date",
   				"type": "datetime",
-  				"nullable": true
+          "description": "Date de fin de l'organisation",
   			}
   		}
   	},
   	"level": {
-  		"description": "Level of the structure",
-  		"type": "string"
+  		"type": "string",
+      "description": "Type de la structure",
+      "traitement": "Dérivé du code de catégorie juridique suivant un mapping propre à #dataesr"
   	},
   	"type": {
-  		"description": "Level of the structure",
-  		"type": "string"
-  	},
-  	"nature": {
-  		"description": "Nature of structure's supervision",
-  		"type": "string"
+  		"type": "string",
+      "description": "Secteur de la structure",
+      "traitement": "Dérivé du code de catégorie juridique suivant un mapping propre à #dataesr"
   	},
   	"name": {
   		"type": "dict",
   		"schema": {
   			"label": {
-  				"description": "Structure's name",
-  				"type": "string",
-  				"nullable": True
+  				"description": "Nom de la structure",
+  				"type": "string"
   			},
   			"acronym": {
-  				"description": "Structure's acronym",
-  				"type": "string",
-                  "nullable": True
+  				"description": "Acronyme de la structure",
+  				"type": "string"
   			}
   		}
   	},
   	"human_ressources": {
   		"type": "dict",
-  		"nullable": True,
   		"schema": {
   			"employees_slice": {
-  				"description": "Structure's name",
-  				"type": "string",
-  				"nullable": true
+  				"description": "Code de tranche d'effectif",
+  				"type": "string"
   			},
   			"date": {
-  				"description": "Structure's acronym",
-  				"type": "string",
-                  "nullable": true
+  				"description": "Date de validité de la tranche d'effectif",
+  				"type": "string"
   			}
   		}
   	},
@@ -280,33 +416,32 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
   		"type": "list",
   		"schema": {
   			"type": "string",
-  			"nullable": true
+        "description":"Autres (anciens) nom et dénominations de la structure",
   		}
   	},
   	"input_address": {
-  		"type": "string",
+      "description": "Adresse de la structure",
+  		"type": "string"
   	},
   	"city_code": {
   		"type": "string",
+      "description": "Code commune de la structure"
   	},
   	"category": {
   		"type": "string",
-  	},
-  	"siren": {
-  		"type": "string"
+      "description": "Catégorie de la structure dans SIRENE (PME, ETI, GE, TPE)"
   	},
   	"headquarter": {
-  		"type": "boolean"
-  	},
-  	"siret": {
-  		"type": "string"
+  		"type": "boolean",
+      "description": "true si le siret est un siège"
   	},
   	"legal_category": {
   		"type": "string",
-
+      "description": "Code de catégorie juridique de la structure"
   	},
   	"naf_code": {
-  			"type": "string"
+  			"type": "string",
+        "description": "Code APE de la structure"
   	}
   }
   ```
@@ -329,7 +464,7 @@ Voir sur: [*Github Repos*](http://https://github.com/dataesr/geocoder), [*Docker
 - *Fonctionnalité(s)*:
   - Géocode une adresse d'entrée et renvoi une adresse complète et propre avec coordonnées (si trouvées).
 
-Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr.
+Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr. Les champs renvoyé sont un mapping des champs revoyés par les adresse.gouv.fr et/ou openstreetmap.
 
 <details>
   <summary>Voir le modèle de donnée complets</summary>
@@ -338,7 +473,7 @@ Ce service expose une API de géocodage, qui utilise les services de adresse.gou
   {
     "input_address": {
       "type": "string",
-      "description": "Adresse renseignée dans le champs 'location' de l'API"
+      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
     },
     "housenumber": {
       "type": "string",
@@ -428,95 +563,84 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
 
   ```json
   {
-    "status": {
-        "description": "status of the organizations",
-        "type": "string",
-        "unique": True
-    },
     "id": {
-        "description": "#dataESR organization identifier",
-        "type": "string",
-        "unique": True,
-        "nullable": False
+      "type": "string",
+      "description": "Identifiant #dataesr"
+    },
+    "status": {
+      "type": "string",
+      "description": "status of the organizations"
     },
     "bce": {
-        "description": "UAI id",
-        "type": "string",
-        "regex": REGEX_UAI,
-        "unique": True,
-        "nullable": True
+      "type": "string",
+      "description": "Identifiant UAI de la BCE"
     },
     "grid": {
-        "description": "grid.ac id",
-        "type": "string",
-        "regex": REGEX_GRID,
-        "unique": True,
-        "nullable": True
+      "type": "string",
+      "description": "Identifiant dans la Base GRID.ac"
     },
     "rnsr": {
-        "description": "RNSR id",
-        "type": "string",
-        "regex": REGEX_NNS,
-        "unique": True,
-        "nullable": True
+      "type": "string",
+      "description": "Identifiant dans le RNSR"
     },
     "ed": {
-        "description": "Doctoral School id",
-        "type": "string",
-        "regex": REGEX_ED,
-        "unique": True,
-        "nullable": True
+      "type": "string",
+      "description": "Identifiant d'école doctorale",
     },
     "sirene": {
-        "description": "Sirene id",
-        "type": "string",
-        "unique": True,
-        "regex": REGEX_SIRENE,
-        "nullable": True
+      "type": "string",
+      "description": "Identifiant Sirene"
     },
     "headquarter": {
-        "type": "string"
+      "type": "string",
+      "description": "Est-ce un siège ? (complété uniquement pour les organisations ayant un sirene)"
     },
     "dataesr": {
-        "description": "ESR id for additional organizations",
-        "type": "string",
-        "unique": True,
+      "type": "string",
+      "description": "Identifiant dataesr pour les organisation non présentes dans une base source",
     },
     "rnsr_key": {
-        "description": "ESR id for additional organizations",
-        "type": "string",
-        "unique": True,
+      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles",
+      "type": "string",
     },
     "active": {
-        "description": "is organization active?",
-        "type": "boolean",
+      "description": "true si l'organisation est active?",
+      "type": "boolean",
     },
     "foreign": {
-        "description": "Is organization foreign?",
-        "type": "boolean",
-        "default": False
+      "description": "true si l'organisation est étrangère",
+      "type": "boolean",
     },
     "types": {
-        "description": "Organization's types",
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
+      "description": "Liste de secteur",
+      "type": "list",
+      "schema": {
+        "type": "string",
+        "description": "Secteur de l'organisation"
+      }
     },
     "forbidden_types": {
-        "description": "All types forbidden for that organization.",
+        "description": "Liste de secteurs non autorisés pour une structure",
         "type": "list",
         "schema": {
             "type": "string"
         }
     },
     "dates": {
-        "description": "Start and closing dates",
+        "description": "Dates de début et fin d'une structure",
         "type": "list",
-        "schema": dates
+        "schema": {
+          "type": "object",
+          "schema": {
+            "start_date": {
+              "type": "datetime",
+
+            }
+          }
+        }
     },
     "comment": {
-        "description": "Commentaire sur la Organization",
+        "description": "Commentaire sur l'organisation",
         "type": "string",
         "example": "Peut être un doublon avec 199712586Y"
     },
@@ -557,13 +681,13 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
         }
     },
     "code_numbers": {
-        "type": "list",
-        "schema": {
-            "type": "string"
-        }
+      "type": "list",
+      "schema": {
+        "type": "string"
+      }
     },
     "logo": {
-        "type": "string"
+      "type": "string"
     },
     "nature_group": {
         "description": "Only for UAI organizations.",
