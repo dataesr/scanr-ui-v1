@@ -551,17 +551,18 @@ Application dédiée aux organisations dans #dataesr. Elle est en charge:
 
 #### 3.4.1 Workflow de mise à jour et traitement des données.
 
-La mise à jour d'un document relatif à une orgnanisation se fait avec le point d'entré *_update* qui prend un identifiant comme paramètre. Si une seule source de donnée est identifiée pour cette organisation, la mise à jour est simplifiée et les logiques de traitement métier permettent une mise à jour sans conflit (par exemple, le code de catégorie juridique pour une organisation n'ayant qu'un sirene sera mis à jour directement avec les données sirene). Les données précédentes seront conservés avec une date de fin correspondante à la date de la mise à jour. Ainsi, on peut garder un hstorique des changements opérés sur la base source. Si plusieurs source fournissent des données pour la même orgnaisation, une gestion de conflit existe. Elle peut être soit automatique (par exemple, le secteur fourni par sirene est systematiquement préféré à celui fourni par grid) soit marquée comme conflictuelle grace aux champs `status`. Une intervention est alors nécéssaire de la part d'un administrateur de donnée (les addresses des deux sources ne coincident pas. Faut-il en privilégier une ? Faut-il garder la deuxième comme addresse secondaire ?). Ces opération peuvent être faite via l'interface utilisateur ou directement via l'API.
+La mise à jour d'un document relatif à une orgnanisation se fait avec le point d'entré `_update` qui prend un identifiant d'organisation comme paramètre. Le processus de mise à jour compare ensuite les données sources avec leur version datant de la dernière mise a jour qu'elle avait alors stocké dans des *snapshots*. les différences sont ensuite traitées champ par champ afin d'actualiser les données de l'organisation et la dernière version des données source est stockée dans les snapshots pour répéter le processus au prochain appel de l'API `_update`.
+
+Si une seule source de donnée est identifiée pour cette organisation, la mise à jour est simplifiée et les logiques de traitement permettent une mise à jour sans conflit (par exemple, le nom d'une organisation n'ayant qu'un sirene sera mis à jour directement avec les données sirene). Les données précédentes seront conservés avec une date de fin correspondante à la date de la mise à jour. Ainsi, on peut garder un historique des changements opérés sur la base source. Si plusieurs source fournissent des données pour la même organisation, une gestion de conflit existe. Elle peut être soit automatique (par exemple, les champs `type` et `level` fourni par sirene sont systematiquement préféré à ceux fourni par grid) soit marquée comme conflictuelle grâce aux champs `status`. Une intervention est alors nécessaire de la part d'un administrateur de données (les adresses des deux sources ne coincident pas. Faut-il en privilégier une ? Faut-il garder la deuxième comme adresse secondaire ?). Ces opérations peuvent être faite via l'interface utilisateur ou directement via l'API.
 
 Des traitements sont appliqués et modifient les données source dans certains cas.
-Lorsque c'est possible, un effort est fait pour dédoublonner certaines liste (par exemple si une organisation a deux fois une tutelle identique avec des dates successives, une jointure est faite entre les deux elements).
+Lorsque c'est possible, un effort est fait pour dédoublonner certaines listes (par exemple si une organisation a deux fois une tutelle identique avec des dates successives, une jointure est faite entre les deux elements pour réconcilier dates de début et dates de fin de relation).
 Les addresses sont géocodées grâce à l'application Geocoder mais l'addresse brut est conservée.
-Enfin, certains champs avec relations à d'autre structures ou à des personnes sont automatiquement rattaché l'objet correspondant dans #dataesr, lorsque cette opération est possible. Pour les `leaders` l'application utilise le point d'entré *_match* de l'application Persons afin de retrouver l'identifiant idref du leader. Les données bruts de la source sont conservées.
-Ces opérations permettent ensuite à scanR de proposer une navigation fluide entre ses propres objets et d'aggréger ces données pour des visualisations plus éclairantes.
+Enfin, certains champs avec relations à d'autre structures ou à des personnes sont automatiquement rattaché l'objet correspondant dans #dataesr, lorsque cette opération est possible. Pour les `leaders`, par exemple, l'application utilise le point d'entré `_match` de l'application Persons afin de retrouver l'identifiant idref du leader. Les données bruts de la source sont conservées.
+Ces opérations permettent ensuite à scanR de proposer une navigation fluide entre ses différents objets et d'agréger ces données pour des visualisations plus éclairantes.
 
-Ces processus de mise à jour peuvent également et opérés en 'batch', et lancées depuis l'interface utilisateur. Par example, 'Raffaraichir RNSR' provoque un update de toutes les organizations ayant un identifiant RNSR et ajoute les nouvelles structures.
-La même chose peut etre fait avec SIRENE et GRID.
-
+Ces processus de mise à jour peuvent également être opérés en 'batch', et lancés depuis l'interface utilisateur. Par example, 'Raffaraichir RNSR' provoque un update de toutes les organisations ayant un identifiant RNSR et ajoute les nouvelles présentes dans la source.
+La même chose peut être fait avec SIRENE et GRID.
 
 
 #### 3.4.2 APIs et export
@@ -579,27 +580,27 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
     },
     "status": {
       "type": "string",
-      "description": "status of the organizations"
+      "description": "Status de l'organisation"
     },
     "bce": {
       "type": "string",
-      "description": "Identifiant UAI de la BCE"
+      "description": "Identifiant UAI de la BCE (si existant)"
     },
     "grid": {
       "type": "string",
-      "description": "Identifiant dans la Base GRID.ac"
+      "description": "Identifiant dans la Base GRID.ac (si existant)"
     },
     "rnsr": {
       "type": "string",
-      "description": "Identifiant dans le RNSR"
+      "description": "Identifiant dans le RNSR (si existant)"
     },
     "ed": {
       "type": "string",
-      "description": "Identifiant d'école doctorale"
+      "description": "Identifiant d'école doctorale (si existant)"
     },
     "sirene": {
       "type": "string",
-      "description": "Identifiant Sirene"
+      "description": "Identifiant Sirene (si existant)"
     },
     "headquarter": {
       "type": "string",
@@ -607,11 +608,11 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
     },
     "dataesr": {
       "type": "string",
-      "description": "Identifiant dataesr pour les organisation non présentes dans une base source"
+      "description": "Identifiant dataesr pour les organisation non présentes dans une base source (si existant)"
     },
     "rnsr_key": {
       "type": "string",
-      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles"
+      "description": "Identifiant d'institution dans le RNSR, permet le matching de tutelles (si existant)"
     },
     "active": {
       "type": "boolean",
@@ -960,116 +961,104 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
       }
     },
     "external_links": {
-        "description": "Organizations's external link",
-        "type": "list",
+      "description": "Liens externes de l'organisation (portail HAL)",
+      "type": "list",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "url": {
-                    "description": "External url describing the ressource",
-                    "type": "string",
-                },
-                "type": {
-                    "description": "Type of the external link",
-                    "type": "string",
-                },
-                "language": {
-                    "description": "Language of the website",
-                    "type": "string",
-                    "default": "fr"
-                },
-            }
+          "url": {
+            "description": "URL",
+            "type": "string"
+          },
+          "type": {
+            "description": "Type de lien",
+            "type": "string"
+          },
+          "language": {
+            "description": "langue du lien",
+            "type": "string"
+          },
         }
+      }
     },
     "external_ids": {
-        "description": "Organizations's external ids",
-        "type": "list",
+      "description": "Identifiants externes",
+      "type": "list",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {
-                    "description": "External id",
-                    "type": "string",
-                },
-                "type": {
-                    "description": "Type of the external link",
-                    "type": "string",
-                }
-            }
+          "id": {
+            "description": "Identifiant externe",
+            "type": "string",
+          },
+          "type": {
+            "description": "Type d'identifiant",
+            "type": "string",
+          }
         }
+      }
     },
     "evaluations": {
-        "description": "Organizations's evaluations",
-        "type": "list",
+      "description": "Rapport d'évaluation des organisations",
+      "type": "list",
+      "schema": {
+        "type": "object",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "evaluator": {
-                    "description": "Entity that evaluated the Organization",
-                    "type": "string",
-                    "example": "HCERES"
-                },
-                "url": {
-                    "description": "Url of the evaluation report",
-                    "type": "string",
-                    "example": "https://www.hceres.fr/content/ \
-                        download/31935/488476/file/ \
-                        C2018-EV-0673021V-DER-PUR180015254-019890-RF.pdf"
-                },
-                "year": {
-                    "description": "Year of the avaluation",
-                    "type": "string",
-                    "example": "2017-2018"
-                },
-                "label": {
-                    "description": "Label of the evaluation",
-                    "type": "string",
-                    "example": "Vague B"
-                }
-            }
+          "evaluator": {
+            "description": "Agence d'évaluation",
+            "type": "string"
+          },
+          "url": {
+            "description": "Lien du rapport d'évaluation",
+            "type": "string"
+          },
+          "year": {
+            "description": "Année de l'évaluation",
+            "type": "string"
+          },
+          "label": {
+            "description": "Label de l'évaluation",
+            "type": "string"
+          }
         }
+      }
     },
     "leaders": {
-        "type": "list",
-        "description": "",
+      "type": "list",
+      "description": "",
+      "schema": {
+        "type": "dict",
         "schema": {
-            "type": "dict",
-            "schema": {
-                "id": {
-                    "type": "string",
-                },
-                "href": {
-                    "type": "string",
-                },
-                "identified": {
-                    "type": "boolean"
-                },
-                "start_date": {
-                    "type": "datetime"
-                },
-                "end_date": {
-                    "type": "datetime"
-                },
-                "role": {
-                    "type": "string"
-                },
-                "first_name": {
-                    "type": "string"
-                },
-                "last_name": {
-                    "type": "string"
-                },
-                "source_code": {
-                    "type": "string"
-                },
-                "status": {
-                    "description": "data status",
-                    "type": "string",
-                    "allowed": ["valid", "conflict"],
-                    "example": "valid",
-                }
-              }
+          "id": {
+            "type": "string",
+          },
+          "identified": {
+            "type": "boolean"
+          },
+          "start_date": {
+            "type": "datetime"
+          },
+          "end_date": {
+            "type": "datetime"
+          },
+          "role": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "source_code": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "description": "Status de la donnée permettant la gestion de conflit"
+          }
         }
+      }
     },
     "predecessors": {
         "type": "list",
