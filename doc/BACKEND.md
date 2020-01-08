@@ -363,7 +363,7 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
   		"regex": "^([0-9]{14})$"
   	},
   	"dates": {
-  		"type": "dict",
+  		"type": "object",
   		"schema": {
   			"start_date": {
   				"type": "datetime",
@@ -387,7 +387,7 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
       "traitement": "Dérivé du code de catégorie juridique suivant un mapping propre à #dataesr"
   	},
   	"name": {
-  		"type": "dict",
+  		"type": "object",
   		"schema": {
   			"label": {
   				"description": "Nom de la structure",
@@ -400,7 +400,7 @@ Le service récupère toute les données d'intéret pour scanR. Cela comprend le
   		}
   	},
   	"human_ressources": {
-  		"type": "dict",
+  		"type": "object",
   		"schema": {
   			"employees_slice": {
   				"description": "Code de tranche d'effectif",
@@ -554,17 +554,17 @@ Application dédiée aux organisations dans #dataesr. Elle est en charge:
 
 #### 3.4.1 Workflow de mise à jour et traitement des données.
 
-La mise à jour d'un document relatif à une orgnanisation se fait avec le point d'entré `_update` qui prend un identifiant d'organisation comme paramètre. Le processus de mise à jour compare ensuite les données sources avec leur version datant de la dernière mise a jour qu'elle avait alors stocké dans des *snapshots*. les différences sont ensuite traitées champ par champ afin d'actualiser les données de l'organisation et la dernière version des données source est stockée dans les snapshots pour répéter le processus au prochain appel de l'API `_update`.
+La mise à jour d'un document relatif à une organisation se fait avec le point d'entré `_update` qui prend un identifiant d'organisation comme paramètre. Le processus de mise à jour compare ensuite les données sources avec leur version datant de la dernière mise a jour qu'elle avait alors stocké dans des *snapshots*. les différences sont ensuite traitées champ par champ afin d'actualiser les données de l'organisation et la dernière version des données source est stockée dans les snapshots pour répéter le processus au prochain appel de l'API `_update`.
 
-Si une seule source de donnée est identifiée pour cette organisation, la mise à jour est simplifiée et les logiques de traitement permettent une mise à jour sans conflit (par exemple, le nom d'une organisation n'ayant qu'un sirene sera mis à jour directement avec les données sirene). Les données précédentes seront conservés avec une date de fin correspondante à la date de la mise à jour. Ainsi, on peut garder un historique des changements opérés sur la base source. Si plusieurs source fournissent des données pour la même organisation, une gestion de conflit existe. Elle peut être soit automatique (par exemple, les champs `type` et `level` fourni par sirene sont systematiquement préféré à ceux fourni par grid) soit marquée comme conflictuelle grâce aux champs `status`. Une intervention est alors nécessaire de la part d'un administrateur de données (les adresses des deux sources ne coincident pas. Faut-il en privilégier une ? Faut-il garder la deuxième comme adresse secondaire ?). Ces opérations peuvent être faite via l'interface utilisateur ou directement via l'API.
+Si une seule source de donnée est identifiée pour cette organisation, la mise à jour est simplifiée et les logiques de traitement permettent une mise à jour sans conflit (par exemple, le nom d'une organisation n'ayant qu'un sirene sera mis à jour directement avec les données sirene). Les données précédentes seront conservés avec une date de fin correspondante à la date de la mise à jour. Ainsi, on peut garder un historique des changements opérés sur la base source. Si plusieurs source fournissent des données pour la même organisation, une gestion de conflit existe. Elle peut être soit automatique (par exemple, les champs `type` et `level` fourni par sirene sont systématiquement préféré à ceux fourni par grid) soit marquée comme conflictuelle grâce aux champs `status`. Une intervention est alors nécessaire de la part d'un administrateur de données (les adresses des deux sources ne coïncident pas. Faut-il en privilégier une ? Faut-il garder la deuxième comme adresse secondaire ?). Ces opérations peuvent être faite via l'interface utilisateur ou directement via l'API.
 
 Des traitements sont appliqués et modifient les données source dans certains cas.
-Lorsque c'est possible, un effort est fait pour dédoublonner certaines listes (par exemple si une organisation a deux fois une tutelle identique avec des dates successives, une jointure est faite entre les deux elements pour réconcilier dates de début et dates de fin de relation).
-Les addresses sont géocodées grâce à l'application Geocoder mais l'addresse brut est conservée.
+Lorsque c'est possible, un effort est fait pour dédoublonner certaines listes (par exemple si une organisation a deux fois une tutelle identique avec des dates successives, une jointure est faite entre les deux éléments pour réconcilier dates de début et dates de fin de relation).
+Les adresses sont géocodées grâce à l'application Geocoder mais l'adresse brut est conservée.
 Enfin, certains champs avec relations à d'autre structures ou à des personnes sont automatiquement rattaché l'objet correspondant dans #dataesr, lorsque cette opération est possible. Pour les `leaders`, par exemple, l'application utilise le point d'entré `_match` de l'application Persons afin de retrouver l'identifiant idref du leader. Les données bruts de la source sont conservées.
 Ces opérations permettent ensuite à scanR de proposer une navigation fluide entre ses différents objets et d'agréger ces données pour des visualisations plus éclairantes.
 
-Ces processus de mise à jour peuvent également être opérés en 'batch', et lancés depuis l'interface utilisateur. Par example, 'Raffaraichir RNSR' provoque un update de toutes les organisations ayant un identifiant RNSR et ajoute les nouvelles présentes dans la source.
+Ces processus de mise à jour peuvent également être opérés en 'batch', et lancés depuis l'interface utilisateur. Par exemple, 'Raffraîchir RNSR' provoque un update de toutes les organisations ayant un identifiant RNSR et ajoute les nouvelles présentes dans la source.
 La même chose peut être fait avec SIRENE et GRID.
 
 
@@ -772,7 +772,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"type": "list",
   		"description": "Catégorie Juridique de l'organisation",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"value": {
   					"type": "string",
@@ -928,7 +928,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   	"nace": {
   		"type": "list",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"code": {
   					"type": "string"
@@ -944,7 +944,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"description": "Information sur les effectifs",
   		"type": "list",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"num_employees": {
   					"description": "Nombre d'employés",
@@ -1032,7 +1032,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"type": "list",
   		"description": "",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"id": {
   					"type": "string"
@@ -1069,7 +1069,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"type": "list",
   		"description": "List of Organization's higher level relations",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"id": {
   					"type": "string"
@@ -1100,7 +1100,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"type": "list",
   		"description": "List of Organization's higher level relations",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"id": {
   					"type": "string"
@@ -1138,7 +1138,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   	"parents": {
   		"type": "list",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"start_date": {
   					"type": "datetime"
@@ -1181,7 +1181,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"description": "",
   		"type": "list",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"certification_name": {
   					"description": "",
@@ -1206,7 +1206,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"description": "",
   		"type": "list",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"prize_name": {
   					"description": "",
@@ -1239,7 +1239,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
   		"type": "list",
   		"description": "",
   		"schema": {
-  			"type": "dict",
+  			"type": "object",
   			"schema": {
   				"id": {
   					"type": "string"
@@ -1284,7 +1284,7 @@ Cette application expose une API RESTful de la collection 'organizations' qui es
 
 L'application expose aussi une API de matching, permettant d'identifier un document de la collection organisation à partir d'un nom d'organisation. Cette API combine moteur de recherche, et règles métiers afin de fournir (ou de ne pas fournir) un matching le plus qualitatif possible.
 
-Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD. L'export utilise certaines nomenclatures présentes dans l'application Datastore.
+Une collection scanR est également exposée. Cette dernière est une vue des données présente dans la collection 'organizations' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD. L'export utilise certaines nomenclatures présentes dans l'application Datastore.
 
 
 ### 3.4 Projects
@@ -1297,70 +1297,261 @@ Voir sur: [*Github Repos*](https://github.com/dataesr/projects), [*Docker image*
 - *Fonctionnalité(s)*:
   - Expose les données de projets. Relie les participants à une organisation de #dataesr.
 
-Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr. Les champs renvoyé sont un mapping des champs revoyés par les adresse.gouv.fr et/ou openstreetmap.
+  Les données arrivent dans #dataesr via l'API de l'application. Une opération de matching avec les objets #dataesr est ensuite opérée.
+  Cette application a deux collections principales: projets et participants exposés par API avec toutes les méthodes CRUD.
+
+  Les données de projets sont traitées en amont par le département d'outils d'aide à la décision avec comme données source l'ANR, H2020, Parenariat Huber Curien, Casdar, FP7, Innovation2030. Un travail d'alignement des participants au projets et fait avec des méthodes diverses et variées:
+   - utilisant des algorithmes de matching sur les nom, adresses,
+   - manuels
+   - utilisant des données d'organisme de recherche.
+
+  Une collection scanR est également exposée. Cette dernière est une vue des données présente dans la collection 'families' exportée avec un modèle de donnée utilisable dans scanR. Les données présentes dans `participants` et `patents` sont également intégrés pôur chaque famille de brevet. Cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
 
 <details>
   <summary>Voir le modèle de donnée des projets</summary>
 
   ```json
   {
-    "input_address": {
-      "type": "string",
-      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
-    },
-    "housenumber": {
-      "type": "string",
-      "description": "Numéro de rue",
-    },
-    "street": {
-      "type": "string",
-      "description": "Nome de la voie",
-    },
-    "post_code": {
-      "type": "string",
-      "description": "Code postal",
-    },
-    "city_code": {
-      "type": "string",
-      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
-    },
-    "city": {
-      "type": "string",
-      "description": "Ville",
-    },
-    "country": {
-      "type": "string",
-      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
-    },
-    "geocoded": {
-      "type": "boolean",
-      "description": "Un booléen -- True si le géocodage est un succès",
-    },
-    "score": {
-      "type": "numeric",
-      "description": "Score du géocodeur",
-    },
-    "precision": {
-      "type": "string",
-      "description": "Précision du résultat -- housenumber, street etc.",
-    },
-    "provider": {
-      "type": "string",
-      "description": "Fournisseur du service",
-    },
-    "coordinates": {
-      "type": "object",
-      "schema": {
-        "lat": {
-          "type": "numeric",
-          "description": "latitude"
-        },
-        "lon": {
-          "type": "numeric",
-          "description": "longitude"
-        }
+      "id": {
+          "type": "string"
+      },
+      "type": {
+          "type": "string"
+      },
+      "stage": {
+          "type": "string"
+      },
+      "status": {
+          "type": "string"
+      },
+      "name": {
+          "type": "object",
+          "schema": {
+              "default": {
+                  "type": "string"
+              },
+              "fr": {
+                  "type": "string"
+              },
+              "en": {
+                  "type": "string"
+              },
+              "modified_by": {
+                  "type": "string"
+              },
+              "modified_at": {
+                  "type": "string"
+              },
+              "source": {
+                  "type": "string"
+              }
+          }
+      },
+      "description": {
+          "type": "object",
+          "schema": {
+              "default": {
+                  "type": "string"
+              },
+              "fr": {
+                  "type": "string"
+              },
+              "en": {
+                  "type": "string"
+              },
+              "modified_by": {
+                  "type": "string"
+              },
+              "modified_at": {
+                  "type": "string"
+              },
+              "source": {
+                  "type": "string"
+              }
+          }
+      },
+      "acronym": {
+          "type": "string"
+      },
+      "keywords_en": {
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "keywords_fr": {
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "comment": {
+          "description": "Commentaire sur le projet",
+          "type": "string"
+      },
+      "year": {
+          "type": "integer"
+      },
+      "signature_date": {
+          "type": "datetime"
+      },
+      "start_date": {
+          "type": "datetime"
+      },
+      "end_date": {
+          "type": "datetime"
+      },
+      "budget_total": {
+          "type": "number"
+      },
+      "dg_code": {
+          "type": "string",
+          "description": ""
+      },
+      "budget_financed": {
+          "type": "number"
+      },
+      "duration": {
+          "type": "integer"
+      },
+      "source_url": {
+          "type": "string"
+      },
+      "project_website": {
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "number_participant": {
+          "type": "integer"
+      },
+      "thematics": {
+          "description": "#dataESR domains",
+          "type": "list",
+          "schema": "thematics"
+      },
+      "call_code": {
+          "type": "string"
+      },
+      "call_date": {
+          "type": "datetime"
+      },
+      "call_name": {
+          "type": "string"
+      },
+      "call_year": {
+          "type": "string"
+      },
+      "topic_code": {
+          "type": "string"
+      },
+      "topic_name": {
+          "type": "string"
+      },
+      "msca_code": {
+          "type": "string",
+          "description": ""
+      },
+      "msca_name": {
+          "type": "string",
+          "description": ""
+      },
+      "action": {
+          "description": "#dataESR domains",
+          "type": "list",
+          "schema": {
+              "type": "object",
+              "schema": {
+                  "code": {
+                      "type": "string"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "level": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "priorities": {
+          "description": "EU priorities",
+          "type": "list",
+          "schema": {
+              "type": "object",
+              "schema": {
+                  "code": {
+                      "type": "string"
+                  },
+                  "name": {
+                      "type": "string"
+                  },
+                  "level": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "panels": {
+          "description": "#dataESR domains",
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "persons": {
+          "type": "list",
+          "description": "",
+          "schema": {
+              "type": "dict",
+              "schema": {
+                  "id": {
+                      "type": "string",
+                  },
+                  "identified": {
+                      "type": "boolean"
+                  },
+                  "role": {
+                      "type": "string"
+                  },
+                  "first_name": {
+                      "type": "string"
+                  },
+                  "last_name": {
+                      "type": "string"
+                  }
+              }
+          }
+      },
+      "focus": {
+          "description": "all focus",
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "badges": {
+          "description": "all badges",
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "similar_projects": {
+          "description": "all badges",
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
+      },
+      "related_projects": {
+          "description": "all badges",
+          "type": "list",
+          "schema": {
+              "type": "string"
+          }
       }
-    }
   }
   ```
 </details>
@@ -1369,69 +1560,116 @@ Ce service expose une API de géocodage, qui utilise les services de adresse.gou
 
   ```json
   {
-    "input_address": {
-      "type": "string",
-      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
-    },
-    "housenumber": {
-      "type": "string",
-      "description": "Numéro de rue",
-    },
-    "street": {
-      "type": "string",
-      "description": "Nome de la voie",
-    },
-    "post_code": {
-      "type": "string",
-      "description": "Code postal",
-    },
-    "city_code": {
-      "type": "string",
-      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
-    },
-    "city": {
-      "type": "string",
-      "description": "Ville",
-    },
-    "country": {
-      "type": "string",
-      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
-    },
-    "geocoded": {
-      "type": "boolean",
-      "description": "Un booléen -- True si le géocodage est un succès",
-    },
-    "score": {
-      "type": "numeric",
-      "description": "Score du géocodeur",
-    },
-    "precision": {
-      "type": "string",
-      "description": "Précision du résultat -- housenumber, street etc.",
-    },
-    "provider": {
-      "type": "string",
-      "description": "Fournisseur du service",
-    },
-    "coordinates": {
-      "type": "object",
-      "schema": {
-        "lat": {
-          "type": "numeric",
-          "description": "latitude"
-        },
-        "lon": {
-          "type": "numeric",
-          "description": "longitude"
-        }
+      "id": {
+          "type": "string"
+      },
+      "identified": {
+          "type": "boolean"
+      },
+      "project_id": {
+          "type": "string"
+      },
+      "project_type": {
+          "type": "string"
+      },
+      "pic_id": {
+          "type": "string"
+      },
+      "pic_id_2": {
+          "type": "string"
+      },
+      "vat_id": {
+          "type": "string"
+      },
+      "participant_id": {
+          "type": "string"
+      },
+      "participant_id_0": {
+          "type": "string"
+      },
+      "organizations_id": {
+          "type": "string"
+      },
+      "pme": {
+          "type": "string"
+      },
+      "stage": {
+          "type": "string"
+      },
+      "acronym": {
+          "type": "string"
+      },
+      "acronym_source": {
+          "type": "string"
+      },
+      "participates_as": {
+          "type": "string"
+      },
+      "global_costs": {
+          "type": "string"
+      },
+      "funding": {
+          "type": "string"
+      },
+      "funding_share": {
+          "type": "string"
+      },
+      "role": {
+          "type": "string"
+      },
+      "name": {
+          "type": "string"
+      },
+      "name_source": {
+          "type": "string"
+      },
+      "status": {
+          "type": "string"
+      },
+      "participant_order": {
+          "type": "string"
+      },
+      "participant_type_code": {
+          "type": "string"
+      },
+      "participant_type_name": {
+          "type": "string"
+      },
+      "website": {
+          "type": "string"
+      },
+      "address": {
+          "type": "object",
+          "schema": {
+              "address": {
+                  "type": "string"
+              },
+              "city": {
+                  "type": "string"
+              },
+              "post_code": {
+                  "type": "string"
+              },
+              "country": {
+                  "type": "string"
+              },
+              "country_code": {
+                  "type": "string"
+              },
+              "country_level_2": {
+                  "type": "string"
+              },
+              "country_level_1": {
+                  "type": "string"
+              }
+          }
       }
-    }
   }
   ```
 </details>
 
 
-### 3.5 Projects
+### 3.5 Patents (inventions)
 Voir sur: [*Github Repos*](https://github.com/dataesr/patents), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/patents), [*Documentation*](http://185.161.45.213/patents/doc)
 - *Stockage de données*: OUI
 - *Acces mongo*: OUI
@@ -1441,70 +1679,316 @@ Voir sur: [*Github Repos*](https://github.com/dataesr/patents), [*Docker image*]
 - *Fonctionnalité(s)*:
   - Expose les données d'inventions. Relie les participants à une organisation de #dataesr.
 
-Ce service expose une API de géocodage, qui utilise les services de adresse.gouv.fr et d'openstreetmap afin de géocoder une adresse postale. Elle renvoie une adresse géocodée dans le format adresse de #dataesr. Les champs renvoyé sont un mapping des champs revoyés par les adresse.gouv.fr et/ou openstreetmap.
+Les données arrivent dans #dataesr via l'API de l'application. Une opération de matching avec les objets #dataesr est ensuite opérée.
+
+Les données de brevet sont traitées en amont par le département d'outils d'aide à la décision avec comme données source ... Une attention particulière est portée au dédoublonnage des déposants et inventeurs et un matching de ces derniers avec les bases de données d'organisation et ou de personnes permet de relier invention et organisation.
+
+Une collection scanR est également exposée. Cette dernière est une vue des données présente dans la collection 'families' exportée avec un modèle de donnée utilisable dans scanR. Les données présentes dans `participants` et `patents` sont également intégrés pôur chaque famille de brevet. Cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
 
 <details>
-  <summary>Voir le modèle de donnée des participations</summary>
+  <summary>Voir le modèle de donnée des Invention</summary>
 
   ```json
   {
-    "input_address": {
-      "type": "string",
-      "description": "Adresse renseignée dans le champs 'location' de l'API par l'utilisateur"
+    "id": {
+        "description": "Identifiant de la famille - docdb_family_id de patstat",
+        "type": "string"
     },
-    "housenumber": {
-      "type": "string",
-      "description": "Numéro de rue",
+    "title_fr": {
+        "description": "Titre français du premier dépôt",
+        "type": "string"
     },
-    "street": {
-      "type": "string",
-      "description": "Nome de la voie",
+    "title_en": {
+        "description": "Titre anglais du premier dépôt",
+        "type": "string"
     },
-    "post_code": {
-      "type": "string",
-      "description": "Code postal",
+    "title_default": {
+        "description": "Titre par défaut du premier dépôt, quand il n'y a pas de français ou anglais",
+        "type": "string"
     },
-    "city_code": {
-      "type": "string",
-      "description": "Code commune -- seulement pour les adresses françaises et comme provider adress.data.gouv.fr"
+    "title_default_language": {
+        "description": "Langue du titre par défaut",
+        "type": "string"
     },
-    "city": {
-      "type": "string",
-      "description": "Ville",
+    "abstract_fr": {
+        "description": "Résumé français du premier dépôt",
+        "type": "string"
     },
-    "country": {
-      "type": "string",
-      "description": "Pays -- France par default avec provider adress.data.gouv.fr",
+    "abstract_en": {
+        "description": "Résumé anglais du premier dépôt",
+        "type": "string"
     },
-    "geocoded": {
-      "type": "boolean",
-      "description": "Un booléen -- True si le géocodage est un succès",
+    "abstract_default": {
+        "description": "Résumé par défaut du premier dépôt, quand il n'y a pas de français ou anglais",
+        "type": "string"
     },
-    "score": {
-      "type": "numeric",
-      "description": "Score du géocodeur",
+    "abstract_default_language": {
+        "description": "Langue du Résumé par défaut",
+        "type": "string"
     },
-    "precision": {
-      "type": "string",
-      "description": "Précision du résultat -- housenumber, street etc.",
+    "is_granted": {
+        "description": "vaut 1 si au moins 1 des demandes de cette famille a été brevetée",
+        "type": "boolean"
     },
-    "provider": {
-      "type": "string",
-      "description": "Fournisseur du service",
+    "date_first_granted": {
+        "description": "date du premier brevet délivré dans la famille",
+        "type": "datetime"
     },
-    "coordinates": {
-      "type": "object",
-      "schema": {
-        "lat": {
-          "type": "numeric",
-          "description": "latitude"
-        },
-        "lon": {
-          "type": "numeric",
-          "description": "longitude"
-        }
-      }
+    "is_international": {
+        "description": "vaut 1 s'il y a eu un dépôt international",
+        "type": "boolean"
+    },
+    "is_oeb": {
+        "description": "vaut 1 s'il y a eu un dépôt à l'OEB",
+        "type": "boolean"
+    },
+    "earliest_application_date": {
+        "description": "date de premier dépôt",
+        "type": "datetime"
+    },
+    "earliest_publication_date": {
+        "description": "date de première publication",
+        "type": "datetime"
+    },
+    "patents_count": {
+        "description": "Nombre de demandes de brevets dans la famille",
+        "type": "integer"
+    },
+    "design_patents_count": {
+        "description": "Nombre de dessins dans la famille",
+        "type": "integer"
+    },
+    "utility_models_count": {
+        "description": "Nombre de modèles d'utilité dans la famille",
+        "type": "integer"
+    },
+    "inpadoc_family_id": {
+       "description": "identifiant INPADOC de la famille élargie à laquelle appartient la famille DOCDB",
+       "type": "string"
     }
+  }
+  ```
+</details>
+<details>
+  <summary>Voir le modèle de donnée des brevets</summary>
+
+  ```json
+  {
+    "id": {
+        "description": "Identifiant EPODOC de la demande",
+        "type": "string"
+    },
+    "patent_family_id": {
+        "description": "Patent family the patent belongs to.",
+        "type": "string"
+    },
+    "original_application_number": {
+        "description": "Numéro de dépôt original",
+        "type": "string"
+    },
+    "publication_number": {
+        "description": "Numéro de publication",
+        "type": "string"
+    },
+    "is_priority": {
+      "description": "Ce dépôt est un dépôt prioritaire de la famille (1 oui/0 non)",
+      "type": "boolean"
+    },
+    "office": {
+        "description": "Office de dépôt de propriété industrielle (string 2)",
+        "type": "string"
+    },
+    "industrial_property_type": {
+        "description": "Type de propriété industrielle : brevet (PI), dessin (DP) ou modèle d'utilité (UM)",
+        "type": "string"
+    },
+    "application_type": {
+        "description": "Type de dépôt : brevet princeps, brevet de perfectionnement ",
+        "type": "string"
+    },
+    "application_date": {
+        "description": "Date de dépôt de la demande",
+        "type": "datetime"
+    },
+    "publication_date": {
+        "description": "Date de publication à 18 mois",
+        "type": "datetime"
+    },
+    "granted": {
+        "description": "délivrance Y/N",
+        "type": "boolean"
+    },
+    "granted_date": {
+        "description": "Date de délivrance",
+        "type": "datetime"
+    },
+    "granted_publication_number": {
+        "description": "Numéro de publication de la délivrance",
+        "type": "string"
+    },
+    "title": {
+        "description": "Titre de la demande de PI",
+        "type": "string"
+    },
+    "title_language": {
+        "description": "Langue du titre (string 2)",
+        "type": "string"
+    },
+    "abstract": {
+        "description": "Résumé de l'invention",
+        "type": "string"
+    },
+    "abstract_language": {
+        "description": "Langue du résumé (string 2)",
+        "type": "string"
+    },
+    "technologies": {
+        "description": "technologies",
+        "type": "list",
+        "schema": {
+            "type": "object",
+            "schema": {
+                "classification": {
+                    "description": "type de classification : CPC (cooperative patent classification), IPC (international patent classification,DE (domaine emergent)",
+                    "type": "string"
+                },
+                "niveau": {
+                    "description": " Niveau de la classification",
+                    "type": "string"
+                },
+                "code": {
+                    "description": "code par exemple D01D 5/10",
+                    "type": "string"
+                },
+                "libelle": {
+                    "description": "libelle du code de classification",
+                    "type": "string"
+                }
+            }
+        }
+    }
+  }
+  ```
+</details>
+<details>
+  <summary>Voir le modèle de donnée des participants</summary>
+
+  ```json
+  {
+      "id": {
+          "description": "Unique participation identifier",
+          "type": "string"
+      },
+      "id_patent": {
+          "description": "Identifiant de la demande de brevet - numero epodoc de patstat",
+          "type": "string"
+      },
+      "id_participant": {
+          "description": "Identifiant du participant brut - person_id de patstat",
+          "type": "string"
+      },
+      "id_dataesr": {
+          "description": "dataesr id",
+          "type": "string"
+      },
+      "id_identified": {
+          "description": "dataesr id",
+          "type": "string"
+      },
+      "participates_as": {
+          "description": "les rôles du participant : déposant, inventeur ...",
+          "type": "list",
+          "schema": {
+              "type": "object",
+              "schema": {
+                   "role": {
+                      "description": "deposant, inventeur, titulaire ...",
+                      "type": "string"
+                  },
+                  "seq": {
+                      "description": "ordre d'inscription du déposant ou de l'inventeur",
+                      "type": "integer"
+                  },
+                  "date_part_debut": {
+                      "description": "date début participation : changement de titulaire, licensié",
+                      "type": "datetime"
+                  },
+                  "date_part_fin": {
+                      "description": "date fin participation : changement de titulaire (cession)",
+                      "type": "datetime"
+                  }
+              }
+          }
+      },
+      "name_source": {
+          "description": "Name provided by the source",
+          "type": "string"
+      },
+      "name_corrected": {
+          "description": "Name provided by the source",
+          "type": "string"
+      },
+      "first_name": {
+          "description": "Prénom",
+          "type": "string"
+      },
+      "last_name": {
+          "description": "Nom",
+          "type": "string"
+      },
+      "sexe": {
+          "description": "sexe F/M",
+          "type": "string"
+      },
+      "company_name": {
+          "description": "libelle entreprise",
+          "type": "string"
+      },
+      "type": {
+          "description": "personne physique (PP) ou personne morale (PM) ",
+          "type": "string"
+      },
+      "address_source": {
+          "description": "Adresse source",
+          "type": "string"
+      },
+      "address_corrected": {
+          "description": "Adresse source",
+          "type": "string"
+      },
+      "country_source": {
+          "description": "Pays déclaré du participant",
+          "type": "string"
+      },
+      "country_corrected": {
+          "description": "Pays déclaré du participant",
+          "type": "string"
+      },
+      "post_code": {
+          "description": "Code postal",
+          "type": "string"
+      },
+      "city_code": {
+          "description": "code_commune",
+          "type": "string"
+      },
+      "id_external": {
+          "description": "identifiants extérieurs du participant",
+          "type": "list",
+          "schema": {
+              "type": "object",
+              "schema": {
+                  "id_type": {
+                      "description": "source de l'identifiant du participant (siren,orchid,idref)",
+                      "type": "string"
+                  },
+                  "id_value": {
+                      "description": "valeur de l'identifiant",
+                      "type": "string"
+                  }
+              }
+          }
+      }
   }
   ```
 </details>
