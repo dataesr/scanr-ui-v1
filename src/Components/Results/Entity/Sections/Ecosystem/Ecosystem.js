@@ -283,7 +283,7 @@ class Ecosystem extends Component {
               {
                 this.state.frIntFilter.map(item => (
                   <option key={item.value} value={item.value}>
-                    {`${item.value} (${item.count})`}
+                    {`${messages[this.props.language][item.value]} (${item.count})`}
                   </option>
                 ))
               }
