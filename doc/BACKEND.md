@@ -2016,6 +2016,7 @@ Cette application expose une API RESTful pour les collections suivantes :
  - 'unpwayll_dump' qui contient les données issues du feed hebdomadaire de Unpaywall
  - 'openapc_dump' dump, pas utilisé à ce jour
  - 'opencitations_dump' dump, pas utilisé à ce jour
+
 Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
 
 De plus, deux points d'entrées spécifiques existent :
@@ -2059,8 +2060,16 @@ Cette application expose une API RESTful pour les collections suivantes :
  - 'notices_persons' qui contient le code XML des notices IdRef et Orcid
 Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
 
+La collection 'notices_persons' contient les informations disponibles dans les notices IdRef et Orcid. La correspondance entre les identifiants IdRef et Orcid est directement présente dans la fiche IdRef (le traitement de matching est effectué annuellement par l'ABES en charge d'IdRef).
+La collection 'persons' contient les mêmes informations miseis en forme selon le schéma de données dataESR.
+
 De plus, un point d'entrée pour le matching existe :
- 
+ - /persons/_match
+Il prend en entrée une liste de couples (nom, prénom). La procédure suivante est appliquée pour tenter de retrouver l'IdRef de chacun de ces nom/prénom :
+1. On parcourt la liste des noms/prénoms, et pour chacun, s'il est possible de retrouver l'identifiant idref sans ambiguité (une et une seule correspondance exacte), l'identifcation de ce nom/prénom est faite.
+2. Ensuite, pour les nom/prénom restants, pour ceux où il y a une ambiguité (cas des homonymes), on utilise la liste des co-auteurs (issue du Sudoc, et dans les données IdRef) pour léver les ambiguités à partir des nom/prénom déjà identifiés dans l'étape 1.
+
+Ce point d'entrée est utilisé pour attribuer l'identifiant idref aux auteurs des publications. Ce traitement est asynchrone et est effectué régulièrement sur les publications.
 
 <details>
   <summary>Voir le modèle de donnée des persons</summary>
