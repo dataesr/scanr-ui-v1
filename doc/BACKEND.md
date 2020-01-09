@@ -1994,6 +1994,94 @@ Une collection scanR est également exposée. Cette dernière est une vue des do
 </details>
 
 
+### 3.X Publications
+
+Voir sur [*Github*](http://https://github.com/dataesr/publications), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/publications), [*Swagger*](http://185.161.45.213/publications/doc)
+
+- *Stockage de données*: OUI
+- *Acces mongo*: OUI
+- *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
+- *Dépendances interne*: aucune.
+- *Dépendances externe*: Persons, Projects, Organizations, Datastore, API de HAL.
+
+Application dédiée aux publications dans #dataesr. Elle est en charge:
+1. de l'exposition d'une API pour les données des publications (avec notamment la mise à jour des données venant de Unpaywall et de HAL)
+2. de l'export de ces données en une version compatible avec l'application scanR,
+
+#### 3.X.1 APIs et export
+
+Cette application expose une API RESTful pour les collections suivantes : 
+ - 'publications' qui est un ensemble de documents représentant des publications. 
+ - 'notices_publications' qui contient le code HTML des pages web scrappées pour chaque doi
+ - 'unpwayll_dump' qui contient les données issues du feed hebdomadaire de Unpaywall
+ - 'openapc_dump' dump, pas utilisé à ce jour
+ - 'opencitations_dump' dump, pas utilisé à ce jour
+
+Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
+
+De plus, deux points d'entrées spécifiques existent :
+ - /hal_publication pour la collecte / mise à jour d'une publication venant de HAL (utilise l'API de HAL)
+ - /unpaywall_publication pour la collecte / mise à jour d'une publication venant de Unpaywall (à partir de la collection 'unpaywall_dump')
+
+Pour ces deux points d'entrées, les méta-données de publications sont collectées et transformées dans un format compatible avec le modèle de données des publications dans dataESR.
+De plus, quand la page web du DOI a été scrappée (présente dans la collection 'notices_publications'), le code HTML est parsé (avec BeautifulSoup) pour enrichir les meta-données de la publication concernant les affiliations.
+
+Enfin, le point d'entrée /update permet de fusionner toutes les informations disponibles concernant la publication. Ainsi, pour une publication déjà en base, par exemple si une donnée supplémentaire concernant les affiliations arrive (par l'un des deux endpoints précédents), la route 'update' se charge d'ajouter l'information sans pour autant créer de doublons. Par défaut, les routes 'hal_publication' et 'unpaywall_publication' appellent déjà la route 'update'.
+ 
+
+<details>
+  <summary>Voir le modèle de donnée des publications</summary>
+
+  ```json
+  ```
+</details>
+<br/>
+
+Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'publications' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
+
+### 3.XX Personnes
+
+Voir sur [*Github*](http://https://github.com/dataesr/persons), [*Docker*](http://https://hub.docker.com/repository/docker/dataesr/persons), [*Swagger*](http://185.161.45.213/persons/doc)
+
+- *Stockage de données*: OUI
+- *Acces mongo*: OUI
+- *Missions*: Collecte de données, Transformation de données, Exposition API de données, Export de données
+- *Dépendances interne*: aucune.
+- *Dépendances externe*: API Idref, API ORCID
+
+Application dédiée aux personnes dans #dataesr. Elle est en charge:
+1. de l'exposition d'une API pour les données des personnes (avec notamment la mise à jour des données venant de IdRef et ORCID)
+2. de l'export de ces données en une version compatible avec l'application scanR,
+
+#### 3.XX.1 APIs et export
+
+Cette application expose une API RESTful pour les collections suivantes : 
+ - 'persons' qui est un ensemble de documents représentant des personnes. 
+ - 'notices_persons' qui contient le code XML des notices IdRef et Orcid
+Cette API permet toutes les opérations CRUD à savoir le GET, POST, PATCH et DELETE.
+
+La collection 'notices_persons' contient les informations disponibles dans les notices IdRef et Orcid. La correspondance entre les identifiants IdRef et Orcid est directement présente dans la fiche IdRef (le traitement de matching est effectué annuellement par l'ABES en charge d'IdRef).
+La collection 'persons' contient les mêmes informations miseis en forme selon le schéma de données dataESR.
+
+De plus, un point d'entrée pour le matching existe :
+ - /persons/_match
+Il prend en entrée une liste de couples (nom, prénom). La procédure suivante est appliquée pour tenter de retrouver l'IdRef de chacun de ces nom/prénom :
+1. On parcourt la liste des noms/prénoms, et pour chacun, s'il est possible de retrouver l'identifiant idref sans ambiguité (une et une seule correspondance exacte), l'identifcation de ce nom/prénom est faite.
+2. Ensuite, pour les nom/prénom restants, pour ceux où il y a une ambiguité (cas des homonymes), on utilise la liste des co-auteurs (issue du Sudoc, et dans les données IdRef) pour léver les ambiguités à partir des nom/prénom déjà identifiés dans l'étape 1.
+
+Ce point d'entrée est utilisé pour attribuer l'identifiant idref aux auteurs des publications. Ce traitement est asynchrone et est effectué régulièrement sur les publications.
+
+<details>
+  <summary>Voir le modèle de donnée des persons</summary>
+
+  ```json
+  ```
+</details>
+<br/>
+
+Une collection scanR est egalement exposée. Cette dernière est une vue des données présente dans la collection 'persons' exportée avec un modèle de donnée utilisable dans scanR. C'est cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
+
+
 ### 3.8 UI
 
 [*Github Repos*](//https://github.com/dataesr/nginx), [*Docker image*](https://hub.docker.com/repository/docker/dataesr/nginx)
