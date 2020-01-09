@@ -103,19 +103,36 @@ const EntityCard = (props) => {
     )
     : null;
 
+  const country = (props.data.country)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-map-marker" />
+        </div>
+        <p className="m-0">
+          {props.data.country}
+        </p>
+      </li>
+    )
+    : null;
 
   return (
     <React.Fragment>
       <IntlProvider locale={props.language} messages={messages[props.language]}>
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle} ${classes.blockWithText}`}>
-            <a href={`entite/${props.data.id}`}>
-              {getSelectedKey(props.data, 'label', props.language, 'default')}
-            </a>
+            {
+              (props.data.id) ? (
+                <a href={`entite/${props.data.id}`}>
+                  {getSelectedKey(props.data, 'label', props.language, 'default')}
+                </a>
+              ) : getSelectedKey(props.data, 'label', props.language, 'default')
+            }
           </h3>
           <ul className="m-0 p-0">
             {kind}
             {address}
+            {country}
             {identifier}
             <hr className={`mb-2 mt-2 ${classes.HighlightEntitySep}`} aria-hidden="true" />
             {highlight}
