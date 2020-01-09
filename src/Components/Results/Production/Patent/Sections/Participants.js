@@ -25,19 +25,22 @@ const PatentParticipants = (props) => {
   });
   inventors = [...new Set(inventors.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
 
-  let depos = props.data.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
-    const [label, country] = auth.fullName.split('__');
-    return { label, country: countries[props.language][country], id: (auth.affiliations && auth.affiliations.length) && auth.affiliations[0].structure };
+  let depos = props.data.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+    const [label, country] = deposant.fullName.split('__');
+    return { label, country: countries[props.language][country], id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
   });
   depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
   const deposants = [];
-  depos.forEach((dep) => {
-    const newdep = { ...dep };
-    const structure = props.affiliations.find(aff => aff.id === dep.id);
+  depos.forEach((deposant) => {
+    const newdep = { ...deposant };
+    const structure = props.affiliations.find(aff => aff.id === deposant.id) || {};
+    if (!deposant.id) {
+      structure.label = { default: deposant.label, fr: deposant.label };
+      structure.country = deposant.country || null;
+    }
     newdep.structure = structure;
     deposants.push(newdep);
   });
-
   const nbInventorsToShow = 4;
 
   return (
@@ -92,6 +95,7 @@ const PatentParticipants = (props) => {
                     labelKey="other-inventors"
                     modalTitleKey="inventors-modal-title"
                     color="MiddleGrey"
+                    isPerson
                   />
                 </div>
               ) : null
@@ -120,12 +124,12 @@ const PatentParticipants = (props) => {
               ) : null
           }
           {
-            deposants.map((dep, index) => {
+            deposants.map((deposant, index) => {
               if (index < nbInventorsToShow) {
                 return (
                   <div className={`col-md-6 ${classes.CardContainer}`}>
                     <EntityCard
-                      data={dep}
+                      data={deposant}
                       showTitle={false}
                       className={classes.BGLightGrey}
                       language={props.language}
