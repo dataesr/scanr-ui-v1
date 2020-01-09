@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 import PersonCard from '../../../Search/Results/ResultCards/PersonCard';
-import AffiliationCard from '../../../Search/Results/ResultCards/EntityCard';
+import EntityCard from '../../../Search/Results/ResultCards/EntityCard';
 
 import classes from './CounterListCard.scss';
 
@@ -44,9 +44,9 @@ const CounterListCard = (props) => {
     if (props.isEntity) {
       return (
         <li key={item}>
-          <AffiliationCard
+          <EntityCard
             language={props.language}
-            data={item}
+            data={item.structure}
             small
           />
         </li>
