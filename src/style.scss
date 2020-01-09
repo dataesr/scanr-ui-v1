@@ -510,3 +510,15 @@ $cardTitleBgColor: $scanrlightgreyColor;
     padding: 0.25em;
   }
 }
+.AlertMessageSection {
+  background-color: $scanrlightgreyColor;
+  padding-top: 24px;
+}
+.AlertMessage {
+  background-color: white;
+  color: $scanrdeepblueColor;
+  border: 2px solid $scanrdeepblueColor;
+  border-radius: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
