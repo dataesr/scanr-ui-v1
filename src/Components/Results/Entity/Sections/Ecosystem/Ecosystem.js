@@ -208,13 +208,13 @@ class Ecosystem extends Component {
     }
     // Tri des données filtrées avant affichage
     const dataSorted = this.state.data.sort((a, b) => {
-      const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0);
-      const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0);
+      const prodA = ((a.details.Project) ? a.details.Project : 0) + ((a.details.publication) ? a.details.publication : 0) + ((a.details.thesis) ? a.details.thesis : 0) + ((a.details.patent) ? a.details.patent : 0);
+      const prodB = ((b.details.Project) ? b.details.Project : 0) + ((b.details.publication) ? b.details.publication : 0) + ((b.details.thesis) ? b.details.thesis : 0) + ((b.details.patent) ? b.details.patent : 0);
       return prodB - prodA;
     });
 
     const content = dataSorted.map((data, index) => {
-      const jointProductions = (data.details.publication || 0) + (data.details.Project || 0);
+      const jointProductions = (data.details.publication || 0) + (data.details.thesis || 0) + (data.details.Project || 0) + (data.details.patent || 0);
       let selected = '';
       if (data === this.state.selectedCollaboration) {
         selected = classes.Selected;
@@ -253,12 +253,38 @@ class Ecosystem extends Component {
     const dataSimple = [];
     if (this.state.selectedCollaboration) {
       if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.publication) {
-        dataSimple.push(<div className="col"><CounterDataSimple title="Publications" value={this.state.selectedCollaboration.details.publication} /></div>);
+        dataSimple.push(<div className="col-6"><CounterDataSimple title="Publications" value={this.state.selectedCollaboration.details.publication} /></div>);
       }
       if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.Project) {
-        dataSimple.push(<div className="col"><CounterDataSimple title={(this.props.language === 'fr') ? 'Projets' : 'Projects'} value={this.state.selectedCollaboration.details.Project} /></div>);
+        dataSimple.push(<div className="col-6"><CounterDataSimple title={(this.props.language === 'fr') ? 'Projets' : 'Projects'} value={this.state.selectedCollaboration.details.Project} /></div>);
+      }
+      if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.thesis) {
+        dataSimple.push(<div className="col-6"><CounterDataSimple title={(this.props.language === 'fr') ? 'Thèses' : 'Thesis'} value={this.state.selectedCollaboration.details.thesis} /></div>);
+      }
+      if (this.state.selectedCollaboration.details && this.state.selectedCollaboration.details.patent) {
+        dataSimple.push(<div className="col-6"><CounterDataSimple title={(this.props.language === 'fr') ? 'Inventions' : 'Inventions'} value={this.state.selectedCollaboration.details.patent} /></div>);
       }
     }
+
+    const addressTab = [];
+    if (this.state.selectedCollaboration.structure) {
+      if (this.state.selectedCollaboration.structure.address[0].address) {
+        addressTab.push(this.state.selectedCollaboration.structure.address[0].address);
+      }
+      if (this.state.selectedCollaboration.structure.address[0].citycode) {
+        addressTab.push(this.state.selectedCollaboration.structure.address[0].citycode);
+      }
+      if (this.state.selectedCollaboration.structure.address[0].city) {
+        addressTab.push(this.state.selectedCollaboration.structure.address[0].city);
+      }
+    }
+
+    const address = (addressTab.length > 0) ? (
+      <p>
+        <i className="fas fa-map-marker pr-2" />
+        {addressTab.join(' - ')}
+      </p>
+    ) : '';
 
     return (
       <Fragment>
@@ -305,11 +331,7 @@ class Ecosystem extends Component {
                     </div>
                     {
                       (this.state.selectedCollaboration.structure && this.state.selectedCollaboration.structure.address && this.state.selectedCollaboration.structure.address[0])
-                        ? (
-                          <p>
-                            {`${this.state.selectedCollaboration.structure.address[0].address || ''} - ${this.state.selectedCollaboration.structure.address[0].citycode} - ${this.state.selectedCollaboration.structure.address[0].city}`}
-                          </p>
-                        ) : null
+                        ? address : null
                     }
                     <hr className={classes.Hr} />
                     <h4>
