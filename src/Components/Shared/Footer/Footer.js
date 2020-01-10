@@ -78,9 +78,7 @@ const Footer = () => {
               </p>
             </Modal.Header>
             <Modal.Body className={classes.Content}>
-              <FormContact
-                language={context.language}
-              />
+              <FormContact language={context.language} apiName="contact" />
             </Modal.Body>
           </Modal>
         </Fragment>
