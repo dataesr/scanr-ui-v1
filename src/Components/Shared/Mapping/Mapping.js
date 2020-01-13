@@ -12,6 +12,14 @@ const msg = {
   en: messagesEn,
 };
 
+/**
+ * Mapping
+ * Url : <br/>
+ * Description : Utilisée pour traduire les libellés des retours d'api et non pour l'UI<br/>
+ * Responsive : . <br/>
+ * Accessible : . <br/>
+ * Tests
+ */
 const Mapping = (props) => {
   const context = useContext(GlobalContext);
 
