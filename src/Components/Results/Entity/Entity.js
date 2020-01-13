@@ -1,5 +1,5 @@
 import React from 'react';
-import { IntlProvider } from 'react-intl';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -91,6 +91,16 @@ const Entity = (props) => {
           id={id}
           isFull={scrollY === 0}
         />
+        {
+          (!data.isFrench) ? (
+            <div className={styles.AlertMessageSection}>
+              <div className={`container ${styles.AlertMessage}`}>
+                <i className="fas fa-exclamation-triangle mr-2" />
+                <FormattedHTMLMessage id="isNotFrench.label" />
+              </div>
+            </div>
+          ) : null
+        }
         <SectionEntity id="Portrait">
           <div className="container">
             <SectionTitle
