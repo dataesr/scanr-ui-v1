@@ -227,10 +227,6 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
-              imageName="logo-irstea.svg"
-              cssClass="CardLogo"
-            />
-            <RedirectingLogoCard
               imageName="logo-simv.svg"
               cssClass="CardLogo"
             />
@@ -238,11 +234,11 @@ class Ressources extends Component {
           <div className={`row ${classes.SourcesPart}`}>
             <div className={classes.SourcesCard}>
               <div className={classes.Title}>
-                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE DE LEUR PROPRES PARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF THEIR OWN PARTICIPANTS IN H2020 PROJECTS' }
+                {(this.props.language === 'fr') ? 'ONT CONTRIBUÉ AU REPÉRAGE DE LEURS PROPRES PARTICIPANTS DES PROJETS H2020' : 'CONTRIBUTED TO THE IDENTIFICATION OF THEIR OWN PARTICIPANTS IN H2020 PROJECTS' }
               </div>
             </div>
             <RedirectingLogoCard
-              imageName="logo-inra.svg"
+              imageName="logo-inrae.svg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
