@@ -12,26 +12,22 @@ const msg = {
   en: messagesEn,
 };
 
-/**
- * Mapping
- * Url : <br/>
- * Description : Utilisée pour traduire les libellés des retours d'api et non pour l'UI<br/>
- * Responsive : . <br/>
- * Accessible : . <br/>
- * Tests
- */
-const Mapping = (props) => {
+const DictionaryData = (props) => {
   const context = useContext(GlobalContext);
 
   return (
     <IntlProvider locale={context.language} messages={msg[context.language]}>
-      <FormattedHTMLMessage id={props.id} />
+      <FormattedHTMLMessage id={props.id} default={props.id} />
     </IntlProvider>
   );
 };
 
-export default Mapping;
 
-Mapping.propTypes = {
+DictionaryData.propTypes = {
   id: PropTypes.string.isRequired,
 };
+
+
+export const getDictionaryDataFromId = (id, language) => msg[language][id] || id;
+
+export default DictionaryData;
