@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
 
+import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
 import LogoCard from '../../../../../Shared/Ui/LogoCard/LogoCard';
 import getSelectKey from '../../../../../../Utils/getSelectKey';
@@ -36,9 +37,9 @@ const Identity = (props) => {
     return (
       <div className="col-6">
         <div className="row">
-          <h3 className={`col-12 ${classes.SubSectionTitle}`}>
-            <FormattedHTMLMessage id="Project.Informations.Identity.title" />
-          </h3>
+          <div className={`col-12 ${classes.NoSpace}`}>
+            <CardsTitle title={<FormattedHTMLMessage id="Project.Informations.Identity.title" />} />
+          </div>
           <div className={`col-6 ${classes.CardContainer}`}>
             <LogoCard
               language={props.language}
