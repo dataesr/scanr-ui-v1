@@ -67,7 +67,7 @@ const Informations = (props) => {
               <div className={`col-md-12 ${classes.CardContainer}`}>
                 <SimpleCardWithButton
                   language={props.language}
-                  logo="fas fa-calendar-day"
+                  logo="fas fa-fingerprint"
                   title={idName}
                   label={id}
                   url={externalLink}
