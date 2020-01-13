@@ -1,9 +1,13 @@
 import React, { Fragment } from 'react';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
+
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
 
 import classes from './ProductionDetail.scss';
 
@@ -16,6 +20,11 @@ import classes from './ProductionDetail.scss';
  * Tests unitaires : .
 */
 const ProductionDetail = (props) => {
+  const messages = {
+    fr: messagesFr,
+    en: messagesEn,
+  };
+
   if (Object.entries(props.data).length === 0) {
     return null;
   }
@@ -61,8 +70,15 @@ const ProductionDetail = (props) => {
       return { label, country };
     });
     deposants = [...new Set(deposants.map(i => JSON.stringify(i)))].length;
-    const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
-    return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
+    // const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
+    // return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
+    return (
+      <React.Fragment>
+        <FormattedHTMLMessage id="inventor" values={{ count: inventeurs }} />
+        ,&nbsp;
+        <FormattedHTMLMessage id="deposant" values={{ count: deposants }} />
+      </React.Fragment>
+    );
   };
 
   const maxAuthors = 2;
@@ -102,89 +118,91 @@ const ProductionDetail = (props) => {
 
 
   return (
-    <div className="d-flex flex-column h-100">
-      <p className={classes.detailTitle}>
-        {getSelectKey(props.data, 'title', props.language, 'default')}
-      </p>
-      <p className="m-0">
-        {
-          authors.reduce((prev, curr) => [prev, ', ', curr])
-        }
-        {' '}
-        {props.data.productionType === 'publication' && others}
-      </p>
-      <div>
-        <p className={classes.Grey}>
+    <IntlProvider locale={props.language} messages={messages[props.language]}>
+      <div className="d-flex flex-column h-100">
+        <p className={classes.detailTitle}>
+          {getSelectKey(props.data, 'title', props.language, 'default')}
+        </p>
+        <p className="m-0">
           {
-            (props.data.source && props.data.source.title)
-              ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${props.data.source.title}"]}}`} className={classes.Italic}>{props.data.source.title}</a>
-              : null
+            authors.reduce((prev, curr) => [prev, ', ', curr])
           }
-          {' | '}
-          {date}
+          {' '}
+          {props.data.productionType === 'publication' && others}
         </p>
-        <p className={classes.Grey}>
-          {id}
-        </p>
-      </div>
-      {
-        (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
-          ? <hr className={`w-100 ${classes[props.data.productionType]}`} />
-          : null
-      }
-      {
-        (getSelectKey(props.data, 'summary', props.language, 'default'))
-          ? (
-            <div className={classes.Summary}>
-              {getSelectKey(props.data, 'summary', props.language, 'default')}
-            </div>
-          )
-          : null
-      }
-      <div className={classes.Keywords}>
-        {
-          keywords.map(keyword => (
-            <Fragment key={keyword}>
-              <a href={`/recherche/all?query=${keyword}`}>
-                {`#${keyword}`}
-              </a>
-              &nbsp;
-            </Fragment>
-          ))
-        }
-      </div>
-      <hr className={`w-100 mt-auto ${classes[props.data.productionType]}`} />
-      <div className="d-flex justify-content-between flex-wrap">
-        <div className={`my-1 ${classes.Oa}`}>
-          {(props.data.isOa) ? (
-            <div className="d-flex align-items-center">
-              <span aria-hidden className={`fa-stack ${classes.isOa}`}>
-                <i className="fas fa-circle fa-stack-2x" />
-                <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
-              </span>
-              <ButtonToPage
-                className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
-                url={props.data.oaEvidence.url}
-                target="_blank"
-              >
-                {(props.language === 'fr') ? 'Accéder à la publication' : 'Access the publication'}
-              </ButtonToPage>
-            </div>
-          ) : (
-            <span className={`fa-stack ${classes.isNotOa}`}>
-              <i className="fas fa-circle fa-stack-2x" />
-              <i className="fas fa-lock fa-stack-1x fa-inverse" />
-            </span>
-          )}
+        <div>
+          <p className={classes.Grey}>
+            {
+              (props.data.source && props.data.source.title)
+                ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${props.data.source.title}"]}}`} className={classes.Italic}>{props.data.source.title}</a>
+                : null
+            }
+            {(props.data.source && props.data.source.title && date) ? ' | ' : null}
+            {date}
+          </p>
+          <p className={classes.Grey}>
+            {id}
+          </p>
         </div>
-        <ButtonToPage
-          className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
-          url={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}
-        >
-          Voir la publication dans scanR
-        </ButtonToPage>
+        {
+          (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
+            ? <hr className={`w-100 ${classes[props.data.productionType]}`} />
+            : null
+        }
+        {
+          (getSelectKey(props.data, 'summary', props.language, 'default'))
+            ? (
+              <div className={classes.Summary}>
+                {getSelectKey(props.data, 'summary', props.language, 'default')}
+              </div>
+            )
+            : null
+        }
+        <div className={classes.Keywords}>
+          {
+            keywords.map(keyword => (
+              <Fragment key={keyword}>
+                <a href={`/recherche/all?query=${keyword}`}>
+                  {`#${keyword}`}
+                </a>
+                &nbsp;
+              </Fragment>
+            ))
+          }
+        </div>
+        <hr className={`w-100 mt-auto ${classes[props.data.productionType]}`} />
+        <div className="d-flex justify-content-between flex-wrap">
+          <div className={`my-1 ${classes.Oa}`}>
+            {(props.data.isOa) ? (
+              <div className="d-flex align-items-center">
+                <span aria-hidden className={`fa-stack ${classes.isOa}`}>
+                  <i className="fas fa-circle fa-stack-2x" />
+                  <i className="fas fa-lock-open fa-stack-1x fa-inverse" />
+                </span>
+                <ButtonToPage
+                  className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
+                  url={props.data.oaEvidence.url}
+                  target="_blank"
+                >
+                  {(props.language === 'fr') ? 'Accéder à la publication' : 'Access the publication'}
+                </ButtonToPage>
+              </div>
+            ) : (
+              <span className={`fa-stack ${classes.isNotOa}`}>
+                <i className="fas fa-circle fa-stack-2x" />
+                <i className="fas fa-lock fa-stack-1x fa-inverse" />
+              </span>
+            )}
+          </div>
+          <ButtonToPage
+            className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
+            url={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}
+          >
+            Voir la publication dans scanR
+          </ButtonToPage>
+        </div>
       </div>
-    </div>
+    </IntlProvider>
   );
 };
 
