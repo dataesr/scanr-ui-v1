@@ -88,8 +88,14 @@ const PublicationCard = (props) => {
       return { label, country };
     });
     deposants = [...new Set(deposants.map(i => JSON.stringify(i)))].length;
-    const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
-    return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
+    // const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
+    return (
+      <React.Fragment>
+        <FormattedHTMLMessage id="inventor" values={{ count: inventeurs }} />
+        ,&nbsp;
+        <FormattedHTMLMessage id="deposant" values={{ count: deposants }} />
+      </React.Fragment>
+    );
   };
 
   const productionType = (props.data.productionType)
