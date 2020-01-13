@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
-import Mapping from '../../Mapping/Mapping';
+import DictionaryData from '../../DictionaryData/DictionaryData';
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 
 import classes from './SimpleListCard.scss';
@@ -37,7 +37,7 @@ const additionalListFunction = (allProps) => {
       <div className="d-flex flew-row">
         <div>
           <span className={classes.Key}>
-            <Mapping id={item.type} />
+            <DictionaryData id={item.type} />
           </span>
         </div>
         <div className="ml-auto">
