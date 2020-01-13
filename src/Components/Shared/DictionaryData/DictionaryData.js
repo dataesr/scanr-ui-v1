@@ -22,8 +22,12 @@ const DictionaryData = (props) => {
   );
 };
 
-export default DictionaryData;
 
 DictionaryData.propTypes = {
   id: PropTypes.string.isRequired,
 };
+
+
+export const getDictionaryDataFromId = (id, language) => msg[language][id] || id;
+
+export default DictionaryData;
