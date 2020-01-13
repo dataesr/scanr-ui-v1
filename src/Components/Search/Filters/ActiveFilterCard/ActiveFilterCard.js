@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import DictionaryData from '../../../Shared/DictionaryData/DictionaryData';
 
 /* Gestion des langues */
 
@@ -24,7 +25,7 @@ const ActiveFilterCard = (props) => {
           className={`badge badge-pill p-2 mt-1 mr-2 d-flex ${classes.deleteFilter}`}
         >
           <div className={`justify-content-start ${classes.deleteFilterTxt}`}>
-            {value}
+            <DictionaryData id={value} />
           </div>
           <i
             className={`fas fa-times ml-3 ${classes.closeIcon}`}
