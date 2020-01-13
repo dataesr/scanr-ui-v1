@@ -85,7 +85,7 @@ const Informations = (props) => {
           <div className={`col-md-6 ${classes.CardContainer}`}>
             <SimpleCardWithButton
               language={props.language}
-              logo="fas fa-id-card"
+              logo="fas fa-fingerprint"
               title={<FormattedHTMLMessage id="Thesis.Identity.id" />}
               label={id}
               tooltip=""
