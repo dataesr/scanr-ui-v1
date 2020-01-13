@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './CheckBoxFilter.scss';
+import DictionaryData from '../../../../Shared/DictionaryData/DictionaryData';
 
 const messages = {
   en: {
@@ -124,7 +125,7 @@ class CheckBoxFilter extends Component {
                           </div>
                           {/* eslint-disable-next-line */}
                           <label className={`pl-1 form-check-label ${classes.Item}`} htmlFor={facet.value}>
-                            {facet.value}
+                            <DictionaryData id={facet.value} />
                           </label>
                           <div className={`ml-auto ${classes.FacetsCounts}`}>
                             {`(${facet.count.toLocaleString(this.props.language)})`}
