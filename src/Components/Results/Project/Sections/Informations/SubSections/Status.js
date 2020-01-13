@@ -4,7 +4,7 @@ import { FormattedHTMLMessage } from 'react-intl';
 import moment from 'moment';
 import 'moment/locale/fr';
 
-
+import CardsTitle from '../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import SimpleCard from '../../../../../Shared/Ui/SimpleCard/SimpleCard2';
 import PileCard from '../../../Components/PileCard';
 
@@ -40,9 +40,9 @@ const Status = (props) => {
   return (
     <div className="col-6">
       <div className="row">
-        <h3 className={`col-12 ${classes.SubSectionTitle}`}>
-          <FormattedHTMLMessage id="Project.Informations.Status.title" />
-        </h3>
+        <div className={`col-12 ${classes.NoSpace}`}>
+          <CardsTitle title={<FormattedHTMLMessage id="Project.Informations.Status.title" />} />
+        </div>
         <div className={`col-6 ${classes.CardContainer}`}>
           {
             (startDate)
