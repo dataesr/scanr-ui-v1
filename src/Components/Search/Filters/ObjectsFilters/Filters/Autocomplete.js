@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { deburr } from 'lodash';
 import classes from './Autocomplete.scss';
+import DictionaryData, { getDictionaryDataFromId } from '../../../../Shared/DictionaryData/DictionaryData';
 
 class Autocomplete extends Component {
   constructor(props) {
@@ -60,7 +61,7 @@ class Autocomplete extends Component {
   render() {
     let filtered = [];
     filtered = this.props.facets
-      .filter(item => deburr(item.value.toLowerCase()).includes(deburr(this.state.query.toLowerCase())));
+      .filter(item => deburr(getDictionaryDataFromId(item.value, this.props.language)).toLowerCase().includes(deburr(this.state.query.toLowerCase())));
 
     return (
       <div className="d-flex flex-column mb-3">
@@ -111,7 +112,7 @@ class Autocomplete extends Component {
                   >
                     <div className="d-flex flex-row align-items-center">
                       <div>
-                        {filter.value}
+                        <DictionaryData id={filter.value} />
                       </div>
                       <div className={`ml-auto ${classes.FacetsCounts}`}>
                         {`(${filter.count})`}
@@ -137,4 +138,5 @@ Autocomplete.propTypes = {
   subtitle: PropTypes.string,
   placeholder: PropTypes.string,
   facetID: PropTypes.string.isRequired,
+  language: PropTypes.string,
 };
