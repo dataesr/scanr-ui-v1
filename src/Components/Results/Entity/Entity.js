@@ -105,6 +105,7 @@ const Entity = (props) => {
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
+              lexicon="EntityPortrait"
               objectType="structures"
               language={props.language}
               id={id}
