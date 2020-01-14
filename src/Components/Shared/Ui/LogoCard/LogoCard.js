@@ -27,11 +27,12 @@ const LogoCard = (props) => {
 
   const context = useContext(GlobalContext);
   let img = <img src={initialImage} onLoad={newTestFunction} alt="Chargement..." />;
+  const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
   if (count === 1) {
-    img = <img src={props.src} alt="url1" onError={newTestFunction} />;
+    img = <img src={src} alt="url1" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
   }
   if (count === 2) {
-    img = <img src={props.url} alt="url2" onError={newTestFunction} />;
+    img = <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
   }
   if (count === 3) {
     img = (
@@ -57,6 +58,7 @@ export default LogoCard;
 
 LogoCard.propTypes = {
   src: PropTypes.string,
+  label: PropTypes.string,
   url: PropTypes.string,
   cssClass: PropTypes.string,
 };
