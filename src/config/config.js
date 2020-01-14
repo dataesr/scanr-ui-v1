@@ -5,7 +5,9 @@ export const API_CONTRIBUTE_SCANR = API_BASE_SCANR.concat('/contribute');
 export const API_CONTACT_SCANR = API_BASE_SCANR.concat('/contact');
 export const API_ERRORS_SCANR = API_BASE_SCANR.concat('/errors');
 
-export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
+export const API_BASE_URL = `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_VERSION}`;
+export const API_BASE_URL_SWAGGER = `${process.env.REACT_APP_API_BASE}swagger-ui.html`;
+
 // Get
 export const API_STRUCTURES_END_POINT = API_BASE_URL.concat('/structures');
 export const API_PUBLICATIONS_END_POINT = API_BASE_URL.concat('/publications');

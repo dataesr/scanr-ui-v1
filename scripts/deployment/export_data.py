@@ -231,7 +231,13 @@ def dump_from_mongo(mongo, db, collection, to_file):
     file = "scanrJSON/" + to_file
     # Creates a json file to send to ftp
     with open(file, "w") as f:
-        json.dump([cur for cur in cursor], f, default=scanr_encoder, indent=4)
+        current_list = [cur for cur in cursor]
+        for elem in current_list:
+            if 'id' in elem:
+                elem['id'] = elem['id'][0:450]
+                if len(elem['id'])>450:
+                    print(len(elem['id']), elem['id'])
+        json.dump(current_list, f, default=scanr_encoder, indent=4)
         f.close()
     return {'ok': 1}
 
@@ -243,14 +249,25 @@ def dump_publications_from_mongo(mongo, to_file):
     cursor_patents = coll_patents.find({}, {"_id": 0})
     file = "scanrJSON/" + to_file
     # Creates a json file to send to ftp
+    ix_pat = 0
+    ix_pub = 0
     with open(file, "w") as f:
         f.write('[')
         for i in cursor_patents:
+            ix_pat += 1
+            if 'links' in i:
+                links = i['links']
+                for link in links:
+                    if 'url' in link:
+                        link['url'] = 'date_'+link['url']
             json.dump(i, f, default=scanr_encoder, indent=4)
             f.write(',\n')
+        print("{} patents".format(ix_pat))
         for i in cursor_publications: 
+            ix_pub += 1
             json.dump(i, f, default=scanr_encoder, indent=4)
             f.write(',\n')
+        print("{} publi".format(ix_pub))
         print(f.tell())
         f.seek(f.tell()-2, 0)
         f.write(']')
@@ -301,10 +318,10 @@ def marshmallow_dump_from_mongo(mongo, db, collection, limit):
 
 
 start = datetime.now()
-dump_from_mongo(mongo=mongo, db="organizations", collection="scanr", to_file="organizations.json")
-dump_from_mongo(mongo=mongo, db="projects", collection="scanr", to_file="projects.json")
+#dump_from_mongo(mongo=mongo, db="organizations", collection="scanr", to_file="organizations.json")
+#dump_from_mongo(mongo=mongo, db="projects", collection="scanr", to_file="projects.json")
 dump_publications_from_mongo(mongo=mongo, to_file="publications.json")
-dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
+#dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
 print(datetime.now()- start)
 
 

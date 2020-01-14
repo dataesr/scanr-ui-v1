@@ -38,6 +38,7 @@ const SimilarPersons = (props) => {
     fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
     likeIds: [props.id],
     likeTexts: [],
+    pageSize: 100,
   };
   const { data, isLoading, isError } = useLikeApi('persons', request);
   if (isLoading) return <SectionLoader />;

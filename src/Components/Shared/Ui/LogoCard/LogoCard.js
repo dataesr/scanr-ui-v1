@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
-import ReactImageFallback from 'react-image-fallback';
+import { GlobalContext } from '../../../../GlobalContext';
 
 /* SCSS */
 import classes from './LogoCard.scss';
 
-// import fallbackImage from '../../images/not_found_image.png';
 import initialImage from '../../images/Spinner-1s-70px.gif';
 
 /**
@@ -16,24 +15,41 @@ import initialImage from '../../images/Spinner-1s-70px.gif';
  * Accessible : .
  * Tests unitaires : .
 */
+
 const LogoCard = (props) => {
+  const [count, setCount] = useState(0);
+
+  const newTestFunction = () => {
+    if (count < 3) {
+      setCount(count + 1);
+    }
+  };
+
+  const context = useContext(GlobalContext);
+  let img = <img src={initialImage} onLoad={newTestFunction} alt="Chargement..." />;
   const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
-  let cssClass = '';
-  if (props.cssClass) {
-    cssClass = classes[`${props.cssClass}`];
+  if (count === 1) {
+    img = <img src={src} alt="url1" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
+  }
+  if (count === 2) {
+    img = <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
+  }
+  if (count === 3) {
+    img = (
+      <div>
+        <div className={classes.Logo}><i className="fas fa-image" aria-hidden="true" /></div>
+        <h3 className={classes.Title}>
+          {
+            (context.language === 'fr' ? 'Logo non connu' : 'Unknown logo')
+          }
+        </h3>
+      </div>
+    );
   }
 
   return (
-    <div className={`${classes.card} ${cssClass}`}>
-      <a href={props.targetUrl} target="_blank" rel="noopener noreferrer">
-        <ReactImageFallback
-          src={src}
-          fallbackImage={props.url}
-          initialImage={initialImage}
-          alt={props.label}
-          className={`img-fluid ${classes.img}`}
-        />
-      </a>
+    <div className={`${classes.card} ${props.cssClass}`}>
+      {img}
     </div>
   );
 };
@@ -41,9 +57,8 @@ const LogoCard = (props) => {
 export default LogoCard;
 
 LogoCard.propTypes = {
-  label: PropTypes.string,
   src: PropTypes.string,
+  label: PropTypes.string,
   url: PropTypes.string,
   cssClass: PropTypes.string,
-  targetUrl: PropTypes.string,
 };

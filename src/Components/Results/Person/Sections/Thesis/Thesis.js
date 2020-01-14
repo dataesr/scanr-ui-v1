@@ -86,9 +86,7 @@ const Thesis = (props) => {
                   </div>
                 </div>
                 <div className={`col-md-3 ${classes.CardContainer}`}>
-                  <div className={classes.isOa}>
-                    <IsOa className="p-3" language={props.language} oa={thesis.isOa} />
-                  </div>
+                  <IsOa className="p-3" language={props.language} oa={thesis.isOa} />
                 </div>
                 {
                   (thesis.isOa)
