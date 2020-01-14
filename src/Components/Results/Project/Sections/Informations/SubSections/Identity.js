@@ -51,7 +51,7 @@ const Identity = (props) => {
           <div className={`col-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
-              logo="fas fa-qrcode"
+              logo="fas fa-fingerprint"
               title={<FormattedHTMLMessage id="Project.Informations.Identity.identifier" />}
               label={props.data.id}
             />
@@ -59,7 +59,7 @@ const Identity = (props) => {
           <div className={`col-12 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
-              logo="fas fa-calendar-day"
+              logo="fas fa-qrcode"
               title={<FormattedHTMLMessage id="Project.Informations.Identity.name" />}
               label={titleAcro}
             />
