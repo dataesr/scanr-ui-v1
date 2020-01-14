@@ -49,7 +49,7 @@ const Status = (props) => {
               ? (
                 <SimpleCard
                   language={props.language}
-                  logo="fas fa-qrcode"
+                  logo="fas fa-calendar-day"
                   title={<FormattedHTMLMessage id="Project.Informations.Status.startDate" />}
                   label={startDate}
                   tooltip=""
@@ -64,7 +64,7 @@ const Status = (props) => {
               ? (
                 <SimpleCard
                   language={props.language}
-                  logo="fas fa-qrcode"
+                  logo="fas fa-calendar-day"
                   title={<FormattedHTMLMessage id="Project.Informations.Status.endDate" />}
                   label={endDate}
                   tooltip=""

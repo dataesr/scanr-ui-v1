@@ -76,7 +76,7 @@ const Identity = (props) => {
           <div className={`col-lg-6 ${classes.CardContainer}`}>
             <SimpleListCard
               language={props.language}
-              logo="fas fa-qrcode"
+              logo="fas fa-fingerprint"
               title={<FormattedHTMLMessage id="Entity.Portrait.Identity.id" />}
               // label={props.id}
               multipleLabels={mainIds}

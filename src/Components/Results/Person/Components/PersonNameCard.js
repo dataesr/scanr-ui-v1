@@ -18,7 +18,7 @@ import ButtonWithModal from '../../../Shared/Ui/Buttons/ButtonWithModal';
 */
 
 const PersonCardName = (props) => {
-  const logo = (<div className={classes.Logo}><i className="fas fa-qrcode" aria-hidden="true" /></div>);
+  const logo = (<div className={classes.Logo}><i className={props.logo} aria-hidden="true" /></div>);
   const htmlList = (props.data.externalIds)
     ? props.data.externalIds.map(tag => (
       <li className="d-flex" key={tag}>
@@ -73,7 +73,7 @@ const PersonCardName = (props) => {
           (props.data.externalIds && props.data.externalIds.length < 0)
             ? (
               <ButtonWithModal
-                logo="fas fa-qrcode"
+                logo={props.logo}
                 title={<FormattedHTMLMessage id="Person.PersonNameCard.identifiers" />}
                 buttonLabel={<FormattedHTMLMessage id="Person.Global.seeAll" />}
                 dataHtml={htmlList}
@@ -89,7 +89,12 @@ const PersonCardName = (props) => {
 
 export default PersonCardName;
 
+PersonCardName.defaultProps = {
+  logo: 'fas fa-qrcode',
+};
+
 PersonCardName.propTypes = {
   data: PropTypes.object,
   tooltip: PropTypes.string,
+  logo: PropTypes.string,
 };

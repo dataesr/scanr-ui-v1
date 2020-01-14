@@ -30,7 +30,7 @@ const Identity = (props) => {
         </div>
         <div className="row">
           <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`}>
-            <PersonNameCard logo="fas fa-flask" data={props.data} />
+            <PersonNameCard logo="fas fa-id-card" data={props.data} />
           </div>
           <div className={`col-md-6 col-sm-12 ${classes.NoSpace}`}>
             {
