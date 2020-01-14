@@ -29,8 +29,8 @@ const Status = (props) => {
   }
   const statusEndDate = (props.data.endDate) ? new Date(props.data.endDate) : calculatedEndDate;
   const status = (statusEndDate > Date.now()) ? 'running' : 'over';
-  const startDate = moment(props.data.startDate).format('LL');
-  const endDate = (props.data.endDate) ? moment(props.data.endDate).format('LL') : moment(calculatedEndDate).format('LL');
+  const startDate = (props.data.startDate) ? moment(props.data.startDate).format('LL') : null;
+  const endDate = (statusEndDate) && moment(statusEndDate).format('LL');
   let percents = 100;
   if (status && status === 'running') {
     percents = Math.round(
