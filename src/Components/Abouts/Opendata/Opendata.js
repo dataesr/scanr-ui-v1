@@ -2,6 +2,8 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import { API_BASE_URL_SWAGGER } from '../../../config/config';
+
 import Footer from '../../Shared/Footer/Footer';
 import Header from '../../Shared/Header/Header';
 import CardTwoColumns from './CardTwoColumns';
@@ -201,7 +203,7 @@ const Opendata = props => (
               title={messages[props.language]['Opendata.DocuApi']}
               // url="http://scanr-api.enseignementsup-recherche.gouv.fr/swagger-ui"
               target="_blank"
-              url="https://scanr-preprod.sword-group.com/api/swagger-ui.html"
+              url={API_BASE_URL_SWAGGER}
               lib_button="Acceder"
               schema="card_dark"
             />
