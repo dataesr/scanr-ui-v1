@@ -110,12 +110,12 @@ class CheckBoxFilter extends Component {
                         key={facet.value}
                         id={facet.value}
                         className={`${classes.Suggestion}`}
-                        onClick={() => this.submitWrapper(facet.value)}
-                        onKeyPress={() => this.submitWrapper(facet.value)}
+                        onClick={() => facet.count !== 0 && this.submitWrapper(facet.value)}
+                        onKeyPress={() => facet.count !== 0 && this.submitWrapper(facet.value)}
                         onMouseDown={event => event.preventDefault()}
                       >
                         <div className="d-flex flex-row align-items-center">
-                          <div className={`mr-1 ${classes.CheckBox}`}>
+                          <div className={`mr-1 ${classes.CheckBox} ${facet.count === 0 && classes.disabledCheckBox}`}>
                             <input
                               type="checkbox"
                               id={facet.value}

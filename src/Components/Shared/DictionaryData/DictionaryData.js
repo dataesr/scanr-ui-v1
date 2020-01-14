@@ -12,12 +12,11 @@ const msg = {
   en: messagesEn,
 };
 
-const DictionaryData = (props) => {
+const DictionaryData = ({ id }) => {
   const context = useContext(GlobalContext);
-
   return (
     <IntlProvider locale={context.language} messages={msg[context.language]}>
-      <FormattedHTMLMessage id={props.id} default={props.id} />
+      <FormattedHTMLMessage id={id || ' '} defaultMessage={id} />
     </IntlProvider>
   );
 };

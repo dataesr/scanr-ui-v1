@@ -123,18 +123,26 @@ const EntityFilters = (props) => {
             backgroundColor: classes.entityColor,
           }}
         />
-        <div className={classes.FilterHeaders}>
-          <FormattedHTMLMessage id="Search.Filters.others" />
-        </div>
-        <CheckBoxFilter
-          language={props.language}
-          title={<FormattedHTMLMessage id="Search.Filters.caracteristics" />}
-          facets={caractFacets.entries}
-          filters={caractActiveFilters}
-          facetID="badges.label.fr"
-          onSubmit={props.multiValueFilterHandler}
-          defaultActive
-        />
+        {
+          (caractFacets.entries && caractFacets.entries.length)
+            ? (
+              <React.Fragment>
+                <div className={classes.FilterHeaders}>
+                  <FormattedHTMLMessage id="Search.Filters.others" />
+                </div>
+                <CheckBoxFilter
+                  language={props.language}
+                  title={<FormattedHTMLMessage id="Search.Filters.caracteristics" />}
+                  facets={caractFacets.entries}
+                  filters={caractActiveFilters}
+                  facetID="badges.label.fr"
+                  onSubmit={props.multiValueFilterHandler}
+                  defaultActive
+                />
+              </React.Fragment>
+            )
+            : null
+        }
       </div>
     </div>
   );

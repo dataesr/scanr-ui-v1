@@ -23,7 +23,7 @@ const Financial = (props) => {
       {
         (props.data.budgetTotal)
           ? (
-            <div className={`col-3 ${classes.CardContainer}`}>
+            <div className={`col-3 ${classes.CardContainer} ${classes.Grey}`}>
               <SimpleCard
                 language={props.language}
                 logo="fas fa-euro-sign"
@@ -37,7 +37,7 @@ const Financial = (props) => {
       {
         (props.data.budgetFinanced)
           ? (
-            <div className={`col-3 ${classes.CardContainer}`}>
+            <div className={`col-3 ${classes.CardContainer} ${classes.Grey}`}>
               <SimpleCard
                 language={props.language}
                 logo="fas fa-euro-sign"
