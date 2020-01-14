@@ -1681,7 +1681,9 @@ Voir sur: [*Github Repos*](https://github.com/dataesr/patents), [*Docker image*]
 
 Les données arrivent dans #dataesr via l'API de l'application. Une opération de matching avec les objets #dataesr est ensuite opérée.
 
-Les données de brevet sont traitées en amont par le département d'outils d'aide à la décision avec comme données source ... Une attention particulière est portée au dédoublonnage des déposants et inventeurs et un matching de ces derniers avec les bases de données d'organisation et ou de personnes permet de relier invention et organisation.
+Les données de brevet sont traitées en amont par le département d'outils d'aide à la décision avec comme données source les données de PATSTAT et
+de l'INPI. Toutes les informations principales sont tirées de PATSTAT : identifiants (numéros de familles DOCDB, numéros de publication, de dépôt), les dates (de dépôt, publication ou délivrance), les données sur les différents dépôts de la famille ainsi que les données sur les déposants et inventeurs. Les SIREN des déposants ont par contre comme source l'INPI ainsi qu'un recodage automatique et manuel. Dans la première version, les adresses des participants, le sexe et leur type (personne physique ou morale) ne sont pas disponibles mais sont prévus pour l'être par la suite.
+Une attention particulière est portée au dédoublonnage des déposants et inventeurs (car ces informations sont disponibles par dépôt et elles sont rendues disponibles par famille, donc regroupées) et un matching de ces derniers avec les bases de données d'organisation et ou de personnes permet de relier invention et organisation.
 
 Une collection scanR est également exposée. Cette dernière est une vue des données présente dans la collection 'families' exportée avec un modèle de donnée utilisable dans scanR. Les données présentes dans `participants` et `patents` sont également intégrés pôur chaque famille de brevet. Cette dernière API est est appelé lorsque les administrateurs viennent récupérer les données pour les transférer à la couche scanR backend gérée par SWORD.
 
