@@ -59,6 +59,15 @@
   user-select: none;
 }
 
+.disabledCheckBox {
+  cursor: default;
+  opacity: 0.2;
+}
+.disabledCheckBox:hover {
+  cursor: default;
+  opacity: 1;
+}
+
 /* Hide the browser's default checkbox */
 .CheckBox INPUT {
   position: absolute;
@@ -81,7 +90,7 @@
 
 /* On mouse-over, add a grey background color */
 .CheckBox:hover INPUT ~ .CheckMark {
-  background-color: #ccc;
+  opacity: 0.2;
 }
 
 /* When the checkbox is checked, add a blue background */
@@ -150,5 +159,4 @@
 
 .Suggestion:hover {
   color: $scanrfooterBgColor;
-  cursor: pointer;
 }

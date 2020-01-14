@@ -11,7 +11,10 @@
   background-color: white;
   background-position: bottom 0 left 0;
 }
-
+.Grey {
+  border-radius: 5px;
+  box-shadow: 0px 0px 8px $scanrmiddlegreyColor;
+}
 .noSpace100 {
   margin: 0;
   padding: 0;
