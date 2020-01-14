@@ -408,6 +408,18 @@
     }
   },
   {
+    "key": "EntityPortrait",
+    "icon": "fas fa-flask",
+    "label": {
+      "fr": "Portrait de l'entité",
+      "en": "Entity portrait"
+      },
+    "definition": {
+      "fr": "Cette section trace le portrait de l'entité : sont présentés son nom, son type, sa localisation, ses différents identifiants externes et le cas échéant sa date de création et les liens vers les sites web et réseaux sociaux de l'entité. Il existe quatre secteurs pour les entités (visibles dans les fiches des résultats de recherche et dans les filtres associés): 'secteur public', 'secteur privé', 'organisation internationale' et 'structure de recherche'. Les entités peuvent être rattachées à plusieurs secteurs, sauf pour les 'structures de recherches'. Ces dernières correspondent aux entités répertoriées dans le 'Répertoire National des Structures de Recherche (RNSR)', qui leur attribue un numéro unique national. Chaque entité peut également être rattachée à l'un des 'types d'organisme'.<br/> Questions liées dans la FAQ : <br/><li><a href='/faq/q14' target='_blank'>Quelles sont les entités référencées dans scanR ?</a></li><li><a href='/faq/q30' target='_blank'>Entreprises issues ou liées aux laboratoires de recherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?</a></li><li><a href='/faq/q37' target='_blank'>Quels sont les référentiels d'entités utilisés dans scanR ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
+      "en": "This section provides a portrait of the entity: its name, type, location, various external identifiers and, if applicable, its creation date and links to the entity's websites and social networks are presented. There are four sectors for the entities (visible in the search results sheets and in the associated filters): 'public sector', 'private sector', 'international organisation' and 'search structure'. Entities can be attached to more than one sector, except for 'search structures'. The latter correspond to the entities listed in the 'French National Directory of Research Structures (RNSR)', which assigns them a unique national number. Each entity can also be attached to one of the 'types of organisation'.<br/> Related questions in the FAQ : <br/><li><a href='/faq/q14' target='_blank'>Which entities are referenced in scanR ?</a></li><li><a href='/faq/q30' target='_blank'>Companies from or related to research laboratories, what does the presence of companies in certain laboratory profiles mean ?</a></li><li><a href='/faq/q37' target='_blank'>What are the entity repositories used in scanR?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
+    }
+  },
+  {
     "key": "EntityNetwork",
     "icon": "fas fa-flask",
     "label": {
