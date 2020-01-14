@@ -29,7 +29,7 @@ const History = props => (
         <div className={`col-lg-6 ${classes.CardContainer}`}>
           <SimpleCard
             language={props.language}
-            logo="fas fa-id-card"
+            logo="fas fa-calendar-day"
             title={<FormattedHTMLMessage id="Entity.Portrait.History.createdDate.title" />}
             label={props.creationYear}
             tooltip=""
