@@ -25,10 +25,9 @@ class YoutubeCard extends Component {
     this.getData();
   }
 
-
   getData = () => {
     const youtubeUrl = this.props.url;
-    let urlIframe = null;
+    let urlIframe = '';
     if (youtubeUrl.indexOf('youtube.com/user') !== -1) {
       const regex = /.*youtube.com\/user\//gi;
       const userYoutube = youtubeUrl.replace(regex, '');
