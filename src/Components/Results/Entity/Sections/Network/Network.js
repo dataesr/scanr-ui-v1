@@ -39,7 +39,7 @@ class Network extends Component {
       this.setState({ incubateur });
       const carnot = this.props.data.relations.filter(item => item.type === 'membre_carnot');
       this.setState({ carnot });
-      const spinoff = this.props.data.relations.filter(item => item.type.indexOf('spinoff') !== -1);
+      const spinoff = this.props.data.relations.filter(item => ((item.type || '').indexOf('spinoff') !== -1) || false);
       this.setState({ spinoff });
       const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
       this.setState({ rachete });
