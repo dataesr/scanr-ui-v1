@@ -5,7 +5,7 @@ import { GridLoader } from 'react-spinners';
 import { API_STRUCTURES_SEARCH_END_POINT } from '../../../config/config';
 import classes from './GraphCard.scss';
 import transformRequest from '../../../Utils/transformRequest';
-import HighChartsDonut from '../GraphComponents/Graphs/HighChartsDonut';
+import HighChartsBar from '../GraphComponents/Graphs/HighChartsBar';
 import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
 export default class EntityProjects extends Component {
@@ -32,16 +32,10 @@ export default class EntityProjects extends Component {
 
   getData = () => {
     const request = { ...this.props.request };
-    const missingText = (this.props.language === 'fr') ? 'Aucun financement' : 'No support';
     request.aggregations = this.state.aggregations;
     Axios.post(API_STRUCTURES_SEARCH_END_POINT, transformRequest(request))
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'projectTypes') || { entries: [] };
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        const hasValue = newStateData.entries.map(facet => (facet.count)).reduce(reducer);
-        if (hasValue !== response.data.total) {
-          newStateData.entries.push({ count: (response.data.total - hasValue), value: missingText });
-        }
         this.setState({ data: newStateData, isLoading: false });
       })
       .catch((error) => {
@@ -61,7 +55,7 @@ export default class EntityProjects extends Component {
             language={this.props.language}
             subtitle={this.props.subtitle}
           />
-          <HighChartsDonut
+          <HighChartsBar
             filename="Type de projets auxquels ont participé les structures"
             data={this.state.data}
             language={this.props.language}

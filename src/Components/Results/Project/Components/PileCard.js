@@ -12,10 +12,10 @@ import classes from './PileCard.scss';
  * Tests unitaires : .
 */
 const PileCard = (props) => {
-  const percent = `${props.percents}%`;
+  const percent = `${100 - props.percents}%`;
   let color = '#5dd99d';
   let status = 'running';
-  if (props.percents === 100) {
+  if ((100 - props.percents) === 0) {
     color = '#e74253';
     status = 'over';
   }

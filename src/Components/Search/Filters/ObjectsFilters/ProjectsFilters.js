@@ -59,7 +59,7 @@ const ProjectsFilters = (props) => {
           title={<FormattedHTMLMessage id="Search.Filters.actions" />}
           facets={domainsFacets.entries}
           filters={typeActiveFilters}
-          facetID="domains.label.default"
+          facetID="action.label.default"
           onSubmit={props.multiValueFilterHandler}
         />
         <hr

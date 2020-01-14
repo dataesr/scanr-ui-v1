@@ -52,14 +52,28 @@ export const StructuresAggregations = {
     size: 1000,
   },
   kind: {
-    field: 'kind',
-    filters: {},
-    min_doc_count: 1,
-    order: {
-      direction: 'DESC',
-      type: 'COUNT',
+    filters: {
+      'Secteur privé': {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: ['Secteur privé'],
+      },
+      'Secteur public': {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: ['Secteur public'],
+      },
+      'Structure de recherche': {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: ['Structure de recherche'],
+      },
+      'Organisation internationale': {
+        type: 'MultiValueSearchFilter',
+        op: 'all',
+        values: ['Organisation internationale'],
+      },
     },
-    size: 50,
   },
   projectTypes: {
     field: 'projects.project.type',
@@ -112,6 +126,7 @@ export const StructuresAggregations = {
     size: 20,
   },
 };
+
 export const PublicationsAggregations = {
   types: {
     field: 'type',
@@ -201,7 +216,7 @@ export const PublicationsAggregations = {
       direction: 'DESC',
       type: 'COUNT',
     },
-    size: 10000,
+    size: 3000,
   },
 };
 export const PersonsAggregations = {

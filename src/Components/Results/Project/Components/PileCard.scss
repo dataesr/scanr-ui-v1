@@ -17,18 +17,20 @@
 }
 
 .Pile {
-  border-radius: 8px;
+  border-radius: 5px;
   border: 7px solid;
-  padding: 0.25em;
-  height: 5em;
-  width: 13em;
+  padding: 0.15em;
+  height: 2.5em;
+  width: 6.5em;
+  margin-top: 0.5em;
 
 }
 .PileExtend {
-  margin-left: -7px;
-  height: 2em;
-  width: 15px;
-  border-radius: 3px;
+  margin-top: 0.5em;
+  margin-left: -3px;
+  height: 1em;
+  width: 10px;
+  border-radius: 5px;
 }
 .PileFill {
   height: 100%;
