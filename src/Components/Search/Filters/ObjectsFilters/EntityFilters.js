@@ -67,6 +67,7 @@ const EntityFilters = (props) => {
           facetID="kind"
           onSubmit={props.multiValueFilterHandler}
           defaultActive
+          filterType="all"
         />
         <hr
           style={{
