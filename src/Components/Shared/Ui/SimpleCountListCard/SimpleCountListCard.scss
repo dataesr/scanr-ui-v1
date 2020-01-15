@@ -5,7 +5,7 @@
   background-color: $scanrlightgreyColor;
   border-radius: 8px;
   text-align: center;
-  min-height: 250px;
+  min-height: 280px;
   margin: 3px;
 
   .Title {
@@ -26,11 +26,14 @@
     text-align: left;
     font-size: 0.9rem;
     color: $scanrdeepblueColor;
-
+    LI {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     I {
       color: $scanrblueColor
     }
-
   }
 
   .Button {
