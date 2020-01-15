@@ -29,7 +29,9 @@ const SimpleCountListCard = (props) => {
           <span className="fa-li">
             <i className="fas fa-chevron-circle-right" />
           </span>
-          {label}
+          <span title={label}>
+            {label}
+          </span>
         </li>
       );
     }

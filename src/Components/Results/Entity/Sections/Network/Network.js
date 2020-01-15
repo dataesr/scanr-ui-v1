@@ -120,7 +120,7 @@ class Network extends Component {
             <div className={`col-md-4 ${classes.NoSpace}`}>
               <SimpleCountListCard
                 language={this.props.language}
-                maxList={10}
+                maxList={5}
                 data={this.props.data.institutions}
                 title={<FormattedHTMLMessage id="Entity.Network.supervisors.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.institutions.length }} />}
@@ -346,6 +346,7 @@ class Network extends Component {
                 label={getSelectKey(badge, 'label', this.props.language, 'fr')}
                 icon="prize"
                 color={styles.personColor}
+                className={classes.PrizeCardStyle}
               />
             </div>
           ))
