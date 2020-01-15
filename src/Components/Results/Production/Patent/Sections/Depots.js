@@ -22,14 +22,14 @@ const PatentsApplications = (props) => {
   const patents = [];
   props.data.forEach((patent) => {
     const [country, type, delivrance] = patent.type.split('__');
+    const url = patent.url.replace('date_', '');
     const newPatent = {
-      ...patent, country, type, delivrance,
+      ...patent, country, type, delivrance, url,
     };
     patents.push(newPatent);
   });
 
   const [selected, setSelected] = useState((patents.length) ? patents[0] : {});
-
 
   const content = patents.sort((a, b) => moment(a.url).format('YYYYMMDD') - moment(b.url).format('YYYYMMDD')).map((item, i) => {
     let first = false;
