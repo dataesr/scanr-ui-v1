@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import PrizeImage from '../../svg/icon-fiche-prix';
-/* SCSS */
+
 import classes from './PrizeCard.scss';
 
 /**
@@ -17,15 +17,12 @@ const messages = {
   fr: 'Prix',
   en: 'Award',
 };
+
 const options = {
   year: 'numeric',
 };
 
-
 const PrizeCard = (props) => {
-  // const image = {
-  //   prize: PrizeImage,
-  // };
   const year = (props.date) ? new Date(props.date).toLocaleDateString('fr-FR', options) : '';
   const date = (props.title)
     ? (
@@ -36,9 +33,11 @@ const PrizeCard = (props) => {
       </p>
     )
     : (<p className={classes.Title}>{`${messages[props.language]} ${year}`}</p>);
+
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
+
   return (
-    <div className={`${classes.SimpleCard}`}>
+    <div className={`${classes.SimpleCard} ${props.className}`}>
       {date}
       <PrizeImage
         fill={props.color}
@@ -56,5 +55,5 @@ PrizeCard.propTypes = {
   title: PropTypes.string,
   date: PropTypes.any,
   color: PropTypes.string,
+  className: PropTypes.string,
 };
-// icon: PropTypes.string,
