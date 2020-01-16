@@ -44,7 +44,7 @@ const createMarkers = (address, data = []) => {
 
 const Localisation = (props) => {
   const [showEntityAround, setEntityAround] = useState(false);
-  const url = `${API_STRUCTURES_END_POINT}/near/${props.id}?distance=${10}`;
+  const url = `${API_STRUCTURES_END_POINT}/near/${props.id}?distance=${0.5}&nb=${1000}`;
   const { data } = useGetData(url);
 
   // if (!props.address || (!props.address[0].address && !props.address[0].city || !props.address[0].country)) {
