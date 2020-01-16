@@ -20,11 +20,16 @@ const SimilarProjects = (props) => {
   const request = {
     fields: ['publications.publication.title', 'websites.description', 'activities.label', 'description'],
     likeIds: [props.id],
+    pageSize: 100,
     likeTexts: [],
   };
-  const { data, isLoading, isError } = useLikeApi('structures', request);
+  /* eslint-disable-next-line */
+  let { data, isLoading, isError } = useLikeApi('structures', request);
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
+  if (props.id.slice(0, 4) !== 'grid') {
+    data = data.filter(entity => entity.value.id.slice(0, 4) !== 'grid');
+  }
   return (
     <ul className={`row px-2 ${classes.Ul}`}>
       {
