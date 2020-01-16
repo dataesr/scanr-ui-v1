@@ -27,7 +27,7 @@ const Portrait = props => (
       language={props.language}
       description={props.data.description}
       name={props.data.label}
-      nature={props.data.nature}
+      level={props.data.level}
     />
 
     <Localisation
