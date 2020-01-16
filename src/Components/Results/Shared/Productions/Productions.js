@@ -249,7 +249,7 @@ class Productions extends Component {
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
-                title="Productions"
+                title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
                 lexicon="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
@@ -301,7 +301,7 @@ class Productions extends Component {
               language={this.props.language}
               id={this.props.match.params.id}
               total={this.state.total}
-              title="Productions"
+              title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
               lexicon="Productions"
               viewModeClickHandler={this.viewModeClickHandler}
               viewMode={this.state.viewMode}
