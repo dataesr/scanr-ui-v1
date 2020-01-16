@@ -5,6 +5,11 @@
   align-self: stretch;
 }
 
+.Id {
+    margin: 0;
+    word-break: break-all;
+}
+
 @media screen and (max-width: 991px) {
   .card {
     flex: 0 1 100%;

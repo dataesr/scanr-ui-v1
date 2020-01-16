@@ -26,7 +26,7 @@ const EntityCard = (props) => {
         <div className={classes.Icons}>
           <i aria-hidden="true" className="fas fa-fingerprint" />
         </div>
-        <p className="m-0">
+        <p className={classes.Id}>
           {`ID: ${props.data.id}`}
         </p>
       </li>
