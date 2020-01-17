@@ -42,6 +42,10 @@ const parseThesisData = (d, id) => {
     });
   }
   if (theses.length > 0) {
+    const thesesOA = theses.filter(t => t.isOa);
+    if (thesesOA.length !== 0) {
+      theses = thesesOA;
+    }
     const thesesOnly = theses.filter(t => (t.id).indexOf('these') !== -1);
     if (thesesOnly.length !== 0) {
       theses = thesesOnly;
