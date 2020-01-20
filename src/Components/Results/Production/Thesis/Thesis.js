@@ -75,7 +75,7 @@ const Thesis = props => (
             objectType="publications"
             language={props.language}
             id={props.id}
-            title={messages[props.language]['Authors.title']}
+            title={(props.data.type === 'these') ? messages[props.language]['Persons.title'] : messages[props.language]['Authors.title']}
           />
           <Authors
             language={props.language}
