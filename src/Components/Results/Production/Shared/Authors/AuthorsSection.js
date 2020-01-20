@@ -17,8 +17,6 @@ import classes from '../../../../../style.scss';
  * Tests unitaires : .
 */
 const AuthorsSection = (props) => {
-  // const getAuthor = role => (props.data.authors.find(person => person.role === role));
-
   const getAuthors = role => (props.data.authors.filter(person => person.role === role));
 
   const getSortedAuthors = () => {
@@ -55,7 +53,7 @@ const AuthorsSection = (props) => {
                 <CounterCard
                   counter={sortedAuthors.length}
                   title=""
-                  label={<FormattedHTMLMessage id="Publication.publication.persons" />}
+                  label={(props.data.type === 'these') ? <FormattedHTMLMessage id="Publication.thesis.persons" /> : <FormattedHTMLMessage id="Publication.publication.persons" />}
                   color="Persons"
                   className={classes.PersonCardHeight}
                 />
@@ -72,6 +70,7 @@ const AuthorsSection = (props) => {
                     showTitle={false}
                     language={props.language}
                     className={classes.PersonCardHeight}
+                    role={(props.data.type === 'these') ? author.role : null}
                   />
                 </div>
               );
