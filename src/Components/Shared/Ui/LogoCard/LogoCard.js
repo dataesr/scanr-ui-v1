@@ -32,7 +32,15 @@ const LogoCard = (props) => {
     img = <img src={src} alt="url1" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
   }
   if (count === 2) {
-    img = <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
+    if (props.targetUrl) {
+      img = (
+        <a href={props.targetUrl} target="_blank" rel="noopener noreferrer">
+          <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />
+        </a>
+      );
+    } else {
+      img = <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
+    }
   }
   if (count === 3) {
     img = (
@@ -60,5 +68,6 @@ LogoCard.propTypes = {
   src: PropTypes.string,
   label: PropTypes.string,
   url: PropTypes.string,
+  targetUrl: PropTypes.string,
   cssClass: PropTypes.string,
 };
