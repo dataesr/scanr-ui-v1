@@ -25,14 +25,14 @@ const ProductionGraphs = (props) => {
   const labelFor = {
     fr: {
       isOa: "Taux d'accès ouvert",
-      years: 'Publications par année',
+      years: 'Répartition par année',
       keywords: 'Nuage de mots clés des publications',
       journal: 'Top 10 des journaux',
       types: 'Types de publications',
     },
     en: {
       isOa: 'Open Access',
-      years: 'Publications by year',
+      years: 'Distribution by year',
       keywords: 'Publications wordcloud',
       journal: 'Top 10 journals',
       types: 'Publication types',
