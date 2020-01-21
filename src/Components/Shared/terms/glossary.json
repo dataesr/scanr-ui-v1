@@ -168,6 +168,18 @@
     }
   },
   {
+    "key": "PatentYearSearch",
+    "icon": "fas fa-flask",
+    "label": {
+      "fr": "Evolution par année de priorité du nombre d'inventions",
+      "en": "Evolution by year of priority of the number of inventions"
+      },
+    "definition": {
+      "fr": "Ce graphique présente l'évolution du nombre d'inventions par année de priorité, c'est à dire l'année du premier dépôt. Les inventions correspondent ici aux familles de brevets simples au sens de l’OEB, c’est à dire une collection de dépôts de brevets déposés dans différentes juridictions mais couvrant la même invention. Leur contenu technique est réputé identique et ils ont tous exactement les mêmes priorités.<br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'entend-on par invention ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une invention ?</a></li>",
+      "en": "This graph shows the evolution of the number of inventions per priority year, i.e. the year of first filing. The inventions here correspond to simple patent families in the sense of the EPO, i.e. a collection of patent filings filed in different jurisdictions but covering the same invention. Their technical content is deemed to be identical and they all have exactly the same priorities.<br/>Related questions in the FAQ: <li><a href='/faq/q45' target='_blank' >What do we mean by invention?</a></li><li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the date of the first filing of an invention?</a></li>"
+    }
+  },
+  {
     "key": "PublicationTypeSearch",
     "icon": "fas fa-flask",
     "label": {

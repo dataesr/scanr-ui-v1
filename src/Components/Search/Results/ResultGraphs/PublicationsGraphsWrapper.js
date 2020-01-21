@@ -62,7 +62,7 @@ const PublicationsGraphsWrapper = props => (
           filterLow={1990}
           filterHigh={2019}
           title={messages[props.language].PatentYearsTitle}
-          lexicon="PublicationYearSearch"
+          lexicon="PatentYearSearch"
           subtitle={messages[props.language].PatentYearsSubtitle}
           language={props.language}
           request={props.request}
