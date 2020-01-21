@@ -19,6 +19,8 @@ const LastFocus = (props) => {
     en: messagesEn,
   };
 
+  const focusList = props.focusList.filter(focus => focus.url !== props.match.url);
+
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <section className={classes.LastFocus}>
@@ -34,31 +36,40 @@ const LastFocus = (props) => {
                 <i className="fa fa-info-circle" />
               </LexiconModal>
             </h2>
-            <ButtonToPage
-              className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
-              target="_blank"
-              url="/focus"
-            >
-              <FormattedHTMLMessage
-                id="LastFocus.AllFocus"
-                defaultMessage="LastFocus.AllFocus"
-              />
-            </ButtonToPage>
+            {
+              (props.focusList.length > 3) ? (
+                <ButtonToPage
+                  className={`${classes.RectangleButton} ${classes.btn_scanrBlue}`}
+                  target="_blank"
+                  url="/focus"
+                >
+                  <FormattedHTMLMessage
+                    id="LastFocus.AllFocus"
+                    defaultMessage="LastFocus.AllFocus"
+                  />
+                </ButtonToPage>
+              ) : null
+            }
           </div>
 
           <div className="row pb-4">
             {
-              props.focusList.map(oneFocus => (
-                <div className={`col-lg-4 ${classes.CardContainer}`} key={oneFocus.title}>
-                  <FocusCard
-                    schema={oneFocus.api}
-                    tags={oneFocus.tags[props.language]}
-                    title={oneFocus.title[props.language]}
-                    type={oneFocus.type}
-                    url={oneFocus.url}
-                  />
-                </div>
-              ))
+              focusList.map((oneFocus, counter) => {
+                if (counter < 3) {
+                  return (
+                    <div className={`col-lg-4 ${classes.CardContainer}`} key={oneFocus.title}>
+                      <FocusCard
+                        schema={oneFocus.api}
+                        tags={oneFocus.tags[props.language]}
+                        title={oneFocus.title[props.language]}
+                        type={oneFocus.type}
+                        url={oneFocus.url}
+                      />
+                    </div>
+                  );
+                }
+                return null;
+              })
             }
           </div>
         </div>
@@ -72,6 +83,7 @@ export default LastFocus;
 LastFocus.propTypes = {
   language: PropTypes.string.isRequired,
   focusList: PropTypes.array,
+  match: PropTypes.string,
 };
 LastFocus.defaultProps = {
   focusList: [
