@@ -86,7 +86,8 @@ const SimpleCountListCard = (props) => {
       >
         {buttonLabel}
         <i className="fas fa-search ml-2" />
-      </a>);
+      </a>
+    );
   } else if (props.data.length > MAX_LIST_MODAL && !props.entityLabel) {
     actionButton = (
       <ButtonWithModal
