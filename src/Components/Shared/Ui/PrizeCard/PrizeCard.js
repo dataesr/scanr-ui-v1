@@ -39,9 +39,13 @@ const PrizeCard = (props) => {
   return (
     <div className={`${classes.SimpleCard} ${props.className}`}>
       {date}
-      <PrizeImage
-        fill={props.color}
-      />
+      {(props.logo) ? (
+        <div className={classes.Logo}><i className={props.logo} aria-hidden="true" /></div>
+      ) : (
+        <PrizeImage
+          fill={props.color}
+        />
+      )}
       {label}
     </div>
   );
@@ -53,6 +57,7 @@ PrizeCard.propTypes = {
   language: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string,
+  logo: PropTypes.string,
   date: PropTypes.any,
   color: PropTypes.string,
   className: PropTypes.string,
