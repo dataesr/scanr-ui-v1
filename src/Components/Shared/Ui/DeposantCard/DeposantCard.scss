@@ -5,12 +5,11 @@
   border-radius: 8px;
   text-align: center;
   justify-content: space-around;
-  min-height: 160px;
+  height: 160px;
 
 
   .Logo {
     height: 60px;
-    padding-top: 8px;
     color: $scanrblueColor;
   }
 
@@ -31,8 +30,7 @@
   }
 
   .Button {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
 
 }

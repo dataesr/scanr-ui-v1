@@ -31,15 +31,20 @@ const PatentParticipants = (props) => {
   });
   depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
   const deposants = [];
+  const ids = [];
   depos.forEach((deposant) => {
     const newdep = { ...deposant };
     const structure = props.affiliations.find(aff => aff.id === deposant.id) || {};
     if (!deposant.id) {
       structure.label = { default: deposant.label, fr: deposant.label };
       structure.country = deposant.country || null;
+    } else {
+      ids.push(deposant.id);
     }
     newdep.structure = structure;
-    deposants.push(newdep);
+    if (ids.filter(id => id === deposant.id).length < 2) {
+      deposants.push(newdep);
+    }
   });
   const nbInventorsToShow = 4;
 
