@@ -4,7 +4,6 @@ import Markdown from 'markdown-to-jsx';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 
-// import Errors from '../Shared/Errors/Errors';
 // Composants
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
@@ -13,9 +12,7 @@ import Banner from '../Shared/Banner/Banner';
 import ButtonToPage from '../Shared/Ui/Buttons/ButtonToPage';
 import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 
-// import LexiconPanel from '../../Shared/Lexicon/LexiconPanel';
 import getSelectKey from '../../Utils/getSelectKey';
-// import useGetData from '../../Hooks/useGetData';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
@@ -93,14 +90,12 @@ const Focus = (props) => {
   let isError = true;
   let isLoading = true;
   let data = [];
-  // let { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus', props.match.params.id);
   if (isError || data.length === 0) {
     const filename = `./Configs/${props.match.params.id}.json`;
     // eslint-disable-next-line
     data = require(`${filename}`);
     isLoading = false;
     isError = true;
-    // return <Errors error={500} />;
   }
   if (isLoading) {
     return <Loader />;
@@ -184,7 +179,7 @@ const Focus = (props) => {
             url={data.hrefX}
             target="_blank"
           />
-          <LastFocus language={props.language} />
+          <LastFocus language={props.language} match={props.match} />
           <Footer />
         </div>
       </IntlProvider>
