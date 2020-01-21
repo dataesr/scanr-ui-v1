@@ -324,7 +324,7 @@ class Network extends Component {
                 title={<FormattedHTMLMessage id="Entity.Network.prizeCard.title" />}
                 language={this.props.language}
                 label={getSelectKey(badge, 'label', this.props.language, 'fr')}
-                icon="prize"
+                logo="fas fa-project-diagram fa-3x"
                 color={styles.personColor}
                 className={classes.PrizeCardStyle}
               />
