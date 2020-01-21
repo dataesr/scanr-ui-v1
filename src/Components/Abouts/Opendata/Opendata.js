@@ -55,7 +55,7 @@ const Opendata = props => (
             </div>
           </div>
           <div className={`${classes.CardContainer}`}>
-            <div className="row" style={{ padding: '0px' }}>
+            <div className="row p-0">
               <CardWithButton
                 language={props.language}
                 messages={messages}
@@ -201,7 +201,6 @@ const Opendata = props => (
               language={props.language}
               messages={messages}
               title={messages[props.language]['Opendata.DocuApi']}
-              // url="http://scanr-api.enseignementsup-recherche.gouv.fr/swagger-ui"
               target="_blank"
               url={API_BASE_URL_SWAGGER}
               lib_button="Acceder"
@@ -252,13 +251,6 @@ const Opendata = props => (
           </div>
         </div>
       </section>
-      { /*
-      <Banner
-        language={props.language}
-        labelKey="Appear"
-        cssClass="BannerDark"
-        url=""
-      /> */}
       <Footer language={props.language} />
     </div>
   </IntlProvider>

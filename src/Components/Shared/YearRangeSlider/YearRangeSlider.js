@@ -382,7 +382,6 @@ class YearRangeSlider extends Component {
           </div>
           <div className={classes.slider} ref={this.slider}>
             <div
-              ref={this.slider}
               className={classes.slider}
               style={{
                 backgroundColor: `${this.props.barColor}`,

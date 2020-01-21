@@ -90,7 +90,8 @@ const Affiliations = (props) => {
         testAffs[key].push(affiliation);
       });
     }
-    const orderedYears = Object.keys(testAffs).sort((a, b) => b.replace('-', '') - a.replace('-', ''));
+    // const orderedYears = Object.keys(testAffs).sort((a, b) => b.replace('-', '') - a.replace('-', ''));
+    const orderedYears = Object.keys(testAffs).sort((a, b) => b.slice(-4) - a.slice(-4));
     return (
       <React.Fragment>
         <section className="container-fluid">
