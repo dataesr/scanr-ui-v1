@@ -15,14 +15,27 @@
     margin-top: 8px;
   }
 
-  .Label, .Value {
+  .Value {
     color: $scanrdeepblueColor;
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: bold;
+    height: 38px;
+  }
+
+  .Label {
+    color: $scanrdeepblueColor;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .Hr {
+    border: 1px solid $entityColor;
+    width: 80%;
+    margin-top: 5px;
   }
 
   UL {
-    margin-top: 10px;
+    margin: 8px;
     text-align: left;
     font-size: 0.9rem;
     color: $scanrdeepblueColor;
