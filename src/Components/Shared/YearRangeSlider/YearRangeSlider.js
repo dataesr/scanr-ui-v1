@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
+
 import classes from './YearRangeSlider.scss';
 
 class YearRangeSlider extends Component {
@@ -369,7 +370,6 @@ class YearRangeSlider extends Component {
   }
 
   render() {
-    if (!this.props.data.length) return null;
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
     return (
       <div className="w-100">
