@@ -42,7 +42,7 @@ const PersonCard = (props) => {
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
         <div className={classes.Logo}>
-          <i className="fas fa-folder fa-3x" alt="" />
+          <i className="fas fa-edit fa-3x" alt="" />
         </div>
         <div className={classes.Name} title={label}>
           {label}
