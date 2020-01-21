@@ -16,22 +16,25 @@ import classes from './SimpleCountListCard.scss';
  * Tests unitaires : .
 */
 const SimpleCountListCard = (props) => {
-  const MAX_LIST = (props.maxList) ? (props.maxList) : 5;
+  const MAX_LIST_CARD = props.maxList;
+  const MAX_LIST_MODAL = 15;
   const shortLi = props.data.map((item, i) => {
     // Identification du Label
     const label = (item.label)
       ? item.label
       : getSelectKey(item.structure, 'label', props.language, 'fr');
-    if (i < MAX_LIST) {
+    const label2 = (item.id)
+      ? (
+        <a title={label} href={`/entite/${item.id}`}>
+          {label}
+        </a>
+      ) : label;
+    if (i < MAX_LIST_CARD) {
       return (
         /* eslint-disable-next-line */
         <li key={`${item}_${i}`}>
-          <span className="fa-li">
-            <i className="fas fa-chevron-circle-right" />
-          </span>
-          <span title={label}>
-            {label}
-          </span>
+          <i className="fas fa-chevron-circle-right pr-2" />
+          {label2}
         </li>
       );
     }
@@ -43,12 +46,18 @@ const SimpleCountListCard = (props) => {
     const label = (item.label)
       ? item.label
       : getSelectKey(item.structure, 'label', props.language, 'fr');
+    const label2 = (item.id)
+      ? (
+        <a title={label} href={`/entite/${item.id}`}>
+          {label}
+        </a>
+      ) : label;
     return (
       <li key={item}>
         <span className="fa-li">
           <i className="fas fa-chevron-circle-right" />
         </span>
-        {label}
+        {label2}
       </li>
     );
   });
@@ -56,13 +65,30 @@ const SimpleCountListCard = (props) => {
   const buttonLabel = (
     <React.Fragment>
       {props.modalButtonLabel}
-      &nbsp;
-      {props.data.length}
     </React.Fragment>
   );
-  let modalButton = null;
-  if (props.data.length > MAX_LIST) {
-    modalButton = (
+  let actionButton = null;
+  if (props.data.length > MAX_LIST_CARD && props.data.length < MAX_LIST_MODAL) {
+    actionButton = (
+      <ButtonWithModal
+        logo="fas fa-qrcode"
+        title={props.modalButtonTitle}
+        buttonLabel={buttonLabel}
+        dataHtml={dataHtmlList}
+      />
+    );
+  } else if (props.data.length > MAX_LIST_MODAL && props.entityLabel) {
+    actionButton = (
+      <a
+        className={`btn ${classes.btn_scanrBlue}`}
+        type="button"
+        href={`/recherche/structures?filters=%7B%22institutions.structure.label.fr%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22all%22%2C%22values%22%3A%5B%22${props.entityLabel}%22%5D%7D%7D&query=&sort&view=list`}
+      >
+        {buttonLabel}
+        <i className="fas fa-search ml-2" />
+      </a>);
+  } else if (props.data.length > MAX_LIST_MODAL && !props.entityLabel) {
+    actionButton = (
       <ButtonWithModal
         logo="fas fa-qrcode"
         title={props.modalButtonTitle}
@@ -91,9 +117,10 @@ const SimpleCountListCard = (props) => {
       <div className={classes.Label}>
         {props.label}
       </div>
+      <hr className={classes.Hr} />
       {listItems}
       <div className={classes.Button}>
-        {modalButton}
+        {actionButton}
       </div>
       {tooltip}
     </div>
@@ -101,8 +128,11 @@ const SimpleCountListCard = (props) => {
 };
 
 export default SimpleCountListCard;
+
 SimpleCountListCard.defaultProps = {
   count: null,
+  maxList: 4,
+  tooltip: '',
 };
 
 SimpleCountListCard.propTypes = {
@@ -112,6 +142,7 @@ SimpleCountListCard.propTypes = {
   maxList: PropTypes.number,
   title: PropTypes.string,
   label: PropTypes.string,
+  entityLabel: PropTypes.string,
   tooltip: PropTypes.string,
   modalButtonLabel: PropTypes.string,
   modalButtonTitle: PropTypes.string,
