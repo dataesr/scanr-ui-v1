@@ -89,8 +89,8 @@ const Identity = (props) => {
             <SimpleCard
               language={props.language}
               logo="fas fa-flask"
-              title={<FormattedHTMLMessage id="Entity.Portrait.Identity.nature" />}
-              label={props.nature || ''}
+              title={<FormattedHTMLMessage id="Entity.Portrait.Identity.level" />}
+              label={props.level || ''}
               tooltip=""
             />
           </div>
@@ -123,5 +123,5 @@ Identity.propTypes = {
   links: PropTypes.array,
   id: PropTypes.string,
   name: PropTypes.object,
-  nature: PropTypes.string,
+  level: PropTypes.string,
 };

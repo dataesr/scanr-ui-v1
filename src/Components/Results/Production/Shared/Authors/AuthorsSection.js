@@ -17,8 +17,6 @@ import classes from '../../../../../style.scss';
  * Tests unitaires : .
 */
 const AuthorsSection = (props) => {
-  // const getAuthor = role => (props.data.authors.find(person => person.role === role));
-
   const getAuthors = role => (props.data.authors.filter(person => person.role === role));
 
   const getSortedAuthors = () => {
@@ -30,8 +28,17 @@ const AuthorsSection = (props) => {
         authors.forEach(author => sortedAuthors.push(author));
       }
     });
+
+    // Ajout des auteurs sans role
+    props.data.authors.forEach((author) => {
+      if (!sortedAuthors.find(authorIn => author === authorIn)) {
+        sortedAuthors.push(author);
+      }
+    });
+
     return sortedAuthors;
   };
+
 
   const nbAuthorsToShow = 6;
   const sortedAuthors = getSortedAuthors();
@@ -44,9 +51,9 @@ const AuthorsSection = (props) => {
             ? (
               <div className={`col-md-3 ${classes.CardContainer}`}>
                 <CounterCard
-                  counter={props.data.authors.length}
+                  counter={sortedAuthors.length}
                   title=""
-                  label={<FormattedHTMLMessage id="Publication.publication.persons" />}
+                  label={(props.data.type === 'these') ? <FormattedHTMLMessage id="Publication.thesis.persons" /> : <FormattedHTMLMessage id="Publication.publication.persons" />}
                   color="Persons"
                   className={classes.PersonCardHeight}
                 />
@@ -63,6 +70,7 @@ const AuthorsSection = (props) => {
                     showTitle={false}
                     language={props.language}
                     className={classes.PersonCardHeight}
+                    role={(props.data.type === 'these') ? author.role : null}
                   />
                 </div>
               );
@@ -71,7 +79,7 @@ const AuthorsSection = (props) => {
           })
         }
         {
-          (props.data.authors && props.data.authors.length > nbAuthorsToShow)
+          (props.data.authors && sortedAuthors.length > nbAuthorsToShow)
             ? (
               <div className={`col-md-3 ${classes.CardContainer}`}>
                 <CounterListCard

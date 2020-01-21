@@ -68,17 +68,13 @@ const FocusMiniCard = (props) => {
   }
 
   return (
-    <div className={classes.FocusMiniCard}>
-      <div className="d-flex flex-row">
-        <a href={props.url} className="align-self-left">
-          {componentSvg}
-        </a>
-        <div className="d-flex align-items-center">
-          <a href={props.url} className={classes.Title}>
-            {props.title}
-          </a>
-        </div>
-      </div>
+    <div className={`d-flex align-items-center ${classes.FocusMiniCard}`}>
+      <a href={props.url} className="pr-3">
+        {componentSvg}
+      </a>
+      <a href={props.url} className={classes.Title}>
+        {props.title}
+      </a>
     </div>
   );
 };

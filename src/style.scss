@@ -139,33 +139,33 @@ $sanKey2 : #90ee7e;
 /* cards de couleur dans la page open data*/
 .entitiesCards {
   background-color: $entityColor !important;
-  color: white !important;
+  color: $scanrdeepblueColor !important;
   .Button {
-    background-color: $scanrblueColor;
+    background-color: $scanrdeepblueColor;
     color: white;
   }
 }
 .projectsCards {
   background-color: $projectgreenColor !important;
-  color: white !important;
+  color: $scanrdeepblueColor !important;
   .Button {
-    background-color: $scanrblueColor;
+    background-color: $scanrdeepblueColor;
     color: white;
   }
 }
 .personsCards {
   background-color: $personColor !important;
-  color: white !important;
+  color: $scanrdeepblueColor !important;
   .Button {
-    background-color: $scanrblueColor;
+    background-color: $scanrdeepblueColor;
     color: white;
   }
 }
 .publicationsCards {
   background-color: $productionColor !important;
-  color: white !important;
+  color: $scanrdeepblueColor !important;
   .Button {
-    background-color: $scanrblueColor;
+    background-color: $scanrdeepblueColor;
     color: white;
   }
 }

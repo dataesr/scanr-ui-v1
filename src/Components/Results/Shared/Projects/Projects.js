@@ -210,7 +210,7 @@ class Projects extends Component {
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
-                title={(this.props.language === 'fr') ? 'Projets' : 'Projects'}
+                title={(this.props.language === 'fr') ? 'Financements' : 'Fundings'}
                 lexicon="Projects"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
@@ -251,7 +251,7 @@ class Projects extends Component {
       newEntry.tooltip = `${entry.count} projets - ${entry.value}`;
       sliderDataWithTooltip.push(newEntry);
     });
-    const title = (this.props.language === 'fr') ? 'Projets' : 'Projects';
+    const title = (this.props.language === 'fr') ? 'Financements' : 'Fundings';
 
     return (
       <Fragment>
