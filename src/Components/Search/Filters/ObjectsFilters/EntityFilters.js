@@ -37,7 +37,7 @@ const EntityFilters = (props) => {
   const projectsFacets = facets.find(item => item.id === 'projectTypes') || { entries: [] };
 
   // Filtre 6 - Caractéristiques
-  const caractActiveFilters = props.filters[`badges.label[${props.language}]`] || {};
+  const caractActiveFilters = props.filters[`badges.label.${props.language}`] || {};
   const caractFacets = facets.find(item => item.id === `badges${props.language}`) || { entries: [] };
 
   return (

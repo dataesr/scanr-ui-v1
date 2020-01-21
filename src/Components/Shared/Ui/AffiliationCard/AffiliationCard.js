@@ -35,12 +35,12 @@ const AffiliationCard = props => (
           ) : null
       }
       {
-        (props.nature)
+        (props.level)
           ? (
             <div>
               <i className="fas fa-flask" />
               <span>
-                {props.nature}
+                {props.level}
               </span>
             </div>
           ) : null
@@ -73,6 +73,6 @@ export default AffiliationCard;
 AffiliationCard.propTypes = {
   label: PropTypes.string,
   address: PropTypes.string,
-  nature: PropTypes.string,
+  level: PropTypes.string,
   id: PropTypes.string,
 };

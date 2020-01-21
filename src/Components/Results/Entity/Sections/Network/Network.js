@@ -60,13 +60,18 @@ class Network extends Component {
             op: 'all',
             values: [`${this.props.data.id}`],
           },
+          status: {
+            type: 'MultiValueSearchFilter',
+            op: 'all',
+            values: ['active'],
+          },
         },
         pageSize: 100,
       };
       Axios.post(url, obj)
         .then((response) => {
           const newData = response.data.results.map((item) => {
-            const o = { label: getSelectKey(item.value, 'label', this.props.language, 'fr') };
+            const o = { label: getSelectKey(item.value, 'label', this.props.language, 'fr'), id: item.value.id };
             return o;
           });
           this.setState({ dataSupervisorOf: newData, dataSupervisorOfTotal: response.data.total });
@@ -120,11 +125,9 @@ class Network extends Component {
             <div className={`col-md-4 ${classes.NoSpace}`}>
               <SimpleCountListCard
                 language={this.props.language}
-                maxList={10}
                 data={this.props.data.institutions}
                 title={<FormattedHTMLMessage id="Entity.Network.supervisors.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.institutions.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.title" />}
               />
@@ -137,10 +140,8 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.props.data.children}
-                maxList={5}
                 title={<FormattedHTMLMessage id="Entity.Network.headOf.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.children.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -153,11 +154,10 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.dataSupervisorOf}
-                maxList={5}
                 count={this.state.dataSupervisorOfTotal}
                 title={<FormattedHTMLMessage id="Entity.Network.supervisorOf.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.dataSupervisorOf.length }} />}
-                tooltip=""
+                entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -170,11 +170,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.satt}
-                maxList={5}
                 count={this.state.satt.length}
                 title={<FormattedHTMLMessage id="Entity.Network.satt.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.satt.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -187,11 +185,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.carnot}
-                maxList={5}
                 count={this.state.carnot.length}
                 title={<FormattedHTMLMessage id="Entity.Network.carnot.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.carnot.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -204,11 +200,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.incubateur}
-                maxList={5}
                 count={this.state.incubateur.length}
                 title={<FormattedHTMLMessage id="Entity.Network.incubateur.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.incubateur.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -221,11 +215,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.spinoff}
-                maxList={5}
                 count={this.state.spinoff.length}
                 title={<FormattedHTMLMessage id="Entity.Network.spinoff.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoff.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -238,11 +230,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.rachete}
-                maxList={5}
                 count={this.state.rachete.length}
                 title={<FormattedHTMLMessage id="Entity.Network.rachete.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.rachete.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -255,11 +245,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.aRachete}
-                maxList={5}
                 count={this.state.aRachete.length}
                 title={<FormattedHTMLMessage id="Entity.Network.aRachete.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aRachete.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -272,11 +260,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.aIncube}
-                maxList={5}
                 count={this.state.aIncube.length}
                 title={<FormattedHTMLMessage id="Entity.Network.aIncube.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aIncube.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -289,11 +275,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.appartientCarnot}
-                maxList={5}
                 count={this.state.appartientCarnot.length}
                 title={<FormattedHTMLMessage id="Entity.Network.appartientCarnot.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.appartientCarnot.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -306,11 +290,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.actionnaireSatt}
-                maxList={5}
                 count={this.state.actionnaireSatt.length}
                 title={<FormattedHTMLMessage id="Entity.Network.actionnaireSatt.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.actionnaireSatt.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -323,11 +305,9 @@ class Network extends Component {
               <SimpleCountListCard
                 language={this.props.language}
                 data={this.state.spinoffFrom}
-                maxList={5}
                 count={this.state.spinoffFrom.length}
                 title={<FormattedHTMLMessage id="Entity.network.spinoffFrom.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoffFrom.length }} />}
-                tooltip=""
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
               />
@@ -344,8 +324,9 @@ class Network extends Component {
                 title={<FormattedHTMLMessage id="Entity.Network.prizeCard.title" />}
                 language={this.props.language}
                 label={getSelectKey(badge, 'label', this.props.language, 'fr')}
-                icon="prize"
+                logo="fas fa-project-diagram fa-3x"
                 color={styles.personColor}
+                className={classes.PrizeCardStyle}
               />
             </div>
           ))
@@ -359,8 +340,10 @@ class Network extends Component {
     const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
     const relationsHasNoData = ((!this.props.data.relations || this.props.data.relations.length === 0)) && (this.state.hasNoInverseRelation);
     const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
+    const noNetworkBadge = (this.state.networkBadges.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
+        && noNetworkBadge
         && childrenHasNoData
         && relationsHasNoData
         && institutionsHasNoData)) {
