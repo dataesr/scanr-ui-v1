@@ -23,9 +23,9 @@ const EntityGraphsWrapper = props => (
       request={props.request}
     />
     <SimpleAggregationGraph
-      aggField="nature"
+      aggField="level"
       aggSize={10}
-      filename="scanr_export_structures_natures"
+      filename="scanr_export_structures_levels"
       graphType="HighChartsDonut"
       api="structures"
       title={messages[props.language].EntityNatureTitle}

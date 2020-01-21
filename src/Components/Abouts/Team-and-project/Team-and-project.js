@@ -62,30 +62,36 @@ const TeamAndProjectPage = props => (
               </div>
             </div>
             <div className={` ${classes.CardContainer} col-lg-3`}>
-              <CardToPage
-                cssClass="card_light"
-                labelKey="Discover.TalkAboutScanr"
-                language={props.language}
-                messages={messages}
-                url="/medias"
-                btnText="Discover"
-              />
-              <CardToPage
-                cssClass="card_light"
-                labelKey="Discover.Sources"
-                language={props.language}
-                messages={messages}
-                url="/ressources"
-                btnText="Discover"
-              />
-              <CardToPage
-                cssClass="card_light"
-                labelKey="Discover.FAQ"
-                language={props.language}
-                messages={messages}
-                url="/faq"
-                btnText="Discover"
-              />
+              <div className="m-1">
+                <CardToPage
+                  cssClass="card_light"
+                  labelKey="Discover.TalkAboutScanr"
+                  language={props.language}
+                  messages={messages}
+                  url="/medias"
+                  btnText="Discover"
+                />
+              </div>
+              <div className="m-1">
+                <CardToPage
+                  cssClass="card_light"
+                  labelKey="Discover.Sources"
+                  language={props.language}
+                  messages={messages}
+                  url="/ressources"
+                  btnText="Discover"
+                />
+              </div>
+              <div className="m-1">
+                <CardToPage
+                  cssClass="card_light"
+                  labelKey="Discover.FAQ"
+                  language={props.language}
+                  messages={messages}
+                  url="/faq"
+                  btnText="Discover"
+                />
+              </div>
             </div>
           </div>
         </div>

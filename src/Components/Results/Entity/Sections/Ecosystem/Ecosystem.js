@@ -354,7 +354,7 @@ class Ecosystem extends Component {
                         }
                         &nbsp;
                         {
-                          this.state.selectedCollaboration.structure.nature || null
+                          this.state.selectedCollaboration.structure.level || null
                         }
                       </div>
                       <ButtonToPage
