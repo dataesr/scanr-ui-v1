@@ -372,6 +372,17 @@ class SearchPage extends Component {
     }
     if (api === 'publications') {
       req.lang = 'default';
+      req.sourceFields = [
+        'id',
+        'productionType',
+        'title',
+        'authors',
+        'isOa',
+        'publicationDate',
+        'domains',
+        'submissionDate',
+        'affiliations',
+      ];
       req.aggregations = PublicationsAggregations;
     } else if (api === 'structures') {
       req.aggregations = StructuresAggregations;

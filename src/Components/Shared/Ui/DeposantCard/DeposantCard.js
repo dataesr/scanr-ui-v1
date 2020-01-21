@@ -29,7 +29,7 @@ const PersonCard = (props) => {
   let label = props.data.label;
   const country = props.data.country;
   if (props.data.structure) {
-    if (props.data.person && props.data.person.label) {
+    if (props.data.structure && props.data.structure.label) {
       label = getSelectKey(props.data.structure, 'label', props.language, 'default');
     }
   }
@@ -59,7 +59,7 @@ const PersonCard = (props) => {
         {
           (url)
             ? (
-              <div className="mt-auto">
+              <div>
                 <ButtonToPage
                   className={`${classes.Button} ${classes.btn_scanrBlue}`}
                   url={url}
