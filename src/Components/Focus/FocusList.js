@@ -10,10 +10,7 @@ import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import FocusCard from '../Shared/Ui/FocusCard/FocusCard';
-// import useGetData from '../../Hooks/useGetData';
 
-// import Lexicon from '../Shared/Lexicon/Lexicon';
-// import Search from '../Home-page/Search/Search';
 import classes from './Focus.scss';
 
 /**
@@ -28,7 +25,6 @@ const FocusList = (props) => {
   const isError = false;
   const isLoading = false;
   const data = props.focusList;
-  // const { data, isLoading, isError } = useGetData('http://66.70.222.205/api/focus');
   if (isError) {
     return <Errors error={500} />;
   }
