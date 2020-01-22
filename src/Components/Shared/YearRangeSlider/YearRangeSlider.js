@@ -379,7 +379,7 @@ class YearRangeSlider extends Component {
       }
       : { display: 'none' };
     return (
-      <div className="w-100">
+      <div className="w-100" ref={this.slider}>
         <div className="d-flex flex-column" style={{ marginBottom: '-30px' }}>
           <div className={classes.label} htmlFor="slider">
             {this.props.label}
@@ -387,7 +387,7 @@ class YearRangeSlider extends Component {
           <div className="d-flex align-items-end w-100" style={{ height }}>
             {(this.state.html) ? this.state.html.map(bar => bar) : null}
           </div>
-          <div className={classes.slider} ref={this.slider}>
+          <div className={classes.slider}>
             <div
               className={classes.slider}
               style={style}
