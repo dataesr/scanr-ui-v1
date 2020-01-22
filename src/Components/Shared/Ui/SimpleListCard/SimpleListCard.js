@@ -32,6 +32,8 @@ const multipleLabelsFunction = labels => (
 );
 
 const additionalListFunction = (allProps) => {
+  if (allProps.list && allProps.list.length === 0) { return null; }
+
   const items = allProps.list.map(item => (
     <li key={item.type} className="list-group-item">
       <div className="d-flex flew-row">
@@ -64,6 +66,10 @@ const SimpleListCard = (props) => {
       <ReactTooltip html />
     </Fragment>
   ) : null;
+
+  if (props.multipleLabels && props.multipleLabels.length === 1 && props.multipleLabels[0].indexOf('dataesr') >= 0) {
+    return null;
+  }
 
   return (
     <div className={classes.SimpleListCard}>
