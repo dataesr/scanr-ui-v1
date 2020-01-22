@@ -58,7 +58,7 @@ const PublicationsFilters = (props) => {
           data={props.sliderData}
           height={60}
           barColor={styles.productionColor}
-          label={<FormattedHTMLMessage id="Search.Filters.yearFilter" />}
+          label={<FormattedHTMLMessage id="Search.Filters.yearFilterWithWarning" />}
           min={(props.filters.year) ? props.filters.year.min : null}
           max={(props.filters.year) ? (props.filters.year.max - 1) : null}
           minBound={2000}
