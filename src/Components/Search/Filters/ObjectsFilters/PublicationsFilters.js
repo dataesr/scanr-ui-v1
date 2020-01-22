@@ -17,7 +17,12 @@ const PublicationsFilters = (props) => {
   // const journalActiveFilters = props.filters['source.title'] || {};
   const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
   const certificationsActiveFilters = props.filters['certifications.label'] || {};
-  const certificationsFacets = facets.find(item => item.id === 'certifications') || { entries: [] };
+  const certif = facets.find(item => item.id === 'certifications.label')
+    ? (facets.find(item => item.id === 'certifications.label').entries || [])
+    : [];
+  const certificationsFacets = { entries: certif.filter(c => c.value !== 'granted') };
+  const grantedFacets = { entries: certif.filter(c => c.value === 'granted') };
+  const grantedActiveFilters = props.filters['certifications.label'] || {};
   const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
   const patentDomainsFacets = facets.find(item => item.id === 'domains') || { entries: [] };
   const publiTypeActiveFilters = props.filters.type || {};
@@ -92,17 +97,37 @@ const PublicationsFilters = (props) => {
         {
           props.filters.productionType && (props.filters.productionType.values.includes('patent'))
             ? (
-              <CheckBoxFilter
-                language={props.language}
-                title={<FormattedHTMLMessage id="Search.Filters.publicationType" />}
-                facets={certificationsFacets.entries}
-                filters={certificationsActiveFilters}
-                facetID="certifications.label"
-                onSubmit={props.multiValueFilterHandler}
-                defaultActive
-                retractable={false}
-                nbItemsToShow={3}
-              />
+              <React.Fragment>
+                <CheckBoxFilter
+                  language={props.language}
+                  title=""
+                  facets={grantedFacets.entries}
+                  filters={grantedActiveFilters}
+                  facetID="certifications.label"
+                  onSubmit={props.multiValueFilterHandler}
+                  defaultActive
+                  retractable={false}
+                  nbItemsToShow={3}
+                />
+                <hr
+                  style={{
+                    height: '2px',
+                    color: styles.productionColor,
+                    backgroundColor: styles.productionColor,
+                  }}
+                />
+                <CheckBoxFilter
+                  language={props.language}
+                  title={<FormattedHTMLMessage id="Search.Filters.patentType" />}
+                  facets={certificationsFacets.entries}
+                  filters={certificationsActiveFilters}
+                  facetID="certifications.label"
+                  onSubmit={props.multiValueFilterHandler}
+                  defaultActive
+                  retractable={false}
+                  nbItemsToShow={3}
+                />
+              </React.Fragment>
             )
             : null
         }
