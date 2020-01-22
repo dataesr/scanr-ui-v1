@@ -16,6 +16,8 @@ const SimpleCard = (props) => {
   const title = (props.title) ? <h3 className={classes.Title}>{props.title}</h3> : null;
   const label = (props.label) ? <p className={classes.Label}>{props.label}</p> : null;
 
+  if (!label) { return null; }
+
   return (
     <div className={classes.SimpleCard}>
       {logo}
