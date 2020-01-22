@@ -371,6 +371,13 @@ class YearRangeSlider extends Component {
 
   render() {
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
+    const style = (this.state.sliderLowPosition !== null)
+      ? {
+        backgroundColor: `${this.props.barColor}`,
+        marginLeft: `calc(${this.state.sliderLowPosition}px + 10px)`,
+        marginRight: `calc(100% - ${this.state.sliderHighPosition}px - 10px)`,
+      }
+      : { display: 'none' };
     return (
       <div className="w-100">
         <div className="d-flex flex-column" style={{ marginBottom: '-30px' }}>
@@ -383,11 +390,7 @@ class YearRangeSlider extends Component {
           <div className={classes.slider} ref={this.slider}>
             <div
               className={classes.slider}
-              style={{
-                backgroundColor: `${this.props.barColor}`,
-                marginLeft: `calc(${this.state.sliderLowPosition}px + 10px)`,
-                marginRight: `calc(100% - ${this.state.sliderHighPosition}px - 10px)`,
-              }}
+              style={style}
             />
           </div>
           <div
