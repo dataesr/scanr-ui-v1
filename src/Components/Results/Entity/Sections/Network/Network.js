@@ -306,7 +306,7 @@ class Network extends Component {
                 language={this.props.language}
                 data={this.state.spinoffFrom}
                 count={this.state.spinoffFrom.length}
-                title={<FormattedHTMLMessage id="Entity.network.spinoffFrom.title" />}
+                title={<FormattedHTMLMessage id="Entity.Network.spinoffFrom.title" />}
                 label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoffFrom.length }} />}
                 modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                 modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
