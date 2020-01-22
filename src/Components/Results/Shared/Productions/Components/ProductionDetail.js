@@ -65,13 +65,23 @@ const ProductionDetail = (props) => {
     });
     inventeurs = [...new Set(inventeurs.map(i => JSON.stringify(i)))].length;
 
-    let deposants = data.authors.filter(auth => auth.role.indexOf('__deposant') >= 0).map((auth) => {
-      const [label, country] = auth.fullName.split('__');
-      return { label, country };
+    let depos = data.authors.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+      const label = deposant.fullName.split('__')[0];
+      return { label, id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
     });
-    deposants = [...new Set(deposants.map(i => JSON.stringify(i)))].length;
-    // const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
-    // return `${depots}${inventeurs} inventeurs, ${deposants} déposants`;
+    depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
+    let deposants = 0;
+    const ids = [];
+    depos.forEach((deposant) => {
+      if (deposant.id) {
+        ids.push(deposant.id);
+        if (ids.filter(iden => iden === deposant.id).length < 2) {
+          deposants += 1;
+        }
+      } else {
+        deposants += 1;
+      }
+    });
     return (
       <React.Fragment>
         <FormattedHTMLMessage id="inventor" values={{ count: inventeurs }} />

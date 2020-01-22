@@ -29,7 +29,7 @@ const PersonCard = (props) => {
   let label = props.data.label;
   const country = props.data.country;
   if (props.data.structure) {
-    if (props.data.person && props.data.person.label) {
+    if (props.data.structure && props.data.structure.label) {
       label = getSelectKey(props.data.structure, 'label', props.language, 'default');
     }
   }
@@ -41,12 +41,10 @@ const PersonCard = (props) => {
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
       <div className={`d-flex flex-column ${classes.PersonCard} ${props.className}`}>
-        <div>
-          <div className={classes.Logo}>
-            <i className="fas fa-folder fa-4x" alt="" />
-          </div>
+        <div className={classes.Logo}>
+          <i className="fas fa-edit fa-3x" alt="" />
         </div>
-        <div className={classes.Name}>
+        <div className={classes.Name} title={label}>
           {label}
         </div>
         <div>
@@ -59,7 +57,7 @@ const PersonCard = (props) => {
         {
           (url)
             ? (
-              <div className="mt-auto">
+              <div>
                 <ButtonToPage
                   className={`${classes.Button} ${classes.btn_scanrBlue}`}
                   url={url}

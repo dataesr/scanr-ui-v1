@@ -106,7 +106,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.oeb" />}
-              label={(isOEB && isOEB.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isOEB && isOEB.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -115,7 +115,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-clipboard-list"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.international" />}
-              label={(isInternational && isInternational.length) ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+              label={(isInternational && isInternational.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
