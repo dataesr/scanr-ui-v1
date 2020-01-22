@@ -16,38 +16,42 @@ import classes from './History.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const History = props => (
-  <div className="col-md-6">
-    <div className={classes.History}>
-      <div className="row">
-        <div className={`col ${classes.NoSpace}`}>
-          <CardsTitle title={<FormattedHTMLMessage id="Entity.Portrait.History.title" />} />
-        </div>
-      </div>
+const History = (props) => {
+  if (!props.creationYear && !props.predecessors) { return null; }
 
-      <div className="row">
-        <div className={`col-lg-6 ${classes.CardContainer}`}>
-          <SimpleCard
-            language={props.language}
-            logo="fas fa-calendar-day"
-            title={<FormattedHTMLMessage id="Entity.Portrait.History.createdDate.title" />}
-            label={props.creationYear}
-            tooltip=""
-          />
+  return (
+    <div className="col-md-6">
+      <div className={classes.History}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle title={<FormattedHTMLMessage id="Entity.Portrait.History.title" />} />
+          </div>
         </div>
-        <div className={`col-lg-6 ${classes.CardContainer}`}>
-          <HistoryListCard
-            language={props.language}
-            title={<FormattedHTMLMessage id="Entity.Portrait.History.history.title" />}
-            list={props.predecessors}
-            labelListButton={<FormattedHTMLMessage id="Entity.Portrait.History.history.labelListButton" />}
-            tooltip={<FormattedHTMLMessage id="Entity.Portrait.History.history.tooltip" />}
-          />
+
+        <div className="row">
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <SimpleCard
+              language={props.language}
+              logo="fas fa-calendar-day"
+              title={<FormattedHTMLMessage id="Entity.Portrait.History.createdDate.title" />}
+              label={props.creationYear}
+              tooltip=""
+            />
+          </div>
+          <div className={`col-lg-6 ${classes.CardContainer}`}>
+            <HistoryListCard
+              language={props.language}
+              title={<FormattedHTMLMessage id="Entity.Portrait.History.history.title" />}
+              list={props.predecessors}
+              labelListButton={<FormattedHTMLMessage id="Entity.Portrait.History.history.labelListButton" />}
+              tooltip={<FormattedHTMLMessage id="Entity.Portrait.History.history.tooltip" />}
+            />
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default History;
 

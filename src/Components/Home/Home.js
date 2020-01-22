@@ -5,10 +5,6 @@ import { GlobalContext } from '../../GlobalContext';
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Footer from '../Shared/Footer/Footer';
 import Header from '../Shared/Header/Header';
-// import LastFocus from '../Shared/LastFocus/LastFocus';
-// import MostActiveThemes from './MostActiveThemes/MostActiveThemes';
-// import { currentThemes } from '../../config/CurrentThemesAndSuggestions';
-// import Newsletter from '../Shared/Newsletter/Newsletter';
 import ScanrToday from './ScanrToday/ScanrToday';
 import ScanrIs from './ScanrIs/ScanrIs';
 import Search from './Search/Search';
@@ -52,28 +48,6 @@ const HomePage = (props) => {
         <ScanrIs
           language={context.language}
         />
-        {/* <ScanrToday language={context.language} />
-
-
-        <Banner
-          language={context.language}
-          labelKey="WhatAreOurSources"
-          cssClass="BannerLight"
-          url="/ressources"
-        />
-        <MostActiveThemes
-          language={context.language}
-          data={currentThemes}
-        />
-        <Banner
-          language={context.language}
-          labelKey="Appear"
-          cssClass="BannerLight"
-          url=""
-          <LastFocus language={context.language} />
-        /> */}
-        {/* Not for Now */}
-        {/* <Newsletter language={this.context.language} /> */}
         <Banner
           language={context.language}
           labelKey="DiscoverDataesr"
