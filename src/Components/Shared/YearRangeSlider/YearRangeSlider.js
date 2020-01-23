@@ -108,10 +108,10 @@ class YearRangeSlider extends Component {
       const { identifier, clientX } = changedTouches[i];
       if (identifier === touchIdentifier) {
         let sliderLowPosition = clientX - shiftX - left;
-        if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
-          sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
+        if (sliderLowPosition < 0 - 10) {
+          sliderLowPosition = 0 - 10;
         }
-        const rightEdge = this.slider.current.offsetWidth - this.lowThumb.current.offsetWidth / 2;
+        const rightEdge = this.slider.current.offsetWidth - 10;
         if (sliderLowPosition > rightEdge) {
           sliderLowPosition = rightEdge;
         }
@@ -136,10 +136,10 @@ class YearRangeSlider extends Component {
       const { identifier, clientX } = changedTouches[i];
       if (identifier === touchIdentifier) {
         let sliderHighPosition = clientX - shiftX - left;
-        if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
-          sliderHighPosition = 0 - this.highThumb.current.offsetWidth / 2;
+        if (sliderHighPosition < 0 - 10) {
+          sliderHighPosition = 0 - 10;
         }
-        const rightEdge = this.slider.current.offsetWidth - this.highThumb.current.offsetWidth / 2;
+        const rightEdge = this.slider.current.offsetWidth - 10;
         if (sliderHighPosition > rightEdge) {
           sliderHighPosition = rightEdge;
         }
@@ -186,10 +186,10 @@ class YearRangeSlider extends Component {
     if (touchDown) return;
     if (mouseDown !== 'low') return;
     let sliderLowPosition = clientX - shiftX - left;
-    if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
-      sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
+    if (sliderLowPosition < 0 - 10) {
+      sliderLowPosition = 0 - 10;
     }
-    const rightEdge = this.slider.current.offsetWidth - this.lowThumb.current.offsetWidth / 2;
+    const rightEdge = this.slider.current.offsetWidth - 10;
     if (sliderLowPosition > rightEdge) {
       sliderLowPosition = rightEdge;
     }
@@ -204,10 +204,10 @@ class YearRangeSlider extends Component {
     if (touchDown) return;
     if (mouseDown !== 'high') return;
     let sliderHighPosition = clientX - shiftX - left;
-    if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
-      sliderHighPosition = 0 - this.highThumb.current.offsetWidth / 2;
+    if (sliderHighPosition < 0 - 10) {
+      sliderHighPosition = 0 - 10;
     }
-    const rightEdge = this.slider.current.offsetWidth - this.highThumb.current.offsetWidth / 2;
+    const rightEdge = this.slider.current.offsetWidth - 10;
     if (sliderHighPosition > rightEdge) {
       sliderHighPosition = rightEdge;
     }
@@ -300,8 +300,8 @@ class YearRangeSlider extends Component {
       const maxCount = Math.max(...data.map(entry => entry.count));
       const width = this.slider.current.getBoundingClientRect().width;
       const sortedData = data.sort((a, b) => (parseInt(a.value, 10) - parseInt(b.value, 10)));
-      let sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
-      let sliderHighPosition = this.slider.current.getBoundingClientRect().width - this.highThumb.current.offsetWidth / 2;
+      let sliderLowPosition = 0 - 10;
+      let sliderHighPosition = this.slider.current.getBoundingClientRect().width - 10;
       let { min, max } = this.props;
       if (!min) {
         min = years[0];
@@ -319,11 +319,11 @@ class YearRangeSlider extends Component {
         const height = Math.round((entry.count / maxCount) * 100);
         if (parseInt(entry.value, 10) === parseInt(min, 10)) {
           lowYear = years[index];
-          sliderLowPosition = positions[index] - this.lowThumb.current.offsetWidth / 2;
+          sliderLowPosition = positions[index] - 10;
         }
         if (parseInt(entry.value, 10) === parseInt(max, 10)) {
           highYear = years[index];
-          sliderHighPosition = positions[index] - this.highThumb.current.offsetWidth / 2;
+          sliderHighPosition = positions[index] - 10;
         }
         html.push(
           <React.Fragment key={entry.value}>
