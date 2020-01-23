@@ -12,8 +12,8 @@ class YearRangeSlider extends Component {
     this.lowThumb = React.createRef();
     this.highThumb = React.createRef();
     this.state = {
-      sliderLowPosition: null,
-      sliderHighPosition: null,
+      sliderLowPosition: 0,
+      sliderHighPosition: 0,
       mouseDown: null,
       touchDown: null,
       touchIdentifier: null,
@@ -371,13 +371,6 @@ class YearRangeSlider extends Component {
 
   render() {
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
-    const style = (this.state.sliderLowPosition !== null)
-      ? {
-        backgroundColor: `${this.props.barColor}`,
-        marginLeft: `calc(${this.state.sliderLowPosition}px + 10px)`,
-        marginRight: `calc(100% - ${this.state.sliderHighPosition}px - 10px)`,
-      }
-      : { display: 'none' };
     return (
       <div className="w-100" ref={this.slider}>
         <div className="d-flex flex-column" style={{ marginBottom: '-30px' }}>
@@ -390,7 +383,11 @@ class YearRangeSlider extends Component {
           <div className={classes.slider}>
             <div
               className={classes.slider}
-              style={style}
+              style={{
+                backgroundColor: `${this.props.barColor}`,
+                marginLeft: `calc(${this.state.sliderLowPosition}px + 10px)`,
+                marginRight: `calc(100% - ${this.state.sliderHighPosition}px - 10px)`,
+              }}
             />
           </div>
           <div
