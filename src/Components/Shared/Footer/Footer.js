@@ -20,6 +20,11 @@ const messages = {
 };
 
 const Footer = () => {
+  /* eslint-disable-next-line */
+  var _paq = window._paq || []; 
+  if (localStorage.consent !== 'ko') {
+    _paq.push(['rememberConsentGiven']);
+  }
   const context = useContext(GlobalContext);
   const [isActive, setActive] = useState(false);
   return (
@@ -51,7 +56,7 @@ const Footer = () => {
           onAccept={() => { var _paq = window._paq || []; _paq.push(['rememberConsentGiven']); }}
           enableDeclineButton
           /* eslint-disable-next-line */
-          onDecline={() => { var _paq = window._paq || []; _paq.push(['forgetConsentGiven']); }}
+          onDecline={() => { var _paq = window._paq || []; _paq.push(['forgetConsentGiven']); localStorage.consent = 'ko';}}
         >
           <FormattedHTMLMessage
             id="Footer.consentInfo"
