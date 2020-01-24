@@ -14,7 +14,7 @@ const ProjectsFilters = (props) => {
   const typeActiveFilters = props.filters.type || {};
   const typeFacets = generalFacets.find(item => item.id === 'types') || { entries: [] };
   const domainsFacets = facets.find(item => item.id === 'domains') || { entries: [] };
-
+  if (!props.facets) return null;
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
