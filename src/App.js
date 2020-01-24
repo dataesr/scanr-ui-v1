@@ -1,5 +1,10 @@
 import React, { Component, Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
@@ -79,6 +84,18 @@ class App extends Component {
                   />
                 )}
               />
+              <Switch>
+                <Redirect from="/structure/:id" to="/entite/:id" />
+                <Route
+                  path="/entite/:id"
+                  render={props => (
+                    <EntityPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+              </Switch>
               <Route
                 path="/entite/:id"
                 render={props => (
