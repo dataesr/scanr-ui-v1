@@ -84,18 +84,16 @@ class App extends Component {
                   />
                 )}
               />
-              <Switch>
-                <Redirect from="/structure/:id" to="/entite/:id" />
-                <Route
-                  path="/entite/:id"
-                  render={props => (
-                    <EntityPage
-                      {...props}
-                      language={this.context.language}
-                    />
-                  )}
-                />
-              </Switch>
+              <Redirect from="/structure/:id" to="/entite/:id" />
+              <Route
+                path="/entite/:id"
+                render={props => (
+                  <EntityPage
+                    {...props}
+                    language={this.context.language}
+                  />
+                )}
+              />
               <Route
                 path="/entite/:id"
                 render={props => (
