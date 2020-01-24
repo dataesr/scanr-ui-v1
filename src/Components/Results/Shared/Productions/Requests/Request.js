@@ -5,7 +5,7 @@ export default {
   sourceFields: [
     'id', 'keywordsEn', 'keywordsFr', 'title', 'subtitle', 'summary', 'authors', 'productionType',
     'alternativeSummary', 'source', 'oaEvidence', 'isOa', 'domains', 'type',
-    'publicationDate', 'year',
+    'publicationDate', 'year', 'affiliations',
   ],
   filters: {
     year: {
