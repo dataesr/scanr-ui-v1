@@ -11,6 +11,7 @@ import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
 
 import classes from './AllResults.scss';
+import styles from '../../../style.scss';
 
 
 const SearchResults = (props) => {
@@ -60,6 +61,17 @@ const SearchResults = (props) => {
                             values={{ count: props.preview[section].count }}
                           />
                         )
+                        : null
+                    }
+                    {
+                      (section !== 'structures') ? (
+                        <div className={styles.AlertMessageSectionHome}>
+                          <div className={`container ${styles.AlertMessage}`}>
+                            <i className="fas fa-exclamation-triangle mr-2" />
+                            <FormattedHTMLMessage id={`Search.Results.${section}.warning`} />
+                          </div>
+                        </div>
+                      )
                         : null
                     }
                   </p>

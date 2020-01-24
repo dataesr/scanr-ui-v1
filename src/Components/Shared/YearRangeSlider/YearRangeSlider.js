@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
 
+
 import classes from './YearRangeSlider.scss';
 
 class YearRangeSlider extends Component {
@@ -11,8 +12,8 @@ class YearRangeSlider extends Component {
     this.lowThumb = React.createRef();
     this.highThumb = React.createRef();
     this.state = {
-      sliderLowPosition: null,
-      sliderHighPosition: null,
+      sliderLowPosition: 0,
+      sliderHighPosition: 0,
       mouseDown: null,
       touchDown: null,
       touchIdentifier: null,
@@ -107,10 +108,10 @@ class YearRangeSlider extends Component {
       const { identifier, clientX } = changedTouches[i];
       if (identifier === touchIdentifier) {
         let sliderLowPosition = clientX - shiftX - left;
-        if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
-          sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
+        if (sliderLowPosition < 0 - 10) {
+          sliderLowPosition = 0 - 10;
         }
-        const rightEdge = this.slider.current.offsetWidth - this.lowThumb.current.offsetWidth / 2;
+        const rightEdge = this.slider.current.offsetWidth - 10;
         if (sliderLowPosition > rightEdge) {
           sliderLowPosition = rightEdge;
         }
@@ -135,10 +136,10 @@ class YearRangeSlider extends Component {
       const { identifier, clientX } = changedTouches[i];
       if (identifier === touchIdentifier) {
         let sliderHighPosition = clientX - shiftX - left;
-        if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
-          sliderHighPosition = 0 - this.highThumb.current.offsetWidth / 2;
+        if (sliderHighPosition < 0 - 10) {
+          sliderHighPosition = 0 - 10;
         }
-        const rightEdge = this.slider.current.offsetWidth - this.highThumb.current.offsetWidth / 2;
+        const rightEdge = this.slider.current.offsetWidth - 10;
         if (sliderHighPosition > rightEdge) {
           sliderHighPosition = rightEdge;
         }
@@ -185,10 +186,10 @@ class YearRangeSlider extends Component {
     if (touchDown) return;
     if (mouseDown !== 'low') return;
     let sliderLowPosition = clientX - shiftX - left;
-    if (sliderLowPosition < 0 - this.lowThumb.current.offsetWidth / 2) {
-      sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
+    if (sliderLowPosition < 0 - 10) {
+      sliderLowPosition = 0 - 10;
     }
-    const rightEdge = this.slider.current.offsetWidth - this.lowThumb.current.offsetWidth / 2;
+    const rightEdge = this.slider.current.offsetWidth - 10;
     if (sliderLowPosition > rightEdge) {
       sliderLowPosition = rightEdge;
     }
@@ -203,10 +204,10 @@ class YearRangeSlider extends Component {
     if (touchDown) return;
     if (mouseDown !== 'high') return;
     let sliderHighPosition = clientX - shiftX - left;
-    if (sliderHighPosition < 0 - this.highThumb.current.offsetWidth / 2) {
-      sliderHighPosition = 0 - this.highThumb.current.offsetWidth / 2;
+    if (sliderHighPosition < 0 - 10) {
+      sliderHighPosition = 0 - 10;
     }
-    const rightEdge = this.slider.current.offsetWidth - this.highThumb.current.offsetWidth / 2;
+    const rightEdge = this.slider.current.offsetWidth - 10;
     if (sliderHighPosition > rightEdge) {
       sliderHighPosition = rightEdge;
     }
@@ -297,10 +298,10 @@ class YearRangeSlider extends Component {
     if (data.length > 0) {
       const years = data.map(entry => parseInt(entry.value, 10)).sort((a, b) => (a - b));
       const maxCount = Math.max(...data.map(entry => entry.count));
-      const width = this.slider.current.getBoundingClientRect().width;
+      const { width } = this.slider.current.getBoundingClientRect();
       const sortedData = data.sort((a, b) => (parseInt(a.value, 10) - parseInt(b.value, 10)));
-      let sliderLowPosition = 0 - this.lowThumb.current.offsetWidth / 2;
-      let sliderHighPosition = this.slider.current.getBoundingClientRect().width - this.highThumb.current.offsetWidth / 2;
+      let sliderLowPosition = 0 - 10;
+      let sliderHighPosition = width - 10;
       let { min, max } = this.props;
       if (!min) {
         min = years[0];
@@ -318,11 +319,11 @@ class YearRangeSlider extends Component {
         const height = Math.round((entry.count / maxCount) * 100);
         if (parseInt(entry.value, 10) === parseInt(min, 10)) {
           lowYear = years[index];
-          sliderLowPosition = positions[index] - this.lowThumb.current.offsetWidth / 2;
+          sliderLowPosition = positions[index] - 10;
         }
         if (parseInt(entry.value, 10) === parseInt(max, 10)) {
           highYear = years[index];
-          sliderHighPosition = positions[index] - this.highThumb.current.offsetWidth / 2;
+          sliderHighPosition = positions[index] - 10;
         }
         html.push(
           <React.Fragment key={entry.value}>
@@ -369,10 +370,9 @@ class YearRangeSlider extends Component {
   }
 
   render() {
-    if (!this.props.data.length) return null;
     const height = (this.props.height) ? `${this.props.height}px` : '40px';
     return (
-      <div className="w-100">
+      <div className="w-100" ref={this.slider}>
         <div className="d-flex flex-column" style={{ marginBottom: '-30px' }}>
           <div className={classes.label} htmlFor="slider">
             {this.props.label}
@@ -380,7 +380,7 @@ class YearRangeSlider extends Component {
           <div className="d-flex align-items-end w-100" style={{ height }}>
             {(this.state.html) ? this.state.html.map(bar => bar) : null}
           </div>
-          <div className={classes.slider} ref={this.slider}>
+          <div className={classes.slider}>
             <div
               className={classes.slider}
               style={{
