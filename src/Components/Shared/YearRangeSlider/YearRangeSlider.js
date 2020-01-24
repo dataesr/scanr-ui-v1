@@ -298,10 +298,10 @@ class YearRangeSlider extends Component {
     if (data.length > 0) {
       const years = data.map(entry => parseInt(entry.value, 10)).sort((a, b) => (a - b));
       const maxCount = Math.max(...data.map(entry => entry.count));
-      const width = this.slider.current.getBoundingClientRect().width;
+      const { width } = this.slider.current.getBoundingClientRect();
       const sortedData = data.sort((a, b) => (parseInt(a.value, 10) - parseInt(b.value, 10)));
       let sliderLowPosition = 0 - 10;
-      let sliderHighPosition = this.slider.current.getBoundingClientRect().width - 10;
+      let sliderHighPosition = width - 10;
       let { min, max } = this.props;
       if (!min) {
         min = years[0];
