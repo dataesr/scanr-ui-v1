@@ -317,11 +317,32 @@ def marshmallow_dump_from_mongo(mongo, db, collection, limit):
 # In[7]:
 
 
+do_orga = False
+do_project = False
+do_production = False
+do_person = True
+
 start = datetime.now()
-#dump_from_mongo(mongo=mongo, db="organizations", collection="scanr", to_file="organizations.json")
-#dump_from_mongo(mongo=mongo, db="projects", collection="scanr", to_file="projects.json")
-dump_publications_from_mongo(mongo=mongo, to_file="publications.json")
-#dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
+if do_orga:
+    print("start orga")
+    dump_from_mongo(mongo=mongo, db="organizations", collection="scanr", to_file="organizations.json")
+    print("end")
+    print("")
+if do_project:
+    print("start projects")
+    dump_from_mongo(mongo=mongo, db="projects", collection="scanr", to_file="projects.json")
+    print("end")
+    print("")
+if do_production:
+    print("start productions")
+    dump_publications_from_mongo(mongo=mongo, to_file="publications.json")
+    print("end")
+    print("")
+if do_person:
+    print("start persons")
+    dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
+    print("end")
+    print("")
 print(datetime.now()- start)
 
 
