@@ -1,6 +1,7 @@
 export default {
   pageSize: 10000,
   query: '',
+  sort: { year: 'DESC' },
   sourceFields: [
     'id', 'keywords', 'label', 'acronym', 'domains', 'type',
     'participantCount', 'call', 'action', 'year', 'description',
