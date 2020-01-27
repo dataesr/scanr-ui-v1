@@ -46,7 +46,7 @@ const CounterListCard = (props) => {
         <li key={item}>
           <EntityCard
             language={props.language}
-            data={item.structure}
+            data={item.structure || item}
             small
           />
         </li>
@@ -94,7 +94,7 @@ CounterListCard.defaultProps = {
 
 CounterListCard.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.string,
+  data: PropTypes.array,
   limit: PropTypes.number,
   title: PropTypes.string,
   modalTitleKey: PropTypes.string,
