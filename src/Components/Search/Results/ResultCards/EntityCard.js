@@ -20,7 +20,9 @@ const EntityCard = (props) => {
     en: highlightsEn,
   };
 
-  const identifier = (props.data.id)
+  if (!props.data) { return null; }
+
+  const identifier = (props.data && props.data.id)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -33,7 +35,7 @@ const EntityCard = (props) => {
     )
     : null;
 
-  const address = (props.data.address && props.data.address.length > 0 && props.data.address[0].postcode)
+  const address = (props.data && props.data.address && props.data.address.length > 0 && props.data.address[0].postcode)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -46,7 +48,7 @@ const EntityCard = (props) => {
     )
     : null;
 
-  const kind = (props.data.kind && !props.small)
+  const kind = (props.data && props.data.kind && !props.small)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -59,10 +61,8 @@ const EntityCard = (props) => {
     )
     : null;
 
-  // let previousHighlight = '';
   let allHighlights = '';
   if (props.highlights && props.highlights.length > 0) {
-    // previousHighlight = [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ');
     let firstSource = '';
     for (let i = 0; i < props.highlights.length; i += 1) {
       const currentH = props.highlights[i];
@@ -103,7 +103,7 @@ const EntityCard = (props) => {
     )
     : null;
 
-  const country = (props.data.country)
+  const country = (props.data && props.data.country)
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -122,7 +122,7 @@ const EntityCard = (props) => {
         <article className={`d-flex flex-column ${classes.ResultCard} ${classes[props.cardColor]}`}>
           <h3 className={`mb-auto pb-3 ${classes.CardTitle} ${classes.blockWithText}`}>
             {
-              (props.data.id) ? (
+              (props.data && props.data.id) ? (
                 <a href={`entite/${props.data.id}`}>
                   {getSelectedKey(props.data, 'label', props.language, 'default')}
                 </a>
