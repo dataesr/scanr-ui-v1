@@ -44,12 +44,16 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    I {
-      color: $scanrblueColor
-    }
   }
 
   .Button {
     margin-bottom: 16px;
   }
+}
+.Link {
+  color: $scanrdeepblueColor;
+  font-weight: bold;
+}
+.Puce {
+  color: $scanrblueColor
 }
