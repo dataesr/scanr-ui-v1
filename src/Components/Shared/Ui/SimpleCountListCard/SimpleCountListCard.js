@@ -15,59 +15,65 @@ import classes from './SimpleCountListCard.scss';
  * Accessible : .
  * Tests unitaires : .
 */
+const getLabel = (item, lang) => {
+  const label = (item.label)
+    ? item.label
+    : getSelectKey(item.structure, 'label', lang, 'fr');
+
+  let label2 = label;
+  if (item.id) {
+    label2 = (
+      <a title={label} href={`/entite/${item.id}`} className={classes.Link}>
+        {label}
+      </a>
+    );
+  } else if (item.structure && item.structure.id) {
+    label2 = (
+      <a title={label} href={`/entite/${item.structure.id}`} className={classes.Link}>
+        {label}
+      </a>
+    );
+  }
+  return label2;
+};
+
 const SimpleCountListCard = (props) => {
   const MAX_LIST_CARD = props.maxList;
+
   const MAX_LIST_MODAL = 15;
+
   const shortLi = props.data.map((item, i) => {
-    // Identification du Label
-    const label = (item.label)
-      ? item.label
-      : getSelectKey(item.structure, 'label', props.language, 'fr');
-    const label2 = (item.id)
-      ? (
-        <a title={label} href={`/entite/${item.id}`}>
-          {label}
-        </a>
-      ) : label;
     if (i < MAX_LIST_CARD) {
       return (
         /* eslint-disable-next-line */
         <li key={`${item}_${i}`}>
-          <i className="fas fa-chevron-circle-right pr-2" />
-          {label2}
+          <i className={`fas fa-chevron-circle-right pr-2 ${classes.Puce}`} />
+          {getLabel(item, props.language)}
         </li>
       );
     }
     return null;
   });
 
-  const FullLi = props.data.map((item) => {
-    // Identification du Label
-    const label = (item.label)
-      ? item.label
-      : getSelectKey(item.structure, 'label', props.language, 'fr');
-    const label2 = (item.id)
-      ? (
-        <a title={label} href={`/entite/${item.id}`}>
-          {label}
-        </a>
-      ) : label;
-    return (
-      <li key={item}>
-        <span className="fa-li">
-          <i className="fas fa-chevron-circle-right" />
-        </span>
-        {label2}
-      </li>
-    );
-  });
+  const FullLi = props.data.map(item => (
+    <li key={item}>
+      <span className="fa-li">
+        <i className={`fas fa-chevron-circle-right ${classes.Puce}`} />
+      </span>
+      {getLabel(item, props.language)}
+    </li>
+  ));
+
   const dataHtmlList = <ul className="fa-ul">{FullLi}</ul>;
+
   const buttonLabel = (
     <React.Fragment>
       {props.modalButtonLabel}
     </React.Fragment>
   );
+
   let actionButton = null;
+
   if (props.data.length > MAX_LIST_CARD && props.data.length < MAX_LIST_MODAL) {
     actionButton = (
       <ButtonWithModal
