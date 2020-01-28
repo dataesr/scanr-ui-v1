@@ -32,6 +32,7 @@ class Network extends Component {
   componentDidMount() {
     this.getDataSupervisorOf();
     this.getLinksOf();
+    this.getEntitiesWhereIMParent();
     if (this.props.data.relations) {
       const satt = this.props.data.relations.filter(item => item.type === 'satt_actionnaire');
       this.setState({ satt });
@@ -117,224 +118,285 @@ class Network extends Component {
     }
   }
 
-  renderSection = () => (
-    <Fragment>
-      <div className="row">
-        {
-          (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.props.data.institutions}
-                title={<FormattedHTMLMessage id="Entity.Network.supervisors.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.institutions.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.props.data.children && this.props.data.children.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.props.data.children}
-                title={<FormattedHTMLMessage id="Entity.Network.headOf.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.children.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.dataSupervisorOf}
-                count={this.state.dataSupervisorOfTotal}
-                title={<FormattedHTMLMessage id="Entity.Network.supervisorOf.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.dataSupervisorOf.length }} />}
-                entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.satt && this.state.satt.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.satt}
-                count={this.state.satt.length}
-                title={<FormattedHTMLMessage id="Entity.Network.satt.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.satt.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.carnot && this.state.carnot.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.carnot}
-                count={this.state.carnot.length}
-                title={<FormattedHTMLMessage id="Entity.Network.carnot.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.carnot.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.incubateur && this.state.incubateur.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.incubateur}
-                count={this.state.incubateur.length}
-                title={<FormattedHTMLMessage id="Entity.Network.incubateur.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.incubateur.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.spinoff && this.state.spinoff.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.spinoff}
-                count={this.state.spinoff.length}
-                title={<FormattedHTMLMessage id="Entity.Network.spinoff.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoff.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.rachete && this.state.rachete.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.rachete}
-                count={this.state.rachete.length}
-                title={<FormattedHTMLMessage id="Entity.Network.rachete.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.rachete.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.aRachete && this.state.aRachete.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.aRachete}
-                count={this.state.aRachete.length}
-                title={<FormattedHTMLMessage id="Entity.Network.aRachete.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aRachete.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.aIncube && this.state.aIncube.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.aIncube}
-                count={this.state.aIncube.length}
-                title={<FormattedHTMLMessage id="Entity.Network.aIncube.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aIncube.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.appartientCarnot && this.state.appartientCarnot.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.appartientCarnot}
-                count={this.state.appartientCarnot.length}
-                title={<FormattedHTMLMessage id="Entity.Network.appartientCarnot.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.appartientCarnot.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.actionnaireSatt && this.state.actionnaireSatt.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.actionnaireSatt}
-                count={this.state.actionnaireSatt.length}
-                title={<FormattedHTMLMessage id="Entity.Network.actionnaireSatt.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.actionnaireSatt.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-        {
-          (this.state.spinoffFrom && this.state.spinoffFrom.length > 0) ? (
-            <div className={`col-md-4 ${classes.NoSpace}`}>
-              <SimpleCountListCard
-                language={this.props.language}
-                data={this.state.spinoffFrom}
-                count={this.state.spinoffFrom.length}
-                title={<FormattedHTMLMessage id="Entity.Network.spinoffFrom.title" />}
-                label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoffFrom.length }} />}
-                modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
-                modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
-              />
-            </div>
-          ) : null
-        }
-      </div>
-      <div className="row">
-        {
-          this.state.networkBadges.map(badge => (
-            <div className={`col-md-4 ${classes.CardContainer}`}>
-              <PrizeCard
-                date={null}
-                title={<FormattedHTMLMessage id="Entity.Network.prizeCard.title" />}
-                language={this.props.language}
-                label={getSelectKey(badge, 'label', this.props.language, 'fr')}
-                logo="fas fa-project-diagram fa-3x"
-                color={styles.personColor}
-                className={classes.PrizeCardStyle}
-              />
-            </div>
-          ))
-        }
-      </div>
-    </Fragment>
-  );
+  getEntitiesWhereIMParent = () => {
+    if (this.props.data.id) {
+      const url = `${API_STRUCTURES_END_POINT}/search`;
+      const obj = {
+        filters: {
+          'parents.structure.id': {
+            type: 'MultiValueSearchFilter',
+            op: 'all',
+            values: [`${this.props.data.id}`],
+          },
+        },
+        sourceFields: ['relations', 'label', 'id'],
+        pageSize: 10000,
+      };
+      Axios.post(url, obj)
+        .then((response) => {
+          const newData = response.data.results.map((item) => {
+            const o = {
+              label: getSelectKey(item.value, 'label', this.props.language, 'fr'),
+              id: item.value.id,
+            };
+            return o;
+          });
+          this.setState({ entitiesWhereIMParent: newData });
+        });
+    }
+  }
 
+  renderSection = () => {
+    let parents = null;
+    if (this.props.data.parents) {
+      parents = this.props.data.parents.filter(entity => entity.structure.status === 'active') || null;
+    }
+    return (
+      <Fragment>
+        <div className="row">
+          {
+            (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.props.data.institutions}
+                  title={<FormattedHTMLMessage id="Entity.Network.supervisors.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.institutions.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.props.data.children && this.props.data.children.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.props.data.children}
+                  title={<FormattedHTMLMessage id="Entity.Network.headOf.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.children.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (parents) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language} // participe à
+                  data={parents}
+                  title={<FormattedHTMLMessage id="Entity.Network.parents.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.parents.label" values={{ count: parents.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.parents.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.parents.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.entitiesWhereIMParent && this.state.entitiesWhereIMParent.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language} // participe à
+                  data={this.state.entitiesWhereIMParent}
+                  title={<FormattedHTMLMessage id="Entity.Network.entitiesWhereIMParent.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.entitiesWhereIMParent.label" values={{ count: this.state.entitiesWhereIMParent.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.entitiesWhereIMParent.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entitiesWhereIMParent.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.dataSupervisorOf && this.state.dataSupervisorOf.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.dataSupervisorOf}
+                  count={this.state.dataSupervisorOfTotal}
+                  title={<FormattedHTMLMessage id="Entity.Network.supervisorOf.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.dataSupervisorOf.length }} />}
+                  entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.satt && this.state.satt.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.satt}
+                  count={this.state.satt.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.satt.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.satt.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.carnot && this.state.carnot.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.carnot}
+                  count={this.state.carnot.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.carnot.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.carnot.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.incubateur && this.state.incubateur.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.incubateur}
+                  count={this.state.incubateur.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.incubateur.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.incubateur.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.spinoff && this.state.spinoff.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.spinoff}
+                  count={this.state.spinoff.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.spinoff.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoff.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.rachete && this.state.rachete.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.rachete}
+                  count={this.state.rachete.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.rachete.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.rachete.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.aRachete && this.state.aRachete.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.aRachete}
+                  count={this.state.aRachete.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.aRachete.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aRachete.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.aIncube && this.state.aIncube.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.aIncube}
+                  count={this.state.aIncube.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.aIncube.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aIncube.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.appartientCarnot && this.state.appartientCarnot.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.appartientCarnot}
+                  count={this.state.appartientCarnot.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.appartientCarnot.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.appartientCarnot.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.actionnaireSatt && this.state.actionnaireSatt.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.actionnaireSatt}
+                  count={this.state.actionnaireSatt.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.actionnaireSatt.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.actionnaireSatt.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.spinoffFrom && this.state.spinoffFrom.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.spinoffFrom}
+                  count={this.state.spinoffFrom.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.spinoffFrom.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.spinoffFrom.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+        </div>
+        <div className="row">
+          {
+            this.state.networkBadges.map(badge => (
+              <div className={`col-md-4 ${classes.CardContainer}`}>
+                <PrizeCard
+                  date={null}
+                  title={<FormattedHTMLMessage id="Entity.Network.prizeCard.title" />}
+                  language={this.props.language}
+                  label={getSelectKey(badge, 'label', this.props.language, 'fr')}
+                  logo="fas fa-project-diagram fa-3x"
+                  color={styles.personColor}
+                  className={classes.PrizeCardStyle}
+                />
+              </div>
+            ))
+          }
+        </div>
+      </Fragment>
+    );
+  };
 
   render() {
     const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
