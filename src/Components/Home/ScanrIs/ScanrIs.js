@@ -128,9 +128,6 @@ const ScanrIs = () => {
                 <DescriptiveText>
                   <FormattedHTMLMessage id="Home.ScanrIs.section.third.text" />
                 </DescriptiveText>
-                <LearnMore href="/tutorial">
-                  <FormattedHTMLMessage id="Home.ScanrIs.learnMore.howtoScanr" />
-                </LearnMore>
               </div>
               <div className="d-flex flex-column">
                 <Icon className="fas fa-lock-open" aria-hidden />
