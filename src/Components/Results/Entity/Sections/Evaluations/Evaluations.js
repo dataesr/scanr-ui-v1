@@ -110,9 +110,9 @@ const Evaluations = (props) => {
                   {<FormattedHTMLMessage id="Entity.Evaluations.report" />}
                   {(counter > 1) ? 's' : null}
                 </p>
-                <div className="h-100">
+                <div>
                   {(finalList) ? (
-                    <div className="h-100 d-flex align-items-center justify-content-center">
+                    <div className="d-flex align-items-center justify-content-center">
                       <ButtonWithModal
                         logo="fas fa-landmark"
                         title={<FormattedHTMLMessage id="Entity.Evaluations.title" />}
