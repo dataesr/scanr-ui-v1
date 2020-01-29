@@ -1,0 +1,11 @@
+@import '../../../style.scss';
+
+.CSVExporter {
+  .Label {
+    color: $scanrgreyColor;
+    background-color: white;
+  }
+  .Button {
+    padding: 1px 6px;
+  }
+}
