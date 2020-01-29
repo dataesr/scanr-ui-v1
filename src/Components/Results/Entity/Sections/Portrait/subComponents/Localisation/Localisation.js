@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
-
 import {
   Map, Marker, TileLayer, Tooltip,
 } from 'react-leaflet';
@@ -9,6 +8,7 @@ import MarkerClusterGroup from 'react-leaflet-markercluster';
 import { yellowIcon, greenIcon } from './icons';
 import useGetData from '../../../../../../../Hooks/useGetData';
 import { API_STRUCTURES_END_POINT } from '../../../../../../../config/config';
+
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Localisation.scss';
@@ -47,22 +47,40 @@ const Localisation = (props) => {
   const url = `${API_STRUCTURES_END_POINT}/near/${props.id}?distance=${0.5}&nb=${1000}`;
   const { data } = useGetData(url);
 
-  // if (!props.address || (!props.address[0].address && !props.address[0].city || !props.address[0].country)) {
-  // eslint-disable-next-line
   if (!props.address) {
     return null;
   }
-  let displayedAddress = '';
-  if (props.address[0].address) {
-    const displayedCity = (props.address[0].city) ? (props.address[0].city) : '';
-    const displayedCountry = (props.address[0].country) ? (props.address[0].country) : '';
-    const displayedSep = (props.address[0].city) ? ' - ' : '';
-    displayedAddress = displayedCity.concat(displayedSep, displayedCountry);
-  }
+
+  const getDisplayedAddress = (address, main = false) => {
+    const displayedCity = address.city || '';
+    const displayedCountry = address.country || '';
+    const displayedSep = (address.city) ? ' - ' : '';
+    const cityCountry = displayedCity.concat(displayedSep, displayedCountry);
+    return (
+      <React.Fragment>
+        <hr />
+        <div className="d-flex flex-row">
+          <div>
+            <div>{address.address}</div>
+            <div>{cityCountry}</div>
+          </div>
+          {
+            (main) ? <i className="fas fa-flag ml-auto" /> : null
+          }
+        </div>
+      </React.Fragment>
+    );
+  };
+
+  // Get main Address
+  const mainAddress = props.address.find(ad => ad.main === true);
+  const otherAddresses = props.address.find(ad => ad.main === false);
+
   let mapProps = {};
   if (props.address[0].gps && props.address[0].gps.lat && props.address[0].gps.lon) {
     mapProps = { maxZoom: 17, center: [props.address[0].gps.lat, props.address[0].gps.lon], zoom: 14 };
   }
+
   const markers = createMarkers(props.address[0].gps, data);
 
   return (
@@ -124,9 +142,8 @@ const Localisation = (props) => {
                   </div>
                 </div>
                 <div className={classes.Address}>
-                  {props.address[0].address}
-                  <br />
-                  {`${displayedAddress}`}
+                  {getDisplayedAddress(mainAddress, true)}
+                  {getDisplayedAddress(otherAddresses)}
                 </div>
               </div>
             </div>
