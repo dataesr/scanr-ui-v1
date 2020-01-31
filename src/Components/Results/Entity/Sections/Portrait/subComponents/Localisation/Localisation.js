@@ -51,7 +51,7 @@ const Localisation = (props) => {
     return null;
   }
 
-  const getDisplayedAddress = (address, main = false) => {
+  const getDisplayedAddress = (address = {}, main = false) => {
     const displayedCity = address.city || '';
     const displayedCountry = address.country || '';
     const displayedSep = (address.city) ? ' - ' : '';
@@ -74,7 +74,7 @@ const Localisation = (props) => {
 
   // Get main Address
   const mainAddress = props.address.find(ad => ad.main === true);
-  const otherAddresses = props.address.find(ad => ad.main === false);
+  const otherAddresses = props.address.filter(ad => ad.main === false);
 
   let mapProps = {};
   if (props.address[0].gps && props.address[0].gps.lat && props.address[0].gps.lon) {
@@ -143,7 +143,9 @@ const Localisation = (props) => {
                 </div>
                 <div className={classes.Address}>
                   {getDisplayedAddress(mainAddress, true)}
-                  {getDisplayedAddress(otherAddresses)}
+                  {
+                    otherAddresses.map(ad => (getDisplayedAddress(ad)))
+                  }
                 </div>
               </div>
             </div>
