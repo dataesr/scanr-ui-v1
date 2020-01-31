@@ -256,17 +256,7 @@ class App extends Component {
                   />
                 )}
               />
-              { /*
-              <Route
-                exact
-                path="/contribuer"
-                component={props => (
-                  <ContributePage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              /> */}
+
               <Route
                 component={() => (<Errors error={404} />)}
               />
