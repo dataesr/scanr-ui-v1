@@ -33,6 +33,9 @@ const Informations = (props) => {
     idName = 'Sudoc';
     id = props.data.id.substring(5);
     externalLink = 'http://www.sudoc.fr/'.concat({ id }.id);
+  } else if (props.data.id.substring(0, 6) === 'dumas-') {
+    idName = 'HAL';
+    externalLink = 'https://dumas.ccsd.cnrs.fr/'.concat({ id }.id);
   } else {
     idName = 'HAL';
     externalLink = 'https://hal.archives-ouvertes.fr/'.concat({ id }.id);
