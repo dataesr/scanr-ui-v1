@@ -240,7 +240,7 @@ class Ecosystem extends Component {
       const nbPatents = data.details.patent || 0;
       dataCSV.push(
         {
-          col1: label,
+          col1: label.replace(/"/g, ''),
           col2: nbPublications,
           col3: nbThesis,
           col4: nbProjects,

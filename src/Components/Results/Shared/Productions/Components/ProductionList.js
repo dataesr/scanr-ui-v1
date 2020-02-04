@@ -48,7 +48,7 @@ const ProductionList = (props) => {
     dataCSV.push(
       {
         col1: item.value.id,
-        col2: label,
+        col2: label.replace(/"/g, ''),
         col3: item.value.type,
       },
     );
