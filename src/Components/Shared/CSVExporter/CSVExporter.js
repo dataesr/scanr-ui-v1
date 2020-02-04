@@ -19,6 +19,7 @@ const CSVExporter = (props) => {
           separator=";"
           columns={props.columns}
           datas={props.data}
+          wrapColumnChar='"'
         >
           <button type="button" className={`btn ${classes.btn_scanrBlue} ${classes.Button}`}>
             <i className="fas fa-table" title="export CSV" />
