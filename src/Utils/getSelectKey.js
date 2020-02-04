@@ -7,7 +7,7 @@
 */
 export default function getSelectKey(globalObj, key, searchedKey, defaultKey) {
   let res = '';
-  if (globalObj[key]) {
+  if (globalObj && globalObj[key]) {
     if (globalObj[key][searchedKey]) {
       res = globalObj[key][searchedKey];
     } else if (globalObj[key][defaultKey]) {
