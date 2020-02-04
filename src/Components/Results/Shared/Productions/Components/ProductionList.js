@@ -5,17 +5,35 @@ import moment from 'moment';
 import classes from './ProductionList.scss';
 import ProductionDetail from './ProductionDetail';
 import getSelectKey from '../../../../../Utils/getSelectKey';
+import CSVExporter from '../../../../Shared/CSVExporter/CSVExporter';
+
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 /**
  * ProductionList
  * Url : ex: /entite/200711886U
- * Description : Bloc identité visible dans la section Protrait
+ * Description : Bloc identité visible dans la section Productions
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
 */
 const ProductionList = (props) => {
   let selectedProd = {};
+
+  const dataCSVColumns = [
+    { id: 'col1', displayName: messages[props.language]['dataCSVColumns.col1'] },
+    { id: 'col2', displayName: messages[props.language]['dataCSVColumns.col2'] },
+    { id: 'col3', displayName: messages[props.language]['dataCSVColumns.col3'] },
+  ];
+  const dataCSV = [];
+
   const content = props.data.map((item, i) => {
     let first = false;
     if (i > 0) {
@@ -26,6 +44,14 @@ const ProductionList = (props) => {
       selected = classes.Selected;
       selectedProd = item.value;
     }
+    const label = getSelectKey(item.value, 'title', props.language, 'default');
+    dataCSV.push(
+      {
+        col1: item.value.id,
+        col2: label.replace(/"/g, ''),
+        col3: item.value.type,
+      },
+    );
     return (
       <React.Fragment key={item.value.id}>
         {
@@ -47,7 +73,7 @@ const ProductionList = (props) => {
           tabIndex={0}
         >
           <p className={classes.Title}>
-            {getSelectKey(item.value, 'title', props.language, 'default')}
+            {label}
           </p>
           <div className={`d-flex align-items-center ${classes.Type}`}>
             <div className="mr-auto" />
@@ -66,6 +92,16 @@ const ProductionList = (props) => {
           <div className={classes.ListOfProductions}>
             {(content.length > 0) ? content : 'Aucun résultat'}
           </div>
+          {(content.length > 0) ? (
+            <div className="pt-2">
+              <CSVExporter
+                language={props.language}
+                columns={dataCSVColumns}
+                data={dataCSV}
+                fileName="productions_export"
+              />
+            </div>
+          ) : null}
         </div>
         <div className="col-lg-7">
           <ProductionDetail language={props.language} data={selectedProd} />
