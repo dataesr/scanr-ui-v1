@@ -80,7 +80,7 @@ const PatentIdentity = (props) => {
                 <div className={`col-12 ${classes.CardContainer}`}>
                   <SimpleCard
                     language={props.language}
-                    logo="fas fa-id-card"
+                    logo="fas fa-calendar-check"
                     title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
                     label={<FormattedHTMLMessage id="Patent.Identity.depots.grantedDate" values={{ date: moment(grantedInfo[0].date).format('L') }} />}
                     tooltip=""
@@ -104,7 +104,7 @@ const PatentIdentity = (props) => {
           <div className={`col-md-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
-              logo="fas fa-clipboard-list"
+              logo="fas fa-flag"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.oeb" />}
               label={(isOEB && isOEB.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""
@@ -113,7 +113,7 @@ const PatentIdentity = (props) => {
           <div className={`col-md-6 ${classes.CardContainer}`}>
             <SimpleCard
               language={props.language}
-              logo="fas fa-clipboard-list"
+              logo="fas fa-flag"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.international" />}
               label={(isInternational && isInternational.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""

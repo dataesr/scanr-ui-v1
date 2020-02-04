@@ -92,7 +92,7 @@ const PatentsApplications = (props) => {
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCardWithButton
                         language={props.language}
-                        logo="fas fa-id-card"
+                        logo="fas fa-fingerprint"
                         title={<FormattedHTMLMessage id="Patent.Depots.id" />}
                         label={selected.id}
                         tooltip=""
@@ -114,7 +114,7 @@ const PatentsApplications = (props) => {
                         <div className={`col-md-6 ${classes.CardContainer}`}>
                           <SimpleCard
                             language={props.language}
-                            logo="fas fa-id-card"
+                            logo="fas fa-calendar-check"
                             title={<FormattedHTMLMessage id="Patent.Depots.granted" />}
                             label={<FormattedHTMLMessage id="Patent.Depots.grantedDate" values={{ date: moment(selected.delivrance).format('DD-MM-YYYY') }} />}
                             tooltip=""
@@ -125,7 +125,7 @@ const PatentsApplications = (props) => {
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={props.language}
-                        logo="fas fa-calendar-day"
+                        logo="fas fa-flag"
                         title={<FormattedHTMLMessage id="Patent.Depots.country" />}
                         label={countries[props.language][selected.country]}
                         tooltip=""
@@ -134,7 +134,7 @@ const PatentsApplications = (props) => {
                     <div className={`col-md-6 ${classes.CardContainer}`}>
                       <SimpleCard
                         language={props.language}
-                        logo="fas fa-clipboard-list"
+                        logo="fas fa-lightbulb"
                         title={<FormattedHTMLMessage id="Patent.Depots.type" />}
                         label={patentType[props.language][selected.type]}
                         tooltip=""
@@ -145,7 +145,7 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-clipboard-list"
                         title={<FormattedHTMLMessage id="Patent.Depots.isPriority" />}
-                        label={(selected.label === 'priority') ? (<i className={`fas fa-check-circle fa-3x ${classes.Success}`} />) : (<i className={`fas fa-times-circle fa-3x ${classes.Danger}`} />)}
+                        label={(selected.label === 'priority') ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
                         tooltip=""
                       />
                     </div>
