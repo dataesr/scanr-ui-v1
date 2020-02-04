@@ -10,7 +10,6 @@ import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighCha
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import CounterDataSimple from '../../../../Shared/CounterDataSimple/CounterDataSimple';
 import FranceFlag from '../../../../Shared/images/france-flag-icon-32.png';
-import CSVExporter from '../../../../Shared/CSVExporter/CSVExporter';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -214,14 +213,6 @@ class Ecosystem extends Component {
       return prodB - prodA;
     });
 
-    const dataCSVColumns = [
-      { id: 'col1', displayName: messages[this.props.language]['dataCSVColumns.col1'] },
-      { id: 'col2', displayName: messages[this.props.language]['dataCSVColumns.col2'] },
-      { id: 'col3', displayName: messages[this.props.language]['dataCSVColumns.col3'] },
-      { id: 'col4', displayName: messages[this.props.language]['dataCSVColumns.col4'] },
-      { id: 'col5', displayName: messages[this.props.language]['dataCSVColumns.col5'] },
-    ];
-    const dataCSV = [];
     const content = dataSorted.map((data, index) => {
       const jointProductions = (data.details.publication || 0) + (data.details.thesis || 0) + (data.details.Project || 0) + (data.details.patent || 0);
       let selected = '';
@@ -233,20 +224,6 @@ class Ecosystem extends Component {
       if (!this.state.selectedCollaboration.structure && index === 0) {
         this.setSelectedCollaborationHandler(data);
       }
-      const label = getSelectKey(data.structure, 'label', this.props.language, 'fr');
-      const nbPublications = data.details.publication || 0;
-      const nbThesis = data.details.thesis || 0;
-      const nbProjects = data.details.Project || 0;
-      const nbPatents = data.details.patent || 0;
-      dataCSV.push(
-        {
-          col1: label,
-          col2: nbPublications,
-          col3: nbThesis,
-          col4: nbProjects,
-          col5: nbPatents,
-        },
-      );
 
       return (
         <Fragment key={data.structure.id}>
@@ -258,7 +235,7 @@ class Ecosystem extends Component {
             tabIndex={0}
           >
             <div className={classes.StructureTitle}>
-              {label}
+              {getSelectKey(data.structure, 'label', this.props.language, 'fr')}
             </div>
             <div className={classes.SharedProd}>
               {`${jointProductions} ${messages[this.props.language]['Entity.ecosystem.jointProductions']}`}
@@ -396,14 +373,6 @@ class Ecosystem extends Component {
                 )
             }
           </div>
-        </div>
-        <div className="pt-2">
-          <CSVExporter
-            language={this.props.language}
-            columns={dataCSVColumns}
-            data={dataCSV}
-            fileName="ecosystem_export"
-          />
         </div>
       </Fragment>
     );
