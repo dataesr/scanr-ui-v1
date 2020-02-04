@@ -136,7 +136,7 @@ const PersonCard = (props) => {
   if (youtubeUrl.indexOf('youtube.com/user') !== -1) {
     const regex = /.*youtube.com\/user\//gi;
     const userYoutube = youtubeUrl.replace(regex, '');
-    urlIframe = 'http://www.youtube.com/embed?listType=user_uploads&list='.concat(userYoutube);
+    urlIframe = 'https://www.youtube.com/embed?listType=user_uploads&list='.concat(userYoutube);
   } else if (youtubeUrl.indexOf('youtube.com/channel/UC') !== -1) {
     const regex = /.*youtube.com\/channel\/UC/gi;
     const userYoutube = youtubeUrl.replace(regex, 'UU');
