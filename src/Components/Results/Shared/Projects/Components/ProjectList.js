@@ -4,7 +4,16 @@ import PropTypes from 'prop-types';
 import classes from './ProjectList.scss';
 import ProjectDetail from './ProjectDetail';
 import getSelectKey from '../../../../../Utils/getSelectKey';
+import CSVExporter from '../../../../Shared/CSVExporter/CSVExporter';
 
+/* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 /**
  * ProjectList
  * Url : ex: /entite/200711886U
@@ -15,6 +24,14 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
 */
 const ProjectList = (props) => {
   let selectedProd = {};
+
+  const dataCSVColumns = [
+    { id: 'col1', displayName: messages[props.language]['dataCSVColumns.col1'] },
+    { id: 'col2', displayName: messages[props.language]['dataCSVColumns.col2'] },
+    { id: 'col3', displayName: messages[props.language]['dataCSVColumns.col3'] },
+  ];
+  const dataCSV = [];
+
   const content = props.data.map((item, i) => {
     let first = false;
     if (i > 0) {
@@ -25,6 +42,18 @@ const ProjectList = (props) => {
       selected = classes.Selected;
       selectedProd = item.value;
     }
+
+    const acronym = getSelectKey(item.value, 'acronym', props.language, 'default');
+    const label = getSelectKey(item.value, 'label', props.language, 'default');
+    const completeLabel = `${acronym}${(acronym ? ' - ' : '')}${label}`;
+
+    dataCSV.push(
+      {
+        col1: item.value.id,
+        col2: label.replace(/"/g, ''),
+        col3: item.value.type,
+      },
+    );
     return (
       <React.Fragment key={item.value.id}>
         {
@@ -43,8 +72,8 @@ const ProjectList = (props) => {
           role="button"
           tabIndex={0}
         >
-          <p className={classes.Title}>
-            {getSelectKey(item.value, 'acronym', props.language, 'default')}
+          <p className={classes.Title} title={completeLabel}>
+            {completeLabel}
           </p>
           <div className={`d-flex align-items-center ${classes.Type}`}>
             <div className="mr-auto" />
@@ -63,6 +92,16 @@ const ProjectList = (props) => {
           <div className={classes.ListOfProjects}>
             {(content.length > 0) ? content : 'Aucun résultat'}
           </div>
+          {(content.length > 0) ? (
+            <div className="pt-2">
+              <CSVExporter
+                language={props.language}
+                columns={dataCSVColumns}
+                data={dataCSV}
+                fileName="fundings_export"
+              />
+            </div>
+          ) : null}
         </div>
         <div className="col-lg-7">
           <ProjectDetail language={props.language} data={selectedProd} />
