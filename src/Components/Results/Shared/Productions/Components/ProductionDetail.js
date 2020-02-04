@@ -208,7 +208,7 @@ const ProductionDetail = (props) => {
             className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
             url={`publication/${props.data.id.replace(new RegExp('/', 'g'), '%25252f')}`}
           >
-            Voir la publication dans scanR
+            <FormattedHTMLMessage id="voir_production" />
           </ButtonToPage>
         </div>
       </div>
