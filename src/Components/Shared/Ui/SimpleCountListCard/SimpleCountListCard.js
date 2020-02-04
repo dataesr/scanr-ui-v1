@@ -55,14 +55,20 @@ const SimpleCountListCard = (props) => {
     return null;
   });
 
-  const FullLi = props.data.map(item => (
-    <li key={item}>
-      <span className="fa-li">
-        <i className={`fas fa-chevron-circle-right ${classes.Puce}`} />
-      </span>
-      {getLabel(item, props.language)}
-    </li>
-  ));
+  const FullLi = props.data.map((item) => {
+    const label = getLabel(item, props.language);
+    if (label) {
+      return (
+        <li key={item}>
+          <span className="fa-li">
+            <i className={`fas fa-chevron-circle-right ${classes.Puce}`} />
+          </span>
+          {label}
+        </li>
+      );
+    }
+    return null;
+  });
 
   const dataHtmlList = <ul className="fa-ul">{FullLi}</ul>;
 
