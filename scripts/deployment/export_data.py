@@ -226,6 +226,7 @@ def scanr_encoder2(obj):
 
 def dump_from_mongo(mongo, db, collection, to_file):
     """Send scanr collection as a json file in ftp."""
+    nb_objects = 0
     coll = mongo[db][collection]
     cursor = coll.find({}, {"_id": 0})
     file = "scanrJSON/" + to_file
@@ -238,7 +239,9 @@ def dump_from_mongo(mongo, db, collection, to_file):
                 if len(elem['id'])>450:
                     print(len(elem['id']), elem['id'])
         json.dump(current_list, f, default=scanr_encoder, indent=4)
+        nb_objects = len(current_list)
         f.close()
+    print("{} objects dumped".format(nb_objects))
     return {'ok': 1}
 
 def dump_publications_from_mongo(mongo, to_file):
@@ -273,6 +276,7 @@ def dump_publications_from_mongo(mongo, to_file):
         f.write(']')
         f.truncate() 
         f.close()
+    print("{} objects dumped".format(ix_pat + ix_pub))
     return {'ok': 1}
 
 def marshmallow_dump_from_mongo(mongo, db, collection, limit):
@@ -319,8 +323,8 @@ def marshmallow_dump_from_mongo(mongo, db, collection, limit):
 
 do_orga = False
 do_project = False
-do_production = False
 do_person = True
+do_production = False
 
 start = datetime.now()
 if do_orga:
