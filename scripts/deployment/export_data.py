@@ -224,6 +224,19 @@ def scanr_encoder2(obj):
     except TypeError:
         pass
 
+def dump_id(mongo, db, collection, to_file):
+    """Send scanr collection as a json file in ftp."""
+    coll = mongo[db][collection]
+    cursor = coll.find({}, {"id": 1})
+    file = "scanrJSON/" + to_file
+    # Creates a json file to send to ftp
+    with open(file, "w") as f:
+        f.write("id\n")
+        for cur in cursor:
+            f.write(cur['id'].replace('idref', '') + "\n")
+        f.close()
+    return {'ok': 1}
+
 def dump_from_mongo(mongo, db, collection, to_file):
     """Send scanr collection as a json file in ftp."""
     nb_objects = 0
@@ -323,8 +336,9 @@ def marshmallow_dump_from_mongo(mongo, db, collection, limit):
 
 do_orga = False
 do_project = False
-do_person = True
+do_person = False
 do_production = False
+do_idref = True
 
 start = datetime.now()
 if do_orga:
@@ -345,6 +359,11 @@ if do_production:
 if do_person:
     print("start persons")
     dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
+    print("end")
+    print("")
+if do_idref:
+    print("start idrefs")
+    dump_id(mongo=mongo, db="persons", collection="scanr", to_file="idref.csv")
     print("end")
     print("")
 print(datetime.now()- start)
