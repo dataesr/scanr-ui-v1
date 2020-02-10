@@ -47,6 +47,11 @@ const Web = (props) => {
   const getWikidataId = () => {
     if (props.externalIds && props.externalIds.length > 0) {
       for (let i = 0; i < props.externalIds.length; i += 1) {
+        if (props.externalIds[i].type.toLowerCase() === 'preferred wikidata') {
+          return props.externalIds[i].id;
+        }
+      }
+      for (let i = 0; i < props.externalIds.length; i += 1) {
         if (props.externalIds[i].type.toLowerCase() === 'wikidata') {
           return props.externalIds[i].id;
         }
