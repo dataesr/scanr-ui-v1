@@ -233,7 +233,7 @@ def dump_id(mongo, db, collection, to_file):
     with open(file, "w") as f:
         f.write("id\n")
         for cur in cursor:
-            f.write(cur['id'].replace('idref', '') + "\n")
+            f.write(cur['id'] + "\n")
         f.close()
     return {'ok': 1}
 
@@ -338,7 +338,7 @@ do_orga = False
 do_project = False
 do_person = False
 do_production = False
-do_idref = True
+do_sitemap = True
 
 start = datetime.now()
 if do_orga:
@@ -361,9 +361,14 @@ if do_person:
     dump_from_mongo(mongo=mongo, db="persons", collection="scanr", to_file="persons.json")
     print("end")
     print("")
-if do_idref:
-    print("start idrefs")
-    dump_id(mongo=mongo, db="persons", collection="scanr", to_file="idref.csv")
+
+if do_sitemap:
+    print("start all ids")
+    dump_id(mongo=mongo, db="persons", collection="scanr", to_file="persons_id.csv")
+    dump_id(mongo=mongo, db="projects", collection="scanr", to_file="projects_id.csv")
+    dump_id(mongo=mongo, db="publications", collection="scanr", to_file="publications_id.csv")
+    dump_id(mongo=mongo, db="patents", collection="scanr", to_file="patents_id.csv")
+    dump_id(mongo=mongo, db="organizations", collection="scanr", to_file="organizations_id.csv")
     print("end")
     print("")
 print(datetime.now()- start)
