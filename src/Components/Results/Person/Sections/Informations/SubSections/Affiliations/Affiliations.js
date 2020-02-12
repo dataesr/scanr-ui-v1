@@ -63,10 +63,12 @@ const Affiliations = (props) => {
         affiliation.subLabel = affiliation.sources.length.toString().concat(' ', 'productions');
       }
       const key = affiliation.startDate.concat('-', affiliation.endDate);
-      if (!(key in testAffs)) {
-        testAffs[key] = [];
+      if (affiliation.structure.label) {
+        if (!(key in testAffs)) {
+          testAffs[key] = [];
+        }
+        testAffs[key].push(affiliation);
       }
-      testAffs[key].push(affiliation);
     });
     if (props.data.roles) {
       props.data.roles.forEach((role) => {

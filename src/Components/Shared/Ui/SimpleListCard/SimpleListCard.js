@@ -67,7 +67,7 @@ const SimpleListCard = (props) => {
     </Fragment>
   ) : null;
 
-  if (props.multipleLabels && props.multipleLabels.length === 1 && props.multipleLabels[0].indexOf('dataesr') >= 0) {
+  if (props.multipleLabels && props.multipleLabels.length === 1 && props.multipleLabels[0] && props.multipleLabels[0].indexOf('dataesr') >= 0) {
     return null;
   }
 
