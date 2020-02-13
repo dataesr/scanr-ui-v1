@@ -6,6 +6,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
 import YoutubeCard from '../../../../../../Shared/Ui/YoutubeCard/YoutubeCard';
+import TheConversationCard from '../../../../../../Shared/Ui/TheConversationCard/TheConversationCard';
 
 import classes from './Web.scss';
 /**
@@ -20,12 +21,14 @@ const Web = (props) => {
   let wikidataId = {};
   let twitterUrl = {};
   let youtubeUrl = {};
+  let theConversationId = {};
   if (props.data.links && props.data.links.length > 0) {
     youtubeUrl = props.data.links.find(link => (link.type.toLowerCase() === 'youtube')) || {};
     twitterUrl = props.data.links.find(link => (link.type.toLowerCase() === 'twitter')) || {};
   }
   if (props.data.externalIds && props.data.externalIds.length > 0) {
     wikidataId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'wikidata')) || {};
+    theConversationId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'theconversation')) || {};
   }
   return (
     <div className="container-fluid">
@@ -52,6 +55,11 @@ const Web = (props) => {
         { (youtubeUrl.url) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
             <YoutubeCard url={youtubeUrl.url} autoHeight />
+          </div>
+        ) : null }
+        { (theConversationId) ? (
+          <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+            <TheConversationCard id={theConversationId.id} autoHeight />
           </div>
         ) : null }
       </div>
