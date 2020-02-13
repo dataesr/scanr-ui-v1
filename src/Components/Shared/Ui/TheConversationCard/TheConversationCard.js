@@ -1,9 +1,18 @@
-import React, { Component } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import { GlobalContext } from '../../../../GlobalContext';
+import LogoCard from '../LogoCardWithButton/LogoCardWithButton';
 
 import classes from './TheConversationCard.scss';
 
 /* Gestion des langues */
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 
 /**
@@ -14,46 +23,29 @@ import classes from './TheConversationCard.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-class TheConversationCard extends Component {
-  state= {
-    // eslint-disable-next-line
-    title: null,
-    urlIframe: null,
-  }
+const TheConversationCard = (props) => {
+  const context = useContext(GlobalContext);
+  const url = 'https://theconversation.com/profiles/'.concat(props.id, '/articles');
 
-  componentDidMount() {
-    this.getData();
-  }
-
-  getData = () => {
-    const urlIframe = 'https://theconversation.com/profiles/'.concat(this.props.id);
-    this.setState({ urlIframe });
-  }
-
-
-  render() {
-    return (
-      <div className={classes.TheConversationCard}>
-        <div className={classes.Content}>
-          {
-            (this.state.urlIframe)
-              ? (
-                <iframe
-                  title="theConversationIframe"
-                  type="text/html"
-                  width="100%"
-                  height="492px"
-                  src={this.state.urlIframe}
-                  target="_parent"
-                  frameBorder="0"
-                />
-              ) : null
-          }
-        </div>
+  return (
+    <div className={classes.TheConversationCard}>
+      <div className={classes.Content}>
+        {
+          (url)
+            ? (
+              <LogoCard
+                url="/img/logo-the-conversation.svg"
+                targetUrl={url}
+                label="The Conversation"
+                link={messages[context.language].the_conversation_link}
+                cssClass="Height250"
+              />
+            ) : null
+        }
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default TheConversationCard;
 
