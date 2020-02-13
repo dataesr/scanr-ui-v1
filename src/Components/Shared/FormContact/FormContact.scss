@@ -20,6 +20,20 @@
   font-style: italic;
 }
 
+.TexteOK {
+  color: $scanrlightgreyColor;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.TexteError {
+  color: $warningColor;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .ConfirmEmail {
   display: None;
 }
