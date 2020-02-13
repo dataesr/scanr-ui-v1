@@ -33,7 +33,7 @@ const Web = (props) => {
   return (
     <div className="container-fluid">
       {
-        (wikidataId.id || twitterUrl.url || youtubeUrl.url) ? (
+        (wikidataId.id || twitterUrl.url || youtubeUrl.url || theConversationId.id) ? (
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
               <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Web.title" />} />
