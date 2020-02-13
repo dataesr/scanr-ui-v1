@@ -15,7 +15,7 @@ def read_ids(file_with_id):
             if forbidden in line.strip():
                 skip = True
         if skip is not True:
-            ids.append(line.strip())
+            ids.append(line.strip().replace("/", "%25252f"))
     print("{} : {}".format(file_with_id, len(ids)))
     return ids
 
