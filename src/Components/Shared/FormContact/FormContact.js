@@ -160,10 +160,10 @@ const Contact = (props) => {
           </div>
           <div className="col-lg-7 d-flex align-items-center justify-content-end">
             {
-              (error) ? <div className={classes.Texte}>Une erreur est survenue</div> : null
+              (error) ? <div className={classes.TexteError}>Une erreur est survenue</div> : null
             }
             {
-              (sent) ? <div className={classes.Texte}>Merci de votre contribution</div> : null
+              (sent) ? <div className={classes.TexteOK}>Message envoyé ! Merci de votre contribution</div> : null
             }
             <button
               type="submit"
