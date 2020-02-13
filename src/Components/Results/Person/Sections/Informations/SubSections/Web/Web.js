@@ -57,7 +57,7 @@ const Web = (props) => {
             <YoutubeCard url={youtubeUrl.url} autoHeight />
           </div>
         ) : null }
-        { (theConversationId) ? (
+        { (theConversationId.id) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
             <TheConversationCard id={theConversationId.id} autoHeight />
           </div>
