@@ -10,7 +10,12 @@ def read_ids(file_with_id):
     the_file.readline() # header
     ids = []
     for line in the_file.readlines():
-        ids.append(line.strip())
+        skip = False
+        for forbidden in ['&','?', '<', '>']:
+            if forbidden in line.strip():
+                skip = True
+        if skip is not True:
+            ids.append(line.strip())
     print("{} : {}".format(file_with_id, len(ids)))
     return ids
 
