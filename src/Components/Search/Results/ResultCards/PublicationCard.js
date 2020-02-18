@@ -164,6 +164,14 @@ const PublicationCard = (props) => {
   }
   // const inventors = getInventors(props.data);
 
+  let publicationDateStr = '';
+  if (props.data.publicationDate) {
+    publicationDateStr = moment(props.data.publicationDate).format('LL');
+    if (moment(props.data.publicationDate).format('L').slice(0, 5) === '01/01') {
+      publicationDateStr = moment(props.data.publicationDate).format('L').slice(6, 10);
+    }
+  }
+
   let publicationDate = (props.data.publicationDate)
     ? (
       <li className="d-flex">
@@ -171,7 +179,7 @@ const PublicationCard = (props) => {
           <i aria-hidden="true" className="fas fa-calendar" />
         </div>
         <p className="m-0">
-          {moment(props.data.publicationDate).format('LL')}
+          {publicationDateStr}
         </p>
       </li>
     )
