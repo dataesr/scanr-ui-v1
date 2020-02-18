@@ -32,7 +32,10 @@ const Informations = (props) => {
 
   const theseLink = 'http://www.theses.fr/'.concat({ id }.id);
 
-  const publicationDate = moment(props.data.publicationDate).format('L');
+  let publicationDate = moment(props.data.publicationDate).format('L');
+  if (publicationDate.slice(0, 5) === '01/01') {
+    publicationDate = publicationDate.slice(6, 10);
+  }
 
   let swHeritageLink = null;
   if (props.data.links && props.data.links.length > 0) {
