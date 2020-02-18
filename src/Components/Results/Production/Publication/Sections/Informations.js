@@ -40,7 +40,10 @@ const Informations = (props) => {
     idName = 'HAL';
     externalLink = 'https://hal.archives-ouvertes.fr/'.concat({ id }.id);
   }
-  const publicationDate = moment(props.data.publicationDate).format('L');
+  let publicationDate = moment(props.data.publicationDate).format('L');
+  if (publicationDate.slice(0, 5) === '01/01') {
+    publicationDate = publicationDate.slice(6, 10);
+  }
   const summary = getSelectKey(props.data, 'summary', props.language, 'default') || getSelectKey(props.data, 'alternativeSummary', props.language, 'default');
 
   let swHeritageLink = null;
