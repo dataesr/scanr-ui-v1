@@ -13,8 +13,7 @@ import TeamComposition from './SubComponents/teamComposition';
  * Tests unitaires : .
 */
 const Team = (props) => {
-  const hideTeam = (props.childs && props.childs.length > 0);
-
+  const hideTeam = (props.childs && props.childs.length > 0 && props.data && props.data.level !== 'Unité de recherche');
   if (!props.data.leaders || props.data.leaders.length === 0) return <EmptySection language={props.language} color="#fff" />;
   return (
     <div className="row">

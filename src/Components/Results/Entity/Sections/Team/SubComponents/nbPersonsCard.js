@@ -6,6 +6,15 @@ import classes from './nbPersonsCard.scss';
 
 import logo from '../../../../../Shared/svg/icon-fiche-responsable_h.svg';
 
+/* Gestion des langues */
+import messagesFr from '../../../translations/fr.json';
+import messagesEn from '../../../translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
+
 /**
  * nbPersonsCard
  * Url : .
@@ -25,7 +34,7 @@ const nbPersonsCard = props => (
       {props.nbPersons}
     </div>
     <div className={classes.Label}>
-      personnes identifiées
+      { messages[props.language]['Entity.Team.PersonsIdentified'] }
     </div>
     <div className="mt-auto" style={{ marginBottom: '8px' }}>
       <ButtonWithModal
@@ -43,4 +52,5 @@ export default nbPersonsCard;
 nbPersonsCard.propTypes = {
   nbPersons: PropTypes.number.isRequired,
   personsModalList: PropTypes.any,
+  language: PropTypes.any,
 };
