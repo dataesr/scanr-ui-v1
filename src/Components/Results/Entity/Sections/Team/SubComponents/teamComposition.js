@@ -50,9 +50,22 @@ class TeamComposition extends Component {
     const personsRecent = [];
     for (let i = 0; i < this.props.persons.length; i += 1) {
       if (moment(this.props.persons[i].endDate).format('YYYY-MM-DD') >= lastAffiliationDateForTeam) {
-        personsRecent.push(this.props.persons[i]);
+        if (this.props.persons[i].person.fullName) {
+          const newPerson = this.props.persons[i];
+          const fullName = newPerson.person.fullName.toLowerCase().trim();
+          const lastName = fullName.substr(fullName.indexOf(' ') + 1).trim();
+          const firstName = fullName.split(' ')[0].trim();
+          newPerson.nameForSort = lastName.concat(' ', firstName).trim();
+          personsRecent.push(newPerson);
+        }
       }
     }
+    personsRecent.sort((a, b) => {
+      if (a.nameForSort > b.nameForSort) {
+        return 1;
+      }
+      return -1;
+    });
     // Récupération des données par api search
     const url = API_PERSONS_SEARCH_END_POINT;
     const data = {
