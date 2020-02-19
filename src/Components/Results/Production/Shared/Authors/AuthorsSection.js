@@ -62,7 +62,7 @@ const AuthorsSection = (props) => {
         }
         {
           sortedAuthors.map((author, index) => {
-            if (index < nbAuthorsToShow) {
+            if (index < nbAuthorsToShow && (author.fullName || author.firstName || author.lastName)) {
               return (
                 <div className={`col-md-3 ${classes.CardContainer}`}>
                   <PersonCard
