@@ -151,11 +151,10 @@ const Web = (props) => {
   const idWiki = getWikidataId();
   const youtubeUrl = getYoutubeId();
 
-
   return (
     <Fragment>
       {
-        (mainWebSiteUrl)
+        (mainWebSiteUrl || idWiki || othWebSites.length > 0)
           ? (
             <div className="col-12">
               <div className={classes.Web}>
