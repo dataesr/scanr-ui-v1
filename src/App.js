@@ -10,9 +10,9 @@ import ReactPiwik from 'react-piwik';
 import { createBrowserHistory } from 'history';
 import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
-
 import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
 import { GlobalContext } from './GlobalContext';
+
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
@@ -24,8 +24,6 @@ const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
 
 /* Pages froides */
-// const AccessibilityPage = lazy(() => import('./Components/Abouts/Accessibility/Accessibility'));
-// const ContributePage = lazy(() => import('./Components/Abouts/Contribute/Contribute'));
 const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
 const FAQPage = lazy(() => import('./Components/Abouts/FAQ/FAQ'));
 const GlossaryPage = lazy(() => import('./Components/Abouts/Glossary/Glossary'));
@@ -35,7 +33,6 @@ const Opendata = lazy(() => import('./Components/Abouts/Opendata/Opendata'));
 const Ressources = lazy(() => import('./Components/Abouts/Ressources/Ressources'));
 const TeamAndProjectPage = lazy(() => import('./Components/Abouts/Team-and-project/Team-and-project'));
 const Errors = lazy(() => import('./Components/Shared/Errors/Errors'));
-// const TutorialsPage = lazy(() => import('./Components/Abouts/Tutorials/Tutorials'));
 
 class App extends Component {
   // eslint-disable-next-line
@@ -153,17 +150,6 @@ class App extends Component {
               />
 
               {/* vvv--------------- other-pages ------------------vvv  */}
-              { /*
-              <Route
-                exact
-                path="/accessibilite"
-                component={props => (
-                  <AccessibilityPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              /> */}
               <Route
                 exact
                 path="/mentions-legales"
@@ -174,7 +160,6 @@ class App extends Component {
                   />
                 )}
               />
-
               <Route
                 exact
                 path="/l-equipe-et-son-projet"
@@ -185,7 +170,6 @@ class App extends Component {
                   />
                 )}
               />
-
               <Route
                 path="/opendata"
                 component={props => (
@@ -215,17 +199,6 @@ class App extends Component {
                   />
                 )}
               />
-              { /*
-              <Route
-                exact
-                path="/tutoriels"
-                component={props => (
-                  <TutorialsPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              /> */}
               <Route
                 exact
                 path={['/faq/:id', '/faq']}
@@ -256,17 +229,11 @@ class App extends Component {
                   />
                 )}
               />
-              { /*
               <Route
                 exact
-                path="/contribuer"
-                component={props => (
-                  <ContributePage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              /> */}
+                path="/erreur404"
+                component={() => (<Errors error={404} />)}
+              />
               <Route
                 component={() => (<Errors error={404} />)}
               />
