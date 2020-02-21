@@ -57,6 +57,7 @@ const LogoCard = (props) => {
 
   return (
     <div className={`${classes.card} ${props.cssClass}`}>
+      <span className={classes.helper} />
       {img}
     </div>
   );
