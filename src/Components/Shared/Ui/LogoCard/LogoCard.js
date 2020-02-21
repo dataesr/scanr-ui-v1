@@ -27,9 +27,11 @@ const LogoCard = (props) => {
 
   const context = useContext(GlobalContext);
   let img = <img src={initialImage} onLoad={newTestFunction} alt="Chargement..." />;
+  let helper = null;
   const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
   if (count === 1) {
     img = <img src={src} alt="url1" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
+    helper = <span className={classes.helper} />;
   }
   if (count === 2) {
     if (props.targetUrl) {
@@ -41,6 +43,7 @@ const LogoCard = (props) => {
     } else {
       img = <img src={props.url} alt="url2" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
     }
+    helper = <span className={classes.helper} />;
   }
   if (count === 3) {
     img = (
@@ -57,7 +60,7 @@ const LogoCard = (props) => {
 
   return (
     <div className={`${classes.card} ${props.cssClass}`}>
-      <span className={classes.helper} />
+      {helper}
       {img}
     </div>
   );
