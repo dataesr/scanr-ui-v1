@@ -10,10 +10,15 @@
 
 .img {
   max-width: 100%;
-  height: 95%;
+  max-height: 95%;
+  vertical-align: middle;
   padding: 8px;
 }
-
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
 .Height150 {
   height: 150px;
 }
