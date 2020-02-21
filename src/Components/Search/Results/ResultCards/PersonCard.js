@@ -1,6 +1,8 @@
 import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+import 'moment/locale/fr';
 import getSelectedKey from '../../../../Utils/getSelectKey';
 import highlightsFr from './translations/highlights_fr.json';
 import highlightsEn from './translations/highlights_en.json';
@@ -20,13 +22,21 @@ const PersonCard = (props) => {
     en: highlightsEn,
   };
 
-  const affiliation = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
-    ? props.data.affiliations.sort((a, b) => b.endDate - a.endDate)[0].structure
+  const affiliationDate = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
+    ? moment(props.data.affiliations.sort((a, b) => b.endDate - a.endDate)[0].endDate).format('YYYY')
     : null;
+  let affiliation = null;
+  let address = null;
+  if (affiliationDate && affiliationDate >= '2018') {
+    affiliation = (props.data.affiliations && props.data.affiliations.length > 0 && props.data.affiliations[0].structure)
+      ? props.data.affiliations.sort((a, b) => b.endDate - a.endDate)[0].structure
+      : null;
 
-  const address = (affiliation && affiliation.address && affiliation.address.length > 0)
-    ? affiliation.address[0]
-    : null;
+    address = (affiliation && affiliation.address && affiliation.address.length > 0)
+      ? affiliation.address[0]
+      : null;
+  }
+
 
   let domains = [];
   if (props.data.domains && props.data.domains.length > 0) {
