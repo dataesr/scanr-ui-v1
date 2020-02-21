@@ -400,6 +400,7 @@ class Network extends Component {
 
   render() {
     const childrenHasNoData = (!this.props.data.children || this.props.data.children.length === 0);
+    const parentsHasNoData = (!this.props.data.parents || this.props.data.parents.length === 0);
     const relationsHasNoData = ((!this.props.data.relations || this.props.data.relations.length === 0)) && (this.state.hasNoInverseRelation);
     const institutionsHasNoData = (!this.props.data.institutions || this.props.data.institutions.length === 0);
     const noNetworkBadge = (this.state.networkBadges.length === 0);
@@ -407,6 +408,7 @@ class Network extends Component {
       || (this.state.dataSupervisorOfTotal === 0
         && noNetworkBadge
         && childrenHasNoData
+        && parentsHasNoData
         && relationsHasNoData
         && institutionsHasNoData)) {
       return <EmptySection />;
