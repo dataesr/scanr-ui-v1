@@ -42,7 +42,7 @@ const PublicationCard = (props) => {
     }
     if (data.productionType === 'publication') {
       authors = data.authors.map((author) => {
-        if (author.person) {
+        if (author.person && author.person.fullName) {
           return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
         }
         return <span key={JSON.stringify(author)}>{author.fullName}</span>;
@@ -51,7 +51,7 @@ const PublicationCard = (props) => {
       authors = data.authors
         .filter(author => author.role === 'author')
         .map((author) => {
-          if (author.person) {
+          if (author.person && author.person.fullName) {
             return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
           }
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
@@ -60,7 +60,7 @@ const PublicationCard = (props) => {
       authors = data.authors
         .filter(author => author.role === 'author')
         .map((author) => {
-          if (author.person) {
+          if (author.person && author.person.fullName) {
             return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
           }
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
