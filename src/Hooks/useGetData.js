@@ -13,6 +13,10 @@ function useGetData(BASE_URL, id) {
       const res = await response.data;
       setData(res);
       setLoading(false);
+
+      if (Object.entries(res).length === 0) {
+        window.location.href = '../erreur404';
+      }
     } catch (error) {
       Axios.post(API_ERRORS_SCANR, { error });
       setError(true);
@@ -25,12 +29,3 @@ function useGetData(BASE_URL, id) {
   return { data, isLoading, isError };
 }
 export default useGetData;
-
-// const errorJSON = {
-//   type: 'React boundary',
-//   url: window.location.href.toString(),
-//   agent: window.navigator.userAgent.toString(),
-//   msg: error.toString(),
-//   info: info.componentStack,
-// };
-// Axios.post(API_ERRORS_SCANR, errorJSON);
