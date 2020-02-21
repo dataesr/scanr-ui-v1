@@ -18,6 +18,7 @@ import classes from './History.scss';
 */
 const History = (props) => {
   if (!props.creationYear && !props.predecessors) { return null; }
+  if (props.creationYear === 1900) { return null; }
 
   return (
     <div className="col-md-6">
