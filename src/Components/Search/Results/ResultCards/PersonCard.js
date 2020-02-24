@@ -40,9 +40,12 @@ const PersonCard = (props) => {
 
   let domains = [];
   if (props.data.domains && props.data.domains.length > 0) {
-    domains = props.data.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
+    domains = props.data.domains
+      .filter(dom => dom.type !== 'macro_level_barometre')
+      .map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
       .filter(txt => (txt.length > 1))
+      .map(txt => txt.split('(')[0])
       .filter(txt => (txt.length < 18))
       .sort((a, b) => a.length - b.length)
       .slice(-4);
