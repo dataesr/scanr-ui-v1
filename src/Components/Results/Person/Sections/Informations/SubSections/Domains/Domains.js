@@ -20,10 +20,12 @@ const Domains = (props) => {
   if (props.data) {
     let tags = [];
     if (props.data.domains && props.data.domains.length > 0) {
-      tags = props.data.domains.map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
+      tags = props.data.domains
+        .filter(dom => dom.type !== 'macro_level_barometre')
+        .map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
         .filter(txt => (txt))
         .filter(txt => (txt.length > 1))
-        .filter(txt => (txt.length < 20))
+        .map(txt => txt.split('(')[0])
         .sort((a, b) => a.length - b.length);
     }
     const domains = [...new Set(tags)];
