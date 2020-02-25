@@ -44,6 +44,7 @@ const createMarkers = (address, data = []) => {
 
 const Localisation = (props) => {
   const [showEntityAround, setEntityAround] = useState(false);
+  const [showEntityGroup, setEntityGroup] = useState(false);
   const url = `${API_STRUCTURES_END_POINT}/near/${props.id}?distance=${0.5}&nb=${1000}`;
   const { data } = useGetData(url);
 
@@ -74,14 +75,27 @@ const Localisation = (props) => {
 
   // Get main Address
   const mainAddress = props.address.find(ad => ad.main === true);
+
   const otherAddresses = props.address.filter(ad => ad.main === false);
+
+  const childrenAddresses = props.entitiesWhereIMParent.map((child) => {
+    if (child.value && child.value.address && child.value.address[0]) {
+      return {
+        label: child.value.label,
+        address: child.value.address,
+      };
+    }
+    return null;
+  });
 
   let mapProps = {};
   if (props.address[0].gps && props.address[0].gps.lat && props.address[0].gps.lon) {
     mapProps = { maxZoom: 17, center: [props.address[0].gps.lat, props.address[0].gps.lon], zoom: 14 };
   }
 
-  const markers = createMarkers(props.address[0].gps, data);
+  const markersNear = createMarkers(props.address[0].gps, data);
+
+  const markersGroup = createMarkers(props.address[0].gps, childrenAddresses);
 
   return (
     <div className="col-md-6">
@@ -103,10 +117,24 @@ const Localisation = (props) => {
                   url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
                 />
                 {
-                  (showEntityAround && markers)
+                  (showEntityAround && markersNear)
                     ? (
                       <MarkerClusterGroup maxClusterRadius={20}>
-                        {markers}
+                        {markersNear}
+                      </MarkerClusterGroup>
+                    )
+                    : (
+                      <Marker
+                        position={props.address[0].gps}
+                        icon={yellowIcon}
+                      />
+                    )
+                }
+                {
+                  (showEntityGroup && markersGroup)
+                    ? (
+                      <MarkerClusterGroup maxClusterRadius={20}>
+                        {markersGroup}
                       </MarkerClusterGroup>
                     )
                     : (
@@ -122,12 +150,23 @@ const Localisation = (props) => {
               <div className={classes.Title}>
                 <div className="d-flex align-items-center">
                   <div>
-                    <i className="fas fa-map-marker" />
-                    Localisation
+                    {
+                      (markersGroup.length)
+                        ? (
+                          <button
+                            className={`btn ${classes.btn_scanrBlue} ${classes.ButtonRectangle}`}
+                            type="button"
+                            onClick={() => setEntityGroup(!showEntityGroup)}
+                          >
+                            Entités groupe
+                          </button>
+                        )
+                        : null
+                    }
                   </div>
                   <div className="px-2 ml-auto">
                     {
-                      (markers.length)
+                      (markersNear.length)
                         ? (
                           <button
                             className={`btn ${classes.btn_scanrBlue} ${classes.ButtonRectangle}`}
@@ -162,4 +201,5 @@ Localisation.propTypes = {
   address: PropTypes.object.isRequired,
   id: PropTypes.array,
   language: PropTypes.string.isRequired,
+  entitiesWhereIMParent: PropTypes.array,
 };

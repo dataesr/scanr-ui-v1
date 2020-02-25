@@ -34,6 +34,7 @@ const Portrait = props => (
       address={props.data.address}
       id={props.id}
       language={props.language}
+      entitiesWhereIMParent={props.entitiesWhereIMParent}
     />
 
     <History
@@ -78,8 +79,13 @@ const Portrait = props => (
 
 export default Portrait;
 
+Portrait.defaultProps = {
+  entitiesWhereIMParent: [],
+};
+
 Portrait.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired,
+  entitiesWhereIMParent: PropTypes,
 };

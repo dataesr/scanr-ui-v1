@@ -131,6 +131,7 @@ const Entity = (props) => {
               language={props.language}
               data={data}
               id={props.match.params.id}
+              entitiesWhereIMParent={parentOf.data.results}
             />
           </div>
         </SectionEntity>
