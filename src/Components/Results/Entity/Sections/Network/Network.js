@@ -27,6 +27,7 @@ class Network extends Component {
     satt: [],
     networkBadges: [],
     dataSupervisorOfTotal: 0,
+    entitiesWhereIMParent: [],
   };
 
   componentDidMount() {
@@ -119,30 +120,9 @@ class Network extends Component {
   }
 
   getEntitiesWhereIMParent = () => {
-    if (this.props.data.id) {
-      const url = `${API_STRUCTURES_END_POINT}/search`;
-      const obj = {
-        filters: {
-          'parents.structure.id': {
-            type: 'MultiValueSearchFilter',
-            op: 'all',
-            values: [`${this.props.data.id}`],
-          },
-        },
-        sourceFields: ['relations', 'label', 'id'],
-        pageSize: 10000,
-      };
-      Axios.post(url, obj)
-        .then((response) => {
-          const newData = response.data.results.map((item) => {
-            const o = {
-              label: getSelectKey(item.value, 'label', this.props.language, 'fr'),
-              id: item.value.id,
-            };
-            return o;
-          });
-          this.setState({ entitiesWhereIMParent: newData });
-        });
+    if (this.props.entitiesWhereIMParent) {
+      const data = this.props.entitiesWhereIMParent.map(item => (item.value));
+      this.setState({ entitiesWhereIMParent: data });
     }
   }
 
@@ -420,8 +400,13 @@ class Network extends Component {
 
 export default Network;
 
+Network.defaultProps = {
+  entitiesWhereIMParent: [],
+};
+
 Network.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
   id: PropTypes.string.isRequired,
+  entitiesWhereIMParent: PropTypes.array,
 };

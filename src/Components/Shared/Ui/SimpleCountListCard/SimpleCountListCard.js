@@ -16,9 +16,9 @@ import classes from './SimpleCountListCard.scss';
  * Tests unitaires : .
 */
 const getLabel = (item, lang) => {
-  const label = (item.label)
+  const label = (item.label && typeof item.label === 'string')
     ? item.label
-    : getSelectKey(item.structure, 'label', lang, 'fr');
+    : getSelectKey(item, 'label', lang, 'fr');
 
   let label2 = label;
   if (item.id) {
@@ -29,8 +29,8 @@ const getLabel = (item, lang) => {
     );
   } else if (item.structure && item.structure.id) {
     label2 = (
-      <a title={label} href={`/entite/${item.structure.id}`} className={classes.Link}>
-        {label}
+      <a title={getSelectKey(item.structure, 'label', lang, 'fr')} href={`/entite/${item.structure.id}`} className={classes.Link}>
+        {getSelectKey(item.structure, 'label', lang, 'fr')}
       </a>
     );
   }

@@ -62,7 +62,7 @@ const Entity = (props) => {
     },
   };
   const requestParents = {
-    searchFields: ['label', 'id'],
+    searchFields: ['relations', 'label', 'id'],
     pageSize: 4095,
     filters: {
       'parents.structure.id': {
@@ -148,6 +148,7 @@ const Entity = (props) => {
               language={props.language}
               data={data}
               id={id}
+              entitiesWhereIMParent={parentOf.data.results}
             />
           </div>
         </SectionWhite>
