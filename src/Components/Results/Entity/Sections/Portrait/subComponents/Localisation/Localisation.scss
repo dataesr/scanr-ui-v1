@@ -37,10 +37,18 @@
       padding-left: 24px;
       line-height: 22px;
       color: $localisationTextColor;
-      font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-style: normal;
+
+      .AddressStrong {
+        font-weight: bold;
+      }
     }
   }
 
+  .LinkAddresses {
+    font-weight: normal;
+    font-size: 1rem;
+    cursor: pointer;
+  }
 }
