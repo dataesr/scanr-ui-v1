@@ -26,6 +26,8 @@ const Domains = (props) => {
         .filter(txt => (txt))
         .filter(txt => (txt.length > 1))
         .map(txt => txt.split('(')[0])
+        .map(txt => txt.split('/')[txt.split('/').length - 1])
+        .map(txt => txt.split('[')[0])
         .sort((a, b) => a.length - b.length);
     }
     const domains = [...new Set(tags)];
