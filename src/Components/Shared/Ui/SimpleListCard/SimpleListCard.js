@@ -34,6 +34,64 @@ const multipleLabelsFunction = labels => (
 const additionalListFunction = (allProps) => {
   if (allProps.list && allProps.list.length === 0) { return null; }
 
+  const getContent = (type, id) => {
+    let content = '';
+    let url = '';
+    switch (type) {
+      case 'wikidata' || 'preferred Wikidata':
+        url = `https://www.wikidata.org/wiki/${id}`;
+        break;
+
+      case 'siret':
+        url = `https://www.sirene.fr/sirene/public/recherche?recherche.sirenSiret=${id}&recherche.raisonSociale=&recherche.adresse=&recherche.commune=&__checkbox_recherche.excludeClosed=true&recherche.captcha=`;
+        break;
+
+      case 'siren':
+        url = `https://entreprise.data.gouv.fr/etablissement/${id}`;
+        break;
+
+      case 'opencorporates':
+        url = `https://opencorporates.com/companies/${id}`;
+        break;
+
+      case 'rna':
+        url = `https://entreprise.data.gouv.fr/etablissement/${id}`;
+        break;
+
+      case 'ISIN_ABR':
+        url = `http://www.isni.org/${id}`;
+        break;
+
+      case 'ISNI':
+        url = `http://www.isni.org/${id}`;
+        break;
+
+      case 'ROR':
+        url = `https://ror.org/${id}`;
+        break;
+
+      case 'idref':
+        url = `https://www.idref.fr/${id.replace('idref', '')}`;
+        break;
+
+      case 'rnsr':
+        url = `https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=${id}&PUBLIC=OK`;
+        break;
+
+      default:
+        content = id;
+    }
+    if (!content) {
+      content = (
+        <a href={url} target="blank">
+          {id}
+          <i className="pl-2 fas fa-external-link-alt" />
+        </a>
+      );
+    }
+    return <span className={classes.Value}>{content}</span>;
+  };
+
   const items = allProps.list.map(item => (
     <li key={item.type} className="list-group-item">
       <div className="d-flex flew-row">
@@ -43,7 +101,7 @@ const additionalListFunction = (allProps) => {
           </span>
         </div>
         <div className="ml-auto">
-          <span className={classes.Value}>{item.id}</span>
+          {getContent(item.type, item.id)}
         </div>
       </div>
     </li>
