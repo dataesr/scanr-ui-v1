@@ -37,6 +37,7 @@ const PersonCardName = (props) => {
       <ReactTooltip html />
     </React.Fragment>
   ) : null;
+  const displayGender = false;
   return (
     <React.Fragment>
       <div className={`d-flex flex-column pb-3 ${classes.PersonCardName}`}>
@@ -50,7 +51,7 @@ const PersonCardName = (props) => {
           {props.data.fullName}
         </div>
         {
-          (props.data.gender) ? (
+          (props.data.gender && displayGender) ? (
             <React.Fragment>
               <div className={classes.Title}>
                 <FormattedHTMLMessage id="Person.PersonNameCard.gender" />
