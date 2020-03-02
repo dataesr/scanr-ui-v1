@@ -37,8 +37,12 @@ const additionalListFunction = (allProps) => {
   const getContent = (type, id) => {
     let content = '';
     let url = '';
-    switch (type) {
-      case 'wikidata' || 'preferred Wikidata':
+    switch (type.toLowerCase()) {
+      case 'wikidata':
+        url = `https://www.wikidata.org/wiki/${id}`;
+        break;
+
+      case 'preferred wikidata':
         url = `https://www.wikidata.org/wiki/${id}`;
         break;
 
@@ -58,20 +62,24 @@ const additionalListFunction = (allProps) => {
         url = `https://entreprise.data.gouv.fr/etablissement/${id}`;
         break;
 
-      case 'ISIN_ABR':
+      case 'isin_abr':
         url = `http://www.isni.org/${id}`;
         break;
 
-      case 'ISNI':
+      case 'isni':
         url = `http://www.isni.org/${id}`;
         break;
 
-      case 'ROR':
+      case 'ror':
         url = `https://ror.org/${id}`;
         break;
 
       case 'idref':
         url = `https://www.idref.fr/${id.replace('idref', '')}`;
+        break;
+
+      case 'grid':
+        url = `https://www.grid.ac/institutes/${id}`;
         break;
 
       case 'rnsr':
