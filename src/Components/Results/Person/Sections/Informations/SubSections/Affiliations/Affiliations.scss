@@ -1,67 +1,60 @@
 @import '../../../../../../../style.scss';
 
 .Affiliations {
-  position: relative;
-  background-color: white;
-  border-radius: 8px;
-  min-height: 150px;
-}
+  .vl {
+    margin-left: 25px;
+    margin-right: 25px;
+    background-color: $entityColor;
+    width: 6px;
+    height: auto;
+  }
+  .vl::before {
+    position: relative;
+    left: -7px;
+    top: 22px;
+    display: inline-block;
+    content: '';
+    -webkit-border-radius: 0.7rem;
+    border-radius: 0.7rem;
+    height: 1.2rem;
+    width: 1.2rem;
+    background-color: $entityColor;
+  }
 
-.SubSectionTitle {
-  margin-bottom: 6px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: $scanrmiddlegreyColor;
-  color: $scanrdeepblueColor;
-  font-size: 18px;
-  text-transform: uppercase;
-  font-weight: 700;
-}
+  .AffiliationsAlert {
+    background-color: white;
+    color: $scanrgreyColor;
+    font-style: italic;
+    padding-left: 12px;
+    padding-right: 12px;
+    font-size: 0.9em;
+  }
 
-.vl {
-  margin-left: 25px;
-  margin-right: 25px;
-  background-color: $entityColor;
-  width: 6px;
-  height: auto;
-}
+  .AffiliationsList {
+    background-color: white;
+  }
+  .AffiliationsList:last-child {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
 
-.AffiliationsAlert {
-  background-color: white;
-  color: $scanrgreyColor;
-  font-style: italic;
-  padding-left: 12px;
-  padding-right: 12px;
-  font-size: 0.9em;
-}
-.AffiliationsList {
-  background-color: white;
-}
-.AffiliationsList:last-child {
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-.AffiliationTitle {
-  font-size: 15px;
-  font-weight: 600;
-  color: $scanrdeepblueColor
-}
-.AffiliationYears {
-  font-size: 12px;
-  color: $scanrgreyColor;
-  font-style: italic;
-  font-family: monospace;
-}
+  .AffiliationTitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: $scanrdeepblueColor
+  }
 
-.vl::before {
-  position: relative;
-  left: -7px;
-  top: 22px;
-  display: inline-block;
-  content: '';
-  -webkit-border-radius: 0.7rem;
-  border-radius: 0.7rem;
-  height: 1.2rem;
-  width: 1.2rem;
-  background-color: $entityColor;
+  .AffiliationYears {
+    font-size: 12px;
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-family: monospace;
+  }
+  
+  .Map{
+    margin: 2px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 310px;
+  }
 }

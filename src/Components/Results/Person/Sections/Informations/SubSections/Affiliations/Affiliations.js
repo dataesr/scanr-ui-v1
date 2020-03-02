@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import { FormattedHTMLMessage } from 'react-intl';
 
-import LeafletMap from '../../../../../../Shared/GraphComponents/Graphs/LeafletMap';
+import {
+  Map, Marker, TileLayer, Tooltip,
+} from 'react-leaflet';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
+import { yellowIcon } from '../../../../../Shared/leafletIcons';
+
 import getSelectKey from '../../../../../../../Utils/getSelectKey';
 import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 
 import classes from './Affiliations.scss';
-import styles from '../../../../../../../style.scss';
 
 /**
  * Affiliations
@@ -19,40 +23,24 @@ import styles from '../../../../../../../style.scss';
  * Tests unitaires : .
 */
 const Affiliations = (props) => {
-  // ADD ROLES in AFFILIATIONS!
-  // const addRoles = props.roles.map((role) => {
-  //
-  // })
+  const markers = [];
+  const bounds = [];
   if (props.data) {
-    const mapdata = [];
     props.data.forEach((aff) => {
       try {
-        const dataElement = {
-          id: aff.structure.id,
-          position: [aff.structure.address[0].gps.lat, aff.structure.address[0].gps.lon],
-          infos: [getSelectKey(aff.structure, 'label', props.language, 'default')],
-        };
-        mapdata.push(dataElement);
+        markers.push(
+          <Marker icon={yellowIcon} position={aff.structure.address[0].gps} key={aff.structure.id}>
+            <Tooltip>{getSelectKey(aff.structure, 'label', props.language, 'default')}</Tooltip>
+          </Marker>,
+        );
+
+        bounds.push(aff.structure.address[0].gps);
       } catch (error) {
         // eslint-disable-no-empty
       }
     });
-    const mapStyle = {
-      height: '32.5vh',
-      borderTopLeftRadius: '10px',
-      borderTopRightRadius: '10px',
-      borderBottom: `5px solid ${styles.entityColor}`,
-    };
+
     const testAffs = {};
-    /*
-    const affYears = props.data.map((aff) => {
-      const endDate = moment(aff.endDate).format('YYYY');
-      return endDate;
-    });
-    affYears.forEach((year) => {
-      testAffs[year] = [];
-    });
-    */
     props.data.forEach((aff) => {
       const affiliation = { ...aff };
       affiliation.endDate = moment(aff.endDate).format('YYYY');
@@ -70,6 +58,7 @@ const Affiliations = (props) => {
         testAffs[key].push(affiliation);
       }
     });
+
     if (props.data.roles) {
       props.data.roles.forEach((role) => {
         const affiliation = {};
@@ -92,69 +81,75 @@ const Affiliations = (props) => {
         testAffs[key].push(affiliation);
       });
     }
-    // const orderedYears = Object.keys(testAffs).sort((a, b) => b.replace('-', '') - a.replace('-', ''));
+
     const orderedYears = Object.keys(testAffs).sort((a, b) => b.slice(-4) - a.slice(-4));
+
+    const mapProps = { maxZoom: 17, bounds, zoom: 14 };
+
     return (
-      <React.Fragment>
-        <section className="container-fluid">
-          <div className="row">
-            <div className={`col ${classes.NoSpace}`}>
-              <CardsTitle
-                title={<FormattedHTMLMessage id="Person.Informations.Affiliations.title" />}
-                lexicon="PersonAffiliation"
-                language={props.language}
-              />
-            </div>
+      <section className={`container-fluid ${classes.Affiliations}`}>
+        <div className="row">
+          <div className={`col ${classes.NoSpace}`}>
+            <CardsTitle
+              title={<FormattedHTMLMessage id="Person.Informations.Affiliations.title" />}
+              lexicon="PersonAffiliation"
+              language={props.language}
+            />
           </div>
-          <div className="row">
-            <div className={`col-12 ${classes.CardContainer}`}>
-              <div className="w-100">
-                <LeafletMap
-                  filename="carto"
-                  data={mapdata}
-                  share={false}
-                  language={props.language}
-                  style={mapStyle}
+        </div>
+        <div className="row">
+          <div className={`col-12 ${classes.CardContainer}`}>
+            <div className="w-100">
+              <Map
+                className={classes.Map}
+                {...mapProps}
+              >
+                <TileLayer
+                  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
+                  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
                 />
-              </div>
-              <div className={`w-100 ${classes.AffiliationsAlert}`}>
-                <FormattedHTMLMessage id="Person.Informations.Affiliations.warning" />
-              </div>
-              <div className={`w-100 ${classes.AffiliationsList}`}>
-                {
-                  orderedYears.map(year => (
-                    <div className="d-flex" key={year}>
-                      <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
-                        {year}
-                      </div>
-                      <div className={`${classes.vl}`} />
-                      <div className={`d-flex flex-column pt-3 pb-3 w-100 ${classes.AffiliationItem}`}>
-                        {
-                          testAffs[year].map(struct => (
-                            <div key={JSON.stringify(struct)} className="d-flex pl-2 pr-2 pb-2 align-items-center">
-                              <div className="d-flex flex-column mr-auto">
-                                <p className={`m-0 ${classes.AffiliationTitle}`}>
-                                  {getSelectKey(struct.structure, 'label', props.language, 'default')}
-                                </p>
-                                <p className={`m-0 ${classes.AffiliationYears}`}>
-                                  {`${struct.subLabel}`}
-                                </p>
-                              </div>
-                              <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
-                                <i className="fas fa-arrow-right" aria-hidden="true" />
-                              </a>
-                            </div>
-                          ))
-                        }
-                      </div>
+                <MarkerClusterGroup maxClusterRadius={20}>
+                  {markers}
+                </MarkerClusterGroup>
+              </Map>
+            </div>
+            <div className={`w-100 ${classes.AffiliationsAlert}`}>
+              <FormattedHTMLMessage id="Person.Informations.Affiliations.warning" />
+            </div>
+            <div className={`w-100 ${classes.AffiliationsList}`}>
+              {
+                orderedYears.map(year => (
+                  <div className="d-flex" key={year}>
+                    <div className={`pl-2 pt-4 ${classes.AffiliationYears}`}>
+                      {year}
                     </div>
-                  ))
-                }
-              </div>
+                    <div className={`${classes.vl}`} />
+                    <div className={`d-flex flex-column pt-3 pb-3 w-100 ${classes.AffiliationItem}`}>
+                      {
+                        testAffs[year].map(struct => (
+                          <div key={JSON.stringify(struct)} className="d-flex pl-2 pr-2 pb-2 align-items-center">
+                            <div className="d-flex flex-column mr-auto">
+                              <p className={`m-0 ${classes.AffiliationTitle}`}>
+                                {getSelectKey(struct.structure, 'label', props.language, 'default')}
+                              </p>
+                              <p className={`m-0 ${classes.AffiliationYears}`}>
+                                {`${struct.subLabel}`}
+                              </p>
+                            </div>
+                            <a href={`/entite/${struct.structure.id}`} className={`align-self-start ml-3 mr-3 btn ${classes.btn_scanrBlue}`}>
+                              <i className="fas fa-arrow-right" aria-hidden="true" />
+                            </a>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  </div>
+                ))
+              }
             </div>
           </div>
-        </section>
-      </React.Fragment>
+        </div>
+      </section>
     );
   }
   return null;
