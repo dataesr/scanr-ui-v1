@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import Axios from 'axios';
 import Loader from '../../../Shared/LoadingSpinners/GraphSpinner';
@@ -24,6 +25,10 @@ import DateRequest from './Requests/DateRequest';
  * Accessible : .
  * Tests unitaires : .
 */
+
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
 class Productions extends Component {
   state = {
     productionType: 'publication',
@@ -291,58 +296,65 @@ class Productions extends Component {
       newEntry.tooltip = `${entry.count} ${this.state.productionType} - ${entry.value}`;
       sliderDataWithTooltip.push(newEntry);
     });
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
     return (
-      <Fragment>
-        <section className="container-fluid py-4">
-          <div className="container">
-            <SectionTitleViewMode
-              icon="fa-folder-open"
-              objectType="publications"
-              language={this.props.language}
-              id={this.props.match.params.id}
-              total={this.state.total}
-              title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
-              lexicon="Productions"
-              viewModeClickHandler={this.viewModeClickHandler}
-              viewMode={this.state.viewMode}
-            />
-            <FilterPanel
-              language={this.props.language}
-              data={sliderDataWithTooltip}
-              totalPerType={this.state.totalPerType}
-              selectedType={this.state.productionType}
-              changeTypeHandler={this.changeTypeHandler}
-              currentQueryText={this.state.currentQueryText}
-              queryChangeHandler={this.queryChangeHandler}
-              queryTextChangeHandler={this.queryTextChangeHandler}
-              lowSliderYear={this.state.low}
-              highSliderYear={this.state.high}
-              handleSliderRange={this.handleSliderRange}
-            />
-            {
-              (this.state.viewMode === 'list')
-                ? (
-                  <ProductionList
-                    language={this.props.language}
-                    data={this.state.data}
-                    selectedProduction={this.state.selectedProduction}
-                    setSelectedProductionHandler={this.setSelectedProductionHandler}
-                  />
-                )
-                : (
-                  <ProductionGraphs
-                    language={this.props.language}
-                    activeGraph={this.state.activeGraph}
-                    setActiveGraphHandler={this.setActiveGraphHandler}
-                    graphData={this.state.graphData}
-                    productionType={this.state.productionType}
-                    totalPerType={this.state.totalPerType}
-                  />
-                )
-            }
-          </div>
-        </section>
-      </Fragment>
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
+          <section className="container-fluid py-4">
+            <div className="container">
+              <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="publications"
+                language={this.props.language}
+                id={this.props.match.params.id}
+                total={this.state.total}
+                title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
+                lexicon="Productions"
+                viewModeClickHandler={this.viewModeClickHandler}
+                viewMode={this.state.viewMode}
+              />
+              <FormattedHTMLMessage id="ProductionPerimeter" />
+              <FilterPanel
+                language={this.props.language}
+                data={sliderDataWithTooltip}
+                totalPerType={this.state.totalPerType}
+                selectedType={this.state.productionType}
+                changeTypeHandler={this.changeTypeHandler}
+                currentQueryText={this.state.currentQueryText}
+                queryChangeHandler={this.queryChangeHandler}
+                queryTextChangeHandler={this.queryTextChangeHandler}
+                lowSliderYear={this.state.low}
+                highSliderYear={this.state.high}
+                handleSliderRange={this.handleSliderRange}
+              />
+              {
+                (this.state.viewMode === 'list')
+                  ? (
+                    <ProductionList
+                      language={this.props.language}
+                      data={this.state.data}
+                      selectedProduction={this.state.selectedProduction}
+                      setSelectedProductionHandler={this.setSelectedProductionHandler}
+                    />
+                  )
+                  : (
+                    <ProductionGraphs
+                      language={this.props.language}
+                      activeGraph={this.state.activeGraph}
+                      setActiveGraphHandler={this.setActiveGraphHandler}
+                      graphData={this.state.graphData}
+                      productionType={this.state.productionType}
+                      totalPerType={this.state.totalPerType}
+                    />
+                  )
+              }
+            </div>
+          </section>
+        </Fragment>
+      </IntlProvider>
     );
   }
 }
