@@ -243,49 +243,56 @@ class Productions extends Component {
   }
 
   render() {
+    const messages = {
+      fr: messagesFr,
+      en: messagesEn,
+    };
     if (this.state.total === 0 || this.state.error || this.state.isLoading) {
       return (
-        <Fragment>
-          <section className="container-fluid py-4">
-            <div className="container">
-              <SectionTitleViewMode
-                icon="fa-folder-open"
-                objectType="publications"
-                language={this.props.language}
-                id={this.props.match.params.id}
-                total={this.state.total}
-                title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
-                lexicon="Productions"
-                viewModeClickHandler={this.viewModeClickHandler}
-                viewMode={this.state.viewMode}
-              />
-              {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
-              {(this.state.error) ? <Errors error={500} /> : null}
-              {
-                (this.state.isLoading)
-                  ? (
-                    <React.Fragment>
-                      <FilterPanel
-                        language={this.props.language}
-                        data={[]}
-                        totalPerType={this.state.totalPerType}
-                        selectedType={this.state.productionType}
-                        changeTypeHandler={this.changeTypeHandler}
-                        currentQueryText={this.state.currentQueryText}
-                        queryChangeHandler={this.queryChangeHandler}
-                        queryTextChangeHandler={this.queryTextChangeHandler}
-                        lowSliderYear={this.state.low}
-                        highSliderYear={this.state.high}
-                        handleSliderRange={this.handleSliderRange}
-                      />
-                      <Loader color={styles.publicationsColor} />
-                    </React.Fragment>
-                  )
-                  : null
-              }
-            </div>
-          </section>
-        </Fragment>
+        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+          <Fragment>
+            <section className="container-fluid py-4">
+              <div className="container">
+                <SectionTitleViewMode
+                  icon="fa-folder-open"
+                  objectType="publications"
+                  language={this.props.language}
+                  id={this.props.match.params.id}
+                  total={this.state.total}
+                  title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
+                  lexicon="Productions"
+                  viewModeClickHandler={this.viewModeClickHandler}
+                  viewMode={this.state.viewMode}
+                />
+                <FormattedHTMLMessage id="ProductionPerimeter" />
+                {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
+                {(this.state.error) ? <Errors error={500} /> : null}
+                {
+                  (this.state.isLoading)
+                    ? (
+                      <React.Fragment>
+                        <FilterPanel
+                          language={this.props.language}
+                          data={[]}
+                          totalPerType={this.state.totalPerType}
+                          selectedType={this.state.productionType}
+                          changeTypeHandler={this.changeTypeHandler}
+                          currentQueryText={this.state.currentQueryText}
+                          queryChangeHandler={this.queryChangeHandler}
+                          queryTextChangeHandler={this.queryTextChangeHandler}
+                          lowSliderYear={this.state.low}
+                          highSliderYear={this.state.high}
+                          handleSliderRange={this.handleSliderRange}
+                        />
+                        <Loader color={styles.publicationsColor} />
+                      </React.Fragment>
+                    )
+                    : null
+                }
+              </div>
+            </section>
+          </Fragment>
+        </IntlProvider>
       );
     }
 
@@ -296,10 +303,6 @@ class Productions extends Component {
       newEntry.tooltip = `${entry.count} ${this.state.productionType} - ${entry.value}`;
       sliderDataWithTooltip.push(newEntry);
     });
-    const messages = {
-      fr: messagesFr,
-      en: messagesEn,
-    };
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
