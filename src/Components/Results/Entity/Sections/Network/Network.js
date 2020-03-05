@@ -44,6 +44,8 @@ class Network extends Component {
       this.setState({ spinoff });
       const rachete = this.props.data.relations.filter(item => item.type === 'rachete_par');
       this.setState({ rachete });
+      const doctoralSchool = this.props.data.relations.filter(item => item.type === 'DS_LABS').filter(item => item.structure);
+      this.setState({ doctoralSchool });
     }
     if (this.props.data.badges) {
       const networkBadges = this.props.data.badges.filter(b => ['carnot', 'gican', 'gifas', 'gicat', 'rescurie', 'allenvi', 'itagricole', 'irt', 'polecompetitivite', 'satt'].includes(b.code.toLowerCase()));
@@ -107,12 +109,14 @@ class Network extends Component {
           const appartientCarnot = newData.filter(r => r.relations[0].type === 'membre_carnot');
           const actionnaireSatt = newData.filter(r => r.relations[0].type === 'satt_actionnaire');
           const aRachete = newData.filter(r => r.relations[0].type === 'rachete_par');
+          const doctoralSchoolOf = newData.filter(r => r.relations[0].type === 'DS_LABS');
           const aIncube = newData.filter(r => r.relations[0].type === 'incubateur_public');
           const spinoffFrom = newData.filter(r => r.relations[0].type.indexOf('spinoff') !== -1);
-          const inverseRelations = [].concat(appartientCarnot, actionnaireSatt, aRachete, aIncube, spinoffFrom);
+
+          const inverseRelations = [].concat(appartientCarnot, actionnaireSatt, aRachete, aIncube, spinoffFrom, doctoralSchoolOf);
           const hasNoInverseRelation = (inverseRelations.length === 0);
           this.setState({
-            appartientCarnot, actionnaireSatt, aRachete, spinoffFrom, aIncube, hasNoInverseRelation,
+            appartientCarnot, actionnaireSatt, aRachete, spinoffFrom, aIncube, hasNoInverseRelation, doctoralSchoolOf,
           });
         });
     }
@@ -310,6 +314,36 @@ class Network extends Component {
                   count={this.state.aRachete.length}
                   title={<FormattedHTMLMessage id="Entity.Network.aRachete.title" />}
                   label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.aRachete.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.doctoralSchool && this.state.doctoralSchool.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.doctoralSchool}
+                  count={this.state.doctoralSchool.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.doctoralSchool.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.doctoralSchool.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.doctoralSchoolOf && this.state.doctoralSchoolOf.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.doctoralSchoolOf}
+                  count={this.state.doctoralSchoolOf.length}
+                  title={<FormattedHTMLMessage id="Entity.Network.doctoralSchoolOf.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.doctoralSchoolOf.length }} />}
                   modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                   modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
                 />
