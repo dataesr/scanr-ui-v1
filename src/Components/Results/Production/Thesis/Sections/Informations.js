@@ -69,6 +69,10 @@ const Informations = (props) => {
   }
 
   const summary = (props.language === 'fr') ? getSelectKey(props.data, 'summary', props.language, 'default') : getSelectKey(props.data, 'alternativeSummary', props.language, 'default');
+  const keywords = props.data.keywords;
+  const keywordsFromDomains = props.data.domains.filter(domain => domain.code && domain.code.slice(-2) !== '00').map(domain => domain.label);
+  keywords.default = keywords.default.concat(keywordsFromDomains.map(label => label.default).filter(label => label));
+  keywords.default = [...new Set(keywords.default)];
 
   return (
     <div className="row">
@@ -165,14 +169,14 @@ const Informations = (props) => {
             ) : null
           }
           {
-            (props.data.keywords.default.length > 0) ? (
+            (keywords.default.length > 0) ? (
               <div className={`col-12 ${classes.CardContainer}`}>
                 <TagCard
                   language={props.language}
                   logo="fas fa-clipboard-list"
                   title={<FormattedHTMLMessage id="Thesis.Identity.tags" />}
                   labelListButton="Autres"
-                  tagList={props.data.keywords.default}
+                  tagList={keywords.default}
                   tooltip=""
                 />
               </div>
