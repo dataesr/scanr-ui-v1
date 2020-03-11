@@ -48,6 +48,8 @@ const Person = (props) => {
     );
   }
   if (isError) return <Errors error={500} />;
+  const doNotShow = ['idref157107442'];
+  if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
