@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { IntlProvider } from 'react-intl';
+import { Base64 } from 'js-base64';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -244,8 +245,8 @@ class SearchPage extends Component {
     const newRequest = { ...this.state.request };
     const transformed = this.transformRequest(newRequest);
     delete transformed.lang;
-    const base64Query = btoa(JSON.stringify(transformed));
-    const base = btoa('scanr.esr.gouv.fr');
+    const base64Query = Base64.encode(JSON.stringify(transformed));
+    const base = Base64.encode('scanr.esr.gouv.fr');
     const url = `${API_BASE_URL}/${this.state.api}/search/export?request=${base64Query}&requestPath=${base}`;
     const filename = `CSV_${this.state.api}_${base64Query}.xls`;
     Axios({
