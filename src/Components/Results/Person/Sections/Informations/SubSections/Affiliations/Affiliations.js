@@ -27,16 +27,17 @@ const Affiliations = (props) => {
   const bounds = [];
   if (props.data) {
     props.data.forEach((aff) => {
-      try {
-        markers.push(
-          <Marker icon={yellowIcon} position={aff.structure.address[0].gps} key={aff.structure.id}>
-            <Tooltip>{getSelectKey(aff.structure, 'label', props.language, 'default')}</Tooltip>
-          </Marker>,
-        );
-
-        bounds.push(aff.structure.address[0].gps);
-      } catch (error) {
-        // eslint-disable-no-empty
+      if (aff.structure.address && aff.structure.address[0] && aff.structure.address[0].gps) {
+        try {
+          markers.push(
+            <Marker icon={yellowIcon} position={aff.structure.address[0].gps} key={aff.structure.id}>
+              <Tooltip>{getSelectKey(aff.structure, 'label', props.language, 'default')}</Tooltip>
+            </Marker>,
+          );
+          bounds.push(aff.structure.address[0].gps);
+        } catch (error) {
+          // eslint-disable-no-empty
+        }
       }
     });
 
