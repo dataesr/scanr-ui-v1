@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Carto from '../Components/Carto';
 import SimpleCard from '../../../../Shared/Ui/SimpleCard/SimpleCard';
 import SimpleCardWithButton from '../../../../Shared/Ui/SimpleCardWithButton/SimpleCardWithButton';
+import LogoCardWithButton from '../../../../Shared/Ui/LogoCardWithButton/LogoCardWithButton';
 import classes from './Depots.scss';
 import countries from '../countries.json';
 import patentType from './patentType.json';
@@ -21,10 +22,10 @@ import patentType from './patentType.json';
 const PatentsApplications = (props) => {
   const patents = [];
   props.data.forEach((patent) => {
-    const [country, type, delivrance] = patent.type.split('__');
+    const [country, type, delivrance,nbpub] = patent.type.split('__');
     const url = patent.url.replace('date_', '');
     const newPatent = {
-      ...patent, country, type, delivrance, url,
+      ...patent, country, type, delivrance, nbpub, url,
     };
     patents.push(newPatent);
   });
@@ -65,7 +66,8 @@ const PatentsApplications = (props) => {
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />) : ' '}
+              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />): ' '}
+              {(item.label === 'priority' && (item.delivrance)) ? ' - ': ' '}
               {(item.delivrance) && (<FormattedHTMLMessage id="Patent.Depots.delivered" />)}
             </p>
           </div>
@@ -89,15 +91,31 @@ const PatentsApplications = (props) => {
                 </div>
                 <div className="col-lg-7">
                   <div className="row">
+                    <div className={`col-md-12 ${classes.CardContainer}`}>
+                      <LogoCardWithButton
+                        language={props.language}
+                        url="/img/logo-oeb.svg"
+                        targetUrl={'https://worldwide.espacenet.com/patent/search/?q=pn%3D"'.concat(selected.country).concat(selected.nbpub).concat('"')}
+                        link= "link_patent"
+                        cssClass="Height100"
+                      />
+                    </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <SimpleCardWithButton
+                      <SimpleCard
                         language={props.language}
                         logo="fas fa-fingerprint"
                         title={<FormattedHTMLMessage id="Patent.Depots.id" />}
                         label={selected.id}
                         tooltip=""
-                        url={'https://worldwide.espacenet.com/patent/search?q='.concat(selected.id)}
-                        link="link_patent"
+                      />
+                    </div>
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <SimpleCard
+                        language={props.language}
+                        logo="fas fa-fingerprint"
+                        title={<FormattedHTMLMessage id="Patent.Depots.publicationNumber" />}
+                        label={(selected.country).concat(selected.nbpub)}
+                        tooltip=""
                       />
                     </div>
                     <div className={`col-md-6 ${classes.CardContainer}`}>
