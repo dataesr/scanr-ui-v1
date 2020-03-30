@@ -80,7 +80,7 @@ const SimpleCountListCard = (props) => {
 
   let actionButton = null;
 
-  if (props.data.length > MAX_LIST_CARD && props.data.length < MAX_LIST_MODAL) {
+  if (props.data.length > MAX_LIST_CARD && props.data.length <= MAX_LIST_MODAL) {
     actionButton = (
       <ButtonWithModal
         logo="fas fa-qrcode"
