@@ -75,7 +75,7 @@ const Status = (props) => {
         </div>
         <div className={`col-6 ${classes.CardContainer}`}>
           {
-            (percents)
+            (percents && statusEndDate)
               ? (
                 <PileCard
                   language={props.language}
