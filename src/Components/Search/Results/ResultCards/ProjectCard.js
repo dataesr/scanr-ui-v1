@@ -54,7 +54,7 @@ const ProjectCard = (props) => {
     )
     : null;
 
-  const status = (props.data.endDate && new Date(props.data.endDate).toLocaleDateString('fr-FR', options) > '2019')
+  const status = (props.data.endDate && new Date(props.data.endDate).toLocaleDateString('fr-FR', options) > '2020')
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>
@@ -65,16 +65,7 @@ const ProjectCard = (props) => {
         </p>
       </li>
     )
-    : (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-battery-full" />
-        </div>
-        <p className="m-0">
-          <FormattedHTMLMessage id="resultCard.status.over" defaultMessage="resultCard.status.over" />
-        </p>
-      </li>
-    );
+    : null;
 
   // let previousHighlight = '';
   let allHighlights = '';
