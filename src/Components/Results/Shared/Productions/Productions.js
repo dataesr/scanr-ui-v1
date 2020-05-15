@@ -77,7 +77,7 @@ class Productions extends Component {
     }
     if (prevState.query !== this.state.query) {
       const low = 2000;
-      const high = 2020;
+      const high = 2021;
       this.setState({ low, high });
       this.fetchDataByType();
     }
@@ -148,7 +148,7 @@ class Productions extends Component {
     request.filters.productionType.values = [this.state.productionType];
     dateRequest.filters.productionType.values = [this.state.productionType];
     request.filters.year.min = this.state.low ? this.state.low : 2000;
-    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2020;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2021;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
       const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
