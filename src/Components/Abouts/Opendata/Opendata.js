@@ -87,8 +87,8 @@ const Opendata = props => (
                 language={props.language}
                 messages={messages}
                 schema="publicationsCards"
-                title={messages[props.language]['Opendata.CIR']}
-                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-cir-et-cii-organismes-et-bureaux-de-style-agrees/information/"
+                title={messages[props.language]['Opendata.ExportPubli']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-export-des-productions-scientifiques-exposes-dans-scanr-publications-thes/information/"
                 lib_button="Voir"
                 target="_blank"
               />
@@ -101,7 +101,7 @@ const Opendata = props => (
                 messages={messages}
                 title={messages[props.language]['Opendata.AppelANR']}
                 schema="projectsCards"
-                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-aap-anr-projets-retenus-participants-identifies/information/?disjunctive.identifiant_de_partenaire"
+                url="https://www.data.gouv.fr/fr/datasets/projets-finances-hors-pia-2005-2019/"
                 lib_button="Voir"
                 target="_blank"
               />
@@ -126,9 +126,9 @@ const Opendata = props => (
               <CardWithButton
                 language={props.language}
                 messages={messages}
-                schema="personsCards"
-                title={messages[props.language]['Opendata.MT180']}
-                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-finalistes-et-laureats-du-concours-ma-these-en-180-secondes-france/information/"
+                schema="publicationsCards"
+                title={messages[props.language]['Opendata.CIR']}
+                url="https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-cir-et-cii-organismes-et-bureaux-de-style-agrees/information/"
                 lib_button="Voir"
                 target="_blank"
               />
