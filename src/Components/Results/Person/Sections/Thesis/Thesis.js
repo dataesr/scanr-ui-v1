@@ -79,6 +79,7 @@ const Thesis = (props) => {
   const { rapporteur, theses, direction } = parseThesisData(data.results, props.id);
   return (
     <React.Fragment>
+      <FormattedHTMLMessage id="ThesePerimeter" />
       {
         (theses.length)
           ? (
