@@ -190,6 +190,7 @@ const Project = (props) => {
               language={props.language}
               coContributors={data.coContributors}
               id={props.match.params.id}
+              data={data}
             />
           </div>
         </SectionProjects>

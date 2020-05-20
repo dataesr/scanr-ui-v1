@@ -17,9 +17,16 @@ import classes from './Similars.scss';
  * Tests unitaires : .
 */
 const SimilarProjects = (props) => {
+  let lang = 'fr';
+  if (props.data.label.default) {
+    lang = 'default';
+  } else if (props.data.label.en) {
+    lang = 'en';
+  }
   const request = {
-    fields: ['publications.title', 'description', 'title', 'domains.label', 'label'],
+    fields: ['publications.title', 'description', 'keywords', 'domains.label', 'label'],
     likeIds: [props.id],
+    lang,
     likeTexts: [],
   };
   const { data, isLoading, isError } = useLikeApi('projects', request);
@@ -47,4 +54,5 @@ export default SimilarProjects;
 SimilarProjects.propTypes = {
   language: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
+  data: PropTypes.object.isRequired,
 };
