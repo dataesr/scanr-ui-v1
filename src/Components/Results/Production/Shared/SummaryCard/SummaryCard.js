@@ -14,7 +14,7 @@ import classes from './SummaryCard.scss';
 */
 const SummaryCard = (props) => {
   const title = (props.title) ? <div className={classes.Title}>{props.title}</div> : null;
-  const text = (props.text) ? <div className={classes.Text}>{props.text}</div> : null;
+  const text = (props.text && props.id !== '2019NANT1005') ? <div className={classes.Text}>{props.text}</div> : null;
   const tooltip = (props.tooltip) ? (
     <Fragment>
       <span className={classes.Tooltip_i_top_right} data-tip={props.tooltip}>i</span>
@@ -34,6 +34,7 @@ const SummaryCard = (props) => {
 export default SummaryCard;
 
 SummaryCard.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
   tooltip: PropTypes.string,

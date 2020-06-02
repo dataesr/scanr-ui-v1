@@ -60,7 +60,7 @@ const PublicationsGraphsWrapper = props => (
         <YearTimeLine
           api="publications"
           filterLow={1990}
-          filterHigh={2019}
+          filterHigh={2020}
           title={messages[props.language].PatentYearsTitle}
           lexicon="PatentYearSearch"
           subtitle={messages[props.language].PatentYearsSubtitle}
@@ -71,7 +71,7 @@ const PublicationsGraphsWrapper = props => (
         <YearTimeLine
           api="publications"
           filterLow={1990}
-          filterHigh={2019}
+          filterHigh={2020}
           title={messages[props.language].PublicationsYearsTitle}
           lexicon="PublicationYearSearch"
           subtitle={messages[props.language].PublicationsYearsSubtitle}
