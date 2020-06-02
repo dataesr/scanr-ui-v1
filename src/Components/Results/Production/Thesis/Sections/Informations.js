@@ -160,6 +160,7 @@ const Informations = (props) => {
             (summary) ? (
               <div className={`col-12 ${classes.CardContainer}`}>
                 <SummaryCard
+                  id={id}
                   language={props.language}
                   title={<FormattedHTMLMessage id="Thesis.Identity.summary" />}
                   text={summary}
