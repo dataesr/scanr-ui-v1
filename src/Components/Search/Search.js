@@ -373,6 +373,14 @@ class SearchPage extends Component {
     }
     if (api === 'publications') {
       req.lang = 'default';
+      if (!req.filters) {
+        req.filters = {};
+      }
+      req.filters.id = {
+        type: 'MultiValueSearchFilter',
+        op: 'none',
+        values: ['these2017PSLED078'],
+      };
       req.sourceFields = [
         'id',
         'productionType',
