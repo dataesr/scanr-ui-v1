@@ -27,7 +27,8 @@ const wordFreq = (words) => {
   words.forEach((w) => {
     const wordsSplit = w.split('/');
     wordsSplit.forEach((ws) => {
-      const x = ws.replace(/\[.*/, '');
+      let x = ws.replace(/\[.*/, '');
+      x = x.trim();
       words2.push(x);
     });
   });
