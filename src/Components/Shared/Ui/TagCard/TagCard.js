@@ -49,7 +49,7 @@ const TagCard = (props) => {
       <ul className={`d-flex flex-wrap p-3 ${classes.MyUL}`}>
         {
           (props.tagList.length > props.maxElements)
-            ? htmlList.slice(-props.maxElements)
+            ? htmlList.slice(0, props.maxElements)
             : htmlList
         }
       </ul>
