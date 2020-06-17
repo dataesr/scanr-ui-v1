@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../../GlobalContext';
-import logoMinistere from '../../Shared/svg/logo-ministere.svg';
+import logoMinistere from '../../Shared/images/MESRI_2020.png';
 import FocusCard from '../../Shared/Ui/FocusMiniCard/FocusMiniCard';
-// import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
+
 import {
   Grid,
   Title,
@@ -107,7 +107,9 @@ const ScanrIs = () => {
               <DescriptiveText>
                 <FormattedHTMLMessage id="Home.ScanrIs.main.ministry" />
               </DescriptiveText>
-              <img src={logoMinistere} height="60px" alt="" aria-hidden />
+              <div className={classes.LogoContainer}>
+                <img src={logoMinistere} height="60px" alt="" aria-hidden />
+              </div>
             </div>
           </div>
           <div className="col-lg-6 py-1">

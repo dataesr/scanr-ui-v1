@@ -74,31 +74,35 @@ $linkColorHover: rgb(255, 255, 255);
   }
 
   .feedback {
-  position: fixed;
-  bottom: 30px;
-  right: 40px;
-}
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+  }
 
-.feedbackButton {
-  background-color : $projectgreenColor;
-  cursor: pointer;
-  color: white;
-  padding: 15px 15px;
-  border-radius: 50%;
-  border:none;
-}
+  .feedbackButton {
+    background-color : $projectgreenColor;
+    cursor: pointer;
+    color: white;
+    padding: 15px 15px;
+    border-radius: 50%;
+    border:none;
+  }
 
-.feedbackButton:hover {
-	background-color : $projectmiddlegreenColor;
-}
+  .feedbackButton:hover {
+    background-color : $projectmiddlegreenColor;
+  }
 
-.feedback:focus {
-  outline: none !important;
-}
-.feedbackButton:focus {
-  outline: none !important;
-}
+  .feedback:focus {
+    outline: none !important;
+  }
+  .feedbackButton:focus {
+    outline: none !important;
+  }
 
+  .LogoContainer {
+    background-color: white;
+    padding: 8px;
+  }
 
   .Logo {
     height: 50px;
