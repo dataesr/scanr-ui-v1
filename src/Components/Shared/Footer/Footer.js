@@ -6,8 +6,7 @@ import Modal from 'react-bootstrap/Modal';
 import { GlobalContext } from '../../../GlobalContext';
 import FormContact from '../FormContact/FormContact';
 
-/* Style */
-import logo from '../svg/logo-ministere.svg';
+import logo from '../images/MESRI_2020.png';
 import classes from './Footer.scss';
 
 /* Gestion des langues */
@@ -90,11 +89,13 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className={`col-md ${classes.Col}`}>
-              <img
-                src={logo}
-                alt="Logo MESRI"
-                className={classes.Logo}
-              />
+              <div className={classes.LogoContainer}>
+                <img
+                  src={logo}
+                  alt="Logo MESRI"
+                  className={classes.Logo}
+                />
+              </div>
             </div>
             <div className={`col-md ${classes.Col}`}>
               <ul>
