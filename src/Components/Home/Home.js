@@ -11,7 +11,7 @@ import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 import WelcomeModal from './WelcomeModal';
 
-import logo from '../Shared/svg/logo-ministere.svg';
+import logo from '../Shared/images/MESRI_2020.png';
 
 import classes from './Home.scss';
 
