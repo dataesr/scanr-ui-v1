@@ -3,7 +3,7 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
-import useSearchAPI from '../../../Hooks/useSearchAPI';
+// 20200629 import useSearchAPI from '../../../Hooks/useSearchAPI';
 
 import Errors from '../../Shared/Errors/Errors';
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
@@ -50,34 +50,38 @@ const Entity = (props) => {
   const scrollY = useScrollY();
   const { id } = props.match.params;
   const url = `${API_STRUCTURES_END_POINT}/structure`;
-  const requestInstitutions = {
-    searchFields: ['label', 'id'],
-    pageSize: 4095,
-    filters: {
-      'institutions.structure.id': {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [id],
-      },
-    },
-  };
-  const requestParents = {
-    searchFields: ['label', 'id'],
-    pageSize: 4095,
-    filters: {
-      'parents.structure.id': {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [id],
-      },
-    },
-  };
+  // 20200629 const requestInstitutions = {
+  // 20200629  searchFields: ['label', 'id'],
+  // 20200629  pageSize: 4095,
+  // 20200629    filters: {
+  // 20200629    'institutions.structure.id': {
+  // 20200629      type: 'MultiValueSearchFilter',
+  // 20200629      op: 'all',
+  // 20200629      values: [id],
+  // 20200629    },
+  // 20200629  },
+  // 20200629 };
+  // 20200629  const requestParents = {
+  // 20200629    searchFields: ['label', 'id'],
+  // 20200629    pageSize: 4095,
+  // 20200629    filters: {
+  // 20200629      'parents.structure.id': {
+  // 20200629        type: 'MultiValueSearchFilter',
+  // 20200629        op: 'all',
+  // 20200629        values: [id],
+  // 20200629      },
+  // 20200629    },
+  // 20200629  };
   const { data, isLoading, isError } = useGetData(url, id);
-  const supervisorOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestInstitutions);
-  const parentOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestParents);
-  let childs = supervisorOf.data.results || [];
-  childs = childs.concat(parentOf.data.results || []);
-  childs = childs.slice(0, 4095);
+
+  const childs = [];
+  const supervisorOf = [];
+  const parentOf = [];
+  // 20200629 const supervisorOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestInstitutions);
+  // 20200629 const parentOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestParents);
+  // 20200629 childs = childs.concat(supervisorOf.data.results || []);
+  // 20200629 childs = childs.concat(parentOf.data.results || []);
+  // 20200629 childs = childs.slice(0, 4095);
 
   if (isLoading || supervisorOf.isLoading || parentOf.isLoading) {
     return (
