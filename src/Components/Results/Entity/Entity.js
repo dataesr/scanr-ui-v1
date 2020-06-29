@@ -3,7 +3,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
-// 20200629 import useSearchAPI from '../../../Hooks/useSearchAPI';
 
 import Errors from '../../Shared/Errors/Errors';
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
@@ -50,40 +49,12 @@ const Entity = (props) => {
   const scrollY = useScrollY();
   const { id } = props.match.params;
   const url = `${API_STRUCTURES_END_POINT}/structure`;
-  // 20200629 const requestInstitutions = {
-  // 20200629  searchFields: ['label', 'id'],
-  // 20200629  pageSize: 4095,
-  // 20200629    filters: {
-  // 20200629    'institutions.structure.id': {
-  // 20200629      type: 'MultiValueSearchFilter',
-  // 20200629      op: 'all',
-  // 20200629      values: [id],
-  // 20200629    },
-  // 20200629  },
-  // 20200629 };
-  // 20200629  const requestParents = {
-  // 20200629    searchFields: ['label', 'id'],
-  // 20200629    pageSize: 4095,
-  // 20200629    filters: {
-  // 20200629      'parents.structure.id': {
-  // 20200629        type: 'MultiValueSearchFilter',
-  // 20200629        op: 'all',
-  // 20200629        values: [id],
-  // 20200629      },
-  // 20200629    },
-  // 20200629  };
   const { data, isLoading, isError } = useGetData(url, id);
-
   const childs = [];
-  const supervisorOf = [];
   const parentOf = [];
-  // 20200629 const supervisorOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestInstitutions);
-  // 20200629 const parentOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestParents);
-  // 20200629 childs = childs.concat(supervisorOf.data.results || []);
-  // 20200629 childs = childs.concat(parentOf.data.results || []);
-  // 20200629 childs = childs.slice(0, 4095);
 
-  if (isLoading || supervisorOf.isLoading || parentOf.isLoading) {
+
+  if (isLoading || parentOf.isLoading) {
     return (
       <React.Fragment>
         <Header />
@@ -92,7 +63,7 @@ const Entity = (props) => {
       </React.Fragment>
     );
   }
-  if (isError || supervisorOf.isError || parentOf.isError) return <Errors error={500} />;
+  if (isError || parentOf.isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
