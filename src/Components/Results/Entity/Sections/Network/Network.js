@@ -24,13 +24,18 @@ import classes from './Network.scss';
 class Network extends Component {
   state = {
     dataSupervisorOf: {},
+    dataParticipantOf: {},
     satt: [],
+    supervisors: [],
+    participants: [],
     networkBadges: [],
     dataSupervisorOfTotal: 0,
+    dataParticipantOfTotal: 0,
   };
 
   componentDidMount() {
     this.getDataSupervisorOf();
+    this.getSupervisorsAndParticipants();
     this.getLinksOf();
     this.getEntitiesWhereIMParent();
     if (this.props.data.relations) {
@@ -63,23 +68,49 @@ class Network extends Component {
             op: 'all',
             values: [`${this.props.data.id}`],
           },
-          status: {
-            type: 'MultiValueSearchFilter',
-            op: 'all',
-            values: ['active'],
-          },
         },
-        pageSize: 100,
+        sourceFields: ['id', 'label', 'institutions'],
+        pageSize: 4500,
       };
       Axios.post(url, obj)
         .then((response) => {
-          const newData = response.data.results.map((item) => {
+          const newDataSupervisors = [];
+          const newDataParticipants = [];
+          response.data.results.forEach((item) => {
             const o = { label: getSelectKey(item.value, 'label', this.props.language, 'fr'), id: item.value.id };
-            return o;
+            const currentInst = item.value.institutions.filter(inst => inst.structure && inst.structure.id === this.props.data.id);
+            currentInst.forEach((inst) => {
+              if (inst.relationType === 'etablissement tutelle') {
+                newDataSupervisors.push(o);
+              } else if (inst.relationType === 'etablissement participant') {
+                newDataParticipants.push(o);
+              }
+            });
           });
-          this.setState({ dataSupervisorOf: newData, dataSupervisorOfTotal: response.data.total });
+
+          this.setState({
+            dataSupervisorOf: newDataSupervisors,
+            dataSupervisorOfTotal: newDataSupervisors.length,
+            dataParticipantOf: newDataParticipants,
+            dataParticipantOfTotal: newDataParticipants.length,
+          });
         });
     }
+  }
+
+  getSupervisorsAndParticipants = () => {
+    const supervisors = [];
+    const participants = [];
+    if (this.props.data.institutions && this.props.data.institutions.length > 0) {
+      this.props.data.institutions.forEach((inst) => {
+        if (inst.relationType === 'etablissement tutelle') {
+          supervisors.push(inst);
+        } else if (inst.relationType === 'etablissement participant') {
+          participants.push(inst);
+        }
+      });
+    }
+    this.setState({ participants, supervisors });
   }
 
   getLinksOf = () => {
@@ -159,15 +190,29 @@ class Network extends Component {
       <Fragment>
         <div className="row">
           {
-            (this.props.data.institutions && this.props.data.institutions.length > 0) ? (
+            (this.state.supervisors && this.state.supervisors.length > 0) ? (
               <div className={`col-md-4 ${classes.NoSpace}`}>
                 <SimpleCountListCard
                   language={this.props.language}
-                  data={this.props.data.institutions}
+                  data={this.state.supervisors}
                   title={<FormattedHTMLMessage id="Entity.Network.supervisors.title" />}
-                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.props.data.institutions.length }} />}
+                  label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.supervisors.length }} />}
                   modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                   modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.participants && this.state.participants.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.participants}
+                  title={<FormattedHTMLMessage id="Entity.Network.participants.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.participants.label" values={{ count: this.state.participants.length }} />}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.participants.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.participants.SimpleCountListCard.title" />}
                 />
               </div>
             ) : null
@@ -223,7 +268,23 @@ class Network extends Component {
                   count={this.state.dataSupervisorOfTotal}
                   title={<FormattedHTMLMessage id="Entity.Network.supervisorOf.title" />}
                   label={<FormattedHTMLMessage id="Entity.Network.supervisors.label" values={{ count: this.state.dataSupervisorOf.length }} />}
-                  entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
+                  // not using this as the results cannot be get with a search query entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
+                  modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
+                  modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
+                />
+              </div>
+            ) : null
+          }
+          {
+            (this.state.dataParticipantOf && this.state.dataParticipantOf.length > 0) ? (
+              <div className={`col-md-4 ${classes.NoSpace}`}>
+                <SimpleCountListCard
+                  language={this.props.language}
+                  data={this.state.dataParticipantOf}
+                  count={this.state.dataParticipantOfTotal}
+                  title={<FormattedHTMLMessage id="Entity.Network.participantOf.title" />}
+                  label={<FormattedHTMLMessage id="Entity.Network.participants.label" values={{ count: this.state.dataParticipantOf.length }} />}
+                  // not using this as the results cannot be get with a search query entityLabel={getSelectKey(this.props.data, 'label', this.props.language, 'fr')}
                   modalButtonLabel={<FormattedHTMLMessage id="Entity.Network.supervisors.SimpleCountListCard.label" />}
                   modalButtonTitle={<FormattedHTMLMessage id="Entity.Network.entities.SimpleCountListCard.title" />}
                 />
@@ -440,6 +501,7 @@ class Network extends Component {
     const noNetworkBadge = (this.state.networkBadges.length === 0);
     if (!this.props.data
       || (this.state.dataSupervisorOfTotal === 0
+        && this.state.dataParticipantOfTotal === 0
         && noNetworkBadge
         && childrenHasNoData
         && parentsHasNoData
