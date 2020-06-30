@@ -3,7 +3,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
-import useSearchAPI from '../../../Hooks/useSearchAPI';
 
 import Errors from '../../Shared/Errors/Errors';
 import { API_STRUCTURES_END_POINT } from '../../../config/config';
@@ -50,36 +49,12 @@ const Entity = (props) => {
   const scrollY = useScrollY();
   const { id } = props.match.params;
   const url = `${API_STRUCTURES_END_POINT}/structure`;
-  const requestInstitutions = {
-    searchFields: ['label', 'id'],
-    pageSize: 4095,
-    filters: {
-      'institutions.structure.id': {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [id],
-      },
-    },
-  };
-  const requestParents = {
-    searchFields: ['label', 'id'],
-    pageSize: 4095,
-    filters: {
-      'parents.structure.id': {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: [id],
-      },
-    },
-  };
   const { data, isLoading, isError } = useGetData(url, id);
-  const supervisorOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestInstitutions);
-  const parentOf = useSearchAPI(`${API_STRUCTURES_END_POINT}/search`, requestParents);
-  let childs = supervisorOf.data.results || [];
-  childs = childs.concat(parentOf.data.results || []);
-  childs = childs.slice(0, 4095);
+  const childs = [];
+  const parentOf = [];
 
-  if (isLoading || supervisorOf.isLoading || parentOf.isLoading) {
+
+  if (isLoading || parentOf.isLoading) {
     return (
       <React.Fragment>
         <Header />
@@ -88,7 +63,7 @@ const Entity = (props) => {
       </React.Fragment>
     );
   }
-  if (isError || supervisorOf.isError || parentOf.isError) return <Errors error={500} />;
+  if (isError || parentOf.isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
