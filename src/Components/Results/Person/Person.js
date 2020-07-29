@@ -92,14 +92,6 @@ const Person = (props) => {
         />
         <SectionProductions id="Thesis">
           <div className="container">
-            <SectionTitle
-              icon="fa-id-card"
-              objectType="persons"
-              lexicon="PersonThesis"
-              language={props.language}
-              id={props.match.params.id}
-              title={messages[props.language]['Person.thesis']}
-            />
             <Thesis language={props.language} id={props.match.params.id} />
           </div>
         </SectionProductions>
