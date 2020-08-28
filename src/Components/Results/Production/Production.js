@@ -61,7 +61,7 @@ const Production = (props) => {
     );
   }
   if (isError) return <Errors error={500} />;
-  const doNotShow = ['these2017PSLED078'];
+  const doNotShow = [];
   if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   return (
     <React.Fragment>
