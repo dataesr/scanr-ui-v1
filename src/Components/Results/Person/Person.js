@@ -48,7 +48,7 @@ const Person = (props) => {
     );
   }
   if (isError) return <Errors error={500} />;
-  const doNotShow = ['idref157107442'];
+  const doNotShow = [''];
   if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
@@ -92,14 +92,6 @@ const Person = (props) => {
         />
         <SectionProductions id="Thesis">
           <div className="container">
-            <SectionTitle
-              icon="fa-id-card"
-              objectType="persons"
-              lexicon="PersonThesis"
-              language={props.language}
-              id={props.match.params.id}
-              title={messages[props.language]['Person.thesis']}
-            />
             <Thesis language={props.language} id={props.match.params.id} />
           </div>
         </SectionProductions>
