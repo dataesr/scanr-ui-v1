@@ -5,6 +5,7 @@ import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../../config/config'
 import useSearchAPI from '../../../../../Hooks/useSearchAPI';
 
 import SectionLoader from '../../../../Shared/LoadingSpinners/GraphSpinner';
+import SectionTitle from '../../../Shared/SectionTitle';
 import Errors from '../../../../Shared/Errors/Errors';
 import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
@@ -14,6 +15,11 @@ import IsOa from '../../../Production/Shared/Oa/OaCard';
 import OaLink from '../../../Production/Shared/Oa/OaLink';
 
 import classes from './Thesis.scss';
+/* Gestion des langues */
+import messagesFr from '../../translations/fr.json';
+import messagesEn from '../../translations/en.json';
+
+const messages = { fr: messagesFr, en: messagesEn };
 /**
  * SimilarEntities
  * Url : .
@@ -79,7 +85,23 @@ const Thesis = (props) => {
   const { rapporteur, theses, direction } = parseThesisData(data.results, props.id);
   return (
     <React.Fragment>
-      <FormattedHTMLMessage id="ThesePerimeter" />
+      {
+        (theses.length || direction.length || rapporteur.length)
+          ? (
+            <div>
+              <SectionTitle
+                icon="fa-id-card"
+                objectType="persons"
+                lexicon="PersonThesis"
+                language={props.language}
+                id={props.id}
+                title={messages[props.language]['Person.thesis']}
+              />
+              <FormattedHTMLMessage id="ThesePerimeter" />
+            </div>
+          )
+          : null
+      }
       {
         (theses.length)
           ? (
