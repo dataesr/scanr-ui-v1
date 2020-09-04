@@ -7,6 +7,7 @@ import CardsTitle from '../../../../../../Shared/Ui/CardsTitle/CardsTitle';
 import WikidataCard from '../../../../../../Shared/Ui/WikidataCard/WikidataCard';
 import YoutubeCard from '../../../../../../Shared/Ui/YoutubeCard/YoutubeCard';
 import TheConversationCard from '../../../../../../Shared/Ui/TheConversationCard/TheConversationCard';
+import GscholarCard from '../../../../../../Shared/Ui/GscholarCard/GscholarCard';
 
 import classes from './Web.scss';
 /**
@@ -22,6 +23,7 @@ const Web = (props) => {
   let twitterUrl = {};
   let youtubeUrl = {};
   let theConversationId = {};
+  let gscholarId = {};
   if (props.data.links && props.data.links.length > 0) {
     youtubeUrl = props.data.links.find(link => (link.type.toLowerCase() === 'youtube')) || {};
     twitterUrl = props.data.links.find(link => (link.type.toLowerCase() === 'twitter')) || {};
@@ -29,11 +31,12 @@ const Web = (props) => {
   if (props.data.externalIds && props.data.externalIds.length > 0) {
     wikidataId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'wikidata')) || {};
     theConversationId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'theconversation')) || {};
+    gscholarId = props.data.externalIds.find(link => (link.type.toLowerCase() === 'gscholar')) || {};
   }
   return (
     <div className="container-fluid">
       {
-        (wikidataId.id || twitterUrl.url || youtubeUrl.url || theConversationId.id) ? (
+        (wikidataId.id || twitterUrl.url || youtubeUrl.url || theConversationId.id || gscholarId.id) ? (
           <div className="row">
             <div className={`col ${classes.NoSpace}`}>
               <CardsTitle title={<FormattedHTMLMessage id="Person.Informations.Web.title" />} />
@@ -60,6 +63,11 @@ const Web = (props) => {
         { (theConversationId.id) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
             <TheConversationCard id={theConversationId.id} autoHeight />
+          </div>
+        ) : null }
+        { (gscholarId.id) ? (
+          <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
+            <GscholarCard id={gscholarId.id} autoHeight />
           </div>
         ) : null }
       </div>
