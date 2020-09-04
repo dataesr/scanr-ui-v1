@@ -376,11 +376,12 @@ class SearchPage extends Component {
       if (!req.filters) {
         req.filters = {};
       }
-      req.filters.id = {
-        type: 'MultiValueSearchFilter',
-        op: 'none',
-        values: ['these2017PSLED078'],
-      };
+      // filter out some ids if needed
+      // req.filters.id = {
+      //   type: 'MultiValueSearchFilter',
+      //   op: 'none',
+      //   values: [''],
+      // };
       req.sourceFields = [
         'id',
         'productionType',
