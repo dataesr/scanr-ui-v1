@@ -36,7 +36,7 @@ const ParticipantRow = props => (
               {getSelectKey(props.data.structure, 'label', props.language, 'default')}
             </a>
           )
-          : getSelectKey(props.data, 'label', props.language, 'default')
+          : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
       }
     </p>
     <div className={`d-flex justify-content-between align-items-bottom pr-2 ${classes.Funding}`}>
