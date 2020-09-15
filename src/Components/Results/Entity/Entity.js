@@ -52,6 +52,7 @@ const Entity = (props) => {
   const { data, isLoading, isError } = useGetData(url, id);
   const childs = [];
   const parentOf = [];
+  const isActive = (data.status === 'active');
 
 
   if (isLoading || parentOf.isLoading) {
@@ -88,6 +89,16 @@ const Entity = (props) => {
               <div className={`container ${styles.AlertMessage}`}>
                 <i className="fas fa-exclamation-triangle mr-2" />
                 <FormattedHTMLMessage id="isNotFrench.label" />
+              </div>
+            </div>
+          ) : null
+        }
+        {
+          (!isActive) ? (
+            <div className={styles.AlertMessageSection}>
+              <div className={`container ${styles.AlertMessage}`}>
+                <i className="fas fa-exclamation-triangle mr-2" />
+                <FormattedHTMLMessage id="isNotActive.label" />
               </div>
             </div>
           ) : null
