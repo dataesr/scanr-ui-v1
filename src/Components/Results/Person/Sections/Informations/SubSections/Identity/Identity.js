@@ -18,8 +18,12 @@ import classes from './Identity.scss';
 */
 const Identity = (props) => {
   const extIdref = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'idref')) : [];
-  const extOrcid = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'orcid')) : [];
-  const extIdhal = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'id_hal')) : [];
+  let extOrcid = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'orcid')) : [];
+  let extIdhal = (props.data.externalIds) ? (props.data.externalIds.filter(item => item.type.toLowerCase() === 'id_hal')) : [];
+  if (props.data.id === 'idref180049224') {
+    extOrcid = [{ type: 'orcid', id: '0000-0003-4447-1448' }];
+    extIdhal = [{ type: 'id_hal', id: '184405' }];
+  }
   if (props.data) {
     return (
       <div className="container-fluid">
