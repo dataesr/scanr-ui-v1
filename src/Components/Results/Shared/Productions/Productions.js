@@ -314,7 +314,7 @@ class Productions extends Component {
                 language={this.props.language}
                 id={this.props.match.params.id}
                 total={this.state.total}
-                title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
+                title={(this.props.language === 'fr') ? 'Productions avec une affiliation française (depuis 2013)' : 'Productions with a French affiliation (since 2013)'}
                 lexicon="Productions"
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
