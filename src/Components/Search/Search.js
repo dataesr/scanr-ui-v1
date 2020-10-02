@@ -377,11 +377,11 @@ class SearchPage extends Component {
         req.filters = {};
       }
       // filter out some ids if needed
-      // req.filters.id = {
-      //   type: 'MultiValueSearchFilter',
-      //   op: 'none',
-      //   values: [''],
-      // };
+      req.filters.id = {
+        type: 'MultiValueSearchFilter',
+        op: 'none',
+        values: ['cea-02339765'],
+      };
       req.sourceFields = [
         'id',
         'productionType',
