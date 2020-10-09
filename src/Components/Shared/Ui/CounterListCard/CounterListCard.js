@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ButtonWithModal from '../Buttons/ButtonWithModal';
 import PersonCard from '../../../Search/Results/ResultCards/PersonCard';
 import EntityCard from '../../../Search/Results/ResultCards/EntityCard';
+import PublicationCard from '../../../Search/Results/ResultCards/PublicationCard';
 
 import classes from './CounterListCard.scss';
 
@@ -52,6 +53,17 @@ const CounterListCard = (props) => {
         </li>
       );
     }
+    if (props.isPublication) {
+      return (
+        <li key={item}>
+          <PublicationCard
+            language={props.language}
+            data={item.structure || item}
+            small
+          />
+        </li>
+      );
+    }
     return null;
   });
 
@@ -90,6 +102,7 @@ CounterListCard.defaultProps = {
   modalTitleKey: 'authors.modal.title',
   isEntity: false,
   isPerson: false,
+  isPublication: false,
 };
 
 CounterListCard.propTypes = {
@@ -102,4 +115,5 @@ CounterListCard.propTypes = {
   color: PropTypes.string,
   isEntity: PropTypes.bool,
   isPerson: PropTypes.bool,
+  isPublication: PropTypes.bool,
 };
