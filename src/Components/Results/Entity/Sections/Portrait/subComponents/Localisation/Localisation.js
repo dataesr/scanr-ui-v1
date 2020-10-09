@@ -26,11 +26,13 @@ const createMarkers = (address, data = []) => {
   if (data) {
     data.forEach((element) => {
       try {
-        markers.push(
-          <Marker icon={greenIcon} position={element.address[0].gps} key={element.id}>
-            <Tooltip>{element.label.fr}</Tooltip>
-          </Marker>,
-        );
+        if (element.address[0].gps) {
+          markers.push(
+            <Marker icon={greenIcon} position={element.address[0].gps} key={element.id}>
+              <Tooltip>{element.label.fr}</Tooltip>
+            </Marker>,
+          );
+        }
       } catch (error) {
         // eslint-disable-no-empty
       }
