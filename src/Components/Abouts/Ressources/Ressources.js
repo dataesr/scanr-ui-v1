@@ -124,6 +124,11 @@ class Ressources extends Component {
               cssClass="CardLogo"
             />
             <RedirectingLogoCard
+              labelKey="hal"
+              imageName="logo-hal.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
               labelKey="wikipedia"
               imageName="logo-wikipedia.svg"
               cssClass="CardLogo"
@@ -187,12 +192,17 @@ class Ressources extends Component {
           <div className={`row ${classes.SourcesPart}`}>
             <div className={classes.SourcesCard}>
               <div className={classes.Title}>
-                {(this.props.language === 'fr') ? 'ARCHIVES OUVERTES' : 'OPEN REPOSITORIES' }
+                {(this.props.language === 'fr') ? 'SOURCES INDIRECTES (via le Baromètre de la Science Ouverte)' : 'Indirect sources' }
               </div>
             </div>
             <RedirectingLogoCard
-              labelKey="hal"
-              imageName="logo-hal.svg"
+              labelKey="pubmed"
+              imageName="logo-pubmed.svg"
+              cssClass="CardLogo"
+            />
+            <RedirectingLogoCard
+              labelKey="arxiv"
+              imageName="logo-arxiv.svg"
               cssClass="CardLogo"
             />
           </div>
