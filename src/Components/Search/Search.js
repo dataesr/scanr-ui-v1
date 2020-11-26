@@ -380,7 +380,7 @@ class SearchPage extends Component {
       req.filters.id = {
         type: 'MultiValueSearchFilter',
         op: 'none',
-        values: ['cea-02339765'],
+        values: ['cea-02339765', 'these2017PA100123'],
       };
       req.sourceFields = [
         'id',
@@ -413,6 +413,15 @@ class SearchPage extends Component {
     } else if (api === 'persons') {
       req.aggregations = PersonsAggregations;
       req.lang = this.props.language;
+      if (!req.filters) {
+        req.filters = {};
+      }
+      // filter out some ids if needed
+      req.filters.id = {
+        type: 'MultiValueSearchFilter',
+        op: 'none',
+        values: ['idref227790677'],
+      };
       req.sourceFields = ['id', 'affiliations', 'fullName', 'firstName',
         'lastName', 'gender', 'externalIds', 'domains'];
     } else if (api === 'projects') {
