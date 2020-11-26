@@ -48,7 +48,7 @@ const Person = (props) => {
     );
   }
   if (isError) return <Errors error={500} />;
-  const doNotShow = [''];
+  const doNotShow = ['idref227790677'];
   if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
