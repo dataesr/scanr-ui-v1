@@ -379,7 +379,7 @@ class SearchPage extends Component {
       // filter out some ids if needed
       req.filters.id = {
         type: 'MultiValueSearchFilter',
-        op: 'none',
+        op: 'not_all',
         values: ['cea-02339765', 'these2017PA100123'],
       };
       req.sourceFields = [
@@ -419,7 +419,7 @@ class SearchPage extends Component {
       // filter out some ids if needed
       req.filters.id = {
         type: 'MultiValueSearchFilter',
-        op: 'none',
+        op: 'not_all',
         values: ['idref227790677'],
       };
       req.sourceFields = ['id', 'affiliations', 'fullName', 'firstName',
