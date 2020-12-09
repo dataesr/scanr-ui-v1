@@ -48,21 +48,23 @@ const ProductionGraphs = (props) => {
     }
     if (active === 'isOa') {
       const data = { id: 'isOa', entries: [] };
-      props.graphData.isOa.entries.forEach((entry) => {
-        if (entry.value === 'false') {
-          data.entries.push({
-            color: 'rgb(170, 170, 170)',
-            value: (props.language === 'fr') ? 'Accès fermé' : 'Closed access',
-            count: entry.count,
-          });
-        } else {
-          data.entries.push({
-            color: 'rgb(32, 225, 104)',
-            value: (props.language === 'fr') ? 'Accès ouvert' : 'Open access',
-            count: entry.count,
-          });
-        }
-      });
+      if (props.graphData.isOa && props.graphData.isOa.entries) {
+        props.graphData.isOa.entries.forEach((entry) => {
+          if (entry.value === 'false') {
+            data.entries.push({
+              color: 'rgb(170, 170, 170)',
+              value: (props.language === 'fr') ? 'Accès fermé' : 'Closed access',
+              count: entry.count,
+            });
+          } else {
+            data.entries.push({
+              color: 'rgb(32, 225, 104)',
+              value: (props.language === 'fr') ? 'Accès ouvert' : 'Open access',
+              count: entry.count,
+            });
+          }
+        });
+      }
       return <DonutChart filename={labelFor[props.language][active]} data={data} language={props.language} subtitle={subtitle} />;
     }
     if (active === 'years') {
@@ -93,7 +95,7 @@ const ProductionGraphs = (props) => {
         className={`btn mx-1 ${classes.graphSelector} ${(graph === active) ? classes.active : ''}`}
         onClick={() => props.setActiveGraphHandler(graph)}
         onKeyPress={() => props.setActiveGraphHandler(graph)}
-        disabled={props.graphData[graph].entries.length === 0}
+        disabled={(props.graphData[graph] && props.graphData[graph].entries && props.graphData[graph].entries.length === 0)}
       >
         {labelFor[props.language][graph]}
       </button>
