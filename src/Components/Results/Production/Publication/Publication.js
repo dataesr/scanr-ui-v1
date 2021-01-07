@@ -9,6 +9,7 @@ import Authors from '../Shared/Authors/AuthorsSection';
 import Affiliations from '../Shared/Affiliations/AffiliationsSection';
 
 import Similars from '../Shared/Similars/Similars';
+import Citations from './Sections/Citations/Citations';
 
 import {
   SectionProductions,
@@ -115,6 +116,7 @@ const Publication = props => (
           <Similars language={props.language} id={props.id} />
         </div>
       </section>
+      <Citations language={props.language} id={props.id} />
     </Fragment>
   </IntlProvider>
 );
