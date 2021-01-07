@@ -1,1 +1,39 @@
-@import '../../../../../style.scss';
+@import '../../../../../../style.scss';
+
+.ResultCard {
+  height: calc(100% - 8px);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.90em;
+  padding: 1.5em 1.5em 0.6em 1.5em;
+  box-shadow: 0px 0px 8px $scanrmiddlegreyColor;
+
+  strong{
+    color:$warningColor;
+  }
+
+  .CardTitle {
+    color: $scanrdeepblueColor;
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .CardTitle > a {
+    color: $scanrdeepblueColor;
+  }
+  .CardTitle > a:hover {
+    color: $scanrblueColor;
+    text-decoration: underline $scanrblueColor;
+    cursor: pointer;
+  }
+
+  .CardContent {
+    line-height: 1.5;
+  }
+
+  .Icons {
+      font-size: 1.1em;
+      color: $scanrblueColor;
+      min-width: 28px !important;
+  }
+}
