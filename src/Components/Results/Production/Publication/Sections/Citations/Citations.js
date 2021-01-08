@@ -119,7 +119,7 @@ CrossRefList.defaultProps = {
   maxItems: 6,
 };
 
-const Citations = ({ id: inputId, language: lang, direction }) => {
+export default function Citations({ id: inputId, language: lang, direction }) {
   const citDir = (direction === 'references') ? 'cited' : 'citing';
   const id = inputId.replace(new RegExp('%252f', 'g'), '/').slice(3);
   const { data, isLoading, isError } = useOpenCitations(direction, id);
@@ -143,8 +143,7 @@ const Citations = ({ id: inputId, language: lang, direction }) => {
     );
   }
   return null;
-};
-export default Citations;
+}
 
 Citations.propTypes = {
   language: PropTypes.string.isRequired,
