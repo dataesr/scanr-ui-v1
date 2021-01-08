@@ -116,8 +116,8 @@ const Publication = props => (
           <Similars language={props.language} id={props.id} />
         </div>
       </section>
-      <Citations language={props.language} id={props.id} direction="citations"/>
-      <Citations language={props.language} id={props.id} direction="references"/>
+      <Citations language={props.language} id={props.id} direction="citations" />
+      <Citations language={props.language} id={props.id} direction="references" />
     </Fragment>
   </IntlProvider>
 );
