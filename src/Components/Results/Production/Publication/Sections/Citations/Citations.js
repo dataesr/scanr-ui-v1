@@ -36,7 +36,7 @@ function parseCrossRef(item) {
   if (item.author && item.author.length) {
     obj.num_authors = item.author.length;
     obj.authors = item.author.map(
-      (auth) => `${(auth.given) ? `${auth.given} ` : ''}${(auth.family) ? auth.family : ''}`,
+      auth => `${(auth.given) ? `${auth.given} ` : ''}${(auth.family) ? auth.family : ''}`,
     );
   }
   return obj;
@@ -100,10 +100,10 @@ function CrossRefList({ ids, lang, maxItems }) {
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
   if (data.length) {
-    const publis = data.slice(0, maxItems).map((item) => parseCrossRef(item));
+    const publis = data.slice(0, maxItems).map(item => parseCrossRef(item));
     return (
       <div className="row">
-        {publis.map((item) => (<CrossRefCard key={item.doi} item={item} lang={lang} />))}
+        {publis.map(item => (<CrossRefCard key={item.doi} item={item} lang={lang} />))}
       </div>
     );
   }
@@ -136,7 +136,7 @@ const Citations = ({ id: inputId, language: lang, direction }) => {
               language={lang}
               title={<FormattedHTMLMessage id="Publication.references" values={{ count: data.length }} />}
             />
-            <CrossRefList ids={data.map((obj) => obj[citDir])} lang={lang} />
+            <CrossRefList ids={data.map(obj => obj[citDir])} lang={lang} />
           </div>
         </section>
       </IntlProvider>
