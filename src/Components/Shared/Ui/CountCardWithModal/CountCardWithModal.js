@@ -12,16 +12,15 @@ import classes from './CountCardWithModal.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-export function CountCardModalItem({ title }) {
+export function CountCardModalItem({ children, key }) {
   return (
-    <div>
-      <p>{title}</p>
-    </div>
+    <li key={key}>{children}</li>
   );
 }
 
 CountCardModalItem.propTypes = {
-  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+  key: PropTypes.any,
 };
 
 export default function CountCardWithModal({
@@ -42,7 +41,9 @@ export default function CountCardWithModal({
             <Modal.Title>{modalTitle}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            {children}
+            <ul className={classes.ListStyle}>
+              {children}
+            </ul>
           </Modal.Body>
         </Modal>
 
@@ -58,6 +59,6 @@ export default function CountCardWithModal({
 CountCardWithModal.propTypes = {
   children: PropTypes.node.isRequired,
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
-  buttonLabel: PropTypes.string.isRequired,
-  modalTitle: PropTypes.string.isRequired,
+  buttonLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
+  modalTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
 };
