@@ -1,0 +1,59 @@
+@import '../../../../style.scss';
+
+.SimpleCountListCard {
+  height: calc(100% - 8px);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.90em;
+  padding: 1.5em 1.5em 0.6em 1.5em;
+  box-shadow: 0px 0px 8px $scanrmiddlegreyColor;
+  background-color: $scanrlightgreyColor;
+  text-align: center;
+
+  .Title {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+
+  .Value {
+    color: $scanrdeepblueColor;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 38px;
+  }
+
+  .Label {
+    color: $scanrdeepblueColor;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+
+  .Button {
+    margin-bottom: 16px;
+  }
+}
+.Link {
+  color: $scanrdeepblueColor;
+  font-weight: bold;
+}
+.Puce {
+  color: $scanrblueColor
+}
+
+.ButtonWithModal {
+  .Button {
+    color: $colorCardButton;
+    background-color: $bgColorCardButton;
+    font-weight: bold;
+    I {
+      display: inline-block;
+      padding-left: 16px;
+    }
+  }
+  .Button:hover, .Button:focus {
+    background-color: $scanrgreyColor;
+  }
+
+}
