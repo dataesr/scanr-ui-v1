@@ -4,7 +4,13 @@ import Axios from 'axios';
 import { API_ERRORS_SCANR, API_CROSSREF } from '../config/config';
 
 function parseCrossRef(item) {
-  const obj = {};
+  const obj = {
+    doi: '',
+    title: '',
+    date: '',
+    journal: '',
+    authors: [],
+  };
   obj.doi = item.DOI;
   if (item.title.length) {
     obj.title = item.title[0];
