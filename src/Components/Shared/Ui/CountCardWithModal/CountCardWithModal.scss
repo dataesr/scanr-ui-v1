@@ -25,6 +25,15 @@
   color: $scanrblueColor
 }
 
+.ListStyle {
+  list-style-type: none;
+  padding: 0;
+  margin: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: $scanrdeepblueColor;
+}
+
 .ButtonWithModal {
   .Button {
     margin: 16px auto;
@@ -39,5 +48,4 @@
   .Button:hover, .Button:focus {
     background-color: $scanrgreyColor;
   }
-
 }
