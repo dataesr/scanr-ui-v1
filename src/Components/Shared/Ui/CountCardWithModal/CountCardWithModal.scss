@@ -1,6 +1,6 @@
 @import '../../../../style.scss';
 
-.SimpleCountListCard {
+.CountCardWithModal {
   height: calc(100% - 8px);
   border-radius: 8px;
   margin-bottom: 8px;
@@ -11,27 +11,10 @@
   text-align: center;
 
   .Title {
-    color: $scanrgreyColor;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 8px;
-  }
-
-  .Value {
     color: $scanrdeepblueColor;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     height: 38px;
-  }
-
-  .Label {
-    color: $scanrdeepblueColor;
-    font-size: 1rem;
-    font-weight: normal;
-  }
-
-  .Button {
-    margin-bottom: 16px;
   }
 }
 .Link {
@@ -44,6 +27,7 @@
 
 .ButtonWithModal {
   .Button {
+    margin: 16px auto;
     color: $colorCardButton;
     background-color: $bgColorCardButton;
     font-weight: bold;
