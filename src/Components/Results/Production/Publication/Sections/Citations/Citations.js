@@ -6,6 +6,7 @@ import useCrossRef from '../../../../../../Hooks/useCrossRef';
 import SectionLoader from '../../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../../Shared/Errors/Errors';
 import SectionTitle from '../../../../Shared/SectionTitle';
+import CountCardWithModal, { CountCardModalItem } from '../../../../../Shared/Ui/CountCardWithModal/CountCardWithModal';
 // import getSelectedKey from '../../../../../../Utils/getSelectKey';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
@@ -101,9 +102,24 @@ function CrossRefList({ ids, lang, maxItems }) {
   if (isError) return <Errors error={500} />;
   if (data.length) {
     const publis = data.slice(0, maxItems).map(item => parseCrossRef(item));
+    const rest = data.slice(maxItems).map(item => parseCrossRef(item));
+    const title = `et ${ids.length - maxItems} autres`;
     return (
       <div className="row">
         {publis.map(item => (<CrossRefCard key={item.doi} item={item} lang={lang} />))}
+        {
+          rest && (
+            <div className={`col-md-4 ${classes.CardContainer}`}>
+              <CountCardWithModal title={title} buttonLabel="Voir les autres" modalTitle="Autres citations">
+                {
+                  rest.map(item => (
+                    <CountCardModalItem title={item.title} />
+                  ))
+                }
+              </CountCardWithModal>
+            </div>
+          )
+        }
       </div>
     );
   }
@@ -116,7 +132,7 @@ CrossRefList.propTypes = {
   maxItems: PropTypes.number,
 };
 CrossRefList.defaultProps = {
-  maxItems: 6,
+  maxItems: 5,
 };
 
 export default function Citations({ id: inputId, language: lang, direction }) {
