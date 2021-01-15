@@ -80,7 +80,7 @@ const Patent = (props) => {
             />
             <Depots
               language={props.language}
-              data={props.data.links || []}
+              data={props.data.patents || []}
               id={props.id}
               name={name}
               viewMode={depotsViewMode}

@@ -19,16 +19,32 @@ import countries from '../countries.json';
  * Tests unitaires : .
 */
 const PatentParticipants = (props) => {
-  let inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
-    const [fullName, country] = auth.fullName.split('__');
-    return { fullName, country: countries[props.language][country] };
-  });
+  // let inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+  //   const [fullName, country] = auth.fullName.split('__');
+  //   return { fullName, country: countries[props.language][country] };
+  // });
+  let inventors = props.data.filter((auth) => {
+    if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(role => role.role === 'inv')) {
+      return true;
+    }
+    return false;
+  }).map(inv => ({ fullName: inv.fullName, country: countries[props.language][inv.country] }));
   inventors = [...new Set(inventors.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
 
-  let depos = props.data.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
-    const [label, country] = deposant.fullName.split('__');
-    return { label, country: countries[props.language][country], id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
-  });
+  // let depos = props.data.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+  //   const [label, country] = deposant.fullName.split('__');
+  //   return { label, country: countries[props.language][country], id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
+  // });
+  let depos = props.data.filter((auth) => {
+    if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(role => role.role === 'dep')) {
+      return true;
+    }
+    return false;
+  }).map(deposant => ({
+    label: deposant.fullName,
+    country: countries[props.language][deposant.country],
+    id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure,
+  }));
   depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
   const deposants = [];
   const ids = [];
