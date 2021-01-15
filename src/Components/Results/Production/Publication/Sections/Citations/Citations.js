@@ -22,27 +22,6 @@ import classes from './Citations.scss';
 */
 const messages = { fr: messagesFr, en: messagesEn };
 
-function parseCrossRef(item) {
-  const obj = {};
-  obj.doi = item.DOI;
-  if (item.title.length) {
-    obj.title = item.title[0];
-  }
-  if (item.issued && item.issued['date-parts'].length && item.issued['date-parts'][0].length) {
-    obj.date = item.issued['date-parts'][0][0];
-  }
-  if (item['container-title'] && item['container-title'].length) {
-    obj.journal = item['container-title'][0];
-  }
-  if (item.author && item.author.length) {
-    obj.num_authors = item.author.length;
-    obj.authors = item.author.map(
-      auth => `${(auth.given) ? `${auth.given} ` : ''}${(auth.family) ? auth.family : ''}`,
-    );
-  }
-  return obj;
-}
-
 function CrossRefCard({ item }) {
   return (
     <div key={item.DOI} className={`col-md-4 ${classes.CardContainer}`}>
@@ -101,16 +80,17 @@ function CrossRefList({ ids, lang, maxItems }) {
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
   if (data.length) {
-    const publis = data.slice(0, maxItems).map(item => parseCrossRef(item));
-    const rest = data.slice(maxItems).map(item => parseCrossRef(item));
-    const title = `et ${ids.length - maxItems} autres`;
+    const publis = data.slice(0, maxItems);
+    const rest = data.slice(maxItems);
+    const title = rest && <FormattedHTMLMessage id="Publication.authors" values={{ count: ids.length - maxItems }} />;
+    const others = rest && <FormattedHTMLMessage id="Publication.list" />;
     return (
       <div className="row">
         {publis.map(item => (<CrossRefCard key={item.doi} item={item} lang={lang} />))}
         {
           rest && (
             <div className={`col-md-4 ${classes.CardContainer}`}>
-              <CountCardWithModal title={title} buttonLabel="Voir les autres" modalTitle="Autres citations">
+              <CountCardWithModal title={title} buttonLabel={others} modalTitle="Autres citations">
                 {
                   rest.map(item => (
                     <CountCardModalItem title={item.title} />

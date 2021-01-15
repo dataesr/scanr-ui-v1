@@ -26,19 +26,15 @@ CountCardModalItem.propTypes = {
 
 export default function CountCardWithModal({
   children,
-  count,
   title,
   buttonLabel,
   modalTitle,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className={`d-flex flex-column ${classes.SimpleCountListCard}`}>
+    <div className={`d-flex flex-column justify-content-around ${classes.CountCardWithModal}`}>
       <div className={classes.Title}>
         {title}
-      </div>
-      <div className={classes.Value}>
-        {count}
       </div>
       <div className={classes.ButtonWithModal}>
         <Modal show={isOpen} onHide={() => setIsOpen(false)}>
@@ -59,14 +55,9 @@ export default function CountCardWithModal({
   );
 }
 
-CountCardWithModal.defaultProps = {
-  count: null,
-};
-
 CountCardWithModal.propTypes = {
   children: PropTypes.node.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]).isRequired,
   buttonLabel: PropTypes.string.isRequired,
   modalTitle: PropTypes.string.isRequired,
-  count: PropTypes.oneOfType([PropTypes.number, null]),
 };
