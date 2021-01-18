@@ -77,25 +77,16 @@ const PublicationCard = (props) => {
     if (!data.authors || data.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
-    // TODO : gerer auth.country !== 'None' dans les données
-    let inventeurs = data.authors.filter((auth) => {
-      if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(a => a.role === 'inv')) {
-        return true;
-      }
-      return false;
+    let inventeurs = data.authors.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+      const [fullName, country] = auth.fullName.split('__');
+      return { fullName, country };
     });
     inventeurs = [...new Set(inventeurs.map(i => JSON.stringify(i)))].length;
 
-    // TODO : gerer auth.country !== 'None' dans les données
-    let depos = data.authors.filter((auth) => {
-      if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(role => role.role === 'dep')) {
-        return true;
-      }
-      return false;
-    }).map(deposant => (
-      { label: deposant.fullName, id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure }
-    ));
-
+    let depos = data.authors.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+      const label = deposant.fullName.split('__')[0];
+      return { label, id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
+    });
     depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
     let deposants = 0;
     const ids = [];

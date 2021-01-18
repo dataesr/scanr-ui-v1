@@ -29,10 +29,10 @@ class Carto extends Component {
   };
 
   componentDidMount() {
-    const existEP = this.props.data.find(el => el.office === 'EP');
-    const existEA = this.props.data.find(el => el.office === 'EA');
-    const existAP = this.props.data.find(el => el.office === 'AP');
-    const existWO = this.props.data.find(el => el.office === 'WO');
+    const existEP = this.props.data.find(el => el.country === 'EP');
+    const existEA = this.props.data.find(el => el.country === 'EA');
+    const existAP = this.props.data.find(el => el.country === 'AP');
+    const existWO = this.props.data.find(el => el.country === 'WO');
 
     this.setState({
       existEP, existEA, existAP, existWO,
@@ -82,8 +82,8 @@ class Carto extends Component {
       researchCountry = 'DK';
     }
     if (this.props.data.find((el) => {
-      if (el.office === researchCountry) {
-        patentDate = el.applicationDate;
+      if (el.country === researchCountry) {
+        patentDate = el.url;
         numPatent = el.id || null;
         return true;
       }
