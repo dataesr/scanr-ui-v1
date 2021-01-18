@@ -61,7 +61,7 @@ const Production = (props) => {
     );
   }
   if (isError) return <Errors error={500} />;
-  const doNotShow = ['cea-02339765', 'these2017PA100123'];
+  const doNotShow = ['hal-02423632', 'hal-02422378', 'hal-02415294'];
   if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   return (
     <React.Fragment>
