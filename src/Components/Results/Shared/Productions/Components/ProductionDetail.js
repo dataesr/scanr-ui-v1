@@ -11,6 +11,7 @@ import messagesEn from './translations/en.json';
 
 import classes from './ProductionDetail.scss';
 import ProductionAuthors from './ProductionAuthors';
+import ProductionInfos from './ProductionInfos';
 
 /**
  * ProductionDetail
@@ -28,11 +29,6 @@ const ProductionDetail = (props) => {
 
   if (Object.entries(props.data).length === 0) {
     return null;
-  }
-
-  let date = '';
-  if (props.data.publicationDate) {
-    date = moment(props.data.publicationDate).format('YYYY');
   }
 
   let id = '';
@@ -62,20 +58,7 @@ const ProductionDetail = (props) => {
           {getSelectKey(props.data, 'title', props.language, 'default')}
         </p>
         <ProductionAuthors production={props.data} language={props.language} />
-        <div>
-          <p className={classes.Grey}>
-            {
-              (props.data.source && props.data.source.title)
-                ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${props.data.source.title}"]}}`} className={classes.Italic}>{props.data.source.title}</a>
-                : null
-            }
-            {(props.data.source && props.data.source.title && date) ? ' | ' : null}
-            {date}
-          </p>
-          <p className={classes.Grey}>
-            {id}
-          </p>
-        </div>
+        <ProductionInfos source={props.data.source} id={id} publicationDate={props.data.publicationDate} />
         {
           (getSelectKey(props.data, 'summary', props.language, 'default') || keywords.length > 0)
             ? <hr className={`w-100 ${classes[props.data.productionType]}`} />
