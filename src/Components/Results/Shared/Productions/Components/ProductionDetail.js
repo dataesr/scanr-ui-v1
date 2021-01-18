@@ -10,7 +10,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 import classes from './ProductionDetail.scss';
-import Authors from './Authors';
+import ProductionAuthors from './ProductionAuthors';
 
 /**
  * ProductionDetail
@@ -61,7 +61,7 @@ const ProductionDetail = (props) => {
         <p className={classes.detailTitle}>
           {getSelectKey(props.data, 'title', props.language, 'default')}
         </p>
-        <Authors production={props.data} language={props.language} />
+        <ProductionAuthors production={props.data} language={props.language} />
         <div>
           <p className={classes.Grey}>
             {

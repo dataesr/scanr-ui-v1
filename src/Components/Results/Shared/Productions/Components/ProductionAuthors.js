@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-const Authors = (props) => {
+const ProductionAuthors = (props) => {
   const { production: productionItem, language } = props;
 
   const getInventors = (prod) => {
@@ -84,9 +84,9 @@ const Authors = (props) => {
   );
 };
 
-export default Authors;
+export default ProductionAuthors;
 
-Authors.propTypes = {
+ProductionAuthors.propTypes = {
   language: PropTypes.string.isRequired,
   production: PropTypes.object.isRequired,
 };
