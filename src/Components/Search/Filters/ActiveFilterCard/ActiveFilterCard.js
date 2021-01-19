@@ -12,7 +12,11 @@ const ActiveFilterCard = (props) => {
   let count = 0;
   const filteredFilters = {};
   Object.keys(filters).forEach((key) => {
-    if (filters[key].type === 'MultiValueSearchFilter' && key !== 'isFrench' && key !== 'status') {
+    if (filters[key].type === 'MultiValueSearchFilter'
+      && filters[key].op !== 'not_all'
+      && key !== 'isFrench'
+      && key !== 'status'
+    ) {
       filteredFilters[key] = filters[key];
     }
   });
