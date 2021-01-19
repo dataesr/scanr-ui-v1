@@ -67,19 +67,18 @@ const PersonCard = (props) => {
     );
   } else if (!affiliation && props.onlyExisting) {
     affiliations = null;
+  } else {
+    affiliations = (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-building" />
+        </div>
+        <p className={`m-0 ${classes.UnknownData}`}>
+          {messages[props.language]['resultCard.unknownData']}
+        </p>
+      </li>
+    );
   }
-  // else {
-  //   affiliations = (
-  //     <li className="d-flex">
-  //       <div className={classes.Icons}>
-  //         <i aria-hidden="true" className="fas fa-building" />
-  //       </div>
-  //       <p className={`m-0 ${classes.UnknownData}`}>
-  //         {messages[props.language]['resultCard.unknownData']}
-  //       </p>
-  //     </li>
-  //   );
-  // }
 
   const addresses = (address && !props.small)
     ? (

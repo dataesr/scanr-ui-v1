@@ -93,11 +93,11 @@ const PatentIdentity = (props) => {
         <div className="row">
           <div className={`col-md-6 ${classes.CardContainer}`}>
             <CounterCard
-              counter={props.data.patents.length}
+              counter={props.data.links.length}
               title=""
               color="Productions"
               language={props.language}
-              label={<FormattedHTMLMessage id="Patent.Identity.depots.number" values={{ count: props.data.patents.length }} />}
+              label={<FormattedHTMLMessage id="Patent.Identity.depots.number" values={{ count: props.data.links.length }} />}
               className={classes.PersonCardHeight}
             />
           </div>
