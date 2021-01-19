@@ -82,7 +82,7 @@ const CounterListCard = (props) => {
         </div>
       </p>
 
-      <div className="mt-auto pb-2">
+      <div className="mt-auto">
         <div className={classes.Button}>
           <ButtonWithModal
             title={messages[props.language][props.modalTitleKey]}
