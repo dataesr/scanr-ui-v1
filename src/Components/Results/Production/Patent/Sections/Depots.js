@@ -19,14 +19,22 @@ import patentType from './patentType.json';
  * Tests unitaires : .
 */
 const PatentsApplications = (props) => {
-  const patents = props.data;
+  const patents = [];
+  props.data.forEach((patent) => {
+    const [country, type, delivrance, nbpub] = patent.type.split('__');
+    const url = patent.url.replace('date_', '');
+    const newPatent = {
+      ...patent, country, type, delivrance, nbpub, url,
+    };
+    patents.push(newPatent);
+  });
 
   const [selected, setSelected] = useState((patents.length) ? patents[0] : {});
 
-  const content = patents.sort((a, b) => a.applicationDate - b.applicationDate).map((item, i) => {
+  const content = patents.sort((a, b) => moment(a.url).format('YYYYMMDD') - moment(b.url).format('YYYYMMDD')).map((item, i) => {
     let first = false;
     if (i > 0) {
-      first = (props.data[i - 1].applicationDate !== item.applicationDate);
+      first = (moment(props.data[i - 1].url).format('DD-MM-YYYY') !== moment(item.url).format('DD-MM-YYYY'));
     }
     let select = '';
     if (item.id === selected.id) {
@@ -34,7 +42,17 @@ const PatentsApplications = (props) => {
     }
     return (
       <React.Fragment key={item.id}>
-        {(i === 0 || first) ? <div className={classes.TitleYear}>{moment(props.data[i].applicationDate).format('L')}</div> : null}
+        {
+          (i === 0 || first)
+            ? (
+              <div className={classes.TitleYear}>
+                {
+                  moment(item.url).format('DD-MM-YYYY')
+                }
+              </div>
+            )
+            : null
+        }
         <div
           className={`${classes.Item} ${select}`}
           onClick={() => setSelected(item)}
@@ -43,13 +61,13 @@ const PatentsApplications = (props) => {
           tabIndex={0}
         >
           <p className={classes.Title}>
-            {countries[props.language][item.office]}
+            {countries[props.language][item.country]}
           </p>
           <div className={`d-flex align-items-center justify-content-end ${classes.Type}`}>
             <p className="m-0">
-              {(item.isPriority) ? <FormattedHTMLMessage id="Patent.Depots.priority" /> : null}
-              {(item.label === 'priority' && (item.applicationDate)) ? ' - ' : null}
-              {(item.grantedDate) && (<FormattedHTMLMessage id="Patent.Depots.delivered" />)}
+              {(item.label === 'priority') ? (<FormattedHTMLMessage id="Patent.Depots.priority" />) : ' '}
+              {(item.label === 'priority' && (item.delivrance)) ? ' - ' : ' '}
+              {(item.delivrance) && (<FormattedHTMLMessage id="Patent.Depots.delivered" />)}
             </p>
           </div>
         </div>
@@ -76,7 +94,7 @@ const PatentsApplications = (props) => {
                       <LogoCardWithButton
                         language={props.language}
                         url="/img/logo-oeb.svg"
-                        targetUrl={selected.links[0].url}
+                        targetUrl={'https://worldwide.espacenet.com/patent/search/?q=pn%3D"'.concat(selected.country).concat(selected.nbpub).concat('"')}
                         link="link_patent"
                         cssClass="Height100"
                       />
@@ -95,7 +113,7 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-fingerprint"
                         title={<FormattedHTMLMessage id="Patent.Depots.publicationNumber" />}
-                        label={(selected.office).concat(selected.publicationNumber)}
+                        label={(selected.country).concat(selected.nbpub)}
                         tooltip=""
                       />
                     </div>
@@ -104,27 +122,18 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-calendar-day"
                         title={<FormattedHTMLMessage id="Patent.Depots.date" />}
-                        label={moment(selected.applicationDate).format('L')}
-                        tooltip=""
-                      />
-                    </div>
-                    <div className={`col-md-6 ${classes.CardContainer}`}>
-                      <SimpleCard
-                        language={props.language}
-                        logo="fas fa-calendar-day"
-                        title={<FormattedHTMLMessage id="Patent.Depots.publicationDate" />}
-                        label={moment(selected.publicationDate).format('L')}
+                        label={moment(selected.url).format('DD-MM-YYYY')}
                         tooltip=""
                       />
                     </div>
                     {
-                      (selected.grantedDate) && (
+                      (selected.delivrance) && (
                         <div className={`col-md-6 ${classes.CardContainer}`}>
                           <SimpleCard
                             language={props.language}
                             logo="fas fa-calendar-check"
                             title={<FormattedHTMLMessage id="Patent.Depots.granted" />}
-                            label={<FormattedHTMLMessage id="Patent.Depots.grantedDate" values={{ date: moment(selected.grantedDate).format('L') }} />}
+                            label={<FormattedHTMLMessage id="Patent.Depots.grantedDate" values={{ date: moment(selected.delivrance).format('DD-MM-YYYY') }} />}
                             tooltip=""
                           />
                         </div>
@@ -135,7 +144,7 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-flag"
                         title={<FormattedHTMLMessage id="Patent.Depots.country" />}
-                        label={countries[props.language][selected.office]}
+                        label={countries[props.language][selected.country]}
                         tooltip=""
                       />
                     </div>
@@ -144,7 +153,7 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-lightbulb"
                         title={<FormattedHTMLMessage id="Patent.Depots.type" />}
-                        label={patentType[props.language][selected.ipType]}
+                        label={patentType[props.language][selected.type]}
                         tooltip=""
                       />
                     </div>
@@ -153,7 +162,7 @@ const PatentsApplications = (props) => {
                         language={props.language}
                         logo="fas fa-clipboard-list"
                         title={<FormattedHTMLMessage id="Patent.Depots.isPriority" />}
-                        label={(selected.isPriority) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
+                        label={(selected.label === 'priority') ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
                         tooltip=""
                       />
                     </div>
