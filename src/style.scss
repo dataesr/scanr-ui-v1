@@ -3,7 +3,7 @@
 *, html {
   font-family: 'Inter UI';
 }
-html, body{
+html, body {
   height: 100%;
 }
 
@@ -11,50 +11,50 @@ html, body{
 /* tous les prog scss sont à modifier pour intégrer ces couleurs !!!!! */
 
 /* les bleus et gris généraux de scanR*/
-$scanrblueColor : rgb(55,120,187);
-$scanrdeepblueColor : rgb(0,50,89);
-$scanrgreyColor : rgb(76,111,139);
-$scanrmiddlegreyColor : rgb(204,214,222);
-$scanrlightgreyColor : rgb(235,238,240);
-$scanrelectricblueColor : rgb(17,159,212);
-$scanrfooterBgColor : rgb(0,33,59);
+$scanrblueColor: rgb(55, 120, 187);
+$scanrdeepblueColor: rgb(0, 50, 89);
+$scanrgreyColor: rgb(76, 111, 139);
+$scanrmiddlegreyColor: rgb(204, 214, 222);
+$scanrlightgreyColor: rgb(235, 238, 240);
+$scanrelectricblueColor: rgb(17, 159, 212);
+$scanrfooterBgColor: rgb(0, 33, 59);
 $scanrhomelightblueColor: aliceblue;
 
 /* couleurs entités */
-$entityColor : rgb(255,209,56);
-$structureColor : rgb(255,209,56);
+$entityColor: rgb(255, 209, 56);
+$structureColor: rgb(255, 209, 56);
 
 /* couleurs personnes */
-$personColor : rgb(254,119,71);
+$personColor: rgb(254, 119, 71);
 
 /* couleurs projets */
 
-$projectgreenColor : rgb(93,217,157);
-$projectlightgreenColor : rgb(212,226,77);
-$projectmiddlegreenColor : rgb(67,190,68);
-$projectdarkgreenColor : rgb(32,118,121);
+$projectgreenColor: rgb(93, 217, 157);
+$projectlightgreenColor: rgb(212, 226, 77);
+$projectmiddlegreenColor: rgb(67, 190, 68);
+$projectdarkgreenColor: rgb(32, 118, 121);
 
 /* couleurs productions */
 
-$productionColor : rgb(204,61,143);
-$productionpublicationColor : rgb(204,61,143);
-$PatentsNationalDepots : rgb(254,101,91);
-$PatentsInternationalDepots : rgba(64,26,23,0.6);
-$PatentsNoDepot : $scanrmiddlegreyColor;
-$productionthesesColor : rgb(254,173,64);
+$productionColor: rgb(204, 61, 143);
+$productionpublicationColor: rgb(204, 61, 143);
+$PatentsNationalDepots: rgb(254, 101, 91);
+$PatentsInternationalDepots: rgba(64, 26, 23, 0.6);
+$PatentsNoDepot: $scanrmiddlegreyColor;
+$productionthesesColor: rgb(254, 173, 64);
 
 /* couleurs dataviz ecosystem */
 
-$frenchentityColor : rgb(17,159,212);
-$internationalentityColor : rgb(78,196,192);
-$researchstructuresColor : rgb(255,209,56);
-$entreprisesColor : rgb(254,89,79);
-$oiColor : rgb(254,142,64);
-$publicsectorColor : rgb(254,116,173);
-$isblColor : rgb(149,82,179);
+$frenchentityColor: rgb(17, 159, 212);
+$internationalentityColor: rgb(78, 196, 192);
+$researchstructuresColor: rgb(255, 209, 56);
+$entreprisesColor: rgb(254, 89, 79);
+$oiColor: rgb(254, 142, 64);
+$publicsectorColor: rgb(254, 116, 173);
+$isblColor: rgb(149, 82, 179);
 
 /* couleur message d'alerte */
-$warningColor : rgb(236,15,1);
+$warningColor: rgb(236, 15, 1);
 
 
 /* General */
@@ -69,7 +69,7 @@ $projectsColor: rgb(93, 217, 157);
 $publicationsColor: rgb(204, 61, 143);
 $textColor: rgb(0, 50, 89);
 $headerHeight: 56px;
-$mediaTextColor:rgb(56, 119, 186);
+$mediaTextColor: rgb(56, 119, 186);
 
 /* OpenAccess Colors*/
 $oaOpenColor: rgb(32, 225, 104);
@@ -80,8 +80,8 @@ $oaClose: rgb(170, 170, 170);
 /* Blanc avec alpha 0.7*/
 $alphaWhite7: rgba(255, 255, 255, 0.7);
 
-$sanKey1 : #55BF3B;
-$sanKey2 : #90ee7e;
+$sanKey1: #55BF3B;
+$sanKey2: #90ee7e;
 
 :export {
   scanrblueColor: $scanrblueColor;
@@ -205,8 +205,8 @@ $sanKey2 : #90ee7e;
 }
 
 .NoGutters {
- padding: 0;
- margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 /* BANNIERES*/
@@ -217,7 +217,7 @@ $sanKey2 : #90ee7e;
   a {
     color: white;
   }
-  .Button{
+  .Button {
     background-color: $scanrblueColor;
     color: white;
   }
@@ -269,10 +269,10 @@ $bgFooter: $scanrfooterBgColor;
 $footerHeight: 15%;
 
 /*HeaderTitle*/
-$bgHeaderTitle : $scanrblueColor;
+$bgHeaderTitle: $scanrblueColor;
 $colorHeaderTitle: white;
-$sizeHeaderTitle : 2em;
-$colorBreadCrumbHeaderTitle : white;
+$sizeHeaderTitle: 2em;
+$colorBreadCrumbHeaderTitle: white;
 
 /*BreadCrumb*/
 $breadcrumb-divider: quote(">");
@@ -281,13 +281,13 @@ $otherPagesPaddingTop: 90px;
 $otherPagesPaddingBottom: 90px;
 
 /*Medias*/
-$colormediaperiod:$scanrblueColor;
+$colormediaperiod: $scanrblueColor;
 
 /*Ressources*/
-$bgcolormSmallCard:$scanrblueColor;
-$ressourceColorDark:$scanrdeepblueColor;
-$ressourceColorLight:$scanrgreyColor;
-$ressourceUnderlineColor:$scanrblueColor;
+$bgcolormSmallCard: $scanrblueColor;
+$ressourceColorDark: $scanrdeepblueColor;
+$ressourceColorLight: $scanrgreyColor;
+$ressourceUnderlineColor: $scanrblueColor;
 
 /*Resultats*/
 $bgColorCardButton: $scanrblueColor;
@@ -355,8 +355,8 @@ $cardTitleBgColor: $scanrlightgreyColor;
 
 .CardCenter {
   text-align: center;
-  vertical-align:middle;
-  margin:auto;
+  vertical-align: middle;
+  margin: auto;
   font-size: 1.4rem;
   .Button {
     margin: auto;
@@ -369,38 +369,38 @@ $cardTitleBgColor: $scanrlightgreyColor;
   font-size: 0.8rem;
 }
 
-.btn_dark{
+.btn_dark {
   background-color: $scanrdeepblueColor;
   color: white;
 }
 
-.btn_scanrBlue{
+.btn_scanrBlue {
   background-color: $scanrblueColor;
   color: white;
   font-weight: bold;
   max-height: 40px;
 }
-.btn_scanrBlue:hover, .btn_scanrBlue:focus{
+.btn_scanrBlue:hover, .btn_scanrBlue:focus {
   background-color: $scanrgreyColor;
   color: white;
 }
 
-.btn_scanrGrey{
+.btn_scanrGrey {
   background-color: $scanrgreyColor;
   color: white;
   font-weight: bold;
 }
-.btn_scanrGrey:hover, .btn_scanrGrey:focus{
+.btn_scanrGrey:hover, .btn_scanrGrey:focus {
   background-color: $scanrdeepblueColor;
   color: white;
 }
 
-.btn_scanrlightgrey{
+.btn_scanrlightgrey {
   background-color: $scanrlightgreyColor;
   color: $scanrdeepblueColor;
   font-weight: bold;
 }
-.btn_scanrlightgrey:hover, .btn_scanrlightgrey:focus{
+.btn_scanrlightgrey:hover, .btn_scanrlightgrey:focus {
   background-color: $scanrgreyColor;
   color: white;
 }
