@@ -1,6 +1,10 @@
 node_modules
 build
+doc
+k8s
 .dockerignore
 Dockerfile
-Dockerfile.prod
+Dockerfile-production
+Dockerfile.staging
 .github
+deployment
