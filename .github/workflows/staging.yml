@@ -64,4 +64,4 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
-          target: 'scanr'
+          deployment: 'scanr'
