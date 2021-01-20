@@ -60,8 +60,8 @@ jobs:
 
       - name: Deploy to Cluster
         id: kubectl-deploy
-        uses: dataesr/kubectl-deploy@v1.1
+        uses: dataesr/kubectl-deploy
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
-          deployment: 'scanr'
+          restart: 'scanr'
