@@ -60,7 +60,7 @@ jobs:
 
       - name: Deploy to Cluster
         id: kubectl-deploy
-        uses: dataesr/kubectl-deploy@v1
+        uses: dataesr/kubectl-deploy@v1.1
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
