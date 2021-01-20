@@ -65,3 +65,8 @@ jobs:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
           restart: 'scanr'
+
+      - name: Notify in slack
+        run: |
+          message='{"text":"Une nouvelle version de scanR est en préprod. Vous pouvez la voir ici: http://51.91.81.57/"}'
+          curl -X POST -H 'Content-type: application/json' --data $message ${{ secrets.SLACK_WEBHOOK }}
