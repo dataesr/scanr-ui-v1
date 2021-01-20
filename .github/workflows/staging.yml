@@ -1,4 +1,4 @@
-name: push to Docker Hub
+name: Push to Docker Hub and Deploy on k8s
 
 on:
   push:
@@ -65,7 +65,7 @@ jobs:
 
       - name: Deploy to Cluster
         id: kubectl-deploy
-        uses: ./actions
+        uses: dataesr/kubectl-deploy@v1
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
