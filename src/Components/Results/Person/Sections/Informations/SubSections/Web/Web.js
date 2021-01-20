@@ -62,7 +62,7 @@ const Web = (props) => {
         ) : null }
         { (theConversationId.id) ? (
           <div className={`col-md-6 ${classes.CardContainer}`} style={{ height: '500px' }}>
-            <TheConversationCard id={theConversationId.id} autoHeight />
+            <TheConversationCard id={theConversationId.id} autoHeight language={props.language} />
           </div>
         ) : null }
         { (gscholarId.id) ? (
