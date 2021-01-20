@@ -57,11 +57,6 @@ jobs:
 
       - name: Check Out Repo
         uses: actions/checkout@v2
-      #
-      # - name: Set Tag name
-      #   run: |
-      #     VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-      #     TAG=dataesr/scanr:staging-$VERSION
 
       - name: Deploy to Cluster
         id: kubectl-deploy
@@ -70,5 +65,3 @@ jobs:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
           target: 'scanr'
-          # container: scanr
-          # image: $TAG
