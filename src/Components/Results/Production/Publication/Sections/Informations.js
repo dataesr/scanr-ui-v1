@@ -129,7 +129,6 @@ const Informations = (props) => {
             <div className={`col-md-6 ${classes.CardContainer}`}>
               <LogoCard
                 url="./img/swh-logo.jpg"
-                language={props.language}
                 cssClass="Height150"
                 targetUrl={swHeritageLink}
               />

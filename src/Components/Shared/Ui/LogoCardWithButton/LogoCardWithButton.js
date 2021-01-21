@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ReactImageFallback from 'react-image-fallback';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { GlobalContext } from '../../../../GlobalContext';
+
 import ButtonToPage from '../Buttons/ButtonToPage2';
 
 /* Gestion des langues */
@@ -23,19 +25,21 @@ import initialImage from '../../images/Spinner-1s-70px.gif';
  * Tests unitaires : .
 */
 const LogoCardWithButton = (props) => {
+  const context = useContext(GlobalContext);
   const messages = {
     fr: messagesFr,
     en: messagesEn,
   };
   const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
   let cssClass = '';
+
   if (props.cssClass) {
     cssClass = classes[`${props.cssClass}`];
   }
   const defaultText = (props.link) ? (props.link) : 'Website';
 
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
+    <IntlProvider locale={context.language} messages={messages[context.language]}>
       <div className={`${classes.card} ${cssClass}`}>
         <a href={props.targetUrl} target="_blank" rel="noopener noreferrer">
           <ReactImageFallback
@@ -75,7 +79,6 @@ LogoCardWithButton.propTypes = {
   src: PropTypes.string,
   url: PropTypes.string,
   link: PropTypes.string,
-  language: PropTypes.string,
   cssClass: PropTypes.string,
   targetUrl: PropTypes.string,
 };
