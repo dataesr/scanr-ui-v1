@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scanr
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  selector:
+    matchLabels:
+      app: scanr
+  template:
+    metadata:
+      labels:
+        app: scanr
+    spec:
+      containers:
+      - image: dataesr/scanr:staging
+        name: scanr
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      restartPolicy: Always

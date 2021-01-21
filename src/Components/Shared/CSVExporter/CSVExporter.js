@@ -8,6 +8,7 @@ const CSVExporter = (props) => {
   if (!props.data || props.data.length === 0) {
     return null;
   }
+
   return (
     <div className={`d-flex align-items-center ${classes.CSVExporter}`}>
       <div className={`pr-2 ${classes.Label}`}>
