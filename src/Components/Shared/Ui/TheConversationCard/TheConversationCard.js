@@ -34,7 +34,6 @@ const TheConversationCard = (props) => {
           (url)
             ? (
               <LogoCard
-                language={props.language}
                 url="/img/logo-the-conversation.svg"
                 targetUrl={url}
                 label="The Conversation"
@@ -52,5 +51,4 @@ export default TheConversationCard;
 
 TheConversationCard.propTypes = {
   id: PropTypes.string,
-  language: PropTypes.string.isRequired,
 };

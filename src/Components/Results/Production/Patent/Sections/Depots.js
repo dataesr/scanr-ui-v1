@@ -92,7 +92,6 @@ const PatentsApplications = (props) => {
                   <div className="row">
                     <div className={`col-md-12 ${classes.CardContainer}`}>
                       <LogoCardWithButton
-                        language={props.language}
                         url="/img/logo-oeb.svg"
                         targetUrl={'https://worldwide.espacenet.com/patent/search/?q=pn%3D"'.concat(selected.country).concat(selected.nbpub).concat('"')}
                         link="link_patent"
