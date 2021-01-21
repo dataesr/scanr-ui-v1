@@ -1,6 +1,15 @@
 import React from 'react';
-import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+
+/* Intl */
+import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import messagesFr from './translations/fr.json';
+import messagesEn from './translations/en.json';
+
+const messages = {
+  fr: messagesFr,
+  en: messagesEn,
+};
 
 const ProductionAuthors = (props) => {
   const { production: productionItem, language } = props;
@@ -64,23 +73,20 @@ const ProductionAuthors = (props) => {
     }
     return authors;
   };
-  let others = '';
   const diff = productionItem.authors.length - maxAuthors;
-  if (diff === 1) {
-    others = `${(language === 'fr') ? 'et ' : 'and '} 1 ${(language === 'fr') ? 'autre auteur' : 'more author'}`;
-  } else if (diff > 1) {
-    others = `${(language === 'fr') ? 'et ' : 'and '} ${diff} ${(language === 'fr') ? 'autres auteurs' : 'more authors'}`;
-  }
+  const others = diff > 0 ? <FormattedHTMLMessage id="more_authors" values={{ count: diff }} /> : '';
   const authors = getAuthors(productionItem).slice(0, maxAuthors);
 
   return (
-    <p className="m-0">
-      {
+    <IntlProvider locale={language} messages={messages[language]}>
+      <p className="m-0">
+        {
       authors.reduce((prev, curr) => [prev, ', ', curr])
     }
-      {' '}
-      {productionItem.productionType === 'publication' && others}
-    </p>
+        {' '}
+        {productionItem.productionType === 'publication' && others}
+      </p>
+    </IntlProvider>
   );
 };
 
