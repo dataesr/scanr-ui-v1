@@ -42,7 +42,6 @@ const Identity = (props) => {
           </div>
           <div className={`col-6 ${classes.CardContainer}`}>
             <LogoCard
-              language={props.language}
               url={`/img/projects/${props.data.type.toLowerCase()}.png`}
               label={props.data.type.toLowerCase()}
               cssClass="Height150"
