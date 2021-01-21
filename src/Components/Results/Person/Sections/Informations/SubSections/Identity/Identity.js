@@ -53,7 +53,6 @@ const Identity = (props) => {
             { (extOrcid.length > 0) ? (
               <div className={classes.CardContainer}>
                 <LogoCard
-                  language={props.language}
                   url="/img/logo-orcid.svg"
                   targetUrl={'http://www.orcid.org/'.concat(extOrcid[0].id)}
                   label="Orcid"
@@ -65,7 +64,6 @@ const Identity = (props) => {
             { (extIdhal.length > 0) ? (
               <div className={classes.CardContainer}>
                 <LogoCard
-                  language={props.language}
                   url="/img/logo-hal.svg"
                   targetUrl={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')}
                   label="IdHAL"
@@ -85,6 +83,5 @@ const Identity = (props) => {
 export default Identity;
 
 Identity.propTypes = {
-  language: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
