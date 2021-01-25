@@ -6,9 +6,7 @@ import Banner from '../../Shared/Banner/Banner';
 import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import ComponentVideo from '../../Shared/Video/ComponentVideo';
-import Footer from '../../Shared/Footer/Footer';
 import FormContact from '../../Shared/FormContact/FormContact';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 
 
@@ -38,15 +36,12 @@ const videoPoster = 'img/video-poster/Tai-Ji-gravure-paysage-Chine.gif';
 const ContributePage = props => (
   <IntlProvider messages={messages[props.language]}>
     <React.Fragment>
-      <Header />
-
       <HeaderTitle
         language={props.language}
         labelkey="contribute"
         url1="/"
         url2="#"
       />
-
       <section className={`${classes.Contribute} ${classes.Content}`}>
         <div className="container">
           <div className="row pt-4">
@@ -163,9 +158,6 @@ const ContributePage = props => (
         url=""
         target="_blank"
       />
-
-      <Footer />
-
     </React.Fragment>
   </IntlProvider>
 );

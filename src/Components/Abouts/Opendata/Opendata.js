@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 import { API_BASE_URL_SWAGGER } from '../../../config/config';
 
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import CardTwoColumns from './CardTwoColumns';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
@@ -30,10 +28,6 @@ const messages = {
 const Opendata = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.Opendata}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
       <HeaderTitle
         url1="/"
         language={props.language}
@@ -251,7 +245,6 @@ const Opendata = props => (
           </div>
         </div>
       </section>
-      <Footer language={props.language} />
     </div>
   </IntlProvider>
 );
@@ -260,5 +253,4 @@ export default Opendata;
 
 Opendata.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };

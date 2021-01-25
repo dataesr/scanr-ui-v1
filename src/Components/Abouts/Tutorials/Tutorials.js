@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
 import Banner from '../../Shared/Banner/Banner';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import TutorialVideo1 from './TutorialVideo/TutorialVideo1';
 import TutorialVideo2 from './TutorialVideo/TutorialVideo2';
@@ -34,10 +32,6 @@ const messages = {
 const Tutorials = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.Tutorials}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
       <HeaderTitle
         language={props.language}
         labelkey="tutorial"
@@ -107,8 +101,6 @@ const Tutorials = props => (
         language={props.language}
         url=""
       />
-
-      <Footer language={props.language} />
     </div>
   </IntlProvider>
 );

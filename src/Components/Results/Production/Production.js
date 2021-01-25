@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -13,6 +13,7 @@ import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Publication from './Publication/Publication';
 import Patent from './Patent/Patent';
 import Thesis from './Thesis/Thesis';
+import { GlobalContext } from '../../../GlobalContext';
 
 import styles from '../../../style.scss';
 /**
@@ -33,7 +34,8 @@ function renderProductionTypePage(language, data, id) {
   return <Publication language={language} data={data} id={id} />;
 }
 
-export default function Production({ match, language }) {
+export default function Production({ match }) {
+  const { language } = useContext(GlobalContext);
   const { id } = match.params;
   // Return a 404 for the following ids.
   const doNotShow = ['hal-02423632', 'hal-02422378', 'hal-02415294'];
@@ -63,6 +65,5 @@ export default function Production({ match, language }) {
 }
 
 Production.propTypes = {
-  language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
 };

@@ -7,8 +7,6 @@ import useScrollY from '../../../Hooks/useScrollY';
 
 import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import CoAuthors from './Sections/CoAuthors/CoAuthors';
 import Informations from './Sections/Informations/Informations';
@@ -37,18 +35,11 @@ import messagesEn from './translations/en.json';
 */
 const Person = (props) => {
   const scrollY = useScrollY();
-  const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
-  if (isLoading) {
-    return (
-      <React.Fragment>
-        <Header />
-        <Loader color={styles.personColor} />
-        <Footer />
-      </React.Fragment>
-    );
-  }
-  if (isError) return <Errors error={500} />;
   const doNotShow = ['idref227790677'];
+  const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
+
+  if (isLoading) return <Loader color={styles.personColor} />;
+  if (isError) return <Errors error={500} />;
   if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
@@ -60,7 +51,6 @@ const Person = (props) => {
           href2Title="Persons"
           href3={`./person/${props.match.params.id}`}
         />
-        <Header />
         <HeaderTitle
           language={props.language}
           label={(data.fullName) ? data.fullName : ''}
@@ -142,7 +132,6 @@ const Person = (props) => {
             />
           </div>
         </SectionPersons>
-        <Footer />
       </React.Fragment>
     </IntlProvider>
   );

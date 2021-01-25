@@ -33,8 +33,8 @@ const Patent = ({ id, data, language }) => {
   const [depotsViewMode, setDepotsViewMode] = useState('graph');
   const name = getSelectKey(data, 'title', language, 'default');
   return (
-    <React.Fragment>
-      <IntlProvider locale={language} messages={messages[language]}>
+    <IntlProvider locale={language} messages={messages[language]}>
+      <React.Fragment>
         <SectionProductions id="Identity">
           <div className="container">
             <SectionTitle
@@ -98,8 +98,8 @@ const Patent = ({ id, data, language }) => {
             <Similars language={language} id={id} />
           </div>
         </SectionProductions>
-      </IntlProvider>
-    </React.Fragment>
+      </React.Fragment>
+    </IntlProvider>
   );
 };
 

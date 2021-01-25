@@ -6,8 +6,6 @@ import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import Errors from '../Shared/Errors/Errors';
 import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 import Banner from '../Shared/Banner/Banner';
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import FocusCard from '../Shared/Ui/FocusCard/FocusCard';
 
@@ -48,7 +46,6 @@ const FocusList = (props) => {
         href2="/focus"
         href2Title="Focus"
       />
-      <Header />
       <HeaderTitle
         language={props.language}
         labelkey="focus"
@@ -84,7 +81,6 @@ const FocusList = (props) => {
         url="https://data.esr.gouv.fr/"
         target="_blank"
       />
-      <Footer />
     </React.Fragment>
   );
 };
