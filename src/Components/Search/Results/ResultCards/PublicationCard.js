@@ -77,13 +77,13 @@ const PublicationCard = (props) => {
     if (!data.authors || data.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
-    let inventeurs = data.authors.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+    let inventeurs = data.authors.filter(auth => auth.role && auth.role.indexOf('__inventeur') >= 0).map((auth) => {
       const [fullName, country] = auth.fullName.split('__');
       return { fullName, country };
     });
     inventeurs = [...new Set(inventeurs.map(i => JSON.stringify(i)))].length;
 
-    let depos = data.authors.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+    let depos = data.authors.filter(deposant => deposant.role && deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
       const label = deposant.fullName.split('__')[0];
       return { label, id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
     });
