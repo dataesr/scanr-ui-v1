@@ -12,8 +12,6 @@ import { API_PROJECTS_END_POINT } from '../../../config/config';
 // Components
 import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Participants from './Sections/Participants/Participants';
 import Productions from './Sections/Productions/Productions';
@@ -53,15 +51,7 @@ import messagesEn from './translations/en.json';
 const Project = (props) => {
   const scrollY = useScrollY();
   const { data, isLoading, isError } = useGetData(API_PROJECTS_END_POINT, props.match.params.id);
-  if (isLoading) {
-    return (
-      <React.Fragment>
-        <Header />
-        <Loader color={styles.projectColor} />
-        <Footer />
-      </React.Fragment>
-    );
-  }
+  if (isLoading) return <Loader color={styles.projectColor} />;
   if (isError) return <Errors error={500} />;
   const msg = { en: messagesEn, fr: messagesFr };
   return (
@@ -73,7 +63,6 @@ const Project = (props) => {
           href2Title="Projets"
           href3={`./project/${props.match.params.id}`}
         />
-        <Header />
         <HeaderTitle
           language={props.language}
           label={getSelectKey(data, 'label', props.language, 'default')}
@@ -194,7 +183,6 @@ const Project = (props) => {
             />
           </div>
         </SectionProjects>
-        <Footer />
       </React.Fragment>
     </IntlProvider>
   );

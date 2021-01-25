@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
 // import Banner from '../../Shared/Banner/Banner';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-import Footer from '../../Shared/Footer/Footer';
 // import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
@@ -35,11 +33,6 @@ const messages = {
 const TeamAndProjectPage = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.TeamAndProjectPage}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
-
       <HeaderTitle
         language={props.language}
         labelkey="team"
@@ -141,8 +134,6 @@ const TeamAndProjectPage = props => (
           </div>
         </div>
       </section>
-
-      <Footer language={props.language} />
     </div>
   </IntlProvider>
 );
@@ -151,5 +142,4 @@ export default TeamAndProjectPage;
 
 TeamAndProjectPage.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };
