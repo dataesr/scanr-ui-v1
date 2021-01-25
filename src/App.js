@@ -59,7 +59,7 @@ class App extends Component {
   }
 
   render() {
-    const { lang } = this.context;
+    const { language: lang } = this.context;
     const { piwik, customHistory } = this.state;
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', lang);
