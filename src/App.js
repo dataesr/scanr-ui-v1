@@ -13,6 +13,9 @@ import localeEn from 'react-intl/locale-data/en';
 import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
 import { GlobalContext } from './GlobalContext';
 
+import Footer from './Components/Shared/Footer/Footer';
+import Header from './Components/Shared/Header/Header';
+
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
 const SearchPage = lazy(() => import('./Components/Search/Search'));
@@ -59,188 +62,192 @@ class App extends Component {
     addLocaleData([...localeEn, ...localeFr]);
     document.documentElement.setAttribute('lang', this.context.language);
     return (
-      <IntlProvider locale={this.context.language}>
-        <Router history={(this.state.piwik) ? this.state.piwik.connectToHistory(this.state.customHistory) : null}>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Switch>
-              <Route
-                exact
-                path="/"
-                component={props => (
-                  <HomePage
-                    {...props}
-                  />
-                )}
-              />
-              <Route
-                path="/recherche/:api"
-                render={props => (
-                  <SearchPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Redirect from="/structure/:id" to="/entite/:id" />
-              <Route
-                path="/entite/:id"
-                render={props => (
-                  <EntityPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                path="/entite/:id"
-                render={props => (
-                  <EntityPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                path="/publication/:id"
-                render={props => (
-                  <ProductionPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                path="/project/:id"
-                render={props => (
-                  <ProjectPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                path="/person/:id"
-                render={props => (
-                  <PersonPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/focus"
-                component={props => (
-                  <FocusList
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
+      <React.Fragment>
+        <IntlProvider locale={this.context.language}>
+          <Header />
+          <Router history={(this.state.piwik) ? this.state.piwik.connectToHistory(this.state.customHistory) : null}>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Switch>
+                <Route
+                  exact
+                  path="/"
+                  component={props => (
+                    <HomePage
+                      {...props}
+                    />
+                  )}
+                />
+                <Route
+                  path="/recherche/:api"
+                  render={props => (
+                    <SearchPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Redirect from="/structure/:id" to="/entite/:id" />
+                <Route
+                  path="/entite/:id"
+                  render={props => (
+                    <EntityPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  path="/entite/:id"
+                  render={props => (
+                    <EntityPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  path="/publication/:id"
+                  render={props => (
+                    <ProductionPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  path="/project/:id"
+                  render={props => (
+                    <ProjectPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  path="/person/:id"
+                  render={props => (
+                    <PersonPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/focus"
+                  component={props => (
+                    <FocusList
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
 
-              <Route
-                exact
-                path="/focus/:id"
-                component={props => (
-                  <Focus
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
+                <Route
+                  exact
+                  path="/focus/:id"
+                  component={props => (
+                    <Focus
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
 
-              {/* vvv--------------- other-pages ------------------vvv  */}
-              <Route
-                exact
-                path="/mentions-legales"
-                component={props => (
-                  <LegalNoticePage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/l-equipe-et-son-projet"
-                component={props => (
-                  <TeamAndProjectPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                path="/opendata"
-                component={props => (
-                  <Opendata
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
+                {/* vvv--------------- other-pages ------------------vvv  */}
+                <Route
+                  exact
+                  path="/mentions-legales"
+                  component={props => (
+                    <LegalNoticePage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/l-equipe-et-son-projet"
+                  component={props => (
+                    <TeamAndProjectPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  path="/opendata"
+                  component={props => (
+                    <Opendata
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
 
-              <Route
-                path={['/ressources/:id', '/ressources']}
-                component={props => (
-                  <Ressources
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/medias"
-                component={props => (
-                  <MediasPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path={['/faq/:id', '/faq']}
-                component={props => (
-                  <FAQPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/contact"
-                component={props => (
-                  <ContactPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/glossaire"
-                component={props => (
-                  <GlossaryPage
-                    {...props}
-                    language={this.context.language}
-                  />
-                )}
-              />
-              <Route
-                exact
-                path="/erreur404"
-                component={() => (<Errors error={404} />)}
-              />
-              <Route
-                component={() => (<Errors error={404} />)}
-              />
-            </Switch>
-          </Suspense>
-        </Router>
-      </IntlProvider>
+                <Route
+                  path={['/ressources/:id', '/ressources']}
+                  component={props => (
+                    <Ressources
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/medias"
+                  component={props => (
+                    <MediasPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path={['/faq/:id', '/faq']}
+                  component={props => (
+                    <FAQPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/contact"
+                  component={props => (
+                    <ContactPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/glossaire"
+                  component={props => (
+                    <GlossaryPage
+                      {...props}
+                      language={this.context.language}
+                    />
+                  )}
+                />
+                <Route
+                  exact
+                  path="/erreur404"
+                  component={() => (<Errors error={404} />)}
+                />
+                <Route
+                  component={() => (<Errors error={404} />)}
+                />
+              </Switch>
+            </Suspense>
+          </Router>
+          <Footer />
+        </IntlProvider>
+      </React.Fragment>
     );
   }
 }
