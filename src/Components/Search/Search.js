@@ -9,8 +9,6 @@ import ReactPiwik from 'react-piwik';
 import { API_BASE_URL } from '../../config/config';
 import ExportingSpinner from '../Shared/LoadingSpinners/ExportingSpinner';
 
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
 
 import LocalHeader from './Header/Header';
@@ -609,7 +607,6 @@ class SearchPage extends Component {
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div className="d-flex flex-column h-100">
           <ExportingSpinner visible={this.state.isExporting} />
-          <Header />
           <LocalHeader
             language={this.props.language}
             api={this.state.api}
@@ -630,7 +627,6 @@ class SearchPage extends Component {
             {this.WhichResults()}
           </section>
           {this.WhichBanner()}
-          <Footer language={this.props.language} />
         </div>
       </IntlProvider>
     );

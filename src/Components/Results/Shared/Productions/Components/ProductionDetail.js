@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
 import ButtonToPage from '../../../../Shared/Ui/Buttons/ButtonToPage';
