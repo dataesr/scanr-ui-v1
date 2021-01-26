@@ -12,6 +12,11 @@ import messagesEn from './translations/en.json';
 import './UIModal.static.scss';
 import classes from '../../../Search/Filters/ActiveFilterCard/ActiveFilterCard.scss';
 
+const cssModal = {
+  big: { height: '70vh', width: '70vw' },
+  small: { height: '40vh', width: '40vw' },
+};
+
 const msg = {
   fr: messagesFr,
   en: messagesEn,
@@ -19,23 +24,27 @@ const msg = {
 
 function UIModal(props) {
   const {
-    title, children, active,
+    title, children, isOpened, size, modalHandler,
   } = props;
-  const [opened, setOpened] = useState(active);
-  const context = useContext(GlobalContext);
+  const [opened, setOpened] = useState(isOpened);
+  const { language } = useContext(GlobalContext);
 
   useEffect(() => {
     ReactModal.setAppElement('body');
-    setOpened(active);
-  }, [active]);
+    setOpened(isOpened);
+  }, [isOpened]);
 
   const closeModal = () => {
     setOpened(false);
+    if (modalHandler) {
+      modalHandler();
+    }
   };
 
   return (
-    <IntlProvider locale={context.language} messages={msg[context.language]}>
+    <IntlProvider locale={language} messages={msg[language]}>
       <ReactModal
+        style={{ content: cssModal[size] }}
         closeTimeoutMS={200}
         contentLabel={title}
         onRequestClose={closeModal}
@@ -46,10 +55,10 @@ function UIModal(props) {
         <section className="modal-header">
           <div className="container">
             <div className="row">
-              <div className="col-9">
+              <div className="col-9 pl-0">
                 <article>
                   <div className="wrapper-title">
-                    {title ? <h1 className="title pl-4">{title}</h1> : null}
+                    {title ? <h1 className="title">{title}</h1> : null}
                   </div>
                 </article>
               </div>
@@ -64,9 +73,7 @@ function UIModal(props) {
             </div>
           </div>
         </section>
-        <section>
-          {children}
-        </section>
+        {children}
       </ReactModal>
     </IntlProvider>
   );
@@ -75,11 +82,14 @@ function UIModal(props) {
 export default UIModal;
 
 UIModal.propTypes = {
-  active: PropTypes.bool,
+  isOpened: PropTypes.bool,
   title: PropTypes.string,
+  modalHandler: PropTypes.func,
   children: PropTypes.any.isRequired,
+  size: PropTypes.string,
 };
 
 UIModal.defaultProps = {
-  active: false,
+  isOpened: false,
+  size: 'big',
 };

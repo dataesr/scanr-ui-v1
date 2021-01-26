@@ -16,20 +16,44 @@ import classes from './SectionTitle.scss';
 */
 const SectionTitle = props => (
   <div className="row">
-    <div className="d-flex flex-wrap align-items-center flex-grow-1 mx-1">
-      <i className={`fas ${props.icon} ${classes.Icon}`} />
-      <span className={`pl-2 mr-auto my-2 ${classes.Title}`}>
-        {(props.total) ? (props.total).toLocaleString(props.language) : null}
+    <div className="col-lg-12">
+      <div className="d-flex flex-wrap align-items-center flex-grow-1 mx-1">
+        <i className={`fas ${props.icon} ${classes.Icon}`} />
+        <span className={`pl-0 pl-lg-2 my-2 ${classes.Title}`}>
+          {(props.total) ? (props.total).toLocaleString(props.language) : null}
         &nbsp;
-        {props.title}
+          {props.title}
         &nbsp;
-        {(props.lexicon) ? (
-          <LexiconModal language={props.language} target={props.lexicon}>
-            <i className="fa fa-info-circle" />
-          </LexiconModal>
-        ) : null }
-      </span>
-      {
+          {(props.lexicon && !props.subTitle) ? (
+            <LexiconModal language={props.language} target={props.lexicon}>
+              <i className="fa fa-info-circle" />
+            </LexiconModal>
+          ) : null }
+        </span>
+        {props.subTitle ? (
+          <React.Fragment>
+            <div className="ml-xl-3 mb-sm-3 mb-xl-0 d-flex align-items-center">
+              <div className="d-flex">
+                <LexiconModal language={props.language} target={props.lexicon}>
+                  <i className={`fa fa-info-circle ${classes.Icon}`} />
+                </LexiconModal>
+              </div>
+              <div
+                role="button"
+                tabIndex={0}
+                className={`ml-3 d-flex align-items-center ${classes.pointer}`}
+                onKeyPress={props.modalHandler}
+                onClick={props.modalHandler}
+              >
+                <i className={`fa fa-plus-square ${classes.Icon}`} />
+                <span className={`ml-1 ${classes.Text}`}>Suggest a publication</span>
+              </div>
+            </div>
+            <div className="mb-5">{props.subTitle}</div>
+          </React.Fragment>
+        )
+          : null}
+        {
         (props.viewModeClickHandler && props.viewMode)
           ? (
             <div className="d-flex flex-wrap align-items-center">
@@ -41,8 +65,8 @@ const SectionTitle = props => (
                 onKeyPress={() => props.viewModeClickHandler('list')}
                 className={classes.ViewChangeButton}
               >
-                <div className="mx-3 d-flex flex-nowrap align-items-center">
-                  <span className={`mx-2 btn ${classes.SquareButton} ${(props.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
+                <div className="d-flex flex-nowrap align-items-center">
+                  <span className={`mr-2 btn ${classes.SquareButton} ${(props.viewMode === 'list') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
                     <i aria-hidden className="fas fa-list" />
                   </span>
                   <p className={`m-0 ${classes.Text}`} id="ViewList">
@@ -60,7 +84,6 @@ const SectionTitle = props => (
                 aria-labelledby="ViewGraph"
                 onClick={() => props.viewModeClickHandler('graph')}
                 onKeyPress={() => props.viewModeClickHandler('graph')}
-                className={classes.ViewChangeButton}
               >
                 <div className="mx-3 d-flex flex-nowrap align-items-center">
                   <span className={`mx-2 btn ${classes.SquareButton} ${(props.viewMode === 'graph') ? classes.btn_scanrBlue : classes.btn_scanrlightgrey}`}>
@@ -75,8 +98,8 @@ const SectionTitle = props => (
           )
           : null
       }
-      {
-        (props.id && props.objectType)
+        {
+        (props.id && props.objectType && !props.subTitle)
           ? (
             <span className="pl-2 ml-auto my-2">
               <Contribute
@@ -89,6 +112,7 @@ const SectionTitle = props => (
           )
           : null
       }
+      </div>
     </div>
   </div>
 );
@@ -100,9 +124,11 @@ SectionTitle.propTypes = {
   lexicon: PropTypes.string,
   icon: PropTypes.string.isRequired,
   title: PropTypes.any.isRequired,
+  subTitle: PropTypes.object,
   id: PropTypes.string,
   objectType: PropTypes.string,
   total: PropTypes.number,
   viewModeClickHandler: PropTypes.func,
+  modalHandler: PropTypes.func,
   viewMode: PropTypes.string,
 };
