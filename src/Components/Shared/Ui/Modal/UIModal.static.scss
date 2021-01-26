@@ -8,6 +8,7 @@
   right: 0;
   bottom: 0;
   opacity: 0;
+  z-index: 1003;
 }
 
 .ReactModal__Overlay--after-open {
@@ -28,14 +29,11 @@
 .Modal {
   position: absolute;
   margin: auto;
-  width: 70vw;
-  height: 70vh;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: #fff;
-  //overflow: auto;
   -webkit-overflow-scrolling: touch;
   border-radius: 0.3rem;
   border: 1px solid rgba(0, 0, 0, .2);

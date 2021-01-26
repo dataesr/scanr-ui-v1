@@ -10,7 +10,7 @@ const style = {
 };
 
 const RouterSpinner = props => (
-  <div className="d-flex justify-content-center align-items-center" style={style}>
+  <div className="d-flex justify-content-center align-items-center" style={props.style ? props.style : style}>
     <GridLoader
       color={props.color ? props.color : styles.scanrblueColor}
       loading
@@ -22,4 +22,5 @@ export default RouterSpinner;
 
 RouterSpinner.propTypes = {
   color: PropTypes.string,
+  style: PropTypes.object,
 };
