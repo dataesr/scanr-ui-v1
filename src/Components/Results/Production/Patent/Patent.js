@@ -80,7 +80,7 @@ const Patent = ({ id, data, language }) => {
             />
             <Depots
               language={language}
-              data={data.links || []}
+              data={data.patents || []}
               id={id}
               name={name}
               viewMode={depotsViewMode}
