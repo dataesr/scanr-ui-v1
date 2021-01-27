@@ -6,8 +6,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 
 // Composants
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
 import Banner from '../Shared/Banner/Banner';
 import ButtonToPage from '../Shared/Ui/Buttons/ButtonToPage';
 import Loader from '../Shared/LoadingSpinners/RouterSpinner';
@@ -112,7 +110,6 @@ const Focus = (props) => {
             href2Title="Focus"
             href3={`/focus/${props.match.params.id}`}
           />
-          <Header />
           <HeaderTitle
             language={props.language}
             title={getSelectKey(data, 'title', props.language, 'fr')}
@@ -180,7 +177,6 @@ const Focus = (props) => {
             target="_blank"
           />
           <LastFocus language={props.language} match={props.match} />
-          <Footer />
         </div>
       </IntlProvider>
     );

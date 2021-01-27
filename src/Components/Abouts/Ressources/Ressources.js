@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
@@ -37,10 +35,6 @@ const sectionStyleblanc = {
 class Ressources extends Component {
   renderRessources = () => (
     <div className={`container-fluid ${classes.Ressources}`}>
-      <Header
-        language={this.props.language}
-        switchLanguage={this.props.switchLanguage}
-      />
       <section>
         <HeaderTitle
           url1="/"
@@ -303,7 +297,6 @@ class Ressources extends Component {
           </div>
         </div>
       </section>
-      <Footer language={this.props.language} />
     </div>
   )
 
@@ -439,10 +432,6 @@ class Ressources extends Component {
     ) : null;
     return (
       <div className={`container-fluid ${classes.Ressources}`}>
-        <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
-        />
         <section>
           <HeaderTitle
             language={this.props.language}
@@ -532,7 +521,6 @@ class Ressources extends Component {
             </div>
           </div>
         </section>
-        <Footer language={this.props.language} />
       </div>
     );
   }
@@ -557,6 +545,5 @@ export default Ressources;
 
 Ressources.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
   match: PropTypes.any,
 };
