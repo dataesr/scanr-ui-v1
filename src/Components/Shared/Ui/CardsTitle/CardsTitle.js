@@ -18,7 +18,7 @@ const CardsTitle = props => (
     &nbsp;
     {(props.lexicon) ? (
       <LexiconModal language={props.language} target={props.lexicon}>
-        <i className="fa fa-info-circle" />
+        <i className="test fa fa-info-circle" />
       </LexiconModal>
     ) : null }
   </h2>

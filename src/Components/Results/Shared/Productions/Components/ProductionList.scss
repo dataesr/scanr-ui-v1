@@ -8,7 +8,6 @@
 }
 
 .ListOfProductions {
-  height: 515px;
   direction: rtl;
   padding-left: 16px;
   padding-right: 20px;
@@ -36,7 +35,6 @@
     background-color: $scanrlightgreyColor;
     padding-left: 12px;
     color: $scanrdeepblueColor;
-    cursor: pointer;
 
     .Type {
       display: block;
@@ -71,10 +69,52 @@
         margin-right: 5px;
       }
     }
+    .Blockquote {
+      color: #000;
+      font-size: 0.9rem;
+    }
   }
-  .Item:hover {
-    background-color: $scanrblueColor;
-    color: white;
+
+  &:not(.Skinny) {
+    .Item:hover {
+      background-color: $scanrblueColor;
+      color: white;
+    }
+  }
+  &.Skinny {
+    padding: 0 0 0 10px;
+    .Title {
+      position: relative;
+      .Link {
+        color: $scanrdeepblueColor;
+        font-size: 1rem;
+      }
+    }
+    .TitleYear {
+      font-size: 1rem;
+      padding: 4px 12px;
+    }
+    .Item {
+      border-bottom: 1px solid $scanrmiddlegreyColor;
+      &:last-child {
+        border-bottom: none;
+      }
+      .HiddenInput {
+        position: absolute;
+        clip: rect(0 0 0 0);
+        outline: none;
+        visibility: hidden;
+      }
+      .CustomInput {
+        position: absolute;
+        left: 0;
+        top: 25%;
+        color: $scanrblueColor;
+      }
+      p {
+        font-weight: normal;
+      }
+    }
   }
 }
 .ListOfProductions::-webkit-scrollbar {
