@@ -37,7 +37,7 @@ function renderProductionTypePage(language, data, id) {
 export default function Production({ match }) {
   const { language } = useContext(GlobalContext);
   const { id } = match.params;
-  // Return a 404 for the following ids.
+  // Return a 404 for the following ids. TODO: Remove next two lines when unnessessary
   const doNotShow = ['hal-02423632', 'hal-02422378', 'hal-02415294'];
   if (doNotShow.indexOf(id) !== -1) return <Errors error={404} />;
   const scrollY = useScrollY();

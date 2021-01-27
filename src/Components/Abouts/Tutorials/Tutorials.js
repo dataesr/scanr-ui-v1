@@ -109,5 +109,4 @@ export default Tutorials;
 
 Tutorials.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };

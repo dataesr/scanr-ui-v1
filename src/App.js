@@ -79,8 +79,6 @@ class App extends Component {
                 <Route path="/person/:id" render={props => (<PersonPage {...props} language={lang} />)} />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
-
-                {/* vvv--------------- other-pages ------------------vvv  */}
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />
                 <Route exact path="/l-equipe-et-son-projet" component={() => (<TeamAndProjectPage language={lang} />)} />
                 <Route path="/opendata" component={() => (<Opendata language={lang} />)} />
