@@ -21,11 +21,7 @@ const ProductionAuthors = (props) => {
         {(source && source.title && date) ? ' | ' : null}
         {date}
       </p>
-      {id ? (
-        <p className={classes.Grey}>
-          {id}
-        </p>
-      ) : null}
+      {id && <p className={classes.Grey}>{id}</p>}
     </div>
   );
 };
@@ -34,6 +30,6 @@ export default ProductionAuthors;
 
 ProductionAuthors.propTypes = {
   id: PropTypes.string,
-  publicationDate: PropTypes.string.isRequired,
+  publicationDate: PropTypes.number.isRequired,
   source: PropTypes.object.isRequired,
 };
