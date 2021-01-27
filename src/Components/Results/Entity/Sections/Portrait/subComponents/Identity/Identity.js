@@ -66,7 +66,6 @@ const Identity = (props) => {
           </div>
           <div className={`col-lg-6 ${classes.CardContainer}`}>
             <LogoCard
-              language={props.language}
               src={`./logos/${props.id}.png`}
               url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${props.id}`}
               cssClass="Height150"

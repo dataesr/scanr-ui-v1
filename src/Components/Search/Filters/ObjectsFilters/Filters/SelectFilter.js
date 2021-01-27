@@ -91,7 +91,7 @@ class SelectFilter extends Component {
                 />
                 {/* eslint-disable-next-line */}
                 <label className={`form-check-label ${classes.Item}`} htmlFor={`all_${this.props.title}`}>
-                  Tous
+                  {(this.props.language === 'fr') ? 'Tous' : 'All'}
                 </label>
                 <div className={`ml-auto ${classes.FacetsCounts}`}>
                   {`(${allCount.toLocaleString(this.props.language)})`}

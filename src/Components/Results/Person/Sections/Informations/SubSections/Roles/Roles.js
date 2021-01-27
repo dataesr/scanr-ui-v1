@@ -33,7 +33,7 @@ const Roles = (props) => {
               <div className="row">
                 {
                   props.data.roles.map(role => (
-                    <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`} key={role}>
+                    <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`} key={`${role.role}`}>
                       <RoleCard
                         logo="fas fa-user"
                         data={role}

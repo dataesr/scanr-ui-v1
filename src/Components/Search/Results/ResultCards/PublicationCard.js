@@ -77,6 +77,7 @@ const PublicationCard = (props) => {
     if (!data.authors || data.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
+
     // TODO : gerer auth.country !== 'None' dans les données
     let inventeurs = data.authors.filter((auth) => {
       if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(a => a.role === 'inv')) {
