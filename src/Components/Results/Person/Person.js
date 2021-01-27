@@ -35,12 +35,12 @@ import messagesEn from './translations/en.json';
 */
 const Person = (props) => {
   const scrollY = useScrollY();
+  // Return a 404 for the following ids. TODO: Remove next two lines when unnessessary
   const doNotShow = ['idref227790677'];
+  if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const { data, isLoading, isError } = useGetData(API_PERSONS_END_POINT, props.match.params.id);
-
   if (isLoading) return <Loader color={styles.personColor} />;
   if (isError) return <Errors error={500} />;
-  if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
     <IntlProvider locale={props.language} messages={messages[props.language]}>
