@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// https://github.com/dolezel/react-csv-downloader/issues/190
+// eslint-disable-next-line import/no-unresolved
 import CsvDownloader from 'react-csv-downloader';
 
 import classes from './CSVExporter.scss';
@@ -16,6 +18,8 @@ const CSVExporter = (props) => {
       </div>
       <div className="pr-1 d-flex align-items-center">
         <CsvDownloader
+          prefix=""
+          suffix=""
           filename={props.fileName}
           separator=";"
           columns={props.columns}
