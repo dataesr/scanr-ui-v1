@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 // import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
 // import Banner from '../../Shared/Banner/Banner';
@@ -31,10 +29,6 @@ const messages = {
 const LegalNoticePage = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.LegalNoticePage}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
       <HeaderTitle
         language={props.language}
         labelkey="legal"
@@ -365,9 +359,6 @@ const LegalNoticePage = props => (
         cssClass="BannerDark"
         url=""
       /> */ }
-
-      <Footer language={props.language} />
-
     </div>
   </IntlProvider>
 );
@@ -376,5 +367,4 @@ export default LegalNoticePage;
 
 LegalNoticePage.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };

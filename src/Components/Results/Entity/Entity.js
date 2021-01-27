@@ -10,8 +10,6 @@ import getSelectKey from '../../../Utils/getSelectKey';
 
 import SectionTitle from '../Shared/SectionTitle';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
@@ -80,16 +78,7 @@ const Entity = (props) => {
   childs = childs.slice(0, 4095);
   const isActive = (data.status === 'active');
 
-
-  if (isLoading || parentOf.isLoading) {
-    return (
-      <React.Fragment>
-        <Header />
-        <Loader color={styles.entityColor} />
-        <Footer />
-      </React.Fragment>
-    );
-  }
+  if (isLoading || parentOf.isLoading) return <Loader color={styles.entityColor} />;
   if (isError || parentOf.isError) return <Errors error={500} />;
   const messages = { fr: messagesFr, en: messagesEn };
   return (
@@ -101,7 +90,6 @@ const Entity = (props) => {
           href2Title="Structures"
           href3={`./entite/${id}`}
         />
-        <Header />
         <HeaderTitle
           language={props.language}
           label={getSelectKey(data, 'label', props.language, 'fr')}
@@ -264,8 +252,6 @@ const Entity = (props) => {
           cssClass="BannerLight"
           url="/opendata"
         />
-
-        <Footer />
       </React.Fragment>
     </IntlProvider>
   );

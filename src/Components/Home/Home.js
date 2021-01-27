@@ -3,8 +3,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../GlobalContext';
 
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
-import Footer from '../Shared/Footer/Footer';
-import Header from '../Shared/Header/Header';
 import ScanrToday from './ScanrToday/ScanrToday';
 import ScanrIs from './ScanrIs/ScanrIs';
 import Search from './Search/Search';
@@ -32,7 +30,6 @@ const HomePage = (props) => {
           {logoLabel => (<ScanRMeta title={logoLabel} />)}
         </FormattedHTMLMessage>
         <WelcomeModal />
-        <Header />
         <div className={`col-md ${classes.LogoHome}`}>
           <img
             src={logo}
@@ -55,7 +52,6 @@ const HomePage = (props) => {
           url="https://data.esr.gouv.fr/"
           target="_blank"
         />
-        <Footer />
       </div>
     </IntlProvider>
   );
