@@ -2,8 +2,6 @@ import React from 'react';
 import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
 import Background from './poudre-bleu_Fgris-B.jpg';
@@ -33,10 +31,6 @@ const data = require(`${filename}`).medias;
 const Medias = props => (
   <IntlProvider locale={props.language} messages={messages[props.language]}>
     <div className={`container-fluid ${classes.Medias}`}>
-      <Header
-        language={props.language}
-        switchLanguage={props.switchLanguage}
-      />
       <HeaderTitle
         language={props.language}
         labelkey="media"
@@ -101,7 +95,6 @@ const Medias = props => (
         cssClass="BannerDark"
         url=""
       /> */}
-      <Footer language={props.language} />
     </div>
   </IntlProvider>
 );
@@ -110,5 +103,4 @@ export default Medias;
 
 Medias.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };

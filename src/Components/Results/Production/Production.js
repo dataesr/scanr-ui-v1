@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
@@ -9,12 +9,11 @@ import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
 import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import getSelectKey from '../../../Utils/getSelectKey';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 
 import Publication from './Publication/Publication';
 import Patent from './Patent/Patent';
 import Thesis from './Thesis/Thesis';
+import { GlobalContext } from '../../../GlobalContext';
 
 import styles from '../../../style.scss';
 /**
@@ -25,69 +24,46 @@ import styles from '../../../style.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const Production = (props) => {
-  const renderContent = (prop) => {
-    const properties = {
-      language: prop.language,
-      data: prop.data,
-      id: prop.match.params.id,
-    };
-    let displayType = '';
-    if (prop.data.productionType === 'patent') {
-      displayType = 'patent';
-    } else if (prop.data.id.indexOf('these') !== -1) {
-      displayType = 'thesis';
-    } else {
-      displayType = 'publication';
-    }
-    switch (displayType) {
-      case 'patent': return <Patent {...properties} />;
-      case 'thesis': return <Thesis {...properties} />;
-      case 'publication': return <Publication {...properties} />;
-      // For now, default is patent. Raise errors after data are fixed ?
-      default: return <Patent {...properties} />;
-    }
-  };
-
-  const scrollY = useScrollY();
-  const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, props.match.params.id);
-  if (isLoading) {
-    return (
-      <React.Fragment>
-        <Header />
-        <Loader color={styles.productionColor} />
-        <Footer />
-      </React.Fragment>
-    );
+function renderProductionTypePage(language, data, id) {
+  if (data.productionType === 'patent') {
+    return <Patent language={language} data={data} id={id} />;
   }
-  if (isError) return <Errors error={500} />;
+  if (data.id.indexOf('these') !== -1) {
+    return <Thesis language={language} data={data} id={id} />;
+  }
+  return <Publication language={language} data={data} id={id} />;
+}
+
+export default function Production({ match }) {
+  const { language } = useContext(GlobalContext);
+  const { id } = match.params;
+  // Return a 404 for the following ids. TODO: Remove next two lines when unnessessary
   const doNotShow = ['hal-02423632', 'hal-02422378', 'hal-02415294'];
-  if (doNotShow.indexOf(props.match.params.id) !== -1) return <Errors error={404} />;
+  if (doNotShow.indexOf(id) !== -1) return <Errors error={404} />;
+  const scrollY = useScrollY();
+  const { data, isLoading, isError } = useGetData(API_PUBLICATIONS_END_POINT, id);
+  if (isLoading) return <Loader color={styles.productionColor} />;
+  if (isError) return <Errors error={500} />;
   return (
     <React.Fragment>
       <ScanRMeta
-        title={getSelectKey(data, 'title', props.language, 'fr')}
+        title={getSelectKey(data, 'title', language, 'fr')}
         href2="./recherche/publications?query="
         href2Title={data.productionType}
-        href3={`./publication/${props.match.params.id}`}
+        href3={`./publication/${id}`}
       />
-      <Header />
       <HeaderTitle
-        language={props.language}
-        label={getSelectKey(data, 'title', props.language, 'fr')}
+        language={language}
+        label={getSelectKey(data, 'title', language, 'fr')}
         idPage={data.productionType}
-        id={props.match.params.id}
+        id={id}
         isFull={scrollY === 0}
       />
-      {renderContent({ ...props, data })}
-      <Footer />
+      {renderProductionTypePage(language, data, id)}
     </React.Fragment>
   );
-};
-
-export default Production;
+}
 
 Production.propTypes = {
-  language: PropTypes.string.isRequired,
   match: PropTypes.object.isRequired,
 };

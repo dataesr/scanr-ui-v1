@@ -29,11 +29,11 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
-const Patent = (props) => {
+const Patent = ({ id, data, language }) => {
   const [depotsViewMode, setDepotsViewMode] = useState('graph');
-  const name = getSelectKey(props.data, 'title', props.language, 'default');
+  const name = getSelectKey(data, 'title', language, 'default');
   return (
-    <IntlProvider locale={props.language} messages={messages[props.language]}>
+    <IntlProvider locale={language} messages={messages[language]}>
       <React.Fragment>
         <SectionProductions id="Identity">
           <div className="container">
@@ -41,11 +41,11 @@ const Patent = (props) => {
               icon="fa-id-card"
               objectType="productions"
               lexicon="InventionPortrait"
-              language={props.language}
-              id={props.id}
-              title={messages[props.language]['Patent.identity']}
+              language={language}
+              id={id}
+              title={messages[language]['Patent.identity']}
             />
-            <Identity language={props.language} data={props.data} id={props.id} />
+            <Identity language={language} data={data} id={id} />
           </div>
         </SectionProductions>
         <SectionWhite id="Participants">
@@ -54,15 +54,15 @@ const Patent = (props) => {
               icon="fa-user-friends"
               lexicon="PatentParticipant"
               objectType="publications"
-              language={props.language}
-              id={props.id}
-              title={messages[props.language]['Patent.participants']}
+              language={language}
+              id={id}
+              title={messages[language]['Patent.participants']}
             />
             <Participants
-              language={props.language}
-              data={props.data.authors || []}
-              affiliations={props.data.affiliations || []}
-              id={props.id}
+              language={language}
+              data={data.authors || []}
+              affiliations={data.affiliations || []}
+              id={id}
             />
           </div>
         </SectionWhite>
@@ -71,17 +71,17 @@ const Patent = (props) => {
             <SectionTitle
               icon="fa-folder-open"
               objectType="productions"
-              language={props.language}
-              id={props.id}
+              language={language}
+              id={id}
               lexicon="PatentDepot"
-              title={messages[props.language]['Patent.depots']}
+              title={messages[language]['Patent.depots']}
               viewModeClickHandler={view => setDepotsViewMode(view)}
               viewMode={depotsViewMode}
             />
             <Depots
-              language={props.language}
-              data={props.data.patents || []}
-              id={props.id}
+              language={language}
+              data={data.patents || []}
+              id={id}
               name={name}
               viewMode={depotsViewMode}
             />
@@ -92,10 +92,10 @@ const Patent = (props) => {
             <SectionTitle
               icon="fa-folder-open"
               lexicon="PatentSimilar"
-              language={props.language}
-              title={messages[props.language]['Patent.similars']}
+              language={language}
+              title={messages[language]['Patent.similars']}
             />
-            <Similars language={props.language} id={props.id} />
+            <Similars language={language} id={id} />
           </div>
         </SectionProductions>
       </React.Fragment>

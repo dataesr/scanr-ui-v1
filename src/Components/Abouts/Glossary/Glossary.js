@@ -3,8 +3,6 @@ import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
@@ -43,10 +41,6 @@ class Glossary extends Component {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <div className={`container-fluid ${classes.Glossary}`}>
-          <Header
-            language={this.props.language}
-            switchLanguage={this.props.switchLanguage}
-          />
           <section>
             <HeaderTitle
               url1="/"
@@ -125,7 +119,6 @@ class Glossary extends Component {
             cssClass="BannerDark"
             url=""
           /> */}
-          <Footer language={this.props.language} />
         </div>
       </IntlProvider>
     );
@@ -136,5 +129,4 @@ export default Glossary;
 
 Glossary.propTypes = {
   language: PropTypes.string.isRequired,
-  switchLanguage: PropTypes.func.isRequired,
 };
