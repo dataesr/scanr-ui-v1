@@ -2,8 +2,6 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 
@@ -84,10 +82,6 @@ class FAQ extends Component {
 
     return (
       <div className={`container-fluid ${classes.FAQ}`}>
-        <Header
-          language={this.props.language}
-          switchLanguage={this.props.switchLanguage}
-        />
         <section>
           <HeaderTitle
             url1="/"
@@ -138,7 +132,6 @@ class FAQ extends Component {
           cssClass="BannerDark"
           url=""
         /> */ }
-        <Footer language={this.props.language} />
       </div>
     );
   }
@@ -147,7 +140,6 @@ class FAQ extends Component {
 export default FAQ;
 
 FAQ.propTypes = {
-  switchLanguage: PropTypes.func.isRequired,
   match: PropTypes.object,
   language: PropTypes.string.isRequired,
 };
