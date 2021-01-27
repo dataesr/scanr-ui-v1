@@ -7,7 +7,6 @@ import SectionLoader from '../../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../../Shared/Errors/Errors';
 import SectionTitle from '../../../../Shared/SectionTitle';
 import CountCardWithModal, { CountCardModalItem } from '../../../../../Shared/Ui/CountCardWithModal/CountCardWithModal';
-// import getSelectedKey from '../../../../../../Utils/getSelectKey';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
