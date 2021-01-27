@@ -4,19 +4,30 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import Loader from '../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../Shared/Errors/Errors';
+import UIModal from '../../../Shared/Ui/Modal/UIModal';
 
-import { API_PUBLICATIONS_SEARCH_END_POINT } from '../../../../config/config';
+/* REQUESTS */
+import {
+  API_PUBLICATIONS_SEARCH_END_POINT,
+  API_PERSONS_SEARCH_END_POINT,
+  API_CONTRIBUTE_PUBLICATIONS_SCANR,
+} from '../../../../config/config';
+import Request from './Requests/Request';
+import PreRequest from './Requests/PreRequest';
+import DateRequest from './Requests/DateRequest';
+import { iDsFromFullNameCasesRequest, productionsWithoutIdsRequest } from './Requests/ProductionRequest';
 
+/* SCSS */
 import styles from '../../../../style.scss';
 
+/* COMPONENTS */
 import EmptySection from '../EmptySection/EmptySection';
+import SuggestedProductionForm from './Components/SuggestedProductionsForm';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
-import Request from './Requests/Request';
-import PreRequest from './Requests/PreRequest';
-import DateRequest from './Requests/DateRequest';
+
 /**
  * Productions
  * Url : .
@@ -53,10 +64,15 @@ class Productions extends Component {
     activeGraph: null,
     viewMode: 'list',
     data: [],
+    suggestedData: [],
+    suggestedDataMessage: '',
+    isLoadingSuggestedData: false,
+    isModalOpened: false,
+    modalSize: 'big',
     selectedProduction: '',
     high: null,
     low: null,
-  }
+  };
 
   componentDidMount() {
     this.fetchGlobalData();
@@ -132,7 +148,7 @@ class Productions extends Component {
         viewMode,
       });
     });
-  }
+  };
 
   fetchDataByType = () => {
     if (this.state.total === 0) {
@@ -201,7 +217,7 @@ class Productions extends Component {
         isLoading: false,
       });
     });
-  }
+  };
 
   changeTypeHandler = (e) => {
     e.preventDefault();
@@ -211,28 +227,53 @@ class Productions extends Component {
       low: null,
       high: null,
     });
-  }
+  };
 
   viewModeClickHandler = (viewMode) => {
     this.setState({ viewMode });
-  }
+  };
+
+  modalHandler = () => {
+    if (!this.state.isModalOpened) {
+      this.fetchSuggestedData();
+    } else {
+      this.setState({ suggestedData: [] });
+    }
+    this.setState(prevState => ({ isModalOpened: !prevState.isModalOpened }));
+  };
 
   queryTextChangeHandler = (e) => {
     this.setState({ currentQueryText: e.target.value });
-  }
+  };
 
   queryChangeHandler = (e) => {
     // eslint-disable-next-line
     e.preventDefault();
     this.setState(prevState => ({ query: prevState.currentQueryText }));
-  }
+  };
 
   setActiveGraphHandler = (nextGraph) => {
     this.setState({ activeGraph: nextGraph });
-  }
+  };
 
   setSelectedProductionHandler = (selectedProduction) => {
     this.setState({ selectedProduction });
+  };
+
+  validateSuggestedProductions = (formData) => {
+    const contributionsUrl = API_CONTRIBUTE_PUBLICATIONS_SCANR;
+    const contributionReq = {
+      id: this.props.match.params.id,
+      email: '',
+      name: this.props.fullName,
+      productions: formData,
+    };
+
+    Axios.post(contributionsUrl, contributionReq).then((response) => {
+      if (response.data.status === 'OK') {
+        this.setState({ suggestedDataMessage: 'Contribution received!', modalSize: 'small' });
+      }
+    });
   };
 
   handleSliderRange = (low, high) => {
@@ -240,7 +281,33 @@ class Productions extends Component {
       high: Math.max(low, high),
       low: Math.min(low, high),
     });
-  }
+  };
+
+  fetchSuggestedData = () => {
+    this.setState({ isLoadingSuggestedData: true });
+
+    const personsUrl = API_PERSONS_SEARCH_END_POINT;
+    const publicationsUrl = API_PUBLICATIONS_SEARCH_END_POINT;
+    const personsReq = iDsFromFullNameCasesRequest(this.props.fullName);
+
+    Axios.post(personsUrl, personsReq).then(res => res.data.results).then((ids) => {
+      if (ids) {
+        const publicationsReq = productionsWithoutIdsRequest(this.props.fullName, [...ids].map(id => id.value.id));
+
+        Axios.post(publicationsUrl, publicationsReq).then((response) => {
+          setTimeout(() => {
+            if (!response.data.total) {
+              this.setState({ isLoadingSuggestedData: false, suggestedDataMessage: 'Sorry, no productions found.' });
+            } else {
+              this.setState(() => ({ suggestedData: response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate)) }));
+            }
+          }, 3000);
+        }).finally(() => {
+          this.setState({ isLoadingSuggestedData: false });
+        });
+      }
+    });
+  };
 
   render() {
     const messages = {
@@ -262,6 +329,7 @@ class Productions extends Component {
                   title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
                   lexicon="Productions"
                   viewModeClickHandler={this.viewModeClickHandler}
+                  modalHandler={this.modalHandler}
                   viewMode={this.state.viewMode}
                 />
                 <FormattedHTMLMessage id="ProductionPerimeter" />
@@ -275,7 +343,7 @@ class Productions extends Component {
                           language={this.props.language}
                           data={[]}
                           totalPerType={this.state.totalPerType}
-                          selectedType={this.state.productionType}
+                          selectedType={this.state.productionType || 'publication'}
                           changeTypeHandler={this.changeTypeHandler}
                           currentQueryText={this.state.currentQueryText}
                           queryChangeHandler={this.queryChangeHandler}
@@ -316,10 +384,11 @@ class Productions extends Component {
                 total={this.state.total}
                 title={(this.props.language === 'fr') ? 'Productions avec une affiliation française (depuis 2013)' : 'Productions with a French affiliation (since 2013)'}
                 lexicon="Productions"
+                subTitle={<FormattedHTMLMessage id="ProductionPerimeter" />}
+                modalHandler={this.modalHandler}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
               />
-              <FormattedHTMLMessage id="ProductionPerimeter" />
               <FilterPanel
                 language={this.props.language}
                 data={sliderDataWithTooltip}
@@ -356,6 +425,30 @@ class Productions extends Component {
               }
             </div>
           </section>
+          <UIModal
+            title="Suggest a production"
+            modalHandler={this.modalHandler}
+            isOpened={this.state.isModalOpened}
+            size={this.state.modalSize}
+          >
+            {this.state.suggestedDataMessage
+              ? (
+                <div className="container d-flex justify-content-center h-50">
+                  <div className="row align-self-center">
+                    <p className="text-center">{this.state.suggestedDataMessage}</p>
+                  </div>
+                </div>
+              )
+              : (
+                <SuggestedProductionForm
+                  validate={this.validateSuggestedProductions}
+                  isLoading={this.state.isLoadingSuggestedData}
+                  language={this.props.language}
+                  suggestedData={this.state.suggestedData}
+                />
+              )
+            }
+          </UIModal>
         </Fragment>
       </IntlProvider>
     );
@@ -366,6 +459,7 @@ export default Productions;
 
 Productions.propTypes = {
   language: PropTypes.string.isRequired,
+  fullName: PropTypes.string,
   match: PropTypes.object.isRequired,
   childs: PropTypes.array.isRequired,
   person: PropTypes.bool,

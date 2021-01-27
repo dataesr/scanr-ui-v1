@@ -100,6 +100,7 @@ const Person = (props) => {
             language={props.language}
             match={props.match}
             childs={[]}
+            fullName={data.fullName}
             person
           />
         </div>
