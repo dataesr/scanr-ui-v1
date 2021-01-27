@@ -34,8 +34,10 @@ export default function useCrossRef(ids) {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(true);
   const [isError, setError] = useState(false);
+  const fetchLimit = 50;
+  const joinedIds = ids.slice(0, fetchLimit).map(doi => `doi:${doi}`).join(',');
   async function getData() {
-    const url = `${API_CROSSREF}?filter=${ids.slice(0, 50).map(doi => `doi:${doi}`).join(',')}&rows=50`;
+    const url = `${API_CROSSREF}?filter=${joinedIds}&rows=50`;
     const response = await Axios.get(url);
     try {
       const res = await response.data.message.items || [];
