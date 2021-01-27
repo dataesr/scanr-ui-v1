@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules/*
-yarn.lock
 ftp.info
 
 y testing
@@ -23,7 +22,8 @@ y testing
 .env.test.local
 .env.production.local
 
-# package-lock.json
+package-lock.json
+yarn.lock
 
 .directory
 
