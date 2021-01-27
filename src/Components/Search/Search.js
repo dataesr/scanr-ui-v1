@@ -365,6 +365,8 @@ class SearchPage extends Component {
     if (!req.query) {
       req.query = '';
     }
+    // CAS PARTICULIER CAB
+    req.query = req.query.replace(/animaler?i?e?s?/gi, '');
     if (req.page) {
       req.page -= 1;
     }
@@ -380,7 +382,7 @@ class SearchPage extends Component {
       req.filters.id = {
         type: 'MultiValueSearchFilter',
         op: 'not_all',
-        values: ['cea-02339765', 'these2017PA100123'],
+        values: ['hal-02423632', 'hal-02422378', 'hal-02415294'],
       };
       req.sourceFields = [
         'id',

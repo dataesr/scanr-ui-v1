@@ -74,7 +74,6 @@ const PatentsApplications = (props) => {
                   <div className="row">
                     <div className={`col-md-12 ${classes.CardContainer}`}>
                       <LogoCardWithButton
-                        language={props.language}
                         url="/img/logo-oeb.svg"
                         targetUrl={selected.links[0].url}
                         link="link_patent"
