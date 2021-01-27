@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 
 
 import CardToPage from '../../Shared/CardWithButton/CardToPage';
-// import Banner from '../../Shared/Banner/Banner';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-// import DiscoverScanR from './DiscoverScanR/DiscoverScanR';
 
 
 /* Gestion des langues */
