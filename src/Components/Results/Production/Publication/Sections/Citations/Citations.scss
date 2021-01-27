@@ -17,14 +17,14 @@
     font-size: 1.2em;
     font-weight: 700;
     line-height: 1.1;
-  }
-  .CardTitle > a {
-    color: $scanrdeepblueColor;
-  }
-  .CardTitle > a:hover {
-    color: $scanrblueColor;
-    text-decoration: underline $scanrblueColor;
-    cursor: pointer;
+    a {
+      color: $scanrdeepblueColor;
+      &:hover {
+        color: $scanrblueColor;
+        text-decoration: underline $scanrblueColor;
+        cursor: pointer;
+      }
+    }
   }
 
   .CardContent {

@@ -86,8 +86,8 @@ function CrossRefList({
     return (
       <div className="row">
         {publis.map(item => (
-          <div className={`col-md-4 ${classes.CardContainer}`}>
-            <CrossRefCard key={item.doi} item={item} lang={lang} />
+          <div key={item.doi} className={`col-md-4 ${classes.CardContainer}`}>
+            <CrossRefCard item={item} lang={lang} />
           </div>
         ))}
         {
