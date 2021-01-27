@@ -1,7 +1,7 @@
 @import '../../../../style.scss';
 
 .lexiconButton {
-  cursor: pointer;
+  font-size: 0;
 }
 .LexiconModal {
   .Header {
@@ -16,7 +16,7 @@
     font-size: 1.8rem;
     color: $scanrfooterBgColor;
     font-weight: bold;
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     padding-bottom: 0;
     margin-bottom: 0;
   }

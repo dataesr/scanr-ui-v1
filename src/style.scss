@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 *, html {
-  font-family: 'Inter UI';
+  font-family: 'Inter UI', sans-serif;
 }
 html, body {
   height: 100%;
@@ -405,7 +405,12 @@ $cardTitleBgColor: $scanrlightgreyColor;
   color: white;
 }
 
-/* card de logo*/
+/* Link */
+.pointer {
+  cursor: pointer;
+}
+
+/* card de logo */
 .CardLogo {
   width: 215px;
   height: 215px;

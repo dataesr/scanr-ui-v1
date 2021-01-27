@@ -41,6 +41,7 @@ const Identity = (props) => {
               (extIdref.length > 0) ? (
                 <div className={classes.CardContainer}>
                   <LogoCard
+                    language={props.language}
                     url="/img/logo-idref.png"
                     targetUrl={'http:///www.idref.fr/'.concat(extIdref[0].id)}
                     label="Idref"
@@ -83,5 +84,6 @@ const Identity = (props) => {
 export default Identity;
 
 Identity.propTypes = {
+  language: PropTypes.string.isRequired,
   data: PropTypes.object,
 };
