@@ -76,13 +76,13 @@ function CrossRefList({
   direction,
 }) {
   const { data, isLoading, isError } = useCrossRef(ids);
-  const count = (ids.length - maxItems >= 0) ? ids.length - maxItems : 0;
+  const publicationCount = (ids.length - maxItems >= 0) ? ids.length - maxItems : 0;
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
   if (data.length) {
     const publis = data.slice(0, maxItems);
     const rest = data.slice(maxItems);
-    const title = rest && <FormattedHTMLMessage id="Publication.authors" values={{ count }} />;
+    const title = rest && <FormattedHTMLMessage id="Publication.reste" values={{ count: publicationCount }} />;
     const others = rest && <FormattedHTMLMessage id="Publication.list" />;
     return (
       <div className="row">
