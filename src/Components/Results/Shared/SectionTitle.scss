@@ -4,13 +4,19 @@
 .Title {
   color: $scanrdeepblueColor;
   font-weight: 700;
-  font-size: 1.7em;
+  font-size: 1.7rem;
+
+  &:before {
+    font-size: 1.7rem;
+  }
 }
+
 .Icon {
   color: $scanrdeepblueColor;
   font-weight: 700;
   font-size: 1.7rem;
 }
+
 .Text {
   color: $scanrdeepblueColor;
   font-size: 1.1rem;
