@@ -59,7 +59,7 @@ function CrossRefCard({ item }) {
           </p>
         </li>
       </ul>
-      <a href={`https://doi.org/${item.doi}`} className="ml-auto my-1">
+      <a href={`https://doi.org/${item.doi}`} target="_blank" rel="noopener noreferrer" className="ml-auto my-1">
         <FormattedHTMLMessage id="Publication.seeMore" />
       </a>
     </article>
@@ -76,12 +76,13 @@ function CrossRefList({
   direction,
 }) {
   const { data, isLoading, isError } = useCrossRef(ids);
+  const publicationCount = (ids.length - maxItems >= 0) ? ids.length - maxItems : 0;
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
   if (data.length) {
     const publis = data.slice(0, maxItems);
     const rest = data.slice(maxItems);
-    const title = rest && <FormattedHTMLMessage id="Publication.authors" values={{ count: ids.length - maxItems }} />;
+    const title = rest && <FormattedHTMLMessage id="Publication.reste" values={{ count: publicationCount }} />;
     const others = rest && <FormattedHTMLMessage id="Publication.list" />;
     return (
       <div className="row">
@@ -91,23 +92,25 @@ function CrossRefList({
           </div>
         ))}
         {
-          rest && (
-            <div className={`col-md-4 ${classes.CardContainer}`}>
-              <CountCardWithModal
-                title={title}
-                buttonLabel={others}
-                modalTitle={<FormattedHTMLMessage id={`Publication.${direction}.others`} />}
-              >
-                {
-                  rest.map(item => (
-                    <CountCardModalItem key={item.doi}>
-                      <CrossRefCard item={item} lang={lang} />
-                    </CountCardModalItem>
-                  ))
-                }
-              </CountCardWithModal>
-            </div>
-          )
+          (rest.length)
+            ? (
+              <div className={`col-md-4 ${classes.CardContainer}`}>
+                <CountCardWithModal
+                  title={title}
+                  buttonLabel={others}
+                  modalTitle={<FormattedHTMLMessage id={`Publication.${direction}.others`} />}
+                >
+                  {
+                    rest.map(item => (
+                      <CountCardModalItem key={item.doi}>
+                        <CrossRefCard item={item} lang={lang} />
+                      </CountCardModalItem>
+                    ))
+                  }
+                </CountCardWithModal>
+              </div>
+            )
+            : null
         }
       </div>
     );
