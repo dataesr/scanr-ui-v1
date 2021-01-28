@@ -605,7 +605,7 @@ class SearchPage extends Component {
   render() {
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-        <div className="d-flex flex-column h-100">
+        <React.Fragment>
           <ExportingSpinner visible={this.state.isExporting} />
           <LocalHeader
             language={this.props.language}
@@ -627,7 +627,7 @@ class SearchPage extends Component {
             {this.WhichResults()}
           </section>
           {this.WhichBanner()}
-        </div>
+        </React.Fragment>
       </IntlProvider>
     );
   }
