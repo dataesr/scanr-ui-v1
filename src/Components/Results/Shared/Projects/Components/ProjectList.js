@@ -1,19 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import classes from './ProjectList.scss';
 import ProjectDetail from './ProjectDetail';
 import getSelectKey from '../../../../../Utils/getSelectKey';
 import CSVExporter from '../../../../Shared/CSVExporter/CSVExporter';
-
-/* Gestion des langues */
-import messagesFr from './translations/fr.json';
-import messagesEn from './translations/en.json';
-
-const messages = {
-  fr: messagesFr,
-  en: messagesEn,
-};
+import projectCsvExporter from '../projectCsvExporter/projectCsvExporter';
 /**
  * ProjectList
  * Url : ex: /entite/200711886U
@@ -22,38 +14,40 @@ const messages = {
  * Accessible : .
  * Tests unitaires : .
 */
-const ProjectList = (props) => {
+const ProjectList = ({
+  language,
+  selectedProject,
+  setSelectedProjectHandler,
+  data,
+}) => {
   let selectedProd = {};
 
-  const dataCSVColumns = [
-    { id: 'col1', displayName: messages[props.language]['dataCSVColumns.col1'] },
-    { id: 'col2', displayName: messages[props.language]['dataCSVColumns.col2'] },
-    { id: 'col3', displayName: messages[props.language]['dataCSVColumns.col3'] },
-  ];
-  const dataCSV = [];
+  const [csvColumns, setCsvColumns] = useState();
+  const [csvData, setCsvData] = useState();
+  useEffect(() => {
+    const {
+      csvColumns: cols,
+      csvData: dataCsv,
+    } = projectCsvExporter(data, language);
+    setCsvData(dataCsv);
+    setCsvColumns(cols);
+  }, [data, language]);
 
-  const content = props.data.map((item, i) => {
+  const content = data.map((item, i) => {
     let first = false;
     if (i > 0) {
-      first = props.data[i - 1].value.year !== item.value.year;
+      first = data[i - 1].value.year !== item.value.year;
     }
     let selected = '';
-    if (item.value.id === props.selectedProject) {
+    if (item.value.id === selectedProject) {
       selected = classes.Selected;
       selectedProd = item.value;
     }
 
-    const acronym = getSelectKey(item.value, 'acronym', props.language, 'default');
-    const label = getSelectKey(item.value, 'label', props.language, 'default');
+    const acronym = getSelectKey(item.value, 'acronym', language, 'default');
+    const label = getSelectKey(item.value, 'label', language, 'default');
     const completeLabel = `${acronym}${(acronym ? ' - ' : '')}${label}`;
 
-    dataCSV.push(
-      {
-        col1: item.value.id,
-        col2: label.replace(/"/g, ''),
-        col3: item.value.type,
-      },
-    );
     return (
       <React.Fragment key={item.value.id}>
         {
@@ -67,8 +61,8 @@ const ProjectList = (props) => {
         }
         <div
           className={`${classes.Item} ${selected}`}
-          onClick={() => props.setSelectedProjectHandler(item.value.id)}
-          onKeyPress={() => props.setSelectedProjectHandler(item.value.id)}
+          onClick={() => setSelectedProjectHandler(item.value.id)}
+          onKeyPress={() => setSelectedProjectHandler(item.value.id)}
           role="button"
           tabIndex={0}
         >
@@ -95,16 +89,16 @@ const ProjectList = (props) => {
           {(content.length > 0) ? (
             <div className="pt-2">
               <CSVExporter
-                language={props.language}
-                columns={dataCSVColumns}
-                data={dataCSV}
+                language={language}
+                columns={csvColumns}
+                data={csvData}
                 fileName="fundings_export"
               />
             </div>
           ) : null}
         </div>
         <div className="col-lg-7">
-          <ProjectDetail language={props.language} data={selectedProd} />
+          <ProjectDetail language={language} data={selectedProd} />
         </div>
       </div>
     </React.Fragment>
