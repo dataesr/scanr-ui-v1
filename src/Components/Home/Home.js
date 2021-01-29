@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { useHistory } from 'react-router-dom';
 import { GlobalContext } from '../../GlobalContext';
-
 import ScanRMeta from '../Shared/MetaTags/ScanRMeta';
 import ScanrToday from './ScanrToday/ScanrToday';
 import ScanrIs from './ScanrIs/ScanrIs';
@@ -21,8 +21,9 @@ const msg = {
   en: messagesEn,
 };
 
-const HomePage = (props) => {
+const HomePage = () => {
   const context = useContext(GlobalContext);
+  const history = useHistory();
   return (
     <IntlProvider locale={context.language} messages={msg[context.language]}>
       <div className={`container-fluid ${classes.HomePage}`}>
@@ -31,16 +32,9 @@ const HomePage = (props) => {
         </FormattedHTMLMessage>
         <WelcomeModal />
         <div className={`col-md ${classes.LogoHome}`}>
-          <img
-            src={logo}
-            alt="Logo MESRI"
-            className={classes.Logo}
-          />
+          <img src={logo} alt="Logo MESRI" className={classes.Logo} />
         </div>
-        <Search
-          {...props}
-          language={context.language}
-        />
+        <Search history={history} language={context.language} />
         <ScanrToday />
         <ScanrIs
           language={context.language}

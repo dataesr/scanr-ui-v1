@@ -17,11 +17,11 @@ import classes from './Search.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const Search = (props) => {
+const Search = ({ language, history }) => {
   const submitResearch = (e) => {
     e.preventDefault();
     const query = e.target.query.value;
-    props.history.push(`/recherche/all?query=${query}`);
+    history.push(`/recherche/all?query=${query}`);
   };
   return (
     <section className={classes.SearchFull}>
@@ -78,7 +78,7 @@ const Search = (props) => {
                 <li>
                   <a href={`recherche/all?query=${suggest.query}`}>
                     {
-                      (props.language === 'fr')
+                      (language === 'fr')
                         ? (<ButtonMiniDarkToSearch key={suggest.labelFr}>{suggest.labelFr}</ButtonMiniDarkToSearch>)
                         : (<ButtonMiniDarkToSearch key={suggest.labelEn}>{suggest.labelEn}</ButtonMiniDarkToSearch>)}
                   </a>
