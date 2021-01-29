@@ -13,6 +13,7 @@ const columnNames = {
     { id: 'budgetFinanced', displayName: 'Budget du projet financé par l\'opérateur' },
     { id: 'year', displayName: 'Année' },
     { id: 'description', displayName: 'Description' },
+    { id: 'duration', displayName: 'Durée en mois' },
   ],
   en: [
     { id: 'ID', displayName: 'ID' },
@@ -26,6 +27,7 @@ const columnNames = {
     { id: 'budgetFinanced', displayName: 'Financed budget' },
     { id: 'year', displayName: 'Year' },
     { id: 'description', displayName: 'Description' },
+    { id: 'duration', displayName: 'Duration (in month)' },
   ],
 };
 
@@ -53,6 +55,7 @@ export default function projectCsvExporter(data, lang) {
       budgetFinanced: project.budgetFinanced,
       year: project.year,
       description: getSelectKey(project, 'description', lang, 'default'),
+      duration: project.duration,
     };
     csvData.push(flatProject);
   });

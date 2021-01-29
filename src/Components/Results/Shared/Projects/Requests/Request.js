@@ -5,7 +5,7 @@ export default {
   sourceFields: [
     'id', 'keywords', 'label', 'acronym', 'domains', 'type',
     'participantCount', 'call', 'action', 'year', 'description',
-    'participants', 'budgetTotal', 'budgetFinanced',
+    'participants', 'budgetTotal', 'budgetFinanced', 'duration',
   ],
   filters: {
     year: {
