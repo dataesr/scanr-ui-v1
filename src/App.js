@@ -70,7 +70,7 @@ class App extends Component {
           <Router history={(piwik) ? piwik.connectToHistory(customHistory) : null}>
             <Suspense fallback={<LoadingSpinner />}>
               <Switch>
-                <Route exact path="/" render={() => (<HomePage />)} />
+                <Route exact path="/" component={HomePage} />
                 <Route path="/recherche/:api" render={props => (<SearchPage {...props} language={lang} />)} />
                 <Redirect from="/structure/:id" to="/entite/:id" />
                 <Route path="/entite/:id" render={props => (<EntityPage {...props} language={lang} />)} />
