@@ -73,7 +73,7 @@ function UIModal(props) {
                 </article>
               </div>
               <div className="col-3">
-                <button type="button" className={`${classes.Close} pointer modal-close close`} onClick={onRequestClose}>
+                <button type="button" className={`${classes.Close} ${classes.pointer} modal-close close`} onClick={onRequestClose}>
                   <span aria-hidden="true">
                     <i className="fas fa-xs fa-times" />
                   </span>
