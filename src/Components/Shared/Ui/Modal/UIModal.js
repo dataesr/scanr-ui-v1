@@ -1,4 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  useContext, useEffect, useState,
+} from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 
@@ -9,8 +11,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 /* SCSS */
-import './UIModal.static.scss';
-import classes from '../../../Search/Filters/ActiveFilterCard/ActiveFilterCard.scss';
+import classes from './UIModal.scss';
 
 const cssModal = {
   big: { height: '70vh', width: '70vw' },
@@ -34,38 +35,47 @@ function UIModal(props) {
     setOpened(isOpened);
   }, [isOpened]);
 
-  const closeModal = () => {
+  const toggleAnimation = (visible = true) => {
+    const overlay = document.querySelector(`.${classes.Overlay}`);
+    overlay.style.opacity = visible ? 1 : 0;
+    overlay.style.transition = 'opacity 200ms ease-out';
+  };
+
+  const onRequestClose = () => {
+    toggleAnimation(false);
+
     setOpened(false);
     if (modalHandler) {
       modalHandler();
     }
   };
-
   return (
     <IntlProvider locale={language} messages={msg[language]}>
       <ReactModal
+        onAfterOpen={toggleAnimation}
         style={{ content: cssModal[size] }}
         closeTimeoutMS={200}
         contentLabel={title}
-        onRequestClose={closeModal}
+        onRequestClose={onRequestClose}
         isOpen={opened}
-        className="Modal"
-        overlayClassName="Overlay"
+        className={`${classes.Modal} Modal`}
+        overlayClassName={`${classes.Overlay}`}
+        bodyOpenClassName={`${classes.ReactModal__BodyOpen}`}
       >
-        <section className="modal-header">
+        <section className={`${classes.Header} modal-header`}>
           <div className="container">
             <div className="row">
               <div className="col-9 pl-0">
                 <article>
-                  <div className="wrapper-title">
-                    {title ? <h1 className="title">{title}</h1> : null}
+                  <div>
+                    {title ? <h1 className={classes.Title}>{title}</h1> : null}
                   </div>
                 </article>
               </div>
               <div className="col-3">
-                <button type="button" className="modal-close close pointer" onClick={closeModal}>
+                <button type="button" className={`${classes.Close} pointer modal-close close`} onClick={onRequestClose}>
                   <span aria-hidden="true">
-                    <i className={`fas fa-xs fa-times ${classes.closeIcon}`} />
+                    <i className="fas fa-xs fa-times" />
                   </span>
                   <span className="sr-only"><FormattedHTMLMessage id="close" /></span>
                 </button>
