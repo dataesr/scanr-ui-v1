@@ -1,0 +1,60 @@
+@import '../../../../style.scss';
+
+.Modal {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 0.3rem;
+  border: 1px solid rgba(0, 0, 0, .2);
+  outline: none;
+}
+
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 1003;
+}
+
+.ReactModal__BodyOpen {
+  overflow: hidden;
+}
+
+.Title {
+  z-index: 1002;
+  color: $scanrdeepblueColor;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.Close {
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+}
+
+.Close:hover {
+  cursor: pointer;
+}
+
