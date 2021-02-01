@@ -11,6 +11,8 @@ const messages = {
   en: messagesEn,
 };
 
+const verifyRole = (author, roles) => roles.includes(author.role ? author.role : author.rolePatent[0].role);
+
 const ProductionAuthors = (props) => {
   const { production: productionItem, language } = props;
 
@@ -18,13 +20,13 @@ const ProductionAuthors = (props) => {
     if (!prod.authors || prod.authors.length === 0) {
       return { inventeurs: null, deposants: null };
     }
-    let inventeurs = prod.authors.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
+    let inventeurs = prod.authors.filter(auth => verifyRole(auth, ['__inventeur', 'inv'])).map((auth) => {
       const [fullName, country] = auth.fullName.split('__');
       return { fullName, country };
     });
     inventeurs = [...new Set(inventeurs.map(i => JSON.stringify(i)))].length;
 
-    let depos = prod.authors.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
+    let depos = prod.authors.filter(deposant => verifyRole(deposant, ['__deposant', 'dep'])).map((deposant) => {
       const label = deposant.fullName.split('__')[0];
       return { label, id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
     });
