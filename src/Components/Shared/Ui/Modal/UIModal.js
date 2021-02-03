@@ -25,7 +25,7 @@ const msg = {
 
 function UIModal(props) {
   const {
-    title, children, isOpened, size, modalHandler,
+    titleID, children, isOpened, size, modalHandler,
   } = props;
   const [opened, setOpened] = useState(isOpened);
   const { language } = useContext(GlobalContext);
@@ -55,7 +55,7 @@ function UIModal(props) {
         onAfterOpen={toggleAnimation}
         style={{ content: cssModal[size] }}
         closeTimeoutMS={200}
-        contentLabel={title}
+        contentLabel={<FormattedHTMLMessage id={titleID} />}
         onRequestClose={onRequestClose}
         isOpen={opened}
         className={`${classes.Modal} Modal`}
@@ -68,7 +68,7 @@ function UIModal(props) {
               <div className="col-9 pl-0">
                 <article>
                   <div>
-                    {title ? <h1 className={classes.Title}>{title}</h1> : null}
+                    {titleID ? <h1 className={classes.Title}><FormattedHTMLMessage id={titleID} /></h1> : null}
                   </div>
                 </article>
               </div>
@@ -93,7 +93,7 @@ export default UIModal;
 
 UIModal.propTypes = {
   isOpened: PropTypes.bool,
-  title: PropTypes.string,
+  titleID: PropTypes.string.isRequired,
   modalHandler: PropTypes.func,
   children: PropTypes.any.isRequired,
   size: PropTypes.string,

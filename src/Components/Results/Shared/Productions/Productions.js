@@ -22,11 +22,13 @@ import styles from '../../../../style.scss';
 
 /* COMPONENTS */
 import EmptySection from '../EmptySection/EmptySection';
-import SuggestedProductionForm from './Components/SuggestedProductionsForm';
+import SuggestedDataForm from './Components/SuggestedDataForm';
+import SuggestedDataConfirmForm from './Components/SuggestedDataConfirmForm';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
+import SearchSuggestedDataForm from './Components/SearchSuggestedDataForm';
 
 /**
  * Productions
@@ -39,6 +41,8 @@ import ProductionGraphs from './Components/ProductionGraphs';
 
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+
+const PAGE_SIZE = 4;
 
 class Productions extends Component {
   state = {
@@ -65,8 +69,12 @@ class Productions extends Component {
     viewMode: 'list',
     data: [],
     suggestedData: [],
-    suggestedDataMessage: '',
+    suggestedDataMessageID: '',
+    suggestedDataSuccessID: '',
     isLoadingSuggestedData: false,
+    currentPageSuggestedData: 0,
+    querySuggestedData: '',
+    loadMoreSuggestedData: false,
     isModalOpened: false,
     modalSize: 'big',
     selectedProduction: '',
@@ -239,7 +247,7 @@ class Productions extends Component {
     } else {
       this.setState({ suggestedData: [] });
     }
-    this.setState(prevState => ({ isModalOpened: !prevState.isModalOpened }));
+    this.setState(prevState => ({ isModalOpened: !prevState.isModalOpened, querySuggestedData: this.props.fullName }));
   };
 
   queryTextChangeHandler = (e) => {
@@ -260,18 +268,18 @@ class Productions extends Component {
     this.setState({ selectedProduction });
   };
 
-  validateSuggestedProductions = (formData) => {
+  validateSuggestedData = (productions: Array) => {
     const contributionsUrl = API_CONTRIBUTE_PUBLICATIONS_SCANR;
     const contributionReq = {
       id: this.props.match.params.id,
       email: '',
       name: this.props.fullName,
-      productions: formData,
+      productions,
     };
 
     Axios.post(contributionsUrl, contributionReq).then((response) => {
       if (response.data.status === 'OK') {
-        this.setState({ suggestedDataMessage: 'Contribution received!', modalSize: 'small' });
+        this.setState({ suggestedDataSuccessID: 'contribution_received', modalSize: 'small' });
       }
     });
   };
@@ -283,28 +291,41 @@ class Productions extends Component {
     });
   };
 
-  fetchSuggestedData = () => {
-    this.setState({ isLoadingSuggestedData: true });
+  updateSuggestedData=(param: { loading: boolean, messageID: string, data: Array }) => {
+    this.setState({ isLoadingSuggestedData: param.loading || false, suggestedDataMessageID: param.messageID || '', suggestedData: param.data || [] });
+  }
 
+  fetchSuggestedData = (param:{ loadMore: boolean } = {}) => {
+    this.updateSuggestedData({ loading: !param.loadMore, data: param.loadMore ? this.state.suggestedData : [] });
+    const { loadMore } = param;
     const personsUrl = API_PERSONS_SEARCH_END_POINT;
     const publicationsUrl = API_PUBLICATIONS_SEARCH_END_POINT;
-    const personsReq = iDsFromFullNameCasesRequest(this.props.fullName);
+    const fullName = this.state.querySuggestedData || this.props.fullName;
+    const personsReq = iDsFromFullNameCasesRequest(fullName);
+
+    if (fullName.split(' ').length === 1) return;
+
+    this.setState(prevState => ({ currentPageSuggestedData: loadMore ? prevState.currentPageSuggestedData + 1 : 0 }));
 
     Axios.post(personsUrl, personsReq).then(res => res.data.results).then((ids) => {
-      if (ids) {
-        const publicationsReq = productionsWithoutIdsRequest(this.props.fullName, [...ids].map(id => id.value.id));
-
+      if (ids.length > 0) {
+        const publicationsReq = productionsWithoutIdsRequest(fullName, [...ids].map(id => id.value.id), this.state.currentPageSuggestedData, PAGE_SIZE);
         Axios.post(publicationsUrl, publicationsReq).then((response) => {
-          setTimeout(() => {
-            if (!response.data.total) {
-              this.setState({ isLoadingSuggestedData: false, suggestedDataMessage: 'Sorry, no productions found.' });
-            } else {
-              this.setState(() => ({ suggestedData: response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate)) }));
-            }
-          }, 3000);
-        }).finally(() => {
-          this.setState({ isLoadingSuggestedData: false });
+          const { suggestedData } = this.state;
+          const { data } = response;
+          if (!response.data.total) {
+            this.updateSuggestedData({ messageID: 'nothing_found' });
+          } else {
+            const totalSuggested = loadMore ? (suggestedData.length + data.results.length) : data.results.length;
+            this.setState({ loadMoreSuggestedData: !!totalSuggested < data.total });
+            const results = data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+            const productions = loadMore ? [...suggestedData, ...results] : results;
+
+            this.updateSuggestedData({ data: productions, loading: false });
+          }
         });
+      } else {
+        this.updateSuggestedData({ messageID: 'nothing_found' });
       }
     });
   };
@@ -385,6 +406,7 @@ class Productions extends Component {
                 title={(this.props.language === 'fr') ? 'Productions avec une affiliation française (depuis 2013)' : 'Productions with a French affiliation (since 2013)'}
                 lexicon="Productions"
                 subTitle={<FormattedHTMLMessage id="ProductionPerimeter" />}
+                subTitleLink={<FormattedHTMLMessage id="SuggestPublication" />}
                 modalHandler={this.modalHandler}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
@@ -426,26 +448,33 @@ class Productions extends Component {
             </div>
           </section>
           <UIModal
-            title="Suggest a production"
+            titleID="suggested_production_title"
             modalHandler={this.modalHandler}
             isOpened={this.state.isModalOpened}
             size={this.state.modalSize}
           >
-            {this.state.suggestedDataMessage
-              ? (
-                <div className="container d-flex justify-content-center h-50">
-                  <div className="row align-self-center">
-                    <p className="text-center">{this.state.suggestedDataMessage}</p>
-                  </div>
-                </div>
-              )
+            {this.state.suggestedDataSuccessID ? (
+              <SuggestedDataConfirmForm
+                language={this.props.language}
+                suggestedDataSuccessID={this.state.suggestedDataSuccessID}
+              />
+            )
               : (
-                <SuggestedProductionForm
-                  validate={this.validateSuggestedProductions}
+                <SuggestedDataForm
+                  validate={this.validateSuggestedData}
                   isLoading={this.state.isLoadingSuggestedData}
                   language={this.props.language}
                   suggestedData={this.state.suggestedData}
-                />
+                  suggestedDataMessageID={this.state.suggestedDataMessageID}
+                  loadMoreAction={this.state.loadMoreSuggestedData ? this.fetchSuggestedData : null}
+                >
+                  <SearchSuggestedDataForm
+                    querySuggestedData={this.state.querySuggestedData}
+                    language={this.props.language}
+                    updateQuery={querySuggestedData => this.setState({ querySuggestedData })}
+                    fetchProduction={this.fetchSuggestedData}
+                  />
+                </SuggestedDataForm>
               )
             }
           </UIModal>
