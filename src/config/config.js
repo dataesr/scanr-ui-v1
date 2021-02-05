@@ -37,6 +37,7 @@ export const API_PERSON_LIKE_END_POINT = API_BASE_URL.concat('/persons/like');
 
 export const API_OPEN_CITATIONS = 'https://opencitations.net/index/coci/api/v1/';
 export const API_CROSSREF = 'https://api.crossref.org/works';
+export const API_UNPAYWALL = 'https://api.oadoi.org/v2/';
 
 // portrait
 export const OTHER_WEBSITES = ['wikipedia', 'HAL', 'Hypothese'];
