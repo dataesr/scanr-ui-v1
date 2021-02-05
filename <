@@ -1,0 +1,13 @@
+[1mdiff --git a/src/App.js b/src/App.js[m
+[1mindex 0cb3de6d..478114e3 100644[m
+[1m--- a/src/App.js[m
+[1m+++ b/src/App.js[m
+[36m@@ -70,7 +70,7 @@[m [mclass App extends Component {[m
+           <Router history={(piwik) ? piwik.connectToHistory(customHistory) : null}>[m
+             <Suspense fallback={<LoadingSpinner />}>[m
+               <Switch>[m
+[31m-                <Route exact path="/" render={() => (<HomePage />)} />[m
+[32m+[m[32m                <Route exact path="/" component={HomePage} />[m
+                 <Route path="/recherche/:api" render={props => (<SearchPage {...props} language={lang} />)} />[m
+                 <Redirect from="/structure/:id" to="/entite/:id" />[m
+                 <Route path="/entite/:id" render={props => (<EntityPage {...props} language={lang} />)} />[m
