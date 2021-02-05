@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import useOpenCitations from '../../../../../../Hooks/useOpenCitations';
-import useCrossRef from '../../../../../../Hooks/useCrossRef';
+import useUnpaywall from '../../../../../../Hooks/useUnpaywall';
 import SectionLoader from '../../../../../Shared/LoadingSpinners/GraphSpinner';
 import Errors from '../../../../../Shared/Errors/Errors';
 import SectionTitle from '../../../../Shared/SectionTitle';
@@ -21,7 +21,10 @@ import classes from './Citations.scss';
 */
 const messages = { fr: messagesFr, en: messagesEn };
 
-function CrossRefCard({ item }) {
+function UnpaywallCard({ item }) {
+  const authors = item.z_authors && item.z_authors.map(
+    auth => `${(auth.given) ? `${auth.given} ` : ''}${(auth.family) ? auth.family : ''}`,
+  );
   return (
     <article key={item.doi} className={`d-flex flex-column ${classes.ResultCard} ${classes.CardWhite}`}>
       <h3 className={`mb-auto pb-2 ${classes.CardTitle}`}>
@@ -33,11 +36,11 @@ function CrossRefCard({ item }) {
             <i aria-hidden="true" className="fas fa-users" />
           </div>
           <p className="m-0">
-            {(item.authors && item.authors.length < 3) && item.authors.join(', ')}
-            {(item.authors && item.authors.length >= 3) && (
+            {(authors && authors.length < 3) && authors.join(', ')}
+            {(authors && authors.length >= 3) && (
               <Fragment>
-                {`${item.authors.length && item.authors[0]} `}
-                <FormattedHTMLMessage id="Publication.authors" values={{ count: item.num_authors }} />
+                {`${authors.length && authors[0]} `}
+                <FormattedHTMLMessage id="Publication.authors" values={{ count: authors.length }} />
               </Fragment>
             )}
           </p>
@@ -47,7 +50,7 @@ function CrossRefCard({ item }) {
             <i aria-hidden="true" className="fas fa-calendar" />
           </div>
           <p className="m-0">
-            {item.date}
+            {item.published_date}
           </p>
         </li>
         <li className="d-flex">
@@ -55,7 +58,7 @@ function CrossRefCard({ item }) {
             <i aria-hidden="true" className="fas fa-folder-open" />
           </div>
           <p className="m-0">
-            {item.journal}
+            {item.journal_name}
           </p>
         </li>
       </ul>
@@ -65,20 +68,19 @@ function CrossRefCard({ item }) {
     </article>
   );
 }
-CrossRefCard.propTypes = {
+UnpaywallCard.propTypes = {
   item: PropTypes.object.isRequired,
 };
 
-function CrossRefList({
+function UnpaywallList({
   ids,
   lang,
   maxItems,
   direction,
 }) {
-  const { data, isLoading, isError } = useCrossRef(ids);
+  const { data, isLoading } = useUnpaywall(ids);
   const publicationCount = (ids.length - maxItems >= 0) ? ids.length - maxItems : 0;
   if (isLoading) return <SectionLoader />;
-  if (isError) return <Errors error={500} />;
   if (data.length) {
     const publis = data.slice(0, maxItems);
     const rest = data.slice(maxItems);
@@ -88,7 +90,7 @@ function CrossRefList({
       <div className="row">
         {publis.map(item => (
           <div key={item.doi} className={`col-md-4 ${classes.CardContainer}`}>
-            <CrossRefCard item={item} lang={lang} />
+            <UnpaywallCard item={item} lang={lang} />
           </div>
         ))}
         {
@@ -103,7 +105,7 @@ function CrossRefList({
                   {
                     rest.map(item => (
                       <CountCardModalItem key={item.doi}>
-                        <CrossRefCard item={item} lang={lang} />
+                        <UnpaywallCard item={item} lang={lang} />
                       </CountCardModalItem>
                     ))
                   }
@@ -118,13 +120,13 @@ function CrossRefList({
   return null;
 }
 
-CrossRefList.propTypes = {
+UnpaywallList.propTypes = {
   ids: PropTypes.arrayOf(PropTypes.string).isRequired,
   lang: PropTypes.oneOf(['fr', 'en']).isRequired,
   maxItems: PropTypes.number,
   direction: PropTypes.string.isRequired,
 };
-CrossRefList.defaultProps = {
+UnpaywallList.defaultProps = {
   maxItems: 5,
 };
 
@@ -145,7 +147,7 @@ export default function Citations({ id: inputId, language: lang, direction }) {
               language={lang}
               title={<FormattedHTMLMessage id={`Publication.${direction}`} values={{ count: data.length }} />}
             />
-            <CrossRefList ids={data.map(obj => obj[citDir])} lang={lang} direction={direction} />
+            <UnpaywallList ids={data.map(obj => obj[citDir])} lang={lang} direction={direction} />
           </div>
         </section>
       </IntlProvider>
