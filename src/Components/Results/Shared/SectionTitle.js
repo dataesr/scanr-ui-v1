@@ -26,7 +26,7 @@ const SectionTitle = props => (
           &nbsp;
           {(props.lexicon && !props.subTitle) ? (
             <LexiconModal language={props.language} target={props.lexicon}>
-              <i className={`${classes.Title} fa fa-info-circle pointer`} />
+              <i className={`${classes.Title} ${classes.pointer} fa fa-info-circle`} />
             </LexiconModal>
           ) : null}
         </span>
@@ -35,7 +35,7 @@ const SectionTitle = props => (
             <div className="ml-xl-3 mb-sm-3 mb-xl-0 d-flex align-items-center">
               <div className="d-flex">
                 <LexiconModal language={props.language} target={props.lexicon}>
-                  <i className={`fa fa-info-circle pointer ${classes.Icon}`} />
+                  <i className={`fa fa-info-circle ${classes.pointer} ${classes.Icon}`} />
                 </LexiconModal>
               </div>
               <div

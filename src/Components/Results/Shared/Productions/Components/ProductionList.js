@@ -99,7 +99,7 @@ const ProductionList = (props) => {
             : null
         }
         <div
-          className={`${classes.Item} ${selected} ${props.checkBoxItems ? '' : 'pointer'}`}
+          className={`${classes.Item} ${selected} ${props.checkBoxItems ? '' : classes.pointer}`}
           onClick={() => (props.setSelectedProductionHandler ? props.setSelectedProductionHandler(item.value.id) : null)}
           onKeyPress={() => (props.setSelectedProductionHandler ? props.setSelectedProductionHandler(item.value.id) : null)}
           role="button"
