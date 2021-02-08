@@ -55,7 +55,6 @@ function UIModal(props) {
         onAfterOpen={toggleAnimation}
         style={{ content: cssModal[size] }}
         closeTimeoutMS={200}
-        contentLabel={<FormattedHTMLMessage id={titleID} />}
         onRequestClose={onRequestClose}
         isOpen={opened}
         className={`${classes.Modal} Modal`}

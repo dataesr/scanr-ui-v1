@@ -66,7 +66,7 @@ const ProductionList = (props) => {
   const [maxListHeight, setMaxListHeight] = useState(0);
   const [loadMore, setLoadMore] = useState(true);
   let dataContent = null;
-  const [setNode, entry] = useIntersect({
+  const [setIntersectNode, entry] = useIntersect({
     treshold: 0.25,
   });
   let selectedProd = {};
@@ -116,7 +116,6 @@ const ProductionList = (props) => {
             onKeyPress={() => (props.setSelectedProductionHandler ? props.setSelectedProductionHandler(item.value.id) : null)}
             role="button"
             tabIndex={0}
-            // ref={i === props.data.length - 1 ? loadMoreElement : null}
           >
             <ProductionItem
               props={{
@@ -151,7 +150,7 @@ const ProductionList = (props) => {
   useEffect(() => {
     manageHeightList();
     if (loadMoreElement.current) {
-      setNode(loadMoreElement.current);
+      setIntersectNode(loadMoreElement.current);
     }
   }, [manageHeightList]);
 

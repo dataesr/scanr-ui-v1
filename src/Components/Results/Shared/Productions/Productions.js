@@ -42,7 +42,7 @@ import SearchSuggestedDataForm from './Components/SearchSuggestedDataForm';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-const PAGE_SIZE = 4;
+const PAGE_SIZE = 10;
 
 class Productions extends Component {
   state = {
