@@ -106,8 +106,8 @@ const Affiliations = (props) => {
                 {...mapProps}
               >
                 <TileLayer
-                  attribution="&amp;copy <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-                  url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png"
+                  attribution="<a href='https://www.jawg.io' target='_blank'>&copy; Jawg</a> | <a href='https://www.openstreetmap.org' target='_blank'>&copy; OpenStreetMap</a>&nbsp;contributors"
+                  url="https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=5V4ER9yrsLxoHQrAGQuYNu4yWqXNqKAM6iaX5D1LGpRNTBxvQL3enWXpxMQqTrY8"
                 />
                 <MarkerClusterGroup maxClusterRadius={20}>
                   {markers}
