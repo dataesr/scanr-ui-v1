@@ -9,6 +9,8 @@ import SectionTitle from '../../../../Shared/SectionTitle';
 import CountCardWithModal, { CountCardModalItem } from '../../../../../Shared/Ui/CountCardWithModal/CountCardWithModal';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+import oaOpen from '../../../../../../images/svg/oa_open.svg';
+import oaClose from '../../../../../../images/svg/oa_close.svg';
 
 import classes from './Citations.scss';
 /**
@@ -62,9 +64,42 @@ function UnpaywallCard({ item }) {
           </p>
         </li>
       </ul>
-      <a href={`https://doi.org/${item.doi}`} target="_blank" rel="noopener noreferrer" className="ml-auto my-1">
-        <FormattedHTMLMessage id="Publication.seeMore" />
-      </a>
+      <div className="d-flex justify-content-between mt-3 mb-1">
+        {
+          item.is_oa ? (
+            <a
+              className="d-flex align-items-center"
+              href={item.best_oa_location.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="mr-2"
+                src={oaOpen}
+                alt=""
+                aria-hidden
+                style={{ maxHeight: '20px' }}
+              />
+              <FormattedHTMLMessage id="Publication.accessOpen" />
+            </a>
+          )
+            : (
+              <p className="m-0 d-flex align-items-center">
+                <img
+                  className="mr-2"
+                  src={oaClose}
+                  alt=""
+                  aria-hidden
+                  style={{ maxHeight: '20px' }}
+                />
+                <FormattedHTMLMessage id="Publication.accessClose" />
+              </p>
+            )
+        }
+        <a href={`https://doi.org/${item.doi}`} target="_blank" rel="noopener noreferrer">
+          <FormattedHTMLMessage id="Publication.seeMore" />
+        </a>
+      </div>
     </article>
   );
 }
