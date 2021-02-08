@@ -134,8 +134,8 @@ class LeafletMap extends Component<{}, State> {
           maxBounds={[[85, -180], [-85, 180]]}
         >
           <TileLayer
-            attribution='&amp;copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &amp;copy <a href="https://carto.com/attributions">CARTO</a>'
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            attribution="<a href='https://www.jawg.io' target='_blank'>&copy; Jawg</a> | <a href='https://www.openstreetmap.org' target='_blank'>&copy; OpenStreetMap</a>&nbsp;contributors"
+            url="https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=5V4ER9yrsLxoHQrAGQuYNu4yWqXNqKAM6iaX5D1LGpRNTBxvQL3enWXpxMQqTrY8"
           />
           <MarkerClusterGroup maxClusterRadius={20}>
             {markers}
