@@ -27,7 +27,10 @@ const CardsTitle = props => (
 export default CardsTitle;
 
 CardsTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   lexicon: PropTypes.string,
   language: PropTypes.string,
 };
