@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import classes from './ProductionDetail.scss';
 
-const ProductionAuthors = (props) => {
+const ProductionInfos = (props) => {
   const { source, id, publicationDate } = props;
 
   let date = '';
@@ -26,9 +26,9 @@ const ProductionAuthors = (props) => {
   );
 };
 
-export default ProductionAuthors;
+export default ProductionInfos;
 
-ProductionAuthors.propTypes = {
+ProductionInfos.propTypes = {
   id: PropTypes.string,
   publicationDate: PropTypes.number.isRequired,
   source: PropTypes.object.isRequired,
