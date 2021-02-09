@@ -9,26 +9,26 @@ import UIModal from '../../../Shared/Ui/Modal/UIModal';
 /* REQUESTS */
 import {
   API_PUBLICATIONS_SEARCH_END_POINT,
-  API_PERSONS_SEARCH_END_POINT,
   API_CONTRIBUTE_PUBLICATIONS_SCANR,
 } from '../../../../config/config';
+
 import Request from './Requests/Request';
 import PreRequest from './Requests/PreRequest';
 import DateRequest from './Requests/DateRequest';
-import { iDsFromFullNameCasesRequest, productionsWithoutIdsRequest } from './Requests/ProductionRequest';
+import productionsWithoutAuthorRequest from './Requests/ProductionRequest';
 
 /* SCSS */
 import styles from '../../../../style.scss';
 
 /* COMPONENTS */
 import EmptySection from '../EmptySection/EmptySection';
-import SuggestedDataForm from './Components/SuggestedDataForm';
-import SuggestedDataConfirmForm from './Components/SuggestedDataConfirmForm';
+import SuggestionForm from './Components/SuggestionForm';
+import SuggestionConfirmForm from './Components/SuggestionConfirmForm';
 import SectionTitleViewMode from '../SectionTitle';
 import FilterPanel from './Components/FilterPanel';
 import ProductionList from './Components/ProductionList';
 import ProductionGraphs from './Components/ProductionGraphs';
-import SearchSuggestedDataForm from './Components/SearchSuggestedDataForm';
+import SuggestionSearchForm from './Components/SuggestionSearchForm';
 
 /**
  * Productions
@@ -68,15 +68,19 @@ class Productions extends Component {
     activeGraph: null,
     viewMode: 'list',
     data: [],
-    suggestedData: [],
-    suggestedDataMessageID: '',
-    suggestedDataSuccessID: '',
-    isLoadingSuggestedData: false,
-    currentPageSuggestedData: 0,
-    querySuggestedData: '',
-    loadMoreSuggestedData: false,
-    isModalOpened: false,
-    modalSize: 'big',
+    suggestion: {
+      data: [],
+      productionErrorTextID: '',
+      productionsSuccessTextID: '',
+      successID: '',
+      successEtag: '',
+      emailSuccessTextID: '',
+      isLoadingSuggestion: false,
+      currentPageSuggestionData: 0,
+      querySuggestionData: '',
+      loadMoreSuggestionData: false,
+      isModalOpened: false,
+    },
     selectedProduction: '',
     high: null,
     low: null,
@@ -242,12 +246,15 @@ class Productions extends Component {
   };
 
   modalHandler = () => {
-    if (!this.state.isModalOpened) {
-      this.fetchSuggestedData();
-    } else {
-      this.setState({ suggestedData: [] });
+    if (!this.state.suggestion.isModalOpened) {
+      this.fetchSuggestionData();
     }
-    this.setState(prevState => ({ isModalOpened: !prevState.isModalOpened, querySuggestedData: this.props.fullName }));
+
+    this.setSuggestion({
+      isModalOpened: !this.state.suggestion.isModalOpened,
+      querySuggestionData: this.props.fullName,
+      data: [],
+    }, false);
   };
 
   queryTextChangeHandler = (e) => {
@@ -268,7 +275,21 @@ class Productions extends Component {
     this.setState({ selectedProduction });
   };
 
-  validateSuggestedData = (productions: Array) => {
+  validateEmail = (data : { email: string, message: string }) => {
+    const url = `http://localhost:5000/api/contribute_productions/${this.state.suggestion.successID}`;
+    Axios.patch(url, data, {
+      headers: {
+        'If-Match': this.state.suggestion.successEtag,
+      },
+    }).then(() => {
+      this.setSuggestion({
+        emailSuccessTextID: 'email_received',
+        successEtag: '',
+      }, false);
+    });
+  }
+
+  validateSuggestionData = (productions: Array) => {
     const contributionsUrl = API_CONTRIBUTE_PUBLICATIONS_SCANR;
     const contributionReq = {
       id: this.props.match.params.id,
@@ -279,8 +300,15 @@ class Productions extends Component {
 
     Axios.post(contributionsUrl, contributionReq).then((response) => {
       if (response.data.status === 'OK') {
-        this.setState({ suggestedDataSuccessID: 'contribution_received', modalSize: 'small' });
+        const { _id, etag } = response.data;
+        this.setSuggestion({
+          productionsSuccessTextID: 'contribution_received',
+          successID: _id,
+          successEtag: etag,
+        }, false);
       }
+    }).catch(() => {
+      this.setSuggestion({ productionErrorTextID: 'something_wrong' });
     });
   };
 
@@ -291,50 +319,69 @@ class Productions extends Component {
     });
   };
 
-  updateSuggestedData=(param: { loading: boolean, messageID: string, data: Array }) => {
-    this.setState({
-      isLoadingSuggestedData: param.loading || false,
-      suggestedDataMessageID: param.messageID || '',
-      suggestedData: param.data || [],
-    });
-  }
+  setSuggestion = (param: { isLoadingSuggestion: boolean, productionErrorTextID: string, productionsSuccessTextID: string, emailSuccessTextID: string, data: Array }, initState = true) => new Promise((resolve) => {
+    const {
+      isLoadingSuggestion, productionErrorTextID, productionsSuccessTextID, emailSuccessTextID, data,
+    } = param;
+    let nextState = param;
 
-  fetchSuggestedData = (param:{ loadMore: boolean } = {}) => {
-    this.updateSuggestedData({ loading: !param.loadMore, data: param.loadMore ? this.state.suggestedData : [] });
+    if (initState) {
+      nextState = {
+        isLoadingSuggestion: isLoadingSuggestion || false,
+        productionsSuccessTextID: productionsSuccessTextID || '',
+        productionErrorTextID: productionErrorTextID || '',
+        emailSuccessTextID: emailSuccessTextID || '',
+        data: data || [],
+      };
+    }
+
+    this.setState(prevState => ({
+      suggestion: {
+        ...prevState.suggestion,
+        ...nextState,
+      },
+    }), () => {
+      resolve();
+    });
+  })
+
+  fetchSuggestionData = async (param:{ loadMore: boolean } = {}) => {
     const { loadMore } = param;
-    const personsUrl = API_PERSONS_SEARCH_END_POINT;
     const publicationsUrl = API_PUBLICATIONS_SEARCH_END_POINT;
-    const fullName = this.state.querySuggestedData || this.props.fullName;
-    const personsReq = iDsFromFullNameCasesRequest(fullName);
+    const { currentPageSuggestionData: currentPage, data: suggestionData, querySuggestionData: query } = this.state.suggestion;
+    const fullName = query || this.props.fullName;
 
     if (fullName.trim().split(' ').length === 1) {
-      this.updateSuggestedData({ messageID: 'wrong_request', data: [] });
+      this.setSuggestion({ productionErrorTextID: 'wrong_request' });
     } else {
-      this.setState(prevState => ({ currentPageSuggestedData: loadMore ? prevState.currentPageSuggestedData + 1 : 0 }));
+      const obj = {
+        isLoadingSuggestion: !loadMore,
+        data: loadMore ? suggestionData : [],
+        currentPageSuggestionData: loadMore ? currentPage + 1 : 0,
+      };
+      await this.setSuggestion(obj, false);
 
-      Axios.post(personsUrl, personsReq).then(res => res.data.results).then((ids) => {
-        if (ids.length > 0) {
-          const publicationsReq = productionsWithoutIdsRequest(fullName, [...ids].map(id => id.value.id), this.state.currentPageSuggestedData, PAGE_SIZE);
-          Axios.post(publicationsUrl, publicationsReq).then((response) => {
-            const { suggestedData } = this.state;
-            const { data } = response;
-            if (!response.data.total) {
-              this.updateSuggestedData({ messageID: 'nothing_found' });
-            } else {
-              const currentTotalResults = loadMore ? (suggestedData.length + data.results.length) : data.results.length;
-              const nextLoadMore = data.total <= currentTotalResults ? 0 : 1;
+      const publicationsReq = productionsWithoutAuthorRequest(fullName, [this.props.match.params.id], this.state.suggestion.currentPageSuggestionData, PAGE_SIZE);
 
-              this.setState({ loadMoreSuggestedData: !!nextLoadMore });
+      Axios.post(publicationsUrl, publicationsReq).then((response) => {
+        const { data: currentProductions } = this.state.suggestion;
+        const { results, total } = response.data;
 
-              const results = data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
-              const productions = loadMore ? [...suggestedData, ...results] : results;
-
-              this.updateSuggestedData({ data: productions, loading: false });
-            }
-          });
+        if (!total) {
+          this.setSuggestion({ productionErrorTextID: 'nothing_found' });
         } else {
-          this.updateSuggestedData({ messageID: 'nothing_found' });
+          const currentTotalResults = loadMore ? (currentProductions.length + results.length) : results.length;
+          const nextLoadMore = total <= currentTotalResults ? 0 : 1;
+
+          this.setSuggestion({ loadMoreSuggestionData: !!nextLoadMore }, false);
+
+          const sortedResults = results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+          const productions = loadMore ? [...currentProductions, ...sortedResults] : sortedResults;
+
+          this.setSuggestion({ data: productions, loading: false });
         }
+      }).catch(() => {
+        this.setSuggestion({ productionErrorTextID: 'something_wrong' });
       });
     }
   };
@@ -460,31 +507,32 @@ class Productions extends Component {
           <UIModal
             titleID="suggested_production_title"
             modalHandler={this.modalHandler}
-            isOpened={this.state.isModalOpened}
-            size={this.state.modalSize}
+            isOpened={this.state.suggestion.isModalOpened}
           >
-            {this.state.suggestedDataSuccessID ? (
-              <SuggestedDataConfirmForm
+            {this.state.suggestion.productionsSuccessTextID ? (
+              <SuggestionConfirmForm
+                validate={this.validateEmail}
                 language={this.props.language}
-                suggestedDataSuccessID={this.state.suggestedDataSuccessID}
+                emailSuccessTextID={this.state.suggestion.emailSuccessTextID}
+                productionsSuccessTextID={this.state.suggestion.productionsSuccessTextID}
               />
             )
               : (
-                <SuggestedDataForm
-                  validate={this.validateSuggestedData}
-                  isLoading={this.state.isLoadingSuggestedData}
+                <SuggestionForm
+                  validate={this.validateSuggestionData}
+                  isLoading={this.state.suggestion.isLoadingSuggestion}
                   language={this.props.language}
-                  suggestedData={this.state.suggestedData}
-                  suggestedDataMessageID={this.state.suggestedDataMessageID}
-                  loadMoreAction={this.state.loadMoreSuggestedData ? this.fetchSuggestedData : null}
+                  suggestionData={this.state.suggestion.data}
+                  productionErrorTextID={this.state.suggestion.productionErrorTextID}
+                  loadMoreAction={this.state.suggestion.loadMoreSuggestionData ? this.fetchSuggestionData : null}
                 >
-                  <SearchSuggestedDataForm
-                    querySuggestedData={this.state.querySuggestedData}
+                  <SuggestionSearchForm
+                    querySuggestionData={this.state.suggestion.querySuggestionData}
                     language={this.props.language}
-                    updateQuery={querySuggestedData => this.setState({ querySuggestedData })}
-                    fetchProduction={this.fetchSuggestedData}
+                    updateQuery={(querySuggestionData) => { this.setSuggestion({ querySuggestionData }, false); }}
+                    fetchData={this.fetchSuggestionData}
                   />
-                </SuggestedDataForm>
+                </SuggestionForm>
               )
             }
           </UIModal>

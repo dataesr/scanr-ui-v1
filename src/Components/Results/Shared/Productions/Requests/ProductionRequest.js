@@ -18,16 +18,7 @@ const fullNameCases = (fullName: string) => {
   return query;
 };
 
-export function iDsFromFullNameCasesRequest(fullName: string) {
-  return {
-    pageSize: 1000,
-    query: fullNameCases(fullName),
-    searchFields: ['fullName'],
-    sourceFields: ['id'],
-  };
-}
-
-export function productionsWithoutIdsRequest(fullName: string, ids: Array, page: number, pageSize: number) {
+export default function productionsWithoutAuthorRequest(fullName: string, ids: Array, page: number, pageSize: number) {
   return {
     page: page || 0,
     pageSize,
