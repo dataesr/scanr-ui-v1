@@ -30,7 +30,7 @@ const SectionTitle = props => (
             </LexiconModal>
           ) : null}
         </span>
-        {props.subTitle ? (
+        {props.subTitleLink ? (
           <React.Fragment>
             <div className="ml-xl-3 mb-sm-3 mb-xl-0 d-flex align-items-center">
               <div className="d-flex">
@@ -46,7 +46,7 @@ const SectionTitle = props => (
                 onClick={props.modalHandler}
               >
                 <i className={`fa fa-plus-square ${classes.Icon}`} />
-                <span className={`ml-1 ${classes.Text}`}>Suggest a publication</span>
+                <span className={`ml-1 ${classes.Text}`}>{props.subTitleLink}</span>
               </div>
             </div>
             <div className="mb-5">{props.subTitle}</div>
@@ -129,6 +129,7 @@ SectionTitle.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.any.isRequired,
   subTitle: PropTypes.object,
+  subTitleLink: PropTypes.object,
   id: PropTypes.string,
   objectType: PropTypes.string,
   total: PropTypes.number,

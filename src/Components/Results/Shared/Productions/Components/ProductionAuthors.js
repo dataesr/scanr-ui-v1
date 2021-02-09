@@ -11,7 +11,12 @@ const messages = {
   en: messagesEn,
 };
 
-const verifyRole = (author, roles) => roles.includes(author.role ? author.role : author.rolePatent[0].role);
+const verifyRole = (author: Object, roles: Array) => {
+  if (!author.rolePatent && !author.role) {
+    return false;
+  }
+  return roles.includes(author.role ? author.role : author.rolePatent[0].role);
+};
 
 const ProductionAuthors = (props) => {
   const { production: productionItem, language } = props;
