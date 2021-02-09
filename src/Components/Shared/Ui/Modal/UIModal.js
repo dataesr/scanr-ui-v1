@@ -13,11 +13,6 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './UIModal.scss';
 
-const cssModal = {
-  big: { height: '70vh', width: '70vw' },
-  small: { height: '40vh', width: '40vw' },
-};
-
 const msg = {
   fr: messagesFr,
   en: messagesEn,
@@ -25,7 +20,7 @@ const msg = {
 
 function UIModal(props) {
   const {
-    titleID, children, isOpened, size, modalHandler,
+    titleID, children, isOpened, modalHandler,
   } = props;
   const [opened, setOpened] = useState(isOpened);
   const { language } = useContext(GlobalContext);
@@ -53,7 +48,6 @@ function UIModal(props) {
     <IntlProvider locale={language} messages={msg[language]}>
       <ReactModal
         onAfterOpen={toggleAnimation}
-        style={{ content: cssModal[size] }}
         closeTimeoutMS={200}
         onRequestClose={onRequestClose}
         isOpen={opened}
@@ -95,10 +89,8 @@ UIModal.propTypes = {
   titleID: PropTypes.string.isRequired,
   modalHandler: PropTypes.func,
   children: PropTypes.any.isRequired,
-  size: PropTypes.string,
 };
 
 UIModal.defaultProps = {
   isOpened: false,
-  size: 'big',
 };
