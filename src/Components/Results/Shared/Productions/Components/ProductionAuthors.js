@@ -19,7 +19,7 @@ const verifyRole = (author: Object, roles: Array) => {
 };
 
 const ProductionAuthors = (props) => {
-  const { production: productionItem, language } = props;
+  const { production: productionItem, language, maxAuthors } = props;
 
   const getInventors = (prod) => {
     if (!prod.authors || prod.authors.length === 0) {
@@ -56,7 +56,7 @@ const ProductionAuthors = (props) => {
       </React.Fragment>
     );
   };
-  const maxAuthors = 2;
+
   const getAuthors = (production) => {
     let authors = [];
     if (production.productionType === 'publication') {
@@ -99,7 +99,11 @@ const ProductionAuthors = (props) => {
 
 export default ProductionAuthors;
 
+ProductionAuthors.defaultProps = {
+  maxAuthors: 2,
+};
 ProductionAuthors.propTypes = {
   language: PropTypes.string.isRequired,
+  maxAuthors: PropTypes.number,
   production: PropTypes.object.isRequired,
 };
