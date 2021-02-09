@@ -1,4 +1,4 @@
-const fullNameCases = (fullName) => {
+const fullNameCases = (fullName: string) => {
   let query = '';
   const firstName = fullName.substr(0, fullName.indexOf(' '));
   const lastName = fullName.substr(fullName.indexOf(' ') + 1);
@@ -18,7 +18,7 @@ const fullNameCases = (fullName) => {
   return query;
 };
 
-export function iDsFromFullNameCasesRequest(fullName) {
+export function iDsFromFullNameCasesRequest(fullName: string) {
   return {
     pageSize: 1000,
     query: fullNameCases(fullName),
@@ -27,9 +27,10 @@ export function iDsFromFullNameCasesRequest(fullName) {
   };
 }
 
-export function productionsWithoutIdsRequest(fullName, ids) {
+export function productionsWithoutIdsRequest(fullName: string, ids: Array, page: number, pageSize: number) {
   return {
-    pageSize: 100,
+    page: page || 0,
+    pageSize,
     query: fullNameCases(fullName),
     searchFields: ['authors.fullName'],
     sort: { year: 'DESC' },
