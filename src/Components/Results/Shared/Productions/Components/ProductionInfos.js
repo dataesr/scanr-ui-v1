@@ -12,7 +12,7 @@ const ProductionInfos = (props) => {
   }
   return (
     <div>
-      <p className={classes.Grey}>
+      <p className={`${props.skinnyTheme ? 'mb-1' : ''} ${classes.Grey}`}>
         {
           (source && source.title)
             ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${source.title}"]}}`} className={classes.Italic}>{source.title}</a>
@@ -28,8 +28,13 @@ const ProductionInfos = (props) => {
 
 export default ProductionInfos;
 
+ProductionInfos.defaultProps = {
+  skinnyTheme: false,
+};
+
 ProductionInfos.propTypes = {
   id: PropTypes.string,
+  skinnyTheme: PropTypes.bool,
   publicationDate: PropTypes.number.isRequired,
   source: PropTypes.object.isRequired,
 };

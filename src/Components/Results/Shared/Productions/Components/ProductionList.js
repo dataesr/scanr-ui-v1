@@ -67,8 +67,9 @@ const ProductionList = (props) => {
   const [loadMore, setLoadMore] = useState(true);
   let dataContent = null;
   const [setIntersectNode, entry] = useIntersect({
-    threshold: 1,
+    threshold: 0.8,
   });
+  const skinnyTheme = (props.styleList && props.styleList.theme === 'skinny');
   let selectedProd = {};
   const dataCSVColumns = [
     { id: 'col1', displayName: messages[props.language]['dataCSVColumns.col1'] },
@@ -81,7 +82,7 @@ const ProductionList = (props) => {
 
     dataContent = props.data.map((item, i) => {
       let first = false;
-      if (i > 0 && !props.loadMoreAction) {
+      if (i > 0 && !props.loadMoreAction && !skinnyTheme) {
         first = (moment(props.data[i - 1].value.publicationDate).format('YYYY') !== moment(item.value.publicationDate).format('YYYY'));
       }
       let selected = '';
@@ -100,7 +101,7 @@ const ProductionList = (props) => {
       return (
         <React.Fragment key={`${item.value.id}-${item.value.publicationDate}`}>
           {
-            (i === 0 || first)
+            ((i === 0 || first) && !skinnyTheme)
               ? (
                 <div className={classes.TitleYear}>
                   {
@@ -123,6 +124,7 @@ const ProductionList = (props) => {
                 checkBoxItems: props.checkBoxItems,
                 itemsActive: props.itemsActive,
                 handleChange: props.checkItem,
+                skinnyTheme,
                 label,
                 item,
               }}
@@ -167,11 +169,11 @@ const ProductionList = (props) => {
 
   return (
     <>
-      <div className="row">
-        <div className={(props.styleList && props.styleList.width) || 'col-lg-5'}>
+      <div className="row justify-content-lg-center">
+        <div className={(props.styleList && props.styleList.classWidth) || 'col-lg-5'}>
           <div
             style={{ height: heightList }}
-            className={`${classes.ListOfProductions} ${props.styleList && props.styleList.theme === 'skinny' ? classes.Skinny : ''}`}
+            className={`${classes.ListOfProductions} ${skinnyTheme ? classes.Skinny : ''}`}
           >
             {(!props.loading) ? renderDataContent() : <Loader color={style.scanrmiddlegreyColor} style={{ width: 'auto', height: '100%' }} />}
           </div>
