@@ -67,7 +67,7 @@ const ProductionList = (props) => {
   const [loadMore, setLoadMore] = useState(true);
   let dataContent = null;
   const [setIntersectNode, entry] = useIntersect({
-    treshold: 0.25,
+    threshold: 1,
   });
   let selectedProd = {};
   const dataCSVColumns = [

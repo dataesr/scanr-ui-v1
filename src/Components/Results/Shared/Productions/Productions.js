@@ -292,7 +292,11 @@ class Productions extends Component {
   };
 
   updateSuggestedData=(param: { loading: boolean, messageID: string, data: Array }) => {
-    this.setState({ isLoadingSuggestedData: param.loading || false, suggestedDataMessageID: param.messageID || '', suggestedData: param.data || [] });
+    this.setState({
+      isLoadingSuggestedData: param.loading || false,
+      suggestedDataMessageID: param.messageID || '',
+      suggestedData: param.data || [],
+    });
   }
 
   fetchSuggestedData = (param:{ loadMore: boolean } = {}) => {
@@ -303,31 +307,36 @@ class Productions extends Component {
     const fullName = this.state.querySuggestedData || this.props.fullName;
     const personsReq = iDsFromFullNameCasesRequest(fullName);
 
-    if (fullName.split(' ').length === 1) return;
+    if (fullName.trim().split(' ').length === 1) {
+      this.updateSuggestedData({ messageID: 'wrong_request', data: [] });
+    } else {
+      this.setState(prevState => ({ currentPageSuggestedData: loadMore ? prevState.currentPageSuggestedData + 1 : 0 }));
 
-    this.setState(prevState => ({ currentPageSuggestedData: loadMore ? prevState.currentPageSuggestedData + 1 : 0 }));
+      Axios.post(personsUrl, personsReq).then(res => res.data.results).then((ids) => {
+        if (ids.length > 0) {
+          const publicationsReq = productionsWithoutIdsRequest(fullName, [...ids].map(id => id.value.id), this.state.currentPageSuggestedData, PAGE_SIZE);
+          Axios.post(publicationsUrl, publicationsReq).then((response) => {
+            const { suggestedData } = this.state;
+            const { data } = response;
+            if (!response.data.total) {
+              this.updateSuggestedData({ messageID: 'nothing_found' });
+            } else {
+              const currentTotalResults = loadMore ? (suggestedData.length + data.results.length) : data.results.length;
+              const nextLoadMore = data.total <= currentTotalResults ? 0 : 1;
 
-    Axios.post(personsUrl, personsReq).then(res => res.data.results).then((ids) => {
-      if (ids.length > 0) {
-        const publicationsReq = productionsWithoutIdsRequest(fullName, [...ids].map(id => id.value.id), this.state.currentPageSuggestedData, PAGE_SIZE);
-        Axios.post(publicationsUrl, publicationsReq).then((response) => {
-          const { suggestedData } = this.state;
-          const { data } = response;
-          if (!response.data.total) {
-            this.updateSuggestedData({ messageID: 'nothing_found' });
-          } else {
-            const totalSuggested = loadMore ? (suggestedData.length + data.results.length) : data.results.length;
-            this.setState({ loadMoreSuggestedData: !!totalSuggested < data.total });
-            const results = data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
-            const productions = loadMore ? [...suggestedData, ...results] : results;
+              this.setState({ loadMoreSuggestedData: !!nextLoadMore });
 
-            this.updateSuggestedData({ data: productions, loading: false });
-          }
-        });
-      } else {
-        this.updateSuggestedData({ messageID: 'nothing_found' });
-      }
-    });
+              const results = data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+              const productions = loadMore ? [...suggestedData, ...results] : results;
+
+              this.updateSuggestedData({ data: productions, loading: false });
+            }
+          });
+        } else {
+          this.updateSuggestedData({ messageID: 'nothing_found' });
+        }
+      });
+    }
   };
 
   render() {
@@ -392,6 +401,7 @@ class Productions extends Component {
       newEntry.tooltip = `${entry.count} ${this.state.productionType} - ${entry.value}`;
       sliderDataWithTooltip.push(newEntry);
     });
+
     return (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>

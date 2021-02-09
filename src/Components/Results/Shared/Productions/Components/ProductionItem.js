@@ -37,7 +37,7 @@ const ProductionItem = ({ props }) => {
                   <div className="col-12">
                     <blockquote className={classes.Blockquote}>
                       <ProductionAuthors production={item.value} language={language} />
-                      {item.value.publicationDate && (
+                      {item.value.publicationDate && item.value.source && (
                       <cite title={titleSource}>
                         <ProductionInfos source={item.value.source} publicationDate={item.value.publicationDate} />
                       </cite>
