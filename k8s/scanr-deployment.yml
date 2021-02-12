@@ -22,5 +22,5 @@ spec:
         name: scanr
         imagePullPolicy: Always
         ports:
-        - containerPort: 80
+        - containerPort: 3000
       restartPolicy: Always
