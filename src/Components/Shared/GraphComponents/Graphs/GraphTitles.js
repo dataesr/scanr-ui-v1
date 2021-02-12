@@ -12,7 +12,7 @@ const GraphTitles = props => (
       &nbsp;
       {(props.lexicon) ? (
         <LexiconModal language={props.language} target={props.lexicon}>
-          <i className="fa fa-info-circle" />
+          <i className={`fa fa-info-circle ${classes.fs_small}`} />
         </LexiconModal>
       ) : null }
     </div>

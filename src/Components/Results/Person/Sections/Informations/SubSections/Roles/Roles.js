@@ -26,7 +26,7 @@ const Roles = (props) => {
               <FormattedHTMLMessage id="Person.Informations.Roles.title" />
               &nbsp;
               <LexiconModal language={props.language} target="PersonRole">
-                <i className="fa fa-info-circle" />
+                <i className={`fa fa-info-circle ${classes.fs_small}`} />
               </LexiconModal>
             </div>
             <div className="container-fluid">
