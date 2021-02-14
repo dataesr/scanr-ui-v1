@@ -19,10 +19,6 @@ const MostActiveThemes = props => (
               id="Home.MostActiveThemes.lib"
               defaultMessage="Home.MostActiveThemes.lib"
             />
-            { /* &nbsp;
-            <LexiconModal language={props.language} target="top10">
-              <i className="fa fa-info-circle" />
-            </LexiconModal> */ }
           </div>
           <div className={classes.Lib2}>
             <FormattedHTMLMessage
