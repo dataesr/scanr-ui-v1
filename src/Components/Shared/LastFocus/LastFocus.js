@@ -33,7 +33,7 @@ const LastFocus = (props) => {
               />
               &nbsp;
               <LexiconModal language={props.language} target="Focus">
-                <i className="fa fa-info-circle" />
+                <i className={`fa fa-info-circle ${classes.fs_small}`} />
               </LexiconModal>
             </h2>
             {
