@@ -14,9 +14,9 @@ const message = {
   en: messagesEn,
 };
 
-const SearchSuggestedDataForm = (props) => {
+const SuggestionSearchForm = (props) => {
   const {
-    language, fetchProduction, updateQuery, querySuggestedData: query,
+    language, fetchData, updateQuery, querySuggestionData: query,
   } = props;
   const waitInterval = 800;
   let timer = null;
@@ -30,7 +30,7 @@ const SearchSuggestedDataForm = (props) => {
     clearTimeout(timer);
     timer = setTimeout(() => {
       if (query) {
-        fetchProduction({ query });
+        fetchData({ query });
       }
     }, waitInterval);
     return () => clearTimeout(timer);
@@ -48,11 +48,11 @@ const SearchSuggestedDataForm = (props) => {
   );
 };
 
-export default SearchSuggestedDataForm;
+export default SuggestionSearchForm;
 
-SearchSuggestedDataForm.propTypes = {
+SuggestionSearchForm.propTypes = {
   language: PropTypes.string.isRequired,
-  querySuggestedData: PropTypes.string,
-  fetchProduction: PropTypes.func.isRequired,
+  querySuggestionData: PropTypes.string,
+  fetchData: PropTypes.func.isRequired,
   updateQuery: PropTypes.func.isRequired,
 };
