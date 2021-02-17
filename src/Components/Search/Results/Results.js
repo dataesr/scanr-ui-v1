@@ -19,14 +19,11 @@ const ProjectCard = lazy(() => import('./ResultCards/ProjectCard'));
 
 class SearchResults extends Component {
   renderListResults = () => {
-    const propertiesList = this.props.data.results.map((res) => {
-      const properties = {
-        data: res.value,
-        highlights: res.highlights,
-        language: this.props.language,
-      };
-      return properties;
-    });
+    const propertiesList = this.props.data.results.map(res => ({
+      data: res.value,
+      highlights: res.highlights,
+      language: this.props.language,
+    }));
     switch (this.props.api) {
       case 'structures': return propertiesList.map(prop => (
         <div className={classes.card} key={prop.data.id}>
@@ -188,7 +185,7 @@ class SearchResults extends Component {
               </FormattedHTMLMessage>
               &nbsp;
               <LexiconModal language={this.props.language} target="Download">
-                <i className="fa fa-info-circle" />
+                <i className={`fa fa-info-circle ${classes.fs_small}`} />
               </LexiconModal>
             </div>
           </div>
