@@ -103,7 +103,7 @@ const SearchPanel = (props) => {
           </button>
           &nbsp;
           <LexiconModal language={props.language} target="Search">
-            <i className="fa fa-info-circle" />
+            <i className={`fa fa-info-circle ${classes.fs_small}`} />
           </LexiconModal>
         </div>
       </div>

@@ -18,7 +18,7 @@ const SectionTitle = props => (
   <div className="row">
     <div className="col-lg-12">
       <div className="d-flex flex-wrap align-items-center flex-grow-1 mx-1">
-        <i className={`fas ${props.icon} ${classes.Icon}`} />
+        <i className={`fas ${props.icon} ${classes.Title}`} />
         <span className={`pl-0 pl-lg-2 my-2 ${classes.Title}`}>
           {(props.total) ? (props.total).toLocaleString(props.language) : null}
           &nbsp;
@@ -26,16 +26,16 @@ const SectionTitle = props => (
           &nbsp;
           {(props.lexicon && !props.subTitle) ? (
             <LexiconModal language={props.language} target={props.lexicon}>
-              <i className={`${classes.Title} ${classes.pointer} fa fa-info-circle`} />
+              <i className={`fa fa-info-circle ${classes.Title} ${classes.pointer} ${classes.fs_small}`} />
             </LexiconModal>
           ) : null}
         </span>
-        {props.subTitle ? (
+        {props.subTitleLink ? (
           <React.Fragment>
             <div className="ml-xl-3 mb-sm-3 mb-xl-0 d-flex align-items-center">
               <div className="d-flex">
                 <LexiconModal language={props.language} target={props.lexicon}>
-                  <i className={`fa fa-info-circle ${classes.pointer} ${classes.Icon}`} />
+                  <i className={`fa fa-info-circle ${classes.pointer} ${classes.Title} ${classes.fs_large}`} />
                 </LexiconModal>
               </div>
               <div
@@ -45,8 +45,8 @@ const SectionTitle = props => (
                 onKeyPress={props.modalHandler}
                 onClick={props.modalHandler}
               >
-                <i className={`fa fa-plus-square ${classes.Icon}`} />
-                <span className={`ml-1 ${classes.Text}`}>Suggest a publication</span>
+                <i className={`fa fa-plus-square ${classes.Title}`} />
+                <span className={`ml-1 ${classes.Text}`}>{props.subTitleLink}</span>
               </div>
             </div>
             <div className="mb-5">{props.subTitle}</div>
@@ -129,6 +129,7 @@ SectionTitle.propTypes = {
   icon: PropTypes.string.isRequired,
   title: PropTypes.any.isRequired,
   subTitle: PropTypes.object,
+  subTitleLink: PropTypes.object,
   id: PropTypes.string,
   objectType: PropTypes.string,
   total: PropTypes.number,
