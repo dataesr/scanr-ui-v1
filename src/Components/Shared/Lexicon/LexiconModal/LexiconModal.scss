@@ -1,7 +1,11 @@
 @import '../../../../style.scss';
 
-.lexiconButton {
+.LexiconButton {
   font-size: 0;
+
+  *::before {
+    font-size: 1em;
+  }
 }
 
 .LexiconModal {
