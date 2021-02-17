@@ -73,7 +73,6 @@ class Productions extends Component {
       productionErrorTextID: '',
       productionsSuccessTextID: '',
       successID: '',
-      successEtag: '',
       emailSuccessTextID: '',
       isLoadingSuggestion: false,
       currentPageSuggestionData: 0,
@@ -276,15 +275,10 @@ class Productions extends Component {
   };
 
   validateEmail = (data : { email: string, message: string }) => {
-    const url = `http://localhost:5000/api/contribute_productions/${this.state.suggestion.successID}`;
-    Axios.patch(url, data, {
-      headers: {
-        'If-Match': this.state.suggestion.successEtag,
-      },
-    }).then(() => {
+    const url = `${API_CONTRIBUTE_PUBLICATIONS_SCANR}/${this.state.suggestion.successID}`;
+    Axios.patch(url, data).then(() => {
       this.setSuggestion({
         emailSuccessTextID: 'email_received',
-        successEtag: '',
       }, false);
     });
   }
@@ -300,11 +294,10 @@ class Productions extends Component {
 
     Axios.post(contributionsUrl, contributionReq).then((response) => {
       if (response.data.status === 'OK') {
-        const { _id, etag } = response.data;
+        const { _id } = response.data;
         this.setSuggestion({
           productionsSuccessTextID: 'contribution_received',
           successID: _id,
-          successEtag: etag,
         }, false);
       }
     }).catch(() => {
