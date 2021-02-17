@@ -15,36 +15,44 @@ const ProductionItem = ({ props }) => {
   if (checkBoxItems) {
     contentItem = (
       <div className="container">
-        <div className="d-flex align-items-center">
-          <div className="row">
-            <div className="col-12">
-              <label htmlFor={titleLabel} className={`pl-5 ${classes.Title}`}>
-                <div className="row">
-                  <div>
-                    <input className={classes.HiddenInput} id={titleLabel} onChange={() => handleChange(item.value.id)} type="checkbox" />
-                    <i className={`fa-lg ${classes.pointer} ${classes.CustomInput} ${itemsActive.indexOf(item.value.id) > -1 ? 'fas fa-check-square' : 'far fa-square'}`} />
-                  </div>
-                  <div className="col-12 pb-2">
-                    <a
-                      className={`${classes.Link} ${classes.pointer}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={`publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`}
-                    >
-                      {titleLabel}
-                    </a>
-                  </div>
-                  <div className="col-12">
-                    <blockquote className={classes.Blockquote}>
-                      <ProductionAuthors production={item.value} language={language} />
-                      <cite title={titleSource}>
-                        <ProductionInfos source={item.value.source} publicationDate={item.value.publicationDate} />
-                      </cite>
-                    </blockquote>
-                  </div>
+        <div className="row">
+          <div className="col-12">
+            <label htmlFor={titleLabel} className={`pl-5 ${classes.Title} ${props.skinnyTheme ? 'pb-0' : ''}`}>
+              <div className="row">
+                <div>
+                  <input className={classes.HiddenInput} id={titleLabel} onChange={() => handleChange(item.value.id)} type="checkbox" />
+                  <i className={`fa-lg ${classes.pointer} ${classes.CustomInput} ${itemsActive.indexOf(item.value.id) > -1 ? 'fas fa-check-square' : 'far fa-square'}`} />
                 </div>
-              </label>
-            </div>
+                <div className={`col-12 ${props.skinnyTheme ? '' : 'pb-2'}`}>
+                  <a
+                    className={`${classes.Link} ${classes.pointer}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`}
+                  >
+                    {titleLabel}
+                  </a>
+                </div>
+                <div className="col-12">
+                  <blockquote className={`${classes.Blockquote} ${props.skinnyTheme ? 'mb-1' : ''}`}>
+                    <ProductionAuthors
+                      production={item.value}
+                      maxAuthors={props.skinnyTheme ? 1 : 2}
+                      language={language}
+                    />
+                    {item.value.publicationDate && item.value.source && (
+                      <cite title={titleSource}>
+                        <ProductionInfos
+                          skinnyTheme={props.skinnyTheme}
+                          source={item.value.source}
+                          publicationDate={item.value.publicationDate}
+                        />
+                      </cite>
+                    )}
+                  </blockquote>
+                </div>
+              </div>
+            </label>
           </div>
         </div>
       </div>
@@ -68,7 +76,11 @@ const ProductionItem = ({ props }) => {
 
 export default ProductionItem;
 
+ProductionItem.defaultprops = {
+  skinnyTheme: false,
+};
 ProductionItem.propTypes = {
   itemsActive: PropTypes.array,
   handleChange: PropTypes.func,
+  skinnyTheme: PropTypes.bool,
 };

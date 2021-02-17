@@ -18,7 +18,7 @@ const CardsTitle = props => (
     &nbsp;
     {(props.lexicon) ? (
       <LexiconModal language={props.language} target={props.lexicon}>
-        <i className="fa fa-info-circle" />
+        <i className={`fa fa-info-circle ${classes.fs_small}`} />
       </LexiconModal>
     ) : null }
   </h2>
@@ -27,7 +27,10 @@ const CardsTitle = props => (
 export default CardsTitle;
 
 CardsTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   lexicon: PropTypes.string,
   language: PropTypes.string,
 };
