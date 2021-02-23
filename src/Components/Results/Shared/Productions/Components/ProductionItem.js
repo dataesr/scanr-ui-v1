@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classes from './ProductionList.scss';
 import ProductionAuthors from './ProductionAuthors';
 import ProductionInfos from './ProductionInfos';
+import getExternalInfos from '../../../../../Utils/helpers';
 
 const ProductionItem = ({ props }) => {
   let contentItem;
@@ -11,7 +12,6 @@ const ProductionItem = ({ props }) => {
   } = props;
 
   const titleSource = item.value.source ? item.value.source.title : item.value.title;
-
   if (checkBoxItems) {
     contentItem = (
       <div className="container">
@@ -28,7 +28,7 @@ const ProductionItem = ({ props }) => {
                     className={`${classes.Link} ${classes.pointer}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`}
+                    href={`${props.skinnyTheme ? getExternalInfos(item.value.id).link : `publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`}`}
                   >
                     {titleLabel}
                   </a>

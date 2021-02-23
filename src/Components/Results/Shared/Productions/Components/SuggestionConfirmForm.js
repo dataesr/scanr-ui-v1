@@ -45,6 +45,7 @@ const SuggestionConfirmForm = (props) => {
                         <label htmlFor="email" className={`${classes.TitleFilter} w-100 col-form-label-sm`}>
                           <div><FormattedHTMLMessage id="email_label" /></div>
                           <input
+                            pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                             type="text"
                             id="email"
                             name="email"
@@ -57,9 +58,9 @@ const SuggestionConfirmForm = (props) => {
                       <div className="form-group">
                         <label htmlFor="message" className={`${classes.TitleFilter} w-100 col-form-label-sm`}>
                           <div><FormattedHTMLMessage id="message_label" /></div>
-                          <input
-                            type="text"
+                          <textarea
                             id="message"
+                            maxLength="300"
                             name="message"
                             className={`form-control form-control-sm ${classes.SearchBar}`}
                             onChange={e => setMessage(e.target.value)}

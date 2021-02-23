@@ -245,15 +245,19 @@ class Productions extends Component {
   };
 
   modalHandler = () => {
-    if (!this.state.suggestion.isModalOpened) {
-      this.fetchSuggestionData();
-    }
+    const { suggestion } = this.state;
 
     this.setSuggestion({
-      isModalOpened: !this.state.suggestion.isModalOpened,
+      isModalOpened: !suggestion.isModalOpened,
       querySuggestionData: this.props.fullName,
       data: [],
-    }, false);
+      productionsSuccessTextID: '',
+      emailSuccessTextID: '',
+    }, false).then(() => {
+      if (!suggestion.isModalOpened) {
+        this.fetchSuggestionData();
+      }
+    });
   };
 
   queryTextChangeHandler = (e) => {
@@ -280,6 +284,8 @@ class Productions extends Component {
       this.setSuggestion({
         emailSuccessTextID: 'email_received',
       }, false);
+    }).catch(() => {
+      this.setSuggestion({ productionErrorTextID: 'something_wrong' });
     });
   }
 
@@ -344,68 +350,66 @@ class Productions extends Component {
     const { currentPageSuggestionData: currentPage, data: suggestionData, querySuggestionData: query } = this.state.suggestion;
     const fullName = query || this.props.fullName;
 
-    if (fullName.trim().split(' ').length === 1) {
-      this.setSuggestion({ productionErrorTextID: 'wrong_request' });
-    } else {
-      const obj = {
-        isLoadingSuggestion: !loadMore,
-        data: loadMore ? suggestionData : [],
-        currentPageSuggestionData: loadMore ? currentPage + 1 : 0,
-      };
-      await this.setSuggestion(obj, false);
+    const obj = {
+      isLoadingSuggestion: !loadMore,
+      data: loadMore ? suggestionData : [],
+      currentPageSuggestionData: loadMore ? currentPage + 1 : 0,
+    };
+    await this.setSuggestion(obj, false);
 
-      const publicationsReq = productionsWithoutAuthorRequest(fullName, [this.props.match.params.id], this.state.suggestion.currentPageSuggestionData, PAGE_SIZE);
+    const publicationsReq = productionsWithoutAuthorRequest(fullName, [this.props.match.params.id], this.state.suggestion.currentPageSuggestionData, PAGE_SIZE);
 
-      Axios.post(publicationsUrl, publicationsReq).then((response) => {
-        const { data: currentProductions } = this.state.suggestion;
-        const { results, total } = response.data;
+    Axios.post(publicationsUrl, publicationsReq).then((response) => {
+      const { data: currentProductions } = this.state.suggestion;
+      const { results, total } = response.data;
 
-        if (!total) {
-          this.setSuggestion({ productionErrorTextID: 'nothing_found' });
-        } else {
-          const currentTotalResults = loadMore ? (currentProductions.length + results.length) : results.length;
-          const nextLoadMore = total <= currentTotalResults ? 0 : 1;
+      if (!total || !query) {
+        this.setSuggestion({ productionErrorTextID: 'nothing_found' });
+      } else {
+        const currentTotalResults = loadMore ? (currentProductions.length + results.length) : results.length;
+        const nextLoadMore = total <= currentTotalResults ? 0 : 1;
 
-          this.setSuggestion({ loadMoreSuggestionData: !!nextLoadMore }, false);
+        this.setSuggestion({ loadMoreSuggestionData: !!nextLoadMore }, false);
 
-          const sortedResults = results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
-          const productions = loadMore ? [...currentProductions, ...sortedResults] : sortedResults;
+        const sortedResults = results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
+        const productions = loadMore ? [...currentProductions, ...sortedResults] : sortedResults;
 
-          this.setSuggestion({ data: productions, loading: false });
-        }
-      }).catch(() => {
-        this.setSuggestion({ productionErrorTextID: 'something_wrong' });
-      });
-    }
+        this.setSuggestion({ data: productions, loading: false });
+      }
+    }).catch(() => {
+      this.setSuggestion({ productionErrorTextID: 'something_wrong' });
+    });
   };
 
   render() {
+    const HTMLContent = {};
     const messages = {
       fr: messagesFr,
       en: messagesEn,
     };
-    if (this.state.total === 0 || this.state.error || this.state.isLoading) {
-      return (
-        <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
-          <Fragment>
-            <section className="container-fluid py-4">
-              <div className="container">
-                <SectionTitleViewMode
-                  icon="fa-folder-open"
-                  objectType="publications"
-                  language={this.props.language}
-                  id={this.props.match.params.id}
-                  total={this.state.total}
-                  title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
-                  lexicon="Productions"
-                  viewModeClickHandler={this.viewModeClickHandler}
-                  modalHandler={this.modalHandler}
-                  viewMode={this.state.viewMode}
-                />
-                <FormattedHTMLMessage id="ProductionPerimeter" />
-                {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
-                {(this.state.error) ? <Errors error={500} /> : null}
-                {
+
+    HTMLContent.noData = (
+      <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
+        <Fragment>
+          <section className="container-fluid py-4">
+            <div className="container">
+              <SectionTitleViewMode
+                icon="fa-folder-open"
+                objectType="publications"
+                language={this.props.language}
+                id={this.props.match.params.id}
+                total={this.state.total}
+                title={(this.props.language === 'fr') ? 'Productions (depuis 2013)' : 'Productions (since 2013)'}
+                subTitleLink={<FormattedHTMLMessage id="SuggestPublication" />}
+                lexicon="Productions"
+                viewModeClickHandler={this.viewModeClickHandler}
+                modalHandler={this.modalHandler}
+                viewMode={this.state.viewMode}
+              />
+              <FormattedHTMLMessage id="ProductionPerimeter" />
+              {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
+              {(this.state.error) ? <Errors error={500} /> : null}
+              {
                   (this.state.isLoading)
                     ? (
                       <React.Fragment>
@@ -427,12 +431,12 @@ class Productions extends Component {
                     )
                     : null
                 }
-              </div>
-            </section>
-          </Fragment>
-        </IntlProvider>
-      );
-    }
+            </div>
+          </section>
+        </Fragment>
+      </IntlProvider>
+    );
+
 
     // set tooltip for slider
     const sliderDataWithTooltip = [];
@@ -442,7 +446,7 @@ class Productions extends Component {
       sliderDataWithTooltip.push(newEntry);
     });
 
-    return (
+    HTMLContent.data = (
       <IntlProvider locale={this.props.language} messages={messages[this.props.language]}>
         <Fragment>
           <section className="container-fluid py-4">
@@ -497,40 +501,45 @@ class Productions extends Component {
               }
             </div>
           </section>
-          <UIModal
-            titleID="suggested_production_title"
-            modalHandler={this.modalHandler}
-            isOpened={this.state.suggestion.isModalOpened}
-          >
-            {this.state.suggestion.productionsSuccessTextID ? (
-              <SuggestionConfirmForm
-                validate={this.validateEmail}
-                language={this.props.language}
-                emailSuccessTextID={this.state.suggestion.emailSuccessTextID}
-                productionsSuccessTextID={this.state.suggestion.productionsSuccessTextID}
-              />
-            )
-              : (
-                <SuggestionForm
-                  validate={this.validateSuggestionData}
-                  isLoading={this.state.suggestion.isLoadingSuggestion}
-                  language={this.props.language}
-                  suggestionData={this.state.suggestion.data}
-                  productionErrorTextID={this.state.suggestion.productionErrorTextID}
-                  loadMoreAction={this.state.suggestion.loadMoreSuggestionData ? this.fetchSuggestionData : null}
-                >
-                  <SuggestionSearchForm
-                    querySuggestionData={this.state.suggestion.querySuggestionData}
-                    language={this.props.language}
-                    updateQuery={(querySuggestionData) => { this.setSuggestion({ querySuggestionData }, false); }}
-                    fetchData={this.fetchSuggestionData}
-                  />
-                </SuggestionForm>
-              )
-            }
-          </UIModal>
         </Fragment>
       </IntlProvider>
+    );
+
+    return (
+      <>
+        {this.state.total === 0 || this.state.error || this.state.isLoading ? HTMLContent.noData : HTMLContent.data}
+        <UIModal
+          titleID="suggested_production_title"
+          modalHandler={this.modalHandler}
+          isOpened={this.state.suggestion.isModalOpened}
+        >
+          {this.state.suggestion.productionsSuccessTextID ? (
+            <SuggestionConfirmForm
+              validate={this.validateEmail}
+              language={this.props.language}
+              emailSuccessTextID={this.state.suggestion.emailSuccessTextID}
+              productionsSuccessTextID={this.state.suggestion.productionsSuccessTextID}
+            />
+          )
+            : (
+              <SuggestionForm
+                validate={this.validateSuggestionData}
+                isLoading={this.state.suggestion.isLoadingSuggestion}
+                language={this.props.language}
+                suggestionData={this.state.suggestion.data}
+                productionErrorTextID={this.state.suggestion.productionErrorTextID}
+                loadMoreAction={this.state.suggestion.loadMoreSuggestionData ? this.fetchSuggestionData : null}
+              >
+                <SuggestionSearchForm
+                  querySuggestionData={this.state.suggestion.querySuggestionData}
+                  language={this.props.language}
+                  updateQuery={(querySuggestionData) => { this.setSuggestion({ querySuggestionData }, false); }}
+                  fetchData={this.fetchSuggestionData}
+                />
+              </SuggestionForm>
+            )}
+        </UIModal>
+      </>
     );
   }
 }
