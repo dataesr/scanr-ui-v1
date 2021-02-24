@@ -24,7 +24,7 @@ import classes from '../Publication.scss';
 */
 
 const Informations = (props) => {
-  const id = props.data.id;
+  const { id } = props.data;
   let publicationDate = moment(props.data.publicationDate).format('L');
   if (publicationDate.slice(0, 5) === '01/01') {
     publicationDate = publicationDate.slice(6, 10);
@@ -59,9 +59,9 @@ const Informations = (props) => {
                 <SimpleCardWithButton
                   language={props.language}
                   logo="fas fa-fingerprint"
-                  title={getExternalInfos(props.data.id).name}
+                  title={getExternalInfos(id).name}
                   label={id}
-                  url={getExternalInfos(props.data.id).link}
+                  url={getExternalInfos(id).link}
                   link="link_publication"
                   tooltip=""
                 />
