@@ -18,7 +18,7 @@ const message = {
 const SuggestionForm = (props) => {
   const [suggestionDataActive, setSuggestionDataActive] = useState([]);
   const {
-    isLoading, language, suggestionData, validate, children, productionErrorTextID, loadMoreAction,
+    isLoading, language, suggestionData, validate, children, productionErrorTextID, loadMoreAction, fullName,
   } = props;
 
   const checkItem = (id) => {
@@ -36,7 +36,7 @@ const SuggestionForm = (props) => {
           <div className="col-12 col-lg-11 d-flex content-header pt-3">
             <div className="col-9 p-0">
               <p>
-                <FormattedHTMLMessage id="suggestion_intro" />
+                <FormattedHTMLMessage values={{ fullName }} id="suggestion_intro" />
               </p>
             </div>
             <div className="col-3 p-0 text-right">
@@ -85,6 +85,7 @@ export default SuggestionForm;
 SuggestionForm.propTypes = {
   children: PropTypes.any.isRequired,
   language: PropTypes.string.isRequired,
+  fullName: PropTypes.string.isRequired,
   suggestionData: PropTypes.array.isRequired,
   productionErrorTextID: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
