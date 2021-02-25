@@ -32,7 +32,7 @@ const SectionTitle = props => (
         </span>
         {props.subTitleLink ? (
           <React.Fragment>
-            <div className="ml-xl-3 mb-sm-3 mb-xl-0 d-flex align-items-center">
+            <div className="mb-sm-3 mb-xl-0 d-flex align-items-center">
               <div className="d-flex">
                 <LexiconModal language={props.language} target={props.lexicon}>
                   <i className={`fa fa-info-circle ${classes.pointer} ${classes.Title} ${classes.fs_large}`} />
