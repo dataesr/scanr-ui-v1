@@ -515,6 +515,7 @@ class Productions extends Component {
         >
           {this.state.suggestion.productionsSuccessTextID ? (
             <SuggestionConfirmForm
+              fullName={this.props.fullName}
               validate={this.validateEmail}
               language={this.props.language}
               emailSuccessTextID={this.state.suggestion.emailSuccessTextID}
@@ -529,6 +530,7 @@ class Productions extends Component {
                 suggestionData={this.state.suggestion.data}
                 productionErrorTextID={this.state.suggestion.productionErrorTextID}
                 loadMoreAction={this.state.suggestion.loadMoreSuggestionData ? this.fetchSuggestionData : null}
+                fullName={this.props.fullName}
               >
                 <SuggestionSearchForm
                   querySuggestionData={this.state.suggestion.querySuggestionData}
