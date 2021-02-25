@@ -166,7 +166,6 @@ const ProductionList = (props) => {
       setLoadMore(true);
     }
   }, [entry]);
-
   return (
     <>
       <div className="row justify-content-lg-center">
@@ -189,7 +188,7 @@ const ProductionList = (props) => {
           ) : null}
         </div>
         {
-          Object.keys(selectedProd).length === 0 && (
+          Object.keys(selectedProd).length > 0 && (
           <div className="col-lg-7">
             <ProductionDetail language={props.language} data={selectedProd} />
           </div>
