@@ -10,6 +10,7 @@ import SourceCard from '../SubComponents/SourceCard';
 import LogoCard from '../../../../Shared/Ui/LogoCard/LogoCard';
 
 import getSelectKey from '../../../../../Utils/getSelectKey';
+import getExternalInfos from '../../../../../Utils/helpers';
 
 import classes from '../Publication.scss';
 
@@ -21,25 +22,9 @@ import classes from '../Publication.scss';
  * Accessible : .
  * Tests unitaires : .
 */
+
 const Informations = (props) => {
-  let id = props.data.id;
-  let idName = 'Identifiant';
-  let externalLink = '#';
-  if (props.data.id.substring(0, 3) === 'doi') {
-    idName = 'DOI';
-    id = props.data.id.substring(3);
-    externalLink = 'http://doi.org/'.concat({ id }.id);
-  } else if (props.data.id.substring(0, 5) === 'sudoc') {
-    idName = 'Sudoc';
-    id = props.data.id.substring(5);
-    externalLink = 'http://www.sudoc.fr/'.concat({ id }.id);
-  } else if (props.data.id.substring(0, 6) === 'dumas-') {
-    idName = 'HAL';
-    externalLink = 'https://dumas.ccsd.cnrs.fr/'.concat({ id }.id);
-  } else {
-    idName = 'HAL';
-    externalLink = 'https://hal.archives-ouvertes.fr/'.concat({ id }.id);
-  }
+  const { id } = props.data;
   let publicationDate = moment(props.data.publicationDate).format('L');
   if (publicationDate.slice(0, 5) === '01/01') {
     publicationDate = publicationDate.slice(6, 10);
@@ -74,9 +59,9 @@ const Informations = (props) => {
                 <SimpleCardWithButton
                   language={props.language}
                   logo="fas fa-fingerprint"
-                  title={idName}
+                  title={getExternalInfos(id).name}
                   label={id}
-                  url={externalLink}
+                  url={getExternalInfos(id).link}
                   link="link_publication"
                   tooltip=""
                 />
