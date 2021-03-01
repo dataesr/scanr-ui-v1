@@ -295,7 +295,7 @@ class Productions extends Component {
       id: this.props.match.params.id,
       email: '',
       name: this.props.fullName,
-      productions,
+      productions: productions.map(production => ({ id: production })),
     };
 
     Axios.post(contributionsUrl, contributionReq).then((response) => {
