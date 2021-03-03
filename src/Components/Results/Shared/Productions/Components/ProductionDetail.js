@@ -124,5 +124,5 @@ export default ProductionDetail;
 
 ProductionDetail.propTypes = {
   language: PropTypes.string.isRequired,
-  data: PropTypes.object,
+  data: PropTypes.object.isRequired,
 };
