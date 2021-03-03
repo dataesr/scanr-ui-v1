@@ -10,6 +10,12 @@ const ProductionItem = ({ props }) => {
   const {
     handleChange, checkBoxItems, label: titleLabel, item, itemsActive, language,
   } = props;
+  const scanrLink = `publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`;
+  const linkByType = {
+    patent: () => scanrLink,
+    thesis: () => getExternalInfos(item.value.id, 'thesis').link,
+    publication: props.skinnyTheme ? () => getExternalInfos(item.value.id, 'publication').link : () => scanrLink,
+  };
 
   const titleSource = item.value.source ? item.value.source.title : item.value.title;
   if (checkBoxItems) {
@@ -28,7 +34,7 @@ const ProductionItem = ({ props }) => {
                     className={`${classes.Link} ${classes.pointer}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={`${props.skinnyTheme ? getExternalInfos(item.value.id).link : `publication/${item.value.id.replace(new RegExp('/', 'g'), '%25252f')}`}`}
+                    href={linkByType[item.value.productionType]()}
                   >
                     {titleLabel}
                   </a>
