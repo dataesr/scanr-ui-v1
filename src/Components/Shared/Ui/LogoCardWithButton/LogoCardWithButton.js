@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import ReactImageFallback from 'react-image-fallback';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
+import { IntlProvider } from 'react-intl';
 import { GlobalContext } from '../../../../GlobalContext';
 
 import ButtonToPage from '../Buttons/ButtonToPage2';
@@ -36,7 +36,6 @@ const LogoCardWithButton = (props) => {
   if (props.cssClass) {
     cssClass = classes[`${props.cssClass}`];
   }
-  const defaultText = (props.link) ? (props.link) : 'Website';
 
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
@@ -59,10 +58,7 @@ const LogoCardWithButton = (props) => {
                     url={props.targetUrl}
                     target="_blank"
                   >
-                    <FormattedHTMLMessage
-                      id={props.link}
-                      defaultMessage={defaultText}
-                    />
+                    {props.link || 'Website'}
                   </ButtonToPage>
                 </div>
               ) : null
