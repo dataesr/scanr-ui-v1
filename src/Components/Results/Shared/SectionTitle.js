@@ -108,9 +108,7 @@ const SectionTitle = (props) => {
                   </p>
                 </div>
               </div>
-              {
-               renderContributionLink()
-              }
+              {renderContributionLink()}
             </div>
           ) : null }
       </div>
