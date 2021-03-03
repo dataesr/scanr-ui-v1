@@ -86,13 +86,13 @@
     .Title {
       position: relative;
       .Link {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         color: $scanrdeepblueColor;
         font-size: 1rem;
       }
-    }
-    .TitleYear {
-      font-size: 1rem;
-      padding: 4px 12px;
     }
     .Item {
       border-bottom: 1px solid $scanrmiddlegreyColor;

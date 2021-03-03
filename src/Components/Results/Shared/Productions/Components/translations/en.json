@@ -1,11 +1,21 @@
 {
-  "inventor": "{count, plural, =0 {# inventor} one {# inventor} other {# inventors}}",
-  "deposant": "{count, plural, =0 {# applicant} one {# applicant} other {# applicants}}",
+  "confirm_form_intro": "To be kept informed of the processing of your proposals, indicate your e-mail",
+  "contribution_received": "Thank you ! We have received the suggestions list for {fullName}. ScanR team will study it as soon as possible",
   "dataCSVColumns.col1": "ID",
   "dataCSVColumns.col2": "Label",
   "dataCSVColumns.col3": "Type",
-  "more_authors" : "{count, plural, =1 {and 1 more author} other {and {count} more authors}}",
-  "intro_suggested_production": " Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium, amet beatae doloribus ea error esse est excepturi explicabo itaque minima natus nisi non nostrum optio quibusdam rerum vero voluptates.",
+  "deposant": "{count, plural, =0 {# applicant} one {# applicant} other {# applicants}}",
+  "email_label": "Email",
+  "email_received": "Thanks for your contributions",
+  "inventor": "{count, plural, =0 {# inventor} one {# inventor} other {# inventors}}",
+  "message_label": "Message",
+  "more_authors": "{count, plural, =1 {and 1 more author} other {and {count} more authors}}",
+  "nothing_found": "We haven't found any production",
+  "search_label": "Search by author",
+  "send": "Send",
+  "something_wrong": "An error has occurred. Please try again or contact us at scanr@recherche.gouv.fr",
+  "suggestion_intro": "To associate more productions to {fullName} after 2013, ScanR propose:",
   "validate": "Validate",
-  "voir_production" : "See the production"
+  "voir_production": "See the production",
+  "wrong_request": "Wrong request"
 }
