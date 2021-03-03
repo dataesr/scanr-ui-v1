@@ -61,7 +61,7 @@ const SectionTitle = (props) => {
           )
             : null}
           <div className="mb-5">{props.subTitle}</div>
-          {renderContributionLink()}
+          {(!props.total || props.total === 0) && renderContributionLink()}
         </div>
         {props.total > 0
           && (props.viewModeClickHandler && props.viewMode)
