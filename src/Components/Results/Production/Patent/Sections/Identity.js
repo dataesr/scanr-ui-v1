@@ -28,16 +28,6 @@ const PatentIdentity = (props) => {
       { tag: `${el.label.default} (${el.code})`, href: `/recherche/publications?filters=%7B"domains.label.default"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"any"%2C"values"%3A%5B"${el.label.default}"%5D%7D%2C"productionType"%3A%7B"type"%3A"MultiValueSearchFilter"%2C"op"%3A"all"%2C"values"%3A%5B"patent"%5D%7D%7D` }
     ));
   }
-  let isInternational = null;
-  let isOEB = null;
-  let grantedInfo = [];
-  if (props.data.certifications) {
-    isInternational = (props.data.certifications.filter(cert => cert.label === 'international'));
-    isOEB = (props.data.certifications.filter(cert => cert.label === 'oeb'));
-    grantedInfo = (props.data.certifications.filter(cert => cert.label === 'granted'))
-      ? props.data.certifications.filter(cert => cert.label === 'granted')
-      : [];
-  }
 
   return (
     <div className="row">
@@ -74,21 +64,19 @@ const PatentIdentity = (props) => {
           </div>
         </div>
         {
-          (grantedInfo && grantedInfo.length)
-            ? (
-              <div className="row">
-                <div className={`col-12 ${classes.CardContainer}`}>
-                  <SimpleCard
-                    language={props.language}
-                    logo="fas fa-calendar-check"
-                    title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
-                    label={<FormattedHTMLMessage id="Patent.Identity.depots.grantedDate" values={{ date: moment(grantedInfo[0].date).format('L') }} />}
-                    tooltip=""
-                  />
-                </div>
+          (props.data.grantedDate) ? (
+            <div className="row">
+              <div className={`col-12 ${classes.CardContainer}`}>
+                <SimpleCard
+                  language={props.language}
+                  logo="fas fa-calendar-check"
+                  title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
+                  label={<FormattedHTMLMessage id="Patent.Identity.depots.grantedDate" values={{ date: moment(props.data.grantedDate).format('L') }} />}
+                  tooltip=""
+                />
               </div>
-            )
-            : null
+            </div>
+          ) : null
         }
         <div className="row">
           <div className={`col-md-6 ${classes.CardContainer}`}>
@@ -106,7 +94,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-flag"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.oeb" />}
-              label={(isOEB && isOEB.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
+              label={(props.data.isOeb) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -115,7 +103,7 @@ const PatentIdentity = (props) => {
               language={props.language}
               logo="fas fa-flag"
               title={<FormattedHTMLMessage id="Patent.Identity.depots.international" />}
-              label={(isInternational && isInternational.length) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
+              label={(props.data.isInternational) ? (<i className={`fas fa-calendar-check fa-3x ${classes.Success}`} />) : (<i className={`fas fa-calendar-times fa-3x ${classes.Danger}`} />)}
               tooltip=""
             />
           </div>
@@ -160,20 +148,3 @@ PatentIdentity.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
 };
-
-
-// {
-//   (grantedInfo.length)
-//     ? (
-//       <div className={`col-md-6 ${classes.CardContainer}`}>
-//         <SimpleCard
-//           language={props.language}
-//           logo="fas fa-calendar-day"
-//           title={<FormattedHTMLMessage id="Patent.Identity.depots.granted" />}
-//           label={moment(grantedInfo[0].date).format('L')}
-//           tooltip=""
-//         />
-//       </div>
-//     )
-//     : null
-// }

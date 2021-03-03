@@ -23,6 +23,20 @@ const PublicationCard = (props) => {
     en: highlightsEn,
   };
 
+  const getLi = (iconClass, content) => {
+    if (content) {
+      return (
+        <li>
+          <i aria-hidden="true" className={`fas ${iconClass} ${classes.Icons}`} />
+          <p className="m-0 d-inline">
+            {content}
+          </p>
+        </li>
+      );
+    }
+    return null;
+  };
+
   // Auteurs
   const getAuthors = (data, maxAuthors) => {
     let authors = [];
@@ -30,20 +44,25 @@ const PublicationCard = (props) => {
       return { authors: null, others: null };
     }
     const diff = data.authors.length - maxAuthors;
-    let others = '';
+    let others = null;
     const personsFr = (data.productionType === 'publication') ? 'auteurs' : 'personnes';
     const personsEn = (data.productionType === 'publication') ? 'authors' : 'persons';
     const personFr = (data.productionType === 'publication') ? 'auteur' : 'personne';
     const personEn = (data.productionType === 'publication') ? 'author' : 'person';
     if (diff === 1) {
-      others = `${(props.language === 'fr') ? 'et ' : 'and '} 1 ${(props.language === 'fr') ? `${personFr}` : `${personEn}`}`;
+      others = `${(props.language === 'fr') ? ' et ' : ' and '} 1 ${(props.language === 'fr') ? `${personFr}` : `${personEn}`}`;
     } else if (diff > 1) {
-      others = `${(props.language === 'fr') ? 'et ' : 'and '} ${diff} ${(props.language === 'fr') ? `${personsFr}` : `${personsEn}`}`;
+      others = `${(props.language === 'fr') ? ' et ' : ' and '} ${diff} ${(props.language === 'fr') ? `${personsFr}` : `${personsEn}`}`;
     }
     if (data.productionType === 'publication') {
       authors = data.authors.map((author) => {
         if (author.person && author.person.fullName) {
-          return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
+          return (
+            <React.Fragment>
+              <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>
+              {others}
+            </React.Fragment>
+          );
         }
         return <span key={JSON.stringify(author)}>{author.fullName}</span>;
       });
@@ -69,8 +88,21 @@ const PublicationCard = (props) => {
       return { authors: null, others: null };
     }
     const printedAuthors = authors;
-    const printedOthers = (props.data.productionType !== 'thesis') ? others : null;
-    return { authors: printedAuthors, others: printedOthers };
+    // const printedOthers = (props.data.productionType !== 'thesis') ? others : null;
+
+    if (authors.length === 0) {
+      return messages[props.language]['resultCard.production.noAuthors'];
+    }
+
+    // if (others) {
+    //   const author = printedAuthors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr]);
+    //   console.log(author);
+
+    //   return `${author}`;
+    // }
+    return printedAuthors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr]);
+
+    // return { authors: printedAuthors, others: printedOthers };
   };
 
   const getInventors = (data) => {
@@ -110,69 +142,27 @@ const PublicationCard = (props) => {
         deposants += 1;
       }
     });
-    // const depots = (data.links && data.links.length) ? `${data.links.length} dépôts: ` : '';
+
+    if (inventeurs === 0 && deposants === 0) {
+      return null;
+    }
+
     return (
       <React.Fragment>
-        <FormattedHTMLMessage id="inventor" values={{ count: inventeurs }} />
-        ,&nbsp;
-        <FormattedHTMLMessage id="deposant" values={{ count: deposants }} />
+        {(inventeurs > 0) ? <FormattedHTMLMessage id="inventor" values={{ count: inventeurs }} /> : ''}
+        {(inventeurs > 0 && deposants > 0) ? ', ' : null}
+        {(deposants > 0) ? <FormattedHTMLMessage id="deposant" values={{ count: deposants }} /> : ''}
       </React.Fragment>
     );
   };
 
-  const productionType = (props.data.productionType)
-    ? (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-clipboard" />
-        </div>
-        <p className="m-0">
-          {messages[props.language][`resultCard.production.${props.data.productionType}`]}
-        </p>
-      </li>
-    )
-    : null;
-
   const maxAuthors = 1;
   let coAuthors = null;
   if (props.data.productionType === 'publication' || props.data.productionType === 'thesis') {
-    const auth = getAuthors(props.data, maxAuthors);
-    coAuthors = (auth.authors && auth.authors.length > 0)
-      ? (
-        <li className="d-flex">
-          <div className={classes.Icons}>
-            <i aria-hidden="true" className="fas fa-users" />
-          </div>
-          <p className="m-0">
-            {auth.authors.slice(0, maxAuthors).reduce((prev, curr) => [prev, ', ', curr])}
-            {' '}
-            {auth.others}
-          </p>
-        </li>
-      )
-      : (
-        <li className="d-flex">
-          <div className={classes.Icons}>
-            <i aria-hidden="true" className="fas fa-users" />
-          </div>
-          <p className={`m-0 ${classes.UnknownData}`}>
-            {messages[props.language]['resultCard.production.noAuthors']}
-          </p>
-        </li>
-      );
+    coAuthors = getLi('fa-users', getAuthors(props.data, maxAuthors));
   } else {
-    coAuthors = (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-users" />
-        </div>
-        <p className="m-0">
-          {getInventors(props.data)}
-        </p>
-      </li>
-    );
+    coAuthors = getLi('fa-users', getInventors(props.data));
   }
-  // const inventors = getInventors(props.data);
 
   let publicationDateStr = '';
   if (props.data.publicationDate) {
@@ -182,52 +172,17 @@ const PublicationCard = (props) => {
     }
   }
 
-  let publicationDate = (props.data.publicationDate)
-    ? (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-calendar" />
-        </div>
-        <p className="m-0">
-          {publicationDateStr}
-        </p>
-      </li>
-    )
-    : (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-calendar" />
-        </div>
-        <p className={`m-0 ${classes.UnknownData}`}>
-          {messages[props.language]['resultCard.production.noDate']}
-        </p>
-      </li>
-    );
-
+  let publicationDate = null;
   if (props.data.productionType === 'patent') {
-    publicationDate = (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-calendar" />
-        </div>
-        <p className="m-0">
-          {moment(props.data.submissionDate).format('LL')}
-        </p>
-      </li>
-    );
+    publicationDate = getLi('fa-calendar', moment(props.data.submissionDate).format('LL'));
+  } else if (props.data.publicationDate) {
+    publicationDate = getLi('fa-calendar', publicationDateStr);
+  } else {
+    publicationDate = getLi('fa-calendar', messages[props.language]['resultCard.production.noDate']);
   }
 
   const journal = (props.data.source && props.data.source.title && !props.small)
-    ? (
-      <li className="d-flex">
-        <div className={classes.Icons}>
-          <i aria-hidden="true" className="fas fa-folder-open" />
-        </div>
-        <p className="m-0">
-          {props.data.source.title}
-        </p>
-      </li>
-    )
+    ? getLi('fa-folder-open', props.data.source.title)
     : null;
 
   // let previousHighlight = '';
@@ -284,7 +239,7 @@ const PublicationCard = (props) => {
             </a>
           </h3>
           <ul className="m-0 p-0">
-            {productionType}
+            {getLi('fa-clipboard', (props.data.productionType) ? messages[props.language][`resultCard.production.${props.data.productionType}`] : null)}
             {(props.small === 'noAuthors') ? null : coAuthors}
             {publicationDate}
             {journal}
