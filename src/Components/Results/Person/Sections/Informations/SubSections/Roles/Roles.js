@@ -26,14 +26,14 @@ const Roles = (props) => {
               <FormattedHTMLMessage id="Person.Informations.Roles.title" />
               &nbsp;
               <LexiconModal language={props.language} target="PersonRole">
-                <i className="fa fa-info-circle" />
+                <i className={`fa fa-info-circle ${classes.fs_small}`} />
               </LexiconModal>
             </div>
             <div className="container-fluid">
               <div className="row">
                 {
                   props.data.roles.map(role => (
-                    <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`} key={`${role.role}`}>
+                    <div className={`col-md-6 col-sm-12 ${classes.CardContainer}`} key={`${role.role}-${role.description}`}>
                       <RoleCard
                         logo="fas fa-user"
                         data={role}

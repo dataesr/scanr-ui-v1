@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import classes from './ProductionDetail.scss';
 
-const ProductionAuthors = (props) => {
+const ProductionInfos = (props) => {
   const { source, id, publicationDate } = props;
 
   let date = '';
@@ -12,7 +12,7 @@ const ProductionAuthors = (props) => {
   }
   return (
     <div>
-      <p className={classes.Grey}>
+      <p className={`${props.skinnyTheme ? 'mb-1' : ''} ${classes.Grey}`}>
         {
           (source && source.title)
             ? <a href={`recherche/publications?filters={"source.title": {"type": "MultiValueSearchFilter", "op": "any", "values": ["${source.title}"]}}`} className={classes.Italic}>{source.title}</a>
@@ -26,10 +26,15 @@ const ProductionAuthors = (props) => {
   );
 };
 
-export default ProductionAuthors;
+export default ProductionInfos;
 
-ProductionAuthors.propTypes = {
+ProductionInfos.defaultProps = {
+  skinnyTheme: false,
+};
+
+ProductionInfos.propTypes = {
   id: PropTypes.string,
+  skinnyTheme: PropTypes.bool,
   publicationDate: PropTypes.number.isRequired,
   source: PropTypes.object.isRequired,
 };
