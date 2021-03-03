@@ -19,22 +19,18 @@ import countries from '../countries.json';
  * Tests unitaires : .
 */
 const PatentParticipants = (props) => {
-  // let inventors = props.data.filter(auth => auth.role.indexOf('__inventeur') >= 0).map((auth) => {
-  //   const [fullName, country] = auth.fullName.split('__');
-  //   return { fullName, country: countries[props.language][country] };
-  // });
   let inventors = props.data.filter((auth) => {
     if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(role => role.role === 'inv')) {
       return true;
     }
     return false;
-  }).map(inv => ({ fullName: inv.fullName, country: countries[props.language][inv.country] }));
+  }).map(inv => ({
+    fullName: inv.fullName,
+    country: countries[props.language][inv.country],
+  }));
+
   inventors = [...new Set(inventors.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
 
-  // let depos = props.data.filter(deposant => deposant.role.indexOf('__deposant') >= 0).map((deposant) => {
-  //   const [label, country] = deposant.fullName.split('__');
-  //   return { label, country: countries[props.language][country], id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure };
-  // });
   let depos = props.data.filter((auth) => {
     if (auth.country !== 'None' && auth.rolePatent && auth.rolePatent.find(role => role.role === 'dep')) {
       return true;
@@ -42,12 +38,18 @@ const PatentParticipants = (props) => {
     return false;
   }).map(deposant => ({
     label: deposant.fullName,
+    fullName: deposant.fullName,
     country: countries[props.language][deposant.country],
     id: (deposant.affiliations && deposant.affiliations.length) && deposant.affiliations[0].structure,
+    typeParticipant: deposant.typeParticipant,
   }));
+
   depos = [...new Set(depos.map(i => JSON.stringify(i)))].map(i => JSON.parse(i));
+
   const deposants = [];
+
   const ids = [];
+
   depos.forEach((deposant) => {
     const newdep = { ...deposant };
     const structure = props.affiliations.find(aff => aff.id === deposant.id) || {};
@@ -62,6 +64,7 @@ const PatentParticipants = (props) => {
       deposants.push(newdep);
     }
   });
+
   const nbInventorsToShow = 4;
 
   return (
@@ -72,7 +75,6 @@ const PatentParticipants = (props) => {
             <CardsTitle title={<FormattedHTMLMessage id="Patents.Participants.inventor" />} />
           </div>
         </div>
-
         <div className="row">
           {
             (inventors.length > 1)
@@ -147,6 +149,17 @@ const PatentParticipants = (props) => {
           {
             deposants.map((deposant, index) => {
               if (index < nbInventorsToShow) {
+                if (deposant.typeParticipant === 'pp') {
+                  return (
+                    <div className={`col-md-6 ${classes.CardContainer}`}>
+                      <PersonCard
+                        data={deposant}
+                        showTitle={false}
+                        className={classes.BGLightGrey}
+                      />
+                    </div>
+                  );
+                }
                 return (
                   <div className={`col-md-6 ${classes.CardContainer}`}>
                     <EntityCard
