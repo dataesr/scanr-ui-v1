@@ -75,6 +75,7 @@ const Patent = ({ id, data, language }) => {
               id={id}
               lexicon="PatentDepot"
               title={messages[language]['Patent.depots']}
+              total={data.patents.length}
               viewModeClickHandler={view => setDepotsViewMode(view)}
               viewMode={depotsViewMode}
             />
