@@ -76,7 +76,7 @@ const PatentsApplications = (props) => {
                       <LogoCardWithButton
                         url="/img/logo-oeb.svg"
                         targetUrl={selected.links[0].url}
-                        link="link_patent"
+                        link={<FormattedHTMLMessage id="link_patent" />}
                         cssClass="Height100"
                       />
                     </div>
