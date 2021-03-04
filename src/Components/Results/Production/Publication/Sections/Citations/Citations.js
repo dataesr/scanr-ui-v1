@@ -165,9 +165,10 @@ UnpaywallList.defaultProps = {
   maxItems: 5,
 };
 
-export default function Citations({ id: inputId, language: lang, direction }) {
+export default function Citations({ id: inputID, language: lang, direction }) {
+  if (inputID.slice(0, 3) !== 'doi') return null;
   const citDir = (direction === 'references') ? 'cited' : 'citing';
-  const id = inputId.replace(new RegExp('%252f', 'g'), '/').slice(3);
+  const id = inputID.replace(new RegExp('%252f', 'g'), '/').slice(3);
   const { data, isLoading, isError } = useOpenCitations(direction, id);
   if (isLoading) return <SectionLoader />;
   if (isError) return <Errors error={500} />;
