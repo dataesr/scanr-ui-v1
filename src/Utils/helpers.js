@@ -1,4 +1,4 @@
-function getExternalInfos(id: string, type: string) {
+function getExternalInfos(id, type) {
   const result = { name: 'Identifiant', link: '#' };
   let substring = id;
   if (type === 'publication') {
