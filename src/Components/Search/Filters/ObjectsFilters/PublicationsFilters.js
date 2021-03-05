@@ -14,16 +14,7 @@ const PublicationsFilters = (props) => {
   const generalFacets = props.generalFacets || [];
   const typeActiveFilters = props.filters.productionType || {};
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
-  // const journalActiveFilters = props.filters['source.title'] || {};
   const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
-  // const certificationsActiveFilters = props.filters['certifications.label'] || {};
-  // const certif = facets.find(item => item.id === 'certifications.label')
-  //   ? (facets.find(item => item.id === 'certifications.label').entries || [])
-  //   : [];
-  // const certificationsFacets = { entries: certif.filter(c => c.value !== 'granted') };
-  // const grantedFacets = { entries: certif.filter(c => c.value === 'granted') };
-  // const grantedActiveFilters = props.filters['certifications.label'] || {};
-
   const isOebActiveFilters = props.filters.isOeb || {};
   const isOebFacets = facets.find(item => item.id === 'isOeb') || { entries: [] };
   const isInternationalActiveFilters = props.filters.isInternational || {};
