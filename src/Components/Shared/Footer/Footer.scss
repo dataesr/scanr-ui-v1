@@ -62,12 +62,13 @@ $linkColorHover: rgb(255, 255, 255);
 
 .Footer {
   background-color: $bgFooter;
-  // min-height: $footerHeight; deleted by fred TODO check
+  height: 150px;
   padding-top: 32px;
   color: #ddd;
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
+  width: 100vw;
 
   LI {
     list-style: none;

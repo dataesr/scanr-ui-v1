@@ -40,7 +40,7 @@ const FocusList = (props) => {
     focusList = data.data;
   }
   return (
-    <React.Fragment>
+    <div style={{ minHeight: 'calc(100% - 150px)' }}>
       <ScanRMeta
         title="Focus"
         href2="/focus"
@@ -81,7 +81,7 @@ const FocusList = (props) => {
         url="https://data.esr.gouv.fr/"
         target="_blank"
       />
-    </React.Fragment>
+    </div>
   );
 };
 
