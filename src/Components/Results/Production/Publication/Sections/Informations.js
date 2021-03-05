@@ -59,9 +59,9 @@ const Informations = (props) => {
                 <SimpleCardWithButton
                   language={props.language}
                   logo="fas fa-fingerprint"
-                  title={getExternalInfos(id).name}
+                  title={getExternalInfos(id, 'publication').name}
                   label={id}
-                  url={getExternalInfos(id).link}
+                  url={getExternalInfos(id, 'publication').link}
                   link="link_publication"
                   tooltip=""
                 />
