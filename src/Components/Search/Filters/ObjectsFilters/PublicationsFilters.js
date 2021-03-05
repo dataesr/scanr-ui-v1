@@ -14,15 +14,11 @@ const PublicationsFilters = (props) => {
   const generalFacets = props.generalFacets || [];
   const typeActiveFilters = props.filters.productionType || {};
   const typeFacets = generalFacets.find(item => item.id === 'productionTypes') || { entries: [] };
-  // const journalActiveFilters = props.filters['source.title'] || {};
   const journalFacets = facets.find(item => item.id === 'journal') || { entries: [] };
-  const certificationsActiveFilters = props.filters['certifications.label'] || {};
-  const certif = facets.find(item => item.id === 'certifications.label')
-    ? (facets.find(item => item.id === 'certifications.label').entries || [])
-    : [];
-  const certificationsFacets = { entries: certif.filter(c => c.value !== 'granted') };
-  const grantedFacets = { entries: certif.filter(c => c.value === 'granted') };
-  const grantedActiveFilters = props.filters['certifications.label'] || {};
+  const isOebActiveFilters = props.filters.isOeb || {};
+  const isOebFacets = facets.find(item => item.id === 'isOeb') || { entries: [] };
+  const isInternationalActiveFilters = props.filters.isInternational || {};
+  const isInternationalFacets = facets.find(item => item.id === 'isInternational') || { entries: [] };
   const publiTypeFacets = facets.find(item => item.id === 'types') || { entries: [] };
   const patentDomainsFacets = facets.find(item => item.id === 'domains') || { entries: [] };
   const publiTypeActiveFilters = props.filters.type || {};
@@ -36,6 +32,14 @@ const PublicationsFilters = (props) => {
   const isOaLabel = {
     false: <FormattedHTMLMessage id="Search.Filters.openAccess.close" />,
     true: <FormattedHTMLMessage id="Search.Filters.openAccess.open" />,
+  };
+  const isOebLabel = {
+    false: <FormattedHTMLMessage id="Search.Filters.oeb.false" />,
+    true: <FormattedHTMLMessage id="Search.Filters.oeb.true" />,
+  };
+  const isInternationalLabel = {
+    false: <FormattedHTMLMessage id="Search.Filters.international.false" />,
+    true: <FormattedHTMLMessage id="Search.Filters.international.true" />,
   };
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
@@ -98,16 +102,16 @@ const PublicationsFilters = (props) => {
           props.filters.productionType && (props.filters.productionType.values.includes('patent'))
             ? (
               <React.Fragment>
-                <CheckBoxFilter
+                <SelectFilter
                   language={props.language}
-                  title=""
-                  facets={grantedFacets.entries}
-                  filters={grantedActiveFilters}
-                  facetID="certifications.label"
+                  title={<FormattedHTMLMessage id="Search.Filters.oeb" />}
+                  facets={isOebFacets.entries}
+                  filters={isOebActiveFilters}
+                  permanentList={isOebLabel}
+                  facetID="isOeb"
                   onSubmit={props.multiValueFilterHandler}
                   defaultActive
-                  retractable={false}
-                  nbItemsToShow={3}
+                  request={props.request}
                 />
                 <hr
                   style={{
@@ -116,16 +120,16 @@ const PublicationsFilters = (props) => {
                     backgroundColor: styles.productionColor,
                   }}
                 />
-                <CheckBoxFilter
+                <SelectFilter
                   language={props.language}
-                  title={<FormattedHTMLMessage id="Search.Filters.patentType" />}
-                  facets={certificationsFacets.entries}
-                  filters={certificationsActiveFilters}
-                  facetID="certifications.label"
+                  title={<FormattedHTMLMessage id="Search.Filters.international" />}
+                  facets={isInternationalFacets.entries}
+                  filters={isInternationalActiveFilters}
+                  permanentList={isInternationalLabel}
+                  facetID="isInternational"
                   onSubmit={props.multiValueFilterHandler}
                   defaultActive
-                  retractable={false}
-                  nbItemsToShow={3}
+                  request={props.request}
                 />
               </React.Fragment>
             )
