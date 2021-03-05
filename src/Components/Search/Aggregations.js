@@ -148,24 +148,25 @@ export const PublicationsAggregations = {
     },
     size: 4,
   },
-  'certifications.label': {
-    filters: {
-      oeb: {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: ['oeb'],
-      },
-      international: {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: ['international'],
-      },
-      granted: {
-        type: 'MultiValueSearchFilter',
-        op: 'all',
-        values: ['granted'],
-      },
+  isOeb: {
+    field: 'isOeb',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
     },
+    size: 3,
+  },
+  isInternational: {
+    field: 'isInternational',
+    filters: {},
+    min_doc_count: 1,
+    order: {
+      direction: 'DESC',
+      type: 'COUNT',
+    },
+    size: 3,
   },
   keywordsEn: {
     field: 'keywords.en',
