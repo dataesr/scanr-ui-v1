@@ -103,7 +103,7 @@ const Focus = (props) => {
     const htmlList = buildFocusFromConfig(data.components, props.language);
     return (
       <IntlProvider locale={props.language} messages={msg[props.language]}>
-        <div className="d-flex flex-column h-100">
+        <>
           <ScanRMeta
             title={getSelectKey(data, 'title', props.language, 'fr')}
             href2="/focus"
@@ -177,7 +177,7 @@ const Focus = (props) => {
             target="_blank"
           />
           <LastFocus language={props.language} match={props.match} />
-        </div>
+        </>
       </IntlProvider>
     );
   }
