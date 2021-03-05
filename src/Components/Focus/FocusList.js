@@ -40,7 +40,7 @@ const FocusList = (props) => {
     focusList = data.data;
   }
   return (
-    <div style={{ minHeight: 'calc(100% - 150px)' }}>
+    <div className={classes.FocusList}>
       <ScanRMeta
         title="Focus"
         href2="/focus"
