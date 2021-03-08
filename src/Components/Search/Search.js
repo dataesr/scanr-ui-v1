@@ -470,7 +470,7 @@ class SearchPage extends Component {
           size: 100,
         },
       };
-      Axios.post(url, dateRequest, this.state.api)
+      Axios.post(url, dateRequest)
         .then((response) => {
           const sliderData = response.data.facets.find(facet => facet.id === 'years').entries;
           this.setState({ sliderData });
