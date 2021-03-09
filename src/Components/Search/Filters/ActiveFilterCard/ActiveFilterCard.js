@@ -23,13 +23,23 @@ const ActiveFilterCard = (props) => {
   const activeFilters = Object.keys(filteredFilters).map(key => (
     filters[key].values.map((value) => {
       count += 1;
+      let val = value;
+      if (key === 'isInternational') {
+        val = `is${value === 'true' ? '' : 'Not'}International`;
+      }
+      if (key === 'isOeb') {
+        val = `is${value === 'true' ? '' : 'Not'}Oeb`;
+      }
+      if (key === 'isOa') {
+        val = `is${value === 'true' ? '' : 'Not'}Oa`;
+      }
       return (
         <div
           key={key}
           className={`badge badge-pill p-2 mt-1 mr-2 d-flex ${classes.deleteFilter}`}
         >
           <div className={`justify-content-start ${classes.deleteFilterTxt}`}>
-            <DictionaryData id={value} />
+            <DictionaryData id={val} />
           </div>
           <i
             className={`fas fa-times ml-3 ${classes.closeIcon}`}

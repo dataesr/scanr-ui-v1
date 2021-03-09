@@ -41,6 +41,7 @@ const PublicationsFilters = (props) => {
     false: <FormattedHTMLMessage id="Search.Filters.international.false" />,
     true: <FormattedHTMLMessage id="Search.Filters.international.true" />,
   };
+
   return (
     <div className="d-flex flex-column mt-1 mb-3 pr-3">
       <div className="p-2">
