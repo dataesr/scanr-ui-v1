@@ -8,13 +8,13 @@ import transformRequest from '../../../Utils/transformRequest';
 import HighChartsDonut from '../GraphComponents/Graphs/HighChartsDonut';
 import GraphTitles from '../GraphComponents/Graphs/GraphTitles';
 
-export default class ProductionIsOa extends Component {
+export default class ProductionIsInternational extends Component {
   state = {
     data: { entries: [] },
     isLoading: true,
     aggregations: {
       facet: {
-        field: 'certifications.label',
+        field: 'isInternational',
         filters: {},
         min_doc_count: 1,
         order: {
@@ -37,19 +37,15 @@ export default class ProductionIsOa extends Component {
       .then((response) => {
         const newStateData = response.data.facets.find(item => item.id === 'facet') || { entries: [] };
         const data = { id: 'inter', entries: [] };
-        newStateData.entries.forEach((entry) => {
-          if (entry.value === 'international') {
-            data.entries.push({
-              color: 'rgb(32, 225, 104)',
-              value: (this.props.language === 'fr') ? 'Avec dépôt international' : 'with international application',
-              count: entry.count,
-            });
-            data.entries.push({
-              color: 'rgb(170, 170, 170)',
-              value: (this.props.language === 'fr') ? 'Sans dépôt international' : 'without international application',
-              count: response.data.total - entry.count,
-            });
-          }
+        data.entries.push({
+          color: 'rgb(32, 225, 104)',
+          value: (this.props.language === 'fr') ? 'Avec dépôt international' : 'with international application',
+          count: newStateData.entries.find(entry => entry.value === 'true').count,
+        });
+        data.entries.push({
+          color: 'rgb(170, 170, 170)',
+          value: (this.props.language === 'fr') ? 'Sans dépôt international' : 'without international application',
+          count: newStateData.entries.find(entry => entry.value === 'false').count,
         });
         this.setState({ data, isLoading: false });
       })
@@ -82,7 +78,7 @@ export default class ProductionIsOa extends Component {
   );
 }
 
-ProductionIsOa.propTypes = {
+ProductionIsInternational.propTypes = {
   language: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
