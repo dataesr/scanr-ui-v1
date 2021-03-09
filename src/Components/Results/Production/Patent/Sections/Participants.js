@@ -106,7 +106,7 @@ const PatentParticipants = (props) => {
             })
           }
           {
-            (inventors.length > nbInventorsToShow)
+            (inventors.length > nbInventorsToShow + 1)
               ? (
                 <div className={`col-md-6 ${classes.CardContainer}`}>
                   <CounterListCard
@@ -121,7 +121,15 @@ const PatentParticipants = (props) => {
                     isPerson
                   />
                 </div>
-              ) : null
+              ) : (
+                <div className={`col-md-6 ${classes.CardContainer}`}>
+                  <PersonCard
+                    data={inventors[inventors.length - 1]}
+                    showTitle={false}
+                    className={classes.BGLightGrey}
+                  />
+                </div>
+              )
           }
         </div>
 
