@@ -16,7 +16,7 @@ import classes from './SectionTitle.scss';
  */
 
 const SectionTitle = (props) => {
-  const renderContributionLink = () => ((props.id && props.objectType && !props.subTitle)
+  const renderContributionLink = () => ((props.id && props.objectType && !props.suggestion)
     ? (
       <span className="pl-2 ml-auto my-2">
         <Contribute
@@ -52,7 +52,7 @@ const SectionTitle = (props) => {
                 ) : null
               }
               {
-                (props.subTitleLink) ? (
+                (props.subTitleLink && props.suggestion) ? (
                   <div
                     role="button"
                     tabIndex={0}
@@ -139,4 +139,5 @@ SectionTitle.propTypes = {
   viewModeClickHandler: PropTypes.func,
   modalHandler: PropTypes.func,
   viewMode: PropTypes.string,
+  suggestion: PropTypes.bool,
 };
