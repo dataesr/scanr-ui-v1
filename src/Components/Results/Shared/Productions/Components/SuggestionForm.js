@@ -41,7 +41,8 @@ const SuggestionForm = (props) => {
             </div>
             <div className="col-3 p-0 text-right">
               <button
-                onClick={suggestionDataActive.length ? () => validate(suggestionDataActive) : null}
+                disabled={suggestionDataActive.length === 0}
+                onClick={() => validate(suggestionDataActive)}
                 type="submit"
                 className={`btn ${styles.btn_scanrBlue} ${!suggestionDataActive.length ? 'disabled' : ''}`}
               >
