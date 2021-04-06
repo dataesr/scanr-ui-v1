@@ -38,6 +38,7 @@ const CounterListCard = (props) => {
             language={props.language}
             data={item}
             small
+            isThesis={props.isThesis}
           />
         </li>
       );
@@ -103,6 +104,7 @@ CounterListCard.defaultProps = {
   isEntity: false,
   isPerson: false,
   isPublication: false,
+  isThesis: false,
 };
 
 CounterListCard.propTypes = {
@@ -116,4 +118,5 @@ CounterListCard.propTypes = {
   isEntity: PropTypes.bool,
   isPerson: PropTypes.bool,
   isPublication: PropTypes.bool,
+  isThesis: PropTypes.bool,
 };
