@@ -12,9 +12,11 @@ import localeFr from 'react-intl/locale-data/fr';
 import localeEn from 'react-intl/locale-data/en';
 import LoadingSpinner from './Components/Shared/LoadingSpinners/RouterSpinner';
 import { GlobalContext } from './GlobalContext';
+import { doNotDisplay } from './config/doNotConfig';
 
 import Footer from './Components/Shared/Footer/Footer';
 import Header from './Components/Shared/Header/Header';
+import PageChecker from './Components/Shared/PageChecker/PageChecker';
 
 /* Composants */
 const HomePage = lazy(() => import('./Components/Home/Home'));
@@ -74,9 +76,31 @@ class App extends Component {
                 <Route path="/recherche/:api" render={props => (<SearchPage {...props} language={lang} />)} />
                 <Redirect from="/structure/:id" to="/entite/:id" />
                 <Route path="/entite/:id" render={props => (<EntityPage {...props} language={lang} />)} />
-                <Route path="/publication/:id" render={props => (<ProductionPage {...props} />)} />
+                <Route
+                  path="/publication/:id"
+                  render={props => (
+                    <PageChecker
+                      type="publication"
+                      id={props.match.params.id}
+                      config={doNotDisplay}
+                    >
+                      <ProductionPage {...props} />
+                    </PageChecker>
+                  )}
+                />
                 <Route path="/project/:id" render={props => (<ProjectPage {...props} language={lang} />)} />
-                <Route path="/person/:id" render={props => (<PersonPage {...props} language={lang} />)} />
+                <Route
+                  path="/person/:id"
+                  render={props => (
+                    <PageChecker
+                      type="person"
+                      id={props.match.params.id}
+                      config={doNotDisplay}
+                    >
+                      <PersonPage {...props} language={lang} />
+                    </PageChecker>
+                  )}
+                />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />
