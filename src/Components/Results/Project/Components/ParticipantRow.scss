@@ -1,6 +1,15 @@
 @import '../../../../style.scss';
 
 
+.SubTitle {
+  border-left: 2px solid $scanrdeepblueColor;
+}
+.SubTitle a {
+  font-weight: 600;
+  color: inherit;
+}
+
+
 .Title {
   font-weight: 600;
 }
