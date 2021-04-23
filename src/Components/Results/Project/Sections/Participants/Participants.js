@@ -37,12 +37,32 @@ const Participants = (props) => {
     borderTopRightRadius: '10px',
     borderBottom: `5px solid ${styles.entityColor}`,
   };
+
+  // Recherche et stockage des sous-participants
+  const dataForRows = [];
+  props.data.forEach((part) => {
+    const idPart = part.label.default.split('__')[2].slice(0, -2);
+    // Dernier caractère : Si != 0 alors il s'agit d'un sous participant
+    if (part.label.default.slice(-1) === '0') {
+      // Recherche d'éventuels sous-participants
+      const subs = props.data.filter((partSub) => {
+        // Id
+        const idPartSub = partSub.label.default.split('__')[2].slice(0, -2);
+        return (idPartSub === idPart && partSub.label.default.slice(-1) !== '0');
+      });
+      const obj = {
+        ...part,
+        subParticipants: subs || null,
+      };
+      dataForRows.push(obj);
+    }
+  });
   return (
     <div className="row">
       <div className="px-3 col-12 col-lg-5">
         <div className={`${classes.participantList}`}>
           {
-            props.data.map(part => (
+            dataForRows.map(part => (
               <div
                 key={getSelectKey(part, 'label', props.language, 'default')}
                 className={`col-12 py-3 px-3 ${classes.participantItem}`}
