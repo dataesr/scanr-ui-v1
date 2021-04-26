@@ -1,15 +1,9 @@
 @import '../../../../style.scss';
 
-
-.SubTitle {
-  border-left: 2px solid $scanrdeepblueColor;
-}
-.SubTitle a {
+.coParticipant a {
   font-weight: 600;
   color: inherit;
 }
-
-
 .Title {
   font-weight: 600;
 }
@@ -24,7 +18,6 @@
 .participant p {
   margin: 0;
 }
-
 .yellowBullet {
   display: inline-block;
   width: 12px;
