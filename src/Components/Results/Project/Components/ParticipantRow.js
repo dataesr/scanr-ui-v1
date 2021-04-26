@@ -13,54 +13,81 @@ import getSelectKey from '../../../../Utils/getSelectKey';
  * Accessible : .
  * Tests unitaires : .
 */
-const ParticipantRow = props => (
-  <div className={classes.participant}>
-    {
-      (props.data.role === 'coordinator')
-        ? (
-          <div className="d-flex justify-content-start align-items-bottom pr-2">
-            <span className={classes.yellowBullet} />
-            <p className={classes.Funding}>
-              <FormattedHTMLMessage id="Project.ParticipantsRow.coordinator" />
-            </p>
-          </div>
-        )
-        : null
 
-    }
-    <p className={classes.Title}>
+const ParticipantRow = (props) => {
+  const getSubs = subParticipants => (
+    subParticipants.map(part => (
+      <p className={`${classes.SubTitle} pl-2`}>
+        {
+          (part.structure)
+            ? (
+              <a href={`entite/${part.structure.id}`}>
+                {getSelectKey(part.structure, 'label', props.language, 'default')}
+              </a>
+            )
+            : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
+        }
+      </p>
+    ))
+  );
+
+  return (
+    <div className={classes.participant}>
       {
-        (props.data.structure)
+        (props.data.role === 'coordinator')
           ? (
-            <a href={`entite/${props.data.structure.id}`}>
-              {getSelectKey(props.data.structure, 'label', props.language, 'default')}
-            </a>
+            <div className="d-flex justify-content-start align-items-bottom pr-2">
+              <span className={classes.yellowBullet} />
+              <p className={classes.Funding}>
+                <FormattedHTMLMessage id="Project.ParticipantsRow.coordinator" />
+              </p>
+            </div>
           )
-          : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
+          : null
       }
-    </p>
-    <div className={`d-flex justify-content-between align-items-bottom pr-2 ${classes.Funding}`}>
+      <p className={classes.Title}>
+        {
+          (props.data.structure)
+            ? (
+              <a href={`entite/${props.data.structure.id}`}>
+                {getSelectKey(props.data.structure, 'label', props.language, 'default')}
+              </a>
+            )
+            : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
+        }
+      </p>
+      <div className={`d-flex justify-content-between align-items-bottom pr-2 ${classes.Funding}`}>
+        {
+          (props.data.funding)
+            ? (
+              <p>{`${parseFloat(props.data.funding).toLocaleString(props.language)} €`}</p>
+            )
+            : null
+        }
+        {
+          (props?.data?.structure?.address?.[0]?.country)
+            ? (
+              <p>{`${props.data.structure.address[0].country}`}</p>
+            )
+            : (
+              <p>
+                <FormattedHTMLMessage id="Project.ParticipantsRow.noAddress" />
+              </p>
+            )
+        }
+      </div>
       {
-        (props.data.funding)
+        (props?.data?.subParticipants?.length > 0)
           ? (
-            <p>{`${parseFloat(props.data.funding).toLocaleString(props.language)} €`}</p>
-          )
-          : <div />
-      }
-      {
-        (props.data.structure && props.data.structure.address && props.data.structure.address.length > 0 && props.data.structure.address[0].country)
-          ? (
-            <p>{`${props.data.structure.address[0].country}`}</p>
-          )
-          : (
-            <p>
-              <FormattedHTMLMessage id="Project.ParticipantsRow.noAddress" />
+            <p className="mr-3 mt-2">
+              <i>Co-participants</i>
+              {getSubs(props.data.subParticipants)}
             </p>
-          )
+          ) : null
       }
     </div>
-  </div>
-);
+  );
+};
 
 
 export default ParticipantRow;
