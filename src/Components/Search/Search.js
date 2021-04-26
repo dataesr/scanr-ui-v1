@@ -417,7 +417,7 @@ class SearchPage extends Component {
     Object.keys(req).forEach(key => (req[key] === undefined ? delete req[key] : ''));
     Object.keys(req).forEach(key => (req[key] === null ? delete req[key] : ''));
 
-    if (config) {
+    if (config && config[api]) {
       if (!req.filters) {
         req.filters = {};
       }
