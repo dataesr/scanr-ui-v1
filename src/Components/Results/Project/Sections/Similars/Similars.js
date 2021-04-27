@@ -18,9 +18,9 @@ import classes from './Similars.scss';
 */
 const SimilarProjects = (props) => {
   let lang = 'fr';
-  if (props.data.label.default) {
+  if (props.data.label?.default) {
     lang = 'default';
-  } else if (props.data.label.en) {
+  } else if (props.data.label?.en) {
     lang = 'en';
   }
   const request = {
