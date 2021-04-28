@@ -53,7 +53,6 @@ const PersonCard = (props) => {
   domains = [...new Set(domains)];
 
   let affiliations;
-
   if (affiliation) {
     affiliations = (
       <li className="d-flex">
@@ -68,18 +67,6 @@ const PersonCard = (props) => {
   } else if (!affiliation && props.onlyExisting) {
     affiliations = null;
   }
-  // else {
-  //   affiliations = (
-  //     <li className="d-flex">
-  //       <div className={classes.Icons}>
-  //         <i aria-hidden="true" className="fas fa-building" />
-  //       </div>
-  //       <p className={`m-0 ${classes.UnknownData}`}>
-  //         {messages[props.language]['resultCard.unknownData']}
-  //       </p>
-  //     </li>
-  //   );
-  // }
 
   const addresses = (address && !props.small)
     ? (
@@ -126,10 +113,8 @@ const PersonCard = (props) => {
     )
     : null;
 
-  // let previousHighlight = '';
   let allHighlights = '';
   if (props.highlights && props.highlights.length > 0) {
-    // previousHighlight = [...new Set(props.highlights.map(h => (highlights[props.language][h.type] || h.type)))].join(', ');
     let firstSource = '';
     for (let i = 0; i < props.highlights.length; i += 1) {
       const currentH = props.highlights[i];
@@ -171,6 +156,12 @@ const PersonCard = (props) => {
     )
     : null;
 
+  const role = (props.data?.role && props.isThesis) ? (
+    <li className={classes.Role}>
+      {messages[props.language][props.data.role]}
+    </li>
+  ) : null;
+
 
   return (
     <React.Fragment>
@@ -190,6 +181,7 @@ const PersonCard = (props) => {
             }
           </h3>
           <ul className="m-0 p-0">
+            {role}
             {identifier}
             {affiliations}
             {addresses}
@@ -209,6 +201,7 @@ PersonCard.defaultProps = {
   cardColor: 'CardWhite',
   small: false,
   onlyExisting: false,
+  isThesis: false,
 };
 
 PersonCard.propTypes = {
@@ -218,4 +211,5 @@ PersonCard.propTypes = {
   cardColor: PropTypes.string,
   small: PropTypes.bool,
   onlyExisting: PropTypes.bool,
+  isThesis: PropTypes.bool,
 };

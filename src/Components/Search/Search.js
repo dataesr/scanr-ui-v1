@@ -7,6 +7,7 @@ import queryString from 'query-string';
 import ReactPiwik from 'react-piwik';
 
 import { API_BASE_URL } from '../../config/config';
+import { doNotSearch } from '../../config/doNotConfig';
 import ExportingSpinner from '../Shared/LoadingSpinners/ExportingSpinner';
 
 import Banner from '../Shared/Banner/Banner';
@@ -28,7 +29,6 @@ import {
   StructuresAggregations,
   ProjectsAggregations,
 } from './Aggregations';
-
 
 const messages = {
   fr: messagesFr,
@@ -358,7 +358,7 @@ class SearchPage extends Component {
   // *******************************************************************
   // AXIOS CALL TO GET DATA
   // *******************************************************************
-  transformRequest = (requests, api) => {
+  transformRequest = (requests, api, config) => {
     const req = { ...requests };
     if (!req.query) {
       req.query = '';
@@ -373,15 +373,7 @@ class SearchPage extends Component {
     }
     if (api === 'publications') {
       req.lang = 'default';
-      if (!req.filters) {
-        req.filters = {};
-      }
-      // filter out some ids if needed
-      req.filters.id = {
-        type: 'MultiValueSearchFilter',
-        op: 'not_all',
-        values: ['hal-02423632', 'hal-02422378', 'hal-02415294'],
-      };
+
       req.sourceFields = [
         'id',
         'productionType',
@@ -413,15 +405,7 @@ class SearchPage extends Component {
     } else if (api === 'persons') {
       req.aggregations = PersonsAggregations;
       req.lang = this.props.language;
-      if (!req.filters) {
-        req.filters = {};
-      }
-      // filter out some ids if needed
-      req.filters.id = {
-        type: 'MultiValueSearchFilter',
-        op: 'not_all',
-        values: ['idref227790677'],
-      };
+
       req.sourceFields = ['id', 'affiliations', 'fullName', 'firstName',
         'lastName', 'gender', 'externalIds', 'domains'];
     } else if (api === 'projects') {
@@ -432,8 +416,20 @@ class SearchPage extends Component {
     }
     Object.keys(req).forEach(key => (req[key] === undefined ? delete req[key] : ''));
     Object.keys(req).forEach(key => (req[key] === null ? delete req[key] : ''));
+
+    if (config && config[api]) {
+      if (!req.filters) {
+        req.filters = {};
+      }
+      req.filters.id = {
+        type: 'MultiValueSearchFilter',
+        op: 'not_all',
+        values: config[api] ? config[api].ids : [],
+      };
+    }
+
     return req;
-  };
+  }
 
   getData = () => {
     if (this.state.api === 'all') {
@@ -477,10 +473,10 @@ class SearchPage extends Component {
         })
         .catch((error) => {
           /* eslint-disable-next-line */
-          console.log(error);
+          console.log(error)
         });
     }
-    Axios.post(url, this.transformRequest(this.state.request, this.state.api))
+    Axios.post(url, this.transformRequest(this.state.request, this.state.api, doNotSearch))
       .then((response) => {
         const data = {
           results: response.data.results,
@@ -495,7 +491,7 @@ class SearchPage extends Component {
       })
       .catch((error) => {
         /* eslint-disable-next-line */
-        console.log(error);
+        console.log(error)
       });
   }
 
@@ -506,7 +502,7 @@ class SearchPage extends Component {
       const url = `${API_BASE_URL}/${api}/search`;
       const newCounts = { ...this.state.preview };
       newCounts[api].isLoading = true;
-      Axios.post(url, this.transformRequest(query, api))
+      Axios.post(url, this.transformRequest(query, api, doNotSearch))
         .then((response) => {
           newCounts[api].isLoading = false;
           newCounts[api].count = response.data.total;
@@ -522,7 +518,7 @@ class SearchPage extends Component {
         })
         .catch((e) => {
           /* eslint-disable-next-line */
-          console.log('error', e);
+          console.log('error', e)
         });
     });
   }
