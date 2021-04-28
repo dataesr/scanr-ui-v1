@@ -22,7 +22,11 @@ const ParticipantRow = (props) => {
           (part.structure)
             ? (
               <a href={`entite/${part.structure.id}`}>
-                {getSelectKey(part.structure, 'label', props.language, 'default')}
+                {
+                  (part.structure?.label)
+                    ? getSelectKey(part.structure, 'label', props.language, 'default')
+                    : getSelectKey(part, 'label', props.language, 'default').split('__')[0]
+                }
               </a>
             )
             : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
