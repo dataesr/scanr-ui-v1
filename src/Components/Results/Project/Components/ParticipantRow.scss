@@ -1,6 +1,9 @@
 @import '../../../../style.scss';
 
-
+.coParticipant a {
+  font-weight: 600;
+  color: inherit;
+}
 .Title {
   font-weight: 600;
 }
@@ -15,7 +18,6 @@
 .participant p {
   margin: 0;
 }
-
 .yellowBullet {
   display: inline-block;
   width: 12px;

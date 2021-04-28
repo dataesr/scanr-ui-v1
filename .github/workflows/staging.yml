@@ -63,4 +63,4 @@ jobs:
 
       - name: Notify in slack
         run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"text":"Une nouvelle version de scanR est en préprod. Vous pouvez la voir ici: http://51.91.81.57/"}' ${{ secrets.SLACK_WEBHOOK }}
+          curl -X POST -H 'Content-type: application/json' --data '{"text":"Une nouvelle version de scanR est en préprod. Vous pouvez la voir ici: http://scanr.staging.dataesr.ovh"}' ${{ secrets.SLACK_WEBHOOK }}

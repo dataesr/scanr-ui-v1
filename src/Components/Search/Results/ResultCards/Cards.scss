@@ -14,6 +14,7 @@
   .card {
     flex: 0 1 100%;
   }
+  
   .ResultCard {
     min-height: 50px !important;
   }
@@ -22,9 +23,11 @@
 .GreyTitle {
   color: $scanrgreyColor !important;
 }
+
 .TextOverflow {
   text-overflow: ellipsis;
 }
+
 .Highlights {
   font-size: 0.8em;
 }
@@ -34,37 +37,46 @@
   font-weight: 500;
   font-size: 0.9em;
 }
+
 .UnknownData {
   color: $scanrgreyColor;
   font-style: italic;
   font-size: 0.9em;
 }
+
 .Capitalised {
   font-style: italic;
   line-height: 1;
 }
+
 .FoundIn {
   font-size: 0.8em;
   font-weight: 600;
 }
+
 .NoneStyleUL {
   list-style: none;
 }
+
 .InlineLI {
   display: inline;
 }
+
 .HighlightEntitySep {
   background-color: $entityColor;
   border-color: $entityColor;
 }
+
 .HighlightProjectSep {
   background-color: $projectgreenColor;
   border-color: $projectgreenColor;
 }
+
 .HighlightProductionSep {
   background-color: $publicationsColor;
   border-color: $publicationsColor;
 }
+
 .HighlightPersonSep {
   background-color: $personsColor;
   border-color: $personsColor;
@@ -88,9 +100,11 @@
     font-weight: 700;
     line-height: 1.1;
   }
+
   .CardTitle > a {
     color: $scanrdeepblueColor;
   }
+
   .CardTitle > a:hover {
     color: $scanrblueColor;
     text-decoration: underline $scanrblueColor;
@@ -109,6 +123,11 @@
 
   LI {
     list-style: none;
+  }
+
+  .Role {
+    color: $scanrgreyColor;
+    font-size: 0.9rem;
   }
 }
 
