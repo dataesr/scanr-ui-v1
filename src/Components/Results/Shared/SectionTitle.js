@@ -16,7 +16,7 @@ import classes from './SectionTitle.scss';
  */
 
 const SectionTitle = (props) => {
-  const renderContributionLink = () => ((props.id && props.objectType && !props.subTitle)
+  const renderContributionLink = () => ((props.id && props.objectType && !props.suggestion)
     ? (
       <span className="pl-2 ml-auto my-2">
         <Contribute
@@ -40,23 +40,31 @@ const SectionTitle = (props) => {
             {props.title}
           &nbsp;
           </span>
-          {props.subTitleLink ? (
+          {(props.subTitleLink || props.lexicon) ? (
             <div className="mb-sm-3 mb-xl-0 d-flex align-items-center">
-              <div className="d-flex">
-                <LexiconModal language={props.language} target={props.lexicon}>
-                  <i className={`fa fa-info-circle ${classes.pointer} ${classes.Title} ${classes.fs_large}`} />
-                </LexiconModal>
-              </div>
-              <div
-                role="button"
-                tabIndex={0}
-                className={`ml-3 d-flex align-items-center ${classes.pointer}`}
-                onKeyPress={props.modalHandler}
-                onClick={props.modalHandler}
-              >
-                <i className={`fa fa-plus-square ${classes.Title}`} />
-                <span className={`ml-1 ${classes.Text}`}>{props.subTitleLink}</span>
-              </div>
+              {
+                (props.lexicon) ? (
+                  <div className="d-flex">
+                    <LexiconModal language={props.language} target={props.lexicon}>
+                      <i className={`fa fa-info-circle ${classes.pointer} ${classes.Title} ${classes.fs_large}`} />
+                    </LexiconModal>
+                  </div>
+                ) : null
+              }
+              {
+                (props.subTitleLink && props.suggestion) ? (
+                  <div
+                    role="button"
+                    tabIndex={0}
+                    className={`ml-3 d-flex align-items-center ${classes.pointer}`}
+                    onKeyPress={props.modalHandler}
+                    onClick={props.modalHandler}
+                  >
+                    <i className={`fa fa-plus-square ${classes.Title}`} />
+                    <span className={`ml-1 ${classes.Text}`}>{props.subTitleLink}</span>
+                  </div>
+                ) : null
+              }
             </div>
           )
             : null}
@@ -131,4 +139,5 @@ SectionTitle.propTypes = {
   viewModeClickHandler: PropTypes.func,
   modalHandler: PropTypes.func,
   viewMode: PropTypes.string,
+  suggestion: PropTypes.bool,
 };
