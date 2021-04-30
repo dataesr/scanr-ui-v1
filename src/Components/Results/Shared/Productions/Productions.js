@@ -405,6 +405,7 @@ class Productions extends Component {
                 viewModeClickHandler={this.viewModeClickHandler}
                 modalHandler={this.modalHandler}
                 viewMode={this.state.viewMode}
+                suggestion={this.props.match.url.indexOf('person') > 0}
               />
               <FormattedHTMLMessage id="ProductionPerimeter" />
               {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
@@ -464,6 +465,7 @@ class Productions extends Component {
                 modalHandler={this.modalHandler}
                 viewModeClickHandler={this.viewModeClickHandler}
                 viewMode={this.state.viewMode}
+                suggestion={this.props.match.url.indexOf('person') > 0}
               />
               <FilterPanel
                 language={this.props.language}

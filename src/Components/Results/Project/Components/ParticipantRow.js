@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
 
 import classes from './ParticipantRow.scss';
 import getSelectKey from '../../../../Utils/getSelectKey';
@@ -17,7 +18,7 @@ import getSelectKey from '../../../../Utils/getSelectKey';
 const ParticipantRow = (props) => {
   const getSubs = subParticipants => (
     subParticipants.map(part => (
-      <p className={`${classes.SubTitle} pl-2`}>
+      <li className={`${classes.coParticipant} pl-2`} key={uuidv4()}>
         {
           (part.structure)
             ? (
@@ -31,7 +32,7 @@ const ParticipantRow = (props) => {
             )
             : getSelectKey(props.data, 'label', props.language, 'default').split('__')[0]
         }
-      </p>
+      </li>
     ))
   );
 
@@ -51,7 +52,7 @@ const ParticipantRow = (props) => {
       }
       <p className={classes.Title}>
         {
-          (props.data.structure)
+          (props.data.structure?.id && props.data.structure?.label)
             ? (
               <a href={`entite/${props.data.structure.id}`}>
                 {getSelectKey(props.data.structure, 'label', props.language, 'default')}
@@ -94,7 +95,6 @@ const ParticipantRow = (props) => {
     </div>
   );
 };
-
 
 export default ParticipantRow;
 
