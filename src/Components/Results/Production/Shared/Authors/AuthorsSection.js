@@ -91,6 +91,7 @@ const AuthorsSection = (props) => {
                   color="Default"
                   labelKey="authors-publication"
                   isPerson
+                  isThesis={(props.data?.productionType === 'thesis')}
                 />
               </div>
             ) : null
