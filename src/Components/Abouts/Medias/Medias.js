@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
-import Background from './poudre-bleu_Fgris-B.jpg';
+import Background from '../../../images/img/poudre-bleu_Fgris-B.jpg';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import MediasCard from '../../Shared/CardWithButton/MediasCard2';
 
