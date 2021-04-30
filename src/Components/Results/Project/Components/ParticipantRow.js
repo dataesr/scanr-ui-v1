@@ -85,10 +85,10 @@ const ParticipantRow = (props) => {
         (props?.data?.subParticipants?.length > 0)
           ? (
             <p className="mr-3 mt-2">
-              <i>Co-participants</i>
-              <ul className="pl-3 mt-0">
-                {getSubs(props.data.subParticipants)}
-              </ul>
+              <i>
+                {`Co-participant${(props.data.subParticipants.length > 1) ? 's' : ''}`}
+              </i>
+              {getSubs(props.data.subParticipants)}
             </p>
           ) : null
       }
