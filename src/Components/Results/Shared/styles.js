@@ -4,13 +4,6 @@ import styles from '../../../style.scss';
 // -------------------------------------
 // Just a start rewrite section propelly.
 // -------------------------------------
-import YellowBackground from '../../../images/img/poudre-jaune_Fgris-B.jpg';
-import OrangeBackground from '../../../images/img/poudre-orange_Fgris-BR.jpg';
-import FuschiaBackground from '../../../images/img/poudre-fuschia_Fgris-B.jpg';
-import GreenGreyBackground from '../../../images/img/poudre-vert_Fgris-A.jpg';
-import GreenWhiteBackground from '../../../images/img/poudre-vert_Fblanc-A.jpg';
-import BlueOrangeBackground from '../../../images/img/poudre-orange-Fbleu-BR.jpg';
-
 export const Section = styled.section`
   padding-top: 1.25em;
   padding-bottom: 1.25em;
@@ -36,32 +29,32 @@ export const SectionEntity = styled(Section)`
   background-size: 50%; /* version standardisée */
   background-color: ${styles.scanrlightgreyColor};
   background-position: bottom 0 left 0;
-  background-image: url(${YellowBackground});
+  background-image: url('./img/poudres/poudre-jaune_Fgris-B.jpg');
 `;
 
 export const SectionProjects = styled(Section)`
   background-size: 50%;
   background-color: ${props => (props.alternative ? 'white' : styles.scanrlightgreyColor)};
-  background-image: ${props => (props.alternative ? `url(${GreenWhiteBackground})` : `url(${GreenGreyBackground})`)};
+  background-image: ${props => (props.alternative ? 'url(\'./img/poudres/poudre-vert_Fblanc-A.jpg\')' : 'url(\'./img/poudres/poudre-vert_Fgris-A.jpg\')')};
   background-position: bottom 0 right -15%;
 `;
 
 export const SectionProductions = styled(Section)`
   background-color: ${styles.scanrlightgreyColor};
   background-size: 20%;
-  background-image: url(${FuschiaBackground});
+  background-image: url('./img/poudres/poudre-fuschia_Fgris-B.jpg');
   background-position: bottom 0 left 0;
 `;
 
 export const SectionPersons = styled(Section)`
-  background-image: url(${OrangeBackground});
+  background-image: url('./img/poudres/poudre-orange_Fgris-BR.jpg');
   background-size: 40%;
   background-color: ${styles.scanrlightgreyColor};
   background-position: bottom 0 right 0;
 `;
 
 export const SectionPersonsBlue = styled(SectionPersons)`
-  background-image: url(${BlueOrangeBackground});
+  background-image: url('./img/poudres/poudre-orange-Fbleu-BR.jpg');
   background-size: 30%;
   background-color: ${styles.scanrblueColor};
 `;

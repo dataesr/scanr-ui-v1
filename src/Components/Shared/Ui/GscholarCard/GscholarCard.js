@@ -34,7 +34,7 @@ const GscholarCard = (props) => {
           (url)
             ? (
               <LogoCard
-                url="/img/logo-gscholar.png"
+                url="/img/logos/logo-gscholar.png"
                 targetUrl={url}
                 label="Google scholar"
                 link={messages[context.language].gscholar_link}

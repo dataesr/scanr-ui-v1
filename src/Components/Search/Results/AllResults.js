@@ -28,7 +28,7 @@ const SearchResults = (props) => {
       // const cardColor = ([0, 2].includes(index)) ? 'CardWhite' : 'CardGrey';
       const cardColor = 'CardWhite';
       const CardsToShow = CardsComponents[section];
-      const bgUrl = `./img/poudre-${section}_fond_${BgClass}.jpg`;
+      const bgUrl = `./img/poudres/poudre-${section}_fond_${BgClass}.jpg`;
       const sizes = ['100%', '80%', '75%', '70%'];
       const positions = ['-115% -15%', '0 -25%', '100% -50%', '10% -30%'];
       const sectionStyle = {

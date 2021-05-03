@@ -34,7 +34,7 @@ const TheConversationCard = (props) => {
           (url)
             ? (
               <LogoCard
-                url="/img/logo-the-conversation.svg"
+                url="/img/logos/logo-the-conversation.svg"
                 targetUrl={url}
                 label="The Conversation"
                 link={messages[context.language].the_conversation_link}

@@ -9,8 +9,6 @@ import Search from './Search/Search';
 import Banner from '../Shared/Banner/Banner';
 import WelcomeModal from './WelcomeModal';
 
-import logo from '../Shared/images/MESRI_2020.png';
-
 import classes from './Home.scss';
 
 import messagesFr from './translations/fr.json';
@@ -32,7 +30,7 @@ const HomePage = (props) => {
         <WelcomeModal />
         <div className={`col-md ${classes.LogoHome}`}>
           <img
-            src={logo}
+            src="./img/scanr/MESRI_2020.png"
             alt="Logo MESRI"
             className={classes.Logo}
           />
