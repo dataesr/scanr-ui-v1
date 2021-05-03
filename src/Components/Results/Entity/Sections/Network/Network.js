@@ -21,9 +21,6 @@ import classes from './Network.scss';
  * Accessible : .
  * Tests unitaires : .
 */
-const participantRegex = new RegExp('participant');
-const tutelleRegex = new RegExp('tutelle');
-
 class Network extends Component {
   state = {
     dataSupervisorOf: {},
@@ -88,9 +85,9 @@ class Network extends Component {
             const o = { label: getSelectKey(item.value, 'label', this.props.language, 'fr'), id: item.value.id };
             const currentInst = item.value.institutions.filter(inst => inst.structure && inst.structure.id === this.props.data.id);
             currentInst.forEach((inst) => {
-              if (tutelleRegex.test(inst.relationType)) {
+              if (inst.relationType === 'etablissement tutelle') {
                 newDataSupervisors.push(o);
-              } else if (participantRegex.test(inst.relationType)) {
+              } else if (inst.relationType === 'etablissement participant') {
                 newDataParticipants.push(o);
               }
             });
@@ -111,9 +108,9 @@ class Network extends Component {
     const participants = [];
     if (this.props.data.institutions && this.props.data.institutions.length > 0) {
       this.props.data.institutions.forEach((inst) => {
-        if (tutelleRegex.test(inst.relationType)) {
+        if (inst.relationType === 'etablissement tutelle') {
           supervisors.push(inst);
-        } else if (participantRegex.test(inst.relationType)) {
+        } else if (inst.relationType === 'etablissement participant') {
           participants.push(inst);
         }
       });
