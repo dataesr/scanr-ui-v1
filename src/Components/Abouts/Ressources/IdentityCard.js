@@ -11,7 +11,7 @@ import classes from './IdentityCard.scss';
 import metadata from './metadata.json';
 
 const IdentityCard = (props) => {
-  const logo = `../img/${props.imageName}`;
+  const logo = `./img/${props.imageName}`;
   const logopart = (logo) ? (
     <Fragment>
       <div className={`row ${classes.Logo}`}>

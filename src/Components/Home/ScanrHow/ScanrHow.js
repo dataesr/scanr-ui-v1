@@ -1,13 +1,9 @@
 import React from 'react';
-import searchImage from '../../../images/img/search.png';
-import entityImage from '../../../images/img/entityPage.png';
-import ecosystemImage from '../../../images/img/ecosystem.png';
-import focusImage from '../../../images/img/focus.png';
 
 const ScanrIs = () => (
   <div className="container flex-column p-5">
     <div className="d-flex flex-nowrap py-4">
-      <img style={style} src={searchImage} height="300px" aria-hidden alt="" />
+      <img src="./img/sceenshots/search.png" height="300px" aria-hidden alt="" />
       <div className="d-flex flex-column align-items-center justify-content-center px-4">
         <h3>scanR, un moteur de recherche</h3>
         <p>
@@ -19,13 +15,13 @@ const ScanrIs = () => (
       <div className="d-flex flex-column align-items-center justify-content-center px-4">
         <h3>scanR connecte...</h3>
         <p>
-        scanR lie tout ces objets les uns aux autres. Il associe les projets de recherche aux laboratoires qui en bénéficient, des publications à leurs auteurs, etc. scanR fait aussi des liens avec des structures étrangères et permet de voir les collaborations international des acteurs. Ces liens sont retrouvés par scanR et ne sauraient être exhaustifs.
+          scanR lie tout ces objets les uns aux autres. Il associe les projets de recherche aux laboratoires qui en bénéficient, des publications à leurs auteurs, etc. scanR fait aussi des liens avec des structures étrangères et permet de voir les collaborations international des acteurs. Ces liens sont retrouvés par scanR et ne sauraient être exhaustifs.
         </p>
       </div>
-      <img src={ecosystemImage} height="250px" aria-hidden alt="" />
+      <img src="./img/screenshots/ecosystem.png" height="250px" aria-hidden alt="" />
     </div>
     <div className="d-flex flex-nowrap">
-      <img src={entityImage} height="250px" aria-hidden alt="" />
+      <img src="./img/screenshots/entityPage.png" height="250px" aria-hidden alt="" />
       <div className="d-flex flex-column align-items-center justify-content-center px-4">
         <h3>scanR restitue de l&apos;information</h3>
         <p>
@@ -40,7 +36,7 @@ const ScanrIs = () => (
           scanR propose des vues sythétiques sur des sujets divers, souvent en lien avec l&apos;actialité au travers des focus.
         </p>
       </div>
-      <img src={focusImage} height="250px" aria-hidden alt="" />
+      <img src="./img/screenshots/focus.png" height="250px" aria-hidden alt="" />
     </div>
   </div>
 );

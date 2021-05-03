@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import Md5 from 'md5';
 
-import logo from '../../images/wikipedia.png';
-
 import classes from './WikidataCard.scss';
 
 /* Gestion des langues */
@@ -101,7 +99,7 @@ class WikidataCard extends Component {
             Wikipedia
           </p>
           <div className={classes.LogoWiki}>
-            <img src={logo} alt="wikipedia" />
+            <img src="./img/logos/logo-wikipedia.png" alt="wikipedia" />
           </div>
         </div>
         <div className={classes.Content}>
