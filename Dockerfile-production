@@ -7,7 +7,7 @@ COPY package.json .
 COPY package-lock.json .
 RUN npm ci
 COPY . .
-RUN npm run build:staging
+RUN npm run build:production
 
 # production environment
 FROM nginx:stable

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import getSelectKey from '../../../../Utils/getSelectKey';
 import classes from './DeposantCard.scss';
 
-// import logo from './icon-entities.svg';
 import ButtonToPage from '../Buttons/ButtonToPage2';
 
 

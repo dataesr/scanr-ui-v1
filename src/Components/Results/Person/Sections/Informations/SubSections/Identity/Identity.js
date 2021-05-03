@@ -42,7 +42,7 @@ const Identity = (props) => {
                 <div className={classes.CardContainer}>
                   <LogoCard
                     language={props.language}
-                    url="/img/logo-idref.png"
+                    url="/img/logos/logo-idref.png"
                     targetUrl={'http:///www.idref.fr/'.concat(extIdref[0].id)}
                     label="Idref"
                     link={extIdref[0].id}
@@ -54,7 +54,7 @@ const Identity = (props) => {
             { (extOrcid.length > 0) ? (
               <div className={classes.CardContainer}>
                 <LogoCard
-                  url="/img/logo-orcid.svg"
+                  url="/img/logos/logo-orcid.svg"
                   targetUrl={'http://www.orcid.org/'.concat(extOrcid[0].id)}
                   label="Orcid"
                   link={extOrcid[0].id}
@@ -65,7 +65,7 @@ const Identity = (props) => {
             { (extIdhal.length > 0) ? (
               <div className={classes.CardContainer}>
                 <LogoCard
-                  url="/img/logo-hal.svg"
+                  url="/img/logos/logo-hal.svg"
                   targetUrl={'https://aurehal.archives-ouvertes.fr/author/browse?critere=idHal_i:%22'.concat(extIdhal[0].id, '%22')}
                   label="IdHAL"
                   cssClass="Height75"

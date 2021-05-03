@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 import classes from './PersonCard.scss';
 
-import logo from '../../svg/icon-fiche-responsable_h.svg';
 import ButtonToPage from '../Buttons/ButtonToPage2';
 
 
@@ -71,7 +70,7 @@ const PersonCard = (props) => {
         }
         <div>
           <div className={classes.Logo}>
-            <img src={logo} alt="" />
+            <img src="./img/icons/icon-fiche-responsable_h.svg" alt="" />
           </div>
         </div>
         <div className={classes.Name}>

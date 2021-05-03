@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import { GlobalContext } from '../../../GlobalContext';
 import FormContact from '../FormContact/FormContact';
 
-import logo from '../images/MESRI_2020.png';
 import classes from './Footer.scss';
 
 /* Gestion des langues */
@@ -20,7 +19,7 @@ const messages = {
 
 const Footer = () => {
   /* eslint-disable-next-line */
-  var _paq = window._paq || []; 
+  var _paq = window._paq || [];
   if (localStorage.consent !== 'ko') {
     _paq.push(['rememberConsentGiven']);
   }
@@ -91,7 +90,7 @@ const Footer = () => {
             <div className={`col-md ${classes.Col}`}>
               <div className={classes.LogoContainer}>
                 <img
-                  src={logo}
+                  src="./img/scanr/MESRI_2020.png"
                   alt="Logo MESRI"
                   className={classes.Logo}
                 />
