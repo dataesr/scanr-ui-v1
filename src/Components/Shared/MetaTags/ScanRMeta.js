@@ -6,7 +6,7 @@ import MetaTags from 'react-meta-tags';
 const ScanRMeta = (props) => {
   const title = `scanR | ${props.title}`;
   const description = "scanR est un outil d'aide à l'exploration, au suivi et à la caractérisation des activités de recherche et d'innovation des acteurs français (publics et privés) de la recherche";
-  const image = '../../svg/logo-scanr-blue.svg';
+  const image = '/img/scanr/logo-scanr-blue.svg';
   return (
     <MetaTags>
       <title>{title}</title>
