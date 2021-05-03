@@ -13,7 +13,7 @@ import classes from './RedirectingLogoCard.scss';
  * Tests unitaires : .
 */
 const RedirectingLogoCard = (props) => {
-  const src = (props.src) ? props.src : `../img/${props.imageName}`;
+  const src = (props.src) ? props.src : `./img/logos/${props.imageName}`;
   const url = `./ressources/${props.labelKey}`;
   let cssClass = '';
   if (props.cssClass) {

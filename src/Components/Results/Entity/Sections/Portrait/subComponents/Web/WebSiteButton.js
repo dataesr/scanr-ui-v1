@@ -20,17 +20,17 @@ const WebSiteButton = (props) => {
   let style = null;
   switch (props.type) {
     case 'HAL':
-      logo = <img src="./img/hal.logo.png" alt="logo HAL" />;
+      logo = <img src="./img/logos/logo-hal.png" alt="logo HAL" />;
       UsedClasse = classes.HalLogo;
       style = { backgroundColor: '#003259' };
       break;
     case 'wikipedia':
-      logo = <img src="./img/Wikipedia-logo.png" alt="logo wikipedia" />;
+      logo = <img src="./img/logos/logo-wikipedia.png" alt="logo wikipedia" />;
       UsedClasse = classes.WikipediaLogo;
       label = <FormattedHTMLMessage id="Entity.Portrait.Web.WebSiteButton.wikipedia" />;
       break;
     case 'Hypothese':
-      logo = <img src="./img/hypotheses_baselineEN.png" alt="logo Hypothese" />;
+      logo = <img src="./img/logos/logo-hypotheses.png" alt="logo Hypothese" />;
       UsedClasse = classes.HypotheseLogo;
       break;
     default:

@@ -9,7 +9,6 @@ import EmptySection from '../../../Shared/EmptySection/EmptySection';
 import PackedBubbleChart from '../../../../Shared/GraphComponents/Graphs/HighChartsPackedbubble';
 import SectionTitleViewMode from '../../../Shared/SectionTitle';
 import CounterDataSimple from '../../../../Shared/CounterDataSimple/CounterDataSimple';
-import FranceFlag from '../../../../Shared/images/france-flag-icon-32.png';
 import CSVExporter from '../../../../Shared/CSVExporter/CSVExporter';
 
 /* Gestion des langues */
@@ -373,7 +372,7 @@ class Ecosystem extends Component {
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <div>
                         {
-                          (this.state.selectedCollaboration.structure.isFrench === false) ? '' : <img src={FranceFlag} alt="France" />
+                          (this.state.selectedCollaboration.structure.isFrench === false) ? '' : <img src="./img/flags/france-flag-icon-32.png" alt="France" />
                         }
                         &nbsp;
                         {
