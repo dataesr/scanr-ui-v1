@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 // import Banner from '../../Shared/Banner/Banner';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
-import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
-import Backgroundblanc from '../../Shared/images/poudre-bleu_Fblanc-A.jpg';
 import RedirectingLogoCard from '../../Shared/Ui/RedirectingLogoCard/RedirectingLogoCard';
 import IdentityCard from './IdentityCard';
 
@@ -26,10 +24,10 @@ const messages = {
 };
 
 const sectionStyle = {
-  backgroundImage: `url(${Background})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fgris-B.jpg\')',
 };
 const sectionStyleblanc = {
-  backgroundImage: `url(${Backgroundblanc})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fblanc-A.jpg\')',
 };
 
 class Ressources extends Component {
@@ -159,7 +157,7 @@ class Ressources extends Component {
             />
             <RedirectingLogoCard
               labelKey="swh"
-              imageName="swh-logo.jpg"
+              imageName="logo-swh.jpg"
               cssClass="CardLogo"
             />
             <RedirectingLogoCard

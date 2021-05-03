@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 import { GlobalContext } from '../../../GlobalContext';
-import logoMinistere from '../../Shared/images/MESRI_2020.png';
 import FocusCard from '../../Shared/Ui/FocusMiniCard/FocusMiniCard';
 
 import {
@@ -108,7 +107,7 @@ const ScanrIs = () => {
                 <FormattedHTMLMessage id="Home.ScanrIs.main.ministry" />
               </DescriptiveText>
               <div className={classes.LogoContainer}>
-                <img src={logoMinistere} height="60px" alt="" aria-hidden />
+                <img src="./img/scanr/MESRI_2020.png" height="60px" alt="" aria-hidden />
               </div>
             </div>
           </div>

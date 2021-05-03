@@ -3,8 +3,6 @@ import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
-// import Banner from '../../Shared/Banner/Banner';
-import Background from '../../../images/img/poudre-bleu_Fgris-B.jpg';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import MediasCard from '../../Shared/CardWithButton/MediasCard2';
 
@@ -21,7 +19,7 @@ const messages = {
 };
 
 const sectionStyle = {
-  backgroundImage: `url(${Background})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fgris-B.jpg\')',
 };
 // eslint-disable-next-line
 const filename = './data.json';

@@ -5,8 +5,6 @@ import { GlobalContext } from '../../../../GlobalContext';
 /* SCSS */
 import classes from './LogoCard.scss';
 
-import initialImage from '../../images/Spinner-1s-70px.gif';
-
 /**
  * LogoCard
  * Url : ui
@@ -26,9 +24,9 @@ const LogoCard = (props) => {
   };
 
   const context = useContext(GlobalContext);
-  let img = <img src={initialImage} onLoad={newTestFunction} alt="Chargement..." />;
+  let img = <img src="./img/utils/Spinner-1s-70px.gif" onLoad={newTestFunction} alt="Chargement..." />;
   let helper = null;
-  const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
+  const src = (props.src) ? props.src : `./img/logos/logo-${props.label}.svg`;
   if (count === 1) {
     img = <img src={src} alt="url1" onError={newTestFunction} className={`img-fluid ${classes.img}`} />;
     helper = <span className={classes.helper} />;
