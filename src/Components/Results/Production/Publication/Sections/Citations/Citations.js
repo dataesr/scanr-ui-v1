@@ -9,8 +9,7 @@ import SectionTitle from '../../../../Shared/SectionTitle';
 import CountCardWithModal, { CountCardModalItem } from '../../../../../Shared/Ui/CountCardWithModal/CountCardWithModal';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-import oaOpen from '../../../../../../images/svg/oa_open.svg';
-import oaClose from '../../../../../../images/svg/oa_close.svg';
+
 
 import classes from './Citations.scss';
 /**
@@ -75,7 +74,7 @@ function UnpaywallCard({ item }) {
             >
               <img
                 className="mr-2"
-                src={oaOpen}
+                src="./img/oa/oa_open.svg"
                 alt=""
                 aria-hidden
                 style={{ maxHeight: '20px' }}
@@ -87,7 +86,7 @@ function UnpaywallCard({ item }) {
               <p className="m-0 d-flex align-items-center">
                 <img
                   className="mr-2"
-                  src={oaClose}
+                  src="./img/oa/oa_close.svg"
                   alt=""
                   aria-hidden
                   style={{ maxHeight: '20px' }}

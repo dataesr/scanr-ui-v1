@@ -113,7 +113,7 @@ const Informations = (props) => {
           (swHeritageLink) ? (
             <div className={`col-md-6 ${classes.CardContainer}`}>
               <LogoCard
-                url="./img/swh-logo.jpg"
+                url="./img/logos/logo-swh.jpg"
                 cssClass="Height150"
                 targetUrl={swHeritageLink}
               />

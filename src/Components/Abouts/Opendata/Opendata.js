@@ -8,7 +8,6 @@ import CardTwoColumns from './CardTwoColumns';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import Banner from '../../Shared/Banner/Banner';
-import Background from '../../Shared/images/poudre-bleu_Fgris-B.jpg';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -18,7 +17,7 @@ import messagesEn from './translations/en.json';
 import classes from './Opendata.scss';
 
 const sectionStyle = {
-  backgroundImage: `url(${Background})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fgris-B.jpg\')',
 };
 const messages = {
   fr: messagesFr,
