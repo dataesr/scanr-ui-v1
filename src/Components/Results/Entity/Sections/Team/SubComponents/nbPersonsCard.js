@@ -4,8 +4,6 @@ import { FormattedHTMLMessage } from 'react-intl';
 import ButtonWithModal from '../../../../../Shared/Ui/Buttons/ButtonWithModal';
 import classes from './nbPersonsCard.scss';
 
-import logo from '../../../../../Shared/svg/icon-fiche-responsable_h.svg';
-
 /* Gestion des langues */
 import messagesFr from '../../../translations/fr.json';
 import messagesEn from '../../../translations/en.json';
@@ -26,9 +24,9 @@ const messages = {
 const nbPersonsCard = props => (
   <div className={`d-flex flex-column ${classes.nbPersonsCard}`}>
     <div className={classes.Logo}>
-      <img src={logo} alt="logo" />
-      <img src={logo} alt="logo" />
-      <img src={logo} alt="logo" />
+      <img src="./img/icons/icon-fiche-responsable_h.svg" alt="logo" />
+      <img src="./img/icons/icon-fiche-responsable_h.svg" alt="logo" />
+      <img src="./img/icons/icon-fiche-responsable_h.svg" alt="logo" />
     </div>
     <div className={classes.Nb}>
       {props.nbPersons}

@@ -13,9 +13,6 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './LogoCardWithButton.scss';
 
-// import fallbackImage from '../../images/not_found_image.png';
-import initialImage from '../../images/Spinner-1s-70px.gif';
-
 /**
  * LogoCardWithButton
  * Url : ui
@@ -30,7 +27,7 @@ const LogoCardWithButton = (props) => {
     fr: messagesFr,
     en: messagesEn,
   };
-  const src = (props.src) ? props.src : `./img/logo-${props.label}.svg`;
+  const src = (props.src) ? props.src : `./img/logos/logo-${props.label}.svg`;
   let cssClass = '';
 
   if (props.cssClass) {
@@ -44,7 +41,7 @@ const LogoCardWithButton = (props) => {
           <ReactImageFallback
             src={src}
             fallbackImage={props.url}
-            initialImage={initialImage}
+            initialImage="./img/utils/Spinner-1s-70px.gif"
             alt={props.label}
             className={`img-fluid ${classes.img}`}
           />

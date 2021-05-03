@@ -2,11 +2,9 @@ import React from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 
-// import ButtonToPage from '../../Shared/Ui/Buttons/ButtonToPage';
 import CardWithButton from '../../Shared/CardWithButton/CardWithButton';
 import HeaderTitle from '../../Shared/HeaderTitle/HeaderTitle';
 import LogoCard from '../../Shared/Ui/LogoCard/LogoCard';
-// import Banner from '../../Shared/Banner/Banner';
 
 /* Gestion des langues */
 import messagesFr from './translations/fr.json';
@@ -15,10 +13,9 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './Legal-notice.scss';
 
-import Background from './poudre-bleu_Fgris-B.jpg';
 
 const sectionStyle = {
-  backgroundImage: `url(${Background})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fgris-B.jpg\')',
 };
 
 const messages = {
