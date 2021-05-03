@@ -13,10 +13,9 @@ import messagesEn from './translations/en.json';
 /* SCSS */
 import classes from './Legal-notice.scss';
 
-import Background from '../../../images/img/poudre-bleu_Fgris-B.jpg';
 
 const sectionStyle = {
-  backgroundImage: `url(${Background})`,
+  backgroundImage: 'url(\'./img/poudres/poudre-bleu_Fgris-B.jpg\')',
 };
 
 const messages = {

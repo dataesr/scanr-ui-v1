@@ -5,7 +5,6 @@ import ButtonWithModal from '../../../../Shared/Ui/Buttons/ButtonWithModal';
 import EmptySection from '../../../Shared/EmptySection/EmptySection';
 
 import classes from './Evaluations.scss';
-import logo from '../../../../Shared/images/hceres-logo.png';
 
 /**
  * Evaluations
@@ -131,7 +130,7 @@ const Evaluations = (props) => {
                 </div>
               </div>
               <div className="ml-auto">
-                <img src={logo} alt="Evaluator logo" />
+                <img src="./img/logos/logo-hceres.png" alt="Evaluator logo" />
               </div>
             </div>
 

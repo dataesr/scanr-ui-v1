@@ -8,12 +8,6 @@ import {
   API_PUBLICATIONS_SEARCH_END_POINT,
 } from '../../../config/config';
 
-// import LexiconModal from '../../Shared/Lexicon/LexiconModal/LexiconModal';
-import entityLogo from '../../../images/svg/icon-entities.svg';
-import personLogo from '../../../images/svg/icon-persons.svg';
-import projectLogo from '../../../images/svg/icon-projects.svg';
-import productionLogo from '../../../images/svg/icon-publications.svg';
-import scanRLogo from '../../Shared/svg/logo-scanr-white_V3.svg';
 import {
   DatabaseText,
   Chevron,
@@ -47,7 +41,7 @@ const ScanrToday = () => {
         <ChevronStart>
           <div className="text-center">
             <img
-              src={scanRLogo}
+              src="./img/scanr/logo-scanr-white_alt.svg"
               alt="Logo Entity scanR"
               aria-hidden
               style={{ maxHeight: '70px' }}
@@ -60,7 +54,7 @@ const ScanrToday = () => {
         <Chevron as="a" href="/recherche/structures">
           <div className="text-center">
             <img
-              src={entityLogo}
+              src="./img/icons/icon-entities.svg"
               alt=""
               aria-hidden
               style={{ maxHeight: '70px' }}
@@ -74,7 +68,7 @@ const ScanrToday = () => {
         <Chevron as="a" href="/recherche/persons">
           <div className="text-center">
             <img
-              src={personLogo}
+              src="./img/icons/icon-persons.svg"
               alt=""
               aria-hidden
               style={{ maxHeight: '70px' }}
@@ -88,7 +82,7 @@ const ScanrToday = () => {
         <Chevron as="a" href="/recherche/projects">
           <div className="text-center">
             <img
-              src={projectLogo}
+              src="./img/icons/icon-projects.svg"
               alt=""
               aria-hidden
               style={{ maxHeight: '70px' }}
@@ -102,7 +96,7 @@ const ScanrToday = () => {
         <ChevronEnd as="a" href="/recherche/publications">
           <div className="text-center">
             <img
-              src={productionLogo}
+              src="./img/icons/icon-publications.svg"
               alt=""
               aria-hidden
               style={{ maxHeight: '70px' }}

@@ -42,7 +42,7 @@ const TeamAndProjectPage = props => (
           <div className="row">
             <div className="col-lg-9 my-4">
               <img
-                src="./img/logo-scanr-blue.svg"
+                src="url('./img/scanr/logo-scanr-blue.svg')"
                 alt="Logo"
               />
               <div className={classes.Texte}>
