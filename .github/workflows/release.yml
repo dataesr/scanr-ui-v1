@@ -26,8 +26,8 @@ jobs:
           IMAGE_ID=ghcr.io/$OWNER/$IMAGE
           docker tag $IMAGE $IMAGE_ID:latest
           docker tag $IMAGE $IMAGE_ID:${{ steps.version.outputs.version }}
-          docker push $IMAGE_ID:latest
           docker push $IMAGE_ID:${{ steps.version.outputs.version }}
+          docker push $IMAGE_ID:latest
 
   release:
     runs-on: ubuntu-latest
