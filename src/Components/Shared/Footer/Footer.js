@@ -121,7 +121,7 @@ const Footer = () => {
                   />
                 </li> */}
                 <li>
-                  <a href="https://github.com/MinistereSupRecherche" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/dataesr/scanr" target="_blank" rel="noopener noreferrer">
                     <FormattedHTMLMessage
                       id="Footer.link.gitHub"
                       defaultMessage="Footer.link.gitHub"
