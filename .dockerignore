@@ -1,7 +1,29 @@
+# dependencies
 node_modules
+
+# testing
+coverage
+
+# production
 build
-.dockerignore
-Dockerfile
-Dockerfile-production
-Dockerfile-staging
+
+# IDE
+.vscode
+.idea
+
+# misc
+.DS_Store
+.env*.local
+yarn.lock
+.directory
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git
 .github
+
+# Docker
+.dockerignore
+Dockerfile*
