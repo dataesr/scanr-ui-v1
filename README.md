@@ -1,4 +1,6 @@
 # scanR source code
+![https://img.shields.io/github/v/release/dataesr/scanr](https://img.shields.io/github/v/release/dataesr/scanr)
+![Build](https://github.com/dataesr/scanr/actions/workflows/staging.yml/badge.svg)
 
 Run the app :
 - cd scanR
