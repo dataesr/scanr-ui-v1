@@ -20,10 +20,12 @@ jobs:
       - name: Log into registry
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
       - name: Build image
-        run: docker build -f Dockerfile-production -t $IMAGE:${{ steps.version.outputs.version }} -t $IMAGE:latest .
+        run: docker build -f Dockerfile-production -t $IMAGE .
       - name: Push image
         run: |
           IMAGE_ID=ghcr.io/$OWNER/$IMAGE
+          docker tag $IMAGE $IMAGE_ID:latest
+          docker tag $IMAGE $IMAGE_ID:${{ steps.version.outputs.version }}
           docker push $IMAGE_ID:latest
           docker push $IMAGE_ID:${{ steps.version.outputs.version }}
 
