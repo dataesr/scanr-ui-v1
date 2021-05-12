@@ -128,6 +128,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
+                <li>
+                  <a href="https://github.com/dataesr/scanr/releases" target="_blank" rel="noopener noreferrer">
+                    <FormattedHTMLMessage
+                      id="Footer.link.changelog"
+                      defaultMessage="Footer.link.changelog"
+                    />
+                  </a>
+                </li>
               </ul>
             </div>
             <div className={`col-md ${classes.Col}`}>
