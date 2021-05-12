@@ -7,8 +7,11 @@ export class GlobalContextProvider extends Component {
   constructor(props) {
     super(props);
     this.switchLanguage = this.switchLanguage.bind(this);
+    const localLanguage = ['fr', 'en'].includes(navigator.language.split(/[-_]/)[0])
+      ? navigator.language.split(/[-_]/)[0]
+      : 'en';
     this.state = {
-      language: localStorage.getItem('scanr_lang') || navigator.language.split(/[-_]/)[0],
+      language: localStorage.getItem('scanr_lang') || localLanguage,
       switchLanguage: this.switchLanguage,
     };
   }
