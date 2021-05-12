@@ -9,7 +9,7 @@ import DescriptionCard from '../../../../../../Shared/Ui/DescriptionCard/Descrip
 
 import getSelectKey from '../../../../../../../Utils/getSelectKey';
 import getWebSiteByType from '../../../../../../../Utils/getWebSiteByType';
-
+import { OS_LOGOS_URL } from '../../../../../../../config/config';
 import classes from './Identity.scss';
 
 /**
@@ -66,7 +66,7 @@ const Identity = (props) => {
           </div>
           <div className={`col-lg-6 ${classes.CardContainer}`}>
             <LogoCard
-              src={`./logos/${props.id}.png`}
+              src={`${OS_LOGOS_URL}${props.id}_128.png`}
               url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${props.id}`}
               cssClass="Height150"
               targetUrl={getWebSiteByType(props.links, 'main')}
