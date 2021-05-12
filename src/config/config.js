@@ -10,7 +10,7 @@ export const API_CONTRIBUTE_PUBLICATIONS_SCANR = API_BASE_SCANR.concat('/contrib
 
 export const API_BASE_URL = `${process.env.REACT_APP_API_BASE}${process.env.REACT_APP_API_VERSION}`;
 export const API_BASE_URL_SWAGGER = `${process.env.REACT_APP_API_BASE}swagger-ui.html`;
-
+export const OS_LOGOS_URL = 'https://storage.sbg.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/dataesr/';
 // Get
 export const API_STRUCTURES_END_POINT = API_BASE_URL.concat('/structures');
 export const API_PUBLICATIONS_END_POINT = API_BASE_URL.concat('/publications');
