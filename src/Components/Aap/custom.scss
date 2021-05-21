@@ -1,0 +1,107 @@
+@import '../../style.scss';
+
+.aap {
+  min-height: 70%;
+  background-color: $scanrmiddlegreyColor;
+}
+.AsideContainer {
+  background-color: $scanrlightgreyColor;
+  color: $scanrdeepblueColor;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding: 8px 20px;
+  .title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+
+  }
+  .subTitle {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .requiredKeywords {
+    color: $scanrgreyColor;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 0;
+  }
+}
+.SearchBar {
+  background-color: white;
+  border: 2px solid $scanrdeepblueColor;
+  height: 40px;
+  font-size: 1em;
+  border-radius: 8px;
+  width: 80%;
+}
+.SearchBar:focus {
+  border: 2px solid $scanrgreyColor;
+  outline: none;
+}
+.BtnCustom {
+  border-radius: 8px;
+  height: 40px;
+  width: 40px;
+}
+.callTitle {
+  color: $scanrdeepblueColor;
+  font-size: 1.3rem;
+}
+.subTitle {
+  color: $scanrdeepblueColor;
+  font-style: italic;
+  margin: 0;
+}
+.steps{
+  font-size: 1.4rem;
+  color: $scanrgreyColor;
+  padding-top: 36px;
+  text-align: center;
+}
+.Keywords {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+  LI {
+    margin: 2px;
+    padding: 4px;
+    color: white;
+    background-color: $scanrblueColor;
+    display: inline-block;
+    border-radius: 4px;
+  }
+  SPAN {
+    cursor: pointer;
+    margin-left: 4px;
+  }
+}
+.required {
+  background-color: $entreprisesColor !important;
+}
+.callBlock {
+  background-color: $projectgreenColor;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px 8px 8px 8px;
+}
+.separator {
+  border-top: solid 3px $structureColor;
+}
+.Pagination {
+  padding: 8px;
+  background-color: $scanrlightgreyColor;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $scanrdeepblueColor;
+}
+.MessagesBox {
+  border-radius: 8px;
+  border: 2px solid $scanrdeepblueColor;
+  background-color: $scanrlightgreyColor;
+}

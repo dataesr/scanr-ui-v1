@@ -27,6 +27,7 @@ const ProjectPage = lazy(() => import('./Components/Results/Project/Project'));
 const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
 const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
+const AapPage = lazy(() => import('./Components/Aap/Aap'));
 
 /* Pages froides */
 const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
@@ -101,6 +102,7 @@ class App extends Component {
                     </PageChecker>
                   )}
                 />
+                <Route path="/aap/:id" render={props => (<AapPage {...props} language={lang} />)} />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />
