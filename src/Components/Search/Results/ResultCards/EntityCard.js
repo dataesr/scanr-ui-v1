@@ -141,7 +141,7 @@ const EntityCard = (props) => {
           <h3 className={`mb-auto pb-3 ${classes.CardTitle} ${classes.blockWithText}`}>
             {
               (props.data && props.data.id) ? (
-                <a href={`entite/${props.data.id}`}>
+                <a href={`entite/${props.data.id}`} target={props.target}>
                   {getSelectedKey(props.data, 'label', props.language, 'default')}
                 </a>
               ) : getSelectedKey(props.data, 'label', props.language, 'default')
@@ -167,6 +167,7 @@ export default EntityCard;
 EntityCard.defaultProps = {
   cardColor: 'CardWhite',
   small: false,
+  target: '_self',
 };
 
 EntityCard.propTypes = {
@@ -176,4 +177,5 @@ EntityCard.propTypes = {
   highlightsKeywords: PropTypes.string,
   cardColor: PropTypes.string,
   small: PropTypes.bool,
+  target: PropTypes.string,
 };

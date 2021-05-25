@@ -105,3 +105,18 @@
   border: 2px solid $scanrdeepblueColor;
   background-color: $scanrlightgreyColor;
 }
+
+.Header {
+  padding: 80px 36px 16px 36px;
+  background-color: $scanrblueColor;
+  color: white;
+
+  IMG {
+    height: 50px;
+    background-color: white;
+  }
+  H2 {
+    display: inline-block;
+    padding-left: 24px;
+  }
+}

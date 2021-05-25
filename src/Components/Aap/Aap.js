@@ -3,28 +3,30 @@ import PropTypes from 'prop-types';
 import Axios from 'axios';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import {
-  Container, Row, Col, Form,
+  Container, Row, Col, Form, Button,
 } from 'react-bootstrap';
+import { Typeahead } from 'react-bootstrap-typeahead';
 
-import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
+// ScanR components
+import Header from './Header';
 import EntityCard from '../Search/Results/ResultCards/EntityCard';
-
+import LeafletMap from '../Shared/GraphComponents/Graphs/LeafletMap';
 import { API_STRUCTURES_SEARCH_END_POINT } from '../../config/config';
+import getSelectedKey from '../../Utils/getSelectKey';
 
+// Styles
+import classes from './custom.scss';
+import 'react-bootstrap-typeahead/css/Typeahead.css';
+
+// Traductions
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-import classes from './custom.scss';
+const msg = { fr: messagesFr, en: messagesEn };
+const pageSize = 10000;
+const entitiesPerPage = 20;
 
-const msg = {
-  fr: messagesFr,
-  en: messagesEn,
-};
-// ce-sc5-07-2020
-// IMI2-2015-07-07
 const AapPage = (props) => {
-  const pageSize = 100;
-  const entitiesPerPage = 20;
   const [step, setStep] = useState('1');
   const [callObject, setCallObject] = useState({});
   const [keywords, setKeywords] = useState([]);
@@ -40,6 +42,20 @@ const AapPage = (props) => {
     { key: 'public', kindLabel: 'Secteur public', active: true },
     { key: 'struct', kindLabel: 'Structure de recherche', active: true },
   ]);
+  const [typeFundingFilter, setTypeFundingFilter] = useState([
+    { key: 'ANR', label: 'ANR', active: true },
+    { key: 'H2020', label: 'H2020', active: true },
+    { key: 'FP7', label: 'FP7', active: true },
+    { key: 'Partenariat Hubert Curien', label: 'Partenariat Hubert Curien', active: true },
+    { key: 'PIA', label: 'PIA', active: true },
+    { key: 'Theses co-financées ADEME', label: 'Thèses co-financées ADEME', active: true },
+    { key: 'INCA', label: 'INCA', active: true },
+    { key: 'Casdar', label: 'Casdar', active: true },
+    { key: 'Innovation 2030', label: 'Innovation 2030', active: true },
+    { key: 'PHRC', label: 'PHRC', active: true },
+  ]);
+  const [localisationFilter, setLocalisationFilter] = useState([]);
+  const [selectedLocalisations, setSelectedLocalisations] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
 
@@ -60,6 +76,14 @@ const AapPage = (props) => {
     const obj = {
       query: `"${keywords[ind]}"`,
       pageSize,
+      sourceFields: ['id', 'isFrench', 'kind', 'label', 'address', 'projects.project.type'],
+      filters: {
+        status: {
+          type: 'MultiValueSearchFilter',
+          op: 'all',
+          values: ['active'],
+        },
+      },
     };
     Axios.post(API_STRUCTURES_SEARCH_END_POINT, obj).then((respFromScanR) => {
       if (ind === '0') {
@@ -77,7 +101,7 @@ const AapPage = (props) => {
     });
   };
 
-  const mergeData = () => {
+  const mergeData = () => { // Step === '3'
     const structuresFromScanR = [];
     // Parcours de toutes les structures
     responsesFromScanR.forEach((keywordData) => {
@@ -96,11 +120,21 @@ const AapPage = (props) => {
         }
       });
     });
+
+    // creation du filtre de localisation
+    const localisationSet = new Set();
+    structuresFromScanR.forEach((struct) => {
+      struct.address[0].localisationSuggestions.forEach((loc) => {
+        localisationSet.add(loc);
+      });
+    });
+    setLocalisationFilter([...localisationSet]);
+
     setMergedStructures(structuresFromScanR);
     setStep('4');
   };
 
-  const sortData = () => {
+  const sortData = () => { // Step === '4'
     setSortedData(mergedStructures.sort((a, b) => (b.count - a.count)));
     setStep('5');
   };
@@ -162,7 +196,7 @@ const AapPage = (props) => {
     return checker;
   };
 
-  const applyFilters = () => {
+  const applyFilters = () => { // Step === '5'
     let data = [...sortedData];
     if (isFrenchOnly) {
       data = sortedData.filter(el => (el.isFrench === true));
@@ -174,6 +208,12 @@ const AapPage = (props) => {
       .map(s => s.kindLabel)
       .includes(k))));
 
+    // Filtre sur les types de financements
+    data = data.filter(struct => (struct?.projects?.map(p => p.project.type).some(k => typeFundingFilter
+      .filter(tf => (tf.active))
+      .map(tf => tf.label)
+      .includes(k))));
+
     // Filtre sur les mots-clés requis
     if (requiredKeywords.length > 0) {
       // OR - au moins un des mots-clés required doit êre présent dans l'entité
@@ -181,6 +221,13 @@ const AapPage = (props) => {
 
       // AND - Tous les mots-clés required doivent être présents dans l'entité
       data = data.filter(el => (requiredKeywords.every(kw => el.highlightsKeywords.includes(kw))));
+    }
+
+    // Filtre de localisation
+    if (selectedLocalisations.length > 0) {
+      data = data.filter(struct => (struct?.address[0]?.localisationSuggestions.some(s => selectedLocalisations
+        .map(l => l)
+        .includes(s))));
     }
 
     setFilteredData(data);
@@ -223,6 +270,15 @@ const AapPage = (props) => {
     setStep('5');
   };
 
+  const updateTypeFundingFilter = (tfKey) => {
+    const obj = [...typeFundingFilter];
+    const idx = obj.findIndex(sector => sector.key === tfKey);
+    const previousState = obj[idx].active;
+    obj[idx].active = !previousState;
+    setTypeFundingFilter(obj);
+    setStep('5');
+  };
+
   const addToRequiredKeywords = (kw) => {
     if (requiredKeywords.includes(kw)) {
       setRequiredKeywords(requiredKeywords.filter(k => (k !== kw)));
@@ -232,9 +288,26 @@ const AapPage = (props) => {
     setStep('5');
   };
 
+  const onLocalisationChange = (item) => {
+    setSelectedLocalisations(item);
+    setStep('5');
+  };
+
   const getContent = () => {
     const nbStruct = filteredData.filter(s => (s.count > 1)).length;
     const nbPages = Math.ceil(nbStruct / entitiesPerPage);
+    const dataMap = [];
+    filteredData.filter(s => (s.count > 1)).forEach((s) => {
+      if (s.address && s.address[0]?.gps) {
+        dataMap.push(
+          {
+            id: s.id,
+            infos: [getSelectedKey(s, 'label', props.language, 'default')],
+            position: [s.address[0].gps.lat, s.address[0].gps.lon],
+          },
+        );
+      }
+    });
 
     return (
       <>
@@ -248,13 +321,12 @@ const AapPage = (props) => {
               id="query"
               className={classes.SearchBar}
             />
-            <button
+            <Button
               className={`btn ml-1 ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
-              type="button"
               onClick={submitSearch}
             >
               <i className="fas fa-search" />
-            </button>
+            </Button>
             <hr className={classes.separator} />
 
             <p className={classes.subTitle}>
@@ -265,13 +337,12 @@ const AapPage = (props) => {
               id="keyword"
               className={classes.SearchBar}
             />
-            <button
+            <Button
               className={`btn ml-1 ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
-              type="button"
               onClick={() => addKeyword()}
             >
               <i className="fas fa-plus" />
-            </button>
+            </Button>
             <p className={classes.requiredKeywords}>
               <FormattedHTMLMessage id="requiredKeywords" />
             </p>
@@ -300,21 +371,25 @@ const AapPage = (props) => {
               }
             </ul>
             <div className="text-center">
-              <button
+              <Button
                 className={`btn ml-1 ${classes.btn_dark} ${classes.btn_dark_margin54} ${classes.BtnSearch}`}
-                type="button"
                 onClick={() => setStep('2_0')}
                 disabled={checkKeywords()}
               >
                 <FormattedHTMLMessage id="button" />
                 <i className="fas fa-search ml-3" />
-              </button>
+              </Button>
             </div>
           </>
+
           <hr className={classes.separator} />
+
+          {/* Filtres */}
           <p className={classes.title}>
             <FormattedHTMLMessage id="filterBy" />
           </p>
+
+          {/* isFrench */}
           <Form.Group>
             <Form.Check
               type="checkbox"
@@ -324,8 +399,10 @@ const AapPage = (props) => {
               onChange={e => onIsFrenchChange(e)}
             />
           </Form.Group>
+
+          {/* Par secteurs */}
           <p className={classes.subTitle}>
-            Secteurs
+            <FormattedHTMLMessage id="sectors" />
           </p>
           {
             sectorsFilter.map((sector, i) => (
@@ -340,6 +417,33 @@ const AapPage = (props) => {
             ))
           }
 
+          {/* Par type de financements */}
+          <p className={`mt-3 ${classes.subTitle}`}>
+            <FormattedHTMLMessage id="typeFunding" />
+          </p>
+          {
+            typeFundingFilter.map((tf, i) => (
+              <Form.Check
+                key={tf.key}
+                type="checkbox"
+                id={`istf${i}`}
+                label={tf.label}
+                checked={tf.active}
+                onChange={() => updateTypeFundingFilter(tf.key)}
+              />
+            ))
+          }
+
+          {/* Par localisation - géo */}
+          <p className={`mt-3 ${classes.subTitle}`}>
+            Localisations
+          </p>
+          <Typeahead
+            multiple
+            onChange={e => onLocalisationChange(e)}
+            options={localisationFilter}
+            selected={selectedLocalisations}
+          />
         </Col>
         <Col>
           <div className={classes.callBlock}>
@@ -389,6 +493,13 @@ const AapPage = (props) => {
             &nbsp;
             {filteredData.length}
           </p>
+          <p>
+            <LeafletMap
+              filename="Carte"
+              data={dataMap}
+              language={props.language}
+            />
+          </p>
           {
             filteredData.map((s, index) => {
               if (s.count > 1 && index >= ((currentPage - 1) * entitiesPerPage) && index < (currentPage * entitiesPerPage)) {
@@ -399,6 +510,7 @@ const AapPage = (props) => {
                       language={props.language}
                       highlights={s.highlights}
                       highlightsKeywords={s.highlightsKeywords.join(', ')}
+                      target="_blank"
                     />
                   </div>
                 );
@@ -447,12 +559,7 @@ const AapPage = (props) => {
   return (
     <IntlProvider locale={props.language} messages={msg[props.language]}>
       <div className={classes.aap}>
-        <HeaderTitle
-          language={props.language}
-          labelkey="aap"
-          url1="/"
-          url2="/focus"
-        />
+        <Header title={<FormattedHTMLMessage id="title" />} />
         <Container as="main">
           <Row>
             {

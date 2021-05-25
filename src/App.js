@@ -102,7 +102,7 @@ class App extends Component {
                     </PageChecker>
                   )}
                 />
-                <Route path="/aap/:id" render={props => (<AapPage {...props} language={lang} />)} />
+                <Route path="/trouver-des-partenaires-pour-horizon-europe/:id" render={props => (<AapPage {...props} language={lang} />)} />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />
