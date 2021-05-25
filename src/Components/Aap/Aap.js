@@ -124,9 +124,11 @@ const AapPage = (props) => {
     // creation du filtre de localisation
     const localisationSet = new Set();
     structuresFromScanR.forEach((struct) => {
-      struct.address[0].localisationSuggestions.forEach((loc) => {
-        localisationSet.add(loc);
-      });
+      if (struct.address && struct.address[0] && struct.address[0].localisationSuggestions) {
+        struct.address[0].localisationSuggestions.forEach((loc) => {
+          localisationSet.add(loc);
+        });
+      }
     });
     setLocalisationFilter([...localisationSet]);
 
@@ -225,7 +227,7 @@ const AapPage = (props) => {
 
     // Filtre de localisation
     if (selectedLocalisations.length > 0) {
-      data = data.filter(struct => (struct?.address[0]?.localisationSuggestions.some(s => selectedLocalisations
+      data = data.filter(struct => (struct?.address[0]?.localisationSuggestions?.some(s => selectedLocalisations
         .map(l => l)
         .includes(s))));
     }
