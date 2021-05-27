@@ -103,6 +103,24 @@ const EntityCard = (props) => {
     )
     : null;
 
+  const highlightsKeywords = (props.highlightsKeywords)
+    ? (
+      <li className="d-flex">
+        <div className={classes.Icons}>
+          <i aria-hidden="true" className="fas fa-search" />
+        </div>
+        <div className="m-0 flex-grow-1 pl-1">
+          <p className={`m-0 ${classes.FoundIn}`}>
+            <FormattedHTMLMessage id="resultCard.keyswordsFounded" defaultMessage="resultCard.keyswordsFounded" />
+          </p>
+          <p className={`d-flex m-0 ${classes.Highlights}`}>
+            {props.highlightsKeywords}
+          </p>
+        </div>
+      </li>
+    )
+    : null;
+
   const country = (props.data && props.data.country)
     ? (
       <li className="d-flex">
@@ -123,7 +141,7 @@ const EntityCard = (props) => {
           <h3 className={`mb-auto pb-3 ${classes.CardTitle} ${classes.blockWithText}`}>
             {
               (props.data && props.data.id) ? (
-                <a href={`entite/${props.data.id}`}>
+                <a href={`entite/${props.data.id}`} target={props.target}>
                   {getSelectedKey(props.data, 'label', props.language, 'default')}
                 </a>
               ) : getSelectedKey(props.data, 'label', props.language, 'default')
@@ -136,6 +154,7 @@ const EntityCard = (props) => {
             {identifier}
             <hr className={`mb-2 mt-2 ${classes.HighlightEntitySep}`} aria-hidden="true" />
             {highlight}
+            {highlightsKeywords}
           </ul>
         </article>
       </IntlProvider>
@@ -148,12 +167,15 @@ export default EntityCard;
 EntityCard.defaultProps = {
   cardColor: 'CardWhite',
   small: false,
+  target: '_self',
 };
 
 EntityCard.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.object,
   highlights: PropTypes.array,
+  highlightsKeywords: PropTypes.string,
   cardColor: PropTypes.string,
   small: PropTypes.bool,
+  target: PropTypes.string,
 };
