@@ -5,27 +5,27 @@ on:
     tags:
       - "*"
 
-env:
-  IMAGE: scanr
-  OWNER: dataesr
-
 jobs:
-  build:
+  publish-package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
       - name: Get version
         id: version
         run: echo ::set-output name=version::${GITHUB_REF#refs/tags/}
+
       - name: Log into registry
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+
       - name: Build image
-        run: docker build -f Dockerfile-production -t $IMAGE .
+        run: docker build -f Dockerfile -t ${{ github.repository }} .
+
       - name: Push image
         run: |
-          IMAGE_ID=ghcr.io/$OWNER/$IMAGE
-          docker tag $IMAGE $IMAGE_ID:latest
-          docker tag $IMAGE $IMAGE_ID:${{ steps.version.outputs.version }}
+          IMAGE_ID=ghcr.io/${{ github.repository }}
+          docker tag ${{ github.repository }} $IMAGE_ID:latest
+          docker tag ${{ github.repository }} $IMAGE_ID:${{ steps.version.outputs.version }}
           docker push $IMAGE_ID:latest
           docker push $IMAGE_ID:${{ steps.version.outputs.version }}
 
@@ -48,7 +48,7 @@ jobs:
         uses: loopwerk/tag-changelog@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          config_file: changelog-config.js
+          config_file: .github/config/changelog-config.js
       - name: print changelog
         run: echo "${{ steps.changelog.outputs.changes }}"
       - name: Create Release
@@ -58,7 +58,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.version.outputs.version }}
-          release_name: ${{ steps.version.outputs.version }} (${{ steps.setdate.outputs.date }})
+          release_name: ${{ steps.version.outputs.version }}
           body: "${{ steps.changelog.outputs.changes }}"
-          draft: false
-          prerelease: false
