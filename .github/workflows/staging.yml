@@ -12,27 +12,27 @@ env:
   DEPLOYMENT_URL: https://scanr.staging.dataesr.ovh
 
 jobs:
-  publish-ghcr:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
+  # publish-ghcr:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v2
 
-      - name: Log into registry
-        run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+  #     - name: Log into registry
+  #       run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build image
-        run: docker build -f Dockerfile-staging -t ${{ github.repository }} .
+  #     - name: Build image
+  #       run: docker build -f Dockerfile-staging -t ${{ github.repository }} .
 
-      - name: Get Tag
-        id: version
-        run: echo ::set-output name=tag::${GITHUB_REF#refs/heads/}
+  #     - name: Get Tag
+  #       id: version
+  #       run: echo ::set-output name=tag::${GITHUB_REF#refs/heads/}
 
-      - name: Push image
-        run: |
-          IMAGE_ID=ghcr.io/${{ github.repository }}
-          IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-          docker tag ${{ github.repository }} $IMAGE_ID:${{ steps.version.outputs.tag }}
-          docker push $IMAGE_ID:${{ steps.version.outputs.tag }}
+  #     - name: Push image
+  #       run: |
+  #         IMAGE_ID=ghcr.io/${{ github.repository }}
+  #         IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
+  #         docker tag ${{ github.repository }} $IMAGE_ID:${{ steps.version.outputs.tag }}
+  #         docker push $IMAGE_ID:${{ steps.version.outputs.tag }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,8 +47,8 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
-          namespace: ${DEPLOYMENT_NAMESPACE}
-          restart: ${DEPLOYMENT}
+          namespace: ${{ DEPLOYMENT_NAMESPACE }}
+          restart: ${{ DEPLOYMENT }}
 
       - name: Notify in slack
         run: |
