@@ -47,9 +47,9 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
-          namespace: ${{ DEPLOYMENT_NAMESPACE }}
-          restart: ${{ DEPLOYMENT }}
+          namespace: staging
+          restart: scanr
 
-      - name: Notify in slack
-        run: |
-          curl -X POST -H 'Content-type: application/json' --data '{"blocks": [{"type": "section", "text": {"type": "mrkdwn", "text": "Une nouvelle version de $DEPLOYMENT a été déployée !"}, "accessory": {"type": "button", "style": "primary", "text": {"type": "plain_text", "text": "Voir le site", "emoji": true }, "value": "go-to-page", "url": $DEPLOYMENT_URL, "action_id": "button-action" }}]}' ${{ secrets.SLACK_WEBHOOK }}
+      # - name: Notify in slack
+      #   run: |
+      #     curl -X POST -H 'Content-type: application/json' --data '{"blocks": [{"type": "section", "text": {"type": "mrkdwn", "text": "Une nouvelle version de $DEPLOYMENT a été déployée !"}, "accessory": {"type": "button", "style": "primary", "text": {"type": "plain_text", "text": "Voir le site", "emoji": true }, "value": "go-to-page", "url": $DEPLOYMENT_URL, "action_id": "button-action" }}]}' ${{ secrets.SLACK_WEBHOOK }}
