@@ -40,9 +40,6 @@ jobs:
       - name: Get version
         id: version
         run: echo ::set-output name=version::${GITHUB_REF#refs/tags/}
-      - name: Set date
-        id: setdate
-        run: echo "::set-output name=date::$(date +'%d-%m-%Y')"
       - name: Create changelog text
         id: changelog
         uses: loopwerk/tag-changelog@v1
