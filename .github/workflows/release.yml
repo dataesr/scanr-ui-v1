@@ -58,7 +58,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ steps.version.outputs.version }}
-          release_name: ${{ steps.version.outputs.version }} (${{ steps.setdate.outputs.date }})
+          release_name: ${{ steps.version.outputs.version }}
           body: "${{ steps.changelog.outputs.changes }}"
-          draft: false
-          prerelease: false
