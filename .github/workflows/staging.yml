@@ -15,12 +15,6 @@ jobs:
   publish-ghcr:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
-        run: |
-          echo $DEPLOYMENT
-          echo ${DEPLOYMENT}
-          echo ${$DEPLOYMENT}
-
       - uses: actions/checkout@v2
 
       - name: Log into registry
