@@ -15,6 +15,12 @@ jobs:
   publish-ghcr:
     runs-on: ubuntu-latest
     steps:
+      - name: Echo
+        run: |
+          echo $DEPLOYMENT
+          echo ${DEPLOYMENT}
+          echo ${$DEPLOYMENT}
+
       - uses: actions/checkout@v2
 
       - name: Log into registry
@@ -47,8 +53,8 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_STAGING }}
         with:
-          namespace: $DEPLOYMENT_NAMESPACE
-          restart: $DEPLOYMENT
+          namespace: ${DEPLOYMENT_NAMESPACE}
+          restart: ${DEPLOYMENT}
 
       - name: Notify in slack
         run: |
