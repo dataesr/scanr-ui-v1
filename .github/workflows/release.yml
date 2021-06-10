@@ -46,8 +46,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           config_file: .github/config/changelog-config.js
-      - name: print changelog
-        run: echo "${{ steps.changelog.outputs.changes }}"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
