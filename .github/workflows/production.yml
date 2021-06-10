@@ -3,7 +3,7 @@ name: Production deployment
 on:
   push:
     tags:
-      - "*"
+      - "v[0-9]+.[0-9]+.[0-9]+"
 
 env:
   # Must match k8s deployment name
