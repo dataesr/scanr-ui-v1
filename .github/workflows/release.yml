@@ -19,7 +19,7 @@ jobs:
         run: docker login ghcr.io -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -f Dockerfile-production -t ${{ github.repository }} .
+        run: docker build -t ${{ github.repository }} .
 
       - name: Push image
         run: |
