@@ -1,9 +1,15 @@
-name: Publish docker image and release
+name: Production deployment
 
 on:
   push:
     tags:
       - "*"
+
+env:
+  # Must match k8s deployment name
+  DEPLOYMENT: scanr
+  DEPLOYMENT_URL: https://scanr.dataesr.ovh
+  SLACK_NOTIFICATION_CHANNEL: '#scanr'
 
 jobs:
   publish-ghcr:
@@ -55,3 +61,31 @@ jobs:
           tag_name: ${{ steps.version.outputs.version }}
           release_name: ${{ steps.version.outputs.version }}
           body: "${{ steps.changelog.outputs.changes }}"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check Out Repo
+        uses: actions/checkout@v2
+
+      - name: Deploy to Cluster
+        id: kubectl-deploy
+        uses: dataesr/kubectl-deploy@v1.1
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_DOAD }}
+        with:
+          restart: ${{ env.DEPLOYMENT }}
+
+  notify:
+    needs: deploy
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dataesr/slack-notifier-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN}}
+          slack_token: ${{ secrets.SLACK_TOKEN }}
+          slack_channel: ${{ env.SLACK_NOTIFICATION_CHANNEL}}
+          deployment_url: ${{ env.DEPLOYMENT_URL }}
