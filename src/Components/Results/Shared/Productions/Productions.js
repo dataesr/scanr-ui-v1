@@ -43,6 +43,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 const PAGE_SIZE = 10;
+const year = Number(new Date().year) + 1;
 
 class Productions extends Component {
   state = {
@@ -104,7 +105,7 @@ class Productions extends Component {
     }
     if (prevState.query !== this.state.query) {
       const low = 2000;
-      const high = 2021;
+      const high = year;
       this.setState({ low, high });
       this.fetchDataByType();
     }
@@ -175,7 +176,7 @@ class Productions extends Component {
     request.filters.productionType.values = [this.state.productionType];
     dateRequest.filters.productionType.values = [this.state.productionType];
     request.filters.year.min = this.state.low ? this.state.low : 2000;
-    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2021;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : year;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
       const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);

@@ -25,6 +25,7 @@ import PreRequest from './Requests/PreRequest';
  * Accessible : .
  * Tests unitaires : .
 */
+const year = Number(new Date().year) + 1;
 class Projects extends Component {
   state = {
     projectType: 'all',
@@ -70,7 +71,7 @@ class Projects extends Component {
     }
     if (prevState.query !== this.state.query) {
       const low = 2000;
-      const high = 2021;
+      const high = year;
       this.setState({ low, high });
       this.fetchDataByType();
     }
@@ -126,7 +127,7 @@ class Projects extends Component {
       delete dateRequest.filters.type;
     }
     request.filters.year.min = this.state.low ? this.state.low : 2000;
-    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2021;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : year;
 
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
