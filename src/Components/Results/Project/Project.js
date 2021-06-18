@@ -163,6 +163,7 @@ const Project = (props) => {
               language={props.language}
               data={data.participants}
               id={props.match.params.id}
+              type={data.type}
             />
           </div>
         </SectionWhite>
