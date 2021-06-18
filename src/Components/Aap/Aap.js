@@ -35,7 +35,7 @@ const AapPage = (props) => {
   const [mergedStructures, setMergedStructures] = useState([]);
   const [sortedData, setSortedData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [isFrenchOnly, setIsFrenchFilter] = useState(false);
+  const [isFrenchOnly, setIsFrenchFilter] = useState(true);
   const [sectorsFilter, setSectorsFilter] = useState([
     { key: 'orgaInter', kindLabel: 'Organisation internationale', active: true },
     { key: 'prive', kindLabel: 'Secteur privé', active: true },
@@ -61,7 +61,8 @@ const AapPage = (props) => {
 
   const getDataFromCE = async () => {
     try {
-      const responseCallFromCE = await Axios.get(`https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${props.match.params.id.toLowerCase()}.json`);
+      const headers = { headers: { 'Access-Control-Allow-Origin': '*' } };
+      const responseCallFromCE = await Axios.get(`https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${props.match.params.id.toLowerCase()}.json`, headers);
       const { TopicDetails } = responseCallFromCE.data;
       setCallObject(TopicDetails);
       setKeywords(TopicDetails.keywords);
