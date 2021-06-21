@@ -64,7 +64,7 @@ const AapPage = (props) => {
       const config = {
         headers: {
           // 'Access-Control-Allow-Origin': '*',
-          Referer: 'http://localhost:3000/',
+          Referer: 'https://scanr.staging.dataesr.ovh/',
           // 'Referrer-Policy': 'strict-origin-when-cross-origin', // no-referrer-when-downgrade
           'Content-type': 'application/json',
         },
