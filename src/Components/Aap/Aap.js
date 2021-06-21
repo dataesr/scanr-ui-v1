@@ -64,7 +64,7 @@ const AapPage = (props) => {
       const config = {
         headers: {
           // 'Access-Control-Allow-Origin': '*',
-          Referer: 'https://scanr.staging.dataesr.ovh/',
+          Referer: 'https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/',
           // 'Referrer-Policy': 'strict-origin-when-cross-origin', // no-referrer-when-downgrade
           'Content-type': 'application/json',
         },
