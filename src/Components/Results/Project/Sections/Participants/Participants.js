@@ -41,20 +41,24 @@ const Participants = (props) => {
   // Recherche et stockage des sous-participants
   const dataForRows = [];
   props.data.forEach((part) => {
-    const idPart = part.label.default.split('__')[2].slice(0, -2);
-    // Dernier caractère : Si != 0 alors il s'agit d'un sous participant
-    if (part.label.default.slice(-1) === '0') {
-      // Recherche d'éventuels sous-participants
-      const subs = props.data.filter((partSub) => {
-        // Id
-        const idPartSub = partSub.label.default.split('__')[2].slice(0, -2);
-        return (idPartSub === idPart && partSub.label.default.slice(-1) !== '0');
-      });
-      const obj = {
-        ...part,
-        subParticipants: subs || null,
-      };
-      dataForRows.push(obj);
+    if (props.type.toUpperCase() === 'H2020') {
+      const idPart = part.label.default.split('__')[2].slice(0, -2);
+      // Dernier caractère : Si != 0 alors il s'agit d'un sous participant
+      if (part.label.default.slice(-1) === '0') {
+        // Recherche d'éventuels sous-participants
+        const subs = props.data.filter((partSub) => {
+          // Id
+          const idPartSub = partSub.label.default.split('__')[2].slice(0, -2);
+          return (idPartSub === idPart && partSub.label.default.slice(-1) !== '0');
+        });
+        const obj = {
+          ...part,
+          subParticipants: subs || null,
+        };
+        dataForRows.push(obj);
+      }
+    } else {
+      dataForRows.push(part);
     }
   });
   return (
@@ -98,4 +102,5 @@ export default Participants;
 Participants.propTypes = {
   language: PropTypes.string.isRequired,
   data: PropTypes.array,
+  type: PropTypes.string.isRequired,
 };

@@ -61,7 +61,15 @@ const AapPage = (props) => {
 
   const getDataFromCE = async () => {
     try {
-      const responseCallFromCE = await Axios.get(`https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${props.match.params.id.toLowerCase()}.json`);
+      const config = {
+        headers: {
+          // 'Access-Control-Allow-Origin': '*',
+          Referer: 'https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/',
+          // 'Referrer-Policy': 'strict-origin-when-cross-origin', // no-referrer-when-downgrade
+          'Content-type': 'application/json',
+        },
+      };
+      const responseCallFromCE = await Axios.get(`https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${props.match.params.id.toLowerCase()}.json`, config);
       const { TopicDetails } = responseCallFromCE.data;
       setCallObject(TopicDetails);
       setKeywords(TopicDetails.keywords);
