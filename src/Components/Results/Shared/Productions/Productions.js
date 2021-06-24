@@ -411,28 +411,7 @@ class Productions extends Component {
               <FormattedHTMLMessage id="ProductionPerimeter" />
               {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
               {(this.state.error) ? <Errors error={500} /> : null}
-              {
-                  (this.state.isLoading)
-                    ? (
-                      <React.Fragment>
-                        <FilterPanel
-                          language={this.props.language}
-                          data={[]}
-                          totalPerType={this.state.totalPerType}
-                          selectedType={this.state.productionType || 'publication'}
-                          changeTypeHandler={this.changeTypeHandler}
-                          currentQueryText={this.state.currentQueryText}
-                          queryChangeHandler={this.queryChangeHandler}
-                          queryTextChangeHandler={this.queryTextChangeHandler}
-                          lowSliderYear={this.state.low}
-                          highSliderYear={this.state.high}
-                          handleSliderRange={this.handleSliderRange}
-                        />
-                        <Loader color={styles.publicationsColor} />
-                      </React.Fragment>
-                    )
-                    : null
-                }
+              {(this.state.isLoading) ? <Loader color={styles.publicationsColor} /> : null}
             </div>
           </section>
         </Fragment>

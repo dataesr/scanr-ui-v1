@@ -218,28 +218,7 @@ class Projects extends Component {
               />
               {(this.state.total === 0) ? <EmptySection /> : null}
               {(this.state.error) ? <Errors error={500} /> : null}
-              {
-                (this.state.isLoading)
-                  ? (
-                    <React.Fragment>
-                      <FilterPanel
-                        language={this.props.language}
-                        totalPerType={this.state.totalPerType}
-                        selectedType={this.state.projectType}
-                        data={[]}
-                        changeTypeHandler={this.changeTypeHandler}
-                        currentQueryText={this.state.currentQueryText}
-                        queryChangeHandler={this.queryChangeHandler}
-                        queryTextChangeHandler={this.queryTextChangeHandler}
-                        lowSliderYear={this.state.low}
-                        highSliderYear={this.state.high}
-                        handleSliderRange={this.handleSliderRange}
-                      />
-                      <Loader color={styles.projectsColor} />
-                    </React.Fragment>
-                  )
-                  : null
-              }
+              {(this.state.isLoading) ? <Loader color={styles.projectsColor} /> : null}
             </div>
           </section>
         </Fragment>
