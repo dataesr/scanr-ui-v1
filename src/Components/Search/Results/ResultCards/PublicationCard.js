@@ -41,7 +41,7 @@ const PublicationCard = (props) => {
   const getAuthors = (data, maxAuthors) => {
     let authors = [];
     if (!data.authors) {
-      return { authors: null, others: null };
+      return null;
     }
     const diff = data.authors.length - maxAuthors;
     let others = null;
@@ -85,7 +85,7 @@ const PublicationCard = (props) => {
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
     } else {
-      return { authors: null, others: null };
+      return null;
     }
     const printedAuthors = authors;
     // const printedOthers = (props.data.productionType !== 'thesis') ? others : null;
