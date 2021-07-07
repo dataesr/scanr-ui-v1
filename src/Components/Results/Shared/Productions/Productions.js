@@ -43,6 +43,7 @@ import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
 const PAGE_SIZE = 10;
+const year = Number(new Date().year) + 1;
 
 class Productions extends Component {
   state = {
@@ -104,7 +105,7 @@ class Productions extends Component {
     }
     if (prevState.query !== this.state.query) {
       const low = 2000;
-      const high = 2021;
+      const high = year;
       this.setState({ low, high });
       this.fetchDataByType();
     }
@@ -175,7 +176,7 @@ class Productions extends Component {
     request.filters.productionType.values = [this.state.productionType];
     dateRequest.filters.productionType.values = [this.state.productionType];
     request.filters.year.min = this.state.low ? this.state.low : 2000;
-    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2021;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : year;
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
       const childs = this.props.childs.map(child => child.value.id).slice(0, 4095);
@@ -410,28 +411,7 @@ class Productions extends Component {
               <FormattedHTMLMessage id="ProductionPerimeter" />
               {(this.state.total === 0) ? <EmptySection language={this.props.language} /> : null}
               {(this.state.error) ? <Errors error={500} /> : null}
-              {
-                  (this.state.isLoading)
-                    ? (
-                      <React.Fragment>
-                        <FilterPanel
-                          language={this.props.language}
-                          data={[]}
-                          totalPerType={this.state.totalPerType}
-                          selectedType={this.state.productionType || 'publication'}
-                          changeTypeHandler={this.changeTypeHandler}
-                          currentQueryText={this.state.currentQueryText}
-                          queryChangeHandler={this.queryChangeHandler}
-                          queryTextChangeHandler={this.queryTextChangeHandler}
-                          lowSliderYear={this.state.low}
-                          highSliderYear={this.state.high}
-                          handleSliderRange={this.handleSliderRange}
-                        />
-                        <Loader color={styles.publicationsColor} />
-                      </React.Fragment>
-                    )
-                    : null
-                }
+              {(this.state.isLoading) ? <Loader color={styles.publicationsColor} /> : null}
             </div>
           </section>
         </Fragment>

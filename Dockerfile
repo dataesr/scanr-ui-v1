@@ -1,10 +1,7 @@
-FROM node:14.15.4-alpine3.12 AS build
+FROM node:14 AS build
 
-# need Git for npm ci to run.
-RUN apk update && apk add git
 WORKDIR /app
-COPY package.json .
-COPY package-lock.json .
+COPY package*.json .
 RUN npm ci
 COPY . .
 RUN npm run build:production

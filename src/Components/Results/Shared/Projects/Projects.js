@@ -25,6 +25,7 @@ import PreRequest from './Requests/PreRequest';
  * Accessible : .
  * Tests unitaires : .
 */
+const year = Number(new Date().year) + 1;
 class Projects extends Component {
   state = {
     projectType: 'all',
@@ -70,7 +71,7 @@ class Projects extends Component {
     }
     if (prevState.query !== this.state.query) {
       const low = 2000;
-      const high = 2021;
+      const high = year;
       this.setState({ low, high });
       this.fetchDataByType();
     }
@@ -126,7 +127,7 @@ class Projects extends Component {
       delete dateRequest.filters.type;
     }
     request.filters.year.min = this.state.low ? this.state.low : 2000;
-    request.filters.year.max = this.state.high ? (this.state.high + 1) : 2021;
+    request.filters.year.max = this.state.high ? (this.state.high + 1) : year;
 
     let allIds = [this.props.match.params.id];
     if (this.props.childs.length > 0) {
@@ -217,28 +218,7 @@ class Projects extends Component {
               />
               {(this.state.total === 0) ? <EmptySection /> : null}
               {(this.state.error) ? <Errors error={500} /> : null}
-              {
-                (this.state.isLoading)
-                  ? (
-                    <React.Fragment>
-                      <FilterPanel
-                        language={this.props.language}
-                        totalPerType={this.state.totalPerType}
-                        selectedType={this.state.projectType}
-                        data={[]}
-                        changeTypeHandler={this.changeTypeHandler}
-                        currentQueryText={this.state.currentQueryText}
-                        queryChangeHandler={this.queryChangeHandler}
-                        queryTextChangeHandler={this.queryTextChangeHandler}
-                        lowSliderYear={this.state.low}
-                        highSliderYear={this.state.high}
-                        handleSliderRange={this.handleSliderRange}
-                      />
-                      <Loader color={styles.projectsColor} />
-                    </React.Fragment>
-                  )
-                  : null
-              }
+              {(this.state.isLoading) ? <Loader color={styles.projectsColor} /> : null}
             </div>
           </section>
         </Fragment>
