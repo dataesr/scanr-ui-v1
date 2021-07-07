@@ -83,7 +83,7 @@ jobs:
   #         restart: ${{ env.DEPLOYMENT }}
 
   notify:
-    needs: deploy
+    needs: release
     if: always()
     runs-on: ubuntu-latest
     steps:
