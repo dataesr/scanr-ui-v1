@@ -104,9 +104,6 @@ class Productions extends Component {
       this.fetchDataByType();
     }
     if (prevState.query !== this.state.query) {
-      const low = 2000;
-      const high = year;
-      this.setState({ low, high });
       this.fetchDataByType();
     }
   }
