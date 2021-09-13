@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Errors from '../Errors/Errors';
 
 export default function PageChecker({
@@ -9,3 +10,10 @@ export default function PageChecker({
   }
   return children;
 }
+
+PageChecker.propTypes = {
+  children: PropTypes.element.isRequired,
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  config: PropTypes.shape({ person: PropTypes.array, publication: PropTypes.array }).isRequired,
+};

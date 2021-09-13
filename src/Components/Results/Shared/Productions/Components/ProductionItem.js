@@ -18,16 +18,17 @@ const ProductionItem = ({ props }) => {
   };
 
   const titleSource = item.value.source ? item.value.source.title : item.value.title;
+  const { id: itemId } = item.value;
   if (checkBoxItems) {
     contentItem = (
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <label htmlFor={titleLabel} className={`pl-5 ${classes.Title} ${props.skinnyTheme ? 'pb-0' : ''}`}>
+            <label htmlFor={itemId} className={`pl-5 ${classes.Title} ${props.skinnyTheme ? 'pb-0' : ''}`}>
               <div className="row">
                 <div>
-                  <input className={classes.HiddenInput} id={titleLabel} onChange={() => handleChange(item.value.id)} type="checkbox" />
-                  <i className={`fa-lg ${classes.pointer} ${classes.CustomInput} ${itemsActive.indexOf(item.value.id) > -1 ? 'fas fa-check-square' : 'far fa-square'}`} />
+                  <input className={classes.HiddenInput} id={itemId} onChange={() => handleChange(itemId)} type="checkbox" />
+                  <i className={`fa-lg ${classes.pointer} ${classes.CustomInput} ${itemsActive.indexOf(itemId) > -1 ? 'fas fa-check-square' : 'far fa-square'}`} />
                 </div>
                 <div className={`col-12 ${props.skinnyTheme ? '' : 'pb-2'}`}>
                   <a
