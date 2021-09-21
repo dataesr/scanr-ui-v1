@@ -1,11 +1,11 @@
 {
   "title": {
-    "fr": "Les thèses soutenues en 2018. Sur quels thèmes ?",
-    "en": "2018 thesis in france. Which thematics?"
+    "fr": "Les thèses soutenues en 2019. Sur quels thèmes ?",
+    "en": "2019 thesis in france. Which thematics?"
   },
   "text":  {
     "fr": "#### Le paysage des thèses françaises\nLe moteur de recherche <a href='http://theses.fr' target='_blank'>theses.fr</a>, produit par l’Agence bibliographique de l’enseignement supérieur <a href='http://www.abes.fr' target='_blank'>ABES</a> recense toutes les thèses soutenues en France grâce au travail de signalement des personnels (service de la recherche, écoles doctorales, bibliothèques des établissements habilités à délivrer le doctorat …) et lie à chacune d’elle les personnes et organismes associés. Les données de theses.fr proviennent des applications sources que sont l’application de signalement des thèses en préparation <a href='https://step.theses.fr' target='_blank'>STEP</a>, celle dédiée à la gestion du dépôt national des thèses électroniques françaises <a href='https://star.theses.fr' target='_blank'>STAR</a> et du catalogue collectif <a href='http://sudoc.fr' target='_blank'>Sudoc</a>.<br/>scanR, moteur de la recherche et de l’innovation vous invite à découvrir quelques visualisations pour mieux appréhender le paysage des thèses françaises.",
-    "en": "#### PhD theses defended in 2018. On which themes?\nThe [theses.fr](http://theses.fr) search engine, produced by the Agence bibliographique de l'enseignement supérieur <a href='http://www.abes.fr' target='_blank'>ABES</a>, lists all the theses defended in France thanks to the reporting work of the staff (research department, doctoral schools, libraries, etc.) of institutions authorised to award the PhD in France and links associated persons and organisations to each of them. The data from theses.fr comes from the source applications that are the application for reporting theses in preparation <a href='https://step.theses.fr' target='_blank'>STEP</a>, the application dedicated to the management of the national repository of French electronic theses <a href='https://star.theses.fr' target='_blank'>STAR</a> and the <a href='http://sudoc.fr' target='_blank'>Sudoc union catalogue</a>.<br/> scanR, the engine of research and innovation, invites you to discover some visualizations to better understand the landscape of French theses."
+    "en": "#### PhD theses defended in 2019. On which themes?\nThe [theses.fr](http://theses.fr) search engine, produced by the Agence bibliographique de l'enseignement supérieur <a href='http://www.abes.fr' target='_blank'>ABES</a>, lists all the theses defended in France thanks to the reporting work of the staff (research department, doctoral schools, libraries, etc.) of institutions authorised to award the PhD in France and links associated persons and organisations to each of them. The data from theses.fr comes from the source applications that are the application for reporting theses in preparation <a href='https://step.theses.fr' target='_blank'>STEP</a>, the application dedicated to the management of the national repository of French electronic theses <a href='https://star.theses.fr' target='_blank'>STAR</a> and the <a href='http://sudoc.fr' target='_blank'>Sudoc union catalogue</a>.<br/> scanR, the engine of research and innovation, invites you to discover some visualizations to better understand the landscape of French theses."
   },
   "tags": {
     "fr": ["theses"],
@@ -13,7 +13,7 @@
   },
   "type": "bubble",
   "api": "publications",
-  "href": "/recherche/publications?filters=%7B%22productionType%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22thesis%22%5D%7D%2C%22year%22%3A%7B%22type%22%3A%22LongRangeFilter%22%2C%22max%22%3A2019%2C%22min%22%3A2018%2C%22missing%22%3Afalse%7D%7D&query=&sort",
+  "href": "/recherche/publications?filters=%7B%22productionType%22%3A%7B%22type%22%3A%22MultiValueSearchFilter%22%2C%22op%22%3A%22any%22%2C%22values%22%3A%5B%22thesis%22%5D%7D%2C%22year%22%3A%7B%22type%22%3A%22LongRangeFilter%22%2C%22max%22%3A2019%2C%22min%22%3A2019%2C%22missing%22%3Afalse%7D%7D&query=&sort",
   "hrefX": "/recherche/publications",
   "components": [
     {
@@ -22,7 +22,7 @@
         "fr": "Principaux mot-clés des thèses",
         "en": "Thesis keyword cloud for PhD theses"
       },
-      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
+      "subtitle": {"fr": "Thèses soutenues en 2019", "en": "Theses defended in 2019"},
       "api" : "publications",
       "lexicon" : "FocusTheseKeyword",
       "request": {
@@ -36,8 +36,8 @@
           },
           "year": {
             "type": "LongRangeFilter",
-            "min": 2018,
-            "max": 2019,
+            "min": 2019,
+            "max": 2020,
             "missing": false
           }
         }
@@ -49,7 +49,7 @@
         "fr": "Principaux domaines de recherche des thèses",
         "en": "Main research areas of the PhD theses"
       },
-      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
+      "subtitle": {"fr": "Thèses soutenues en 2019", "en": "Theses defended in 2019"},
       "api" : "publications",
       "lexicon" : "FocusTheseDomain",
       "request": {
@@ -63,8 +63,8 @@
           },
           "year": {
             "type": "LongRangeFilter",
-            "min": 2018,
-            "max": 2019,
+            "min": 2019,
+            "max": 2020,
             "missing": false
           }
         }
@@ -76,7 +76,7 @@
         "fr": "Nombre de thèses par unité urbaine (top 10)",
         "en": "Number of PhD theses by urban unit (top 10)"
       },
-      "subtitle": {"fr": "Thèses soutenues en 2018", "en": "Theses defended in 2018"},
+      "subtitle": {"fr": "Thèses soutenues en 2019", "en": "Theses defended in 2019"},
       "api" : "publications",
       "lexicon" : "FocusTheseCity",
       "aggSize": 20,
@@ -94,8 +94,8 @@
           },
           "year": {
             "type": "LongRangeFilter",
-            "min": 2018,
-            "max": 2019,
+            "min": 2019,
+            "max": 2020,
             "missing": false
           }
         }

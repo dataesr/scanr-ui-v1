@@ -1,7 +1,7 @@
 {
   "title": {
-    "fr": "Les nominations 2019 à l'Institut Universitaire de France",
-    "en": "The Institut Universitaire de France new members in 2019"
+    "fr": "Les nominations 2020 à l'Institut Universitaire de France",
+    "en": "The Institut Universitaire de France new members in 2020"
   },
   "text":  {
 	  "fr": "Les membres sont nommés pour une durée de 5 ans et placés à ce titre en position de délégation. Ils continuent à exercer leur activité dans leur université d’appartenance, en bénéficiant d’un allègement de leur service d’enseignement et de crédits de recherche spécifiques. Ils peuvent être nommés en tant que junior (pour les moins de 40 ans) ou sénior. Les membres sénior peuvent être reconduits pour une nouvelle période de 5 ans à la fin de leur délégation.",
@@ -23,39 +23,39 @@
   "components": [
     {
       "componentType": "OpendataEntityMap",
-      "opendata": "iuf-2019.json",
+      "opendata": "iuf.json",
       "lexicon": "FocusIUFMap",
       "tooltipFr": "prenom;nom__NEWLINE__type_nomination__NEWLINE__structure_recherche;commune",
       "title": {
-        "fr": "Carte des nominations à l'IUF en 2019",
-        "en": "Map of new IUF members in 2019"
+        "fr": "Carte des nominations à l'IUF en 2020",
+        "en": "Map of new IUF members in 2020"
       },
       "subtitle": {"fr": "", "en": ""},
-      "opendata" : "iuf-2019.json"
+      "opendata" : "iuf.json"
     },
     {
       "componentType": "OpendataPackedBubble",
-      "opendata": "iuf-2019.json",
+      "opendata": "iuf.json",
       "lexicon": "FocusIUFDomain",
       "title": {
-        "fr": "Champs disciplinaires des nouveaux membres de l'IUF en 2019",
-        "en": "Disciplinary fields of new IUF members in 2019"
+        "fr": "Champs disciplinaires des nouveaux membres de l'IUF en 2020",
+        "en": "Disciplinary fields of new IUF members in 2020"
       },
       "subtitle": {"fr": "", "en": ""},
       "tooltipFr": "lauréat·e·s",
       "tooltipEn": "laureates",
-      "opendata" : "iuf-2019.json"
+      "opendata" : "iuf.json"
     },
     {
       "componentType": "GenderTreemap",
       "lexicon": "FocusIUFGender",
-      "opendata": "iuf-2019.json",
+      "opendata": "iuf.json",
       "title": {
-        "fr": "Nouveaux membres 2019 de l'IUF par genre et type de nomination",
-        "en": "Gender and type of nomination of the new IUF members in 2019"
+        "fr": "Nouveaux membres 2020 de l'IUF par genre et type de nomination",
+        "en": "Gender and type of nomination of the new IUF members in 2020"
       },
       "subtitle": {"fr": "", "en": ""},
-      "opendata" : "iuf-2019.json"
+      "opendata" : "iuf.json"
     }
   ]
 }
