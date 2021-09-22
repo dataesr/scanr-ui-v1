@@ -17,6 +17,7 @@ import Results from './Results/Results';
 import AllResults from './Results/AllResults';
 import Filters from './Filters/Filters';
 import Nav from './Nav/Nav';
+import Exporters from './Exporters';
 
 import classes from './Search.scss';
 
@@ -238,31 +239,22 @@ class SearchPage extends Component {
     this.props.history.push(url);
   }
 
-  handleExports = () => {
+  handleExports = async () => {
     this.setState({ isExporting: true });
     const newRequest = { ...this.state.request };
-    const transformed = this.transformRequest(newRequest);
-    delete transformed.lang;
-    const base64Query = Base64.encode(JSON.stringify(transformed));
-    const base = Base64.encode('scanr.esr.gouv.fr');
-    const url = `${API_BASE_URL}/${this.state.api}/search/export?request=${base64Query}&requestPath=${base}`;
+    const context = this.transformRequest(newRequest, this.state.api);
+    delete context.lang;
+    const contextUrl = this.setURL(context);
+    const url = `${API_BASE_URL}/${this.state.api}/search`;
+    const base64Query = Base64.encode(JSON.stringify(context));
     const filename = `CSV_${this.state.api}_${base64Query}.xls`;
-    Axios({
-      url,
-      method: 'GET',
-      responseType: 'blob',
-    }).then((response) => {
-      const type = response.headers['content-type'];
-      const blob = new Blob([response.data], { type, encoding: 'UTF-8' });
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = filename;
-      link.click();
+    try {
+      await Exporters[this.state.api](url, context, contextUrl, filename);
       this.setState({ isExporting: false });
       ReactPiwik.push(['trackEvent', 'Download', filename]);
-    }).catch(() => {
+    } catch (e) {
       this.setState({ isExporting: false });
-    });
+    }
   }
 
   handleSortResults = (e) => {
