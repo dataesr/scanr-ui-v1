@@ -35,7 +35,7 @@ const projectToCSV = (query, data) => {
     res.value.call && res.value.call.label,
     res.value.action && res.value.action.label.default,
     res.value.duration,
-    `https://scanr.enseignementsup-recherche.gouv.fr/projet/${res.value.id}`,
+    `https://scanr.enseignementsup-recherche.gouv.fr/project/${res.value.id}`,
     new Date().toISOString(),
     `https://scanr.enseignementsup-recherche.gouv.fr${query}`,
   ]);
