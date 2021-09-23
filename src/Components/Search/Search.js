@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { IntlProvider } from 'react-intl';
-import { Base64 } from 'js-base64';
 import Axios from 'axios';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -246,8 +245,7 @@ class SearchPage extends Component {
     delete context.lang;
     const contextUrl = this.setURL(context);
     const url = `${API_BASE_URL}/${this.state.api}/search`;
-    const base64Query = Base64.encode(JSON.stringify(context));
-    const filename = `CSV_${this.state.api}_${base64Query}.xls`;
+    const filename = `scanr_${this.state.api}.csv`;
     try {
       await Exporters[this.state.api](url, context, contextUrl, filename);
       this.setState({ isExporting: false });
