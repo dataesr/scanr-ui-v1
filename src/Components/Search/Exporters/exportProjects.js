@@ -3,6 +3,7 @@ import csvify from './csvify';
 
 const projectToCSV = (query, data) => {
   const cols = [
+    'Identifiant',
     'Label',
     'Type',
     'Date de début',
@@ -21,7 +22,8 @@ const projectToCSV = (query, data) => {
 
   ];
   const rows = data.map(res => [
-    res.value.label && (res.value.label.default || res.value.label.fr),
+    res.value.id,
+    res.value.label && (res.value.label.default || res.value.label.fr || res.value.label.en),
     res.value.type,
     res.value.startDate && new Date(res.value.startDate).toISOString(),
     res.value.endDate && new Date(res.value.endDate).toISOString(),
