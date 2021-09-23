@@ -19,9 +19,9 @@ const productionToCSV = (query, data) => {
   ].join(';');
   const values = data.map(res => [
     res.value.id,
-    (res.value.title && res.value.title.default) && res.value.title.default.replace(/;|\n/g, ','),
-    (res.value.summary && res.value.summary.default) && res.value.summary.default.replace(/;|\n/g, ','),
-    res.value.authors && res.value.authors.map(a => a.fullName).join('|').replace(/;|\n/g, ','),
+    (res.value.title && res.value.title.default) && res.value.title.default.replace(/;|\n|\r/g, ' '),
+    (res.value.summary && res.value.summary.default) && res.value.summary.default.replace(/;|\n|\r/g, ','),
+    res.value.authors && res.value.authors.map(a => a.fullName).join('|').replace(/;|\n|\r/g, ' '),
     res.value.source && res.value.source.publisher,
     res.value.source && res.value.source.title,
     (res.value.source && res.value.source.journalIssns) && res.value.source.journalIssns.join('|'),
