@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import csvify from './csvify';
 
 const personsToCSV = (query, data) => {
   const cols = [
@@ -10,19 +11,18 @@ const personsToCSV = (query, data) => {
     'Lien vers fiche scanR',
     "Date d'export",
     'Contexte de recherche',
-  ].join(';');
-  const values = data.map(res => [
+  ];
+  const rows = data.map(res => [
     res.value.id,
     res.value.firstName || null,
     res.value.lastName || null,
     [res.value.firstName || undefined, res.value.lastName || undefined].join(' '),
-    res.value.keywords && res.value.keywords.fr.join('|'),
+    res.value.keywords && res.value.keywords.fr.join(';'),
     `https://scanr.enseignementsup-recherche.gouv.fr/person/${res.value.id}`,
     new Date().toISOString(),
     `https://scanr.enseignementsup-recherche.gouv.fr${query}`,
-  ].join(';'));
-  const csv = [cols, values.join('\n')].join('\n');
-  return new Blob([csv], { encoding: 'UTF-8', type: 'text/csv' });
+  ]);
+  return new Blob([csvify(rows, cols)], { encoding: 'UTF-8', type: 'text/csv' });
 };
 
 export default async function exportPersons(url, context, contextUrl, filename) {

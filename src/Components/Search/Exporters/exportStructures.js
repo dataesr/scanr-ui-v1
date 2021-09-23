@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import csvify from './csvify';
 
 const structureToCSV = (query, data) => {
   const cols = [
@@ -12,13 +13,13 @@ const structureToCSV = (query, data) => {
     'Lien vers fiche scanR',
     "Date d'export",
     'Contexte de recherche',
-  ].join(';');
-  const values = data.map((res) => {
+  ];
+  const rows = data.map((res) => {
     const address = res.value.address ? res.value.address.filter(a => a.main) : [];
     const link = res.value.links ? res.value.links.filter(l => l.type === 'main') : [];
     return [
       res.value.id,
-      res.value.label && (res.value.label.default || res.value.label.fr).replace(/;/g, ','),
+      res.value.label && (res.value.label.default || res.value.label.fr),
       res.value.acronym && (res.value.acronym.default || res.value.acronym.fr),
       res.value.nature,
       address.length && address[0].postcode,
@@ -27,10 +28,9 @@ const structureToCSV = (query, data) => {
       `https://scanr.enseignementsup-recherche.gouv.fr/entite/${res.value.id}`,
       new Date().toISOString(),
       `https://scanr.enseignementsup-recherche.gouv.fr${query}`,
-    ].join(';');
+    ];
   });
-  const csv = [cols, values.join('\n')].join('\n');
-  return new Blob([csv], { encoding: 'UTF-8', type: 'text/csv' });
+  return new Blob([csvify(rows, cols)], { encoding: 'UTF-8', type: 'text/csv' });
 };
 
 export default async function exportStructures(url, context, contextUrl, filename) {
@@ -39,7 +39,7 @@ export default async function exportStructures(url, context, contextUrl, filenam
   if (query.filters) {
     query.filters = JSON.parse(query.filters);
   }
-  query.pageSize = 1000;
+  query.pageSize = 500;
   query.sourceFields = ['id', 'label', 'acronym', 'nature', 'address', 'links'];
   const response = await Axios.post(url, query);
   const blob = structureToCSV(contextUrl, response.data.results);

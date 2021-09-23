@@ -1,4 +1,5 @@
 import Axios from 'axios';
+import csvify from './csvify';
 
 const projectToCSV = (query, data) => {
   const cols = [
@@ -18,8 +19,8 @@ const projectToCSV = (query, data) => {
     "Date d'export",
     'Contexte de recherche',
 
-  ].join(';');
-  const values = data.map(res => [
+  ];
+  const rows = data.map(res => [
     res.value.label && (res.value.label.default || res.value.label.fr),
     res.value.type,
     res.value.startDate && new Date(res.value.startDate).toISOString(),
@@ -35,9 +36,8 @@ const projectToCSV = (query, data) => {
     `https://scanr.enseignementsup-recherche.gouv.fr/projet/${res.value.id}`,
     new Date().toISOString(),
     `https://scanr.enseignementsup-recherche.gouv.fr${query}`,
-  ].join(';'));
-  const csv = [cols, values.join('\n')].join('\n');
-  return new Blob([csv], { encoding: 'UTF-8', type: 'text/csv' });
+  ]);
+  return new Blob([csvify(rows, cols)], { encoding: 'UTF-8', type: 'text/csv' });
 };
 
 export default async function exportProjects(url, context, contextUrl, filename) {
