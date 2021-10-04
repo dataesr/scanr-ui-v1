@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { API_ERRORS_SCANR, API_CROSSREF } from '../config/config';
+import { API_CROSSREF } from '../config/config';
 
 function parseCrossRef(item) {
   const obj = {
@@ -44,7 +44,7 @@ export default function useCrossRef(ids) {
       setData(res.map(item => parseCrossRef(item)));
       setLoading(false);
     } catch (error) {
-      Axios.post(API_ERRORS_SCANR, { error });
+      // Axios.post(API_ERRORS_SCANR, { error });
       setError(true);
       setLoading(false);
     }
