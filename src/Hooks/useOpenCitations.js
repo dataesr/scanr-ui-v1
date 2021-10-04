@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { API_ERRORS_SCANR, API_OPEN_CITATIONS } from '../config/config';
+import { API_OPEN_CITATIONS } from '../config/config';
 
 export default function useOpenCitations(api, id) {
   const [data, setData] = useState([]);
@@ -15,7 +15,7 @@ export default function useOpenCitations(api, id) {
       setData(res);
       setLoading(false);
     } catch (error) {
-      Axios.post(API_ERRORS_SCANR, { error });
+      // Axios.post(API_ERRORS_SCANR, { error });
       setError(true);
       setLoading(false);
     }
