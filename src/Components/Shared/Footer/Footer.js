@@ -86,6 +86,14 @@ const Footer = () => {
                     />
                   </a>
                 </li>
+                <li>
+                  <a href="/tutorial">
+                    <FormattedHTMLMessage
+                      id="Footer.link.tutorial"
+                      defaultMessage="Footer.link.tutorial"
+                    />
+                  </a>
+                </li>
                 {/* <li>
                   <FormattedHTMLMessage
                     id="Footer.link.contribute"
