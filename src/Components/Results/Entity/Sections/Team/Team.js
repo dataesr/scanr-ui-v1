@@ -14,14 +14,20 @@ import TeamComposition from './SubComponents/teamComposition';
 */
 const Team = (props) => {
   const hideTeam = (props.childs && props.childs.length > 0 && props.data && props.data.level !== 'Unité de recherche');
-  if (!props.data.leaders || props.data.leaders.length === 0) return <EmptySection language={props.language} color="#fff" />;
+  const hideLeaders = (!props.data.leaders || props.data.leaders.length === 0);
+  if (hideTeam && hideLeaders) {
+    return <EmptySection language={props.language} color="#fff" />;
+  }
   return (
     <div className="row">
-      <Leaders
-        id={props.data.id}
-        language={props.language}
-        leaders={props.data.leaders}
-      />
+      { hideLeaders ? null
+        : (
+          <Leaders
+            id={props.data.id}
+            language={props.language}
+            leaders={props.data.leaders}
+          />
+        )}
       { hideTeam ? null
         : (
           <TeamComposition

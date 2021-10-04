@@ -18,7 +18,7 @@ import Team from './Sections/Team/Team';
 import Projects from '../Shared/Projects/Projects';
 import Productions from '../Shared/Productions/Productions';
 import Ecosystem from './Sections/Ecosystem/Ecosystem';
-import Awards from './Sections/Awards/Awards';
+// import Awards from './Sections/Awards/Awards';
 import SimilarEntities from './Sections/SimilarEntities/SimilarEntities';
 import Banner from '../../Shared/Banner/Banner';
 import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
@@ -28,7 +28,7 @@ import {
   SectionEntity,
   SectionGrey,
   SectionPersonsBlue,
-  SectionBlue,
+  // SectionBlue,
   SectionWhite,
 } from '../Shared/styles';
 
@@ -188,7 +188,7 @@ const Entity = (props) => {
             childs={childs}
           />
         </div>
-        <SectionBlue id="Awards">
+        { /* <SectionBlue id="Awards">
           <div className="container">
             <SectionTitle
               icon="fa-th"
@@ -204,7 +204,7 @@ const Entity = (props) => {
               id={id}
             />
           </div>
-        </SectionBlue>
+      </SectionBlue> */}
         <SectionGrey id="Evaluations">
           <div className="container">
             <SectionTitle

@@ -1,0 +1,47 @@
+@import '../../../../style.scss';
+
+.TutorialVideo {
+
+  padding: 32px  ;
+  color: $textColor;
+  font-size: 1.6rem;
+  text-align:center;
+
+
+  SMALL {
+      font-size: 1rem;
+   }
+
+
+  .SocialButtons {
+    flex-direction:row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+    A {
+       background-color: rgb(56, 119, 186);
+       width: 2em;
+       height: 2em;
+       border:none;
+       padding: .25em ;
+       margin-left: 5px ;
+       border-radius: 5px;
+       color: white;
+       font-size: 1rem;
+       text-align:center;
+     }
+
+  }
+
+  @media (min-width: 0px) and (max-width: 500px) {
+    margin: .5rem;
+    font-size: 1.2rem;
+
+    SMALL {
+        font-size: .8rem;
+     }
+   }
+
+
+}
