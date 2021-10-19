@@ -312,6 +312,8 @@ const AapPage = (props) => {
       }
     });
 
+
+    console.log('filteredData', filteredData);
     return (
       <>
         <Col md={4} className={classes.AsideContainer}>
