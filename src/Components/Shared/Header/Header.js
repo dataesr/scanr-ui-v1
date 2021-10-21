@@ -87,6 +87,12 @@ const Header = () => {
                       defaultMessage="Header.link.team"
                     />
                   </a>
+                  <a className="dropdown-item" href="/tutorial">
+                    <FormattedHTMLMessage
+                      id="Header.link.tutorials"
+                      defaultMessage="Header.link.tutorials"
+                    />
+                  </a>
                   <div className="dropdown-divider" />
                   <a className="dropdown-item" href="https://data.esr.gouv.fr/FR/" target="_blank" rel="noopener noreferrer">
                     <FormattedHTMLMessage

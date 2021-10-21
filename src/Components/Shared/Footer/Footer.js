@@ -1,10 +1,7 @@
-import React, { useContext, useState, Fragment } from 'react';
+import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import CookieConsent from 'react-cookie-consent';
-import ReactTooltip from 'react-tooltip';
-import Modal from 'react-bootstrap/Modal';
 import { GlobalContext } from '../../../GlobalContext';
-import FormContact from '../FormContact/FormContact';
 
 import classes from './Footer.scss';
 
@@ -24,7 +21,6 @@ const Footer = () => {
     _paq.push(['rememberConsentGiven']);
   }
   const context = useContext(GlobalContext);
-  const [isActive, setActive] = useState(false);
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
       <section className={classes.Footer}>
@@ -61,30 +57,6 @@ const Footer = () => {
             defaultMessage="Footer.consentInfo"
           />
         </CookieConsent>
-        <div className={classes.feedback}>
-          <button type="button" className={`btn ${classes.feedbackButton}`} onClick={() => setActive(!isActive)} data-tip={messages[context.language]['Feedback.Tooltip']}>
-            {(isActive) ? (<i className="far fa-2x fa-window-close" />) : (<i className="far fa-2x fa-envelope-open" />)}
-          </button>
-          <ReactTooltip html />
-        </div>
-        <Fragment>
-          <Modal
-            show={isActive}
-            onHide={() => setActive(!isActive)}
-            className={classes.FeedbackModal}
-            size="lg"
-          >
-            <Modal.Header closeButton className={classes.Header}>
-              <p className={classes.Title}>
-                <i className="far fa-envelope-open" />
-                <FormattedHTMLMessage id="Feedback.Title" />
-              </p>
-            </Modal.Header>
-            <Modal.Body className={classes.Content}>
-              <FormContact language={context.language} apiName="contact" />
-            </Modal.Body>
-          </Modal>
-        </Fragment>
         <div className="container">
           <div className="row">
             <div className={`col-md ${classes.Col}`}>
@@ -111,6 +83,14 @@ const Footer = () => {
                     <FormattedHTMLMessage
                       id="Footer.link.ressources"
                       defaultMessage="Footer.link.ressources"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="/tutorial">
+                    <FormattedHTMLMessage
+                      id="Footer.link.tutorial"
+                      defaultMessage="Footer.link.tutorial"
                     />
                   </a>
                 </li>

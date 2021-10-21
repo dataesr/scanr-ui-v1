@@ -28,9 +28,11 @@ const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
 const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
 const AapPage = lazy(() => import('./Components/Aap/Aap'));
+const AapPage2 = lazy(() => import('./Components/Aap2/Aap'));
 
 /* Pages froides */
 const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
+const TutorialPage = lazy(() => import('./Components/Abouts/Tutorial/Tutorial'));
 const FAQPage = lazy(() => import('./Components/Abouts/FAQ/FAQ'));
 const GlossaryPage = lazy(() => import('./Components/Abouts/Glossary/Glossary'));
 const LegalNoticePage = lazy(() => import('./Components/Abouts/Legal-notice/Legal-notice'));
@@ -103,6 +105,7 @@ class App extends Component {
                   )}
                 />
                 <Route path="/trouver-des-partenaires-pour-horizon-europe/:id" render={props => (<AapPage {...props} language={lang} />)} />
+                <Route path="/aap/:id" render={props => (<AapPage2 {...props} language={lang} />)} />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />
@@ -112,6 +115,7 @@ class App extends Component {
                 <Route exact path="/medias" component={() => (<MediasPage language={lang} />)} />
                 <Route exact path={['/faq/:id', '/faq']} component={props => (<FAQPage {...props} language={lang} />)} />
                 <Route exact path="/contact" component={() => (<ContactPage language={lang} />)} />
+                <Route exact path="/tutorial" component={() => (<TutorialPage language={lang} />)} />
                 <Route exact path="/glossaire" component={() => (<GlossaryPage language={lang} />)} />
                 <Route exact path="/erreur404" component={() => (<Errors error={404} />)} />
                 <Route component={() => (<Errors error={404} />)} />

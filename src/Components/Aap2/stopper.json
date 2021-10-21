@@ -1,0 +1,2457 @@
+{
+  "took": 681,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": 44.70729,
+    "hits": [
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200920620D",
+        "_score": 44.70729,
+        "fields": {
+          "address.postcode.sort": [
+            "91120"
+          ],
+          "label.default": [
+            "Unité d'Informatique et d'Ingénierie des Systèmes"
+          ],
+          "address.citycode.keyword": [
+            "91477"
+          ],
+          "address.urbanUnitCode": [
+            "UU00851"
+          ],
+          "address.address.sort": [
+            "828 boulevard des marechaux"
+          ],
+          "address.citycode": [
+            "91477"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "200920620D"
+          ],
+          "address.city.sort": [
+            "palaiseau"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "91477"
+          ],
+          "address.localisationSuggestions.sort": [
+            "ile-de-france",
+            "paris (agglomeration)",
+            "palaiseau",
+            "versailles (academie)",
+            "essonne (91)"
+          ],
+          "address.urbanUnitLabel": [
+            "Paris"
+          ],
+          "address.city": [
+            "Palaiseau"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Palaiseau",
+            "Versailles (académie)",
+            "Essonne (91)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu00851"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "828 Boulevard des Maréchaux"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                2.219392,
+                48.710371
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Paris"
+          ],
+          "address.localisationSuggestions": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Palaiseau",
+            "Versailles (académie)",
+            "Essonne (91)"
+          ],
+          "address.score.keyword": [
+            "0.7580014285714285"
+          ],
+          "address.postcode.keyword": [
+            "91120"
+          ],
+          "address.address": [
+            "828 Boulevard des Maréchaux"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU00851"
+          ],
+          "address.score": [
+            "0.7580014285714285"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "paris"
+          ],
+          "address.city.keyword": [
+            "Palaiseau"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "H2020",
+            "H2020",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.7580014285714285"
+          ],
+          "address.postcode": [
+            "91120"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "Learning compliant <em>robotic</em> skills for safe industrial assembly (LeCoRoS)",
+            "Learning compliant <em>robotic</em> skills for safe industrial assembly (LeCoRoS)"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em> IoT",
+            "<em>Internet</em> <em>of</em> <em>Things</em> IoT",
+            "<em>Robotics</em>",
+            "<em>Robotics</em>",
+            "<em>Robotics</em>"
+          ],
+          "websites.webPages.content": [
+            "systems integrating autonomous decision-making processes with applications in intelligent transport, <em>robotics</em>",
+            "The laboratory brings together the research activities of the ENSTA Paris School in computer science, <em>robotics</em>",
+            "fields, the motivation of most of its work is to be able to be integrated in products (components, <em>robotic</em>",
+            ", humanoid <em>robotics</em>, intelligent vehicles, and security.",
+            "Teaching\n2018-2019, Software architectures for <em>robotics</em> (ROB314, ENSTA 3A)\nMentions Legales"
+          ],
+          "publications.publication.title.default": [
+            "Proposal of a multi-standard transceiver for the WBAN <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Advanced synchronization techniques for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Social <em>Robotics</em>",
+            "<em>of</em> <em>Things</em>",
+            "Statistical information and signal processing for the underwater <em>internet</em> <em>of</em> <em>things</em>;Traitement statistique"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200314989J",
+        "_score": 44.019665,
+        "fields": {
+          "address.postcode.sort": [
+            "69100"
+          ],
+          "label.default": [
+            "Centre of Innovation in Telecommunications and Integration of service Centre d'innovation en télécommunications et intégration de services"
+          ],
+          "address.citycode.keyword": [
+            "69266"
+          ],
+          "address.urbanUnitCode": [
+            "UU00758"
+          ],
+          "address.address.sort": [
+            "6 avenue des arts"
+          ],
+          "address.citycode": [
+            "69266"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "200314989J"
+          ],
+          "address.city.sort": [
+            "villeurbanne"
+          ],
+          "address.citycode.sort": [
+            "69266"
+          ],
+          "address.localisationSuggestions.sort": [
+            "auvergne-rhone-alpes",
+            "lyon (agglomeration)",
+            "villeurbanne",
+            "lyon (academie)",
+            "rhone (69)"
+          ],
+          "address.urbanUnitLabel": [
+            "Lyon"
+          ],
+          "address.city": [
+            "Villeurbanne"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Auvergne-Rhône-Alpes",
+            "Lyon (agglomération)",
+            "Villeurbanne",
+            "Lyon (académie)",
+            "Rhône (69)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu00758"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "6 Avenue des Arts"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                4.8726894,
+                45.783796200000005
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Lyon"
+          ],
+          "address.localisationSuggestions": [
+            "Auvergne-Rhône-Alpes",
+            "Lyon (agglomération)",
+            "Villeurbanne",
+            "Lyon (académie)",
+            "Rhône (69)"
+          ],
+          "address.postcode.keyword": [
+            "69100"
+          ],
+          "address.address": [
+            "6 Avenue des Arts"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU00758"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "lyon"
+          ],
+          "address.city.keyword": [
+            "Villeurbanne"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR"
+          ],
+          "address.postcode": [
+            "69100"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "MUROTEX : Multi-Agent Coordination in <em>Robotic</em> Exploration and Reconnaissance Missions"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "websites.webPages.content": [
+            "<em>of</em> <em>Things</em> Keywords Programming languages, distributed systems, <em>Internet</em> <em>of</em> <em>Things</em>, middleware Location",
+            "<em>of</em> <em>Things</em> Keywords Programming languages, distributed systems, <em>Internet</em> <em>of</em> <em>Things</em>, middleware Location",
+            "<em>of</em> <em>Things</em> Keywords Programming languages, distributed systems, <em>Internet</em> <em>of</em> <em>Things</em>, middleware Location",
+            "<em>of</em> <em>Things</em> Abstract Also known as the <em>Internet</em> <em>of</em> <em>Things</em> (IoT), the proliferation of connected objects",
+            "<em>of</em> <em>Things</em> Abstract Also known as the <em>Internet</em> <em>of</em> <em>Things</em> (IoT), the proliferation of connected objects"
+          ],
+          "publications.publication.title.default": [
+            "Bidirectional visible light communications for the <em>internet</em> <em>of</em> <em>things</em>",
+            "Ensuring k-coverage in low-power wide area networks for <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Wireless Transmission in Ventilation (HVAC) Ducts for the <em>Internet</em> <em>of</em> <em>Things</em> and Smarter Buildings: Proof",
+            "Bidirectional visible light communications for the <em>internet</em> <em>of</em> <em>things</em>;Communications bidirectionnelles",
+            "Privacy Challenges in Wireless Communications of the <em>Internet</em> <em>of</em> <em>Things</em>"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200118591H",
+        "_score": 43.5002,
+        "fields": {
+          "address.postcode.sort": [
+            "91190"
+          ],
+          "label.default": [
+            "Laboratoire d'Intégration des Systèmes et des Technologies"
+          ],
+          "address.citycode.keyword": [
+            "91272"
+          ],
+          "address.urbanUnitCode": [
+            "UU00851"
+          ],
+          "address.citycode": [
+            "91272"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "200118591H"
+          ],
+          "address.city.sort": [
+            "gif-sur-yvette"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "91272"
+          ],
+          "address.localisationSuggestions.sort": [
+            "ile-de-france",
+            "paris (agglomeration)",
+            "gif-sur-yvette",
+            "versailles (academie)",
+            "essonne (91)"
+          ],
+          "address.urbanUnitLabel": [
+            "Paris"
+          ],
+          "address.city": [
+            "Gif-sur-Yvette"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Gif-sur-Yvette",
+            "Versailles (académie)",
+            "Essonne (91)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu00851"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "kind": [
+            "Structure de recherche",
+            "Secteur public"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                2.133049,
+                48.701092
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Paris"
+          ],
+          "address.localisationSuggestions": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Gif-sur-Yvette",
+            "Versailles (académie)",
+            "Essonne (91)"
+          ],
+          "address.score.keyword": [
+            "0.46997727272727274"
+          ],
+          "address.postcode.keyword": [
+            "91190"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU00851"
+          ],
+          "address.score": [
+            "0.46997727272727274"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "paris"
+          ],
+          "address.city.keyword": [
+            "Gif-sur-Yvette"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "FP7",
+            "H2020",
+            "H2020",
+            "FP7",
+            "H2020",
+            "FP7",
+            "FP7",
+            "H2020",
+            "H2020",
+            "FP7",
+            "FP7",
+            "FP7",
+            "H2020",
+            "FP7",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "H2020",
+            "H2020",
+            "FP7",
+            "FP7",
+            "H2020",
+            "FP7",
+            "H2020",
+            "H2020",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "FP7",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Thèses co-financées ADEME",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "H2020",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "H2020",
+            "FP7",
+            "H2020",
+            "H2020",
+            "FP7",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "ANR",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "FP7",
+            "H2020",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.46997727272727274"
+          ],
+          "address.postcode": [
+            "91190"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "User empowerment for Security and prIvacy in <em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "projects.project.label.en": [
+            "<em>Internet</em> <em>of</em> <em>Things</em> Architecture",
+            "Cyber security 4.0: protecting the Industrial <em>Internet</em> <em>Of</em> <em>Things</em>",
+            "User empowerment for Security and prIvacy in <em>Internet</em> <em>of</em> <em>Things</em>",
+            "AUTOmated driving Progressed by <em>Internet</em> <em>Of</em> <em>Things</em>",
+            "Smart integrated <em>Robotics</em> system for SMEs controlled by <em>Internet</em> <em>of</em> <em>Things</em> based on dynamic manufacturing"
+          ],
+          "websites.webPages.content": [
+            "<em>of</em> <em>Things</em>.”",
+            "<em>of</em> <em>Things</em>, IIoT.",
+            "<em>of</em> <em>Things</em>, IIoT.",
+            "<em>of</em> <em>Things</em>, IIoT.",
+            "<em>of</em> <em>Things</em>, IIoT."
+          ],
+          "publications.publication.title.default": [
+            "Semantic Framework for <em>Internet</em> <em>of</em> <em>Things</em>-Aware Business Process Development",
+            "Lightweight attribute-based encryption for the <em>internet</em> <em>of</em> <em>things</em>",
+            "Survey on secure communication protocols for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Lightweight collaborative key establishment scheme for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Reliability for Emergency Applications in <em>Internet</em> <em>of</em> <em>Things</em>"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200515214V",
+        "_score": 42.6254,
+        "fields": {
+          "address.postcode.sort": [
+            "94400"
+          ],
+          "label.default": [
+            "Laboratoire Images, signaux et systèmes intelligents"
+          ],
+          "address.citycode.keyword": [
+            "94081"
+          ],
+          "address.urbanUnitCode": [
+            "UU00851"
+          ],
+          "address.address.sort": [
+            "122 rue paul armangot"
+          ],
+          "address.citycode": [
+            "94081"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "200515214V"
+          ],
+          "address.city.sort": [
+            "vitry-sur-seine"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "94081"
+          ],
+          "address.localisationSuggestions.sort": [
+            "ile-de-france",
+            "paris (agglomeration)",
+            "vitry-sur-seine",
+            "creteil (academie)",
+            "val-de-marne (94)"
+          ],
+          "address.urbanUnitLabel": [
+            "Paris"
+          ],
+          "address.city": [
+            "Vitry-sur-Seine"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Vitry-sur-Seine",
+            "Créteil (académie)",
+            "Val-de-Marne (94)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu00851"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "122 Rue Paul Armangot"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                2.375966,
+                48.776595
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Paris"
+          ],
+          "address.localisationSuggestions": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Vitry-sur-Seine",
+            "Créteil (académie)",
+            "Val-de-Marne (94)"
+          ],
+          "address.score.keyword": [
+            "0.6465272419106316"
+          ],
+          "address.postcode.keyword": [
+            "94400"
+          ],
+          "address.address": [
+            "122 Rue Paul Armangot"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU00851"
+          ],
+          "address.score": [
+            "0.6465272419106316"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "paris"
+          ],
+          "address.city.keyword": [
+            "Vitry-sur-Seine"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "H2020"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.6465272419106316"
+          ],
+          "address.postcode": [
+            "94400"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "R4S: <em>Robotic</em> Support and functional electrical Stimulation to assiSt Standing-up",
+            "R4S: <em>Robotic</em> Support and functional electrical Stimulation to assiSt Standing-up",
+            "Exchange for Integration of Emerging Information Technologies for Human Health Monitoring and Assistive <em>Robotics</em>"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em> IoT",
+            "<em>Internet</em> <em>of</em> <em>things</em> IoT",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>"
+          ],
+          "websites.webPages.content": [
+            "Matson, \"A Semantic Approach for Enhancing Assistive Services in ubiquitous <em>robotics</em>,\" <em>Robotics</em> and Autonomous",
+            "<em>Internet</em> <em>of</em> <em>Things</em> gateway design for ambient Environments 4.",
+            "This infrastructure consists in six large-scale <em>Internet</em> <em>of</em> <em>Things</em> testbeds in France with over 2700",
+            "deployed more several wireless sensors and actuators networks that comply with the standards of the <em>Internet</em>",
+            "<em>of</em> <em>Things</em> such as RFID, Bluetooth BLE, Zwave, Zigbee and 6lowpan."
+          ],
+          "publications.publication.title.default": [
+            "Informatics in Control, Automation and <em>Robotics</em>",
+            "Service-Oriented, User-Centered and Event-Aware Framework for Ambient Intelligence and <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Energy-centered and QoS-aware services selection for <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Ontology for autonomous <em>robotics</em>",
+            "Assistive <em>robotics</em>"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200012163A",
+        "_score": 39.80406,
+        "fields": {
+          "address.postcode.sort": [
+            "35700"
+          ],
+          "label.default": [
+            "Institut de Recherche en Informatique et Systèmes Aléatoires"
+          ],
+          "address.citycode.keyword": [
+            "35238"
+          ],
+          "address.urbanUnitCode": [
+            "UU35701"
+          ],
+          "address.address.sort": [
+            "263 avenue general leclerc"
+          ],
+          "address.citycode": [
+            "35238"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "200012163A"
+          ],
+          "address.city.sort": [
+            "rennes"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "35238"
+          ],
+          "address.localisationSuggestions.sort": [
+            "bretagne",
+            "rennes (agglomeration)",
+            "rennes",
+            "rennes (academie)",
+            "ille-et-vilaine (35)"
+          ],
+          "address.urbanUnitLabel": [
+            "Rennes"
+          ],
+          "address.city": [
+            "Rennes"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Bretagne",
+            "Rennes (agglomération)",
+            "Rennes",
+            "Rennes (académie)",
+            "Ille-et-Vilaine (35)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu35701"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "263 Avenue Général Leclerc"
+          ],
+          "kind": [
+            "Structure de recherche",
+            "Secteur public"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                -1.636424,
+                48.114339
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Rennes"
+          ],
+          "address.localisationSuggestions": [
+            "Bretagne",
+            "Rennes (agglomération)",
+            "Rennes",
+            "Rennes (académie)",
+            "Ille-et-Vilaine (35)"
+          ],
+          "address.score.keyword": [
+            "0.7097245676274945"
+          ],
+          "address.postcode.keyword": [
+            "35700"
+          ],
+          "address.address": [
+            "263 Avenue Général Leclerc"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU35701"
+          ],
+          "address.score": [
+            "0.7097245676274945"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "rennes"
+          ],
+          "address.city.keyword": [
+            "Rennes"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "FP7",
+            "ANR",
+            "H2020",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "LabCom",
+            "FP7",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "LabCom",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "H2020",
+            "H2020",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.7097245676274945"
+          ],
+          "address.postcode": [
+            "35700"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "Achieving Energy Efficient Communication in Future Networks by Supporting Multi-Access Edge Computing in <em>Internet</em>",
+            "<em>of</em> <em>Things</em> (IoT)"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>"
+          ],
+          "projects.project.label.en": [
+            "<em>Robotic</em> Manipulation for Nuclear Sort and Segregation",
+            "Building Information Modeling, Augmented Reality and <em>Internet</em> <em>Of</em> <em>Things</em>",
+            "Pursuing ROadmaps and BEnchmarks for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "In-SEM Multi-physics characterization and <em>robotics</em> manipulation"
+          ],
+          "websites.webPages.content": [
+            "<em>of</em> <em>Things</em> and intelligent transport systems (ITS).",
+            "2021 - 23:13\nLieu\nRennes\nType de contrat\nCDD\nEquipe de recherche\nEMSEC\nContexte\nIn the new area of the <em>internet</em>-<em>of</em>-<em>things</em>",
+            "<em>of</em> <em>Things</em> opens many opportunities for new digital products and applications.",
+            "“Artificial Intelligence and <em>Internet</em> <em>of</em> <em>Things</em> for Autonomous Vehicles”.",
+            "<em>of</em> <em>Things</em> (IoT) applications (e.g., smart cities)."
+          ],
+          "publications.publication.title.default": [
+            "CoAP over BP for a Delay-Tolerant <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Cognitive radio for M2M and <em>Internet</em> <em>of</em> <em>Things</em>: A survey",
+            "Self-adaptation for <em>Internet</em> <em>of</em> <em>things</em> applications",
+            "Efficient Broadcast Protocol for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "An architectural style for <em>internet</em> <em>of</em> <em>things</em> systems"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "199111950H",
+        "_score": 35.91314,
+        "fields": {
+          "address.postcode.sort": [
+            "34090"
+          ],
+          "label.default": [
+            "Laboratoire d'Informatique, de Robotique et de Microélectronique de Montpellier"
+          ],
+          "address.citycode.keyword": [
+            "34172"
+          ],
+          "address.urbanUnitCode": [
+            "UU34701"
+          ],
+          "address.address.sort": [
+            "161 rue ada"
+          ],
+          "address.citycode": [
+            "34172"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "199111950H"
+          ],
+          "address.city.sort": [
+            "montpellier"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "34172"
+          ],
+          "address.localisationSuggestions.sort": [
+            "occitanie",
+            "montpellier (agglomeration)",
+            "montpellier",
+            "montpellier (academie)",
+            "herault (34)"
+          ],
+          "address.urbanUnitLabel": [
+            "Montpellier"
+          ],
+          "address.city": [
+            "Montpellier"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Occitanie",
+            "Montpellier (agglomération)",
+            "Montpellier",
+            "Montpellier (académie)",
+            "Hérault (34)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu34701"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "161 Rue Ada"
+          ],
+          "kind": [
+            "Structure de recherche",
+            "Secteur public"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                3.840717,
+                43.636837
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Montpellier"
+          ],
+          "address.localisationSuggestions": [
+            "Occitanie",
+            "Montpellier (agglomération)",
+            "Montpellier",
+            "Montpellier (académie)",
+            "Hérault (34)"
+          ],
+          "address.score.keyword": [
+            "0.40014577712609967"
+          ],
+          "address.postcode.keyword": [
+            "34090"
+          ],
+          "address.address": [
+            "161 Rue Ada"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU34701"
+          ],
+          "address.score": [
+            "0.40014577712609967"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "montpellier"
+          ],
+          "address.city.keyword": [
+            "Montpellier"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "Casdar",
+            "FP7",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "H2020",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "H2020",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "LabCom",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.40014577712609967"
+          ],
+          "address.postcode": [
+            "34090"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "Computational Tools for <em>Robotic</em> Systems with Dynamic Constraints: Case Studies in Dynamic Manipulation"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "projects.project.label.en": [
+            "Parallel Cable <em>Robotics</em> for Improving Maintenance and Logistics of Large-Scale Products",
+            "Elderly-friendly City services for active and <em>healthy</em> <em>ageing</em>",
+            "Industrial Cooperative Assistant <em>Robotics</em>",
+            "Innovative <em>robotic</em> applications for highly reconfigurable production lines - VERSATILE"
+          ],
+          "websites.webPages.content": [
+            "En savoir plus\n26 Novembre 2014\n“An <em>Internet</em> <em>of</em> <em>Things</em> primer\"\nTitle: “An <em>Internet</em> <em>of</em> <em>Things</em> primer\"",
+            "Actualité : “An <em>Internet</em> <em>of</em> <em>Things</em> primer\"\n26 Novembre 2014\n“An <em>Internet</em> <em>of</em> <em>Things</em> primer\"\nTitle: “An",
+            "a lot of buzz around the so-called \"<em>Internet</em> <em>of</em> <em>Things</em>\".",
+            "Program 7, '<em>Internet</em> <em>of</em> <em>Things</em> - Architecture\" (IoT-A).",
+            "Read more\n26 Novembre 2014\n“An <em>Internet</em> <em>of</em> <em>Things</em> primer\"\nTitle: “An <em>Internet</em> <em>of</em> <em>Things</em> primer\" Abstract"
+          ],
+          "publications.publication.title.default": [
+            "An Energy-Efficient Multiobjective Scheduling Model for Monitoring in <em>Internet</em> <em>of</em> <em>Things</em>",
+            "Distributed monitoring in 6LoWPAN based <em>Internet</em> <em>of</em> <em>Things</em>",
+            "FlexNode: a reconfigurable <em>Internet</em> <em>of</em> <em>Things</em> node for design evaluation",
+            "Monitoring the <em>Internet</em> <em>of</em> <em>Things</em> (IoT) Networks",
+            "<em>of</em> <em>Things</em>."
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "341120749",
+        "_score": 35.571922,
+        "fields": {
+          "address.postcode.sort": [
+            "75008"
+          ],
+          "label.default": [
+            "TRIALOG"
+          ],
+          "address.citycode.keyword": [
+            "75108"
+          ],
+          "address.urbanUnitCode": [
+            "UU00851"
+          ],
+          "address.address.sort": [
+            "25 rue du general foy"
+          ],
+          "address.citycode": [
+            "75108"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "341120749"
+          ],
+          "address.city.sort": [
+            "paris"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "75108"
+          ],
+          "address.localisationSuggestions.sort": [
+            "ile-de-france",
+            "paris (agglomeration)",
+            "paris  8e",
+            "paris (academie)",
+            "paris (75)"
+          ],
+          "address.urbanUnitLabel": [
+            "Paris"
+          ],
+          "address.city": [
+            "Paris"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Paris  8e",
+            "Paris (académie)",
+            "Paris (75)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu00851"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "25 Rue du Général Foy"
+          ],
+          "kind": [
+            "Secteur privé"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                2.317369,
+                48.87893
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Paris"
+          ],
+          "address.localisationSuggestions": [
+            "Île-de-France",
+            "Paris (agglomération)",
+            "Paris  8e",
+            "Paris (académie)",
+            "Paris (75)"
+          ],
+          "address.score.keyword": [
+            "0.8304007486631015"
+          ],
+          "address.postcode.keyword": [
+            "75008"
+          ],
+          "address.address": [
+            "25 Rue du Général Foy"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU00851"
+          ],
+          "address.score": [
+            "0.8304007486631015"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "paris"
+          ],
+          "address.city.keyword": [
+            "Paris"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "FP7",
+            "H2020",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.8304007486631015"
+          ],
+          "address.postcode": [
+            "75008"
+          ]
+        },
+        "highlight": {
+          "publications.publication.keywords.default": [
+            "IoT - <em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "websites.webPages.content": [
+            "These smart objects have the ability to interconnect, which is done through IoT (<em>Internet</em> <em>of</em> <em>Things</em>)",
+            "<em>Internet</em> <em>of</em> <em>Things</em>\nReport on privacy-by-design for the <em>Internet</em> <em>of</em> <em>Things</em>\nTrialog has published for the",
+            "<em>Internet</em> <em>of</em> <em>Things</em>\nReport on privacy-by-design for the <em>Internet</em> <em>of</em> <em>Things</em>\nTrialog has published for the",
+            "<em>Internet</em> <em>of</em> <em>things</em> systems\nThe <em>internet</em> <em>of</em> <em>things</em> (IoT) is everywhere… What do we mean by this?",
+            "<em>of</em> <em>Things</em> )."
+          ],
+          "publications.publication.title.default": [
+            "A Privacy Engineering Framework for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "People-Centric <em>Internet</em> <em>of</em> <em>Things</em>—Challenges, Approach, and Enabling Technologies",
+            "Life methodological handbook for agile cocreation of <em>robotics</em> solutions for ageing"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "200711886U",
+        "_score": 34.868877,
+        "fields": {
+          "label.default": [
+            "Laboratoire d'informatique de Grenoble"
+          ],
+          "address.city": [
+            "Saint-Martin-d'Hères"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Saint-Martin-d'Hères"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "110 Rue de la Chimie"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                5.76931,
+                45.193587
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.localisationSuggestions": [
+            "Saint-Martin-d'Hères"
+          ],
+          "address.address.sort": [
+            "110 rue de la chimie"
+          ],
+          "address.score.keyword": [
+            "0.8302909090909091"
+          ],
+          "address.address": [
+            "110 Rue de la Chimie"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "address.score": [
+            "0.8302909090909091"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.city.keyword": [
+            "Saint-Martin-d'Hères"
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "FP7",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR"
+          ],
+          "id": [
+            "200711886U"
+          ],
+          "address.city.sort": [
+            "saint-martin-d'heres"
+          ],
+          "address.score.sort": [
+            "0.8302909090909091"
+          ],
+          "address.localisationSuggestions.sort": [
+            "saint-martin-d'heres"
+          ]
+        },
+        "highlight": {
+          "projects.project.label.default": [
+            "Security protocols for the Cloud-oriented <em>Internet</em> <em>of</em> <em>Things</em> (SeCIoT)",
+            "Security protocols for the Cloud-oriented <em>Internet</em> <em>of</em> <em>Things</em> (SeCIoT)"
+          ],
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>"
+          ],
+          "websites.webPages.content": [
+            "development of future wireless networks and the integration of Sensors and Smart Objects within the <em>Internet</em>",
+            "<em>of</em> <em>Things</em>.",
+            "<em>of</em> <em>Things</em> (large-scale interconnection of Smart Objects, 802.15.4, BLE, LoRa, and 5G-MTC)\nfuture network",
+            "Keywords\nInternet Wireless Networks <em>Internet</em> <em>of</em> <em>Things</em> Wireless Sensor Networks Traffic Measurements",
+            "<em>of</em> <em>Things</em> (IoT) continues its evolution, causing a drasticallyegrowth of traffic and processing demands"
+          ],
+          "publications.publication.title.default": [
+            "Comparison of the Device Lifetime in Wireless Networks for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "OSCAR: Object security architecture for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "OSCAR: Object security architecture for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "IoTChain: A blockchain security architecture for the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "IoTChain: A Blockchain Security Architecture for the <em>Internet</em> <em>of</em> <em>Things</em>"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "201220263C",
+        "_score": 34.023552,
+        "fields": {
+          "address.postcode.sort": [
+            "60200"
+          ],
+          "label.default": [
+            "Heuristique et diagnostic des systèmes complexes"
+          ],
+          "address.citycode.keyword": [
+            "60159"
+          ],
+          "address.urbanUnitCode": [
+            "UU60502"
+          ],
+          "address.citycode": [
+            "60159"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "201220263C"
+          ],
+          "address.city.sort": [
+            "compiegne"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "60159"
+          ],
+          "address.localisationSuggestions.sort": [
+            "hauts-de-france",
+            "compiegne (agglomeration)",
+            "compiegne",
+            "amiens (academie)",
+            "oise (60)"
+          ],
+          "address.urbanUnitLabel": [
+            "Compiègne"
+          ],
+          "address.city": [
+            "Compiègne"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Hauts-de-France",
+            "Compiègne (agglomération)",
+            "Compiègne",
+            "Amiens (académie)",
+            "Oise (60)"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu60502"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                2.797276,
+                49.403549
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Compiègne"
+          ],
+          "address.localisationSuggestions": [
+            "Hauts-de-France",
+            "Compiègne (agglomération)",
+            "Compiègne",
+            "Amiens (académie)",
+            "Oise (60)"
+          ],
+          "address.score.keyword": [
+            "0.7506662337662338"
+          ],
+          "address.postcode.keyword": [
+            "60200"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU60502"
+          ],
+          "address.score": [
+            "0.7506662337662338"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "compiegne"
+          ],
+          "address.city.keyword": [
+            "Compiègne"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "H2020",
+            "ANR",
+            "Casdar",
+            "ANR",
+            "ANR",
+            "ANR",
+            "Thèses co-financées ADEME",
+            "ANR",
+            "H2020",
+            "H2020",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.7506662337662338"
+          ],
+          "address.postcode": [
+            "60200"
+          ]
+        },
+        "highlight": {
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "websites.webPages.content": [
+            "factory of the future\" and transport networks)\nCybersecurity in highly interconnected systems (Cloud, <em>Internet</em>",
+            "<em>of</em> <em>Things</em>, etc.)",
+            "Home Heudiasyc\nResearch\nResearch teams\nSyRI (<em>Robotic</em> Systems in Interaction)\nSyRI (<em>Robotic</em> Systems in",
+            "Carmen\nCarmen testbed\nCARMEN is a Citroën C5 dedicated to the <em>robotic</em> perception.",
+            "Robust nonlinear continuous control for <em>robotic</em> systems | A."
+          ],
+          "publications.publication.title.default": [
+            "A roadmap for security challenges in the <em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em> security: A top-down survey",
+            "Collaborative KP-ABE for cloud-based <em>Internet</em> <em>of</em> <em>Things</em> applications",
+            "Reliability for Emergency Applications in <em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em> Context-Aware Privacy Architecture"
+          ]
+        }
+      },
+      {
+        "_index": "structures-20210825",
+        "_type": "_doc",
+        "_id": "201320497C",
+        "_score": 33.37455,
+        "fields": {
+          "address.postcode.sort": [
+            "67400"
+          ],
+          "label.default": [
+            "Laboratoire des sciences de l'ingénieur, de l'informatique et de l'imagerie"
+          ],
+          "address.citycode.keyword": [
+            "67218"
+          ],
+          "address.urbanUnitCode": [
+            "UU67701"
+          ],
+          "address.address.sort": [
+            "300 boulevard sebastien brant"
+          ],
+          "address.citycode": [
+            "67218"
+          ],
+          "address.provider.keyword": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.country": [
+            "France"
+          ],
+          "isFrench": [
+            true
+          ],
+          "address.country.sort": [
+            "france"
+          ],
+          "id": [
+            "201320497C"
+          ],
+          "address.city.sort": [
+            "illkirch-graffenstaden"
+          ],
+          "address.provider": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.citycode.sort": [
+            "67218"
+          ],
+          "address.localisationSuggestions.sort": [
+            "grand est",
+            "strasbourg (agglomeration)",
+            "illkirch-graffenstaden",
+            "strasbourg (academie)",
+            "bas-rhin (67)",
+            "alsace"
+          ],
+          "address.urbanUnitLabel": [
+            "Strasbourg"
+          ],
+          "address.city": [
+            "Illkirch-Graffenstaden"
+          ],
+          "address.localisationSuggestions.keyword": [
+            "Grand Est",
+            "Strasbourg (agglomération)",
+            "Illkirch-Graffenstaden",
+            "Strasbourg (académie)",
+            "Bas-Rhin (67)",
+            "Alsace"
+          ],
+          "address.urbanUnitCode.sort": [
+            "uu67701"
+          ],
+          "address.country.keyword": [
+            "France"
+          ],
+          "address.address.keyword": [
+            "300 Boulevard Sébastien Brant"
+          ],
+          "kind": [
+            "Structure de recherche"
+          ],
+          "address.gps": [
+            {
+              "coordinates": [
+                7.737765,
+                48.525557
+              ],
+              "type": "Point"
+            }
+          ],
+          "address.urbanUnitLabel.keyword": [
+            "Strasbourg"
+          ],
+          "address.localisationSuggestions": [
+            "Grand Est",
+            "Strasbourg (agglomération)",
+            "Illkirch-Graffenstaden",
+            "Strasbourg (académie)",
+            "Bas-Rhin (67)",
+            "Alsace"
+          ],
+          "address.score.keyword": [
+            "0.6952925691699605"
+          ],
+          "address.postcode.keyword": [
+            "67400"
+          ],
+          "address.address": [
+            "300 Boulevard Sébastien Brant"
+          ],
+          "address.urbanUnitCode.keyword": [
+            "UU67701"
+          ],
+          "address.score": [
+            "0.6952925691699605"
+          ],
+          "address.urbanUnitLabel.sort": [
+            "strasbourg"
+          ],
+          "address.city.keyword": [
+            "Illkirch-Graffenstaden"
+          ],
+          "address.main": [
+            true
+          ],
+          "projects.project.type": [
+            "H2020",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "FP7",
+            "ANR",
+            "FP7",
+            "ANR",
+            "FP7",
+            "FP7",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "ANR",
+            "ANR",
+            "Partenariat Hubert Curien",
+            "Partenariat Hubert Curien",
+            "FP7",
+            "ANR",
+            "FP7",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "FP7",
+            "FP7",
+            "FP7",
+            "H2020",
+            "H2020",
+            "H2020",
+            "H2020",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "PIA",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "FP7",
+            "FP7",
+            "H2020",
+            "ANR",
+            "H2020",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "ANR",
+            "H2020",
+            "ANR"
+          ],
+          "address.provider.sort": [
+            "adresse.data.gouv.fr"
+          ],
+          "address.score.sort": [
+            "0.6952925691699605"
+          ],
+          "address.postcode": [
+            "67400"
+          ]
+        },
+        "highlight": {
+          "publications.publication.keywords.default": [
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>",
+            "<em>Internet</em> <em>of</em> <em>Things</em>"
+          ],
+          "projects.project.label.en": [
+            "SUPERVISED <em>ROBOTIC</em> SURGERY - APPLICATION TO RADIOFREQUENCY ABLATION OF LIVER TUMORS"
+          ],
+          "websites.webPages.content": [
+            "[En savoir plus]\nThesis: Reliable Communications for the Industrial <em>Internet</em> <em>of</em> <em>Things</em>\nLe 25 septembre",
+            "<em>of</em> <em>Things</em> Team: Networks Abstract: The Industrial <em>Internet</em> <em>of</em> <em>Things</em> (IIoT) is an emerging concept aiming",
+            "<em>of</em> <em>Things</em>, as many applications...",
+            "and the <em>internet</em> <em>of</em> <em>things</em> respectively.",
+            "ICube has 7 leading technological platforms in medical imaging and <em>robotics</em>, <em>Internet</em> <em>of</em> <em>Things</em>, remote"
+          ],
+          "publications.publication.title.default": [
+            "Heterogeneous MAC duty-cycling for energy-efficient <em>Internet</em> <em>of</em> <em>Things</em> deployments",
+            "<em>of</em> <em>things</em>",
+            "<em>of</em> <em>things</em>",
+            "Industrial <em>Internet</em> <em>of</em> <em>Things</em>: Specificities and challenges",
+            "<em>Internet</em> <em>of</em> <em>Things</em> and M2M Communications"
+          ]
+        }
+      }
+    ]
+  }
+}

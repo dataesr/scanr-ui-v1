@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import {
-  API_ERRORS_SCANR,
+  // API_ERRORS_SCANR,
   API_STRUCTURE_LIKE_END_POINT,
   API_PUBLICATIONS_LIKE_END_POINT,
   API_PROJECT_LIKE_END_POINT,
@@ -27,7 +27,7 @@ function useLikeApi(api, request) {
       setData(res);
       setLoading(false);
     } catch (error) {
-      Axios.post(API_ERRORS_SCANR, { error });
+      // Axios.post(API_ERRORS_SCANR, { error });
       setError(true);
       setLoading(false);
     }

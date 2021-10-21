@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { API_ERRORS_SCANR } from '../config/config';
+// import { API_ERRORS_SCANR } from '../config/config';
 
 function useGetData(BASE_URL, id) {
   const [data, setData] = useState([]);
@@ -18,7 +18,7 @@ function useGetData(BASE_URL, id) {
         window.location.href = '../erreur404';
       }
     } catch (error) {
-      Axios.post(API_ERRORS_SCANR, { error });
+      // Axios.post(API_ERRORS_SCANR, { error });
       setError(true);
       setLoading(false);
     }

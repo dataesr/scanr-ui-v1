@@ -112,11 +112,11 @@ FocusList.defaultProps = {
         en: ['PhD', '#DoctoralSchools'],
       },
       title: {
-        fr: 'Les thèses soutenues en 2018. Sur quels thèmes ?',
-        en: '2018 thesis in france. Which thematics?',
+        fr: 'Les thèses soutenues en 2019. Sur quels thèmes ?',
+        en: '2019 thesis in france. Which thematics?',
       },
       type: 'bubble',
-      url: '/focus/themes-theses-2018',
+      url: '/focus/themes-theses-2019',
       api: 'publications',
     },
     {
@@ -125,8 +125,8 @@ FocusList.defaultProps = {
         en: ['#InstitutUniversitaireDeFrance', '#IUF'],
       },
       title: {
-        fr: "Les nominations 2019 à l'Institut Universitaire de France",
-        en: '2019 new members of the Institut Universitaire de France',
+        fr: "Les nominations 2020 à l'Institut Universitaire de France",
+        en: '2020 new members of the Institut Universitaire de France',
       },
       type: 'treemap',
       url: '/focus/iuf',
