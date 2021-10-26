@@ -42,54 +42,59 @@ const AapPage = (props) => {
       setCallObject(responseCallFromCE.data);
       setKeywords(responseCallFromCE.data.keywords);
       // const url = 'https://scanr-api.enseignementsup-recherche.gouv.fr/elasticsearch/structures/_search';
-      // const query = {
-      //   query: {
-      //     bool: {
-      //       should: [
-      //         { match_phrase: { 'publications.publication.title.default': 'Internet of Things' } },
-      //         { match_phrase: { 'publications.publication.title.default': 'robotics' } },
-      //         { match_phrase: { 'publications.publication.title.default': 'Healthy ageing' } },
-      //         { match_phrase: { 'publications.publication.keywords.default': 'Internet of Things' } },
-      //         { match_phrase: { 'publications.publication.keywords.default': 'robotics' } },
-      //         { match_phrase: { 'publications.publication.keywords.default': 'Healthy ageing' } },
-      //         { match_phrase: { 'projects.project.label.en': 'Internet of Things' } },
-      //         { match_phrase: { 'projects.project.label.en': 'robotics' } },
-      //         { match_phrase: { 'projects.project.label.en': 'Healthy ageing' } },
-      //         { match_phrase: { 'projects.project.label.default': 'Internet of Things' } },
-      //         { match_phrase: { 'projects.project.label.default': 'robotics' } },
-      //         { match_phrase: { 'projects.project.label.default': 'Healthy ageing' } },
-      //         { match_phrase: { 'websites.webPages.content': 'Internet of Things' } },
-      //         { match_phrase: { 'websites.webPages.content': 'robotics' } },
-      //         { match_phrase: { 'websites.webPages.content': 'Healthy ageing' } },
-      //       ],
-      //       filter: [
-      //         { match: { status: 'active' } },
-      //       ],
-      //     },
-      //   },
-      //   highlight: {
-      //     fields: {
-      //       'publications.publication.title.default': {},
-      //       'publications.publication.keywords.default': {},
-      //       'projects.project.label.en': {},
-      //       'projects.project.label.default': {},
-      //       'websites.webPages.content': {},
-      //     },
-      //   },
-      //   _source: false,
-      //   fields: [
-      //     'id',
-      //     'label.default',
-      //     'isFrench',
-      //     'kind',
-      //     'address.localisationSuggestions',
-      //     'projects.project.type',
-      //     'address.gps',
-      //     'address.*',
-      //   ],
-      // };
-      // const responseFromScanRTest = await Axios.post(url, query);
-      // console.log('responseFromScanRTest', responseFromScanRTest);
+      const url = 'https://scanr-preprod.sword-group.com/elasticsearch/publications/_search';
+      const query = {
+        query: {
+          bool: {
+            should: [
+              { match_phrase: { 'publications.publication.title.default': 'Internet of Things' } },
+              { match_phrase: { 'publications.publication.title.default': 'robotics' } },
+              { match_phrase: { 'publications.publication.title.default': 'Healthy ageing' } },
+              { match_phrase: { 'publications.publication.keywords.default': 'Internet of Things' } },
+              { match_phrase: { 'publications.publication.keywords.default': 'robotics' } },
+              { match_phrase: { 'publications.publication.keywords.default': 'Healthy ageing' } },
+              { match_phrase: { 'projects.project.label.en': 'Internet of Things' } },
+              { match_phrase: { 'projects.project.label.en': 'robotics' } },
+              { match_phrase: { 'projects.project.label.en': 'Healthy ageing' } },
+              { match_phrase: { 'projects.project.label.default': 'Internet of Things' } },
+              { match_phrase: { 'projects.project.label.default': 'robotics' } },
+              { match_phrase: { 'projects.project.label.default': 'Healthy ageing' } },
+              { match_phrase: { 'websites.webPages.content': 'Internet of Things' } },
+              { match_phrase: { 'websites.webPages.content': 'robotics' } },
+              { match_phrase: { 'websites.webPages.content': 'Healthy ageing' } },
+            ],
+            filter: [
+              { match: { status: 'active' } },
+            ],
+          },
+        },
+        highlight: {
+          fields: {
+            'publications.publication.title.default': {},
+            'publications.publication.keywords.default': {},
+            'projects.project.label.en': {},
+            'projects.project.label.default': {},
+            'websites.webPages.content': {},
+          },
+        },
+        _source: false,
+        fields: [
+          'id',
+          'label.default',
+          'isFrench',
+          'kind',
+          'address.localisationSuggestions',
+          'projects.project.type',
+          'address.gps',
+          'address.*',
+        ],
+      };
+      const responseFromScanRTest = await Axios.post(url, query, {
+        headers: {
+          Authorization: 'ApiKey aVpVMHAzd0JHa1NuTnpHTmlFRWM6RTNJd3h0Tm1TVFd1X1FuaGw4Qi01QQ==',
+        },
+      });
+      console.log('responseFromScanRTest', responseFromScanRTest);
       setResponsesFromScanR(responseFromScanR); // Bouchon
     } catch (err) {
       throw (err);
@@ -181,8 +186,6 @@ const AapPage = (props) => {
       </>
     );
   };
-
-  console.log(keywords);
 
   return (
     <IntlProvider locale={props.language} messages={msg[props.language]}>
