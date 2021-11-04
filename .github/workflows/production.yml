@@ -8,6 +8,7 @@ on:
 env:
   # Must match k8s deployment name
   DEPLOYMENT: scanr
+  DEPLOYMENT_NAMESPACE: scanr
   DEPLOYMENT_URL: https://scanr.dataesr.ovh
   SLACK_NOTIFICATION_CHANNEL: '#scanr'
 
@@ -83,7 +84,7 @@ jobs:
           restart: ${{ env.DEPLOYMENT }}
 
   notify:
-    needs: release
+    needs: deploy
     if: always()
     runs-on: ubuntu-latest
     steps:
