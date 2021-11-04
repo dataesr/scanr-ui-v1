@@ -93,4 +93,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN}}
           slack_token: ${{ secrets.SLACK_TOKEN }}
           slack_channel: ${{ env.SLACK_NOTIFICATION_CHANNEL}}
-          # deployment_url: ${{ env.DEPLOYMENT_URL }}
+          deployment_url: ${{ env.DEPLOYMENT_URL }}
