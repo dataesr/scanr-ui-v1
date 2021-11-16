@@ -30,7 +30,7 @@ export default class HighChartsBar extends Component {
     this.state = {
       options: null,
     };
-    this.nbBars = 10;
+    this.nbBars = 20;
   }
 
   componentDidMount() {
