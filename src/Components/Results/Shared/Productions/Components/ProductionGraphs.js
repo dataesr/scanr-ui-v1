@@ -18,12 +18,13 @@ import classes from './ProductionGraphs.scss';
 */
 const ProductionGraphs = (props) => {
   const graphFor = {
-    thesis: ['isOa', 'years', 'keywords'],
-    publication: ['isOa', 'years', 'keywords', 'journal', 'types'],
+    thesis: ['disciplines', 'isOa', 'years', 'keywords'],
+    publication: ['disciplines', 'isOa', 'years', 'keywords', 'journal', 'types'],
     patent: ['years'],
   };
   const labelFor = {
     fr: {
+      disciplines: 'Domaines de recherche',
       isOa: "Taux d'accès ouvert",
       years: 'Répartition par année',
       keywords: 'Nuage de mots clés des publications',
@@ -31,6 +32,7 @@ const ProductionGraphs = (props) => {
       types: 'Types de publications',
     },
     en: {
+      disciplines: 'Research fields',
       isOa: 'Open Access',
       years: 'Distribution by year',
       keywords: 'Publications wordcloud',

@@ -60,6 +60,7 @@ class Productions extends Component {
     query: '',
     currentQueryText: '',
     graphData: {
+      disciplines: {},
       isOa: {},
       journals: {},
       years: {},
@@ -217,6 +218,13 @@ class Productions extends Component {
         id: 'keywords',
         entries: graphData.keywordsFr.entries.concat(graphData.keywordsEn.entries),
       };
+      graphData.disciplines = {
+        id: 'disciplines',
+        entries: graphData.disciplinesFr.entries,
+      };
+      if (this.props.language !== 'fr') { graphData.disciplines.entries = graphData.disciplinesEn.entries; }
+      graphData.disciplines.entries = graphData.disciplines.entries.filter(el => !el.value.includes('['));
+      graphData.disciplines.entries = graphData.disciplines.entries.filter(el => ((!el.value.includes('Homme et Société') && !el.value.includes('Humanities and Social Sciences')) || (el.value.includes('/'))));
       const data = response.data.results.sort((a, b) => (b.value.publicationDate - a.value.publicationDate));
       const selectedProduction = data.length > 0 ? data[0].value.id : '';
       this.setState({

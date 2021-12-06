@@ -61,6 +61,26 @@ export default {
       },
       size: 100,
     },
+    disciplinesFr: {
+      field: 'domains.label.fr',
+      filters: {},
+      min_doc_count: 1,
+      order: {
+        direction: 'DESC',
+        type: 'COUNT',
+      },
+      size: 50,
+    },
+    disciplinesEn: {
+      field: 'domains.label.en',
+      filters: {},
+      min_doc_count: 1,
+      order: {
+        direction: 'DESC',
+        type: 'COUNT',
+      },
+      size: 50,
+    },
     journal: {
       field: 'source.title',
       filters: {},
