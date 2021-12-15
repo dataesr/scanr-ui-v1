@@ -28,7 +28,6 @@ const PersonPage = lazy(() => import('./Components/Results/Person/Person'));
 const FocusList = lazy(() => import('./Components/Focus/FocusList'));
 const Focus = lazy(() => import('./Components/Focus/Focus'));
 const AapPage = lazy(() => import('./Components/Aap/Aap'));
-const AapPage2 = lazy(() => import('./Components/Aap2/Aap'));
 
 /* Pages froides */
 const ContactPage = lazy(() => import('./Components/Abouts/Contact/Contact'));
@@ -105,7 +104,6 @@ class App extends Component {
                   )}
                 />
                 <Route path="/trouver-des-partenaires-pour-horizon-europe/:id" render={props => (<AapPage {...props} language={lang} />)} />
-                <Route path="/aap/:id" render={props => (<AapPage2 {...props} language={lang} />)} />
                 <Route exact path="/focus" render={props => (<FocusList {...props} language={lang} />)} />
                 <Route exact path="/focus/:id" render={props => (<Focus {...props} language={lang} />)} />
                 <Route exact path="/mentions-legales" component={() => (<LegalNoticePage language={lang} />)} />

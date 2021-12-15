@@ -1,6 +1,5 @@
 import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import Parser from 'html-react-parser';
+import { IntlProvider } from 'react-intl';
 import PropTypes from 'prop-types';
 import getSelectedKey from '../../Utils/getSelectKey';
 
@@ -63,7 +62,6 @@ const EntityCard = (props) => {
     )
     : null;
 
-  console.log('highlights==>', props.highlights);
 
   const highlight = (props.highlights)
     ? (
@@ -73,19 +71,14 @@ const EntityCard = (props) => {
         </div>
         <div className="m-0 flex-grow-1 pl-1">
           <p className={`m-0 ${classes.FoundIn}`}>
-            <FormattedHTMLMessage id="resultCard.foundIn" />
-            &nbsp;(
-            {
-              Object.entries(props.highlights).map(item => ({ x: item.length })).reduce((acc, curr) => acc + curr.x, 0)
-            }
-            )
+            Résultats trouvés dans :
           </p>
           <ul className={`m-0 ${classes.Highlights}`}>
             {
               Object.keys(props.highlights).map(key => (
                 <li>
-                  {`${highlights[props.language][key]} (${props.highlights[key].length})`}
-                  <ul>
+                  {`${highlights[props.language][key]} ${props.highlights[key].length} résultat(s)`}
+                  {/* <ul>
                     {
                       props.highlights[key].map(OneHL => (
                         <li>
@@ -93,7 +86,7 @@ const EntityCard = (props) => {
                         </li>
                       ))
                     }
-                  </ul>
+                  </ul> */}
                 </li>
               ))
             }

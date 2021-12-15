@@ -5,7 +5,7 @@ import classes from './custom.scss';
 
 const Header = props => (
   <div className={classes.Header}>
-    <img src="https://www.horizon-europe.gouv.fr/sites/default/files/styles/news_frieze_list_block/public/2021-01/logo-horizon-europe-signature-5-2643.jpg?itok=J_DROIvo" alt="" />
+    <img src="https://ec.europa.eu/info/sites/default/themes/europa/images/svg/logo/logo--fr.svg" alt="" />
     <h2>
       {props.title}
     </h2>
