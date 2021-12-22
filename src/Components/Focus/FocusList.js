@@ -95,6 +95,19 @@ FocusList.defaultProps = {
   focusList: [
     {
       tags: {
+        fr: ['#InstitutUniversitaireDeFrance', '#IUF'],
+        en: ['#InstitutUniversitaireDeFrance', '#IUF'],
+      },
+      title: {
+        fr: "Les nominations 2020 à l'Institut Universitaire de France",
+        en: '2020 new members of the Institut Universitaire de France',
+      },
+      type: 'treemap',
+      url: '/focus/h2020',
+      api: 'persons',
+    },
+    {
+      tags: {
         fr: ['#satt', '#transfert', '#technologies'],
         en: ['#satt', '#transfert', '#technologies'],
       },
