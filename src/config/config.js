@@ -4,6 +4,8 @@ export const API_FOCUS_SCANR = API_BASE_SCANR.concat('/focus');
 export const API_CONTRIBUTE_SCANR = API_BASE_SCANR.concat('/contribute');
 export const API_CONTACT_SCANR = API_BASE_SCANR.concat('/contact');
 export const API_ERRORS_SCANR = API_BASE_SCANR.concat('/errors');
+export const API_ES = process.env.REACT_APP_API_ES;
+export const API_KEY_ES = process.env.REACT_APP_API_ES_KEY;
 
 // Contributions Publications
 export const API_CONTRIBUTE_PUBLICATIONS_SCANR = API_BASE_SCANR.concat('/contribute_productions');

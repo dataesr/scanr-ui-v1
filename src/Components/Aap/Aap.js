@@ -14,7 +14,8 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 import Header from './Header';
 import EntityCard from './EntityCard';
 import LeafletMap from '../Shared/GraphComponents/Graphs/LeafletMap';
-// import { API_STRUCTURES_SEARCH_END_POINT } from '../../config/config';
+import { API_ES, API_KEY_ES } from '../../config/config';
+
 import getSelectedKey from '../../Utils/getSelectKey';
 
 // Styles
@@ -25,8 +26,7 @@ import 'react-bootstrap-typeahead/css/Typeahead.css';
 import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
 
-// import responseFromScanR from './stopper.json';
-// http://localhost:3000/aap/dt-tds-01-2019
+// exemple .../dt-tds-01-2019
 
 const msg = { fr: messagesFr, en: messagesEn };
 // const pageSize = 50;
@@ -68,8 +68,6 @@ const AapPage = (props) => {
   };
 
   const getScanRData = async (kwords) => {
-    // const url = 'https://scanr-api.enseignementsup-recherche.gouv.fr/elasticsearch/structures/_search';
-    const url = 'https://scanr-preprod.sword-group.com/elasticsearch/structures/_search';
     const query = {
       query: {
         bool: {
@@ -124,9 +122,9 @@ const AapPage = (props) => {
     if (isFrenchOnly) {
       query.query.bool.filter.push({ term: { isFrench: isFrenchOnly } });
     }
-    const responseFromScanR = await Axios.post(url, query, {
+    const responseFromScanR = await Axios.post(API_ES, query, {
       headers: {
-        Authorization: 'ApiKey aVpVMHAzd0JHa1NuTnpHTmlFRWM6RTNJd3h0Tm1TVFd1X1FuaGw4Qi01QQ==',
+        Authorization: API_KEY_ES,
       },
     });
     return responseFromScanR;
