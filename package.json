@@ -1,6 +1,6 @@
 {
   "name": "scanr",
-  "version": "2.1.4",
+  "version": "2.1.5",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.10.1",
@@ -26,6 +26,7 @@
     "highcharts-react-official": "^2.1.3",
     "highcharts-rounded-corners": "git+https://github.com/highcharts/rounded-corners.git",
     "history": "^4.10.1",
+    "html-react-parser": "^1.4.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "20.0.4",
     "jquery": "^3.3.1",
@@ -154,15 +155,15 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@babel/preset-env": "^7.12.11",
-    "@babel/preset-flow": "^7.12.1",
-    "@babel/preset-react": "^7.12.10",
     "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-json-strings": "^7.0.0",
     "@babel/plugin-proposal-private-methods": "^7.4.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-syntax-import-meta": "^7.0.0",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
     "@types/react-intl": "^3.0.0",
     "css-loader": "^0.28.7",
     "dotenv": "^4.0.0",
