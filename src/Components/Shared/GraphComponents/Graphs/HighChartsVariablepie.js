@@ -46,7 +46,7 @@ export default class HighChartsVariablepie extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.text !== this.props.text || prevProps.tooltipText !== this.props.tooltipText) {
+    if (prevProps.text !== this.props.text || prevProps.tooltipText !== this.props.tooltipText || prevProps.data !== this.props.data) {
       this.loadData();
     }
   }
@@ -73,7 +73,7 @@ export default class HighChartsVariablepie extends Component {
         minPointSize: 1,
         innerSize: '50%',
         zMin: 0,
-        data: this.data.slice(0, 20),
+        data: this.props.data,
       }],
       exporting: {
         filename: this.props.filename,

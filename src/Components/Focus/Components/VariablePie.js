@@ -22,6 +22,12 @@ export default class VariablePie extends Component {
     this.getData();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.currentId !== prevState.currentId) {
+      this.getData();
+    }
+  }
+
   getNodes = () => {
     /* eslint-disable-next-line */
     const nodes = require('../../Focus/Data/h2020/nodes_fr.json');
@@ -30,43 +36,51 @@ export default class VariablePie extends Component {
 
   getData = () => {
     /* eslint-disable-next-line */
-    const data = require('../../Focus/Data/h2020/'.concat(this.state.currentId).concat('.json'));
+    const data = require(`../../Focus/Data/h2020/${this.state.currentId}.json`);
     this.setState({ data, isLoading: false });
   }
 
-  render = () => {
-    const selector = this.state.nodes.map(el => (<option value={el.id}>{el.name}</option>));
-    return (
-      <div>
-        <Row style={{ backgroundColor: '#ffb200' }} className={classes.arrowRight}>
-          <select>
-            { selector }
-          </select>
-        </Row>
-        {
-            (this.state.data !== [] && !this.state.isLoading && this.state.nodes !== [] && this.state.currentId)
-              ? (
-                <div className={`w-100 ${classes.graphCard}`}>
-                  <GraphTitles
-                    lexicon={this.props.lexicon}
-                    language={this.props.language}
-                    title={this.props.title.concat(' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name, ' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects, ' projets')}
-                    subtitle={this.props.subtitle}
-                  />
-                  <HighChartsVariablepie
-                    filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
-                    data={this.state.data}
-                    exporting={this.state.exporting}
-                    language={this.props.language}
-                    tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
-                  />
-                </div>
-              )
-              : (<GraphSpinner />)
+  render = () => (
+    <div>
+      <Row className={classes.arrowRight}>
+        <select
+          className="form-control mx-3 mb-2"
+          onChange={e => this.setState({ currentId: e.target.value, data: [] })}
+        >
+          {
+            this.state.nodes.map((el) => {
+              let ret = <option value={el.id}>{el.name}</option>;
+              if (el.id === this.state.currentId) {
+                ret = <option value={el.id} selected>{el.name}</option>;
+              }
+              return ret;
+            })
           }
-      </div>
-    );
-  }
+        </select>
+      </Row>
+      {
+          (this.state.data !== [] && !this.state.isLoading && this.state.nodes !== [] && this.state.currentId)
+            ? (
+              <div className={`w-100 ${classes.graphCard}`}>
+                <GraphTitles
+                  lexicon={this.props.lexicon}
+                  language={this.props.language}
+                  title={this.props.title.concat(' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name, ' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects, ' projets')}
+                  subtitle={this.props.subtitle}
+                />
+                <HighChartsVariablepie
+                  filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
+                  data={this.state.data.slice(0, 20)}
+                  exporting={this.state.exporting}
+                  language={this.props.language}
+                  tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
+                />
+              </div>
+            )
+            : (<GraphSpinner />)
+        }
+    </div>
+  )
 }
 
 VariablePie.propTypes = {
