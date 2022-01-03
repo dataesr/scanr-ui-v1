@@ -1,37 +1,88 @@
-[
-  {
-    "name": "IRSN (France)",
-    "country": "France",
-    "full_name": "Institut de radioprotection et de sûreté nucléaire",
-    "acronym": "IRSN",
-    "id": "86GK4",
-    "y": 1,
-    "z": 48
+{
+  "all": {
+    "all": [
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Tecnatom (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnatom",
+        "id": "grid.6467.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "CEPN (France)",
+        "country": "France",
+        "full_name": "Ctre Etude Evaluat Protect Domain Nuclea",
+        "acronym": "CEPN",
+        "id": "310071477",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      }
+    ]
   },
-  {
-    "name": "CEPN (France)",
-    "country": "France",
-    "full_name": "Ctre Etude Evaluat Protect Domain Nuclea",
-    "acronym": "CEPN",
-    "id": "310071477",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Tecnatom (Espagne)",
-    "country": "Espagne",
-    "full_name": "Tecnatom",
-    "id": "grid.6467.3",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
+  "Euratom": {
+    "Euratom (EURATOM)": [
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "Tecnatom (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnatom",
+        "id": "grid.6467.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "CEPN (France)",
+        "country": "France",
+        "full_name": "Ctre Etude Evaluat Protect Domain Nuclea",
+        "acronym": "CEPN",
+        "id": "310071477",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      }
+    ]
   }
-]
+}

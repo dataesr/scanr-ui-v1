@@ -1,419 +1,982 @@
-[
-  {
-    "name": "Austrian Competence Centre of Food Safety (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austrian Competence Centre of Food Safety",
-    "id": "grid.435576.6",
-    "y": 3,
-    "z": 5
+{
+  "all": {
+    "all": [
+      {
+        "name": "Federalimentare (Italie)",
+        "country": "Italie",
+        "full_name": "Federalimentare",
+        "id": "grid.494104.c",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 4
+      },
+      {
+        "name": "Gospodarska zbornica Slovenije (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Gospodarska zbornica Slovenije",
+        "id": "grid.424500.7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "Austrian Competence Centre of Food Safety (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Competence Centre of Food Safety",
+        "id": "grid.435576.6",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 5
+      },
+      {
+        "name": "Union of Dairy Beef Food Industrialists and Producers of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Union of Dairy Beef Food Industrialists and Producers of Turkey",
+        "id": "grid.438844.7",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "University of Surrey (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Surrey",
+        "id": "grid.5475.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 112
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 109
+      },
+      {
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 170
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "International Life Sciences Institute Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "International Life Sciences Institute Europe",
+        "id": "grid.425211.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "Agrosup Dijon (France)",
+        "country": "France",
+        "full_name": "Agrosup Dijon",
+        "acronym": "Agrosup Dijon",
+        "id": "upGa1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Harokopio University (Grèce)",
+        "country": "Grèce",
+        "full_name": "Harokopio University",
+        "id": "grid.15823.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "ECRIN (France)",
+        "country": "France",
+        "full_name": "Ecrin European Clinical Research Infrastructure Network",
+        "acronym": "ECRIN",
+        "id": "801933235",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 56
+      },
+      {
+        "name": "Agricultural University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "Agricultural University of Athens",
+        "id": "grid.10985.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 149
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 177
+      },
+      {
+        "name": "Tereos (France)",
+        "country": "France",
+        "full_name": "Tereos",
+        "acronym": "Tereos",
+        "id": "gent173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 367
+      },
+      {
+        "name": "University of Navarra (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Navarra",
+        "id": "grid.5924.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "Vitagora (France)",
+        "country": "France",
+        "full_name": "Vitagora",
+        "acronym": "Vitagora",
+        "id": "FBc5d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "European Food Information Resource (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Food Information Resource",
+        "id": "grid.424817.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "U. Angers (France)",
+        "country": "France",
+        "full_name": "Université d'Angers",
+        "acronym": "U. Angers",
+        "id": "IXHyv",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "CRNH RHONE-ALPES (France)",
+        "country": "France",
+        "full_name": "Ctre Recherche Nutrition Humaine Rhône-Alpes",
+        "acronym": "CRNH RHONE-ALPES",
+        "id": "180089526",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Cargill (Belgique)",
+        "country": "Belgique",
+        "full_name": "Cargill",
+        "id": "grid.498107.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 412
+      },
+      {
+        "name": "UBS (France)",
+        "country": "France",
+        "full_name": "Université Bretagne Sud",
+        "acronym": "UBS",
+        "id": "5tVy4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "Fundació Privada per a la Investigació Nutricional (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada per a la Investigació Nutricional",
+        "id": "grid.434623.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Icam Ouest (France)",
+        "country": "France",
+        "full_name": "Institut catholique d'arts et métiers Ouest",
+        "acronym": "Icam Ouest",
+        "id": "t4vMb",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "uB (France)",
+        "country": "France",
+        "full_name": "Université de Bourgogne",
+        "acronym": "uB",
+        "id": "Lr94O",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "ONIRIS (France)",
+        "country": "France",
+        "full_name": "École nationale vétérinaire, agroalimentaire et de l'alimentation, Nantes-Atlantique",
+        "acronym": "ONIRIS",
+        "id": "b2TCC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Black Sea Regional Energy Centre (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Black Sea Regional Energy Centre",
+        "id": "grid.424243.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Austrian Energy Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Energy Agency",
+        "id": "grid.424461.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "Carbon Trust (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Carbon Trust",
+        "id": "grid.422971.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Energy Restructuring Agency (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Energy Restructuring Agency",
+        "id": "grid.457264.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ricerca sul Sistema Energetico (Italie)",
+        "country": "Italie",
+        "full_name": "Ricerca sul Sistema Energetico",
+        "id": "grid.79546.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Joint Implementation Network (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Joint Implementation Network",
+        "id": "grid.451335.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Polish National Energy Conservation Agency (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish National Energy Conservation Agency",
+        "id": "grid.426488.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Center for Renewable Energy Sources and Saving (Grèce)",
+        "country": "Grèce",
+        "full_name": "Center for Renewable Energy Sources and Saving",
+        "id": "grid.423502.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania",
+        "id": "grid.433526.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Adelphi Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Adelphi Research",
+        "id": "grid.423657.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Riga Technical University (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Riga Technical University",
+        "id": "grid.6973.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "ATEE (France)",
+        "country": "France",
+        "full_name": "Assoc Technique Energie Environnement",
+        "acronym": "ATEE",
+        "id": "315062786",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Institute for European Energy and Climate Policy (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Institute for European Energy and Climate Policy",
+        "id": "grid.493359.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "University of Brescia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Brescia",
+        "id": "grid.7637.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      }
+    ]
   },
-  {
-    "name": "Gospodarska zbornica Slovenije (Slovénie)",
-    "country": "Slovénie",
-    "full_name": "Gospodarska zbornica Slovenije",
-    "id": "grid.424500.7",
-    "y": 3,
-    "z": 11
-  },
-  {
-    "name": "Federalimentare (Italie)",
-    "country": "Italie",
-    "full_name": "Federalimentare",
-    "id": "grid.494104.c",
-    "y": 3,
-    "z": 4
-  },
-  {
-    "name": "Union of Dairy Beef Food Industrialists and Producers of Turkey (Turquie)",
-    "country": "Turquie",
-    "full_name": "Union of Dairy Beef Food Industrialists and Producers of Turkey",
-    "id": "grid.438844.7",
-    "y": 2,
-    "z": 3
-  },
-  {
-    "name": "U. Angers (France)",
-    "country": "France",
-    "full_name": "Université d'Angers",
-    "acronym": "U. Angers",
-    "id": "IXHyv",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "U. Nantes (France)",
-    "country": "France",
-    "full_name": "Université de Nantes",
-    "acronym": "U. Nantes",
-    "id": "7hB8r",
-    "y": 1,
-    "z": 71
-  },
-  {
-    "name": "University of Liverpool (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Liverpool",
-    "id": "grid.10025.36",
-    "y": 1,
-    "z": 109
-  },
-  {
-    "name": "European Food Information Resource (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Food Information Resource",
-    "id": "grid.424817.c",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "UBS (France)",
-    "country": "France",
-    "full_name": "Université Bretagne Sud",
-    "acronym": "UBS",
-    "id": "5tVy4",
-    "y": 1,
-    "z": 40
-  },
-  {
-    "name": "Cargill (Belgique)",
-    "country": "Belgique",
-    "full_name": "Cargill",
-    "id": "grid.498107.3",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "University College London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University College London",
-    "id": "grid.83440.3b",
-    "y": 1,
-    "z": 412
-  },
-  {
-    "name": "International Life Sciences Institute Europe (Belgique)",
-    "country": "Belgique",
-    "full_name": "International Life Sciences Institute Europe",
-    "id": "grid.425211.1",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "IMT Atlantique (France)",
-    "country": "France",
-    "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-    "acronym": "IMT Atlantique",
-    "id": "krqUz",
-    "y": 1,
-    "z": 49
-  },
-  {
-    "name": "Harokopio University (Grèce)",
-    "country": "Grèce",
-    "full_name": "Harokopio University",
-    "id": "grid.15823.3d",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Wageningen University & Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Wageningen University & Research",
-    "id": "grid.4818.5",
-    "y": 1,
-    "z": 367
-  },
-  {
-    "name": "Maastricht University (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Maastricht University",
-    "id": "grid.5012.6",
-    "y": 1,
-    "z": 177
-  },
-  {
-    "name": "IMT (France)",
-    "country": "France",
-    "full_name": "Institut Mines-Télécom",
-    "acronym": "IMT",
-    "id": "6Th4v",
-    "y": 1,
-    "z": 124
-  },
-  {
-    "name": "uB (France)",
-    "country": "France",
-    "full_name": "Université de Bourgogne",
-    "acronym": "uB",
-    "id": "Lr94O",
-    "y": 1,
-    "z": 35
-  },
-  {
-    "name": "Newcastle University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Newcastle University",
-    "id": "grid.1006.7",
-    "y": 1,
-    "z": 149
-  },
-  {
-    "name": "Fundació Privada per a la Investigació Nutricional (Espagne)",
-    "country": "Espagne",
-    "full_name": "Fundació Privada per a la Investigació Nutricional",
-    "id": "grid.434623.4",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Agrosup Dijon (France)",
-    "country": "France",
-    "full_name": "Agrosup Dijon",
-    "acronym": "Agrosup Dijon",
-    "id": "upGa1",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "CRNH RHONE-ALPES (France)",
-    "country": "France",
-    "full_name": "Ctre Recherche Nutrition Humaine Rhône-Alpes",
-    "acronym": "CRNH RHONE-ALPES",
-    "id": "180089526",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "University of Copenhagen (Danemark)",
-    "country": "Danemark",
-    "full_name": "University of Copenhagen",
-    "id": "grid.5254.6",
-    "y": 1,
-    "z": 321
-  },
-  {
-    "name": "University of Leeds (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Leeds",
-    "id": "grid.9909.9",
-    "y": 1,
-    "z": 170
-  },
-  {
-    "name": "ECRIN (France)",
-    "country": "France",
-    "full_name": "Ecrin European Clinical Research Infrastructure Network",
-    "acronym": "ECRIN",
-    "id": "801933235",
-    "y": 1,
-    "z": 56
-  },
-  {
-    "name": "Inrae (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Inrae",
-    "id": "t4SA4",
-    "y": 1,
-    "z": 453
-  },
-  {
-    "name": "University of Surrey (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Surrey",
-    "id": "grid.5475.3",
-    "y": 1,
-    "z": 112
-  },
-  {
-    "name": "UBFC (France)",
-    "country": "France",
-    "full_name": "Université Bourgogne - Franche-Comté",
-    "acronym": "UBFC",
-    "id": "8A0mg",
-    "y": 1,
-    "z": 64
-  },
-  {
-    "name": "Vitagora (France)",
-    "country": "France",
-    "full_name": "Vitagora",
-    "acronym": "Vitagora",
-    "id": "FBc5d",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Agricultural University of Athens (Grèce)",
-    "country": "Grèce",
-    "full_name": "Agricultural University of Athens",
-    "id": "grid.10985.35",
-    "y": 1,
-    "z": 65
-  },
-  {
-    "name": "ONIRIS (France)",
-    "country": "France",
-    "full_name": "École nationale vétérinaire, agroalimentaire et de l'alimentation, Nantes-Atlantique",
-    "acronym": "ONIRIS",
-    "id": "b2TCC",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Icam Ouest (France)",
-    "country": "France",
-    "full_name": "Institut catholique d'arts et métiers Ouest",
-    "acronym": "Icam Ouest",
-    "id": "t4vMb",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "University of Navarra (Espagne)",
-    "country": "Espagne",
-    "full_name": "University of Navarra",
-    "id": "grid.5924.a",
-    "y": 1,
-    "z": 45
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "Tereos (France)",
-    "country": "France",
-    "full_name": "Tereos",
-    "acronym": "Tereos",
-    "id": "gent173",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Energy Restructuring Agency (Slovénie)",
-    "country": "Slovénie",
-    "full_name": "Energy Restructuring Agency",
-    "id": "grid.457264.6",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Black Sea Regional Energy Centre (Bulgarie)",
-    "country": "Bulgarie",
-    "full_name": "Black Sea Regional Energy Centre",
-    "id": "grid.424243.7",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Austrian Energy Agency (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austrian Energy Agency",
-    "id": "grid.424461.1",
-    "y": 1,
-    "z": 39
-  },
-  {
-    "name": "Polish National Energy Conservation Agency (Pologne)",
-    "country": "Pologne",
-    "full_name": "Polish National Energy Conservation Agency",
-    "id": "grid.426488.4",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania (Roumanie)",
-    "country": "Roumanie",
-    "full_name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania",
-    "id": "grid.433526.5",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Joint Implementation Network (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Joint Implementation Network",
-    "id": "grid.451335.5",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Carbon Trust (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Carbon Trust",
-    "id": "grid.422971.b",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Center for Renewable Energy Sources and Saving (Grèce)",
-    "country": "Grèce",
-    "full_name": "Center for Renewable Energy Sources and Saving",
-    "id": "grid.423502.2",
-    "y": 1,
-    "z": 60
-  },
-  {
-    "name": "Ricerca sul Sistema Energetico (Italie)",
-    "country": "Italie",
-    "full_name": "Ricerca sul Sistema Energetico",
-    "id": "grid.79546.39",
-    "y": 1,
-    "z": 20
-  },
-  {
-    "name": "University of Brescia (Italie)",
-    "country": "Italie",
-    "full_name": "University of Brescia",
-    "id": "grid.7637.5",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "University of Stuttgart (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Stuttgart",
-    "id": "grid.5719.a",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 1,
-    "z": 1072
-  },
-  {
-    "name": "ATEE (France)",
-    "country": "France",
-    "full_name": "Assoc Technique Energie Environnement",
-    "acronym": "ATEE",
-    "id": "315062786",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Riga Technical University (Lettonie)",
-    "country": "Lettonie",
-    "full_name": "Riga Technical University",
-    "id": "grid.6973.b",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "Adelphi Research (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Adelphi Research",
-    "id": "grid.423657.1",
-    "y": 1,
-    "z": 20
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "University of Surrey (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Surrey",
+        "id": "grid.5475.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 44
+      },
+      {
+        "name": "Federalimentare (Italie)",
+        "country": "Italie",
+        "full_name": "Federalimentare",
+        "id": "grid.494104.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "International Life Sciences Institute Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "International Life Sciences Institute Europe",
+        "id": "grid.425211.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Agrosup Dijon (France)",
+        "country": "France",
+        "full_name": "Agrosup Dijon",
+        "acronym": "Agrosup Dijon",
+        "id": "upGa1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Harokopio University (Grèce)",
+        "country": "Grèce",
+        "full_name": "Harokopio University",
+        "id": "grid.15823.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "ECRIN (France)",
+        "country": "France",
+        "full_name": "Ecrin European Clinical Research Infrastructure Network",
+        "acronym": "ECRIN",
+        "id": "801933235",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Agricultural University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "Agricultural University of Athens",
+        "id": "grid.10985.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Tereos (France)",
+        "country": "France",
+        "full_name": "Tereos",
+        "acronym": "Tereos",
+        "id": "gent173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "University of Navarra (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Navarra",
+        "id": "grid.5924.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Vitagora (France)",
+        "country": "France",
+        "full_name": "Vitagora",
+        "acronym": "Vitagora",
+        "id": "FBc5d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "European Food Information Resource (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Food Information Resource",
+        "id": "grid.424817.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "U. Angers (France)",
+        "country": "France",
+        "full_name": "Université d'Angers",
+        "acronym": "U. Angers",
+        "id": "IXHyv",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Gospodarska zbornica Slovenije (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Gospodarska zbornica Slovenije",
+        "id": "grid.424500.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CRNH RHONE-ALPES (France)",
+        "country": "France",
+        "full_name": "Ctre Recherche Nutrition Humaine Rhône-Alpes",
+        "acronym": "CRNH RHONE-ALPES",
+        "id": "180089526",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "Cargill (Belgique)",
+        "country": "Belgique",
+        "full_name": "Cargill",
+        "id": "grid.498107.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Austrian Competence Centre of Food Safety (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Competence Centre of Food Safety",
+        "id": "grid.435576.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "UBS (France)",
+        "country": "France",
+        "full_name": "Université Bretagne Sud",
+        "acronym": "UBS",
+        "id": "5tVy4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Fundació Privada per a la Investigació Nutricional (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada per a la Investigació Nutricional",
+        "id": "grid.434623.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Icam Ouest (France)",
+        "country": "France",
+        "full_name": "Institut catholique d'arts et métiers Ouest",
+        "acronym": "Icam Ouest",
+        "id": "t4vMb",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "uB (France)",
+        "country": "France",
+        "full_name": "Université de Bourgogne",
+        "acronym": "uB",
+        "id": "Lr94O",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "ONIRIS (France)",
+        "country": "France",
+        "full_name": "École nationale vétérinaire, agroalimentaire et de l'alimentation, Nantes-Atlantique",
+        "acronym": "ONIRIS",
+        "id": "b2TCC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      }
+    ],
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Federalimentare (Italie)",
+        "country": "Italie",
+        "full_name": "Federalimentare",
+        "id": "grid.494104.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Gospodarska zbornica Slovenije (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Gospodarska zbornica Slovenije",
+        "id": "grid.424500.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Austrian Competence Centre of Food Safety (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Competence Centre of Food Safety",
+        "id": "grid.435576.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Union of Dairy Beef Food Industrialists and Producers of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Union of Dairy Beef Food Industrialists and Producers of Turkey",
+        "id": "grid.438844.7",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Black Sea Regional Energy Centre (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Black Sea Regional Energy Centre",
+        "id": "grid.424243.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Austrian Energy Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Energy Agency",
+        "id": "grid.424461.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Carbon Trust (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Carbon Trust",
+        "id": "grid.422971.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Energy Restructuring Agency (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Energy Restructuring Agency",
+        "id": "grid.457264.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ricerca sul Sistema Energetico (Italie)",
+        "country": "Italie",
+        "full_name": "Ricerca sul Sistema Energetico",
+        "id": "grid.79546.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Joint Implementation Network (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Joint Implementation Network",
+        "id": "grid.451335.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Polish National Energy Conservation Agency (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish National Energy Conservation Agency",
+        "id": "grid.426488.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Center for Renewable Energy Sources and Saving (Grèce)",
+        "country": "Grèce",
+        "full_name": "Center for Renewable Energy Sources and Saving",
+        "id": "grid.423502.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Centrul pentru Promovarea Energiei Curate si Eficiente in Romania",
+        "id": "grid.433526.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Adelphi Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Adelphi Research",
+        "id": "grid.423657.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "Riga Technical University (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Riga Technical University",
+        "id": "grid.6973.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ATEE (France)",
+        "country": "France",
+        "full_name": "Assoc Technique Energie Environnement",
+        "acronym": "ATEE",
+        "id": "315062786",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Institute for European Energy and Climate Policy (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Institute for European Energy and Climate Policy",
+        "id": "grid.493359.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "University of Brescia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Brescia",
+        "id": "grid.7637.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Stuttgart",
+        "id": "grid.5719.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      }
+    ]
   }
-]
+}

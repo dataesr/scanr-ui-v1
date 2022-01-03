@@ -1,281 +1,840 @@
-[
-  {
-    "name": "Université PSL (France)",
-    "country": "France",
-    "full_name": "Université Paris sciences et lettres",
-    "acronym": "Université PSL",
-    "id": "PpsCQ",
-    "y": 3,
-    "z": 407
+{
+  "all": {
+    "all": [
+      {
+        "name": "X (France)",
+        "country": "France",
+        "full_name": "École polytechnique",
+        "acronym": "X",
+        "id": "DdW7n",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 85
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 407
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 103
+      },
+      {
+        "name": "Total (France)",
+        "country": "France",
+        "full_name": "Total",
+        "acronym": "Total",
+        "id": "gent178",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 47
+      },
+      {
+        "name": "Chimie ParisTech-PSL (France)",
+        "country": "France",
+        "full_name": "Chimie ParisTech-PSL",
+        "acronym": "Chimie ParisTech-PSL",
+        "id": "uhDO3",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 21
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 23
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 2670
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 125
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 238
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 575
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 388
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 342
+      },
+      {
+        "name": "University of Ljubljana (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "University of Ljubljana",
+        "id": "grid.8954.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 163
+      },
+      {
+        "name": "Advanced Coatings (Belgique)",
+        "country": "Belgique",
+        "full_name": "Advanced Coatings",
+        "id": "grid.432370.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 211
+      },
+      {
+        "name": "Solibro Research (Suède)",
+        "country": "Suède",
+        "full_name": "Solibro Research",
+        "id": "grid.502658.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "International Iberian Nanotechnology Laboratory (Portugal)",
+        "country": "Portugal",
+        "full_name": "International Iberian Nanotechnology Laboratory",
+        "id": "grid.420330.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "Midsummer (Suède)",
+        "country": "Suède",
+        "full_name": "Midsummer",
+        "id": "grid.502587.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Obducat (Suède)",
+        "country": "Suède",
+        "full_name": "Obducat",
+        "id": "grid.436860.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ArcelorMittal (France)",
+        "country": "France",
+        "full_name": "ArcelorMittal",
+        "acronym": "ArcelorMittal",
+        "id": "gent23",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ENS Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "École normale supérieure Paris-Saclay",
+        "acronym": "ENS Paris-Saclay",
+        "id": "6kk6n",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 505
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg",
+        "id": "grid.13428.3c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 268
+      },
+      {
+        "name": "Nice Solar Energy (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Nice Solar Energy",
+        "id": "grid.506759.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Australian National University (Australie)",
+        "country": "Australie",
+        "full_name": "Australian National University",
+        "id": "grid.1001.0",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Solaronix (Suisse)",
+        "country": "Suisse",
+        "full_name": "Solaronix",
+        "id": "grid.426377.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Hasselt University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Hasselt University",
+        "id": "grid.12155.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      }
+    ]
   },
-  {
-    "name": "Total (France)",
-    "country": "France",
-    "full_name": "Total",
-    "acronym": "Total",
-    "id": "gent178",
-    "y": 3,
-    "z": 47
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "X (France)",
+        "country": "France",
+        "full_name": "École polytechnique",
+        "acronym": "X",
+        "id": "DdW7n",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "University of Ljubljana (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "University of Ljubljana",
+        "id": "grid.8954.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Advanced Coatings (Belgique)",
+        "country": "Belgique",
+        "full_name": "Advanced Coatings",
+        "id": "grid.432370.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Solibro Research (Suède)",
+        "country": "Suède",
+        "full_name": "Solibro Research",
+        "id": "grid.502658.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Total (France)",
+        "country": "France",
+        "full_name": "Total",
+        "acronym": "Total",
+        "id": "gent178",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "International Iberian Nanotechnology Laboratory (Portugal)",
+        "country": "Portugal",
+        "full_name": "International Iberian Nanotechnology Laboratory",
+        "id": "grid.420330.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Chimie ParisTech-PSL (France)",
+        "country": "France",
+        "full_name": "Chimie ParisTech-PSL",
+        "acronym": "Chimie ParisTech-PSL",
+        "id": "uhDO3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 72
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "Midsummer (Suède)",
+        "country": "Suède",
+        "full_name": "Midsummer",
+        "id": "grid.502587.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Obducat (Suède)",
+        "country": "Suède",
+        "full_name": "Obducat",
+        "id": "grid.436860.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ArcelorMittal (France)",
+        "country": "France",
+        "full_name": "ArcelorMittal",
+        "acronym": "ArcelorMittal",
+        "id": "gent23",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      }
+    ]
   },
-  {
-    "name": "EDF (France)",
-    "country": "France",
-    "full_name": "Electricité de France",
-    "acronym": "EDF",
-    "id": "gent66",
-    "y": 3,
-    "z": 125
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "X (France)",
+        "country": "France",
+        "full_name": "École polytechnique",
+        "acronym": "X",
+        "id": "DdW7n",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 165
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Total (France)",
+        "country": "France",
+        "full_name": "Total",
+        "acronym": "Total",
+        "id": "gent178",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Chimie ParisTech-PSL (France)",
+        "country": "France",
+        "full_name": "Chimie ParisTech-PSL",
+        "acronym": "Chimie ParisTech-PSL",
+        "id": "uhDO3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      }
+    ]
   },
-  {
-    "name": "Chimie ParisTech-PSL (France)",
-    "country": "France",
-    "full_name": "Chimie ParisTech-PSL",
-    "acronym": "Chimie ParisTech-PSL",
-    "id": "uhDO3",
-    "y": 3,
-    "z": 21
-  },
-  {
-    "name": "Air Liquide (France)",
-    "country": "France",
-    "full_name": "Air Liquide",
-    "acronym": "Air Liquide",
-    "id": "gent7",
-    "y": 3,
-    "z": 23
-  },
-  {
-    "name": "X (France)",
-    "country": "France",
-    "full_name": "École polytechnique",
-    "acronym": "X",
-    "id": "DdW7n",
-    "y": 3,
-    "z": 85
-  },
-  {
-    "name": "IP Paris (France)",
-    "country": "France",
-    "full_name": "Institut polytechnique de Paris",
-    "acronym": "IP Paris",
-    "id": "kYR50",
-    "y": 3,
-    "z": 103
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 3,
-    "z": 2670
-  },
-  {
-    "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Netherlands Organisation for Applied Scientific Research",
-    "id": "grid.4858.1",
-    "y": 2,
-    "z": 342
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 2,
-    "z": 575
-  },
-  {
-    "name": "U. Paris (France)",
-    "country": "France",
-    "full_name": "Université de Paris",
-    "acronym": "U. Paris",
-    "id": "5cZyU",
-    "y": 2,
-    "z": 388
-  },
-  {
-    "name": "Imec (Belgique)",
-    "country": "Belgique",
-    "full_name": "Imec",
-    "id": "grid.15762.37",
-    "y": 2,
-    "z": 238
-  },
-  {
-    "name": "Midsummer (Suède)",
-    "country": "Suède",
-    "full_name": "Midsummer",
-    "id": "grid.502587.d",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Uppsala University (Suède)",
-    "country": "Suède",
-    "full_name": "Uppsala University",
-    "id": "grid.8993.b",
-    "y": 1,
-    "z": 211
-  },
-  {
-    "name": "Université Catholique de Louvain (Belgique)",
-    "country": "Belgique",
-    "full_name": "Université Catholique de Louvain",
-    "id": "grid.7942.8",
-    "y": 1,
-    "z": 114
-  },
-  {
-    "name": "ArcelorMittal (France)",
-    "country": "France",
-    "full_name": "ArcelorMittal",
-    "acronym": "ArcelorMittal",
-    "id": "gent23",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "International Iberian Nanotechnology Laboratory (Portugal)",
-    "country": "Portugal",
-    "full_name": "International Iberian Nanotechnology Laboratory",
-    "id": "grid.420330.6",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "University of Ljubljana (Slovénie)",
-    "country": "Slovénie",
-    "full_name": "University of Ljubljana",
-    "id": "grid.8954.0",
-    "y": 1,
-    "z": 163
-  },
-  {
-    "name": "Advanced Coatings (Belgique)",
-    "country": "Belgique",
-    "full_name": "Advanced Coatings",
-    "id": "grid.432370.1",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Obducat (Suède)",
-    "country": "Suède",
-    "full_name": "Obducat",
-    "id": "grid.436860.f",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Solibro Research (Suède)",
-    "country": "Suède",
-    "full_name": "Solibro Research",
-    "id": "grid.502658.c",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg",
-    "id": "grid.13428.3c",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "CentraleSupélec (France)",
-    "country": "France",
-    "full_name": "CentraleSupélec",
-    "acronym": "CentraleSupélec",
-    "id": "m84Aa",
-    "y": 1,
-    "z": 60
-  },
-  {
-    "name": "Australian National University (Australie)",
-    "country": "Australie",
-    "full_name": "Australian National University",
-    "id": "grid.1001.0",
-    "y": 1,
-    "z": 28
-  },
-  {
-    "name": "ENS Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "École normale supérieure Paris-Saclay",
-    "acronym": "ENS Paris-Saclay",
-    "id": "6kk6n",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "Solaronix (Suisse)",
-    "country": "Suisse",
-    "full_name": "Solaronix",
-    "id": "grid.426377.3",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "UVSQ (France)",
-    "country": "France",
-    "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-    "acronym": "UVSQ",
-    "id": "V13Pk",
-    "y": 1,
-    "z": 94
-  },
-  {
-    "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
-    "country": "Suisse",
-    "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
-    "id": "grid.7354.5",
-    "y": 1,
-    "z": 76
-  },
-  {
-    "name": "Flemish Institute for Technological Research (Belgique)",
-    "country": "Belgique",
-    "full_name": "Flemish Institute for Technological Research",
-    "id": "grid.6717.7",
-    "y": 1,
-    "z": 142
-  },
-  {
-    "name": "Sorbonne U (France)",
-    "country": "France",
-    "full_name": "Sorbonne Université",
-    "acronym": "Sorbonne U",
-    "id": "bxPQe",
-    "y": 1,
-    "z": 505
-  },
-  {
-    "name": "Hasselt University (Belgique)",
-    "country": "Belgique",
-    "full_name": "Hasselt University",
-    "id": "grid.12155.32",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "Nice Solar Energy (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Nice Solar Energy",
-    "id": "grid.506759.8",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Karlsruhe Institute of Technology (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Karlsruhe Institute of Technology",
-    "id": "grid.7892.4",
-    "y": 1,
-    "z": 268
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "X (France)",
+        "country": "France",
+        "full_name": "École polytechnique",
+        "acronym": "X",
+        "id": "DdW7n",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Total (France)",
+        "country": "France",
+        "full_name": "Total",
+        "acronym": "Total",
+        "id": "gent178",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Chimie ParisTech-PSL (France)",
+        "country": "France",
+        "full_name": "Chimie ParisTech-PSL",
+        "acronym": "Chimie ParisTech-PSL",
+        "id": "uhDO3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "ENS Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "École normale supérieure Paris-Saclay",
+        "acronym": "ENS Paris-Saclay",
+        "id": "6kk6n",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Zentrum für Sonnenenergie- und Wasserstoff-Forschung Baden-Württemberg",
+        "id": "grid.13428.3c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Nice Solar Energy (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Nice Solar Energy",
+        "id": "grid.506759.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Australian National University (Australie)",
+        "country": "Australie",
+        "full_name": "Australian National University",
+        "id": "grid.1001.0",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Solaronix (Suisse)",
+        "country": "Suisse",
+        "full_name": "Solaronix",
+        "id": "grid.426377.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Hasselt University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Hasselt University",
+        "id": "grid.12155.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      }
+    ]
   }
-]
+}

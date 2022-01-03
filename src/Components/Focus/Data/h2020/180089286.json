@@ -1,393 +1,886 @@
-[
-  {
-    "name": "National Institute of Agricultural Botany (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "National Institute of Agricultural Botany",
-    "id": "grid.17595.3f",
-    "y": 2,
-    "z": 5
+{
+  "all": {
+    "all": [
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 453
+      },
+      {
+        "name": "Arvalis Institut du vé... (France)",
+        "country": "France",
+        "full_name": "Arvalis Institut du végétal",
+        "acronym": "Arvalis Institut du vé...",
+        "id": "775685779",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Economic Affairs Education and Research",
+        "id": "grid.18068.37",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 37
+      },
+      {
+        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute of Agricultural Botany",
+        "id": "grid.17595.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "National Food Chain Safety Office (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "National Food Chain Safety Office",
+        "id": "grid.432859.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Api-Agro (France)",
+        "country": "France",
+        "full_name": "Api-Agro",
+        "acronym": "Api-Agro",
+        "id": "827935925",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Inrae Transfert (France)",
+        "country": "France",
+        "full_name": "Inrae Transfert",
+        "acronym": "Inrae Transfert",
+        "id": "433960762",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 44
+      },
+      {
+        "name": "Walloon Agricultural Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Walloon Agricultural Research Centre",
+        "id": "grid.22954.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Comitor Consulting (France)",
+        "country": "France",
+        "full_name": "Comitor Consulting",
+        "acronym": "Comitor Consulting",
+        "id": "519421846",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instytut Ogrodnictwa (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Ogrodnictwa",
+        "id": "grid.425305.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "Institute for Research and Technology in Food and Agriculture (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Research and Technology in Food and Agriculture",
+        "id": "grid.8581.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Central Institute for Supervising and Testing in Agriculture (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Central Institute for Supervising and Testing in Agriculture",
+        "id": "grid.486653.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scottish Government (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Government",
+        "id": "grid.421126.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 367
+      },
+      {
+        "name": "Arcadia International (Belgique)",
+        "country": "Belgique",
+        "full_name": "Arcadia International",
+        "id": "grid.424168.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Austrian Agency for Health and Food Safety (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Agency for Health and Food Safety",
+        "id": "grid.414107.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Instituut voor Landbouw en Visserijonderzoek (Belgique)",
+        "country": "Belgique",
+        "full_name": "Instituut voor Landbouw en Visserijonderzoek",
+        "id": "grid.418605.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
+        "country": "Suisse",
+        "full_name": "Forschungsinstitut für Biologischen Landbau",
+        "id": "grid.424520.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "U. Angers (France)",
+        "country": "France",
+        "full_name": "Université d'Angers",
+        "acronym": "U. Angers",
+        "id": "IXHyv",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Center for Research in Agricultural Genomics (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research in Agricultural Genomics",
+        "id": "grid.423637.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Hohenheim (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Hohenheim",
+        "id": "grid.9464.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "CETIOM (France)",
+        "country": "France",
+        "full_name": "Terres Inovia",
+        "acronym": "CETIOM",
+        "id": "775688492",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
+        "country": "Irlande",
+        "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
+        "id": "grid.6435.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 78
+      },
+      {
+        "name": "James Hutton Institute (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "James Hutton Institute",
+        "id": "grid.43641.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "ACTA (France)",
+        "country": "France",
+        "full_name": "Ass Coordinat Techniq Agricole",
+        "acronym": "ACTA",
+        "id": "784523318",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Institut Agro (France)",
+        "country": "France",
+        "full_name": "Institut national d'enseignement supérieur pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Institut Agro",
+        "id": "MihlE",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 105
+      },
+      {
+        "name": "CTIFL (France)",
+        "country": "France",
+        "full_name": "Centre Technique Interprofessionnel des Fruits et Légumes",
+        "acronym": "CTIFL",
+        "id": "775675796",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CPVO (France)",
+        "country": "France",
+        "full_name": "Community Plant Variety Office",
+        "acronym": "CPVO",
+        "id": "417996410",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Agricultural Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "Agricultural Research Council",
+        "id": "grid.423616.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "National Agricultural and Food Centre (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "National Agricultural and Food Centre",
+        "id": "grid.454934.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Crop Research Institute (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crop Research Institute",
+        "id": "grid.417626.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Danish Agriculture and Food Council (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Agriculture and Food Council",
+        "id": "grid.436092.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 306
+      },
+      {
+        "name": "Lantmännen (Suède)",
+        "country": "Suède",
+        "full_name": "Lantmännen",
+        "id": "grid.502516.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "University of Agriculture (Pakistan)",
+        "country": "Pakistan",
+        "full_name": "University of Agriculture",
+        "id": "grid.412298.4",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University Medical Center Hamburg-Eppendorf (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Medical Center Hamburg-Eppendorf",
+        "id": "grid.13648.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Plant Breeding and Acclimatization Institute - National Research Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "Plant Breeding and Acclimatization Institute - National Research Institute",
+        "id": "grid.425508.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "John Innes Centre (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "John Innes Centre",
+        "id": "grid.14830.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "AgroParisTech (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
+        "acronym": "AgroParisTech",
+        "id": "SsSFH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Latvia University of Life Sciences and Technologies (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Latvia University of Life Sciences and Technologies",
+        "id": "grid.22657.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "R2N (France)",
+        "country": "France",
+        "full_name": "Ragt 2n",
+        "acronym": "R2N",
+        "id": "431899996",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Julius Kühn-Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Julius Kühn-Institut",
+        "id": "grid.13946.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias",
+        "id": "grid.493403.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      }
+    ]
   },
-  {
-    "name": "Arvalis Institut du vé... (France)",
-    "country": "France",
-    "full_name": "Arvalis Institut du végétal",
-    "acronym": "Arvalis Institut du vé...",
-    "id": "775685779",
-    "y": 2,
-    "z": 13
-  },
-  {
-    "name": "Inrae (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Inrae",
-    "id": "t4SA4",
-    "y": 2,
-    "z": 453
-  },
-  {
-    "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
-    "country": "Suisse",
-    "full_name": "Federal Department of Economic Affairs Education and Research",
-    "id": "grid.18068.37",
-    "y": 2,
-    "z": 37
-  },
-  {
-    "name": "CPVO (France)",
-    "country": "France",
-    "full_name": "Community Plant Variety Office",
-    "acronym": "CPVO",
-    "id": "417996410",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "U. Angers (France)",
-    "country": "France",
-    "full_name": "Université d'Angers",
-    "acronym": "U. Angers",
-    "id": "IXHyv",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "Arcadia International (Belgique)",
-    "country": "Belgique",
-    "full_name": "Arcadia International",
-    "id": "grid.424168.d",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Agricultural Research Council (Italie)",
-    "country": "Italie",
-    "full_name": "Agricultural Research Council",
-    "id": "grid.423616.4",
-    "y": 1,
-    "z": 52
-  },
-  {
-    "name": "Scottish Government (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Scottish Government",
-    "id": "grid.421126.2",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "University of Hohenheim (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Hohenheim",
-    "id": "grid.9464.f",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "Wageningen University & Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Wageningen University & Research",
-    "id": "grid.4818.5",
-    "y": 1,
-    "z": 367
-  },
-  {
-    "name": "Instituut voor Landbouw en Visserijonderzoek (Belgique)",
-    "country": "Belgique",
-    "full_name": "Instituut voor Landbouw en Visserijonderzoek",
-    "id": "grid.418605.e",
-    "y": 1,
-    "z": 63
-  },
-  {
-    "name": "Walloon Agricultural Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Walloon Agricultural Research Centre",
-    "id": "grid.22954.38",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Inrae Transfert (France)",
-    "country": "France",
-    "full_name": "Inrae Transfert",
-    "acronym": "Inrae Transfert",
-    "id": "433960762",
-    "y": 1,
-    "z": 44
-  },
-  {
-    "name": "Central Institute for Supervising and Testing in Agriculture (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Central Institute for Supervising and Testing in Agriculture",
-    "id": "grid.486653.a",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
-    "country": "Suisse",
-    "full_name": "Forschungsinstitut für Biologischen Landbau",
-    "id": "grid.424520.5",
-    "y": 1,
-    "z": 32
-  },
-  {
-    "name": "Instytut Ogrodnictwa (Pologne)",
-    "country": "Pologne",
-    "full_name": "Instytut Ogrodnictwa",
-    "id": "grid.425305.5",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "James Hutton Institute (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "James Hutton Institute",
-    "id": "grid.43641.34",
-    "y": 1,
-    "z": 38
-  },
-  {
-    "name": "Institut Agro (France)",
-    "country": "France",
-    "full_name": "Institut national d'enseignement supérieur pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Institut Agro",
-    "id": "MihlE",
-    "y": 1,
-    "z": 105
-  },
-  {
-    "name": "Center for Research in Agricultural Genomics (Espagne)",
-    "country": "Espagne",
-    "full_name": "Center for Research in Agricultural Genomics",
-    "id": "grid.423637.7",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Comitor Consulting (France)",
-    "country": "France",
-    "full_name": "Comitor Consulting",
-    "acronym": "Comitor Consulting",
-    "id": "519421846",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "CTIFL (France)",
-    "country": "France",
-    "full_name": "Centre Technique Interprofessionnel des Fruits et Légumes",
-    "acronym": "CTIFL",
-    "id": "775675796",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Universitat Politècnica de Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Universitat Politècnica de Catalunya",
-    "id": "grid.6835.8",
-    "y": 1,
-    "z": 212
-  },
-  {
-    "name": "National Food Chain Safety Office (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "National Food Chain Safety Office",
-    "id": "grid.432859.1",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Api-Agro (France)",
-    "country": "France",
-    "full_name": "Api-Agro",
-    "acronym": "Api-Agro",
-    "id": "827935925",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Institute for Research and Technology in Food and Agriculture (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institute for Research and Technology in Food and Agriculture",
-    "id": "grid.8581.4",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "Austrian Agency for Health and Food Safety (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austrian Agency for Health and Food Safety",
-    "id": "grid.414107.7",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "ACTA (France)",
-    "country": "France",
-    "full_name": "Ass Coordinat Techniq Agricole",
-    "acronym": "ACTA",
-    "id": "784523318",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
-    "country": "Irlande",
-    "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
-    "id": "grid.6435.4",
-    "y": 1,
-    "z": 78
-  },
-  {
-    "name": "CETIOM (France)",
-    "country": "France",
-    "full_name": "Terres Inovia",
-    "acronym": "CETIOM",
-    "id": "775688492",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Julius Kühn-Institut (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Julius Kühn-Institut",
-    "id": "grid.13946.39",
-    "y": 1,
-    "z": 18
-  },
-  {
-    "name": "Bayer (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bayer",
-    "id": "grid.420044.6",
-    "y": 1,
-    "z": 64
-  },
-  {
-    "name": "Crop Research Institute (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Crop Research Institute",
-    "id": "grid.417626.0",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Aarhus University (Danemark)",
-    "country": "Danemark",
-    "full_name": "Aarhus University",
-    "id": "grid.7048.b",
-    "y": 1,
-    "z": 306
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 1,
-    "z": 575
-  },
-  {
-    "name": "Danish Agriculture and Food Council (Danemark)",
-    "country": "Danemark",
-    "full_name": "Danish Agriculture and Food Council",
-    "id": "grid.436092.a",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "University Medical Center Hamburg-Eppendorf (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University Medical Center Hamburg-Eppendorf",
-    "id": "grid.13648.38",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "AgroParisTech (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
-    "acronym": "AgroParisTech",
-    "id": "SsSFH",
-    "y": 1,
-    "z": 68
-  },
-  {
-    "name": "Plant Breeding and Acclimatization Institute - National Research Institute (Pologne)",
-    "country": "Pologne",
-    "full_name": "Plant Breeding and Acclimatization Institute - National Research Institute",
-    "id": "grid.425508.e",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "R2N (France)",
-    "country": "France",
-    "full_name": "Ragt 2n",
-    "acronym": "R2N",
-    "id": "431899996",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "University of Agriculture (Pakistan)",
-    "country": "Pakistan",
-    "full_name": "University of Agriculture",
-    "id": "grid.412298.4",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "John Innes Centre (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "John Innes Centre",
-    "id": "grid.14830.3e",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "Lantmännen (Suède)",
-    "country": "Suède",
-    "full_name": "Lantmännen",
-    "id": "grid.502516.5",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Latvia University of Life Sciences and Technologies (Lettonie)",
-    "country": "Lettonie",
-    "full_name": "Latvia University of Life Sciences and Technologies",
-    "id": "grid.22657.34",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "National Agricultural and Food Centre (Slovaquie)",
-    "country": "Slovaquie",
-    "full_name": "National Agricultural and Food Centre",
-    "id": "grid.454934.b",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias (Espagne)",
-    "country": "Espagne",
-    "full_name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias",
-    "id": "grid.493403.9",
-    "y": 1,
-    "z": 16
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 142
+      },
+      {
+        "name": "Arvalis Institut du vé... (France)",
+        "country": "France",
+        "full_name": "Arvalis Institut du végétal",
+        "acronym": "Arvalis Institut du vé...",
+        "id": "775685779",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Economic Affairs Education and Research",
+        "id": "grid.18068.37",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 26
+      },
+      {
+        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute of Agricultural Botany",
+        "id": "grid.17595.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "National Food Chain Safety Office (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "National Food Chain Safety Office",
+        "id": "grid.432859.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Api-Agro (France)",
+        "country": "France",
+        "full_name": "Api-Agro",
+        "acronym": "Api-Agro",
+        "id": "827935925",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Inrae Transfert (France)",
+        "country": "France",
+        "full_name": "Inrae Transfert",
+        "acronym": "Inrae Transfert",
+        "id": "433960762",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Walloon Agricultural Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Walloon Agricultural Research Centre",
+        "id": "grid.22954.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Comitor Consulting (France)",
+        "country": "France",
+        "full_name": "Comitor Consulting",
+        "acronym": "Comitor Consulting",
+        "id": "519421846",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instytut Ogrodnictwa (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Ogrodnictwa",
+        "id": "grid.425305.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Institute for Research and Technology in Food and Agriculture (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Research and Technology in Food and Agriculture",
+        "id": "grid.8581.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Central Institute for Supervising and Testing in Agriculture (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Central Institute for Supervising and Testing in Agriculture",
+        "id": "grid.486653.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scottish Government (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Government",
+        "id": "grid.421126.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "Arcadia International (Belgique)",
+        "country": "Belgique",
+        "full_name": "Arcadia International",
+        "id": "grid.424168.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Austrian Agency for Health and Food Safety (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Agency for Health and Food Safety",
+        "id": "grid.414107.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Instituut voor Landbouw en Visserijonderzoek (Belgique)",
+        "country": "Belgique",
+        "full_name": "Instituut voor Landbouw en Visserijonderzoek",
+        "id": "grid.418605.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
+        "country": "Suisse",
+        "full_name": "Forschungsinstitut für Biologischen Landbau",
+        "id": "grid.424520.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "U. Angers (France)",
+        "country": "France",
+        "full_name": "Université d'Angers",
+        "acronym": "U. Angers",
+        "id": "IXHyv",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Center for Research in Agricultural Genomics (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research in Agricultural Genomics",
+        "id": "grid.423637.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Hohenheim (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Hohenheim",
+        "id": "grid.9464.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "CETIOM (France)",
+        "country": "France",
+        "full_name": "Terres Inovia",
+        "acronym": "CETIOM",
+        "id": "775688492",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
+        "country": "Irlande",
+        "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
+        "id": "grid.6435.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "James Hutton Institute (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "James Hutton Institute",
+        "id": "grid.43641.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "ACTA (France)",
+        "country": "France",
+        "full_name": "Ass Coordinat Techniq Agricole",
+        "acronym": "ACTA",
+        "id": "784523318",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Institut Agro (France)",
+        "country": "France",
+        "full_name": "Institut national d'enseignement supérieur pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Institut Agro",
+        "id": "MihlE",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "CTIFL (France)",
+        "country": "France",
+        "full_name": "Centre Technique Interprofessionnel des Fruits et Légumes",
+        "acronym": "CTIFL",
+        "id": "775675796",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CPVO (France)",
+        "country": "France",
+        "full_name": "Community Plant Variety Office",
+        "acronym": "CPVO",
+        "id": "417996410",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Agricultural Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "Agricultural Research Council",
+        "id": "grid.423616.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Agricultural and Food Centre (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "National Agricultural and Food Centre",
+        "id": "grid.454934.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Crop Research Institute (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crop Research Institute",
+        "id": "grid.417626.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Danish Agriculture and Food Council (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Agriculture and Food Council",
+        "id": "grid.436092.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Lantmännen (Suède)",
+        "country": "Suède",
+        "full_name": "Lantmännen",
+        "id": "grid.502516.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "University of Agriculture (Pakistan)",
+        "country": "Pakistan",
+        "full_name": "University of Agriculture",
+        "id": "grid.412298.4",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University Medical Center Hamburg-Eppendorf (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Medical Center Hamburg-Eppendorf",
+        "id": "grid.13648.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Plant Breeding and Acclimatization Institute - National Research Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "Plant Breeding and Acclimatization Institute - National Research Institute",
+        "id": "grid.425508.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "John Innes Centre (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "John Innes Centre",
+        "id": "grid.14830.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "AgroParisTech (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
+        "acronym": "AgroParisTech",
+        "id": "SsSFH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Latvia University of Life Sciences and Technologies (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Latvia University of Life Sciences and Technologies",
+        "id": "grid.22657.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "R2N (France)",
+        "country": "France",
+        "full_name": "Ragt 2n",
+        "acronym": "R2N",
+        "id": "431899996",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Julius Kühn-Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Julius Kühn-Institut",
+        "id": "grid.13946.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias",
+        "id": "grid.493403.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      }
+    ]
   }
-]
+}

@@ -1,279 +1,651 @@
-[
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 2,
-    "z": 575
+{
+  "all": {
+    "all": [
+      {
+        "name": "Quantis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Quantis",
+        "id": "grid.425743.3",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 30
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 575
+      },
+      {
+        "name": "Ajinomoto Animal Nutri... (France)",
+        "country": "France",
+        "full_name": "Ajinomoto Animal Nutrition Europe",
+        "acronym": "Ajinomoto Animal Nutri...",
+        "id": "302607676",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Mg2 Mix (France)",
+        "country": "France",
+        "full_name": "Mg2 Mix",
+        "acronym": "Mg2 Mix",
+        "id": "351487772",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Eurofins Scientific (France)",
+        "country": "France",
+        "full_name": "Eurofins Scientific",
+        "acronym": "Eurofins Scientific",
+        "id": "gent78",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Virbac (France)",
+        "country": "France",
+        "full_name": "Virbac",
+        "acronym": "Virbac",
+        "id": "gent191",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Clextral (France)",
+        "country": "France",
+        "full_name": "Clextral",
+        "acronym": "Clextral",
+        "id": "435337167",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Skretting (Norvège)",
+        "country": "Norvège",
+        "full_name": "Skretting",
+        "id": "grid.436785.b",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Industries & Agro-Ress... (France)",
+        "country": "France",
+        "full_name": "Industries & Agro-Ressources",
+        "acronym": "Industries & Agro-Ress...",
+        "id": "b1uc7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ULMA Embedded Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "ULMA Embedded Solutions",
+        "id": "grid.438835.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Compo France (France)",
+        "country": "France",
+        "full_name": "Compo France",
+        "acronym": "Compo France",
+        "id": "345408272",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Walloon Agricultural Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Walloon Agricultural Research Centre",
+        "id": "grid.22954.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Tgc Extrusion (France)",
+        "country": "France",
+        "full_name": "Tgc Extrusion",
+        "acronym": "Tgc Extrusion",
+        "id": "414553826",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Adm Bazancourt (France)",
+        "country": "France",
+        "full_name": "Adm Bazancourt",
+        "acronym": "Adm Bazancourt",
+        "id": "379260656",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "PNO Consultants (Italie)",
+        "country": "Italie",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Pno Consultants (France)",
+        "country": "France",
+        "full_name": "Pno Consultants",
+        "acronym": "Pno Consultants",
+        "id": "500199831",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "INERIS (France)",
+        "country": "France",
+        "full_name": "Institut national de l'environnement industriel et des risques",
+        "acronym": "INERIS",
+        "id": "86H3P",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "University of Warwick (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Warwick",
+        "id": "grid.7372.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "Inrae Transfert (France)",
+        "country": "France",
+        "full_name": "Inrae Transfert",
+        "acronym": "Inrae Transfert",
+        "id": "433960762",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 44
+      },
+      {
+        "name": "Saudi Arabia Basic Industries (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Saudi Arabia Basic Industries",
+        "id": "grid.471269.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Nova Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Nova Institut",
+        "id": "grid.425930.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Avantium (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Avantium",
+        "id": "grid.432077.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 159
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Tereos (France)",
+        "country": "France",
+        "full_name": "Tereos",
+        "acronym": "Tereos",
+        "id": "gent173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "AgroParisTech (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
+        "acronym": "AgroParisTech",
+        "id": "SsSFH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 367
+      },
+      {
+        "name": "INSA Toulouse (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Toulouse",
+        "acronym": "INSA Toulouse",
+        "id": "dj88d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      }
+    ]
   },
-  {
-    "name": "Quantis (Suisse)",
-    "country": "Suisse",
-    "full_name": "Quantis",
-    "id": "grid.425743.3",
-    "y": 2,
-    "z": 30
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "Ajinomoto Animal Nutri... (France)",
+        "country": "France",
+        "full_name": "Ajinomoto Animal Nutrition Europe",
+        "acronym": "Ajinomoto Animal Nutri...",
+        "id": "302607676",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Quantis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Quantis",
+        "id": "grid.425743.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Mg2 Mix (France)",
+        "country": "France",
+        "full_name": "Mg2 Mix",
+        "acronym": "Mg2 Mix",
+        "id": "351487772",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Eurofins Scientific (France)",
+        "country": "France",
+        "full_name": "Eurofins Scientific",
+        "acronym": "Eurofins Scientific",
+        "id": "gent78",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Virbac (France)",
+        "country": "France",
+        "full_name": "Virbac",
+        "acronym": "Virbac",
+        "id": "gent191",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Clextral (France)",
+        "country": "France",
+        "full_name": "Clextral",
+        "acronym": "Clextral",
+        "id": "435337167",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Skretting (Norvège)",
+        "country": "Norvège",
+        "full_name": "Skretting",
+        "id": "grid.436785.b",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 74
+      },
+      {
+        "name": "Industries & Agro-Ress... (France)",
+        "country": "France",
+        "full_name": "Industries & Agro-Ressources",
+        "acronym": "Industries & Agro-Ress...",
+        "id": "b1uc7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ULMA Embedded Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "ULMA Embedded Solutions",
+        "id": "grid.438835.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Compo France (France)",
+        "country": "France",
+        "full_name": "Compo France",
+        "acronym": "Compo France",
+        "id": "345408272",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Walloon Agricultural Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Walloon Agricultural Research Centre",
+        "id": "grid.22954.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tgc Extrusion (France)",
+        "country": "France",
+        "full_name": "Tgc Extrusion",
+        "acronym": "Tgc Extrusion",
+        "id": "414553826",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Adm Bazancourt (France)",
+        "country": "France",
+        "full_name": "Adm Bazancourt",
+        "acronym": "Adm Bazancourt",
+        "id": "379260656",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "PNO Consultants (Italie)",
+        "country": "Italie",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Pno Consultants (France)",
+        "country": "France",
+        "full_name": "Pno Consultants",
+        "acronym": "Pno Consultants",
+        "id": "500199831",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ]
   },
-  {
-    "name": "Industries & Agro-Ress... (France)",
-    "country": "France",
-    "full_name": "Industries & Agro-Ressources",
-    "acronym": "Industries & Agro-Ress...",
-    "id": "b1uc7",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Tgc Extrusion (France)",
-    "country": "France",
-    "full_name": "Tgc Extrusion",
-    "acronym": "Tgc Extrusion",
-    "id": "414553826",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Mg2 Mix (France)",
-    "country": "France",
-    "full_name": "Mg2 Mix",
-    "acronym": "Mg2 Mix",
-    "id": "351487772",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Eurofins Scientific (France)",
-    "country": "France",
-    "full_name": "Eurofins Scientific",
-    "acronym": "Eurofins Scientific",
-    "id": "gent78",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Adm Bazancourt (France)",
-    "country": "France",
-    "full_name": "Adm Bazancourt",
-    "acronym": "Adm Bazancourt",
-    "id": "379260656",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Walloon Agricultural Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Walloon Agricultural Research Centre",
-    "id": "grid.22954.38",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Compo France (France)",
-    "country": "France",
-    "full_name": "Compo France",
-    "acronym": "Compo France",
-    "id": "345408272",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "ULMA Embedded Solutions (Espagne)",
-    "country": "Espagne",
-    "full_name": "ULMA Embedded Solutions",
-    "id": "grid.438835.1",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Virbac (France)",
-    "country": "France",
-    "full_name": "Virbac",
-    "acronym": "Virbac",
-    "id": "gent191",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
-  },
-  {
-    "name": "Skretting (Norvège)",
-    "country": "Norvège",
-    "full_name": "Skretting",
-    "id": "grid.436785.b",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Pno Consultants (France)",
-    "country": "France",
-    "full_name": "Pno Consultants",
-    "acronym": "Pno Consultants",
-    "id": "500199831",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Ajinomoto Animal Nutri... (France)",
-    "country": "France",
-    "full_name": "Ajinomoto Animal Nutrition Europe",
-    "acronym": "Ajinomoto Animal Nutri...",
-    "id": "302607676",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Clextral (France)",
-    "country": "France",
-    "full_name": "Clextral",
-    "acronym": "Clextral",
-    "id": "435337167",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "PNO Consultants (Italie)",
-    "country": "Italie",
-    "full_name": "PNO Consultants",
-    "id": "grid.465145.7",
-    "y": 1,
-    "z": 37
-  },
-  {
-    "name": "AMU (France)",
-    "country": "France",
-    "full_name": "Aix-Marseille Université",
-    "acronym": "AMU",
-    "id": "xJdyB",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "Saudi Arabia Basic Industries (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Saudi Arabia Basic Industries",
-    "id": "grid.471269.f",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Wageningen University & Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Wageningen University & Research",
-    "id": "grid.4818.5",
-    "y": 1,
-    "z": 367
-  },
-  {
-    "name": "University of Warwick (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Warwick",
-    "id": "grid.7372.1",
-    "y": 1,
-    "z": 114
-  },
-  {
-    "name": "UPEC (France)",
-    "country": "France",
-    "full_name": "Université Paris-Est Créteil",
-    "acronym": "UPEC",
-    "id": "vb71K",
-    "y": 1,
-    "z": 39
-  },
-  {
-    "name": "INERIS (France)",
-    "country": "France",
-    "full_name": "Institut national de l'environnement industriel et des risques",
-    "acronym": "INERIS",
-    "id": "86H3P",
-    "y": 1,
-    "z": 33
-  },
-  {
-    "name": "Aalto University (Finlande)",
-    "country": "Finlande",
-    "full_name": "Aalto University",
-    "id": "grid.5373.2",
-    "y": 1,
-    "z": 159
-  },
-  {
-    "name": "AgroParisTech (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
-    "acronym": "AgroParisTech",
-    "id": "SsSFH",
-    "y": 1,
-    "z": 68
-  },
-  {
-    "name": "Inrae Transfert (France)",
-    "country": "France",
-    "full_name": "Inrae Transfert",
-    "acronym": "Inrae Transfert",
-    "id": "433960762",
-    "y": 1,
-    "z": 44
-  },
-  {
-    "name": "INSA Toulouse (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences appliquées de Toulouse",
-    "acronym": "INSA Toulouse",
-    "id": "dj88d",
-    "y": 1,
-    "z": 65
-  },
-  {
-    "name": "Avantium (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Avantium",
-    "id": "grid.432077.5",
-    "y": 1,
-    "z": 20
-  },
-  {
-    "name": "Inrae (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Inrae",
-    "id": "t4SA4",
-    "y": 1,
-    "z": 453
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "Nova Institut (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Nova Institut",
-    "id": "grid.425930.9",
-    "y": 1,
-    "z": 21
-  },
-  {
-    "name": "Tereos (France)",
-    "country": "France",
-    "full_name": "Tereos",
-    "acronym": "Tereos",
-    "id": "gent173",
-    "y": 1,
-    "z": 3
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Quantis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Quantis",
+        "id": "grid.425743.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "INERIS (France)",
+        "country": "France",
+        "full_name": "Institut national de l'environnement industriel et des risques",
+        "acronym": "INERIS",
+        "id": "86H3P",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "University of Warwick (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Warwick",
+        "id": "grid.7372.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Inrae Transfert (France)",
+        "country": "France",
+        "full_name": "Inrae Transfert",
+        "acronym": "Inrae Transfert",
+        "id": "433960762",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Saudi Arabia Basic Industries (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Saudi Arabia Basic Industries",
+        "id": "grid.471269.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Nova Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Nova Institut",
+        "id": "grid.425930.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Avantium (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Avantium",
+        "id": "grid.432077.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "Tereos (France)",
+        "country": "France",
+        "full_name": "Tereos",
+        "acronym": "Tereos",
+        "id": "gent173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "AgroParisTech (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences et industries du vivant et de l'environnement",
+        "acronym": "AgroParisTech",
+        "id": "SsSFH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "INSA Toulouse (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Toulouse",
+        "acronym": "INSA Toulouse",
+        "id": "dj88d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   }
-]
+}

@@ -1,344 +1,786 @@
-[
-  {
-    "name": "Inria (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche en informatique et en automatique",
-    "acronym": "Inria",
-    "id": "E1Wdn",
-    "y": 1,
-    "z": 295
+{
+  "all": {
+    "all": [
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "Ariadnext (France)",
+        "country": "France",
+        "full_name": "Ariadnext",
+        "acronym": "Ariadnext",
+        "id": "520769225",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scytl (Espagne)",
+        "country": "Espagne",
+        "full_name": "Scytl",
+        "id": "grid.437956.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Erdyn Atlantique (France)",
+        "country": "France",
+        "full_name": "Erdyn Atlantique",
+        "acronym": "Erdyn Atlantique",
+        "id": "522369446",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Idiap Research Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Idiap Research Institute",
+        "id": "grid.482253.a",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Basque Foundation for Health Innovation and Research (Espagne)",
+        "country": "Espagne",
+        "full_name": "Basque Foundation for Health Innovation and Research",
+        "id": "grid.424868.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Osakidetza (Espagne)",
+        "country": "Espagne",
+        "full_name": "Osakidetza",
+        "id": "grid.426049.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 137
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 295
+      },
+      {
+        "name": "University of Huddersfield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Huddersfield",
+        "id": "grid.15751.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "KWR Watercycle Research Institute (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "KWR Watercycle Research Institute",
+        "id": "grid.419022.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 58
+      },
+      {
+        "name": "Engie (France)",
+        "country": "France",
+        "full_name": "Engie",
+        "acronym": "Engie",
+        "id": "gent70",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "HZ University of Applied Sciences (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "HZ University of Applied Sciences",
+        "id": "grid.448873.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Technical University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "Technical University of Crete",
+        "id": "grid.6809.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Water Supply and Sanitation Technology Platform (Belgique)",
+        "country": "Belgique",
+        "full_name": "Water Supply and Sanitation Technology Platform",
+        "id": "grid.474004.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 423
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 273
+      },
+      {
+        "name": "Strane Innovation (France)",
+        "country": "France",
+        "full_name": "Strane Innovation",
+        "acronym": "Strane Innovation",
+        "id": "792228173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Dow Chemical (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dow Chemical",
+        "id": "grid.433683.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Engie (Belgique)",
+        "country": "Belgique",
+        "full_name": "Engie",
+        "id": "grid.425752.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 251
+      },
+      {
+        "name": "Social Science Research Center Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Social Science Research Center Berlin",
+        "id": "grid.13388.31",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 280
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "Centre for Social Sciences (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Centre for Social Sciences",
+        "id": "grid.472630.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 162
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 171
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 257
+      },
+      {
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 127
+      },
+      {
+        "name": "Humboldt-Universität zu Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Humboldt-Universität zu Berlin",
+        "id": "grid.7468.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 164
+      },
+      {
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 125
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 306
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 77
+      },
+      {
+        "name": "University of Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bremen",
+        "id": "grid.7704.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 100
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 173
+      },
+      {
+        "name": "University of Cologne (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Cologne",
+        "id": "grid.6190.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      }
+    ]
   },
-  {
-    "name": "CentraleSupélec (France)",
-    "country": "France",
-    "full_name": "CentraleSupélec",
-    "acronym": "CentraleSupélec",
-    "id": "m84Aa",
-    "y": 1,
-    "z": 60
+  "Societal Challenges": {
+    "Secure societies - Protecting freedom and security of Europe and its citizens (SECURITY)": [
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Ariadnext (France)",
+        "country": "France",
+        "full_name": "Ariadnext",
+        "acronym": "Ariadnext",
+        "id": "520769225",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scytl (Espagne)",
+        "country": "Espagne",
+        "full_name": "Scytl",
+        "id": "grid.437956.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Erdyn Atlantique (France)",
+        "country": "France",
+        "full_name": "Erdyn Atlantique",
+        "acronym": "Erdyn Atlantique",
+        "id": "522369446",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Idiap Research Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Idiap Research Institute",
+        "id": "grid.482253.a",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Basque Foundation for Health Innovation and Research (Espagne)",
+        "country": "Espagne",
+        "full_name": "Basque Foundation for Health Innovation and Research",
+        "id": "grid.424868.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Osakidetza (Espagne)",
+        "country": "Espagne",
+        "full_name": "Osakidetza",
+        "id": "grid.426049.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      }
+    ]
   },
-  {
-    "name": "Ariadnext (France)",
-    "country": "France",
-    "full_name": "Ariadnext",
-    "acronym": "Ariadnext",
-    "id": "520769225",
-    "y": 1,
-    "z": 1
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "University of Huddersfield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Huddersfield",
+        "id": "grid.15751.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "KWR Watercycle Research Institute (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "KWR Watercycle Research Institute",
+        "id": "grid.419022.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Engie (France)",
+        "country": "France",
+        "full_name": "Engie",
+        "acronym": "Engie",
+        "id": "gent70",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "HZ University of Applied Sciences (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "HZ University of Applied Sciences",
+        "id": "grid.448873.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "Technical University of Crete",
+        "id": "grid.6809.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Water Supply and Sanitation Technology Platform (Belgique)",
+        "country": "Belgique",
+        "full_name": "Water Supply and Sanitation Technology Platform",
+        "id": "grid.474004.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Strane Innovation (France)",
+        "country": "France",
+        "full_name": "Strane Innovation",
+        "acronym": "Strane Innovation",
+        "id": "792228173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Dow Chemical (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dow Chemical",
+        "id": "grid.433683.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Engie (Belgique)",
+        "country": "Belgique",
+        "full_name": "Engie",
+        "id": "grid.425752.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      }
+    ]
   },
-  {
-    "name": "KU Leuven (Belgique)",
-    "country": "Belgique",
-    "full_name": "KU Leuven",
-    "id": "grid.5596.f",
-    "y": 1,
-    "z": 489
-  },
-  {
-    "name": "Basque Foundation for Health Innovation and Research (Espagne)",
-    "country": "Espagne",
-    "full_name": "Basque Foundation for Health Innovation and Research",
-    "id": "grid.424868.4",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Idiap Research Institute (Suisse)",
-    "country": "Suisse",
-    "full_name": "Idiap Research Institute",
-    "id": "grid.482253.a",
-    "y": 1,
-    "z": 20
-  },
-  {
-    "name": "Scytl (Espagne)",
-    "country": "Espagne",
-    "full_name": "Scytl",
-    "id": "grid.437956.a",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Erdyn Atlantique (France)",
-    "country": "France",
-    "full_name": "Erdyn Atlantique",
-    "acronym": "Erdyn Atlantique",
-    "id": "522369446",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Osakidetza (Espagne)",
-    "country": "Espagne",
-    "full_name": "Osakidetza",
-    "id": "grid.426049.d",
-    "y": 1,
-    "z": 17
-  },
-  {
-    "name": "Autonomous University of Barcelona (Espagne)",
-    "country": "Espagne",
-    "full_name": "Autonomous University of Barcelona",
-    "id": "grid.7080.f",
-    "y": 1,
-    "z": 137
-  },
-  {
-    "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-    "id": "grid.28409.37",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "RWTH Aachen University (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "RWTH Aachen University",
-    "id": "grid.1957.a",
-    "y": 1,
-    "z": 251
-  },
-  {
-    "name": "Technical University of Crete (Grèce)",
-    "country": "Grèce",
-    "full_name": "Technical University of Crete",
-    "id": "grid.6809.7",
-    "y": 1,
-    "z": 37
-  },
-  {
-    "name": "Water Supply and Sanitation Technology Platform (Belgique)",
-    "country": "Belgique",
-    "full_name": "Water Supply and Sanitation Technology Platform",
-    "id": "grid.474004.3",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "Athens University of Economics and Business (Grèce)",
-    "country": "Grèce",
-    "full_name": "Athens University of Economics and Business",
-    "id": "grid.16299.35",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "Ghent University (Belgique)",
-    "country": "Belgique",
-    "full_name": "Ghent University",
-    "id": "grid.5342.0",
-    "y": 1,
-    "z": 273
-  },
-  {
-    "name": "Dow Chemical (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Dow Chemical",
-    "id": "grid.433683.9",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Marche Polytechnic University (Italie)",
-    "country": "Italie",
-    "full_name": "Marche Polytechnic University",
-    "id": "grid.7010.6",
-    "y": 1,
-    "z": 58
-  },
-  {
-    "name": "Strane Innovation (France)",
-    "country": "France",
-    "full_name": "Strane Innovation",
-    "acronym": "Strane Innovation",
-    "id": "792228173",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "University of Huddersfield (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Huddersfield",
-    "id": "grid.15751.37",
-    "y": 1,
-    "z": 27
-  },
-  {
-    "name": "Engie (Belgique)",
-    "country": "Belgique",
-    "full_name": "Engie",
-    "id": "grid.425752.3",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "KWR Watercycle Research Institute (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "KWR Watercycle Research Institute",
-    "id": "grid.419022.c",
-    "y": 1,
-    "z": 20
-  },
-  {
-    "name": "Flemish Institute for Technological Research (Belgique)",
-    "country": "Belgique",
-    "full_name": "Flemish Institute for Technological Research",
-    "id": "grid.6717.7",
-    "y": 1,
-    "z": 142
-  },
-  {
-    "name": "Engie (France)",
-    "country": "France",
-    "full_name": "Engie",
-    "acronym": "Engie",
-    "id": "gent70",
-    "y": 1,
-    "z": 46
-  },
-  {
-    "name": "HZ University of Applied Sciences (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "HZ University of Applied Sciences",
-    "id": "grid.448873.4",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "National Technical University of Athens (Grèce)",
-    "country": "Grèce",
-    "full_name": "National Technical University of Athens",
-    "id": "grid.4241.3",
-    "y": 1,
-    "z": 423
-  },
-  {
-    "name": "Aarhus University (Danemark)",
-    "country": "Danemark",
-    "full_name": "Aarhus University",
-    "id": "grid.7048.b",
-    "y": 1,
-    "z": 306
-  },
-  {
-    "name": "University of Strathclyde (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Strathclyde",
-    "id": "grid.11984.35",
-    "y": 1,
-    "z": 125
-  },
-  {
-    "name": "VU Amsterdam (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VU Amsterdam",
-    "id": "grid.12380.38",
-    "y": 1,
-    "z": 173
-  },
-  {
-    "name": "University of Bremen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Bremen",
-    "id": "grid.7704.4",
-    "y": 1,
-    "z": 100
-  },
-  {
-    "name": "University College Dublin (Irlande)",
-    "country": "Irlande",
-    "full_name": "University College Dublin",
-    "id": "grid.7886.1",
-    "y": 1,
-    "z": 162
-  },
-  {
-    "name": "University of Exeter (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Exeter",
-    "id": "grid.8391.3",
-    "y": 1,
-    "z": 127
-  },
-  {
-    "name": "Social Science Research Center Berlin (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Social Science Research Center Berlin",
-    "id": "grid.13388.31",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "University of Amsterdam (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University of Amsterdam",
-    "id": "grid.7177.6",
-    "y": 1,
-    "z": 164
-  },
-  {
-    "name": "Humboldt-Universität zu Berlin (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Humboldt-Universität zu Berlin",
-    "id": "grid.7468.d",
-    "y": 1,
-    "z": 70
-  },
-  {
-    "name": "Hebrew University of Jerusalem (Israël)",
-    "country": "Israël",
-    "full_name": "Hebrew University of Jerusalem",
-    "id": "grid.9619.7",
-    "y": 1,
-    "z": 77
-  },
-  {
-    "name": "University of Cologne (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Cologne",
-    "id": "grid.6190.e",
-    "y": 1,
-    "z": 32
-  },
-  {
-    "name": "Centre for Social Sciences (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "Centre for Social Sciences",
-    "id": "grid.472630.4",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "University of Edinburgh (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Edinburgh",
-    "id": "grid.4305.2",
-    "y": 1,
-    "z": 257
-  },
-  {
-    "name": "University of Vienna (Autriche)",
-    "country": "Autriche",
-    "full_name": "University of Vienna",
-    "id": "grid.10420.37",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "Technical University of Munich (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Technical University of Munich",
-    "id": "grid.6936.a",
-    "y": 1,
-    "z": 280
-  },
-  {
-    "name": "Vrije Universiteit Brussel (Belgique)",
-    "country": "Belgique",
-    "full_name": "Vrije Universiteit Brussel",
-    "id": "grid.8767.e",
-    "y": 1,
-    "z": 171
+  "Excellent Science": {
+    "Research infrastructures (INFRA)": [
+      {
+        "name": "Social Science Research Center Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Social Science Research Center Berlin",
+        "id": "grid.13388.31",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Centre for Social Sciences (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Centre for Social Sciences",
+        "id": "grid.472630.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Humboldt-Universität zu Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Humboldt-Universität zu Berlin",
+        "id": "grid.7468.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "University of Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bremen",
+        "id": "grid.7704.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University of Cologne (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Cologne",
+        "id": "grid.6190.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      }
+    ]
   }
-]
+}

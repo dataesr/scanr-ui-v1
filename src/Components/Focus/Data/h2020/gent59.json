@@ -1,412 +1,1140 @@
-[
-  {
-    "name": "Airbus (France)",
-    "country": "France",
-    "full_name": "Airbus",
-    "acronym": "Airbus",
-    "id": "gent8",
-    "y": 30,
-    "z": 155
+{
+  "all": {
+    "all": [
+      {
+        "name": "Airbus (France)",
+        "country": "France",
+        "full_name": "Airbus",
+        "acronym": "Airbus",
+        "id": "gent8",
+        "country_level_part": "Pays membres",
+        "y": 30,
+        "z": 155
+      },
+      {
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
+        "country_level_part": "Pays membres",
+        "y": 28,
+        "z": 450
+      },
+      {
+        "name": "National Aerospace Laboratory (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Aerospace Laboratory",
+        "id": "grid.6078.9",
+        "country_level_part": "Pays membres",
+        "y": 21,
+        "z": 108
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "y": 20,
+        "z": 286
+      },
+      {
+        "name": "ONERA (France)",
+        "country": "France",
+        "full_name": "Office national d’études et de recherches aérospatiales",
+        "acronym": "ONERA",
+        "id": "zO154",
+        "country_level_part": "Pays membres",
+        "y": 19,
+        "z": 103
+      },
+      {
+        "name": "Honeywell (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Honeywell",
+        "id": "grid.424723.4",
+        "country_level_part": "Pays membres",
+        "y": 17,
+        "z": 42
+      },
+      {
+        "name": "Eurocontrol (Belgique)",
+        "country": "Belgique",
+        "full_name": "Eurocontrol",
+        "id": "grid.424710.4",
+        "country_level_part": "Pays membres",
+        "y": 17,
+        "z": 91
+      },
+      {
+        "name": "Airbus (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Airbus",
+        "id": "grid.410308.e",
+        "country_level_part": "Pays membres",
+        "y": 17,
+        "z": 91
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "y": 16,
+        "z": 76
+      },
+      {
+        "name": "Saab (Suède)",
+        "country": "Suède",
+        "full_name": "Saab",
+        "id": "grid.5595.c",
+        "country_level_part": "Pays membres",
+        "y": 15,
+        "z": 40
+      },
+      {
+        "name": "Safran (France)",
+        "country": "France",
+        "full_name": "Safran",
+        "acronym": "Safran",
+        "id": "gent144",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 56
+      },
+      {
+        "name": "Italian Aerospace Research Centre (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Aerospace Research Centre",
+        "id": "grid.17374.36",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 46
+      },
+      {
+        "name": "DGAC (France)",
+        "country": "France",
+        "full_name": "Direction générale de l'aviation civile",
+        "acronym": "DGAC",
+        "id": "120064019",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 45
+      },
+      {
+        "name": "Indra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Indra",
+        "id": "grid.424656.7",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 95
+      },
+      {
+        "name": "Honeywell Aerospace (France)",
+        "country": "France",
+        "full_name": "Honeywell Aerospace",
+        "acronym": "Honeywell Aerospace",
+        "id": "340797919",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 23
+      },
+      {
+        "name": "Ente Nazionale Assistenza al Volo (Italie)",
+        "country": "Italie",
+        "full_name": "Ente Nazionale Assistenza al Volo",
+        "id": "grid.424443.1",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 43
+      },
+      {
+        "name": "Croatia control, croatian air navigation services ltd (Croatie)",
+        "country": "Croatie",
+        "full_name": "Croatia control, croatian air navigation services ltd",
+        "id": "grid.486153.d",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 45
+      },
+      {
+        "name": "Polish Air Navigation Services Agency (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish Air Navigation Services Agency",
+        "id": "grid.494438.6",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 35
+      },
+      {
+        "name": "Deutsche Flugsicherung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Deutsche Flugsicherung",
+        "id": "grid.7555.2",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 35
+      },
+      {
+        "name": "Aena (Espagne)",
+        "country": "Espagne",
+        "full_name": "Aena",
+        "id": "grid.9370.d",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 49
+      },
+      {
+        "name": "Honeywell (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Honeywell",
+        "id": "grid.420747.2",
+        "country_level_part": "Pays tiers",
+        "y": 12,
+        "z": 22
+      },
+      {
+        "name": "Luftfartsverket (Suède)",
+        "country": "Suède",
+        "full_name": "Luftfartsverket",
+        "id": "grid.438235.b",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 39
+      },
+      {
+        "name": "National Air Traffic Services (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Air Traffic Services",
+        "id": "grid.425421.4",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 34
+      },
+      {
+        "name": "Austro Control (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austro Control",
+        "id": "grid.450644.7",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 41
+      },
+      {
+        "name": "Frequentis (Autriche)",
+        "country": "Autriche",
+        "full_name": "Frequentis",
+        "id": "grid.424668.a",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 38
+      },
+      {
+        "name": "Airbus (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Airbus",
+        "id": "grid.7546.0",
+        "country_level_part": "Pays membres",
+        "y": 9,
+        "z": 30
+      },
+      {
+        "name": "Airbus (Espagne)",
+        "country": "Espagne",
+        "full_name": "Airbus",
+        "id": "grid.151569.f",
+        "country_level_part": "Pays membres",
+        "y": 9,
+        "z": 29
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "y": 9,
+        "z": 258
+      },
+      {
+        "name": "Reference Center for Research, Development and Innovation in ATM (Espagne)",
+        "country": "Espagne",
+        "full_name": "Reference Center for Research, Development and Innovation in ATM",
+        "id": "grid.473909.0",
+        "country_level_part": "Pays membres",
+        "y": 8,
+        "z": 49
+      },
+      {
+        "name": "Rolls-Royce (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Rolls-Royce",
+        "id": "grid.1121.3",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 29
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 2670
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 407
+      },
+      {
+        "name": "Avinor (Norvège)",
+        "country": "Norvège",
+        "full_name": "Avinor",
+        "id": "grid.457437.6",
+        "country_level_part": "Pays associés",
+        "y": 7,
+        "z": 21
+      },
+      {
+        "name": "Sistemi Innovativi per Il Controllo del Traffico Aereo (Italie)",
+        "country": "Italie",
+        "full_name": "Sistemi Innovativi per Il Controllo del Traffico Aereo",
+        "id": "grid.426091.8",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 21
+      },
+      {
+        "name": "Central Aerohydrodynamic Institute (Russie)",
+        "country": "Russie",
+        "full_name": "Central Aerohydrodynamic Institute",
+        "id": "grid.423518.9",
+        "country_level_part": "Pays tiers",
+        "y": 6,
+        "z": 16
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 305
+      },
+      {
+        "name": "Heathrow Airport Holdings (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Heathrow Airport Holdings",
+        "id": "grid.498473.5",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 20
+      },
+      {
+        "name": "ADP (France)",
+        "country": "France",
+        "full_name": "Aéroports de Paris",
+        "acronym": "ADP",
+        "id": "gent4",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 19
+      },
+      {
+        "name": "Zürich Airport (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zürich Airport",
+        "id": "grid.451493.e",
+        "country_level_part": "Pays associés",
+        "y": 6,
+        "z": 18
+      },
+      {
+        "name": "Indra Navia (Norvège)",
+        "country": "Norvège",
+        "full_name": "Indra Navia",
+        "id": "grid.458077.9",
+        "country_level_part": "Pays associés",
+        "y": 6,
+        "z": 11
+      },
+      {
+        "name": "Thales (Portugal)",
+        "country": "Portugal",
+        "full_name": "Thales",
+        "id": "grid.434332.1",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 16
+      },
+      {
+        "name": "Ingenieria Y Economia Del Transporte (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingenieria Y Economia Del Transporte",
+        "id": "grid.17380.3d",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 27
+      },
+      {
+        "name": "Stork (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Stork",
+        "id": "grid.425984.6",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 12
+      },
+      {
+        "name": "Liebherr-Aerospace Tou... (France)",
+        "country": "France",
+        "full_name": "Liebherr-Aerospace Toulouse Sas",
+        "acronym": "Liebherr-Aerospace Tou...",
+        "id": "552016834",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 7
+      },
+      {
+        "name": "University of Warsaw (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Warsaw",
+        "id": "grid.12847.38",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 98
+      },
+      {
+        "name": "ENAC (France)",
+        "country": "France",
+        "full_name": "École nationale de l'aviation civile",
+        "acronym": "ENAC",
+        "id": "JQKHK",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 35
+      },
+      {
+        "name": "Ingeniería de Sistemas para la Defensa de España (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingeniería de Sistemas para la Defensa de España",
+        "id": "grid.425057.1",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 18
+      },
+      {
+        "name": "Foundation for the Research Development and Application of Composite Materials (Espagne)",
+        "country": "Espagne",
+        "full_name": "Foundation for the Research Development and Application of Composite Materials",
+        "id": "grid.434708.c",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 17
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 1072
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 155
+      }
+    ]
   },
-  {
-    "name": "German Aerospace Center (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "German Aerospace Center",
-    "id": "grid.7551.6",
-    "y": 28,
-    "z": 450
+  "Societal Challenges": {
+    "Smart, green and integrated transport (TPT)": [
+      {
+        "name": "Airbus (France)",
+        "country": "France",
+        "full_name": "Airbus",
+        "acronym": "Airbus",
+        "id": "gent8",
+        "country_level_part": "Pays membres",
+        "y": 30,
+        "z": 76
+      },
+      {
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
+        "country_level_part": "Pays membres",
+        "y": 28,
+        "z": 176
+      },
+      {
+        "name": "National Aerospace Laboratory (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Aerospace Laboratory",
+        "id": "grid.6078.9",
+        "country_level_part": "Pays membres",
+        "y": 21,
+        "z": 101
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "y": 20,
+        "z": 64
+      },
+      {
+        "name": "ONERA (France)",
+        "country": "France",
+        "full_name": "Office national d’études et de recherches aérospatiales",
+        "acronym": "ONERA",
+        "id": "zO154",
+        "country_level_part": "Pays membres",
+        "y": 19,
+        "z": 65
+      },
+      {
+        "name": "Honeywell (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Honeywell",
+        "id": "grid.424723.4",
+        "country_level_part": "Pays membres",
+        "y": 17,
+        "z": 35
+      },
+      {
+        "name": "Eurocontrol (Belgique)",
+        "country": "Belgique",
+        "full_name": "Eurocontrol",
+        "id": "grid.424710.4",
+        "country_level_part": "Pays membres",
+        "y": 17,
+        "z": 89
+      },
+      {
+        "name": "Airbus (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Airbus",
+        "id": "grid.410308.e",
+        "country_level_part": "Pays membres",
+        "y": 16,
+        "z": 33
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "y": 16,
+        "z": 51
+      },
+      {
+        "name": "Saab (Suède)",
+        "country": "Suède",
+        "full_name": "Saab",
+        "id": "grid.5595.c",
+        "country_level_part": "Pays membres",
+        "y": 15,
+        "z": 38
+      },
+      {
+        "name": "Safran (France)",
+        "country": "France",
+        "full_name": "Safran",
+        "acronym": "Safran",
+        "id": "gent144",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 36
+      },
+      {
+        "name": "Italian Aerospace Research Centre (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Aerospace Research Centre",
+        "id": "grid.17374.36",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 43
+      },
+      {
+        "name": "DGAC (France)",
+        "country": "France",
+        "full_name": "Direction générale de l'aviation civile",
+        "acronym": "DGAC",
+        "id": "120064019",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 45
+      },
+      {
+        "name": "Indra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Indra",
+        "id": "grid.424656.7",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 72
+      },
+      {
+        "name": "Honeywell Aerospace (France)",
+        "country": "France",
+        "full_name": "Honeywell Aerospace",
+        "acronym": "Honeywell Aerospace",
+        "id": "340797919",
+        "country_level_part": "Pays membres",
+        "y": 14,
+        "z": 23
+      },
+      {
+        "name": "Ente Nazionale Assistenza al Volo (Italie)",
+        "country": "Italie",
+        "full_name": "Ente Nazionale Assistenza al Volo",
+        "id": "grid.424443.1",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 39
+      },
+      {
+        "name": "Croatia control, croatian air navigation services ltd (Croatie)",
+        "country": "Croatie",
+        "full_name": "Croatia control, croatian air navigation services ltd",
+        "id": "grid.486153.d",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 45
+      },
+      {
+        "name": "Polish Air Navigation Services Agency (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish Air Navigation Services Agency",
+        "id": "grid.494438.6",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 35
+      },
+      {
+        "name": "Deutsche Flugsicherung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Deutsche Flugsicherung",
+        "id": "grid.7555.2",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 35
+      },
+      {
+        "name": "Aena (Espagne)",
+        "country": "Espagne",
+        "full_name": "Aena",
+        "id": "grid.9370.d",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 47
+      },
+      {
+        "name": "Honeywell (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Honeywell",
+        "id": "grid.420747.2",
+        "country_level_part": "Pays tiers",
+        "y": 12,
+        "z": 21
+      },
+      {
+        "name": "Luftfartsverket (Suède)",
+        "country": "Suède",
+        "full_name": "Luftfartsverket",
+        "id": "grid.438235.b",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 39
+      },
+      {
+        "name": "National Air Traffic Services (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Air Traffic Services",
+        "id": "grid.425421.4",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 34
+      },
+      {
+        "name": "Austro Control (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austro Control",
+        "id": "grid.450644.7",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 41
+      },
+      {
+        "name": "Frequentis (Autriche)",
+        "country": "Autriche",
+        "full_name": "Frequentis",
+        "id": "grid.424668.a",
+        "country_level_part": "Pays membres",
+        "y": 11,
+        "z": 34
+      },
+      {
+        "name": "Airbus (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Airbus",
+        "id": "grid.7546.0",
+        "country_level_part": "Pays membres",
+        "y": 9,
+        "z": 15
+      },
+      {
+        "name": "Airbus (Espagne)",
+        "country": "Espagne",
+        "full_name": "Airbus",
+        "id": "grid.151569.f",
+        "country_level_part": "Pays membres",
+        "y": 9,
+        "z": 14
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "y": 9,
+        "z": 53
+      },
+      {
+        "name": "Reference Center for Research, Development and Innovation in ATM (Espagne)",
+        "country": "Espagne",
+        "full_name": "Reference Center for Research, Development and Innovation in ATM",
+        "id": "grid.473909.0",
+        "country_level_part": "Pays membres",
+        "y": 8,
+        "z": 48
+      },
+      {
+        "name": "Rolls-Royce (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Rolls-Royce",
+        "id": "grid.1121.3",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 22
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 88
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 83
+      },
+      {
+        "name": "Avinor (Norvège)",
+        "country": "Norvège",
+        "full_name": "Avinor",
+        "id": "grid.457437.6",
+        "country_level_part": "Pays associés",
+        "y": 7,
+        "z": 21
+      },
+      {
+        "name": "Sistemi Innovativi per Il Controllo del Traffico Aereo (Italie)",
+        "country": "Italie",
+        "full_name": "Sistemi Innovativi per Il Controllo del Traffico Aereo",
+        "id": "grid.426091.8",
+        "country_level_part": "Pays membres",
+        "y": 7,
+        "z": 18
+      },
+      {
+        "name": "Central Aerohydrodynamic Institute (Russie)",
+        "country": "Russie",
+        "full_name": "Central Aerohydrodynamic Institute",
+        "id": "grid.423518.9",
+        "country_level_part": "Pays tiers",
+        "y": 6,
+        "z": 16
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 16
+      },
+      {
+        "name": "Heathrow Airport Holdings (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Heathrow Airport Holdings",
+        "id": "grid.498473.5",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 20
+      },
+      {
+        "name": "ADP (France)",
+        "country": "France",
+        "full_name": "Aéroports de Paris",
+        "acronym": "ADP",
+        "id": "gent4",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 18
+      },
+      {
+        "name": "Zürich Airport (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zürich Airport",
+        "id": "grid.451493.e",
+        "country_level_part": "Pays associés",
+        "y": 6,
+        "z": 18
+      },
+      {
+        "name": "Indra Navia (Norvège)",
+        "country": "Norvège",
+        "full_name": "Indra Navia",
+        "id": "grid.458077.9",
+        "country_level_part": "Pays associés",
+        "y": 6,
+        "z": 11
+      },
+      {
+        "name": "Thales (Portugal)",
+        "country": "Portugal",
+        "full_name": "Thales",
+        "id": "grid.434332.1",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 12
+      },
+      {
+        "name": "Ingenieria Y Economia Del Transporte (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingenieria Y Economia Del Transporte",
+        "id": "grid.17380.3d",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 23
+      },
+      {
+        "name": "Stork (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Stork",
+        "id": "grid.425984.6",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 11
+      },
+      {
+        "name": "Liebherr-Aerospace Tou... (France)",
+        "country": "France",
+        "full_name": "Liebherr-Aerospace Toulouse Sas",
+        "acronym": "Liebherr-Aerospace Tou...",
+        "id": "552016834",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 7
+      },
+      {
+        "name": "University of Warsaw (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Warsaw",
+        "id": "grid.12847.38",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 8
+      },
+      {
+        "name": "ENAC (France)",
+        "country": "France",
+        "full_name": "École nationale de l'aviation civile",
+        "acronym": "ENAC",
+        "id": "JQKHK",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 30
+      },
+      {
+        "name": "Ingeniería de Sistemas para la Defensa de España (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingeniería de Sistemas para la Defensa de España",
+        "id": "grid.425057.1",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 13
+      },
+      {
+        "name": "Piaggio Aerospace (Italie)",
+        "country": "Italie",
+        "full_name": "Piaggio Aerospace",
+        "id": "grid.425474.4",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 10
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 18
+      },
+      {
+        "name": "Rolls-Royce (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rolls-Royce",
+        "id": "grid.17568.3d",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 12
+      }
+    ]
   },
-  {
-    "name": "National Aerospace Laboratory (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "National Aerospace Laboratory",
-    "id": "grid.6078.9",
-    "y": 21,
-    "z": 108
-  },
-  {
-    "name": "Thales (France)",
-    "country": "France",
-    "full_name": "Thales",
-    "acronym": "Thales",
-    "id": "gent175",
-    "y": 20,
-    "z": 286
-  },
-  {
-    "name": "ONERA (France)",
-    "country": "France",
-    "full_name": "Office national d’études et de recherches aérospatiales",
-    "acronym": "ONERA",
-    "id": "zO154",
-    "y": 19,
-    "z": 103
-  },
-  {
-    "name": "Honeywell (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Honeywell",
-    "id": "grid.424723.4",
-    "y": 17,
-    "z": 42
-  },
-  {
-    "name": "Eurocontrol (Belgique)",
-    "country": "Belgique",
-    "full_name": "Eurocontrol",
-    "id": "grid.424710.4",
-    "y": 17,
-    "z": 91
-  },
-  {
-    "name": "Airbus (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Airbus",
-    "id": "grid.410308.e",
-    "y": 17,
-    "z": 91
-  },
-  {
-    "name": "Finmeccanica (Italie)",
-    "country": "Italie",
-    "full_name": "Finmeccanica",
-    "id": "grid.423952.b",
-    "y": 16,
-    "z": 76
-  },
-  {
-    "name": "Saab (Suède)",
-    "country": "Suède",
-    "full_name": "Saab",
-    "id": "grid.5595.c",
-    "y": 15,
-    "z": 40
-  },
-  {
-    "name": "Safran (France)",
-    "country": "France",
-    "full_name": "Safran",
-    "acronym": "Safran",
-    "id": "gent144",
-    "y": 14,
-    "z": 56
-  },
-  {
-    "name": "Italian Aerospace Research Centre (Italie)",
-    "country": "Italie",
-    "full_name": "Italian Aerospace Research Centre",
-    "id": "grid.17374.36",
-    "y": 14,
-    "z": 46
-  },
-  {
-    "name": "Indra (Espagne)",
-    "country": "Espagne",
-    "full_name": "Indra",
-    "id": "grid.424656.7",
-    "y": 14,
-    "z": 95
-  },
-  {
-    "name": "DGAC (France)",
-    "country": "France",
-    "full_name": "Direction générale de l'aviation civile",
-    "acronym": "DGAC",
-    "id": "120064019",
-    "y": 14,
-    "z": 45
-  },
-  {
-    "name": "Honeywell Aerospace (France)",
-    "country": "France",
-    "full_name": "Honeywell Aerospace",
-    "acronym": "Honeywell Aerospace",
-    "id": "340797919",
-    "y": 14,
-    "z": 23
-  },
-  {
-    "name": "Ente Nazionale Assistenza al Volo (Italie)",
-    "country": "Italie",
-    "full_name": "Ente Nazionale Assistenza al Volo",
-    "id": "grid.424443.1",
-    "y": 13,
-    "z": 43
-  },
-  {
-    "name": "Aena (Espagne)",
-    "country": "Espagne",
-    "full_name": "Aena",
-    "id": "grid.9370.d",
-    "y": 13,
-    "z": 49
-  },
-  {
-    "name": "Croatia control, croatian air navigation services ltd (Croatie)",
-    "country": "Croatie",
-    "full_name": "Croatia control, croatian air navigation services ltd",
-    "id": "grid.486153.d",
-    "y": 13,
-    "z": 45
-  },
-  {
-    "name": "Polish Air Navigation Services Agency (Pologne)",
-    "country": "Pologne",
-    "full_name": "Polish Air Navigation Services Agency",
-    "id": "grid.494438.6",
-    "y": 13,
-    "z": 35
-  },
-  {
-    "name": "Deutsche Flugsicherung (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Deutsche Flugsicherung",
-    "id": "grid.7555.2",
-    "y": 13,
-    "z": 35
-  },
-  {
-    "name": "Honeywell (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "Honeywell",
-    "id": "grid.420747.2",
-    "y": 12,
-    "z": 22
-  },
-  {
-    "name": "National Air Traffic Services (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "National Air Traffic Services",
-    "id": "grid.425421.4",
-    "y": 11,
-    "z": 34
-  },
-  {
-    "name": "Luftfartsverket (Suède)",
-    "country": "Suède",
-    "full_name": "Luftfartsverket",
-    "id": "grid.438235.b",
-    "y": 11,
-    "z": 39
-  },
-  {
-    "name": "Austro Control (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austro Control",
-    "id": "grid.450644.7",
-    "y": 11,
-    "z": 41
-  },
-  {
-    "name": "Frequentis (Autriche)",
-    "country": "Autriche",
-    "full_name": "Frequentis",
-    "id": "grid.424668.a",
-    "y": 11,
-    "z": 38
-  },
-  {
-    "name": "Airbus (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Airbus",
-    "id": "grid.7546.0",
-    "y": 9,
-    "z": 30
-  },
-  {
-    "name": "Airbus (Espagne)",
-    "country": "Espagne",
-    "full_name": "Airbus",
-    "id": "grid.151569.f",
-    "y": 9,
-    "z": 29
-  },
-  {
-    "name": "SINTEF (Norvège)",
-    "country": "Norvège",
-    "full_name": "SINTEF",
-    "id": "grid.4319.f",
-    "y": 9,
-    "z": 258
-  },
-  {
-    "name": "Reference Center for Research, Development and Innovation in ATM (Espagne)",
-    "country": "Espagne",
-    "full_name": "Reference Center for Research, Development and Innovation in ATM",
-    "id": "grid.473909.0",
-    "y": 8,
-    "z": 49
-  },
-  {
-    "name": "Rolls-Royce (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Rolls-Royce",
-    "id": "grid.1121.3",
-    "y": 7,
-    "z": 29
-  },
-  {
-    "name": "Delft University of Technology (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Delft University of Technology",
-    "id": "grid.5292.c",
-    "y": 7,
-    "z": 407
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 7,
-    "z": 2670
-  },
-  {
-    "name": "Avinor (Norvège)",
-    "country": "Norvège",
-    "full_name": "Avinor",
-    "id": "grid.457437.6",
-    "y": 7,
-    "z": 21
-  },
-  {
-    "name": "Sistemi Innovativi per Il Controllo del Traffico Aereo (Italie)",
-    "country": "Italie",
-    "full_name": "Sistemi Innovativi per Il Controllo del Traffico Aereo",
-    "id": "grid.426091.8",
-    "y": 7,
-    "z": 21
-  },
-  {
-    "name": "Central Aerohydrodynamic Institute (Russie)",
-    "country": "Russie",
-    "full_name": "Central Aerohydrodynamic Institute",
-    "id": "grid.423518.9",
-    "y": 6,
-    "z": 16
-  },
-  {
-    "name": "Imperial College London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Imperial College London",
-    "id": "grid.7445.2",
-    "y": 6,
-    "z": 305
-  },
-  {
-    "name": "ADP (France)",
-    "country": "France",
-    "full_name": "Aéroports de Paris",
-    "acronym": "ADP",
-    "id": "gent4",
-    "y": 6,
-    "z": 19
-  },
-  {
-    "name": "Heathrow Airport Holdings (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Heathrow Airport Holdings",
-    "id": "grid.498473.5",
-    "y": 6,
-    "z": 20
-  },
-  {
-    "name": "Zürich Airport (Suisse)",
-    "country": "Suisse",
-    "full_name": "Zürich Airport",
-    "id": "grid.451493.e",
-    "y": 6,
-    "z": 18
-  },
-  {
-    "name": "Indra Navia (Norvège)",
-    "country": "Norvège",
-    "full_name": "Indra Navia",
-    "id": "grid.458077.9",
-    "y": 6,
-    "z": 11
-  },
-  {
-    "name": "Thales (Portugal)",
-    "country": "Portugal",
-    "full_name": "Thales",
-    "id": "grid.434332.1",
-    "y": 6,
-    "z": 16
-  },
-  {
-    "name": "Ingenieria Y Economia Del Transporte (Espagne)",
-    "country": "Espagne",
-    "full_name": "Ingenieria Y Economia Del Transporte",
-    "id": "grid.17380.3d",
-    "y": 6,
-    "z": 27
-  },
-  {
-    "name": "Stork (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Stork",
-    "id": "grid.425984.6",
-    "y": 6,
-    "z": 12
-  },
-  {
-    "name": "Liebherr-Aerospace Tou... (France)",
-    "country": "France",
-    "full_name": "Liebherr-Aerospace Toulouse Sas",
-    "acronym": "Liebherr-Aerospace Tou...",
-    "id": "552016834",
-    "y": 5,
-    "z": 7
-  },
-  {
-    "name": "University of Warsaw (Pologne)",
-    "country": "Pologne",
-    "full_name": "University of Warsaw",
-    "id": "grid.12847.38",
-    "y": 5,
-    "z": 98
-  },
-  {
-    "name": "Ingeniería de Sistemas para la Defensa de España (Espagne)",
-    "country": "Espagne",
-    "full_name": "Ingeniería de Sistemas para la Defensa de España",
-    "id": "grid.425057.1",
-    "y": 5,
-    "z": 18
-  },
-  {
-    "name": "ENAC (France)",
-    "country": "France",
-    "full_name": "École nationale de l'aviation civile",
-    "acronym": "ENAC",
-    "id": "JQKHK",
-    "y": 5,
-    "z": 35
-  },
-  {
-    "name": "Foundation for the Research Development and Application of Composite Materials (Espagne)",
-    "country": "Espagne",
-    "full_name": "Foundation for the Research Development and Application of Composite Materials",
-    "id": "grid.434708.c",
-    "y": 5,
-    "z": 17
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 5,
-    "z": 1072
-  },
-  {
-    "name": "University of Nottingham (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Nottingham",
-    "id": "grid.4563.4",
-    "y": 5,
-    "z": 155
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "Airbus (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Airbus",
+        "id": "grid.410308.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Foundation for the Research Development and Application of Composite Materials (Espagne)",
+        "country": "Espagne",
+        "full_name": "Foundation for the Research Development and Application of Composite Materials",
+        "id": "grid.434708.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ideko (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ideko",
+        "id": "grid.435408.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Dassault Systèmes (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Dassault Systèmes",
+        "id": "grid.472485.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Profactor (Autriche)",
+        "country": "Autriche",
+        "full_name": "Profactor",
+        "id": "grid.15165.36",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      }
+    ],
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 283
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Ideko (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ideko",
+        "id": "grid.435408.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "SimPlan (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "SimPlan",
+        "id": "grid.470631.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Keonys (France)",
+        "country": "France",
+        "full_name": "Keonys",
+        "acronym": "Keonys",
+        "id": "504725730",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Dassault Systèmes (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Dassault Systèmes",
+        "id": "grid.472485.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Laing O'Rourke (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Laing O'Rourke",
+        "id": "grid.420780.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Alstom (France)",
+        "country": "France",
+        "full_name": "Alstom",
+        "acronym": "Alstom",
+        "id": "gent15",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Deusto (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Deusto",
+        "id": "grid.14724.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Technikon (Autriche)",
+        "country": "Autriche",
+        "full_name": "Technikon",
+        "id": "grid.426234.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Turku University of Applied Sciences (Finlande)",
+        "country": "Finlande",
+        "full_name": "Turku University of Applied Sciences",
+        "id": "grid.426415.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Search-Lab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Search-Lab",
+        "id": "grid.451266.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Amossys (France)",
+        "country": "France",
+        "full_name": "Amossys",
+        "acronym": "Amossys",
+        "id": "493348890",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 71
+      }
+    ]
   }
-]
+}

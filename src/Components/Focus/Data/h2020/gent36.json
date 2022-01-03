@@ -1,273 +1,632 @@
-[
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
+{
+  "all": {
+    "all": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "University of Konstanz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Konstanz",
+        "id": "grid.9811.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 130
+      },
+      {
+        "name": "Karolinska Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Karolinska Institute",
+        "id": "grid.4714.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "BASF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BASF",
+        "id": "grid.3319.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Pompeu Fabra University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Pompeu Fabra University",
+        "id": "grid.5612.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "L'oréal (France)",
+        "country": "France",
+        "full_name": "L'oréal",
+        "acronym": "L'oréal",
+        "id": "632012100",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 211
+      },
+      {
+        "name": "Liverpool John Moores University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Liverpool John Moores University",
+        "id": "grid.4425.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 388
+      },
+      {
+        "name": "Steinbeis Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Steinbeis Foundation",
+        "id": "grid.153460.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 106
+      },
+      {
+        "name": "Arttic (France)",
+        "country": "France",
+        "full_name": "Arttic",
+        "acronym": "Arttic",
+        "id": "344112396",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 73
+      },
+      {
+        "name": "Simcyp (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Simcyp",
+        "id": "grid.437832.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 112
+      },
+      {
+        "name": "Edelweiss Connect (Suisse)",
+        "country": "Suisse",
+        "full_name": "Edelweiss Connect",
+        "id": "grid.433671.4",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 173
+      },
+      {
+        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Institute for Public Health and the Environment",
+        "id": "grid.31147.30",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "Unilever (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Unilever",
+        "id": "grid.418707.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "Latvijas Organiskas Sintezes Instituts (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Latvijas Organiskas Sintezes Instituts",
+        "id": "grid.419212.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 342
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "BioDetection Systems (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "BioDetection Systems",
+        "id": "grid.450522.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "Lund University (Suède)",
+        "country": "Suède",
+        "full_name": "Lund University",
+        "id": "grid.4514.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 211
+      },
+      {
+        "name": "Federal Institute for Risk Assessment (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Institute for Risk Assessment",
+        "id": "grid.417830.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 199
+      }
+    ]
   },
-  {
-    "name": "INSA de Lyon (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences appliquées de Lyon",
-    "acronym": "INSA de Lyon",
-    "id": "8k41p",
-    "y": 1,
-    "z": 75
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 938
+      }
+    ]
   },
-  {
-    "name": "U. Lyon 1 (France)",
-    "country": "France",
-    "full_name": "Université Claude Bernard - Lyon 1",
-    "acronym": "U. Lyon 1",
-    "id": "etBz7",
-    "y": 1,
-    "z": 191
-  },
-  {
-    "name": "BASF (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "BASF",
-    "id": "grid.3319.8",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "RISE Research Institutes of Sweden (Suède)",
-    "country": "Suède",
-    "full_name": "RISE Research Institutes of Sweden",
-    "id": "grid.450998.9",
-    "y": 1,
-    "z": 199
-  },
-  {
-    "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Netherlands Organisation for Applied Scientific Research",
-    "id": "grid.4858.1",
-    "y": 1,
-    "z": 342
-  },
-  {
-    "name": "National Institute for Public Health and the Environment (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "National Institute for Public Health and the Environment",
-    "id": "grid.31147.30",
-    "y": 1,
-    "z": 61
-  },
-  {
-    "name": "Unilever (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Unilever",
-    "id": "grid.418707.d",
-    "y": 1,
-    "z": 17
-  },
-  {
-    "name": "Technical University of Denmark (Danemark)",
-    "country": "Danemark",
-    "full_name": "Technical University of Denmark",
-    "id": "grid.5170.3",
-    "y": 1,
-    "z": 379
-  },
-  {
-    "name": "University of Konstanz (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Konstanz",
-    "id": "grid.9811.1",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "University of Vienna (Autriche)",
-    "country": "Autriche",
-    "full_name": "University of Vienna",
-    "id": "grid.10420.37",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "Liverpool John Moores University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Liverpool John Moores University",
-    "id": "grid.4425.7",
-    "y": 1,
-    "z": 18
-  },
-  {
-    "name": "Edelweiss Connect (Suisse)",
-    "country": "Suisse",
-    "full_name": "Edelweiss Connect",
-    "id": "grid.433671.4",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Latvijas Organiskas Sintezes Instituts (Lettonie)",
-    "country": "Lettonie",
-    "full_name": "Latvijas Organiskas Sintezes Instituts",
-    "id": "grid.419212.d",
-    "y": 1,
-    "z": 16
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 1,
-    "z": 1072
-  },
-  {
-    "name": "VU Amsterdam (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VU Amsterdam",
-    "id": "grid.12380.38",
-    "y": 1,
-    "z": 173
-  },
-  {
-    "name": "Uppsala University (Suède)",
-    "country": "Suède",
-    "full_name": "Uppsala University",
-    "id": "grid.8993.b",
-    "y": 1,
-    "z": 211
-  },
-  {
-    "name": "University Medical Center Utrecht (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Utrecht",
-    "id": "grid.7692.a",
-    "y": 1,
-    "z": 112
-  },
-  {
-    "name": "Leiden University (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Leiden University",
-    "id": "grid.5132.5",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "Arttic (France)",
-    "country": "France",
-    "full_name": "Arttic",
-    "acronym": "Arttic",
-    "id": "344112396",
-    "y": 1,
-    "z": 73
-  },
-  {
-    "name": "L'oréal (France)",
-    "country": "France",
-    "full_name": "L'oréal",
-    "acronym": "L'oréal",
-    "id": "632012100",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "University of Copenhagen (Danemark)",
-    "country": "Danemark",
-    "full_name": "University of Copenhagen",
-    "id": "grid.5254.6",
-    "y": 1,
-    "z": 321
-  },
-  {
-    "name": "BioDetection Systems (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "BioDetection Systems",
-    "id": "grid.450522.4",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Lund University (Suède)",
-    "country": "Suède",
-    "full_name": "Lund University",
-    "id": "grid.4514.4",
-    "y": 1,
-    "z": 211
-  },
-  {
-    "name": "European Molecular Biology Laboratory (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "European Molecular Biology Laboratory",
-    "id": "grid.4709.a",
-    "y": 1,
-    "z": 130
-  },
-  {
-    "name": "U. Paris (France)",
-    "country": "France",
-    "full_name": "Université de Paris",
-    "acronym": "U. Paris",
-    "id": "5cZyU",
-    "y": 1,
-    "z": 388
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "Pompeu Fabra University (Espagne)",
-    "country": "Espagne",
-    "full_name": "Pompeu Fabra University",
-    "id": "grid.5612.0",
-    "y": 1,
-    "z": 94
-  },
-  {
-    "name": "KU Leuven (Belgique)",
-    "country": "Belgique",
-    "full_name": "KU Leuven",
-    "id": "grid.5596.f",
-    "y": 1,
-    "z": 489
-  },
-  {
-    "name": "Federal Institute for Risk Assessment (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Federal Institute for Risk Assessment",
-    "id": "grid.417830.9",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "Steinbeis Foundation (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Steinbeis Foundation",
-    "id": "grid.153460.5",
-    "y": 1,
-    "z": 106
-  },
-  {
-    "name": "Simcyp (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Simcyp",
-    "id": "grid.437832.9",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Karolinska Institute (Suède)",
-    "country": "Suède",
-    "full_name": "Karolinska Institute",
-    "id": "grid.4714.6",
-    "y": 1,
-    "z": 214
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "University of Konstanz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Konstanz",
+        "id": "grid.9811.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Karolinska Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Karolinska Institute",
+        "id": "grid.4714.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "BASF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BASF",
+        "id": "grid.3319.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Pompeu Fabra University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Pompeu Fabra University",
+        "id": "grid.5612.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "L'oréal (France)",
+        "country": "France",
+        "full_name": "L'oréal",
+        "acronym": "L'oréal",
+        "id": "632012100",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Liverpool John Moores University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Liverpool John Moores University",
+        "id": "grid.4425.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Steinbeis Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Steinbeis Foundation",
+        "id": "grid.153460.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Arttic (France)",
+        "country": "France",
+        "full_name": "Arttic",
+        "acronym": "Arttic",
+        "id": "344112396",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Simcyp (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Simcyp",
+        "id": "grid.437832.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Edelweiss Connect (Suisse)",
+        "country": "Suisse",
+        "full_name": "Edelweiss Connect",
+        "id": "grid.433671.4",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Institute for Public Health and the Environment",
+        "id": "grid.31147.30",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Unilever (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Unilever",
+        "id": "grid.418707.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Latvijas Organiskas Sintezes Instituts (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Latvijas Organiskas Sintezes Instituts",
+        "id": "grid.419212.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "BioDetection Systems (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "BioDetection Systems",
+        "id": "grid.450522.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Lund University (Suède)",
+        "country": "Suède",
+        "full_name": "Lund University",
+        "id": "grid.4514.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Federal Institute for Risk Assessment (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Institute for Risk Assessment",
+        "id": "grid.417830.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      }
+    ]
   }
-]
+}

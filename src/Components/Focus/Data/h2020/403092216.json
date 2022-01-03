@@ -1,358 +1,808 @@
-[
-  {
-    "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Netherlands Organisation for Applied Scientific Research",
-    "id": "grid.4858.1",
-    "y": 3,
-    "z": 342
+{
+  "all": {
+    "all": [
+      {
+        "name": "Applied Materials (Israël)",
+        "country": "Israël",
+        "full_name": "Applied Materials",
+        "id": "grid.432770.5",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 238
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 342
+      },
+      {
+        "name": "Nova Measuring Instruments (Israël)",
+        "country": "Israël",
+        "full_name": "Nova Measuring Instruments",
+        "id": "grid.474141.3",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 12
+      },
+      {
+        "name": "Thermo Fisher Scientific (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.433187.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 16
+      },
+      {
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Eindhoven University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eindhoven University of Technology",
+        "id": "grid.6852.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 269
+      },
+      {
+        "name": "Bruker (Israël)",
+        "country": "Israël",
+        "full_name": "Bruker",
+        "id": "grid.473958.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "VDL Groep (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VDL Groep",
+        "id": "grid.491500.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Coventor Sarl (France)",
+        "country": "France",
+        "full_name": "Coventor Sarl",
+        "acronym": "Coventor Sarl",
+        "id": "431906833",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "Recif Hold. (France)",
+        "country": "France",
+        "full_name": "Recif Holding",
+        "acronym": "Recif Hold.",
+        "id": "gent140",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "KLA (Israël)",
+        "country": "Israël",
+        "full_name": "KLA",
+        "id": "grid.425610.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Carl Zeiss (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Carl Zeiss",
+        "id": "grid.424549.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "ASML (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ASML",
+        "id": "grid.424262.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Applied Materials France (France)",
+        "country": "France",
+        "full_name": "Applied Materials France",
+        "acronym": "Applied Materials France",
+        "id": "385124862",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Fei (France)",
+        "country": "France",
+        "full_name": "Fei",
+        "acronym": "Fei",
+        "id": "351153382",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Physikalisch-Technische Bundesanstalt",
+        "id": "grid.4764.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Cadence Design Systems (France)",
+        "country": "France",
+        "full_name": "Cadence Design Systems",
+        "acronym": "Cadence Design Systems",
+        "id": "329200521",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Leibniz Institute of Surface Engineering (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute of Surface Engineering",
+        "id": "grid.461802.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Pfeiffer Vacuum (France)",
+        "country": "France",
+        "full_name": "Pfeiffer Vacuum",
+        "acronym": "Pfeiffer Vacuum",
+        "id": "085980357",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Ion Beam Services (France)",
+        "country": "France",
+        "full_name": "Ion Beam Services",
+        "acronym": "Ion Beam Services",
+        "id": "342673134",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "SPTS Technologies (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "SPTS Technologies",
+        "id": "grid.438185.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "LASSE (France)",
+        "country": "France",
+        "full_name": "Laser Systems & Solutions Of Europe",
+        "acronym": "LASSE",
+        "id": "802526574",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Prodrive Technologies (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Prodrive Technologies",
+        "id": "grid.474140.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 136
+      },
+      {
+        "name": "Unity Semiconductor (France)",
+        "country": "France",
+        "full_name": "Unity Semiconductor",
+        "acronym": "Unity Semiconductor",
+        "id": "477711972",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Reden (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Reden",
+        "id": "grid.474166.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Institut für Mikroelektronik Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Institut für Mikroelektronik Stuttgart",
+        "id": "grid.425335.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Mellanox Technologies (Israël)",
+        "country": "Israël",
+        "full_name": "Mellanox Technologies",
+        "id": "grid.474341.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Crytur (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crytur",
+        "id": "grid.447944.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Institute of Physics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Physics",
+        "id": "grid.424881.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Advanced Mask Technology Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Advanced Mask Technology Center",
+        "id": "grid.482856.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Plansee (Autriche)",
+        "country": "Autriche",
+        "full_name": "Plansee",
+        "id": "grid.425507.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 67
+      },
+      {
+        "name": "SolMateS (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "SolMateS",
+        "id": "grid.470638.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      }
+    ]
   },
-  {
-    "name": "Imec (Belgique)",
-    "country": "Belgique",
-    "full_name": "Imec",
-    "id": "grid.15762.37",
-    "y": 3,
-    "z": 238
-  },
-  {
-    "name": "Nova Measuring Instruments (Israël)",
-    "country": "Israël",
-    "full_name": "Nova Measuring Instruments",
-    "id": "grid.474141.3",
-    "y": 3,
-    "z": 12
-  },
-  {
-    "name": "Applied Materials (Israël)",
-    "country": "Israël",
-    "full_name": "Applied Materials",
-    "id": "grid.432770.5",
-    "y": 3,
-    "z": 11
-  },
-  {
-    "name": "Thermo Fisher Scientific (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Thermo Fisher Scientific",
-    "id": "grid.433187.a",
-    "y": 3,
-    "z": 16
-  },
-  {
-    "name": "Semilab (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "Semilab",
-    "id": "grid.425991.2",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "Eindhoven University of Technology (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Eindhoven University of Technology",
-    "id": "grid.6852.9",
-    "y": 2,
-    "z": 269
-  },
-  {
-    "name": "Bruker (Israël)",
-    "country": "Israël",
-    "full_name": "Bruker",
-    "id": "grid.473958.4",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "Coventor Sarl (France)",
-    "country": "France",
-    "full_name": "Coventor Sarl",
-    "acronym": "Coventor Sarl",
-    "id": "431906833",
-    "y": 2,
-    "z": 8
-  },
-  {
-    "name": "ASML (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "ASML",
-    "id": "grid.424262.4",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "KLA (Israël)",
-    "country": "Israël",
-    "full_name": "KLA",
-    "id": "grid.425610.4",
-    "y": 2,
-    "z": 9
-  },
-  {
-    "name": "VDL Groep (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VDL Groep",
-    "id": "grid.491500.9",
-    "y": 2,
-    "z": 10
-  },
-  {
-    "name": "EV Group (Autriche)",
-    "country": "Autriche",
-    "full_name": "EV Group",
-    "id": "grid.424986.5",
-    "y": 2,
-    "z": 19
-  },
-  {
-    "name": "Recif Hold. (France)",
-    "country": "France",
-    "full_name": "Recif Holding",
-    "acronym": "Recif Hold.",
-    "id": "gent140",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "Carl Zeiss (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Carl Zeiss",
-    "id": "grid.424549.a",
-    "y": 2,
-    "z": 20
-  },
-  {
-    "name": "Bruker (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bruker",
-    "id": "grid.423218.e",
-    "y": 1,
-    "z": 22
-  },
-  {
-    "name": "Fei (France)",
-    "country": "France",
-    "full_name": "Fei",
-    "acronym": "Fei",
-    "id": "351153382",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "STMicroelectronics (France)",
-    "country": "France",
-    "full_name": "STMicroelectronics",
-    "acronym": "STMicroelectronics",
-    "id": "gent166",
-    "y": 1,
-    "z": 51
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
-  },
-  {
-    "name": "Technical University of Denmark (Danemark)",
-    "country": "Danemark",
-    "full_name": "Technical University of Denmark",
-    "id": "grid.5170.3",
-    "y": 1,
-    "z": 379
-  },
-  {
-    "name": "Applied Materials France (France)",
-    "country": "France",
-    "full_name": "Applied Materials France",
-    "acronym": "Applied Materials France",
-    "id": "385124862",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Pfeiffer Vacuum (France)",
-    "country": "France",
-    "full_name": "Pfeiffer Vacuum",
-    "acronym": "Pfeiffer Vacuum",
-    "id": "085980357",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "LASSE (France)",
-    "country": "France",
-    "full_name": "Laser Systems & Solutions Of Europe",
-    "acronym": "LASSE",
-    "id": "802526574",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Ion Beam Services (France)",
-    "country": "France",
-    "full_name": "Ion Beam Services",
-    "acronym": "Ion Beam Services",
-    "id": "342673134",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Cadence Design Systems (France)",
-    "country": "France",
-    "full_name": "Cadence Design Systems",
-    "acronym": "Cadence Design Systems",
-    "id": "329200521",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Physikalisch-Technische Bundesanstalt",
-    "id": "grid.4764.1",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "Unity Semiconductor (France)",
-    "country": "France",
-    "full_name": "Unity Semiconductor",
-    "acronym": "Unity Semiconductor",
-    "id": "477711972",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Reden (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Reden",
-    "id": "grid.474166.6",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Prodrive Technologies (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Prodrive Technologies",
-    "id": "grid.474140.2",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Polytechnic University of Bucharest (Roumanie)",
-    "country": "Roumanie",
-    "full_name": "Polytechnic University of Bucharest",
-    "id": "grid.4551.5",
-    "y": 1,
-    "z": 49
-  },
-  {
-    "name": "Soitec (France)",
-    "country": "France",
-    "full_name": "Soitec",
-    "acronym": "Soitec",
-    "id": "gent163",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "SPTS Technologies (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "SPTS Technologies",
-    "id": "grid.438185.3",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Dutch Research Council (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Dutch Research Council",
-    "id": "grid.420488.2",
-    "y": 1,
-    "z": 136
-  },
-  {
-    "name": "Leibniz Institute of Surface Engineering (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Leibniz Institute of Surface Engineering",
-    "id": "grid.461802.9",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "SolMateS (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "SolMateS",
-    "id": "grid.470638.e",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 1,
-    "z": 1072
-  },
-  {
-    "name": "Mellanox Technologies (Israël)",
-    "country": "Israël",
-    "full_name": "Mellanox Technologies",
-    "id": "grid.474341.1",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "Advanced Mask Technology Center (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Advanced Mask Technology Center",
-    "id": "grid.482856.5",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Institute of Photonic Sciences (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institute of Photonic Sciences",
-    "id": "grid.5853.b",
-    "y": 1,
-    "z": 67
-  },
-  {
-    "name": "Plansee (Autriche)",
-    "country": "Autriche",
-    "full_name": "Plansee",
-    "id": "grid.425507.1",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Institute of Physics (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Institute of Physics",
-    "id": "grid.424881.3",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Crytur (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Crytur",
-    "id": "grid.447944.e",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Institut für Mikroelektronik Stuttgart (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Institut für Mikroelektronik Stuttgart",
-    "id": "grid.425335.6",
-    "y": 1,
-    "z": 5
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "Applied Materials (Israël)",
+        "country": "Israël",
+        "full_name": "Applied Materials",
+        "id": "grid.432770.5",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 135
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 78
+      },
+      {
+        "name": "Nova Measuring Instruments (Israël)",
+        "country": "Israël",
+        "full_name": "Nova Measuring Instruments",
+        "id": "grid.474141.3",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "Thermo Fisher Scientific (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.433187.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 10
+      },
+      {
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Eindhoven University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eindhoven University of Technology",
+        "id": "grid.6852.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 75
+      },
+      {
+        "name": "Bruker (Israël)",
+        "country": "Israël",
+        "full_name": "Bruker",
+        "id": "grid.473958.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "VDL Groep (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VDL Groep",
+        "id": "grid.491500.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "Coventor Sarl (France)",
+        "country": "France",
+        "full_name": "Coventor Sarl",
+        "acronym": "Coventor Sarl",
+        "id": "431906833",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "Recif Hold. (France)",
+        "country": "France",
+        "full_name": "Recif Holding",
+        "acronym": "Recif Hold.",
+        "id": "gent140",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "KLA (Israël)",
+        "country": "Israël",
+        "full_name": "KLA",
+        "id": "grid.425610.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Carl Zeiss (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Carl Zeiss",
+        "id": "grid.424549.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "ASML (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ASML",
+        "id": "grid.424262.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Applied Materials France (France)",
+        "country": "France",
+        "full_name": "Applied Materials France",
+        "acronym": "Applied Materials France",
+        "id": "385124862",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Fei (France)",
+        "country": "France",
+        "full_name": "Fei",
+        "acronym": "Fei",
+        "id": "351153382",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Physikalisch-Technische Bundesanstalt",
+        "id": "grid.4764.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Cadence Design Systems (France)",
+        "country": "France",
+        "full_name": "Cadence Design Systems",
+        "acronym": "Cadence Design Systems",
+        "id": "329200521",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Leibniz Institute of Surface Engineering (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute of Surface Engineering",
+        "id": "grid.461802.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Pfeiffer Vacuum (France)",
+        "country": "France",
+        "full_name": "Pfeiffer Vacuum",
+        "acronym": "Pfeiffer Vacuum",
+        "id": "085980357",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Ion Beam Services (France)",
+        "country": "France",
+        "full_name": "Ion Beam Services",
+        "acronym": "Ion Beam Services",
+        "id": "342673134",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "SPTS Technologies (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "SPTS Technologies",
+        "id": "grid.438185.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "LASSE (France)",
+        "country": "France",
+        "full_name": "Laser Systems & Solutions Of Europe",
+        "acronym": "LASSE",
+        "id": "802526574",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Prodrive Technologies (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Prodrive Technologies",
+        "id": "grid.474140.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Unity Semiconductor (France)",
+        "country": "France",
+        "full_name": "Unity Semiconductor",
+        "acronym": "Unity Semiconductor",
+        "id": "477711972",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Reden (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Reden",
+        "id": "grid.474166.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Institut für Mikroelektronik Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Institut für Mikroelektronik Stuttgart",
+        "id": "grid.425335.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Mellanox Technologies (Israël)",
+        "country": "Israël",
+        "full_name": "Mellanox Technologies",
+        "id": "grid.474341.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Crytur (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crytur",
+        "id": "grid.447944.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institute of Physics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Physics",
+        "id": "grid.424881.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Advanced Mask Technology Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Advanced Mask Technology Center",
+        "id": "grid.482856.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Plansee (Autriche)",
+        "country": "Autriche",
+        "full_name": "Plansee",
+        "id": "grid.425507.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 283
+      },
+      {
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "SolMateS (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "SolMateS",
+        "id": "grid.470638.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      }
+    ]
   }
-]
+}

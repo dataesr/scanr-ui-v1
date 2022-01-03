@@ -1,211 +1,476 @@
-[
-  {
-    "name": "Cheikh Anta Diop University (Sénégal)",
-    "country": "Sénégal",
-    "full_name": "Cheikh Anta Diop University",
-    "id": "grid.8191.1",
-    "y": 1,
-    "z": 6
+{
+  "all": {
+    "all": [
+      {
+        "name": "Cheikh Anta Diop University (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Cheikh Anta Diop University",
+        "id": "grid.8191.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "EHESP (France)",
+        "country": "France",
+        "full_name": "École des hautes études en santé publique",
+        "acronym": "EHESP",
+        "id": "SsRkf",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 210
+      },
+      {
+        "name": "UPV (France)",
+        "country": "France",
+        "full_name": "Université Paul-Valéry - Montpellier 3",
+        "acronym": "UPV",
+        "id": "1I7hJ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 164
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 388
+      },
+      {
+        "name": "ENS de Lyon (France)",
+        "country": "France",
+        "full_name": "École normale supérieure de Lyon",
+        "acronym": "ENS de Lyon",
+        "id": "kWved",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Graduate Institute of International and Development Studies (Suisse)",
+        "country": "Suisse",
+        "full_name": "Graduate Institute of International and Development Studies",
+        "id": "grid.424404.2",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Lyon 2 (France)",
+        "country": "France",
+        "full_name": "Université Lumière - Lyon 2",
+        "acronym": "U. Lyon 2",
+        "id": "CUBKB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "AP-HM (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "UGE (France)",
+        "country": "France",
+        "full_name": "Université Gustave Eiffel",
+        "acronym": "UGE",
+        "id": "3Z5e6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 89
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "CANOE (France)",
+        "country": "France",
+        "full_name": "Centre Technologique Nouvelle-Aquitaine Composites & Materiaux Avances",
+        "acronym": "CANOE",
+        "id": "775586340",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Bernhard Nocht Institute for Tropical Medicine (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bernhard Nocht Institute for Tropical Medicine",
+        "id": "grid.424065.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "U. Parsi 8 (France)",
+        "country": "France",
+        "full_name": "Université Paris 8 - Vincennes - Saint-Denis",
+        "acronym": "U. Parsi 8",
+        "id": "Uxr7Z",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "I. Pasteur (France)",
+        "country": "France",
+        "full_name": "Institut Pasteur",
+        "acronym": "I. Pasteur",
+        "id": "Sn8Nt",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "Department of Health and Social Care (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department of Health and Social Care",
+        "id": "grid.57981.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "U. Sorbonne Paris Nord (France)",
+        "country": "France",
+        "full_name": "Université Sorbonne Paris Nord",
+        "acronym": "U. Sorbonne Paris Nord",
+        "id": "cqyN7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      }
+    ]
   },
-  {
-    "name": "University of Amsterdam (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University of Amsterdam",
-    "id": "grid.7177.6",
-    "y": 1,
-    "z": 164
-  },
-  {
-    "name": "Department of Health and Social Care (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Department of Health and Social Care",
-    "id": "grid.57981.32",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "Utrecht University (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Utrecht University",
-    "id": "grid.5477.1",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "I. Pasteur (France)",
-    "country": "France",
-    "full_name": "Institut Pasteur",
-    "acronym": "I. Pasteur",
-    "id": "Sn8Nt",
-    "y": 1,
-    "z": 94
-  },
-  {
-    "name": "UJM (France)",
-    "country": "France",
-    "full_name": "Université Jean Monnet",
-    "acronym": "UJM",
-    "id": "tIJ02",
-    "y": 1,
-    "z": 70
-  },
-  {
-    "name": "ENS de Lyon (France)",
-    "country": "France",
-    "full_name": "École normale supérieure de Lyon",
-    "acronym": "ENS de Lyon",
-    "id": "kWved",
-    "y": 1,
-    "z": 76
-  },
-  {
-    "name": "Bernhard Nocht Institute for Tropical Medicine (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bernhard Nocht Institute for Tropical Medicine",
-    "id": "grid.424065.1",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "U. Parsi 8 (France)",
-    "country": "France",
-    "full_name": "Université Paris 8 - Vincennes - Saint-Denis",
-    "acronym": "U. Parsi 8",
-    "id": "Uxr7Z",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "UPV (France)",
-    "country": "France",
-    "full_name": "Université Paul-Valéry - Montpellier 3",
-    "acronym": "UPV",
-    "id": "1I7hJ",
-    "y": 1,
-    "z": 40
-  },
-  {
-    "name": "AMU (France)",
-    "country": "France",
-    "full_name": "Aix-Marseille Université",
-    "acronym": "AMU",
-    "id": "xJdyB",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "IRD (France)",
-    "country": "France",
-    "full_name": "Institut de recherche pour le développement",
-    "acronym": "IRD",
-    "id": "Uan45",
-    "y": 1,
-    "z": 214
-  },
-  {
-    "name": "U. Lyon 2 (France)",
-    "country": "France",
-    "full_name": "Université Lumière - Lyon 2",
-    "acronym": "U. Lyon 2",
-    "id": "CUBKB",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "U. Sorbonne Paris Nord (France)",
-    "country": "France",
-    "full_name": "Université Sorbonne Paris Nord",
-    "acronym": "U. Sorbonne Paris Nord",
-    "id": "cqyN7",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "U. Paris (France)",
-    "country": "France",
-    "full_name": "Université de Paris",
-    "acronym": "U. Paris",
-    "id": "5cZyU",
-    "y": 1,
-    "z": 388
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "Heidelberg University (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Heidelberg University",
-    "id": "grid.7700.0",
-    "y": 1,
-    "z": 81
-  },
-  {
-    "name": "Graduate Institute of International and Development Studies (Suisse)",
-    "country": "Suisse",
-    "full_name": "Graduate Institute of International and Development Studies",
-    "id": "grid.424404.2",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "EHESP (France)",
-    "country": "France",
-    "full_name": "École des hautes études en santé publique",
-    "acronym": "EHESP",
-    "id": "SsRkf",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "AP-HM (France)",
-    "country": "France",
-    "full_name": "Assistance publique - Hôpitaux de Marseille",
-    "acronym": "AP-HM",
-    "id": "dUyiC",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "UBx (France)",
-    "country": "France",
-    "full_name": "Université de Bordeaux",
-    "acronym": "UBx",
-    "id": "90I54",
-    "y": 1,
-    "z": 210
-  },
-  {
-    "name": "UGE (France)",
-    "country": "France",
-    "full_name": "Université Gustave Eiffel",
-    "acronym": "UGE",
-    "id": "3Z5e6",
-    "y": 1,
-    "z": 89
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "CANOE (France)",
-    "country": "France",
-    "full_name": "Centre Technologique Nouvelle-Aquitaine Composites & Materiaux Avances",
-    "acronym": "CANOE",
-    "id": "775586340",
-    "y": 1,
-    "z": 14
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Cheikh Anta Diop University (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Cheikh Anta Diop University",
+        "id": "grid.8191.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "EHESP (France)",
+        "country": "France",
+        "full_name": "École des hautes études en santé publique",
+        "acronym": "EHESP",
+        "id": "SsRkf",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "UPV (France)",
+        "country": "France",
+        "full_name": "Université Paul-Valéry - Montpellier 3",
+        "acronym": "UPV",
+        "id": "1I7hJ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "ENS de Lyon (France)",
+        "country": "France",
+        "full_name": "École normale supérieure de Lyon",
+        "acronym": "ENS de Lyon",
+        "id": "kWved",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Graduate Institute of International and Development Studies (Suisse)",
+        "country": "Suisse",
+        "full_name": "Graduate Institute of International and Development Studies",
+        "id": "grid.424404.2",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Lyon 2 (France)",
+        "country": "France",
+        "full_name": "Université Lumière - Lyon 2",
+        "acronym": "U. Lyon 2",
+        "id": "CUBKB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "AP-HM (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "UGE (France)",
+        "country": "France",
+        "full_name": "Université Gustave Eiffel",
+        "acronym": "UGE",
+        "id": "3Z5e6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "CANOE (France)",
+        "country": "France",
+        "full_name": "Centre Technologique Nouvelle-Aquitaine Composites & Materiaux Avances",
+        "acronym": "CANOE",
+        "id": "775586340",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Bernhard Nocht Institute for Tropical Medicine (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bernhard Nocht Institute for Tropical Medicine",
+        "id": "grid.424065.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "U. Parsi 8 (France)",
+        "country": "France",
+        "full_name": "Université Paris 8 - Vincennes - Saint-Denis",
+        "acronym": "U. Parsi 8",
+        "id": "Uxr7Z",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "I. Pasteur (France)",
+        "country": "France",
+        "full_name": "Institut Pasteur",
+        "acronym": "I. Pasteur",
+        "id": "Sn8Nt",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Department of Health and Social Care (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department of Health and Social Care",
+        "id": "grid.57981.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "U. Sorbonne Paris Nord (France)",
+        "country": "France",
+        "full_name": "Université Sorbonne Paris Nord",
+        "acronym": "U. Sorbonne Paris Nord",
+        "id": "cqyN7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      }
+    ]
   }
-]
+}
