@@ -65,8 +65,8 @@ export default class VariablePie extends Component {
                 <GraphTitles
                   lexicon={this.props.lexicon}
                   language={this.props.language}
-                  title={this.props.title.concat(' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name, ' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects, ' projets')}
-                  subtitle={this.props.subtitle}
+                  title={this.props.subtitle.concat('', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name, ' ', this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects, ' projets')}
+                  subtitle={this.props.title}
                 />
                 <HighChartsVariablepie
                   filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
