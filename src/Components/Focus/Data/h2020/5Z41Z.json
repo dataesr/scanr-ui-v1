@@ -1,418 +1,942 @@
-[
-  {
-    "name": "FWF Austrian Science Fund (Autriche)",
-    "country": "Autriche",
-    "full_name": "FWF Austrian Science Fund",
-    "id": "grid.25111.36",
-    "y": 2,
-    "z": 23
+{
+  "all": {
+    "all": [
+      {
+        "name": "Israel Ministry of Health (Israël)",
+        "country": "Israël",
+        "full_name": "Israel Ministry of Health",
+        "id": "grid.414840.d",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 22
+      },
+      {
+        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Scientific and Technological Research Council of Turkey",
+        "id": "grid.426409.d",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 99
+      },
+      {
+        "name": "Research Foundation - Flanders (Belgique)",
+        "country": "Belgique",
+        "full_name": "Research Foundation - Flanders",
+        "id": "grid.434261.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 39
+      },
+      {
+        "name": "Norwegian Cancer Society (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Cancer Society",
+        "id": "grid.454853.b",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "INCa (France)",
+        "country": "France",
+        "full_name": "Institut national du Cancer",
+        "acronym": "INCa",
+        "id": "8dUhI",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias",
+        "id": "grid.483774.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Ministry of Science and Technology (Taïwan)",
+        "country": "Taïwan",
+        "full_name": "Ministry of Science and Technology",
+        "id": "grid.410767.3",
+        "country_level_part": "Pays tiers",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "State Education Development Agency (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "State Education Development Agency",
+        "id": "grid.460254.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 47
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 63
+      },
+      {
+        "name": "National Centre for Research and Development (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Centre for Research and Development",
+        "id": "grid.55047.33",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 46
+      },
+      {
+        "name": "Alleanza Contro il Cancro (Italie)",
+        "country": "Italie",
+        "full_name": "Alleanza Contro il Cancro",
+        "id": "grid.432053.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Slovak Academy of Sciences (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Slovak Academy of Sciences",
+        "id": "grid.419303.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 33
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 51
+      },
+      {
+        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Fundação para a Ciência e Tecnologia",
+        "id": "grid.22919.31",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 96
+      },
+      {
+        "name": "Estonian Research Council (Estonie)",
+        "country": "Estonie",
+        "full_name": "Estonian Research Council",
+        "id": "grid.426153.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 52
+      },
+      {
+        "name": "FWF Austrian Science Fund (Autriche)",
+        "country": "Autriche",
+        "full_name": "FWF Austrian Science Fund",
+        "id": "grid.25111.36",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 23
+      },
+      {
+        "name": "Ministero della Salute (Italie)",
+        "country": "Italie",
+        "full_name": "Ministero della Salute",
+        "id": "grid.415788.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 25
+      },
+      {
+        "name": "Federal Ministry of Education and Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Ministry of Education and Research",
+        "id": "grid.5586.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 26
+      },
+      {
+        "name": "General Secretariat for Research and Technology (Grèce)",
+        "country": "Grèce",
+        "full_name": "General Secretariat for Research and Technology",
+        "id": "grid.438715.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "The Research Council of Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "The Research Council of Norway",
+        "id": "grid.13985.36",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 80
+      },
+      {
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 450
+      },
+      {
+        "name": "Fund for Scientific Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Fund for Scientific Research",
+        "id": "grid.424470.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 46
+      },
+      {
+        "name": "Istituto per lo Studio e la Prevenzione Oncologica (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto per lo Studio e la Prevenzione Oncologica",
+        "id": "grid.417623.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Queen Mary University of London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen Mary University of London",
+        "id": "grid.4868.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 87
+      },
+      {
+        "name": "Azienda Sanitaria Unità Locale di Reggio Emilia (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Sanitaria Unità Locale di Reggio Emilia",
+        "id": "grid.458453.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "U. Lyon 3 (France)",
+        "country": "France",
+        "full_name": "Université Jean Moulin - Lyon 3",
+        "acronym": "U. Lyon 3",
+        "id": "7Gzub",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "CH Léon Berard (France)",
+        "country": "France",
+        "full_name": "Centre hospitalier Léon Berard",
+        "acronym": "CH Léon Berard",
+        "id": "263900060",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Loughborough University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Loughborough University",
+        "id": "grid.6571.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "CEPH (France)",
+        "country": "France",
+        "full_name": "Fondation Jean Dausset-CEPH",
+        "acronym": "CEPH",
+        "id": "YBgh6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 241
+      },
+      {
+        "name": "CGFL (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Georges-François Leclerc",
+        "acronym": "CGFL",
+        "id": "74mVQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 197
+      },
+      {
+        "name": "EHESS (France)",
+        "country": "France",
+        "full_name": "École des hautes études en sciences sociales",
+        "acronym": "EHESS",
+        "id": "y52D7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Unicancer (France)",
+        "country": "France",
+        "full_name": "Unicancer",
+        "acronym": "Unicancer",
+        "id": "532834090",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institut Gustave Roussy (France)",
+        "country": "France",
+        "full_name": "Institut Gustave Roussy",
+        "acronym": "Institut Gustave Roussy",
+        "id": "16RWt",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori",
+        "id": "grid.419563.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "CNGE (France)",
+        "country": "France",
+        "full_name": "College Nat des Généralistes Enseignants",
+        "acronym": "CNGE",
+        "id": "392662185",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "Institut Jules Bordet (Belgique)",
+        "country": "Belgique",
+        "full_name": "Institut Jules Bordet",
+        "id": "grid.418119.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "Predilife (France)",
+        "country": "France",
+        "full_name": "Predilife",
+        "acronym": "Predilife",
+        "id": "453164790",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "Parc de Salut (Espagne)",
+        "country": "Espagne",
+        "full_name": "Parc de Salut",
+        "id": "grid.418476.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 139
+      },
+      {
+        "name": "HCL (France)",
+        "country": "France",
+        "full_name": "Hospices civils de Lyon",
+        "acronym": "HCL",
+        "id": "Y4l0C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino",
+        "id": "grid.432329.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      }
+    ]
   },
-  {
-    "name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias (Espagne)",
-    "country": "Espagne",
-    "full_name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias",
-    "id": "grid.483774.b",
-    "y": 2,
-    "z": 8
-  },
-  {
-    "name": "State Education Development Agency (Lettonie)",
-    "country": "Lettonie",
-    "full_name": "State Education Development Agency",
-    "id": "grid.460254.1",
-    "y": 2,
-    "z": 47
-  },
-  {
-    "name": "Istituto Superiore di Sanità (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Superiore di Sanità",
-    "id": "grid.416651.1",
-    "y": 2,
-    "z": 63
-  },
-  {
-    "name": "The Research Council of Norway (Norvège)",
-    "country": "Norvège",
-    "full_name": "The Research Council of Norway",
-    "id": "grid.13985.36",
-    "y": 2,
-    "z": 80
-  },
-  {
-    "name": "Ministry of Science and Technology (Taïwan)",
-    "country": "Taïwan",
-    "full_name": "Ministry of Science and Technology",
-    "id": "grid.410767.3",
-    "y": 2,
-    "z": 10
-  },
-  {
-    "name": "Scientific and Technological Research Council of Turkey (Turquie)",
-    "country": "Turquie",
-    "full_name": "Scientific and Technological Research Council of Turkey",
-    "id": "grid.426409.d",
-    "y": 2,
-    "z": 99
-  },
-  {
-    "name": "Slovak Academy of Sciences (Slovaquie)",
-    "country": "Slovaquie",
-    "full_name": "Slovak Academy of Sciences",
-    "id": "grid.419303.c",
-    "y": 2,
-    "z": 33
-  },
-  {
-    "name": "Fund for Scientific Research (Belgique)",
-    "country": "Belgique",
-    "full_name": "Fund for Scientific Research",
-    "id": "grid.424470.1",
-    "y": 2,
-    "z": 46
-  },
-  {
-    "name": "Research Foundation - Flanders (Belgique)",
-    "country": "Belgique",
-    "full_name": "Research Foundation - Flanders",
-    "id": "grid.434261.6",
-    "y": 2,
-    "z": 39
-  },
-  {
-    "name": "Fundação para a Ciência e Tecnologia (Portugal)",
-    "country": "Portugal",
-    "full_name": "Fundação para a Ciência e Tecnologia",
-    "id": "grid.22919.31",
-    "y": 2,
-    "z": 96
-  },
-  {
-    "name": "German Aerospace Center (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "German Aerospace Center",
-    "id": "grid.7551.6",
-    "y": 2,
-    "z": 450
-  },
-  {
-    "name": "Federal Ministry of Education and Research (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Federal Ministry of Education and Research",
-    "id": "grid.5586.e",
-    "y": 2,
-    "z": 26
-  },
-  {
-    "name": "Israel Ministry of Health (Israël)",
-    "country": "Israël",
-    "full_name": "Israel Ministry of Health",
-    "id": "grid.414840.d",
-    "y": 2,
-    "z": 22
-  },
-  {
-    "name": "Norwegian Cancer Society (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Cancer Society",
-    "id": "grid.454853.b",
-    "y": 2,
-    "z": 2
-  },
-  {
-    "name": "Alleanza Contro il Cancro (Italie)",
-    "country": "Italie",
-    "full_name": "Alleanza Contro il Cancro",
-    "id": "grid.432053.3",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "Instituto de Salud Carlos III (Espagne)",
-    "country": "Espagne",
-    "full_name": "Instituto de Salud Carlos III",
-    "id": "grid.413448.e",
-    "y": 2,
-    "z": 51
-  },
-  {
-    "name": "General Secretariat for Research and Technology (Grèce)",
-    "country": "Grèce",
-    "full_name": "General Secretariat for Research and Technology",
-    "id": "grid.438715.c",
-    "y": 2,
-    "z": 20
-  },
-  {
-    "name": "National Centre for Research and Development (Pologne)",
-    "country": "Pologne",
-    "full_name": "National Centre for Research and Development",
-    "id": "grid.55047.33",
-    "y": 2,
-    "z": 46
-  },
-  {
-    "name": "INCa (France)",
-    "country": "France",
-    "full_name": "Institut national du Cancer",
-    "acronym": "INCa",
-    "id": "8dUhI",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "Estonian Research Council (Estonie)",
-    "country": "Estonie",
-    "full_name": "Estonian Research Council",
-    "id": "grid.426153.7",
-    "y": 2,
-    "z": 52
-  },
-  {
-    "name": "Ministero della Salute (Italie)",
-    "country": "Italie",
-    "full_name": "Ministero della Salute",
-    "id": "grid.415788.7",
-    "y": 2,
-    "z": 25
-  },
-  {
-    "name": "University of Nottingham (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Nottingham",
-    "id": "grid.4563.4",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "CH Léon Berard (France)",
-    "country": "France",
-    "full_name": "Centre hospitalier Léon Berard",
-    "acronym": "CH Léon Berard",
-    "id": "263900060",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Institut Gustave Roussy (France)",
-    "country": "France",
-    "full_name": "Institut Gustave Roussy",
-    "acronym": "Institut Gustave Roussy",
-    "id": "16RWt",
-    "y": 1,
-    "z": 18
-  },
-  {
-    "name": "University of Cambridge (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Cambridge",
-    "id": "grid.5335.0",
-    "y": 1,
-    "z": 345
-  },
-  {
-    "name": "CNGE (France)",
-    "country": "France",
-    "full_name": "College Nat des Généralistes Enseignants",
-    "acronym": "CNGE",
-    "id": "392662185",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Istituto per lo Studio e la Prevenzione Oncologica (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto per lo Studio e la Prevenzione Oncologica",
-    "id": "grid.417623.5",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University of Manchester (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Manchester",
-    "id": "grid.5379.8",
-    "y": 1,
-    "z": 241
-  },
-  {
-    "name": "UJM (France)",
-    "country": "France",
-    "full_name": "Université Jean Monnet",
-    "acronym": "UJM",
-    "id": "tIJ02",
-    "y": 1,
-    "z": 70
-  },
-  {
-    "name": "CGFL (France)",
-    "country": "France",
-    "full_name": "Centre de lutte contre le cancer Georges-François Leclerc",
-    "acronym": "CGFL",
-    "id": "74mVQ",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori",
-    "id": "grid.419563.c",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Azienda Sanitaria Unità Locale di Reggio Emilia (Italie)",
-    "country": "Italie",
-    "full_name": "Azienda Sanitaria Unità Locale di Reggio Emilia",
-    "id": "grid.458453.b",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
-  },
-  {
-    "name": "Loughborough University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Loughborough University",
-    "id": "grid.6571.5",
-    "y": 1,
-    "z": 46
-  },
-  {
-    "name": "ANSP (France)",
-    "country": "France",
-    "full_name": "Agence nationale de Sante Publique",
-    "acronym": "ANSP",
-    "id": "130022338",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Erasmus MC (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Erasmus MC",
-    "id": "grid.5645.2",
-    "y": 1,
-    "z": 139
-  },
-  {
-    "name": "Parc de Salut (Espagne)",
-    "country": "Espagne",
-    "full_name": "Parc de Salut",
-    "id": "grid.418476.8",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "HCL (France)",
-    "country": "France",
-    "full_name": "Hospices civils de Lyon",
-    "acronym": "HCL",
-    "id": "Y4l0C",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "CEPH (France)",
-    "country": "France",
-    "full_name": "Fondation Jean Dausset-CEPH",
-    "acronym": "CEPH",
-    "id": "YBgh6",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "EHESS (France)",
-    "country": "France",
-    "full_name": "École des hautes études en sciences sociales",
-    "acronym": "EHESS",
-    "id": "y52D7",
-    "y": 1,
-    "z": 50
-  },
-  {
-    "name": "U. Sorbonne Paris Nord (France)",
-    "country": "France",
-    "full_name": "Université Sorbonne Paris Nord",
-    "acronym": "U. Sorbonne Paris Nord",
-    "id": "cqyN7",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "Queen Mary University of London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Queen Mary University of London",
-    "id": "grid.4868.2",
-    "y": 1,
-    "z": 87
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "Predilife (France)",
-    "country": "France",
-    "full_name": "Predilife",
-    "acronym": "Predilife",
-    "id": "453164790",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "U. Lyon 3 (France)",
-    "country": "France",
-    "full_name": "Université Jean Moulin - Lyon 3",
-    "acronym": "U. Lyon 3",
-    "id": "7Gzub",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Institut Jules Bordet (Belgique)",
-    "country": "Belgique",
-    "full_name": "Institut Jules Bordet",
-    "id": "grid.418119.4",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Unicancer (France)",
-    "country": "France",
-    "full_name": "Unicancer",
-    "acronym": "Unicancer",
-    "id": "532834090",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino (Italie)",
-    "country": "Italie",
-    "full_name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino",
-    "id": "grid.432329.d",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "University of California System (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "University of California System",
-    "id": "grid.30389.31",
-    "y": 1,
-    "z": 197
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Israel Ministry of Health (Israël)",
+        "country": "Israël",
+        "full_name": "Israel Ministry of Health",
+        "id": "grid.414840.d",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Scientific and Technological Research Council of Turkey",
+        "id": "grid.426409.d",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Research Foundation - Flanders (Belgique)",
+        "country": "Belgique",
+        "full_name": "Research Foundation - Flanders",
+        "id": "grid.434261.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Norwegian Cancer Society (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Cancer Society",
+        "id": "grid.454853.b",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "INCa (France)",
+        "country": "France",
+        "full_name": "Institut national du Cancer",
+        "acronym": "INCa",
+        "id": "8dUhI",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Foundation for the Promotion of Applied Scientific Research and Technology in Asturias",
+        "id": "grid.483774.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Ministry of Science and Technology (Taïwan)",
+        "country": "Taïwan",
+        "full_name": "Ministry of Science and Technology",
+        "id": "grid.410767.3",
+        "country_level_part": "Pays tiers",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "State Education Development Agency (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "State Education Development Agency",
+        "id": "grid.460254.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "National Centre for Research and Development (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Centre for Research and Development",
+        "id": "grid.55047.33",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Alleanza Contro il Cancro (Italie)",
+        "country": "Italie",
+        "full_name": "Alleanza Contro il Cancro",
+        "id": "grid.432053.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Slovak Academy of Sciences (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Slovak Academy of Sciences",
+        "id": "grid.419303.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 31
+      },
+      {
+        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Fundação para a Ciência e Tecnologia",
+        "id": "grid.22919.31",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "Estonian Research Council (Estonie)",
+        "country": "Estonie",
+        "full_name": "Estonian Research Council",
+        "id": "grid.426153.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "FWF Austrian Science Fund (Autriche)",
+        "country": "Autriche",
+        "full_name": "FWF Austrian Science Fund",
+        "id": "grid.25111.36",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Ministero della Salute (Italie)",
+        "country": "Italie",
+        "full_name": "Ministero della Salute",
+        "id": "grid.415788.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "Federal Ministry of Education and Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Ministry of Education and Research",
+        "id": "grid.5586.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "General Secretariat for Research and Technology (Grèce)",
+        "country": "Grèce",
+        "full_name": "General Secretariat for Research and Technology",
+        "id": "grid.438715.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "The Research Council of Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "The Research Council of Norway",
+        "id": "grid.13985.36",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 23
+      },
+      {
+        "name": "Fund for Scientific Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Fund for Scientific Research",
+        "id": "grid.424470.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "Istituto per lo Studio e la Prevenzione Oncologica (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto per lo Studio e la Prevenzione Oncologica",
+        "id": "grid.417623.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Queen Mary University of London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen Mary University of London",
+        "id": "grid.4868.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Azienda Sanitaria Unità Locale di Reggio Emilia (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Sanitaria Unità Locale di Reggio Emilia",
+        "id": "grid.458453.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "U. Lyon 3 (France)",
+        "country": "France",
+        "full_name": "Université Jean Moulin - Lyon 3",
+        "acronym": "U. Lyon 3",
+        "id": "7Gzub",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CH Léon Berard (France)",
+        "country": "France",
+        "full_name": "Centre hospitalier Léon Berard",
+        "acronym": "CH Léon Berard",
+        "id": "263900060",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Loughborough University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Loughborough University",
+        "id": "grid.6571.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "CEPH (France)",
+        "country": "France",
+        "full_name": "Fondation Jean Dausset-CEPH",
+        "acronym": "CEPH",
+        "id": "YBgh6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "CGFL (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Georges-François Leclerc",
+        "acronym": "CGFL",
+        "id": "74mVQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "EHESS (France)",
+        "country": "France",
+        "full_name": "École des hautes études en sciences sociales",
+        "acronym": "EHESS",
+        "id": "y52D7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Unicancer (France)",
+        "country": "France",
+        "full_name": "Unicancer",
+        "acronym": "Unicancer",
+        "id": "532834090",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institut Gustave Roussy (France)",
+        "country": "France",
+        "full_name": "Institut Gustave Roussy",
+        "acronym": "Institut Gustave Roussy",
+        "id": "16RWt",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori",
+        "id": "grid.419563.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "CNGE (France)",
+        "country": "France",
+        "full_name": "College Nat des Généralistes Enseignants",
+        "acronym": "CNGE",
+        "id": "392662185",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Institut Jules Bordet (Belgique)",
+        "country": "Belgique",
+        "full_name": "Institut Jules Bordet",
+        "id": "grid.418119.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Predilife (France)",
+        "country": "France",
+        "full_name": "Predilife",
+        "acronym": "Predilife",
+        "id": "453164790",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Parc de Salut (Espagne)",
+        "country": "Espagne",
+        "full_name": "Parc de Salut",
+        "id": "grid.418476.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "HCL (France)",
+        "country": "France",
+        "full_name": "Hospices civils de Lyon",
+        "acronym": "HCL",
+        "id": "Y4l0C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Ospedaliera Citta' della Salute e della Scienza di Torino",
+        "id": "grid.432329.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      }
+    ]
   }
-]
+}

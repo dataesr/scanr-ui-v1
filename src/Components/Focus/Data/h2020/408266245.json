@@ -1,236 +1,596 @@
-[
-  {
-    "name": "Ellinogermaniki Agogi (Grèce)",
-    "country": "Grèce",
-    "full_name": "Ellinogermaniki Agogi",
-    "id": "grid.424396.e",
-    "y": 3,
-    "z": 20
+{
+  "all": {
+    "all": [
+      {
+        "name": "Ellinogermaniki Agogi (Grèce)",
+        "country": "Grèce",
+        "full_name": "Ellinogermaniki Agogi",
+        "id": "grid.424396.e",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 20
+      },
+      {
+        "name": "Curtin University (Australie)",
+        "country": "Australie",
+        "full_name": "Curtin University",
+        "id": "grid.1032.0",
+        "country_level_part": "Pays tiers",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Núcleo Interactivo de Astronomia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Núcleo Interactivo de Astronomia",
+        "id": "grid.436761.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "University of Bayreuth (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bayreuth",
+        "id": "grid.7384.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 28
+      },
+      {
+        "name": "Ciência Viva (Portugal)",
+        "country": "Portugal",
+        "full_name": "Ciência Viva",
+        "id": "grid.420768.f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "National Institute for Aerospace Technology (Espagne)",
+        "country": "Espagne",
+        "full_name": "National Institute for Aerospace Technology",
+        "id": "grid.15312.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 230
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "Signosis (Belgique)",
+        "country": "Belgique",
+        "full_name": "Signosis",
+        "id": "grid.426147.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Centrum Badan Kosmicznych (Pologne)",
+        "country": "Pologne",
+        "full_name": "Centrum Badan Kosmicznych",
+        "id": "grid.423929.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "United Kingdom Space Agency (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "United Kingdom Space Agency",
+        "id": "grid.451402.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Devil-Hop (France)",
+        "country": "France",
+        "full_name": "Devil-Hop",
+        "acronym": "Devil-Hop",
+        "id": "807711114",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Graz (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Graz",
+        "id": "grid.5110.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "University of Deusto (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Deusto",
+        "id": "grid.14724.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Dublin City University (Irlande)",
+        "country": "Irlande",
+        "full_name": "Dublin City University",
+        "id": "grid.15596.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 73
+      },
+      {
+        "name": "INTRASOFT International (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "INTRASOFT International",
+        "id": "grid.410461.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 84
+      },
+      {
+        "name": "EPS (France)",
+        "country": "France",
+        "full_name": "European Physical Society",
+        "acronym": "EPS",
+        "id": "411445166",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "ORT Israel (Israël)",
+        "country": "Israël",
+        "full_name": "ORT Israel",
+        "id": "grid.436914.d",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Fondazione Idis Città della Scienza (Italie)",
+        "country": "Italie",
+        "full_name": "Fondazione Idis Città della Scienza",
+        "id": "grid.424421.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Bloomfield Science Museum Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Bloomfield Science Museum Jerusalem",
+        "id": "grid.424253.6",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University of Turku (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Turku",
+        "id": "grid.1374.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 67
+      },
+      {
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "Ars Electronica Center (Autriche)",
+        "country": "Autriche",
+        "full_name": "Ars Electronica Center",
+        "id": "grid.432494.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "European Network of Science Centres and Museums (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Network of Science Centres and Museums",
+        "id": "grid.423613.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Universum Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universum Bremen",
+        "id": "grid.493320.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 158
+      },
+      {
+        "name": "University of Helsinki (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Helsinki",
+        "id": "grid.7737.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 235
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 197
+      },
+      {
+        "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Otto-von-Guericke University Magdeburg",
+        "id": "grid.5807.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      }
+    ]
   },
-  {
-    "name": "Ciência Viva (Portugal)",
-    "country": "Portugal",
-    "full_name": "Ciência Viva",
-    "id": "grid.420768.f",
-    "y": 2,
-    "z": 14
+  "Industrial Leadership": {
+    "Space (SPACE)": [
+      {
+        "name": "National Institute for Aerospace Technology (Espagne)",
+        "country": "Espagne",
+        "full_name": "National Institute for Aerospace Technology",
+        "id": "grid.15312.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Signosis (Belgique)",
+        "country": "Belgique",
+        "full_name": "Signosis",
+        "id": "grid.426147.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centrum Badan Kosmicznych (Pologne)",
+        "country": "Pologne",
+        "full_name": "Centrum Badan Kosmicznych",
+        "id": "grid.423929.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "United Kingdom Space Agency (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "United Kingdom Space Agency",
+        "id": "grid.451402.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Devil-Hop (France)",
+        "country": "France",
+        "full_name": "Devil-Hop",
+        "acronym": "Devil-Hop",
+        "id": "807711114",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Graz (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Graz",
+        "id": "grid.5110.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ellinogermaniki Agogi (Grèce)",
+        "country": "Grèce",
+        "full_name": "Ellinogermaniki Agogi",
+        "id": "grid.424396.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ciência Viva (Portugal)",
+        "country": "Portugal",
+        "full_name": "Ciência Viva",
+        "id": "grid.420768.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Ars Electronica Center (Autriche)",
+        "country": "Autriche",
+        "full_name": "Ars Electronica Center",
+        "id": "grid.432494.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "European Network of Science Centres and Museums (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Network of Science Centres and Museums",
+        "id": "grid.423613.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Universum Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universum Bremen",
+        "id": "grid.493320.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      }
+    ],
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "Curtin University (Australie)",
+        "country": "Australie",
+        "full_name": "Curtin University",
+        "id": "grid.1032.0",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Núcleo Interactivo de Astronomia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Núcleo Interactivo de Astronomia",
+        "id": "grid.436761.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Bayreuth (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bayreuth",
+        "id": "grid.7384.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ellinogermaniki Agogi (Grèce)",
+        "country": "Grèce",
+        "full_name": "Ellinogermaniki Agogi",
+        "id": "grid.424396.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Helsinki (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Helsinki",
+        "id": "grid.7737.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Otto-von-Guericke University Magdeburg",
+        "id": "grid.5807.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   },
-  {
-    "name": "University of Bayreuth (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Bayreuth",
-    "id": "grid.7384.8",
-    "y": 2,
-    "z": 28
-  },
-  {
-    "name": "Núcleo Interactivo de Astronomia (Portugal)",
-    "country": "Portugal",
-    "full_name": "Núcleo Interactivo de Astronomia",
-    "id": "grid.436761.1",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "Curtin University (Australie)",
-    "country": "Australie",
-    "full_name": "Curtin University",
-    "id": "grid.1032.0",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "Signosis (Belgique)",
-    "country": "Belgique",
-    "full_name": "Signosis",
-    "id": "grid.426147.2",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Centrum Badan Kosmicznych (Pologne)",
-    "country": "Pologne",
-    "full_name": "Centrum Badan Kosmicznych",
-    "id": "grid.423929.7",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Devil-Hop (France)",
-    "country": "France",
-    "full_name": "Devil-Hop",
-    "acronym": "Devil-Hop",
-    "id": "807711114",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Technical University of Denmark (Danemark)",
-    "country": "Danemark",
-    "full_name": "Technical University of Denmark",
-    "id": "grid.5170.3",
-    "y": 1,
-    "z": 379
-  },
-  {
-    "name": "National Institute for Aerospace Technology (Espagne)",
-    "country": "Espagne",
-    "full_name": "National Institute for Aerospace Technology",
-    "id": "grid.15312.34",
-    "y": 1,
-    "z": 33
-  },
-  {
-    "name": "United Kingdom Space Agency (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "United Kingdom Space Agency",
-    "id": "grid.451402.6",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Polytechnic University of Turin (Italie)",
-    "country": "Italie",
-    "full_name": "Polytechnic University of Turin",
-    "id": "grid.4800.c",
-    "y": 1,
-    "z": 230
-  },
-  {
-    "name": "University of Graz (Autriche)",
-    "country": "Autriche",
-    "full_name": "University of Graz",
-    "id": "grid.5110.5",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "EPS (France)",
-    "country": "France",
-    "full_name": "European Physical Society",
-    "acronym": "EPS",
-    "id": "411445166",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University of Deusto (Espagne)",
-    "country": "Espagne",
-    "full_name": "University of Deusto",
-    "id": "grid.14724.34",
-    "y": 1,
-    "z": 41
-  },
-  {
-    "name": "INTRASOFT International (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "INTRASOFT International",
-    "id": "grid.410461.6",
-    "y": 1,
-    "z": 84
-  },
-  {
-    "name": "University of Turku (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Turku",
-    "id": "grid.1374.1",
-    "y": 1,
-    "z": 67
-  },
-  {
-    "name": "Dublin City University (Irlande)",
-    "country": "Irlande",
-    "full_name": "Dublin City University",
-    "id": "grid.15596.3e",
-    "y": 1,
-    "z": 73
-  },
-  {
-    "name": "Fondazione Idis Città della Scienza (Italie)",
-    "country": "Italie",
-    "full_name": "Fondazione Idis Città della Scienza",
-    "id": "grid.424421.5",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "ORT Israel (Israël)",
-    "country": "Israël",
-    "full_name": "ORT Israel",
-    "id": "grid.436914.d",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Bloomfield Science Museum Jerusalem (Israël)",
-    "country": "Israël",
-    "full_name": "Bloomfield Science Museum Jerusalem",
-    "id": "grid.424253.6",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "European Network of Science Centres and Museums (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Network of Science Centres and Museums",
-    "id": "grid.423613.1",
-    "y": 1,
-    "z": 21
-  },
-  {
-    "name": "Ars Electronica Center (Autriche)",
-    "country": "Autriche",
-    "full_name": "Ars Electronica Center",
-    "id": "grid.432494.c",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Trinity College Dublin (Irlande)",
-    "country": "Irlande",
-    "full_name": "Trinity College Dublin",
-    "id": "grid.8217.c",
-    "y": 1,
-    "z": 158
-  },
-  {
-    "name": "Leiden University (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Leiden University",
-    "id": "grid.5132.5",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "Universum Bremen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Universum Bremen",
-    "id": "grid.493320.f",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "University of Helsinki (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Helsinki",
-    "id": "grid.7737.4",
-    "y": 1,
-    "z": 235
-  },
-  {
-    "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Otto-von-Guericke University Magdeburg",
-    "id": "grid.5807.a",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "University of California System (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "University of California System",
-    "id": "grid.30389.31",
-    "y": 1,
-    "z": 197
+  "Science with and for Society": {
+    "Science with and for Society (SWAFS)": [
+      {
+        "name": "University of Deusto (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Deusto",
+        "id": "grid.14724.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Dublin City University (Irlande)",
+        "country": "Irlande",
+        "full_name": "Dublin City University",
+        "id": "grid.15596.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "INTRASOFT International (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "INTRASOFT International",
+        "id": "grid.410461.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "EPS (France)",
+        "country": "France",
+        "full_name": "European Physical Society",
+        "acronym": "EPS",
+        "id": "411445166",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Curtin University (Australie)",
+        "country": "Australie",
+        "full_name": "Curtin University",
+        "id": "grid.1032.0",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Núcleo Interactivo de Astronomia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Núcleo Interactivo de Astronomia",
+        "id": "grid.436761.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ORT Israel (Israël)",
+        "country": "Israël",
+        "full_name": "ORT Israel",
+        "id": "grid.436914.d",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Fondazione Idis Città della Scienza (Italie)",
+        "country": "Italie",
+        "full_name": "Fondazione Idis Città della Scienza",
+        "id": "grid.424421.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Bayreuth (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bayreuth",
+        "id": "grid.7384.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ellinogermaniki Agogi (Grèce)",
+        "country": "Grèce",
+        "full_name": "Ellinogermaniki Agogi",
+        "id": "grid.424396.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Bloomfield Science Museum Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Bloomfield Science Museum Jerusalem",
+        "id": "grid.424253.6",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Ciência Viva (Portugal)",
+        "country": "Portugal",
+        "full_name": "Ciência Viva",
+        "id": "grid.420768.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Turku (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Turku",
+        "id": "grid.1374.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   }
-]
+}

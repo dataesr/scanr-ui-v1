@@ -1,263 +1,594 @@
-[
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
+{
+  "all": {
+    "all": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "CPE Lyon (France)",
+        "country": "France",
+        "full_name": "École supérieure de chimie physique électronique de Lyon",
+        "acronym": "CPE Lyon",
+        "id": "CdULA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Amplitude Laser (France)",
+        "country": "France",
+        "full_name": "Amplitude Laser",
+        "acronym": "Amplitude Laser",
+        "id": "gent19",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ECM (France)",
+        "country": "France",
+        "full_name": "Centrale Marseille",
+        "acronym": "ECM",
+        "id": "1tI7C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 210
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "IOTA (France)",
+        "country": "France",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Novae (France)",
+        "country": "France",
+        "full_name": "Novae",
+        "acronym": "Novae",
+        "id": "790655062",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "University of Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Stuttgart",
+        "id": "grid.5719.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 251
+      },
+      {
+        "name": "TRUMPF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TRUMPF",
+        "id": "grid.435016.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AMO (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AMO",
+        "id": "grid.461610.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "University of Milano-Bicocca (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milano-Bicocca",
+        "id": "grid.7563.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 73
+      },
+      {
+        "name": "Institute for Physical Research (Arménie)",
+        "country": "Arménie",
+        "full_name": "Institute for Physical Research",
+        "id": "grid.435052.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Belarusian State University (Biélorussie)",
+        "country": "Biélorussie",
+        "full_name": "Belarusian State University",
+        "id": "grid.17678.3f",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "Lomonosov Moscow State University (Russie)",
+        "country": "Russie",
+        "full_name": "Lomonosov Moscow State University",
+        "id": "grid.14476.30",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "European Organization for Nuclear Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "European Organization for Nuclear Research",
+        "id": "grid.9132.9",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 86
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 197
+      },
+      {
+        "name": "Intelligentsia Consultants (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Intelligentsia Consultants",
+        "id": "grid.435548.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "University of Giessen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Giessen",
+        "id": "grid.8664.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Prysmian Group (Italie)",
+        "country": "Italie",
+        "full_name": "Prysmian Group",
+        "id": "grid.437419.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institute of Physics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Physics",
+        "id": "grid.424881.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Crytur (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crytur",
+        "id": "grid.447944.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Tohoku University (Japon)",
+        "country": "Japon",
+        "full_name": "Tohoku University",
+        "id": "grid.69566.3a",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 8
+      }
+    ]
   },
-  {
-    "name": "Mines Saint-Étienne (France)",
-    "country": "France",
-    "full_name": "École nationale supérieure des mines de Saint-Étienne",
-    "acronym": "Mines Saint-Étienne",
-    "id": "K841M",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "TRUMPF (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "TRUMPF",
-    "id": "grid.435016.5",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "UJM (France)",
-    "country": "France",
-    "full_name": "Université Jean Monnet",
-    "acronym": "UJM",
-    "id": "tIJ02",
-    "y": 1,
-    "z": 70
-  },
-  {
-    "name": "University of Stuttgart (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Stuttgart",
-    "id": "grid.5719.a",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "AMO (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "AMO",
-    "id": "grid.461610.4",
-    "y": 1,
-    "z": 30
-  },
-  {
-    "name": "IOTA (France)",
-    "country": "France",
-    "full_name": "Institut d'optique Graduate School",
-    "acronym": "IOTA",
-    "id": "QtZkX",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
-  },
-  {
-    "name": "Amplitude Laser (France)",
-    "country": "France",
-    "full_name": "Amplitude Laser",
-    "acronym": "Amplitude Laser",
-    "id": "gent19",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "ECM (France)",
-    "country": "France",
-    "full_name": "Centrale Marseille",
-    "acronym": "ECM",
-    "id": "1tI7C",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "ALPHANOV (France)",
-    "country": "France",
-    "full_name": "Alphanov",
-    "acronym": "ALPHANOV",
-    "id": "493635817",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "RWTH Aachen University (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "RWTH Aachen University",
-    "id": "grid.1957.a",
-    "y": 1,
-    "z": 251
-  },
-  {
-    "name": "Novae (France)",
-    "country": "France",
-    "full_name": "Novae",
-    "acronym": "Novae",
-    "id": "790655062",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "AMU (France)",
-    "country": "France",
-    "full_name": "Aix-Marseille Université",
-    "acronym": "AMU",
-    "id": "xJdyB",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "CPE Lyon (France)",
-    "country": "France",
-    "full_name": "École supérieure de chimie physique électronique de Lyon",
-    "acronym": "CPE Lyon",
-    "id": "CdULA",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "University of Eastern Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Eastern Finland",
-    "id": "grid.9668.1",
-    "y": 1,
-    "z": 66
-  },
-  {
-    "name": "University of Southampton (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Southampton",
-    "id": "grid.5491.9",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "UBx (France)",
-    "country": "France",
-    "full_name": "Université de Bordeaux",
-    "acronym": "UBx",
-    "id": "90I54",
-    "y": 1,
-    "z": 210
-  },
-  {
-    "name": "European Organization for Nuclear Research (Suisse)",
-    "country": "Suisse",
-    "full_name": "European Organization for Nuclear Research",
-    "id": "grid.9132.9",
-    "y": 1,
-    "z": 86
-  },
-  {
-    "name": "University of Giessen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Giessen",
-    "id": "grid.8664.c",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Crytur (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Crytur",
-    "id": "grid.447944.e",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Prysmian Group (Italie)",
-    "country": "Italie",
-    "full_name": "Prysmian Group",
-    "id": "grid.437419.c",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "University of Milano-Bicocca (Italie)",
-    "country": "Italie",
-    "full_name": "University of Milano-Bicocca",
-    "id": "grid.7563.7",
-    "y": 1,
-    "z": 73
-  },
-  {
-    "name": "University of California System (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "University of California System",
-    "id": "grid.30389.31",
-    "y": 1,
-    "z": 197
-  },
-  {
-    "name": "Belarusian State University (Biélorussie)",
-    "country": "Biélorussie",
-    "full_name": "Belarusian State University",
-    "id": "grid.17678.3f",
-    "y": 1,
-    "z": 22
-  },
-  {
-    "name": "Tohoku University (Japon)",
-    "country": "Japon",
-    "full_name": "Tohoku University",
-    "id": "grid.69566.3a",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Intelligentsia Consultants (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "Intelligentsia Consultants",
-    "id": "grid.435548.b",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "Institute of Physics (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Institute of Physics",
-    "id": "grid.424881.3",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Institute for Physical Research (Arménie)",
-    "country": "Arménie",
-    "full_name": "Institute for Physical Research",
-    "id": "grid.435052.5",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "U. Lyon 1 (France)",
-    "country": "France",
-    "full_name": "Université Claude Bernard - Lyon 1",
-    "acronym": "U. Lyon 1",
-    "id": "etBz7",
-    "y": 1,
-    "z": 191
-  },
-  {
-    "name": "Lomonosov Moscow State University (Russie)",
-    "country": "Russie",
-    "full_name": "Lomonosov Moscow State University",
-    "id": "grid.14476.30",
-    "y": 1,
-    "z": 11
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 938
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CPE Lyon (France)",
+        "country": "France",
+        "full_name": "École supérieure de chimie physique électronique de Lyon",
+        "acronym": "CPE Lyon",
+        "id": "CdULA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 91
+      },
+      {
+        "name": "Amplitude Laser (France)",
+        "country": "France",
+        "full_name": "Amplitude Laser",
+        "acronym": "Amplitude Laser",
+        "id": "gent19",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "ECM (France)",
+        "country": "France",
+        "full_name": "Centrale Marseille",
+        "acronym": "ECM",
+        "id": "1tI7C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 98
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "IOTA (France)",
+        "country": "France",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Novae (France)",
+        "country": "France",
+        "full_name": "Novae",
+        "acronym": "Novae",
+        "id": "790655062",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "University of Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Stuttgart",
+        "id": "grid.5719.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "TRUMPF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TRUMPF",
+        "id": "grid.435016.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "AMO (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AMO",
+        "id": "grid.461610.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Milano-Bicocca (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milano-Bicocca",
+        "id": "grid.7563.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Institute for Physical Research (Arménie)",
+        "country": "Arménie",
+        "full_name": "Institute for Physical Research",
+        "id": "grid.435052.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Belarusian State University (Biélorussie)",
+        "country": "Biélorussie",
+        "full_name": "Belarusian State University",
+        "id": "grid.17678.3f",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Lomonosov Moscow State University (Russie)",
+        "country": "Russie",
+        "full_name": "Lomonosov Moscow State University",
+        "id": "grid.14476.30",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "European Organization for Nuclear Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "European Organization for Nuclear Research",
+        "id": "grid.9132.9",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Intelligentsia Consultants (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Intelligentsia Consultants",
+        "id": "grid.435548.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Giessen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Giessen",
+        "id": "grid.8664.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Prysmian Group (Italie)",
+        "country": "Italie",
+        "full_name": "Prysmian Group",
+        "id": "grid.437419.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute of Physics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Physics",
+        "id": "grid.424881.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Crytur (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Crytur",
+        "id": "grid.447944.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tohoku University (Japon)",
+        "country": "Japon",
+        "full_name": "Tohoku University",
+        "id": "grid.69566.3a",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 4
+      }
+    ]
   }
-]
+}

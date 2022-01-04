@@ -1,110 +1,252 @@
-[
-  {
-    "name": "Institut Mihajlo Pupin (Serbie)",
-    "country": "Serbie",
-    "full_name": "Institut Mihajlo Pupin",
-    "id": "grid.424650.1",
-    "y": 2,
-    "z": 21
+{
+  "all": {
+    "all": [
+      {
+        "name": "Institut Mihajlo Pupin (Serbie)",
+        "country": "Serbie",
+        "full_name": "Institut Mihajlo Pupin",
+        "id": "grid.424650.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 21
+      },
+      {
+        "name": "Engie (France)",
+        "country": "France",
+        "full_name": "Engie",
+        "acronym": "Engie",
+        "id": "gent70",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Center for Electronics and Microtechnology",
+        "id": "grid.423798.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 86
+      },
+      {
+        "name": "University of Cyprus (Chypre)",
+        "country": "Chypre",
+        "full_name": "University of Cyprus",
+        "id": "grid.6603.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 106
+      },
+      {
+        "name": "Austrian Institute of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Communauté agglo. Paris-Saclay",
+        "acronym": "Paris-Saclay",
+        "id": "200056232",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Munster Technological University (Irlande)",
+        "country": "Irlande",
+        "full_name": "Munster Technological University",
+        "id": "grid.510393.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 125
+      },
+      {
+        "name": "Energies 2050 (France)",
+        "country": "France",
+        "full_name": "Energies 2050",
+        "acronym": "Energies 2050",
+        "id": "539215889",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 156
+      },
+      {
+        "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut de Recerca de l'Energia de Catalunya",
+        "id": "grid.424742.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Sofia Energy Agency (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Sofia Energy Agency",
+        "id": "grid.494493.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   },
-  {
-    "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
-    "country": "Suisse",
-    "full_name": "Swiss Center for Electronics and Microtechnology",
-    "id": "grid.423798.3",
-    "y": 1,
-    "z": 86
-  },
-  {
-    "name": "University of Cyprus (Chypre)",
-    "country": "Chypre",
-    "full_name": "University of Cyprus",
-    "id": "grid.6603.3",
-    "y": 1,
-    "z": 106
-  },
-  {
-    "name": "Engie (France)",
-    "country": "France",
-    "full_name": "Engie",
-    "acronym": "Engie",
-    "id": "gent70",
-    "y": 1,
-    "z": 46
-  },
-  {
-    "name": "Munster Technological University (Irlande)",
-    "country": "Irlande",
-    "full_name": "Munster Technological University",
-    "id": "grid.510393.d",
-    "y": 1,
-    "z": 40
-  },
-  {
-    "name": "Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Communauté agglo. Paris-Saclay",
-    "acronym": "Paris-Saclay",
-    "id": "200056232",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "EDF (France)",
-    "country": "France",
-    "full_name": "Electricité de France",
-    "acronym": "EDF",
-    "id": "gent66",
-    "y": 1,
-    "z": 125
-  },
-  {
-    "name": "Energies 2050 (France)",
-    "country": "France",
-    "full_name": "Energies 2050",
-    "acronym": "Energies 2050",
-    "id": "539215889",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Austrian Institute of Technology (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austrian Institute of Technology",
-    "id": "grid.4332.6",
-    "y": 1,
-    "z": 191
-  },
-  {
-    "name": "Aalborg University (Danemark)",
-    "country": "Danemark",
-    "full_name": "Aalborg University",
-    "id": "grid.5117.2",
-    "y": 1,
-    "z": 156
-  },
-  {
-    "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-    "country": "Italie",
-    "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-    "id": "grid.5196.b",
-    "y": 1,
-    "z": 174
-  },
-  {
-    "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institut de Recerca de l'Energia de Catalunya",
-    "id": "grid.424742.3",
-    "y": 1,
-    "z": 40
-  },
-  {
-    "name": "Sofia Energy Agency (Bulgarie)",
-    "country": "Bulgarie",
-    "full_name": "Sofia Energy Agency",
-    "id": "grid.494493.7",
-    "y": 1,
-    "z": 3
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Institut Mihajlo Pupin (Serbie)",
+        "country": "Serbie",
+        "full_name": "Institut Mihajlo Pupin",
+        "id": "grid.424650.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Engie (France)",
+        "country": "France",
+        "full_name": "Engie",
+        "acronym": "Engie",
+        "id": "gent70",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Center for Electronics and Microtechnology",
+        "id": "grid.423798.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "University of Cyprus (Chypre)",
+        "country": "Chypre",
+        "full_name": "University of Cyprus",
+        "id": "grid.6603.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Austrian Institute of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Communauté agglo. Paris-Saclay",
+        "acronym": "Paris-Saclay",
+        "id": "200056232",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Munster Technological University (Irlande)",
+        "country": "Irlande",
+        "full_name": "Munster Technological University",
+        "id": "grid.510393.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Energies 2050 (France)",
+        "country": "France",
+        "full_name": "Energies 2050",
+        "acronym": "Energies 2050",
+        "id": "539215889",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut de Recerca de l'Energia de Catalunya",
+        "id": "grid.424742.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Sofia Energy Agency (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Sofia Energy Agency",
+        "id": "grid.494493.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   }
-]
+}

@@ -1,411 +1,928 @@
-[
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 6,
-    "z": 852
+{
+  "all": {
+    "all": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 852
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 54
+      },
+      {
+        "name": "Czech Technical University in Prague (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Czech Technical University in Prague",
+        "id": "grid.6652.7",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 89
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 425
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 48
+      },
+      {
+        "name": "Forschungszentrum Jülich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungszentrum Jülich",
+        "id": "grid.8385.6",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 228
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 174
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 2670
+      },
+      {
+        "name": "Galson Sciences (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Galson Sciences",
+        "id": "grid.424900.b",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 4
+      },
+      {
+        "name": "Nuclear Research and Consultancy Group (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Nuclear Research and Consultancy Group",
+        "id": "grid.20542.31",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 22
+      },
+      {
+        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
+        "id": "grid.420019.e",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 103
+      },
+      {
+        "name": "National Nuclear Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Nuclear Laboratory",
+        "id": "grid.270117.2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 19
+      },
+      {
+        "name": "Empresa Nacional de Residuos Radiactivos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Empresa Nacional de Residuos Radiactivos",
+        "id": "grid.17513.31",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 7
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 149
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 268
+      },
+      {
+        "name": "National Institute for Nuclear Physics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Nuclear Physics",
+        "id": "grid.6045.7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 119
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 125
+      },
+      {
+        "name": "ANDRA (France)",
+        "country": "France",
+        "full_name": "Agence nationale pour la gestion des déchets radioactifs",
+        "acronym": "ANDRA",
+        "id": "3Hrf2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 9
+      },
+      {
+        "name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen",
+        "id": "grid.425417.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 3
+      },
+      {
+        "name": "Technical University of Sofia (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Technical University of Sofia",
+        "id": "grid.6981.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "Federal Institute For Materials Research and Testing (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Institute For Materials Research and Testing",
+        "id": "grid.71566.33",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 27
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 88
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 575
+      },
+      {
+        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Research Institute Rez",
+        "id": "grid.4278.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 31
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 124
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 111
+      },
+      {
+        "name": "Ansaldo (Italie)",
+        "country": "Italie",
+        "full_name": "Ansaldo",
+        "id": "grid.12513.34",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 47
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 241
+      },
+      {
+        "name": "Research Centre Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Research Centre Rez",
+        "id": "grid.423938.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "Institute for Nuclear Research Pitesti (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Institute for Nuclear Research Pitesti",
+        "id": "grid.425839.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "Deutsche Montan Technologie (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Deutsche Montan Technologie",
+        "id": "grid.443895.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "University of Helsinki (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Helsinki",
+        "id": "grid.7737.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 235
+      },
+      {
+        "name": "Autonomous University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Madrid",
+        "id": "grid.5515.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 73
+      },
+      {
+        "name": "Center for Physical Sciences and Technology (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Center for Physical Sciences and Technology",
+        "id": "grid.425985.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 554
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 386
+      },
+      {
+        "name": "University of Sheffield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Sheffield",
+        "id": "grid.11835.3e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 188
+      },
+      {
+        "name": "Amphos 21 (Espagne)",
+        "country": "Espagne",
+        "full_name": "Amphos 21",
+        "id": "grid.424036.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 16
+      },
+      {
+        "name": "U. Montpellier (France)",
+        "country": "France",
+        "full_name": "Université de Montpellier",
+        "acronym": "U. Montpellier",
+        "id": "7yd5d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 211
+      },
+      {
+        "name": "Instytut Chemii i Techniki Jadrowej (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Chemii i Techniki Jadrowej",
+        "id": "grid.418850.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "National Cooperative for the Disposal of Radioactive Waste (Suisse)",
+        "country": "Suisse",
+        "full_name": "National Cooperative for the Disposal of Radioactive Waste",
+        "id": "grid.425451.3",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Swedish Nuclear Fuel and Waste Management (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish Nuclear Fuel and Waste Management",
+        "id": "grid.37678.3d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Posiva (Finlande)",
+        "country": "Finlande",
+        "full_name": "Posiva",
+        "id": "grid.425535.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Radioactive Waste Repository Authority (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Radioactive Waste Repository Authority",
+        "id": "grid.437657.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Vuje (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Vuje",
+        "id": "grid.426558.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "U. Poitiers (France)",
+        "country": "France",
+        "full_name": "Université de Poitiers",
+        "acronym": "U. Poitiers",
+        "id": "hlX1r",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 31
+      },
+      {
+        "name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment",
+        "id": "grid.434289.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Lithuanian Energy Institute (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian Energy Institute",
+        "id": "grid.20653.32",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 26
+      },
+      {
+        "name": "Technical University of Liberec (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Technical University of Liberec",
+        "id": "grid.6912.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Costruzioni Apparecchiature Elettroniche Nucleari (Italie)",
+        "country": "Italie",
+        "full_name": "Costruzioni Apparecchiature Elettroniche Nucleari",
+        "id": "grid.431991.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 14
+      }
+    ]
   },
-  {
-    "name": "Czech Technical University in Prague (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Czech Technical University in Prague",
-    "id": "grid.6652.7",
-    "y": 5,
-    "z": 89
-  },
-  {
-    "name": "Belgian Nuclear Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Belgian Nuclear Research Centre",
-    "id": "grid.8953.7",
-    "y": 5,
-    "z": 54
-  },
-  {
-    "name": "Forschungszentrum Jülich (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Forschungszentrum Jülich",
-    "id": "grid.8385.6",
-    "y": 4,
-    "z": 228
-  },
-  {
-    "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-    "country": "Italie",
-    "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-    "id": "grid.5196.b",
-    "y": 4,
-    "z": 174
-  },
-  {
-    "name": "VTT Technical Research Centre of Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "VTT Technical Research Centre of Finland",
-    "id": "grid.6324.3",
-    "y": 4,
-    "z": 425
-  },
-  {
-    "name": "IRSN (France)",
-    "country": "France",
-    "full_name": "Institut de radioprotection et de sûreté nucléaire",
-    "acronym": "IRSN",
-    "id": "86GK4",
-    "y": 4,
-    "z": 48
-  },
-  {
-    "name": "Galson Sciences (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Galson Sciences",
-    "id": "grid.424900.b",
-    "y": 4,
-    "z": 4
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 4,
-    "z": 2670
-  },
-  {
-    "name": "Nuclear Research and Consultancy Group (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Nuclear Research and Consultancy Group",
-    "id": "grid.20542.31",
-    "y": 3,
-    "z": 22
-  },
-  {
-    "name": "Empresa Nacional de Residuos Radiactivos (Espagne)",
-    "country": "Espagne",
-    "full_name": "Empresa Nacional de Residuos Radiactivos",
-    "id": "grid.17513.31",
-    "y": 3,
-    "z": 7
-  },
-  {
-    "name": "National Institute for Nuclear Physics (Italie)",
-    "country": "Italie",
-    "full_name": "National Institute for Nuclear Physics",
-    "id": "grid.6045.7",
-    "y": 3,
-    "z": 119
-  },
-  {
-    "name": "Directorate-General Joint Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Directorate-General Joint Research Centre",
-    "id": "grid.489339.c",
-    "y": 3,
-    "z": 149
-  },
-  {
-    "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
-    "country": "Espagne",
-    "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
-    "id": "grid.420019.e",
-    "y": 3,
-    "z": 103
-  },
-  {
-    "name": "National Nuclear Laboratory (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "National Nuclear Laboratory",
-    "id": "grid.270117.2",
-    "y": 3,
-    "z": 19
-  },
-  {
-    "name": "Karlsruhe Institute of Technology (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Karlsruhe Institute of Technology",
-    "id": "grid.7892.4",
-    "y": 3,
-    "z": 268
-  },
-  {
-    "name": "EDF (France)",
-    "country": "France",
-    "full_name": "Electricité de France",
-    "acronym": "EDF",
-    "id": "gent66",
-    "y": 3,
-    "z": 125
-  },
-  {
-    "name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen (Belgique)",
-    "country": "Belgique",
-    "full_name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen",
-    "id": "grid.425417.1",
-    "y": 3,
-    "z": 3
-  },
-  {
-    "name": "ANDRA (France)",
-    "country": "France",
-    "full_name": "Agence nationale pour la gestion des déchets radioactifs",
-    "acronym": "ANDRA",
-    "id": "3Hrf2",
-    "y": 3,
-    "z": 9
-  },
-  {
-    "name": "National Centre of Scientific Research Demokritos (Grèce)",
-    "country": "Grèce",
-    "full_name": "National Centre of Scientific Research Demokritos",
-    "id": "grid.6083.d",
-    "y": 2,
-    "z": 111
-  },
-  {
-    "name": "Ansaldo (Italie)",
-    "country": "Italie",
-    "full_name": "Ansaldo",
-    "id": "grid.12513.34",
-    "y": 2,
-    "z": 47
-  },
-  {
-    "name": "Politecnico di Milano (Italie)",
-    "country": "Italie",
-    "full_name": "Politecnico di Milano",
-    "id": "grid.4643.5",
-    "y": 2,
-    "z": 386
-  },
-  {
-    "name": "Center for Physical Sciences and Technology (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "Center for Physical Sciences and Technology",
-    "id": "grid.425985.7",
-    "y": 2,
-    "z": 12
-  },
-  {
-    "name": "Research Centre Rez (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Research Centre Rez",
-    "id": "grid.423938.7",
-    "y": 2,
-    "z": 32
-  },
-  {
-    "name": "Federal Institute For Materials Research and Testing (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Federal Institute For Materials Research and Testing",
-    "id": "grid.71566.33",
-    "y": 2,
-    "z": 27
-  },
-  {
-    "name": "University of Manchester (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Manchester",
-    "id": "grid.5379.8",
-    "y": 2,
-    "z": 241
-  },
-  {
-    "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Nuclear Research Institute Rez",
-    "id": "grid.4278.9",
-    "y": 2,
-    "z": 31
-  },
-  {
-    "name": "Autonomous University of Madrid (Espagne)",
-    "country": "Espagne",
-    "full_name": "Autonomous University of Madrid",
-    "id": "grid.5515.4",
-    "y": 2,
-    "z": 73
-  },
-  {
-    "name": "Deutsche Montan Technologie (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Deutsche Montan Technologie",
-    "id": "grid.443895.7",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 2,
-    "z": 575
-  },
-  {
-    "name": "Institute for Nuclear Research Pitesti (Roumanie)",
-    "country": "Roumanie",
-    "full_name": "Institute for Nuclear Research Pitesti",
-    "id": "grid.425839.1",
-    "y": 2,
-    "z": 13
-  },
-  {
-    "name": "Spanish National Research Council (Espagne)",
-    "country": "Espagne",
-    "full_name": "Spanish National Research Council",
-    "id": "grid.4711.3",
-    "y": 2,
-    "z": 554
-  },
-  {
-    "name": "Paul Scherrer Institute (Suisse)",
-    "country": "Suisse",
-    "full_name": "Paul Scherrer Institute",
-    "id": "grid.5991.4",
-    "y": 2,
-    "z": 88
-  },
-  {
-    "name": "IMT (France)",
-    "country": "France",
-    "full_name": "Institut Mines-Télécom",
-    "acronym": "IMT",
-    "id": "6Th4v",
-    "y": 2,
-    "z": 124
-  },
-  {
-    "name": "Technical University of Sofia (Bulgarie)",
-    "country": "Bulgarie",
-    "full_name": "Technical University of Sofia",
-    "id": "grid.6981.6",
-    "y": 2,
-    "z": 18
-  },
-  {
-    "name": "University of Sheffield (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Sheffield",
-    "id": "grid.11835.3e",
-    "y": 2,
-    "z": 188
-  },
-  {
-    "name": "University of Helsinki (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Helsinki",
-    "id": "grid.7737.4",
-    "y": 2,
-    "z": 235
-  },
-  {
-    "name": "Amphos 21 (Espagne)",
-    "country": "Espagne",
-    "full_name": "Amphos 21",
-    "id": "grid.424036.7",
-    "y": 2,
-    "z": 16
-  },
-  {
-    "name": "Instytut Chemii i Techniki Jadrowej (Pologne)",
-    "country": "Pologne",
-    "full_name": "Instytut Chemii i Techniki Jadrowej",
-    "id": "grid.418850.0",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "U. Montpellier (France)",
-    "country": "France",
-    "full_name": "Université de Montpellier",
-    "acronym": "U. Montpellier",
-    "id": "7yd5d",
-    "y": 2,
-    "z": 211
-  },
-  {
-    "name": "Vuje (Slovaquie)",
-    "country": "Slovaquie",
-    "full_name": "Vuje",
-    "id": "grid.426558.8",
-    "y": 2,
-    "z": 8
-  },
-  {
-    "name": "Swedish Nuclear Fuel and Waste Management (Suède)",
-    "country": "Suède",
-    "full_name": "Swedish Nuclear Fuel and Waste Management",
-    "id": "grid.37678.3d",
-    "y": 2,
-    "z": 5
-  },
-  {
-    "name": "Radioactive Waste Repository Authority (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Radioactive Waste Repository Authority",
-    "id": "grid.437657.4",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "Lithuanian Energy Institute (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "Lithuanian Energy Institute",
-    "id": "grid.20653.32",
-    "y": 2,
-    "z": 26
-  },
-  {
-    "name": "Technical University of Liberec (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Technical University of Liberec",
-    "id": "grid.6912.c",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "U. Poitiers (France)",
-    "country": "France",
-    "full_name": "Université de Poitiers",
-    "acronym": "U. Poitiers",
-    "id": "hlX1r",
-    "y": 2,
-    "z": 31
-  },
-  {
-    "name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment",
-    "id": "grid.434289.0",
-    "y": 2,
-    "z": 2
-  },
-  {
-    "name": "Posiva (Finlande)",
-    "country": "Finlande",
-    "full_name": "Posiva",
-    "id": "grid.425535.0",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "National Cooperative for the Disposal of Radioactive Waste (Suisse)",
-    "country": "Suisse",
-    "full_name": "National Cooperative for the Disposal of Radioactive Waste",
-    "id": "grid.425451.3",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "Costruzioni Apparecchiature Elettroniche Nucleari (Italie)",
-    "country": "Italie",
-    "full_name": "Costruzioni Apparecchiature Elettroniche Nucleari",
-    "id": "grid.431991.7",
-    "y": 2,
-    "z": 14
+  "Euratom": {
+    "Euratom (EURATOM)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 66
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 48
+      },
+      {
+        "name": "Czech Technical University in Prague (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Czech Technical University in Prague",
+        "id": "grid.6652.7",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 16
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 37
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 41
+      },
+      {
+        "name": "Forschungszentrum Jülich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungszentrum Jülich",
+        "id": "grid.8385.6",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 14
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 29
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 29
+      },
+      {
+        "name": "Galson Sciences (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Galson Sciences",
+        "id": "grid.424900.b",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 4
+      },
+      {
+        "name": "Nuclear Research and Consultancy Group (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Nuclear Research and Consultancy Group",
+        "id": "grid.20542.31",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 22
+      },
+      {
+        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
+        "id": "grid.420019.e",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 37
+      },
+      {
+        "name": "National Nuclear Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Nuclear Laboratory",
+        "id": "grid.270117.2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 17
+      },
+      {
+        "name": "Empresa Nacional de Residuos Radiactivos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Empresa Nacional de Residuos Radiactivos",
+        "id": "grid.17513.31",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 7
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 40
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 37
+      },
+      {
+        "name": "National Institute for Nuclear Physics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Nuclear Physics",
+        "id": "grid.6045.7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 5
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 43
+      },
+      {
+        "name": "ANDRA (France)",
+        "country": "France",
+        "full_name": "Agence nationale pour la gestion des déchets radioactifs",
+        "acronym": "ANDRA",
+        "id": "3Hrf2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 7
+      },
+      {
+        "name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Nationale Instelling voor Radioactief Aval en verijkte Splijtstoffen",
+        "id": "grid.425417.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 3
+      },
+      {
+        "name": "Technical University of Sofia (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Technical University of Sofia",
+        "id": "grid.6981.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Federal Institute For Materials Research and Testing (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Federal Institute For Materials Research and Testing",
+        "id": "grid.71566.33",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 28
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 23
+      },
+      {
+        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Research Institute Rez",
+        "id": "grid.4278.9",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 29
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Ansaldo (Italie)",
+        "country": "Italie",
+        "full_name": "Ansaldo",
+        "id": "grid.12513.34",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Research Centre Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Research Centre Rez",
+        "id": "grid.423938.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 30
+      },
+      {
+        "name": "Institute for Nuclear Research Pitesti (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Institute for Nuclear Research Pitesti",
+        "id": "grid.425839.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "Deutsche Montan Technologie (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Deutsche Montan Technologie",
+        "id": "grid.443895.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "University of Helsinki (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Helsinki",
+        "id": "grid.7737.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Autonomous University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Madrid",
+        "id": "grid.5515.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Center for Physical Sciences and Technology (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Center for Physical Sciences and Technology",
+        "id": "grid.425985.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "University of Sheffield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Sheffield",
+        "id": "grid.11835.3e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Amphos 21 (Espagne)",
+        "country": "Espagne",
+        "full_name": "Amphos 21",
+        "id": "grid.424036.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "U. Montpellier (France)",
+        "country": "France",
+        "full_name": "Université de Montpellier",
+        "acronym": "U. Montpellier",
+        "id": "7yd5d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Instytut Chemii i Techniki Jadrowej (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Chemii i Techniki Jadrowej",
+        "id": "grid.418850.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "National Cooperative for the Disposal of Radioactive Waste (Suisse)",
+        "country": "Suisse",
+        "full_name": "National Cooperative for the Disposal of Radioactive Waste",
+        "id": "grid.425451.3",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Swedish Nuclear Fuel and Waste Management (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish Nuclear Fuel and Waste Management",
+        "id": "grid.37678.3d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Posiva (Finlande)",
+        "country": "Finlande",
+        "full_name": "Posiva",
+        "id": "grid.425535.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Radioactive Waste Repository Authority (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Radioactive Waste Repository Authority",
+        "id": "grid.437657.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Vuje (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Vuje",
+        "id": "grid.426558.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "U. Poitiers (France)",
+        "country": "France",
+        "full_name": "Université de Poitiers",
+        "acronym": "U. Poitiers",
+        "id": "hlX1r",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Underground Research Infrastructure for Disposal of nuclear waste in a Clay Environment",
+        "id": "grid.434289.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Lithuanian Energy Institute (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian Energy Institute",
+        "id": "grid.20653.32",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 15
+      },
+      {
+        "name": "Technical University of Liberec (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Technical University of Liberec",
+        "id": "grid.6912.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Costruzioni Apparecchiature Elettroniche Nucleari (Italie)",
+        "country": "Italie",
+        "full_name": "Costruzioni Apparecchiature Elettroniche Nucleari",
+        "id": "grid.431991.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      }
+    ]
   }
-]
+}

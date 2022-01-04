@@ -1,221 +1,504 @@
-[
-  {
-    "name": "U. Lille (France)",
-    "country": "France",
-    "full_name": "Université de Lille",
-    "acronym": "U. Lille",
-    "id": "Szqy5",
-    "y": 1,
-    "z": 124
+{
+  "all": {
+    "all": [
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "ENGEES (France)",
+        "country": "France",
+        "full_name": "École nationale du génie de l'eau et de l'environnement de Strasbourg",
+        "acronym": "ENGEES",
+        "id": "YPOQX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "Onze Lieve Vrouwziekenhuis Hospital (Belgique)",
+        "country": "Belgique",
+        "full_name": "Onze Lieve Vrouwziekenhuis Hospital",
+        "id": "grid.416672.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 295
+      },
+      {
+        "name": "Italian Institute of Technology (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Institute of Technology",
+        "id": "grid.25786.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 133
+      },
+      {
+        "name": "European Institute of Oncology (Italie)",
+        "country": "Italie",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 305
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Télécom Paris (France)",
+        "country": "France",
+        "full_name": "Télécom Paris",
+        "acronym": "Télécom Paris",
+        "id": "K6jgY",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "INSA Strasbourg (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Strasbourg",
+        "acronym": "INSA Strasbourg",
+        "id": "ab5z5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "U. Strasbourg (France)",
+        "country": "France",
+        "full_name": "Université de Strasbourg",
+        "acronym": "U. Strasbourg",
+        "id": "4k25D",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 148
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 407
+      },
+      {
+        "name": "Camelot Biomedical Systems (Italie)",
+        "country": "Italie",
+        "full_name": "Camelot Biomedical Systems",
+        "id": "grid.433175.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 176
+      },
+      {
+        "name": "University of Verona (Italie)",
+        "country": "Italie",
+        "full_name": "University of Verona",
+        "id": "grid.5611.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 162
+      },
+      {
+        "name": "Pintail (Irlande)",
+        "country": "Irlande",
+        "full_name": "Pintail",
+        "id": "grid.425490.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      }
+    ]
   },
-  {
-    "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-    "country": "Espagne",
-    "full_name": "Vall d'Hebron Institut de Recerca",
-    "id": "grid.430994.3",
-    "y": 1,
-    "z": 57
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "ENGEES (France)",
+        "country": "France",
+        "full_name": "École nationale du génie de l'eau et de l'environnement de Strasbourg",
+        "acronym": "ENGEES",
+        "id": "YPOQX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "IP Paris (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Paris",
+        "acronym": "IP Paris",
+        "id": "kYR50",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Onze Lieve Vrouwziekenhuis Hospital (Belgique)",
+        "country": "Belgique",
+        "full_name": "Onze Lieve Vrouwziekenhuis Hospital",
+        "id": "grid.416672.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Italian Institute of Technology (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Institute of Technology",
+        "id": "grid.25786.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "European Institute of Oncology (Italie)",
+        "country": "Italie",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Télécom Paris (France)",
+        "country": "France",
+        "full_name": "Télécom Paris",
+        "acronym": "Télécom Paris",
+        "id": "K6jgY",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "INSA Strasbourg (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Strasbourg",
+        "acronym": "INSA Strasbourg",
+        "id": "ab5z5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "U. Strasbourg (France)",
+        "country": "France",
+        "full_name": "Université de Strasbourg",
+        "acronym": "U. Strasbourg",
+        "id": "4k25D",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "Camelot Biomedical Systems (Italie)",
+        "country": "Italie",
+        "full_name": "Camelot Biomedical Systems",
+        "id": "grid.433175.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 139
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "University of Verona (Italie)",
+        "country": "Italie",
+        "full_name": "University of Verona",
+        "id": "grid.5611.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      }
+    ]
   },
-  {
-    "name": "Télécom Paris (France)",
-    "country": "France",
-    "full_name": "Télécom Paris",
-    "acronym": "Télécom Paris",
-    "id": "K6jgY",
-    "y": 1,
-    "z": 46
-  },
-  {
-    "name": "Sant'Anna School of Advanced Studies (Italie)",
-    "country": "Italie",
-    "full_name": "Sant'Anna School of Advanced Studies",
-    "id": "grid.263145.7",
-    "y": 1,
-    "z": 95
-  },
-  {
-    "name": "Politecnico di Milano (Italie)",
-    "country": "Italie",
-    "full_name": "Politecnico di Milano",
-    "id": "grid.4643.5",
-    "y": 1,
-    "z": 386
-  },
-  {
-    "name": "INSA Strasbourg (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences appliquées de Strasbourg",
-    "acronym": "INSA Strasbourg",
-    "id": "ab5z5",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "Onze Lieve Vrouwziekenhuis Hospital (Belgique)",
-    "country": "Belgique",
-    "full_name": "Onze Lieve Vrouwziekenhuis Hospital",
-    "id": "grid.416672.0",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Imperial College London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Imperial College London",
-    "id": "grid.7445.2",
-    "y": 1,
-    "z": 305
-  },
-  {
-    "name": "IMT (France)",
-    "country": "France",
-    "full_name": "Institut Mines-Télécom",
-    "acronym": "IMT",
-    "id": "6Th4v",
-    "y": 1,
-    "z": 124
-  },
-  {
-    "name": "University of Pisa (Italie)",
-    "country": "Italie",
-    "full_name": "University of Pisa",
-    "id": "grid.5395.a",
-    "y": 1,
-    "z": 176
-  },
-  {
-    "name": "Inria (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche en informatique et en automatique",
-    "acronym": "Inria",
-    "id": "E1Wdn",
-    "y": 1,
-    "z": 295
-  },
-  {
-    "name": "U. Strasbourg (France)",
-    "country": "France",
-    "full_name": "Université de Strasbourg",
-    "acronym": "U. Strasbourg",
-    "id": "4k25D",
-    "y": 1,
-    "z": 148
-  },
-  {
-    "name": "Delft University of Technology (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Delft University of Technology",
-    "id": "grid.5292.c",
-    "y": 1,
-    "z": 407
-  },
-  {
-    "name": "HUS (France)",
-    "country": "France",
-    "full_name": "Les Hôpitaux Universitaires de Strasbourg",
-    "acronym": "HUS",
-    "id": "e1S12",
-    "y": 1,
-    "z": 18
-  },
-  {
-    "name": "Universitat Politècnica de Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Universitat Politècnica de Catalunya",
-    "id": "grid.6835.8",
-    "y": 1,
-    "z": 212
-  },
-  {
-    "name": "University of Verona (Italie)",
-    "country": "Italie",
-    "full_name": "University of Verona",
-    "id": "grid.5611.3",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "European Institute of Oncology (Italie)",
-    "country": "Italie",
-    "full_name": "European Institute of Oncology",
-    "id": "grid.15667.33",
-    "y": 1,
-    "z": 21
-  },
-  {
-    "name": "ENGEES (France)",
-    "country": "France",
-    "full_name": "École nationale du génie de l'eau et de l'environnement de Strasbourg",
-    "acronym": "ENGEES",
-    "id": "YPOQX",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "Italian Institute of Technology (Italie)",
-    "country": "Italie",
-    "full_name": "Italian Institute of Technology",
-    "id": "grid.25786.3e",
-    "y": 1,
-    "z": 133
-  },
-  {
-    "name": "KU Leuven (Belgique)",
-    "country": "Belgique",
-    "full_name": "KU Leuven",
-    "id": "grid.5596.f",
-    "y": 1,
-    "z": 489
-  },
-  {
-    "name": "CLI (France)",
-    "country": "France",
-    "full_name": "Centrale Lille Institut",
-    "acronym": "CLI",
-    "id": "54VTe",
-    "y": 1,
-    "z": 47
-  },
-  {
-    "name": "IP Paris (France)",
-    "country": "France",
-    "full_name": "Institut polytechnique de Paris",
-    "acronym": "IP Paris",
-    "id": "kYR50",
-    "y": 1,
-    "z": 103
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "Camelot Biomedical Systems (Italie)",
-    "country": "Italie",
-    "full_name": "Camelot Biomedical Systems",
-    "id": "grid.433175.7",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University College Dublin (Irlande)",
-    "country": "Irlande",
-    "full_name": "University College Dublin",
-    "id": "grid.7886.1",
-    "y": 1,
-    "z": 162
-  },
-  {
-    "name": "Pintail (Irlande)",
-    "country": "Irlande",
-    "full_name": "Pintail",
-    "id": "grid.425490.e",
-    "y": 1,
-    "z": 16
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Pintail (Irlande)",
+        "country": "Irlande",
+        "full_name": "Pintail",
+        "id": "grid.425490.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      }
+    ]
   }
-]
+}

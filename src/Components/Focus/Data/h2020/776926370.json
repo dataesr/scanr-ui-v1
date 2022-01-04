@@ -1,280 +1,634 @@
-[
-  {
-    "name": "IRT B-Com (France)",
-    "country": "France",
-    "full_name": "IRT B-COM",
-    "acronym": "IRT B-Com",
-    "id": "crALB",
-    "y": 1,
-    "z": 14
+{
+  "all": {
+    "all": [
+      {
+        "name": "Barcelona Institute for Global Health (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Institut Català d'Oncologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català d'Oncologia",
+        "id": "grid.418701.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Västra Götaland Regional Council (Suède)",
+        "country": "Suède",
+        "full_name": "Västra Götaland Regional Council",
+        "id": "grid.452005.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 166
+      },
+      {
+        "name": "Nofer Institute of Occupational Medicine (Pologne)",
+        "country": "Pologne",
+        "full_name": "Nofer Institute of Occupational Medicine",
+        "id": "grid.418868.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 162
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 149
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 137
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 388
+      },
+      {
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 132
+      },
+      {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 305
+      },
+      {
+        "name": "University Hospital Würzburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Würzburg",
+        "id": "grid.411760.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Sapienza University of Rome (Italie)",
+        "country": "Italie",
+        "full_name": "Sapienza University of Rome",
+        "id": "grid.7841.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "Polytechnic Institute of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "Polytechnic Institute of Coimbra",
+        "id": "grid.88832.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Philipp University of Marburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Philipp University of Marburg",
+        "id": "grid.10253.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Johannes Gutenberg University of Mainz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Johannes Gutenberg University of Mainz",
+        "id": "grid.5802.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 273
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "European Institute for Biomedical Imaging Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "European Institute for Biomedical Imaging Research",
+        "id": "grid.424274.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "IRT B-Com (France)",
+        "country": "France",
+        "full_name": "IRT B-COM",
+        "acronym": "IRT B-Com",
+        "id": "crALB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Rechts der Isar Hospital (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rechts der Isar Hospital",
+        "id": "grid.15474.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Otto-von-Guericke University Magdeburg",
+        "id": "grid.5807.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Institut Català de la Salut (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català de la Salut",
+        "id": "grid.22061.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Antoni van Leeuwenhoek Hospital",
+        "id": "grid.430814.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 220
+      }
+    ]
   },
-  {
-    "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Antoni van Leeuwenhoek Hospital",
-    "id": "grid.430814.a",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "University Hospital Würzburg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University Hospital Würzburg",
-    "id": "grid.411760.5",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "European Institute for Biomedical Imaging Research (Autriche)",
-    "country": "Autriche",
-    "full_name": "European Institute for Biomedical Imaging Research",
-    "id": "grid.424274.3",
-    "y": 1,
-    "z": 12
-  },
-  {
-    "name": "Istituto Superiore di Sanità (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Superiore di Sanità",
-    "id": "grid.416651.1",
-    "y": 1,
-    "z": 63
-  },
-  {
-    "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Otto-von-Guericke University Magdeburg",
-    "id": "grid.5807.a",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Johannes Gutenberg University of Mainz (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Johannes Gutenberg University of Mainz",
-    "id": "grid.5802.f",
-    "y": 1,
-    "z": 81
-  },
-  {
-    "name": "Ghent University (Belgique)",
-    "country": "Belgique",
-    "full_name": "Ghent University",
-    "id": "grid.5342.0",
-    "y": 1,
-    "z": 273
-  },
-  {
-    "name": "Philipp University of Marburg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Philipp University of Marburg",
-    "id": "grid.10253.35",
-    "y": 1,
-    "z": 29
-  },
-  {
-    "name": "Imperial College London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Imperial College London",
-    "id": "grid.7445.2",
-    "y": 1,
-    "z": 305
-  },
-  {
-    "name": "Helmholtz Zentrum München (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Helmholtz Zentrum München",
-    "id": "grid.4567.0",
-    "y": 1,
-    "z": 65
-  },
-  {
-    "name": "Nofer Institute of Occupational Medicine (Pologne)",
-    "country": "Pologne",
-    "full_name": "Nofer Institute of Occupational Medicine",
-    "id": "grid.418868.b",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Autonomous University of Barcelona (Espagne)",
-    "country": "Espagne",
-    "full_name": "Autonomous University of Barcelona",
-    "id": "grid.7080.f",
-    "y": 1,
-    "z": 137
-  },
-  {
-    "name": "Newcastle University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Newcastle University",
-    "id": "grid.1006.7",
-    "y": 1,
-    "z": 149
-  },
-  {
-    "name": "University College Dublin (Irlande)",
-    "country": "Irlande",
-    "full_name": "University College Dublin",
-    "id": "grid.7886.1",
-    "y": 1,
-    "z": 162
-  },
-  {
-    "name": "Institut Català de la Salut (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institut Català de la Salut",
-    "id": "grid.22061.37",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "University of Geneva (Suisse)",
-    "country": "Suisse",
-    "full_name": "University of Geneva",
-    "id": "grid.8591.5",
-    "y": 1,
-    "z": 132
-  },
-  {
-    "name": "Universitat Politècnica de Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Universitat Politècnica de Catalunya",
-    "id": "grid.6835.8",
-    "y": 1,
-    "z": 212
-  },
-  {
-    "name": "Barcelona Institute for Global Health (Espagne)",
-    "country": "Espagne",
-    "full_name": "Barcelona Institute for Global Health",
-    "id": "grid.434607.2",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "Rechts der Isar Hospital (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Rechts der Isar Hospital",
-    "id": "grid.15474.33",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Västra Götaland Regional Council (Suède)",
-    "country": "Suède",
-    "full_name": "Västra Götaland Regional Council",
-    "id": "grid.452005.6",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "University of Bristol (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Bristol",
-    "id": "grid.5337.2",
-    "y": 1,
-    "z": 166
-  },
-  {
-    "name": "University Medical Center Groningen (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Groningen",
-    "id": "grid.4494.d",
-    "y": 1,
-    "z": 104
-  },
-  {
-    "name": "U. Paris (France)",
-    "country": "France",
-    "full_name": "Université de Paris",
-    "acronym": "U. Paris",
-    "id": "5cZyU",
-    "y": 1,
-    "z": 388
-  },
-  {
-    "name": "Polytechnic Institute of Coimbra (Portugal)",
-    "country": "Portugal",
-    "full_name": "Polytechnic Institute of Coimbra",
-    "id": "grid.88832.39",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "IRSN (France)",
-    "country": "France",
-    "full_name": "Institut de radioprotection et de sûreté nucléaire",
-    "acronym": "IRSN",
-    "id": "86GK4",
-    "y": 1,
-    "z": 48
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "Institut Català d'Oncologia (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institut Català d'Oncologia",
-    "id": "grid.418701.b",
-    "y": 1,
-    "z": 12
-  },
-  {
-    "name": "University of Crete (Grèce)",
-    "country": "Grèce",
-    "full_name": "University of Crete",
-    "id": "grid.8127.c",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "Sapienza University of Rome (Italie)",
-    "country": "Italie",
-    "full_name": "Sapienza University of Rome",
-    "id": "grid.7841.a",
-    "y": 1,
-    "z": 186
-  },
-  {
-    "name": "U. Toulouse III (France)",
-    "country": "France",
-    "full_name": "Université Toulouse III - Paul Sabatier",
-    "acronym": "U. Toulouse III",
-    "id": "m7K6T",
-    "y": 1,
-    "z": 220
-  },
-  {
-    "name": "VU University Medical Center (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VU University Medical Center",
-    "id": "grid.16872.3a",
-    "y": 1,
-    "z": 79
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "Belgian Nuclear Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Belgian Nuclear Research Centre",
-    "id": "grid.8953.7",
-    "y": 1,
-    "z": 54
+  "Euratom": {
+    "Euratom (EURATOM)": [
+      {
+        "name": "Barcelona Institute for Global Health (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Institut Català d'Oncologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català d'Oncologia",
+        "id": "grid.418701.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Västra Götaland Regional Council (Suède)",
+        "country": "Suède",
+        "full_name": "Västra Götaland Regional Council",
+        "id": "grid.452005.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Nofer Institute of Occupational Medicine (Pologne)",
+        "country": "Pologne",
+        "full_name": "Nofer Institute of Occupational Medicine",
+        "id": "grid.418868.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University Hospital Würzburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Würzburg",
+        "id": "grid.411760.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sapienza University of Rome (Italie)",
+        "country": "Italie",
+        "full_name": "Sapienza University of Rome",
+        "id": "grid.7841.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Polytechnic Institute of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "Polytechnic Institute of Coimbra",
+        "id": "grid.88832.39",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Philipp University of Marburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Philipp University of Marburg",
+        "id": "grid.10253.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Johannes Gutenberg University of Mainz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Johannes Gutenberg University of Mainz",
+        "id": "grid.5802.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "European Institute for Biomedical Imaging Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "European Institute for Biomedical Imaging Research",
+        "id": "grid.424274.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "IRT B-Com (France)",
+        "country": "France",
+        "full_name": "IRT B-COM",
+        "acronym": "IRT B-Com",
+        "id": "crALB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Rechts der Isar Hospital (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rechts der Isar Hospital",
+        "id": "grid.15474.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Otto-von-Guericke University Magdeburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Otto-von-Guericke University Magdeburg",
+        "id": "grid.5807.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Institut Català de la Salut (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català de la Salut",
+        "id": "grid.22061.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Antoni van Leeuwenhoek Hospital",
+        "id": "grid.430814.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   }
-]
+}

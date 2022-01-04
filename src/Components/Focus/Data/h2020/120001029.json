@@ -1,415 +1,936 @@
-[
-  {
-    "name": "University of Tartu (Estonie)",
-    "country": "Estonie",
-    "full_name": "University of Tartu",
-    "id": "grid.10939.32",
-    "y": 1,
-    "z": 150
+{
+  "all": {
+    "all": [
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 280
+      },
+      {
+        "name": "Center for Security Studies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Center for Security Studies",
+        "id": "grid.433340.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 72
+      },
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "University of Konstanz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Konstanz",
+        "id": "grid.9811.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Polish Platform for Homeland Security (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish Platform for Homeland Security",
+        "id": "grid.499051.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Systems, Applications & Products in Data Processing (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Systems, Applications & Products in Data Processing",
+        "id": "grid.19008.30",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Instituto de Novas Tecnologias (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Novas Tecnologias",
+        "id": "grid.464691.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "University of Bonn (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bonn",
+        "id": "grid.10388.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Fortiss (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fortiss",
+        "id": "grid.472757.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "Technikon (Autriche)",
+        "country": "Autriche",
+        "full_name": "Technikon",
+        "id": "grid.426234.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 111
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 685
+      },
+      {
+        "name": "Instytut Technik Telekomunikacyjnych i Informatycznych (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Technik Telekomunikacyjnych i Informatycznych",
+        "id": "grid.425109.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Yes We Hack (France)",
+        "country": "France",
+        "full_name": "Yes We Hack",
+        "acronym": "Yes We Hack",
+        "id": "814037214",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "Télécom SudParis (France)",
+        "country": "France",
+        "full_name": "Télécom SudParis",
+        "acronym": "Télécom SudParis",
+        "id": "YvBkH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 295
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 150
+      },
+      {
+        "name": "Centre d'Excellence en Technologies de l'Information et de la Communication (Belgique)",
+        "country": "Belgique",
+        "full_name": "Centre d'Excellence en Technologies de l'Information et de la Communication",
+        "id": "grid.423619.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Vicomtech (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vicomtech",
+        "id": "grid.424271.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Mykolas Romeris University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Mykolas Romeris University",
+        "id": "grid.5259.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Indra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Indra",
+        "id": "grid.424656.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Télécom Paris (France)",
+        "country": "France",
+        "full_name": "Télécom Paris",
+        "acronym": "Télécom Paris",
+        "id": "K6jgY",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "University of Namur (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Namur",
+        "id": "grid.6520.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "NASK National Research Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "NASK National Research Institute",
+        "id": "grid.425598.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Joanneum Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Joanneum Research",
+        "id": "grid.8684.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Czech Education and Scientific Net work (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Czech Education and Scientific Net work",
+        "id": "grid.423953.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione",
+        "id": "grid.425418.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "University of Luxembourg (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "University of Luxembourg",
+        "id": "grid.16008.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 90
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Consorzio Interuniversitario Nazionale per l'Informatica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Interuniversitario Nazionale per l'Informatica",
+        "id": "grid.28598.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 286
+      },
+      {
+        "name": "General Jonas Žemaitis Military Academy of Lithuania (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "General Jonas Žemaitis Military Academy of Lithuania",
+        "id": "grid.466225.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Kaunas University of Technology (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Kaunas University of Technology",
+        "id": "grid.6901.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "University of Lisbon (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Lisbon",
+        "id": "grid.9983.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "University of Klagenfurt (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Klagenfurt",
+        "id": "grid.7520.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "NXP (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NXP",
+        "id": "grid.426027.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "Idemia (France)",
+        "country": "France",
+        "full_name": "Idemia",
+        "acronym": "Idemia",
+        "id": "gent94",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      }
+    ]
   },
-  {
-    "name": "University of Bonn (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Bonn",
-    "id": "grid.10388.32",
-    "y": 1,
-    "z": 68
-  },
-  {
-    "name": "University of Lisbon (Portugal)",
-    "country": "Portugal",
-    "full_name": "University of Lisbon",
-    "id": "grid.9983.b",
-    "y": 1,
-    "z": 186
-  },
-  {
-    "name": "National Centre of Scientific Research Demokritos (Grèce)",
-    "country": "Grèce",
-    "full_name": "National Centre of Scientific Research Demokritos",
-    "id": "grid.6083.d",
-    "y": 1,
-    "z": 111
-  },
-  {
-    "name": "Télécom Paris (France)",
-    "country": "France",
-    "full_name": "Télécom Paris",
-    "acronym": "Télécom Paris",
-    "id": "K6jgY",
-    "y": 1,
-    "z": 46
-  },
-  {
-    "name": "Télécom SudParis (France)",
-    "country": "France",
-    "full_name": "Télécom SudParis",
-    "acronym": "Télécom SudParis",
-    "id": "YvBkH",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "CentraleSupélec (France)",
-    "country": "France",
-    "full_name": "CentraleSupélec",
-    "acronym": "CentraleSupélec",
-    "id": "m84Aa",
-    "y": 1,
-    "z": 60
-  },
-  {
-    "name": "Mines Saint-Étienne (France)",
-    "country": "France",
-    "full_name": "École nationale supérieure des mines de Saint-Étienne",
-    "acronym": "Mines Saint-Étienne",
-    "id": "K841M",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "University of Konstanz (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Konstanz",
-    "id": "grid.9811.1",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "Indra (Espagne)",
-    "country": "Espagne",
-    "full_name": "Indra",
-    "id": "grid.424656.7",
-    "y": 1,
-    "z": 95
-  },
-  {
-    "name": "Czech Education and Scientific Net work (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Czech Education and Scientific Net work",
-    "id": "grid.423953.a",
-    "y": 1,
-    "z": 28
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 1,
-    "z": 1072
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 1,
-    "z": 575
-  },
-  {
-    "name": "IMT Atlantique (France)",
-    "country": "France",
-    "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-    "acronym": "IMT Atlantique",
-    "id": "krqUz",
-    "y": 1,
-    "z": 49
-  },
-  {
-    "name": "Technical University of Munich (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Technical University of Munich",
-    "id": "grid.6936.a",
-    "y": 1,
-    "z": 280
-  },
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 1,
-    "z": 852
-  },
-  {
-    "name": "Brno University of Technology (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Brno University of Technology",
-    "id": "grid.4994.0",
-    "y": 1,
-    "z": 62
-  },
-  {
-    "name": "Thales (France)",
-    "country": "France",
-    "full_name": "Thales",
-    "acronym": "Thales",
-    "id": "gent175",
-    "y": 1,
-    "z": 286
-  },
-  {
-    "name": "INSA de Lyon (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences appliquées de Lyon",
-    "acronym": "INSA de Lyon",
-    "id": "8k41p",
-    "y": 1,
-    "z": 75
-  },
-  {
-    "name": "University of Namur (Belgique)",
-    "country": "Belgique",
-    "full_name": "University of Namur",
-    "id": "grid.6520.1",
-    "y": 1,
-    "z": 16
-  },
-  {
-    "name": "IMT (France)",
-    "country": "France",
-    "full_name": "Institut Mines-Télécom",
-    "acronym": "IMT",
-    "id": "6Th4v",
-    "y": 1,
-    "z": 124
-  },
-  {
-    "name": "Polish Platform for Homeland Security (Pologne)",
-    "country": "Pologne",
-    "full_name": "Polish Platform for Homeland Security",
-    "id": "grid.499051.0",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Instituto de Novas Tecnologias (Portugal)",
-    "country": "Portugal",
-    "full_name": "Instituto de Novas Tecnologias",
-    "id": "grid.464691.8",
-    "y": 1,
-    "z": 29
-  },
-  {
-    "name": "University of Luxembourg (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "University of Luxembourg",
-    "id": "grid.16008.3f",
-    "y": 1,
-    "z": 90
-  },
-  {
-    "name": "Technikon (Autriche)",
-    "country": "Autriche",
-    "full_name": "Technikon",
-    "id": "grid.426234.5",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Systems, Applications & Products in Data Processing (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Systems, Applications & Products in Data Processing",
-    "id": "grid.19008.30",
-    "y": 1,
-    "z": 17
-  },
-  {
-    "name": "Inria (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche en informatique et en automatique",
-    "acronym": "Inria",
-    "id": "E1Wdn",
-    "y": 1,
-    "z": 295
-  },
-  {
-    "name": "Fortiss (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fortiss",
-    "id": "grid.472757.4",
-    "y": 1,
-    "z": 27
-  },
-  {
-    "name": "Tecnalia (Espagne)",
-    "country": "Espagne",
-    "full_name": "Tecnalia",
-    "id": "grid.13753.33",
-    "y": 1,
-    "z": 368
-  },
-  {
-    "name": "General Jonas Žemaitis Military Academy of Lithuania (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "General Jonas Žemaitis Military Academy of Lithuania",
-    "id": "grid.466225.1",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
-    "country": "Italie",
-    "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-    "id": "grid.28326.3d",
-    "y": 1,
-    "z": 51
-  },
-  {
-    "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "Luxembourg Institute of Science and Technology",
-    "id": "grid.423669.c",
-    "y": 1,
-    "z": 53
-  },
-  {
-    "name": "NASK National Research Institute (Pologne)",
-    "country": "Pologne",
-    "full_name": "NASK National Research Institute",
-    "id": "grid.425598.7",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Joanneum Research (Autriche)",
-    "country": "Autriche",
-    "full_name": "Joanneum Research",
-    "id": "grid.8684.2",
-    "y": 1,
-    "z": 68
-  },
-  {
-    "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-    "id": "grid.28409.37",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione",
-    "id": "grid.425418.e",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Mykolas Romeris University (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "Mykolas Romeris University",
-    "id": "grid.5259.b",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Consorzio Interuniversitario Nazionale per l'Informatica (Italie)",
-    "country": "Italie",
-    "full_name": "Consorzio Interuniversitario Nazionale per l'Informatica",
-    "id": "grid.28598.3e",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Instytut Technik Telekomunikacyjnych i Informatycznych (Pologne)",
-    "country": "Pologne",
-    "full_name": "Instytut Technik Telekomunikacyjnych i Informatycznych",
-    "id": "grid.425109.b",
-    "y": 1,
-    "z": 22
-  },
-  {
-    "name": "Centre d'Excellence en Technologies de l'Information et de la Communication (Belgique)",
-    "country": "Belgique",
-    "full_name": "Centre d'Excellence en Technologies de l'Information et de la Communication",
-    "id": "grid.423619.b",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Vicomtech (Espagne)",
-    "country": "Espagne",
-    "full_name": "Vicomtech",
-    "id": "grid.424271.6",
-    "y": 1,
-    "z": 38
-  },
-  {
-    "name": "Finmeccanica (Italie)",
-    "country": "Italie",
-    "full_name": "Finmeccanica",
-    "id": "grid.423952.b",
-    "y": 1,
-    "z": 76
-  },
-  {
-    "name": "Kaunas University of Technology (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "Kaunas University of Technology",
-    "id": "grid.6901.e",
-    "y": 1,
-    "z": 47
-  },
-  {
-    "name": "Yes We Hack (France)",
-    "country": "France",
-    "full_name": "Yes We Hack",
-    "acronym": "Yes We Hack",
-    "id": "814037214",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "National Research Council (Italie)",
-    "country": "Italie",
-    "full_name": "National Research Council",
-    "id": "grid.5326.2",
-    "y": 1,
-    "z": 685
-  },
-  {
-    "name": "Center for Security Studies (Grèce)",
-    "country": "Grèce",
-    "full_name": "Center for Security Studies",
-    "id": "grid.433340.3",
-    "y": 1,
-    "z": 72
-  },
-  {
-    "name": "Idemia (France)",
-    "country": "France",
-    "full_name": "Idemia",
-    "acronym": "Idemia",
-    "id": "gent94",
-    "y": 1,
-    "z": 17
-  },
-  {
-    "name": "University of Klagenfurt (Autriche)",
-    "country": "Autriche",
-    "full_name": "University of Klagenfurt",
-    "id": "grid.7520.0",
-    "y": 1,
-    "z": 21
-  },
-  {
-    "name": "Université Catholique de Louvain (Belgique)",
-    "country": "Belgique",
-    "full_name": "Université Catholique de Louvain",
-    "id": "grid.7942.8",
-    "y": 1,
-    "z": 114
-  },
-  {
-    "name": "University of Bristol (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Bristol",
-    "id": "grid.5337.2",
-    "y": 1,
-    "z": 166
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Center for Security Studies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Center for Security Studies",
+        "id": "grid.433340.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Konstanz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Konstanz",
+        "id": "grid.9811.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Polish Platform for Homeland Security (Pologne)",
+        "country": "Pologne",
+        "full_name": "Polish Platform for Homeland Security",
+        "id": "grid.499051.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Systems, Applications & Products in Data Processing (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Systems, Applications & Products in Data Processing",
+        "id": "grid.19008.30",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Instituto de Novas Tecnologias (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Novas Tecnologias",
+        "id": "grid.464691.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Bonn (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bonn",
+        "id": "grid.10388.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Fortiss (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fortiss",
+        "id": "grid.472757.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Technikon (Autriche)",
+        "country": "Autriche",
+        "full_name": "Technikon",
+        "id": "grid.426234.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Instytut Technik Telekomunikacyjnych i Informatycznych (Pologne)",
+        "country": "Pologne",
+        "full_name": "Instytut Technik Telekomunikacyjnych i Informatycznych",
+        "id": "grid.425109.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Yes We Hack (France)",
+        "country": "France",
+        "full_name": "Yes We Hack",
+        "acronym": "Yes We Hack",
+        "id": "814037214",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Télécom SudParis (France)",
+        "country": "France",
+        "full_name": "Télécom SudParis",
+        "acronym": "Télécom SudParis",
+        "id": "YvBkH",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Centre d'Excellence en Technologies de l'Information et de la Communication (Belgique)",
+        "country": "Belgique",
+        "full_name": "Centre d'Excellence en Technologies de l'Information et de la Communication",
+        "id": "grid.423619.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Vicomtech (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vicomtech",
+        "id": "grid.424271.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Mykolas Romeris University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Mykolas Romeris University",
+        "id": "grid.5259.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Indra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Indra",
+        "id": "grid.424656.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Télécom Paris (France)",
+        "country": "France",
+        "full_name": "Télécom Paris",
+        "acronym": "Télécom Paris",
+        "id": "K6jgY",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Namur (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Namur",
+        "id": "grid.6520.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "NASK National Research Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "NASK National Research Institute",
+        "id": "grid.425598.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Joanneum Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Joanneum Research",
+        "id": "grid.8684.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Czech Education and Scientific Net work (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Czech Education and Scientific Net work",
+        "id": "grid.423953.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore delle Comunicazioni e delle Tecnologie Dell'Informazione",
+        "id": "grid.425418.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "University of Luxembourg (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "University of Luxembourg",
+        "id": "grid.16008.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 283
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Consorzio Interuniversitario Nazionale per l'Informatica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Interuniversitario Nazionale per l'Informatica",
+        "id": "grid.28598.3e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 84
+      },
+      {
+        "name": "General Jonas Žemaitis Military Academy of Lithuania (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "General Jonas Žemaitis Military Academy of Lithuania",
+        "id": "grid.466225.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Kaunas University of Technology (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Kaunas University of Technology",
+        "id": "grid.6901.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Lisbon (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Lisbon",
+        "id": "grid.9983.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "University of Klagenfurt (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Klagenfurt",
+        "id": "grid.7520.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "NXP (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NXP",
+        "id": "grid.426027.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Idemia (France)",
+        "country": "France",
+        "full_name": "Idemia",
+        "acronym": "Idemia",
+        "id": "gent94",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      }
+    ]
   }
-]
+}

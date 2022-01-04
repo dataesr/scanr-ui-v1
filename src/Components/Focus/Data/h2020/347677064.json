@@ -1,307 +1,692 @@
-[
-  {
-    "name": "Hospital de Sant Pau (Espagne)",
-    "country": "Espagne",
-    "full_name": "Hospital de Sant Pau",
-    "id": "grid.413396.a",
-    "y": 1,
-    "z": 9
+{
+  "all": {
+    "all": [
+      {
+        "name": "H. Pitié-Salpêtrière (AP-HP) (France)",
+        "country": "France",
+        "full_name": "Hôpital Universitaire Pitié-Salpêtrière",
+        "acronym": "H. Pitié-Salpêtrière (AP-HP)",
+        "id": "zvM6A",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Luxembourg Institute of Health (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Health",
+        "id": "grid.451012.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "Queen's University Belfast (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen's University Belfast",
+        "id": "grid.4777.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 87
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "Instituto Ramón y Cajal de Investigación Sanitaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Ramón y Cajal de Investigación Sanitaria",
+        "id": "grid.420232.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "University of Dundee (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Dundee",
+        "id": "grid.8241.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "CERMEP (France)",
+        "country": "France",
+        "full_name": "Ctre Expl Recherche Medic Emiss Position",
+        "acronym": "CERMEP",
+        "id": "348145913",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Vet Agro Sup (France)",
+        "country": "France",
+        "full_name": "Vet Agro Sup",
+        "acronym": "Vet Agro Sup",
+        "id": "5cuYU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 112
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "University Hospital Heidelberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Heidelberg",
+        "id": "grid.5253.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Hospital de Sant Pau (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital de Sant Pau",
+        "id": "grid.413396.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "AP-HM (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "Clinical Trial Center Maastricht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Clinical Trial Center Maastricht",
+        "id": "grid.489920.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 122
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "Inserm Transfert (France)",
+        "country": "France",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Universitätsklinikum Aachen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universitätsklinikum Aachen",
+        "id": "grid.412301.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 220
+      },
+      {
+        "name": "HCL (France)",
+        "country": "France",
+        "full_name": "Hospices civils de Lyon",
+        "acronym": "HCL",
+        "id": "Y4l0C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Metabrain Research (France)",
+        "country": "France",
+        "full_name": "Metabrain Research",
+        "acronym": "Metabrain Research",
+        "id": "510992282",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Biomedical Research Networking Center on Neurodegenerative Diseases (Espagne)",
+        "country": "Espagne",
+        "full_name": "Biomedical Research Networking Center on Neurodegenerative Diseases",
+        "id": "grid.418264.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      }
+    ]
   },
-  {
-    "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-    "country": "Espagne",
-    "full_name": "Vall d'Hebron Institut de Recerca",
-    "id": "grid.430994.3",
-    "y": 1,
-    "z": 57
-  },
-  {
-    "name": "AP-HP (France)",
-    "country": "France",
-    "full_name": "Assistance publique - Hôpitaux de Paris",
-    "acronym": "AP-HP",
-    "id": "Py0K5",
-    "y": 1,
-    "z": 122
-  },
-  {
-    "name": "University Hospital Heidelberg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University Hospital Heidelberg",
-    "id": "grid.5253.1",
-    "y": 1,
-    "z": 54
-  },
-  {
-    "name": "Sanofi (France)",
-    "country": "France",
-    "full_name": "Sanofi",
-    "acronym": "Sanofi",
-    "id": "gent147",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "Vet Agro Sup (France)",
-    "country": "France",
-    "full_name": "Vet Agro Sup",
-    "acronym": "Vet Agro Sup",
-    "id": "5cuYU",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "Instituto Ramón y Cajal de Investigación Sanitaria (Espagne)",
-    "country": "Espagne",
-    "full_name": "Instituto Ramón y Cajal de Investigación Sanitaria",
-    "id": "grid.420232.5",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "UPEC (France)",
-    "country": "France",
-    "full_name": "Université Paris-Est Créteil",
-    "acronym": "UPEC",
-    "id": "vb71K",
-    "y": 1,
-    "z": 39
-  },
-  {
-    "name": "Bayer (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bayer",
-    "id": "grid.420044.6",
-    "y": 1,
-    "z": 64
-  },
-  {
-    "name": "CERMEP (France)",
-    "country": "France",
-    "full_name": "Ctre Expl Recherche Medic Emiss Position",
-    "acronym": "CERMEP",
-    "id": "348145913",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Helmholtz Zentrum München (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Helmholtz Zentrum München",
-    "id": "grid.4567.0",
-    "y": 1,
-    "z": 65
-  },
-  {
-    "name": "University Medical Center Utrecht (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Utrecht",
-    "id": "grid.7692.a",
-    "y": 1,
-    "z": 112
-  },
-  {
-    "name": "INSA de Lyon (France)",
-    "country": "France",
-    "full_name": "Institut national des sciences appliquées de Lyon",
-    "acronym": "INSA de Lyon",
-    "id": "8k41p",
-    "y": 1,
-    "z": 75
-  },
-  {
-    "name": "Universitätsklinikum Aachen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Universitätsklinikum Aachen",
-    "id": "grid.412301.5",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "Biomedical Research Networking Center on Neurodegenerative Diseases (Espagne)",
-    "country": "Espagne",
-    "full_name": "Biomedical Research Networking Center on Neurodegenerative Diseases",
-    "id": "grid.418264.d",
-    "y": 1,
-    "z": 28
-  },
-  {
-    "name": "Swiss Institute of Bioinformatics (Suisse)",
-    "country": "Suisse",
-    "full_name": "Swiss Institute of Bioinformatics",
-    "id": "grid.419765.8",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "H. Pitié-Salpêtrière (AP-HP) (France)",
-    "country": "France",
-    "full_name": "Hôpital Universitaire Pitié-Salpêtrière",
-    "acronym": "H. Pitié-Salpêtrière (AP-HP)",
-    "id": "zvM6A",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "AMU (France)",
-    "country": "France",
-    "full_name": "Aix-Marseille Université",
-    "acronym": "AMU",
-    "id": "xJdyB",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "Metabrain Research (France)",
-    "country": "France",
-    "full_name": "Metabrain Research",
-    "acronym": "Metabrain Research",
-    "id": "510992282",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "HCL (France)",
-    "country": "France",
-    "full_name": "Hospices civils de Lyon",
-    "acronym": "HCL",
-    "id": "Y4l0C",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "University of Dundee (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Dundee",
-    "id": "grid.8241.f",
-    "y": 1,
-    "z": 51
-  },
-  {
-    "name": "Luxembourg Institute of Health (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "Luxembourg Institute of Health",
-    "id": "grid.451012.3",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "Inrae (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Inrae",
-    "id": "t4SA4",
-    "y": 1,
-    "z": 453
-  },
-  {
-    "name": "Eli Lilly (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Eli Lilly",
-    "id": "grid.418786.4",
-    "y": 1,
-    "z": 38
-  },
-  {
-    "name": "Inserm Transfert (France)",
-    "country": "France",
-    "full_name": "Inserm Transfert",
-    "acronym": "Inserm Transfert",
-    "id": "434033619",
-    "y": 1,
-    "z": 33
-  },
-  {
-    "name": "University Medical Center Groningen (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Groningen",
-    "id": "grid.4494.d",
-    "y": 1,
-    "z": 104
-  },
-  {
-    "name": "Queen's University Belfast (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Queen's University Belfast",
-    "id": "grid.4777.3",
-    "y": 1,
-    "z": 87
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "KU Leuven (Belgique)",
-    "country": "Belgique",
-    "full_name": "KU Leuven",
-    "id": "grid.5596.f",
-    "y": 1,
-    "z": 489
-  },
-  {
-    "name": "AP-HM (France)",
-    "country": "France",
-    "full_name": "Assistance publique - Hôpitaux de Marseille",
-    "acronym": "AP-HM",
-    "id": "dUyiC",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "University of Turin (Italie)",
-    "country": "Italie",
-    "full_name": "University of Turin",
-    "id": "grid.7605.4",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "U. Toulouse III (France)",
-    "country": "France",
-    "full_name": "Université Toulouse III - Paul Sabatier",
-    "acronym": "U. Toulouse III",
-    "id": "m7K6T",
-    "y": 1,
-    "z": 220
-  },
-  {
-    "name": "Clinical Trial Center Maastricht (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Clinical Trial Center Maastricht",
-    "id": "grid.489920.e",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "VU University Medical Center (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VU University Medical Center",
-    "id": "grid.16872.3a",
-    "y": 1,
-    "z": 79
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "U. Lyon 1 (France)",
-    "country": "France",
-    "full_name": "Université Claude Bernard - Lyon 1",
-    "acronym": "U. Lyon 1",
-    "id": "etBz7",
-    "y": 1,
-    "z": 191
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "H. Pitié-Salpêtrière (AP-HP) (France)",
+        "country": "France",
+        "full_name": "Hôpital Universitaire Pitié-Salpêtrière",
+        "acronym": "H. Pitié-Salpêtrière (AP-HP)",
+        "id": "zvM6A",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Luxembourg Institute of Health (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Health",
+        "id": "grid.451012.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Queen's University Belfast (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen's University Belfast",
+        "id": "grid.4777.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Instituto Ramón y Cajal de Investigación Sanitaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Ramón y Cajal de Investigación Sanitaria",
+        "id": "grid.420232.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "University of Dundee (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Dundee",
+        "id": "grid.8241.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "CERMEP (France)",
+        "country": "France",
+        "full_name": "Ctre Expl Recherche Medic Emiss Position",
+        "acronym": "CERMEP",
+        "id": "348145913",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Vet Agro Sup (France)",
+        "country": "France",
+        "full_name": "Vet Agro Sup",
+        "acronym": "Vet Agro Sup",
+        "id": "5cuYU",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "University Hospital Heidelberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Heidelberg",
+        "id": "grid.5253.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Hospital de Sant Pau (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital de Sant Pau",
+        "id": "grid.413396.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "AP-HM (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Clinical Trial Center Maastricht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Clinical Trial Center Maastricht",
+        "id": "grid.489920.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Inserm Transfert (France)",
+        "country": "France",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Universitätsklinikum Aachen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universitätsklinikum Aachen",
+        "id": "grid.412301.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "HCL (France)",
+        "country": "France",
+        "full_name": "Hospices civils de Lyon",
+        "acronym": "HCL",
+        "id": "Y4l0C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Metabrain Research (France)",
+        "country": "France",
+        "full_name": "Metabrain Research",
+        "acronym": "Metabrain Research",
+        "id": "510992282",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Biomedical Research Networking Center on Neurodegenerative Diseases (Espagne)",
+        "country": "Espagne",
+        "full_name": "Biomedical Research Networking Center on Neurodegenerative Diseases",
+        "id": "grid.418264.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      }
+    ]
   }
-]
+}

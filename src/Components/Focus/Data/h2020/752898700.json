@@ -1,400 +1,946 @@
-[
-  {
-    "name": "Université PSL (France)",
-    "country": "France",
-    "full_name": "Université Paris sciences et lettres",
-    "acronym": "Université PSL",
-    "id": "PpsCQ",
-    "y": 2,
-    "z": 407
+{
+  "all": {
+    "all": [
+      {
+        "name": "EPHE (France)",
+        "country": "France",
+        "full_name": "École pratique des hautes études",
+        "acronym": "EPHE",
+        "id": "QXnpG",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 90
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 505
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 407
+      },
+      {
+        "name": "University of Milan (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milan",
+        "id": "grid.4708.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 151
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "SIAAP (France)",
+        "country": "France",
+        "full_name": "Syndicat interdépartemental pour l'assainissement de l'agglomération parisienne",
+        "acronym": "SIAAP",
+        "id": "257550004",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Berliner Wasserbetriebe (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berliner Wasserbetriebe",
+        "id": "grid.506642.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 58
+      },
+      {
+        "name": "Catalan Institute for Water Research (Espagne)",
+        "country": "Espagne",
+        "full_name": "Catalan Institute for Water Research",
+        "id": "grid.424734.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Berlin Centre of Competence for Water (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berlin Centre of Competence for Water",
+        "id": "grid.435815.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Ecologic Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ecologic Institute",
+        "id": "grid.22859.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Strane Innovation (France)",
+        "country": "France",
+        "full_name": "Strane Innovation",
+        "acronym": "Strane Innovation",
+        "id": "792228173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Arctik (Belgique)",
+        "country": "Belgique",
+        "full_name": "Arctik",
+        "id": "grid.424227.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Finnish Meteorological Institute (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Meteorological Institute",
+        "id": "grid.8657.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "National Institute of Oceanography and Experimental Geophysics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute of Oceanography and Experimental Geophysics",
+        "id": "grid.4336.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Swedish Meteorological and Hydrological Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish Meteorological and Hydrological Institute",
+        "id": "grid.6057.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Flanders Marine Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Marine Institute",
+        "id": "grid.426539.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "Smartbay Ireland (Irlande)",
+        "country": "Irlande",
+        "full_name": "Smartbay Ireland",
+        "id": "grid.496943.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 87
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 210
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 685
+      },
+      {
+        "name": "Marine Information Service (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Marine Information Service",
+        "id": "grid.425439.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Hellenic Centre for Marine Research (Grèce)",
+        "country": "Grèce",
+        "full_name": "Hellenic Centre for Marine Research",
+        "id": "grid.410335.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Department for Environment Food and Rural Affairs (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department for Environment Food and Rural Affairs",
+        "id": "grid.13689.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "University of Malta (Malte)",
+        "country": "Malte",
+        "full_name": "University of Malta",
+        "id": "grid.4462.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "UNICAEN (France)",
+        "country": "France",
+        "full_name": "Université de Caen Normandie",
+        "acronym": "UNICAEN",
+        "id": "p25Q3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "ULCO (France)",
+        "country": "France",
+        "full_name": "Université du Littoral Côte d’Opale",
+        "acronym": "ULCO",
+        "id": "yH19Y",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Deltares (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Deltares",
+        "id": "grid.6385.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "Norwegian Institute of Marine Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Marine Research",
+        "id": "grid.10917.3e",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research",
+        "id": "grid.24999.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Norwegian Institute for Water Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Water Research",
+        "id": "grid.6407.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Institute of Oceanology (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Institute of Oceanology",
+        "id": "grid.447712.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 554
+      },
+      {
+        "name": "Norwegian Research Centre (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Research Centre",
+        "id": "grid.509009.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Ministry of Infrastructure and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Ministry of Infrastructure and the Environment",
+        "id": "grid.425715.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Euro-Mediterranean Center for Climate Change (Italie)",
+        "country": "Italie",
+        "full_name": "Euro-Mediterranean Center for Climate Change",
+        "id": "grid.423878.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "Instituto Hidrográfico (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto Hidrográfico",
+        "id": "grid.421278.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Euro Argo (France)",
+        "country": "France",
+        "full_name": "Euro Argo",
+        "acronym": "Euro Argo",
+        "id": "804377778",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Finnish Environment Institute (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Environment Institute",
+        "id": "grid.410381.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "UBO (France)",
+        "country": "France",
+        "full_name": "Université de Bretagne Occidentale",
+        "acronym": "UBO",
+        "id": "06SE7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "European Global Ocean Observing System (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Global Ocean Observing System",
+        "id": "grid.450753.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      }
+    ]
   },
-  {
-    "name": "EPHE (France)",
-    "country": "France",
-    "full_name": "École pratique des hautes études",
-    "acronym": "EPHE",
-    "id": "QXnpG",
-    "y": 2,
-    "z": 90
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      {
+        "name": "University of Milan (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milan",
+        "id": "grid.4708.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "EPHE (France)",
+        "country": "France",
+        "full_name": "École pratique des hautes études",
+        "acronym": "EPHE",
+        "id": "QXnpG",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "SIAAP (France)",
+        "country": "France",
+        "full_name": "Syndicat interdépartemental pour l'assainissement de l'agglomération parisienne",
+        "acronym": "SIAAP",
+        "id": "257550004",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Berliner Wasserbetriebe (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berliner Wasserbetriebe",
+        "id": "grid.506642.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Catalan Institute for Water Research (Espagne)",
+        "country": "Espagne",
+        "full_name": "Catalan Institute for Water Research",
+        "id": "grid.424734.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Berlin Centre of Competence for Water (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berlin Centre of Competence for Water",
+        "id": "grid.435815.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Ecologic Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ecologic Institute",
+        "id": "grid.22859.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Strane Innovation (France)",
+        "country": "France",
+        "full_name": "Strane Innovation",
+        "acronym": "Strane Innovation",
+        "id": "792228173",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Arctik (Belgique)",
+        "country": "Belgique",
+        "full_name": "Arctik",
+        "id": "grid.424227.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      }
+    ]
   },
-  {
-    "name": "Sorbonne U (France)",
-    "country": "France",
-    "full_name": "Sorbonne Université",
-    "acronym": "Sorbonne U",
-    "id": "bxPQe",
-    "y": 2,
-    "z": 505
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
-  },
-  {
-    "name": "Berlin Centre of Competence for Water (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Berlin Centre of Competence for Water",
-    "id": "grid.435815.e",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "University of Milan (Italie)",
-    "country": "Italie",
-    "full_name": "University of Milan",
-    "id": "grid.4708.b",
-    "y": 1,
-    "z": 151
-  },
-  {
-    "name": "Arctik (Belgique)",
-    "country": "Belgique",
-    "full_name": "Arctik",
-    "id": "grid.424227.5",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Istituto Superiore di Sanità (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Superiore di Sanità",
-    "id": "grid.416651.1",
-    "y": 1,
-    "z": 63
-  },
-  {
-    "name": "Ecologic Institute (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Ecologic Institute",
-    "id": "grid.22859.34",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Marche Polytechnic University (Italie)",
-    "country": "Italie",
-    "full_name": "Marche Polytechnic University",
-    "id": "grid.7010.6",
-    "y": 1,
-    "z": 58
-  },
-  {
-    "name": "SINTEF (Norvège)",
-    "country": "Norvège",
-    "full_name": "SINTEF",
-    "id": "grid.4319.f",
-    "y": 1,
-    "z": 258
-  },
-  {
-    "name": "SIAAP (France)",
-    "country": "France",
-    "full_name": "Syndicat interdépartemental pour l'assainissement de l'agglomération parisienne",
-    "acronym": "SIAAP",
-    "id": "257550004",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Strane Innovation (France)",
-    "country": "France",
-    "full_name": "Strane Innovation",
-    "acronym": "Strane Innovation",
-    "id": "792228173",
-    "y": 1,
-    "z": 15
-  },
-  {
-    "name": "Inrae (France)",
-    "country": "France",
-    "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-    "acronym": "Inrae",
-    "id": "t4SA4",
-    "y": 1,
-    "z": 453
-  },
-  {
-    "name": "Berliner Wasserbetriebe (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Berliner Wasserbetriebe",
-    "id": "grid.506642.3",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Catalan Institute for Water Research (Espagne)",
-    "country": "Espagne",
-    "full_name": "Catalan Institute for Water Research",
-    "id": "grid.424734.2",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "U. Lille (France)",
-    "country": "France",
-    "full_name": "Université de Lille",
-    "acronym": "U. Lille",
-    "id": "Szqy5",
-    "y": 1,
-    "z": 124
-  },
-  {
-    "name": "Finnish Environment Institute (Finlande)",
-    "country": "Finlande",
-    "full_name": "Finnish Environment Institute",
-    "id": "grid.410381.f",
-    "y": 1,
-    "z": 35
-  },
-  {
-    "name": "Institute of Oceanology (Bulgarie)",
-    "country": "Bulgarie",
-    "full_name": "Institute of Oceanology",
-    "id": "grid.447712.3",
-    "y": 1,
-    "z": 10
-  },
-  {
-    "name": "Marine Institute (Irlande)",
-    "country": "Irlande",
-    "full_name": "Marine Institute",
-    "id": "grid.6408.a",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "Norwegian Institute for Water Research (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Institute for Water Research",
-    "id": "grid.6407.5",
-    "y": 1,
-    "z": 33
-  },
-  {
-    "name": "Finnish Meteorological Institute (Finlande)",
-    "country": "Finlande",
-    "full_name": "Finnish Meteorological Institute",
-    "id": "grid.8657.c",
-    "y": 1,
-    "z": 79
-  },
-  {
-    "name": "Swedish Meteorological and Hydrological Institute (Suède)",
-    "country": "Suède",
-    "full_name": "Swedish Meteorological and Hydrological Institute",
-    "id": "grid.6057.4",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "European Global Ocean Observing System (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Global Ocean Observing System",
-    "id": "grid.450753.0",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Norwegian Research Centre (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Research Centre",
-    "id": "grid.509009.5",
-    "y": 1,
-    "z": 47
-  },
-  {
-    "name": "UBO (France)",
-    "country": "France",
-    "full_name": "Université de Bretagne Occidentale",
-    "acronym": "UBO",
-    "id": "06SE7",
-    "y": 1,
-    "z": 48
-  },
-  {
-    "name": "ULCO (France)",
-    "country": "France",
-    "full_name": "Université du Littoral Côte d’Opale",
-    "acronym": "ULCO",
-    "id": "yH19Y",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Flanders Marine Institute (Belgique)",
-    "country": "Belgique",
-    "full_name": "Flanders Marine Institute",
-    "id": "grid.426539.f",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "Spanish National Research Council (Espagne)",
-    "country": "Espagne",
-    "full_name": "Spanish National Research Council",
-    "id": "grid.4711.3",
-    "y": 1,
-    "z": 554
-  },
-  {
-    "name": "Ifremer (France)",
-    "country": "France",
-    "full_name": "Institut français de recherche pour l'exploitation de la mer",
-    "acronym": "Ifremer",
-    "id": "F6Zt5",
-    "y": 1,
-    "z": 87
-  },
-  {
-    "name": "Ministry of Infrastructure and the Environment (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Ministry of Infrastructure and the Environment",
-    "id": "grid.425715.0",
-    "y": 1,
-    "z": 43
-  },
-  {
-    "name": "UNICAEN (France)",
-    "country": "France",
-    "full_name": "Université de Caen Normandie",
-    "acronym": "UNICAEN",
-    "id": "p25Q3",
-    "y": 1,
-    "z": 22
-  },
-  {
-    "name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research",
-    "id": "grid.24999.3f",
-    "y": 1,
-    "z": 54
-  },
-  {
-    "name": "Euro-Mediterranean Center for Climate Change (Italie)",
-    "country": "Italie",
-    "full_name": "Euro-Mediterranean Center for Climate Change",
-    "id": "grid.423878.2",
-    "y": 1,
-    "z": 66
-  },
-  {
-    "name": "Deltares (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Deltares",
-    "id": "grid.6385.8",
-    "y": 1,
-    "z": 45
-  },
-  {
-    "name": "Tecnalia (Espagne)",
-    "country": "Espagne",
-    "full_name": "Tecnalia",
-    "id": "grid.13753.33",
-    "y": 1,
-    "z": 368
-  },
-  {
-    "name": "Euro Argo (France)",
-    "country": "France",
-    "full_name": "Euro Argo",
-    "acronym": "Euro Argo",
-    "id": "804377778",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Instituto Hidrográfico (Portugal)",
-    "country": "Portugal",
-    "full_name": "Instituto Hidrográfico",
-    "id": "grid.421278.a",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Universitat Politècnica de Catalunya (Espagne)",
-    "country": "Espagne",
-    "full_name": "Universitat Politècnica de Catalunya",
-    "id": "grid.6835.8",
-    "y": 1,
-    "z": 212
-  },
-  {
-    "name": "National Institute of Oceanography and Experimental Geophysics (Italie)",
-    "country": "Italie",
-    "full_name": "National Institute of Oceanography and Experimental Geophysics",
-    "id": "grid.4336.2",
-    "y": 1,
-    "z": 27
-  },
-  {
-    "name": "Norwegian Institute of Marine Research (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Institute of Marine Research",
-    "id": "grid.10917.3e",
-    "y": 1,
-    "z": 33
-  },
-  {
-    "name": "Marine Information Service (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Marine Information Service",
-    "id": "grid.425439.d",
-    "y": 1,
-    "z": 14
-  },
-  {
-    "name": "Department for Environment Food and Rural Affairs (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Department for Environment Food and Rural Affairs",
-    "id": "grid.13689.35",
-    "y": 1,
-    "z": 45
-  },
-  {
-    "name": "Smartbay Ireland (Irlande)",
-    "country": "Irlande",
-    "full_name": "Smartbay Ireland",
-    "id": "grid.496943.5",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "UBx (France)",
-    "country": "France",
-    "full_name": "Université de Bordeaux",
-    "acronym": "UBx",
-    "id": "90I54",
-    "y": 1,
-    "z": 210
-  },
-  {
-    "name": "University of Malta (Malte)",
-    "country": "Malte",
-    "full_name": "University of Malta",
-    "id": "grid.4462.4",
-    "y": 1,
-    "z": 62
-  },
-  {
-    "name": "National Research Council (Italie)",
-    "country": "Italie",
-    "full_name": "National Research Council",
-    "id": "grid.5326.2",
-    "y": 1,
-    "z": 685
-  },
-  {
-    "name": "Hellenic Centre for Marine Research (Grèce)",
-    "country": "Grèce",
-    "full_name": "Hellenic Centre for Marine Research",
-    "id": "grid.410335.0",
-    "y": 1,
-    "z": 60
+  "Excellent Science": {
+    "Research infrastructures (INFRA)": [
+      {
+        "name": "EPHE (France)",
+        "country": "France",
+        "full_name": "École pratique des hautes études",
+        "acronym": "EPHE",
+        "id": "QXnpG",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 169
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Finnish Meteorological Institute (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Meteorological Institute",
+        "id": "grid.8657.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "National Institute of Oceanography and Experimental Geophysics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute of Oceanography and Experimental Geophysics",
+        "id": "grid.4336.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Swedish Meteorological and Hydrological Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish Meteorological and Hydrological Institute",
+        "id": "grid.6057.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Flanders Marine Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Marine Institute",
+        "id": "grid.426539.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Smartbay Ireland (Irlande)",
+        "country": "Irlande",
+        "full_name": "Smartbay Ireland",
+        "id": "grid.496943.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 97
+      },
+      {
+        "name": "Marine Information Service (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Marine Information Service",
+        "id": "grid.425439.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Hellenic Centre for Marine Research (Grèce)",
+        "country": "Grèce",
+        "full_name": "Hellenic Centre for Marine Research",
+        "id": "grid.410335.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Department for Environment Food and Rural Affairs (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department for Environment Food and Rural Affairs",
+        "id": "grid.13689.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Malta (Malte)",
+        "country": "Malte",
+        "full_name": "University of Malta",
+        "id": "grid.4462.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "UNICAEN (France)",
+        "country": "France",
+        "full_name": "Université de Caen Normandie",
+        "acronym": "UNICAEN",
+        "id": "p25Q3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "ULCO (France)",
+        "country": "France",
+        "full_name": "Université du Littoral Côte d’Opale",
+        "acronym": "ULCO",
+        "id": "yH19Y",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Deltares (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Deltares",
+        "id": "grid.6385.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Norwegian Institute of Marine Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Marine Research",
+        "id": "grid.10917.3e",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz-Zentrum Geesthacht Centre for Materials and Coastal Research",
+        "id": "grid.24999.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Norwegian Institute for Water Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Water Research",
+        "id": "grid.6407.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Institute of Oceanology (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Institute of Oceanology",
+        "id": "grid.447712.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 74
+      },
+      {
+        "name": "Norwegian Research Centre (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Research Centre",
+        "id": "grid.509009.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Ministry of Infrastructure and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Ministry of Infrastructure and the Environment",
+        "id": "grid.425715.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Euro-Mediterranean Center for Climate Change (Italie)",
+        "country": "Italie",
+        "full_name": "Euro-Mediterranean Center for Climate Change",
+        "id": "grid.423878.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Instituto Hidrográfico (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto Hidrográfico",
+        "id": "grid.421278.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Euro Argo (France)",
+        "country": "France",
+        "full_name": "Euro Argo",
+        "acronym": "Euro Argo",
+        "id": "804377778",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Finnish Environment Institute (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Environment Institute",
+        "id": "grid.410381.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "UBO (France)",
+        "country": "France",
+        "full_name": "Université de Bretagne Occidentale",
+        "acronym": "UBO",
+        "id": "06SE7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "European Global Ocean Observing System (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Global Ocean Observing System",
+        "id": "grid.450753.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      }
+    ]
   }
-]
+}

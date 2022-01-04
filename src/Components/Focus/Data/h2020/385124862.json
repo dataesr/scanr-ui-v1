@@ -1,413 +1,934 @@
-[
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 4,
-    "z": 852
+{
+  "all": {
+    "all": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 852
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 19
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 14
+      },
+      {
+        "name": "Nova Measuring Instruments (Israël)",
+        "country": "Israël",
+        "full_name": "Nova Measuring Instruments",
+        "id": "grid.474141.3",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 12
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 51
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 62
+      },
+      {
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 85
+      },
+      {
+        "name": "STMicroelectronics (Italie)",
+        "country": "Italie",
+        "full_name": "STMicroelectronics",
+        "id": "grid.5403.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 61
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 1072
+      },
+      {
+        "name": "Robert Bosch (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Robert Bosch",
+        "id": "grid.6584.f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 115
+      },
+      {
+        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institut Mikroelektronických Aplikací",
+        "id": "grid.424651.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "Lam Research Sas (France)",
+        "country": "France",
+        "full_name": "Lam Research Sas",
+        "acronym": "Lam Research Sas",
+        "id": "381687680",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Applied Materials (Israël)",
+        "country": "Israël",
+        "full_name": "Applied Materials",
+        "id": "grid.432770.5",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Picosun (Finlande)",
+        "country": "Finlande",
+        "full_name": "Picosun",
+        "id": "grid.425475.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Integrated Systems Development (Grèce)",
+        "country": "Grèce",
+        "full_name": "Integrated Systems Development",
+        "id": "grid.435684.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Thermo Fisher Scientific (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.433187.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 16
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 22
+      },
+      {
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Valeo Siemens Eautomot... (France)",
+        "country": "France",
+        "full_name": "Valeo Siemens Eautomotive France Sas",
+        "acronym": "Valeo Siemens Eautomot...",
+        "id": "528970197",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Soitec Lab (France)",
+        "country": "France",
+        "full_name": "Soitec Lab",
+        "acronym": "Soitec Lab",
+        "id": "849568530",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Chemnitz University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Chemnitz University of Technology",
+        "id": "grid.6810.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Mersen (France)",
+        "country": "France",
+        "full_name": "Mersen",
+        "acronym": "Mersen",
+        "id": "gent114",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Hamm-Lippstadt University of Applied Sciences (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hamm-Lippstadt University of Applied Sciences",
+        "id": "grid.461668.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Saint-Gobain (France)",
+        "country": "France",
+        "full_name": "Saint-Gobain",
+        "acronym": "Saint-Gobain",
+        "id": "gent87",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Norstel (Suède)",
+        "country": "Suède",
+        "full_name": "Norstel",
+        "id": "grid.499312.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Aixtron (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Aixtron",
+        "id": "grid.423869.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "University of Kaiserslautern (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Kaiserslautern",
+        "id": "grid.7645.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Semikron (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Semikron",
+        "id": "grid.474504.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Linköping University (Suède)",
+        "country": "Suède",
+        "full_name": "Linköping University",
+        "id": "grid.5640.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 98
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Novasic (France)",
+        "country": "France",
+        "full_name": "Novasic",
+        "acronym": "Novasic",
+        "id": "402043822",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "NanoDesign (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "NanoDesign",
+        "id": "grid.455067.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Pavia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pavia",
+        "id": "grid.8982.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 206
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 685
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 230
+      },
+      {
+        "name": "Slovak University of Technology in Bratislava (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Slovak University of Technology in Bratislava",
+        "id": "grid.440789.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "LASSE (France)",
+        "country": "France",
+        "full_name": "Laser Systems & Solutions Of Europe",
+        "acronym": "LASSE",
+        "id": "802526574",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ASM International (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ASM International",
+        "id": "grid.432314.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "GPTech (Espagne)",
+        "country": "Espagne",
+        "full_name": "GPTech",
+        "id": "grid.474002.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Institute of Electron Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Electron Technology",
+        "id": "grid.4612.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "Disco (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Disco",
+        "id": "grid.505550.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 176
+      },
+      {
+        "name": "University of Udine (Italie)",
+        "country": "Italie",
+        "full_name": "University of Udine",
+        "id": "grid.5390.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "University of Bologna (Italie)",
+        "country": "Italie",
+        "full_name": "University of Bologna",
+        "id": "grid.6292.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 314
+      },
+      {
+        "name": "Grenoble INP (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Grenoble",
+        "acronym": "Grenoble INP",
+        "id": "2ALYK",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 118
+      },
+      {
+        "name": "HQ-Dielectrics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "HQ-Dielectrics",
+        "id": "grid.435057.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      }
+    ]
   },
-  {
-    "name": "EV Group (Autriche)",
-    "country": "Autriche",
-    "full_name": "EV Group",
-    "id": "grid.424986.5",
-    "y": 3,
-    "z": 19
-  },
-  {
-    "name": "Soitec (France)",
-    "country": "France",
-    "full_name": "Soitec",
-    "acronym": "Soitec",
-    "id": "gent163",
-    "y": 3,
-    "z": 14
-  },
-  {
-    "name": "Nova Measuring Instruments (Israël)",
-    "country": "Israël",
-    "full_name": "Nova Measuring Instruments",
-    "id": "grid.474141.3",
-    "y": 3,
-    "z": 12
-  },
-  {
-    "name": "STMicroelectronics (France)",
-    "country": "France",
-    "full_name": "STMicroelectronics",
-    "acronym": "STMicroelectronics",
-    "id": "gent166",
-    "y": 3,
-    "z": 51
-  },
-  {
-    "name": "Robert Bosch (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Robert Bosch",
-    "id": "grid.6584.f",
-    "y": 2,
-    "z": 115
-  },
-  {
-    "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
-    "country": "Italie",
-    "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
-    "id": "grid.35247.37",
-    "y": 2,
-    "z": 20
-  },
-  {
-    "name": "STMicroelectronics (Italie)",
-    "country": "Italie",
-    "full_name": "STMicroelectronics",
-    "id": "grid.5403.2",
-    "y": 2,
-    "z": 61
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 2,
-    "z": 1072
-  },
-  {
-    "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Institut Mikroelektronických Aplikací",
-    "id": "grid.424651.0",
-    "y": 2,
-    "z": 19
-  },
-  {
-    "name": "Brno University of Technology (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Brno University of Technology",
-    "id": "grid.4994.0",
-    "y": 2,
-    "z": 62
-  },
-  {
-    "name": "University of Seville (Espagne)",
-    "country": "Espagne",
-    "full_name": "University of Seville",
-    "id": "grid.9224.d",
-    "y": 2,
-    "z": 85
-  },
-  {
-    "name": "Lam Research Sas (France)",
-    "country": "France",
-    "full_name": "Lam Research Sas",
-    "acronym": "Lam Research Sas",
-    "id": "381687680",
-    "y": 2,
-    "z": 3
-  },
-  {
-    "name": "Picosun (Finlande)",
-    "country": "Finlande",
-    "full_name": "Picosun",
-    "id": "grid.425475.5",
-    "y": 2,
-    "z": 12
-  },
-  {
-    "name": "Applied Materials (Israël)",
-    "country": "Israël",
-    "full_name": "Applied Materials",
-    "id": "grid.432770.5",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "Thermo Fisher Scientific (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Thermo Fisher Scientific",
-    "id": "grid.433187.a",
-    "y": 2,
-    "z": 16
-  },
-  {
-    "name": "Bruker (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bruker",
-    "id": "grid.423218.e",
-    "y": 2,
-    "z": 22
-  },
-  {
-    "name": "Integrated Systems Development (Grèce)",
-    "country": "Grèce",
-    "full_name": "Integrated Systems Development",
-    "id": "grid.435684.8",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "Semilab (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "Semilab",
-    "id": "grid.425991.2",
-    "y": 2,
-    "z": 11
-  },
-  {
-    "name": "Aixtron (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Aixtron",
-    "id": "grid.423869.2",
-    "y": 1,
-    "z": 16
-  },
-  {
-    "name": "Saint-Gobain (France)",
-    "country": "France",
-    "full_name": "Saint-Gobain",
-    "acronym": "Saint-Gobain",
-    "id": "gent87",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Soitec Lab (France)",
-    "country": "France",
-    "full_name": "Soitec Lab",
-    "acronym": "Soitec Lab",
-    "id": "849568530",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Valeo Siemens Eautomot... (France)",
-    "country": "France",
-    "full_name": "Valeo Siemens Eautomotive France Sas",
-    "acronym": "Valeo Siemens Eautomot...",
-    "id": "528970197",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "Novasic (France)",
-    "country": "France",
-    "full_name": "Novasic",
-    "acronym": "Novasic",
-    "id": "402043822",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Linköping University (Suède)",
-    "country": "Suède",
-    "full_name": "Linköping University",
-    "id": "grid.5640.7",
-    "y": 1,
-    "z": 98
-  },
-  {
-    "name": "Semikron (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Semikron",
-    "id": "grid.474504.6",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University of Kaiserslautern (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Kaiserslautern",
-    "id": "grid.7645.0",
-    "y": 1,
-    "z": 35
-  },
-  {
-    "name": "Norstel (Suède)",
-    "country": "Suède",
-    "full_name": "Norstel",
-    "id": "grid.499312.4",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Mersen (France)",
-    "country": "France",
-    "full_name": "Mersen",
-    "acronym": "Mersen",
-    "id": "gent114",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "CLI (France)",
-    "country": "France",
-    "full_name": "Centrale Lille Institut",
-    "acronym": "CLI",
-    "id": "54VTe",
-    "y": 1,
-    "z": 47
-  },
-  {
-    "name": "Chemnitz University of Technology (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Chemnitz University of Technology",
-    "id": "grid.6810.f",
-    "y": 1,
-    "z": 37
-  },
-  {
-    "name": "Hamm-Lippstadt University of Applied Sciences (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Hamm-Lippstadt University of Applied Sciences",
-    "id": "grid.461668.b",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Politecnico di Milano (Italie)",
-    "country": "Italie",
-    "full_name": "Politecnico di Milano",
-    "id": "grid.4643.5",
-    "y": 1,
-    "z": 386
-  },
-  {
-    "name": "LASSE (France)",
-    "country": "France",
-    "full_name": "Laser Systems & Solutions Of Europe",
-    "acronym": "LASSE",
-    "id": "802526574",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "University of Udine (Italie)",
-    "country": "Italie",
-    "full_name": "University of Udine",
-    "id": "grid.5390.f",
-    "y": 1,
-    "z": 30
-  },
-  {
-    "name": "Polytechnic University of Turin (Italie)",
-    "country": "Italie",
-    "full_name": "Polytechnic University of Turin",
-    "id": "grid.4800.c",
-    "y": 1,
-    "z": 230
-  },
-  {
-    "name": "Slovak University of Technology in Bratislava (Slovaquie)",
-    "country": "Slovaquie",
-    "full_name": "Slovak University of Technology in Bratislava",
-    "id": "grid.440789.6",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "GPTech (Espagne)",
-    "country": "Espagne",
-    "full_name": "GPTech",
-    "id": "grid.474002.5",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "University of Bologna (Italie)",
-    "country": "Italie",
-    "full_name": "University of Bologna",
-    "id": "grid.6292.f",
-    "y": 1,
-    "z": 314
-  },
-  {
-    "name": "University of Padua (Italie)",
-    "country": "Italie",
-    "full_name": "University of Padua",
-    "id": "grid.5608.b",
-    "y": 1,
-    "z": 206
-  },
-  {
-    "name": "University of Pisa (Italie)",
-    "country": "Italie",
-    "full_name": "University of Pisa",
-    "id": "grid.5395.a",
-    "y": 1,
-    "z": 176
-  },
-  {
-    "name": "Polytechnic University of Bucharest (Roumanie)",
-    "country": "Roumanie",
-    "full_name": "Polytechnic University of Bucharest",
-    "id": "grid.4551.5",
-    "y": 1,
-    "z": 49
-  },
-  {
-    "name": "ASM International (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "ASM International",
-    "id": "grid.432314.3",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "Disco (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Disco",
-    "id": "grid.505550.0",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "NanoDesign (Slovaquie)",
-    "country": "Slovaquie",
-    "full_name": "NanoDesign",
-    "id": "grid.455067.5",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Institute of Electron Technology (Pologne)",
-    "country": "Pologne",
-    "full_name": "Institute of Electron Technology",
-    "id": "grid.4612.1",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "National Research Council (Italie)",
-    "country": "Italie",
-    "full_name": "National Research Council",
-    "id": "grid.5326.2",
-    "y": 1,
-    "z": 685
-  },
-  {
-    "name": "University of Pavia (Italie)",
-    "country": "Italie",
-    "full_name": "University of Pavia",
-    "id": "grid.8982.b",
-    "y": 1,
-    "z": 57
-  },
-  {
-    "name": "Nokia (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Nokia",
-    "id": "grid.425792.f",
-    "y": 1,
-    "z": 39
-  },
-  {
-    "name": "KLA (Israël)",
-    "country": "Israël",
-    "full_name": "KLA",
-    "id": "grid.425610.4",
-    "y": 1,
-    "z": 9
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 167
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 13
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 12
+      },
+      {
+        "name": "Nova Measuring Instruments (Israël)",
+        "country": "Israël",
+        "full_name": "Nova Measuring Instruments",
+        "id": "grid.474141.3",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 40
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "STMicroelectronics (Italie)",
+        "country": "Italie",
+        "full_name": "STMicroelectronics",
+        "id": "grid.5403.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 37
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 283
+      },
+      {
+        "name": "Robert Bosch (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Robert Bosch",
+        "id": "grid.6584.f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 48
+      },
+      {
+        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institut Mikroelektronických Aplikací",
+        "id": "grid.424651.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "Lam Research Sas (France)",
+        "country": "France",
+        "full_name": "Lam Research Sas",
+        "acronym": "Lam Research Sas",
+        "id": "381687680",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Applied Materials (Israël)",
+        "country": "Israël",
+        "full_name": "Applied Materials",
+        "id": "grid.432770.5",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Picosun (Finlande)",
+        "country": "Finlande",
+        "full_name": "Picosun",
+        "id": "grid.425475.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Integrated Systems Development (Grèce)",
+        "country": "Grèce",
+        "full_name": "Integrated Systems Development",
+        "id": "grid.435684.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "Thermo Fisher Scientific (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.433187.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Valeo Siemens Eautomot... (France)",
+        "country": "France",
+        "full_name": "Valeo Siemens Eautomotive France Sas",
+        "acronym": "Valeo Siemens Eautomot...",
+        "id": "528970197",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Soitec Lab (France)",
+        "country": "France",
+        "full_name": "Soitec Lab",
+        "acronym": "Soitec Lab",
+        "id": "849568530",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Chemnitz University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Chemnitz University of Technology",
+        "id": "grid.6810.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Mersen (France)",
+        "country": "France",
+        "full_name": "Mersen",
+        "acronym": "Mersen",
+        "id": "gent114",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Hamm-Lippstadt University of Applied Sciences (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hamm-Lippstadt University of Applied Sciences",
+        "id": "grid.461668.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Saint-Gobain (France)",
+        "country": "France",
+        "full_name": "Saint-Gobain",
+        "acronym": "Saint-Gobain",
+        "id": "gent87",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Norstel (Suède)",
+        "country": "Suède",
+        "full_name": "Norstel",
+        "id": "grid.499312.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Aixtron (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Aixtron",
+        "id": "grid.423869.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Kaiserslautern (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Kaiserslautern",
+        "id": "grid.7645.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Semikron (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Semikron",
+        "id": "grid.474504.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Linköping University (Suède)",
+        "country": "Suède",
+        "full_name": "Linköping University",
+        "id": "grid.5640.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Novasic (France)",
+        "country": "France",
+        "full_name": "Novasic",
+        "acronym": "Novasic",
+        "id": "402043822",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "NanoDesign (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "NanoDesign",
+        "id": "grid.455067.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Pavia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pavia",
+        "id": "grid.8982.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Slovak University of Technology in Bratislava (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Slovak University of Technology in Bratislava",
+        "id": "grid.440789.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "LASSE (France)",
+        "country": "France",
+        "full_name": "Laser Systems & Solutions Of Europe",
+        "acronym": "LASSE",
+        "id": "802526574",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ASM International (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ASM International",
+        "id": "grid.432314.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "GPTech (Espagne)",
+        "country": "Espagne",
+        "full_name": "GPTech",
+        "id": "grid.474002.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Institute of Electron Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Electron Technology",
+        "id": "grid.4612.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "Disco (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Disco",
+        "id": "grid.505550.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "University of Udine (Italie)",
+        "country": "Italie",
+        "full_name": "University of Udine",
+        "id": "grid.5390.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Bologna (Italie)",
+        "country": "Italie",
+        "full_name": "University of Bologna",
+        "id": "grid.6292.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Grenoble INP (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Grenoble",
+        "acronym": "Grenoble INP",
+        "id": "2ALYK",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "HQ-Dielectrics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "HQ-Dielectrics",
+        "id": "grid.435057.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      }
+    ]
   }
-]
+}

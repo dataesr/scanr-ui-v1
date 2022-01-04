@@ -1,410 +1,1095 @@
-[
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 5,
-    "z": 689
+{
+  "all": {
+    "all": [
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 689
+      },
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 205
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 4,
+        "z": 57
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 149
+      },
+      {
+        "name": "University Hospital Heidelberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Heidelberg",
+        "id": "grid.5253.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 54
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 122
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 104
+      },
+      {
+        "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Sant Joan de Déu Barcelona",
+        "id": "grid.411160.3",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 24
+      },
+      {
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 58
+      },
+      {
+        "name": "Charles University (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Charles University",
+        "id": "grid.4491.8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 86
+      },
+      {
+        "name": "University of Tübingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Tübingen",
+        "id": "grid.10392.39",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 108
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 64
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 112
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 38
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 64
+      },
+      {
+        "name": "Servier (France)",
+        "country": "France",
+        "full_name": "Servier",
+        "acronym": "Servier",
+        "id": "gent154",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 28
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 341
+      },
+      {
+        "name": "Roche (Suisse)",
+        "country": "Suisse",
+        "full_name": "Roche",
+        "id": "grid.417570.0",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 36
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 42
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 32
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 49
+      },
+      {
+        "name": "Janssen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Janssen",
+        "id": "grid.419619.2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 76
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 36
+      },
+      {
+        "name": "Azienda Ospedaliera Universitaria Pisana (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Ospedaliera Universitaria Pisana",
+        "id": "grid.144189.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 130
+      },
+      {
+        "name": "ECRIN (France)",
+        "country": "France",
+        "full_name": "Ecrin European Clinical Research Infrastructure Network",
+        "acronym": "ECRIN",
+        "id": "801933235",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 56
+      },
+      {
+        "name": "Bambino Gesù Children's Hospital (Italie)",
+        "country": "Italie",
+        "full_name": "Bambino Gesù Children's Hospital",
+        "id": "grid.414125.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 27
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 150
+      },
+      {
+        "name": "Gianni Benzi Pharmacological Research Foundation (Italie)",
+        "country": "Italie",
+        "full_name": "Gianni Benzi Pharmacological Research Foundation",
+        "id": "grid.490797.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 57
+      },
+      {
+        "name": "Stockholm County Council (Suède)",
+        "country": "Suède",
+        "full_name": "Stockholm County Council",
+        "id": "grid.425979.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 34
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 139
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 124
+      },
+      {
+        "name": "Technical University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Technical University of Madrid",
+        "id": "grid.5690.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 250
+      },
+      {
+        "name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden",
+        "id": "grid.491861.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Manchester University NHS Foundation Trust (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Manchester University NHS Foundation Trust",
+        "id": "grid.498924.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 109
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Centre for Genomic Regulation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Genomic Regulation",
+        "id": "grid.11478.3b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 69
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 211
+      },
+      {
+        "name": "St Anna Children's Hospital (Autriche)",
+        "country": "Autriche",
+        "full_name": "St Anna Children's Hospital",
+        "id": "grid.416346.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 177
+      },
+      {
+        "name": "CLB (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
+        "acronym": "CLB",
+        "id": "rSj62",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 109
+      },
+      {
+        "name": "Consorzio per Valutazioni Biologiche e Farmacologiche (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio per Valutazioni Biologiche e Farmacologiche",
+        "id": "grid.423689.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "Children's Memorial Health Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "Children's Memorial Health Institute",
+        "id": "grid.413923.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Istituto Ortopedico Rizzoli (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Ortopedico Rizzoli",
+        "id": "grid.419038.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 15
+      },
+      {
+        "name": "Finnish Institute for Health and Welfare (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Institute for Health and Welfare",
+        "id": "grid.14758.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 40
+      }
+    ]
   },
-  {
-    "name": "Radboud University Nijmegen (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Radboud University Nijmegen",
-    "id": "grid.5590.9",
-    "y": 4,
-    "z": 205
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 60
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 174
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 40
+      },
+      {
+        "name": "University Hospital Heidelberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Heidelberg",
+        "id": "grid.5253.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 33
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 70
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 50
+      },
+      {
+        "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Sant Joan de Déu Barcelona",
+        "id": "grid.411160.3",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 15
+      },
+      {
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 11
+      },
+      {
+        "name": "Charles University (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Charles University",
+        "id": "grid.4491.8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 18
+      },
+      {
+        "name": "University of Tübingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Tübingen",
+        "id": "grid.10392.39",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 29
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 42
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 65
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 36
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 43
+      },
+      {
+        "name": "Servier (France)",
+        "country": "France",
+        "full_name": "Servier",
+        "acronym": "Servier",
+        "id": "gent154",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 25
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 86
+      },
+      {
+        "name": "Roche (Suisse)",
+        "country": "Suisse",
+        "full_name": "Roche",
+        "id": "grid.417570.0",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 28
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 39
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 24
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 48
+      },
+      {
+        "name": "Janssen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Janssen",
+        "id": "grid.419619.2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 54
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 3,
+        "z": 47
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 23
+      },
+      {
+        "name": "Azienda Ospedaliera Universitaria Pisana (Italie)",
+        "country": "Italie",
+        "full_name": "Azienda Ospedaliera Universitaria Pisana",
+        "id": "grid.144189.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 30
+      },
+      {
+        "name": "ECRIN (France)",
+        "country": "France",
+        "full_name": "Ecrin European Clinical Research Infrastructure Network",
+        "acronym": "ECRIN",
+        "id": "801933235",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 39
+      },
+      {
+        "name": "Bambino Gesù Children's Hospital (Italie)",
+        "country": "Italie",
+        "full_name": "Bambino Gesù Children's Hospital",
+        "id": "grid.414125.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 27
+      },
+      {
+        "name": "Gianni Benzi Pharmacological Research Foundation (Italie)",
+        "country": "Italie",
+        "full_name": "Gianni Benzi Pharmacological Research Foundation",
+        "id": "grid.490797.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 35
+      },
+      {
+        "name": "Stockholm County Council (Suède)",
+        "country": "Suède",
+        "full_name": "Stockholm County Council",
+        "id": "grid.425979.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 26
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 108
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 79
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 66
+      },
+      {
+        "name": "Technical University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Technical University of Madrid",
+        "id": "grid.5690.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden",
+        "id": "grid.491861.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Manchester University NHS Foundation Trust (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Manchester University NHS Foundation Trust",
+        "id": "grid.498924.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 26
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Centre for Genomic Regulation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Genomic Regulation",
+        "id": "grid.11478.3b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 25
+      },
+      {
+        "name": "St Anna Children's Hospital (Autriche)",
+        "country": "Autriche",
+        "full_name": "St Anna Children's Hospital",
+        "id": "grid.416346.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 43
+      },
+      {
+        "name": "CLB (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
+        "acronym": "CLB",
+        "id": "rSj62",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 57
+      },
+      {
+        "name": "Consorzio per Valutazioni Biologiche e Farmacologiche (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio per Valutazioni Biologiche e Farmacologiche",
+        "id": "grid.423689.2",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Children's Memorial Health Institute (Pologne)",
+        "country": "Pologne",
+        "full_name": "Children's Memorial Health Institute",
+        "id": "grid.413923.e",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Istituto Ortopedico Rizzoli (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Ortopedico Rizzoli",
+        "id": "grid.419038.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Finnish Institute for Health and Welfare (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Institute for Health and Welfare",
+        "id": "grid.14758.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 30
+      },
+      {
+        "name": "CHU Dijon (France)",
+        "country": "France",
+        "full_name": "Centre hospitalier universitaire Dijon-Bourgogne",
+        "acronym": "CHU Dijon",
+        "id": "n3gLn",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      }
+    ]
   },
-  {
-    "name": "Novartis (Suisse)",
-    "country": "Suisse",
-    "full_name": "Novartis",
-    "id": "grid.419481.1",
-    "y": 4,
-    "z": 57
-  },
-  {
-    "name": "Charles University (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Charles University",
-    "id": "grid.4491.8",
-    "y": 3,
-    "z": 86
-  },
-  {
-    "name": "University of Tübingen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Tübingen",
-    "id": "grid.10392.39",
-    "y": 3,
-    "z": 108
-  },
-  {
-    "name": "University of Leicester (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Leicester",
-    "id": "grid.9918.9",
-    "y": 3,
-    "z": 58
-  },
-  {
-    "name": "AP-HP (France)",
-    "country": "France",
-    "full_name": "Assistance publique - Hôpitaux de Paris",
-    "acronym": "AP-HP",
-    "id": "Py0K5",
-    "y": 3,
-    "z": 122
-  },
-  {
-    "name": "University Hospital Heidelberg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University Hospital Heidelberg",
-    "id": "grid.5253.1",
-    "y": 3,
-    "z": 54
-  },
-  {
-    "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
-    "country": "Espagne",
-    "full_name": "Hospital Sant Joan de Déu Barcelona",
-    "id": "grid.411160.3",
-    "y": 3,
-    "z": 24
-  },
-  {
-    "name": "Newcastle University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Newcastle University",
-    "id": "grid.1006.7",
-    "y": 3,
-    "z": 149
-  },
-  {
-    "name": "University Medical Center Groningen (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Groningen",
-    "id": "grid.4494.d",
-    "y": 3,
-    "z": 104
-  },
-  {
-    "name": "Madrid Health Service (Espagne)",
-    "country": "Espagne",
-    "full_name": "Madrid Health Service",
-    "id": "grid.410361.1",
-    "y": 3,
-    "z": 64
-  },
-  {
-    "name": "University Medical Center Utrecht (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Utrecht",
-    "id": "grid.7692.a",
-    "y": 3,
-    "z": 112
-  },
-  {
-    "name": "Sanofi (France)",
-    "country": "France",
-    "full_name": "Sanofi",
-    "acronym": "Sanofi",
-    "id": "gent147",
-    "y": 3,
-    "z": 42
-  },
-  {
-    "name": "University of Oxford (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Oxford",
-    "id": "grid.4991.5",
-    "y": 3,
-    "z": 341
-  },
-  {
-    "name": "Bayer (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Bayer",
-    "id": "grid.420044.6",
-    "y": 3,
-    "z": 64
-  },
-  {
-    "name": "UCB Pharma (Belgique)",
-    "country": "Belgique",
-    "full_name": "UCB Pharma",
-    "id": "grid.421932.f",
-    "y": 3,
-    "z": 32
-  },
-  {
-    "name": "Servier (France)",
-    "country": "France",
-    "full_name": "Servier",
-    "acronym": "Servier",
-    "id": "gent154",
-    "y": 3,
-    "z": 28
-  },
-  {
-    "name": "Eli Lilly (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Eli Lilly",
-    "id": "grid.418786.4",
-    "y": 3,
-    "z": 38
-  },
-  {
-    "name": "Roche (Suisse)",
-    "country": "Suisse",
-    "full_name": "Roche",
-    "id": "grid.417570.0",
-    "y": 3,
-    "z": 36
-  },
-  {
-    "name": "GlaxoSmithKline (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "GlaxoSmithKline",
-    "id": "grid.418236.a",
-    "y": 3,
-    "z": 36
-  },
-  {
-    "name": "Janssen (Belgique)",
-    "country": "Belgique",
-    "full_name": "Janssen",
-    "id": "grid.419619.2",
-    "y": 3,
-    "z": 76
-  },
-  {
-    "name": "Pfizer (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Pfizer",
-    "id": "grid.418566.8",
-    "y": 3,
-    "z": 49
-  },
-  {
-    "name": "University Hospital Frankfurt (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University Hospital Frankfurt",
-    "id": "grid.411088.4",
-    "y": 2,
-    "z": 3
-  },
-  {
-    "name": "Centre for Genomic Regulation (Espagne)",
-    "country": "Espagne",
-    "full_name": "Centre for Genomic Regulation",
-    "id": "grid.11478.3b",
-    "y": 2,
-    "z": 69
-  },
-  {
-    "name": "Universitätsklinikum Aachen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Universitätsklinikum Aachen",
-    "id": "grid.412301.5",
-    "y": 2,
-    "z": 36
-  },
-  {
-    "name": "CHU Dijon (France)",
-    "country": "France",
-    "full_name": "Centre hospitalier universitaire Dijon-Bourgogne",
-    "acronym": "CHU Dijon",
-    "id": "n3gLn",
-    "y": 2,
-    "z": 3
-  },
-  {
-    "name": "Erasmus MC (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Erasmus MC",
-    "id": "grid.5645.2",
-    "y": 2,
-    "z": 139
-  },
-  {
-    "name": "Charité - University Medicine Berlin (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Charité - University Medicine Berlin",
-    "id": "grid.6363.0",
-    "y": 2,
-    "z": 109
-  },
-  {
-    "name": "Manchester University NHS Foundation Trust (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Manchester University NHS Foundation Trust",
-    "id": "grid.498924.a",
-    "y": 2,
-    "z": 8
-  },
-  {
-    "name": "University of Liverpool (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Liverpool",
-    "id": "grid.10025.36",
-    "y": 2,
-    "z": 109
-  },
-  {
-    "name": "St Anna Children's Hospital (Autriche)",
-    "country": "Autriche",
-    "full_name": "St Anna Children's Hospital",
-    "id": "grid.416346.2",
-    "y": 2,
-    "z": 10
-  },
-  {
-    "name": "Maastricht University (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Maastricht University",
-    "id": "grid.5012.6",
-    "y": 2,
-    "z": 177
-  },
-  {
-    "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Organisation for Research and Treatment of Cancer",
-    "id": "grid.418936.1",
-    "y": 2,
-    "z": 9
-  },
-  {
-    "name": "Technical University of Madrid (Espagne)",
-    "country": "Espagne",
-    "full_name": "Technical University of Madrid",
-    "id": "grid.5690.a",
-    "y": 2,
-    "z": 250
-  },
-  {
-    "name": "ECRIN (France)",
-    "country": "France",
-    "full_name": "Ecrin European Clinical Research Infrastructure Network",
-    "acronym": "ECRIN",
-    "id": "801933235",
-    "y": 2,
-    "z": 56
-  },
-  {
-    "name": "European Molecular Biology Laboratory (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "European Molecular Biology Laboratory",
-    "id": "grid.4709.a",
-    "y": 2,
-    "z": 130
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
-  },
-  {
-    "name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Helios Dr. Horst Schmidt Kliniken Wiesbaden",
-    "id": "grid.491861.3",
-    "y": 2,
-    "z": 2
-  },
-  {
-    "name": "Uppsala University (Suède)",
-    "country": "Suède",
-    "full_name": "Uppsala University",
-    "id": "grid.8993.b",
-    "y": 2,
-    "z": 211
-  },
-  {
-    "name": "Finnish Institute for Health and Welfare (Finlande)",
-    "country": "Finlande",
-    "full_name": "Finnish Institute for Health and Welfare",
-    "id": "grid.14758.3f",
-    "y": 2,
-    "z": 40
-  },
-  {
-    "name": "CLB (France)",
-    "country": "France",
-    "full_name": "Centre de lutte contre le cancer Léon-Bérard",
-    "acronym": "CLB",
-    "id": "rSj62",
-    "y": 2,
-    "z": 7
-  },
-  {
-    "name": "Children's Memorial Health Institute (Pologne)",
-    "country": "Pologne",
-    "full_name": "Children's Memorial Health Institute",
-    "id": "grid.413923.e",
-    "y": 2,
-    "z": 4
-  },
-  {
-    "name": "Stockholm County Council (Suède)",
-    "country": "Suède",
-    "full_name": "Stockholm County Council",
-    "id": "grid.425979.4",
-    "y": 2,
-    "z": 34
-  },
-  {
-    "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-    "country": "Espagne",
-    "full_name": "Vall d'Hebron Institut de Recerca",
-    "id": "grid.430994.3",
-    "y": 2,
-    "z": 57
-  },
-  {
-    "name": "University of Tartu (Estonie)",
-    "country": "Estonie",
-    "full_name": "University of Tartu",
-    "id": "grid.10939.32",
-    "y": 2,
-    "z": 150
-  },
-  {
-    "name": "Bambino Gesù Children's Hospital (Italie)",
-    "country": "Italie",
-    "full_name": "Bambino Gesù Children's Hospital",
-    "id": "grid.414125.7",
-    "y": 2,
-    "z": 27
-  },
-  {
-    "name": "Academic Medical Center (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Academic Medical Center",
-    "id": "grid.5650.6",
-    "y": 2,
-    "z": 81
-  },
-  {
-    "name": "Consorzio per Valutazioni Biologiche e Farmacologiche (Italie)",
-    "country": "Italie",
-    "full_name": "Consorzio per Valutazioni Biologiche e Farmacologiche",
-    "id": "grid.423689.2",
-    "y": 2,
-    "z": 6
-  },
-  {
-    "name": "Istituto Ortopedico Rizzoli (Italie)",
-    "country": "Italie",
-    "full_name": "Istituto Ortopedico Rizzoli",
-    "id": "grid.419038.7",
-    "y": 2,
-    "z": 15
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "AstraZeneca (Suède)",
+        "country": "Suède",
+        "full_name": "AstraZeneca",
+        "id": "grid.418151.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "Jagiellonian University (Pologne)",
+        "country": "Pologne",
+        "full_name": "Jagiellonian University",
+        "id": "grid.5522.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Max Planck Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Max Planck Society",
+        "id": "grid.4372.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 101
+      },
+      {
+        "name": "Enamine (Ukraine)",
+        "country": "Ukraine",
+        "full_name": "Enamine",
+        "id": "grid.482870.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Pittsburgh (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of Pittsburgh",
+        "id": "grid.21925.3d",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Eindhoven University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eindhoven University of Technology",
+        "id": "grid.6852.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 77
+      },
+      {
+        "name": "University of Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Groningen",
+        "id": "grid.4830.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Ruhr University Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ruhr University Bochum",
+        "id": "grid.5570.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Giotto Biotech (Italie)",
+        "country": "Italie",
+        "full_name": "Giotto Biotech",
+        "id": "grid.434457.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Philipp University of Marburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Philipp University of Marburg",
+        "id": "grid.10253.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "I. Pasteur (France)",
+        "country": "France",
+        "full_name": "Institut Pasteur",
+        "acronym": "I. Pasteur",
+        "id": "Sn8Nt",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      }
+    ]
   }
-]
+}

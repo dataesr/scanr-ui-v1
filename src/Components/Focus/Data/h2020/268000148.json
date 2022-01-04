@@ -1,254 +1,589 @@
-[
-  {
-    "name": "University of Florence (Italie)",
-    "country": "Italie",
-    "full_name": "University of Florence",
-    "id": "grid.8404.8",
-    "y": 2,
-    "z": 143
+{
+  "all": {
+    "all": [
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 143
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 109
+      },
+      {
+        "name": "BioTalentum (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "BioTalentum",
+        "id": "grid.424211.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Sant Joan de Déu Barcelona",
+        "id": "grid.411160.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 241
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Universities of Applied Sciences Joanneum (Autriche)",
+        "country": "Autriche",
+        "full_name": "Universities of Applied Sciences Joanneum",
+        "id": "grid.452085.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 173
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 341
+      },
+      {
+        "name": "Imabiotech (France)",
+        "country": "France",
+        "full_name": "Imabiotech",
+        "acronym": "Imabiotech",
+        "id": "514227255",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Cardiff University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff University",
+        "id": "grid.5600.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "UPJV (France)",
+        "country": "France",
+        "full_name": "Université de Picardie Jules-Verne",
+        "acronym": "UPJV",
+        "id": "8j5s2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Medtronic (Espagne)",
+        "country": "Espagne",
+        "full_name": "Medtronic",
+        "id": "grid.425561.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Medical University of Lodz (Pologne)",
+        "country": "Pologne",
+        "full_name": "Medical University of Lodz",
+        "id": "grid.8267.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 361
+      },
+      {
+        "name": "University of Warwick (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Warwick",
+        "id": "grid.7372.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Università Campus Bio-Medico (Italie)",
+        "country": "Italie",
+        "full_name": "Università Campus Bio-Medico",
+        "id": "grid.9657.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 109
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 112
+      },
+      {
+        "name": "Medtronic France (France)",
+        "country": "France",
+        "full_name": "Medtronic France",
+        "acronym": "Medtronic France",
+        "id": "722008232",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Technical University of Madrid",
+        "id": "grid.5690.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 250
+      },
+      {
+        "name": "Samsung (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Samsung",
+        "id": "grid.437715.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "El Corte Inglés (Espagne)",
+        "country": "Espagne",
+        "full_name": "El Corte Inglés",
+        "id": "grid.435096.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Robotnik (Espagne)",
+        "country": "Espagne",
+        "full_name": "Robotnik",
+        "id": "grid.426075.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 106
+      }
+    ]
   },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "BioTalentum (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "BioTalentum",
+        "id": "grid.424211.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Sant Joan de Déu Barcelona",
+        "id": "grid.411160.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 105
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Universities of Applied Sciences Joanneum (Autriche)",
+        "country": "Autriche",
+        "full_name": "Universities of Applied Sciences Joanneum",
+        "id": "grid.452085.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Imabiotech (France)",
+        "country": "France",
+        "full_name": "Imabiotech",
+        "acronym": "Imabiotech",
+        "id": "514227255",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Cardiff University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff University",
+        "id": "grid.5600.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "UPJV (France)",
+        "country": "France",
+        "full_name": "Université de Picardie Jules-Verne",
+        "acronym": "UPJV",
+        "id": "8j5s2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      }
+    ]
   },
-  {
-    "name": "VU Amsterdam (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "VU Amsterdam",
-    "id": "grid.12380.38",
-    "y": 1,
-    "z": 173
-  },
-  {
-    "name": "Hospital Sant Joan de Déu Barcelona (Espagne)",
-    "country": "Espagne",
-    "full_name": "Hospital Sant Joan de Déu Barcelona",
-    "id": "grid.411160.3",
-    "y": 1,
-    "z": 24
-  },
-  {
-    "name": "Medical University of Vienna (Autriche)",
-    "country": "Autriche",
-    "full_name": "Medical University of Vienna",
-    "id": "grid.22937.3d",
-    "y": 1,
-    "z": 103
-  },
-  {
-    "name": "BioTalentum (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "BioTalentum",
-    "id": "grid.424211.0",
-    "y": 1,
-    "z": 12
-  },
-  {
-    "name": "UPJV (France)",
-    "country": "France",
-    "full_name": "Université de Picardie Jules-Verne",
-    "acronym": "UPJV",
-    "id": "8j5s2",
-    "y": 1,
-    "z": 21
-  },
-  {
-    "name": "Universities of Applied Sciences Joanneum (Autriche)",
-    "country": "Autriche",
-    "full_name": "Universities of Applied Sciences Joanneum",
-    "id": "grid.452085.e",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "University of Copenhagen (Danemark)",
-    "country": "Danemark",
-    "full_name": "University of Copenhagen",
-    "id": "grid.5254.6",
-    "y": 1,
-    "z": 321
-  },
-  {
-    "name": "Imabiotech (France)",
-    "country": "France",
-    "full_name": "Imabiotech",
-    "acronym": "Imabiotech",
-    "id": "514227255",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University of Liverpool (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Liverpool",
-    "id": "grid.10025.36",
-    "y": 1,
-    "z": 109
-  },
-  {
-    "name": "Novartis (Suisse)",
-    "country": "Suisse",
-    "full_name": "Novartis",
-    "id": "grid.419481.1",
-    "y": 1,
-    "z": 57
-  },
-  {
-    "name": "University of Oxford (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Oxford",
-    "id": "grid.4991.5",
-    "y": 1,
-    "z": 341
-  },
-  {
-    "name": "Cardiff University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Cardiff University",
-    "id": "grid.5600.3",
-    "y": 1,
-    "z": 94
-  },
-  {
-    "name": "University of Manchester (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Manchester",
-    "id": "grid.5379.8",
-    "y": 1,
-    "z": 241
-  },
-  {
-    "name": "Madrid Health Service (Espagne)",
-    "country": "Espagne",
-    "full_name": "Madrid Health Service",
-    "id": "grid.410361.1",
-    "y": 1,
-    "z": 64
-  },
-  {
-    "name": "Philips (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Philips",
-    "id": "grid.417284.c",
-    "y": 1,
-    "z": 106
-  },
-  {
-    "name": "Robotnik (Espagne)",
-    "country": "Espagne",
-    "full_name": "Robotnik",
-    "id": "grid.426075.2",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "Charité - University Medicine Berlin (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Charité - University Medicine Berlin",
-    "id": "grid.6363.0",
-    "y": 1,
-    "z": 109
-  },
-  {
-    "name": "Centre for Research and Technology Hellas (Grèce)",
-    "country": "Grèce",
-    "full_name": "Centre for Research and Technology Hellas",
-    "id": "grid.423747.1",
-    "y": 1,
-    "z": 361
-  },
-  {
-    "name": "Medtronic (Espagne)",
-    "country": "Espagne",
-    "full_name": "Medtronic",
-    "id": "grid.425561.1",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Medtronic France (France)",
-    "country": "France",
-    "full_name": "Medtronic France",
-    "acronym": "Medtronic France",
-    "id": "722008232",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Sant'Anna School of Advanced Studies (Italie)",
-    "country": "Italie",
-    "full_name": "Sant'Anna School of Advanced Studies",
-    "id": "grid.263145.7",
-    "y": 1,
-    "z": 95
-  },
-  {
-    "name": "University of Warwick (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Warwick",
-    "id": "grid.7372.1",
-    "y": 1,
-    "z": 114
-  },
-  {
-    "name": "University Medical Center Utrecht (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "University Medical Center Utrecht",
-    "id": "grid.7692.a",
-    "y": 1,
-    "z": 112
-  },
-  {
-    "name": "Medical University of Lodz (Pologne)",
-    "country": "Pologne",
-    "full_name": "Medical University of Lodz",
-    "id": "grid.8267.b",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Università Campus Bio-Medico (Italie)",
-    "country": "Italie",
-    "full_name": "Università Campus Bio-Medico",
-    "id": "grid.9657.d",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Technical University of Madrid (Espagne)",
-    "country": "Espagne",
-    "full_name": "Technical University of Madrid",
-    "id": "grid.5690.a",
-    "y": 1,
-    "z": 250
-  },
-  {
-    "name": "El Corte Inglés (Espagne)",
-    "country": "Espagne",
-    "full_name": "El Corte Inglés",
-    "id": "grid.435096.d",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Foundation for Research and Technology Hellas (Grèce)",
-    "country": "Grèce",
-    "full_name": "Foundation for Research and Technology Hellas",
-    "id": "grid.4834.b",
-    "y": 1,
-    "z": 258
-  },
-  {
-    "name": "Samsung (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Samsung",
-    "id": "grid.437715.3",
-    "y": 1,
-    "z": 14
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Medtronic (Espagne)",
+        "country": "Espagne",
+        "full_name": "Medtronic",
+        "id": "grid.425561.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Medical University of Lodz (Pologne)",
+        "country": "Pologne",
+        "full_name": "Medical University of Lodz",
+        "id": "grid.8267.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 72
+      },
+      {
+        "name": "University of Warwick (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Warwick",
+        "id": "grid.7372.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Università Campus Bio-Medico (Italie)",
+        "country": "Italie",
+        "full_name": "Università Campus Bio-Medico",
+        "id": "grid.9657.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University Medical Center Utrecht (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Utrecht",
+        "id": "grid.7692.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Medtronic France (France)",
+        "country": "France",
+        "full_name": "Medtronic France",
+        "acronym": "Medtronic France",
+        "id": "722008232",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Technical University of Madrid",
+        "id": "grid.5690.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Samsung (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Samsung",
+        "id": "grid.437715.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "El Corte Inglés (Espagne)",
+        "country": "Espagne",
+        "full_name": "El Corte Inglés",
+        "id": "grid.435096.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Robotnik (Espagne)",
+        "country": "Espagne",
+        "full_name": "Robotnik",
+        "id": "grid.426075.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 51
+      }
+    ]
   }
-]
+}

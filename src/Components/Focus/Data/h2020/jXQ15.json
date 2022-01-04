@@ -1,169 +1,397 @@
-[
-  {
-    "name": "Medical University of Vienna (Autriche)",
-    "country": "Autriche",
-    "full_name": "Medical University of Vienna",
-    "id": "grid.22937.3d",
-    "y": 2,
-    "z": 103
+{
+  "all": {
+    "all": [
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 103
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "University of Porto (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Porto",
+        "id": "grid.5808.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 138
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 154
+      },
+      {
+        "name": "MSD (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "MSD",
+        "id": "grid.417993.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 211
+      },
+      {
+        "name": "UCA (France)",
+        "country": "France",
+        "full_name": "Université Clermont Auvergne",
+        "acronym": "UCA",
+        "id": "K4lR3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "SIGMA (France)",
+        "country": "France",
+        "full_name": "SIGMA Clermont",
+        "acronym": "SIGMA",
+        "id": "cQN1f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 143
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "AstraZeneca (Suède)",
+        "country": "Suède",
+        "full_name": "AstraZeneca",
+        "id": "grid.418151.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Alcen (France)",
+        "country": "France",
+        "full_name": "Alcen",
+        "acronym": "Alcen",
+        "id": "gent11",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 305
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 156
+      }
+    ]
   },
-  {
-    "name": "SIGMA (France)",
-    "country": "France",
-    "full_name": "SIGMA Clermont",
-    "acronym": "SIGMA",
-    "id": "cQN1f",
-    "y": 1,
-    "z": 17
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Porto (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Porto",
+        "id": "grid.5808.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Vienna",
+        "id": "grid.10420.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "MSD (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "MSD",
+        "id": "grid.417993.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "UCA (France)",
+        "country": "France",
+        "full_name": "Université Clermont Auvergne",
+        "acronym": "UCA",
+        "id": "K4lR3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "SIGMA (France)",
+        "country": "France",
+        "full_name": "SIGMA Clermont",
+        "acronym": "SIGMA",
+        "id": "cQN1f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "AstraZeneca (Suède)",
+        "country": "Suède",
+        "full_name": "AstraZeneca",
+        "id": "grid.418151.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Alcen (France)",
+        "country": "France",
+        "full_name": "Alcen",
+        "acronym": "Alcen",
+        "id": "gent11",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ]
   },
-  {
-    "name": "UCA (France)",
-    "country": "France",
-    "full_name": "Université Clermont Auvergne",
-    "acronym": "UCA",
-    "id": "K4lR3",
-    "y": 1,
-    "z": 48
-  },
-  {
-    "name": "Mines Saint-Étienne (France)",
-    "country": "France",
-    "full_name": "École nationale supérieure des mines de Saint-Étienne",
-    "acronym": "Mines Saint-Étienne",
-    "id": "K841M",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "Sanofi (France)",
-    "country": "France",
-    "full_name": "Sanofi",
-    "acronym": "Sanofi",
-    "id": "gent147",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "University of Vienna (Autriche)",
-    "country": "Autriche",
-    "full_name": "University of Vienna",
-    "id": "grid.10420.37",
-    "y": 1,
-    "z": 154
-  },
-  {
-    "name": "Uppsala University (Suède)",
-    "country": "Suède",
-    "full_name": "Uppsala University",
-    "id": "grid.8993.b",
-    "y": 1,
-    "z": 211
-  },
-  {
-    "name": "UCB Pharma (Belgique)",
-    "country": "Belgique",
-    "full_name": "UCB Pharma",
-    "id": "grid.421932.f",
-    "y": 1,
-    "z": 32
-  },
-  {
-    "name": "Alcen (France)",
-    "country": "France",
-    "full_name": "Alcen",
-    "acronym": "Alcen",
-    "id": "gent11",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Novartis (Suisse)",
-    "country": "Suisse",
-    "full_name": "Novartis",
-    "id": "grid.419481.1",
-    "y": 1,
-    "z": 57
-  },
-  {
-    "name": "University of Porto (Portugal)",
-    "country": "Portugal",
-    "full_name": "University of Porto",
-    "id": "grid.5808.5",
-    "y": 1,
-    "z": 138
-  },
-  {
-    "name": "University of Eastern Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Eastern Finland",
-    "id": "grid.9668.1",
-    "y": 1,
-    "z": 66
-  },
-  {
-    "name": "Inserm (France)",
-    "country": "France",
-    "full_name": "Institut national de la santé et de la recherche médicale",
-    "acronym": "Inserm",
-    "id": "bZiTA",
-    "y": 1,
-    "z": 689
-  },
-  {
-    "name": "AstraZeneca (Suède)",
-    "country": "Suède",
-    "full_name": "AstraZeneca",
-    "id": "grid.418151.8",
-    "y": 1,
-    "z": 54
-  },
-  {
-    "name": "Pfizer (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Pfizer",
-    "id": "grid.418566.8",
-    "y": 1,
-    "z": 49
-  },
-  {
-    "name": "University of Florence (Italie)",
-    "country": "Italie",
-    "full_name": "University of Florence",
-    "id": "grid.8404.8",
-    "y": 1,
-    "z": 143
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 1,
-    "z": 2670
-  },
-  {
-    "name": "MSD (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "MSD",
-    "id": "grid.417993.1",
-    "y": 1,
-    "z": 12
-  },
-  {
-    "name": "Imperial College London (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Imperial College London",
-    "id": "grid.7445.2",
-    "y": 1,
-    "z": 305
-  },
-  {
-    "name": "Aalborg University (Danemark)",
-    "country": "Danemark",
-    "full_name": "Aalborg University",
-    "id": "grid.5117.2",
-    "y": 1,
-    "z": 156
+  "Fast Track to Innovation Pilot": {
+    "Fast Track to Innovation Pilot (FTIPilot)": [
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ]
   }
-]
+}

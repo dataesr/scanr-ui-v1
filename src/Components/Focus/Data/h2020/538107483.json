@@ -1,415 +1,1073 @@
-[
-  {
-    "name": "Norwegian Institute for Water Research (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Institute for Water Research",
-    "id": "grid.6407.5",
-    "y": 2,
-    "z": 33
+{
+  "all": {
+    "all": [
+      {
+        "name": "University of Algarve (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Algarve",
+        "id": "grid.7157.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 33
+      },
+      {
+        "name": "University of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Coimbra",
+        "id": "grid.8051.c",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 102
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 87
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "Norwegian Institute for Water Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Water Research",
+        "id": "grid.6407.5",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 33
+      },
+      {
+        "name": "Dalhousie University (Canada)",
+        "country": "Canada",
+        "full_name": "Dalhousie University",
+        "id": "grid.55602.34",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Ministry of Communications (Brésil)",
+        "country": "Brésil",
+        "full_name": "Ministry of Communications",
+        "id": "grid.456769.f",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Mercator Ocean (France)",
+        "country": "France",
+        "full_name": "Mercator Ocean",
+        "acronym": "Mercator Ocean",
+        "id": "522911577",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Flanders Marine Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Marine Institute",
+        "id": "grid.426539.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Seascape Consultants (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Seascape Consultants",
+        "id": "grid.470619.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "Max Planck Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Max Planck Society",
+        "id": "grid.4372.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "University of Porto (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Porto",
+        "id": "grid.5808.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 138
+      },
+      {
+        "name": "University of Las Palmas de Gran Canaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Las Palmas de Gran Canaria",
+        "id": "grid.4521.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Havstovan (Danemark)",
+        "country": "Danemark",
+        "full_name": "Havstovan",
+        "id": "grid.424612.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "AFES (France)",
+        "country": "France",
+        "full_name": "Ass Fondation Europeenne Science",
+        "acronym": "AFES",
+        "id": "302493986",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "European Centre for Medium-Range Weather Forecasts (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "European Centre for Medium-Range Weather Forecasts",
+        "id": "grid.42781.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Plymouth Marine Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Plymouth Marine Laboratory",
+        "id": "grid.22319.3b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "Council for Scientific and Industrial Research",
+        "id": "grid.7327.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Spanish Institute of Oceanography (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish Institute of Oceanography",
+        "id": "grid.410389.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Alfred Wegener Institute for Polar and Marine Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Alfred Wegener Institute for Polar and Marine Research",
+        "id": "grid.10894.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "International Council for the Exploration of the Sea (Danemark)",
+        "country": "Danemark",
+        "full_name": "International Council for the Exploration of the Sea",
+        "id": "grid.425198.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Marine Information Service (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Marine Information Service",
+        "id": "grid.425439.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "ACRI (France)",
+        "country": "France",
+        "full_name": "Acri group",
+        "acronym": "ACRI",
+        "id": "gent2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 505
+      },
+      {
+        "name": "Ribocon (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ribocon",
+        "id": "grid.437298.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "Oceanic Platform of the Canary Islands (Espagne)",
+        "country": "Espagne",
+        "full_name": "Oceanic Platform of the Canary Islands",
+        "id": "grid.423633.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "ENS PSL (France)",
+        "country": "France",
+        "full_name": "École normale supérieure PSL",
+        "acronym": "ENS PSL",
+        "id": "8618D",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 153
+      },
+      {
+        "name": "Unesco (France)",
+        "country": "France",
+        "full_name": "Organisation des Nations unies pour l'éducation, la science et la culture",
+        "acronym": "Unesco",
+        "id": "7Mm5G",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "GEOMAR Helmholtz Centre for Ocean Research Kiel (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+        "id": "grid.15649.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Plymouth University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Plymouth University",
+        "id": "grid.11201.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "UK Research and Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "UK Research and Innovation",
+        "id": "grid.496779.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 295
+      },
+      {
+        "name": "TE Laboratories (Irlande)",
+        "country": "Irlande",
+        "full_name": "TE Laboratories",
+        "id": "grid.426148.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 136
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 107
+      },
+      {
+        "name": "Ieee France Section (France)",
+        "country": "France",
+        "full_name": "Ieee France Section",
+        "acronym": "Ieee France Section",
+        "id": "443739792",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Norwegian Institute of Marine Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Marine Research",
+        "id": "grid.10917.3e",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Danish Meteorological Institute (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Meteorological Institute",
+        "id": "grid.14170.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Sir Alister Hardy Foundation for Ocean Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Sir Alister Hardy Foundation for Ocean Science",
+        "id": "grid.421764.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 127
+      },
+      {
+        "name": "Met Office (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Met Office",
+        "id": "grid.17100.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "CLS (France)",
+        "country": "France",
+        "full_name": "Collecte Localisation Satellite",
+        "acronym": "CLS",
+        "id": "gent53",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "German Marine Research Consortium (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Marine Research Consortium",
+        "id": "grid.435843.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Bergen (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Bergen",
+        "id": "grid.7914.b",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 127
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 554
+      },
+      {
+        "name": "Euro-Mediterranean Center for Climate Change (Italie)",
+        "country": "Italie",
+        "full_name": "Euro-Mediterranean Center for Climate Change",
+        "id": "grid.423878.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "Institute of Oceanology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Oceanology",
+        "id": "grid.425054.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      }
+    ]
   },
-  {
-    "name": "University of Algarve (Portugal)",
-    "country": "Portugal",
-    "full_name": "University of Algarve",
-    "id": "grid.7157.4",
-    "y": 2,
-    "z": 33
-  },
-  {
-    "name": "University of Coimbra (Portugal)",
-    "country": "Portugal",
-    "full_name": "University of Coimbra",
-    "id": "grid.8051.c",
-    "y": 2,
-    "z": 102
-  },
-  {
-    "name": "Ifremer (France)",
-    "country": "France",
-    "full_name": "Institut français de recherche pour l'exploitation de la mer",
-    "acronym": "Ifremer",
-    "id": "F6Zt5",
-    "y": 2,
-    "z": 87
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
-  },
-  {
-    "name": "International Council for the Exploration of the Sea (Danemark)",
-    "country": "Danemark",
-    "full_name": "International Council for the Exploration of the Sea",
-    "id": "grid.425198.3",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Marine Institute (Irlande)",
-    "country": "Irlande",
-    "full_name": "Marine Institute",
-    "id": "grid.6408.a",
-    "y": 1,
-    "z": 34
-  },
-  {
-    "name": "University of Exeter (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Exeter",
-    "id": "grid.8391.3",
-    "y": 1,
-    "z": 127
-  },
-  {
-    "name": "Technical University of Denmark (Danemark)",
-    "country": "Danemark",
-    "full_name": "Technical University of Denmark",
-    "id": "grid.5170.3",
-    "y": 1,
-    "z": 379
-  },
-  {
-    "name": "UK Research and Innovation (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "UK Research and Innovation",
-    "id": "grid.496779.2",
-    "y": 1,
-    "z": 295
-  },
-  {
-    "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
-    "country": "Afrique du Sud",
-    "full_name": "Council for Scientific and Industrial Research",
-    "id": "grid.7327.1",
-    "y": 1,
-    "z": 22
-  },
-  {
-    "name": "Ieee France Section (France)",
-    "country": "France",
-    "full_name": "Ieee France Section",
-    "acronym": "Ieee France Section",
-    "id": "443739792",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "ENS PSL (France)",
-    "country": "France",
-    "full_name": "École normale supérieure PSL",
-    "acronym": "ENS PSL",
-    "id": "8618D",
-    "y": 1,
-    "z": 153
-  },
-  {
-    "name": "Alfred Wegener Institute for Polar and Marine Research (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Alfred Wegener Institute for Polar and Marine Research",
-    "id": "grid.10894.34",
-    "y": 1,
-    "z": 57
-  },
-  {
-    "name": "Scottish Association For Marine Science (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Scottish Association For Marine Science",
-    "id": "grid.410415.5",
-    "y": 1,
-    "z": 17
-  },
-  {
-    "name": "European Global Ocean Observing System (Belgique)",
-    "country": "Belgique",
-    "full_name": "European Global Ocean Observing System",
-    "id": "grid.450753.0",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "Unesco (France)",
-    "country": "France",
-    "full_name": "Organisation des Nations unies pour l'éducation, la science et la culture",
-    "acronym": "Unesco",
-    "id": "7Mm5G",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "Flanders Marine Institute (Belgique)",
-    "country": "Belgique",
-    "full_name": "Flanders Marine Institute",
-    "id": "grid.426539.f",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "CNES (France)",
-    "country": "France",
-    "full_name": "Centre national d'études spatiales",
-    "acronym": "CNES",
-    "id": "CvdQn",
-    "y": 1,
-    "z": 107
-  },
-  {
-    "name": "Dalhousie University (Canada)",
-    "country": "Canada",
-    "full_name": "Dalhousie University",
-    "id": "grid.55602.34",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Spanish National Research Council (Espagne)",
-    "country": "Espagne",
-    "full_name": "Spanish National Research Council",
-    "id": "grid.4711.3",
-    "y": 1,
-    "z": 554
-  },
-  {
-    "name": "ACRI (France)",
-    "country": "France",
-    "full_name": "Acri group",
-    "acronym": "ACRI",
-    "id": "gent2",
-    "y": 1,
-    "z": 13
-  },
-  {
-    "name": "Seascape Consultants (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Seascape Consultants",
-    "id": "grid.470619.d",
-    "y": 1,
-    "z": 7
-  },
-  {
-    "name": "Plymouth Marine Laboratory (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Plymouth Marine Laboratory",
-    "id": "grid.22319.3b",
-    "y": 1,
-    "z": 27
-  },
-  {
-    "name": "Ribocon (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Ribocon",
-    "id": "grid.437298.3",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "University of Bologna (Italie)",
-    "country": "Italie",
-    "full_name": "University of Bologna",
-    "id": "grid.6292.f",
-    "y": 1,
-    "z": 314
-  },
-  {
-    "name": "Oceanic Platform of the Canary Islands (Espagne)",
-    "country": "Espagne",
-    "full_name": "Oceanic Platform of the Canary Islands",
-    "id": "grid.423633.3",
-    "y": 1,
-    "z": 30
-  },
-  {
-    "name": "CLS (France)",
-    "country": "France",
-    "full_name": "Collecte Localisation Satellite",
-    "acronym": "CLS",
-    "id": "gent53",
-    "y": 1,
-    "z": 27
-  },
-  {
-    "name": "Daithi O’Murchu Marine Research Station (Irlande)",
-    "country": "Irlande",
-    "full_name": "Daithi O’Murchu Marine Research Station",
-    "id": "grid.423899.d",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Spanish Institute of Oceanography (Espagne)",
-    "country": "Espagne",
-    "full_name": "Spanish Institute of Oceanography",
-    "id": "grid.410389.7",
-    "y": 1,
-    "z": 18
-  },
-  {
-    "name": "German Marine Research Consortium (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "German Marine Research Consortium",
-    "id": "grid.435843.d",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Euro-Mediterranean Center for Climate Change (Italie)",
-    "country": "Italie",
-    "full_name": "Euro-Mediterranean Center for Climate Change",
-    "id": "grid.423878.2",
-    "y": 1,
-    "z": 66
-  },
-  {
-    "name": "European Centre for Medium-Range Weather Forecasts (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "European Centre for Medium-Range Weather Forecasts",
-    "id": "grid.42781.38",
-    "y": 1,
-    "z": 42
-  },
-  {
-    "name": "Woods Hole Oceanographic Institution (Etats-Unis)",
-    "country": "Etats-Unis",
-    "full_name": "Woods Hole Oceanographic Institution",
-    "id": "grid.56466.37",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Sir Alister Hardy Foundation for Ocean Science (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Sir Alister Hardy Foundation for Ocean Science",
-    "id": "grid.421764.2",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "Euro Argo (France)",
-    "country": "France",
-    "full_name": "Euro Argo",
-    "acronym": "Euro Argo",
-    "id": "804377778",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "AFES (France)",
-    "country": "France",
-    "full_name": "Ass Fondation Europeenne Science",
-    "acronym": "AFES",
-    "id": "302493986",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Ministry of Communications (Brésil)",
-    "country": "Brésil",
-    "full_name": "Ministry of Communications",
-    "id": "grid.456769.f",
-    "y": 1,
-    "z": 3
-  },
-  {
-    "name": "University of Las Palmas de Gran Canaria (Espagne)",
-    "country": "Espagne",
-    "full_name": "University of Las Palmas de Gran Canaria",
-    "id": "grid.4521.2",
-    "y": 1,
-    "z": 39
-  },
-  {
-    "name": "MNHN (France)",
-    "country": "France",
-    "full_name": "Muséum national d'histoire naturelle",
-    "acronym": "MNHN",
-    "id": "VaJ52",
-    "y": 1,
-    "z": 68
-  },
-  {
-    "name": "Havstovan (Danemark)",
-    "country": "Danemark",
-    "full_name": "Havstovan",
-    "id": "grid.424612.7",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "GEOMAR Helmholtz Centre for Ocean Research Kiel (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
-    "id": "grid.15649.3f",
-    "y": 1,
-    "z": 36
-  },
-  {
-    "name": "TE Laboratories (Irlande)",
-    "country": "Irlande",
-    "full_name": "TE Laboratories",
-    "id": "grid.426148.d",
-    "y": 1,
-    "z": 4
-  },
-  {
-    "name": "Sorbonne U (France)",
-    "country": "France",
-    "full_name": "Sorbonne Université",
-    "acronym": "Sorbonne U",
-    "id": "bxPQe",
-    "y": 1,
-    "z": 505
-  },
-  {
-    "name": "Met Office (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Met Office",
-    "id": "grid.17100.37",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "IRD (France)",
-    "country": "France",
-    "full_name": "Institut de recherche pour le développement",
-    "acronym": "IRD",
-    "id": "Uan45",
-    "y": 1,
-    "z": 214
-  },
-  {
-    "name": "Dutch Research Council (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Dutch Research Council",
-    "id": "grid.420488.2",
-    "y": 1,
-    "z": 136
-  },
-  {
-    "name": "University of Bergen (Norvège)",
-    "country": "Norvège",
-    "full_name": "University of Bergen",
-    "id": "grid.7914.b",
-    "y": 1,
-    "z": 127
-  },
-  {
-    "name": "Plymouth University (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "Plymouth University",
-    "id": "grid.11201.33",
-    "y": 1,
-    "z": 30
-  },
-  {
-    "name": "Norwegian Institute of Marine Research (Norvège)",
-    "country": "Norvège",
-    "full_name": "Norwegian Institute of Marine Research",
-    "id": "grid.10917.3e",
-    "y": 1,
-    "z": 33
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      {
+        "name": "Dalhousie University (Canada)",
+        "country": "Canada",
+        "full_name": "Dalhousie University",
+        "id": "grid.55602.34",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Ministry of Communications (Brésil)",
+        "country": "Brésil",
+        "full_name": "Ministry of Communications",
+        "id": "grid.456769.f",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Mercator Ocean (France)",
+        "country": "France",
+        "full_name": "Mercator Ocean",
+        "acronym": "Mercator Ocean",
+        "id": "522911577",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Flanders Marine Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Marine Institute",
+        "id": "grid.426539.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Seascape Consultants (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Seascape Consultants",
+        "id": "grid.470619.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Algarve (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Algarve",
+        "id": "grid.7157.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Max Planck Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Max Planck Society",
+        "id": "grid.4372.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "University of Porto (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Porto",
+        "id": "grid.5808.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Las Palmas de Gran Canaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Las Palmas de Gran Canaria",
+        "id": "grid.4521.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Havstovan (Danemark)",
+        "country": "Danemark",
+        "full_name": "Havstovan",
+        "id": "grid.424612.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "AFES (France)",
+        "country": "France",
+        "full_name": "Ass Fondation Europeenne Science",
+        "acronym": "AFES",
+        "id": "302493986",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "European Centre for Medium-Range Weather Forecasts (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "European Centre for Medium-Range Weather Forecasts",
+        "id": "grid.42781.38",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Plymouth Marine Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Plymouth Marine Laboratory",
+        "id": "grid.22319.3b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Coimbra",
+        "id": "grid.8051.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "Council for Scientific and Industrial Research",
+        "id": "grid.7327.1",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Spanish Institute of Oceanography (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish Institute of Oceanography",
+        "id": "grid.410389.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Alfred Wegener Institute for Polar and Marine Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Alfred Wegener Institute for Polar and Marine Research",
+        "id": "grid.10894.34",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "International Council for the Exploration of the Sea (Danemark)",
+        "country": "Danemark",
+        "full_name": "International Council for the Exploration of the Sea",
+        "id": "grid.425198.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Marine Information Service (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Marine Information Service",
+        "id": "grid.425439.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ACRI (France)",
+        "country": "France",
+        "full_name": "Acri group",
+        "acronym": "ACRI",
+        "id": "gent2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Ribocon (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ribocon",
+        "id": "grid.437298.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Oceanic Platform of the Canary Islands (Espagne)",
+        "country": "Espagne",
+        "full_name": "Oceanic Platform of the Canary Islands",
+        "id": "grid.423633.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ENS PSL (France)",
+        "country": "France",
+        "full_name": "École normale supérieure PSL",
+        "acronym": "ENS PSL",
+        "id": "8618D",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Unesco (France)",
+        "country": "France",
+        "full_name": "Organisation des Nations unies pour l'éducation, la science et la culture",
+        "acronym": "Unesco",
+        "id": "7Mm5G",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "GEOMAR Helmholtz Centre for Ocean Research Kiel (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "GEOMAR Helmholtz Centre for Ocean Research Kiel",
+        "id": "grid.15649.3f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Plymouth University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Plymouth University",
+        "id": "grid.11201.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UK Research and Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "UK Research and Innovation",
+        "id": "grid.496779.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "TE Laboratories (Irlande)",
+        "country": "Irlande",
+        "full_name": "TE Laboratories",
+        "id": "grid.426148.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Ieee France Section (France)",
+        "country": "France",
+        "full_name": "Ieee France Section",
+        "acronym": "Ieee France Section",
+        "id": "443739792",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Norwegian Institute of Marine Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Marine Research",
+        "id": "grid.10917.3e",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Danish Meteorological Institute (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Meteorological Institute",
+        "id": "grid.14170.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Sir Alister Hardy Foundation for Ocean Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Sir Alister Hardy Foundation for Ocean Science",
+        "id": "grid.421764.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Met Office (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Met Office",
+        "id": "grid.17100.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "CLS (France)",
+        "country": "France",
+        "full_name": "Collecte Localisation Satellite",
+        "acronym": "CLS",
+        "id": "gent53",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Norwegian Institute for Water Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Water Research",
+        "id": "grid.6407.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "German Marine Research Consortium (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Marine Research Consortium",
+        "id": "grid.435843.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Bergen (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Bergen",
+        "id": "grid.7914.b",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Euro-Mediterranean Center for Climate Change (Italie)",
+        "country": "Italie",
+        "full_name": "Euro-Mediterranean Center for Climate Change",
+        "id": "grid.423878.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Institute of Oceanology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Oceanology",
+        "id": "grid.425054.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ],
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "University of Algarve (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Algarve",
+        "id": "grid.7157.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Coimbra",
+        "id": "grid.8051.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "Norwegian Institute for Water Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Water Research",
+        "id": "grid.6407.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "University of Applied Sciences and Arts Western Switzerland (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Applied Sciences and Arts Western Switzerland",
+        "id": "grid.5681.a",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Centro para a Excelência e Inovação na Indústria Automóvel (Portugal)",
+        "country": "Portugal",
+        "full_name": "Centro para a Excelência e Inovação na Indústria Automóvel",
+        "id": "grid.433205.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "Hellenic Centre for Marine Research (Grèce)",
+        "country": "Grèce",
+        "full_name": "Hellenic Centre for Marine Research",
+        "id": "grid.410335.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Finnish Environment Institute (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Environment Institute",
+        "id": "grid.410381.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Center for Electronics and Microtechnology",
+        "id": "grid.423798.3",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Calabria (Italie)",
+        "country": "Italie",
+        "full_name": "University of Calabria",
+        "id": "grid.7778.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "European Centre for Information on Marine Science and Technology (Portugal)",
+        "country": "Portugal",
+        "full_name": "European Centre for Information on Marine Science and Technology",
+        "id": "grid.424698.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "German Research Centre for Artificial Intelligence (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Research Centre for Artificial Intelligence",
+        "id": "grid.17272.31",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Ljubljana (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "University of Ljubljana",
+        "id": "grid.8954.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      }
+    ]
   }
-]
+}

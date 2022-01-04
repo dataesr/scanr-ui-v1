@@ -1,419 +1,1703 @@
-[
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 13,
-    "z": 852
+{
+  "all": {
+    "all": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 13,
+        "z": 852
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 368
+      },
+      {
+        "name": "Centro Ricerche FIAT (Italie)",
+        "country": "Italie",
+        "full_name": "Centro Ricerche FIAT",
+        "id": "grid.6276.5",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 141
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 1072
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 50
+      },
+      {
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 138
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 2670
+      },
+      {
+        "name": "TPI (France)",
+        "country": "France",
+        "full_name": "Albea Services",
+        "acronym": "TPI",
+        "id": "648202216",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 4
+      },
+      {
+        "name": "ESI (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "ESI",
+        "id": "grid.424473.2",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 16
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 342
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 425
+      },
+      {
+        "name": "ESI group (France)",
+        "country": "France",
+        "full_name": "ESI group",
+        "acronym": "ESI group",
+        "id": "gent75",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 29
+      },
+      {
+        "name": "Technology Transfer System (Italie)",
+        "country": "Italie",
+        "full_name": "Technology Transfer System",
+        "id": "grid.426252.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 18
+      },
+      {
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 45
+      },
+      {
+        "name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica",
+        "id": "grid.19061.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "Fundación Prodintec (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundación Prodintec",
+        "id": "grid.424854.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 159
+      },
+      {
+        "name": "International Iberian Nanotechnology Laboratory (Portugal)",
+        "country": "Portugal",
+        "full_name": "International Iberian Nanotechnology Laboratory",
+        "id": "grid.420330.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 36
+      },
+      {
+        "name": "Arkema (France)",
+        "country": "France",
+        "full_name": "Arkema",
+        "acronym": "Arkema",
+        "id": "gent27",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 43
+      },
+      {
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 99
+      },
+      {
+        "name": "Amires (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Amires",
+        "id": "grid.432434.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 29
+      },
+      {
+        "name": "IRIS Technology Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "IRIS Technology Solutions",
+        "id": "grid.17277.34",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 56
+      },
+      {
+        "name": "CECIMO (Belgique)",
+        "country": "Belgique",
+        "full_name": "CECIMO",
+        "id": "grid.424595.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "INTRASOFT International (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "INTRASOFT International",
+        "id": "grid.410461.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 84
+      },
+      {
+        "name": "Innovalia Association (Espagne)",
+        "country": "Espagne",
+        "full_name": "Innovalia Association",
+        "id": "grid.424272.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 21
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 386
+      },
+      {
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 41
+      },
+      {
+        "name": "Austrian Standards (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Standards",
+        "id": "grid.493223.d",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "University of Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bremen",
+        "id": "grid.7704.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 100
+      },
+      {
+        "name": "Asociación Española de Normalización y Certificación (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación Española de Normalización y Certificación",
+        "id": "grid.432416.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 51
+      },
+      {
+        "name": "Centre for Electrochemical Technologies (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Electrochemical Technologies",
+        "id": "grid.39768.33",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 58
+      },
+      {
+        "name": "Greenovate! Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "Greenovate! Europe",
+        "id": "grid.424540.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 21
+      },
+      {
+        "name": "Acciona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Acciona",
+        "id": "grid.11023.31",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 79
+      },
+      {
+        "name": "Pellenc Selective Tech... (France)",
+        "country": "France",
+        "full_name": "Pellenc Selective Technologies",
+        "acronym": "Pellenc Selective Tech...",
+        "id": "435267885",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Organic Waste Systems (Belgique)",
+        "country": "Belgique",
+        "full_name": "Organic Waste Systems",
+        "id": "grid.426189.0",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 19
+      },
+      {
+        "name": "UCA (France)",
+        "country": "France",
+        "full_name": "Université Clermont Auvergne",
+        "acronym": "UCA",
+        "id": "K4lR3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 48
+      },
+      {
+        "name": "SIGMA (France)",
+        "country": "France",
+        "full_name": "SIGMA Clermont",
+        "acronym": "SIGMA",
+        "id": "cQN1f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 17
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "y": 2,
+        "z": 76
+      },
+      {
+        "name": "Benkei (France)",
+        "country": "France",
+        "full_name": "Benkei",
+        "acronym": "Benkei",
+        "id": "798742995",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 575
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 179
+      },
+      {
+        "name": "Danone (France)",
+        "country": "France",
+        "full_name": "Danone",
+        "acronym": "Danone",
+        "id": "gent58",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Elixance Masterbatches (France)",
+        "country": "France",
+        "full_name": "Elixance Masterbatches",
+        "acronym": "Elixance Masterbatches",
+        "id": "449717974",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Industries & Agro-Ress... (France)",
+        "country": "France",
+        "full_name": "Industries & Agro-Ressources",
+        "acronym": "Industries & Agro-Ress...",
+        "id": "b1uc7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Celabor (Belgique)",
+        "country": "Belgique",
+        "full_name": "Celabor",
+        "id": "grid.433218.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Sofradim Production (France)",
+        "country": "France",
+        "full_name": "Sofradim Production",
+        "acronym": "Sofradim Production",
+        "id": "388924854",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ENIB (France)",
+        "country": "France",
+        "full_name": "École nationale d'ingénieurs de Brest",
+        "acronym": "ENIB",
+        "id": "dPmxa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "UBS (France)",
+        "country": "France",
+        "full_name": "Université Bretagne Sud",
+        "acronym": "UBS",
+        "id": "5tVy4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "UBO (France)",
+        "country": "France",
+        "full_name": "Université de Bretagne Occidentale",
+        "acronym": "UBO",
+        "id": "06SE7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "ENSTA Bretagne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure de techniques avancées Bretagne",
+        "acronym": "ENSTA Bretagne",
+        "id": "GCGkl",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      }
+    ]
   },
-  {
-    "name": "Tecnalia (Espagne)",
-    "country": "Espagne",
-    "full_name": "Tecnalia",
-    "id": "grid.13753.33",
-    "y": 6,
-    "z": 368
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 59
+      },
+      {
+        "name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica",
+        "id": "grid.19061.3f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Danone (France)",
+        "country": "France",
+        "full_name": "Danone",
+        "acronym": "Danone",
+        "id": "gent58",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Elixance Masterbatches (France)",
+        "country": "France",
+        "full_name": "Elixance Masterbatches",
+        "acronym": "Elixance Masterbatches",
+        "id": "449717974",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Industries & Agro-Ress... (France)",
+        "country": "France",
+        "full_name": "Industries & Agro-Ressources",
+        "acronym": "Industries & Agro-Ress...",
+        "id": "b1uc7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Celabor (Belgique)",
+        "country": "Belgique",
+        "full_name": "Celabor",
+        "id": "grid.433218.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Sofradim Production (France)",
+        "country": "France",
+        "full_name": "Sofradim Production",
+        "acronym": "Sofradim Production",
+        "id": "388924854",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ENIB (France)",
+        "country": "France",
+        "full_name": "École nationale d'ingénieurs de Brest",
+        "acronym": "ENIB",
+        "id": "dPmxa",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UBS (France)",
+        "country": "France",
+        "full_name": "Université Bretagne Sud",
+        "acronym": "UBS",
+        "id": "5tVy4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UBO (France)",
+        "country": "France",
+        "full_name": "Université de Bretagne Occidentale",
+        "acronym": "UBO",
+        "id": "06SE7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ENSTA Bretagne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure de techniques avancées Bretagne",
+        "acronym": "ENSTA Bretagne",
+        "id": "GCGkl",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Biotrend (Portugal)",
+        "country": "Portugal",
+        "full_name": "Biotrend",
+        "id": "grid.424224.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Centexbel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Centexbel",
+        "id": "grid.423834.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Austrian Standards (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Standards",
+        "id": "grid.493223.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Greenovate! Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "Greenovate! Europe",
+        "id": "grid.424540.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Cng Emballages Industr... (France)",
+        "country": "France",
+        "full_name": "Cng Emballages Industriels",
+        "acronym": "Cng Emballages Industr...",
+        "id": "499469849",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "InvestorNet-Gate2Growth (Danemark)",
+        "country": "Danemark",
+        "full_name": "InvestorNet-Gate2Growth",
+        "id": "grid.474061.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Icci Sea (France)",
+        "country": "France",
+        "full_name": "Icci Sea",
+        "acronym": "Icci Sea",
+        "id": "531971281",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Next Technology Tecnotessile (Italie)",
+        "country": "Italie",
+        "full_name": "Next Technology Tecnotessile",
+        "id": "grid.438387.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Pellenc Selective Tech... (France)",
+        "country": "France",
+        "full_name": "Pellenc Selective Technologies",
+        "acronym": "Pellenc Selective Tech...",
+        "id": "435267885",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute for European Environmental Policy (Belgique)",
+        "country": "Belgique",
+        "full_name": "Institute for European Environmental Policy",
+        "id": "grid.493351.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Organic Waste Systems (Belgique)",
+        "country": "Belgique",
+        "full_name": "Organic Waste Systems",
+        "id": "grid.426189.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Tomas Bata University in Zlín (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Tomas Bata University in Zlín",
+        "id": "grid.21678.3a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UCA (France)",
+        "country": "France",
+        "full_name": "Université Clermont Auvergne",
+        "acronym": "UCA",
+        "id": "K4lR3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "SIGMA (France)",
+        "country": "France",
+        "full_name": "SIGMA Clermont",
+        "acronym": "SIGMA",
+        "id": "cQN1f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ],
+    "Smart, green and integrated transport (TPT)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "ESI group (France)",
+        "country": "France",
+        "full_name": "ESI group",
+        "acronym": "ESI group",
+        "id": "gent75",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "ESI (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "ESI",
+        "id": "grid.424473.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Centre for Electrochemical Technologies (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Electrochemical Technologies",
+        "id": "grid.39768.33",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Girona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Girona",
+        "id": "grid.5319.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Alpex Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Alpex Technologies",
+        "id": "grid.432111.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "BAE Systems (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "BAE Systems",
+        "id": "grid.1343.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "National Institute for Aerospace Research Elie Carafoli (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "National Institute for Aerospace Research Elie Carafoli",
+        "id": "grid.425276.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Aciturri (Espagne)",
+        "country": "Espagne",
+        "full_name": "Aciturri",
+        "id": "grid.432159.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "EASN Technology Innovation Services BVBA (Belgique)",
+        "country": "Belgique",
+        "full_name": "EASN Technology Innovation Services BVBA",
+        "id": "grid.424420.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Arts et Métiers (France)",
+        "country": "France",
+        "full_name": "Arts et Métiers Sciences et Technologies",
+        "acronym": "Arts et Métiers",
+        "id": "jYUcF",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "IMDEA Materials (Espagne)",
+        "country": "Espagne",
+        "full_name": "IMDEA Materials",
+        "id": "grid.482872.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Prollion (France)",
+        "country": "France",
+        "full_name": "Prollion",
+        "acronym": "Prollion",
+        "id": "519216162",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Hahn-Schickard-Gesellschaft für angewandte Forschung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hahn-Schickard-Gesellschaft für angewandte Forschung",
+        "id": "grid.424588.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Forschungszentrum Jülich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungszentrum Jülich",
+        "id": "grid.8385.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Tekna Plasma Europe (France)",
+        "country": "France",
+        "full_name": "Tekna Plasma Europe",
+        "acronym": "Tekna Plasma Europe",
+        "id": "751171745",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Recupyl (France)",
+        "country": "France",
+        "full_name": "Recupyl",
+        "acronym": "Recupyl",
+        "id": "392678793",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Prayon (Belgique)",
+        "country": "Belgique",
+        "full_name": "Prayon",
+        "id": "grid.488356.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ],
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Pellenc Selective Tech... (France)",
+        "country": "France",
+        "full_name": "Pellenc Selective Technologies",
+        "acronym": "Pellenc Selective Tech...",
+        "id": "435267885",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Benkei (France)",
+        "country": "France",
+        "full_name": "Benkei",
+        "acronym": "Benkei",
+        "id": "798742995",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Société Extrusion du P... (France)",
+        "country": "France",
+        "full_name": "Société Extrusion du Polyethylène A.barbier",
+        "acronym": "Société Extrusion du P...",
+        "id": "586050072",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Paprec France (France)",
+        "country": "France",
+        "full_name": "Paprec France",
+        "acronym": "Paprec France",
+        "id": "333050284",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Prospex Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Prospex Institute",
+        "id": "grid.493472.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Leygatech (France)",
+        "country": "France",
+        "full_name": "Leygatech",
+        "acronym": "Leygatech",
+        "id": "441815198",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      }
+    ],
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Tallinn University of Technology (Estonie)",
+        "country": "Estonie",
+        "full_name": "Tallinn University of Technology",
+        "id": "grid.6988.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut de Recerca de l'Energia de Catalunya",
+        "id": "grid.424742.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Oxford Brookes University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Oxford Brookes University",
+        "id": "grid.7628.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Rescoll (France)",
+        "country": "France",
+        "full_name": "Rescoll",
+        "acronym": "Rescoll",
+        "id": "gent142",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Imra Europe Sas (France)",
+        "country": "France",
+        "full_name": "Imra Europe Sas",
+        "acronym": "Imra Europe Sas",
+        "id": "338457625",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Helmholtz-Zentrum Berlin für Materialien und Energie (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz-Zentrum Berlin für Materialien und Energie",
+        "id": "grid.424048.e",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Carl von Ossietzky University of Oldenburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Carl von Ossietzky University of Oldenburg",
+        "id": "grid.5560.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      }
+    ]
   },
-  {
-    "name": "Centro Ricerche FIAT (Italie)",
-    "country": "Italie",
-    "full_name": "Centro Ricerche FIAT",
-    "id": "grid.6276.5",
-    "y": 6,
-    "z": 141
-  },
-  {
-    "name": "Fraunhofer Society (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Fraunhofer Society",
-    "id": "grid.4561.6",
-    "y": 5,
-    "z": 1072
-  },
-  {
-    "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-    "country": "Espagne",
-    "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-    "id": "grid.424291.8",
-    "y": 5,
-    "z": 50
-  },
-  {
-    "name": "University of Patras (Grèce)",
-    "country": "Grèce",
-    "full_name": "University of Patras",
-    "id": "grid.11047.33",
-    "y": 5,
-    "z": 138
-  },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 4,
-    "z": 2670
-  },
-  {
-    "name": "TPI (France)",
-    "country": "France",
-    "full_name": "Albea Services",
-    "acronym": "TPI",
-    "id": "648202216",
-    "y": 4,
-    "z": 4
-  },
-  {
-    "name": "ESI (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "ESI",
-    "id": "grid.424473.2",
-    "y": 4,
-    "z": 16
-  },
-  {
-    "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-    "country": "Pays-Bas",
-    "full_name": "Netherlands Organisation for Applied Scientific Research",
-    "id": "grid.4858.1",
-    "y": 4,
-    "z": 342
-  },
-  {
-    "name": "VTT Technical Research Centre of Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "VTT Technical Research Centre of Finland",
-    "id": "grid.6324.3",
-    "y": 3,
-    "z": 425
-  },
-  {
-    "name": "Technology Transfer System (Italie)",
-    "country": "Italie",
-    "full_name": "Technology Transfer System",
-    "id": "grid.426252.5",
-    "y": 3,
-    "z": 18
-  },
-  {
-    "name": "ESI group (France)",
-    "country": "France",
-    "full_name": "ESI group",
-    "acronym": "ESI group",
-    "id": "gent75",
-    "y": 3,
-    "z": 29
-  },
-  {
-    "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
-    "country": "Espagne",
-    "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
-    "id": "grid.18228.31",
-    "y": 3,
-    "z": 45
-  },
-  {
-    "name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica (Espagne)",
-    "country": "Espagne",
-    "full_name": "Instituto Tecnologico Del Embalaje, Transporte Y Logistica",
-    "id": "grid.19061.3f",
-    "y": 2,
-    "z": 32
-  },
-  {
-    "name": "Fundación Prodintec (Espagne)",
-    "country": "Espagne",
-    "full_name": "Fundación Prodintec",
-    "id": "grid.424854.b",
-    "y": 2,
-    "z": 19
-  },
-  {
-    "name": "Rina Services (Italie)",
-    "country": "Italie",
-    "full_name": "Rina Services",
-    "id": "grid.426062.4",
-    "y": 2,
-    "z": 159
-  },
-  {
-    "name": "International Iberian Nanotechnology Laboratory (Portugal)",
-    "country": "Portugal",
-    "full_name": "International Iberian Nanotechnology Laboratory",
-    "id": "grid.420330.6",
-    "y": 2,
-    "z": 36
-  },
-  {
-    "name": "Leitat Technological Center (Espagne)",
-    "country": "Espagne",
-    "full_name": "Leitat Technological Center",
-    "id": "grid.452632.4",
-    "y": 2,
-    "z": 99
-  },
-  {
-    "name": "Arkema (France)",
-    "country": "France",
-    "full_name": "Arkema",
-    "acronym": "Arkema",
-    "id": "gent27",
-    "y": 2,
-    "z": 43
-  },
-  {
-    "name": "Amires (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Amires",
-    "id": "grid.432434.6",
-    "y": 2,
-    "z": 29
-  },
-  {
-    "name": "IRIS Technology Solutions (Espagne)",
-    "country": "Espagne",
-    "full_name": "IRIS Technology Solutions",
-    "id": "grid.17277.34",
-    "y": 2,
-    "z": 56
-  },
-  {
-    "name": "Fiat Chrysler Automobiles (Italie)",
-    "country": "Italie",
-    "full_name": "Fiat Chrysler Automobiles",
-    "id": "grid.425176.3",
-    "y": 2,
-    "z": 41
-  },
-  {
-    "name": "Politecnico di Milano (Italie)",
-    "country": "Italie",
-    "full_name": "Politecnico di Milano",
-    "id": "grid.4643.5",
-    "y": 2,
-    "z": 386
-  },
-  {
-    "name": "CECIMO (Belgique)",
-    "country": "Belgique",
-    "full_name": "CECIMO",
-    "id": "grid.424595.b",
-    "y": 2,
-    "z": 5
-  },
-  {
-    "name": "Innovalia Association (Espagne)",
-    "country": "Espagne",
-    "full_name": "Innovalia Association",
-    "id": "grid.424272.5",
-    "y": 2,
-    "z": 21
-  },
-  {
-    "name": "INTRASOFT International (Luxembourg)",
-    "country": "Luxembourg",
-    "full_name": "INTRASOFT International",
-    "id": "grid.410461.6",
-    "y": 2,
-    "z": 84
-  },
-  {
-    "name": "Austrian Standards (Autriche)",
-    "country": "Autriche",
-    "full_name": "Austrian Standards",
-    "id": "grid.493223.d",
-    "y": 2,
-    "z": 13
-  },
-  {
-    "name": "University of Bremen (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Bremen",
-    "id": "grid.7704.4",
-    "y": 2,
-    "z": 100
-  },
-  {
-    "name": "Asociación Española de Normalización y Certificación (Espagne)",
-    "country": "Espagne",
-    "full_name": "Asociación Española de Normalización y Certificación",
-    "id": "grid.432416.6",
-    "y": 2,
-    "z": 51
-  },
-  {
-    "name": "Greenovate! Europe (Belgique)",
-    "country": "Belgique",
-    "full_name": "Greenovate! Europe",
-    "id": "grid.424540.3",
-    "y": 2,
-    "z": 21
-  },
-  {
-    "name": "Centre for Electrochemical Technologies (Espagne)",
-    "country": "Espagne",
-    "full_name": "Centre for Electrochemical Technologies",
-    "id": "grid.39768.33",
-    "y": 2,
-    "z": 58
-  },
-  {
-    "name": "Acciona (Espagne)",
-    "country": "Espagne",
-    "full_name": "Acciona",
-    "id": "grid.11023.31",
-    "y": 2,
-    "z": 79
-  },
-  {
-    "name": "SIGMA (France)",
-    "country": "France",
-    "full_name": "SIGMA Clermont",
-    "acronym": "SIGMA",
-    "id": "cQN1f",
-    "y": 2,
-    "z": 17
-  },
-  {
-    "name": "UCA (France)",
-    "country": "France",
-    "full_name": "Université Clermont Auvergne",
-    "acronym": "UCA",
-    "id": "K4lR3",
-    "y": 2,
-    "z": 48
-  },
-  {
-    "name": "Organic Waste Systems (Belgique)",
-    "country": "Belgique",
-    "full_name": "Organic Waste Systems",
-    "id": "grid.426189.0",
-    "y": 2,
-    "z": 19
-  },
-  {
-    "name": "Pellenc Selective Tech... (France)",
-    "country": "France",
-    "full_name": "Pellenc Selective Technologies",
-    "acronym": "Pellenc Selective Tech...",
-    "id": "435267885",
-    "y": 2,
-    "z": 2
-  },
-  {
-    "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
-    "country": "Suisse",
-    "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
-    "id": "grid.7354.5",
-    "y": 2,
-    "z": 76
-  },
-  {
-    "name": "Benkei (France)",
-    "country": "France",
-    "full_name": "Benkei",
-    "acronym": "Benkei",
-    "id": "798742995",
-    "y": 2,
-    "z": 2
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 2,
-    "z": 575
-  },
-  {
-    "name": "University of Birmingham (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Birmingham",
-    "id": "grid.6572.6",
-    "y": 2,
-    "z": 179
-  },
-  {
-    "name": "Danone (France)",
-    "country": "France",
-    "full_name": "Danone",
-    "acronym": "Danone",
-    "id": "gent58",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "Industries & Agro-Ress... (France)",
-    "country": "France",
-    "full_name": "Industries & Agro-Ressources",
-    "acronym": "Industries & Agro-Ress...",
-    "id": "b1uc7",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Celabor (Belgique)",
-    "country": "Belgique",
-    "full_name": "Celabor",
-    "id": "grid.433218.f",
-    "y": 1,
-    "z": 9
-  },
-  {
-    "name": "Elixance Masterbatches (France)",
-    "country": "France",
-    "full_name": "Elixance Masterbatches",
-    "acronym": "Elixance Masterbatches",
-    "id": "449717974",
-    "y": 1,
-    "z": 1
-  },
-  {
-    "name": "UBO (France)",
-    "country": "France",
-    "full_name": "Université de Bretagne Occidentale",
-    "acronym": "UBO",
-    "id": "06SE7",
-    "y": 1,
-    "z": 48
-  },
-  {
-    "name": "Sofradim Production (France)",
-    "country": "France",
-    "full_name": "Sofradim Production",
-    "acronym": "Sofradim Production",
-    "id": "388924854",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "ENIB (France)",
-    "country": "France",
-    "full_name": "École nationale d'ingénieurs de Brest",
-    "acronym": "ENIB",
-    "id": "dPmxa",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "Biotrend (Portugal)",
-    "country": "Portugal",
-    "full_name": "Biotrend",
-    "id": "grid.424224.6",
-    "y": 1,
-    "z": 12
-  },
-  {
-    "name": "UBS (France)",
-    "country": "France",
-    "full_name": "Université Bretagne Sud",
-    "acronym": "UBS",
-    "id": "5tVy4",
-    "y": 1,
-    "z": 40
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 9,
+        "z": 74
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "y": 6,
+        "z": 73
+      },
+      {
+        "name": "Centro Ricerche FIAT (Italie)",
+        "country": "Italie",
+        "full_name": "Centro Ricerche FIAT",
+        "id": "grid.6276.5",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 30
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 169
+      },
+      {
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
+        "country_level_part": "Pays membres",
+        "y": 5,
+        "z": 33
+      },
+      {
+        "name": "TPI (France)",
+        "country": "France",
+        "full_name": "Albea Services",
+        "acronym": "TPI",
+        "id": "648202216",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 4
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "y": 4,
+        "z": 21
+      },
+      {
+        "name": "ESI (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "ESI",
+        "id": "grid.424473.2",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 9
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 46
+      },
+      {
+        "name": "Technology Transfer System (Italie)",
+        "country": "Italie",
+        "full_name": "Technology Transfer System",
+        "id": "grid.426252.5",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 9
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 72
+      },
+      {
+        "name": "Fundación Prodintec (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundación Prodintec",
+        "id": "grid.424854.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 38
+      },
+      {
+        "name": "International Iberian Nanotechnology Laboratory (Portugal)",
+        "country": "Portugal",
+        "full_name": "International Iberian Nanotechnology Laboratory",
+        "id": "grid.420330.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "Arkema (France)",
+        "country": "France",
+        "full_name": "Arkema",
+        "acronym": "Arkema",
+        "id": "gent27",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 22
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 46
+      },
+      {
+        "name": "Amires (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Amires",
+        "id": "grid.432434.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "IRIS Technology Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "IRIS Technology Solutions",
+        "id": "grid.17277.34",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 24
+      },
+      {
+        "name": "ESI group (France)",
+        "country": "France",
+        "full_name": "ESI group",
+        "acronym": "ESI group",
+        "id": "gent75",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "CECIMO (Belgique)",
+        "country": "Belgique",
+        "full_name": "CECIMO",
+        "id": "grid.424595.b",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "INTRASOFT International (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "INTRASOFT International",
+        "id": "grid.410461.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "Innovalia Association (Espagne)",
+        "country": "Espagne",
+        "full_name": "Innovalia Association",
+        "id": "grid.424272.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 30
+      },
+      {
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "University of Bremen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bremen",
+        "id": "grid.7704.4",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Asociación Española de Normalización y Certificación (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación Española de Normalización y Certificación",
+        "id": "grid.432416.6",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 24
+      },
+      {
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 15
+      },
+      {
+        "name": "Acciona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Acciona",
+        "id": "grid.11023.31",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 24
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "Nanotechnology Industries Association (Belgique)",
+        "country": "Belgique",
+        "full_name": "Nanotechnology Industries Association",
+        "id": "grid.425345.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Baylor University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Baylor University",
+        "id": "grid.252890.4",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Brown University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Brown University",
+        "id": "grid.40263.33",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University College Cork (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Cork",
+        "id": "grid.7872.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Georgia Institute of Technology (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Georgia Institute of Technology",
+        "id": "grid.213917.f",
+        "country_level_part": "Pays tiers",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "TU Wien (Autriche)",
+        "country": "Autriche",
+        "full_name": "TU Wien",
+        "id": "grid.5329.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "APACH'M (France)",
+        "country": "France",
+        "full_name": "Asso Hexagone Arts Et Sciences",
+        "acronym": "APACH'M",
+        "id": "307603407",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Dynergie (France)",
+        "country": "France",
+        "full_name": "Dynergie",
+        "acronym": "Dynergie",
+        "id": "490474343",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Infineon Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Infineon Technologies",
+        "id": "grid.425032.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Cardiff Metropolitan University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff Metropolitan University",
+        "id": "grid.47170.35",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Rbnano (France)",
+        "country": "France",
+        "full_name": "Rbnano",
+        "acronym": "Rbnano",
+        "id": "497929604",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Advent Technologies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Advent Technologies",
+        "id": "grid.432400.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Autoliv-Isodelta (France)",
+        "country": "France",
+        "full_name": "Autoliv-Isodelta",
+        "acronym": "Autoliv-Isodelta",
+        "id": "326780541",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Symbiose (France)",
+        "country": "France",
+        "full_name": "Symbiose",
+        "acronym": "Symbiose",
+        "id": "804501369",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Autoliv (Suède)",
+        "country": "Suède",
+        "full_name": "Autoliv",
+        "id": "grid.423780.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Amcor (Suisse)",
+        "country": "Suisse",
+        "full_name": "Amcor",
+        "id": "grid.432294.a",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Aristotle University of Thessaloniki (Grèce)",
+        "country": "Grèce",
+        "full_name": "Aristotle University of Thessaloniki",
+        "id": "grid.4793.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Procter & Gamble (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Procter & Gamble",
+        "id": "grid.471168.d",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Joanneum Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Joanneum Research",
+        "id": "grid.8684.2",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      }
+    ],
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Centro Ricerche FIAT (Italie)",
+        "country": "Italie",
+        "full_name": "Centro Ricerche FIAT",
+        "id": "grid.6276.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Electro Optical Systems (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Electro Optical Systems",
+        "id": "grid.424585.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Iii-V Lab (France)",
+        "country": "France",
+        "full_name": "Iii-V Lab",
+        "acronym": "Iii-V Lab",
+        "id": "478651284",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Altair (France)",
+        "country": "France",
+        "full_name": "Altair",
+        "acronym": "Altair",
+        "id": "gent16",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Alstom (Espagne)",
+        "country": "Espagne",
+        "full_name": "Alstom",
+        "id": "grid.424237.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Alstom (France)",
+        "country": "France",
+        "full_name": "Alstom",
+        "acronym": "Alstom",
+        "id": "gent15",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      }
+    ]
   }
-]
+}

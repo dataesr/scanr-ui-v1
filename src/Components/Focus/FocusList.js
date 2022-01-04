@@ -95,16 +95,16 @@ FocusList.defaultProps = {
   focusList: [
     {
       tags: {
-        fr: ['#InstitutUniversitaireDeFrance', '#IUF'],
-        en: ['#InstitutUniversitaireDeFrance', '#IUF'],
+        fr: ['#CoopérationsInternationales', '#H2020'],
+        en: ['#InternationalCooperation', '#H2020'],
       },
       title: {
-        fr: "Les nominations 2020 à l'Institut Universitaire de France",
-        en: '2020 new members of the Institut Universitaire de France',
+        fr: 'Coopérations internationales de la recherche française via H2020',
+        en: 'International cooperation of French research via H2020',
       },
-      type: 'treemap',
+      type: 'donut',
       url: '/focus/h2020',
-      api: 'persons',
+      api: 'projects',
     },
     {
       tags: {

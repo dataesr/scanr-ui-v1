@@ -1,143 +1,326 @@
-[
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 3,
-    "z": 852
+{
+  "all": {
+    "all": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 852
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 125
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 280
+      },
+      {
+        "name": "ILL (France)",
+        "country": "France",
+        "full_name": "Institut Max Von Laue - Paul Langevin",
+        "acronym": "ILL",
+        "id": "779555887",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 21
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 54
+      },
+      {
+        "name": "LGI (France)",
+        "country": "France",
+        "full_name": "Lgi Sustainable Innovation",
+        "acronym": "LGI",
+        "id": "485241368",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "Research Centre Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Research Centre Rez",
+        "id": "grid.423938.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "National Centre for Nuclear Research (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Centre for Nuclear Research",
+        "id": "grid.450295.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Gesellschaft für Anlagen und Reaktorsicherheit (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Gesellschaft für Anlagen und Reaktorsicherheit",
+        "id": "grid.72447.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Lithuanian Energy Institute (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian Energy Institute",
+        "id": "grid.20653.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare",
+        "id": "grid.443987.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 88
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 149
+      },
+      {
+        "name": "Fortum (Finlande)",
+        "country": "Finlande",
+        "full_name": "Fortum",
+        "id": "grid.424557.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 9
+      }
+    ]
   },
-  {
-    "name": "EDF (France)",
-    "country": "France",
-    "full_name": "Electricité de France",
-    "acronym": "EDF",
-    "id": "gent66",
-    "y": 3,
-    "z": 125
-  },
-  {
-    "name": "ILL (France)",
-    "country": "France",
-    "full_name": "Institut Max Von Laue - Paul Langevin",
-    "acronym": "ILL",
-    "id": "779555887",
-    "y": 2,
-    "z": 21
-  },
-  {
-    "name": "Technical University of Munich (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Technical University of Munich",
-    "id": "grid.6936.a",
-    "y": 2,
-    "z": 280
-  },
-  {
-    "name": "Belgian Nuclear Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Belgian Nuclear Research Centre",
-    "id": "grid.8953.7",
-    "y": 2,
-    "z": 54
-  },
-  {
-    "name": "LGI (France)",
-    "country": "France",
-    "full_name": "Lgi Sustainable Innovation",
-    "acronym": "LGI",
-    "id": "485241368",
-    "y": 1,
-    "z": 45
-  },
-  {
-    "name": "National Centre for Nuclear Research (Pologne)",
-    "country": "Pologne",
-    "full_name": "National Centre for Nuclear Research",
-    "id": "grid.450295.f",
-    "y": 1,
-    "z": 28
-  },
-  {
-    "name": "Research Centre Rez (Rép. Tchèque)",
-    "country": "Rép. Tchèque",
-    "full_name": "Research Centre Rez",
-    "id": "grid.423938.7",
-    "y": 1,
-    "z": 32
-  },
-  {
-    "name": "VTT Technical Research Centre of Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "VTT Technical Research Centre of Finland",
-    "id": "grid.6324.3",
-    "y": 1,
-    "z": 425
-  },
-  {
-    "name": "Directorate-General Joint Research Centre (Belgique)",
-    "country": "Belgique",
-    "full_name": "Directorate-General Joint Research Centre",
-    "id": "grid.489339.c",
-    "y": 1,
-    "z": 149
-  },
-  {
-    "name": "Gesellschaft für Anlagen und Reaktorsicherheit (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Gesellschaft für Anlagen und Reaktorsicherheit",
-    "id": "grid.72447.32",
-    "y": 1,
-    "z": 11
-  },
-  {
-    "name": "IRSN (France)",
-    "country": "France",
-    "full_name": "Institut de radioprotection et de sûreté nucléaire",
-    "acronym": "IRSN",
-    "id": "86GK4",
-    "y": 1,
-    "z": 48
-  },
-  {
-    "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-    "country": "Italie",
-    "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-    "id": "grid.5196.b",
-    "y": 1,
-    "z": 174
-  },
-  {
-    "name": "Paul Scherrer Institute (Suisse)",
-    "country": "Suisse",
-    "full_name": "Paul Scherrer Institute",
-    "id": "grid.5991.4",
-    "y": 1,
-    "z": 88
-  },
-  {
-    "name": "Lithuanian Energy Institute (Lituanie)",
-    "country": "Lituanie",
-    "full_name": "Lithuanian Energy Institute",
-    "id": "grid.20653.32",
-    "y": 1,
-    "z": 26
-  },
-  {
-    "name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare (Italie)",
-    "country": "Italie",
-    "full_name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare",
-    "id": "grid.443987.5",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "Fortum (Finlande)",
-    "country": "Finlande",
-    "full_name": "Fortum",
-    "id": "grid.424557.5",
-    "y": 1,
-    "z": 9
+  "Euratom": {
+    "Euratom (EURATOM)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 66
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "y": 3,
+        "z": 43
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "ILL (France)",
+        "country": "France",
+        "full_name": "Institut Max Von Laue - Paul Langevin",
+        "acronym": "ILL",
+        "id": "779555887",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 48
+      },
+      {
+        "name": "LGI (France)",
+        "country": "France",
+        "full_name": "Lgi Sustainable Innovation",
+        "acronym": "LGI",
+        "id": "485241368",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Research Centre Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Research Centre Rez",
+        "id": "grid.423938.7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "National Centre for Nuclear Research (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Centre for Nuclear Research",
+        "id": "grid.450295.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Gesellschaft für Anlagen und Reaktorsicherheit (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Gesellschaft für Anlagen und Reaktorsicherheit",
+        "id": "grid.72447.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "IRSN (France)",
+        "country": "France",
+        "full_name": "Institut de radioprotection et de sûreté nucléaire",
+        "acronym": "IRSN",
+        "id": "86GK4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Lithuanian Energy Institute (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian Energy Institute",
+        "id": "grid.20653.32",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Interuniversitario per la Ricerca Tecnologica Nucleare",
+        "id": "grid.443987.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "Fortum (Finlande)",
+        "country": "Finlande",
+        "full_name": "Fortum",
+        "id": "grid.424557.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      }
+    ]
   }
-]
+}

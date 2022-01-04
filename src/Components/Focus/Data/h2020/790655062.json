@@ -1,225 +1,530 @@
-[
-  {
-    "name": "CEA (France)",
-    "country": "France",
-    "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-    "acronym": "CEA",
-    "id": "zYXK8",
-    "y": 2,
-    "z": 852
+{
+  "all": {
+    "all": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 852
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 2,
+        "z": 2670
+      },
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "CPE Lyon (France)",
+        "country": "France",
+        "full_name": "École supérieure de chimie physique électronique de Lyon",
+        "acronym": "CPE Lyon",
+        "id": "CdULA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Amplitude Laser (France)",
+        "country": "France",
+        "full_name": "Amplitude Laser",
+        "acronym": "Amplitude Laser",
+        "id": "gent19",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ECM (France)",
+        "country": "France",
+        "full_name": "Centrale Marseille",
+        "acronym": "ECM",
+        "id": "1tI7C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 210
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "IOTA (France)",
+        "country": "France",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Fibercryst (France)",
+        "country": "France",
+        "full_name": "Fibercryst",
+        "acronym": "Fibercryst",
+        "id": "450365911",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "University of Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Stuttgart",
+        "id": "grid.5719.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 251
+      },
+      {
+        "name": "TRUMPF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TRUMPF",
+        "id": "grid.435016.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AMO (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AMO",
+        "id": "grid.461610.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "University of Erlangen-Nuremberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Erlangen-Nuremberg",
+        "id": "grid.5330.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 106
+      },
+      {
+        "name": "Menlo Systems (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Menlo Systems",
+        "id": "grid.436196.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Wigner Research Centre for Physics (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Wigner Research Centre for Physics",
+        "id": "grid.419766.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "U. Limoges (France)",
+        "country": "France",
+        "full_name": "Université de Limoges",
+        "acronym": "U. Limoges",
+        "id": "nkbwh",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 67
+      },
+      {
+        "name": "U. Poitiers (France)",
+        "country": "France",
+        "full_name": "Université de Poitiers",
+        "acronym": "U. Poitiers",
+        "id": "hlX1r",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 575
+      }
+    ]
   },
-  {
-    "name": "CNRS (France)",
-    "country": "France",
-    "full_name": "Centre national de la recherche scientifique",
-    "acronym": "CNRS",
-    "id": "n2X5f",
-    "y": 2,
-    "z": 2670
-  },
-  {
-    "name": "Mines Saint-Étienne (France)",
-    "country": "France",
-    "full_name": "École nationale supérieure des mines de Saint-Étienne",
-    "acronym": "Mines Saint-Étienne",
-    "id": "K841M",
-    "y": 1,
-    "z": 19
-  },
-  {
-    "name": "TRUMPF (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "TRUMPF",
-    "id": "grid.435016.5",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "UJM (France)",
-    "country": "France",
-    "full_name": "Université Jean Monnet",
-    "acronym": "UJM",
-    "id": "tIJ02",
-    "y": 1,
-    "z": 70
-  },
-  {
-    "name": "University of Stuttgart (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Stuttgart",
-    "id": "grid.5719.a",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "AMO (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "AMO",
-    "id": "grid.461610.4",
-    "y": 1,
-    "z": 30
-  },
-  {
-    "name": "IOTA (France)",
-    "country": "France",
-    "full_name": "Institut d'optique Graduate School",
-    "acronym": "IOTA",
-    "id": "QtZkX",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "Amplitude Laser (France)",
-    "country": "France",
-    "full_name": "Amplitude Laser",
-    "acronym": "Amplitude Laser",
-    "id": "gent19",
-    "y": 1,
-    "z": 8
-  },
-  {
-    "name": "ECM (France)",
-    "country": "France",
-    "full_name": "Centrale Marseille",
-    "acronym": "ECM",
-    "id": "1tI7C",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "ALPHANOV (France)",
-    "country": "France",
-    "full_name": "Alphanov",
-    "acronym": "ALPHANOV",
-    "id": "493635817",
-    "y": 1,
-    "z": 6
-  },
-  {
-    "name": "RWTH Aachen University (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "RWTH Aachen University",
-    "id": "grid.1957.a",
-    "y": 1,
-    "z": 251
-  },
-  {
-    "name": "AMU (France)",
-    "country": "France",
-    "full_name": "Aix-Marseille Université",
-    "acronym": "AMU",
-    "id": "xJdyB",
-    "y": 1,
-    "z": 216
-  },
-  {
-    "name": "Fibercryst (France)",
-    "country": "France",
-    "full_name": "Fibercryst",
-    "acronym": "Fibercryst",
-    "id": "450365911",
-    "y": 1,
-    "z": 2
-  },
-  {
-    "name": "CPE Lyon (France)",
-    "country": "France",
-    "full_name": "École supérieure de chimie physique électronique de Lyon",
-    "acronym": "CPE Lyon",
-    "id": "CdULA",
-    "y": 1,
-    "z": 23
-  },
-  {
-    "name": "University of Eastern Finland (Finlande)",
-    "country": "Finlande",
-    "full_name": "University of Eastern Finland",
-    "id": "grid.9668.1",
-    "y": 1,
-    "z": 66
-  },
-  {
-    "name": "University of Southampton (Royaume-Uni)",
-    "country": "Royaume-Uni",
-    "full_name": "University of Southampton",
-    "id": "grid.5491.9",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "UBx (France)",
-    "country": "France",
-    "full_name": "Université de Bordeaux",
-    "acronym": "UBx",
-    "id": "90I54",
-    "y": 1,
-    "z": 210
-  },
-  {
-    "name": "U. Paris-Saclay (France)",
-    "country": "France",
-    "full_name": "Université Paris-Saclay",
-    "acronym": "U. Paris-Saclay",
-    "id": "G2qA7",
-    "y": 1,
-    "z": 575
-  },
-  {
-    "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Ludwig-Maximilians-Universität München",
-    "id": "grid.5252.0",
-    "y": 1,
-    "z": 155
-  },
-  {
-    "name": "Menlo Systems (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "Menlo Systems",
-    "id": "grid.436196.f",
-    "y": 1,
-    "z": 5
-  },
-  {
-    "name": "U. Poitiers (France)",
-    "country": "France",
-    "full_name": "Université de Poitiers",
-    "acronym": "U. Poitiers",
-    "id": "hlX1r",
-    "y": 1,
-    "z": 31
-  },
-  {
-    "name": "Institute of Photonic Sciences (Espagne)",
-    "country": "Espagne",
-    "full_name": "Institute of Photonic Sciences",
-    "id": "grid.5853.b",
-    "y": 1,
-    "z": 67
-  },
-  {
-    "name": "University of Erlangen-Nuremberg (Allemagne)",
-    "country": "Allemagne",
-    "full_name": "University of Erlangen-Nuremberg",
-    "id": "grid.5330.5",
-    "y": 1,
-    "z": 106
-  },
-  {
-    "name": "U. Limoges (France)",
-    "country": "France",
-    "full_name": "Université de Limoges",
-    "acronym": "U. Limoges",
-    "id": "nkbwh",
-    "y": 1,
-    "z": 25
-  },
-  {
-    "name": "Wigner Research Centre for Physics (Hongrie)",
-    "country": "Hongrie",
-    "full_name": "Wigner Research Centre for Physics",
-    "id": "grid.419766.b",
-    "y": 1,
-    "z": 19
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "Mines Saint-Étienne (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Saint-Étienne",
+        "acronym": "Mines Saint-Étienne",
+        "id": "K841M",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CPE Lyon (France)",
+        "country": "France",
+        "full_name": "École supérieure de chimie physique électronique de Lyon",
+        "acronym": "CPE Lyon",
+        "id": "CdULA",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 91
+      },
+      {
+        "name": "Amplitude Laser (France)",
+        "country": "France",
+        "full_name": "Amplitude Laser",
+        "acronym": "Amplitude Laser",
+        "id": "gent19",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "ECM (France)",
+        "country": "France",
+        "full_name": "Centrale Marseille",
+        "acronym": "ECM",
+        "id": "1tI7C",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 98
+      },
+      {
+        "name": "University of Eastern Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Eastern Finland",
+        "id": "grid.9668.1",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "IOTA (France)",
+        "country": "France",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Fibercryst (France)",
+        "country": "France",
+        "full_name": "Fibercryst",
+        "acronym": "Fibercryst",
+        "id": "450365911",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "University of Stuttgart (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Stuttgart",
+        "id": "grid.5719.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "TRUMPF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TRUMPF",
+        "id": "grid.435016.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "AMO (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AMO",
+        "id": "grid.461610.4",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 5
+      }
+    ],
+    "Future and Emerging Technologies (FET)": [
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 177
+      },
+      {
+        "name": "University of Erlangen-Nuremberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Erlangen-Nuremberg",
+        "id": "grid.5330.5",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Menlo Systems (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Menlo Systems",
+        "id": "grid.436196.f",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Wigner Research Centre for Physics (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Wigner Research Centre for Physics",
+        "id": "grid.419766.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Limoges (France)",
+        "country": "France",
+        "full_name": "Université de Limoges",
+        "acronym": "U. Limoges",
+        "id": "nkbwh",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "U. Poitiers (France)",
+        "country": "France",
+        "full_name": "Université de Poitiers",
+        "acronym": "U. Poitiers",
+        "id": "hlX1r",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "y": 1,
+        "z": 53
+      }
+    ]
   }
-]
+}
