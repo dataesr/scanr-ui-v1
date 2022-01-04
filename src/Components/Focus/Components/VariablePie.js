@@ -12,14 +12,14 @@ export default class VariablePie extends Component {
   state = {
     data: [],
     nodes: [],
-    currentId: 'bZiTA',
+    currentId: 'nothing',
     exporting: true,
     isLoading: true,
   }
 
   componentDidMount() {
     this.getNodes();
-    this.getData();
+    // this.getData();
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -47,6 +47,12 @@ export default class VariablePie extends Component {
           className="form-control mx-3 mb-2"
           onChange={e => this.setState({ currentId: e.target.value, data: [] })}
         >
+          {
+            (this.state.currentId === 'nothing')
+              ? <option value="nothing" selected>Sélectionner une entité française pour voir ses principaux partenaires</option>
+              : <option value="nothing">Sélectionner une entité française pour voir ses principaux partenaires</option>
+          }
+
           {
             this.state.nodes.map((el) => {
               let ret = <option value={el.id}>{el.name}</option>;
