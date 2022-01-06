@@ -2,56 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Physikalisch-Technische Bundesanstalt",
-        "id": "grid.4764.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 25
-      },
-      {
-        "name": "European Organization for Nuclear Research (Suisse)",
-        "country": "Suisse",
-        "full_name": "European Organization for Nuclear Research",
-        "id": "grid.9132.9",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 86
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 206
-      },
-      {
-        "name": "Paul Scherrer Institute (Suisse)",
-        "country": "Suisse",
-        "full_name": "Paul Scherrer Institute",
-        "id": "grid.5991.4",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 88
-      },
-      {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 211
-      },
-      {
         "name": "Helmholtz-Zentrum Dresden-Rossendorf (Allemagne)",
         "country": "Allemagne",
         "full_name": "Helmholtz-Zentrum Dresden-Rossendorf",
         "id": "grid.40602.30",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
         "y": 2,
         "z": 55
       },
@@ -62,17 +21,12 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
         "y": 2,
         "z": 2670
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 489
       },
       {
         "name": "ILL (France)",
@@ -81,8 +35,51 @@
         "acronym": "ILL",
         "id": "779555887",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
         "y": 2,
         "z": 21
+      },
+      {
+        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Physikalisch-Technische Bundesanstalt",
+        "id": "grid.4764.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 25
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 206
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 88
       },
       {
         "name": "GSI Helmholtz Centre for Heavy Ion Research (Allemagne)",
@@ -90,8 +87,64 @@
         "full_name": "GSI Helmholtz Centre for Heavy Ion Research",
         "id": "grid.159791.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
         "y": 2,
         "z": 22
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 489
+      },
+      {
+        "name": "European Organization for Nuclear Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "European Organization for Nuclear Research",
+        "id": "grid.9132.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 86
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 211
+      },
+      {
+        "name": "National Institute for Nuclear Physics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Nuclear Physics",
+        "id": "grid.6045.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
+        "y": 2,
+        "z": 119
       },
       {
         "name": "CEA (France)",
@@ -100,6 +153,10 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
         "y": 2,
         "z": 852
       },
@@ -109,17 +166,12 @@
         "full_name": "National Centre for Nuclear Research",
         "id": "grid.450295.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
         "y": 2,
         "z": 28
-      },
-      {
-        "name": "National Institute for Nuclear Physics (Italie)",
-        "country": "Italie",
-        "full_name": "National Institute for Nuclear Physics",
-        "id": "grid.6045.7",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 119
       },
       {
         "name": "U. Montpellier (France)",
@@ -128,89 +180,11 @@
         "acronym": "U. Montpellier",
         "id": "7yd5d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 211
-      },
-      {
-        "name": "Nuclear Physics Institute (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Nuclear Physics Institute",
-        "id": "grid.425110.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "University of Seville (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Seville",
-        "id": "grid.9224.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 85
-      },
-      {
-        "name": "Institute of Physics (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institute of Physics",
-        "id": "grid.424881.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "University of Jyväskylä (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Jyväskylä",
-        "id": "grid.9681.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 114
-      },
-      {
-        "name": "UK Research and Innovation (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "UK Research and Innovation",
-        "id": "grid.496779.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 295
-      },
-      {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
       },
       {
         "name": "CNES (France)",
@@ -219,28 +193,59 @@
         "acronym": "CNES",
         "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 107
       },
       {
-        "name": "Iroc Technologies (France)",
-        "country": "France",
-        "full_name": "Iroc Technologies",
-        "acronym": "Iroc Technologies",
-        "id": "428924732",
+        "name": "UK Research and Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "UK Research and Innovation",
+        "id": "grid.496779.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 4
+        "z": 295
       },
       {
-        "name": "ESRF (France)",
-        "country": "France",
-        "full_name": "European synchrotron radiation facility",
-        "acronym": "ESRF",
-        "id": "TshOK",
+        "name": "Carlos III University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Carlos III University of Madrid",
+        "id": "grid.7840.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 29
+        "z": 108
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 104
       },
       {
         "name": "UJM (France)",
@@ -249,17 +254,60 @@
         "acronym": "UJM",
         "id": "tIJ02",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 70
       },
       {
-        "name": "Carlos III University of Madrid (Espagne)",
-        "country": "Espagne",
-        "full_name": "Carlos III University of Madrid",
-        "id": "grid.7840.b",
+        "name": "University of Jyväskylä (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Jyväskylä",
+        "id": "grid.9681.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 108
+        "z": 43
+      },
+      {
+        "name": "Carl von Ossietzky University of Oldenburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Carl von Ossietzky University of Oldenburg",
+        "id": "grid.5560.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "ESRF (France)",
+        "country": "France",
+        "full_name": "European synchrotron radiation facility",
+        "acronym": "ESRF",
+        "id": "TshOK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 29
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -267,8 +315,60 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "Iroc Technologies (France)",
+        "country": "France",
+        "full_name": "Iroc Technologies",
+        "acronym": "Iroc Technologies",
+        "id": "428924732",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Nuclear Physics Institute (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Physics Institute",
+        "id": "grid.425110.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Institute of Physics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Physics",
+        "id": "grid.424881.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 104
       },
       {
         "name": "ISAE-SUPAERO (France)",
@@ -277,80 +377,23 @@
         "acronym": "ISAE-SUPAERO",
         "id": "2Nnrv",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 38
       },
       {
-        "name": "Carl von Ossietzky University of Oldenburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Carl von Ossietzky University of Oldenburg",
-        "id": "grid.5560.6",
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 379
-      },
-      {
-        "name": "Sciprom (Suisse)",
-        "country": "Suisse",
-        "full_name": "Sciprom",
-        "id": "grid.437903.a",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Belgian Nuclear Research Centre (Belgique)",
-        "country": "Belgique",
-        "full_name": "Belgian Nuclear Research Centre",
-        "id": "grid.8953.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 54
-      },
-      {
-        "name": "Innsbruck Medical University (Autriche)",
-        "country": "Autriche",
-        "full_name": "Innsbruck Medical University",
-        "id": "grid.5361.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "National Physical Laboratory (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Physical Laboratory",
-        "id": "grid.410351.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "University of Latvia (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "University of Latvia",
-        "id": "grid.9845.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
-        "name": "Directorate-General Joint Research Centre (Belgique)",
-        "country": "Belgique",
-        "full_name": "Directorate-General Joint Research Centre",
-        "id": "grid.489339.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 149
+        "z": 85
       },
       {
         "name": "University Hospital of Lausanne (Suisse)",
@@ -358,26 +401,11 @@
         "full_name": "University Hospital of Lausanne",
         "id": "grid.8515.9",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 32
-      },
-      {
-        "name": "European Spallation Source (Suède)",
-        "country": "Suède",
-        "full_name": "European Spallation Source",
-        "id": "grid.434715.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Rechts der Isar Hospital (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rechts der Isar Hospital",
-        "id": "grid.15474.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
       },
       {
         "name": "GIPArronax (France)",
@@ -386,8 +414,23 @@
         "acronym": "GIPArronax",
         "id": "130004112",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "National Physical Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Physical Laboratory",
+        "id": "grid.410351.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 33
       },
       {
         "name": "University of Oslo (Norvège)",
@@ -395,63 +438,179 @@
         "full_name": "University of Oslo",
         "id": "grid.5510.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 186
       },
       {
-        "name": "Keele University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Keele University",
-        "id": "grid.9757.c",
+        "name": "Innsbruck Medical University (Autriche)",
+        "country": "Autriche",
+        "full_name": "Innsbruck Medical University",
+        "id": "grid.5361.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 14
+        "z": 34
       },
       {
-        "name": "Goethe University Frankfurt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
+        "name": "University of Latvia (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "University of Latvia",
+        "id": "grid.9845.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 85
+        "z": 62
       },
       {
-        "name": "UHA (France)",
-        "country": "France",
-        "full_name": "Université de Haute-Alsace",
-        "acronym": "UHA",
-        "id": "OJZ4a",
-        "country_level_part": "Pays membres",
+        "name": "Sciprom (Suisse)",
+        "country": "Suisse",
+        "full_name": "Sciprom",
+        "id": "grid.437903.a",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 15
+        "z": 11
       },
       {
-        "name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
-        "id": "grid.443874.8",
+        "name": "European Spallation Source (Suède)",
+        "country": "Suède",
+        "full_name": "European Spallation Source",
+        "id": "grid.434715.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 20
+        "z": 19
       },
       {
-        "name": "Max Planck Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Max Planck Society",
-        "id": "grid.4372.2",
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 379
       },
       {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
+        "name": "Rechts der Isar Hospital (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rechts der Isar Hospital",
+        "id": "grid.15474.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 306
+        "z": 26
+      },
+      {
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 149
+      },
+      {
+        "name": "Leibniz Institute for Astrophysics Potsdam (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute for Astrophysics Potsdam",
+        "id": "grid.423694.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Institute for Nuclear Research (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Institute for Nuclear Research",
+        "id": "grid.418861.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "Università degli Studi di Enna Kore (Italie)",
+        "country": "Italie",
+        "full_name": "Università degli Studi di Enna Kore",
+        "id": "grid.440863.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute of Astronomy and National Astronomical Observatory (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Institute of Astronomy and National Astronomical Observatory",
+        "id": "grid.507126.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Institute for Astrophysics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Astrophysics",
+        "id": "grid.4293.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 53
       },
       {
         "name": "Université Libre de Bruxelles (Belgique)",
@@ -459,6 +618,9 @@
         "full_name": "Université Libre de Bruxelles",
         "id": "grid.4989.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
         "y": 1,
         "z": 88
       }
@@ -467,56 +629,15 @@
   "Excellent Science": {
     "Research infrastructures (INFRA)": [
       {
-        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Physikalisch-Technische Bundesanstalt",
-        "id": "grid.4764.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 8
-      },
-      {
-        "name": "European Organization for Nuclear Research (Suisse)",
-        "country": "Suisse",
-        "full_name": "European Organization for Nuclear Research",
-        "id": "grid.9132.9",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 43
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 8
-      },
-      {
-        "name": "Paul Scherrer Institute (Suisse)",
-        "country": "Suisse",
-        "full_name": "Paul Scherrer Institute",
-        "id": "grid.5991.4",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 26
-      },
-      {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 35
-      },
-      {
         "name": "Helmholtz-Zentrum Dresden-Rossendorf (Allemagne)",
         "country": "Allemagne",
         "full_name": "Helmholtz-Zentrum Dresden-Rossendorf",
         "id": "grid.40602.30",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
         "y": 2,
         "z": 13
       },
@@ -527,17 +648,12 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
         "y": 2,
         "z": 169
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 14
       },
       {
         "name": "ILL (France)",
@@ -546,8 +662,51 @@
         "acronym": "ILL",
         "id": "779555887",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
         "y": 2,
         "z": 14
+      },
+      {
+        "name": "Physikalisch-Technische Bundesanstalt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Physikalisch-Technische Bundesanstalt",
+        "id": "grid.4764.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 26
       },
       {
         "name": "GSI Helmholtz Centre for Heavy Ion Research (Allemagne)",
@@ -555,8 +714,64 @@
         "full_name": "GSI Helmholtz Centre for Heavy Ion Research",
         "id": "grid.159791.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
         "y": 2,
         "z": 13
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "European Organization for Nuclear Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "European Organization for Nuclear Research",
+        "id": "grid.9132.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008126,
+          101008571
+        ],
+        "y": 2,
+        "z": 43
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126,
+          101008324
+        ],
+        "y": 2,
+        "z": 35
+      },
+      {
+        "name": "National Institute for Nuclear Physics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Nuclear Physics",
+        "id": "grid.6045.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
+        "y": 2,
+        "z": 48
       },
       {
         "name": "CEA (France)",
@@ -565,6 +780,10 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
         "y": 2,
         "z": 80
       },
@@ -574,17 +793,12 @@
         "full_name": "National Centre for Nuclear Research",
         "id": "grid.450295.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571,
+          101008324
+        ],
         "y": 2,
         "z": 5
-      },
-      {
-        "name": "National Institute for Nuclear Physics (Italie)",
-        "country": "Italie",
-        "full_name": "National Institute for Nuclear Physics",
-        "id": "grid.6045.7",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 48
       },
       {
         "name": "U. Montpellier (France)",
@@ -593,17 +807,60 @@
         "acronym": "U. Montpellier",
         "id": "7yd5d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "Nuclear Physics Institute (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Nuclear Physics Institute",
-        "id": "grid.425110.3",
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 4
+        "z": 12
+      },
+      {
+        "name": "UK Research and Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "UK Research and Innovation",
+        "id": "grid.496779.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Carlos III University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Carlos III University of Madrid",
+        "id": "grid.7840.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 18
       },
       {
         "name": "University Medical Center Groningen (Pays-Bas)",
@@ -611,24 +868,108 @@
         "full_name": "University Medical Center Groningen",
         "id": "grid.4494.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 8
       },
       {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 10
+        "z": 3
       },
       {
-        "name": "University of Seville (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Seville",
-        "id": "grid.9224.d",
+        "name": "University of Jyväskylä (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Jyväskylä",
+        "id": "grid.9681.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Carl von Ossietzky University of Oldenburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Carl von Ossietzky University of Oldenburg",
+        "id": "grid.5560.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ESRF (France)",
+        "country": "France",
+        "full_name": "European synchrotron radiation facility",
+        "acronym": "ESRF",
+        "id": "TshOK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Iroc Technologies (France)",
+        "country": "France",
+        "full_name": "Iroc Technologies",
+        "acronym": "Iroc Technologies",
+        "id": "428924732",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Nuclear Physics Institute (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Physics Institute",
+        "id": "grid.425110.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 4
       },
@@ -638,102 +979,23 @@
         "full_name": "Institute of Physics",
         "id": "grid.424881.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "University of Jyväskylä (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Jyväskylä",
-        "id": "grid.9681.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Université Catholique de Louvain (Belgique)",
+        "name": "University of Liège (Belgique)",
         "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 8
-      },
-      {
-        "name": "UK Research and Innovation (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "UK Research and Innovation",
-        "id": "grid.496779.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 83
-      },
-      {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "CNES (France)",
-        "country": "France",
-        "full_name": "Centre national d'études spatiales",
-        "acronym": "CNES",
-        "id": "CvdQn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Iroc Technologies (France)",
-        "country": "France",
-        "full_name": "Iroc Technologies",
-        "acronym": "Iroc Technologies",
-        "id": "428924732",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "ESRF (France)",
-        "country": "France",
-        "full_name": "European synchrotron radiation facility",
-        "acronym": "ESRF",
-        "id": "TshOK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Carlos III University of Madrid (Espagne)",
-        "country": "Espagne",
-        "full_name": "Carlos III University of Madrid",
-        "id": "grid.7840.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
+        "z": 10
       },
       {
         "name": "ISAE-SUPAERO (France)",
@@ -742,80 +1004,23 @@
         "acronym": "ISAE-SUPAERO",
         "id": "2Nnrv",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Carl von Ossietzky University of Oldenburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Carl von Ossietzky University of Oldenburg",
-        "id": "grid.5560.6",
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008126
+        ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "Sciprom (Suisse)",
-        "country": "Suisse",
-        "full_name": "Sciprom",
-        "id": "grid.437903.a",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Belgian Nuclear Research Centre (Belgique)",
-        "country": "Belgique",
-        "full_name": "Belgian Nuclear Research Centre",
-        "id": "grid.8953.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Innsbruck Medical University (Autriche)",
-        "country": "Autriche",
-        "full_name": "Innsbruck Medical University",
-        "id": "grid.5361.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "National Physical Laboratory (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Physical Laboratory",
-        "id": "grid.410351.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Latvia (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "University of Latvia",
-        "id": "grid.9845.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Directorate-General Joint Research Centre (Belgique)",
-        "country": "Belgique",
-        "full_name": "Directorate-General Joint Research Centre",
-        "id": "grid.489339.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
+        "z": 4
       },
       {
         "name": "University Hospital of Lausanne (Suisse)",
@@ -823,26 +1028,11 @@
         "full_name": "University Hospital of Lausanne",
         "id": "grid.8515.9",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "European Spallation Source (Suède)",
-        "country": "Suède",
-        "full_name": "European Spallation Source",
-        "id": "grid.434715.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Rechts der Isar Hospital (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rechts der Isar Hospital",
-        "id": "grid.15474.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "GIPArronax (France)",
@@ -851,6 +1041,21 @@
         "acronym": "GIPArronax",
         "id": "130004112",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Physical Laboratory (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Physical Laboratory",
+        "id": "grid.410351.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 2
       },
@@ -860,63 +1065,179 @@
         "full_name": "University of Oslo",
         "id": "grid.5510.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 27
       },
       {
-        "name": "Keele University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Keele University",
-        "id": "grid.9757.c",
+        "name": "Innsbruck Medical University (Autriche)",
+        "country": "Autriche",
+        "full_name": "Innsbruck Medical University",
+        "id": "grid.5361.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 2
+        "z": 5
       },
       {
-        "name": "Goethe University Frankfurt (Allemagne)",
+        "name": "University of Latvia (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "University of Latvia",
+        "id": "grid.9845.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Sciprom (Suisse)",
+        "country": "Suisse",
+        "full_name": "Sciprom",
+        "id": "grid.437903.a",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "European Spallation Source (Suède)",
+        "country": "Suède",
+        "full_name": "European Spallation Source",
+        "id": "grid.434715.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Rechts der Isar Hospital (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
+        "full_name": "Rechts der Isar Hospital",
+        "id": "grid.15474.33",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "UHA (France)",
-        "country": "France",
-        "full_name": "Université de Haute-Alsace",
-        "acronym": "UHA",
-        "id": "OJZ4a",
-        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Horia Hulubei National Institute for R and D in Physics and Nuclear Engineering",
-        "id": "grid.443874.8",
+        "name": "Belgian Nuclear Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Nuclear Research Centre",
+        "id": "grid.8953.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
         "y": 1,
-        "z": 9
+        "z": 1
       },
       {
-        "name": "Max Planck Society (Allemagne)",
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008571
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Leibniz Institute for Astrophysics Potsdam (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Max Planck Society",
-        "id": "grid.4372.2",
+        "full_name": "Leibniz Institute for Astrophysics Potsdam",
+        "id": "grid.423694.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
         "y": 1,
-        "z": 48
+        "z": 5
       },
       {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
+        "name": "Institute for Nuclear Research (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Institute for Nuclear Research",
+        "id": "grid.418861.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
         "y": 1,
-        "z": 30
+        "z": 7
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Università degli Studi di Enna Kore (Italie)",
+        "country": "Italie",
+        "full_name": "Università degli Studi di Enna Kore",
+        "id": "grid.440863.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute of Astronomy and National Astronomical Observatory (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Institute of Astronomy and National Astronomical Observatory",
+        "id": "grid.507126.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Institute for Astrophysics (Italie)",
+        "country": "Italie",
+        "full_name": "National Institute for Astrophysics",
+        "id": "grid.4293.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
+        "y": 1,
+        "z": 21
       },
       {
         "name": "Université Libre de Bruxelles (Belgique)",
@@ -924,6 +1245,9 @@
         "full_name": "Université Libre de Bruxelles",
         "id": "grid.4989.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008324
+        ],
         "y": 1,
         "z": 5
       }

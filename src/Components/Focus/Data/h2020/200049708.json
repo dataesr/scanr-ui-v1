@@ -2,69 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Ifremer (France)",
-        "country": "France",
-        "full_name": "Institut français de recherche pour l'exploitation de la mer",
-        "acronym": "Ifremer",
-        "id": "F6Zt5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 87
-      },
-      {
-        "name": "University of York (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of York",
-        "id": "grid.5685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 88
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "University of Aveiro (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Aveiro",
-        "id": "grid.7311.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 65
-      },
-      {
         "name": "UBO (France)",
         "country": "France",
         "full_name": "Université de Bretagne Occidentale",
         "acronym": "UBO",
         "id": "06SE7",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 48
-      },
-      {
-        "name": "Queen's University Belfast (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Queen's University Belfast",
-        "id": "grid.4777.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 87
-      },
-      {
-        "name": "University of the Highlands and Islands (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of the Highlands and Islands",
-        "id": "grid.23378.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "CNRS (France)",
@@ -73,8 +21,72 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 2670
+      },
+      {
+        "name": "University of York (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of York",
+        "id": "grid.5685.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 88
+      },
+      {
+        "name": "University of the Highlands and Islands (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of the Highlands and Islands",
+        "id": "grid.23378.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Queen's University Belfast (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen's University Belfast",
+        "id": "grid.4777.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 87
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 87
       },
       {
         "name": "Wageningen University & Research (Pays-Bas)",
@@ -82,6 +94,9 @@
         "full_name": "Wageningen University & Research",
         "id": "grid.4818.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 367
       },
@@ -91,40 +106,11 @@
         "full_name": "Aalborg University",
         "id": "grid.5117.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 156
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Europe in a changing world - inclusive, innovative and reflective Societies (SOCIETY)": [
-      {
-        "name": "Ifremer (France)",
-        "country": "France",
-        "full_name": "Institut français de recherche pour l'exploitation de la mer",
-        "acronym": "Ifremer",
-        "id": "F6Zt5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of York (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of York",
-        "id": "grid.5685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "University of Aveiro (Portugal)",
@@ -132,9 +118,16 @@
         "full_name": "University of Aveiro",
         "id": "grid.7311.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
-        "z": 1
-      },
+        "z": 65
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Europe in a changing world - inclusive, innovative and reflective Societies (SOCIETY)": [
       {
         "name": "UBO (France)",
         "country": "France",
@@ -142,24 +135,9 @@
         "acronym": "UBO",
         "id": "06SE7",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Queen's University Belfast (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Queen's University Belfast",
-        "id": "grid.4777.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of the Highlands and Islands (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of the Highlands and Islands",
-        "id": "grid.23378.3d",
-        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 1
       },
@@ -170,8 +148,72 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 43
+      },
+      {
+        "name": "University of York (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of York",
+        "id": "grid.5685.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of the Highlands and Islands (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of the Highlands and Islands",
+        "id": "grid.23378.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Queen's University Belfast (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen's University Belfast",
+        "id": "grid.4777.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Wageningen University & Research (Pays-Bas)",
@@ -179,6 +221,9 @@
         "full_name": "Wageningen University & Research",
         "id": "grid.4818.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 2
       },
@@ -188,8 +233,23 @@
         "full_name": "Aalborg University",
         "id": "grid.5117.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "University of Aveiro (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Aveiro",
+        "id": "grid.7311.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          770504
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

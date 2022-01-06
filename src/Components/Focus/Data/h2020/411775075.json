@@ -2,126 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 453
-      },
-      {
         "name": "International Livestock Research Institute (Kenya)",
         "country": "Kenya",
         "full_name": "International Livestock Research Institute",
         "id": "grid.419369.0",
         "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 8
-      },
-      {
-        "name": "IHE Delft Institute for Water Education (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "IHE Delft Institute for Water Education",
-        "id": "grid.420326.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Université d'Abomey-Calavi (Bénin)",
-        "country": "Bénin",
-        "full_name": "Université d'Abomey-Calavi",
-        "id": "grid.412037.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 268
-      },
-      {
-        "name": "Toulouse INP (France)",
-        "country": "France",
-        "full_name": "Toulouse INP",
-        "acronym": "Toulouse INP",
-        "id": "mMex4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 90
-      },
-      {
-        "name": "Institut Sénégalais de Recherches Agricoles (Sénégal)",
-        "country": "Sénégal",
-        "full_name": "Institut Sénégalais de Recherches Agricoles",
-        "id": "grid.14416.36",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "University of Giessen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Giessen",
-        "id": "grid.8664.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "CNES (France)",
-        "country": "France",
-        "full_name": "Centre national d'études spatiales",
-        "acronym": "CNES",
-        "id": "CvdQn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 107
-      },
-      {
-        "name": "U. Toulouse III (France)",
-        "country": "France",
-        "full_name": "Université Toulouse III - Paul Sabatier",
-        "acronym": "U. Toulouse III",
-        "id": "m7K6T",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 220
-      },
-      {
-        "name": "North-West University (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "North-West University",
-        "id": "grid.25881.36",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 273
-      },
-      {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 68
       },
       {
         "name": "Aarhus University (Danemark)",
@@ -129,18 +19,36 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 306
       },
       {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
-        "z": 214
+        "z": 268
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 453
       },
       {
         "name": "CNRS (France)",
@@ -149,8 +57,110 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 2670
+      },
+      {
+        "name": "North-West University (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "North-West University",
+        "id": "grid.25881.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 107
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 273
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "University of Giessen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Giessen",
+        "id": "grid.8664.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "IHE Delft Institute for Water Education (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "IHE Delft Institute for Water Education",
+        "id": "grid.420326.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Institut Sénégalais de Recherches Agricoles (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Institut Sénégalais de Recherches Agricoles",
+        "id": "grid.14416.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 220
       },
       {
         "name": "Obafemi Awolowo University (Nigeria)",
@@ -158,134 +168,65 @@
         "full_name": "Obafemi Awolowo University",
         "id": "grid.10824.3f",
         "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Université d'Abomey-Calavi (Bénin)",
+        "country": "Bénin",
+        "full_name": "Université d'Abomey-Calavi",
+        "id": "grid.412037.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Toulouse INP (France)",
+        "country": "France",
+        "full_name": "Toulouse INP",
+        "acronym": "Toulouse INP",
+        "id": "mMex4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 90
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 132
-      },
-      {
         "name": "International Livestock Research Institute (Kenya)",
         "country": "Kenya",
         "full_name": "International Livestock Research Institute",
         "id": "grid.419369.0",
         "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "IHE Delft Institute for Water Education (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "IHE Delft Institute for Water Education",
-        "id": "grid.420326.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Université d'Abomey-Calavi (Bénin)",
-        "country": "Bénin",
-        "full_name": "Université d'Abomey-Calavi",
-        "id": "grid.412037.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Toulouse INP (France)",
-        "country": "France",
-        "full_name": "Toulouse INP",
-        "acronym": "Toulouse INP",
-        "id": "mMex4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Institut Sénégalais de Recherches Agricoles (Sénégal)",
-        "country": "Sénégal",
-        "full_name": "Institut Sénégalais de Recherches Agricoles",
-        "id": "grid.14416.36",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of Giessen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Giessen",
-        "id": "grid.8664.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "CNES (France)",
-        "country": "France",
-        "full_name": "Centre national d'études spatiales",
-        "acronym": "CNES",
-        "id": "CvdQn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "U. Toulouse III (France)",
-        "country": "France",
-        "full_name": "Université Toulouse III - Paul Sabatier",
-        "acronym": "U. Toulouse III",
-        "id": "m7K6T",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
-      },
-      {
-        "name": "North-West University (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "North-West University",
-        "id": "grid.25881.36",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 67
-      },
-      {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Aarhus University (Danemark)",
@@ -293,18 +234,36 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 60
       },
       {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
-        "z": 79
+        "z": 47
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 132
       },
       {
         "name": "CNRS (France)",
@@ -313,8 +272,110 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 938
+      },
+      {
+        "name": "North-West University (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "North-West University",
+        "id": "grid.25881.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 67
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "University of Giessen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Giessen",
+        "id": "grid.8664.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "IHE Delft Institute for Water Education (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "IHE Delft Institute for Water Education",
+        "id": "grid.420326.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Institut Sénégalais de Recherches Agricoles (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Institut Sénégalais de Recherches Agricoles",
+        "id": "grid.14416.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Toulouse III (France)",
+        "country": "France",
+        "full_name": "Université Toulouse III - Paul Sabatier",
+        "acronym": "U. Toulouse III",
+        "id": "m7K6T",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 69
       },
       {
         "name": "Obafemi Awolowo University (Nigeria)",
@@ -322,8 +383,49 @@
         "full_name": "Obafemi Awolowo University",
         "id": "grid.10824.3f",
         "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Université d'Abomey-Calavi (Bénin)",
+        "country": "Bénin",
+        "full_name": "Université d'Abomey-Calavi",
+        "id": "grid.412037.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Toulouse INP (France)",
+        "country": "France",
+        "full_name": "Toulouse INP",
+        "acronym": "Toulouse INP",
+        "id": "mMex4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871944
+        ],
+        "y": 1,
+        "z": 17
       }
     ]
   }

@@ -2,140 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Barcelona Institute for Global Health (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Institute for Global Health",
-        "id": "grid.434607.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Eagle Genomics (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Eagle Genomics",
-        "id": "grid.498247.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 170
-      },
-      {
-        "name": "Anaxomics (Espagne)",
-        "country": "Espagne",
-        "full_name": "Anaxomics",
-        "id": "grid.424066.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 148
-      },
-      {
-        "name": "IBM Research - Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "IBM Research - Zurich",
-        "id": "grid.410387.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 103
-      },
-      {
-        "name": "Kantonsspital St. Gallen (Suisse)",
-        "country": "Suisse",
-        "full_name": "Kantonsspital St. Gallen",
-        "id": "grid.413349.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 211
-      },
-      {
-        "name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer (Espagne)",
-        "country": "Espagne",
-        "full_name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer",
-        "id": "grid.10403.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Newcastle University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Newcastle University",
-        "id": "grid.1006.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 149
-      },
-      {
-        "name": "University of Glasgow (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Glasgow",
-        "id": "grid.8756.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 153
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 137
-      },
-      {
         "name": "U. Paris (France)",
         "country": "France",
         "full_name": "Université de Paris",
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 388
-      },
-      {
-        "name": "IBM Research - Ireland (Irlande)",
-        "country": "Irlande",
-        "full_name": "IBM Research - Ireland",
-        "id": "grid.424816.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 103
       },
       {
         "name": "Trinity College Dublin (Irlande)",
@@ -143,17 +20,59 @@
         "full_name": "Trinity College Dublin",
         "id": "grid.8217.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 158
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
-        "z": 273
+        "z": 170
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 149
+      },
+      {
+        "name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer (Espagne)",
+        "country": "Espagne",
+        "full_name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer",
+        "id": "grid.10403.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 554
       },
       {
         "name": "Firalis (France)",
@@ -162,17 +81,95 @@
         "acronym": "Firalis",
         "id": "504944364",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
-        "z": 554
+        "z": 103
+      },
+      {
+        "name": "Barcelona Institute for Global Health (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Anaxomics (Espagne)",
+        "country": "Espagne",
+        "full_name": "Anaxomics",
+        "id": "grid.424066.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 137
+      },
+      {
+        "name": "Eagle Genomics (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eagle Genomics",
+        "id": "grid.498247.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "IBM Research - Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "IBM Research - Zurich",
+        "id": "grid.410387.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 153
       },
       {
         "name": "Charles University (Rép. Tchèque)",
@@ -180,8 +177,47 @@
         "full_name": "Charles University",
         "id": "grid.4491.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 86
+      },
+      {
+        "name": "IBM Research - Ireland (Irlande)",
+        "country": "Irlande",
+        "full_name": "IBM Research - Ireland",
+        "id": "grid.424816.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Kantonsspital St. Gallen (Suisse)",
+        "country": "Suisse",
+        "full_name": "Kantonsspital St. Gallen",
+        "id": "grid.413349.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 273
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -189,8 +225,35 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 285
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 211
+      },
+      {
+        "name": "University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Barcelona",
+        "id": "grid.5841.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 148
       },
       {
         "name": "Amgen (Royaume-Uni)",
@@ -198,8 +261,60 @@
         "full_name": "Amgen",
         "id": "grid.476413.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "National Institute for Health and Care Excellence (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute for Health and Care Excellence",
+        "id": "grid.416710.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Takeda (Suisse)",
+        "country": "Suisse",
+        "full_name": "Takeda",
+        "id": "grid.476705.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 42
       },
       {
         "name": "AstraZeneca (Suède)",
@@ -207,6 +322,9 @@
         "full_name": "AstraZeneca",
         "id": "grid.418151.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 54
       },
@@ -216,17 +334,11 @@
         "full_name": "Eli Lilly",
         "id": "grid.418786.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "Takeda (Suisse)",
-        "country": "Suisse",
-        "full_name": "Takeda",
-        "id": "grid.476705.7",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 20
       },
       {
         "name": "Bayer (Allemagne)",
@@ -234,26 +346,11 @@
         "full_name": "Bayer",
         "id": "grid.420044.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 64
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "Astellas Pharma (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Astellas Pharma",
-        "id": "grid.476166.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "University Medical Center Utrecht (Pays-Bas)",
@@ -261,6 +358,9 @@
         "full_name": "University Medical Center Utrecht",
         "id": "grid.7692.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 112
       },
@@ -270,45 +370,23 @@
         "full_name": "Takeda",
         "id": "grid.451362.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "National Institute for Health and Care Excellence (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Institute for Health and Care Excellence",
-        "id": "grid.416710.5",
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Sanofi (France)",
-        "country": "France",
-        "full_name": "Sanofi",
-        "acronym": "Sanofi",
-        "id": "gent147",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 42
-      },
-      {
-        "name": "GlaxoSmithKline (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "GlaxoSmithKline",
-        "id": "grid.418236.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "UCB Pharma (Belgique)",
-        "country": "Belgique",
-        "full_name": "UCB Pharma",
-        "id": "grid.421932.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
+        "z": 104
       },
       {
         "name": "Zorginstituut Nederland (Pays-Bas)",
@@ -316,121 +394,40 @@
         "full_name": "Zorginstituut Nederland",
         "id": "grid.454101.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Astellas Pharma (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Astellas Pharma",
+        "id": "grid.476166.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 32
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Barcelona Institute for Global Health (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Institute for Global Health",
-        "id": "grid.434607.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Eagle Genomics (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Eagle Genomics",
-        "id": "grid.498247.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "Anaxomics (Espagne)",
-        "country": "Espagne",
-        "full_name": "Anaxomics",
-        "id": "grid.424066.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 48
-      },
-      {
-        "name": "IBM Research - Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "IBM Research - Zurich",
-        "id": "grid.410387.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Kantonsspital St. Gallen (Suisse)",
-        "country": "Suisse",
-        "full_name": "Kantonsspital St. Gallen",
-        "id": "grid.413349.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer (Espagne)",
-        "country": "Espagne",
-        "full_name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer",
-        "id": "grid.10403.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Newcastle University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Newcastle University",
-        "id": "grid.1006.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "University of Glasgow (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Glasgow",
-        "id": "grid.8756.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 45
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 41
-      },
       {
         "name": "U. Paris (France)",
         "country": "France",
@@ -438,26 +435,11 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 128
-      },
-      {
-        "name": "IBM Research - Ireland (Irlande)",
-        "country": "Irlande",
-        "full_name": "IBM Research - Ireland",
-        "id": "grid.424816.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
       },
       {
         "name": "Trinity College Dublin (Irlande)",
@@ -465,17 +447,59 @@
         "full_name": "Trinity College Dublin",
         "id": "grid.8217.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 39
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
-        "z": 67
+        "z": 39
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer (Espagne)",
+        "country": "Espagne",
+        "full_name": "Consorci Institut D'Investigacions Biomediques August Pi I Sunyer",
+        "id": "grid.10403.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 140
       },
       {
         "name": "Firalis (France)",
@@ -484,17 +508,95 @@
         "acronym": "Firalis",
         "id": "504944364",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
-        "z": 140
+        "z": 32
+      },
+      {
+        "name": "Barcelona Institute for Global Health (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Anaxomics (Espagne)",
+        "country": "Espagne",
+        "full_name": "Anaxomics",
+        "id": "grid.424066.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Eagle Genomics (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eagle Genomics",
+        "id": "grid.498247.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "IBM Research - Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "IBM Research - Zurich",
+        "id": "grid.410387.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 45
       },
       {
         "name": "Charles University (Rép. Tchèque)",
@@ -502,8 +604,47 @@
         "full_name": "Charles University",
         "id": "grid.4491.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "IBM Research - Ireland (Irlande)",
+        "country": "Irlande",
+        "full_name": "IBM Research - Ireland",
+        "id": "grid.424816.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Kantonsspital St. Gallen (Suisse)",
+        "country": "Suisse",
+        "full_name": "Kantonsspital St. Gallen",
+        "id": "grid.413349.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 67
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -511,8 +652,35 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
         "y": 1,
         "z": 55
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Barcelona",
+        "id": "grid.5841.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813545
+        ],
+        "y": 1,
+        "z": 48
       }
     ]
   },
@@ -524,8 +692,60 @@
         "full_name": "Amgen",
         "id": "grid.476413.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "National Institute for Health and Care Excellence (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute for Health and Care Excellence",
+        "id": "grid.416710.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Takeda (Suisse)",
+        "country": "Suisse",
+        "full_name": "Takeda",
+        "id": "grid.476705.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Sanofi (France)",
+        "country": "France",
+        "full_name": "Sanofi",
+        "acronym": "Sanofi",
+        "id": "gent147",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 39
       },
       {
         "name": "AstraZeneca (Suède)",
@@ -533,6 +753,9 @@
         "full_name": "AstraZeneca",
         "id": "grid.418151.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 30
       },
@@ -542,17 +765,11 @@
         "full_name": "Eli Lilly",
         "id": "grid.418786.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 36
-      },
-      {
-        "name": "Takeda (Suisse)",
-        "country": "Suisse",
-        "full_name": "Takeda",
-        "id": "grid.476705.7",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 20
       },
       {
         "name": "Bayer (Allemagne)",
@@ -560,26 +777,11 @@
         "full_name": "Bayer",
         "id": "grid.420044.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 43
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Astellas Pharma (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Astellas Pharma",
-        "id": "grid.476166.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "University Medical Center Utrecht (Pays-Bas)",
@@ -587,6 +789,9 @@
         "full_name": "University Medical Center Utrecht",
         "id": "grid.7692.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 65
       },
@@ -596,45 +801,23 @@
         "full_name": "Takeda",
         "id": "grid.451362.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "National Institute for Health and Care Excellence (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Institute for Health and Care Excellence",
-        "id": "grid.416710.5",
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Sanofi (France)",
-        "country": "France",
-        "full_name": "Sanofi",
-        "acronym": "Sanofi",
-        "id": "gent147",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "GlaxoSmithKline (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "GlaxoSmithKline",
-        "id": "grid.418236.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "UCB Pharma (Belgique)",
-        "country": "Belgique",
-        "full_name": "UCB Pharma",
-        "id": "grid.421932.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
+        "z": 50
       },
       {
         "name": "Zorginstituut Nederland (Pays-Bas)",
@@ -642,8 +825,35 @@
         "full_name": "Zorginstituut Nederland",
         "id": "grid.454101.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Astellas Pharma (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Astellas Pharma",
+        "id": "grid.476166.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "UCB Pharma (Belgique)",
+        "country": "Belgique",
+        "full_name": "UCB Pharma",
+        "id": "grid.421932.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          807012
+        ],
+        "y": 1,
+        "z": 24
       }
     ]
   }

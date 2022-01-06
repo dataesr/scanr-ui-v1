@@ -2,62 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "Saarland University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Saarland University",
-        "id": "grid.11749.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
-      },
-      {
         "name": "Tilde (Lettonie)",
         "country": "Lettonie",
         "full_name": "Tilde",
         "id": "grid.426218.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 15
-      },
-      {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "U. Lorraine (France)",
-        "country": "France",
-        "full_name": "Université de Lorraine",
-        "acronym": "U. Lorraine",
-        "id": "t6Cq5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
       },
       {
         "name": "CNRS (France)",
@@ -66,6 +20,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 2670
       },
@@ -76,8 +33,63 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 295
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "U. Lorraine (France)",
+        "country": "France",
+        "full_name": "Université de Lorraine",
+        "acronym": "U. Lorraine",
+        "id": "t6Cq5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 47
       },
       {
         "name": "Ascora (Allemagne)",
@@ -85,17 +97,35 @@
         "full_name": "Ascora",
         "id": "grid.432245.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "Athens Technology Center (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens Technology Center",
-        "id": "grid.226892.5",
+        "name": "Saarland University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Saarland University",
+        "id": "grid.11749.3a",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
-        "z": 38
+        "z": 35
+      },
+      {
+        "name": "University of Zaragoza (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Zaragoza",
+        "id": "grid.11205.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 88
       },
       {
         "name": "Imperial College London (Royaume-Uni)",
@@ -103,8 +133,47 @@
         "full_name": "Imperial College London",
         "id": "grid.7445.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 305
+      },
+      {
+        "name": "Prodevelop (Espagne)",
+        "country": "Espagne",
+        "full_name": "Prodevelop",
+        "id": "grid.470640.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Athens Technology Center (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens Technology Center",
+        "id": "grid.226892.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "XLAB (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "XLAB",
+        "id": "grid.426473.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 26
       },
       {
         "name": "Institute e-Austria Timisoara (Roumanie)",
@@ -112,6 +181,9 @@
         "full_name": "Institute e-Austria Timisoara",
         "id": "grid.425268.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 3
       },
@@ -121,6 +193,9 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 386
       },
@@ -130,97 +205,27 @@
         "full_name": "Flexiant",
         "id": "grid.424380.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Prodevelop (Espagne)",
-        "country": "Espagne",
-        "full_name": "Prodevelop",
-        "id": "grid.470640.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "University of Zaragoza (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Zaragoza",
-        "id": "grid.11205.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 88
-      },
-      {
-        "name": "XLAB (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "XLAB",
-        "id": "grid.426473.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Saarland University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Saarland University",
-        "id": "grid.11749.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
         "name": "Tilde (Lettonie)",
         "country": "Lettonie",
         "full_name": "Tilde",
         "id": "grid.426218.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 10
-      },
-      {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "U. Lorraine (France)",
-        "country": "France",
-        "full_name": "Université de Lorraine",
-        "acronym": "U. Lorraine",
-        "id": "t6Cq5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "CNRS (France)",
@@ -229,6 +234,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 148
       },
@@ -239,8 +247,63 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
         "y": 1,
         "z": 71
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "U. Lorraine (France)",
+        "country": "France",
+        "full_name": "Université de Lorraine",
+        "acronym": "U. Lorraine",
+        "id": "t6Cq5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Ascora (Allemagne)",
@@ -248,6 +311,57 @@
         "full_name": "Ascora",
         "id": "grid.432245.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Saarland University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Saarland University",
+        "id": "grid.11749.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825081
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Zaragoza (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Zaragoza",
+        "id": "grid.11205.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Prodevelop (Espagne)",
+        "country": "Espagne",
+        "full_name": "Prodevelop",
+        "id": "grid.470640.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 6
       },
@@ -257,17 +371,23 @@
         "full_name": "Athens Technology Center",
         "id": "grid.226892.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 21
       },
       {
-        "name": "Imperial College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Imperial College London",
-        "id": "grid.7445.2",
+        "name": "XLAB (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "XLAB",
+        "id": "grid.426473.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
-        "z": 27
+        "z": 14
       },
       {
         "name": "Institute e-Austria Timisoara (Roumanie)",
@@ -275,6 +395,9 @@
         "full_name": "Institute e-Austria Timisoara",
         "id": "grid.425268.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 2
       },
@@ -284,6 +407,9 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 69
       },
@@ -293,35 +419,11 @@
         "full_name": "Flexiant",
         "id": "grid.424380.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          644869
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Prodevelop (Espagne)",
-        "country": "Espagne",
-        "full_name": "Prodevelop",
-        "id": "grid.470640.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "University of Zaragoza (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Zaragoza",
-        "id": "grid.11205.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "XLAB (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "XLAB",
-        "id": "grid.426473.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       }
     ]
   }

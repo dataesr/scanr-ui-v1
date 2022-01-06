@@ -2,24 +2,38 @@
   "all": {
     "all": [
       {
-        "name": "CCIR Occitanie (France)",
-        "country": "France",
-        "full_name": "CCI de région d'Occitanie",
-        "acronym": "CCIR Occitanie",
-        "id": "130022478",
-        "country_level_part": "Pays membres",
-        "y": 5,
-        "z": 9
-      },
-      {
         "name": "CCIR Nouvelle-Aquitaine (France)",
         "country": "France",
         "full_name": "CCI de région de la Nouvelle-Aquitaine",
         "acronym": "CCIR Nouvelle-Aquitaine",
         "id": "130022494",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
         "y": 5,
         "z": 5
+      },
+      {
+        "name": "CCIR Occitanie (France)",
+        "country": "France",
+        "full_name": "CCI de région d'Occitanie",
+        "acronym": "CCIR Occitanie",
+        "id": "130022478",
+        "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
+        "y": 5,
+        "z": 9
       },
       {
         "name": "ADE Occitanie (France)",
@@ -28,6 +42,12 @@
         "acronym": "ADE Occitanie",
         "id": "839117611",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287
+        ],
         "y": 4,
         "z": 8
       },
@@ -38,6 +58,11 @@
         "acronym": "MADEELI",
         "id": "808715528",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          739631,
+          643311
+        ],
         "y": 3,
         "z": 3
       },
@@ -48,6 +73,9 @@
         "acronym": "Rég. Nouvelle-Aquitaine",
         "id": "m7SQ9",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664
+        ],
         "y": 1,
         "z": 3
       },
@@ -57,8 +85,36 @@
         "full_name": "Bwcon",
         "id": "grid.423911.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          713795
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
+        "id": "grid.432344.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "ESTIA (France)",
+        "country": "France",
+        "full_name": "École supérieure des technologies industrielles avancées",
+        "acronym": "ESTIA",
+        "id": "WsNr7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Aerospace Valley (France)",
@@ -67,6 +123,9 @@
         "acronym": "Aerospace Valley",
         "id": "S2STm",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 17
       },
@@ -76,18 +135,11 @@
         "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
         "id": "grid.19843.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 79
-      },
-      {
-        "name": "ESTIA (France)",
-        "country": "France",
-        "full_name": "École supérieure des technologies industrielles avancées",
-        "acronym": "ESTIA",
-        "id": "WsNr7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Pôle mer - Méditerranée (France)",
@@ -96,6 +148,9 @@
         "acronym": "Pôle mer - Méditerranée",
         "id": "T37ba",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 10
       },
@@ -105,6 +160,9 @@
         "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
         "id": "grid.28409.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 155
       },
@@ -115,17 +173,11 @@
         "acronym": "Inno Tsd",
         "id": "339309320",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 23
-      },
-      {
-        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
-        "id": "grid.432344.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Parco Tecnologico Padano (Italie)",
@@ -133,6 +185,9 @@
         "full_name": "Parco Tecnologico Padano",
         "id": "grid.425375.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 5
       }
@@ -141,24 +196,38 @@
   "Industrial Leadership": {
     "Innovation in SMEs (SME)": [
       {
-        "name": "CCIR Occitanie (France)",
-        "country": "France",
-        "full_name": "CCI de région d'Occitanie",
-        "acronym": "CCIR Occitanie",
-        "id": "130022478",
-        "country_level_part": "Pays membres",
-        "y": 5,
-        "z": 9
-      },
-      {
         "name": "CCIR Nouvelle-Aquitaine (France)",
         "country": "France",
         "full_name": "CCI de région de la Nouvelle-Aquitaine",
         "acronym": "CCIR Nouvelle-Aquitaine",
         "id": "130022494",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
         "y": 5,
         "z": 5
+      },
+      {
+        "name": "CCIR Occitanie (France)",
+        "country": "France",
+        "full_name": "CCI de région d'Occitanie",
+        "acronym": "CCIR Occitanie",
+        "id": "130022478",
+        "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
+        "y": 5,
+        "z": 9
       },
       {
         "name": "ADE Occitanie (France)",
@@ -167,6 +236,12 @@
         "acronym": "ADE Occitanie",
         "id": "839117611",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287
+        ],
         "y": 4,
         "z": 8
       },
@@ -177,6 +252,11 @@
         "acronym": "MADEELI",
         "id": "808715528",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          739631,
+          643311
+        ],
         "y": 3,
         "z": 3
       },
@@ -187,6 +267,9 @@
         "acronym": "Rég. Nouvelle-Aquitaine",
         "id": "m7SQ9",
         "country_level_part": "Pays membres",
+        "projects": [
+          672664
+        ],
         "y": 1,
         "z": 1
       },
@@ -196,8 +279,36 @@
         "full_name": "Bwcon",
         "id": "grid.423911.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          713795
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
+        "id": "grid.432344.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ESTIA (France)",
+        "country": "France",
+        "full_name": "École supérieure des technologies industrielles avancées",
+        "acronym": "ESTIA",
+        "id": "WsNr7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Aerospace Valley (France)",
@@ -206,6 +317,9 @@
         "acronym": "Aerospace Valley",
         "id": "S2STm",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 5
       },
@@ -215,18 +329,11 @@
         "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
         "id": "grid.19843.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "ESTIA (France)",
-        "country": "France",
-        "full_name": "École supérieure des technologies industrielles avancées",
-        "acronym": "ESTIA",
-        "id": "WsNr7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Pôle mer - Méditerranée (France)",
@@ -235,6 +342,9 @@
         "acronym": "Pôle mer - Méditerranée",
         "id": "T37ba",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 2
       },
@@ -244,6 +354,9 @@
         "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
         "id": "grid.28409.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 2
       },
@@ -254,15 +367,9 @@
         "acronym": "Inno Tsd",
         "id": "339309320",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
-        "id": "grid.432344.6",
-        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 2
       },
@@ -272,6 +379,9 @@
         "full_name": "Parco Tecnologico Padano",
         "id": "grid.425375.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 1
       }

@@ -2,23 +2,47 @@
   "all": {
     "all": [
       {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 489
-      },
-      {
         "name": "Institut Curie (France)",
         "country": "France",
         "full_name": "Institut Curie",
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575,
+          821558
+        ],
         "y": 3,
         "z": 76
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575,
+          821558
+        ],
+        "y": 3,
+        "z": 489
+      },
+      {
+        "name": "St Anna Children's Hospital (Autriche)",
+        "country": "Autriche",
+        "full_name": "St Anna Children's Hospital",
+        "id": "grid.416346.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          874719
+        ],
+        "y": 3,
+        "z": 10
       },
       {
         "name": "University Hospital Heidelberg (Allemagne)",
@@ -26,8 +50,27 @@
         "full_name": "University Hospital Heidelberg",
         "id": "grid.5253.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          945153
+        ],
         "y": 3,
         "z": 54
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          874719
+        ],
+        "y": 3,
+        "z": 139
       },
       {
         "name": "Inserm (France)",
@@ -36,26 +79,13 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          821558
+        ],
         "y": 3,
         "z": 689
-      },
-      {
-        "name": "Erasmus MC (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Erasmus MC",
-        "id": "grid.5645.2",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 139
-      },
-      {
-        "name": "St Anna Children's Hospital (Autriche)",
-        "country": "Autriche",
-        "full_name": "St Anna Children's Hospital",
-        "id": "grid.416346.2",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 10
       },
       {
         "name": "Istituto Ortopedico Rizzoli (Italie)",
@@ -63,6 +93,11 @@
         "full_name": "Istituto Ortopedico Rizzoli",
         "id": "grid.419038.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          825806
+        ],
         "y": 3,
         "z": 15
       },
@@ -72,6 +107,10 @@
         "full_name": "University Medical Center Groningen",
         "id": "grid.4494.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575
+        ],
         "y": 2,
         "z": 104
       },
@@ -81,54 +120,25 @@
         "full_name": "Azienda Ospedaliera Universitaria Pisana",
         "id": "grid.144189.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 2
       },
       {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
         "y": 2,
-        "z": 205
-      },
-      {
-        "name": "Swiss Institute of Bioinformatics (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Institute of Bioinformatics",
-        "id": "grid.419765.8",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 23
-      },
-      {
-        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vall d'Hebron Institut de Recerca",
-        "id": "grid.430994.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 57
-      },
-      {
-        "name": "Ljubljana University Medical Centre (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Ljubljana University Medical Centre",
-        "id": "grid.29524.38",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 10
-      },
-      {
-        "name": "AP-HP (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Paris",
-        "acronym": "AP-HP",
-        "id": "Py0K5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 122
+        "z": 109
       },
       {
         "name": "Leiden University Medical Center (Pays-Bas)",
@@ -136,27 +146,51 @@
         "full_name": "Leiden University Medical Center",
         "id": "grid.10419.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 124
       },
       {
-        "name": "University Hospital Schleswig-Holstein (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University Hospital Schleswig-Holstein",
-        "id": "grid.412468.d",
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 7
+        "z": 57
       },
       {
-        "name": "EURORDIS (France)",
-        "country": "France",
-        "full_name": "European Organis For Rare Diseases",
-        "acronym": "EURORDIS",
-        "id": "413459066",
+        "name": "Universitätsklinikum Aachen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universitätsklinikum Aachen",
+        "id": "grid.412301.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 9
+        "z": 36
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 64
       },
       {
         "name": "University of Ljubljana (Slovénie)",
@@ -164,8 +198,78 @@
         "full_name": "University of Ljubljana",
         "id": "grid.8954.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 163
+      },
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 205
+      },
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
+        "y": 2,
+        "z": 241
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Ljubljana University Medical Centre (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Ljubljana University Medical Centre",
+        "id": "grid.29524.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          945153
+        ],
+        "y": 2,
+        "z": 10
       },
       {
         "name": "Medical University of Graz (Autriche)",
@@ -173,6 +277,10 @@
         "full_name": "Medical University of Graz",
         "id": "grid.11598.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 47
       },
@@ -182,17 +290,26 @@
         "full_name": "University of Liverpool",
         "id": "grid.10025.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 109
       },
       {
-        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Organisation for Research and Treatment of Cancer",
-        "id": "grid.418936.1",
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 9
+        "z": 122
       },
       {
         "name": "Centre for Genomic Regulation (Espagne)",
@@ -200,72 +317,12 @@
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
         "y": 2,
         "z": 69
-      },
-      {
-        "name": "University of Tübingen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Tübingen",
-        "id": "grid.10392.39",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 108
-      },
-      {
-        "name": "Madrid Health Service (Espagne)",
-        "country": "Espagne",
-        "full_name": "Madrid Health Service",
-        "id": "grid.410361.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 64
-      },
-      {
-        "name": "HUS (France)",
-        "country": "France",
-        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
-        "acronym": "HUS",
-        "id": "e1S12",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 18
-      },
-      {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 109
-      },
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 241
-      },
-      {
-        "name": "Academic Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Academic Medical Center",
-        "id": "grid.5650.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 81
-      },
-      {
-        "name": "Universitätsklinikum Aachen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Universitätsklinikum Aachen",
-        "id": "grid.412301.5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 36
       },
       {
         "name": "University Hospital Frankfurt (Allemagne)",
@@ -273,8 +330,78 @@
         "full_name": "University Hospital Frankfurt",
         "id": "grid.411088.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 3
+      },
+      {
+        "name": "Academic Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Academic Medical Center",
+        "id": "grid.5650.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 81
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825575,
+          821558
+        ],
+        "y": 2,
+        "z": 23
+      },
+      {
+        "name": "EURORDIS (France)",
+        "country": "France",
+        "full_name": "European Organis For Rare Diseases",
+        "acronym": "EURORDIS",
+        "id": "413459066",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "University Hospital Schleswig-Holstein (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Schleswig-Holstein",
+        "id": "grid.412468.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "University of Tübingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Tübingen",
+        "id": "grid.10392.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 108
       },
       {
         "name": "Fondazione IRCCS Istituto Nazionale dei Tumori (Italie)",
@@ -282,17 +409,12 @@
         "full_name": "Fondazione IRCCS Istituto Nazionale dei Tumori",
         "id": "grid.417893.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          945153,
+          825806
+        ],
         "y": 2,
         "z": 17
-      },
-      {
-        "name": "National Centre of Oncological Hadrontherapy (Italie)",
-        "country": "Italie",
-        "full_name": "National Centre of Oncological Hadrontherapy",
-        "id": "grid.499294.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Aarhus University (Danemark)",
@@ -300,17 +422,59 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 306
       },
       {
-        "name": "Ion Beam Applications (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ion Beam Applications",
-        "id": "grid.425272.4",
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
-        "z": 8
+        "z": 170
+      },
+      {
+        "name": "Ospedale Santa Chiara (Italie)",
+        "country": "Italie",
+        "full_name": "Ospedale Santa Chiara",
+        "id": "grid.415176.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "TU Dresden (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TU Dresden",
+        "id": "grid.4488.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 192
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 412
       },
       {
         "name": "Centre Antoine Lacassagne (France)",
@@ -319,53 +483,11 @@
         "acronym": "Centre Antoine Lacassagne",
         "id": "Iha9u",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Aarhus University Hospital (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University Hospital",
-        "id": "grid.154185.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 412
-      },
-      {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 170
-      },
-      {
-        "name": "TU Dresden (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TU Dresden",
-        "id": "grid.4488.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 192
-      },
-      {
-        "name": "Ospedale Santa Chiara (Italie)",
-        "country": "Italie",
-        "full_name": "Ospedale Santa Chiara",
-        "id": "grid.415176.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Maastro Clinic (Pays-Bas)",
@@ -373,6 +495,9 @@
         "full_name": "Maastro Clinic",
         "id": "grid.426577.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 3
       },
@@ -382,8 +507,47 @@
         "full_name": "Paul Scherrer Institute",
         "id": "grid.5991.4",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 88
+      },
+      {
+        "name": "National Centre of Oncological Hadrontherapy (Italie)",
+        "country": "Italie",
+        "full_name": "National Centre of Oncological Hadrontherapy",
+        "id": "grid.499294.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Aarhus University Hospital (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University Hospital",
+        "id": "grid.154185.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Ion Beam Applications (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ion Beam Applications",
+        "id": "grid.425272.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Proton Therapy Centre (Rép. Tchèque)",
@@ -391,45 +555,36 @@
         "full_name": "Proton Therapy Centre",
         "id": "grid.500734.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Vilnius University Hospital Santariskiu Klinikos (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University Hospital Santariskiu Klinikos",
-        "id": "grid.426597.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "name": "Hannover Medical School (Allemagne)",
         "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
+        "full_name": "Hannover Medical School",
+        "id": "grid.10423.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 130
+        "z": 35
       },
       {
-        "name": "State Education Development Agency (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "State Education Development Agency",
-        "id": "grid.460254.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "H. Bicêtre (AP-HP) (France)",
+        "name": "H. Beaujon (AP-HP) (France)",
         "country": "France",
-        "full_name": "Hôpital de Bicêtre",
-        "acronym": "H. Bicêtre (AP-HP)",
-        "id": "26750045200441",
+        "full_name": "Hôpital Beaujon",
+        "acronym": "H. Beaujon (AP-HP)",
+        "id": "26750045200094",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 3
+        "z": 2
       },
       {
         "name": "National Centre for Research and Development (Pologne)",
@@ -437,41 +592,64 @@
         "full_name": "National Centre for Research and Development",
         "id": "grid.55047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
         "z": 46
       },
       {
-        "name": "ECRIN (France)",
-        "country": "France",
-        "full_name": "Ecrin European Clinical Research Infrastructure Network",
-        "acronym": "ECRIN",
-        "id": "801933235",
+        "name": "Bambino Gesù Children's Hospital (Italie)",
+        "country": "Italie",
+        "full_name": "Bambino Gesù Children's Hospital",
+        "id": "grid.414125.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 56
+        "z": 27
       },
       {
-        "name": "Newcastle upon Tyne Hospital (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Newcastle upon Tyne Hospital",
-        "id": "grid.439383.6",
-        "country_level_part": "Pays membres",
+        "name": "Swiss National Science Foundation (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss National Science Foundation",
+        "id": "grid.425888.b",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 6
+        "z": 19
+      },
+      {
+        "name": "CSC - IT Center for Science (Finlande)",
+        "country": "Finlande",
+        "full_name": "CSC - IT Center for Science",
+        "id": "grid.20709.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
+        "y": 1,
+        "z": 149
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 83
-      },
       {
         "name": "Institut Curie (France)",
         "country": "France",
@@ -479,8 +657,41 @@
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575,
+          821558
+        ],
         "y": 3,
         "z": 12
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575,
+          821558
+        ],
+        "y": 3,
+        "z": 83
+      },
+      {
+        "name": "St Anna Children's Hospital (Autriche)",
+        "country": "Autriche",
+        "full_name": "St Anna Children's Hospital",
+        "id": "grid.416346.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          874719
+        ],
+        "y": 3,
+        "z": 7
       },
       {
         "name": "University Hospital Heidelberg (Allemagne)",
@@ -488,8 +699,27 @@
         "full_name": "University Hospital Heidelberg",
         "id": "grid.5253.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          945153
+        ],
         "y": 3,
         "z": 33
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          874719
+        ],
+        "y": 3,
+        "z": 79
       },
       {
         "name": "Inserm (France)",
@@ -498,26 +728,13 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          821558
+        ],
         "y": 3,
         "z": 174
-      },
-      {
-        "name": "Erasmus MC (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Erasmus MC",
-        "id": "grid.5645.2",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 79
-      },
-      {
-        "name": "St Anna Children's Hospital (Autriche)",
-        "country": "Autriche",
-        "full_name": "St Anna Children's Hospital",
-        "id": "grid.416346.2",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 7
       },
       {
         "name": "Istituto Ortopedico Rizzoli (Italie)",
@@ -525,6 +742,11 @@
         "full_name": "Istituto Ortopedico Rizzoli",
         "id": "grid.419038.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908,
+          825806
+        ],
         "y": 3,
         "z": 9
       },
@@ -534,6 +756,10 @@
         "full_name": "University Medical Center Groningen",
         "id": "grid.4494.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134,
+          825575
+        ],
         "y": 2,
         "z": 50
       },
@@ -543,54 +769,25 @@
         "full_name": "Azienda Ospedaliera Universitaria Pisana",
         "id": "grid.144189.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 2
       },
       {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
         "y": 2,
-        "z": 60
-      },
-      {
-        "name": "Swiss Institute of Bioinformatics (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Institute of Bioinformatics",
-        "id": "grid.419765.8",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 12
-      },
-      {
-        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vall d'Hebron Institut de Recerca",
-        "id": "grid.430994.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 35
-      },
-      {
-        "name": "Ljubljana University Medical Centre (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Ljubljana University Medical Centre",
-        "id": "grid.29524.38",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 10
-      },
-      {
-        "name": "AP-HP (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Paris",
-        "acronym": "AP-HP",
-        "id": "Py0K5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 70
+        "z": 57
       },
       {
         "name": "Leiden University Medical Center (Pays-Bas)",
@@ -598,27 +795,51 @@
         "full_name": "Leiden University Medical Center",
         "id": "grid.10419.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 66
       },
       {
-        "name": "University Hospital Schleswig-Holstein (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University Hospital Schleswig-Holstein",
-        "id": "grid.412468.d",
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 5
+        "z": 35
       },
       {
-        "name": "EURORDIS (France)",
-        "country": "France",
-        "full_name": "European Organis For Rare Diseases",
-        "acronym": "EURORDIS",
-        "id": "413459066",
+        "name": "Universitätsklinikum Aachen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Universitätsklinikum Aachen",
+        "id": "grid.412301.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 8
+        "z": 14
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 42
       },
       {
         "name": "University of Ljubljana (Slovénie)",
@@ -626,8 +847,78 @@
         "full_name": "University of Ljubljana",
         "id": "grid.8954.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 17
+      },
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 60
+      },
+      {
+        "name": "HUS (France)",
+        "country": "France",
+        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
+        "acronym": "HUS",
+        "id": "e1S12",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
+        "y": 2,
+        "z": 28
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Ljubljana University Medical Centre (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Ljubljana University Medical Centre",
+        "id": "grid.29524.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          945153
+        ],
+        "y": 2,
+        "z": 10
       },
       {
         "name": "Medical University of Graz (Autriche)",
@@ -635,6 +926,10 @@
         "full_name": "Medical University of Graz",
         "id": "grid.11598.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 23
       },
@@ -644,17 +939,26 @@
         "full_name": "University of Liverpool",
         "id": "grid.10025.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
         "y": 2,
         "z": 26
       },
       {
-        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Organisation for Research and Treatment of Cancer",
-        "id": "grid.418936.1",
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
-        "z": 8
+        "z": 70
       },
       {
         "name": "Centre for Genomic Regulation (Espagne)",
@@ -662,72 +966,12 @@
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          821558
+        ],
         "y": 2,
         "z": 25
-      },
-      {
-        "name": "University of Tübingen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Tübingen",
-        "id": "grid.10392.39",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 29
-      },
-      {
-        "name": "Madrid Health Service (Espagne)",
-        "country": "Espagne",
-        "full_name": "Madrid Health Service",
-        "id": "grid.410361.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 42
-      },
-      {
-        "name": "HUS (France)",
-        "country": "France",
-        "full_name": "Les Hôpitaux Universitaires de Strasbourg",
-        "acronym": "HUS",
-        "id": "e1S12",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 57
-      },
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 28
-      },
-      {
-        "name": "Academic Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Academic Medical Center",
-        "id": "grid.5650.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 46
-      },
-      {
-        "name": "Universitätsklinikum Aachen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Universitätsklinikum Aachen",
-        "id": "grid.412301.5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 14
       },
       {
         "name": "University Hospital Frankfurt (Allemagne)",
@@ -735,8 +979,78 @@
         "full_name": "University Hospital Frankfurt",
         "id": "grid.411088.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
         "y": 2,
         "z": 3
+      },
+      {
+        "name": "Academic Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Academic Medical Center",
+        "id": "grid.5650.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 46
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825575,
+          821558
+        ],
+        "y": 2,
+        "z": 12
+      },
+      {
+        "name": "EURORDIS (France)",
+        "country": "France",
+        "full_name": "European Organis For Rare Diseases",
+        "acronym": "EURORDIS",
+        "id": "413459066",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "University Hospital Schleswig-Holstein (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University Hospital Schleswig-Holstein",
+        "id": "grid.412468.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          874719
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "University of Tübingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Tübingen",
+        "id": "grid.10392.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575,
+          964908
+        ],
+        "y": 2,
+        "z": 29
       },
       {
         "name": "Fondazione IRCCS Istituto Nazionale dei Tumori (Italie)",
@@ -744,17 +1058,12 @@
         "full_name": "Fondazione IRCCS Istituto Nazionale dei Tumori",
         "id": "grid.417893.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          945153,
+          825806
+        ],
         "y": 2,
         "z": 12
-      },
-      {
-        "name": "National Centre of Oncological Hadrontherapy (Italie)",
-        "country": "Italie",
-        "full_name": "National Centre of Oncological Hadrontherapy",
-        "id": "grid.499294.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Aarhus University (Danemark)",
@@ -762,17 +1071,59 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 29
       },
       {
-        "name": "Ion Beam Applications (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ion Beam Applications",
-        "id": "grid.425272.4",
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
-        "z": 1
+        "z": 17
+      },
+      {
+        "name": "Ospedale Santa Chiara (Italie)",
+        "country": "Italie",
+        "full_name": "Ospedale Santa Chiara",
+        "id": "grid.415176.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "TU Dresden (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TU Dresden",
+        "id": "grid.4488.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 74
       },
       {
         "name": "Centre Antoine Lacassagne (France)",
@@ -781,53 +1132,11 @@
         "acronym": "Centre Antoine Lacassagne",
         "id": "Iha9u",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Aarhus University Hospital (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University Hospital",
-        "id": "grid.154185.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 74
-      },
-      {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "TU Dresden (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TU Dresden",
-        "id": "grid.4488.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "Ospedale Santa Chiara (Italie)",
-        "country": "Italie",
-        "full_name": "Ospedale Santa Chiara",
-        "id": "grid.415176.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Maastro Clinic (Pays-Bas)",
@@ -835,6 +1144,9 @@
         "full_name": "Maastro Clinic",
         "id": "grid.426577.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 3
       },
@@ -844,6 +1156,45 @@
         "full_name": "Paul Scherrer Institute",
         "id": "grid.5991.4",
         "country_level_part": "Pays associés",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Centre of Oncological Hadrontherapy (Italie)",
+        "country": "Italie",
+        "full_name": "National Centre of Oncological Hadrontherapy",
+        "id": "grid.499294.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Aarhus University Hospital (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University Hospital",
+        "id": "grid.154185.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Ion Beam Applications (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ion Beam Applications",
+        "id": "grid.425272.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 1
       },
@@ -853,45 +1204,36 @@
         "full_name": "Proton Therapy Centre",
         "id": "grid.500734.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101008134
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Vilnius University Hospital Santariskiu Klinikos (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University Hospital Santariskiu Klinikos",
-        "id": "grid.426597.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "name": "Hannover Medical School (Allemagne)",
         "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
+        "full_name": "Hannover Medical School",
+        "id": "grid.10423.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 30
+        "z": 17
       },
       {
-        "name": "State Education Development Agency (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "State Education Development Agency",
-        "id": "grid.460254.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "H. Bicêtre (AP-HP) (France)",
+        "name": "H. Beaujon (AP-HP) (France)",
         "country": "France",
-        "full_name": "Hôpital de Bicêtre",
-        "acronym": "H. Bicêtre (AP-HP)",
-        "id": "26750045200441",
+        "full_name": "Hôpital Beaujon",
+        "acronym": "H. Beaujon (AP-HP)",
+        "id": "26750045200094",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 3
+        "z": 2
       },
       {
         "name": "National Centre for Research and Development (Pologne)",
@@ -899,27 +1241,59 @@
         "full_name": "National Centre for Research and Development",
         "id": "grid.55047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "ECRIN (France)",
-        "country": "France",
-        "full_name": "Ecrin European Clinical Research Infrastructure Network",
-        "acronym": "ECRIN",
-        "id": "801933235",
+        "name": "Bambino Gesù Children's Hospital (Italie)",
+        "country": "Italie",
+        "full_name": "Bambino Gesù Children's Hospital",
+        "id": "grid.414125.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 39
+        "z": 19
       },
       {
-        "name": "Newcastle upon Tyne Hospital (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Newcastle upon Tyne Hospital",
-        "id": "grid.439383.6",
-        "country_level_part": "Pays membres",
+        "name": "Swiss National Science Foundation (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss National Science Foundation",
+        "id": "grid.425888.b",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825575
+        ],
         "y": 1,
-        "z": 5
+        "z": 4
+      },
+      {
+        "name": "CSC - IT Center for Science (Finlande)",
+        "country": "Finlande",
+        "full_name": "CSC - IT Center for Science",
+        "id": "grid.20709.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825575
+        ],
+        "y": 1,
+        "z": 40
       }
     ]
   }

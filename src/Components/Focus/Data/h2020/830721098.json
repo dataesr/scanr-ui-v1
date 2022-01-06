@@ -2,13 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "Ruhr University Bochum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ruhr University Bochum",
-        "id": "grid.5570.7",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
-        "z": 65
+        "z": 2670
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 138
       },
       {
         "name": "Grenoble INP (France)",
@@ -17,73 +33,11 @@
         "acronym": "Grenoble INP",
         "id": "2ALYK",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 118
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 345
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 86
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 321
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 379
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 138
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
       },
       {
         "name": "U. Paris (France)",
@@ -92,6 +46,9 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 388
       },
@@ -102,6 +59,9 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 277
       },
@@ -112,19 +72,111 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 575
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
+      },
       {
         "name": "Ruhr University Bochum (Allemagne)",
         "country": "Allemagne",
         "full_name": "Ruhr University Bochum",
         "id": "grid.5570.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 86
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 26
       },
@@ -135,73 +187,11 @@
         "acronym": "Grenoble INP",
         "id": "2ALYK",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 28
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 116
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 91
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 105
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 82
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 938
       },
       {
         "name": "U. Paris (France)",
@@ -210,6 +200,9 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 128
       },
@@ -220,6 +213,9 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 69
       },
@@ -230,8 +226,84 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
         "y": 1,
         "z": 137
+      },
+      {
+        "name": "Ruhr University Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ruhr University Bochum",
+        "id": "grid.5570.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 82
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 105
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 116
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 91
+      },
+      {
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          861097
+        ],
+        "y": 1,
+        "z": 27
       }
     ]
   }

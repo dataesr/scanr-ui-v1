@@ -8,17 +8,13 @@
         "acronym": "NOBATEK/INEF4",
         "id": "9zRYu",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          958397,
+          820773
+        ],
         "y": 3,
         "z": 20
-      },
-      {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 342
       },
       {
         "name": "R2M Solution (Italie)",
@@ -26,8 +22,25 @@
         "full_name": "R2M Solution",
         "id": "grid.437653.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          820773
+        ],
         "y": 2,
         "z": 33
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          820773
+        ],
+        "y": 2,
+        "z": 342
       },
       {
         "name": "Poly-Ouvrages (France)",
@@ -36,86 +49,25 @@
         "acronym": "Poly-Ouvrages",
         "id": "818558223",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397,
+          820773
+        ],
         "y": 2,
         "z": 3
       },
       {
-        "name": "Inrae (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 453
-      },
-      {
-        "name": "ENSA de Nantes (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure d'architecture de Nantes",
-        "acronym": "ENSA de Nantes",
-        "id": "11Weg",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Blue Industry And Science (France)",
-        "country": "France",
-        "full_name": "Blue Industry And Science",
-        "acronym": "Blue Industry And Science",
-        "id": "524673860",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "IPB (France)",
-        "country": "France",
-        "full_name": "Bordeaux INP",
-        "acronym": "IPB",
-        "id": "S88MV",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 75
-      },
-      {
-        "name": "Arts et Métiers (France)",
-        "country": "France",
-        "full_name": "Arts et Métiers Sciences et Technologies",
-        "acronym": "Arts et Métiers",
-        "id": "jYUcF",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 42
-      },
-      {
-        "name": "CEREMA (France)",
-        "country": "France",
-        "full_name": "Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement",
-        "acronym": "CEREMA",
-        "id": "kr03v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Fundacio Privada Universitat I Tecnologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundacio Privada Universitat I Tecnologia",
-        "id": "grid.32258.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
+        "z": 2670
       },
       {
         "name": "UBx (France)",
@@ -124,15 +76,110 @@
         "acronym": "UBx",
         "id": "90I54",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 210
       },
       {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
+        "name": "IPB (France)",
+        "country": "France",
+        "full_name": "Bordeaux INP",
+        "acronym": "IPB",
+        "id": "S88MV",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "Fundacio Privada Universitat I Tecnologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundacio Privada Universitat I Tecnologia",
+        "id": "grid.32258.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "UGE (France)",
+        "country": "France",
+        "full_name": "Université Gustave Eiffel",
+        "acronym": "UGE",
+        "id": "3Z5e6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 89
+      },
+      {
+        "name": "Arts et Métiers (France)",
+        "country": "France",
+        "full_name": "Arts et Métiers Sciences et Technologies",
+        "acronym": "Arts et Métiers",
+        "id": "jYUcF",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 356
+      },
+      {
+        "name": "CEREMA (France)",
+        "country": "France",
+        "full_name": "Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement",
+        "acronym": "CEREMA",
+        "id": "kr03v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Ministère de la Culture (France)",
+        "country": "France",
+        "full_name": "Ministère de la Culture",
+        "acronym": "Ministère de la Culture",
+        "id": "mJpf3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 155
       },
@@ -143,27 +190,36 @@
         "acronym": "ECN",
         "id": "gCAyK",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 30
       },
       {
-        "name": "CNRS (France)",
+        "name": "Blue Industry And Science (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Blue Industry And Science",
+        "acronym": "Blue Industry And Science",
+        "id": "524673860",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 2670
+        "z": 1
       },
       {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
+        "name": "National University of Ireland, Galway (Irlande)",
+        "country": "Irlande",
+        "full_name": "National University of Ireland, Galway",
+        "id": "grid.6142.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 356
+        "z": 162
       },
       {
         "name": "ENSAG (France)",
@@ -172,57 +228,49 @@
         "acronym": "ENSAG",
         "id": "0hkYz",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "UGE (France)",
+        "name": "ENSA de Nantes (France)",
         "country": "France",
-        "full_name": "Université Gustave Eiffel",
-        "acronym": "UGE",
-        "id": "3Z5e6",
+        "full_name": "École nationale supérieure d'architecture de Nantes",
+        "acronym": "ENSA de Nantes",
+        "id": "11Weg",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 89
-      },
-      {
-        "name": "National University of Ireland, Galway (Irlande)",
-        "country": "Irlande",
-        "full_name": "National University of Ireland, Galway",
-        "id": "grid.6142.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 162
-      },
-      {
-        "name": "Ministère de la Culture (France)",
-        "country": "France",
-        "full_name": "Ministère de la Culture",
-        "acronym": "Ministère de la Culture",
-        "id": "mJpf3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 46
-      },
-      {
-        "name": "Rubner Construction Bois (France)",
-        "country": "France",
-        "full_name": "Rubner Construction Bois",
-        "acronym": "Rubner Construction Bois",
-        "id": "523256329",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Panneaux Sandwich Isosta (France)",
-        "country": "France",
-        "full_name": "Panneaux Sandwich Isosta",
-        "acronym": "Panneaux Sandwich Isosta",
-        "id": "950499095",
-        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 155
       },
       {
         "name": "Aramis (France)",
@@ -231,6 +279,9 @@
         "acronym": "Aramis",
         "id": "433882685",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 2
       },
@@ -240,8 +291,37 @@
         "full_name": "European Academy of Bozen",
         "id": "grid.418908.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 47
+      },
+      {
+        "name": "Panneaux Sandwich Isosta (France)",
+        "country": "France",
+        "full_name": "Panneaux Sandwich Isosta",
+        "acronym": "Panneaux Sandwich Isosta",
+        "id": "950499095",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Rubner Construction Bois (France)",
+        "country": "France",
+        "full_name": "Rubner Construction Bois",
+        "acronym": "Rubner Construction Bois",
+        "id": "523256329",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Bouygues (France)",
@@ -250,17 +330,11 @@
         "acronym": "Bouygues",
         "id": "gent41",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 13
-      },
-      {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 99
       },
       {
         "name": "Instituto Valenciano de la Edificación (Espagne)",
@@ -268,26 +342,23 @@
         "full_name": "Instituto Valenciano de la Edificación",
         "id": "grid.493347.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 14
       },
       {
-        "name": "Tecnalia (Espagne)",
+        "name": "Leitat Technological Center (Espagne)",
         "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
-        "z": 368
-      },
-      {
-        "name": "Integrated Environmental Solutions (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Integrated Environmental Solutions",
-        "id": "grid.420256.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
+        "z": 99
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -295,6 +366,9 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 1072
       },
@@ -305,18 +379,11 @@
         "acronym": "Enerbim",
         "id": "812293421",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Wisebim (France)",
-        "country": "France",
-        "full_name": "Wisebim",
-        "acronym": "Wisebim",
-        "id": "828869560",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "CSTB (France)",
@@ -325,8 +392,72 @@
         "acronym": "CSTB",
         "id": "MQpzc",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 28
+      },
+      {
+        "name": "Vilnius Gediminas Technical University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius Gediminas Technical University",
+        "id": "grid.9424.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 251
+      },
+      {
+        "name": "Integrated Environmental Solutions (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Integrated Environmental Solutions",
+        "id": "grid.420256.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Wisebim (France)",
+        "country": "France",
+        "full_name": "Wisebim",
+        "acronym": "Wisebim",
+        "id": "828869560",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "EDF (France)",
@@ -335,26 +466,11 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 125
-      },
-      {
-        "name": "Vilnius Gediminas Technical University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius Gediminas Technical University",
-        "id": "grid.9424.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "RWTH Aachen University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "RWTH Aachen University",
-        "id": "grid.1957.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 251
       }
     ]
   },
@@ -367,7 +483,25 @@
         "acronym": "NOBATEK/INEF4",
         "id": "9zRYu",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          958397,
+          820773
+        ],
         "y": 3,
+        "z": 11
+      },
+      {
+        "name": "R2M Solution (Italie)",
+        "country": "Italie",
+        "full_name": "R2M Solution",
+        "id": "grid.437653.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          820773
+        ],
+        "y": 2,
         "z": 11
       },
       {
@@ -376,17 +510,12 @@
         "full_name": "Netherlands Organisation for Applied Scientific Research",
         "id": "grid.4858.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221,
+          820773
+        ],
         "y": 2,
         "z": 46
-      },
-      {
-        "name": "R2M Solution (Italie)",
-        "country": "Italie",
-        "full_name": "R2M Solution",
-        "id": "grid.437653.0",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 11
       },
       {
         "name": "Poly-Ouvrages (France)",
@@ -395,115 +524,12 @@
         "acronym": "Poly-Ouvrages",
         "id": "818558223",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397,
+          820773
+        ],
         "y": 2,
         "z": 3
-      },
-      {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "ENSA de Nantes (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure d'architecture de Nantes",
-        "acronym": "ENSA de Nantes",
-        "id": "11Weg",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Blue Industry And Science (France)",
-        "country": "France",
-        "full_name": "Blue Industry And Science",
-        "acronym": "Blue Industry And Science",
-        "id": "524673860",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "IPB (France)",
-        "country": "France",
-        "full_name": "Bordeaux INP",
-        "acronym": "IPB",
-        "id": "S88MV",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Arts et Métiers (France)",
-        "country": "France",
-        "full_name": "Arts et Métiers Sciences et Technologies",
-        "acronym": "Arts et Métiers",
-        "id": "jYUcF",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "CEREMA (France)",
-        "country": "France",
-        "full_name": "Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement",
-        "acronym": "CEREMA",
-        "id": "kr03v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Fundacio Privada Universitat I Tecnologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundacio Privada Universitat I Tecnologia",
-        "id": "grid.32258.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "ECN (France)",
-        "country": "France",
-        "full_name": "Centrale Nantes",
-        "acronym": "ECN",
-        "id": "gCAyK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "CNRS (France)",
@@ -512,27 +538,49 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 72
       },
       {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 13
+        "z": 7
       },
       {
-        "name": "ENSAG (France)",
+        "name": "IPB (France)",
         "country": "France",
-        "full_name": "École nationale supérieure d'architecture de Grenoble",
-        "acronym": "ENSAG",
-        "id": "0hkYz",
+        "full_name": "Bordeaux INP",
+        "acronym": "IPB",
+        "id": "S88MV",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
+      },
+      {
+        "name": "Fundacio Privada Universitat I Tecnologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundacio Privada Universitat I Tecnologia",
+        "id": "grid.32258.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "UGE (France)",
@@ -541,6 +589,98 @@
         "acronym": "UGE",
         "id": "3Z5e6",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Arts et Métiers (France)",
+        "country": "France",
+        "full_name": "Arts et Métiers Sciences et Technologies",
+        "acronym": "Arts et Métiers",
+        "id": "jYUcF",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "CEREMA (France)",
+        "country": "France",
+        "full_name": "Centre d'études et d'expertise sur les risques, l'environnement, la mobilité et l'aménagement",
+        "acronym": "CEREMA",
+        "id": "kr03v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ministère de la Culture (France)",
+        "country": "France",
+        "full_name": "Ministère de la Culture",
+        "acronym": "Ministère de la Culture",
+        "id": "mJpf3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "ECN (France)",
+        "country": "France",
+        "full_name": "Centrale Nantes",
+        "acronym": "ECN",
+        "id": "gCAyK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Blue Industry And Science (France)",
+        "country": "France",
+        "full_name": "Blue Industry And Science",
+        "acronym": "Blue Industry And Science",
+        "id": "524673860",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 1
       },
@@ -550,38 +690,62 @@
         "full_name": "National University of Ireland, Galway",
         "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 11
       },
       {
-        "name": "Ministère de la Culture (France)",
+        "name": "ENSAG (France)",
         "country": "France",
-        "full_name": "Ministère de la Culture",
-        "acronym": "Ministère de la Culture",
-        "id": "mJpf3",
+        "full_name": "École nationale supérieure d'architecture de Grenoble",
+        "acronym": "ENSAG",
+        "id": "0hkYz",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Rubner Construction Bois (France)",
-        "country": "France",
-        "full_name": "Rubner Construction Bois",
-        "acronym": "Rubner Construction Bois",
-        "id": "523256329",
-        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Panneaux Sandwich Isosta (France)",
+        "name": "ENSA de Nantes (France)",
         "country": "France",
-        "full_name": "Panneaux Sandwich Isosta",
-        "acronym": "Panneaux Sandwich Isosta",
-        "id": "950499095",
+        "full_name": "École nationale supérieure d'architecture de Nantes",
+        "acronym": "ENSA de Nantes",
+        "id": "11Weg",
         "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
         "y": 1,
-        "z": 2
+        "z": 1
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          637221
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Aramis (France)",
@@ -590,6 +754,9 @@
         "acronym": "Aramis",
         "id": "433882685",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 2
       },
@@ -599,8 +766,37 @@
         "full_name": "European Academy of Bozen",
         "id": "grid.418908.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 8
+      },
+      {
+        "name": "Panneaux Sandwich Isosta (France)",
+        "country": "France",
+        "full_name": "Panneaux Sandwich Isosta",
+        "acronym": "Panneaux Sandwich Isosta",
+        "id": "950499095",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Rubner Construction Bois (France)",
+        "country": "France",
+        "full_name": "Rubner Construction Bois",
+        "acronym": "Rubner Construction Bois",
+        "id": "523256329",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Bouygues (France)",
@@ -609,17 +805,11 @@
         "acronym": "Bouygues",
         "id": "gent41",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 4
-      },
-      {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
       },
       {
         "name": "Instituto Valenciano de la Edificación (Espagne)",
@@ -627,26 +817,23 @@
         "full_name": "Instituto Valenciano de la Edificación",
         "id": "grid.493347.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Tecnalia (Espagne)",
+        "name": "Leitat Technological Center (Espagne)",
         "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          958397
+        ],
         "y": 1,
-        "z": 73
-      },
-      {
-        "name": "Integrated Environmental Solutions (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Integrated Environmental Solutions",
-        "id": "grid.420256.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
+        "z": 35
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -654,6 +841,9 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 169
       },
@@ -664,16 +854,9 @@
         "acronym": "Enerbim",
         "id": "812293421",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Wisebim (France)",
-        "country": "France",
-        "full_name": "Wisebim",
-        "acronym": "Wisebim",
-        "id": "828869560",
-        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 1
       },
@@ -684,8 +867,72 @@
         "acronym": "CSTB",
         "id": "MQpzc",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Vilnius Gediminas Technical University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius Gediminas Technical University",
+        "id": "grid.9424.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 73
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Integrated Environmental Solutions (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Integrated Environmental Solutions",
+        "id": "grid.420256.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Wisebim (France)",
+        "country": "France",
+        "full_name": "Wisebim",
+        "acronym": "Wisebim",
+        "id": "828869560",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "EDF (France)",
@@ -694,26 +941,11 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          820773
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Vilnius Gediminas Technical University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius Gediminas Technical University",
-        "id": "grid.9424.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "RWTH Aachen University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "RWTH Aachen University",
-        "id": "grid.1957.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
       }
     ]
   }

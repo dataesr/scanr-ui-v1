@@ -2,31 +2,30 @@
   "all": {
     "all": [
       {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 489
-      },
-      {
         "name": "National Technical University of Athens (Grèce)",
         "country": "Grèce",
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469,
+          958208
+        ],
         "y": 2,
         "z": 423
       },
       {
-        "name": "HeidelbergCement (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "HeidelbergCement",
-        "id": "grid.470531.4",
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
+        "projects": [
+          776469,
+          958208
+        ],
+        "y": 2,
+        "z": 489
       },
       {
         "name": "Wavestone Advisors (France)",
@@ -35,26 +34,23 @@
         "acronym": "Wavestone Advisors",
         "id": "433224847",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "Acciona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Acciona",
-        "id": "grid.11023.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 79
-      },
-      {
-        "name": "Elkem (Norvège)",
+        "name": "Norwegian University of Science and Technology (Norvège)",
         "country": "Norvège",
-        "full_name": "Elkem",
-        "id": "grid.450768.8",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
         "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
         "y": 1,
-        "z": 11
+        "z": 199
       },
       {
         "name": "ITRB (Chypre)",
@@ -62,8 +58,35 @@
         "full_name": "ITRB",
         "id": "grid.435947.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Elkem (Norvège)",
+        "country": "Norvège",
+        "full_name": "Elkem",
+        "id": "grid.450768.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "University of Limerick (Irlande)",
+        "country": "Irlande",
+        "full_name": "University of Limerick",
+        "id": "grid.10049.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 46
       },
       {
         "name": "Aluminium Pechiney (France)",
@@ -72,35 +95,23 @@
         "acronym": "Aluminium Pechiney",
         "id": "969510940",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "University of Limerick (Irlande)",
-        "country": "Irlande",
-        "full_name": "University of Limerick",
-        "id": "grid.10049.3c",
+        "name": "Acciona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Acciona",
+        "id": "grid.11023.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
-        "z": 46
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 199
+        "z": 79
       },
       {
         "name": "RWTH Aachen University (Allemagne)",
@@ -108,8 +119,35 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 251
+      },
+      {
+        "name": "HeidelbergCement (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "HeidelbergCement",
+        "id": "grid.470531.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 258
       },
       {
         "name": "Imperial College London (Royaume-Uni)",
@@ -117,17 +155,23 @@
         "full_name": "Imperial College London",
         "id": "grid.7445.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 305
       },
       {
-        "name": "Clausthal University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Clausthal University of Technology",
-        "id": "grid.5164.6",
+        "name": "PNO Consultants (Italie)",
+        "country": "Italie",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
-        "z": 7
+        "z": 37
       },
       {
         "name": "Norsk Hydro (Norvège)",
@@ -135,8 +179,23 @@
         "full_name": "Norsk Hydro",
         "id": "grid.425854.a",
         "country_level_part": "Pays associés",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
+        "y": 1,
+        "z": 150
       },
       {
         "name": "Lafarge (France)",
@@ -145,8 +204,23 @@
         "acronym": "Lafarge",
         "id": "gent101",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "Clausthal University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Clausthal University of Technology",
+        "id": "grid.5164.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "Flemish Institute for Technological Research (Belgique)",
@@ -154,120 +228,26 @@
         "full_name": "Flemish Institute for Technological Research",
         "id": "grid.6717.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 142
-      },
-      {
-        "name": "University of Tartu (Estonie)",
-        "country": "Estonie",
-        "full_name": "University of Tartu",
-        "id": "grid.10939.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 150
-      },
-      {
-        "name": "PNO Consultants (Italie)",
-        "country": "Italie",
-        "full_name": "PNO Consultants",
-        "id": "grid.465145.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
       }
     ]
   },
   "Societal Challenges": {
     "Climate action, environment, resource efficiency and raw materials (ENV)": [
       {
-        "name": "HeidelbergCement (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "HeidelbergCement",
-        "id": "grid.470531.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Wavestone Advisors (France)",
         "country": "France",
         "full_name": "Wavestone Advisors",
         "acronym": "Wavestone Advisors",
         "id": "433224847",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Acciona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Acciona",
-        "id": "grid.11023.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Elkem (Norvège)",
-        "country": "Norvège",
-        "full_name": "Elkem",
-        "id": "grid.450768.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "ITRB (Chypre)",
-        "country": "Chypre",
-        "full_name": "ITRB",
-        "id": "grid.435947.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 45
-      },
-      {
-        "name": "Aluminium Pechiney (France)",
-        "country": "France",
-        "full_name": "Aluminium Pechiney",
-        "acronym": "Aluminium Pechiney",
-        "id": "969510940",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "University of Limerick (Irlande)",
-        "country": "Irlande",
-        "full_name": "University of Limerick",
-        "id": "grid.10049.3c",
-        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 2
       },
@@ -277,8 +257,72 @@
         "full_name": "Norwegian University of Science and Technology",
         "id": "grid.5947.f",
         "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 16
+      },
+      {
+        "name": "ITRB (Chypre)",
+        "country": "Chypre",
+        "full_name": "ITRB",
+        "id": "grid.435947.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Elkem (Norvège)",
+        "country": "Norvège",
+        "full_name": "Elkem",
+        "id": "grid.450768.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Limerick (Irlande)",
+        "country": "Irlande",
+        "full_name": "University of Limerick",
+        "id": "grid.10049.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Aluminium Pechiney (France)",
+        "country": "France",
+        "full_name": "Aluminium Pechiney",
+        "acronym": "Aluminium Pechiney",
+        "id": "969510940",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Acciona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Acciona",
+        "id": "grid.11023.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 10
       },
       {
         "name": "RWTH Aachen University (Allemagne)",
@@ -286,21 +330,11 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
         "y": 1,
         "z": 12
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
       },
       {
         "name": "National Technical University of Athens (Grèce)",
@@ -308,8 +342,75 @@
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "HeidelbergCement (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "HeidelbergCement",
+        "id": "grid.470531.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          776469
+        ],
+        "y": 1,
+        "z": 19
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 48
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
+        "y": 1,
+        "z": 20
       },
       {
         "name": "Imperial College London (Royaume-Uni)",
@@ -317,17 +418,23 @@
         "full_name": "Imperial College London",
         "id": "grid.7445.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "Clausthal University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Clausthal University of Technology",
-        "id": "grid.5164.6",
+        "name": "PNO Consultants (Italie)",
+        "country": "Italie",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
-        "z": 2
+        "z": 12
       },
       {
         "name": "Norsk Hydro (Norvège)",
@@ -335,6 +442,21 @@
         "full_name": "Norsk Hydro",
         "id": "grid.425854.a",
         "country_level_part": "Pays associés",
+        "projects": [
+          958208
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Tartu (Estonie)",
+        "country": "Estonie",
+        "full_name": "University of Tartu",
+        "id": "grid.10939.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 3
       },
@@ -345,8 +467,23 @@
         "acronym": "Lafarge",
         "id": "gent101",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "Clausthal University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Clausthal University of Technology",
+        "id": "grid.5164.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Flemish Institute for Technological Research (Belgique)",
@@ -354,26 +491,11 @@
         "full_name": "Flemish Institute for Technological Research",
         "id": "grid.6717.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          958208
+        ],
         "y": 1,
         "z": 27
-      },
-      {
-        "name": "University of Tartu (Estonie)",
-        "country": "Estonie",
-        "full_name": "University of Tartu",
-        "id": "grid.10939.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "PNO Consultants (Italie)",
-        "country": "Italie",
-        "full_name": "PNO Consultants",
-        "id": "grid.465145.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       }
     ]
   }

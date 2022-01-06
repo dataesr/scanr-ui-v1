@@ -2,32 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Nuclear Research Institute Rez",
-        "id": "grid.4278.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 31
-      },
-      {
         "name": "Research Centre Rez (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Research Centre Rez",
         "id": "grid.423938.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606,
+          764690
+        ],
         "y": 2,
         "z": 32
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 125
       },
       {
         "name": "University of Duisburg-Essen (Allemagne)",
@@ -35,6 +20,10 @@
         "full_name": "University of Duisburg-Essen",
         "id": "grid.5718.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606,
+          764690
+        ],
         "y": 2,
         "z": 45
       },
@@ -44,8 +33,39 @@
         "full_name": "University of Stuttgart",
         "id": "grid.5719.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606,
+          764690
+        ],
         "y": 2,
         "z": 155
+      },
+      {
+        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Research Institute Rez",
+        "id": "grid.4278.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847606,
+          764690
+        ],
+        "y": 2,
+        "z": 31
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847606,
+          764690
+        ],
+        "y": 2,
+        "z": 125
       },
       {
         "name": "Rina Services (Italie)",
@@ -53,17 +73,12 @@
         "full_name": "Rina Services",
         "id": "grid.426062.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690,
+          723803
+        ],
         "y": 2,
         "z": 159
-      },
-      {
-        "name": "Jožef Stefan Institute (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Jožef Stefan Institute",
-        "id": "grid.11375.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 186
       },
       {
         "name": "Arttic (France)",
@@ -72,8 +87,35 @@
         "acronym": "Arttic",
         "id": "344112396",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
         "z": 73
+      },
+      {
+        "name": "Jožef Stefan Institute (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Jožef Stefan Institute",
+        "id": "grid.11375.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "General Electric (Italie)",
+        "country": "Italie",
+        "full_name": "General Electric",
+        "id": "grid.424927.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
+        "y": 1,
+        "z": 25
       },
       {
         "name": "Zabala Innovation Consulting (Espagne)",
@@ -81,6 +123,9 @@
         "full_name": "Zabala Innovation Consulting",
         "id": "grid.439216.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 56
       },
@@ -90,35 +135,11 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 386
-      },
-      {
-        "name": "General Electric (Italie)",
-        "country": "Italie",
-        "full_name": "General Electric",
-        "id": "grid.424927.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 368
-      },
-      {
-        "name": "Institute of Power Engineering (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Power Engineering",
-        "id": "grid.410490.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -126,8 +147,35 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research Resources and Energy Consumption",
+        "id": "grid.425212.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "Institute of Power Engineering (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Power Engineering",
+        "id": "grid.410490.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "Torrecid (Espagne)",
@@ -135,6 +183,9 @@
         "full_name": "Torrecid",
         "id": "grid.438557.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 5
       },
@@ -144,17 +195,23 @@
         "full_name": "Phase Change Material Products",
         "id": "grid.425450.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "name": "Tecnalia (Espagne)",
         "country": "Espagne",
-        "full_name": "Center for Research Resources and Energy Consumption",
-        "id": "grid.425212.2",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
-        "z": 75
+        "z": 368
       },
       {
         "name": "Foundation for Transport and Energy Research and Development (Espagne)",
@@ -162,6 +219,9 @@
         "full_name": "Foundation for Transport and Energy Research and Development",
         "id": "grid.424845.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 12
       }
@@ -170,50 +230,16 @@
   "Euratom": {
     "Euratom (EURATOM)": [
       {
-        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Nuclear Research Institute Rez",
-        "id": "grid.4278.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
         "name": "Research Centre Rez (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Research Centre Rez",
         "id": "grid.423938.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
         "z": 30
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Jožef Stefan Institute (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Jožef Stefan Institute",
-        "id": "grid.11375.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "University of Duisburg-Essen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Duisburg-Essen",
-        "id": "grid.5718.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Arttic (France)",
@@ -222,8 +248,23 @@
         "acronym": "Arttic",
         "id": "344112396",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
         "z": 8
+      },
+      {
+        "name": "University of Duisburg-Essen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Duisburg-Essen",
+        "id": "grid.5718.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "University of Stuttgart (Allemagne)",
@@ -231,30 +272,35 @@
         "full_name": "University of Stuttgart",
         "id": "grid.5719.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
         "z": 8
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
+      },
+      {
+        "name": "Jožef Stefan Institute (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Jožef Stefan Institute",
+        "id": "grid.11375.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
+        "y": 1,
+        "z": 21
+      },
       {
         "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Nuclear Research Institute Rez",
         "id": "grid.4278.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Research Centre Rez (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Research Centre Rez",
-        "id": "grid.423938.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 29
       },
       {
         "name": "EDF (France)",
@@ -263,8 +309,27 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          847606
+        ],
         "y": 1,
-        "z": 42
+        "z": 43
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Research Centre Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Research Centre Rez",
+        "id": "grid.423938.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University of Duisburg-Essen (Allemagne)",
@@ -272,6 +337,9 @@
         "full_name": "University of Duisburg-Essen",
         "id": "grid.5718.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 4
       },
@@ -281,8 +349,48 @@
         "full_name": "University of Stuttgart",
         "id": "grid.5719.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Nuclear Research Institute Rez (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Nuclear Research Institute Rez",
+        "id": "grid.4278.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "General Electric (Italie)",
+        "country": "Italie",
+        "full_name": "General Electric",
+        "id": "grid.424927.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Zabala Innovation Consulting (Espagne)",
@@ -290,6 +398,9 @@
         "full_name": "Zabala Innovation Consulting",
         "id": "grid.439216.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 19
       },
@@ -299,6 +410,9 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 45
       },
@@ -308,17 +422,11 @@
         "full_name": "Rina Services",
         "id": "grid.426062.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          764690
+        ],
         "y": 1,
         "z": 48
-      },
-      {
-        "name": "General Electric (Italie)",
-        "country": "Italie",
-        "full_name": "General Electric",
-        "id": "grid.424927.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       }
     ]
   },
@@ -330,26 +438,11 @@
         "full_name": "Rina Services",
         "id": "grid.426062.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 73
-      },
-      {
-        "name": "Institute of Power Engineering (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Power Engineering",
-        "id": "grid.410490.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -357,8 +450,35 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 169
+      },
+      {
+        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research Resources and Energy Consumption",
+        "id": "grid.425212.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Institute of Power Engineering (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Power Engineering",
+        "id": "grid.410490.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Torrecid (Espagne)",
@@ -366,6 +486,9 @@
         "full_name": "Torrecid",
         "id": "grid.438557.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 4
       },
@@ -375,17 +498,23 @@
         "full_name": "Phase Change Material Products",
         "id": "grid.425450.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "name": "Tecnalia (Espagne)",
         "country": "Espagne",
-        "full_name": "Center for Research Resources and Energy Consumption",
-        "id": "grid.425212.2",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
-        "z": 11
+        "z": 73
       },
       {
         "name": "Foundation for Transport and Energy Research and Development (Espagne)",
@@ -393,6 +522,9 @@
         "full_name": "Foundation for Transport and Energy Research and Development",
         "id": "grid.424845.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723803
+        ],
         "y": 1,
         "z": 5
       }

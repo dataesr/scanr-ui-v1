@@ -2,20 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 273
-      },
-      {
         "name": "Centrum Badan i Innowacji Pro-Akademia (Pologne)",
         "country": "Pologne",
         "full_name": "Centrum Badan i Innowacji Pro-Akademia",
         "id": "grid.460373.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
         "y": 1,
         "z": 4
       },
@@ -25,28 +19,37 @@
         "full_name": "Centre for European Economic Research",
         "id": "grid.13414.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
         "y": 1,
         "z": 7
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
+      },
       {
         "name": "Ghent University (Belgique)",
         "country": "Belgique",
         "full_name": "Ghent University",
         "id": "grid.5342.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
         "y": 1,
-        "z": 9
-      },
+        "z": 273
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "Centrum Badan i Innowacji Pro-Akademia (Pologne)",
         "country": "Pologne",
         "full_name": "Centrum Badan i Innowacji Pro-Akademia",
         "id": "grid.460373.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
         "y": 1,
         "z": 3
       },
@@ -56,8 +59,23 @@
         "full_name": "Centre for European Economic Research",
         "id": "grid.13414.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          649733
+        ],
+        "y": 1,
+        "z": 9
       }
     ]
   }

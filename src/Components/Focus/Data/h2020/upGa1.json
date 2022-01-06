@@ -2,24 +2,52 @@
   "all": {
     "all": [
       {
-        "name": "UBFC (France)",
-        "country": "France",
-        "full_name": "Université Bourgogne - Franche-Comté",
-        "acronym": "UBFC",
-        "id": "8A0mg",
-        "country_level_part": "Pays membres",
-        "y": 12,
-        "z": 64
-      },
-      {
         "name": "uB (France)",
         "country": "France",
         "full_name": "Université de Bourgogne",
         "acronym": "uB",
         "id": "Lr94O",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          955575,
+          774293,
+          677251,
+          793707,
+          655545,
+          838373,
+          641984,
+          764985,
+          860383,
+          777995,
+          101000371
+        ],
         "y": 12,
         "z": 35
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          955575,
+          774293,
+          677251,
+          793707,
+          655545,
+          838373,
+          641984,
+          764985,
+          860383,
+          777995,
+          101000371
+        ],
+        "y": 12,
+        "z": 64
       },
       {
         "name": "Inrae (France)",
@@ -28,6 +56,18 @@
         "acronym": "Inrae",
         "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          793707,
+          655545,
+          641984,
+          764985,
+          101000371,
+          678024,
+          633814,
+          726950
+        ],
         "y": 10,
         "z": 453
       },
@@ -37,6 +77,15 @@
         "full_name": "Wageningen University & Research",
         "id": "grid.4818.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          641984,
+          764985,
+          101000371,
+          678024,
+          633814
+        ],
         "y": 7,
         "z": 367
       },
@@ -47,6 +96,13 @@
         "acronym": "EPHE",
         "id": "QXnpG",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          677251,
+          838373,
+          860383,
+          777995
+        ],
         "y": 5,
         "z": 90
       },
@@ -57,6 +113,13 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293,
+          655545,
+          838373,
+          764985,
+          860383
+        ],
         "y": 5,
         "z": 2670
       },
@@ -67,6 +130,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          677251,
+          777995
+        ],
         "y": 3,
         "z": 689
       },
@@ -76,6 +144,11 @@
         "full_name": "National University of Ireland, Galway",
         "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984,
+          777995,
+          726950
+        ],
         "y": 3,
         "z": 162
       },
@@ -85,6 +158,11 @@
         "full_name": "University of Bern",
         "id": "grid.5734.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          860383,
+          777995,
+          726950
+        ],
         "y": 3,
         "z": 117
       },
@@ -94,17 +172,12 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          764985
+        ],
         "y": 2,
         "z": 306
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 86
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -113,17 +186,25 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          726950
+        ],
         "y": 2,
         "z": 575
       },
       {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          955575,
+          726950
+        ],
         "y": 2,
-        "z": 321
+        "z": 86
       },
       {
         "name": "Harokopio University (Grèce)",
@@ -131,6 +212,10 @@
         "full_name": "Harokopio University",
         "id": "grid.15823.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293,
+          726950
+        ],
         "y": 2,
         "z": 26
       },
@@ -140,8 +225,25 @@
         "full_name": "Newcastle University",
         "id": "grid.1006.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293,
+          678024
+        ],
         "y": 2,
         "z": 149
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293,
+          641984
+        ],
+        "y": 2,
+        "z": 321
       },
       {
         "name": "Université PSL (France)",
@@ -150,6 +252,10 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          838373,
+          860383
+        ],
         "y": 2,
         "z": 407
       },
@@ -160,6 +266,10 @@
         "acronym": "U. Rennes 1",
         "id": "9wAap",
         "country_level_part": "Pays membres",
+        "projects": [
+          860383,
+          777995
+        ],
         "y": 2,
         "z": 84
       },
@@ -169,37 +279,12 @@
         "full_name": "Agricultural Research Council",
         "id": "grid.423616.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          678024,
+          633814
+        ],
         "y": 2,
         "z": 52
-      },
-      {
-        "name": "Rothamsted Research (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Rothamsted Research",
-        "id": "grid.418374.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Arvalis Institut du vé... (France)",
-        "country": "France",
-        "full_name": "Arvalis Institut du végétal",
-        "acronym": "Arvalis Institut du vé...",
-        "id": "775685779",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "CRA Centre (France)",
-        "country": "France",
-        "full_name": "Chambre rég. d'agriculture du Centre",
-        "acronym": "CRA Centre",
-        "id": "184500130",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Danish Agriculture and Food Council (Danemark)",
@@ -207,46 +292,23 @@
         "full_name": "Danish Agriculture and Food Council",
         "id": "grid.436092.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 25
       },
       {
-        "name": "APCA (France)",
-        "country": "France",
-        "full_name": "Assemblée Permanente Chambres Agriculture",
-        "acronym": "APCA",
-        "id": "180070047",
+        "name": "Rothamsted Research (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Rothamsted Research",
+        "id": "grid.418374.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
-        "country": "Suisse",
-        "full_name": "Federal Department of Economic Affairs Education and Research",
-        "id": "grid.18068.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 37
-      },
-      {
-        "name": "Horta (Italie)",
-        "country": "Italie",
-        "full_name": "Horta",
-        "id": "grid.435021.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "CAR Ile-de-France (France)",
-        "country": "France",
-        "full_name": "Chambre d'agriculture de la région Ile-de-France",
-        "acronym": "CAR Ile-de-France",
-        "id": "130023815",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 5
       },
       {
         "name": "National Research Council (Italie)",
@@ -254,54 +316,23 @@
         "full_name": "National Research Council",
         "id": "grid.5326.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 685
       },
       {
-        "name": "Sant'Anna School of Advanced Studies (Italie)",
-        "country": "Italie",
-        "full_name": "Sant'Anna School of Advanced Studies",
-        "id": "grid.263145.7",
-        "country_level_part": "Pays membres",
+        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Economic Affairs Education and Research",
+        "id": "grid.18068.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 95
-      },
-      {
-        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Institute of Agricultural Botany",
-        "id": "grid.17595.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Agricultural institute of Slovenia (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Agricultural institute of Slovenia",
-        "id": "grid.425614.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "CETIOM (France)",
-        "country": "France",
-        "full_name": "Terres Inovia",
-        "acronym": "CETIOM",
-        "id": "775688492",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 554
+        "z": 37
       },
       {
         "name": "ACTA (France)",
@@ -310,8 +341,98 @@
         "acronym": "ACTA",
         "id": "784523318",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 24
+      },
+      {
+        "name": "Arvalis Institut du vé... (France)",
+        "country": "France",
+        "full_name": "Arvalis Institut du végétal",
+        "acronym": "Arvalis Institut du vé...",
+        "id": "775685779",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 554
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 176
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Agricultural institute of Slovenia (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Agricultural institute of Slovenia",
+        "id": "grid.425614.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "APCA (France)",
+        "country": "France",
+        "full_name": "Assemblée Permanente Chambres Agriculture",
+        "acronym": "APCA",
+        "id": "180070047",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "CAR Ile-de-France (France)",
+        "country": "France",
+        "full_name": "Chambre d'agriculture de la région Ile-de-France",
+        "acronym": "CAR Ile-de-France",
+        "id": "130023815",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Union Invivo (France)",
@@ -320,8 +441,23 @@
         "acronym": "Union Invivo",
         "id": "gent181",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute of Agricultural Botany",
+        "id": "grid.17595.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias (Espagne)",
@@ -329,44 +465,49 @@
         "full_name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias",
         "id": "grid.493403.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 16
       },
       {
-        "name": "University of Pisa (Italie)",
+        "name": "CRA Centre (France)",
+        "country": "France",
+        "full_name": "Chambre rég. d'agriculture du Centre",
+        "acronym": "CRA Centre",
+        "id": "184500130",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Horta (Italie)",
         "country": "Italie",
-        "full_name": "University of Pisa",
-        "id": "grid.5395.a",
+        "full_name": "Horta",
+        "id": "grid.435021.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 176
+        "z": 6
       },
       {
-        "name": "Paul Ehrlich Institut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Paul Ehrlich Institut",
-        "id": "grid.425396.f",
+        "name": "CETIOM (France)",
+        "country": "France",
+        "full_name": "Terres Inovia",
+        "acronym": "CETIOM",
+        "id": "775688492",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 379
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
+        "z": 7
       },
       {
         "name": "Miltenyi Biotec (Allemagne)",
@@ -374,17 +515,11 @@
         "full_name": "Miltenyi Biotec",
         "id": "grid.59409.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 19
-      },
-      {
-        "name": "VU University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU University Medical Center",
-        "id": "grid.16872.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 79
       },
       {
         "name": "Institut Gustave Roussy (France)",
@@ -393,8 +528,35 @@
         "acronym": "Institut Gustave Roussy",
         "id": "16RWt",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 379
       },
       {
         "name": "Capital Region of Denmark (Danemark)",
@@ -402,44 +564,59 @@
         "full_name": "Capital Region of Denmark",
         "id": "grid.425848.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 69
       },
       {
-        "name": "University of Surrey (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Surrey",
-        "id": "grid.5475.3",
+        "name": "Paul Ehrlich Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Paul Ehrlich Institut",
+        "id": "grid.425396.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
-        "z": 112
+        "z": 15
       },
       {
-        "name": "University of Liverpool (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Liverpool",
-        "id": "grid.10025.36",
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
-        "z": 109
+        "z": 155
       },
       {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
+        "name": "Cargill (Belgique)",
+        "country": "Belgique",
+        "full_name": "Cargill",
+        "id": "grid.498107.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
-        "z": 170
+        "z": 6
       },
       {
-        "name": "Federalimentare (Italie)",
-        "country": "Italie",
-        "full_name": "Federalimentare",
-        "id": "grid.494104.c",
+        "name": "International Life Sciences Institute Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "International Life Sciences Institute Europe",
+        "id": "grid.425211.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
-        "z": 4
+        "z": 6
       },
       {
         "name": "IMT (France)",
@@ -448,32 +625,82 @@
         "acronym": "IMT",
         "id": "6Th4v",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 124
       },
       {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
-        "z": 49
+        "z": 170
       },
       {
-        "name": "International Life Sciences Institute Europe (Belgique)",
-        "country": "Belgique",
-        "full_name": "International Life Sciences Institute Europe",
-        "id": "grid.425211.1",
+        "name": "Fundació Privada per a la Investigació Nutricional (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada per a la Investigació Nutricional",
+        "id": "grid.434623.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
-        "z": 6
+        "z": 1
+      },
+      {
+        "name": "ECRIN (France)",
+        "country": "France",
+        "full_name": "Ecrin European Clinical Research Infrastructure Network",
+        "acronym": "ECRIN",
+        "id": "801933235",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 56
+      },
+      {
+        "name": "CRNH RHONE-ALPES (France)",
+        "country": "France",
+        "full_name": "Ctre Recherche Nutrition Humaine Rhône-Alpes",
+        "acronym": "CRNH RHONE-ALPES",
+        "id": "180089526",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   },
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          101000371,
+          678024,
+          633814
+        ],
+        "y": 5,
+        "z": 186
+      },
       {
         "name": "Inrae (France)",
         "country": "France",
@@ -481,27 +708,15 @@
         "acronym": "Inrae",
         "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          101000371,
+          678024,
+          633814
+        ],
         "y": 5,
         "z": 142
-      },
-      {
-        "name": "Wageningen University & Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Wageningen University & Research",
-        "id": "grid.4818.5",
-        "country_level_part": "Pays membres",
-        "y": 5,
-        "z": 186
-      },
-      {
-        "name": "UBFC (France)",
-        "country": "France",
-        "full_name": "Université Bourgogne - Franche-Comté",
-        "acronym": "UBFC",
-        "id": "8A0mg",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 4
       },
       {
         "name": "uB (France)",
@@ -510,6 +725,26 @@
         "acronym": "uB",
         "id": "Lr94O",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          101000371
+        ],
+        "y": 3,
+        "z": 4
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321,
+          774293,
+          101000371
+        ],
         "y": 3,
         "z": 4
       },
@@ -519,6 +754,10 @@
         "full_name": "Newcastle University",
         "id": "grid.1006.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293,
+          678024
+        ],
         "y": 2,
         "z": 14
       },
@@ -528,37 +767,12 @@
         "full_name": "Agricultural Research Council",
         "id": "grid.423616.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          678024,
+          633814
+        ],
         "y": 2,
         "z": 41
-      },
-      {
-        "name": "Rothamsted Research (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Rothamsted Research",
-        "id": "grid.418374.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Arvalis Institut du vé... (France)",
-        "country": "France",
-        "full_name": "Arvalis Institut du végétal",
-        "acronym": "Arvalis Institut du vé...",
-        "id": "775685779",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "CRA Centre (France)",
-        "country": "France",
-        "full_name": "Chambre rég. d'agriculture du Centre",
-        "acronym": "CRA Centre",
-        "id": "184500130",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Danish Agriculture and Food Council (Danemark)",
@@ -566,55 +780,23 @@
         "full_name": "Danish Agriculture and Food Council",
         "id": "grid.436092.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 23
       },
       {
-        "name": "APCA (France)",
-        "country": "France",
-        "full_name": "Assemblée Permanente Chambres Agriculture",
-        "acronym": "APCA",
-        "id": "180070047",
+        "name": "Rothamsted Research (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Rothamsted Research",
+        "id": "grid.418374.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 52
-      },
-      {
-        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
-        "country": "Suisse",
-        "full_name": "Federal Department of Economic Affairs Education and Research",
-        "id": "grid.18068.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Horta (Italie)",
-        "country": "Italie",
-        "full_name": "Horta",
-        "id": "grid.435021.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "CAR Ile-de-France (France)",
-        "country": "France",
-        "full_name": "Chambre d'agriculture de la région Ile-de-France",
-        "acronym": "CAR Ile-de-France",
-        "id": "130023815",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 4
       },
       {
         "name": "National Research Council (Italie)",
@@ -622,54 +804,23 @@
         "full_name": "National Research Council",
         "id": "grid.5326.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 64
       },
       {
-        "name": "Sant'Anna School of Advanced Studies (Italie)",
-        "country": "Italie",
-        "full_name": "Sant'Anna School of Advanced Studies",
-        "id": "grid.263145.7",
-        "country_level_part": "Pays membres",
+        "name": "Federal Department of Economic Affairs Education and Research (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Economic Affairs Education and Research",
+        "id": "grid.18068.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "National Institute of Agricultural Botany",
-        "id": "grid.17595.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Agricultural institute of Slovenia (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Agricultural institute of Slovenia",
-        "id": "grid.425614.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "CETIOM (France)",
-        "country": "France",
-        "full_name": "Terres Inovia",
-        "acronym": "CETIOM",
-        "id": "775688492",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 71
+        "z": 26
       },
       {
         "name": "ACTA (France)",
@@ -678,8 +829,110 @@
         "acronym": "ACTA",
         "id": "784523318",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 24
+      },
+      {
+        "name": "Arvalis Institut du vé... (France)",
+        "country": "France",
+        "full_name": "Arvalis Institut du végétal",
+        "acronym": "Arvalis Institut du vé...",
+        "id": "775685779",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Agricultural institute of Slovenia (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Agricultural institute of Slovenia",
+        "id": "grid.425614.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "APCA (France)",
+        "country": "France",
+        "full_name": "Assemblée Permanente Chambres Agriculture",
+        "acronym": "APCA",
+        "id": "180070047",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "CAR Ile-de-France (France)",
+        "country": "France",
+        "full_name": "Chambre d'agriculture de la région Ile-de-France",
+        "acronym": "CAR Ile-de-France",
+        "id": "130023815",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Union Invivo (France)",
@@ -688,8 +941,23 @@
         "acronym": "Union Invivo",
         "id": "gent181",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "National Institute of Agricultural Botany (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "National Institute of Agricultural Botany",
+        "id": "grid.17595.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias (Espagne)",
@@ -697,62 +965,86 @@
         "full_name": "Instituto Navarro de Tecnología e Infraestructuras Agroalimentarias",
         "id": "grid.493403.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "University of Pisa (Italie)",
-        "country": "Italie",
-        "full_name": "University of Pisa",
-        "id": "grid.5395.a",
+        "name": "CRA Centre (France)",
+        "country": "France",
+        "full_name": "Chambre rég. d'agriculture du Centre",
+        "acronym": "CRA Centre",
+        "id": "184500130",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "University of Surrey (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Surrey",
-        "id": "grid.5475.3",
-        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "University of Liverpool (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Liverpool",
-        "id": "grid.10025.36",
+        "name": "Horta (Italie)",
+        "country": "Italie",
+        "full_name": "Horta",
+        "id": "grid.435021.1",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 44
-      },
-      {
-        "name": "University of Leeds (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leeds",
-        "id": "grid.9909.9",
-        "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Federalimentare (Italie)",
-        "country": "Italie",
-        "full_name": "Federalimentare",
-        "id": "grid.494104.c",
+        "name": "CETIOM (France)",
+        "country": "France",
+        "full_name": "Terres Inovia",
+        "acronym": "CETIOM",
+        "id": "775688492",
         "country_level_part": "Pays membres",
+        "projects": [
+          727321
+        ],
         "y": 1,
-        "z": 2
+        "z": 7
+      },
+      {
+        "name": "Cargill (Belgique)",
+        "country": "Belgique",
+        "full_name": "Cargill",
+        "id": "grid.498107.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "International Life Sciences Institute Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "International Life Sciences Institute Europe",
+        "id": "grid.425211.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 59
       },
       {
         "name": "IMT (France)",
@@ -761,27 +1053,11 @@
         "acronym": "IMT",
         "id": "6Th4v",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "International Life Sciences Institute Europe (Belgique)",
-        "country": "Belgique",
-        "full_name": "International Life Sciences Institute Europe",
-        "id": "grid.425211.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Harokopio University (Grèce)",
@@ -789,8 +1065,35 @@
         "full_name": "Harokopio University",
         "id": "grid.15823.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "University of Leeds (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leeds",
+        "id": "grid.9909.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Fundació Privada per a la Investigació Nutricional (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada per a la Investigació Nutricional",
+        "id": "grid.434623.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "ECRIN (France)",
@@ -799,81 +1102,9 @@
         "acronym": "ECRIN",
         "id": "801933235",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Agricultural University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "Agricultural University of Athens",
-        "id": "grid.10985.35",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Maastricht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Maastricht University",
-        "id": "grid.5012.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Tereos (France)",
-        "country": "France",
-        "full_name": "Tereos",
-        "acronym": "Tereos",
-        "id": "gent173",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of Navarra (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Navarra",
-        "id": "grid.5924.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Vitagora (France)",
-        "country": "France",
-        "full_name": "Vitagora",
-        "acronym": "Vitagora",
-        "id": "FBc5d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "European Food Information Resource (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Food Information Resource",
-        "id": "grid.424817.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "U. Angers (France)",
-        "country": "France",
-        "full_name": "Université d'Angers",
-        "acronym": "U. Angers",
-        "id": "IXHyv",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Gospodarska zbornica Slovenije (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Gospodarska zbornica Slovenije",
-        "id": "grid.424500.7",
-        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 1
       },
@@ -884,27 +1115,11 @@
         "acronym": "CRNH RHONE-ALPES",
         "id": "180089526",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 59
-      },
-      {
-        "name": "Cargill (Belgique)",
-        "country": "Belgique",
-        "full_name": "Cargill",
-        "id": "grid.498107.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Austrian Competence Centre of Food Safety (Autriche)",
@@ -912,17 +1127,11 @@
         "full_name": "Austrian Competence Centre of Food Safety",
         "id": "grid.435576.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "ANIA (France)",
@@ -931,18 +1140,185 @@
         "acronym": "ANIA",
         "id": "302664784",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "UBS (France)",
-        "country": "France",
-        "full_name": "Université Bretagne Sud",
-        "acronym": "UBS",
-        "id": "5tVy4",
+        "name": "University of Navarra (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Navarra",
+        "id": "grid.5924.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Agricultural University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "Agricultural University of Athens",
+        "id": "grid.10985.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Gospodarska zbornica Slovenije (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Gospodarska zbornica Slovenije",
+        "id": "grid.424500.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "U. Angers (France)",
+        "country": "France",
+        "full_name": "Université d'Angers",
+        "acronym": "U. Angers",
+        "id": "IXHyv",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Federalimentare (Italie)",
+        "country": "Italie",
+        "full_name": "Federalimentare",
+        "id": "grid.494104.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ONIRIS (France)",
+        "country": "France",
+        "full_name": "École nationale vétérinaire, agroalimentaire et de l'alimentation, Nantes-Atlantique",
+        "acronym": "ONIRIS",
+        "id": "b2TCC",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Tereos (France)",
+        "country": "France",
+        "full_name": "Tereos",
+        "acronym": "Tereos",
+        "id": "gent173",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Icam Ouest (France)",
+        "country": "France",
+        "full_name": "Institut catholique d'arts et métiers Ouest",
+        "acronym": "Icam Ouest",
+        "id": "t4vMb",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 44
+      },
+      {
+        "name": "University of Surrey (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Surrey",
+        "id": "grid.5475.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Vitagora (France)",
+        "country": "France",
+        "full_name": "Vitagora",
+        "acronym": "Vitagora",
+        "id": "FBc5d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "European Food Information Resource (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Food Information Resource",
+        "id": "grid.424817.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774293
+        ],
+        "y": 1,
+        "z": 4
       }
     ],
     "Europe in a changing world - inclusive, innovative and reflective Societies (SOCIETY)": [
@@ -953,15 +1329,9 @@
         "acronym": "Inrae",
         "id": "t4SA4",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 3
       },
@@ -972,8 +1342,23 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          726950
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Harokopio University (Grèce)",
@@ -981,6 +1366,9 @@
         "full_name": "Harokopio University",
         "id": "grid.15823.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 2
       },
@@ -990,6 +1378,9 @@
         "full_name": "National University of Ireland, Galway",
         "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 6
       },
@@ -999,17 +1390,35 @@
         "full_name": "University of Bern",
         "id": "grid.5734.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "University of Siena (Italie)",
-        "country": "Italie",
-        "full_name": "University of Siena",
-        "id": "grid.9024.f",
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
-        "z": 5
+        "z": 2
+      },
+      {
+        "name": "Leibniz Institute for Regional Geography (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute for Regional Geography",
+        "id": "grid.461797.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University of Oviedo (Espagne)",
@@ -1017,26 +1426,11 @@
         "full_name": "University of Oviedo",
         "id": "grid.10863.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "TU Dresden (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TU Dresden",
-        "id": "grid.4488.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Groningen",
-        "id": "grid.4830.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "University of Helsinki (Finlande)",
@@ -1044,26 +1438,23 @@
         "full_name": "University of Helsinki",
         "id": "grid.7737.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 14
       },
       {
-        "name": "University of Chieti-Pescara (Italie)",
+        "name": "University of Siena (Italie)",
         "country": "Italie",
-        "full_name": "University of Chieti-Pescara",
-        "id": "grid.412451.7",
+        "full_name": "University of Siena",
+        "id": "grid.9024.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Bucharest University of Economic Studies (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Bucharest University of Economic Studies",
-        "id": "grid.432032.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
+        "z": 5
       },
       {
         "name": "University of Stirling (Royaume-Uni)",
@@ -1071,8 +1462,35 @@
         "full_name": "University of Stirling",
         "id": "grid.11918.30",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Aberystwyth University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Aberystwyth University",
+        "id": "grid.8186.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Groningen",
+        "id": "grid.4830.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "AgroParisTech (France)",
@@ -1081,15 +1499,9 @@
         "acronym": "AgroParisTech",
         "id": "SsSFH",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Leibniz Institute for Regional Geography (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Leibniz Institute for Regional Geography",
-        "id": "grid.461797.a",
-        "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 1
       },
@@ -1099,41 +1511,52 @@
         "full_name": "Institute of Geography and Spatial Organization, Polish Academy of Sciences",
         "id": "grid.460360.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Athens University of Economics and Business (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens University of Economics and Business",
-        "id": "grid.16299.35",
+        "name": "TU Dresden (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TU Dresden",
+        "id": "grid.4488.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
-        "z": 2
+        "z": 4
       },
       {
-        "name": "Aberystwyth University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Aberystwyth University",
-        "id": "grid.8186.7",
+        "name": "University of Chieti-Pescara (Italie)",
+        "country": "Italie",
+        "full_name": "University of Chieti-Pescara",
+        "id": "grid.412451.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Bucharest University of Economic Studies (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Bucharest University of Economic Studies",
+        "id": "grid.432032.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          726950
+        ],
+        "y": 1,
+        "z": 3
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "UBFC (France)",
-        "country": "France",
-        "full_name": "Université Bourgogne - Franche-Comté",
-        "acronym": "UBFC",
-        "id": "8A0mg",
-        "country_level_part": "Pays membres",
-        "y": 8,
-        "z": 30
-      },
       {
         "name": "uB (France)",
         "country": "France",
@@ -1141,8 +1564,38 @@
         "acronym": "uB",
         "id": "Lr94O",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          793707,
+          655545,
+          838373,
+          641984,
+          764985,
+          860383,
+          777995
+        ],
         "y": 8,
         "z": 19
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          793707,
+          655545,
+          838373,
+          641984,
+          764985,
+          860383,
+          777995
+        ],
+        "y": 8,
+        "z": 30
       },
       {
         "name": "Inrae (France)",
@@ -1151,6 +1604,12 @@
         "acronym": "Inrae",
         "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          793707,
+          655545,
+          641984,
+          764985
+        ],
         "y": 4,
         "z": 132
       },
@@ -1161,6 +1620,12 @@
         "acronym": "EPHE",
         "id": "QXnpG",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          838373,
+          860383,
+          777995
+        ],
         "y": 4,
         "z": 51
       },
@@ -1171,6 +1636,12 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          655545,
+          838373,
+          764985,
+          860383
+        ],
         "y": 4,
         "z": 938
       },
@@ -1180,6 +1651,10 @@
         "full_name": "Wageningen University & Research",
         "id": "grid.4818.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984,
+          764985
+        ],
         "y": 2,
         "z": 51
       },
@@ -1190,6 +1665,10 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575,
+          777995
+        ],
         "y": 2,
         "z": 258
       },
@@ -1200,6 +1679,10 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          838373,
+          860383
+        ],
         "y": 2,
         "z": 165
       },
@@ -1209,6 +1692,10 @@
         "full_name": "National University of Ireland, Galway",
         "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984,
+          777995
+        ],
         "y": 2,
         "z": 45
       },
@@ -1219,6 +1706,10 @@
         "acronym": "U. Rennes 1",
         "id": "9wAap",
         "country_level_part": "Pays membres",
+        "projects": [
+          860383,
+          777995
+        ],
         "y": 2,
         "z": 35
       },
@@ -1228,6 +1719,10 @@
         "full_name": "University of Bern",
         "id": "grid.5734.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          860383,
+          777995
+        ],
         "y": 2,
         "z": 36
       },
@@ -1237,44 +1732,11 @@
         "full_name": "Aarhus University",
         "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
         "y": 1,
         "z": 60
-      },
-      {
-        "name": "Paul Ehrlich Institut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Paul Ehrlich Institut",
-        "id": "grid.425396.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 82
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 46
       },
       {
         "name": "Miltenyi Biotec (Allemagne)",
@@ -1282,17 +1744,11 @@
         "full_name": "Miltenyi Biotec",
         "id": "grid.59409.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "VU University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU University Medical Center",
-        "id": "grid.16872.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
       },
       {
         "name": "Institut Gustave Roussy (France)",
@@ -1301,17 +1757,35 @@
         "acronym": "Institut Gustave Roussy",
         "id": "16RWt",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Capital Region of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Capital Region of Denmark",
-        "id": "grid.425848.7",
+        "name": "VU University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU University Medical Center",
+        "id": "grid.16872.3a",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
-        "z": 14
+        "z": 29
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 82
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -1320,8 +1794,59 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
         "y": 1,
         "z": 137
+      },
+      {
+        "name": "Capital Region of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Capital Region of Denmark",
+        "id": "grid.425848.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Paul Ehrlich Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Paul Ehrlich Institut",
+        "id": "grid.425396.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          955575
+        ],
+        "y": 1,
+        "z": 27
       },
       {
         "name": "University of Copenhagen (Danemark)",
@@ -1329,45 +1854,11 @@
         "full_name": "University of Copenhagen",
         "id": "grid.5254.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
         "y": 1,
         "z": 105
-      },
-      {
-        "name": "GenXPro (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "GenXPro",
-        "id": "grid.424994.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Southern Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Southern Denmark",
-        "id": "grid.10825.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "University College Cork (Irlande)",
-        "country": "Irlande",
-        "full_name": "University College Cork",
-        "id": "grid.7872.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
-        "name": "Biofilm Control (France)",
-        "country": "France",
-        "full_name": "Biofilm Control",
-        "acronym": "Biofilm Control",
-        "id": "480060284",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Lactalis (France)",
@@ -1376,8 +1867,36 @@
         "acronym": "Lactalis",
         "id": "gent100",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Biofilm Control (France)",
+        "country": "France",
+        "full_name": "Biofilm Control",
+        "acronym": "Biofilm Control",
+        "id": "480060284",
+        "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Southern Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Southern Denmark",
+        "id": "grid.10825.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
+        "y": 1,
+        "z": 22
       },
       {
         "name": "UCA (France)",
@@ -1386,54 +1905,35 @@
         "acronym": "UCA",
         "id": "K4lR3",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
         "y": 1,
         "z": 19
       },
       {
-        "name": "Norwegian Institute of Public Health (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute of Public Health",
-        "id": "grid.418193.6",
-        "country_level_part": "Pays associés",
+        "name": "GenXPro (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "GenXPro",
+        "id": "grid.424994.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "DF (France)",
-        "country": "France",
-        "full_name": "Diana Food",
-        "acronym": "DF",
-        "id": "308235175",
+        "name": "University College Cork (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Cork",
+        "id": "grid.7872.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          641984
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of the Republic (Uruguay)",
-        "country": "Uruguay",
-        "full_name": "University of the Republic",
-        "id": "grid.11630.35",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Netherlands Nutrition Centre (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Nutrition Centre",
-        "id": "grid.491176.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Arla Foods (Danemark)",
-        "country": "Danemark",
-        "full_name": "Arla Foods",
-        "id": "grid.432104.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
+        "z": 29
       },
       {
         "name": "University of Florence (Italie)",
@@ -1441,6 +1941,9 @@
         "full_name": "University of Florence",
         "id": "grid.8404.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
         "y": 1,
         "z": 30
       },
@@ -1450,8 +1953,23 @@
         "full_name": "Cornell University",
         "id": "grid.5386.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          764985
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Netherlands Nutrition Centre (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Nutrition Centre",
+        "id": "grid.491176.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Nofima (Norvège)",
@@ -1459,6 +1977,9 @@
         "full_name": "Nofima",
         "id": "grid.22736.32",
         "country_level_part": "Pays associés",
+        "projects": [
+          764985
+        ],
         "y": 1,
         "z": 2
       },
@@ -1469,26 +1990,60 @@
         "acronym": "CRI Paul Bocuse",
         "id": "500693957",
         "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "University of Geneva (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Geneva",
-        "id": "grid.8591.5",
-        "country_level_part": "Pays associés",
+        "name": "University of the Republic (Uruguay)",
+        "country": "Uruguay",
+        "full_name": "University of the Republic",
+        "id": "grid.11630.35",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          764985
+        ],
         "y": 1,
-        "z": 32
+        "z": 6
       },
       {
-        "name": "University of Bergen (Norvège)",
-        "country": "Norvège",
-        "full_name": "University of Bergen",
-        "id": "grid.7914.b",
-        "country_level_part": "Pays associés",
+        "name": "DF (France)",
+        "country": "France",
+        "full_name": "Diana Food",
+        "acronym": "DF",
+        "id": "308235175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
         "y": 1,
-        "z": 27
+        "z": 1
+      },
+      {
+        "name": "Norwegian Institute of Public Health (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Public Health",
+        "id": "grid.418193.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          764985
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Arla Foods (Danemark)",
+        "country": "Danemark",
+        "full_name": "Arla Foods",
+        "id": "grid.432104.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764985
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Imperial College London (Royaume-Uni)",
@@ -1496,6 +2051,9 @@
         "full_name": "Imperial College London",
         "id": "grid.7445.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          860383
+        ],
         "y": 1,
         "z": 69
       },
@@ -1505,8 +2063,23 @@
         "full_name": "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences",
         "id": "grid.23731.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          860383
+        ],
         "y": 1,
         "z": 9
+      },
+      {
+        "name": "University of Bergen (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Bergen",
+        "id": "grid.7914.b",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860383
+        ],
+        "y": 1,
+        "z": 27
       },
       {
         "name": "University of Oslo (Norvège)",
@@ -1514,17 +2087,23 @@
         "full_name": "University of Oslo",
         "id": "grid.5510.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          860383
+        ],
         "y": 1,
         "z": 42
       },
       {
-        "name": "University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
-        "country_level_part": "Pays membres",
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860383
+        ],
         "y": 1,
-        "z": 48
+        "z": 32
       },
       {
         "name": "VU Amsterdam (Pays-Bas)",
@@ -1532,8 +2111,35 @@
         "full_name": "VU Amsterdam",
         "id": "grid.12380.38",
         "country_level_part": "Pays membres",
+        "projects": [
+          860383
+        ],
         "y": 1,
         "z": 52
+      },
+      {
+        "name": "University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Barcelona",
+        "id": "grid.5841.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860383
+        ],
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Dokuz Eylül University (Turquie)",
+        "country": "Turquie",
+        "full_name": "Dokuz Eylül University",
+        "id": "grid.21200.31",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          777995
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Cell Stress Discoveries (Irlande)",
@@ -1541,6 +2147,9 @@
         "full_name": "Cell Stress Discoveries",
         "id": "grid.497234.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          777995
+        ],
         "y": 1,
         "z": 4
       },
@@ -1551,30 +2160,14 @@
         "acronym": "Apofas Biotech",
         "id": "827527771",
         "country_level_part": "Pays membres",
+        "projects": [
+          777995
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Dokuz Eylül University (Turquie)",
-        "country": "Turquie",
-        "full_name": "Dokuz Eylül University",
-        "id": "grid.21200.31",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 3
       }
     ],
     "European Research Council (ERC)": [
-      {
-        "name": "UBFC (France)",
-        "country": "France",
-        "full_name": "Université Bourgogne - Franche-Comté",
-        "acronym": "UBFC",
-        "id": "8A0mg",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
       {
         "name": "uB (France)",
         "country": "France",
@@ -1582,8 +2175,24 @@
         "acronym": "uB",
         "id": "Lr94O",
         "country_level_part": "Pays membres",
+        "projects": [
+          677251
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "UBFC (France)",
+        "country": "France",
+        "full_name": "Université Bourgogne - Franche-Comté",
+        "acronym": "UBFC",
+        "id": "8A0mg",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677251
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "EPHE (France)",
@@ -1592,6 +2201,9 @@
         "acronym": "EPHE",
         "id": "QXnpG",
         "country_level_part": "Pays membres",
+        "projects": [
+          677251
+        ],
         "y": 1,
         "z": 13
       },
@@ -1602,6 +2214,9 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          677251
+        ],
         "y": 1,
         "z": 166
       }

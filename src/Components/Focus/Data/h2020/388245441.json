@@ -2,29 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Centre for Electrochemical Technologies (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Electrochemical Technologies",
-        "id": "grid.39768.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 58
-      },
-      {
-        "name": "Norwegian Research Centre (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Research Centre",
-        "id": "grid.509009.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 47
-      },
-      {
         "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
         "country": "Belgique",
         "full_name": "Von Karman Institute for Fluid Dynamics",
         "id": "grid.7547.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
         "y": 1,
         "z": 36
       },
@@ -34,21 +19,23 @@
         "full_name": "Materia Nova",
         "id": "grid.435745.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
         "y": 1,
         "z": 7
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Smart, green and integrated transport (TPT)": [
+      },
       {
         "name": "Centre for Electrochemical Technologies (Espagne)",
         "country": "Espagne",
         "full_name": "Centre for Electrochemical Technologies",
         "id": "grid.39768.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
         "y": 1,
-        "z": 22
+        "z": 58
       },
       {
         "name": "Norwegian Research Centre (Norvège)",
@@ -56,15 +43,25 @@
         "full_name": "Norwegian Research Centre",
         "id": "grid.509009.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          785484
+        ],
         "y": 1,
-        "z": 2
-      },
+        "z": 47
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Smart, green and integrated transport (TPT)": [
       {
         "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
         "country": "Belgique",
         "full_name": "Von Karman Institute for Fluid Dynamics",
         "id": "grid.7547.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
         "y": 1,
         "z": 17
       },
@@ -74,6 +71,33 @@
         "full_name": "Materia Nova",
         "id": "grid.435745.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Centre for Electrochemical Technologies (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Electrochemical Technologies",
+        "id": "grid.39768.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785484
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Norwegian Research Centre (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Research Centre",
+        "id": "grid.509009.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          785484
+        ],
         "y": 1,
         "z": 2
       }

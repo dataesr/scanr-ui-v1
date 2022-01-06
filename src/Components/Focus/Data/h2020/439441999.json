@@ -2,31 +2,30 @@
   "all": {
     "all": [
       {
-        "name": "University of Surrey (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Surrey",
-        "id": "grid.5475.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 112
-      },
-      {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 111
-      },
-      {
         "name": "Avanti (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Avanti",
         "id": "grid.423813.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
         "y": 2,
         "z": 7
+      },
+      {
+        "name": "University of Surrey (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Surrey",
+        "id": "grid.5475.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
+        "y": 2,
+        "z": 112
       },
       {
         "name": "Airbus (France)",
@@ -35,35 +34,37 @@
         "acronym": "Airbus",
         "id": "gent8",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
         "y": 2,
         "z": 155
       },
       {
-        "name": "Space Hellas (Grèce)",
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
         "country": "Grèce",
-        "full_name": "Space Hellas",
-        "id": "grid.426422.4",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "projects": [
+          815178,
+          644843
+        ],
+        "y": 2,
+        "z": 111
       },
       {
-        "name": "Intel (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Intel",
-        "id": "grid.425153.4",
+        "name": "University of Malaga (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Malaga",
+        "id": "grid.10215.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 23
-      },
-      {
-        "name": "Cosmote (Grèce)",
-        "country": "Grèce",
-        "full_name": "Cosmote",
-        "id": "grid.423750.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
+        "z": 43
       },
       {
         "name": "Karlstad University (Suède)",
@@ -71,17 +72,95 @@
         "full_name": "Karlstad University",
         "id": "grid.20258.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 17
       },
       {
-        "name": "Instituto de Telecomunicações (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Telecomunicações",
-        "id": "grid.421174.5",
+        "name": "Cosmote (Grèce)",
+        "country": "Grèce",
+        "full_name": "Cosmote",
+        "id": "grid.423750.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 30
+        "z": 20
+      },
+      {
+        "name": "PrimeTel (Chypre)",
+        "country": "Chypre",
+        "full_name": "PrimeTel",
+        "id": "grid.425560.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Space Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Space Hellas",
+        "id": "grid.426422.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 182
+      },
+      {
+        "name": "Innovations for High Performance Microelectronics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Innovations for High Performance Microelectronics",
+        "id": "grid.424874.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Simula Research Laboratory (Norvège)",
+        "country": "Norvège",
+        "full_name": "Simula Research Laboratory",
+        "id": "grid.419255.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 202
       },
       {
         "name": "EURECOM (France)",
@@ -90,71 +169,11 @@
         "acronym": "EURECOM",
         "id": "qCe6O",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "PrimeTel (Chypre)",
-        "country": "Chypre",
-        "full_name": "PrimeTel",
-        "id": "grid.425560.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 202
-      },
-      {
-        "name": "Innovations for High Performance Microelectronics (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Innovations for High Performance Microelectronics",
-        "id": "grid.424874.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
-      },
-      {
-        "name": "Telefonica Research and Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Telefonica Research and Development",
-        "id": "grid.99308.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
-        "name": "University of Malaga (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Malaga",
-        "id": "grid.10215.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Simula Research Laboratory (Norvège)",
-        "country": "Norvège",
-        "full_name": "Simula Research Laboratory",
-        "id": "grid.419255.e",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 21
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -162,44 +181,47 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 1072
       },
       {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
+        "name": "Instituto de Telecomunicações (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Telecomunicações",
+        "id": "grid.421174.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 342
+        "z": 30
       },
       {
-        "name": "i2CAT (Espagne)",
+        "name": "Telefonica Research and Development (Espagne)",
         "country": "Espagne",
-        "full_name": "i2CAT",
-        "id": "grid.424749.8",
+        "full_name": "Telefonica Research and Development",
+        "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 39
+        "z": 81
       },
       {
-        "name": "BT Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "BT Group",
-        "id": "grid.1453.3",
+        "name": "Intel (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Intel",
+        "id": "grid.425153.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 238
+        "z": 23
       },
       {
         "name": "Thales (France)",
@@ -208,26 +230,23 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 286
       },
       {
-        "name": "TriaGnoSys (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TriaGnoSys",
-        "id": "grid.426334.4",
+        "name": "i2CAT (Espagne)",
+        "country": "Espagne",
+        "full_name": "i2CAT",
+        "id": "grid.424749.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
-        "z": 9
-      },
-      {
-        "name": "University of Oulu (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Oulu",
-        "id": "grid.10858.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 101
+        "z": 39
       },
       {
         "name": "Gilat Satellite Networks (Israël)",
@@ -235,8 +254,35 @@
         "full_name": "Gilat Satellite Networks",
         "id": "grid.425068.d",
         "country_level_part": "Pays associés",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 238
+      },
+      {
+        "name": "SES (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "SES",
+        "id": "grid.426051.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Broadpeak (France)",
@@ -245,26 +291,71 @@
         "acronym": "Broadpeak",
         "id": "524473063",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "SES (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "SES",
-        "id": "grid.426051.4",
+        "name": "University of Oulu (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Oulu",
+        "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
-        "z": 3
+        "z": 101
       },
       {
-        "name": "Nextworks (Italie)",
-        "country": "Italie",
-        "full_name": "Nextworks",
-        "id": "grid.425741.1",
+        "name": "BT Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "BT Group",
+        "id": "grid.1453.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
-        "z": 31
+        "z": 20
+      },
+      {
+        "name": "TriaGnoSys (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TriaGnoSys",
+        "id": "grid.426334.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 342
+      },
+      {
+        "name": "Consorci de Serveis Universitaris de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Consorci de Serveis Universitaris de Catalunya",
+        "id": "grid.432997.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
@@ -272,17 +363,47 @@
         "full_name": "École Polytechnique Fédérale de Lausanne",
         "id": "grid.5333.6",
         "country_level_part": "Pays associés",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 277
       },
       {
-        "name": "Polytechnic University of Bucharest (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Polytechnic University of Bucharest",
-        "id": "grid.4551.5",
+        "name": "Nextworks (Italie)",
+        "country": "Italie",
+        "full_name": "Nextworks",
+        "id": "grid.425741.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
         "y": 1,
-        "z": 49
+        "z": 31
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 173
+      },
+      {
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 104
       },
       {
         "name": "NEC (Allemagne)",
@@ -290,6 +411,9 @@
         "full_name": "NEC",
         "id": "grid.474373.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 48
       },
@@ -299,35 +423,35 @@
         "full_name": "IBM Research - Haifa",
         "id": "grid.11447.37",
         "country_level_part": "Pays associés",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 60
       },
       {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
         "y": 1,
-        "z": 104
+        "z": 49
       },
       {
-        "name": "VU Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU Amsterdam",
-        "id": "grid.12380.38",
+        "name": "INTECS (Italie)",
+        "country": "Italie",
+        "full_name": "INTECS",
+        "id": "grid.425130.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
-        "z": 173
-      },
-      {
-        "name": "Consorci de Serveis Universitaris de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Consorci de Serveis Universitaris de Catalunya",
-        "id": "grid.432997.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
+        "z": 5
       },
       {
         "name": "Fondazione Bruno Kessler (Italie)",
@@ -335,17 +459,11 @@
         "full_name": "Fondazione Bruno Kessler",
         "id": "grid.11469.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 92
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 212
       },
       {
         "name": "Synaptec (France)",
@@ -354,17 +472,35 @@
         "acronym": "Synaptec",
         "id": "528819758",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "INTECS (Italie)",
-        "country": "Italie",
-        "full_name": "INTECS",
-        "id": "grid.425130.1",
+        "name": "Hellenic Telecommunications Organization (Grèce)",
+        "country": "Grèce",
+        "full_name": "Hellenic Telecommunications Organization",
+        "id": "grid.424657.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
-        "z": 5
+        "z": 34
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
+        "y": 1,
+        "z": 212
       },
       {
         "name": "CNES (France)",
@@ -373,48 +509,41 @@
         "acronym": "CNES",
         "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 107
-      },
-      {
-        "name": "Hellenic Telecommunications Organization (Grèce)",
-        "country": "Grèce",
-        "full_name": "Hellenic Telecommunications Organization",
-        "id": "grid.424657.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "University of Surrey (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Surrey",
-        "id": "grid.5475.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 30
-      },
-      {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 31
-      },
-      {
         "name": "Avanti (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Avanti",
         "id": "grid.423813.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
         "y": 2,
         "z": 4
+      },
+      {
+        "name": "University of Surrey (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Surrey",
+        "id": "grid.5475.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
+        "y": 2,
+        "z": 30
       },
       {
         "name": "Airbus (France)",
@@ -423,33 +552,35 @@
         "acronym": "Airbus",
         "id": "gent8",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178,
+          761413
+        ],
         "y": 2,
         "z": 24
       },
       {
-        "name": "Space Hellas (Grèce)",
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
         "country": "Grèce",
-        "full_name": "Space Hellas",
-        "id": "grid.426422.4",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
+        "projects": [
+          815178,
+          644843
+        ],
+        "y": 2,
+        "z": 31
       },
       {
-        "name": "Intel (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Intel",
-        "id": "grid.425153.4",
+        "name": "University of Malaga (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Malaga",
+        "id": "grid.10215.37",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Cosmote (Grèce)",
-        "country": "Grèce",
-        "full_name": "Cosmote",
-        "id": "grid.423750.7",
-        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 16
       },
@@ -459,17 +590,95 @@
         "full_name": "Karlstad University",
         "id": "grid.20258.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Instituto de Telecomunicações (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Telecomunicações",
-        "id": "grid.421174.5",
+        "name": "Cosmote (Grèce)",
+        "country": "Grèce",
+        "full_name": "Cosmote",
+        "id": "grid.423750.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 15
+        "z": 16
+      },
+      {
+        "name": "PrimeTel (Chypre)",
+        "country": "Chypre",
+        "full_name": "PrimeTel",
+        "id": "grid.425560.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Space Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Space Hellas",
+        "id": "grid.426422.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Innovations for High Performance Microelectronics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Innovations for High Performance Microelectronics",
+        "id": "grid.424874.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Simula Research Laboratory (Norvège)",
+        "country": "Norvège",
+        "full_name": "Simula Research Laboratory",
+        "id": "grid.419255.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
+        "y": 1,
+        "z": 104
       },
       {
         "name": "EURECOM (France)",
@@ -478,71 +687,11 @@
         "acronym": "EURECOM",
         "id": "qCe6O",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 21
-      },
-      {
-        "name": "PrimeTel (Chypre)",
-        "country": "Chypre",
-        "full_name": "PrimeTel",
-        "id": "grid.425560.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "Innovations for High Performance Microelectronics (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Innovations for High Performance Microelectronics",
-        "id": "grid.424874.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Telefonica Research and Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Telefonica Research and Development",
-        "id": "grid.99308.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
-        "name": "University of Malaga (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Malaga",
-        "id": "grid.10215.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Simula Research Laboratory (Norvège)",
-        "country": "Norvège",
-        "full_name": "Simula Research Laboratory",
-        "id": "grid.419255.e",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -550,44 +699,47 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
         "z": 283
       },
       {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
+        "name": "Instituto de Telecomunicações (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Telecomunicações",
+        "id": "grid.421174.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 78
+        "z": 15
       },
       {
-        "name": "i2CAT (Espagne)",
+        "name": "Telefonica Research and Development (Espagne)",
         "country": "Espagne",
-        "full_name": "i2CAT",
-        "id": "grid.424749.8",
+        "full_name": "Telefonica Research and Development",
+        "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 31
+        "z": 62
       },
       {
-        "name": "BT Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "BT Group",
-        "id": "grid.1453.3",
+        "name": "Intel (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Intel",
+        "id": "grid.425153.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          815178
+        ],
         "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 135
+        "z": 16
       },
       {
         "name": "Thales (France)",
@@ -596,26 +748,23 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 84
       },
       {
-        "name": "TriaGnoSys (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TriaGnoSys",
-        "id": "grid.426334.4",
+        "name": "i2CAT (Espagne)",
+        "country": "Espagne",
+        "full_name": "i2CAT",
+        "id": "grid.424749.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of Oulu (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Oulu",
-        "id": "grid.10858.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
+        "z": 31
       },
       {
         "name": "Gilat Satellite Networks (Israël)",
@@ -623,8 +772,35 @@
         "full_name": "Gilat Satellite Networks",
         "id": "grid.425068.d",
         "country_level_part": "Pays associés",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 135
+      },
+      {
+        "name": "SES (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "SES",
+        "id": "grid.426051.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Broadpeak (France)",
@@ -633,26 +809,71 @@
         "acronym": "Broadpeak",
         "id": "524473063",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "SES (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "SES",
-        "id": "grid.426051.4",
+        "name": "University of Oulu (Finlande)",
+        "country": "Finlande",
+        "full_name": "University of Oulu",
+        "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "BT Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "BT Group",
+        "id": "grid.1453.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "TriaGnoSys (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TriaGnoSys",
+        "id": "grid.426334.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Nextworks (Italie)",
-        "country": "Italie",
-        "full_name": "Nextworks",
-        "id": "grid.425741.1",
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          761413
+        ],
         "y": 1,
-        "z": 29
+        "z": 78
+      },
+      {
+        "name": "Consorci de Serveis Universitaris de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Consorci de Serveis Universitaris de Catalunya",
+        "id": "grid.432997.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
@@ -660,17 +881,47 @@
         "full_name": "École Polytechnique Fédérale de Lausanne",
         "id": "grid.5333.6",
         "country_level_part": "Pays associés",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 34
       },
       {
-        "name": "Polytechnic University of Bucharest (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Polytechnic University of Bucharest",
-        "id": "grid.4551.5",
+        "name": "Nextworks (Italie)",
+        "country": "Italie",
+        "full_name": "Nextworks",
+        "id": "grid.425741.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
         "y": 1,
-        "z": 15
+        "z": 29
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "NEC (Allemagne)",
@@ -678,6 +929,9 @@
         "full_name": "NEC",
         "id": "grid.474373.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 32
       },
@@ -687,35 +941,35 @@
         "full_name": "IBM Research - Haifa",
         "id": "grid.11447.37",
         "country_level_part": "Pays associés",
+        "projects": [
+          825377
+        ],
         "y": 1,
         "z": 33
       },
       {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
+        "name": "Polytechnic University of Bucharest (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Polytechnic University of Bucharest",
+        "id": "grid.4551.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825377
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "INTECS (Italie)",
+        "country": "Italie",
+        "full_name": "INTECS",
+        "id": "grid.425130.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 4
-      },
-      {
-        "name": "VU Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU Amsterdam",
-        "id": "grid.12380.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Consorci de Serveis Universitaris de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Consorci de Serveis Universitaris de Catalunya",
-        "id": "grid.432997.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Fondazione Bruno Kessler (Italie)",
@@ -723,15 +977,9 @@
         "full_name": "Fondazione Bruno Kessler",
         "id": "grid.11469.3b",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 40
       },
@@ -742,25 +990,9 @@
         "acronym": "Synaptec",
         "id": "528819758",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "INTECS (Italie)",
-        "country": "Italie",
-        "full_name": "INTECS",
-        "id": "grid.425130.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "CNES (France)",
-        "country": "France",
-        "full_name": "Centre national d'études spatiales",
-        "acronym": "CNES",
-        "id": "CvdQn",
-        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 1
       },
@@ -770,8 +1002,36 @@
         "full_name": "Hellenic Telecommunications Organization",
         "id": "grid.424657.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
         "y": 1,
         "z": 24
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644843
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

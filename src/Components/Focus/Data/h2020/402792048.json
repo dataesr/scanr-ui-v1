@@ -2,13 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
+        "name": "Weizmann Institute of Science (Israël)",
+        "country": "Israël",
+        "full_name": "Weizmann Institute of Science",
+        "id": "grid.13992.30",
         "country_level_part": "Pays associés",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 277
+        "z": 68
       },
       {
         "name": "Goethe University Frankfurt (Allemagne)",
@@ -16,72 +19,11 @@
         "full_name": "Goethe University Frankfurt",
         "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 85
-      },
-      {
-        "name": "Weizmann Institute of Science (Israël)",
-        "country": "Israël",
-        "full_name": "Weizmann Institute of Science",
-        "id": "grid.13992.30",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 68
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "University of York (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of York",
-        "id": "grid.5685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 88
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 345
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 379
-      },
-      {
-        "name": "Bruker (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bruker",
-        "id": "grid.423218.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "UVSQ (France)",
-        "country": "France",
-        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-        "acronym": "UVSQ",
-        "id": "V13Pk",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 94
       },
       {
         "name": "CNRS (France)",
@@ -90,26 +32,36 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 2670
       },
       {
-        "name": "University of Freiburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Freiburg",
-        "id": "grid.5963.9",
+        "name": "University of York (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of York",
+        "id": "grid.5685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 95
+        "z": 88
       },
       {
-        "name": "University of Birmingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Birmingham",
-        "id": "grid.6572.6",
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 179
+        "z": 94
       },
       {
         "name": "AMU (France)",
@@ -118,21 +70,111 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 216
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "University of Freiburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Freiburg",
+        "id": "grid.5963.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 179
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
+        "name": "Weizmann Institute of Science (Israël)",
+        "country": "Israël",
+        "full_name": "Weizmann Institute of Science",
+        "id": "grid.13992.30",
         "country_level_part": "Pays associés",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 64
+        "z": 22
       },
       {
         "name": "Goethe University Frankfurt (Allemagne)",
@@ -140,72 +182,11 @@
         "full_name": "Goethe University Frankfurt",
         "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 25
-      },
-      {
-        "name": "Weizmann Institute of Science (Israël)",
-        "country": "Israël",
-        "full_name": "Weizmann Institute of Science",
-        "id": "grid.13992.30",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 46
-      },
-      {
-        "name": "University of York (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of York",
-        "id": "grid.5685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 116
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 82
-      },
-      {
-        "name": "Bruker (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bruker",
-        "id": "grid.423218.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "UVSQ (France)",
-        "country": "France",
-        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-        "acronym": "UVSQ",
-        "id": "V13Pk",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
       },
       {
         "name": "CNRS (France)",
@@ -214,26 +195,36 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 938
       },
       {
-        "name": "University of Freiburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Freiburg",
-        "id": "grid.5963.9",
+        "name": "University of York (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of York",
+        "id": "grid.5685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 29
+        "z": 30
       },
       {
-        "name": "University of Birmingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Birmingham",
-        "id": "grid.6572.6",
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
-        "z": 70
+        "z": 17
       },
       {
         "name": "AMU (France)",
@@ -242,8 +233,95 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
         "y": 1,
         "z": 79
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "University of Freiburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Freiburg",
+        "id": "grid.5963.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Bruker (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bruker",
+        "id": "grid.423218.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 82
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 116
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642773
+        ],
+        "y": 1,
+        "z": 70
       }
     ]
   }

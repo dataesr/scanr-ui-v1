@@ -2,41 +2,43 @@
   "all": {
     "all": [
       {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 241
-      },
-      {
         "name": "Institut Curie (France)",
         "country": "France",
         "full_name": "Institut Curie",
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105,
+          667787
+        ],
         "y": 2,
         "z": 76
       },
       {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 50
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105,
+          667787
+        ],
+        "y": 2,
+        "z": 241
       },
       {
-        "name": "European Institute of Oncology (Italie)",
+        "name": "University of Turin (Italie)",
         "country": "Italie",
-        "full_name": "European Institute of Oncology",
-        "id": "grid.15667.33",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
-        "z": 21
+        "z": 154
       },
       {
         "name": "Vall d'Hebron Institut de Recerca (Espagne)",
@@ -44,6 +46,9 @@
         "full_name": "Vall d'Hebron Institut de Recerca",
         "id": "grid.430994.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 57
       },
@@ -53,80 +58,23 @@
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 489
       },
       {
-        "name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium (Autriche)",
-        "country": "Autriche",
-        "full_name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium",
-        "id": "grid.450509.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 345
-      },
-      {
-        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Antoni van Leeuwenhoek Hospital",
-        "id": "grid.430814.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "Institut Català d'Oncologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Català d'Oncologia",
-        "id": "grid.418701.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "University of Turin (Italie)",
+        "name": "European Institute of Oncology (Italie)",
         "country": "Italie",
-        "full_name": "University of Turin",
-        "id": "grid.7605.4",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
-        "z": 154
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 130
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "Masaryk University (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Masaryk University",
-        "id": "grid.10267.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 102
+        "z": 21
       },
       {
         "name": "Royal College of Surgeons in Ireland (Irlande)",
@@ -134,8 +82,83 @@
         "full_name": "Royal College of Surgeons in Ireland",
         "id": "grid.4912.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 31
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 130
+      },
+      {
+        "name": "Institut Català d'Oncologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català d'Oncologia",
+        "id": "grid.418701.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Masaryk University (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Masaryk University",
+        "id": "grid.10267.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 102
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 50
       },
       {
         "name": "Hospital Universitario de Fuenlabrada (Espagne)",
@@ -143,8 +166,72 @@
         "full_name": "Hospital Universitario de Fuenlabrada",
         "id": "grid.411242.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium (Autriche)",
+        "country": "Autriche",
+        "full_name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium",
+        "id": "grid.450509.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Antoni van Leeuwenhoek Hospital",
+        "id": "grid.430814.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Champalimaud Foundation (Portugal)",
+        "country": "Portugal",
+        "full_name": "Champalimaud Foundation",
+        "id": "grid.421010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Pep-Therapy (France)",
+        "country": "France",
+        "full_name": "Pep-Therapy",
+        "acronym": "Pep-Therapy",
+        "id": "799395215",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 268
       },
       {
         "name": "Leiden University (Pays-Bas)",
@@ -152,8 +239,23 @@
         "full_name": "Leiden University",
         "id": "grid.5132.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 154
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 124
       },
       {
         "name": "Jagiellonian University (Pologne)",
@@ -161,6 +263,9 @@
         "full_name": "Jagiellonian University",
         "id": "grid.5522.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 59
       },
@@ -170,18 +275,11 @@
         "full_name": "University of Liverpool",
         "id": "grid.10025.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 109
-      },
-      {
-        "name": "Pep-Therapy (France)",
-        "country": "France",
-        "full_name": "Pep-Therapy",
-        "acronym": "Pep-Therapy",
-        "id": "799395215",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "University of Trento (Italie)",
@@ -189,57 +287,27 @@
         "full_name": "University of Trento",
         "id": "grid.11696.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 96
-      },
-      {
-        "name": "Champalimaud Foundation (Portugal)",
-        "country": "Portugal",
-        "full_name": "Champalimaud Foundation",
-        "id": "grid.421010.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 268
-      },
-      {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
       }
     ]
   },
   "Excellent Science": {
     "Research infrastructures (INFRA)": [
       {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "European Institute of Oncology (Italie)",
+        "name": "University of Turin (Italie)",
         "country": "Italie",
-        "full_name": "European Institute of Oncology",
-        "id": "grid.15667.33",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
-        "z": 3
+        "z": 9
       },
       {
         "name": "Vall d'Hebron Institut de Recerca (Espagne)",
@@ -247,6 +315,9 @@
         "full_name": "Vall d'Hebron Institut de Recerca",
         "id": "grid.430994.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 3
       },
@@ -256,80 +327,11 @@
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium (Autriche)",
-        "country": "Autriche",
-        "full_name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium",
-        "id": "grid.450509.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Antoni van Leeuwenhoek Hospital",
-        "id": "grid.430814.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Institut Català d'Oncologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Català d'Oncologia",
-        "id": "grid.418701.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "University of Turin",
-        "id": "grid.7605.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "Institut Curie (France)",
@@ -338,17 +340,35 @@
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Masaryk University (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Masaryk University",
-        "id": "grid.10267.32",
+        "name": "European Institute of Oncology (Italie)",
+        "country": "Italie",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
-        "z": 20
+        "z": 3
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 31
       },
       {
         "name": "Royal College of Surgeons in Ireland (Irlande)",
@@ -356,6 +376,81 @@
         "full_name": "Royal College of Surgeons in Ireland",
         "id": "grid.4912.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Institut Català d'Oncologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català d'Oncologia",
+        "id": "grid.418701.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Masaryk University (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Masaryk University",
+        "id": "grid.10267.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 1
       },
@@ -365,22 +460,40 @@
         "full_name": "Hospital Universitario de Fuenlabrada",
         "id": "grid.411242.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium (Autriche)",
+        "country": "Autriche",
+        "full_name": "Biobanking and Biomolecular Resources Research Infrastructure Consortium",
+        "id": "grid.450509.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Antoni van Leeuwenhoek Hospital (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Antoni van Leeuwenhoek Hospital",
+        "id": "grid.430814.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731105
+        ],
+        "y": 1,
+        "z": 7
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
       {
         "name": "Institut Curie (France)",
         "country": "France",
@@ -388,8 +501,60 @@
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Champalimaud Foundation (Portugal)",
+        "country": "Portugal",
+        "full_name": "Champalimaud Foundation",
+        "id": "grid.421010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Pep-Therapy (France)",
+        "country": "France",
+        "full_name": "Pep-Therapy",
+        "acronym": "Pep-Therapy",
+        "id": "799395215",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Leiden University (Pays-Bas)",
@@ -397,8 +562,23 @@
         "full_name": "Leiden University",
         "id": "grid.5132.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 16
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
+        "y": 1,
+        "z": 66
       },
       {
         "name": "Jagiellonian University (Pologne)",
@@ -406,6 +586,9 @@
         "full_name": "Jagiellonian University",
         "id": "grid.5522.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 9
       },
@@ -415,18 +598,11 @@
         "full_name": "University of Liverpool",
         "id": "grid.10025.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 26
-      },
-      {
-        "name": "Pep-Therapy (France)",
-        "country": "France",
-        "full_name": "Pep-Therapy",
-        "acronym": "Pep-Therapy",
-        "id": "799395215",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "University of Trento (Italie)",
@@ -434,35 +610,11 @@
         "full_name": "University of Trento",
         "id": "grid.11696.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          667787
+        ],
         "y": 1,
         "z": 10
-      },
-      {
-        "name": "Champalimaud Foundation (Portugal)",
-        "country": "Portugal",
-        "full_name": "Champalimaud Foundation",
-        "id": "grid.421010.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 66
       }
     ]
   }

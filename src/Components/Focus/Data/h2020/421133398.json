@@ -2,131 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Austrian Research Promotion Agency (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Research Promotion Agency",
-        "id": "grid.197345.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 64
-      },
-      {
-        "name": "Institut für Höhere Studien - Institute for Advanced Studies (Autriche)",
-        "country": "Autriche",
-        "full_name": "Institut für Höhere Studien - Institute for Advanced Studies",
-        "id": "grid.424791.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 306
-      },
-      {
-        "name": "Ministry of Economic Affairs and Climate Policy (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Ministry of Economic Affairs and Climate Policy",
-        "id": "grid.39364.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 44
-      },
-      {
-        "name": "Archimedes Foundation (Estonie)",
-        "country": "Estonie",
-        "full_name": "Archimedes Foundation",
-        "id": "grid.15060.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Technology Agency of the Czech Republic (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Technology Agency of the Czech Republic",
         "id": "grid.452996.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 17
-      },
-      {
-        "name": "University of Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Amsterdam",
-        "id": "grid.7177.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 164
-      },
-      {
-        "name": "Maastricht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Maastricht University",
-        "id": "grid.5012.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 177
-      },
-      {
-        "name": "Wageningen University & Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Wageningen University & Research",
-        "id": "grid.4818.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 367
-      },
-      {
-        "name": "University of the West Indies (Jamaïque)",
-        "country": "Jamaïque",
-        "full_name": "University of the West Indies",
-        "id": "grid.12916.3d",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Estonian Research Council (Estonie)",
-        "country": "Estonie",
-        "full_name": "Estonian Research Council",
-        "id": "grid.426153.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 52
-      },
-      {
-        "name": "FNSP (France)",
-        "country": "France",
-        "full_name": "Fondation nationale des sciences politiques",
-        "acronym": "FNSP",
-        "id": "AC4nM",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "Centre for Social Innovation (Autriche)",
-        "country": "Autriche",
-        "full_name": "Centre for Social Innovation",
-        "id": "grid.15683.39",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
       },
       {
         "name": "CNRS (France)",
@@ -135,8 +20,107 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 2670
+      },
+      {
+        "name": "Archimedes Foundation (Estonie)",
+        "country": "Estonie",
+        "full_name": "Archimedes Foundation",
+        "id": "grid.15060.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ministry of Economic Affairs and Climate Policy (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Ministry of Economic Affairs and Climate Policy",
+        "id": "grid.39364.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 44
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "Institut für Höhere Studien - Institute for Advanced Studies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Institut für Höhere Studien - Institute for Advanced Studies",
+        "id": "grid.424791.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "GenØk (Norvège)",
+        "country": "Norvège",
+        "full_name": "GenØk",
+        "id": "grid.452322.0",
+        "country_level_part": "Pays associés",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Wageningen University & Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Wageningen University & Research",
+        "id": "grid.4818.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 367
+      },
+      {
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 164
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 306
       },
       {
         "name": "IEP de Paris (France)",
@@ -145,17 +129,23 @@
         "acronym": "IEP de Paris",
         "id": "u79ZJ",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 23
       },
       {
-        "name": "Leiden University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University",
-        "id": "grid.5132.5",
+        "name": "Austrian Research Promotion Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Research Promotion Agency",
+        "id": "grid.197345.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
-        "z": 154
+        "z": 64
       },
       {
         "name": "Tecnalia (Espagne)",
@@ -163,8 +153,36 @@
         "full_name": "Tecnalia",
         "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 368
+      },
+      {
+        "name": "FNSP (France)",
+        "country": "France",
+        "full_name": "Fondation nationale des sciences politiques",
+        "acronym": "FNSP",
+        "id": "AC4nM",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "University of the West Indies (Jamaïque)",
+        "country": "Jamaïque",
+        "full_name": "University of the West Indies",
+        "id": "grid.12916.3d",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -172,37 +190,122 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 1072
       },
       {
-        "name": "GenØk (Norvège)",
-        "country": "Norvège",
-        "full_name": "GenØk",
-        "id": "grid.452322.0",
-        "country_level_part": "Pays associés",
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
-        "z": 1
+        "z": 154
+      },
+      {
+        "name": "Estonian Research Council (Estonie)",
+        "country": "Estonie",
+        "full_name": "Estonian Research Council",
+        "id": "grid.426153.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Centre for Social Innovation (Autriche)",
+        "country": "Autriche",
+        "full_name": "Centre for Social Innovation",
+        "id": "grid.15683.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 177
       }
     ]
   },
   "Science with and for Society": {
     "Science with and for Society (SWAFS)": [
       {
+        "name": "Technology Agency of the Czech Republic (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Technology Agency of the Czech Republic",
+        "id": "grid.452996.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Archimedes Foundation (Estonie)",
+        "country": "Estonie",
+        "full_name": "Archimedes Foundation",
+        "id": "grid.15060.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ministry of Economic Affairs and Climate Policy (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Ministry of Economic Affairs and Climate Policy",
+        "id": "grid.39364.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "VTT Technical Research Centre of Finland (Finlande)",
         "country": "Finlande",
         "full_name": "VTT Technical Research Centre of Finland",
         "id": "grid.6324.3",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Austrian Research Promotion Agency (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Research Promotion Agency",
-        "id": "grid.197345.d",
-        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 7
       },
@@ -212,62 +315,23 @@
         "full_name": "Institut für Höhere Studien - Institute for Advanced Studies",
         "id": "grid.424791.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 7
       },
       {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Ministry of Economic Affairs and Climate Policy (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Ministry of Economic Affairs and Climate Policy",
-        "id": "grid.39364.3b",
-        "country_level_part": "Pays membres",
+        "name": "GenØk (Norvège)",
+        "country": "Norvège",
+        "full_name": "GenØk",
+        "id": "grid.452322.0",
+        "country_level_part": "Pays associés",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Archimedes Foundation (Estonie)",
-        "country": "Estonie",
-        "full_name": "Archimedes Foundation",
-        "id": "grid.15060.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Technology Agency of the Czech Republic (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Technology Agency of the Czech Republic",
-        "id": "grid.452996.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Amsterdam",
-        "id": "grid.7177.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Maastricht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Maastricht University",
-        "id": "grid.5012.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Wageningen University & Research (Pays-Bas)",
@@ -275,55 +339,35 @@
         "full_name": "Wageningen University & Research",
         "id": "grid.4818.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 8
       },
       {
-        "name": "University of the West Indies (Jamaïque)",
-        "country": "Jamaïque",
-        "full_name": "University of the West Indies",
-        "id": "grid.12916.3d",
-        "country_level_part": "Pays tiers",
+        "name": "University of Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Amsterdam",
+        "id": "grid.7177.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
-        "z": 1
+        "z": 5
       },
       {
-        "name": "Estonian Research Council (Estonie)",
-        "country": "Estonie",
-        "full_name": "Estonian Research Council",
-        "id": "grid.426153.7",
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "FNSP (France)",
-        "country": "France",
-        "full_name": "Fondation nationale des sciences politiques",
-        "acronym": "FNSP",
-        "id": "AC4nM",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Centre for Social Innovation (Autriche)",
-        "country": "Autriche",
-        "full_name": "Centre for Social Innovation",
-        "id": "grid.15683.39",
-        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 16
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
       },
       {
         "name": "IEP de Paris (France)",
@@ -332,17 +376,23 @@
         "acronym": "IEP de Paris",
         "id": "u79ZJ",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Leiden University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University",
-        "id": "grid.5132.5",
+        "name": "Austrian Research Promotion Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Research Promotion Agency",
+        "id": "grid.197345.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
-        "z": 13
+        "z": 7
       },
       {
         "name": "Tecnalia (Espagne)",
@@ -350,8 +400,36 @@
         "full_name": "Tecnalia",
         "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "FNSP (France)",
+        "country": "France",
+        "full_name": "Fondation nationale des sciences politiques",
+        "acronym": "FNSP",
+        "id": "AC4nM",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of the West Indies (Jamaïque)",
+        "country": "Jamaïque",
+        "full_name": "University of the West Indies",
+        "id": "grid.12916.3d",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -359,17 +437,59 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
         "z": 11
       },
       {
-        "name": "GenØk (Norvège)",
-        "country": "Norvège",
-        "full_name": "GenØk",
-        "id": "grid.452322.0",
-        "country_level_part": "Pays associés",
+        "name": "Leiden University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University",
+        "id": "grid.5132.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
         "y": 1,
-        "z": 1
+        "z": 13
+      },
+      {
+        "name": "Estonian Research Council (Estonie)",
+        "country": "Estonie",
+        "full_name": "Estonian Research Council",
+        "id": "grid.426153.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Centre for Social Innovation (Autriche)",
+        "country": "Autriche",
+        "full_name": "Centre for Social Innovation",
+        "id": "grid.15683.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Maastricht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maastricht University",
+        "id": "grid.5012.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741402
+        ],
+        "y": 1,
+        "z": 9
       }
     ]
   }

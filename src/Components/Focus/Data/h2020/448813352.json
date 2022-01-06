@@ -2,52 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "FNSP (France)",
-        "country": "France",
-        "full_name": "Fondation nationale des sciences politiques",
-        "acronym": "FNSP",
-        "id": "AC4nM",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "Lisbon University Institute (Portugal)",
-        "country": "Portugal",
-        "full_name": "Lisbon University Institute",
-        "id": "grid.45349.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
         "name": "Centre for Research in Anthropology (Portugal)",
         "country": "Portugal",
         "full_name": "Centre for Research in Anthropology",
         "id": "grid.421643.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "EHESS (France)",
-        "country": "France",
-        "full_name": "École des hautes études en sciences sociales",
-        "acronym": "EHESS",
-        "id": "y52D7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Cadmium Compagnie (France)",
-        "country": "France",
-        "full_name": "Cadmium Compagnie",
-        "acronym": "Cadmium Compagnie",
-        "id": "493440903",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "CNRS (France)",
@@ -56,6 +20,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 2670
       },
@@ -65,6 +32,9 @@
         "full_name": "Max Weber Foundation International Humanities",
         "id": "grid.469714.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 9
       },
@@ -75,69 +45,11 @@
         "acronym": "RFIEA",
         "id": "9R9yI",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Net7 (Italie)",
-        "country": "Italie",
-        "full_name": "Net7",
-        "id": "grid.425687.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "UPHF (France)",
-        "country": "France",
-        "full_name": "Université Polytechnique Hauts-de-France",
-        "acronym": "UPHF",
-        "id": "EW53M",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      }
-    ]
-  },
-  "Science with and for Society": {
-    "Science with and for Society (SWAFS)": [
-      {
-        "name": "FNSP (France)",
-        "country": "France",
-        "full_name": "Fondation nationale des sciences politiques",
-        "acronym": "FNSP",
-        "id": "AC4nM",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Lisbon University Institute (Portugal)",
-        "country": "Portugal",
-        "full_name": "Lisbon University Institute",
-        "id": "grid.45349.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Centre for Research in Anthropology (Portugal)",
-        "country": "Portugal",
-        "full_name": "Centre for Research in Anthropology",
-        "id": "grid.421643.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "EHESS (France)",
-        "country": "France",
-        "full_name": "École des hautes études en sciences sociales",
-        "acronym": "EHESS",
-        "id": "y52D7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Cadmium Compagnie (France)",
@@ -146,6 +58,88 @@
         "acronym": "Cadmium Compagnie",
         "id": "493440903",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Lisbon University Institute (Portugal)",
+        "country": "Portugal",
+        "full_name": "Lisbon University Institute",
+        "id": "grid.45349.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "FNSP (France)",
+        "country": "France",
+        "full_name": "Fondation nationale des sciences politiques",
+        "acronym": "FNSP",
+        "id": "AC4nM",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "EHESS (France)",
+        "country": "France",
+        "full_name": "École des hautes études en sciences sociales",
+        "acronym": "EHESS",
+        "id": "y52D7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Net7 (Italie)",
+        "country": "Italie",
+        "full_name": "Net7",
+        "id": "grid.425687.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 4
+      }
+    ]
+  },
+  "Science with and for Society": {
+    "Science with and for Society (SWAFS)": [
+      {
+        "name": "Centre for Research in Anthropology (Portugal)",
+        "country": "Portugal",
+        "full_name": "Centre for Research in Anthropology",
+        "id": "grid.421643.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 1
       },
@@ -156,6 +150,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 15
       },
@@ -165,6 +162,9 @@
         "full_name": "Max Weber Foundation International Humanities",
         "id": "grid.469714.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 1
       },
@@ -175,6 +175,73 @@
         "acronym": "RFIEA",
         "id": "9R9yI",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Cadmium Compagnie (France)",
+        "country": "France",
+        "full_name": "Cadmium Compagnie",
+        "acronym": "Cadmium Compagnie",
+        "id": "493440903",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Lisbon University Institute (Portugal)",
+        "country": "Portugal",
+        "full_name": "Lisbon University Institute",
+        "id": "grid.45349.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "FNSP (France)",
+        "country": "France",
+        "full_name": "Fondation nationale des sciences politiques",
+        "acronym": "FNSP",
+        "id": "AC4nM",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "EHESS (France)",
+        "country": "France",
+        "full_name": "École des hautes études en sciences sociales",
+        "acronym": "EHESS",
+        "id": "y52D7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 1
       },
@@ -184,18 +251,11 @@
         "full_name": "Net7",
         "id": "grid.425687.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006325
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "UPHF (France)",
-        "country": "France",
-        "full_name": "Université Polytechnique Hauts-de-France",
-        "acronym": "UPHF",
-        "id": "EW53M",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       }
     ]
   }

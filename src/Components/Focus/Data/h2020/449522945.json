@@ -2,78 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 111
-      },
-      {
-        "name": "Zurich University of Applied Sciences (Suisse)",
-        "country": "Suisse",
-        "full_name": "Zurich University of Applied Sciences",
-        "id": "grid.19739.35",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Orange (Pologne)",
-        "country": "Pologne",
-        "full_name": "Orange",
-        "id": "grid.426180.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Montimage (France)",
-        "country": "France",
-        "full_name": "Montimage",
-        "acronym": "Montimage",
-        "id": "479142937",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Telefonica Research and Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Telefonica Research and Development",
-        "id": "grid.99308.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 286
-      },
-      {
-        "name": "University of Murcia (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Murcia",
-        "id": "grid.10586.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
       },
       {
         "name": "Orange (France)",
@@ -82,17 +21,23 @@
         "acronym": "Orange",
         "id": "gent127",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 53
       },
       {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
+        "name": "Telefonica Research and Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Telefonica Research and Development",
+        "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
-        "z": 159
+        "z": 81
       },
       {
         "name": "University of Oulu (Finlande)",
@@ -100,8 +45,96 @@
         "full_name": "University of Oulu",
         "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 101
+      },
+      {
+        "name": "Zurich University of Applied Sciences (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zurich University of Applied Sciences",
+        "id": "grid.19739.35",
+        "country_level_part": "Pays associés",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Orange (Pologne)",
+        "country": "Pologne",
+        "full_name": "Orange",
+        "id": "grid.426180.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 111
+      },
+      {
+        "name": "University of Murcia (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Murcia",
+        "id": "grid.10586.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 159
+      },
+      {
+        "name": "Montimage (France)",
+        "country": "France",
+        "full_name": "Montimage",
+        "acronym": "Montimage",
+        "id": "479142937",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 155
       },
       {
         "name": "European Institute For Research and Strategic Studies In Telecommunications (Allemagne)",
@@ -109,6 +142,9 @@
         "full_name": "European Institute For Research and Strategic Studies In Telecommunications",
         "id": "grid.28368.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 22
       }
@@ -117,78 +153,17 @@
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "Zurich University of Applied Sciences (Suisse)",
-        "country": "Suisse",
-        "full_name": "Zurich University of Applied Sciences",
-        "id": "grid.19739.35",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Orange (Pologne)",
-        "country": "Pologne",
-        "full_name": "Orange",
-        "id": "grid.426180.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Montimage (France)",
-        "country": "France",
-        "full_name": "Montimage",
-        "acronym": "Montimage",
-        "id": "479142937",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Telefonica Research and Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Telefonica Research and Development",
-        "id": "grid.99308.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 84
-      },
-      {
-        "name": "University of Murcia (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Murcia",
-        "id": "grid.10586.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Orange (France)",
@@ -197,17 +172,23 @@
         "acronym": "Orange",
         "id": "gent127",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 44
       },
       {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
+        "name": "Telefonica Research and Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Telefonica Research and Development",
+        "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
-        "z": 32
+        "z": 62
       },
       {
         "name": "University of Oulu (Finlande)",
@@ -215,8 +196,96 @@
         "full_name": "University of Oulu",
         "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 22
+      },
+      {
+        "name": "Zurich University of Applied Sciences (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zurich University of Applied Sciences",
+        "id": "grid.19739.35",
+        "country_level_part": "Pays associés",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Orange (Pologne)",
+        "country": "Pologne",
+        "full_name": "Orange",
+        "id": "grid.426180.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "University of Murcia (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Murcia",
+        "id": "grid.10586.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Montimage (France)",
+        "country": "France",
+        "full_name": "Montimage",
+        "acronym": "Montimage",
+        "id": "479142937",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
+        "y": 1,
+        "z": 51
       },
       {
         "name": "European Institute For Research and Strategic Studies In Telecommunications (Allemagne)",
@@ -224,6 +293,9 @@
         "full_name": "European Institute For Research and Strategic Studies In Telecommunications",
         "id": "grid.28368.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          871808
+        ],
         "y": 1,
         "z": 21
       }

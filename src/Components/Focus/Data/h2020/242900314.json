@@ -7,18 +7,12 @@
         "full_name": "Ayuntamiento de Valencia",
         "id": "grid.423853.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136,
+          730283
+        ],
         "y": 2,
         "z": 19
-      },
-      {
-        "name": "Pays-de-Brest (France)",
-        "country": "France",
-        "full_name": "Pôle métropolitain du Pays-de-Brest",
-        "acronym": "Pays-de-Brest",
-        "id": "200033736",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Energy Cities / Energi... (France)",
@@ -27,44 +21,36 @@
         "acronym": "Energy Cities / Energi...",
         "id": "379716764",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136
+        ],
         "y": 1,
         "z": 21
       },
       {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "name": "Pays-de-Brest (France)",
+        "country": "France",
+        "full_name": "Pôle métropolitain du Pays-de-Brest",
+        "acronym": "Pays-de-Brest",
+        "id": "200033736",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136
+        ],
         "y": 1,
-        "z": 368
+        "z": 1
       },
       {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
+        "name": "Manchester City Council (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
+        "full_name": "Manchester City Council",
+        "id": "grid.421109.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
-        "z": 345
-      },
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 241
+        "z": 3
       },
       {
         "name": "Ouishare (France)",
@@ -73,35 +59,11 @@
         "acronym": "Ouishare",
         "id": "788686699",
         "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Manchester Climate Change Agency (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Manchester Climate Change Agency",
-        "id": "grid.494255.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "International Union for Conservation of Nature (Suisse)",
-        "country": "Suisse",
-        "full_name": "International Union for Conservation of Nature",
-        "id": "grid.426526.1",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 99
       },
       {
         "name": "Wroclaw University of Environmental and Life Sciences (Pologne)",
@@ -109,31 +71,111 @@
         "full_name": "Wroclaw University of Environmental and Life Sciences",
         "id": "grid.411200.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "Manchester City Council (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Manchester City Council",
-        "id": "grid.421109.f",
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
-        "z": 3
+        "z": 182
+      },
+      {
+        "name": "Manchester Climate Change Agency (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Manchester Climate Change Agency",
+        "id": "grid.494255.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "International Union for Conservation of Nature (Suisse)",
+        "country": "Suisse",
+        "full_name": "International Union for Conservation of Nature",
+        "id": "grid.426526.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 241
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 99
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "Pays-de-Brest (France)",
-        "country": "France",
-        "full_name": "Pôle métropolitain du Pays-de-Brest",
-        "acronym": "Pays-de-Brest",
-        "id": "200033736",
+        "name": "Ayuntamiento de Valencia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ayuntamiento de Valencia",
+        "id": "grid.423853.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136
+        ],
         "y": 1,
-        "z": 1
+        "z": 2
       },
       {
         "name": "Energy Cities / Energi... (France)",
@@ -142,17 +184,24 @@
         "acronym": "Energy Cities / Energi...",
         "id": "379716764",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136
+        ],
         "y": 1,
         "z": 19
       },
       {
-        "name": "Ayuntamiento de Valencia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ayuntamiento de Valencia",
-        "id": "grid.423853.b",
+        "name": "Pays-de-Brest (France)",
+        "country": "France",
+        "full_name": "Pôle métropolitain du Pays-de-Brest",
+        "acronym": "Pays-de-Brest",
+        "id": "200033736",
         "country_level_part": "Pays membres",
+        "projects": [
+          847136
+        ],
         "y": 1,
-        "z": 2
+        "z": 1
       }
     ],
     "Climate action, environment, resource efficiency and raw materials (ENV)": [
@@ -162,88 +211,9 @@
         "full_name": "Ayuntamiento de Valencia",
         "id": "grid.423853.b",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "University of Manchester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Manchester",
-        "id": "grid.5379.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Ouishare (France)",
-        "country": "France",
-        "full_name": "Ouishare",
-        "acronym": "Ouishare",
-        "id": "788686699",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Manchester Climate Change Agency (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Manchester Climate Change Agency",
-        "id": "grid.494255.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "International Union for Conservation of Nature (Suisse)",
-        "country": "Suisse",
-        "full_name": "International Union for Conservation of Nature",
-        "id": "grid.426526.1",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Wroclaw University of Environmental and Life Sciences (Pologne)",
-        "country": "Pologne",
-        "full_name": "Wroclaw University of Environmental and Life Sciences",
-        "id": "grid.411200.6",
-        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
         "z": 1
       },
@@ -253,8 +223,120 @@
         "full_name": "Manchester City Council",
         "id": "grid.421109.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Ouishare (France)",
+        "country": "France",
+        "full_name": "Ouishare",
+        "acronym": "Ouishare",
+        "id": "788686699",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Wroclaw University of Environmental and Life Sciences (Pologne)",
+        "country": "Pologne",
+        "full_name": "Wroclaw University of Environmental and Life Sciences",
+        "id": "grid.411200.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Manchester Climate Change Agency (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Manchester Climate Change Agency",
+        "id": "grid.494255.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "International Union for Conservation of Nature (Suisse)",
+        "country": "Suisse",
+        "full_name": "International Union for Conservation of Nature",
+        "id": "grid.426526.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730283
+        ],
+        "y": 1,
+        "z": 9
       }
     ]
   }

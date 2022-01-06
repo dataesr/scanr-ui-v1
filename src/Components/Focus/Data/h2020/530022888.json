@@ -2,32 +2,28 @@
   "all": {
     "all": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 453
-      },
-      {
-        "name": "Hospital Clínic de Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Clínic de Barcelona",
-        "id": "grid.410458.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
-      },
-      {
-        "name": "Goethe University Frankfurt (Allemagne)",
+        "name": "Concentris (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
+        "full_name": "Concentris",
+        "id": "grid.424223.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 85
+        "z": 19
+      },
+      {
+        "name": "European Foundation for the Study of Chronic Liver Failure (Espagne)",
+        "country": "Espagne",
+        "full_name": "European Foundation for the Study of Chronic Liver Failure",
+        "id": "grid.490732.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "CEA (France)",
@@ -36,17 +32,23 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 852
       },
       {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
+        "name": "University of Oslo (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Oslo",
+        "id": "grid.5510.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 321
+        "z": 186
       },
       {
         "name": "Max Planck Society (Allemagne)",
@@ -54,26 +56,23 @@
         "full_name": "Max Planck Society",
         "id": "grid.4372.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 379
       },
       {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 130
-      },
-      {
-        "name": "University of Barcelona (Espagne)",
+        "name": "Fundació Privada Clínic per a La Recerca Biomèdica (Espagne)",
         "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
+        "full_name": "Fundació Privada Clínic per a La Recerca Biomèdica",
+        "id": "grid.10447.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 148
+        "z": 31
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -82,35 +81,23 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 575
       },
       {
-        "name": "European Foundation for the Study of Chronic Liver Failure (Espagne)",
-        "country": "Espagne",
-        "full_name": "European Foundation for the Study of Chronic Liver Failure",
-        "id": "grid.490732.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "King's College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "King's College London",
-        "id": "grid.13097.3c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 158
-      },
-      {
-        "name": "Concentris (Allemagne)",
+        "name": "Goethe University Frankfurt (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Concentris",
-        "id": "grid.424223.1",
+        "full_name": "Goethe University Frankfurt",
+        "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 19
+        "z": 85
       },
       {
         "name": "Biobyte Solutions (Allemagne)",
@@ -118,8 +105,23 @@
         "full_name": "Biobyte Solutions",
         "id": "grid.431797.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "King's College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "King's College London",
+        "id": "grid.13097.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 158
       },
       {
         "name": "University of Debrecen (Hongrie)",
@@ -127,26 +129,11 @@
         "full_name": "University of Debrecen",
         "id": "grid.7122.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 489
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 412
       },
       {
         "name": "Leiden University Medical Center (Pays-Bas)",
@@ -154,26 +141,84 @@
         "full_name": "Leiden University Medical Center",
         "id": "grid.10419.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 124
       },
       {
-        "name": "University of Oslo (Norvège)",
-        "country": "Norvège",
-        "full_name": "University of Oslo",
-        "id": "grid.5510.1",
-        "country_level_part": "Pays associés",
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 186
+        "z": 321
       },
       {
-        "name": "Fundació Privada Clínic per a La Recerca Biomèdica (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundació Privada Clínic per a La Recerca Biomèdica",
-        "id": "grid.10447.36",
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 31
+        "z": 489
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 453
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 412
+      },
+      {
+        "name": "Hospital Clínic de Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Clínic de Barcelona",
+        "id": "grid.410458.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Barcelona",
+        "id": "grid.5841.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 148
       },
       {
         "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
@@ -181,40 +226,51 @@
         "full_name": "Institut Català de Nanociència i Nanotecnologia",
         "id": "grid.424584.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 40
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 130
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Hospital Clínic de Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Clínic de Barcelona",
-        "id": "grid.410458.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Goethe University Frankfurt (Allemagne)",
+        "name": "Concentris (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
+        "full_name": "Concentris",
+        "id": "grid.424223.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 21
+        "z": 17
+      },
+      {
+        "name": "European Foundation for the Study of Chronic Liver Failure (Espagne)",
+        "country": "Espagne",
+        "full_name": "European Foundation for the Study of Chronic Liver Failure",
+        "id": "grid.490732.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "CEA (France)",
@@ -223,17 +279,23 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 34
       },
       {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
+        "name": "University of Oslo (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Oslo",
+        "id": "grid.5510.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 49
+        "z": 24
       },
       {
         "name": "Max Planck Society (Allemagne)",
@@ -241,26 +303,23 @@
         "full_name": "Max Planck Society",
         "id": "grid.4372.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 20
       },
       {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "University of Barcelona (Espagne)",
+        "name": "Fundació Privada Clínic per a La Recerca Biomèdica (Espagne)",
         "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
+        "full_name": "Fundació Privada Clínic per a La Recerca Biomèdica",
+        "id": "grid.10447.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 15
+        "z": 26
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -269,35 +328,23 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 30
       },
       {
-        "name": "European Foundation for the Study of Chronic Liver Failure (Espagne)",
-        "country": "Espagne",
-        "full_name": "European Foundation for the Study of Chronic Liver Failure",
-        "id": "grid.490732.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "King's College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "King's College London",
-        "id": "grid.13097.3c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "Concentris (Allemagne)",
+        "name": "Goethe University Frankfurt (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Concentris",
-        "id": "grid.424223.1",
+        "full_name": "Goethe University Frankfurt",
+        "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 17
+        "z": 21
       },
       {
         "name": "Biobyte Solutions (Allemagne)",
@@ -305,8 +352,23 @@
         "full_name": "Biobyte Solutions",
         "id": "grid.431797.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "King's College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "King's College London",
+        "id": "grid.13097.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 57
       },
       {
         "name": "University of Debrecen (Hongrie)",
@@ -314,26 +376,11 @@
         "full_name": "University of Debrecen",
         "id": "grid.7122.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 83
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 74
       },
       {
         "name": "Leiden University Medical Center (Pays-Bas)",
@@ -341,26 +388,84 @@
         "full_name": "Leiden University Medical Center",
         "id": "grid.10419.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 66
       },
       {
-        "name": "University of Oslo (Norvège)",
-        "country": "Norvège",
-        "full_name": "University of Oslo",
-        "id": "grid.5510.1",
-        "country_level_part": "Pays associés",
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
-        "z": 24
+        "z": 49
       },
       {
-        "name": "Fundació Privada Clínic per a La Recerca Biomèdica (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundació Privada Clínic per a La Recerca Biomèdica",
-        "id": "grid.10447.36",
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 26
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 74
+      },
+      {
+        "name": "Hospital Clínic de Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Clínic de Barcelona",
+        "id": "grid.410458.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Barcelona",
+        "id": "grid.5841.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 15
       },
       {
         "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
@@ -368,8 +473,23 @@
         "full_name": "Institut Català de Nanociència i Nanotecnologia",
         "id": "grid.424584.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825694
+        ],
+        "y": 1,
+        "z": 30
       }
     ]
   }

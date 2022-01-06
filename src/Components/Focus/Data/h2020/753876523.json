@@ -2,98 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Inserm Transfert (France)",
-        "country": "France",
-        "full_name": "Inserm Transfert",
-        "acronym": "Inserm Transfert",
-        "id": "434033619",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Public Health Agency of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "Public Health Agency of Sweden",
-        "id": "grid.419734.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
         "name": "Department of Health and Social Care (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Department of Health and Social Care",
         "id": "grid.57981.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 41
-      },
-      {
-        "name": "Cumhuriyet University (Turquie)",
-        "country": "Turquie",
-        "full_name": "Cumhuriyet University",
-        "id": "grid.411689.3",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Stirling (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Stirling",
-        "id": "grid.11918.30",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Coris BioConcept (Belgique)",
-        "country": "Belgique",
-        "full_name": "Coris BioConcept",
-        "id": "grid.433414.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 689
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 321
-      },
-      {
-        "name": "AP-HM (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Marseille",
-        "acronym": "AP-HM",
-        "id": "dUyiC",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 214
       },
       {
         "name": "Cepheid Europe (France)",
@@ -102,46 +20,48 @@
         "acronym": "Cepheid Europe",
         "id": "444404941",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Rd Biotech (France)",
+        "name": "Public Health Agency of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "Public Health Agency of Sweden",
+        "id": "grid.419734.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "University of Stirling (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Stirling",
+        "id": "grid.11918.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "AP-HM (France)",
         "country": "France",
-        "full_name": "Rd Biotech",
-        "acronym": "Rd Biotech",
-        "id": "442804266",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Institut Pasteur de Dakar (Sénégal)",
-        "country": "Sénégal",
-        "full_name": "Institut Pasteur de Dakar",
-        "id": "grid.418508.0",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "EHESP (France)",
-        "country": "France",
-        "full_name": "École des hautes études en santé publique",
-        "acronym": "EHESP",
-        "id": "SsRkf",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani (Italie)",
-        "country": "Italie",
-        "full_name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani",
-        "id": "grid.419423.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
+        "z": 31
       },
       {
         "name": "AMU (France)",
@@ -150,106 +70,152 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 216
+      },
+      {
+        "name": "Cumhuriyet University (Turquie)",
+        "country": "Turquie",
+        "full_name": "Cumhuriyet University",
+        "id": "grid.411689.3",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani",
+        "id": "grid.419423.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "EHESP (France)",
+        "country": "France",
+        "full_name": "École des hautes études en santé publique",
+        "acronym": "EHESP",
+        "id": "SsRkf",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Coris BioConcept (Belgique)",
+        "country": "Belgique",
+        "full_name": "Coris BioConcept",
+        "id": "grid.433414.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Institut Pasteur de Dakar (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Institut Pasteur de Dakar",
+        "id": "grid.418508.0",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Rd Biotech (France)",
+        "country": "France",
+        "full_name": "Rd Biotech",
+        "acronym": "Rd Biotech",
+        "id": "442804266",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "Inserm Transfert (France)",
+        "country": "France",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 689
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Inserm Transfert (France)",
-        "country": "France",
-        "full_name": "Inserm Transfert",
-        "acronym": "Inserm Transfert",
-        "id": "434033619",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "Public Health Agency of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "Public Health Agency of Sweden",
-        "id": "grid.419734.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
         "name": "Department of Health and Social Care (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Department of Health and Social Care",
         "id": "grid.57981.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 24
-      },
-      {
-        "name": "Cumhuriyet University (Turquie)",
-        "country": "Turquie",
-        "full_name": "Cumhuriyet University",
-        "id": "grid.411689.3",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Stirling (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Stirling",
-        "id": "grid.11918.30",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Coris BioConcept (Belgique)",
-        "country": "Belgique",
-        "full_name": "Coris BioConcept",
-        "id": "grid.433414.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "AP-HM (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Marseille",
-        "acronym": "AP-HM",
-        "id": "dUyiC",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "Cepheid Europe (France)",
@@ -258,46 +224,48 @@
         "acronym": "Cepheid Europe",
         "id": "444404941",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Rd Biotech (France)",
+        "name": "Public Health Agency of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "Public Health Agency of Sweden",
+        "id": "grid.419734.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Stirling (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Stirling",
+        "id": "grid.11918.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "AP-HM (France)",
         "country": "France",
-        "full_name": "Rd Biotech",
-        "acronym": "Rd Biotech",
-        "id": "442804266",
+        "full_name": "Assistance publique - Hôpitaux de Marseille",
+        "acronym": "AP-HM",
+        "id": "dUyiC",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Institut Pasteur de Dakar (Sénégal)",
-        "country": "Sénégal",
-        "full_name": "Institut Pasteur de Dakar",
-        "id": "grid.418508.0",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "EHESP (France)",
-        "country": "France",
-        "full_name": "École des hautes études en santé publique",
-        "acronym": "EHESP",
-        "id": "SsRkf",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani (Italie)",
-        "country": "Italie",
-        "full_name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani",
-        "id": "grid.419423.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
+        "z": 8
       },
       {
         "name": "AMU (France)",
@@ -306,8 +274,136 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Cumhuriyet University (Turquie)",
+        "country": "Turquie",
+        "full_name": "Cumhuriyet University",
+        "id": "grid.411689.3",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Nazionale per le Malattie Infettive Lazzaro Spallanzani",
+        "id": "grid.419423.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "EHESP (France)",
+        "country": "France",
+        "full_name": "École des hautes études en santé publique",
+        "acronym": "EHESP",
+        "id": "SsRkf",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Coris BioConcept (Belgique)",
+        "country": "Belgique",
+        "full_name": "Coris BioConcept",
+        "id": "grid.433414.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institut Pasteur de Dakar (Sénégal)",
+        "country": "Sénégal",
+        "full_name": "Institut Pasteur de Dakar",
+        "id": "grid.418508.0",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Rd Biotech (France)",
+        "country": "France",
+        "full_name": "Rd Biotech",
+        "acronym": "Rd Biotech",
+        "id": "442804266",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Inserm Transfert (France)",
+        "country": "France",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          823666
+        ],
+        "y": 1,
+        "z": 174
       }
     ]
   }

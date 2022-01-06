@@ -2,77 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "Ayuntamiento de Santander (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ayuntamiento de Santander",
-        "id": "grid.423848.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "EGLOBALMARK (France)",
-        "country": "France",
-        "full_name": "Easy Global Market",
-        "acronym": "EGLOBALMARK",
-        "id": "524029469",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "NEC (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "NEC",
-        "id": "grid.474373.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 48
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "Telefonica Research and Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Telefonica Research and Development",
-        "id": "grid.99308.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
-        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
-        "id": "grid.410380.e",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 30
-      },
-      {
         "name": "NEC (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "NEC",
         "id": "grid.28328.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
         "z": 27
       },
@@ -83,49 +20,11 @@
         "acronym": "Télécom SudParis",
         "id": "YvBkH",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
         "z": 13
-      },
-      {
-        "name": "Liverpool John Moores University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Liverpool John Moores University",
-        "id": "grid.4425.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Ayuntamiento de Santander (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ayuntamiento de Santander",
-        "id": "grid.423848.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "EGLOBALMARK (France)",
@@ -134,17 +33,11 @@
         "acronym": "EGLOBALMARK",
         "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
-        "z": 14
-      },
-      {
-        "name": "NEC (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "NEC",
-        "id": "grid.474373.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
+        "z": 21
       },
       {
         "name": "CEA (France)",
@@ -153,8 +46,23 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
-        "z": 167
+        "z": 852
+      },
+      {
+        "name": "Ayuntamiento de Santander (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ayuntamiento de Santander",
+        "id": "grid.423848.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "Telefonica Research and Development (Espagne)",
@@ -162,8 +70,60 @@
         "full_name": "Telefonica Research and Development",
         "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
-        "z": 62
+        "z": 81
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "University of Cantabria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "NEC (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NEC",
+        "id": "grid.474373.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Liverpool John Moores University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Liverpool John Moores University",
+        "id": "grid.4425.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 18
       },
       {
         "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
@@ -171,15 +131,25 @@
         "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
         "id": "grid.410380.e",
         "country_level_part": "Pays associés",
+        "projects": [
+          723156
+        ],
         "y": 1,
-        "z": 5
-      },
+        "z": 30
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
       {
         "name": "NEC (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "NEC",
         "id": "grid.28328.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
         "z": 20
       },
@@ -190,17 +160,74 @@
         "acronym": "Télécom SudParis",
         "id": "YvBkH",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
         "z": 7
       },
       {
-        "name": "Liverpool John Moores University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Liverpool John Moores University",
-        "id": "grid.4425.7",
+        "name": "EGLOBALMARK (France)",
+        "country": "France",
+        "full_name": "Easy Global Market",
+        "acronym": "EGLOBALMARK",
+        "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
-        "z": 2
+        "z": 14
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "Ayuntamiento de Santander (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ayuntamiento de Santander",
+        "id": "grid.423848.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Telefonica Research and Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Telefonica Research and Development",
+        "id": "grid.99308.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 36
       },
       {
         "name": "University of Cantabria (Espagne)",
@@ -208,8 +235,47 @@
         "full_name": "University of Cantabria",
         "id": "grid.7821.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
         "y": 1,
         "z": 14
+      },
+      {
+        "name": "NEC (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NEC",
+        "id": "grid.474373.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Liverpool John Moores University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Liverpool John Moores University",
+        "id": "grid.4425.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
+        "id": "grid.410380.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          723156
+        ],
+        "y": 1,
+        "z": 5
       }
     ]
   }

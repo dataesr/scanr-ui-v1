@@ -2,51 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "University of East Anglia (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of East Anglia",
-        "id": "grid.8273.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 42
-      },
-      {
-        "name": "National University of Ireland, Galway (Irlande)",
-        "country": "Irlande",
-        "full_name": "National University of Ireland, Galway",
-        "id": "grid.6142.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 162
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 103
-      },
-      {
-        "name": "Institut Curie (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut Curie",
-        "acronym": "Institut Curie",
-        "id": "etRot",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 76
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 689
+        "z": 2670
       },
       {
         "name": "Erasmus MC (Pays-Bas)",
@@ -54,27 +20,36 @@
         "full_name": "Erasmus MC",
         "id": "grid.5645.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 139
       },
       {
-        "name": "CNRS (France)",
+        "name": "Université PSL (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 2670
+        "z": 407
       },
       {
-        "name": "Miguel Hernandez University (Espagne)",
-        "country": "Espagne",
-        "full_name": "Miguel Hernandez University",
-        "id": "grid.26811.3c",
+        "name": "National University of Ireland, Galway (Irlande)",
+        "country": "Irlande",
+        "full_name": "National University of Ireland, Galway",
+        "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 19
+        "z": 162
       },
       {
         "name": "Tel Aviv University (Israël)",
@@ -82,6 +57,9 @@
         "full_name": "Tel Aviv University",
         "id": "grid.12136.37",
         "country_level_part": "Pays associés",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 78
       },
@@ -92,6 +70,9 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 388
       },
@@ -101,59 +82,11 @@
         "full_name": "King's College London",
         "id": "grid.13097.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 158
-      },
-      {
-        "name": "Université PSL (France)",
-        "country": "France",
-        "full_name": "Université Paris sciences et lettres",
-        "acronym": "Université PSL",
-        "id": "PpsCQ",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 407
-      },
-      {
-        "name": "U. Paris-Saclay (France)",
-        "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 575
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "University of East Anglia (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of East Anglia",
-        "id": "grid.8273.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "National University of Ireland, Galway (Irlande)",
-        "country": "Irlande",
-        "full_name": "National University of Ireland, Galway",
-        "id": "grid.6142.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 45
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
       },
       {
         "name": "Institut Curie (France)",
@@ -162,8 +95,60 @@
         "acronym": "Institut Curie",
         "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 30
+        "z": 76
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "University of East Anglia (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of East Anglia",
+        "id": "grid.8273.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Miguel Hernandez University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Miguel Hernandez University",
+        "id": "grid.26811.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 19
       },
       {
         "name": "Inserm (France)",
@@ -172,18 +157,16 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 258
-      },
-      {
-        "name": "Erasmus MC (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Erasmus MC",
-        "id": "grid.5645.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
+        "z": 689
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -191,17 +174,48 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 938
       },
       {
-        "name": "Miguel Hernandez University (Espagne)",
-        "country": "Espagne",
-        "full_name": "Miguel Hernandez University",
-        "id": "grid.26811.3c",
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 3
+        "z": 34
+      },
+      {
+        "name": "Université PSL (France)",
+        "country": "France",
+        "full_name": "Université Paris sciences et lettres",
+        "acronym": "Université PSL",
+        "id": "PpsCQ",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 165
+      },
+      {
+        "name": "National University of Ireland, Galway (Irlande)",
+        "country": "Irlande",
+        "full_name": "National University of Ireland, Galway",
+        "id": "grid.6142.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 45
       },
       {
         "name": "Tel Aviv University (Israël)",
@@ -209,6 +223,9 @@
         "full_name": "Tel Aviv University",
         "id": "grid.12136.37",
         "country_level_part": "Pays associés",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 34
       },
@@ -219,6 +236,9 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 128
       },
@@ -228,18 +248,24 @@
         "full_name": "King's College London",
         "id": "grid.13097.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 33
       },
       {
-        "name": "Université PSL (France)",
+        "name": "Institut Curie (France)",
         "country": "France",
-        "full_name": "Université Paris sciences et lettres",
-        "acronym": "Université PSL",
-        "id": "PpsCQ",
+        "full_name": "Institut Curie",
+        "acronym": "Institut Curie",
+        "id": "etRot",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
-        "z": 165
+        "z": 30
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -248,8 +274,60 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
         "y": 1,
         "z": 137
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "University of East Anglia (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of East Anglia",
+        "id": "grid.8273.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Miguel Hernandez University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Miguel Hernandez University",
+        "id": "grid.26811.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860635
+        ],
+        "y": 1,
+        "z": 258
       }
     ]
   }

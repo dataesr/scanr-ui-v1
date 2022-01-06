@@ -2,120 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Toptica Photonics (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Toptica Photonics",
-        "id": "grid.426263.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Infineon Technologies (Autriche)",
-        "country": "Autriche",
-        "full_name": "Infineon Technologies",
-        "id": "grid.425032.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "ID Quantique (Suisse)",
-        "country": "Suisse",
-        "full_name": "ID Quantique",
-        "id": "grid.424836.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 238
-      },
-      {
-        "name": "Orsay Group (France)",
-        "country": "France",
-        "full_name": "Orsay Group",
-        "acronym": "Orsay Group",
-        "id": "350421996",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Cryoconcept France (France)",
-        "country": "France",
-        "full_name": "Cryoconcept France",
-        "acronym": "Cryoconcept France",
-        "id": "803871797",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 286
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "Air Liquide (France)",
-        "country": "France",
-        "full_name": "Air Liquide",
-        "acronym": "Air Liquide",
-        "id": "gent7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "Teem Photonics (France)",
-        "country": "France",
-        "full_name": "Teem Photonics",
-        "acronym": "Teem Photonics",
-        "id": "399229434",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "STMicroelectronics (France)",
-        "country": "France",
-        "full_name": "STMicroelectronics",
-        "acronym": "STMicroelectronics",
-        "id": "gent166",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Soitec (France)",
-        "country": "France",
-        "full_name": "Soitec",
-        "acronym": "Soitec",
-        "id": "gent163",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "CNRS (France)",
@@ -124,8 +21,86 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 2670
+      },
+      {
+        "name": "Infineon Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Infineon Technologies",
+        "id": "grid.425032.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 238
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Toptica Photonics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Toptica Photonics",
+        "id": "grid.426263.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "Atos (France)",
@@ -134,16 +109,22 @@
         "acronym": "Atos",
         "id": "gent32",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 52
       },
       {
-        "name": "3d-Oxides (France)",
+        "name": "Orsay Group (France)",
         "country": "France",
-        "full_name": "3d-Oxides",
-        "acronym": "3d-Oxides",
-        "id": "509329082",
+        "full_name": "Orsay Group",
+        "acronym": "Orsay Group",
+        "id": "350421996",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 1
       },
@@ -154,6 +135,9 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 277
       },
@@ -163,35 +147,75 @@
         "full_name": "IBM Research - Zurich",
         "id": "grid.410387.9",
         "country_level_part": "Pays associés",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 103
       },
       {
-        "name": "Technical University of Košice (Slovaquie)",
-        "country": "Slovaquie",
-        "full_name": "Technical University of Košice",
-        "id": "grid.6903.c",
+        "name": "3d-Oxides (France)",
+        "country": "France",
+        "full_name": "3d-Oxides",
+        "acronym": "3d-Oxides",
+        "id": "509329082",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
-        "z": 13
+        "z": 1
       },
       {
-        "name": "Asociación Española de Normalización y Certificación (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación Española de Normalización y Certificación",
-        "id": "grid.432416.6",
+        "name": "Teem Photonics (France)",
+        "country": "France",
+        "full_name": "Teem Photonics",
+        "acronym": "Teem Photonics",
+        "id": "399229434",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "ID Quantique (Suisse)",
+        "country": "Suisse",
+        "full_name": "ID Quantique",
+        "id": "grid.424836.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Cryoconcept France (France)",
+        "country": "France",
+        "full_name": "Cryoconcept France",
+        "acronym": "Cryoconcept France",
+        "id": "803871797",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 51
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 361
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -199,6 +223,9 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 1072
       },
@@ -208,8 +235,35 @@
         "full_name": "LINKS Foundation",
         "id": "grid.507447.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 70
+      },
+      {
+        "name": "Asociación Española de Normalización y Certificación (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación Española de Normalización y Certificación",
+        "id": "grid.432416.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Technical University of Košice (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Technical University of Košice",
+        "id": "grid.6903.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Aluminium Pechiney (France)",
@@ -218,6 +272,9 @@
         "acronym": "Aluminium Pechiney",
         "id": "969510940",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 3
       },
@@ -228,17 +285,23 @@
         "acronym": "Capgemini",
         "id": "gent45",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "University of Geneva (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Geneva",
-        "id": "grid.8591.5",
-        "country_level_part": "Pays associés",
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
-        "z": 132
+        "z": 361
       },
       {
         "name": "University of Cyprus (Chypre)",
@@ -246,17 +309,23 @@
         "full_name": "University of Cyprus",
         "id": "grid.6603.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
         "y": 1,
         "z": 106
       },
       {
-        "name": "University of Coimbra (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Coimbra",
-        "id": "grid.8051.c",
-        "country_level_part": "Pays membres",
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          643647
+        ],
         "y": 1,
-        "z": 102
+        "z": 132
       },
       {
         "name": "Citard Services (Chypre)",
@@ -264,44 +333,23 @@
         "full_name": "Citard Services",
         "id": "grid.433317.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Elbit Systems (Israël)",
-        "country": "Israël",
-        "full_name": "Elbit Systems",
-        "id": "grid.434471.1",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
+        "name": "University of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Coimbra",
+        "id": "grid.8051.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
         "y": 1,
-        "z": 685
-      },
-      {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 206
+        "z": 102
       },
       {
         "name": "Hebrew University of Jerusalem (Israël)",
@@ -309,69 +357,64 @@
         "full_name": "Hebrew University of Jerusalem",
         "id": "grid.9619.7",
         "country_level_part": "Pays associés",
+        "projects": [
+          766563
+        ],
         "y": 1,
         "z": 77
+      },
+      {
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "Elbit Systems (Israël)",
+        "country": "Israël",
+        "full_name": "Elbit Systems",
+        "id": "grid.434471.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 206
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 685
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Toptica Photonics (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Toptica Photonics",
-        "id": "grid.426263.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Infineon Technologies (Autriche)",
-        "country": "Autriche",
-        "full_name": "Infineon Technologies",
-        "id": "grid.425032.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "ID Quantique (Suisse)",
-        "country": "Suisse",
-        "full_name": "ID Quantique",
-        "id": "grid.424836.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Orsay Group (France)",
-        "country": "France",
-        "full_name": "Orsay Group",
-        "acronym": "Orsay Group",
-        "id": "350421996",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Cryoconcept France (France)",
-        "country": "France",
-        "full_name": "Cryoconcept France",
-        "acronym": "Cryoconcept France",
-        "id": "803871797",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
       {
         "name": "Thales (France)",
         "country": "France",
@@ -379,58 +422,11 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 16
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 91
-      },
-      {
-        "name": "Air Liquide (France)",
-        "country": "France",
-        "full_name": "Air Liquide",
-        "acronym": "Air Liquide",
-        "id": "gent7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Teem Photonics (France)",
-        "country": "France",
-        "full_name": "Teem Photonics",
-        "acronym": "Teem Photonics",
-        "id": "399229434",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "STMicroelectronics (France)",
-        "country": "France",
-        "full_name": "STMicroelectronics",
-        "acronym": "STMicroelectronics",
-        "id": "gent166",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Soitec (France)",
-        "country": "France",
-        "full_name": "Soitec",
-        "acronym": "Soitec",
-        "id": "gent163",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "CNRS (France)",
@@ -439,8 +435,86 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 938
+      },
+      {
+        "name": "Infineon Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Infineon Technologies",
+        "id": "grid.425032.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Air Liquide (France)",
+        "country": "France",
+        "full_name": "Air Liquide",
+        "acronym": "Air Liquide",
+        "id": "gent7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 91
+      },
+      {
+        "name": "Toptica Photonics (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Toptica Photonics",
+        "id": "grid.426263.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Soitec (France)",
+        "country": "France",
+        "full_name": "Soitec",
+        "acronym": "Soitec",
+        "id": "gent163",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Atos (France)",
@@ -449,16 +523,22 @@
         "acronym": "Atos",
         "id": "gent32",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "3d-Oxides (France)",
+        "name": "Orsay Group (France)",
         "country": "France",
-        "full_name": "3d-Oxides",
-        "acronym": "3d-Oxides",
-        "id": "509329082",
+        "full_name": "Orsay Group",
+        "acronym": "Orsay Group",
+        "id": "350421996",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 1
       },
@@ -469,6 +549,9 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 69
       },
@@ -478,28 +561,89 @@
         "full_name": "IBM Research - Zurich",
         "id": "grid.410387.9",
         "country_level_part": "Pays associés",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 28
-      }
-    ],
-    "Future and Emerging Technologies (FET)": [
+      },
       {
-        "name": "Elbit Systems (Israël)",
-        "country": "Israël",
-        "full_name": "Elbit Systems",
-        "id": "grid.434471.1",
-        "country_level_part": "Pays associés",
+        "name": "3d-Oxides (France)",
+        "country": "France",
+        "full_name": "3d-Oxides",
+        "acronym": "3d-Oxides",
+        "id": "509329082",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
+        "name": "Teem Photonics (France)",
+        "country": "France",
+        "full_name": "Teem Photonics",
+        "acronym": "Teem Photonics",
+        "id": "399229434",
         "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
         "y": 1,
-        "z": 72
+        "z": 3
+      },
+      {
+        "name": "ID Quantique (Suisse)",
+        "country": "Suisse",
+        "full_name": "ID Quantique",
+        "id": "grid.424836.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Cryoconcept France (France)",
+        "country": "France",
+        "full_name": "Cryoconcept France",
+        "acronym": "Cryoconcept France",
+        "id": "803871797",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "projects": [
+          754303
+        ],
+        "y": 1,
+        "z": 2
+      }
+    ],
+    "Future and Emerging Technologies (FET)": [
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "University of Liège (Belgique)",
@@ -507,8 +651,23 @@
         "full_name": "University of Liège",
         "id": "grid.4861.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
         "y": 1,
         "z": 9
+      },
+      {
+        "name": "Elbit Systems (Israël)",
+        "country": "Israël",
+        "full_name": "Elbit Systems",
+        "id": "grid.434471.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          766563
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University of Padua (Italie)",
@@ -516,55 +675,37 @@
         "full_name": "University of Padua",
         "id": "grid.5608.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
         "y": 1,
         "z": 16
       },
       {
-        "name": "Hebrew University of Jerusalem (Israël)",
-        "country": "Israël",
-        "full_name": "Hebrew University of Jerusalem",
-        "id": "grid.9619.7",
-        "country_level_part": "Pays associés",
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766563
+        ],
         "y": 1,
-        "z": 12
+        "z": 72
       }
     ]
   },
   "Industrial Leadership": {
     "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
       {
-        "name": "Technical University of Košice (Slovaquie)",
-        "country": "Slovaquie",
-        "full_name": "Technical University of Košice",
-        "id": "grid.6903.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Asociación Española de Normalización y Certificación (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación Española de Normalización y Certificación",
-        "id": "grid.432416.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 169
       },
@@ -574,8 +715,35 @@
         "full_name": "LINKS Foundation",
         "id": "grid.507447.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Asociación Española de Normalización y Certificación (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación Española de Normalización y Certificación",
+        "id": "grid.432416.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
+        "y": 1,
+        "z": 24
+      },
+      {
+        "name": "Technical University of Košice (Slovaquie)",
+        "country": "Slovaquie",
+        "full_name": "Technical University of Košice",
+        "id": "grid.6903.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Aluminium Pechiney (France)",
@@ -584,6 +752,9 @@
         "acronym": "Aluminium Pechiney",
         "id": "969510940",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 2
       },
@@ -594,39 +765,51 @@
         "acronym": "Capgemini",
         "id": "gent45",
         "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723650
+        ],
+        "y": 1,
+        "z": 31
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "University of Geneva (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Geneva",
-        "id": "grid.8591.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 23
-      },
-      {
         "name": "University of Cyprus (Chypre)",
         "country": "Chypre",
         "full_name": "University of Cyprus",
         "id": "grid.6603.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
         "y": 1,
         "z": 6
       },
       {
-        "name": "University of Coimbra (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Coimbra",
-        "id": "grid.8051.c",
-        "country_level_part": "Pays membres",
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          643647
+        ],
         "y": 1,
-        "z": 9
+        "z": 23
       },
       {
         "name": "Citard Services (Chypre)",
@@ -634,8 +817,23 @@
         "full_name": "Citard Services",
         "id": "grid.433317.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "University of Coimbra (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Coimbra",
+        "id": "grid.8051.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          643647
+        ],
+        "y": 1,
+        "z": 9
       }
     ]
   }

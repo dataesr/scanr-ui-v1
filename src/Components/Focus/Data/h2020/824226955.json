@@ -2,33 +2,30 @@
   "all": {
     "all": [
       {
-        "name": "Obs. Paris (France)",
-        "country": "France",
-        "full_name": "Observatoire de Paris",
-        "acronym": "Obs. Paris",
-        "id": "tr5VV",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
         "name": "PLDA (France)",
         "country": "France",
         "full_name": "Plda",
         "acronym": "PLDA",
         "id": "407666650",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Durham University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Durham University",
-        "id": "grid.8250.f",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
-        "z": 73
+        "z": 2670
       },
       {
         "name": "CNES (France)",
@@ -37,6 +34,9 @@
         "acronym": "CNES",
         "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 107
       },
@@ -47,6 +47,9 @@
         "acronym": "UVSQ",
         "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 94
       },
@@ -57,28 +60,11 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 505
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 388
       },
       {
         "name": "Université PSL (France)",
@@ -87,13 +73,25 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 407
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Future and Emerging Technologies (FET)": [
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 388
+      },
       {
         "name": "Obs. Paris (France)",
         "country": "France",
@@ -101,18 +99,11 @@
         "acronym": "Obs. Paris",
         "id": "tr5VV",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "PLDA (France)",
-        "country": "France",
-        "full_name": "Plda",
-        "acronym": "PLDA",
-        "id": "407666650",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 43
       },
       {
         "name": "Durham University (Royaume-Uni)",
@@ -120,8 +111,41 @@
         "full_name": "Durham University",
         "id": "grid.8250.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
-        "z": 8
+        "z": 73
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Future and Emerging Technologies (FET)": [
+      {
+        "name": "PLDA (France)",
+        "country": "France",
+        "full_name": "Plda",
+        "acronym": "PLDA",
+        "id": "407666650",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 177
       },
       {
         "name": "CNES (France)",
@@ -130,6 +154,9 @@
         "acronym": "CNES",
         "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 1
       },
@@ -140,6 +167,9 @@
         "acronym": "UVSQ",
         "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 7
       },
@@ -150,28 +180,11 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 53
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 177
-      },
-      {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
       },
       {
         "name": "Université PSL (France)",
@@ -180,8 +193,49 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
         "y": 1,
         "z": 33
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Obs. Paris (France)",
+        "country": "France",
+        "full_name": "Observatoire de Paris",
+        "acronym": "Obs. Paris",
+        "id": "tr5VV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Durham University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Durham University",
+        "id": "grid.8250.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671662
+        ],
+        "y": 1,
+        "z": 8
       }
     ]
   }

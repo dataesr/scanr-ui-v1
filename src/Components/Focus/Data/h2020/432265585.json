@@ -2,48 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "De Agostini (Italie)",
-        "country": "Italie",
-        "full_name": "De Agostini",
-        "id": "grid.435828.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Technology and Life Sciences in Bydgoszcz (Pologne)",
-        "country": "Pologne",
-        "full_name": "University of Technology and Life Sciences in Bydgoszcz",
-        "id": "grid.412837.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "London South Bank University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "London South Bank University",
-        "id": "grid.4756.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Zanasi & Partners (Italie)",
-        "country": "Italie",
-        "full_name": "Zanasi & Partners",
-        "id": "grid.426485.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
         "z": 286
       },
@@ -54,30 +21,11 @@
         "acronym": "Qwant",
         "id": "532867256",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 423
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "De Agostini (Italie)",
-        "country": "Italie",
-        "full_name": "De Agostini",
-        "id": "grid.435828.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "University of Technology and Life Sciences in Bydgoszcz (Pologne)",
@@ -85,8 +33,11 @@
         "full_name": "University of Technology and Life Sciences in Bydgoszcz",
         "id": "grid.412837.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
-        "z": 1
+        "z": 4
       },
       {
         "name": "London South Bank University (Royaume-Uni)",
@@ -94,8 +45,35 @@
         "full_name": "London South Bank University",
         "id": "grid.4756.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
-        "z": 1
+        "z": 12
+      },
+      {
+        "name": "De Agostini (Italie)",
+        "country": "Italie",
+        "full_name": "De Agostini",
+        "id": "grid.435828.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 423
       },
       {
         "name": "Zanasi & Partners (Italie)",
@@ -103,9 +81,16 @@
         "full_name": "Zanasi & Partners",
         "id": "grid.426485.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
-        "z": 2
-      },
+        "z": 8
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
       {
         "name": "Thales (France)",
         "country": "France",
@@ -113,6 +98,9 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
         "z": 84
       },
@@ -123,6 +111,45 @@
         "acronym": "Qwant",
         "id": "532867256",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Technology and Life Sciences in Bydgoszcz (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Technology and Life Sciences in Bydgoszcz",
+        "id": "grid.412837.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "London South Bank University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "London South Bank University",
+        "id": "grid.4756.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "De Agostini (Italie)",
+        "country": "Italie",
+        "full_name": "De Agostini",
+        "id": "grid.435828.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
         "z": 2
       },
@@ -132,8 +159,23 @@
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
         "y": 1,
         "z": 95
+      },
+      {
+        "name": "Zanasi & Partners (Italie)",
+        "country": "Italie",
+        "full_name": "Zanasi & Partners",
+        "id": "grid.426485.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825477
+        ],
+        "y": 1,
+        "z": 2
       }
     ]
   }

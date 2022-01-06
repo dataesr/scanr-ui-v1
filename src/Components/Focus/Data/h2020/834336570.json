@@ -2,23 +2,31 @@
   "all": {
     "all": [
       {
-        "name": "Norwegian Research Centre (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Research Centre",
-        "id": "grid.509009.5",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 47
-      },
-      {
         "name": "EGLOBALMARK (France)",
         "country": "France",
         "full_name": "Easy Global Market",
         "acronym": "EGLOBALMARK",
         "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034,
+          818036
+        ],
         "y": 2,
         "z": 21
+      },
+      {
+        "name": "Norwegian Research Centre (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Research Centre",
+        "id": "grid.509009.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          863034,
+          818036
+        ],
+        "y": 2,
+        "z": 47
       },
       {
         "name": "Leitat Technological Center (Espagne)",
@@ -26,17 +34,36 @@
         "full_name": "Leitat Technological Center",
         "id": "grid.452632.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034,
+          818036
+        ],
         "y": 2,
         "z": 99
       },
       {
-        "name": "University of Cape Town (Afrique du Sud)",
+        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
         "country": "Afrique du Sud",
-        "full_name": "University of Cape Town",
-        "id": "grid.7836.a",
+        "full_name": "Council for Scientific and Industrial Research",
+        "id": "grid.7327.1",
         "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 47
+        "z": 22
+      },
+      {
+        "name": "National Scientific and Technical Research Council (Argentine)",
+        "country": "Argentine",
+        "full_name": "National Scientific and Technical Research Council",
+        "id": "grid.423606.5",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
+        "y": 1,
+        "z": 35
       },
       {
         "name": "Technopole Quimper Cor... (France)",
@@ -45,35 +72,23 @@
         "acronym": "Technopole Quimper Cor...",
         "id": "345349849",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Marine Institute (Irlande)",
-        "country": "Irlande",
-        "full_name": "Marine Institute",
-        "id": "grid.6408.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "National Scientific and Technical Research Council (Argentine)",
-        "country": "Argentine",
-        "full_name": "National Scientific and Technical Research Council",
-        "id": "grid.423606.5",
+        "name": "University of Cape Town (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "University of Cape Town",
+        "id": "grid.7836.a",
         "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
+        "z": 47
       },
       {
         "name": "Pôle mer - Bretagne At... (France)",
@@ -82,17 +97,35 @@
         "acronym": "Pôle mer - Bretagne At...",
         "id": "Oy68e",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "Council for Scientific and Industrial Research",
-        "id": "grid.7327.1",
-        "country_level_part": "Pays tiers",
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 22
+        "z": 17
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
+        "y": 1,
+        "z": 34
       },
       {
         "name": "University of Bergen (Norvège)",
@@ -100,27 +133,11 @@
         "full_name": "University of Bergen",
         "id": "grid.7914.b",
         "country_level_part": "Pays associés",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 127
-      },
-      {
-        "name": "Vertech Group (France)",
-        "country": "France",
-        "full_name": "Vertech Group",
-        "acronym": "Vertech Group",
-        "id": "539865303",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "AquaBioTech Group (Malte)",
-        "country": "Malte",
-        "full_name": "AquaBioTech Group",
-        "id": "grid.424139.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Hellenic Centre for Marine Research (Grèce)",
@@ -128,8 +145,23 @@
         "full_name": "Hellenic Centre for Marine Research",
         "id": "grid.410335.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 60
+      },
+      {
+        "name": "AquaBioTech Group (Malte)",
+        "country": "Malte",
+        "full_name": "AquaBioTech Group",
+        "id": "grid.424139.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Szent István University (Hongrie)",
@@ -137,6 +169,9 @@
         "full_name": "Szent István University",
         "id": "grid.129553.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 13
       },
@@ -146,31 +181,55 @@
         "full_name": "Hochschule Bremerhaven",
         "id": "grid.461640.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 13
+      },
+      {
+        "name": "Vertech Group (France)",
+        "country": "France",
+        "full_name": "Vertech Group",
+        "acronym": "Vertech Group",
+        "id": "539865303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
+        "y": 1,
+        "z": 49
       }
     ]
   },
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
-        "name": "Norwegian Research Centre (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Research Centre",
-        "id": "grid.509009.5",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 10
-      },
-      {
         "name": "EGLOBALMARK (France)",
         "country": "France",
         "full_name": "Easy Global Market",
         "acronym": "EGLOBALMARK",
         "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034,
+          818036
+        ],
         "y": 2,
         "z": 3
+      },
+      {
+        "name": "Norwegian Research Centre (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Research Centre",
+        "id": "grid.509009.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          863034,
+          818036
+        ],
+        "y": 2,
+        "z": 10
       },
       {
         "name": "Leitat Technological Center (Espagne)",
@@ -178,17 +237,36 @@
         "full_name": "Leitat Technological Center",
         "id": "grid.452632.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034,
+          818036
+        ],
         "y": 2,
         "z": 18
       },
       {
-        "name": "University of Cape Town (Afrique du Sud)",
+        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
         "country": "Afrique du Sud",
-        "full_name": "University of Cape Town",
-        "id": "grid.7836.a",
+        "full_name": "Council for Scientific and Industrial Research",
+        "id": "grid.7327.1",
         "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 7
+        "z": 3
+      },
+      {
+        "name": "National Scientific and Technical Research Council (Argentine)",
+        "country": "Argentine",
+        "full_name": "National Scientific and Technical Research Council",
+        "id": "grid.423606.5",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Technopole Quimper Cor... (France)",
@@ -197,35 +275,23 @@
         "acronym": "Technopole Quimper Cor...",
         "id": "345349849",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Marine Institute (Irlande)",
-        "country": "Irlande",
-        "full_name": "Marine Institute",
-        "id": "grid.6408.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "National Scientific and Technical Research Council (Argentine)",
-        "country": "Argentine",
-        "full_name": "National Scientific and Technical Research Council",
-        "id": "grid.423606.5",
+        "name": "University of Cape Town (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "University of Cape Town",
+        "id": "grid.7836.a",
         "country_level_part": "Pays tiers",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
+        "z": 7
       },
       {
         "name": "Pôle mer - Bretagne At... (France)",
@@ -234,17 +300,35 @@
         "acronym": "Pôle mer - Bretagne At...",
         "id": "Oy68e",
         "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Council for Scientific and Industrial Research (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "Council for Scientific and Industrial Research",
-        "id": "grid.7327.1",
-        "country_level_part": "Pays tiers",
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
         "y": 1,
-        "z": 3
+        "z": 8
+      },
+      {
+        "name": "Marine Institute (Irlande)",
+        "country": "Irlande",
+        "full_name": "Marine Institute",
+        "id": "grid.6408.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863034
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "University of Bergen (Norvège)",
@@ -252,27 +336,11 @@
         "full_name": "University of Bergen",
         "id": "grid.7914.b",
         "country_level_part": "Pays associés",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 12
-      },
-      {
-        "name": "Vertech Group (France)",
-        "country": "France",
-        "full_name": "Vertech Group",
-        "acronym": "Vertech Group",
-        "id": "539865303",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "AquaBioTech Group (Malte)",
-        "country": "Malte",
-        "full_name": "AquaBioTech Group",
-        "id": "grid.424139.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Hellenic Centre for Marine Research (Grèce)",
@@ -280,8 +348,23 @@
         "full_name": "Hellenic Centre for Marine Research",
         "id": "grid.410335.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 25
+      },
+      {
+        "name": "AquaBioTech Group (Malte)",
+        "country": "Malte",
+        "full_name": "AquaBioTech Group",
+        "id": "grid.424139.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Szent István University (Hongrie)",
@@ -289,6 +372,9 @@
         "full_name": "Szent István University",
         "id": "grid.129553.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 8
       },
@@ -298,8 +384,24 @@
         "full_name": "Hochschule Bremerhaven",
         "id": "grid.461640.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
         "y": 1,
         "z": 9
+      },
+      {
+        "name": "Vertech Group (France)",
+        "country": "France",
+        "full_name": "Vertech Group",
+        "acronym": "Vertech Group",
+        "id": "539865303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818036
+        ],
+        "y": 1,
+        "z": 12
       }
     ]
   }

@@ -2,43 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 277
-      },
-      {
-        "name": "Grenoble INP (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut polytechnique de Grenoble",
-        "acronym": "Grenoble INP",
-        "id": "2ALYK",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 118
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "Top Industrie (France)",
-        "country": "France",
-        "full_name": "Top Industrie",
-        "acronym": "Top Industrie",
-        "id": "328824891",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 2670
       },
       {
         "name": "Absiskey (France)",
@@ -47,36 +21,37 @@
         "acronym": "Absiskey",
         "id": "523616183",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "CNRS (France)",
+        "name": "CEA (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 2670
+        "z": 852
       },
       {
-        "name": "IVL - Swedish Environmental Research Institute (Suède)",
-        "country": "Suède",
-        "full_name": "IVL - Swedish Environmental Research Institute",
-        "id": "grid.5809.4",
+        "name": "Grenoble INP (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Grenoble",
+        "acronym": "Grenoble INP",
+        "id": "2ALYK",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 26
+        "z": 118
       },
       {
         "name": "Sofresid Engineering (France)",
@@ -85,18 +60,11 @@
         "acronym": "Sofresid Engineering",
         "id": "334456886",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 277
       },
       {
         "name": "Fibre Excellence (France)",
@@ -105,8 +73,73 @@
         "acronym": "Fibre Excellence",
         "id": "gent80",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "Top Industrie (France)",
+        "country": "France",
+        "full_name": "Top Industrie",
+        "acronym": "Top Industrie",
+        "id": "328824891",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IVL - Swedish Environmental Research Institute (Suède)",
+        "country": "Suède",
+        "full_name": "IVL - Swedish Environmental Research Institute",
+        "id": "grid.5809.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 258
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -114,6 +147,9 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 199
       }
@@ -122,43 +158,17 @@
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "Grenoble INP (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut polytechnique de Grenoble",
-        "acronym": "Grenoble INP",
-        "id": "2ALYK",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 78
-      },
-      {
-        "name": "Top Industrie (France)",
-        "country": "France",
-        "full_name": "Top Industrie",
-        "acronym": "Top Industrie",
-        "id": "328824891",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 55
       },
       {
         "name": "Absiskey (France)",
@@ -167,36 +177,37 @@
         "acronym": "Absiskey",
         "id": "523616183",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "CNRS (France)",
+        "name": "CEA (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 55
+        "z": 78
       },
       {
-        "name": "IVL - Swedish Environmental Research Institute (Suède)",
-        "country": "Suède",
-        "full_name": "IVL - Swedish Environmental Research Institute",
-        "id": "grid.5809.4",
+        "name": "Grenoble INP (France)",
+        "country": "France",
+        "full_name": "Institut polytechnique de Grenoble",
+        "acronym": "Grenoble INP",
+        "id": "2ALYK",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
-        "z": 6
+        "z": 4
       },
       {
         "name": "Sofresid Engineering (France)",
@@ -205,18 +216,11 @@
         "acronym": "Sofresid Engineering",
         "id": "334456886",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "Fibre Excellence (France)",
@@ -225,8 +229,73 @@
         "acronym": "Fibre Excellence",
         "id": "gent80",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "Top Industrie (France)",
+        "country": "France",
+        "full_name": "Top Industrie",
+        "acronym": "Top Industrie",
+        "id": "328824891",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "IVL - Swedish Environmental Research Institute (Suède)",
+        "country": "Suède",
+        "full_name": "IVL - Swedish Environmental Research Institute",
+        "id": "grid.5809.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          818011
+        ],
+        "y": 1,
+        "z": 38
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -234,6 +303,9 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          818011
+        ],
         "y": 1,
         "z": 23
       }

@@ -2,31 +2,42 @@
   "all": {
     "all": [
       {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 155
-      },
-      {
         "name": "University of Bristol (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Bristol",
         "id": "grid.5337.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          765472,
+          882842
+        ],
         "y": 2,
         "z": 166
       },
       {
-        "name": "UNSW Sydney (Australie)",
-        "country": "Australie",
-        "full_name": "UNSW Sydney",
-        "id": "grid.1005.4",
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765472,
+          882842
+        ],
+        "y": 2,
+        "z": 155
+      },
+      {
+        "name": "Université de Sherbrooke (Canada)",
+        "country": "Canada",
+        "full_name": "Université de Sherbrooke",
+        "id": "grid.86715.3d",
         "country_level_part": "Pays tiers",
+        "projects": [
+          765472
+        ],
         "y": 1,
-        "z": 19
+        "z": 9
       },
       {
         "name": "ENTPE (France)",
@@ -35,44 +46,23 @@
         "acronym": "ENTPE",
         "id": "56aH3",
         "country_level_part": "Pays membres",
+        "projects": [
+          765472
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "Université de Sherbrooke (Canada)",
-        "country": "Canada",
-        "full_name": "Université de Sherbrooke",
-        "id": "grid.86715.3d",
+        "name": "UNSW Sydney (Australie)",
+        "country": "Australie",
+        "full_name": "UNSW Sydney",
+        "id": "grid.1005.4",
         "country_level_part": "Pays tiers",
+        "projects": [
+          765472
+        ],
         "y": 1,
-        "z": 9
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 489
-      },
-      {
-        "name": "University of Liverpool (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Liverpool",
-        "id": "grid.10025.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 109
-      },
-      {
-        "name": "Siemens (Belgique)",
-        "country": "Belgique",
-        "full_name": "Siemens",
-        "id": "grid.425300.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
+        "z": 19
       },
       {
         "name": "Eindhoven University of Technology (Pays-Bas)",
@@ -80,17 +70,23 @@
         "full_name": "Eindhoven University of Technology",
         "id": "grid.6852.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 269
       },
       {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
+        "name": "Siemens (Belgique)",
+        "country": "Belgique",
+        "full_name": "Siemens",
+        "id": "grid.425300.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
-        "z": 159
+        "z": 37
       },
       {
         "name": "Materialise (Belgique)",
@@ -98,8 +94,47 @@
         "full_name": "Materialise",
         "id": "grid.425496.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 159
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 109
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 489
       },
       {
         "name": "Chalmers University of Technology (Suède)",
@@ -107,6 +142,9 @@
         "full_name": "Chalmers University of Technology",
         "id": "grid.5371.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 221
       }
@@ -115,13 +153,28 @@
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "UNSW Sydney (Australie)",
-        "country": "Australie",
-        "full_name": "UNSW Sydney",
-        "id": "grid.1005.4",
+        "name": "Université de Sherbrooke (Canada)",
+        "country": "Canada",
+        "full_name": "Université de Sherbrooke",
+        "id": "grid.86715.3d",
         "country_level_part": "Pays tiers",
+        "projects": [
+          765472
+        ],
         "y": 1,
-        "z": 8
+        "z": 4
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765472
+        ],
+        "y": 1,
+        "z": 38
       },
       {
         "name": "ENTPE (France)",
@@ -130,6 +183,9 @@
         "acronym": "ENTPE",
         "id": "56aH3",
         "country_level_part": "Pays membres",
+        "projects": [
+          765472
+        ],
         "y": 1,
         "z": 5
       },
@@ -139,53 +195,23 @@
         "full_name": "University of Nottingham",
         "id": "grid.4563.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          765472
+        ],
         "y": 1,
         "z": 46
       },
       {
-        "name": "Université de Sherbrooke (Canada)",
-        "country": "Canada",
-        "full_name": "Université de Sherbrooke",
-        "id": "grid.86715.3d",
+        "name": "UNSW Sydney (Australie)",
+        "country": "Australie",
+        "full_name": "UNSW Sydney",
+        "id": "grid.1005.4",
         "country_level_part": "Pays tiers",
+        "projects": [
+          765472
+        ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Bristol (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Bristol",
-        "id": "grid.5337.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 139
-      },
-      {
-        "name": "University of Liverpool (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Liverpool",
-        "id": "grid.10025.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Siemens (Belgique)",
-        "country": "Belgique",
-        "full_name": "Siemens",
-        "id": "grid.425300.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
+        "z": 8
       },
       {
         "name": "Eindhoven University of Technology (Pays-Bas)",
@@ -193,17 +219,23 @@
         "full_name": "Eindhoven University of Technology",
         "id": "grid.6852.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 77
       },
       {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
+        "name": "Siemens (Belgique)",
+        "country": "Belgique",
+        "full_name": "Siemens",
+        "id": "grid.425300.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
-        "z": 27
+        "z": 16
       },
       {
         "name": "Materialise (Belgique)",
@@ -211,8 +243,47 @@
         "full_name": "Materialise",
         "id": "grid.425496.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "University of Liverpool (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Liverpool",
+        "id": "grid.10025.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
+        "y": 1,
+        "z": 139
       },
       {
         "name": "Chalmers University of Technology (Suède)",
@@ -220,6 +291,9 @@
         "full_name": "Chalmers University of Technology",
         "id": "grid.5371.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          721536
+        ],
         "y": 1,
         "z": 43
       }
@@ -228,22 +302,28 @@
   "Societal Challenges": {
     "Smart, green and integrated transport (TPT)": [
       {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
         "name": "University of Bristol (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Bristol",
         "id": "grid.5337.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          882842
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          882842
+        ],
+        "y": 1,
+        "z": 34
       }
     ]
   }

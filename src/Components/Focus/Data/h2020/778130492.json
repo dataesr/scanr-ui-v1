@@ -2,20 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 425
-      },
-      {
         "name": "KU Leuven (Belgique)",
         "country": "Belgique",
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385,
+          690088
+        ],
         "y": 2,
         "z": 489
       },
@@ -25,6 +20,10 @@
         "full_name": "Umicore",
         "id": "grid.426468.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385,
+          690088
+        ],
         "y": 2,
         "z": 22
       },
@@ -34,8 +33,25 @@
         "full_name": "Outotec",
         "id": "grid.436982.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385,
+          690088
+        ],
         "y": 2,
         "z": 11
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385,
+          690088
+        ],
+        "y": 2,
+        "z": 425
       },
       {
         "name": "TU Bergakademie Freiberg (Allemagne)",
@@ -43,35 +59,11 @@
         "full_name": "TU Bergakademie Freiberg",
         "id": "grid.6862.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 18
-      },
-      {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 159
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 216
-      },
-      {
-        "name": "University of Leicester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leicester",
-        "id": "grid.9918.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 58
       },
       {
         "name": "University of Bonn (Allemagne)",
@@ -79,62 +71,47 @@
         "full_name": "University of Bonn",
         "id": "grid.10388.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 68
       },
       {
-        "name": "Institute of Non-Ferrous Metals (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Non-Ferrous Metals",
-        "id": "grid.425049.e",
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 368
-      },
-      {
-        "name": "IDP Ingeniería y Arquitectura Iberia (Espagne)",
-        "country": "Espagne",
-        "full_name": "IDP Ingeniería y Arquitectura Iberia",
-        "id": "grid.474073.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Technical University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "Technical University of Crete",
-        "id": "grid.6809.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
-      },
-      {
-        "name": "Rina Services (Italie)",
-        "country": "Italie",
-        "full_name": "Rina Services",
-        "id": "grid.426062.4",
-        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 159
       },
       {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
-        "z": 142
+        "z": 58
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
+        "y": 1,
+        "z": 216
       },
       {
         "name": "Ghent University (Belgique)",
@@ -142,6 +119,9 @@
         "full_name": "Ghent University",
         "id": "grid.5342.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 273
       },
@@ -151,8 +131,23 @@
         "full_name": "Idener",
         "id": "grid.451424.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 28
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 368
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -160,30 +155,123 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 199
+      },
+      {
+        "name": "IDP Ingeniería y Arquitectura Iberia (Espagne)",
+        "country": "Espagne",
+        "full_name": "IDP Ingeniería y Arquitectura Iberia",
+        "id": "grid.474073.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Technical University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "Technical University of Crete",
+        "id": "grid.6809.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 159
+      },
+      {
+        "name": "Institute of Non-Ferrous Metals (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Non-Ferrous Metals",
+        "id": "grid.425049.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 8
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
         "name": "TU Bergakademie Freiberg (Allemagne)",
         "country": "Allemagne",
         "full_name": "TU Bergakademie Freiberg",
         "id": "grid.6862.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "University of Bonn (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Bonn",
+        "id": "grid.10388.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Aalto University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Aalto University",
+        "id": "grid.5373.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "KU Leuven (Belgique)",
@@ -191,6 +279,9 @@
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 139
       },
@@ -200,44 +291,11 @@
         "full_name": "Umicore",
         "id": "grid.426468.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Aalto University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Aalto University",
-        "id": "grid.5373.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
-        "name": "University of Leicester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leicester",
-        "id": "grid.9918.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "University of Bonn (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Bonn",
-        "id": "grid.10388.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
       },
       {
         "name": "Outotec (Finlande)",
@@ -245,28 +303,49 @@
         "full_name": "Outotec",
         "id": "grid.436982.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
         "z": 4
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
+        "y": 1,
+        "z": 62
+      },
       {
         "name": "VTT Technical Research Centre of Finland (Finlande)",
         "country": "Finlande",
         "full_name": "VTT Technical Research Centre of Finland",
         "id": "grid.6324.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          721385
+        ],
         "y": 1,
-        "z": 27
-      },
+        "z": 6
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
       {
         "name": "KU Leuven (Belgique)",
         "country": "Belgique",
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 19
       },
@@ -276,6 +355,9 @@
         "full_name": "Umicore",
         "id": "grid.426468.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 2
       },
@@ -285,62 +367,23 @@
         "full_name": "Outotec",
         "id": "grid.436982.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Institute of Non-Ferrous Metals (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Non-Ferrous Metals",
-        "id": "grid.425049.e",
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "IDP Ingeniería y Arquitectura Iberia (Espagne)",
-        "country": "Espagne",
-        "full_name": "IDP Ingeniería y Arquitectura Iberia",
-        "id": "grid.474073.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Technical University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "Technical University of Crete",
-        "id": "grid.6809.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Rina Services (Italie)",
-        "country": "Italie",
-        "full_name": "Rina Services",
-        "id": "grid.426062.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
+        "z": 27
       },
       {
         "name": "Ghent University (Belgique)",
@@ -348,6 +391,9 @@
         "full_name": "Ghent University",
         "id": "grid.5342.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 8
       },
@@ -357,8 +403,23 @@
         "full_name": "Idener",
         "id": "grid.451424.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 11
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 38
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -366,8 +427,71 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
         "y": 1,
         "z": 11
+      },
+      {
+        "name": "IDP Ingeniería y Arquitectura Iberia (Espagne)",
+        "country": "Espagne",
+        "full_name": "IDP Ingeniería y Arquitectura Iberia",
+        "id": "grid.474073.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Technical University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "Technical University of Crete",
+        "id": "grid.6809.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Institute of Non-Ferrous Metals (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Non-Ferrous Metals",
+        "id": "grid.425049.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          690088
+        ],
+        "y": 1,
+        "z": 7
       }
     ]
   }

@@ -2,93 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Cranfield University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cranfield University",
-        "id": "grid.12026.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 89
-      },
-      {
-        "name": "KWR Watercycle Research Institute (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "KWR Watercycle Research Institute",
-        "id": "grid.419022.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Vertech Group (France)",
-        "country": "France",
-        "full_name": "Vertech Group",
-        "acronym": "Vertech Group",
-        "id": "539865303",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "Berliner Wasserbetriebe (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Berliner Wasserbetriebe",
-        "id": "grid.506642.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "BioDetection Systems (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "BioDetection Systems",
-        "id": "grid.450522.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
-        "id": "grid.410380.e",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Adam Mickiewicz University in Poznan (Pologne)",
-        "country": "Pologne",
-        "full_name": "Adam Mickiewicz University in Poznan",
-        "id": "grid.5633.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "X Flow (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "X Flow",
-        "id": "grid.439145.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Berlin Centre of Competence for Water (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Berlin Centre of Competence for Water",
-        "id": "grid.435815.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
         "name": "Dresden University of Applied Sciences (Allemagne)",
         "country": "Allemagne",
         "full_name": "Dresden University of Applied Sciences",
         "id": "grid.434947.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 3
       },
@@ -98,18 +19,35 @@
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 423
       },
       {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
+        "name": "Berliner Wasserbetriebe (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berliner Wasserbetriebe",
+        "id": "grid.506642.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
-        "z": 68
+        "z": 5
+      },
+      {
+        "name": "BioDetection Systems (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "BioDetection Systems",
+        "id": "grid.450522.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Eötvös József Foiskola (Hongrie)",
@@ -117,8 +55,23 @@
         "full_name": "Eötvös József Foiskola",
         "id": "grid.445627.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Adam Mickiewicz University in Poznan (Pologne)",
+        "country": "Pologne",
+        "full_name": "Adam Mickiewicz University in Poznan",
+        "id": "grid.5633.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 39
       },
       {
         "name": "Imageau (France)",
@@ -127,30 +80,36 @@
         "acronym": "Imageau",
         "id": "504316597",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 1
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Climate action, environment, resource efficiency and raw materials (ENV)": [
-      {
-        "name": "Cranfield University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cranfield University",
-        "id": "grid.12026.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
-        "name": "KWR Watercycle Research Institute (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "KWR Watercycle Research Institute",
-        "id": "grid.419022.c",
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
-        "z": 11
+        "z": 68
+      },
+      {
+        "name": "X Flow (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "X Flow",
+        "id": "grid.439145.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Vertech Group (France)",
@@ -159,8 +118,87 @@
         "acronym": "Vertech Group",
         "id": "539865303",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
-        "z": 7
+        "z": 49
+      },
+      {
+        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
+        "id": "grid.410380.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Cranfield University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cranfield University",
+        "id": "grid.12026.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 89
+      },
+      {
+        "name": "Berlin Centre of Competence for Water (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berlin Centre of Competence for Water",
+        "id": "grid.435815.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "KWR Watercycle Research Institute (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "KWR Watercycle Research Institute",
+        "id": "grid.419022.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 20
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      {
+        "name": "Dresden University of Applied Sciences (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Dresden University of Applied Sciences",
+        "id": "grid.434947.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 45
       },
       {
         "name": "Berliner Wasserbetriebe (Allemagne)",
@@ -168,6 +206,9 @@
         "full_name": "Berliner Wasserbetriebe",
         "id": "grid.506642.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 4
       },
@@ -177,72 +218,11 @@
         "full_name": "BioDetection Systems",
         "id": "grid.450522.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
-        "id": "grid.410380.e",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Adam Mickiewicz University in Poznan (Pologne)",
-        "country": "Pologne",
-        "full_name": "Adam Mickiewicz University in Poznan",
-        "id": "grid.5633.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "X Flow (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "X Flow",
-        "id": "grid.439145.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Berlin Centre of Competence for Water (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Berlin Centre of Competence for Water",
-        "id": "grid.435815.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Dresden University of Applied Sciences (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Dresden University of Applied Sciences",
-        "id": "grid.434947.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 45
-      },
-      {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
       },
       {
         "name": "Eötvös József Foiskola (Hongrie)",
@@ -250,8 +230,23 @@
         "full_name": "Eötvös József Foiskola",
         "id": "grid.445627.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Adam Mickiewicz University in Poznan (Pologne)",
+        "country": "Pologne",
+        "full_name": "Adam Mickiewicz University in Poznan",
+        "id": "grid.5633.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Imageau (France)",
@@ -260,8 +255,97 @@
         "acronym": "Imageau",
         "id": "504316597",
         "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "X Flow (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "X Flow",
+        "id": "grid.439145.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Vertech Group (France)",
+        "country": "France",
+        "full_name": "Vertech Group",
+        "acronym": "Vertech Group",
+        "id": "539865303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Applied Sciences and Arts Northwestern Switzerland (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Applied Sciences and Arts Northwestern Switzerland",
+        "id": "grid.410380.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Cranfield University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cranfield University",
+        "id": "grid.12026.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Berlin Centre of Competence for Water (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berlin Centre of Competence for Water",
+        "id": "grid.435815.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "KWR Watercycle Research Institute (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "KWR Watercycle Research Institute",
+        "id": "grid.419022.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689450
+        ],
+        "y": 1,
+        "z": 11
       }
     ]
   }

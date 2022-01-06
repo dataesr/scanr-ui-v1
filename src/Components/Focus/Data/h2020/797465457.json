@@ -2,85 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Mayo Clinic (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Mayo Clinic",
-        "id": "grid.66875.3a",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 345
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 103
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Monash University (Australie)",
-        "country": "Australie",
-        "full_name": "Monash University",
-        "id": "grid.1002.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 19
-      },
-      {
         "name": "University Hospital Bonn (Allemagne)",
         "country": "Allemagne",
         "full_name": "University Hospital Bonn",
         "id": "grid.15090.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 37
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 216
-      },
-      {
-        "name": "Hycult Biotech (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Hycult Biotech",
-        "id": "grid.435189.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -88,17 +19,23 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 285
       },
       {
-        "name": "Helmholtz Zentrum München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Helmholtz Zentrum München",
-        "id": "grid.4567.0",
-        "country_level_part": "Pays membres",
+        "name": "Mayo Clinic (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Mayo Clinic",
+        "id": "grid.66875.3a",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          668036
+        ],
         "y": 1,
-        "z": 65
+        "z": 2
       },
       {
         "name": "EMC Microcollections (Allemagne)",
@@ -106,8 +43,35 @@
         "full_name": "EMC Microcollections",
         "id": "grid.424419.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 65
+      },
+      {
+        "name": "Hycult Biotech (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Hycult Biotech",
+        "id": "grid.435189.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Arttic (France)",
@@ -116,8 +80,83 @@
         "acronym": "Arttic",
         "id": "344112396",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 73
+      },
+      {
+        "name": "Monash University (Australie)",
+        "country": "Australie",
+        "full_name": "Monash University",
+        "id": "grid.1002.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 345
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 216
       },
       {
         "name": "AvantiCell Science (Royaume-Uni)",
@@ -125,6 +164,9 @@
         "full_name": "AvantiCell Science",
         "id": "grid.432076.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          730678
+        ],
         "y": 1,
         "z": 5
       }
@@ -133,85 +175,16 @@
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Mayo Clinic (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Mayo Clinic",
-        "id": "grid.66875.3a",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 55
-      },
-      {
-        "name": "Medical University of Vienna (Autriche)",
-        "country": "Autriche",
-        "full_name": "Medical University of Vienna",
-        "id": "grid.22937.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 41
-      },
-      {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Monash University (Australie)",
-        "country": "Australie",
-        "full_name": "Monash University",
-        "id": "grid.1002.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "University Hospital Bonn (Allemagne)",
         "country": "Allemagne",
         "full_name": "University Hospital Bonn",
         "id": "grid.15090.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 21
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Hycult Biotech (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Hycult Biotech",
-        "id": "grid.435189.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -219,17 +192,23 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "Helmholtz Zentrum München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Helmholtz Zentrum München",
-        "id": "grid.4567.0",
-        "country_level_part": "Pays membres",
+        "name": "Mayo Clinic (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Mayo Clinic",
+        "id": "grid.66875.3a",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          668036
+        ],
         "y": 1,
-        "z": 20
+        "z": 2
       },
       {
         "name": "EMC Microcollections (Allemagne)",
@@ -237,8 +216,35 @@
         "full_name": "EMC Microcollections",
         "id": "grid.424419.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Helmholtz Zentrum München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Zentrum München",
+        "id": "grid.4567.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Hycult Biotech (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Hycult Biotech",
+        "id": "grid.435189.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Arttic (France)",
@@ -247,8 +253,83 @@
         "acronym": "Arttic",
         "id": "344112396",
         "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
         "y": 1,
         "z": 20
+      },
+      {
+        "name": "Monash University (Australie)",
+        "country": "Australie",
+        "full_name": "Monash University",
+        "id": "grid.1002.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Medical University of Vienna (Autriche)",
+        "country": "Autriche",
+        "full_name": "Medical University of Vienna",
+        "id": "grid.22937.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          668036
+        ],
+        "y": 1,
+        "z": 28
       }
     ]
   },
@@ -260,6 +341,9 @@
         "full_name": "AvantiCell Science",
         "id": "grid.432076.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          730678
+        ],
         "y": 1,
         "z": 1
       }

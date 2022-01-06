@@ -2,52 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "University of Florence (Italie)",
-        "country": "Italie",
-        "full_name": "University of Florence",
-        "id": "grid.8404.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 143
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 138
-      },
-      {
         "name": "Saipem Sa (France)",
         "country": "France",
         "full_name": "Saipem Sa",
         "acronym": "Saipem Sa",
         "id": "302588462",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "Euronovia (France)",
-        "country": "France",
-        "full_name": "Euronovia",
-        "acronym": "Euronovia",
-        "id": "800294241",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
+        "z": 143
       },
       {
         "name": "ECN (France)",
@@ -56,8 +33,49 @@
         "acronym": "ECN",
         "id": "gCAyK",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 30
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 138
+      },
+      {
+        "name": "Euronovia (France)",
+        "country": "France",
+        "full_name": "Euronovia",
+        "acronym": "Euronovia",
+        "id": "800294241",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 10
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -65,17 +83,11 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 407
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 368
       },
       {
         "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
@@ -83,17 +95,35 @@
         "full_name": "Offshore Renewable Energy Catapult",
         "id": "grid.460245.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
-        "z": 386
+        "z": 368
+      },
+      {
+        "name": "DNV GL (Norvège)",
+        "country": "Norvège",
+        "full_name": "DNV GL",
+        "id": "grid.9273.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
@@ -101,6 +131,9 @@
         "full_name": "Institut de Recerca de l'Energia de Catalunya",
         "id": "grid.424742.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 40
       },
@@ -110,6 +143,9 @@
         "full_name": "Technical University of Denmark",
         "id": "grid.5170.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 379
       },
@@ -119,44 +155,11 @@
         "full_name": "Dr.Techn.Olav Olsen",
         "id": "grid.457644.0",
         "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "DNV GL (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "DNV GL",
-        "id": "grid.425036.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "DNV GL (Norvège)",
-        "country": "Norvège",
-        "full_name": "DNV GL",
-        "id": "grid.9273.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "Iberdrola (Espagne)",
-        "country": "Espagne",
-        "full_name": "Iberdrola",
-        "id": "grid.8464.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
       },
       {
         "name": "University of Stuttgart (Allemagne)",
@@ -164,31 +167,64 @@
         "full_name": "University of Stuttgart",
         "id": "grid.5719.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 155
+      },
+      {
+        "name": "Iberdrola (Espagne)",
+        "country": "Espagne",
+        "full_name": "Iberdrola",
+        "id": "grid.8464.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "DNV GL (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "DNV GL",
+        "id": "grid.425036.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 258
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "University of Florence (Italie)",
-        "country": "Italie",
-        "full_name": "University of Florence",
-        "id": "grid.8404.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
       {
         "name": "Saipem Sa (France)",
         "country": "France",
@@ -196,28 +232,23 @@
         "acronym": "Saipem Sa",
         "id": "302588462",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
-        "z": 55
-      },
-      {
-        "name": "Euronovia (France)",
-        "country": "France",
-        "full_name": "Euronovia",
-        "acronym": "Euronovia",
-        "id": "800294241",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
+        "z": 9
       },
       {
         "name": "ECN (France)",
@@ -226,8 +257,49 @@
         "acronym": "ECN",
         "id": "gCAyK",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Euronovia (France)",
+        "country": "France",
+        "full_name": "Euronovia",
+        "acronym": "Euronovia",
+        "id": "800294241",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -235,17 +307,11 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007142
+        ],
         "y": 1,
         "z": 29
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 61
       },
       {
         "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
@@ -253,17 +319,35 @@
         "full_name": "Offshore Renewable Energy Catapult",
         "id": "grid.460245.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
-        "z": 45
+        "z": 61
+      },
+      {
+        "name": "DNV GL (Norvège)",
+        "country": "Norvège",
+        "full_name": "DNV GL",
+        "id": "grid.9273.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
@@ -271,6 +355,9 @@
         "full_name": "Institut de Recerca de l'Energia de Catalunya",
         "id": "grid.424742.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 17
       },
@@ -280,6 +367,9 @@
         "full_name": "Technical University of Denmark",
         "id": "grid.5170.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 65
       },
@@ -289,44 +379,11 @@
         "full_name": "Dr.Techn.Olav Olsen",
         "id": "grid.457644.0",
         "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "DNV GL (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "DNV GL",
-        "id": "grid.425036.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "DNV GL (Norvège)",
-        "country": "Norvège",
-        "full_name": "DNV GL",
-        "id": "grid.9273.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Iberdrola (Espagne)",
-        "country": "Espagne",
-        "full_name": "Iberdrola",
-        "id": "grid.8464.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "University of Stuttgart (Allemagne)",
@@ -334,8 +391,59 @@
         "full_name": "University of Stuttgart",
         "id": "grid.5719.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Iberdrola (Espagne)",
+        "country": "Espagne",
+        "full_name": "Iberdrola",
+        "id": "grid.8464.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "DNV GL (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "DNV GL",
+        "id": "grid.425036.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          640741
+        ],
+        "y": 1,
+        "z": 38
       }
     ]
   }

@@ -2,51 +2,43 @@
   "all": {
     "all": [
       {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 257
-      },
-      {
         "name": "Bureau Veritas (France)",
         "country": "France",
         "full_name": "Bureau Veritas",
         "acronym": "Bureau Veritas",
         "id": "gent187",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921,
+          727689
+        ],
         "y": 2,
         "z": 21
       },
       {
-        "name": "Tecnalia (Espagne)",
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921,
+          727689
+        ],
+        "y": 2,
+        "z": 257
+      },
+      {
+        "name": "Idom (Espagne)",
         "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "full_name": "Idom",
+        "id": "grid.435426.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
-        "z": 368
-      },
-      {
-        "name": "Capgemini (France)",
-        "country": "France",
-        "full_name": "Capgemini",
-        "acronym": "Capgemini",
-        "id": "gent45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "WavEC Offshore Renewables (Portugal)",
-        "country": "Portugal",
-        "full_name": "WavEC Offshore Renewables",
-        "id": "grid.422552.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
+        "z": 5
       },
       {
         "name": "Energy Systems Catapult (Royaume-Uni)",
@@ -54,27 +46,11 @@
         "full_name": "Energy Systems Catapult",
         "id": "grid.498320.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "CorPower Ocean (Suède)",
-        "country": "Suède",
-        "full_name": "CorPower Ocean",
-        "id": "grid.473977.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "France Energies Marines (France)",
-        "country": "France",
-        "full_name": "France Energies Marines IEED",
-        "acronym": "France Energies Marines",
-        "id": "751755463",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Naval group (France)",
@@ -83,8 +59,73 @@
         "acronym": "Naval group",
         "id": "gent60",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 16
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 156
+      },
+      {
+        "name": "WavEC Offshore Renewables (Portugal)",
+        "country": "Portugal",
+        "full_name": "WavEC Offshore Renewables",
+        "id": "grid.422552.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Capgemini (France)",
+        "country": "France",
+        "full_name": "Capgemini",
+        "acronym": "Capgemini",
+        "id": "gent45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "France Energies Marines (France)",
+        "country": "France",
+        "full_name": "France Energies Marines IEED",
+        "acronym": "France Energies Marines",
+        "id": "751755463",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "EDF (France)",
@@ -93,26 +134,23 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 125
       },
       {
-        "name": "Idom (Espagne)",
-        "country": "Espagne",
-        "full_name": "Idom",
-        "id": "grid.435426.2",
+        "name": "CorPower Ocean (Suède)",
+        "country": "Suède",
+        "full_name": "CorPower Ocean",
+        "id": "grid.473977.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Aalborg University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aalborg University",
-        "id": "grid.5117.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 156
+        "z": 4
       },
       {
         "name": "Enel (Italie)",
@@ -120,8 +158,23 @@
         "full_name": "Enel",
         "id": "grid.10506.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 36
+      },
+      {
+        "name": "Ingeteam (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingeteam",
+        "id": "grid.435224.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727689
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Ifremer (France)",
@@ -130,26 +183,11 @@
         "acronym": "Ifremer",
         "id": "F6Zt5",
         "country_level_part": "Pays membres",
+        "projects": [
+          727689
+        ],
         "y": 1,
         "z": 87
-      },
-      {
-        "name": "Ingeteam (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ingeteam",
-        "id": "grid.435224.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Offshore Renewable Energy Catapult",
-        "id": "grid.460245.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -157,17 +195,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "Institute of Mechanical Engineering and Industrial Mangement (Portugal)",
-        "country": "Portugal",
-        "full_name": "Institute of Mechanical Engineering and Industrial Mangement",
-        "id": "grid.420980.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
       },
       {
         "name": "Centre for Electrochemical Technologies (Espagne)",
@@ -175,17 +207,11 @@
         "full_name": "Centre for Electrochemical Technologies",
         "id": "grid.39768.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 58
-      },
-      {
-        "name": "Haydale (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Haydale",
-        "id": "grid.434044.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "IRT Jules-Verne (France)",
@@ -194,25 +220,57 @@
         "acronym": "IRT Jules-Verne",
         "id": "eYs8j",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 8
       },
       {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
+        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Offshore Renewable Energy Catapult",
+        "id": "grid.460245.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
-        "z": 423
+        "z": 10
       },
       {
-        "name": "Sense In (France)",
-        "country": "France",
-        "full_name": "Sense In",
-        "acronym": "Sense In",
-        "id": "837534296",
+        "name": "Instituto Tecnológico de Aragón (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Aragón",
+        "id": "grid.16189.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Haydale (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Haydale",
+        "id": "grid.434044.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 1
       },
@@ -222,26 +280,23 @@
         "full_name": "University of Strathclyde",
         "id": "grid.11984.35",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 125
       },
       {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Instituto Tecnológico de Aragón (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Aragón",
-        "id": "grid.16189.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
+        "z": 423
       },
       {
         "name": "University of Birmingham (Royaume-Uni)",
@@ -249,59 +304,79 @@
         "full_name": "University of Birmingham",
         "id": "grid.6572.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 179
+      },
+      {
+        "name": "Sense In (France)",
+        "country": "France",
+        "full_name": "Sense In",
+        "acronym": "Sense In",
+        "id": "837534296",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute of Mechanical Engineering and Industrial Mangement (Portugal)",
+        "country": "Portugal",
+        "full_name": "Institute of Mechanical Engineering and Industrial Mangement",
+        "id": "grid.420980.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 26
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 18
-      },
-      {
         "name": "Bureau Veritas (France)",
         "country": "France",
         "full_name": "Bureau Veritas",
         "acronym": "Bureau Veritas",
         "id": "gent187",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921,
+          727689
+        ],
         "y": 2,
         "z": 4
       },
       {
-        "name": "Tecnalia (Espagne)",
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921,
+          727689
+        ],
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "Idom (Espagne)",
         "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "full_name": "Idom",
+        "id": "grid.435426.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
-        "z": 61
-      },
-      {
-        "name": "Capgemini (France)",
-        "country": "France",
-        "full_name": "Capgemini",
-        "acronym": "Capgemini",
-        "id": "gent45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "WavEC Offshore Renewables (Portugal)",
-        "country": "Portugal",
-        "full_name": "WavEC Offshore Renewables",
-        "id": "grid.422552.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
+        "z": 3
       },
       {
         "name": "Energy Systems Catapult (Royaume-Uni)",
@@ -309,27 +384,11 @@
         "full_name": "Energy Systems Catapult",
         "id": "grid.498320.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "CorPower Ocean (Suède)",
-        "country": "Suède",
-        "full_name": "CorPower Ocean",
-        "id": "grid.473977.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "France Energies Marines (France)",
-        "country": "France",
-        "full_name": "France Energies Marines IEED",
-        "acronym": "France Energies Marines",
-        "id": "751755463",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Naval group (France)",
@@ -338,8 +397,73 @@
         "acronym": "Naval group",
         "id": "gent60",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "WavEC Offshore Renewables (Portugal)",
+        "country": "Portugal",
+        "full_name": "WavEC Offshore Renewables",
+        "id": "grid.422552.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Capgemini (France)",
+        "country": "France",
+        "full_name": "Capgemini",
+        "acronym": "Capgemini",
+        "id": "gent45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "France Energies Marines (France)",
+        "country": "France",
+        "full_name": "France Energies Marines IEED",
+        "acronym": "France Energies Marines",
+        "id": "751755463",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "EDF (France)",
@@ -348,26 +472,23 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 42
       },
       {
-        "name": "Idom (Espagne)",
-        "country": "Espagne",
-        "full_name": "Idom",
-        "id": "grid.435426.2",
+        "name": "CorPower Ocean (Suède)",
+        "country": "Suède",
+        "full_name": "CorPower Ocean",
+        "id": "grid.473977.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Aalborg University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aalborg University",
-        "id": "grid.5117.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
+        "z": 4
       },
       {
         "name": "Enel (Italie)",
@@ -375,8 +496,23 @@
         "full_name": "Enel",
         "id": "grid.10506.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          785921
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "Ingeteam (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ingeteam",
+        "id": "grid.435224.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          727689
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Ifremer (France)",
@@ -385,48 +521,27 @@
         "acronym": "Ifremer",
         "id": "F6Zt5",
         "country_level_part": "Pays membres",
+        "projects": [
+          727689
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Ingeteam (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ingeteam",
-        "id": "grid.435224.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       }
     ]
   },
   "Industrial Leadership": {
     "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
       {
-        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Offshore Renewable Energy Catapult",
-        "id": "grid.460245.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 169
-      },
-      {
-        "name": "Institute of Mechanical Engineering and Industrial Mangement (Portugal)",
-        "country": "Portugal",
-        "full_name": "Institute of Mechanical Engineering and Industrial Mangement",
-        "id": "grid.420980.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       },
       {
         "name": "Centre for Electrochemical Technologies (Espagne)",
@@ -434,17 +549,11 @@
         "full_name": "Centre for Electrochemical Technologies",
         "id": "grid.39768.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 20
-      },
-      {
-        "name": "Haydale (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Haydale",
-        "id": "grid.434044.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "IRT Jules-Verne (France)",
@@ -453,25 +562,57 @@
         "acronym": "IRT Jules-Verne",
         "id": "eYs8j",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
+        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Offshore Renewable Energy Catapult",
+        "id": "grid.460245.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
-        "z": 48
+        "z": 1
       },
       {
-        "name": "Sense In (France)",
-        "country": "France",
-        "full_name": "Sense In",
-        "acronym": "Sense In",
-        "id": "837534296",
+        "name": "Instituto Tecnológico de Aragón (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Aragón",
+        "id": "grid.16189.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Haydale (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Haydale",
+        "id": "grid.434044.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 1
       },
@@ -481,26 +622,23 @@
         "full_name": "University of Strathclyde",
         "id": "grid.11984.35",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 11
       },
       {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Instituto Tecnológico de Aragón (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Aragón",
-        "id": "grid.16189.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
+        "z": 48
       },
       {
         "name": "University of Birmingham (Royaume-Uni)",
@@ -508,8 +646,36 @@
         "full_name": "University of Birmingham",
         "id": "grid.6572.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
         "y": 1,
         "z": 23
+      },
+      {
+        "name": "Sense In (France)",
+        "country": "France",
+        "full_name": "Sense In",
+        "acronym": "Sense In",
+        "id": "837534296",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institute of Mechanical Engineering and Industrial Mangement (Portugal)",
+        "country": "Portugal",
+        "full_name": "Institute of Mechanical Engineering and Industrial Mangement",
+        "id": "grid.420980.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          953192
+        ],
+        "y": 1,
+        "z": 10
       }
     ]
   }

@@ -7,6 +7,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101,
+          783176,
+          101014977
+        ],
         "y": 3,
         "z": 1072
       },
@@ -17,8 +22,36 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101,
+          783176
+        ],
         "y": 2,
         "z": 852
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
+        "y": 1,
+        "z": 341
+      },
+      {
+        "name": "Leipzig University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leipzig University",
+        "id": "grid.9647.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
+        "y": 1,
+        "z": 60
       },
       {
         "name": "Microoled (France)",
@@ -27,35 +60,36 @@
         "acronym": "Microoled",
         "id": "498198167",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Leipzig University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Leipzig University",
-        "id": "grid.9647.c",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
-        "z": 60
+        "z": 2670
       },
       {
-        "name": "University of Oxford (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Oxford",
-        "id": "grid.4991.5",
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
-        "z": 341
-      },
-      {
-        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
-        "country": "Turquie",
-        "full_name": "Scientific and Technological Research Council of Turkey",
-        "id": "grid.426409.d",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 99
+        "z": 137
       },
       {
         "name": "TU Darmstadt (Allemagne)",
@@ -63,36 +97,11 @@
         "full_name": "TU Darmstadt",
         "id": "grid.6546.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 98
-      },
-      {
-        "name": "Continental (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Continental",
-        "id": "grid.423649.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institut Mikroelektronických Aplikací",
-        "id": "grid.424651.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "STMicroelectronics (France)",
-        "country": "France",
-        "full_name": "STMicroelectronics",
-        "acronym": "STMicroelectronics",
-        "id": "gent166",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
       },
       {
         "name": "Pfeiffer Vacuum (France)",
@@ -101,6 +110,59 @@
         "acronym": "Pfeiffer Vacuum",
         "id": "085980357",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Institute of Information Theory and Automation (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Information Theory and Automation",
+        "id": "grid.424990.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institut Mikroelektronických Aplikací",
+        "id": "grid.424651.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "Gemalto (France)",
+        "country": "France",
+        "full_name": "Gemalto",
+        "acronym": "Gemalto",
+        "id": "gent85",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 8
       },
@@ -110,56 +172,48 @@
         "full_name": "Melexis",
         "id": "grid.439139.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "CNRS (France)",
+        "name": "Continental (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Continental",
+        "id": "grid.423649.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Scientific and Technological Research Council of Turkey",
+        "id": "grid.426409.d",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 99
+      },
+      {
+        "name": "STMicroelectronics (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "Gemalto (France)",
-        "country": "France",
-        "full_name": "Gemalto",
-        "acronym": "Gemalto",
-        "id": "gent85",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 137
-      },
-      {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 277
-      },
-      {
-        "name": "Institute of Information Theory and Automation (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institute of Information Theory and Automation",
-        "id": "grid.424990.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
+        "z": 51
       },
       {
         "name": "Valeo (France)",
@@ -168,6 +222,9 @@
         "acronym": "Valeo",
         "id": "gent184",
         "country_level_part": "Pays membres",
+        "projects": [
+          101014977
+        ],
         "y": 1,
         "z": 36
       },
@@ -177,6 +234,9 @@
         "full_name": "Technikon",
         "id": "grid.426234.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101014977
+        ],
         "y": 1,
         "z": 24
       }
@@ -190,6 +250,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101,
+          783176,
+          101014977
+        ],
         "y": 3,
         "z": 283
       },
@@ -200,8 +265,36 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101,
+          783176
+        ],
         "y": 2,
         "z": 167
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Leipzig University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leipzig University",
+        "id": "grid.9647.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Microoled (France)",
@@ -210,91 +303,11 @@
         "acronym": "Microoled",
         "id": "498198167",
         "country_level_part": "Pays membres",
+        "projects": [
+          644101
+        ],
         "y": 1,
         "z": 4
-      },
-      {
-        "name": "Leipzig University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Leipzig University",
-        "id": "grid.9647.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Oxford (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Oxford",
-        "id": "grid.4991.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
-        "country": "Turquie",
-        "full_name": "Scientific and Technological Research Council of Turkey",
-        "id": "grid.426409.d",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "TU Darmstadt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "TU Darmstadt",
-        "id": "grid.6546.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Continental (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Continental",
-        "id": "grid.423649.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institut Mikroelektronických Aplikací",
-        "id": "grid.424651.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "STMicroelectronics (France)",
-        "country": "France",
-        "full_name": "STMicroelectronics",
-        "acronym": "STMicroelectronics",
-        "id": "gent166",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "Pfeiffer Vacuum (France)",
-        "country": "France",
-        "full_name": "Pfeiffer Vacuum",
-        "acronym": "Pfeiffer Vacuum",
-        "id": "085980357",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Melexis (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Melexis",
-        "id": "grid.439139.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "CNRS (France)",
@@ -303,18 +316,11 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 148
-      },
-      {
-        "name": "Gemalto (France)",
-        "country": "France",
-        "full_name": "Gemalto",
-        "acronym": "Gemalto",
-        "id": "gent85",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Autonomous University of Barcelona (Espagne)",
@@ -322,8 +328,60 @@
         "full_name": "Autonomous University of Barcelona",
         "id": "grid.7080.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 8
+      },
+      {
+        "name": "TU Darmstadt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "TU Darmstadt",
+        "id": "grid.6546.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Pfeiffer Vacuum (France)",
+        "country": "France",
+        "full_name": "Pfeiffer Vacuum",
+        "acronym": "Pfeiffer Vacuum",
+        "id": "085980357",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Institute of Information Theory and Automation (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Information Theory and Automation",
+        "id": "grid.424990.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institut Mikroelektronických Aplikací",
+        "id": "grid.424651.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 19
       },
       {
         "name": "UGA (France)",
@@ -332,17 +390,73 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
         "z": 26
       },
       {
-        "name": "Institute of Information Theory and Automation (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institute of Information Theory and Automation",
-        "id": "grid.424990.2",
+        "name": "Gemalto (France)",
+        "country": "France",
+        "full_name": "Gemalto",
+        "acronym": "Gemalto",
+        "id": "gent85",
         "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
         "y": 1,
-        "z": 7
+        "z": 5
+      },
+      {
+        "name": "Melexis (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Melexis",
+        "id": "grid.439139.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Continental (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Continental",
+        "id": "grid.423649.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Scientific and Technological Research Council of Turkey (Turquie)",
+        "country": "Turquie",
+        "full_name": "Scientific and Technological Research Council of Turkey",
+        "id": "grid.426409.d",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783176
+        ],
+        "y": 1,
+        "z": 40
       },
       {
         "name": "Valeo (France)",
@@ -351,6 +465,9 @@
         "acronym": "Valeo",
         "id": "gent184",
         "country_level_part": "Pays membres",
+        "projects": [
+          101014977
+        ],
         "y": 1,
         "z": 11
       },
@@ -360,6 +477,9 @@
         "full_name": "Technikon",
         "id": "grid.426234.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101014977
+        ],
         "y": 1,
         "z": 16
       }

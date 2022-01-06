@@ -2,31 +2,28 @@
   "all": {
     "all": [
       {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 306
-      },
-      {
         "name": "Semmelweis University (Hongrie)",
         "country": "Hongrie",
         "full_name": "Semmelweis University",
         "id": "grid.11804.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 30
       },
       {
-        "name": "Aarhus University Hospital (Danemark)",
+        "name": "Aarhus University (Danemark)",
         "country": "Danemark",
-        "full_name": "Aarhus University Hospital",
-        "id": "grid.154185.c",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
-        "z": 18
+        "z": 306
       },
       {
         "name": "Riga Technical University (Lettonie)",
@@ -34,26 +31,11 @@
         "full_name": "Riga Technical University",
         "id": "grid.6973.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 36
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 257
-      },
-      {
-        "name": "University of Aberdeen (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Aberdeen",
-        "id": "grid.7107.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 61
       },
       {
         "name": "University of Oxford (Royaume-Uni)",
@@ -61,6 +43,9 @@
         "full_name": "University of Oxford",
         "id": "grid.4991.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 341
       },
@@ -70,48 +55,11 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 285
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "Aarhus University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University",
-        "id": "grid.7048.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
-        "name": "Semmelweis University (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Semmelweis University",
-        "id": "grid.11804.3c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Aarhus University Hospital (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aarhus University Hospital",
-        "id": "grid.154185.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Riga Technical University (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "Riga Technical University",
-        "id": "grid.6973.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "University of Edinburgh (Royaume-Uni)",
@@ -119,8 +67,11 @@
         "full_name": "University of Edinburgh",
         "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
-        "z": 35
+        "z": 257
       },
       {
         "name": "University of Aberdeen (Royaume-Uni)",
@@ -128,8 +79,63 @@
         "full_name": "University of Aberdeen",
         "id": "grid.7107.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
-        "z": 7
+        "z": 61
+      },
+      {
+        "name": "Aarhus University Hospital (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University Hospital",
+        "id": "grid.154185.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 18
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Semmelweis University (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semmelweis University",
+        "id": "grid.11804.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Aarhus University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University",
+        "id": "grid.7048.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Riga Technical University (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "Riga Technical University",
+        "id": "grid.6973.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University of Oxford (Royaume-Uni)",
@@ -137,6 +143,9 @@
         "full_name": "University of Oxford",
         "id": "grid.4991.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 86
       },
@@ -146,8 +155,47 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "University of Aberdeen (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Aberdeen",
+        "id": "grid.7107.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Aarhus University Hospital (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aarhus University Hospital",
+        "id": "grid.154185.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017562
+        ],
+        "y": 1,
+        "z": 12
       }
     ]
   }

@@ -2,22 +2,30 @@
   "all": {
     "all": [
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 258
-      },
-      {
         "name": "Cartif (Espagne)",
         "country": "Espagne",
         "full_name": "Cartif",
         "id": "grid.424774.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623,
+          837758
+        ],
         "y": 2,
         "z": 62
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          768623,
+          723611
+        ],
+        "y": 2,
+        "z": 258
       },
       {
         "name": "2.-0 LCA Consultants (Danemark)",
@@ -25,56 +33,12 @@
         "full_name": "2.-0 LCA Consultants",
         "id": "grid.431809.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886,
+          723611
+        ],
         "y": 2,
         "z": 3
-      },
-      {
-        "name": "Aerospace Valley (France)",
-        "country": "France",
-        "full_name": "Aerospace Valley",
-        "acronym": "Aerospace Valley",
-        "id": "S2STm",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
-        "id": "grid.19843.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 79
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Pôle mer - Méditerranée (France)",
-        "country": "France",
-        "full_name": "Pôle mer - Méditerranée",
-        "acronym": "Pôle mer - Méditerranée",
-        "id": "T37ba",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Inno Tsd (France)",
-        "country": "France",
-        "full_name": "Inno Tsd",
-        "acronym": "Inno Tsd",
-        "id": "339309320",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
       },
       {
         "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
@@ -82,6 +46,9 @@
         "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
         "id": "grid.432344.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 6
       },
@@ -92,8 +59,74 @@
         "acronym": "ADI Nouvelle-Aquitaine",
         "id": "820336733",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Aerospace Valley (France)",
+        "country": "France",
+        "full_name": "Aerospace Valley",
+        "acronym": "Aerospace Valley",
+        "id": "S2STm",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
+        "id": "grid.19843.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "Pôle mer - Méditerranée (France)",
+        "country": "France",
+        "full_name": "Pôle mer - Méditerranée",
+        "acronym": "Pôle mer - Méditerranée",
+        "id": "T37ba",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Inno Tsd (France)",
+        "country": "France",
+        "full_name": "Inno Tsd",
+        "acronym": "Inno Tsd",
+        "id": "339309320",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 23
       },
       {
         "name": "Parco Tecnologico Padano (Italie)",
@@ -101,26 +134,11 @@
         "full_name": "Parco Tecnologico Padano",
         "id": "grid.425375.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "Zabala Innovation Consulting (Espagne)",
-        "country": "Espagne",
-        "full_name": "Zabala Innovation Consulting",
-        "id": "grid.439216.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 56
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
       },
       {
         "name": "Onyx Solar (Espagne)",
@@ -128,8 +146,23 @@
         "full_name": "Onyx Solar",
         "id": "grid.436756.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "Zabala Innovation Consulting (Espagne)",
+        "country": "Espagne",
+        "full_name": "Zabala Innovation Consulting",
+        "id": "grid.439216.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
+        "y": 1,
+        "z": 56
       },
       {
         "name": "Comunidad de Madrid (Espagne)",
@@ -137,35 +170,23 @@
         "full_name": "Comunidad de Madrid",
         "id": "grid.418921.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
         "z": 6
       },
       {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
-        "z": 368
-      },
-      {
-        "name": "Ekodenge (Turquie)",
-        "country": "Turquie",
-        "full_name": "Ekodenge",
-        "id": "grid.473932.8",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Mondragon Corporation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mondragon Corporation",
-        "id": "grid.423975.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
+        "z": 155
       },
       {
         "name": "IK4-Lortek (Espagne)",
@@ -173,8 +194,23 @@
         "full_name": "IK4-Lortek",
         "id": "grid.425462.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "Ekodenge (Turquie)",
+        "country": "Turquie",
+        "full_name": "Ekodenge",
+        "id": "grid.473932.8",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Rhodia (France)",
@@ -183,8 +219,35 @@
         "acronym": "Rhodia",
         "id": "gent143",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 15
+      },
+      {
+        "name": "Mondragon Corporation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mondragon Corporation",
+        "id": "grid.423975.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 368
       },
       {
         "name": "German Research Centre for Artificial Intelligence (Allemagne)",
@@ -192,6 +255,9 @@
         "full_name": "German Research Centre for Artificial Intelligence",
         "id": "grid.17272.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 80
       },
@@ -202,28 +268,23 @@
         "acronym": "UPEC",
         "id": "vb71K",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 39
       },
       {
-        "name": "IDD-SII (France)",
-        "country": "France",
-        "full_name": "Institut de L'innovation Durable - Sustainable Innovation Institute (Iid-Sii)",
-        "acronym": "IDD-SII",
-        "id": "853313260",
+        "name": "University of Natural Resources and Life Sciences (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Natural Resources and Life Sciences",
+        "id": "grid.5173.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Petit-Bateau (France)",
-        "country": "France",
-        "full_name": "Petit-Bateau",
-        "acronym": "Petit-Bateau",
-        "id": "542880125",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 105
       },
       {
         "name": "Decathlon (France)",
@@ -232,6 +293,9 @@
         "acronym": "Decathlon",
         "id": "gent61",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 1
       },
@@ -241,26 +305,11 @@
         "full_name": "Prospex Institute",
         "id": "grid.493472.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 142
-      },
-      {
-        "name": "University of Natural Resources and Life Sciences (Autriche)",
-        "country": "Autriche",
-        "full_name": "University of Natural Resources and Life Sciences",
-        "id": "grid.5173.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 105
       },
       {
         "name": "TU Wien (Autriche)",
@@ -268,8 +317,49 @@
         "full_name": "TU Wien",
         "id": "grid.5329.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 197
+      },
+      {
+        "name": "IDD-SII (France)",
+        "country": "France",
+        "full_name": "Institut de L'innovation Durable - Sustainable Innovation Institute (Iid-Sii)",
+        "acronym": "IDD-SII",
+        "id": "853313260",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "Petit-Bateau (France)",
+        "country": "France",
+        "full_name": "Petit-Bateau",
+        "acronym": "Petit-Bateau",
+        "id": "542880125",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "CETI (France)",
@@ -278,6 +368,9 @@
         "acronym": "CETI",
         "id": "507487130",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 3
       },
@@ -288,6 +381,9 @@
         "acronym": "Cero Concept Realisa O...",
         "id": "329666572",
         "country_level_part": "Pays membres",
+        "projects": [
+          886549
+        ],
         "y": 1,
         "z": 1
       },
@@ -297,16 +393,9 @@
         "full_name": "Latécoère",
         "id": "grid.447995.2",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Corima Technologies (France)",
-        "country": "France",
-        "full_name": "Corima Technologies",
-        "acronym": "Corima Technologies",
-        "id": "401614383",
-        "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 1
       },
@@ -317,6 +406,9 @@
         "acronym": "Latécoère",
         "id": "gent102",
         "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 3
       },
@@ -327,8 +419,60 @@
         "acronym": "ESSA",
         "id": "IDUKL",
         "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Corima Technologies (France)",
+        "country": "France",
+        "full_name": "Corima Technologies",
+        "acronym": "Corima Technologies",
+        "id": "401614383",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 158
+      },
+      {
+        "name": "iCons (Italie)",
+        "country": "Italie",
+        "full_name": "iCons",
+        "id": "grid.424830.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "WIP - Renewable Energies (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "WIP - Renewable Energies",
+        "id": "grid.13327.34",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 37
       },
       {
         "name": "Adelphi Research (Allemagne)",
@@ -336,6 +480,9 @@
         "full_name": "Adelphi Research",
         "id": "grid.423657.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
         "y": 1,
         "z": 20
       },
@@ -346,45 +493,11 @@
         "acronym": "I-Ener",
         "id": "804961068",
         "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "WIP - Renewable Energies (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "WIP - Renewable Energies",
-        "id": "grid.13327.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
-      },
-      {
-        "name": "Trinity College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trinity College Dublin",
-        "id": "grid.8217.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 158
-      },
-      {
-        "name": "iCons (Italie)",
-        "country": "Italie",
-        "full_name": "iCons",
-        "id": "grid.424830.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Euroquality (France)",
-        "country": "France",
-        "full_name": "Euroquality",
-        "acronym": "Euroquality",
-        "id": "413939620",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
       },
       {
         "name": "Egreen (France)",
@@ -393,6 +506,9 @@
         "acronym": "Egreen",
         "id": "751465089",
         "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
         "y": 1,
         "z": 1
       },
@@ -402,8 +518,24 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
         "y": 1,
         "z": 58
+      },
+      {
+        "name": "Euroquality (France)",
+        "country": "France",
+        "full_name": "Euroquality",
+        "acronym": "Euroquality",
+        "id": "413939620",
+        "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
+        "y": 1,
+        "z": 15
       },
       {
         "name": "Siemens (Roumanie)",
@@ -411,8 +543,23 @@
         "full_name": "Siemens",
         "id": "grid.426110.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 17
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
+        "y": 1,
+        "z": 1072
       },
       {
         "name": "University of Patras (Grèce)",
@@ -420,17 +567,11 @@
         "full_name": "University of Patras",
         "id": "grid.11047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 138
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 554
       },
       {
         "name": "Lafarge (France)",
@@ -439,17 +580,35 @@
         "acronym": "Lafarge",
         "id": "gent101",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
+        "name": "Fundació Privada Centre CIM (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada Centre CIM",
+        "id": "grid.432871.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
-        "z": 1072
+        "z": 4
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
+        "y": 1,
+        "z": 554
       },
       {
         "name": "Xtreee (France)",
@@ -458,76 +617,25 @@
         "acronym": "Xtreee",
         "id": "817448780",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Fundació Privada Centre CIM (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundació Privada Centre CIM",
-        "id": "grid.432871.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       }
     ]
   },
   "Industrial Leadership": {
     "Innovation in SMEs (SME)": [
       {
-        "name": "Aerospace Valley (France)",
-        "country": "France",
-        "full_name": "Aerospace Valley",
-        "acronym": "Aerospace Valley",
-        "id": "S2STm",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
-        "id": "grid.19843.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Pôle mer - Méditerranée (France)",
-        "country": "France",
-        "full_name": "Pôle mer - Méditerranée",
-        "acronym": "Pôle mer - Méditerranée",
-        "id": "T37ba",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Inno Tsd (France)",
-        "country": "France",
-        "full_name": "Inno Tsd",
-        "acronym": "Inno Tsd",
-        "id": "339309320",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
         "country": "Espagne",
         "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
         "id": "grid.432344.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 2
       },
@@ -538,8 +646,74 @@
         "acronym": "ADI Nouvelle-Aquitaine",
         "id": "820336733",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Aerospace Valley (France)",
+        "country": "France",
+        "full_name": "Aerospace Valley",
+        "acronym": "Aerospace Valley",
+        "id": "S2STm",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies",
+        "id": "grid.19843.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Pôle mer - Méditerranée (France)",
+        "country": "France",
+        "full_name": "Pôle mer - Méditerranée",
+        "acronym": "Pôle mer - Méditerranée",
+        "id": "T37ba",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Inno Tsd (France)",
+        "country": "France",
+        "full_name": "Inno Tsd",
+        "acronym": "Inno Tsd",
+        "id": "339309320",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Parco Tecnologico Padano (Italie)",
@@ -547,6 +721,9 @@
         "full_name": "Parco Tecnologico Padano",
         "id": "grid.425375.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
         "y": 1,
         "z": 1
       }
@@ -558,6 +735,10 @@
         "full_name": "SINTEF",
         "id": "grid.4319.f",
         "country_level_part": "Pays associés",
+        "projects": [
+          768623,
+          723611
+        ],
         "y": 2,
         "z": 43
       },
@@ -567,26 +748,12 @@
         "full_name": "2.-0 LCA Consultants",
         "id": "grid.431809.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886,
+          723611
+        ],
         "y": 2,
         "z": 2
-      },
-      {
-        "name": "Zabala Innovation Consulting (Espagne)",
-        "country": "Espagne",
-        "full_name": "Zabala Innovation Consulting",
-        "id": "grid.439216.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Onyx Solar (Espagne)",
@@ -594,6 +761,21 @@
         "full_name": "Onyx Solar",
         "id": "grid.436756.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Zabala Innovation Consulting (Espagne)",
+        "country": "Espagne",
+        "full_name": "Zabala Innovation Consulting",
+        "id": "grid.439216.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
         "z": 4
       },
@@ -603,8 +785,23 @@
         "full_name": "Comunidad de Madrid",
         "id": "grid.418921.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Cartif (Espagne)",
@@ -612,35 +809,11 @@
         "full_name": "Cartif",
         "id": "grid.424774.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          768623
+        ],
         "y": 1,
         "z": 13
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 73
-      },
-      {
-        "name": "Ekodenge (Turquie)",
-        "country": "Turquie",
-        "full_name": "Ekodenge",
-        "id": "grid.473932.8",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Mondragon Corporation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mondragon Corporation",
-        "id": "grid.423975.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       },
       {
         "name": "IK4-Lortek (Espagne)",
@@ -648,8 +821,23 @@
         "full_name": "IK4-Lortek",
         "id": "grid.425462.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Ekodenge (Turquie)",
+        "country": "Turquie",
+        "full_name": "Ekodenge",
+        "id": "grid.473932.8",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Rhodia (France)",
@@ -658,8 +846,35 @@
         "acronym": "Rhodia",
         "id": "gent143",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 8
+      },
+      {
+        "name": "Mondragon Corporation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mondragon Corporation",
+        "id": "grid.423975.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
+        "y": 1,
+        "z": 73
       },
       {
         "name": "German Research Centre for Artificial Intelligence (Allemagne)",
@@ -667,6 +882,9 @@
         "full_name": "German Research Centre for Artificial Intelligence",
         "id": "grid.17272.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 6
       },
@@ -677,6 +895,9 @@
         "acronym": "UPEC",
         "id": "vb71K",
         "country_level_part": "Pays membres",
+        "projects": [
+          869886
+        ],
         "y": 1,
         "z": 1
       },
@@ -686,8 +907,23 @@
         "full_name": "Siemens",
         "id": "grid.426110.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
+        "y": 1,
+        "z": 169
       },
       {
         "name": "University of Patras (Grèce)",
@@ -695,17 +931,11 @@
         "full_name": "University of Patras",
         "id": "grid.11047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 33
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 41
       },
       {
         "name": "Lafarge (France)",
@@ -714,17 +944,35 @@
         "acronym": "Lafarge",
         "id": "gent101",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
+        "name": "Fundació Privada Centre CIM (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fundació Privada Centre CIM",
+        "id": "grid.432871.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
-        "z": 169
+        "z": 4
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
+        "y": 1,
+        "z": 41
       },
       {
         "name": "Xtreee (France)",
@@ -733,17 +981,11 @@
         "acronym": "Xtreee",
         "id": "817448780",
         "country_level_part": "Pays membres",
+        "projects": [
+          723611
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Fundació Privada Centre CIM (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fundació Privada Centre CIM",
-        "id": "grid.432871.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       }
     ]
   },
@@ -755,8 +997,47 @@
         "full_name": "Cartif",
         "id": "grid.424774.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
         "y": 1,
         "z": 24
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "iCons (Italie)",
+        "country": "Italie",
+        "full_name": "iCons",
+        "id": "grid.424830.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "WIP - Renewable Energies (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "WIP - Renewable Energies",
+        "id": "grid.13327.34",
+        "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
+        "y": 1,
+        "z": 32
       },
       {
         "name": "Adelphi Research (Allemagne)",
@@ -764,6 +1045,9 @@
         "full_name": "Adelphi Research",
         "id": "grid.423657.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
         "y": 1,
         "z": 12
       },
@@ -774,45 +1058,11 @@
         "acronym": "I-Ener",
         "id": "804961068",
         "country_level_part": "Pays membres",
+        "projects": [
+          837758
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "WIP - Renewable Energies (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "WIP - Renewable Energies",
-        "id": "grid.13327.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Trinity College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trinity College Dublin",
-        "id": "grid.8217.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "iCons (Italie)",
-        "country": "Italie",
-        "full_name": "iCons",
-        "id": "grid.424830.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Euroquality (France)",
-        "country": "France",
-        "full_name": "Euroquality",
-        "acronym": "Euroquality",
-        "id": "413939620",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "Egreen (France)",
@@ -821,6 +1071,9 @@
         "acronym": "Egreen",
         "id": "751465089",
         "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
         "y": 1,
         "z": 1
       },
@@ -830,30 +1083,38 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Euroquality (France)",
+        "country": "France",
+        "full_name": "Euroquality",
+        "acronym": "Euroquality",
+        "id": "413939620",
+        "country_level_part": "Pays membres",
+        "projects": [
+          649621
+        ],
+        "y": 1,
+        "z": 11
       }
     ],
     "Climate action, environment, resource efficiency and raw materials (ENV)": [
       {
-        "name": "IDD-SII (France)",
-        "country": "France",
-        "full_name": "Institut de L'innovation Durable - Sustainable Innovation Institute (Iid-Sii)",
-        "acronym": "IDD-SII",
-        "id": "853313260",
+        "name": "University of Natural Resources and Life Sciences (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Natural Resources and Life Sciences",
+        "id": "grid.5173.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Petit-Bateau (France)",
-        "country": "France",
-        "full_name": "Petit-Bateau",
-        "acronym": "Petit-Bateau",
-        "id": "542880125",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 16
       },
       {
         "name": "Decathlon (France)",
@@ -862,6 +1123,9 @@
         "acronym": "Decathlon",
         "id": "gent61",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 1
       },
@@ -871,26 +1135,11 @@
         "full_name": "Prospex Institute",
         "id": "grid.493472.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
-        "name": "University of Natural Resources and Life Sciences (Autriche)",
-        "country": "Autriche",
-        "full_name": "University of Natural Resources and Life Sciences",
-        "id": "grid.5173.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
       },
       {
         "name": "TU Wien (Autriche)",
@@ -898,8 +1147,49 @@
         "full_name": "TU Wien",
         "id": "grid.5329.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "IDD-SII (France)",
+        "country": "France",
+        "full_name": "Institut de L'innovation Durable - Sustainable Innovation Institute (Iid-Sii)",
+        "acronym": "IDD-SII",
+        "id": "853313260",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Petit-Bateau (France)",
+        "country": "France",
+        "full_name": "Petit-Bateau",
+        "acronym": "Petit-Bateau",
+        "id": "542880125",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "CETI (France)",
@@ -908,6 +1198,9 @@
         "acronym": "CETI",
         "id": "507487130",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003906
+        ],
         "y": 1,
         "z": 2
       }
@@ -920,6 +1213,9 @@
         "acronym": "Cero Concept Realisa O...",
         "id": "329666572",
         "country_level_part": "Pays membres",
+        "projects": [
+          886549
+        ],
         "y": 1,
         "z": 1
       },
@@ -929,16 +1225,9 @@
         "full_name": "Latécoère",
         "id": "grid.447995.2",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Corima Technologies (France)",
-        "country": "France",
-        "full_name": "Corima Technologies",
-        "acronym": "Corima Technologies",
-        "id": "401614383",
-        "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 1
       },
@@ -949,6 +1238,9 @@
         "acronym": "Latécoère",
         "id": "gent102",
         "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 3
       },
@@ -959,8 +1251,24 @@
         "acronym": "ESSA",
         "id": "IDUKL",
         "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Corima Technologies (France)",
+        "country": "France",
+        "full_name": "Corima Technologies",
+        "acronym": "Corima Technologies",
+        "id": "401614383",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831900
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

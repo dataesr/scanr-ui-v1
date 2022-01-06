@@ -2,31 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "CNES (France)",
-        "country": "France",
-        "full_name": "Centre national d'études spatiales",
-        "acronym": "CNES",
-        "id": "CvdQn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 107
-      },
-      {
-        "name": "Air-France (France)",
-        "country": "France",
-        "full_name": "Air France",
-        "acronym": "Air-France",
-        "id": "gent6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
         "name": "Airbus (Allemagne)",
         "country": "Allemagne",
         "full_name": "Airbus",
         "id": "grid.410308.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
         "z": 91
       },
@@ -37,13 +20,12 @@
         "acronym": "Chelton Antennas",
         "id": "412162448",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
         "z": 1
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Space (SPACE)": [
+      },
       {
         "name": "CNES (France)",
         "country": "France",
@@ -51,8 +33,11 @@
         "acronym": "CNES",
         "id": "CvdQn",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
-        "z": 34
+        "z": 107
       },
       {
         "name": "Air-France (France)",
@@ -61,15 +46,25 @@
         "acronym": "Air-France",
         "id": "gent6",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
-        "z": 1
-      },
+        "z": 5
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Space (SPACE)": [
       {
         "name": "Airbus (Allemagne)",
         "country": "Allemagne",
         "full_name": "Airbus",
         "id": "grid.410308.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
         "z": 27
       },
@@ -80,6 +75,35 @@
         "acronym": "Chelton Antennas",
         "id": "412162448",
         "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CNES (France)",
+        "country": "France",
+        "full_name": "Centre national d'études spatiales",
+        "acronym": "CNES",
+        "id": "CvdQn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Air-France (France)",
+        "country": "France",
+        "full_name": "Air France",
+        "acronym": "Air-France",
+        "id": "gent6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687554
+        ],
         "y": 1,
         "z": 1
       }

@@ -2,32 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 453
-      },
-      {
         "name": "Sardegna Agricoltura (Italie)",
         "country": "Italie",
         "full_name": "Sardegna Agricoltura",
         "id": "grid.425428.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 6
-      },
-      {
-        "name": "Moredun Research Institute (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Moredun Research Institute",
-        "id": "grid.419384.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
       },
       {
         "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
@@ -35,17 +20,12 @@
         "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
         "id": "grid.6435.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 78
-      },
-      {
-        "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute of Bioeconomy Research",
-        "id": "grid.454322.6",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 32
       },
       {
         "name": "Agricultural Research Organization (Israël)",
@@ -53,6 +33,10 @@
         "full_name": "Agricultural Research Organization",
         "id": "grid.410498.0",
         "country_level_part": "Pays associés",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 13
       },
@@ -63,17 +47,12 @@
         "acronym": "CIIRPO",
         "id": "451546923",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 3
-      },
-      {
-        "name": "Scotland's Rural College (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scotland's Rural College",
-        "id": "grid.426884.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 20
       },
       {
         "name": "Institut de l'elevage (France)",
@@ -82,27 +61,116 @@
         "acronym": "Institut de l'elevage",
         "id": "302984158",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 33
       },
       {
-        "name": "European Federation of Animal Science (Italie)",
-        "country": "Italie",
-        "full_name": "European Federation of Animal Science",
-        "id": "grid.424759.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
+        "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Bioeconomy Research",
+        "id": "grid.454322.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 32
       },
       {
-        "name": "Api-Agro (France)",
-        "country": "France",
-        "full_name": "Api-Agro",
-        "acronym": "Api-Agro",
-        "id": "827935925",
+        "name": "Scotland's Rural College (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scotland's Rural College",
+        "id": "grid.426884.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 453
+      },
+      {
+        "name": "Moredun Research Institute (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Moredun Research Institute",
+        "id": "grid.419384.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Agdatahub (France)",
+        "country": "France",
+        "full_name": "Agdatahub",
+        "acronym": "Agdatahub",
+        "id": "887921484",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
-        "z": 3
+        "z": 1
+      },
+      {
+        "name": "Page Up (France)",
+        "country": "France",
+        "full_name": "Page Up",
+        "acronym": "Page Up",
+        "id": "420760860",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Confed Prod Industr Ro... (France)",
+        "country": "France",
+        "full_name": "Confed Prod Industr Roquefort",
+        "acronym": "Confed Prod Industr Ro...",
+        "id": "776722795",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 137
       },
       {
         "name": "Comite National Brebis... (France)",
@@ -111,6 +179,9 @@
         "acronym": "Comite National Brebis...",
         "id": "487639015",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 2
       },
@@ -121,35 +192,9 @@
         "acronym": "UNOTEC",
         "id": "390305076",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Agdatahub (France)",
-        "country": "France",
-        "full_name": "Agdatahub",
-        "acronym": "Agdatahub",
-        "id": "887921484",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 137
-      },
-      {
-        "name": "Page Up (France)",
-        "country": "France",
-        "full_name": "Page Up",
-        "acronym": "Page Up",
-        "id": "420760860",
-        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 1
       },
@@ -159,18 +204,49 @@
         "full_name": "Banat University of Agricultural Sciences and Veterinary Medicine",
         "id": "grid.472275.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Confed Prod Industr Ro... (France)",
+        "name": "Api-Agro (France)",
         "country": "France",
-        "full_name": "Confed Prod Industr Roquefort",
-        "acronym": "Confed Prod Industr Ro...",
-        "id": "776722795",
+        "full_name": "Api-Agro",
+        "acronym": "Api-Agro",
+        "id": "827935925",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
+      },
+      {
+        "name": "European Federation of Animal Science (Italie)",
+        "country": "Italie",
+        "full_name": "European Federation of Animal Science",
+        "id": "grid.424759.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "In Extenso Innovation ... (France)",
+        "country": "France",
+        "full_name": "In Extenso Innovation Croissance",
+        "acronym": "In Extenso Innovation ...",
+        "id": "439690991",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "Estonian University of Life Sciences (Estonie)",
@@ -178,6 +254,9 @@
         "full_name": "Estonian University of Life Sciences",
         "id": "grid.16697.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 29
       },
@@ -188,6 +267,9 @@
         "acronym": "EPLEFPA Aubenas",
         "id": "190709162",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 1
       },
@@ -197,50 +279,28 @@
         "full_name": "University of Debrecen",
         "id": "grid.7122.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "In Extenso Innovation ... (France)",
-        "country": "France",
-        "full_name": "In Extenso Innovation Croissance",
-        "acronym": "In Extenso Innovation ...",
-        "id": "439690991",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       }
     ]
   },
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 142
-      },
-      {
         "name": "Sardegna Agricoltura (Italie)",
         "country": "Italie",
         "full_name": "Sardegna Agricoltura",
         "id": "grid.425428.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 6
-      },
-      {
-        "name": "Moredun Research Institute (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Moredun Research Institute",
-        "id": "grid.419384.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 3
       },
       {
         "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
@@ -248,17 +308,12 @@
         "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
         "id": "grid.6435.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 63
-      },
-      {
-        "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute of Bioeconomy Research",
-        "id": "grid.454322.6",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 24
       },
       {
         "name": "Agricultural Research Organization (Israël)",
@@ -266,6 +321,10 @@
         "full_name": "Agricultural Research Organization",
         "id": "grid.410498.0",
         "country_level_part": "Pays associés",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 10
       },
@@ -276,17 +335,12 @@
         "acronym": "CIIRPO",
         "id": "451546923",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 3
-      },
-      {
-        "name": "Scotland's Rural College (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scotland's Rural College",
-        "id": "grid.426884.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 16
       },
       {
         "name": "Institut de l'elevage (France)",
@@ -295,27 +349,116 @@
         "acronym": "Institut de l'elevage",
         "id": "302984158",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
         "y": 2,
         "z": 29
       },
       {
-        "name": "European Federation of Animal Science (Italie)",
-        "country": "Italie",
-        "full_name": "European Federation of Animal Science",
-        "id": "grid.424759.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
+        "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Bioeconomy Research",
+        "id": "grid.454322.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 24
       },
       {
-        "name": "Api-Agro (France)",
-        "country": "France",
-        "full_name": "Api-Agro",
-        "acronym": "Api-Agro",
-        "id": "827935925",
+        "name": "Scotland's Rural College (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scotland's Rural College",
+        "id": "grid.426884.4",
         "country_level_part": "Pays membres",
-        "y": 1,
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 16
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
+        "z": 142
+      },
+      {
+        "name": "Moredun Research Institute (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Moredun Research Institute",
+        "id": "grid.419384.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050,
+          101000471
+        ],
+        "y": 2,
         "z": 3
+      },
+      {
+        "name": "Agdatahub (France)",
+        "country": "France",
+        "full_name": "Agdatahub",
+        "acronym": "Agdatahub",
+        "id": "887921484",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Page Up (France)",
+        "country": "France",
+        "full_name": "Page Up",
+        "acronym": "Page Up",
+        "id": "420760860",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Confed Prod Industr Ro... (France)",
+        "country": "France",
+        "full_name": "Confed Prod Industr Roquefort",
+        "acronym": "Confed Prod Industr Ro...",
+        "id": "776722795",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Comite National Brebis... (France)",
@@ -324,6 +467,9 @@
         "acronym": "Comite National Brebis...",
         "id": "487639015",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 2
       },
@@ -334,35 +480,9 @@
         "acronym": "UNOTEC",
         "id": "390305076",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Agdatahub (France)",
-        "country": "France",
-        "full_name": "Agdatahub",
-        "acronym": "Agdatahub",
-        "id": "887921484",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Page Up (France)",
-        "country": "France",
-        "full_name": "Page Up",
-        "acronym": "Page Up",
-        "id": "420760860",
-        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 1
       },
@@ -372,18 +492,49 @@
         "full_name": "Banat University of Agricultural Sciences and Veterinary Medicine",
         "id": "grid.472275.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Confed Prod Industr Ro... (France)",
+        "name": "Api-Agro (France)",
         "country": "France",
-        "full_name": "Confed Prod Industr Roquefort",
-        "acronym": "Confed Prod Industr Ro...",
-        "id": "776722795",
+        "full_name": "Api-Agro",
+        "acronym": "Api-Agro",
+        "id": "827935925",
         "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
+      },
+      {
+        "name": "European Federation of Animal Science (Italie)",
+        "country": "Italie",
+        "full_name": "European Federation of Animal Science",
+        "id": "grid.424759.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862050
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "In Extenso Innovation ... (France)",
+        "country": "France",
+        "full_name": "In Extenso Innovation Croissance",
+        "acronym": "In Extenso Innovation ...",
+        "id": "439690991",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Estonian University of Life Sciences (Estonie)",
@@ -391,6 +542,9 @@
         "full_name": "Estonian University of Life Sciences",
         "id": "grid.16697.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 14
       },
@@ -401,6 +555,9 @@
         "acronym": "EPLEFPA Aubenas",
         "id": "190709162",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 1
       },
@@ -410,18 +567,11 @@
         "full_name": "University of Debrecen",
         "id": "grid.7122.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101000471
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "In Extenso Innovation ... (France)",
-        "country": "France",
-        "full_name": "In Extenso Innovation Croissance",
-        "acronym": "In Extenso Innovation ...",
-        "id": "439690991",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       }
     ]
   }

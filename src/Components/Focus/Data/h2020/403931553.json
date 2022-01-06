@@ -2,22 +2,32 @@
   "all": {
     "all": [
       {
-        "name": "National Institute of Health Dr. Ricardo Jorge (Portugal)",
-        "country": "Portugal",
-        "full_name": "National Institute of Health Dr. Ricardo Jorge",
-        "id": "grid.422270.1",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 13
-      },
-      {
         "name": "National Institute for Public Health and the Environment (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "National Institute for Public Health and the Environment",
         "id": "grid.31147.30",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          634446,
+          101003673
+        ],
         "y": 3,
         "z": 61
+      },
+      {
+        "name": "National Institute of Health Dr. Ricardo Jorge (Portugal)",
+        "country": "Portugal",
+        "full_name": "National Institute of Health Dr. Ricardo Jorge",
+        "id": "grid.422270.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          634446,
+          101003673
+        ],
+        "y": 3,
+        "z": 13
       },
       {
         "name": "Public Health Agency of Sweden (Suède)",
@@ -25,26 +35,12 @@
         "full_name": "Public Health Agency of Sweden",
         "id": "grid.419734.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          101003673
+        ],
         "y": 2,
         "z": 14
-      },
-      {
-        "name": "Finnish Institute for Health and Welfare (Finlande)",
-        "country": "Finlande",
-        "full_name": "Finnish Institute for Health and Welfare",
-        "id": "grid.14758.3f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 40
-      },
-      {
-        "name": "Ministry of Health (Portugal)",
-        "country": "Portugal",
-        "full_name": "Ministry of Health",
-        "id": "grid.420634.7",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
       },
       {
         "name": "Robert Koch Institute (Allemagne)",
@@ -52,17 +48,38 @@
         "full_name": "Robert Koch Institute",
         "id": "grid.13652.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          634446
+        ],
         "y": 2,
         "z": 13
       },
       {
-        "name": "Institutul Cantacuzino (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Institutul Cantacuzino",
-        "id": "grid.418625.c",
+        "name": "Ministry of Health (Portugal)",
+        "country": "Portugal",
+        "full_name": "Ministry of Health",
+        "id": "grid.420634.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          101003673
+        ],
         "y": 2,
-        "z": 4
+        "z": 6
+      },
+      {
+        "name": "Finnish Institute for Health and Welfare (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Institute for Health and Welfare",
+        "id": "grid.14758.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285,
+          634446
+        ],
+        "y": 2,
+        "z": 40
       },
       {
         "name": "U. Montpellier (France)",
@@ -71,150 +88,12 @@
         "acronym": "U. Montpellier",
         "id": "7yd5d",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
         "y": 2,
         "z": 211
-      },
-      {
-        "name": "University of Strathclyde (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Strathclyde",
-        "id": "grid.11984.35",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 125
-      },
-      {
-        "name": "CHU Montpellier (France)",
-        "country": "France",
-        "full_name": "Centre Hospitalier Universitaire de Montpellier",
-        "acronym": "CHU Montpellier",
-        "id": "u1MAA",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 27
-      },
-      {
-        "name": "Instituto de Salud Carlos III (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Carlos III",
-        "id": "grid.413448.e",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 51
-      },
-      {
-        "name": "Sorbonne U (France)",
-        "country": "France",
-        "full_name": "Sorbonne Université",
-        "acronym": "Sorbonne U",
-        "id": "bxPQe",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 505
-      },
-      {
-        "name": "Instituto Aragonés de Ciencias de la Salud (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Aragonés de Ciencias de la Salud",
-        "id": "grid.419040.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 8
-      },
-      {
-        "name": "CHU Rennes (France)",
-        "country": "France",
-        "full_name": "Centre Hospitalier Universitaire de Rennes",
-        "acronym": "CHU Rennes",
-        "id": "WdImd",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 10
-      },
-      {
-        "name": "Health Service Executive (Irlande)",
-        "country": "Irlande",
-        "full_name": "Health Service Executive",
-        "id": "grid.424617.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 13
-      },
-      {
-        "name": "Instituto de Salud Pública de Navarra (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Pública de Navarra",
-        "id": "grid.419126.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "Netherlands Institute for Health Services Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Institute for Health Services Research",
-        "id": "grid.416005.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
-      },
-      {
-        "name": "AP-HP (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Paris",
-        "acronym": "AP-HP",
-        "id": "Py0K5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 122
-      },
-      {
-        "name": "U. Corse (France)",
-        "country": "France",
-        "full_name": "Université de Corse Pasquale Paoli",
-        "acronym": "U. Corse",
-        "id": "NLCOF",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Department of Health and Social Care (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Department of Health and Social Care",
-        "id": "grid.57981.32",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 41
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 689
-      },
-      {
-        "name": "Lithuanian University of Health Sciences (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Lithuanian University of Health Sciences",
-        "id": "grid.45083.3a",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
-      },
-      {
-        "name": "ANSP (France)",
-        "country": "France",
-        "full_name": "Agence nationale de Sante Publique",
-        "acronym": "ANSP",
-        "id": "130022338",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 7
       },
       {
         "name": "HCL (France)",
@@ -223,17 +102,227 @@
         "acronym": "HCL",
         "id": "Y4l0C",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
         "y": 2,
         "z": 43
       },
       {
-        "name": "National University of Ireland, Galway (Irlande)",
-        "country": "Irlande",
-        "full_name": "National University of Ireland, Galway",
-        "id": "grid.6142.1",
+        "name": "CHU Rennes (France)",
+        "country": "France",
+        "full_name": "Centre Hospitalier Universitaire de Rennes",
+        "acronym": "CHU Rennes",
+        "id": "WdImd",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 162
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 10
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 122
+      },
+      {
+        "name": "CHU Montpellier (France)",
+        "country": "France",
+        "full_name": "Centre Hospitalier Universitaire de Montpellier",
+        "acronym": "CHU Montpellier",
+        "id": "u1MAA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 27
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 505
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 51
+      },
+      {
+        "name": "ANSP (France)",
+        "country": "France",
+        "full_name": "Agence nationale de Sante Publique",
+        "acronym": "ANSP",
+        "id": "130022338",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Health Service Executive (Irlande)",
+        "country": "Irlande",
+        "full_name": "Health Service Executive",
+        "id": "grid.424617.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 13
+      },
+      {
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 125
+      },
+      {
+        "name": "Department of Health and Social Care (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department of Health and Social Care",
+        "id": "grid.57981.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 41
+      },
+      {
+        "name": "U. Corse (France)",
+        "country": "France",
+        "full_name": "Université de Corse Pasquale Paoli",
+        "acronym": "U. Corse",
+        "id": "NLCOF",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Instituto de Salud Pública de Navarra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Pública de Navarra",
+        "id": "grid.419126.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Institutul Cantacuzino (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Institutul Cantacuzino",
+        "id": "grid.418625.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Netherlands Institute for Health Services Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Institute for Health Services Research",
+        "id": "grid.416005.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Instituto Aragonés de Ciencias de la Salud (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Aragonés de Ciencias de la Salud",
+        "id": "grid.419040.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Lithuanian University of Health Sciences (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian University of Health Sciences",
+        "id": "grid.45083.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 689
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -241,53 +330,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "Associazione della Croce Rossa Italiana (Italie)",
-        "country": "Italie",
-        "full_name": "Associazione della Croce Rossa Italiana",
-        "id": "grid.483265.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 114
-      },
-      {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 205
-      },
-      {
-        "name": "Trilateral research limited (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trilateral research limited",
-        "id": "grid.426337.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Institute for Scientific Interchange (Italie)",
-        "country": "Italie",
-        "full_name": "Institute for Scientific Interchange",
-        "id": "grid.418750.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       },
       {
         "name": "Institutul National de Sanatate Publica (Roumanie)",
@@ -295,17 +342,59 @@
         "full_name": "Institutul National de Sanatate Publica",
         "id": "grid.414928.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Austrian Red Cross (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Red Cross",
-        "id": "grid.505634.1",
+        "name": "National University of Ireland, Galway (Irlande)",
+        "country": "Irlande",
+        "full_name": "National University of Ireland, Galway",
+        "id": "grid.6142.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
-        "z": 8
+        "z": 162
+      },
+      {
+        "name": "Trilateral research limited (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trilateral research limited",
+        "id": "grid.426337.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "Associazione della Croce Rossa Italiana (Italie)",
+        "country": "Italie",
+        "full_name": "Associazione della Croce Rossa Italiana",
+        "id": "grid.483265.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Pintail (Irlande)",
@@ -313,17 +402,47 @@
         "full_name": "Pintail",
         "id": "grid.425490.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 16
       },
       {
-        "name": "National Institute of Public Health (Pologne)",
-        "country": "Pologne",
-        "full_name": "National Institute of Public Health",
-        "id": "grid.415789.6",
+        "name": "Austrian Red Cross (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Red Cross",
+        "id": "grid.505634.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
-        "z": 1
+        "z": 8
+      },
+      {
+        "name": "Institute for Scientific Interchange (Italie)",
+        "country": "Italie",
+        "full_name": "Institute for Scientific Interchange",
+        "id": "grid.418750.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 205
       },
       {
         "name": "University of Edinburgh (Royaume-Uni)",
@@ -331,35 +450,11 @@
         "full_name": "University of Edinburgh",
         "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 257
-      },
-      {
-        "name": "Statens Serum Institut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Statens Serum Institut",
-        "id": "grid.6203.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Istituto Superiore di Sanità (Italie)",
-        "country": "Italie",
-        "full_name": "Istituto Superiore di Sanità",
-        "id": "grid.416651.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
-      },
-      {
-        "name": "Hrvatski zavod za javno zdravstvo (Croatie)",
-        "country": "Croatie",
-        "full_name": "Hrvatski zavod za javno zdravstvo",
-        "id": "grid.413299.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Biodonostia (Espagne)",
@@ -367,17 +462,35 @@
         "full_name": "Biodonostia",
         "id": "grid.432380.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 7
       },
       {
-        "name": "Norwegian Institute of Public Health (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute of Public Health",
-        "id": "grid.418193.6",
-        "country_level_part": "Pays associés",
+        "name": "Statens Serum Institut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Statens Serum Institut",
+        "id": "grid.6203.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
-        "z": 26
+        "z": 22
+      },
+      {
+        "name": "National Institute of Public Health (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Institute of Public Health",
+        "id": "grid.415789.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Royal College of General Practitioners (Royaume-Uni)",
@@ -385,17 +498,47 @@
         "full_name": "Royal College of General Practitioners",
         "id": "grid.451233.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Oxford (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Oxford",
-        "id": "grid.4991.5",
-        "country_level_part": "Pays membres",
+        "name": "Norwegian Institute of Public Health (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Public Health",
+        "id": "grid.418193.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          634446
+        ],
         "y": 1,
-        "z": 341
+        "z": 26
+      },
+      {
+        "name": "Hrvatski zavod za javno zdravstvo (Croatie)",
+        "country": "Croatie",
+        "full_name": "Hrvatski zavod za javno zdravstvo",
+        "id": "grid.413299.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 63
       },
       {
         "name": "U. Paris (France)",
@@ -404,17 +547,11 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 388
-      },
-      {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 171
       },
       {
         "name": "I. Pasteur (France)",
@@ -423,8 +560,35 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 94
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
+        "y": 1,
+        "z": 341
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
+        "y": 1,
+        "z": 171
       },
       {
         "name": "Institute of Public Health (Albanie)",
@@ -432,6 +596,9 @@
         "full_name": "Institute of Public Health",
         "id": "grid.414773.2",
         "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 1
       }
@@ -440,49 +607,16 @@
   "Societal Challenges": {
     "Secure societies - Protecting freedom and security of Europe and its citizens (SECURITY)": [
       {
-        "name": "National University of Ireland, Galway (Irlande)",
-        "country": "Irlande",
-        "full_name": "National University of Ireland, Galway",
-        "id": "grid.6142.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 57
-      },
-      {
-        "name": "Associazione della Croce Rossa Italiana (Italie)",
-        "country": "Italie",
-        "full_name": "Associazione della Croce Rossa Italiana",
-        "id": "grid.483265.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Public Health Agency of Sweden (Suède)",
@@ -490,6 +624,81 @@
         "full_name": "Public Health Agency of Sweden",
         "id": "grid.419734.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Institutul National de Sanatate Publica (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Institutul National de Sanatate Publica",
+        "id": "grid.414928.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Institute for Public Health and the Environment",
+        "id": "grid.31147.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National University of Ireland, Galway (Irlande)",
+        "country": "Irlande",
+        "full_name": "National University of Ireland, Galway",
+        "id": "grid.6142.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Trilateral research limited (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trilateral research limited",
+        "id": "grid.426337.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Robert Koch Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Robert Koch Institute",
+        "id": "grid.13652.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 2
       },
@@ -499,35 +708,11 @@
         "full_name": "National Institute of Health Dr. Ricardo Jorge",
         "id": "grid.422270.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Trilateral research limited (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trilateral research limited",
-        "id": "grid.426337.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Institute for Scientific Interchange (Italie)",
-        "country": "Italie",
-        "full_name": "Institute for Scientific Interchange",
-        "id": "grid.418750.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Finnish Institute for Health and Welfare (Finlande)",
-        "country": "Finlande",
-        "full_name": "Finnish Institute for Health and Welfare",
-        "id": "grid.14758.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Ministry of Health (Portugal)",
@@ -535,15 +720,33 @@
         "full_name": "Ministry of Health",
         "id": "grid.420634.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Institutul National de Sanatate Publica (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Institutul National de Sanatate Publica",
-        "id": "grid.414928.2",
+        "name": "Associazione della Croce Rossa Italiana (Italie)",
+        "country": "Italie",
+        "full_name": "Associazione della Croce Rossa Italiana",
+        "id": "grid.483265.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Pintail (Irlande)",
+        "country": "Irlande",
+        "full_name": "Pintail",
+        "id": "grid.425490.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 1
       },
@@ -553,233 +756,9 @@
         "full_name": "Austrian Red Cross",
         "id": "grid.505634.1",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Robert Koch Institute (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Robert Koch Institute",
-        "id": "grid.13652.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "National Institute for Public Health and the Environment",
-        "id": "grid.31147.30",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Pintail (Irlande)",
-        "country": "Irlande",
-        "full_name": "Pintail",
-        "id": "grid.425490.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      }
-    ],
-    "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "National Institute of Health Dr. Ricardo Jorge (Portugal)",
-        "country": "Portugal",
-        "full_name": "National Institute of Health Dr. Ricardo Jorge",
-        "id": "grid.422270.1",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
-      },
-      {
-        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "National Institute for Public Health and the Environment",
-        "id": "grid.31147.30",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 25
-      },
-      {
-        "name": "Institutul Cantacuzino (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Institutul Cantacuzino",
-        "id": "grid.418625.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 3
-      },
-      {
-        "name": "U. Montpellier (France)",
-        "country": "France",
-        "full_name": "Université de Montpellier",
-        "acronym": "U. Montpellier",
-        "id": "7yd5d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 16
-      },
-      {
-        "name": "University of Strathclyde (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Strathclyde",
-        "id": "grid.11984.35",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
-        "name": "CHU Montpellier (France)",
-        "country": "France",
-        "full_name": "Centre Hospitalier Universitaire de Montpellier",
-        "acronym": "CHU Montpellier",
-        "id": "u1MAA",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 11
-      },
-      {
-        "name": "Instituto de Salud Carlos III (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Carlos III",
-        "id": "grid.413448.e",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 31
-      },
-      {
-        "name": "Sorbonne U (France)",
-        "country": "France",
-        "full_name": "Sorbonne Université",
-        "acronym": "Sorbonne U",
-        "id": "bxPQe",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 36
-      },
-      {
-        "name": "Instituto Aragonés de Ciencias de la Salud (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Aragonés de Ciencias de la Salud",
-        "id": "grid.419040.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
-        "name": "CHU Rennes (France)",
-        "country": "France",
-        "full_name": "Centre Hospitalier Universitaire de Rennes",
-        "acronym": "CHU Rennes",
-        "id": "WdImd",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
-      },
-      {
-        "name": "Health Service Executive (Irlande)",
-        "country": "Irlande",
-        "full_name": "Health Service Executive",
-        "id": "grid.424617.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
-      },
-      {
-        "name": "Instituto de Salud Pública de Navarra (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Pública de Navarra",
-        "id": "grid.419126.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "Netherlands Institute for Health Services Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Institute for Health Services Research",
-        "id": "grid.416005.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
-      },
-      {
-        "name": "AP-HP (France)",
-        "country": "France",
-        "full_name": "Assistance publique - Hôpitaux de Paris",
-        "acronym": "AP-HP",
-        "id": "Py0K5",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 70
-      },
-      {
-        "name": "U. Corse (France)",
-        "country": "France",
-        "full_name": "Université de Corse Pasquale Paoli",
-        "acronym": "U. Corse",
-        "id": "NLCOF",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 3
-      },
-      {
-        "name": "Department of Health and Social Care (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Department of Health and Social Care",
-        "id": "grid.57981.32",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 24
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 174
-      },
-      {
-        "name": "Lithuanian University of Health Sciences (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Lithuanian University of Health Sciences",
-        "id": "grid.45083.3a",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "ANSP (France)",
-        "country": "France",
-        "full_name": "Agence nationale de Sante Publique",
-        "acronym": "ANSP",
-        "id": "130022338",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "HCL (France)",
-        "country": "France",
-        "full_name": "Hospices civils de Lyon",
-        "acronym": "HCL",
-        "id": "Y4l0C",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 20
-      },
-      {
-        "name": "Public Health Agency of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "Public Health Agency of Sweden",
-        "id": "grid.419734.c",
-        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
         "z": 6
       },
@@ -789,17 +768,318 @@
         "full_name": "Finnish Institute for Health and Welfare",
         "id": "grid.14758.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
-        "z": 30
+        "z": 2
       },
       {
-        "name": "Ministry of Health (Portugal)",
-        "country": "Portugal",
-        "full_name": "Ministry of Health",
-        "id": "grid.420634.7",
+        "name": "Institute for Scientific Interchange (Italie)",
+        "country": "Italie",
+        "full_name": "Institute for Scientific Interchange",
+        "id": "grid.418750.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
         "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883285
+        ],
+        "y": 1,
+        "z": 1
+      }
+    ],
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "National Institute for Public Health and the Environment (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "National Institute for Public Health and the Environment",
+        "id": "grid.31147.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 25
+      },
+      {
+        "name": "National Institute of Health Dr. Ricardo Jorge (Portugal)",
+        "country": "Portugal",
+        "full_name": "National Institute of Health Dr. Ricardo Jorge",
+        "id": "grid.422270.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "U. Montpellier (France)",
+        "country": "France",
+        "full_name": "Université de Montpellier",
+        "acronym": "U. Montpellier",
+        "id": "7yd5d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 16
+      },
+      {
+        "name": "HCL (France)",
+        "country": "France",
+        "full_name": "Hospices civils de Lyon",
+        "acronym": "HCL",
+        "id": "Y4l0C",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "CHU Rennes (France)",
+        "country": "France",
+        "full_name": "Centre Hospitalier Universitaire de Rennes",
+        "acronym": "CHU Rennes",
+        "id": "WdImd",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "AP-HP (France)",
+        "country": "France",
+        "full_name": "Assistance publique - Hôpitaux de Paris",
+        "acronym": "AP-HP",
+        "id": "Py0K5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 70
+      },
+      {
+        "name": "CHU Montpellier (France)",
+        "country": "France",
+        "full_name": "Centre Hospitalier Universitaire de Montpellier",
+        "acronym": "CHU Montpellier",
+        "id": "u1MAA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 11
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 36
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 31
+      },
+      {
+        "name": "ANSP (France)",
+        "country": "France",
+        "full_name": "Agence nationale de Sante Publique",
+        "acronym": "ANSP",
+        "id": "130022338",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Health Service Executive (Irlande)",
+        "country": "Irlande",
+        "full_name": "Health Service Executive",
+        "id": "grid.424617.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Department of Health and Social Care (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Department of Health and Social Care",
+        "id": "grid.57981.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 24
+      },
+      {
+        "name": "U. Corse (France)",
+        "country": "France",
+        "full_name": "Université de Corse Pasquale Paoli",
+        "acronym": "U. Corse",
+        "id": "NLCOF",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
         "z": 3
+      },
+      {
+        "name": "Instituto de Salud Pública de Navarra (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Pública de Navarra",
+        "id": "grid.419126.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Institutul Cantacuzino (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Institutul Cantacuzino",
+        "id": "grid.418625.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Netherlands Institute for Health Services Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Institute for Health Services Research",
+        "id": "grid.416005.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "Instituto Aragonés de Ciencias de la Salud (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Aragonés de Ciencias de la Salud",
+        "id": "grid.419040.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Lithuanian University of Health Sciences (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Lithuanian University of Health Sciences",
+        "id": "grid.45083.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446,
+          101003673
+        ],
+        "y": 2,
+        "z": 174
+      },
+      {
+        "name": "Public Health Agency of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "Public Health Agency of Sweden",
+        "id": "grid.419734.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Robert Koch Institute (Allemagne)",
@@ -807,17 +1087,35 @@
         "full_name": "Robert Koch Institute",
         "id": "grid.13652.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "National Institute of Public Health (Pologne)",
-        "country": "Pologne",
-        "full_name": "National Institute of Public Health",
-        "id": "grid.415789.6",
+        "name": "Ministry of Health (Portugal)",
+        "country": "Portugal",
+        "full_name": "Ministry of Health",
+        "id": "grid.420634.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
+      },
+      {
+        "name": "Finnish Institute for Health and Welfare (Finlande)",
+        "country": "Finlande",
+        "full_name": "Finnish Institute for Health and Welfare",
+        "id": "grid.14758.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 30
       },
       {
         "name": "University of Edinburgh (Royaume-Uni)",
@@ -825,35 +1123,11 @@
         "full_name": "University of Edinburgh",
         "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 35
-      },
-      {
-        "name": "Statens Serum Institut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Statens Serum Institut",
-        "id": "grid.6203.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Istituto Superiore di Sanità (Italie)",
-        "country": "Italie",
-        "full_name": "Istituto Superiore di Sanità",
-        "id": "grid.416651.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Hrvatski zavod za javno zdravstvo (Croatie)",
-        "country": "Croatie",
-        "full_name": "Hrvatski zavod za javno zdravstvo",
-        "id": "grid.413299.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "Biodonostia (Espagne)",
@@ -861,17 +1135,35 @@
         "full_name": "Biodonostia",
         "id": "grid.432380.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Norwegian Institute of Public Health (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute of Public Health",
-        "id": "grid.418193.6",
-        "country_level_part": "Pays associés",
+        "name": "Statens Serum Institut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Statens Serum Institut",
+        "id": "grid.6203.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
-        "z": 16
+        "z": 15
+      },
+      {
+        "name": "National Institute of Public Health (Pologne)",
+        "country": "Pologne",
+        "full_name": "National Institute of Public Health",
+        "id": "grid.415789.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Royal College of General Practitioners (Royaume-Uni)",
@@ -879,17 +1171,47 @@
         "full_name": "Royal College of General Practitioners",
         "id": "grid.451233.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Oxford (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Oxford",
-        "id": "grid.4991.5",
-        "country_level_part": "Pays membres",
+        "name": "Norwegian Institute of Public Health (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute of Public Health",
+        "id": "grid.418193.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          634446
+        ],
         "y": 1,
-        "z": 86
+        "z": 16
+      },
+      {
+        "name": "Hrvatski zavod za javno zdravstvo (Croatie)",
+        "country": "Croatie",
+        "full_name": "Hrvatski zavod za javno zdravstvo",
+        "id": "grid.413299.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Istituto Superiore di Sanità (Italie)",
+        "country": "Italie",
+        "full_name": "Istituto Superiore di Sanità",
+        "id": "grid.416651.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          634446
+        ],
+        "y": 1,
+        "z": 32
       },
       {
         "name": "U. Paris (France)",
@@ -898,17 +1220,11 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 50
-      },
-      {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
       },
       {
         "name": "I. Pasteur (France)",
@@ -917,8 +1233,35 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 30
+      },
+      {
+        "name": "University of Oxford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Oxford",
+        "id": "grid.4991.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
+        "y": 1,
+        "z": 86
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101003673
+        ],
+        "y": 1,
+        "z": 21
       },
       {
         "name": "Institute of Public Health (Albanie)",
@@ -926,6 +1269,9 @@
         "full_name": "Institute of Public Health",
         "id": "grid.414773.2",
         "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          101003673
+        ],
         "y": 1,
         "z": 1
       }

@@ -2,22 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Global Bioenergies (France)",
-        "country": "France",
-        "full_name": "Global Bioenergies",
-        "acronym": "Global Bioenergies",
-        "id": "508596012",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
         "name": "Technip (France)",
         "country": "France",
         "full_name": "Technip",
         "acronym": "Technip",
         "id": "gent172",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104,
+          744330
+        ],
         "y": 2,
         "z": 4
       },
@@ -27,17 +21,38 @@
         "full_name": "Johannes Kepler University of Linz",
         "id": "grid.9970.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104,
+          744330
+        ],
         "y": 2,
         "z": 76
       },
       {
-        "name": "Repsol (Espagne)",
-        "country": "Espagne",
-        "full_name": "Repsol",
-        "id": "grid.425909.3",
+        "name": "Global Bioenergies (France)",
+        "country": "France",
+        "full_name": "Global Bioenergies",
+        "acronym": "Global Bioenergies",
+        "id": "508596012",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104,
+          744330
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "Neste Oil (Finlande)",
+        "country": "Finlande",
+        "full_name": "Neste Oil",
+        "id": "grid.425677.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
-        "z": 11
+        "z": 9
       },
       {
         "name": "Ajinomoto Animal Nutri... (France)",
@@ -46,17 +61,23 @@
         "acronym": "Ajinomoto Animal Nutri...",
         "id": "302607676",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Neste Oil (Finlande)",
-        "country": "Finlande",
-        "full_name": "Neste Oil",
-        "id": "grid.425677.5",
+        "name": "Repsol (Espagne)",
+        "country": "Espagne",
+        "full_name": "Repsol",
+        "id": "grid.425909.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
-        "z": 9
+        "z": 11
       },
       {
         "name": "Clariant (Allemagne)",
@@ -64,6 +85,9 @@
         "full_name": "Clariant",
         "id": "grid.433370.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 8
       },
@@ -73,6 +97,9 @@
         "full_name": "Ineos",
         "id": "grid.497359.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 2
       }
@@ -81,23 +108,41 @@
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "Repsol (Espagne)",
-        "country": "Espagne",
-        "full_name": "Repsol",
-        "id": "grid.425909.3",
+        "name": "Neste Oil (Finlande)",
+        "country": "Finlande",
+        "full_name": "Neste Oil",
+        "id": "grid.425677.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
-        "z": 3
+        "z": 7
       },
       {
-        "name": "Global Bioenergies (France)",
+        "name": "Technip (France)",
         "country": "France",
-        "full_name": "Global Bioenergies",
-        "acronym": "Global Bioenergies",
-        "id": "508596012",
+        "full_name": "Technip",
+        "acronym": "Technip",
+        "id": "gent172",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
-        "z": 2
+        "z": 1
+      },
+      {
+        "name": "Johannes Kepler University of Linz (Autriche)",
+        "country": "Autriche",
+        "full_name": "Johannes Kepler University of Linz",
+        "id": "grid.9970.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "Ajinomoto Animal Nutri... (France)",
@@ -106,39 +151,12 @@
         "acronym": "Ajinomoto Animal Nutri...",
         "id": "302607676",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
         "z": 1
       },
-      {
-        "name": "Technip (France)",
-        "country": "France",
-        "full_name": "Technip",
-        "acronym": "Technip",
-        "id": "gent172",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Johannes Kepler University of Linz (Autriche)",
-        "country": "Autriche",
-        "full_name": "Johannes Kepler University of Linz",
-        "id": "grid.9970.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Neste Oil (Finlande)",
-        "country": "Finlande",
-        "full_name": "Neste Oil",
-        "id": "grid.425677.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      }
-    ],
-    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
         "name": "Global Bioenergies (France)",
         "country": "France",
@@ -146,9 +164,26 @@
         "acronym": "Global Bioenergies",
         "id": "508596012",
         "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
         "y": 1,
         "z": 2
       },
+      {
+        "name": "Repsol (Espagne)",
+        "country": "Espagne",
+        "full_name": "Repsol",
+        "id": "grid.425909.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          792104
+        ],
+        "y": 1,
+        "z": 3
+      }
+    ],
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
         "name": "Technip (France)",
         "country": "France",
@@ -156,6 +191,9 @@
         "acronym": "Technip",
         "id": "gent172",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 2
       },
@@ -165,6 +203,22 @@
         "full_name": "Johannes Kepler University of Linz",
         "id": "grid.9970.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Global Bioenergies (France)",
+        "country": "France",
+        "full_name": "Global Bioenergies",
+        "acronym": "Global Bioenergies",
+        "id": "508596012",
+        "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 2
       },
@@ -174,6 +228,9 @@
         "full_name": "Clariant",
         "id": "grid.433370.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 2
       },
@@ -183,6 +240,9 @@
         "full_name": "Ineos",
         "id": "grid.497359.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          744330
+        ],
         "y": 1,
         "z": 1
       }

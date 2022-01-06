@@ -2,40 +2,34 @@
   "all": {
     "all": [
       {
-        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
-        "country": "Italie",
-        "full_name": "Agenzia per la Promozione della Ricerca Europea",
-        "id": "grid.19760.39",
-        "country_level_part": "Pays membres",
-        "y": 4,
-        "z": 72
-      },
-      {
-        "name": "Austrian Research Promotion Agency (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Research Promotion Agency",
-        "id": "grid.197345.d",
-        "country_level_part": "Pays membres",
-        "y": 4,
-        "z": 64
-      },
-      {
         "name": "Technology Centre (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Technology Centre",
         "id": "grid.17033.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
         "y": 4,
         "z": 29
       },
       {
-        "name": "Agency for Mobility and EU Programmes (Croatie)",
-        "country": "Croatie",
-        "full_name": "Agency for Mobility and EU Programmes",
-        "id": "grid.432739.8",
+        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
+        "country": "Italie",
+        "full_name": "Agenzia per la Promozione della Ricerca Europea",
+        "id": "grid.19760.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
         "y": 4,
-        "z": 23
+        "z": 72
       },
       {
         "name": "Euresearch Association (Suisse)",
@@ -43,17 +37,14 @@
         "full_name": "Euresearch Association",
         "id": "grid.16082.3d",
         "country_level_part": "Pays associés",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
         "y": 4,
         "z": 17
-      },
-      {
-        "name": "Agencia de Inovacao (Portugal)",
-        "country": "Portugal",
-        "full_name": "Agencia de Inovacao",
-        "id": "grid.423753.4",
-        "country_level_part": "Pays membres",
-        "y": 4,
-        "z": 38
       },
       {
         "name": "Institute of Fundamental Technological Research (Pologne)",
@@ -61,8 +52,59 @@
         "full_name": "Institute of Fundamental Technological Research",
         "id": "grid.4616.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
         "y": 4,
         "z": 38
+      },
+      {
+        "name": "Austrian Research Promotion Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Research Promotion Agency",
+        "id": "grid.197345.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 4,
+        "z": 64
+      },
+      {
+        "name": "Agencia de Inovacao (Portugal)",
+        "country": "Portugal",
+        "full_name": "Agencia de Inovacao",
+        "id": "grid.423753.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 4,
+        "z": 38
+      },
+      {
+        "name": "Agency for Mobility and EU Programmes (Croatie)",
+        "country": "Croatie",
+        "full_name": "Agency for Mobility and EU Programmes",
+        "id": "grid.432739.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 4,
+        "z": 23
       },
       {
         "name": "Research Promotion Foundation (Chypre)",
@@ -70,35 +112,13 @@
         "full_name": "Research Promotion Foundation",
         "id": "grid.14751.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          831752,
+          101005071
+        ],
         "y": 3,
         "z": 49
-      },
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 258
-      },
-      {
-        "name": "Instituto de Salud Carlos III (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Carlos III",
-        "id": "grid.413448.e",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 51
-      },
-      {
-        "name": "German Aerospace Center (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Aerospace Center",
-        "id": "grid.7551.6",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 450
       },
       {
         "name": "Agency for Innovation and Technology Transfer (Rép. Moldave)",
@@ -106,17 +126,13 @@
         "full_name": "Agency for Innovation and Technology Transfer",
         "id": "grid.493906.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
         "y": 3,
         "z": 17
-      },
-      {
-        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
-        "country": "Portugal",
-        "full_name": "Fundação para a Ciência e Tecnologia",
-        "id": "grid.22919.31",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 96
       },
       {
         "name": "Enterprise Ireland (Irlande)",
@@ -124,17 +140,69 @@
         "full_name": "Enterprise Ireland",
         "id": "grid.7088.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
         "y": 3,
         "z": 10
       },
       {
-        "name": "Centre for Industrial Technological Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Industrial Technological Development",
-        "id": "grid.410460.7",
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
         "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 57
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 3,
+        "z": 450
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 3,
+        "z": 51
+      },
+      {
+        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Fundação para a Ciência e Tecnologia",
+        "id": "grid.22919.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 3,
+        "z": 96
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752,
+          101005071
+        ],
+        "y": 3,
+        "z": 258
       },
       {
         "name": "The Icelandic Centre for Research (Islande)",
@@ -142,8 +210,25 @@
         "full_name": "The Icelandic Centre for Research",
         "id": "grid.410365.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          831620,
+          101005071
+        ],
         "y": 2,
         "z": 31
+      },
+      {
+        "name": "Centre for Industrial Technological Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Industrial Technological Development",
+        "id": "grid.410460.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          101005071
+        ],
+        "y": 2,
+        "z": 57
       },
       {
         "name": "Slovak Centre of Scientific and Technical Information (Slovaquie)",
@@ -151,17 +236,12 @@
         "full_name": "Slovak Centre of Scientific and Technical Information",
         "id": "grid.450672.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          101005071
+        ],
         "y": 2,
         "z": 32
-      },
-      {
-        "name": "Luxinnovation (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxinnovation",
-        "id": "grid.425373.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 16
       },
       {
         "name": "National Research, Development and Innovation Office (Hongrie)",
@@ -169,44 +249,25 @@
         "full_name": "National Research, Development and Innovation Office",
         "id": "grid.436388.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620,
+          101005071
+        ],
         "y": 2,
         "z": 29
       },
       {
-        "name": "National Institute for Research & Development in Informatics (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "National Institute for Research & Development in Informatics",
-        "id": "grid.425271.7",
+        "name": "Luxinnovation (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxinnovation",
+        "id": "grid.425373.4",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "State Education Development Agency (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "State Education Development Agency",
-        "id": "grid.460254.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "International center for Advancement of Research Technology and Innovation (Géorgie)",
-        "country": "Géorgie",
-        "full_name": "International center for Advancement of Research Technology and Innovation",
-        "id": "grid.435631.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "National Hellenic Research Foundation (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Hellenic Research Foundation",
-        "id": "grid.22459.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
+        "projects": [
+          831620,
+          101005071
+        ],
+        "y": 2,
+        "z": 16
       },
       {
         "name": "Singleimage (Royaume-Uni)",
@@ -214,6 +275,9 @@
         "full_name": "Singleimage",
         "id": "grid.426184.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
@@ -224,6 +288,9 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 295
       },
@@ -233,8 +300,35 @@
         "full_name": "Institute of Information and Communication Technologies",
         "id": "grid.424988.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 13
+      },
+      {
+        "name": "State Education Development Agency (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "State Education Development Agency",
+        "id": "grid.460254.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "International center for Advancement of Research Technology and Innovation (Géorgie)",
+        "country": "Géorgie",
+        "full_name": "International center for Advancement of Research Technology and Innovation",
+        "id": "grid.435631.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "The Research Council of Norway (Norvège)",
@@ -242,8 +336,35 @@
         "full_name": "The Research Council of Norway",
         "id": "grid.13985.36",
         "country_level_part": "Pays associés",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 80
+      },
+      {
+        "name": "National Institute for Research & Development in Informatics (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "National Institute for Research & Development in Informatics",
+        "id": "grid.425271.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "National Hellenic Research Foundation (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Hellenic Research Foundation",
+        "id": "grid.22459.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 35
       },
       {
         "name": "Danish Agency for Science and Higher Education (Danemark)",
@@ -251,17 +372,11 @@
         "full_name": "Danish Agency for Science and Higher Education",
         "id": "grid.491058.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "VINNOVA (Suède)",
-        "country": "Suède",
-        "full_name": "VINNOVA",
-        "id": "grid.453022.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "Agency for Science, Innovation and Technology (Lituanie)",
@@ -269,6 +384,9 @@
         "full_name": "Agency for Science, Innovation and Technology",
         "id": "grid.423761.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 7
       },
@@ -278,91 +396,37 @@
         "full_name": "Fundación Española para la Ciencia y Tecnología",
         "id": "grid.424798.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 27
+      },
+      {
+        "name": "VINNOVA (Suède)",
+        "country": "Suède",
+        "full_name": "VINNOVA",
+        "id": "grid.453022.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 14
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "Centre for Industrial Technological Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Industrial Technological Development",
-        "id": "grid.410460.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
-        "country": "Italie",
-        "full_name": "Agenzia per la Promozione della Ricerca Europea",
-        "id": "grid.19760.39",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "National Institute for Research & Development in Informatics (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "National Institute for Research & Development in Informatics",
-        "id": "grid.425271.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Austrian Research Promotion Agency (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Research Promotion Agency",
-        "id": "grid.197345.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Technology Centre (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Technology Centre",
-        "id": "grid.17033.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "State Education Development Agency (Lettonie)",
-        "country": "Lettonie",
-        "full_name": "State Education Development Agency",
-        "id": "grid.460254.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Agency for Mobility and EU Programmes (Croatie)",
-        "country": "Croatie",
-        "full_name": "Agency for Mobility and EU Programmes",
-        "id": "grid.432739.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "International center for Advancement of Research Technology and Innovation (Géorgie)",
-        "country": "Géorgie",
-        "full_name": "International center for Advancement of Research Technology and Innovation",
-        "id": "grid.435631.6",
+        "name": "The Icelandic Centre for Research (Islande)",
+        "country": "Islande",
+        "full_name": "The Icelandic Centre for Research",
+        "id": "grid.410365.5",
         "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "National Hellenic Research Foundation (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Hellenic Research Foundation",
-        "id": "grid.22459.38",
-        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
@@ -372,6 +436,21 @@
         "full_name": "Singleimage",
         "id": "grid.426184.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Technology Centre (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Technology Centre",
+        "id": "grid.17033.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
@@ -382,17 +461,11 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 71
-      },
-      {
-        "name": "Euresearch Association (Suisse)",
-        "country": "Suisse",
-        "full_name": "Euresearch Association",
-        "id": "grid.16082.3d",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Research Promotion Foundation (Chypre)",
@@ -400,15 +473,57 @@
         "full_name": "Research Promotion Foundation",
         "id": "grid.14751.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "The Icelandic Centre for Research (Islande)",
-        "country": "Islande",
-        "full_name": "The Icelandic Centre for Research",
-        "id": "grid.410365.5",
+        "name": "Institute of Information and Communication Technologies (Bulgarie)",
+        "country": "Bulgarie",
+        "full_name": "Institute of Information and Communication Technologies",
+        "id": "grid.424988.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
+        "country": "Italie",
+        "full_name": "Agenzia per la Promozione della Ricerca Europea",
+        "id": "grid.19760.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Centre for Industrial Technological Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Industrial Technological Development",
+        "id": "grid.410460.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Euresearch Association (Suisse)",
+        "country": "Suisse",
+        "full_name": "Euresearch Association",
+        "id": "grid.16082.3d",
         "country_level_part": "Pays associés",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
@@ -418,44 +533,11 @@
         "full_name": "Slovak Centre of Scientific and Technical Information",
         "id": "grid.450672.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 4
-      },
-      {
-        "name": "Institute of Information and Communication Technologies (Bulgarie)",
-        "country": "Bulgarie",
-        "full_name": "Institute of Information and Communication Technologies",
-        "id": "grid.424988.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Agencia de Inovacao (Portugal)",
-        "country": "Portugal",
-        "full_name": "Agencia de Inovacao",
-        "id": "grid.423753.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Luxinnovation (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxinnovation",
-        "id": "grid.425373.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "National Research, Development and Innovation Office (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "National Research, Development and Innovation Office",
-        "id": "grid.436388.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Institute of Fundamental Technological Research (Pologne)",
@@ -463,37 +545,45 @@
         "full_name": "Institute of Fundamental Technological Research",
         "id": "grid.4616.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "The Research Council of Norway (Norvège)",
-        "country": "Norvège",
-        "full_name": "The Research Council of Norway",
-        "id": "grid.13985.36",
+        "name": "State Education Development Agency (Lettonie)",
+        "country": "Lettonie",
+        "full_name": "State Education Development Agency",
+        "id": "grid.460254.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "International center for Advancement of Research Technology and Innovation (Géorgie)",
+        "country": "Géorgie",
+        "full_name": "International center for Advancement of Research Technology and Innovation",
+        "id": "grid.435631.6",
         "country_level_part": "Pays associés",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 2
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Societal Challenges - Cross-theme (SOCCHAL-CROSST)": [
-      {
-        "name": "Centre for Industrial Technological Development (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Industrial Technological Development",
-        "id": "grid.410460.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
-        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
-        "country": "Italie",
-        "full_name": "Agenzia per la Promozione della Ricerca Europea",
-        "id": "grid.19760.39",
+        "name": "National Research, Development and Innovation Office (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "National Research, Development and Innovation Office",
+        "id": "grid.436388.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
         "y": 1,
         "z": 1
       },
@@ -503,6 +593,97 @@
         "full_name": "Austrian Research Promotion Agency",
         "id": "grid.197345.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Luxinnovation (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxinnovation",
+        "id": "grid.425373.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "The Research Council of Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "The Research Council of Norway",
+        "id": "grid.13985.36",
+        "country_level_part": "Pays associés",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Agencia de Inovacao (Portugal)",
+        "country": "Portugal",
+        "full_name": "Agencia de Inovacao",
+        "id": "grid.423753.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Agency for Mobility and EU Programmes (Croatie)",
+        "country": "Croatie",
+        "full_name": "Agency for Mobility and EU Programmes",
+        "id": "grid.432739.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Institute for Research & Development in Informatics (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "National Institute for Research & Development in Informatics",
+        "id": "grid.425271.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "National Hellenic Research Foundation (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Hellenic Research Foundation",
+        "id": "grid.22459.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          831620
+        ],
+        "y": 1,
+        "z": 2
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Societal Challenges - Cross-theme (SOCCHAL-CROSST)": [
+      {
+        "name": "The Icelandic Centre for Research (Islande)",
+        "country": "Islande",
+        "full_name": "The Icelandic Centre for Research",
+        "id": "grid.410365.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -512,24 +693,9 @@
         "full_name": "Technology Centre",
         "id": "grid.17033.36",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Agency for Mobility and EU Programmes (Croatie)",
-        "country": "Croatie",
-        "full_name": "Agency for Mobility and EU Programmes",
-        "id": "grid.432739.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Euresearch Association (Suisse)",
-        "country": "Suisse",
-        "full_name": "Euresearch Association",
-        "id": "grid.16082.3d",
-        "country_level_part": "Pays associés",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -539,15 +705,45 @@
         "full_name": "Research Promotion Foundation",
         "id": "grid.14751.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "The Icelandic Centre for Research (Islande)",
-        "country": "Islande",
-        "full_name": "The Icelandic Centre for Research",
-        "id": "grid.410365.5",
+        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
+        "country": "Italie",
+        "full_name": "Agenzia per la Promozione della Ricerca Europea",
+        "id": "grid.19760.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centre for Industrial Technological Development (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Industrial Technological Development",
+        "id": "grid.410460.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Euresearch Association (Suisse)",
+        "country": "Suisse",
+        "full_name": "Euresearch Association",
+        "id": "grid.16082.3d",
         "country_level_part": "Pays associés",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -557,33 +753,9 @@
         "full_name": "Slovak Centre of Scientific and Technical Information",
         "id": "grid.450672.2",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Agencia de Inovacao (Portugal)",
-        "country": "Portugal",
-        "full_name": "Agencia de Inovacao",
-        "id": "grid.423753.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Luxinnovation (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxinnovation",
-        "id": "grid.425373.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "National Research, Development and Innovation Office (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "National Research, Development and Innovation Office",
-        "id": "grid.436388.2",
-        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -593,33 +765,69 @@
         "full_name": "Institute of Fundamental Technological Research",
         "id": "grid.4616.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
+        "name": "National Research, Development and Innovation Office (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "National Research, Development and Innovation Office",
+        "id": "grid.436388.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Instituto de Salud Carlos III (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Carlos III",
-        "id": "grid.413448.e",
+        "name": "Austrian Research Promotion Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Research Promotion Agency",
+        "id": "grid.197345.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "German Aerospace Center (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Aerospace Center",
-        "id": "grid.7551.6",
+        "name": "Luxinnovation (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxinnovation",
+        "id": "grid.425373.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Agencia de Inovacao (Portugal)",
+        "country": "Portugal",
+        "full_name": "Agencia de Inovacao",
+        "id": "grid.423753.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Agency for Mobility and EU Programmes (Croatie)",
+        "country": "Croatie",
+        "full_name": "Agency for Mobility and EU Programmes",
+        "id": "grid.432739.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -629,15 +837,9 @@
         "full_name": "Agency for Innovation and Technology Transfer",
         "id": "grid.493906.1",
         "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
-        "country": "Portugal",
-        "full_name": "Fundação para a Ciência e Tecnologia",
-        "id": "grid.22919.31",
-        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -647,15 +849,57 @@
         "full_name": "Enterprise Ireland",
         "id": "grid.7088.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "VINNOVA (Suède)",
-        "country": "Suède",
-        "full_name": "VINNOVA",
-        "id": "grid.453022.2",
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Fundação para a Ciência e Tecnologia (Portugal)",
+        "country": "Portugal",
+        "full_name": "Fundação para a Ciência e Tecnologia",
+        "id": "grid.22919.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -665,6 +909,9 @@
         "full_name": "Agency for Science, Innovation and Technology",
         "id": "grid.423761.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       },
@@ -674,6 +921,21 @@
         "full_name": "Fundación Española para la Ciencia y Tecnología",
         "id": "grid.424798.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "VINNOVA (Suède)",
+        "country": "Suède",
+        "full_name": "VINNOVA",
+        "id": "grid.453022.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005071
+        ],
         "y": 1,
         "z": 1
       }
@@ -682,40 +944,30 @@
   "Science with and for Society": {
     "Science with and for Society (SWAFS)": [
       {
-        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
-        "country": "Italie",
-        "full_name": "Agenzia per la Promozione della Ricerca Europea",
-        "id": "grid.19760.39",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 10
-      },
-      {
-        "name": "Austrian Research Promotion Agency (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Research Promotion Agency",
-        "id": "grid.197345.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 7
-      },
-      {
         "name": "Technology Centre (Rép. Tchèque)",
         "country": "Rép. Tchèque",
         "full_name": "Technology Centre",
         "id": "grid.17033.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 5
       },
       {
-        "name": "Agency for Mobility and EU Programmes (Croatie)",
-        "country": "Croatie",
-        "full_name": "Agency for Mobility and EU Programmes",
-        "id": "grid.432739.8",
+        "name": "Agenzia per la Promozione della Ricerca Europea (Italie)",
+        "country": "Italie",
+        "full_name": "Agenzia per la Promozione della Ricerca Europea",
+        "id": "grid.19760.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
-        "z": 7
+        "z": 10
       },
       {
         "name": "Euresearch Association (Suisse)",
@@ -723,17 +975,12 @@
         "full_name": "Euresearch Association",
         "id": "grid.16082.3d",
         "country_level_part": "Pays associés",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 2
-      },
-      {
-        "name": "Agencia de Inovacao (Portugal)",
-        "country": "Portugal",
-        "full_name": "Agencia de Inovacao",
-        "id": "grid.423753.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
       },
       {
         "name": "Institute of Fundamental Technological Research (Pologne)",
@@ -741,33 +988,49 @@
         "full_name": "Institute of Fundamental Technological Research",
         "id": "grid.4616.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 8
       },
       {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
+        "name": "Austrian Research Promotion Agency (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Research Promotion Agency",
+        "id": "grid.197345.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
-        "z": 4
+        "z": 7
       },
       {
-        "name": "Instituto de Salud Carlos III (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto de Salud Carlos III",
-        "id": "grid.413448.e",
+        "name": "Agencia de Inovacao (Portugal)",
+        "country": "Portugal",
+        "full_name": "Agencia de Inovacao",
+        "id": "grid.423753.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
-        "z": 3
+        "z": 6
       },
       {
-        "name": "German Aerospace Center (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Aerospace Center",
-        "id": "grid.7551.6",
+        "name": "Agency for Mobility and EU Programmes (Croatie)",
+        "country": "Croatie",
+        "full_name": "Agency for Mobility and EU Programmes",
+        "id": "grid.432739.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 7
       },
@@ -777,6 +1040,49 @@
         "full_name": "Agency for Innovation and Technology Transfer",
         "id": "grid.493906.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          633563,
+          831752
+        ],
+        "y": 2,
+        "z": 3
+      },
+      {
+        "name": "Enterprise Ireland (Irlande)",
+        "country": "Irlande",
+        "full_name": "Enterprise Ireland",
+        "id": "grid.7088.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "Instituto de Salud Carlos III (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto de Salud Carlos III",
+        "id": "grid.413448.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 3
       },
@@ -786,17 +1092,25 @@
         "full_name": "Fundação para a Ciência e Tecnologia",
         "id": "grid.22919.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
         "z": 6
       },
       {
-        "name": "Enterprise Ireland (Irlande)",
-        "country": "Irlande",
-        "full_name": "Enterprise Ireland",
-        "id": "grid.7088.7",
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563,
+          831752
+        ],
         "y": 2,
-        "z": 2
+        "z": 4
       },
       {
         "name": "Research Promotion Foundation (Chypre)",
@@ -804,6 +1118,9 @@
         "full_name": "Research Promotion Foundation",
         "id": "grid.14751.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          831752
+        ],
         "y": 1,
         "z": 9
       },
@@ -813,6 +1130,9 @@
         "full_name": "Danish Agency for Science and Higher Education",
         "id": "grid.491058.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          633563
+        ],
         "y": 1,
         "z": 1
       }

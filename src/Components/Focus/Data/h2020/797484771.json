@@ -2,31 +2,18 @@
   "all": {
     "all": [
       {
-        "name": "University of Geneva (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Geneva",
-        "id": "grid.8591.5",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 132
-      },
-      {
-        "name": "University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Crete",
-        "id": "grid.8127.c",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
-        "z": 34
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 277
+        "z": 2670
       },
       {
         "name": "University Hospital Cologne (Allemagne)",
@@ -34,8 +21,25 @@
         "full_name": "University Hospital Cologne",
         "id": "grid.411097.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 32
+      },
+      {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 34
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -43,8 +47,38 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 258
+      },
+      {
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 132
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 277
       },
       {
         "name": "International School for Advanced Studies (Italie)",
@@ -52,18 +86,12 @@
         "full_name": "International School for Advanced Studies",
         "id": "grid.5970.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 32
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2670
       },
       {
         "name": "University of Cologne (Allemagne)",
@@ -71,8 +99,72 @@
         "full_name": "University of Cologne",
         "id": "grid.6190.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 32
+      },
+      {
+        "name": "Institute for Research in Biomedicine (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Research in Biomedicine",
+        "id": "grid.7722.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Tel Aviv University (Israël)",
+        "country": "Israël",
+        "full_name": "Tel Aviv University",
+        "id": "grid.12136.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 78
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 206
+      },
+      {
+        "name": "University of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Lausanne",
+        "id": "grid.9851.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 104
       },
       {
         "name": "UCA (France)",
@@ -81,17 +173,23 @@
         "acronym": "UCA",
         "id": "s3t8T",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
         "y": 1,
         "z": 69
       },
       {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
         "y": 1,
-        "z": 104
+        "z": 86
       },
       {
         "name": "Inserm (France)",
@@ -100,53 +198,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
         "y": 1,
         "z": 689
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 86
-      },
-      {
-        "name": "University of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Lausanne",
-        "id": "grid.9851.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 45
-      },
-      {
-        "name": "Institute for Research in Biomedicine (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute for Research in Biomedicine",
-        "id": "grid.7722.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 206
-      },
-      {
-        "name": "Tel Aviv University (Israël)",
-        "country": "Israël",
-        "full_name": "Tel Aviv University",
-        "id": "grid.12136.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 78
       },
       {
         "name": "St. Anne´s University Hospital (Rép. Tchèque)",
@@ -154,6 +210,9 @@
         "full_name": "St. Anne´s University Hospital",
         "id": "grid.412752.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 18
       },
@@ -163,17 +222,11 @@
         "full_name": "Antoni van Leeuwenhoek Hospital",
         "id": "grid.430814.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 34
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 321
       },
       {
         "name": "U. Toulouse III (France)",
@@ -182,26 +235,11 @@
         "acronym": "U. Toulouse III",
         "id": "m7K6T",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 220
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Karolinska Institute (Suède)",
-        "country": "Suède",
-        "full_name": "Karolinska Institute",
-        "id": "grid.4714.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 214
       },
       {
         "name": "U. Paris (France)",
@@ -210,8 +248,47 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 388
+      },
+      {
+        "name": "Karolinska Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Karolinska Institute",
+        "id": "grid.4714.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 155
       },
       {
         "name": "FIRC Institute of Molecular Oncology (Italie)",
@@ -219,6 +296,9 @@
         "full_name": "FIRC Institute of Molecular Oncology",
         "id": "grid.7678.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 6
       }
@@ -227,31 +307,18 @@
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "University of Geneva (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Geneva",
-        "id": "grid.8591.5",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 32
-      },
-      {
-        "name": "University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Crete",
-        "id": "grid.8127.c",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
-        "z": 8
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 64
+        "z": 938
       },
       {
         "name": "University Hospital Cologne (Allemagne)",
@@ -259,8 +326,25 @@
         "full_name": "University Hospital Cologne",
         "id": "grid.411097.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 6
+      },
+      {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 8
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -268,8 +352,38 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 38
+      },
+      {
+        "name": "University of Geneva (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Geneva",
+        "id": "grid.8591.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 32
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830,
+          812829
+        ],
+        "y": 2,
+        "z": 64
       },
       {
         "name": "International School for Advanced Studies (Italie)",
@@ -277,18 +391,12 @@
         "full_name": "International School for Advanced Studies",
         "id": "grid.5970.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 14
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 938
       },
       {
         "name": "University of Cologne (Allemagne)",
@@ -296,8 +404,72 @@
         "full_name": "University of Cologne",
         "id": "grid.6190.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830,
+          812829
+        ],
         "y": 2,
         "z": 10
+      },
+      {
+        "name": "Institute for Research in Biomedicine (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Research in Biomedicine",
+        "id": "grid.7722.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Tel Aviv University (Israël)",
+        "country": "Israël",
+        "full_name": "Tel Aviv University",
+        "id": "grid.12136.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "University of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Lausanne",
+        "id": "grid.9851.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University Medical Center Groningen (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University Medical Center Groningen",
+        "id": "grid.4494.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
+        "y": 1,
+        "z": 31
       },
       {
         "name": "UCA (France)",
@@ -306,17 +478,23 @@
         "acronym": "UCA",
         "id": "s3t8T",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
         "y": 1,
         "z": 21
       },
       {
-        "name": "University Medical Center Groningen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University Medical Center Groningen",
-        "id": "grid.4494.d",
-        "country_level_part": "Pays membres",
+        "name": "University of Basel (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Basel",
+        "id": "grid.6612.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          812830
+        ],
         "y": 1,
-        "z": 31
+        "z": 27
       },
       {
         "name": "Inserm (France)",
@@ -325,53 +503,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          812830
+        ],
         "y": 1,
         "z": 258
-      },
-      {
-        "name": "University of Basel (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Basel",
-        "id": "grid.6612.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "University of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Lausanne",
-        "id": "grid.9851.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Institute for Research in Biomedicine (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute for Research in Biomedicine",
-        "id": "grid.7722.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 55
-      },
-      {
-        "name": "Tel Aviv University (Israël)",
-        "country": "Israël",
-        "full_name": "Tel Aviv University",
-        "id": "grid.12136.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 34
       },
       {
         "name": "St. Anne´s University Hospital (Rép. Tchèque)",
@@ -379,6 +515,9 @@
         "full_name": "St. Anne´s University Hospital",
         "id": "grid.412752.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 6
       },
@@ -388,17 +527,11 @@
         "full_name": "Antoni van Leeuwenhoek Hospital",
         "id": "grid.430814.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 105
       },
       {
         "name": "U. Toulouse III (France)",
@@ -407,26 +540,11 @@
         "acronym": "U. Toulouse III",
         "id": "m7K6T",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 69
-      },
-      {
-        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ludwig-Maximilians-Universität München",
-        "id": "grid.5252.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 46
-      },
-      {
-        "name": "Karolinska Institute (Suède)",
-        "country": "Suède",
-        "full_name": "Karolinska Institute",
-        "id": "grid.4714.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
       },
       {
         "name": "U. Paris (France)",
@@ -435,8 +553,47 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 128
+      },
+      {
+        "name": "Karolinska Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Karolinska Institute",
+        "id": "grid.4714.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 105
+      },
+      {
+        "name": "Ludwig-Maximilians-Universität München (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ludwig-Maximilians-Universität München",
+        "id": "grid.5252.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
+        "y": 1,
+        "z": 46
       },
       {
         "name": "FIRC Institute of Molecular Oncology (Italie)",
@@ -444,6 +601,9 @@
         "full_name": "FIRC Institute of Molecular Oncology",
         "id": "grid.7678.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          812829
+        ],
         "y": 1,
         "z": 4
       }

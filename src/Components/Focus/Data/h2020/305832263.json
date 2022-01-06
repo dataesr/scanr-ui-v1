@@ -2,42 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "APR (France)",
-        "country": "France",
-        "full_name": "Applications Plastiques du Rhône",
-        "acronym": "APR",
-        "id": "972501571",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "U. Lyon 2 (France)",
         "country": "France",
         "full_name": "Université Lumière - Lyon 2",
         "acronym": "U. Lyon 2",
         "id": "CUBKB",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
       },
       {
         "name": "Mondragon Corporation (Espagne)",
@@ -45,6 +20,9 @@
         "full_name": "Mondragon Corporation",
         "id": "grid.423975.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 27
       },
@@ -54,48 +32,23 @@
         "full_name": "Caixa Mágica Software",
         "id": "grid.424495.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Ikerlan (Espagne)",
+        "name": "Universitat Politècnica de València (Espagne)",
         "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
-        "z": 59
-      },
-      {
-        "name": "Almende (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Almende",
-        "id": "grid.423993.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Ascora (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ascora",
-        "id": "grid.432245.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
+        "z": 182
       },
       {
         "name": "APR (France)",
@@ -104,9 +57,64 @@
         "acronym": "APR",
         "id": "972501571",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 1
       },
+      {
+        "name": "Almende (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Almende",
+        "id": "grid.423993.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Ascora (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ascora",
+        "id": "grid.432245.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 59
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
       {
         "name": "U. Lyon 2 (France)",
         "country": "France",
@@ -114,17 +122,11 @@
         "acronym": "U. Lyon 2",
         "id": "CUBKB",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
       },
       {
         "name": "Mondragon Corporation (Espagne)",
@@ -132,6 +134,9 @@
         "full_name": "Mondragon Corporation",
         "id": "grid.423975.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 9
       },
@@ -141,17 +146,36 @@
         "full_name": "Caixa Mágica Software",
         "id": "grid.424495.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "Ikerlan (Espagne)",
+        "name": "Universitat Politècnica de València (Espagne)",
         "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
-        "z": 28
+        "z": 51
+      },
+      {
+        "name": "APR (France)",
+        "country": "France",
+        "full_name": "Applications Plastiques du Rhône",
+        "acronym": "APR",
+        "id": "972501571",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Almende (Pays-Bas)",
@@ -159,8 +183,23 @@
         "full_name": "Almende",
         "id": "grid.423993.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 16
       },
       {
         "name": "Ascora (Allemagne)",
@@ -168,8 +207,23 @@
         "full_name": "Ascora",
         "id": "grid.432245.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723710
+        ],
+        "y": 1,
+        "z": 28
       }
     ]
   }

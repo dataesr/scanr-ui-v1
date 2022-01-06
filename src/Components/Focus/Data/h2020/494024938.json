@@ -2,126 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Forschungsverbund Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Forschungsverbund Berlin",
-        "id": "grid.5336.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Norwegian Institute for Nature Research (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute for Nature Research",
-        "id": "grid.420127.2",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "UNICAEN (France)",
-        "country": "France",
-        "full_name": "Université de Caen Normandie",
-        "acronym": "UNICAEN",
-        "id": "p25Q3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
         "name": "Norwegian University of Life Sciences (Norvège)",
         "country": "Norvège",
         "full_name": "Norwegian University of Life Sciences",
         "id": "grid.19477.3c",
         "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
         "y": 1,
         "z": 35
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
-      },
-      {
-        "name": "University of South Bohemia in Ceské Budejovice (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "University of South Bohemia in Ceské Budejovice",
-        "id": "grid.14509.39",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "U. Antilles (France)",
-        "country": "France",
-        "full_name": "Université des Antilles",
-        "acronym": "U. Antilles",
-        "id": "z3hdL",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Sorbonne U (France)",
-        "country": "France",
-        "full_name": "Sorbonne Université",
-        "acronym": "Sorbonne U",
-        "id": "bxPQe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 505
-      },
-      {
-        "name": "Generalitat Valenciana (Espagne)",
-        "country": "Espagne",
-        "full_name": "Generalitat Valenciana",
-        "id": "grid.424970.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 214
-      },
-      {
-        "name": "ZF Screens (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "ZF Screens",
-        "id": "grid.474238.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "Hebrew University of Jerusalem (Israël)",
-        "country": "Israël",
-        "full_name": "Hebrew University of Jerusalem",
-        "id": "grid.9619.7",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 77
       },
       {
         "name": "MNHN (France)",
@@ -130,17 +20,233 @@
         "acronym": "MNHN",
         "id": "VaJ52",
         "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
         "y": 1,
         "z": 68
       },
       {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
         "y": 1,
-        "z": 386
+        "z": 2670
+      },
+      {
+        "name": "Generalitat Valenciana (Espagne)",
+        "country": "Espagne",
+        "full_name": "Generalitat Valenciana",
+        "id": "grid.424970.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 505
+      },
+      {
+        "name": "Forschungsverbund Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungsverbund Berlin",
+        "id": "grid.5336.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 214
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 77
+      },
+      {
+        "name": "University of South Bohemia in Ceské Budejovice (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "University of South Bohemia in Ceské Budejovice",
+        "id": "grid.14509.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 182
+      },
+      {
+        "name": "UNICAEN (France)",
+        "country": "France",
+        "full_name": "Université de Caen Normandie",
+        "acronym": "UNICAEN",
+        "id": "p25Q3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "U. Antilles (France)",
+        "country": "France",
+        "full_name": "Université des Antilles",
+        "acronym": "U. Antilles",
+        "id": "z3hdL",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Norwegian Institute for Nature Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Nature Research",
+        "id": "grid.420127.2",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "ZF Screens (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ZF Screens",
+        "id": "grid.474238.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of the Highlands and Islands (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of the Highlands and Islands",
+        "id": "grid.23378.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Swansea University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Swansea University",
+        "id": "grid.4827.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 125
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "World Wide Fund for Nature (Suisse)",
+        "country": "Suisse",
+        "full_name": "World Wide Fund for Nature",
+        "id": "grid.468233.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 379
       },
       {
         "name": "Durham University (Royaume-Uni)",
@@ -148,8 +254,23 @@
         "full_name": "Durham University",
         "id": "grid.8250.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 73
+      },
+      {
+        "name": "Directorate-General Joint Research Centre (Belgique)",
+        "country": "Belgique",
+        "full_name": "Directorate-General Joint Research Centre",
+        "id": "grid.489339.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 149
       },
       {
         "name": "University of Oviedo (Espagne)",
@@ -157,8 +278,23 @@
         "full_name": "University of Oviedo",
         "id": "grid.10863.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 386
       },
       {
         "name": "European Regional Centre for Ecohydrology (Pologne)",
@@ -166,6 +302,9 @@
         "full_name": "European Regional Centre for Ecohydrology",
         "id": "grid.460361.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 8
       },
@@ -175,33 +314,203 @@
         "full_name": "University College Cork",
         "id": "grid.7872.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 198
-      },
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
+        "name": "Norwegian University of Life Sciences (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Life Sciences",
+        "id": "grid.19477.3c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
         "y": 1,
-        "z": 379
+        "z": 5
       },
       {
-        "name": "University of Southampton (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Southampton",
-        "id": "grid.5491.9",
+        "name": "MNHN (France)",
+        "country": "France",
+        "full_name": "Muséum national d'histoire naturelle",
+        "acronym": "MNHN",
+        "id": "VaJ52",
         "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "Generalitat Valenciana (Espagne)",
+        "country": "Espagne",
+        "full_name": "Generalitat Valenciana",
+        "id": "grid.424970.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
         "y": 1,
         "z": 155
       },
       {
-        "name": "World Wide Fund for Nature (Suisse)",
-        "country": "Suisse",
-        "full_name": "World Wide Fund for Nature",
-        "id": "grid.468233.8",
+        "name": "Forschungsverbund Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungsverbund Berlin",
+        "id": "grid.5336.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "IRD (France)",
+        "country": "France",
+        "full_name": "Institut de recherche pour le développement",
+        "acronym": "IRD",
+        "id": "Uan45",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
         "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "University of South Bohemia in Ceské Budejovice (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "University of South Bohemia in Ceské Budejovice",
+        "id": "grid.14509.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "UNICAEN (France)",
+        "country": "France",
+        "full_name": "Université de Caen Normandie",
+        "acronym": "UNICAEN",
+        "id": "p25Q3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "U. Antilles (France)",
+        "country": "France",
+        "full_name": "Université des Antilles",
+        "acronym": "U. Antilles",
+        "id": "z3hdL",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Norwegian Institute for Nature Research (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Institute for Nature Research",
+        "id": "grid.420127.2",
+        "country_level_part": "Pays associés",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ZF Screens (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "ZF Screens",
+        "id": "grid.474238.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          642893
+        ],
+        "y": 1,
+        "z": 1
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+      {
+        "name": "University of the Highlands and Islands (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of the Highlands and Islands",
+        "id": "grid.23378.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 1
       },
@@ -211,15 +520,70 @@
         "full_name": "Swansea University",
         "id": "grid.4827.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
-        "z": 39
+        "z": 3
       },
       {
-        "name": "University of the Highlands and Islands (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of the Highlands and Islands",
-        "id": "grid.23378.3d",
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "World Wide Fund for Nature (Suisse)",
+        "country": "Suisse",
+        "full_name": "World Wide Fund for Nature",
+        "id": "grid.468233.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Durham University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Durham University",
+        "id": "grid.8250.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 3
       },
@@ -229,176 +593,11 @@
         "full_name": "Directorate-General Joint Research Centre",
         "id": "grid.489339.c",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 149
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 125
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Forschungsverbund Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Forschungsverbund Berlin",
-        "id": "grid.5336.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Norwegian Institute for Nature Research (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Institute for Nature Research",
-        "id": "grid.420127.2",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "UNICAEN (France)",
-        "country": "France",
-        "full_name": "Université de Caen Normandie",
-        "acronym": "UNICAEN",
-        "id": "p25Q3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Norwegian University of Life Sciences (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Life Sciences",
-        "id": "grid.19477.3c",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "University of South Bohemia in Ceské Budejovice (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "University of South Bohemia in Ceské Budejovice",
-        "id": "grid.14509.39",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "U. Antilles (France)",
-        "country": "France",
-        "full_name": "Université des Antilles",
-        "acronym": "U. Antilles",
-        "id": "z3hdL",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Sorbonne U (France)",
-        "country": "France",
-        "full_name": "Sorbonne Université",
-        "acronym": "Sorbonne U",
-        "id": "bxPQe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Generalitat Valenciana (Espagne)",
-        "country": "Espagne",
-        "full_name": "Generalitat Valenciana",
-        "id": "grid.424970.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "IRD (France)",
-        "country": "France",
-        "full_name": "Institut de recherche pour le développement",
-        "acronym": "IRD",
-        "id": "Uan45",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 79
-      },
-      {
-        "name": "ZF Screens (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "ZF Screens",
-        "id": "grid.474238.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 938
-      },
-      {
-        "name": "Hebrew University of Jerusalem (Israël)",
-        "country": "Israël",
-        "full_name": "Hebrew University of Jerusalem",
-        "id": "grid.9619.7",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "MNHN (France)",
-        "country": "France",
-        "full_name": "Muséum national d'histoire naturelle",
-        "acronym": "MNHN",
-        "id": "VaJ52",
-        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 19
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Climate action, environment, resource efficiency and raw materials (ENV)": [
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Durham University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Durham University",
-        "id": "grid.8250.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "University of Oviedo (Espagne)",
@@ -406,8 +605,23 @@
         "full_name": "University of Oviedo",
         "id": "grid.10863.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
+        "y": 1,
+        "z": 20
       },
       {
         "name": "European Regional Centre for Ecohydrology (Pologne)",
@@ -415,6 +629,9 @@
         "full_name": "European Regional Centre for Ecohydrology",
         "id": "grid.460361.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 4
       },
@@ -424,70 +641,9 @@
         "full_name": "University College Cork",
         "id": "grid.7872.a",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "University of Southampton (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Southampton",
-        "id": "grid.5491.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "World Wide Fund for Nature (Suisse)",
-        "country": "Suisse",
-        "full_name": "World Wide Fund for Nature",
-        "id": "grid.468233.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Swansea University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Swansea University",
-        "id": "grid.4827.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of the Highlands and Islands (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of the Highlands and Islands",
-        "id": "grid.23378.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Directorate-General Joint Research Centre (Belgique)",
-        "country": "Belgique",
-        "full_name": "Directorate-General Joint Research Centre",
-        "id": "grid.489339.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
+        "projects": [
+          689682
+        ],
         "y": 1,
         "z": 6
       }

@@ -2,32 +2,19 @@
   "all": {
     "all": [
       {
-        "name": "University of L'Aquila (Italie)",
-        "country": "Italie",
-        "full_name": "University of L'Aquila",
-        "id": "grid.158820.6",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 35
-      },
-      {
         "name": "Clearsy (France)",
         "country": "France",
         "full_name": "Clearsy",
         "acronym": "Clearsy",
         "id": "433901402",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          644047
+        ],
         "y": 3,
         "z": 5
-      },
-      {
-        "name": "Åbo Akademi University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Åbo Akademi University",
-        "id": "grid.13797.3b",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 21
       },
       {
         "name": "Mälardalen University (Suède)",
@@ -35,8 +22,41 @@
         "full_name": "Mälardalen University",
         "id": "grid.411579.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          957212
+        ],
         "y": 3,
         "z": 22
+      },
+      {
+        "name": "University of L'Aquila (Italie)",
+        "country": "Italie",
+        "full_name": "University of L'Aquila",
+        "id": "grid.158820.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732223,
+          101007350
+        ],
+        "y": 3,
+        "z": 35
+      },
+      {
+        "name": "Åbo Akademi University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Åbo Akademi University",
+        "id": "grid.13797.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          957212
+        ],
+        "y": 3,
+        "z": 21
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -44,17 +64,13 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732064,
+          732253,
+          731946
+        ],
         "y": 3,
         "z": 1072
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 425
       },
       {
         "name": "Open University of Catalonia (Espagne)",
@@ -62,26 +78,12 @@
         "full_name": "Open University of Catalonia",
         "id": "grid.36083.3e",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 22
-      },
-      {
-        "name": "Bombardier (Suède)",
-        "country": "Suède",
-        "full_name": "Bombardier",
-        "id": "grid.424290.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 23
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 63
       },
       {
         "name": "IMT (France)",
@@ -90,8 +92,64 @@
         "acronym": "IMT",
         "id": "6Th4v",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 124
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732064
+        ],
+        "y": 2,
+        "z": 425
+      },
+      {
+        "name": "Volvo (Suède)",
+        "country": "Suède",
+        "full_name": "Volvo",
+        "id": "grid.5911.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 49
+      },
+      {
+        "name": "Bombardier (Suède)",
+        "country": "Suède",
+        "full_name": "Bombardier",
+        "id": "grid.424290.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 23
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 199
       },
       {
         "name": "Brno University of Technology (Rép. Tchèque)",
@@ -99,6 +157,10 @@
         "full_name": "Brno University of Technology",
         "id": "grid.4994.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 62
       },
@@ -108,35 +170,25 @@
         "full_name": "Atos",
         "id": "grid.410313.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732064
+        ],
         "y": 2,
         "z": 202
       },
       {
-        "name": "Ikerlan (Espagne)",
+        "name": "University of Cantabria (Espagne)",
         "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
-        "z": 59
-      },
-      {
-        "name": "Volvo (Suède)",
-        "country": "Suède",
-        "full_name": "Volvo",
-        "id": "grid.5911.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 49
-      },
-      {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 18
+        "z": 63
       },
       {
         "name": "Camea (Rép. Tchèque)",
@@ -144,17 +196,38 @@
         "full_name": "Camea",
         "id": "grid.448061.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 6
       },
       {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732253
+        ],
         "y": 2,
-        "z": 199
+        "z": 18
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          957212
+        ],
+        "y": 2,
+        "z": 59
       },
       {
         "name": "University of York (Royaume-Uni)",
@@ -162,17 +235,12 @@
         "full_name": "University of York",
         "id": "grid.5685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223,
+          644047
+        ],
         "y": 2,
         "z": 88
-      },
-      {
-        "name": "PNO Consultants (Italie)",
-        "country": "Italie",
-        "full_name": "PNO Consultants",
-        "id": "grid.465145.7",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 37
       },
       {
         "name": "Tecnalia (Espagne)",
@@ -180,66 +248,25 @@
         "full_name": "Tecnalia",
         "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          732064,
+          786713
+        ],
         "y": 2,
         "z": 368
       },
       {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
+        "name": "PNO Consultants (Italie)",
+        "country": "Italie",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "Fent Innovative Software Solutions (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fent Innovative Software Solutions",
-        "id": "grid.433909.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "ECN (France)",
-        "country": "France",
-        "full_name": "Centrale Nantes",
-        "acronym": "ECN",
-        "id": "gCAyK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 295
-      },
-      {
-        "name": "Space Systems Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "Space Systems Finland",
-        "id": "grid.426432.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "projects": [
+          732064,
+          786713
+        ],
+        "y": 2,
+        "z": 37
       },
       {
         "name": "CNRS (France)",
@@ -248,18 +275,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 2670
       },
       {
-        "name": "UPPA (France)",
-        "country": "France",
-        "full_name": "Université de Pau et des Pays de l'Adour",
-        "acronym": "UPPA",
-        "id": "Mz286",
+        "name": "Space Systems Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "Space Systems Finland",
+        "id": "grid.426432.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 30
+        "z": 1
       },
       {
         "name": "Thales (France)",
@@ -268,18 +300,24 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 286
       },
       {
-        "name": "U. Nantes (France)",
+        "name": "Inria (France)",
         "country": "France",
-        "full_name": "Université de Nantes",
-        "acronym": "U. Nantes",
-        "id": "7hB8r",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 71
+        "z": 295
       },
       {
         "name": "Smartesting Solutions ... (France)",
@@ -288,17 +326,100 @@
         "acronym": "Smartesting Solutions ...",
         "id": "809068943",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "University of Piraeus (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Piraeus",
-        "id": "grid.4463.5",
+        "name": "Fent Innovative Software Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fent Innovative Software Solutions",
+        "id": "grid.433909.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 63
+        "z": 5
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "ECN (France)",
+        "country": "France",
+        "full_name": "Centrale Nantes",
+        "acronym": "ECN",
+        "id": "gCAyK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "UPPA (France)",
+        "country": "France",
+        "full_name": "Université de Pau et des Pays de l'Adour",
+        "acronym": "UPPA",
+        "id": "Mz286",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          871643
+        ],
+        "y": 1,
+        "z": 32
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -306,6 +427,9 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 258
       },
@@ -316,6 +440,9 @@
         "acronym": "Activeeon",
         "id": "500807284",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 4
       },
@@ -325,8 +452,23 @@
         "full_name": "University of Oslo",
         "id": "grid.5510.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 186
+      },
+      {
+        "name": "University of Piraeus (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Piraeus",
+        "id": "grid.4463.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
+        "y": 1,
+        "z": 63
       },
       {
         "name": "National Technical University of Athens (Grèce)",
@@ -334,17 +476,11 @@
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 423
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 32
       },
       {
         "name": "Engineering (Italie)",
@@ -352,8 +488,48 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 134
+      },
+      {
+        "name": "Castalia Solutions (France)",
+        "country": "France",
+        "full_name": "Castalia Solutions",
+        "acronym": "Castalia Solutions",
+        "id": "809726326",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Open Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Open Group",
+        "id": "grid.426714.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "Edge Hill University (Royaume-Uni)",
@@ -361,6 +537,9 @@
         "full_name": "Edge Hill University",
         "id": "grid.255434.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 2
       },
@@ -371,26 +550,11 @@
         "acronym": "OW2",
         "id": "499409712",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "Open Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Open Group",
-        "id": "grid.426714.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Dutch Research Council (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Dutch Research Council",
-        "id": "grid.420488.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 136
       },
       {
         "name": "Unparallel Innovation (Portugal)",
@@ -398,63 +562,23 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 26
       },
       {
-        "name": "Castalia Solutions (France)",
-        "country": "France",
-        "full_name": "Castalia Solutions",
-        "acronym": "Castalia Solutions",
-        "id": "809726326",
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Athens University of Economics and Business (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens University of Economics and Business",
-        "id": "grid.16299.35",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Austrian Institute of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 191
-      },
-      {
-        "name": "HI Iberia (Espagne)",
-        "country": "Espagne",
-        "full_name": "HI Iberia",
-        "id": "grid.424687.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Graz University of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Graz University of Technology",
-        "id": "grid.410413.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 115
+        "z": 136
       },
       {
         "name": "Prevision.io (France)",
@@ -463,22 +587,64 @@
         "acronym": "Prevision.io",
         "id": "822405361",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Austrian Institute of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 191
+      },
+      {
+        "name": "Graz University of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Graz University of Technology",
+        "id": "grid.410413.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 115
+      },
+      {
+        "name": "University of Sassari (Italie)",
+        "country": "Italie",
+        "full_name": "University of Sassari",
+        "id": "grid.11450.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 21
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "University of L'Aquila (Italie)",
-        "country": "Italie",
-        "full_name": "University of L'Aquila",
-        "id": "grid.158820.6",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 13
-      },
       {
         "name": "Clearsy (France)",
         "country": "France",
@@ -486,15 +652,11 @@
         "acronym": "Clearsy",
         "id": "433901402",
         "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 5
-      },
-      {
-        "name": "Åbo Akademi University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Åbo Akademi University",
-        "id": "grid.13797.3b",
-        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          644047
+        ],
         "y": 3,
         "z": 5
       },
@@ -504,8 +666,41 @@
         "full_name": "Mälardalen University",
         "id": "grid.411579.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          957212
+        ],
         "y": 3,
         "z": 11
+      },
+      {
+        "name": "University of L'Aquila (Italie)",
+        "country": "Italie",
+        "full_name": "University of L'Aquila",
+        "id": "grid.158820.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732223,
+          101007350
+        ],
+        "y": 3,
+        "z": 13
+      },
+      {
+        "name": "Åbo Akademi University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Åbo Akademi University",
+        "id": "grid.13797.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350,
+          957212
+        ],
+        "y": 3,
+        "z": 5
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -513,17 +708,13 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732064,
+          732253,
+          731946
+        ],
         "y": 3,
         "z": 283
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 99
       },
       {
         "name": "Open University of Catalonia (Espagne)",
@@ -531,26 +722,12 @@
         "full_name": "Open University of Catalonia",
         "id": "grid.36083.3e",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 9
-      },
-      {
-        "name": "Bombardier (Suède)",
-        "country": "Suède",
-        "full_name": "Bombardier",
-        "id": "grid.424290.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 14
       },
       {
         "name": "IMT (France)",
@@ -559,8 +736,64 @@
         "acronym": "IMT",
         "id": "6Th4v",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 36
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732064
+        ],
+        "y": 2,
+        "z": 99
+      },
+      {
+        "name": "Volvo (Suède)",
+        "country": "Suède",
+        "full_name": "Volvo",
+        "id": "grid.5911.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 8
+      },
+      {
+        "name": "Bombardier (Suède)",
+        "country": "Suède",
+        "full_name": "Bombardier",
+        "id": "grid.424290.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 5
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
+        "y": 2,
+        "z": 41
       },
       {
         "name": "Brno University of Technology (Rép. Tchèque)",
@@ -568,6 +801,10 @@
         "full_name": "Brno University of Technology",
         "id": "grid.4994.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 32
       },
@@ -577,35 +814,25 @@
         "full_name": "Atos",
         "id": "grid.410313.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732064
+        ],
         "y": 2,
         "z": 104
       },
       {
-        "name": "Ikerlan (Espagne)",
+        "name": "University of Cantabria (Espagne)",
         "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
-        "z": 28
-      },
-      {
-        "name": "Volvo (Suède)",
-        "country": "Suède",
-        "full_name": "Volvo",
-        "id": "grid.5911.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 8
-      },
-      {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 16
+        "z": 14
       },
       {
         "name": "Camea (Rép. Tchèque)",
@@ -613,17 +840,38 @@
         "full_name": "Camea",
         "id": "grid.448061.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          101007350
+        ],
         "y": 2,
         "z": 6
       },
       {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          732253
+        ],
         "y": 2,
-        "z": 41
+        "z": 16
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          957212
+        ],
+        "y": 2,
+        "z": 28
       },
       {
         "name": "University of York (Royaume-Uni)",
@@ -631,66 +879,12 @@
         "full_name": "University of York",
         "id": "grid.5685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223,
+          644047
+        ],
         "y": 2,
         "z": 8
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Fent Innovative Software Solutions (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fent Innovative Software Solutions",
-        "id": "grid.433909.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "ECN (France)",
-        "country": "France",
-        "full_name": "Centrale Nantes",
-        "acronym": "ECN",
-        "id": "gCAyK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 71
-      },
-      {
-        "name": "Space Systems Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "Space Systems Finland",
-        "id": "grid.426432.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "CNRS (France)",
@@ -699,18 +893,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 148
       },
       {
-        "name": "UPPA (France)",
-        "country": "France",
-        "full_name": "Université de Pau et des Pays de l'Adour",
-        "acronym": "UPPA",
-        "id": "Mz286",
+        "name": "Space Systems Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "Space Systems Finland",
+        "id": "grid.426432.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 3
+        "z": 1
       },
       {
         "name": "Thales (France)",
@@ -719,18 +918,24 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 84
       },
       {
-        "name": "U. Nantes (France)",
+        "name": "Inria (France)",
         "country": "France",
-        "full_name": "Université de Nantes",
-        "acronym": "U. Nantes",
-        "id": "7hB8r",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 5
+        "z": 71
       },
       {
         "name": "Smartesting Solutions ... (France)",
@@ -739,17 +944,100 @@
         "acronym": "Smartesting Solutions ...",
         "id": "809068943",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "University of Piraeus (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Piraeus",
-        "id": "grid.4463.5",
+        "name": "Fent Innovative Software Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fent Innovative Software Solutions",
+        "id": "grid.433909.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 17
+        "z": 3
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ECN (France)",
+        "country": "France",
+        "full_name": "Centrale Nantes",
+        "acronym": "ECN",
+        "id": "gCAyK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "UPPA (France)",
+        "country": "France",
+        "full_name": "Université de Pau et des Pays de l'Adour",
+        "acronym": "UPPA",
+        "id": "Mz286",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          871643
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -757,6 +1045,9 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 54
       },
@@ -767,6 +1058,9 @@
         "acronym": "Activeeon",
         "id": "500807284",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 4
       },
@@ -776,8 +1070,23 @@
         "full_name": "University of Oslo",
         "id": "grid.5510.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "University of Piraeus (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Piraeus",
+        "id": "grid.4463.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "National Technical University of Athens (Grèce)",
@@ -785,17 +1094,11 @@
         "full_name": "National Technical University of Athens",
         "id": "grid.4241.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 95
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Engineering (Italie)",
@@ -803,8 +1106,48 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          871643
+        ],
         "y": 1,
         "z": 46
+      },
+      {
+        "name": "Castalia Solutions (France)",
+        "country": "France",
+        "full_name": "Castalia Solutions",
+        "acronym": "Castalia Solutions",
+        "id": "809726326",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Open Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Open Group",
+        "id": "grid.426714.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Edge Hill University (Royaume-Uni)",
@@ -812,6 +1155,9 @@
         "full_name": "Edge Hill University",
         "id": "grid.255434.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 2
       },
@@ -822,26 +1168,11 @@
         "acronym": "OW2",
         "id": "499409712",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "Open Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Open Group",
-        "id": "grid.426714.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Dutch Research Council (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Dutch Research Council",
-        "id": "grid.420488.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Unparallel Innovation (Portugal)",
@@ -849,63 +1180,23 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 20
       },
       {
-        "name": "Castalia Solutions (France)",
-        "country": "France",
-        "full_name": "Castalia Solutions",
-        "acronym": "Castalia Solutions",
-        "id": "809726326",
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Athens University of Economics and Business (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens University of Economics and Business",
-        "id": "grid.16299.35",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Austrian Institute of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "HI Iberia (Espagne)",
-        "country": "Espagne",
-        "full_name": "HI Iberia",
-        "id": "grid.424687.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Graz University of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Graz University of Technology",
-        "id": "grid.410413.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
+        "z": 6
       },
       {
         "name": "Prevision.io (France)",
@@ -914,17 +1205,71 @@
         "acronym": "Prevision.io",
         "id": "822405361",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Anstalt für Verbrennungskraftmaschinen List (Autriche)",
+        "name": "Austrian Institute of Technology (Autriche)",
         "country": "Autriche",
-        "full_name": "Anstalt für Verbrennungskraftmaschinen List",
-        "id": "grid.75499.36",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
         "y": 1,
-        "z": 36
+        "z": 32
+      },
+      {
+        "name": "Graz University of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Graz University of Technology",
+        "id": "grid.410413.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "University of Sassari (Italie)",
+        "country": "Italie",
+        "full_name": "University of Sassari",
+        "id": "grid.11450.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Honeywell (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Honeywell",
+        "id": "grid.424723.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Acorde (Espagne)",
@@ -932,6 +1277,9 @@
         "full_name": "Acorde",
         "id": "grid.423626.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007350
+        ],
         "y": 1,
         "z": 3
       }
@@ -940,56 +1288,38 @@
   "Societal Challenges": {
     "Secure societies - Protecting freedom and security of Europe and its citizens (SECURITY)": [
       {
-        "name": "PNO Consultants (Italie)",
-        "country": "Italie",
-        "full_name": "PNO Consultants",
-        "id": "grid.465145.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
         "name": "Tecnalia (Espagne)",
         "country": "Espagne",
         "full_name": "Tecnalia",
         "id": "grid.13753.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
         "z": 11
       },
       {
-        "name": "Ayuntamiento de Santander (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ayuntamiento de Santander",
-        "id": "grid.423848.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Ministero dell'Economia e delle Finanze (Italie)",
+        "name": "PNO Consultants (Italie)",
         "country": "Italie",
-        "full_name": "Ministero dell'Economia e delle Finanze",
-        "id": "grid.436099.1",
+        "full_name": "PNO Consultants",
+        "id": "grid.465145.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
-        "z": 1
+        "z": 4
       },
       {
-        "name": "Malta Information Technology Agency (Malte)",
-        "country": "Malte",
-        "full_name": "Malta Information Technology Agency",
-        "id": "grid.425420.5",
+        "name": "Federal Ministry of Education, Science and Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Federal Ministry of Education, Science and Research",
+        "id": "grid.493896.9",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Accenture (Italie)",
-        "country": "Italie",
-        "full_name": "Accenture",
-        "id": "grid.436496.a",
-        "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
         "z": 1
       },
@@ -999,8 +1329,47 @@
         "full_name": "Bundesrechenzentrum",
         "id": "grid.493915.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Ayuntamiento de Santander (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ayuntamiento de Santander",
+        "id": "grid.423848.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ministero dell'Economia e delle Finanze (Italie)",
+        "country": "Italie",
+        "full_name": "Ministero dell'Economia e delle Finanze",
+        "id": "grid.436099.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Malta Information Technology Agency (Malte)",
+        "country": "Malte",
+        "full_name": "Malta Information Technology Agency",
+        "id": "grid.425420.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Sogei (Italie)",
@@ -1008,8 +1377,23 @@
         "full_name": "Sogei",
         "id": "grid.426319.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Accenture (Italie)",
+        "country": "Italie",
+        "full_name": "Accenture",
+        "id": "grid.436496.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University of Coimbra (Portugal)",
@@ -1017,17 +1401,11 @@
         "full_name": "University of Coimbra",
         "id": "grid.8051.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          786713
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Federal Ministry of Education, Science and Research (Autriche)",
-        "country": "Autriche",
-        "full_name": "Federal Ministry of Education, Science and Research",
-        "id": "grid.493896.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       }
     ]
   }

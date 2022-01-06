@@ -2,41 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Biozoon (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Biozoon",
-        "id": "grid.424240.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
         "name": "Arbiom (France)",
         "country": "France",
         "full_name": "Arbiom",
         "acronym": "Arbiom",
         "id": "414756619",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 199
       },
       {
         "name": "Hochschule Bremerhaven (Allemagne)",
@@ -44,6 +20,9 @@
         "full_name": "Hochschule Bremerhaven",
         "id": "grid.461640.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 13
       },
@@ -53,30 +32,11 @@
         "full_name": "Matís",
         "id": "grid.425499.7",
         "country_level_part": "Pays associés",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 22
-      },
-      {
-        "name": "University of Bologna (Italie)",
-        "country": "Italie",
-        "full_name": "University of Bologna",
-        "id": "grid.6292.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 314
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
       },
       {
         "name": "Biozoon (Allemagne)",
@@ -84,18 +44,35 @@
         "full_name": "Biozoon",
         "id": "grid.424240.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
-        "z": 7
+        "z": 9
       },
       {
-        "name": "Arbiom (France)",
-        "country": "France",
-        "full_name": "Arbiom",
-        "acronym": "Arbiom",
-        "id": "414756619",
+        "name": "University of Bologna (Italie)",
+        "country": "Italie",
+        "full_name": "University of Bologna",
+        "id": "grid.6292.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
-        "z": 2
+        "z": 314
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
+        "y": 1,
+        "z": 425
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -103,8 +80,28 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
-        "z": 22
+        "z": 199
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Arbiom (France)",
+        "country": "France",
+        "full_name": "Arbiom",
+        "acronym": "Arbiom",
+        "id": "414756619",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Hochschule Bremerhaven (Allemagne)",
@@ -112,6 +109,9 @@
         "full_name": "Hochschule Bremerhaven",
         "id": "grid.461640.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 9
       },
@@ -121,8 +121,23 @@
         "full_name": "Matís",
         "id": "grid.425499.7",
         "country_level_part": "Pays associés",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 14
+      },
+      {
+        "name": "Biozoon (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Biozoon",
+        "id": "grid.424240.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "University of Bologna (Italie)",
@@ -130,8 +145,35 @@
         "full_name": "University of Bologna",
         "id": "grid.6292.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
         "y": 1,
         "z": 56
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862704
+        ],
+        "y": 1,
+        "z": 22
       }
     ]
   }

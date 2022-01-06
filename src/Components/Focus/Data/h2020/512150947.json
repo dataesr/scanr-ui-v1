@@ -2,32 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "AFP (France)",
-        "country": "France",
-        "full_name": "Agence France Presse",
-        "acronym": "AFP",
-        "id": "775658354",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Deutsche Welle (Allemagne)",
         "country": "Allemagne",
         "full_name": "Deutsche Welle",
         "id": "grid.424191.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
         "y": 1,
         "z": 18
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 361
       },
       {
         "name": "University of Lleida (Espagne)",
@@ -35,40 +19,52 @@
         "full_name": "University of Lleida",
         "id": "grid.15043.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "AFP (France)",
+        "country": "France",
+        "full_name": "Agence France Presse",
+        "acronym": "AFP",
+        "id": "775658354",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
+        "y": 1,
+        "z": 361
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "AFP (France)",
-        "country": "France",
-        "full_name": "Agence France Presse",
-        "acronym": "AFP",
-        "id": "775658354",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Deutsche Welle (Allemagne)",
         "country": "Allemagne",
         "full_name": "Deutsche Welle",
         "id": "grid.424191.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
         "y": 1,
         "z": 15
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 72
       },
       {
         "name": "University of Lleida (Espagne)",
@@ -76,8 +72,36 @@
         "full_name": "University of Lleida",
         "id": "grid.15043.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "AFP (France)",
+        "country": "France",
+        "full_name": "Agence France Presse",
+        "acronym": "AFP",
+        "id": "775658354",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687786
+        ],
+        "y": 1,
+        "z": 72
       }
     ]
   }

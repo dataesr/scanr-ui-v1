@@ -2,67 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Ambiente Italia (Italie)",
-        "country": "Italie",
-        "full_name": "Ambiente Italia",
-        "id": "grid.425347.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz",
-        "id": "grid.494676.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "PlanEnergi (Danemark)",
-        "country": "Danemark",
-        "full_name": "PlanEnergi",
-        "id": "grid.474095.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "AURA EE (France)",
-        "country": "France",
-        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
-        "acronym": "AURA EE",
-        "id": "314538513",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Steinbeis Foundation (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Steinbeis Foundation",
-        "id": "grid.153460.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 106
-      },
-      {
         "name": "AEE Institute for Sustainable Technologies (Autriche)",
         "country": "Autriche",
         "full_name": "AEE Institute for Sustainable Technologies",
         "id": "grid.424164.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 11
       },
@@ -72,21 +19,11 @@
         "full_name": "CIT Energy Management",
         "id": "grid.433313.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 10
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "Ambiente Italia (Italie)",
-        "country": "Italie",
-        "full_name": "Ambiente Italia",
-        "id": "grid.425347.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz (Allemagne)",
@@ -94,18 +31,23 @@
         "full_name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz",
         "id": "grid.494676.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
+        "name": "Ambiente Italia (Italie)",
+        "country": "Italie",
+        "full_name": "Ambiente Italia",
+        "id": "grid.425347.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
-        "z": 78
+        "z": 9
       },
       {
         "name": "PlanEnergi (Danemark)",
@@ -113,16 +55,9 @@
         "full_name": "PlanEnergi",
         "id": "grid.474095.b",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "AURA EE (France)",
-        "country": "France",
-        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
-        "acronym": "AURA EE",
-        "id": "314538513",
-        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 8
       },
@@ -132,15 +67,51 @@
         "full_name": "Steinbeis Foundation",
         "id": "grid.153460.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
-        "z": 18
+        "z": 106
       },
+      {
+        "name": "AURA EE (France)",
+        "country": "France",
+        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
+        "acronym": "AURA EE",
+        "id": "314538513",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 852
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "AEE Institute for Sustainable Technologies (Autriche)",
         "country": "Autriche",
         "full_name": "AEE Institute for Sustainable Technologies",
         "id": "grid.424164.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 6
       },
@@ -150,8 +121,85 @@
         "full_name": "CIT Energy Management",
         "id": "grid.433313.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Thüringer Ministerium für Umwelt, Energie und Naturschutz",
+        "id": "grid.494676.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Ambiente Italia (Italie)",
+        "country": "Italie",
+        "full_name": "Ambiente Italia",
+        "id": "grid.425347.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "PlanEnergi (Danemark)",
+        "country": "Danemark",
+        "full_name": "PlanEnergi",
+        "id": "grid.474095.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Steinbeis Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Steinbeis Foundation",
+        "id": "grid.153460.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "AURA EE (France)",
+        "country": "France",
+        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
+        "acronym": "AURA EE",
+        "id": "314538513",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691624
+        ],
+        "y": 1,
+        "z": 78
       }
     ]
   }

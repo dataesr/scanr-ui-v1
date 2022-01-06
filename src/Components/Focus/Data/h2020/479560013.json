@@ -2,69 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Saarland University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Saarland University",
-        "id": "grid.11749.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vall d'Hebron Institut de Recerca",
-        "id": "grid.430994.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "U. La Réunion (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Université de La Réunion",
-        "acronym": "U. La Réunion",
-        "id": "cEt92",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Institute for Bioengineering of Catalonia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute for Bioengineering of Catalonia",
-        "id": "grid.424736.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Infineon Technologies (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Infineon Technologies",
-        "id": "grid.410337.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 61
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 689
-      },
-      {
-        "name": "Sanquin (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Sanquin",
-        "id": "grid.417732.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
+        "z": 2670
       },
       {
         "name": "U. Antilles (France)",
@@ -73,18 +21,60 @@
         "acronym": "U. Antilles",
         "id": "z3hdL",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 22
       },
       {
-        "name": "EFS (France)",
+        "name": "U. La Réunion (France)",
         "country": "France",
-        "full_name": "Établissement français du sang",
-        "acronym": "EFS",
-        "id": "3j05l",
+        "full_name": "Université de La Réunion",
+        "acronym": "U. La Réunion",
+        "id": "cEt92",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
-        "z": 18
+        "z": 36
+      },
+      {
+        "name": "Infineon Technologies (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Infineon Technologies",
+        "id": "grid.410337.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "University of Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Zurich",
+        "id": "grid.7400.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 134
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 57
       },
       {
         "name": "Sorbonne U (France)",
@@ -93,6 +83,9 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 505
       },
@@ -102,18 +95,11 @@
         "full_name": "University of Bristol",
         "id": "grid.5337.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 166
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
       },
       {
         "name": "U. Paris (France)",
@@ -122,8 +108,23 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 388
+      },
+      {
+        "name": "Institute for Bioengineering of Catalonia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Bioengineering of Catalonia",
+        "id": "grid.424736.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 27
       },
       {
         "name": "UGA (France)",
@@ -132,77 +133,11 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 277
-      },
-      {
-        "name": "University of Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Zurich",
-        "id": "grid.7400.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 134
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Saarland University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Saarland University",
-        "id": "grid.11749.3a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vall d'Hebron Institut de Recerca",
-        "id": "grid.430994.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "U. La Réunion (France)",
-        "country": "France",
-        "full_name": "Université de La Réunion",
-        "acronym": "U. La Réunion",
-        "id": "cEt92",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Institute for Bioengineering of Catalonia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute for Bioengineering of Catalonia",
-        "id": "grid.424736.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Infineon Technologies (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Infineon Technologies",
-        "id": "grid.410337.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 258
       },
       {
         "name": "Sanquin (Pays-Bas)",
@@ -210,16 +145,9 @@
         "full_name": "Sanquin",
         "id": "grid.417732.4",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "U. Antilles (France)",
-        "country": "France",
-        "full_name": "Université des Antilles",
-        "acronym": "U. Antilles",
-        "id": "z3hdL",
-        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 11
       },
@@ -230,8 +158,115 @@
         "acronym": "EFS",
         "id": "3j05l",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Saarland University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Saarland University",
+        "id": "grid.11749.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 689
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 938
+      },
+      {
+        "name": "U. Antilles (France)",
+        "country": "France",
+        "full_name": "Université des Antilles",
+        "acronym": "U. Antilles",
+        "id": "z3hdL",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "U. La Réunion (France)",
+        "country": "France",
+        "full_name": "Université de La Réunion",
+        "acronym": "U. La Réunion",
+        "id": "cEt92",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Infineon Technologies (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Infineon Technologies",
+        "id": "grid.410337.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "University of Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Zurich",
+        "id": "grid.7400.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Vall d'Hebron Institut de Recerca (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vall d'Hebron Institut de Recerca",
+        "id": "grid.430994.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Sorbonne U (France)",
@@ -240,6 +275,9 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 155
       },
@@ -249,18 +287,11 @@
         "full_name": "University of Bristol",
         "id": "grid.5337.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 38
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 938
       },
       {
         "name": "U. Paris (France)",
@@ -269,8 +300,23 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 128
+      },
+      {
+        "name": "Institute for Bioengineering of Catalonia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute for Bioengineering of Catalonia",
+        "id": "grid.424736.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "UGA (France)",
@@ -279,17 +325,61 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
         "z": 69
       },
       {
-        "name": "University of Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Zurich",
-        "id": "grid.7400.3",
-        "country_level_part": "Pays associés",
+        "name": "Sanquin (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Sanquin",
+        "id": "grid.417732.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
         "y": 1,
-        "z": 34
+        "z": 7
+      },
+      {
+        "name": "EFS (France)",
+        "country": "France",
+        "full_name": "Établissement français du sang",
+        "acronym": "EFS",
+        "id": "3j05l",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Saarland University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Saarland University",
+        "id": "grid.11749.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860436
+        ],
+        "y": 1,
+        "z": 258
       }
     ]
   }

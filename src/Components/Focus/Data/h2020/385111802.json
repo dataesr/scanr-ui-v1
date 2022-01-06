@@ -2,47 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "University of Erlangen-Nuremberg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Erlangen-Nuremberg",
-        "id": "grid.5330.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 106
-      },
-      {
-        "name": "Amires (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Amires",
-        "id": "grid.432434.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
-        "name": "Höganäs (Suède)",
-        "country": "Suède",
-        "full_name": "Höganäs",
-        "id": "grid.424709.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 230
-      },
-      {
         "name": "ABB (Suède)",
         "country": "Suède",
         "full_name": "ABB",
         "id": "grid.423529.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 21
       },
@@ -52,62 +19,11 @@
         "full_name": "Swiss Center for Electronics and Microtechnology",
         "id": "grid.423798.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 86
-      },
-      {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 199
-      },
-      {
-        "name": "Hexagon (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hexagon",
-        "id": "grid.473135.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Siemens (Suède)",
-        "country": "Suède",
-        "full_name": "Siemens",
-        "id": "grid.437755.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Enel (Italie)",
-        "country": "Italie",
-        "full_name": "Enel",
-        "id": "grid.10506.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Chalmers University of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Chalmers University of Technology",
-        "id": "grid.5371.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 221
-      },
-      {
-        "name": "Cardiff University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cardiff University",
-        "id": "grid.5600.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 94
       },
       {
         "name": "CIT Energy Management (Suède)",
@@ -115,21 +31,47 @@
         "full_name": "CIT Energy Management",
         "id": "grid.433313.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 10
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
+      },
+      {
+        "name": "Siemens (Suède)",
+        "country": "Suède",
+        "full_name": "Siemens",
+        "id": "grid.437755.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 2
+      },
       {
         "name": "University of Erlangen-Nuremberg (Allemagne)",
         "country": "Allemagne",
         "full_name": "University of Erlangen-Nuremberg",
         "id": "grid.5330.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
-        "z": 9
+        "z": 106
+      },
+      {
+        "name": "Cardiff University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff University",
+        "id": "grid.5600.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 94
       },
       {
         "name": "Amires (Rép. Tchèque)",
@@ -137,8 +79,23 @@
         "full_name": "Amires",
         "id": "grid.432434.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
-        "z": 8
+        "z": 29
+      },
+      {
+        "name": "Hexagon (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hexagon",
+        "id": "grid.473135.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Höganäs (Suède)",
@@ -146,8 +103,35 @@
         "full_name": "Höganäs",
         "id": "grid.424709.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Chalmers University of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Chalmers University of Technology",
+        "id": "grid.5371.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 221
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 199
       },
       {
         "name": "Polytechnic University of Turin (Italie)",
@@ -155,15 +139,37 @@
         "full_name": "Polytechnic University of Turin",
         "id": "grid.4800.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
-        "z": 35
+        "z": 230
       },
+      {
+        "name": "Enel (Italie)",
+        "country": "Italie",
+        "full_name": "Enel",
+        "id": "grid.10506.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 36
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
       {
         "name": "ABB (Suède)",
         "country": "Suède",
         "full_name": "ABB",
         "id": "grid.423529.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 4
       },
@@ -173,24 +179,21 @@
         "full_name": "Swiss Center for Electronics and Microtechnology",
         "id": "grid.423798.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "RISE Research Institutes of Sweden (Suède)",
+        "name": "CIT Energy Management (Suède)",
         "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
+        "full_name": "CIT Energy Management",
+        "id": "grid.433313.5",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Hexagon (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hexagon",
-        "id": "grid.473135.7",
-        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 1
       },
@@ -200,24 +203,21 @@
         "full_name": "Siemens",
         "id": "grid.437755.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Enel (Italie)",
-        "country": "Italie",
-        "full_name": "Enel",
-        "id": "grid.10506.32",
+        "name": "University of Erlangen-Nuremberg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Erlangen-Nuremberg",
+        "id": "grid.5330.5",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Chalmers University of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Chalmers University of Technology",
-        "id": "grid.5371.0",
-        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 9
       },
@@ -227,17 +227,95 @@
         "full_name": "Cardiff University",
         "id": "grid.5600.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "CIT Energy Management (Suède)",
-        "country": "Suède",
-        "full_name": "CIT Energy Management",
-        "id": "grid.433313.5",
+        "name": "Amires (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Amires",
+        "id": "grid.432434.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Hexagon (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hexagon",
+        "id": "grid.473135.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Höganäs (Suède)",
+        "country": "Suède",
+        "full_name": "Höganäs",
+        "id": "grid.424709.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Chalmers University of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Chalmers University of Technology",
+        "id": "grid.5371.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Enel (Italie)",
+        "country": "Italie",
+        "full_name": "Enel",
+        "id": "grid.10506.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820774
+        ],
+        "y": 1,
+        "z": 3
       }
     ]
   }

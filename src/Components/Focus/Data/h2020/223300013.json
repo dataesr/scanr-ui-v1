@@ -2,68 +2,28 @@
   "all": {
     "all": [
       {
-        "name": "Technical University of Munich (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Munich",
-        "id": "grid.6936.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 280
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 368
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Natural Resources Institute Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "Natural Resources Institute Finland",
-        "id": "grid.22642.30",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 73
-      },
-      {
-        "name": "InnovaWood (Belgique)",
-        "country": "Belgique",
-        "full_name": "InnovaWood",
-        "id": "grid.435327.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Pavatex France (France)",
-        "country": "France",
-        "full_name": "Pavatex France",
-        "acronym": "Pavatex France",
-        "id": "483065751",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "Lund University (Suède)",
+        "country": "Suède",
+        "full_name": "Lund University",
+        "id": "grid.4514.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 211
       },
       {
         "name": "Soprema (France)",
@@ -72,27 +32,36 @@
         "acronym": "Soprema",
         "id": "314527557",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "FCBA (France)",
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "Pavatex France (France)",
         "country": "France",
-        "full_name": "Institut technologique fcba (foret cellulose bois...)",
-        "acronym": "FCBA",
-        "id": "775680903",
+        "full_name": "Pavatex France",
+        "acronym": "Pavatex France",
+        "id": "483065751",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Lund University (Suède)",
-        "country": "Suède",
-        "full_name": "Lund University",
-        "id": "grid.4514.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 211
+        "z": 2
       },
       {
         "name": "Pontificia Universidad Católica de Chile (Chili)",
@@ -100,8 +69,71 @@
         "full_name": "Pontificia Universidad Católica de Chile",
         "id": "grid.7870.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 25
+      },
+      {
+        "name": "Elastopoli (Finlande)",
+        "country": "Finlande",
+        "full_name": "Elastopoli",
+        "id": "grid.424315.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "Natural Resources Institute Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "Natural Resources Institute Finland",
+        "id": "grid.22642.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 73
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 280
+      },
+      {
+        "name": "InnovaWood (Belgique)",
+        "country": "Belgique",
+        "full_name": "InnovaWood",
+        "id": "grid.435327.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Bouygues (France)",
@@ -110,26 +142,36 @@
         "acronym": "Bouygues",
         "id": "gent41",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 13
       },
       {
-        "name": "Elastopoli (Finlande)",
-        "country": "Finlande",
-        "full_name": "Elastopoli",
-        "id": "grid.424315.5",
+        "name": "FCBA (France)",
+        "country": "France",
+        "full_name": "Institut technologique fcba (foret cellulose bois...)",
+        "acronym": "FCBA",
+        "id": "775680903",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 1
+        "z": 9
       },
       {
-        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
-        "id": "grid.18228.31",
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 45
+        "z": 425
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -137,6 +179,9 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 199
       }
@@ -145,68 +190,28 @@
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
-        "name": "Technical University of Munich (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Munich",
-        "id": "grid.6936.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Natural Resources Institute Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "Natural Resources Institute Finland",
-        "id": "grid.22642.30",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 55
-      },
-      {
-        "name": "InnovaWood (Belgique)",
-        "country": "Belgique",
-        "full_name": "InnovaWood",
-        "id": "grid.435327.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Pavatex France (France)",
-        "country": "France",
-        "full_name": "Pavatex France",
-        "acronym": "Pavatex France",
-        "id": "483065751",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 37
+      },
+      {
+        "name": "Lund University (Suède)",
+        "country": "Suède",
+        "full_name": "Lund University",
+        "id": "grid.4514.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Soprema (France)",
@@ -215,27 +220,36 @@
         "acronym": "Soprema",
         "id": "314527557",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "FCBA (France)",
-        "country": "France",
-        "full_name": "Institut technologique fcba (foret cellulose bois...)",
-        "acronym": "FCBA",
-        "id": "775680903",
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 3
+        "z": 10
       },
       {
-        "name": "Lund University (Suède)",
-        "country": "Suède",
-        "full_name": "Lund University",
-        "id": "grid.4514.4",
+        "name": "Pavatex France (France)",
+        "country": "France",
+        "full_name": "Pavatex France",
+        "acronym": "Pavatex France",
+        "id": "483065751",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 8
+        "z": 1
       },
       {
         "name": "Pontificia Universidad Católica de Chile (Chili)",
@@ -243,6 +257,69 @@
         "full_name": "Pontificia Universidad Católica de Chile",
         "id": "grid.7870.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Elastopoli (Finlande)",
+        "country": "Finlande",
+        "full_name": "Elastopoli",
+        "id": "grid.424315.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Natural Resources Institute Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "Natural Resources Institute Finland",
+        "id": "grid.22642.30",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "InnovaWood (Belgique)",
+        "country": "Belgique",
+        "full_name": "InnovaWood",
+        "id": "grid.435327.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 3
       },
@@ -253,26 +330,36 @@
         "acronym": "Bouygues",
         "id": "gent41",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Elastopoli (Finlande)",
+        "name": "FCBA (France)",
+        "country": "France",
+        "full_name": "Institut technologique fcba (foret cellulose bois...)",
+        "acronym": "FCBA",
+        "id": "775680903",
+        "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
         "country": "Finlande",
-        "full_name": "Elastopoli",
-        "id": "grid.424315.5",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
-        "id": "grid.18228.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
+        "z": 27
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -280,6 +367,9 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          862942
+        ],
         "y": 1,
         "z": 22
       }

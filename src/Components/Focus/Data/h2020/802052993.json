@@ -2,50 +2,41 @@
   "all": {
     "all": [
       {
-        "name": "Angewandte Micro Messtechnik (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Angewandte Micro Messtechnik",
-        "id": "grid.432428.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Semilab (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Semilab",
-        "id": "grid.425991.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Nxp Semiconductors France (France)",
-        "country": "France",
-        "full_name": "Nxp Semiconductors France",
-        "acronym": "Nxp Semiconductors France",
-        "id": "504538745",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "Murata (Finlande)",
+        "country": "Finlande",
+        "full_name": "Murata",
+        "id": "grid.470618.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Packaging Sip (France)",
+        "country": "France",
+        "full_name": "Packaging Sip",
+        "acronym": "Packaging Sip",
+        "id": "750711285",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "CEA (France)",
@@ -54,6 +45,9 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 852
       },
@@ -63,94 +57,23 @@
         "full_name": "Silicon Radar",
         "id": "grid.437810.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 2
       },
-      {
-        "name": "Spinverse (Finlande)",
-        "country": "Finlande",
-        "full_name": "Spinverse",
-        "id": "grid.426446.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Murata (Finlande)",
-        "country": "Finlande",
-        "full_name": "Murata",
-        "id": "grid.470618.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "EV Group (Autriche)",
-        "country": "Autriche",
-        "full_name": "EV Group",
-        "id": "grid.424986.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Berliner Nanotest und Design (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Berliner Nanotest und Design",
-        "id": "grid.424054.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Packaging Sip (France)",
-        "country": "France",
-        "full_name": "Packaging Sip",
-        "acronym": "Packaging Sip",
-        "id": "750711285",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Elmos Semiconductor (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Elmos Semiconductor",
-        "id": "grid.434619.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
       {
         "name": "Angewandte Micro Messtechnik (Allemagne)",
         "country": "Allemagne",
         "full_name": "Angewandte Micro Messtechnik",
         "id": "grid.432428.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Semilab (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Semilab",
-        "id": "grid.425991.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 99
       },
       {
         "name": "Nxp Semiconductors France (France)",
@@ -159,17 +82,124 @@
         "acronym": "Nxp Semiconductors France",
         "id": "504538745",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Berliner Nanotest und Design (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Berliner Nanotest und Design",
+        "id": "grid.424054.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 3
       },
+      {
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Spinverse (Finlande)",
+        "country": "Finlande",
+        "full_name": "Spinverse",
+        "id": "grid.426446.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Elmos Semiconductor (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Elmos Semiconductor",
+        "id": "grid.434619.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 19
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
       {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 283
+      },
+      {
+        "name": "Murata (Finlande)",
+        "country": "Finlande",
+        "full_name": "Murata",
+        "id": "grid.470618.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Packaging Sip (France)",
+        "country": "France",
+        "full_name": "Packaging Sip",
+        "acronym": "Packaging Sip",
+        "id": "750711285",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "CEA (France)",
@@ -178,6 +208,9 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 167
       },
@@ -187,35 +220,36 @@
         "full_name": "Silicon Radar",
         "id": "grid.437810.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Spinverse (Finlande)",
-        "country": "Finlande",
-        "full_name": "Spinverse",
-        "id": "grid.426446.6",
+        "name": "Angewandte Micro Messtechnik (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Angewandte Micro Messtechnik",
+        "id": "grid.432428.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Nxp Semiconductors France (France)",
+        "country": "France",
+        "full_name": "Nxp Semiconductors France",
+        "acronym": "Nxp Semiconductors France",
+        "id": "504538745",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Murata (Finlande)",
-        "country": "Finlande",
-        "full_name": "Murata",
-        "id": "grid.470618.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "EV Group (Autriche)",
-        "country": "Autriche",
-        "full_name": "EV Group",
-        "id": "grid.424986.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
       },
       {
         "name": "Berliner Nanotest und Design (Allemagne)",
@@ -223,18 +257,35 @@
         "full_name": "Berliner Nanotest und Design",
         "id": "grid.424054.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Packaging Sip (France)",
-        "country": "France",
-        "full_name": "Packaging Sip",
-        "acronym": "Packaging Sip",
-        "id": "750711285",
+        "name": "Semilab (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Semilab",
+        "id": "grid.425991.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
-        "z": 2
+        "z": 8
+      },
+      {
+        "name": "Spinverse (Finlande)",
+        "country": "Finlande",
+        "full_name": "Spinverse",
+        "id": "grid.426446.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Elmos Semiconductor (Allemagne)",
@@ -242,8 +293,35 @@
         "full_name": "Elmos Semiconductor",
         "id": "grid.434619.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 99
+      },
+      {
+        "name": "EV Group (Autriche)",
+        "country": "Autriche",
+        "full_name": "EV Group",
+        "id": "grid.424986.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737497
+        ],
+        "y": 1,
+        "z": 13
       }
     ]
   }

@@ -2,22 +2,40 @@
   "all": {
     "all": [
       {
-        "name": "Statens Serum Institut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Statens Serum Institut",
-        "id": "grid.6203.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
+        "y": 1,
+        "z": 211
       },
       {
         "name": "Janssen (Belgique)",
@@ -25,6 +43,9 @@
         "full_name": "Janssen",
         "id": "grid.419619.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
         "z": 76
       },
@@ -34,17 +55,39 @@
         "full_name": "Paul Ehrlich Institut",
         "id": "grid.425396.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
+        "name": "Statens Serum Institut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Statens Serum Institut",
+        "id": "grid.6203.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
-        "z": 211
+        "z": 22
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
+        "y": 1,
+        "z": 53
       },
       {
         "name": "GlaxoSmithKline (Royaume-Uni)",
@@ -52,30 +95,23 @@
         "full_name": "GlaxoSmithKline",
         "id": "grid.418236.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
-        "z": 36
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "Statens Serum Institut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Statens Serum Institut",
-        "id": "grid.6203.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
+        "z": 23
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
+        "name": "Uppsala University (Suède)",
+        "country": "Suède",
+        "full_name": "Uppsala University",
+        "id": "grid.8993.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
-        "z": 53
+        "z": 29
       },
       {
         "name": "Janssen (Belgique)",
@@ -83,6 +119,9 @@
         "full_name": "Janssen",
         "id": "grid.419619.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
         "z": 54
       },
@@ -92,26 +131,23 @@
         "full_name": "Paul Ehrlich Institut",
         "id": "grid.425396.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "Uppsala University (Suède)",
-        "country": "Suède",
-        "full_name": "Uppsala University",
-        "id": "grid.8993.b",
+        "name": "Statens Serum Institut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Statens Serum Institut",
+        "id": "grid.6203.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          853967
+        ],
         "y": 1,
-        "z": 29
-      },
-      {
-        "name": "GlaxoSmithKline (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "GlaxoSmithKline",
-        "id": "grid.418236.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
+        "z": 15
       }
     ]
   }

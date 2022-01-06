@@ -2,43 +2,57 @@
   "all": {
     "all": [
       {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 295
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          688237
+        ],
         "y": 2,
         "z": 2670
       },
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
+        "projects": [
+          737494,
+          688237
+        ],
+        "y": 2,
+        "z": 295
       },
       {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
+        "name": "Space Systems Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "Space Systems Finland",
+        "id": "grid.426432.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 57
+        "z": 1
+      },
+      {
+        "name": "Clearsy (France)",
+        "country": "France",
+        "full_name": "Clearsy",
+        "acronym": "Clearsy",
+        "id": "433901402",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Open University of Catalonia (Espagne)",
@@ -46,35 +60,11 @@
         "full_name": "Open University of Catalonia",
         "id": "grid.36083.3e",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 22
-      },
-      {
-        "name": "University of L'Aquila (Italie)",
-        "country": "Italie",
-        "full_name": "University of L'Aquila",
-        "id": "grid.158820.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Bombardier (Suède)",
-        "country": "Suède",
-        "full_name": "Bombardier",
-        "id": "grid.424290.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
       },
       {
         "name": "IMT (France)",
@@ -83,18 +73,84 @@
         "acronym": "IMT",
         "id": "6Th4v",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 124
       },
       {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "Mälardalen University (Suède)",
+        "country": "Suède",
+        "full_name": "Mälardalen University",
+        "id": "grid.411579.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Volvo (Suède)",
+        "country": "Suède",
+        "full_name": "Volvo",
+        "id": "grid.5911.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 49
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 286
+      },
+      {
+        "name": "Bombardier (Suède)",
+        "country": "Suède",
+        "full_name": "Bombardier",
+        "id": "grid.424290.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 199
       },
       {
         "name": "Brno University of Technology (Rép. Tchèque)",
@@ -102,6 +158,9 @@
         "full_name": "Brno University of Technology",
         "id": "grid.4994.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 62
       },
@@ -111,54 +170,23 @@
         "full_name": "Fent Innovative Software Solutions",
         "id": "grid.433909.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Åbo Akademi University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Åbo Akademi University",
-        "id": "grid.13797.3b",
+        "name": "University of L'Aquila (Italie)",
+        "country": "Italie",
+        "full_name": "University of L'Aquila",
+        "id": "grid.158820.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 21
-      },
-      {
-        "name": "ECN (France)",
-        "country": "France",
-        "full_name": "Centrale Nantes",
-        "acronym": "ECN",
-        "id": "gCAyK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Mälardalen University (Suède)",
-        "country": "Suède",
-        "full_name": "Mälardalen University",
-        "id": "grid.411579.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Ikerlan (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 59
-      },
-      {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 202
+        "z": 35
       },
       {
         "name": "5710 (France)",
@@ -167,26 +195,61 @@
         "acronym": "5710",
         "id": "493241897",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "Space Systems Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "Space Systems Finland",
-        "id": "grid.426432.5",
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Volvo (Suède)",
-        "country": "Suède",
-        "full_name": "Volvo",
-        "id": "grid.5911.c",
-        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 49
+      },
+      {
+        "name": "ECN (France)",
+        "country": "France",
+        "full_name": "Centrale Nantes",
+        "acronym": "ECN",
+        "id": "gCAyK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Åbo Akademi University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Åbo Akademi University",
+        "id": "grid.13797.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 202
       },
       {
         "name": "UPPA (France)",
@@ -195,36 +258,11 @@
         "acronym": "UPPA",
         "id": "Mz286",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 30
-      },
-      {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Camea (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Camea",
-        "id": "grid.448061.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Thales (France)",
-        "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 286
       },
       {
         "name": "U. Nantes (France)",
@@ -233,37 +271,72 @@
         "acronym": "U. Nantes",
         "id": "7hB8r",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 71
       },
       {
-        "name": "Clearsy (France)",
-        "country": "France",
-        "full_name": "Clearsy",
-        "acronym": "Clearsy",
-        "id": "433901402",
+        "name": "University of Cantabria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 5
+        "z": 63
       },
       {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
+        "name": "Camea (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Camea",
+        "id": "grid.448061.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 199
+        "z": 6
       },
       {
-        "name": "ENS de Lyon (France)",
-        "country": "France",
-        "full_name": "École normale supérieure de Lyon",
-        "acronym": "ENS de Lyon",
-        "id": "kWved",
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
-        "z": 76
+        "z": 18
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 59
       },
       {
         "name": "EGLOBALMARK (France)",
@@ -272,6 +345,9 @@
         "acronym": "EGLOBALMARK",
         "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 21
       },
@@ -282,6 +358,9 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 505
       },
@@ -291,17 +370,24 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 26
       },
       {
-        "name": "Synelixis (Grèce)",
-        "country": "Grèce",
-        "full_name": "Synelixis",
-        "id": "grid.426101.0",
+        "name": "ENS de Lyon (France)",
+        "country": "France",
+        "full_name": "École normale supérieure de Lyon",
+        "acronym": "ENS de Lyon",
+        "id": "kWved",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
-        "z": 23
+        "z": 76
       },
       {
         "name": "Directorate-General Joint Research Centre (Belgique)",
@@ -309,23 +395,28 @@
         "full_name": "Directorate-General Joint Research Centre",
         "id": "grid.489339.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 149
+      },
+      {
+        "name": "Synelixis (Grèce)",
+        "country": "Grèce",
+        "full_name": "Synelixis",
+        "id": "grid.426101.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
+        "y": 1,
+        "z": 23
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 71
-      },
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -333,157 +424,26 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494,
+          688237
+        ],
         "y": 2,
         "z": 148
       },
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 99
-      },
-      {
-        "name": "ARMINES (France)",
+        "name": "Inria (France)",
         "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Open University of Catalonia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Open University of Catalonia",
-        "id": "grid.36083.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "University of L'Aquila (Italie)",
-        "country": "Italie",
-        "full_name": "University of L'Aquila",
-        "id": "grid.158820.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Bombardier (Suède)",
-        "country": "Suède",
-        "full_name": "Bombardier",
-        "id": "grid.424290.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "IMT Atlantique (France)",
-        "country": "France",
-        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
-        "acronym": "IMT Atlantique",
-        "id": "krqUz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Brno University of Technology (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Brno University of Technology",
-        "id": "grid.4994.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Fent Innovative Software Solutions (Espagne)",
-        "country": "Espagne",
-        "full_name": "Fent Innovative Software Solutions",
-        "id": "grid.433909.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Åbo Akademi University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Åbo Akademi University",
-        "id": "grid.13797.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "ECN (France)",
-        "country": "France",
-        "full_name": "Centrale Nantes",
-        "acronym": "ECN",
-        "id": "gCAyK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Mälardalen University (Suède)",
-        "country": "Suède",
-        "full_name": "Mälardalen University",
-        "id": "grid.411579.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Ikerlan (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 104
-      },
-      {
-        "name": "5710 (France)",
-        "country": "France",
-        "full_name": "Softeam",
-        "acronym": "5710",
-        "id": "493241897",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "projects": [
+          737494,
+          688237
+        ],
+        "y": 2,
+        "z": 71
       },
       {
         "name": "Space Systems Finland (Finlande)",
@@ -491,65 +451,11 @@
         "full_name": "Space Systems Finland",
         "id": "grid.426432.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Volvo (Suède)",
-        "country": "Suède",
-        "full_name": "Volvo",
-        "id": "grid.5911.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "UPPA (France)",
-        "country": "France",
-        "full_name": "Université de Pau et des Pays de l'Adour",
-        "acronym": "UPPA",
-        "id": "Mz286",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Camea (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Camea",
-        "id": "grid.448061.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Thales (France)",
-        "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 84
-      },
-      {
-        "name": "U. Nantes (France)",
-        "country": "France",
-        "full_name": "Université de Nantes",
-        "acronym": "U. Nantes",
-        "id": "7hB8r",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "Clearsy (France)",
@@ -558,6 +464,95 @@
         "acronym": "Clearsy",
         "id": "433901402",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Open University of Catalonia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Open University of Catalonia",
+        "id": "grid.36083.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 99
+      },
+      {
+        "name": "Mälardalen University (Suède)",
+        "country": "Suède",
+        "full_name": "Mälardalen University",
+        "id": "grid.411579.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Volvo (Suède)",
+        "country": "Suède",
+        "full_name": "Volvo",
+        "id": "grid.5911.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 84
+      },
+      {
+        "name": "Bombardier (Suède)",
+        "country": "Suède",
+        "full_name": "Bombardier",
+        "id": "grid.424290.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 5
       },
@@ -567,18 +562,197 @@
         "full_name": "RISE Research Institutes of Sweden",
         "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 41
       },
       {
-        "name": "ENS de Lyon (France)",
-        "country": "France",
-        "full_name": "École normale supérieure de Lyon",
-        "acronym": "ENS de Lyon",
-        "id": "kWved",
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "Fent Innovative Software Solutions (Espagne)",
+        "country": "Espagne",
+        "full_name": "Fent Innovative Software Solutions",
+        "id": "grid.433909.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of L'Aquila (Italie)",
+        "country": "Italie",
+        "full_name": "University of L'Aquila",
+        "id": "grid.158820.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "5710 (France)",
+        "country": "France",
+        "full_name": "Softeam",
+        "acronym": "5710",
+        "id": "493241897",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "IMT Atlantique (France)",
+        "country": "France",
+        "full_name": "IMT Atlantique Bretagne Pays de la Loire",
+        "acronym": "IMT Atlantique",
+        "id": "krqUz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ECN (France)",
+        "country": "France",
+        "full_name": "Centrale Nantes",
+        "acronym": "ECN",
+        "id": "gCAyK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Åbo Akademi University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Åbo Akademi University",
+        "id": "grid.13797.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 104
+      },
+      {
+        "name": "UPPA (France)",
+        "country": "France",
+        "full_name": "Université de Pau et des Pays de l'Adour",
+        "acronym": "UPPA",
+        "id": "Mz286",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Cantabria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Camea (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Camea",
+        "id": "grid.448061.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737494
+        ],
+        "y": 1,
+        "z": 28
       },
       {
         "name": "EGLOBALMARK (France)",
@@ -587,6 +761,9 @@
         "acronym": "EGLOBALMARK",
         "id": "524029469",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 14
       },
@@ -597,6 +774,9 @@
         "acronym": "Sorbonne U",
         "id": "bxPQe",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 25
       },
@@ -606,17 +786,24 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 20
       },
       {
-        "name": "Synelixis (Grèce)",
-        "country": "Grèce",
-        "full_name": "Synelixis",
-        "id": "grid.426101.0",
+        "name": "ENS de Lyon (France)",
+        "country": "France",
+        "full_name": "École normale supérieure de Lyon",
+        "acronym": "ENS de Lyon",
+        "id": "kWved",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
-        "z": 10
+        "z": 6
       },
       {
         "name": "Directorate-General Joint Research Centre (Belgique)",
@@ -624,8 +811,23 @@
         "full_name": "Directorate-General Joint Research Centre",
         "id": "grid.489339.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "Synelixis (Grèce)",
+        "country": "Grèce",
+        "full_name": "Synelixis",
+        "id": "grid.426101.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688237
+        ],
+        "y": 1,
+        "z": 10
       }
     ]
   }

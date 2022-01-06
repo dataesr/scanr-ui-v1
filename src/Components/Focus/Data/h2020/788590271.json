@@ -2,32 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Offshore Renewable Energy Catapult",
-        "id": "grid.460245.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
         "name": "Innosea (France)",
         "country": "France",
         "full_name": "Innosea",
         "acronym": "Innosea",
         "id": "539748673",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 8
       },
       {
-        "name": "DNV GL (Royaume-Uni)",
+        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "DNV GL",
-        "id": "grid.423685.e",
+        "full_name": "Offshore Renewable Energy Catapult",
+        "id": "grid.460245.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
-        "z": 9
+        "z": 10
       },
       {
         "name": "France Energies Marines (France)",
@@ -36,17 +33,23 @@
         "acronym": "France Energies Marines",
         "id": "751755463",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "DNV GL (Allemagne)",
-        "country": "Allemagne",
+        "name": "DNV GL (Royaume-Uni)",
+        "country": "Royaume-Uni",
         "full_name": "DNV GL",
-        "id": "grid.425036.6",
+        "id": "grid.423685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
-        "z": 11
+        "z": 9
       },
       {
         "name": "University of Strathclyde (Royaume-Uni)",
@@ -54,6 +57,9 @@
         "full_name": "University of Strathclyde",
         "id": "grid.11984.35",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 125
       },
@@ -64,48 +70,9 @@
         "acronym": "Wood Group France Sas",
         "id": "489847020",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Offshore Renewable Energy Catapult",
-        "id": "grid.460245.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Innosea (France)",
-        "country": "France",
-        "full_name": "Innosea",
-        "acronym": "Innosea",
-        "id": "539748673",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "DNV GL (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "DNV GL",
-        "id": "grid.423685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "France Energies Marines (France)",
-        "country": "France",
-        "full_name": "France Energies Marines IEED",
-        "acronym": "France Energies Marines",
-        "id": "751755463",
-        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 3
       },
@@ -115,6 +82,63 @@
         "full_name": "DNV GL",
         "id": "grid.425036.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
+        "y": 1,
+        "z": 11
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Innosea (France)",
+        "country": "France",
+        "full_name": "Innosea",
+        "acronym": "Innosea",
+        "id": "539748673",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Offshore Renewable Energy Catapult (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Offshore Renewable Energy Catapult",
+        "id": "grid.460245.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "France Energies Marines (France)",
+        "country": "France",
+        "full_name": "France Energies Marines IEED",
+        "acronym": "France Energies Marines",
+        "id": "751755463",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "DNV GL (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "DNV GL",
+        "id": "grid.423685.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 8
       },
@@ -124,6 +148,9 @@
         "full_name": "University of Strathclyde",
         "id": "grid.11984.35",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 11
       },
@@ -134,8 +161,23 @@
         "acronym": "Wood Group France Sas",
         "id": "489847020",
         "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "DNV GL (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "DNV GL",
+        "id": "grid.425036.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          815180
+        ],
+        "y": 1,
+        "z": 8
       }
     ]
   }

@@ -2,24 +2,45 @@
   "all": {
     "all": [
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 852
-      },
-      {
         "name": "Provenrun (France)",
         "country": "France",
         "full_name": "Provenrun",
         "acronym": "Provenrun",
         "id": "514510783",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 3
+      },
+      {
+        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
+        "id": "grid.426274.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
+        "y": 2,
+        "z": 852
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -28,6 +49,10 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 575
       },
@@ -37,17 +62,51 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 58
       },
       {
-        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
-        "id": "grid.426274.1",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Vsora (France)",
+        "country": "France",
+        "full_name": "Vsora",
+        "acronym": "Vsora",
+        "id": "811657519",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sequans Communications (France)",
+        "country": "France",
+        "full_name": "Sequans Communications",
+        "acronym": "Sequans Communications",
+        "id": "450249677",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "CentraleSupélec (France)",
@@ -56,8 +115,75 @@
         "acronym": "CentraleSupélec",
         "id": "m84Aa",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 60
+      },
+      {
+        "name": "ANSYS (France)",
+        "country": "France",
+        "full_name": "Ansys France",
+        "acronym": "ANSYS",
+        "id": "389371816",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "Eurotech (Italie)",
+        "country": "Italie",
+        "full_name": "Eurotech",
+        "id": "grid.424974.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Valeo (France)",
+        "country": "France",
+        "full_name": "Valeo",
+        "acronym": "Valeo",
+        "id": "gent184",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 286
       },
       {
         "name": "SYSNAV NAVIGATION (France)",
@@ -66,6 +192,9 @@
         "acronym": "SYSNAV NAVIGATION",
         "id": "508594009",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
@@ -76,65 +205,60 @@
         "acronym": "Yumain",
         "id": "534620968",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Acoem France (France)",
+        "name": "Airlane Technologies (France)",
         "country": "France",
-        "full_name": "Acoem France",
-        "acronym": "Acoem France",
-        "id": "409869708",
+        "full_name": "Airlane Technologies",
+        "acronym": "Airlane Technologies",
+        "id": "483336608",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 21
+        "z": 295
       },
       {
-        "name": "Valeo (France)",
-        "country": "France",
-        "full_name": "Valeo",
-        "acronym": "Valeo",
-        "id": "gent184",
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 36
+        "z": 76
       },
       {
-        "name": "UGA (France)",
+        "name": "Sherpa Eng. (France)",
         "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
+        "full_name": "Sherpa Engineering",
+        "acronym": "Sherpa Eng.",
+        "id": "gent155",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 277
-      },
-      {
-        "name": "ANSYS (France)",
-        "country": "France",
-        "full_name": "Ansys France",
-        "acronym": "ANSYS",
-        "id": "389371816",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Greenwaves Technologies (France)",
-        "country": "France",
-        "full_name": "Greenwaves Technologies",
-        "acronym": "Greenwaves Technologies",
-        "id": "808076582",
-        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
       },
@@ -145,143 +269,11 @@
         "acronym": "Asso Jessica France",
         "id": "382765410",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Embedded France (France)",
-        "country": "France",
-        "full_name": "Embedded France",
-        "acronym": "Embedded France",
-        "id": "804251965",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "U. Lorraine (France)",
-        "country": "France",
-        "full_name": "Université de Lorraine",
-        "acronym": "U. Lorraine",
-        "id": "t6Cq5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
-      },
-      {
-        "name": "Sequans Communications (France)",
-        "country": "France",
-        "full_name": "Sequans Communications",
-        "acronym": "Sequans Communications",
-        "id": "450249677",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 295
-      },
-      {
-        "name": "Vicomtech (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vicomtech",
-        "id": "grid.424271.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Eurotech (Italie)",
-        "country": "Italie",
-        "full_name": "Eurotech",
-        "id": "grid.424974.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Augsburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Augsburg",
-        "id": "grid.7307.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "University of Salerno (Italie)",
-        "country": "Italie",
-        "full_name": "University of Salerno",
-        "id": "grid.11780.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 41
-      },
-      {
-        "name": "Airlane Technologies (France)",
-        "country": "France",
-        "full_name": "Airlane Technologies",
-        "acronym": "Airlane Technologies",
-        "id": "483336608",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Clausthal University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Clausthal University of Technology",
-        "id": "grid.5164.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Vsora (France)",
-        "country": "France",
-        "full_name": "Vsora",
-        "acronym": "Vsora",
-        "id": "811657519",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "M3S (France)",
-        "country": "France",
-        "full_name": "M3 Systems",
-        "acronym": "M3S",
-        "id": "424756401",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "RTE (France)",
-        "country": "France",
-        "full_name": "Réseau de transport d'électricite",
-        "acronym": "RTE",
-        "id": "444619258",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Kalray (France)",
@@ -290,37 +282,23 @@
         "acronym": "Kalray",
         "id": "507620557",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Schneider Electric (France)",
-        "country": "France",
-        "full_name": "Schneider Electric",
-        "acronym": "Schneider Electric",
-        "id": "gent150",
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Finmeccanica (Italie)",
-        "country": "Italie",
-        "full_name": "Finmeccanica",
-        "id": "grid.423952.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "Thales (France)",
-        "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 286
+        "z": 21
       },
       {
         "name": "Abengoa (Espagne)",
@@ -328,8 +306,88 @@
         "full_name": "Abengoa",
         "id": "grid.423540.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 15
+      },
+      {
+        "name": "U. Lorraine (France)",
+        "country": "France",
+        "full_name": "Université de Lorraine",
+        "acronym": "U. Lorraine",
+        "id": "t6Cq5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "RTE (France)",
+        "country": "France",
+        "full_name": "Réseau de transport d'électricite",
+        "acronym": "RTE",
+        "id": "444619258",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Embedded France (France)",
+        "country": "France",
+        "full_name": "Embedded France",
+        "acronym": "Embedded France",
+        "id": "804251965",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Salerno (Italie)",
+        "country": "Italie",
+        "full_name": "University of Salerno",
+        "id": "grid.11780.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "M3S (France)",
+        "country": "France",
+        "full_name": "M3 Systems",
+        "acronym": "M3S",
+        "id": "424756401",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Acoem France (France)",
+        "country": "France",
+        "full_name": "Acoem France",
+        "acronym": "Acoem France",
+        "id": "409869708",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Arcure (France)",
@@ -338,46 +396,73 @@
         "acronym": "Arcure",
         "id": "519060131",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Sherpa Eng. (France)",
-        "country": "France",
-        "full_name": "Sherpa Engineering",
-        "acronym": "Sherpa Eng.",
-        "id": "gent155",
+        "name": "University of Augsburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Augsburg",
+        "id": "grid.7307.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Clausthal University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Clausthal University of Technology",
+        "id": "grid.5164.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Greenwaves Technologies (France)",
+        "country": "France",
+        "full_name": "Greenwaves Technologies",
+        "acronym": "Greenwaves Technologies",
+        "id": "808076582",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Infraestruturas de Portugal (Portugal)",
-        "country": "Portugal",
-        "full_name": "Infraestruturas de Portugal",
-        "id": "grid.470564.4",
+        "name": "Vicomtech (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vicomtech",
+        "id": "grid.424271.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 16
+        "z": 38
       },
       {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 238
-      },
-      {
-        "name": "Peugeot (France)",
+        "name": "Schneider Electric (France)",
         "country": "France",
-        "full_name": "Peugeot",
-        "acronym": "Peugeot",
-        "id": "gent133",
+        "full_name": "Schneider Electric",
+        "acronym": "Schneider Electric",
+        "id": "gent150",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 32
+        "z": 15
       },
       {
         "name": "National Engineering School of Tunis (Tunisie)",
@@ -385,64 +470,111 @@
         "full_name": "National Engineering School of Tunis",
         "id": "grid.463213.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          783119
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
+        "name": "Canon (France)",
+        "country": "France",
+        "full_name": "Canon",
+        "acronym": "Canon",
+        "id": "gent44",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "UGE (France)",
+        "country": "France",
+        "full_name": "Université Gustave Eiffel",
+        "acronym": "UGE",
+        "id": "3Z5e6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 89
+      },
+      {
+        "name": "Yogoko (France)",
+        "country": "France",
+        "full_name": "Yogoko",
+        "acronym": "Yogoko",
+        "id": "803185735",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Evidence (Italie)",
+        "country": "Italie",
+        "full_name": "Evidence",
+        "id": "grid.433939.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "In2car (France)",
+        "country": "France",
+        "full_name": "In2car",
+        "acronym": "In2car",
+        "id": "529992471",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Gdansk University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Gdansk University of Technology",
+        "id": "grid.6868.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Philips (Pays-Bas)",
         "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 205
+        "z": 106
       },
       {
-        "name": "Austrian Institute of Technology (Autriche)",
+        "name": "Virtual Vehicle (Autriche)",
         "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
+        "full_name": "Virtual Vehicle",
+        "id": "grid.425622.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 191
-      },
-      {
-        "name": "Idemia (France)",
-        "country": "France",
-        "full_name": "Idemia",
-        "acronym": "Idemia",
-        "id": "gent94",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "University of Oulu (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Oulu",
-        "id": "grid.10858.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 101
-      },
-      {
-        "name": "Gemalto (France)",
-        "country": "France",
-        "full_name": "Gemalto",
-        "acronym": "Gemalto",
-        "id": "gent85",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Instituto de Telecomunicações (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Telecomunicações",
-        "id": "grid.421174.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 30
+        "z": 76
       },
       {
         "name": "CISC Semiconductor (Autriche)",
@@ -450,50 +582,64 @@
         "full_name": "CISC Semiconductor",
         "id": "grid.433276.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
         "z": 12
       },
       {
-        "name": "NXP (Pays-Bas)",
+        "name": "Radboud University Nijmegen (Pays-Bas)",
         "country": "Pays-Bas",
-        "full_name": "NXP",
-        "id": "grid.5887.2",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 25
+        "z": 205
       },
       {
-        "name": "Brno University of Technology (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Brno University of Technology",
-        "id": "grid.4994.0",
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 62
+        "z": 199
       },
       {
-        "name": "Thales (Autriche)",
-        "country": "Autriche",
-        "full_name": "Thales",
-        "id": "grid.438772.d",
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 8
+        "z": 41
+      },
+      {
+        "name": "Infraestruturas de Portugal (Portugal)",
+        "country": "Portugal",
+        "full_name": "Infraestruturas de Portugal",
+        "id": "grid.470564.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 16
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 167
-      },
       {
         "name": "Provenrun (France)",
         "country": "France",
@@ -501,8 +647,39 @@
         "acronym": "Provenrun",
         "id": "514510783",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 3
+      },
+      {
+        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
+        "id": "grid.426274.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
+        "y": 2,
+        "z": 9
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
+        "y": 2,
+        "z": 167
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -511,6 +688,10 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 52
       },
@@ -520,17 +701,51 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          783119
+        ],
         "y": 2,
         "z": 20
       },
       {
-        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
-        "id": "grid.426274.1",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 148
+      },
+      {
+        "name": "Vsora (France)",
+        "country": "France",
+        "full_name": "Vsora",
+        "acronym": "Vsora",
+        "id": "811657519",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Sequans Communications (France)",
+        "country": "France",
+        "full_name": "Sequans Communications",
+        "acronym": "Sequans Communications",
+        "id": "450249677",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "CentraleSupélec (France)",
@@ -539,8 +754,75 @@
         "acronym": "CentraleSupélec",
         "id": "m84Aa",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "ANSYS (France)",
+        "country": "France",
+        "full_name": "Ansys France",
+        "acronym": "ANSYS",
+        "id": "389371816",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Eurotech (Italie)",
+        "country": "Italie",
+        "full_name": "Eurotech",
+        "id": "grid.424974.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Valeo (France)",
+        "country": "France",
+        "full_name": "Valeo",
+        "acronym": "Valeo",
+        "id": "gent184",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 84
       },
       {
         "name": "SYSNAV NAVIGATION (France)",
@@ -549,6 +831,9 @@
         "acronym": "SYSNAV NAVIGATION",
         "id": "508594009",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
@@ -559,67 +844,62 @@
         "acronym": "Yumain",
         "id": "534620968",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Acoem France (France)",
+        "name": "Airlane Technologies (France)",
         "country": "France",
-        "full_name": "Acoem France",
-        "acronym": "Acoem France",
-        "id": "409869708",
+        "full_name": "Airlane Technologies",
+        "acronym": "Airlane Technologies",
+        "id": "483336608",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 19
+        "z": 71
       },
       {
-        "name": "Valeo (France)",
-        "country": "France",
-        "full_name": "Valeo",
-        "acronym": "Valeo",
-        "id": "gent184",
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 11
+        "z": 7
       },
       {
-        "name": "UGA (France)",
+        "name": "Sherpa Eng. (France)",
         "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
+        "full_name": "Sherpa Engineering",
+        "acronym": "Sherpa Eng.",
+        "id": "gent155",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 26
-      },
-      {
-        "name": "ANSYS (France)",
-        "country": "France",
-        "full_name": "Ansys France",
-        "acronym": "ANSYS",
-        "id": "389371816",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Greenwaves Technologies (France)",
-        "country": "France",
-        "full_name": "Greenwaves Technologies",
-        "acronym": "Greenwaves Technologies",
-        "id": "808076582",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 2
       },
       {
         "name": "Asso Jessica France (France)",
@@ -628,16 +908,46 @@
         "acronym": "Asso Jessica France",
         "id": "382765410",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Embedded France (France)",
+        "name": "Kalray (France)",
         "country": "France",
-        "full_name": "Embedded France",
-        "acronym": "Embedded France",
-        "id": "804251965",
+        "full_name": "Kalray",
+        "acronym": "Kalray",
+        "id": "507620557",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Abengoa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Abengoa",
+        "id": "grid.423540.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
@@ -648,113 +958,11 @@
         "acronym": "U. Lorraine",
         "id": "t6Cq5",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 16
-      },
-      {
-        "name": "Sequans Communications (France)",
-        "country": "France",
-        "full_name": "Sequans Communications",
-        "acronym": "Sequans Communications",
-        "id": "450249677",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 71
-      },
-      {
-        "name": "Vicomtech (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vicomtech",
-        "id": "grid.424271.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Eurotech (Italie)",
-        "country": "Italie",
-        "full_name": "Eurotech",
-        "id": "grid.424974.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Augsburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Augsburg",
-        "id": "grid.7307.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Salerno (Italie)",
-        "country": "Italie",
-        "full_name": "University of Salerno",
-        "id": "grid.11780.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Airlane Technologies (France)",
-        "country": "France",
-        "full_name": "Airlane Technologies",
-        "acronym": "Airlane Technologies",
-        "id": "483336608",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Clausthal University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Clausthal University of Technology",
-        "id": "grid.5164.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Vsora (France)",
-        "country": "France",
-        "full_name": "Vsora",
-        "acronym": "Vsora",
-        "id": "811657519",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "M3S (France)",
-        "country": "France",
-        "full_name": "M3 Systems",
-        "acronym": "M3S",
-        "id": "424756401",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 148
       },
       {
         "name": "RTE (France)",
@@ -763,54 +971,60 @@
         "acronym": "RTE",
         "id": "444619258",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Kalray (France)",
+        "name": "Embedded France (France)",
         "country": "France",
-        "full_name": "Kalray",
-        "acronym": "Kalray",
-        "id": "507620557",
+        "full_name": "Embedded France",
+        "acronym": "Embedded France",
+        "id": "804251965",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Salerno (Italie)",
+        "country": "Italie",
+        "full_name": "University of Salerno",
+        "id": "grid.11780.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Schneider Electric (France)",
+        "name": "M3S (France)",
         "country": "France",
-        "full_name": "Schneider Electric",
-        "acronym": "Schneider Electric",
-        "id": "gent150",
+        "full_name": "M3 Systems",
+        "acronym": "M3S",
+        "id": "424756401",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 3
+        "z": 2
       },
       {
-        "name": "Finmeccanica (Italie)",
-        "country": "Italie",
-        "full_name": "Finmeccanica",
-        "id": "grid.423952.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Thales (France)",
+        "name": "Acoem France (France)",
         "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
+        "full_name": "Acoem France",
+        "acronym": "Acoem France",
+        "id": "409869708",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 84
-      },
-      {
-        "name": "Abengoa (Espagne)",
-        "country": "Espagne",
-        "full_name": "Abengoa",
-        "id": "grid.423540.4",
-        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
@@ -821,46 +1035,73 @@
         "acronym": "Arcure",
         "id": "519060131",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Sherpa Eng. (France)",
-        "country": "France",
-        "full_name": "Sherpa Engineering",
-        "acronym": "Sherpa Eng.",
-        "id": "gent155",
+        "name": "University of Augsburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Augsburg",
+        "id": "grid.7307.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Clausthal University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Clausthal University of Technology",
+        "id": "grid.5164.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Infraestruturas de Portugal (Portugal)",
-        "country": "Portugal",
-        "full_name": "Infraestruturas de Portugal",
-        "id": "grid.470564.4",
+        "name": "Greenwaves Technologies (France)",
+        "country": "France",
+        "full_name": "Greenwaves Technologies",
+        "acronym": "Greenwaves Technologies",
+        "id": "808076582",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Vicomtech (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vicomtech",
+        "id": "grid.424271.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Schneider Electric (France)",
+        "country": "France",
+        "full_name": "Schneider Electric",
+        "acronym": "Schneider Electric",
+        "id": "gent150",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 135
-      },
-      {
-        "name": "Peugeot (France)",
-        "country": "France",
-        "full_name": "Peugeot",
-        "acronym": "Peugeot",
-        "id": "gent133",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "National Engineering School of Tunis (Tunisie)",
@@ -868,64 +1109,111 @@
         "full_name": "National Engineering School of Tunis",
         "id": "grid.463213.1",
         "country_level_part": "Pays associés",
+        "projects": [
+          783119
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Radboud University Nijmegen (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Radboud University Nijmegen",
-        "id": "grid.5590.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Austrian Institute of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Idemia (France)",
+        "name": "Canon (France)",
         "country": "France",
-        "full_name": "Idemia",
-        "acronym": "Idemia",
-        "id": "gent94",
+        "full_name": "Canon",
+        "acronym": "Canon",
+        "id": "gent44",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 7
+        "z": 1
       },
       {
-        "name": "University of Oulu (Finlande)",
-        "country": "Finlande",
-        "full_name": "University of Oulu",
-        "id": "grid.10858.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Gemalto (France)",
+        "name": "UGE (France)",
         "country": "France",
-        "full_name": "Gemalto",
-        "acronym": "Gemalto",
-        "id": "gent85",
+        "full_name": "Université Gustave Eiffel",
+        "acronym": "UGE",
+        "id": "3Z5e6",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Instituto de Telecomunicações (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Telecomunicações",
-        "id": "grid.421174.5",
+        "name": "Yogoko (France)",
+        "country": "France",
+        "full_name": "Yogoko",
+        "acronym": "Yogoko",
+        "id": "803185735",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 15
+        "z": 2
+      },
+      {
+        "name": "Evidence (Italie)",
+        "country": "Italie",
+        "full_name": "Evidence",
+        "id": "grid.433939.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "In2car (France)",
+        "country": "France",
+        "full_name": "In2car",
+        "acronym": "In2car",
+        "id": "529992471",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Gdansk University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Gdansk University of Technology",
+        "id": "grid.6868.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Virtual Vehicle (Autriche)",
+        "country": "Autriche",
+        "full_name": "Virtual Vehicle",
+        "id": "grid.425622.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 30
       },
       {
         "name": "CISC Semiconductor (Autriche)",
@@ -933,35 +1221,59 @@
         "full_name": "CISC Semiconductor",
         "id": "grid.433276.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "NXP (Pays-Bas)",
+        "name": "Radboud University Nijmegen (Pays-Bas)",
         "country": "Pays-Bas",
-        "full_name": "NXP",
-        "id": "grid.5887.2",
+        "full_name": "Radboud University Nijmegen",
+        "id": "grid.5590.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 17
+        "z": 13
       },
       {
-        "name": "Brno University of Technology (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Brno University of Technology",
-        "id": "grid.4994.0",
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 32
+        "z": 41
       },
       {
-        "name": "Thales (Autriche)",
-        "country": "Autriche",
-        "full_name": "Thales",
-        "id": "grid.438772.d",
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
         "y": 1,
-        "z": 5
+        "z": 18
+      },
+      {
+        "name": "Infraestruturas de Portugal (Portugal)",
+        "country": "Portugal",
+        "full_name": "Infraestruturas de Portugal",
+        "id": "grid.470564.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          783119
+        ],
+        "y": 1,
+        "z": 3
       }
     ]
   }

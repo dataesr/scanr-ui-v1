@@ -2,70 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 453
-      },
-      {
         "name": "U. Montpellier (France)",
         "country": "France",
         "full_name": "Université de Montpellier",
         "acronym": "U. Montpellier",
         "id": "7yd5d",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 211
-      },
-      {
-        "name": "University of Perugia (Italie)",
-        "country": "Italie",
-        "full_name": "University of Perugia",
-        "id": "grid.9027.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 56
-      },
-      {
-        "name": "University of La Frontera (Chili)",
-        "country": "Chili",
-        "full_name": "University of La Frontera",
-        "id": "grid.412163.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 685
-      },
-      {
-        "name": "CIRAD (France)",
-        "country": "France",
-        "full_name": "Centre de coopération internationale en recherche agronomique pour le développement",
-        "acronym": "CIRAD",
-        "id": "7dd3j",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 86
-      },
-      {
-        "name": "National Agricultural Technology Institute (Argentine)",
-        "country": "Argentine",
-        "full_name": "National Agricultural Technology Institute",
-        "id": "grid.419231.c",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "Institut Agro (France)",
@@ -74,35 +21,24 @@
         "acronym": "Institut Agro",
         "id": "MihlE",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 105
       },
       {
-        "name": "Agricultural University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "Agricultural University of Athens",
-        "id": "grid.10985.35",
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 65
-      },
-      {
-        "name": "Mediterranean Agronomic Institute of Chania (Grèce)",
-        "country": "Grèce",
-        "full_name": "Mediterranean Agronomic Institute of Chania",
-        "id": "grid.419661.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Autonomous University of Baja California (Mexique)",
-        "country": "Mexique",
-        "full_name": "Autonomous University of Baja California",
-        "id": "grid.412852.8",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 1
+        "z": 453
       },
       {
         "name": "Institut National de la Recherche Agronomique (Maroc)",
@@ -110,6 +46,9 @@
         "full_name": "Institut National de la Recherche Agronomique",
         "id": "grid.424661.3",
         "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 5
       },
@@ -120,41 +59,11 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 295
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 132
-      },
-      {
-        "name": "U. Montpellier (France)",
-        "country": "France",
-        "full_name": "Université de Montpellier",
-        "acronym": "U. Montpellier",
-        "id": "7yd5d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 78
-      },
-      {
-        "name": "University of Perugia (Italie)",
-        "country": "Italie",
-        "full_name": "University of Perugia",
-        "id": "grid.9027.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
       },
       {
         "name": "University of La Frontera (Chili)",
@@ -162,17 +71,59 @@
         "full_name": "University of La Frontera",
         "id": "grid.412163.3",
         "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 3
+        "z": 4
       },
       {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
+        "name": "Mediterranean Agronomic Institute of Chania (Grèce)",
+        "country": "Grèce",
+        "full_name": "Mediterranean Agronomic Institute of Chania",
+        "id": "grid.419661.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 93
+        "z": 5
+      },
+      {
+        "name": "Autonomous University of Baja California (Mexique)",
+        "country": "Mexique",
+        "full_name": "Autonomous University of Baja California",
+        "id": "grid.412852.8",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Perugia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Perugia",
+        "id": "grid.9027.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 56
+      },
+      {
+        "name": "National Agricultural Technology Institute (Argentine)",
+        "country": "Argentine",
+        "full_name": "National Agricultural Technology Institute",
+        "id": "grid.419231.c",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "CIRAD (France)",
@@ -181,17 +132,52 @@
         "acronym": "CIRAD",
         "id": "7dd3j",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 34
+        "z": 86
       },
       {
-        "name": "National Agricultural Technology Institute (Argentine)",
-        "country": "Argentine",
-        "full_name": "National Agricultural Technology Institute",
-        "id": "grid.419231.c",
-        "country_level_part": "Pays tiers",
+        "name": "Agricultural University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "Agricultural University of Athens",
+        "id": "grid.10985.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 4
+        "z": 65
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 685
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "U. Montpellier (France)",
+        "country": "France",
+        "full_name": "Université de Montpellier",
+        "acronym": "U. Montpellier",
+        "id": "7yd5d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 78
       },
       {
         "name": "Institut Agro (France)",
@@ -200,17 +186,61 @@
         "acronym": "Institut Agro",
         "id": "MihlE",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 31
       },
       {
-        "name": "Agricultural University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "Agricultural University of Athens",
-        "id": "grid.10985.35",
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 8
+        "z": 132
+      },
+      {
+        "name": "Institut National de la Recherche Agronomique (Maroc)",
+        "country": "Maroc",
+        "full_name": "Institut National de la Recherche Agronomique",
+        "id": "grid.424661.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "University of La Frontera (Chili)",
+        "country": "Chili",
+        "full_name": "University of La Frontera",
+        "id": "grid.412163.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Mediterranean Agronomic Institute of Chania (Grèce)",
@@ -218,6 +248,9 @@
         "full_name": "Mediterranean Agronomic Institute of Chania",
         "id": "grid.419661.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 2
       },
@@ -227,27 +260,72 @@
         "full_name": "Autonomous University of Baja California",
         "id": "grid.412852.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Institut National de la Recherche Agronomique (Maroc)",
-        "country": "Maroc",
-        "full_name": "Institut National de la Recherche Agronomique",
-        "id": "grid.424661.3",
-        "country_level_part": "Pays tiers",
+        "name": "University of Perugia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Perugia",
+        "id": "grid.9027.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 3
+        "z": 22
       },
       {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
+        "name": "National Agricultural Technology Institute (Argentine)",
+        "country": "Argentine",
+        "full_name": "National Agricultural Technology Institute",
+        "id": "grid.419231.c",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          645595
+        ],
         "y": 1,
-        "z": 63
+        "z": 4
+      },
+      {
+        "name": "CIRAD (France)",
+        "country": "France",
+        "full_name": "Centre de coopération internationale en recherche agronomique pour le développement",
+        "acronym": "CIRAD",
+        "id": "7dd3j",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Agricultural University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "Agricultural University of Athens",
+        "id": "grid.10985.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          645595
+        ],
+        "y": 1,
+        "z": 93
       }
     ]
   }

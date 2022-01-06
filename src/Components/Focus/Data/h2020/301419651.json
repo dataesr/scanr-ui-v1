@@ -2,13 +2,92 @@
   "all": {
     "all": [
       {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Eramet (France)",
+        "country": "France",
+        "full_name": "Eramet",
+        "acronym": "Eramet",
+        "id": "gent72",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 37
+      },
+      {
         "name": "Eijkelkamp SonicSampDrill (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "Eijkelkamp SonicSampDrill",
         "id": "grid.470596.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 407
+      },
+      {
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "ENSICAEN (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure d'ingénieurs de Caen",
+        "acronym": "ENSICAEN",
+        "id": "I4SPK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 14
       },
       {
         "name": "UNICAEN (France)",
@@ -17,17 +96,23 @@
         "acronym": "UNICAEN",
         "id": "p25Q3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 22
       },
       {
-        "name": "Vilnius University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University",
-        "id": "grid.6441.7",
+        "name": "University of Verona (Italie)",
+        "country": "Italie",
+        "full_name": "University of Verona",
+        "id": "grid.5611.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 37
+        "z": 36
       },
       {
         "name": "University of Trento (Italie)",
@@ -35,6 +120,9 @@
         "full_name": "University of Trento",
         "id": "grid.11696.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 96
       },
@@ -45,19 +133,16 @@
         "acronym": "Inel",
         "id": "305912362",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "ENSICAEN (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure d'ingénieurs de Caen",
-        "acronym": "ENSICAEN",
-        "id": "I4SPK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Climate action, environment, resource efficiency and raw materials (ENV)": [
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -65,27 +150,11 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 68
-      },
-      {
-        "name": "University of Verona (Italie)",
-        "country": "Italie",
-        "full_name": "University of Verona",
-        "id": "grid.5611.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
+        "z": 65
       },
       {
         "name": "Eramet (France)",
@@ -94,8 +163,35 @@
         "acronym": "Eramet",
         "id": "gent72",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 5
+        "z": 3
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Eijkelkamp SonicSampDrill (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eijkelkamp SonicSampDrill",
+        "id": "grid.470596.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -103,21 +199,37 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 407
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Climate action, environment, resource efficiency and raw materials (ENV)": [
+        "z": 32
+      },
       {
-        "name": "Eijkelkamp SonicSampDrill (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Eijkelkamp SonicSampDrill",
-        "id": "grid.470596.9",
+        "name": "BRGM (France)",
+        "country": "France",
+        "full_name": "Bureau de recherches géologiques et minières",
+        "acronym": "BRGM",
+        "id": "MUQxd",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 2
+        "z": 35
+      },
+      {
+        "name": "ENSICAEN (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure d'ingénieurs de Caen",
+        "acronym": "ENSICAEN",
+        "id": "I4SPK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "UNICAEN (France)",
@@ -126,17 +238,23 @@
         "acronym": "UNICAEN",
         "id": "p25Q3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Vilnius University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University",
-        "id": "grid.6441.7",
+        "name": "University of Verona (Italie)",
+        "country": "Italie",
+        "full_name": "University of Verona",
+        "id": "grid.5611.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
       },
       {
         "name": "University of Trento (Italie)",
@@ -144,6 +262,9 @@
         "full_name": "University of Trento",
         "id": "grid.11696.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 3
       },
@@ -154,66 +275,11 @@
         "acronym": "Inel",
         "id": "305912362",
         "country_level_part": "Pays membres",
+        "projects": [
+          689868
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "ENSICAEN (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure d'ingénieurs de Caen",
-        "acronym": "ENSICAEN",
-        "id": "I4SPK",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 65
-      },
-      {
-        "name": "BRGM (France)",
-        "country": "France",
-        "full_name": "Bureau de recherches géologiques et minières",
-        "acronym": "BRGM",
-        "id": "MUQxd",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "University of Verona (Italie)",
-        "country": "Italie",
-        "full_name": "University of Verona",
-        "id": "grid.5611.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Eramet (France)",
-        "country": "France",
-        "full_name": "Eramet",
-        "acronym": "Eramet",
-        "id": "gent72",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
       }
     ]
   }

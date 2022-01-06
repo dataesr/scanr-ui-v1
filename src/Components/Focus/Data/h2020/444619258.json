@@ -2,20 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Terna (Italie)",
-        "country": "Italie",
-        "full_name": "Terna",
-        "id": "grid.426371.5",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 5
-      },
-      {
         "name": "Red Electrica de Espana (Espagne)",
         "country": "Espagne",
         "full_name": "Red Electrica de Espana",
         "id": "grid.437358.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          731220
+        ],
         "y": 3,
         "z": 6
       },
@@ -26,8 +22,27 @@
         "acronym": "Dowel Management",
         "id": "332586445",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          883985,
+          731220
+        ],
         "y": 3,
         "z": 14
+      },
+      {
+        "name": "Terna (Italie)",
+        "country": "Italie",
+        "full_name": "Terna",
+        "id": "grid.426371.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          731220
+        ],
+        "y": 3,
+        "z": 5
       },
       {
         "name": "Eles (Slovénie)",
@@ -35,6 +50,11 @@
         "full_name": "Eles",
         "id": "grid.470529.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          957739
+        ],
         "y": 3,
         "z": 12
       },
@@ -45,6 +65,11 @@
         "acronym": "Schneider Electric",
         "id": "gent150",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          826276,
+          773406
+        ],
         "y": 3,
         "z": 15
       },
@@ -55,6 +80,11 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356,
+          826276,
+          773406
+        ],
         "y": 3,
         "z": 2670
       },
@@ -64,6 +94,11 @@
         "full_name": "Iberdrola",
         "id": "grid.8464.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220,
+          691714
+        ],
         "y": 3,
         "z": 17
       },
@@ -73,6 +108,10 @@
         "full_name": "Schneider Electric",
         "id": "grid.426355.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
         "y": 2,
         "z": 16
       },
@@ -82,71 +121,12 @@
         "full_name": "University of Ljubljana",
         "id": "grid.8954.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          957739
+        ],
         "y": 2,
         "z": 163
-      },
-      {
-        "name": "Tennet (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Tennet",
-        "id": "grid.438638.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "EirGrid (Irlande)",
-        "country": "Irlande",
-        "full_name": "EirGrid",
-        "id": "grid.473929.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 138
-      },
-      {
-        "name": "Center for Research Resources and Energy Consumption (Espagne)",
-        "country": "Espagne",
-        "full_name": "Center for Research Resources and Energy Consumption",
-        "id": "grid.425212.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 75
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 356
-      },
-      {
-        "name": "Tennet (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Tennet",
-        "id": "grid.506811.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 407
       },
       {
         "name": "Milan Vidmar Electric Power Research Institute (Slovénie)",
@@ -154,6 +134,10 @@
         "full_name": "Milan Vidmar Electric Power Research Institute",
         "id": "grid.457268.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          957739
+        ],
         "y": 2,
         "z": 6
       },
@@ -163,6 +147,101 @@
         "full_name": "Consorzio Interuniversitario Nazionale EnSiEL",
         "id": "grid.493095.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research Resources and Energy Consumption",
+        "id": "grid.425212.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          731220
+        ],
+        "y": 2,
+        "z": 75
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
+        "y": 2,
+        "z": 138
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          691800,
+          883985
+        ],
+        "y": 2,
+        "z": 356
+      },
+      {
+        "name": "Tennet (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Tennet",
+        "id": "grid.438638.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 407
+      },
+      {
+        "name": "EirGrid (Irlande)",
+        "country": "Irlande",
+        "full_name": "EirGrid",
+        "id": "grid.473929.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Tennet (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Tennet",
+        "id": "grid.506811.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
         "y": 2,
         "z": 2
       },
@@ -172,6 +251,10 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356,
+          957739
+        ],
         "y": 2,
         "z": 1072
       },
@@ -181,6 +264,10 @@
         "full_name": "Comillas Pontifical University",
         "id": "grid.11108.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985,
+          957739
+        ],
         "y": 2,
         "z": 18
       },
@@ -191,18 +278,12 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985,
+          957739
+        ],
         "y": 2,
         "z": 125
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 852
       },
       {
         "name": "UGA (France)",
@@ -211,8 +292,26 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          691714
+        ],
         "y": 2,
         "z": 277
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          773406
+        ],
+        "y": 2,
+        "z": 852
       },
       {
         "name": "Budapest University of Technology and Economics (Hongrie)",
@@ -220,17 +319,12 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276,
+          957739
+        ],
         "y": 2,
         "z": 58
-      },
-      {
-        "name": "National Renewable Energy Centre (Espagne)",
-        "country": "Espagne",
-        "full_name": "National Renewable Energy Centre",
-        "id": "grid.424779.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 35
       },
       {
         "name": "Engineering (Italie)",
@@ -238,6 +332,10 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          957739
+        ],
         "y": 2,
         "z": 134
       },
@@ -247,8 +345,25 @@
         "full_name": "Ricerca sul Sistema Energetico",
         "id": "grid.79546.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          731220
+        ],
         "y": 2,
         "z": 20
+      },
+      {
+        "name": "National Renewable Energy Centre (Espagne)",
+        "country": "Espagne",
+        "full_name": "National Renewable Energy Centre",
+        "id": "grid.424779.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          731220
+        ],
+        "y": 2,
+        "z": 35
       },
       {
         "name": "Redes Energéticas Nacionais (Portugal)",
@@ -256,8 +371,64 @@
         "full_name": "Redes Energéticas Nacionais",
         "id": "grid.437487.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          957739
+        ],
         "y": 2,
         "z": 6
+      },
+      {
+        "name": "European Distribution System Operators for Smart Grids (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Distribution System Operators for Smart Grids",
+        "id": "grid.434592.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
+        "y": 2,
+        "z": 7
+      },
+      {
+        "name": "European University Institute (Italie)",
+        "country": "Italie",
+        "full_name": "European University Institute",
+        "id": "grid.15711.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          691714
+        ],
+        "y": 2,
+        "z": 39
+      },
+      {
+        "name": "RWTH Aachen University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "RWTH Aachen University",
+        "id": "grid.1957.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          691714
+        ],
+        "y": 2,
+        "z": 251
+      },
+      {
+        "name": "Ceské Energetické Závody (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Ceské Energetické Závody",
+        "id": "grid.432962.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
+        "y": 2,
+        "z": 4
       },
       {
         "name": "Energias de Portugal (Portugal)",
@@ -265,6 +436,10 @@
         "full_name": "Energias de Portugal",
         "id": "grid.6066.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
         "y": 2,
         "z": 21
       },
@@ -274,35 +449,12 @@
         "full_name": "Flemish Institute for Technological Research",
         "id": "grid.6717.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
         "y": 2,
         "z": 142
-      },
-      {
-        "name": "European University Institute (Italie)",
-        "country": "Italie",
-        "full_name": "European University Institute",
-        "id": "grid.15711.33",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 39
-      },
-      {
-        "name": "Ceské Energetické Závody (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Ceské Energetické Závody",
-        "id": "grid.432962.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "RWTH Aachen University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "RWTH Aachen University",
-        "id": "grid.1957.a",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 251
       },
       {
         "name": "Gas Natural Fenosa (Espagne)",
@@ -310,17 +462,12 @@
         "full_name": "Gas Natural Fenosa",
         "id": "grid.426513.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
         "y": 2,
         "z": 11
-      },
-      {
-        "name": "European Distribution System Operators for Smart Grids (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Distribution System Operators for Smart Grids",
-        "id": "grid.434592.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 7
       },
       {
         "name": "Technical University of Denmark (Danemark)",
@@ -328,17 +475,12 @@
         "full_name": "Technical University of Denmark",
         "id": "grid.5170.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731220,
+          691714
+        ],
         "y": 2,
         "z": 379
-      },
-      {
-        "name": "Tractebel Engineering (Belgique)",
-        "country": "Belgique",
-        "full_name": "Tractebel Engineering",
-        "id": "grid.426291.a",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 16
       },
       {
         "name": "Alstom (Royaume-Uni)",
@@ -346,27 +488,37 @@
         "full_name": "Alstom",
         "id": "grid.15419.38",
         "country_level_part": "Pays membres",
+        "projects": [
+          731220,
+          691714
+        ],
         "y": 2,
         "z": 4
       },
       {
-        "name": "Tallinn University of Technology (Estonie)",
-        "country": "Estonie",
-        "full_name": "Tallinn University of Technology",
-        "id": "grid.6988.f",
+        "name": "Tractebel Engineering (Belgique)",
+        "country": "Belgique",
+        "full_name": "Tractebel Engineering",
+        "id": "grid.426291.a",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
+        "projects": [
+          731220,
+          691714
+        ],
+        "y": 2,
+        "z": 16
       },
       {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
+        "name": "Schneider Electric (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Schneider Electric",
+        "id": "grid.437771.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 124
+        "z": 1
       },
       {
         "name": "Arts et Métiers (France)",
@@ -375,26 +527,24 @@
         "acronym": "Arts et Métiers",
         "id": "jYUcF",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 42
       },
       {
-        "name": "Schneider Electric (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Schneider Electric",
-        "id": "grid.437771.1",
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "University College Dublin",
-        "id": "grid.7886.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 162
+        "z": 124
       },
       {
         "name": "University of Manchester (Royaume-Uni)",
@@ -402,6 +552,9 @@
         "full_name": "University of Manchester",
         "id": "grid.5379.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 241
       },
@@ -411,18 +564,35 @@
         "full_name": "Leibniz University Hannover",
         "id": "grid.9122.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 87
       },
       {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 47
+        "z": 162
+      },
+      {
+        "name": "Tallinn University of Technology (Estonie)",
+        "country": "Estonie",
+        "full_name": "Tallinn University of Technology",
+        "id": "grid.6988.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
+        "y": 1,
+        "z": 69
       },
       {
         "name": "Junia (France)",
@@ -431,8 +601,36 @@
         "acronym": "Junia",
         "id": "73Oaz",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 28
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
+        "y": 1,
+        "z": 137
       },
       {
         "name": "U. Toulon (France)",
@@ -441,47 +639,40 @@
         "acronym": "U. Toulon",
         "id": "C701f",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
         "z": 16
       },
       {
-        "name": "ECM (France)",
+        "name": "AMU (France)",
         "country": "France",
-        "full_name": "Centrale Marseille",
-        "acronym": "ECM",
-        "id": "1tI7C",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
-        "z": 31
-      },
-      {
-        "name": "University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Barcelona",
-        "id": "grid.5841.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 148
+        "z": 216
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "Terna (Italie)",
-        "country": "Italie",
-        "full_name": "Terna",
-        "id": "grid.426371.5",
-        "country_level_part": "Pays membres",
-        "y": 3,
-        "z": 5
-      },
-      {
         "name": "Red Electrica de Espana (Espagne)",
         "country": "Espagne",
         "full_name": "Red Electrica de Espana",
         "id": "grid.437358.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          731220
+        ],
         "y": 3,
         "z": 4
       },
@@ -492,8 +683,27 @@
         "acronym": "Dowel Management",
         "id": "332586445",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          883985,
+          731220
+        ],
         "y": 3,
         "z": 9
+      },
+      {
+        "name": "Terna (Italie)",
+        "country": "Italie",
+        "full_name": "Terna",
+        "id": "grid.426371.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          731220
+        ],
+        "y": 3,
+        "z": 5
       },
       {
         "name": "Eles (Slovénie)",
@@ -501,6 +711,11 @@
         "full_name": "Eles",
         "id": "grid.470529.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406,
+          957739
+        ],
         "y": 3,
         "z": 8
       },
@@ -510,6 +725,11 @@
         "full_name": "Iberdrola",
         "id": "grid.8464.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220,
+          691714
+        ],
         "y": 3,
         "z": 11
       },
@@ -519,6 +739,10 @@
         "full_name": "Schneider Electric",
         "id": "grid.426355.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
         "y": 2,
         "z": 8
       },
@@ -528,81 +752,12 @@
         "full_name": "University of Ljubljana",
         "id": "grid.8954.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          957739
+        ],
         "y": 2,
         "z": 16
-      },
-      {
-        "name": "Tennet (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Tennet",
-        "id": "grid.438638.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "EirGrid (Irlande)",
-        "country": "Irlande",
-        "full_name": "EirGrid",
-        "id": "grid.473929.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Technical University of Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Berlin",
-        "id": "grid.6734.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 14
-      },
-      {
-        "name": "Center for Research Resources and Energy Consumption (Espagne)",
-        "country": "Espagne",
-        "full_name": "Center for Research Resources and Energy Consumption",
-        "id": "grid.425212.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 48
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "y": 2,
-        "z": 20
-      },
-      {
-        "name": "Tennet (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Tennet",
-        "id": "grid.506811.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 29
-      },
-      {
-        "name": "Schneider Electric (France)",
-        "country": "France",
-        "full_name": "Schneider Electric",
-        "acronym": "Schneider Electric",
-        "id": "gent150",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 9
       },
       {
         "name": "Milan Vidmar Electric Power Research Institute (Slovénie)",
@@ -610,6 +765,10 @@
         "full_name": "Milan Vidmar Electric Power Research Institute",
         "id": "grid.457268.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          957739
+        ],
         "y": 2,
         "z": 4
       },
@@ -619,8 +778,117 @@
         "full_name": "Consorzio Interuniversitario Nazionale EnSiEL",
         "id": "grid.493095.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
         "y": 2,
         "z": 2
+      },
+      {
+        "name": "Center for Research Resources and Energy Consumption (Espagne)",
+        "country": "Espagne",
+        "full_name": "Center for Research Resources and Energy Consumption",
+        "id": "grid.425212.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          731220
+        ],
+        "y": 2,
+        "z": 48
+      },
+      {
+        "name": "Technical University of Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Berlin",
+        "id": "grid.6734.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          691800,
+          883985
+        ],
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "Tennet (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Tennet",
+        "id": "grid.438638.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 29
+      },
+      {
+        "name": "EirGrid (Irlande)",
+        "country": "Irlande",
+        "full_name": "EirGrid",
+        "id": "grid.473929.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Tennet (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Tennet",
+        "id": "grid.506811.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          691714
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "Schneider Electric (France)",
+        "country": "France",
+        "full_name": "Schneider Electric",
+        "acronym": "Schneider Electric",
+        "id": "gent150",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800,
+          773406
+        ],
+        "y": 2,
+        "z": 9
       },
       {
         "name": "Comillas Pontifical University (Espagne)",
@@ -628,6 +896,10 @@
         "full_name": "Comillas Pontifical University",
         "id": "grid.11108.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985,
+          957739
+        ],
         "y": 2,
         "z": 14
       },
@@ -638,17 +910,12 @@
         "acronym": "EDF",
         "id": "gent66",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985,
+          957739
+        ],
         "y": 2,
         "z": 42
-      },
-      {
-        "name": "National Renewable Energy Centre (Espagne)",
-        "country": "Espagne",
-        "full_name": "National Renewable Energy Centre",
-        "id": "grid.424779.b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 22
       },
       {
         "name": "Engineering (Italie)",
@@ -656,6 +923,10 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          957739
+        ],
         "y": 2,
         "z": 17
       },
@@ -665,8 +936,25 @@
         "full_name": "Ricerca sul Sistema Energetico",
         "id": "grid.79546.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          731220
+        ],
         "y": 2,
         "z": 15
+      },
+      {
+        "name": "National Renewable Energy Centre (Espagne)",
+        "country": "Espagne",
+        "full_name": "National Renewable Energy Centre",
+        "id": "grid.424779.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          731220
+        ],
+        "y": 2,
+        "z": 22
       },
       {
         "name": "Redes Energéticas Nacionais (Portugal)",
@@ -674,26 +962,25 @@
         "full_name": "Redes Energéticas Nacionais",
         "id": "grid.437487.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406,
+          957739
+        ],
         "y": 2,
         "z": 5
       },
       {
-        "name": "Energias de Portugal (Portugal)",
-        "country": "Portugal",
-        "full_name": "Energias de Portugal",
-        "id": "grid.6066.6",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 15
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
+        "name": "European Distribution System Operators for Smart Grids (Belgique)",
         "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
+        "full_name": "European Distribution System Operators for Smart Grids",
+        "id": "grid.434592.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
         "y": 2,
-        "z": 39
+        "z": 6
       },
       {
         "name": "European University Institute (Italie)",
@@ -701,15 +988,10 @@
         "full_name": "European University Institute",
         "id": "grid.15711.33",
         "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Ceské Energetické Závody (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Ceské Energetické Závody",
-        "id": "grid.432962.8",
-        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          691714
+        ],
         "y": 2,
         "z": 4
       },
@@ -719,8 +1001,51 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          691714
+        ],
         "y": 2,
         "z": 32
+      },
+      {
+        "name": "Ceské Energetické Závody (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Ceské Energetické Závody",
+        "id": "grid.432962.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
+        "y": 2,
+        "z": 4
+      },
+      {
+        "name": "Energias de Portugal (Portugal)",
+        "country": "Portugal",
+        "full_name": "Energias de Portugal",
+        "id": "grid.6066.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
+        "y": 2,
+        "z": 15
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
+        "y": 2,
+        "z": 39
       },
       {
         "name": "Gas Natural Fenosa (Espagne)",
@@ -728,17 +1053,12 @@
         "full_name": "Gas Natural Fenosa",
         "id": "grid.426513.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739,
+          731220
+        ],
         "y": 2,
         "z": 9
-      },
-      {
-        "name": "European Distribution System Operators for Smart Grids (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Distribution System Operators for Smart Grids",
-        "id": "grid.434592.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
       },
       {
         "name": "Technical University of Denmark (Danemark)",
@@ -746,17 +1066,12 @@
         "full_name": "Technical University of Denmark",
         "id": "grid.5170.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731220,
+          691714
+        ],
         "y": 2,
         "z": 65
-      },
-      {
-        "name": "Tractebel Engineering (Belgique)",
-        "country": "Belgique",
-        "full_name": "Tractebel Engineering",
-        "id": "grid.426291.a",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
       },
       {
         "name": "Alstom (Royaume-Uni)",
@@ -764,27 +1079,37 @@
         "full_name": "Alstom",
         "id": "grid.15419.38",
         "country_level_part": "Pays membres",
+        "projects": [
+          731220,
+          691714
+        ],
         "y": 2,
         "z": 3
       },
       {
-        "name": "Tallinn University of Technology (Estonie)",
-        "country": "Estonie",
-        "full_name": "Tallinn University of Technology",
-        "id": "grid.6988.f",
+        "name": "Tractebel Engineering (Belgique)",
+        "country": "Belgique",
+        "full_name": "Tractebel Engineering",
+        "id": "grid.426291.a",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
+        "projects": [
+          731220,
+          691714
+        ],
+        "y": 2,
+        "z": 5
       },
       {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
+        "name": "Schneider Electric (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Schneider Electric",
+        "id": "grid.437771.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 2
+        "z": 1
       },
       {
         "name": "Arts et Métiers (France)",
@@ -793,26 +1118,24 @@
         "acronym": "Arts et Métiers",
         "id": "jYUcF",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Schneider Electric (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Schneider Electric",
-        "id": "grid.437771.1",
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "University College Dublin",
-        "id": "grid.7886.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "z": 2
       },
       {
         "name": "University of Manchester (Royaume-Uni)",
@@ -820,6 +1143,9 @@
         "full_name": "University of Manchester",
         "id": "grid.5379.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 16
       },
@@ -829,18 +1155,35 @@
         "full_name": "Leibniz University Hannover",
         "id": "grid.9122.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
+        "name": "University College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Dublin",
+        "id": "grid.7886.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
-        "z": 1
+        "z": 9
+      },
+      {
+        "name": "Tallinn University of Technology (Estonie)",
+        "country": "Estonie",
+        "full_name": "Tallinn University of Technology",
+        "id": "grid.6988.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Junia (France)",
@@ -849,8 +1192,24 @@
         "acronym": "Junia",
         "id": "73Oaz",
         "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691800
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -858,6 +1217,9 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739
+        ],
         "y": 1,
         "z": 108
       },
@@ -868,26 +1230,11 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          773406
+        ],
         "y": 1,
         "z": 55
-      },
-      {
-        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
-        "id": "grid.420019.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "ECN (France)",
@@ -896,18 +1243,35 @@
         "acronym": "ECN",
         "id": "gCAyK",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          883985
+        ],
         "y": 1,
-        "z": 78
+        "z": 14
+      },
+      {
+        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
+        "id": "grid.420019.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          883985
+        ],
+        "y": 1,
+        "z": 22
       },
       {
         "name": "UGA (France)",
@@ -916,8 +1280,24 @@
         "acronym": "UGA",
         "id": "Y7ch7",
         "country_level_part": "Pays membres",
+        "projects": [
+          691714
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773406
+        ],
+        "y": 1,
+        "z": 78
       },
       {
         "name": "Budapest University of Technology and Economics (Hongrie)",
@@ -925,6 +1305,9 @@
         "full_name": "Budapest University of Technology and Economics",
         "id": "grid.6759.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          957739
+        ],
         "y": 1,
         "z": 7
       }
@@ -939,6 +1322,10 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356,
+          826276
+        ],
         "y": 2,
         "z": 148
       },
@@ -949,6 +1336,9 @@
         "acronym": "Schneider Electric",
         "id": "gent150",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 3
       },
@@ -958,8 +1348,23 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
         "z": 283
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "U. Toulon (France)",
@@ -968,8 +1373,24 @@
         "acronym": "U. Toulon",
         "id": "C701f",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "ECM (France)",
@@ -978,6 +1399,9 @@
         "acronym": "ECM",
         "id": "1tI7C",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
         "z": 7
       },
@@ -987,96 +1411,11 @@
         "full_name": "University of Barcelona",
         "id": "grid.5841.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          688356
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "AMU (France)",
-        "country": "France",
-        "full_name": "Aix-Marseille Université",
-        "acronym": "AMU",
-        "id": "xJdyB",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "CentraleSupélec (France)",
-        "country": "France",
-        "full_name": "CentraleSupélec",
-        "acronym": "CentraleSupélec",
-        "id": "m84Aa",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "SYSNAV NAVIGATION (France)",
-        "country": "France",
-        "full_name": "Sysnav",
-        "acronym": "SYSNAV NAVIGATION",
-        "id": "508594009",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Yumain (France)",
-        "country": "France",
-        "full_name": "Yumain",
-        "acronym": "Yumain",
-        "id": "534620968",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Acoem France (France)",
-        "country": "France",
-        "full_name": "Acoem France",
-        "acronym": "Acoem France",
-        "id": "409869708",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Valeo (France)",
-        "country": "France",
-        "full_name": "Valeo",
-        "acronym": "Valeo",
-        "id": "gent184",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 167
       },
       {
         "name": "Internet Of Trust (France)",
@@ -1085,170 +1424,9 @@
         "acronym": "Internet Of Trust",
         "id": "799995998",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Provenrun (France)",
-        "country": "France",
-        "full_name": "Provenrun",
-        "acronym": "Provenrun",
-        "id": "514510783",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "U. Paris-Saclay (France)",
-        "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 52
-      },
-      {
-        "name": "ANSYS (France)",
-        "country": "France",
-        "full_name": "Ansys France",
-        "acronym": "ANSYS",
-        "id": "389371816",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Greenwaves Technologies (France)",
-        "country": "France",
-        "full_name": "Greenwaves Technologies",
-        "acronym": "Greenwaves Technologies",
-        "id": "808076582",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Asso Jessica France (France)",
-        "country": "France",
-        "full_name": "Asso Jessica France",
-        "acronym": "Asso Jessica France",
-        "id": "382765410",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Budapest University of Technology and Economics (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Budapest University of Technology and Economics",
-        "id": "grid.6759.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Embedded France (France)",
-        "country": "France",
-        "full_name": "Embedded France",
-        "acronym": "Embedded France",
-        "id": "804251965",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "U. Lorraine (France)",
-        "country": "France",
-        "full_name": "Université de Lorraine",
-        "acronym": "U. Lorraine",
-        "id": "t6Cq5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Sequans Communications (France)",
-        "country": "France",
-        "full_name": "Sequans Communications",
-        "acronym": "Sequans Communications",
-        "id": "450249677",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 71
-      },
-      {
-        "name": "Vicomtech (Espagne)",
-        "country": "Espagne",
-        "full_name": "Vicomtech",
-        "id": "grid.424271.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Eurotech (Italie)",
-        "country": "Italie",
-        "full_name": "Eurotech",
-        "id": "grid.424974.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Augsburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Augsburg",
-        "id": "grid.7307.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Salerno (Italie)",
-        "country": "Italie",
-        "full_name": "University of Salerno",
-        "id": "grid.11780.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Airlane Technologies (France)",
-        "country": "France",
-        "full_name": "Airlane Technologies",
-        "acronym": "Airlane Technologies",
-        "id": "483336608",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Clausthal University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Clausthal University of Technology",
-        "id": "grid.5164.6",
-        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
       },
@@ -1259,37 +1437,126 @@
         "acronym": "Vsora",
         "id": "811657519",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "M3S (France)",
+        "name": "Sequans Communications (France)",
         "country": "France",
-        "full_name": "M3 Systems",
-        "acronym": "M3S",
-        "id": "424756401",
+        "full_name": "Sequans Communications",
+        "acronym": "Sequans Communications",
+        "id": "450249677",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 2
+        "z": 7
       },
       {
-        "name": "Kalray (France)",
+        "name": "CentraleSupélec (France)",
         "country": "France",
-        "full_name": "Kalray",
-        "acronym": "Kalray",
-        "id": "507620557",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "ANSYS (France)",
+        "country": "France",
+        "full_name": "Ansys France",
+        "acronym": "ANSYS",
+        "id": "389371816",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Provenrun (France)",
+        "country": "France",
+        "full_name": "Provenrun",
+        "acronym": "Provenrun",
+        "id": "514510783",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Eurotech (Italie)",
+        "country": "Italie",
+        "full_name": "Eurotech",
+        "id": "grid.424974.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Finmeccanica (Italie)",
-        "country": "Italie",
-        "full_name": "Finmeccanica",
-        "id": "grid.423952.b",
+        "name": "Valeo (France)",
+        "country": "France",
+        "full_name": "Valeo",
+        "acronym": "Valeo",
+        "id": "gent184",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 7
+        "z": 11
+      },
+      {
+        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
+        "id": "grid.426274.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 167
       },
       {
         "name": "Thales (France)",
@@ -1298,17 +1565,139 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 84
       },
       {
-        "name": "Tecnologías Servicios Telemáticos y Sistemas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnologías Servicios Telemáticos y Sistemas",
-        "id": "grid.426274.1",
+        "name": "SYSNAV NAVIGATION (France)",
+        "country": "France",
+        "full_name": "Sysnav",
+        "acronym": "SYSNAV NAVIGATION",
+        "id": "508594009",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
-        "z": 9
+        "z": 1
+      },
+      {
+        "name": "Yumain (France)",
+        "country": "France",
+        "full_name": "Yumain",
+        "acronym": "Yumain",
+        "id": "534620968",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Airlane Technologies (France)",
+        "country": "France",
+        "full_name": "Airlane Technologies",
+        "acronym": "Airlane Technologies",
+        "id": "483336608",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Sherpa Eng. (France)",
+        "country": "France",
+        "full_name": "Sherpa Engineering",
+        "acronym": "Sherpa Eng.",
+        "id": "gent155",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Asso Jessica France (France)",
+        "country": "France",
+        "full_name": "Asso Jessica France",
+        "acronym": "Asso Jessica France",
+        "id": "382765410",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Kalray (France)",
+        "country": "France",
+        "full_name": "Kalray",
+        "acronym": "Kalray",
+        "id": "507620557",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 19
       },
       {
         "name": "Abengoa (Espagne)",
@@ -1316,6 +1705,85 @@
         "full_name": "Abengoa",
         "id": "grid.423540.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Budapest University of Technology and Economics (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Budapest University of Technology and Economics",
+        "id": "grid.6759.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "U. Lorraine (France)",
+        "country": "France",
+        "full_name": "Université de Lorraine",
+        "acronym": "U. Lorraine",
+        "id": "t6Cq5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Embedded France (France)",
+        "country": "France",
+        "full_name": "Embedded France",
+        "acronym": "Embedded France",
+        "id": "804251965",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Salerno (Italie)",
+        "country": "Italie",
+        "full_name": "University of Salerno",
+        "id": "grid.11780.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "M3S (France)",
+        "country": "France",
+        "full_name": "M3 Systems",
+        "acronym": "M3S",
+        "id": "424756401",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Acoem France (France)",
+        "country": "France",
+        "full_name": "Acoem France",
+        "acronym": "Acoem France",
+        "id": "409869708",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
@@ -1326,18 +1794,60 @@
         "acronym": "Arcure",
         "id": "519060131",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Sherpa Eng. (France)",
-        "country": "France",
-        "full_name": "Sherpa Engineering",
-        "acronym": "Sherpa Eng.",
-        "id": "gent155",
+        "name": "University of Augsburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Augsburg",
+        "id": "grid.7307.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Clausthal University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Clausthal University of Technology",
+        "id": "grid.5164.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Greenwaves Technologies (France)",
+        "country": "France",
+        "full_name": "Greenwaves Technologies",
+        "acronym": "Greenwaves Technologies",
+        "id": "808076582",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Vicomtech (Espagne)",
+        "country": "Espagne",
+        "full_name": "Vicomtech",
+        "id": "grid.424271.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826276
+        ],
+        "y": 1,
+        "z": 13
       }
     ]
   }

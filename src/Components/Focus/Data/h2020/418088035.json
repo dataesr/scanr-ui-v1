@@ -2,20 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Hospital Universitario de La Princesa (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Universitario de La Princesa",
-        "id": "grid.411251.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
         "name": "Parc de Salut (Espagne)",
         "country": "Espagne",
         "full_name": "Parc de Salut",
         "id": "grid.418476.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 9
       },
@@ -25,8 +19,23 @@
         "full_name": "Madrid Health Service",
         "id": "grid.410361.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 64
+      },
+      {
+        "name": "Hospital Universitario de La Princesa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Universitario de La Princesa",
+        "id": "grid.411251.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Aelis Farma (France)",
@@ -35,6 +44,9 @@
         "acronym": "Aelis Farma",
         "id": "797707627",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 1
       },
@@ -45,46 +57,11 @@
         "acronym": "CHU Saint-Etienne",
         "id": "FL57b",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "ICM (France)",
-        "country": "France",
-        "full_name": "Institut du cerveau",
-        "acronym": "ICM",
-        "id": "9TiSL",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "CERBM (France)",
-        "country": "France",
-        "full_name": "Centre européen de recherche en biologie et en médecine",
-        "acronym": "CERBM",
-        "id": "KLwch",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Queen Mary University of London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Queen Mary University of London",
-        "id": "grid.4868.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 87
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 345
       },
       {
         "name": "Centre for Genomic Regulation (Espagne)",
@@ -92,6 +69,9 @@
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 69
       },
@@ -101,8 +81,49 @@
         "full_name": "Concentris",
         "id": "grid.424223.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Institut Hospital del Mar d'Investigacions Mèdiques (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Hospital del Mar d'Investigacions Mèdiques",
+        "id": "grid.20522.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "ICM (France)",
+        "country": "France",
+        "full_name": "Institut du cerveau",
+        "acronym": "ICM",
+        "id": "9TiSL",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Perha Pharmaceuticals (France)",
+        "country": "France",
+        "full_name": "Perha Pharmaceuticals",
+        "acronym": "Perha Pharmaceuticals",
+        "id": "850455429",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Helmholtz Zentrum München (Allemagne)",
@@ -110,6 +131,9 @@
         "full_name": "Helmholtz Zentrum München",
         "id": "grid.4567.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 65
       },
@@ -119,47 +143,62 @@
         "full_name": "King's College London",
         "id": "grid.13097.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 158
       },
       {
-        "name": "Perha Pharmaceuticals (France)",
+        "name": "CERBM (France)",
         "country": "France",
-        "full_name": "Perha Pharmaceuticals",
-        "acronym": "Perha Pharmaceuticals",
-        "id": "850455429",
+        "full_name": "Centre européen de recherche en biologie et en médecine",
+        "acronym": "CERBM",
+        "id": "KLwch",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
-        "z": 1
+        "z": 22
       },
       {
-        "name": "Institut Hospital del Mar d'Investigacions Mèdiques (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Hospital del Mar d'Investigacions Mèdiques",
-        "id": "grid.20522.37",
+        "name": "Queen Mary University of London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen Mary University of London",
+        "id": "grid.4868.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
-        "z": 10
+        "z": 87
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 345
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Hospital Universitario de La Princesa (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Universitario de La Princesa",
-        "id": "grid.411251.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "Parc de Salut (Espagne)",
         "country": "Espagne",
         "full_name": "Parc de Salut",
         "id": "grid.418476.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 8
       },
@@ -169,8 +208,23 @@
         "full_name": "Madrid Health Service",
         "id": "grid.410361.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 42
+      },
+      {
+        "name": "Hospital Universitario de La Princesa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Universitario de La Princesa",
+        "id": "grid.411251.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Aelis Farma (France)",
@@ -179,6 +233,9 @@
         "acronym": "Aelis Farma",
         "id": "797707627",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 1
       },
@@ -189,46 +246,11 @@
         "acronym": "CHU Saint-Etienne",
         "id": "FL57b",
         "country_level_part": "Pays membres",
+        "projects": [
+          899986
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "ICM (France)",
-        "country": "France",
-        "full_name": "Institut du cerveau",
-        "acronym": "ICM",
-        "id": "9TiSL",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "CERBM (France)",
-        "country": "France",
-        "full_name": "Centre européen de recherche en biologie et en médecine",
-        "acronym": "CERBM",
-        "id": "KLwch",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Queen Mary University of London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Queen Mary University of London",
-        "id": "grid.4868.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "University of Cambridge (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Cambridge",
-        "id": "grid.5335.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 55
       },
       {
         "name": "Centre for Genomic Regulation (Espagne)",
@@ -236,6 +258,9 @@
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 25
       },
@@ -245,8 +270,49 @@
         "full_name": "Concentris",
         "id": "grid.424223.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 17
+      },
+      {
+        "name": "Institut Hospital del Mar d'Investigacions Mèdiques (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Hospital del Mar d'Investigacions Mèdiques",
+        "id": "grid.20522.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "ICM (France)",
+        "country": "France",
+        "full_name": "Institut du cerveau",
+        "acronym": "ICM",
+        "id": "9TiSL",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Perha Pharmaceuticals (France)",
+        "country": "France",
+        "full_name": "Perha Pharmaceuticals",
+        "acronym": "Perha Pharmaceuticals",
+        "id": "850455429",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Helmholtz Zentrum München (Allemagne)",
@@ -254,6 +320,9 @@
         "full_name": "Helmholtz Zentrum München",
         "id": "grid.4567.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 20
       },
@@ -263,27 +332,48 @@
         "full_name": "King's College London",
         "id": "grid.13097.3c",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
         "z": 57
       },
       {
-        "name": "Perha Pharmaceuticals (France)",
+        "name": "CERBM (France)",
         "country": "France",
-        "full_name": "Perha Pharmaceuticals",
-        "acronym": "Perha Pharmaceuticals",
-        "id": "850455429",
+        "full_name": "Centre européen de recherche en biologie et en médecine",
+        "acronym": "CERBM",
+        "id": "KLwch",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
       },
       {
-        "name": "Institut Hospital del Mar d'Investigacions Mèdiques (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Hospital del Mar d'Investigacions Mèdiques",
-        "id": "grid.20522.37",
+        "name": "Queen Mary University of London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Queen Mary University of London",
+        "id": "grid.4868.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
         "y": 1,
-        "z": 5
+        "z": 17
+      },
+      {
+        "name": "University of Cambridge (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Cambridge",
+        "id": "grid.5335.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          848077
+        ],
+        "y": 1,
+        "z": 55
       }
     ]
   }

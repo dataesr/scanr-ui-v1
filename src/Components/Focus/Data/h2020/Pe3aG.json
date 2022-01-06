@@ -2,31 +2,64 @@
   "all": {
     "all": [
       {
-        "name": "Brno University of Technology (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Brno University of Technology",
-        "id": "grid.4994.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 685
-      },
-      {
         "name": "Karlsruhe Institute of Technology (Allemagne)",
         "country": "Allemagne",
         "full_name": "Karlsruhe Institute of Technology",
         "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 268
+      },
+      {
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 199
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "Virginia Tech (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Virginia Tech",
+        "id": "grid.438526.e",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "LNE (France)",
@@ -35,17 +68,11 @@
         "acronym": "LNE",
         "id": "aMDHd",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 22
-      },
-      {
-        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Science and Technology",
-        "id": "grid.423669.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 53
       },
       {
         "name": "BioNanoNet (Autriche)",
@@ -53,26 +80,11 @@
         "full_name": "BioNanoNet",
         "id": "grid.432027.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 23
-      },
-      {
-        "name": "Georgia Institute of Technology (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Georgia Institute of Technology",
-        "id": "grid.213917.f",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 199
       },
       {
         "name": "Materia Nova (Belgique)",
@@ -80,17 +92,11 @@
         "full_name": "Materia Nova",
         "id": "grid.435745.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "Virginia Tech (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Virginia Tech",
-        "id": "grid.438526.e",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 8
       },
       {
         "name": "Steinbeis Foundation (Allemagne)",
@@ -98,8 +104,35 @@
         "full_name": "Steinbeis Foundation",
         "id": "grid.153460.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 106
+      },
+      {
+        "name": "Georgia Institute of Technology (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Georgia Institute of Technology",
+        "id": "grid.213917.f",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 685
       },
       {
         "name": "University of Cologne (Allemagne)",
@@ -107,46 +140,11 @@
         "full_name": "University of Cologne",
         "id": "grid.6190.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 32
-      },
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "Whirlpool (Italie)",
-        "country": "Italie",
-        "full_name": "Whirlpool",
-        "id": "grid.439087.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Vertech Group (France)",
-        "country": "France",
-        "full_name": "Vertech Group",
-        "acronym": "Vertech Group",
-        "id": "539865303",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "European Welding Federation (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Welding Federation",
-        "id": "grid.434602.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -154,18 +152,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
       },
       {
         "name": "LGT Condorcet (France)",
@@ -174,17 +165,60 @@
         "acronym": "LGT Condorcet",
         "id": "190200501",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Belgian Welding Institute (Belgique)",
-        "country": "Belgique",
-        "full_name": "Belgian Welding Institute",
-        "id": "grid.493269.3",
+        "name": "Whirlpool (Italie)",
+        "country": "Italie",
+        "full_name": "Whirlpool",
+        "id": "grid.439087.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
-        "z": 4
+        "z": 18
+      },
+      {
+        "name": "European Welding Federation (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Welding Federation",
+        "id": "grid.434602.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "Research Center for Non Destructive Testing (Autriche)",
+        "country": "Autriche",
+        "full_name": "Research Center for Non Destructive Testing",
+        "id": "grid.451841.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "IMT Lille Douai (France)",
@@ -193,17 +227,11 @@
         "acronym": "IMT Lille Douai",
         "id": "qadtj",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Research Center for Non Destructive Testing (Autriche)",
-        "country": "Autriche",
-        "full_name": "Research Center for Non Destructive Testing",
-        "id": "grid.451841.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
       },
       {
         "name": "Phi-Meca Engineering (France)",
@@ -212,39 +240,113 @@
         "acronym": "Phi-Meca Engineering",
         "id": "439210477",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Vertech Group (France)",
+        "country": "France",
+        "full_name": "Vertech Group",
+        "acronym": "Vertech Group",
+        "id": "539865303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Belgian Welding Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Welding Institute",
+        "id": "grid.493269.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Industrial Leadership": {
     "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
       {
-        "name": "Brno University of Technology (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Brno University of Technology",
-        "id": "grid.4994.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
-      },
-      {
         "name": "Karlsruhe Institute of Technology (Allemagne)",
         "country": "Allemagne",
         "full_name": "Karlsruhe Institute of Technology",
         "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 20
+      },
+      {
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Brno University of Technology (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Brno University of Technology",
+        "id": "grid.4994.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Virginia Tech (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Virginia Tech",
+        "id": "grid.438526.e",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "LNE (France)",
@@ -253,17 +355,11 @@
         "acronym": "LNE",
         "id": "aMDHd",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Science and Technology",
-        "id": "grid.423669.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "BioNanoNet (Autriche)",
@@ -271,6 +367,33 @@
         "full_name": "BioNanoNet",
         "id": "grid.432027.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Materia Nova (Belgique)",
+        "country": "Belgique",
+        "full_name": "Materia Nova",
+        "id": "grid.435745.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Steinbeis Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Steinbeis Foundation",
+        "id": "grid.153460.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 17
       },
@@ -280,44 +403,23 @@
         "full_name": "Georgia Institute of Technology",
         "id": "grid.213917.f",
         "country_level_part": "Pays tiers",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Materia Nova (Belgique)",
-        "country": "Belgique",
-        "full_name": "Materia Nova",
-        "id": "grid.435745.4",
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Virginia Tech (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Virginia Tech",
-        "id": "grid.438526.e",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Steinbeis Foundation (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Steinbeis Foundation",
-        "id": "grid.153460.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
+        "z": 50
       },
       {
         "name": "University of Cologne (Allemagne)",
@@ -325,46 +427,11 @@
         "full_name": "University of Cologne",
         "id": "grid.6190.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          886171
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Whirlpool (Italie)",
-        "country": "Italie",
-        "full_name": "Whirlpool",
-        "id": "grid.439087.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Vertech Group (France)",
-        "country": "France",
-        "full_name": "Vertech Group",
-        "acronym": "Vertech Group",
-        "id": "539865303",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "European Welding Federation (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Welding Federation",
-        "id": "grid.434602.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -372,18 +439,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 169
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "LGT Condorcet (France)",
@@ -392,17 +452,60 @@
         "acronym": "LGT Condorcet",
         "id": "190200501",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Belgian Welding Institute (Belgique)",
-        "country": "Belgique",
-        "full_name": "Belgian Welding Institute",
-        "id": "grid.493269.3",
+        "name": "Whirlpool (Italie)",
+        "country": "Italie",
+        "full_name": "Whirlpool",
+        "id": "grid.439087.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "European Welding Federation (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Welding Federation",
+        "id": "grid.434602.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Research Center for Non Destructive Testing (Autriche)",
+        "country": "Autriche",
+        "full_name": "Research Center for Non Destructive Testing",
+        "id": "grid.451841.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "IMT Lille Douai (France)",
@@ -411,17 +514,11 @@
         "acronym": "IMT Lille Douai",
         "id": "qadtj",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Research Center for Non Destructive Testing (Autriche)",
-        "country": "Autriche",
-        "full_name": "Research Center for Non Destructive Testing",
-        "id": "grid.451841.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Phi-Meca Engineering (France)",
@@ -430,8 +527,49 @@
         "acronym": "Phi-Meca Engineering",
         "id": "439210477",
         "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Vertech Group (France)",
+        "country": "France",
+        "full_name": "Vertech Group",
+        "acronym": "Vertech Group",
+        "id": "539865303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Belgian Welding Institute (Belgique)",
+        "country": "Belgique",
+        "full_name": "Belgian Welding Institute",
+        "id": "grid.493269.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          677660
+        ],
+        "y": 1,
+        "z": 2
       }
     ]
   }

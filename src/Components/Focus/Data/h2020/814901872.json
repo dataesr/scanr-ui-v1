@@ -2,13 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "NEC (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "NEC",
-        "id": "grid.474373.0",
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011,
+          956256
+        ],
         "y": 2,
-        "z": 48
+        "z": 51
       },
       {
         "name": "CNRS (France)",
@@ -17,17 +21,25 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011,
+          956256
+        ],
         "y": 2,
         "z": 2670
       },
       {
-        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-        "id": "grid.28326.3d",
+        "name": "NEC (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NEC",
+        "id": "grid.474373.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011,
+          956256
+        ],
         "y": 2,
-        "z": 51
+        "z": 48
       },
       {
         "name": "Chalmers University of Technology (Suède)",
@@ -35,45 +47,11 @@
         "full_name": "Chalmers University of Technology",
         "id": "grid.5371.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 221
-      },
-      {
-        "name": "CentraleSupélec (France)",
-        "country": "France",
-        "full_name": "CentraleSupélec",
-        "acronym": "CentraleSupélec",
-        "id": "m84Aa",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 60
-      },
-      {
-        "name": "Centro Ricerche FIAT (Italie)",
-        "country": "Italie",
-        "full_name": "Centro Ricerche FIAT",
-        "id": "grid.6276.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 141
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Telecom Italia (Italie)",
-        "country": "Italie",
-        "full_name": "Telecom Italia",
-        "id": "grid.14587.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 42
       },
       {
         "name": "National and Kapodistrian University of Athens (Grèce)",
@@ -81,18 +59,11 @@
         "full_name": "National and Kapodistrian University of Athens",
         "id": "grid.5216.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 146
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
       },
       {
         "name": "Orange (France)",
@@ -101,6 +72,9 @@
         "acronym": "Orange",
         "id": "gent127",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 53
       },
@@ -111,17 +85,60 @@
         "acronym": "SNCF",
         "id": "gent160",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 48
       },
       {
-        "name": "Aalborg University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aalborg University",
-        "id": "grid.5117.2",
+        "name": "Telecom Italia (Italie)",
+        "country": "Italie",
+        "full_name": "Telecom Italia",
+        "id": "grid.14587.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 156
+        "z": 42
+      },
+      {
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Centro Ricerche FIAT (Italie)",
+        "country": "Italie",
+        "full_name": "Centro Ricerche FIAT",
+        "id": "grid.6276.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 141
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 155
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -130,26 +147,60 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 575
       },
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 111
+        "z": 156
       },
       {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 18
+        "z": 852
+      },
+      {
+        "name": "Pompeu Fabra University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Pompeu Fabra University",
+        "id": "grid.5612.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "Royal Institute of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Royal Institute of Technology",
+        "id": "grid.5037.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
+        "y": 1,
+        "z": 285
       },
       {
         "name": "Telefonica Research and Development (Espagne)",
@@ -157,6 +208,9 @@
         "full_name": "Telefonica Research and Development",
         "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 81
       },
@@ -166,8 +220,23 @@
         "full_name": "TU Wien",
         "id": "grid.5329.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 197
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
+        "y": 1,
+        "z": 111
       },
       {
         "name": "Aalto University (Finlande)",
@@ -175,76 +244,64 @@
         "full_name": "Aalto University",
         "id": "grid.5373.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 159
       },
       {
-        "name": "Royal Institute of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Royal Institute of Technology",
-        "id": "grid.5037.1",
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
-        "z": 285
-      },
-      {
-        "name": "Pompeu Fabra University (Espagne)",
-        "country": "Espagne",
-        "full_name": "Pompeu Fabra University",
-        "id": "grid.5612.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 94
+        "z": 18
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 148
+      },
+      {
         "name": "Chalmers University of Technology (Suède)",
         "country": "Suède",
         "full_name": "Chalmers University of Technology",
         "id": "grid.5371.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 26
-      },
-      {
-        "name": "CentraleSupélec (France)",
-        "country": "France",
-        "full_name": "CentraleSupélec",
-        "acronym": "CentraleSupélec",
-        "id": "m84Aa",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Centro Ricerche FIAT (Italie)",
-        "country": "Italie",
-        "full_name": "Centro Ricerche FIAT",
-        "id": "grid.6276.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "University of Nottingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Nottingham",
-        "id": "grid.4563.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Telecom Italia (Italie)",
-        "country": "Italie",
-        "full_name": "Telecom Italia",
-        "id": "grid.14587.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
       },
       {
         "name": "National and Kapodistrian University of Athens (Grèce)",
@@ -252,27 +309,11 @@
         "full_name": "National and Kapodistrian University of Athens",
         "id": "grid.5216.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 16
-      },
-      {
-        "name": "NEC (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "NEC",
-        "id": "grid.474373.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 167
       },
       {
         "name": "Orange (France)",
@@ -281,6 +322,9 @@
         "acronym": "Orange",
         "id": "gent127",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 44
       },
@@ -291,36 +335,60 @@
         "acronym": "SNCF",
         "id": "gent160",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 148
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "name": "Telecom Italia (Italie)",
         "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-        "id": "grid.28326.3d",
+        "full_name": "Telecom Italia",
+        "id": "grid.14587.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 28
+        "z": 36
       },
       {
-        "name": "Aalborg University (Danemark)",
-        "country": "Danemark",
-        "full_name": "Aalborg University",
-        "id": "grid.5117.2",
+        "name": "CentraleSupélec (France)",
+        "country": "France",
+        "full_name": "CentraleSupélec",
+        "acronym": "CentraleSupélec",
+        "id": "m84Aa",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 20
+        "z": 18
+      },
+      {
+        "name": "Centro Ricerche FIAT (Italie)",
+        "country": "Italie",
+        "full_name": "Centro Ricerche FIAT",
+        "id": "grid.6276.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "University of Nottingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Nottingham",
+        "id": "grid.4563.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 10
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -329,21 +397,64 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
         "z": 52
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
+      },
       {
         "name": "NEC (Allemagne)",
         "country": "Allemagne",
         "full_name": "NEC",
         "id": "grid.474373.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
         "y": 1,
-        "z": 6
+        "z": 32
+      },
+      {
+        "name": "Aalborg University (Danemark)",
+        "country": "Danemark",
+        "full_name": "Aalborg University",
+        "id": "grid.5117.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017011
+        ],
+        "y": 1,
+        "z": 167
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
+      {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "CNRS (France)",
@@ -352,35 +463,47 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 938
       },
       {
-        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-        "id": "grid.28326.3d",
+        "name": "NEC (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "NEC",
+        "id": "grid.474373.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
-        "z": 3
+        "z": 6
       },
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
+        "name": "Pompeu Fabra University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Pompeu Fabra University",
+        "id": "grid.5612.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
-        "z": 18
+        "z": 20
       },
       {
-        "name": "Nokia solutions and networks oy (Finlande)",
-        "country": "Finlande",
-        "full_name": "Nokia solutions and networks oy",
-        "id": "493466361",
+        "name": "Royal Institute of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Royal Institute of Technology",
+        "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
-        "z": 2
+        "z": 55
       },
       {
         "name": "Telefonica Research and Development (Espagne)",
@@ -388,6 +511,9 @@
         "full_name": "Telefonica Research and Development",
         "id": "grid.99308.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 7
       },
@@ -397,8 +523,23 @@
         "full_name": "TU Wien",
         "id": "grid.5329.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 44
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
+        "y": 1,
+        "z": 18
       },
       {
         "name": "Aalto University (Finlande)",
@@ -406,26 +547,23 @@
         "full_name": "Aalto University",
         "id": "grid.5373.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
         "z": 27
       },
       {
-        "name": "Royal Institute of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Royal Institute of Technology",
-        "id": "grid.5037.1",
+        "name": "Nokia solutions and networks oy (Finlande)",
+        "country": "Finlande",
+        "full_name": "Nokia solutions and networks oy",
+        "id": "493466361",
         "country_level_part": "Pays membres",
+        "projects": [
+          956256
+        ],
         "y": 1,
-        "z": 55
-      },
-      {
-        "name": "Pompeu Fabra University (Espagne)",
-        "country": "Espagne",
-        "full_name": "Pompeu Fabra University",
-        "id": "grid.5612.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
+        "z": 2
       }
     ]
   }

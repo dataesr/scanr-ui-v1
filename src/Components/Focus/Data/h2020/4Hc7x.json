@@ -2,23 +2,31 @@
   "all": {
     "all": [
       {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 412
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826,
+          713010
+        ],
         "y": 2,
         "z": 2670
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826,
+          952096
+        ],
+        "y": 2,
+        "z": 412
       },
       {
         "name": "U. Paris (France)",
@@ -27,8 +35,24 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010,
+          847507
+        ],
         "y": 2,
         "z": 388
+      },
+      {
+        "name": "Complutense University of Madrid (Espagne)",
+        "country": "Espagne",
+        "full_name": "Complutense University of Madrid",
+        "id": "grid.4795.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 77
       },
       {
         "name": "Inrae (France)",
@@ -37,74 +61,23 @@
         "acronym": "Inrae",
         "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 453
       },
       {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
+        "name": "Great Ormond Street Hospital for Children NHS Foundation Trust (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Great Ormond Street Hospital for Children NHS Foundation Trust",
+        "id": "grid.424537.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
-        "z": 70
-      },
-      {
-        "name": "Complutense University of Madrid (Espagne)",
-        "country": "Espagne",
-        "full_name": "Complutense University of Madrid",
-        "id": "grid.4795.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 77
-      },
-      {
-        "name": "Catholic University of the Sacred Heart (Italie)",
-        "country": "Italie",
-        "full_name": "Catholic University of the Sacred Heart",
-        "id": "grid.8142.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 62
-      },
-      {
-        "name": "Consorzio Futuro in Ricerca (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Futuro in Ricerca",
-        "id": "grid.450646.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 689
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "Trinity College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trinity College Dublin",
-        "id": "grid.8217.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 158
+        "z": 5
       },
       {
         "name": "UVSQ (France)",
@@ -113,17 +86,11 @@
         "acronym": "UVSQ",
         "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 94
-      },
-      {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
       },
       {
         "name": "Newcastle University (Royaume-Uni)",
@@ -131,6 +98,9 @@
         "full_name": "Newcastle University",
         "id": "grid.1006.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 149
       },
@@ -140,26 +110,11 @@
         "full_name": "University of Ferrara",
         "id": "grid.8484.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 34
-      },
-      {
-        "name": "Great Ormond Street Hospital for Children NHS Foundation Trust (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Great Ormond Street Hospital for Children NHS Foundation Trust",
-        "id": "grid.424537.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Capital Region of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Capital Region of Denmark",
-        "id": "grid.425848.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -168,8 +123,110 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 575
+      },
+      {
+        "name": "Capital Region of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Capital Region of Denmark",
+        "id": "grid.425848.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "Consorzio Futuro in Ricerca (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Futuro in Ricerca",
+        "id": "grid.450646.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Catholic University of the Sacred Heart (Italie)",
+        "country": "Italie",
+        "full_name": "Catholic University of the Sacred Heart",
+        "id": "grid.8142.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 158
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 689
       },
       {
         "name": "TU Darmstadt (Allemagne)",
@@ -177,26 +234,11 @@
         "full_name": "TU Darmstadt",
         "id": "grid.6546.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 98
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 685
-      },
-      {
-        "name": "University of Lübeck (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Lübeck",
-        "id": "grid.4562.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
       },
       {
         "name": "Frankfurt Institute for Advanced Studies (Allemagne)",
@@ -204,6 +246,9 @@
         "full_name": "Frankfurt Institute for Advanced Studies",
         "id": "grid.417999.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 4
       },
@@ -214,8 +259,35 @@
         "acronym": "CRI",
         "id": "494470453",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "University of Lübeck (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Lübeck",
+        "id": "grid.4562.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
+        "y": 1,
+        "z": 685
       },
       {
         "name": "Ernst Strüngmann Institute for Neuroscience (Allemagne)",
@@ -223,17 +295,23 @@
         "full_name": "Ernst Strüngmann Institute for Neuroscience",
         "id": "grid.461715.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          952096
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Perugia (Italie)",
-        "country": "Italie",
-        "full_name": "University of Perugia",
-        "id": "grid.9027.c",
-        "country_level_part": "Pays membres",
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          847507
+        ],
         "y": 1,
-        "z": 56
+        "z": 32
       },
       {
         "name": "Goethe University Frankfurt (Allemagne)",
@@ -241,17 +319,23 @@
         "full_name": "Goethe University Frankfurt",
         "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 85
       },
       {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
+        "name": "University of Würzburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Würzburg",
+        "id": "grid.8379.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
-        "z": 489
+        "z": 36
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -259,8 +343,107 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 258
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "Hycult Biotech (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Hycult Biotech",
+        "id": "grid.435189.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Aberdeen (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Aberdeen",
+        "id": "grid.7107.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy",
+        "id": "grid.411040.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Hans Knöll Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hans Knöll Institute",
+        "id": "grid.418398.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Minho (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Minho",
+        "id": "grid.10328.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "University of Perugia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Perugia",
+        "id": "grid.9027.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 56
+      },
+      {
+        "name": "Duke University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Duke University",
+        "id": "grid.26009.3d",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 20
       },
       {
         "name": "I. Pasteur (France)",
@@ -269,6 +452,9 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 94
       },
@@ -278,197 +464,27 @@
         "full_name": "Radboud University Nijmegen",
         "id": "grid.5590.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 205
-      },
-      {
-        "name": "University of Aberdeen (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Aberdeen",
-        "id": "grid.7107.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 61
-      },
-      {
-        "name": "University of Würzburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Würzburg",
-        "id": "grid.8379.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Duke University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Duke University",
-        "id": "grid.26009.3d",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "University of Minho (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Minho",
-        "id": "grid.10328.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
-        "name": "Hycult Biotech (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Hycult Biotech",
-        "id": "grid.435189.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Hans Knöll Institute (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hans Knöll Institute",
-        "id": "grid.418398.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy",
-        "id": "grid.411040.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
         "name": "Complutense University of Madrid (Espagne)",
         "country": "Espagne",
         "full_name": "Complutense University of Madrid",
         "id": "grid.4795.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "Catholic University of the Sacred Heart (Italie)",
-        "country": "Italie",
-        "full_name": "Catholic University of the Sacred Heart",
-        "id": "grid.8142.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Consorzio Futuro in Ricerca (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Futuro in Ricerca",
-        "id": "grid.450646.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 74
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "Trinity College Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Trinity College Dublin",
-        "id": "grid.8217.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "UVSQ (France)",
-        "country": "France",
-        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-        "acronym": "UVSQ",
-        "id": "V13Pk",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 66
-      },
-      {
-        "name": "Newcastle University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Newcastle University",
-        "id": "grid.1006.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 40
       },
       {
         "name": "CNRS (France)",
@@ -477,17 +493,24 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 108
       },
       {
-        "name": "University of Ferrara (Italie)",
-        "country": "Italie",
-        "full_name": "University of Ferrara",
-        "id": "grid.8484.0",
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
-        "z": 7
+        "z": 26
       },
       {
         "name": "Great Ormond Street Hospital for Children NHS Foundation Trust (Royaume-Uni)",
@@ -495,17 +518,60 @@
         "full_name": "Great Ormond Street Hospital for Children NHS Foundation Trust",
         "id": "grid.424537.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Capital Region of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Capital Region of Denmark",
-        "id": "grid.425848.7",
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
-        "z": 43
+        "z": 4
+      },
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 74
+      },
+      {
+        "name": "Newcastle University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Newcastle University",
+        "id": "grid.1006.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "University of Ferrara (Italie)",
+        "country": "Italie",
+        "full_name": "University of Ferrara",
+        "id": "grid.8484.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -514,8 +580,110 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
         "y": 1,
         "z": 30
+      },
+      {
+        "name": "Capital Region of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Capital Region of Denmark",
+        "id": "grid.425848.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 66
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Consorzio Futuro in Ricerca (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Futuro in Ricerca",
+        "id": "grid.450646.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Catholic University of the Sacred Heart (Italie)",
+        "country": "Italie",
+        "full_name": "Catholic University of the Sacred Heart",
+        "id": "grid.8142.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Trinity College Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Trinity College Dublin",
+        "id": "grid.8217.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847826
+        ],
+        "y": 1,
+        "z": 174
       },
       {
         "name": "U. Paris (France)",
@@ -524,17 +692,23 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 50
       },
       {
-        "name": "University of Perugia (Italie)",
-        "country": "Italie",
-        "full_name": "University of Perugia",
-        "id": "grid.9027.c",
-        "country_level_part": "Pays membres",
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          847507
+        ],
         "y": 1,
-        "z": 5
+        "z": 18
       },
       {
         "name": "Goethe University Frankfurt (Allemagne)",
@@ -542,17 +716,23 @@
         "full_name": "Goethe University Frankfurt",
         "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 21
       },
       {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
+        "name": "University of Würzburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Würzburg",
+        "id": "grid.8379.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
-        "z": 83
+        "z": 4
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -560,8 +740,107 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 23
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Hycult Biotech (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Hycult Biotech",
+        "id": "grid.435189.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Aberdeen (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Aberdeen",
+        "id": "grid.7107.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy",
+        "id": "grid.411040.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Hans Knöll Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hans Knöll Institute",
+        "id": "grid.418398.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Minho (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Minho",
+        "id": "grid.10328.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Perugia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Perugia",
+        "id": "grid.9027.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Duke University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Duke University",
+        "id": "grid.26009.3d",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          847507
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "I. Pasteur (France)",
@@ -570,6 +849,9 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 30
       },
@@ -579,102 +861,11 @@
         "full_name": "Radboud University Nijmegen",
         "id": "grid.5590.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          847507
+        ],
         "y": 1,
         "z": 60
-      },
-      {
-        "name": "University of Aberdeen (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Aberdeen",
-        "id": "grid.7107.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Würzburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Würzburg",
-        "id": "grid.8379.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Duke University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Duke University",
-        "id": "grid.26009.3d",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of Minho (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Minho",
-        "id": "grid.10328.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Hycult Biotech (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Hycult Biotech",
-        "id": "grid.435189.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Hans Knöll Institute (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hans Knöll Institute",
-        "id": "grid.418398.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Iuliu Ha<U+021B>ieganu University of Medicine and Pharmacy",
-        "id": "grid.411040.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      }
-    ]
-  },
-  "Spreading excellence and widening participation": {
-    "Spreading excellence and widening participation (WIDENING)": [
-      {
-        "name": "University College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University College London",
-        "id": "grid.83440.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Ernst Strüngmann Institute for Neuroscience (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ernst Strüngmann Institute for Neuroscience",
-        "id": "grid.461715.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       }
     ]
   },
@@ -687,6 +878,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 177
       },
@@ -696,26 +890,11 @@
         "full_name": "TU Darmstadt",
         "id": "grid.6546.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 72
-      },
-      {
-        "name": "University of Lübeck (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Lübeck",
-        "id": "grid.4562.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "Frankfurt Institute for Advanced Studies (Allemagne)",
@@ -723,6 +902,9 @@
         "full_name": "Frankfurt Institute for Advanced Studies",
         "id": "grid.417999.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 2
       },
@@ -733,6 +915,9 @@
         "acronym": "CRI",
         "id": "494470453",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 2
       },
@@ -743,8 +928,63 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
         "y": 1,
         "z": 34
+      },
+      {
+        "name": "University of Lübeck (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Lübeck",
+        "id": "grid.4562.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713010
+        ],
+        "y": 1,
+        "z": 72
+      }
+    ]
+  },
+  "Spreading excellence and widening participation": {
+    "Spreading excellence and widening participation (WIDENING)": [
+      {
+        "name": "University College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University College London",
+        "id": "grid.83440.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952096
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Ernst Strüngmann Institute for Neuroscience (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ernst Strüngmann Institute for Neuroscience",
+        "id": "grid.461715.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952096
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

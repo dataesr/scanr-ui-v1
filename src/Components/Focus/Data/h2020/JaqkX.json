@@ -2,43 +2,32 @@
   "all": {
     "all": [
       {
-        "name": "U. Rennes 2 (France)",
-        "country": "France",
-        "full_name": "Université Rennes 2",
-        "acronym": "U. Rennes 2",
-        "id": "ti37C",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 17
-      },
-      {
-        "name": "U. Rennes 1 (France)",
-        "country": "France",
-        "full_name": "Université de Rennes 1",
-        "acronym": "U. Rennes 1",
-        "id": "9wAap",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 84
-      },
-      {
-        "name": "University of Gothenburg (Suède)",
-        "country": "Suède",
-        "full_name": "University of Gothenburg",
-        "id": "grid.8761.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 101
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 2670
+      },
+      {
+        "name": "U. Rennes 2 (France)",
+        "country": "France",
+        "full_name": "Université Rennes 2",
+        "acronym": "U. Rennes 2",
+        "id": "ti37C",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
+        "z": 17
       },
       {
         "name": "EHESP (France)",
@@ -47,8 +36,26 @@
         "acronym": "EHESP",
         "id": "SsRkf",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 13
+      },
+      {
+        "name": "U. Rennes 1 (France)",
+        "country": "France",
+        "full_name": "Université de Rennes 1",
+        "acronym": "U. Rennes 1",
+        "id": "9wAap",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
+        "z": 84
       },
       {
         "name": "University of Bologna (Italie)",
@@ -56,27 +63,25 @@
         "full_name": "University of Bologna",
         "id": "grid.6292.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 314
       },
       {
-        "name": "University of Valencia (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Valencia",
-        "id": "grid.5338.d",
+        "name": "University of Gothenburg (Suède)",
+        "country": "Suède",
+        "full_name": "University of Gothenburg",
+        "id": "grid.8761.8",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 78
-      },
-      {
-        "name": "Quatorze (France)",
-        "country": "France",
-        "full_name": "Quatorze",
-        "acronym": "Quatorze",
-        "id": "753711159",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
+        "z": 101
       },
       {
         "name": "U. Lyon 3 (France)",
@@ -85,8 +90,23 @@
         "acronym": "U. Lyon 3",
         "id": "7Gzub",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 11
+      },
+      {
+        "name": "University of Valencia (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Valencia",
+        "id": "grid.5338.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
+        "y": 1,
+        "z": 78
       },
       {
         "name": "Malmö University (Suède)",
@@ -94,6 +114,9 @@
         "full_name": "Malmö University",
         "id": "grid.32995.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 16
       },
@@ -104,8 +127,36 @@
         "acronym": "Lyon Ingenierie Projets",
         "id": "493298210",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 8
+      },
+      {
+        "name": "Quatorze (France)",
+        "country": "France",
+        "full_name": "Quatorze",
+        "acronym": "Quatorze",
+        "id": "753711159",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Goethe University Frankfurt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Goethe University Frankfurt",
+        "id": "grid.7839.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
+        "y": 1,
+        "z": 85
       },
       {
         "name": "Yeditepe University (Turquie)",
@@ -113,6 +164,9 @@
         "full_name": "Yeditepe University",
         "id": "grid.32140.34",
         "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 1
       },
@@ -122,17 +176,11 @@
         "full_name": "University of Huddersfield",
         "id": "grid.15751.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 27
-      },
-      {
-        "name": "Goethe University Frankfurt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 85
       },
       {
         "name": "Manchester Metropolitan University (Royaume-Uni)",
@@ -140,6 +188,9 @@
         "full_name": "Manchester Metropolitan University",
         "id": "grid.25627.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 32
       },
@@ -150,6 +201,9 @@
         "acronym": "CY Cergy",
         "id": "RS4WF",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 21
       }
@@ -158,43 +212,32 @@
   "Societal Challenges": {
     "Europe in a changing world - inclusive, innovative and reflective Societies (SOCIETY)": [
       {
-        "name": "U. Rennes 2 (France)",
-        "country": "France",
-        "full_name": "Université Rennes 2",
-        "acronym": "U. Rennes 2",
-        "id": "ti37C",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 3
-      },
-      {
-        "name": "U. Rennes 1 (France)",
-        "country": "France",
-        "full_name": "Université de Rennes 1",
-        "acronym": "U. Rennes 1",
-        "id": "9wAap",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 3
-      },
-      {
-        "name": "University of Gothenburg (Suède)",
-        "country": "Suède",
-        "full_name": "University of Gothenburg",
-        "id": "grid.8761.8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 5
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 43
+      },
+      {
+        "name": "U. Rennes 2 (France)",
+        "country": "France",
+        "full_name": "Université Rennes 2",
+        "acronym": "U. Rennes 2",
+        "id": "ti37C",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
+        "z": 3
       },
       {
         "name": "EHESP (France)",
@@ -203,8 +246,26 @@
         "acronym": "EHESP",
         "id": "SsRkf",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 2
+      },
+      {
+        "name": "U. Rennes 1 (France)",
+        "country": "France",
+        "full_name": "Université de Rennes 1",
+        "acronym": "U. Rennes 1",
+        "id": "9wAap",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
+        "z": 3
       },
       {
         "name": "University of Bologna (Italie)",
@@ -212,27 +273,25 @@
         "full_name": "University of Bologna",
         "id": "grid.6292.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535,
+          649416
+        ],
         "y": 2,
         "z": 22
       },
       {
-        "name": "University of Valencia (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Valencia",
-        "id": "grid.5338.d",
+        "name": "University of Gothenburg (Suède)",
+        "country": "Suède",
+        "full_name": "University of Gothenburg",
+        "id": "grid.8761.8",
         "country_level_part": "Pays membres",
-        "y": 1,
+        "projects": [
+          101004535,
+          649416
+        ],
+        "y": 2,
         "z": 5
-      },
-      {
-        "name": "Quatorze (France)",
-        "country": "France",
-        "full_name": "Quatorze",
-        "acronym": "Quatorze",
-        "id": "753711159",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "U. Lyon 3 (France)",
@@ -241,8 +300,23 @@
         "acronym": "U. Lyon 3",
         "id": "7Gzub",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "University of Valencia (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Valencia",
+        "id": "grid.5338.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Malmö University (Suède)",
@@ -250,6 +324,9 @@
         "full_name": "Malmö University",
         "id": "grid.32995.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 11
       },
@@ -260,24 +337,22 @@
         "acronym": "Lyon Ingenierie Projets",
         "id": "493298210",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Yeditepe University (Turquie)",
-        "country": "Turquie",
-        "full_name": "Yeditepe University",
-        "id": "grid.32140.34",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of Huddersfield (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Huddersfield",
-        "id": "grid.15751.37",
+        "name": "Quatorze (France)",
+        "country": "France",
+        "full_name": "Quatorze",
+        "acronym": "Quatorze",
+        "id": "753711159",
         "country_level_part": "Pays membres",
+        "projects": [
+          101004535
+        ],
         "y": 1,
         "z": 1
       },
@@ -287,8 +362,35 @@
         "full_name": "Goethe University Frankfurt",
         "id": "grid.7839.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 5
+      },
+      {
+        "name": "Yeditepe University (Turquie)",
+        "country": "Turquie",
+        "full_name": "Yeditepe University",
+        "id": "grid.32140.34",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          649416
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Huddersfield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Huddersfield",
+        "id": "grid.15751.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Manchester Metropolitan University (Royaume-Uni)",
@@ -296,6 +398,9 @@
         "full_name": "Manchester Metropolitan University",
         "id": "grid.25627.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 5
       },
@@ -306,6 +411,9 @@
         "acronym": "CY Cergy",
         "id": "RS4WF",
         "country_level_part": "Pays membres",
+        "projects": [
+          649416
+        ],
         "y": 1,
         "z": 1
       }

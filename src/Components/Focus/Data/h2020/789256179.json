@@ -2,40 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "SOLIDpower (Italie)",
-        "country": "Italie",
-        "full_name": "SOLIDpower",
-        "id": "grid.437750.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 277
-      },
-      {
         "name": "SOLIDpower (Suisse)",
         "country": "Suisse",
         "full_name": "SOLIDpower",
         "id": "grid.435077.2",
         "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 13
-      },
-      {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
       },
       {
         "name": "CEA (France)",
@@ -44,26 +20,23 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 852
       },
       {
-        "name": "Sunfire (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Sunfire",
-        "id": "grid.438147.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
         "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
         "y": 1,
-        "z": 230
+        "z": 174
       },
       {
         "name": "Paul Scherrer Institute (Suisse)",
@@ -71,48 +44,75 @@
         "full_name": "Paul Scherrer Institute",
         "id": "grid.5991.4",
         "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 88
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "Sunfire (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Sunfire",
+        "id": "grid.438147.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "SOLIDpower (Italie)",
+        "country": "Italie",
+        "full_name": "SOLIDpower",
+        "id": "grid.437750.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 230
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "SOLIDpower (Italie)",
-        "country": "Italie",
-        "full_name": "SOLIDpower",
-        "id": "grid.437750.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 39
-      },
-      {
         "name": "SOLIDpower (Suisse)",
         "country": "Suisse",
         "full_name": "SOLIDpower",
         "id": "grid.435077.2",
         "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 11
-      },
-      {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 52
       },
       {
         "name": "CEA (France)",
@@ -121,8 +121,47 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 78
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Paul Scherrer Institute (Suisse)",
+        "country": "Suisse",
+        "full_name": "Paul Scherrer Institute",
+        "id": "grid.5991.4",
+        "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 39
       },
       {
         "name": "Sunfire (Allemagne)",
@@ -130,6 +169,21 @@
         "full_name": "Sunfire",
         "id": "grid.438147.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "SOLIDpower (Italie)",
+        "country": "Italie",
+        "full_name": "SOLIDpower",
+        "id": "grid.437750.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 13
       },
@@ -139,17 +193,11 @@
         "full_name": "Polytechnic University of Turin",
         "id": "grid.4800.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          826234
+        ],
         "y": 1,
         "z": 27
-      },
-      {
-        "name": "Paul Scherrer Institute (Suisse)",
-        "country": "Suisse",
-        "full_name": "Paul Scherrer Institute",
-        "id": "grid.5991.4",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 5
       }
     ]
   }

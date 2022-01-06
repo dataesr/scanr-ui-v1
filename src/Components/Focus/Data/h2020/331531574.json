@@ -2,40 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Quantis (Suisse)",
-        "country": "Suisse",
-        "full_name": "Quantis",
-        "id": "grid.425743.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 386
-      },
-      {
         "name": "City, University of London (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "City, University of London",
         "id": "grid.28577.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
         "y": 1,
         "z": 49
-      },
-      {
-        "name": "University of Seville (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Seville",
-        "id": "grid.9224.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 85
       },
       {
         "name": "TU Wien (Autriche)",
@@ -43,8 +19,23 @@
         "full_name": "TU Wien",
         "id": "grid.5329.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
         "y": 1,
         "z": 197
+      },
+      {
+        "name": "Quantis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Quantis",
+        "id": "grid.425743.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 30
       },
       {
         "name": "University of Brescia (Italie)",
@@ -52,19 +43,97 @@
         "full_name": "University of Brescia",
         "id": "grid.7637.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
         "y": 1,
         "z": 25
+      },
+      {
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 85
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 386
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
+        "name": "City, University of London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "City, University of London",
+        "id": "grid.28577.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "TU Wien (Autriche)",
+        "country": "Autriche",
+        "full_name": "TU Wien",
+        "id": "grid.5329.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
         "name": "Quantis (Suisse)",
         "country": "Suisse",
         "full_name": "Quantis",
         "id": "grid.425743.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "University of Brescia (Italie)",
+        "country": "Italie",
+        "full_name": "University of Brescia",
+        "id": "grid.7637.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
         "y": 1,
         "z": 8
       },
@@ -74,44 +143,11 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          814985
+        ],
         "y": 1,
         "z": 45
-      },
-      {
-        "name": "City, University of London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "City, University of London",
-        "id": "grid.28577.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Seville (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Seville",
-        "id": "grid.9224.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "TU Wien (Autriche)",
-        "country": "Autriche",
-        "full_name": "TU Wien",
-        "id": "grid.5329.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "University of Brescia (Italie)",
-        "country": "Italie",
-        "full_name": "University of Brescia",
-        "id": "grid.7637.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       }
     ]
   }

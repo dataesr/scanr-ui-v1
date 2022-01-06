@@ -7,6 +7,10 @@
         "full_name": "Mondragon Corporation",
         "id": "grid.423975.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223,
+          820661
+        ],
         "y": 2,
         "z": 27
       },
@@ -16,6 +20,10 @@
         "full_name": "Deutsches Institut für Normung",
         "id": "grid.424319.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631,
+          101021911
+        ],
         "y": 2,
         "z": 35
       },
@@ -25,6 +33,10 @@
         "full_name": "Ikerlan",
         "id": "grid.424891.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631,
+          101021911
+        ],
         "y": 2,
         "z": 59
       },
@@ -34,27 +46,12 @@
         "full_name": "Research Center for Non Destructive Testing",
         "id": "grid.451841.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661,
+          636902
+        ],
         "y": 2,
         "z": 7
-      },
-      {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 852
       },
       {
         "name": "Dfd-Dense Fluid Degrea... (France)",
@@ -63,17 +60,48 @@
         "acronym": "Dfd-Dense Fluid Degrea...",
         "id": "753021898",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
-        "z": 258
+        "z": 852
+      },
+      {
+        "name": "Idener (Espagne)",
+        "country": "Espagne",
+        "full_name": "Idener",
+        "id": "grid.451424.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 174
       },
       {
         "name": "Pv Cycle France (France)",
@@ -82,17 +110,11 @@
         "acronym": "Pv Cycle France",
         "id": "800547499",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Idener (Espagne)",
-        "country": "Espagne",
-        "full_name": "Idener",
-        "id": "grid.451424.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
       },
       {
         "name": "RHP Technology (Autriche)",
@@ -100,17 +122,11 @@
         "full_name": "RHP Technology",
         "id": "grid.426021.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "Bifa Umweltinstitut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bifa Umweltinstitut",
-        "id": "grid.493242.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       },
       {
         "name": "Centre for Social Innovation (Autriche)",
@@ -118,8 +134,35 @@
         "full_name": "Centre for Social Innovation",
         "id": "grid.15683.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 50
+      },
+      {
+        "name": "Bifa Umweltinstitut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bifa Umweltinstitut",
+        "id": "grid.493242.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 258
       },
       {
         "name": "Enel (Italie)",
@@ -127,35 +170,11 @@
         "full_name": "Enel",
         "id": "grid.10506.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 36
-      },
-      {
-        "name": "Tampere University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Tampere University",
-        "id": "grid.502801.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 142
-      },
-      {
-        "name": "Software (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Software",
-        "id": "grid.426368.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
       },
       {
         "name": "Softeco Sismat (Italie)",
@@ -163,8 +182,47 @@
         "full_name": "Softeco Sismat",
         "id": "grid.426366.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "Software (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Software",
+        "id": "grid.426368.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Tampere University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Tampere University",
+        "id": "grid.502801.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 142
       },
       {
         "name": "Universitat Politècnica de València (Espagne)",
@@ -172,8 +230,23 @@
         "full_name": "Universitat Politècnica de València",
         "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 182
+      },
+      {
+        "name": "SIVECO (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "SIVECO",
+        "id": "grid.426215.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 31
       },
       {
         "name": "Instituto Tecnológico de Informática (Espagne)",
@@ -181,6 +254,9 @@
         "full_name": "Instituto Tecnológico de Informática",
         "id": "grid.425230.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 21
       },
@@ -190,35 +266,23 @@
         "full_name": "Profactor",
         "id": "grid.15165.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 15
       },
       {
-        "name": "University of Southampton (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Southampton",
-        "id": "grid.5491.9",
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Fidia (Italie)",
-        "country": "Italie",
-        "full_name": "Fidia",
-        "id": "grid.425191.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "SIVECO (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "SIVECO",
-        "id": "grid.426215.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
+        "z": 51
       },
       {
         "name": "Ascora (Allemagne)",
@@ -226,8 +290,23 @@
         "full_name": "Ascora",
         "id": "grid.432245.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "Fidia (Italie)",
+        "country": "Italie",
+        "full_name": "Fidia",
+        "id": "grid.425191.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "Mondragon University (Espagne)",
@@ -235,17 +314,11 @@
         "full_name": "Mondragon University",
         "id": "grid.436417.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 29
-      },
-      {
-        "name": "Oldenburger Institut für Informatik (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Oldenburger Institut für Informatik",
-        "id": "grid.5637.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
       },
       {
         "name": "University of Oulu (Finlande)",
@@ -253,6 +326,9 @@
         "full_name": "University of Oulu",
         "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 101
       },
@@ -262,26 +338,23 @@
         "full_name": "Association of Electronic and Information Technologies",
         "id": "grid.424978.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "FlexEnable (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "FlexEnable",
-        "id": "grid.460210.1",
+        "name": "Oldenburger Institut für Informatik (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Oldenburger Institut für Informatik",
+        "id": "grid.5637.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 212
+        "z": 24
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -289,26 +362,23 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 1072
       },
       {
-        "name": "Promolding (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Promolding",
-        "id": "grid.425645.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa (Espagne)",
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
         "country": "Espagne",
-        "full_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
-        "id": "grid.13822.3a",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
-        "z": 38
+        "z": 212
       },
       {
         "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
@@ -316,33 +386,45 @@
         "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
         "id": "grid.424291.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 50
       },
       {
-        "name": "Laser Zentrum Hannover (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Laser Zentrum Hannover",
-        "id": "grid.425376.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "University of Sheffield (Royaume-Uni)",
+        "name": "FlexEnable (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "University of Sheffield",
-        "id": "grid.11835.3e",
+        "full_name": "FlexEnable",
+        "id": "grid.460210.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
-        "z": 188
+        "z": 14
       },
       {
-        "name": "Hidria (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Hidria",
-        "id": "grid.457325.2",
+        "name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+        "id": "grid.13822.3a",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "Promolding (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Promolding",
+        "id": "grid.425645.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 4
       },
@@ -352,30 +434,64 @@
         "full_name": "IK4-Lortek",
         "id": "grid.425462.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
         "y": 1,
         "z": 18
+      },
+      {
+        "name": "University of Sheffield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Sheffield",
+        "id": "grid.11835.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 188
+      },
+      {
+        "name": "Laser Zentrum Hannover (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Laser Zentrum Hannover",
+        "id": "grid.425376.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Hidria (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Hidria",
+        "id": "grid.457325.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Societal Challenges": {
     "Climate action, environment, resource efficiency and raw materials (ENV)": [
       {
-        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
-        "country": "Italie",
-        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
-        "id": "grid.5196.b",
+        "name": "Dfd-Dense Fluid Degrea... (France)",
+        "country": "France",
+        "full_name": "Dfd-Dense Fluid Degreasing",
+        "acronym": "Dfd-Dense Fluid Degrea...",
+        "id": "753021898",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Mondragon Corporation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mondragon Corporation",
-        "id": "grid.423975.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
+        "z": 1
       },
       {
         "name": "CEA (France)",
@@ -384,27 +500,47 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 27
       },
       {
-        "name": "Dfd-Dense Fluid Degrea... (France)",
-        "country": "France",
-        "full_name": "Dfd-Dense Fluid Degreasing",
-        "acronym": "Dfd-Dense Fluid Degrea...",
-        "id": "753021898",
+        "name": "Idener (Espagne)",
+        "country": "Espagne",
+        "full_name": "Idener",
+        "id": "grid.451424.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
-        "z": 1
+        "z": 11
       },
       {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
+        "name": "Mondragon Corporation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mondragon Corporation",
+        "id": "grid.423975.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
-        "z": 19
+        "z": 2
+      },
+      {
+        "name": "National Agency for New Technologies, Energy and Sustainable Economic Development (Italie)",
+        "country": "Italie",
+        "full_name": "National Agency for New Technologies, Energy and Sustainable Economic Development",
+        "id": "grid.5196.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "Pv Cycle France (France)",
@@ -413,17 +549,11 @@
         "acronym": "Pv Cycle France",
         "id": "800547499",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Idener (Espagne)",
-        "country": "Espagne",
-        "full_name": "Idener",
-        "id": "grid.451424.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "RHP Technology (Autriche)",
@@ -431,17 +561,11 @@
         "full_name": "RHP Technology",
         "id": "grid.426021.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Bifa Umweltinstitut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bifa Umweltinstitut",
-        "id": "grid.493242.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Centre for Social Innovation (Autriche)",
@@ -449,8 +573,35 @@
         "full_name": "Centre for Social Innovation",
         "id": "grid.15683.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Bifa Umweltinstitut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bifa Umweltinstitut",
+        "id": "grid.493242.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          958223
+        ],
+        "y": 1,
+        "z": 19
       },
       {
         "name": "Enel (Italie)",
@@ -458,6 +609,9 @@
         "full_name": "Enel",
         "id": "grid.10506.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          958223
+        ],
         "y": 1,
         "z": 1
       }
@@ -469,6 +623,9 @@
         "full_name": "Deutsches Institut für Normung",
         "id": "grid.424319.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 8
       },
@@ -478,6 +635,9 @@
         "full_name": "Ikerlan",
         "id": "grid.424891.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 3
       },
@@ -487,15 +647,9 @@
         "full_name": "Mondragon University",
         "id": "grid.436417.3",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Oldenburger Institut für Informatik (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Oldenburger Institut für Informatik",
-        "id": "grid.5637.7",
-        "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 1
       },
@@ -505,6 +659,9 @@
         "full_name": "University of Oulu",
         "id": "grid.10858.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 3
       },
@@ -514,6 +671,21 @@
         "full_name": "Association of Electronic and Information Technologies",
         "id": "grid.424978.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Oldenburger Institut für Informatik (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Oldenburger Institut für Informatik",
+        "id": "grid.5637.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101021911
+        ],
         "y": 1,
         "z": 1
       }
@@ -527,26 +699,11 @@
         "full_name": "Mondragon Corporation",
         "id": "grid.423975.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 10
-      },
-      {
-        "name": "FlexEnable (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "FlexEnable",
-        "id": "grid.460210.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -554,35 +711,23 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 169
       },
       {
-        "name": "Promolding (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Promolding",
-        "id": "grid.425645.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa (Espagne)",
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
         "country": "Espagne",
-        "full_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
-        "id": "grid.13822.3a",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "Research Center for Non Destructive Testing (Autriche)",
-        "country": "Autriche",
-        "full_name": "Research Center for Non Destructive Testing",
-        "id": "grid.451841.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
@@ -590,19 +735,73 @@
         "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
         "id": "grid.424291.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
         "y": 1,
         "z": 21
+      },
+      {
+        "name": "Research Center for Non Destructive Testing (Autriche)",
+        "country": "Autriche",
+        "full_name": "Research Center for Non Destructive Testing",
+        "id": "grid.451841.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "FlexEnable (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "FlexEnable",
+        "id": "grid.460210.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Estudios e Investigaciones Técnicas de Gipuzkoa",
+        "id": "grid.13822.3a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Promolding (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Promolding",
+        "id": "grid.425645.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          820661
+        ],
+        "y": 1,
+        "z": 1
       }
     ],
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "Tampere University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Tampere University",
-        "id": "grid.502801.e",
+        "name": "Softeco Sismat (Italie)",
+        "country": "Italie",
+        "full_name": "Softeco Sismat",
+        "id": "grid.426366.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
-        "z": 28
+        "z": 5
       },
       {
         "name": "Software (Allemagne)",
@@ -610,35 +809,35 @@
         "full_name": "Software",
         "id": "grid.426368.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 5
       },
       {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
-        "z": 16
+        "z": 35
       },
       {
-        "name": "Deutsches Institut für Normung (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Deutsches Institut für Normung",
-        "id": "grid.424319.9",
+        "name": "Tampere University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Tampere University",
+        "id": "grid.502801.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Softeco Sismat (Italie)",
-        "country": "Italie",
-        "full_name": "Softeco Sismat",
-        "id": "grid.426366.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
+        "z": 28
       },
       {
         "name": "Universitat Politècnica de València (Espagne)",
@@ -646,8 +845,23 @@
         "full_name": "Universitat Politècnica de València",
         "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 51
+      },
+      {
+        "name": "SIVECO (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "SIVECO",
+        "id": "grid.426215.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Instituto Tecnológico de Informática (Espagne)",
@@ -655,6 +869,9 @@
         "full_name": "Instituto Tecnológico de Informática",
         "id": "grid.425230.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 19
       },
@@ -664,44 +881,23 @@
         "full_name": "Profactor",
         "id": "grid.15165.36",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 7
       },
       {
-        "name": "University of Southampton (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Southampton",
-        "id": "grid.5491.9",
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Fidia (Italie)",
-        "country": "Italie",
-        "full_name": "Fidia",
-        "id": "grid.425191.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "SIVECO (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "SIVECO",
-        "id": "grid.426215.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Ikerlan (Espagne)",
-        "country": "Espagne",
-        "full_name": "Ikerlan",
-        "id": "grid.424891.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
+        "z": 16
       },
       {
         "name": "Ascora (Allemagne)",
@@ -709,8 +905,47 @@
         "full_name": "Ascora",
         "id": "grid.432245.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Fidia (Italie)",
+        "country": "Italie",
+        "full_name": "Fidia",
+        "id": "grid.425191.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Deutsches Institut für Normung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Deutsches Institut für Normung",
+        "id": "grid.424319.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Ikerlan (Espagne)",
+        "country": "Espagne",
+        "full_name": "Ikerlan",
+        "id": "grid.424891.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825631
+        ],
+        "y": 1,
+        "z": 28
       },
       {
         "name": "Research Center for Non Destructive Testing (Autriche)",
@@ -718,35 +953,11 @@
         "full_name": "Research Center for Non Destructive Testing",
         "id": "grid.451841.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Laser Zentrum Hannover (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Laser Zentrum Hannover",
-        "id": "grid.425376.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Sheffield (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Sheffield",
-        "id": "grid.11835.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Hidria (Slovénie)",
-        "country": "Slovénie",
-        "full_name": "Hidria",
-        "id": "grid.457325.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "IK4-Lortek (Espagne)",
@@ -754,8 +965,47 @@
         "full_name": "IK4-Lortek",
         "id": "grid.425462.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "University of Sheffield (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Sheffield",
+        "id": "grid.11835.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Laser Zentrum Hannover (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Laser Zentrum Hannover",
+        "id": "grid.425376.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Hidria (Slovénie)",
+        "country": "Slovénie",
+        "full_name": "Hidria",
+        "id": "grid.457325.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636902
+        ],
+        "y": 1,
+        "z": 2
       }
     ]
   }

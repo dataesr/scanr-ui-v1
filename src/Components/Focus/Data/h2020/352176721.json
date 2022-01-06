@@ -2,12 +2,40 @@
   "all": {
     "all": [
       {
+        "name": "CEPN (France)",
+        "country": "France",
+        "full_name": "Ctre Etude Evaluat Protect Domain Nuclea",
+        "acronym": "CEPN",
+        "id": "310071477",
+        "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Tecnatom (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnatom",
+        "id": "grid.6467.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
         "name": "IRSN (France)",
         "country": "France",
         "full_name": "Institut de radioprotection et de sûreté nucléaire",
         "acronym": "IRSN",
         "id": "86GK4",
         "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
         "y": 1,
         "z": 48
       },
@@ -18,18 +46,16 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
         "y": 1,
         "z": 852
-      },
-      {
-        "name": "Tecnatom (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnatom",
-        "id": "grid.6467.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
+      }
+    ]
+  },
+  "Euratom": {
+    "Euratom (EURATOM)": [
       {
         "name": "CEPN (France)",
         "country": "France",
@@ -37,13 +63,24 @@
         "acronym": "CEPN",
         "id": "310071477",
         "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
         "y": 1,
         "z": 4
-      }
-    ]
-  },
-  "Euratom": {
-    "Euratom (EURATOM)": [
+      },
+      {
+        "name": "Tecnatom (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnatom",
+        "id": "grid.6467.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
+        "y": 1,
+        "z": 9
+      },
       {
         "name": "IRSN (France)",
         "country": "France",
@@ -51,6 +88,9 @@
         "acronym": "IRSN",
         "id": "86GK4",
         "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
         "y": 1,
         "z": 41
       },
@@ -61,27 +101,11 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          945255
+        ],
         "y": 1,
         "z": 66
-      },
-      {
-        "name": "Tecnatom (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnatom",
-        "id": "grid.6467.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "CEPN (France)",
-        "country": "France",
-        "full_name": "Ctre Etude Evaluat Protect Domain Nuclea",
-        "acronym": "CEPN",
-        "id": "310071477",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
       }
     ]
   }

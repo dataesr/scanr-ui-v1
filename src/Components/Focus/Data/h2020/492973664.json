@@ -2,59 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "L-Up (France)",
-        "country": "France",
-        "full_name": "L-Up",
-        "acronym": "L-Up",
-        "id": "438101651",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "Lodz University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Lodz University of Technology",
-        "id": "grid.412284.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Mondragon Corporation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mondragon Corporation",
-        "id": "grid.423975.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "IQE (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "IQE",
-        "id": "grid.425279.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Center for Electronics and Microtechnology",
-        "id": "grid.423798.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 86
       },
       {
         "name": "Technical University of Madrid (Espagne)",
@@ -62,6 +19,9 @@
         "full_name": "Technical University of Madrid",
         "id": "grid.5690.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 250
       },
@@ -71,58 +31,11 @@
         "full_name": "Engie",
         "id": "grid.425752.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 23
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "L-Up (France)",
-        "country": "France",
-        "full_name": "L-Up",
-        "acronym": "L-Up",
-        "id": "438101651",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 108
-      },
-      {
-        "name": "Lodz University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Lodz University of Technology",
-        "id": "grid.412284.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Mondragon Corporation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Mondragon Corporation",
-        "id": "grid.423975.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "IQE (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "IQE",
-        "id": "grid.425279.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
@@ -130,8 +43,76 @@
         "full_name": "Swiss Center for Electronics and Microtechnology",
         "id": "grid.423798.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 86
+      },
+      {
+        "name": "Lodz University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Lodz University of Technology",
+        "id": "grid.412284.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 15
+      },
+      {
+        "name": "Mondragon Corporation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mondragon Corporation",
+        "id": "grid.423975.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "L-Up (France)",
+        "country": "France",
+        "full_name": "L-Up",
+        "acronym": "L-Up",
+        "id": "438101651",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "IQE (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "IQE",
+        "id": "grid.425279.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 5
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 108
       },
       {
         "name": "Technical University of Madrid (Espagne)",
@@ -139,6 +120,9 @@
         "full_name": "Technical University of Madrid",
         "id": "grid.5690.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 12
       },
@@ -148,8 +132,72 @@
         "full_name": "Engie",
         "id": "grid.425752.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Center for Electronics and Microtechnology",
+        "id": "grid.423798.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Lodz University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Lodz University of Technology",
+        "id": "grid.412284.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Mondragon Corporation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mondragon Corporation",
+        "id": "grid.423975.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "L-Up (France)",
+        "country": "France",
+        "full_name": "L-Up",
+        "acronym": "L-Up",
+        "id": "438101651",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "IQE (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "IQE",
+        "id": "grid.425279.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          857775
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

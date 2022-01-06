@@ -2,59 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "F6S Network (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "F6S Network",
-        "id": "grid.450727.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen",
-        "id": "grid.439195.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 361
-      },
-      {
-        "name": "IRT-M2P (France)",
-        "country": "France",
-        "full_name": "IRT Matériaux, Métallurgie, Procédés",
-        "acronym": "IRT-M2P",
-        "id": "Bzf48",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "Siemens (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Siemens",
-        "id": "grid.5406.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 120
       },
       {
         "name": "CIRAM (France)",
@@ -63,36 +20,11 @@
         "acronym": "CIRAM",
         "id": "8BcQ6",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 4
-      },
-      {
-        "name": "Open Edge (France)",
-        "country": "France",
-        "full_name": "Open Edge",
-        "acronym": "Open Edge",
-        "id": "797935913",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Copenhagen Business School (Danemark)",
-        "country": "Danemark",
-        "full_name": "Copenhagen Business School",
-        "id": "grid.4655.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines",
-        "id": "grid.474032.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "European Dynamics (Grèce)",
@@ -100,8 +32,48 @@
         "full_name": "European Dynamics",
         "id": "grid.434597.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 21
+      },
+      {
+        "name": "Copenhagen Business School (Danemark)",
+        "country": "Danemark",
+        "full_name": "Copenhagen Business School",
+        "id": "grid.4655.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen",
+        "id": "grid.439195.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "IRT-M2P (France)",
+        "country": "France",
+        "full_name": "IRT Matériaux, Métallurgie, Procédés",
+        "acronym": "IRT-M2P",
+        "id": "Bzf48",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Fablabvosges (France)",
@@ -110,67 +82,88 @@
         "acronym": "Fablabvosges",
         "id": "833700289",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Siemens (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Siemens",
+        "id": "grid.5406.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 120
+      },
+      {
+        "name": "F6S Network (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "F6S Network",
+        "id": "grid.450727.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines",
+        "id": "grid.474032.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Open Edge (France)",
+        "country": "France",
+        "full_name": "Open Edge",
+        "acronym": "Open Edge",
+        "id": "797935913",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 361
       }
     ]
   },
   "Industrial Leadership": {
     "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
       {
-        "name": "F6S Network (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "F6S Network",
-        "id": "grid.450727.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen",
-        "id": "grid.439195.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "IRT-M2P (France)",
-        "country": "France",
-        "full_name": "IRT Matériaux, Métallurgie, Procédés",
-        "acronym": "IRT-M2P",
-        "id": "Bzf48",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 169
-      },
-      {
-        "name": "Siemens (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Siemens",
-        "id": "grid.5406.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
       },
       {
         "name": "CIRAM (France)",
@@ -179,16 +172,21 @@
         "acronym": "CIRAM",
         "id": "8BcQ6",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Open Edge (France)",
-        "country": "France",
-        "full_name": "Open Edge",
-        "acronym": "Open Edge",
-        "id": "797935913",
+        "name": "European Dynamics (Grèce)",
+        "country": "Grèce",
+        "full_name": "European Dynamics",
+        "id": "grid.434597.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 1
       },
@@ -198,26 +196,36 @@
         "full_name": "Copenhagen Business School",
         "id": "grid.4655.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines",
-        "id": "grid.474032.6",
+        "name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Zentrum für Innovation und Technik in Nordrhein-Westfalen",
+        "id": "grid.439195.3",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "European Dynamics (Grèce)",
-        "country": "Grèce",
-        "full_name": "European Dynamics",
-        "id": "grid.434597.8",
-        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "IRT-M2P (France)",
+        "country": "France",
+        "full_name": "IRT Matériaux, Métallurgie, Procédés",
+        "acronym": "IRT-M2P",
+        "id": "Bzf48",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Fablabvosges (France)",
@@ -226,8 +234,72 @@
         "acronym": "Fablabvosges",
         "id": "833700289",
         "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Siemens (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Siemens",
+        "id": "grid.5406.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "F6S Network (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "F6S Network",
+        "id": "grid.450727.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico Metalmecánico, Mueble, Madera, Embalaje y Afines",
+        "id": "grid.474032.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Open Edge (France)",
+        "country": "France",
+        "full_name": "Open Edge",
+        "acronym": "Open Edge",
+        "id": "797935913",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870037
+        ],
+        "y": 1,
+        "z": 31
       }
     ]
   }

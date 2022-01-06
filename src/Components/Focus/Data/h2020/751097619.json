@@ -2,23 +2,31 @@
   "all": {
     "all": [
       {
-        "name": "Electricity Authority of Cyprus (Chypre)",
-        "country": "Chypre",
-        "full_name": "Electricity Authority of Cyprus",
-        "id": "grid.424327.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
-      },
-      {
         "name": "Sorea Société des Régi... (France)",
         "country": "France",
         "full_name": "Sorea Société des Régies de l'arc",
         "acronym": "Sorea Société des Régi...",
         "id": "492931944",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 7
+      },
+      {
+        "name": "Electricity Authority of Cyprus (Chypre)",
+        "country": "Chypre",
+        "full_name": "Electricity Authority of Cyprus",
+        "id": "grid.424327.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
+        "y": 2,
+        "z": 6
       },
       {
         "name": "University of Cyprus (Chypre)",
@@ -26,6 +34,10 @@
         "full_name": "University of Cyprus",
         "id": "grid.6603.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 106
       },
@@ -35,6 +47,10 @@
         "full_name": "Centre for Research and Technology Hellas",
         "id": "grid.423747.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 361
       },
@@ -44,26 +60,11 @@
         "full_name": "Teesside University",
         "id": "grid.26597.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Virtual Power Solutions (Portugal)",
-        "country": "Portugal",
-        "full_name": "Virtual Power Solutions",
-        "id": "grid.470659.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente (Portugal)",
-        "country": "Portugal",
-        "full_name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente",
-        "id": "grid.425283.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Engineering (Italie)",
@@ -71,26 +72,23 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 134
       },
       {
-        "name": "SIVECO (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "SIVECO",
-        "id": "grid.426215.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "Catholic University of Portugal (Portugal)",
+        "name": "Virtual Power Solutions (Portugal)",
         "country": "Portugal",
-        "full_name": "Catholic University of Portugal",
-        "id": "grid.7831.d",
+        "full_name": "Virtual Power Solutions",
+        "id": "grid.470659.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 20
+        "z": 7
       },
       {
         "name": "Newcastle University (Royaume-Uni)",
@@ -98,62 +96,35 @@
         "full_name": "Newcastle University",
         "id": "grid.1006.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 149
       },
       {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
+        "name": "Catholic University of Portugal (Portugal)",
+        "country": "Portugal",
+        "full_name": "Catholic University of Portugal",
+        "id": "grid.7831.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 202
+        "z": 20
       },
       {
-        "name": "Sapienza University of Rome (Italie)",
-        "country": "Italie",
-        "full_name": "Sapienza University of Rome",
-        "id": "grid.7841.a",
+        "name": "SIVECO (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "SIVECO",
+        "id": "grid.426215.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 186
-      },
-      {
-        "name": "Siemens (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Siemens",
-        "id": "grid.14601.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 386
-      },
-      {
-        "name": "Gas Natural Fenosa (Espagne)",
-        "country": "Espagne",
-        "full_name": "Gas Natural Fenosa",
-        "id": "grid.426513.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Siemens (Espagne)",
-        "country": "Espagne",
-        "full_name": "Siemens",
-        "id": "grid.426109.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
+        "z": 31
       },
       {
         "name": "ASM Terni (Italie)",
@@ -161,17 +132,95 @@
         "full_name": "ASM Terni",
         "id": "grid.473962.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 16
       },
       {
-        "name": "Siemens (Roumanie)",
-        "country": "Roumanie",
+        "name": "Siemens (Royaume-Uni)",
+        "country": "Royaume-Uni",
         "full_name": "Siemens",
-        "id": "grid.426110.0",
+        "id": "grid.14601.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 17
+        "z": 9
+      },
+      {
+        "name": "Sapienza University of Rome (Italie)",
+        "country": "Italie",
+        "full_name": "Sapienza University of Rome",
+        "id": "grid.7841.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 186
+      },
+      {
+        "name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente (Portugal)",
+        "country": "Portugal",
+        "full_name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente",
+        "id": "grid.425283.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 202
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "Siemens (Espagne)",
+        "country": "Espagne",
+        "full_name": "Siemens",
+        "id": "grid.426109.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Gas Natural Fenosa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Gas Natural Fenosa",
+        "id": "grid.426513.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Stam (Italie)",
@@ -179,6 +228,9 @@
         "full_name": "Stam",
         "id": "grid.426494.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 40
       },
@@ -188,8 +240,23 @@
         "full_name": "Karlsruhe Institute of Technology",
         "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 268
+      },
+      {
+        "name": "Siemens (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Siemens",
+        "id": "grid.426110.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "Directorate-General Joint Research Centre (Belgique)",
@@ -197,6 +264,9 @@
         "full_name": "Directorate-General Joint Research Centre",
         "id": "grid.489339.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 149
       },
@@ -206,6 +276,9 @@
         "full_name": "Hypertech",
         "id": "grid.435251.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 23
       }
@@ -214,21 +287,29 @@
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "Electricity Authority of Cyprus (Chypre)",
-        "country": "Chypre",
-        "full_name": "Electricity Authority of Cyprus",
-        "id": "grid.424327.4",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 6
-      },
-      {
         "name": "Sorea Société des Régi... (France)",
         "country": "France",
         "full_name": "Sorea Société des Régies de l'arc",
         "acronym": "Sorea Société des Régi...",
         "id": "492931944",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "Electricity Authority of Cyprus (Chypre)",
+        "country": "Chypre",
+        "full_name": "Electricity Authority of Cyprus",
+        "id": "grid.424327.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 6
       },
@@ -238,6 +319,10 @@
         "full_name": "University of Cyprus",
         "id": "grid.6603.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 17
       },
@@ -247,6 +332,10 @@
         "full_name": "Centre for Research and Technology Hellas",
         "id": "grid.423747.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268,
+          768559
+        ],
         "y": 2,
         "z": 58
       },
@@ -256,26 +345,11 @@
         "full_name": "Teesside University",
         "id": "grid.26597.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "Virtual Power Solutions (Portugal)",
-        "country": "Portugal",
-        "full_name": "Virtual Power Solutions",
-        "id": "grid.470659.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente (Portugal)",
-        "country": "Portugal",
-        "full_name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente",
-        "id": "grid.425283.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Engineering (Italie)",
@@ -283,26 +357,23 @@
         "full_name": "Engineering",
         "id": "grid.4347.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 17
       },
       {
-        "name": "SIVECO (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "SIVECO",
-        "id": "grid.426215.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Catholic University of Portugal (Portugal)",
+        "name": "Virtual Power Solutions (Portugal)",
         "country": "Portugal",
-        "full_name": "Catholic University of Portugal",
-        "id": "grid.7831.d",
+        "full_name": "Virtual Power Solutions",
+        "id": "grid.470659.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 1
+        "z": 4
       },
       {
         "name": "Newcastle University (Royaume-Uni)",
@@ -310,24 +381,45 @@
         "full_name": "Newcastle University",
         "id": "grid.1006.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 6
       },
       {
-        "name": "Atos (Espagne)",
-        "country": "Espagne",
-        "full_name": "Atos",
-        "id": "grid.410313.4",
+        "name": "Catholic University of Portugal (Portugal)",
+        "country": "Portugal",
+        "full_name": "Catholic University of Portugal",
+        "id": "grid.7831.d",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 11
+        "z": 1
       },
       {
-        "name": "Sapienza University of Rome (Italie)",
-        "country": "Italie",
-        "full_name": "Sapienza University of Rome",
-        "id": "grid.7841.a",
+        "name": "SIVECO (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "SIVECO",
+        "id": "grid.426215.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "ASM Terni (Italie)",
+        "country": "Italie",
+        "full_name": "ASM Terni",
+        "id": "grid.473962.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 8
       },
@@ -337,8 +429,47 @@
         "full_name": "Siemens",
         "id": "grid.14601.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Sapienza University of Rome (Italie)",
+        "country": "Italie",
+        "full_name": "Sapienza University of Rome",
+        "id": "grid.7841.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente (Portugal)",
+        "country": "Portugal",
+        "full_name": "Lisboa E-Nova - Agência Municipal de Energia e Ambiente",
+        "id": "grid.425283.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Atos (Espagne)",
+        "country": "Espagne",
+        "full_name": "Atos",
+        "id": "grid.410313.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Politecnico di Milano (Italie)",
@@ -346,17 +477,11 @@
         "full_name": "Politecnico di Milano",
         "id": "grid.4643.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 45
-      },
-      {
-        "name": "Gas Natural Fenosa (Espagne)",
-        "country": "Espagne",
-        "full_name": "Gas Natural Fenosa",
-        "id": "grid.426513.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Siemens (Espagne)",
@@ -364,26 +489,23 @@
         "full_name": "Siemens",
         "id": "grid.426109.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "ASM Terni (Italie)",
-        "country": "Italie",
-        "full_name": "ASM Terni",
-        "id": "grid.473962.d",
+        "name": "Gas Natural Fenosa (Espagne)",
+        "country": "Espagne",
+        "full_name": "Gas Natural Fenosa",
+        "id": "grid.426513.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          731268
+        ],
         "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Siemens (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Siemens",
-        "id": "grid.426110.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 9
       },
       {
         "name": "Stam (Italie)",
@@ -391,6 +513,9 @@
         "full_name": "Stam",
         "id": "grid.426494.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 4
       },
@@ -400,8 +525,23 @@
         "full_name": "Karlsruhe Institute of Technology",
         "id": "grid.7892.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 32
+      },
+      {
+        "name": "Siemens (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Siemens",
+        "id": "grid.426110.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Directorate-General Joint Research Centre (Belgique)",
@@ -409,6 +549,9 @@
         "full_name": "Directorate-General Joint Research Centre",
         "id": "grid.489339.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 9
       },
@@ -418,6 +561,9 @@
         "full_name": "Hypertech",
         "id": "grid.435251.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          768559
+        ],
         "y": 1,
         "z": 17
       }

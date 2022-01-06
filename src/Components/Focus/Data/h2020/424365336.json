@@ -2,31 +2,28 @@
   "all": {
     "all": [
       {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Heidelberg University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Heidelberg University",
-        "id": "grid.7700.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "Pompeu Fabra University (Espagne)",
+        "country": "Espagne",
+        "full_name": "Pompeu Fabra University",
+        "id": "grid.5612.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 94
       },
       {
         "name": "Hannover Medical School (Allemagne)",
@@ -34,8 +31,47 @@
         "full_name": "Hannover Medical School",
         "id": "grid.10423.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 35
+      },
+      {
+        "name": "Miltenyi Biotec (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Miltenyi Biotec",
+        "id": "grid.59409.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 77
+      },
+      {
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 81
       },
       {
         "name": "I. Pasteur (France)",
@@ -44,8 +80,23 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 94
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 50
       },
       {
         "name": "Medical University of Vienna (Autriche)",
@@ -53,6 +104,9 @@
         "full_name": "Medical University of Vienna",
         "id": "grid.22937.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 103
       },
@@ -62,17 +116,11 @@
         "full_name": "University of Basel",
         "id": "grid.6612.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 86
-      },
-      {
-        "name": "Miltenyi Biotec (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Miltenyi Biotec",
-        "id": "grid.59409.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
       },
       {
         "name": "Ospedale San Martino (Italie)",
@@ -80,17 +128,27 @@
         "full_name": "Ospedale San Martino",
         "id": "grid.410345.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 7
-      },
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Hebrew University of Jerusalem (Israël)",
-        "country": "Israël",
-        "full_name": "Hebrew University of Jerusalem",
-        "id": "grid.9619.7",
-        "country_level_part": "Pays associés",
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
-        "z": 77
+        "z": 54
       },
       {
         "name": "Pompeu Fabra University (Espagne)",
@@ -98,39 +156,11 @@
         "full_name": "Pompeu Fabra University",
         "id": "grid.5612.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
-        "z": 94
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Heidelberg University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Heidelberg University",
-        "id": "grid.7700.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 54
+        "z": 20
       },
       {
         "name": "Hannover Medical School (Allemagne)",
@@ -138,8 +168,47 @@
         "full_name": "Hannover Medical School",
         "id": "grid.10423.34",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 11
+      },
+      {
+        "name": "Miltenyi Biotec (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Miltenyi Biotec",
+        "id": "grid.59409.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Hebrew University of Jerusalem (Israël)",
+        "country": "Israël",
+        "full_name": "Hebrew University of Jerusalem",
+        "id": "grid.9619.7",
+        "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 25
       },
       {
         "name": "I. Pasteur (France)",
@@ -148,8 +217,23 @@
         "acronym": "I. Pasteur",
         "id": "Sn8Nt",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 26
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "Medical University of Vienna (Autriche)",
@@ -157,6 +241,9 @@
         "full_name": "Medical University of Vienna",
         "id": "grid.22937.3d",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 32
       },
@@ -166,17 +253,11 @@
         "full_name": "University of Basel",
         "id": "grid.6612.3",
         "country_level_part": "Pays associés",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 27
-      },
-      {
-        "name": "Miltenyi Biotec (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Miltenyi Biotec",
-        "id": "grid.59409.31",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
       },
       {
         "name": "Ospedale San Martino (Italie)",
@@ -184,26 +265,11 @@
         "full_name": "Ospedale San Martino",
         "id": "grid.410345.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          765104
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Hebrew University of Jerusalem (Israël)",
-        "country": "Israël",
-        "full_name": "Hebrew University of Jerusalem",
-        "id": "grid.9619.7",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Pompeu Fabra University (Espagne)",
-        "country": "Espagne",
-        "full_name": "Pompeu Fabra University",
-        "id": "grid.5612.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
       }
     ]
   }

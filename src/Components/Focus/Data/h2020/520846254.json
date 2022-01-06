@@ -2,88 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Marche Polytechnic University (Italie)",
-        "country": "Italie",
-        "full_name": "Marche Polytechnic University",
-        "id": "grid.7010.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 58
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 685
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
-      },
-      {
-        "name": "UPHF (France)",
-        "country": "France",
-        "full_name": "Université Polytechnique Hauts-de-France",
-        "acronym": "UPHF",
-        "id": "EW53M",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Junia (France)",
-        "country": "France",
-        "full_name": "Junia",
-        "acronym": "Junia",
-        "id": "73Oaz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
         "z": 2670
       },
@@ -94,48 +21,11 @@
         "acronym": "ICL",
         "id": "pgd9B",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
         "z": 22
-      },
-      {
-        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Català de Nanociència i Nanotecnologia",
-        "id": "grid.424584.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 40
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Future and Emerging Technologies (FET)": [
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Marche Polytechnic University (Italie)",
-        "country": "Italie",
-        "full_name": "Marche Polytechnic University",
-        "id": "grid.7010.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 72
       },
       {
         "name": "Universitat Politècnica de València (Espagne)",
@@ -143,38 +33,11 @@
         "full_name": "Universitat Politècnica de València",
         "id": "grid.157927.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
-        "z": 15
-      },
-      {
-        "name": "UPHF (France)",
-        "country": "France",
-        "full_name": "Université Polytechnique Hauts-de-France",
-        "acronym": "UPHF",
-        "id": "EW53M",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Junia (France)",
-        "country": "France",
-        "full_name": "Junia",
-        "acronym": "Junia",
-        "id": "73Oaz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
+        "z": 182
       },
       {
         "name": "U. Lille (France)",
@@ -183,9 +46,103 @@
         "acronym": "U. Lille",
         "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
-        "z": 10
+        "z": 124
       },
+      {
+        "name": "Junia (France)",
+        "country": "France",
+        "full_name": "Junia",
+        "acronym": "Junia",
+        "id": "73Oaz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 58
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català de Nanociència i Nanotecnologia",
+        "id": "grid.424584.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 685
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Future and Emerging Technologies (FET)": [
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -193,6 +150,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
         "z": 177
       },
@@ -203,6 +163,85 @@
         "acronym": "ICL",
         "id": "pgd9B",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Junia (France)",
+        "country": "France",
+        "full_name": "Junia",
+        "acronym": "Junia",
+        "id": "73Oaz",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
         "z": 6
       },
@@ -212,8 +251,35 @@
         "full_name": "Institut Català de Nanociència i Nanotecnologia",
         "id": "grid.424584.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713450
+        ],
+        "y": 1,
+        "z": 72
       }
     ]
   }

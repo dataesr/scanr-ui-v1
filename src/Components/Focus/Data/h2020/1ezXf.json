@@ -2,68 +2,41 @@
   "all": {
     "all": [
       {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Siemens (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Siemens",
-        "id": "grid.5406.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 120
-      },
-      {
-        "name": "Innovation Norway (Norvège)",
-        "country": "Norvège",
-        "full_name": "Innovation Norway",
-        "id": "grid.435304.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Córdoba (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Córdoba",
-        "id": "grid.411901.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 199
-      },
-      {
         "name": "Inria (France)",
         "country": "France",
         "full_name": "Institut national de recherche en informatique et en automatique",
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
         "y": 1,
         "z": 295
+      },
+      {
+        "name": "University of Bern (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Bern",
+        "id": "grid.5734.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 117
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 407
       },
       {
         "name": "U. Sorbonne Paris Nord (France)",
@@ -72,37 +45,147 @@
         "acronym": "U. Sorbonne Paris Nord",
         "id": "cqyN7",
         "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
         "y": 1,
         "z": 41
       },
       {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
+        "name": "University of Córdoba (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Córdoba",
+        "id": "grid.411901.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
         "y": 1,
-        "z": 407
+        "z": 32
       },
       {
-        "name": "University of Bern (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Bern",
-        "id": "grid.5734.5",
-        "country_level_part": "Pays associés",
+        "name": "Siemens (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Siemens",
+        "id": "grid.5406.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
         "y": 1,
-        "z": 117
+        "z": 120
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 199
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Innovation Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "Innovation Norway",
+        "id": "grid.435304.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Oslo University Hospital (Norvège)",
-        "country": "Norvège",
-        "full_name": "Oslo University Hospital",
-        "id": "grid.55325.34",
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "University of Bern (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Bern",
+        "id": "grid.5734.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "U. Sorbonne Paris Nord (France)",
+        "country": "France",
+        "full_name": "Université Sorbonne Paris Nord",
+        "acronym": "U. Sorbonne Paris Nord",
+        "id": "cqyN7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "University of Córdoba (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Córdoba",
+        "id": "grid.411901.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
         "y": 1,
         "z": 12
       },
@@ -112,6 +195,45 @@
         "full_name": "Siemens",
         "id": "grid.5406.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Oslo University Hospital (Norvège)",
+        "country": "Norvège",
+        "full_name": "Oslo University Hospital",
+        "id": "grid.55325.34",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "SINTEF (Norvège)",
+        "country": "Norvège",
+        "full_name": "SINTEF",
+        "id": "grid.4319.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
         "y": 1,
         "z": 8
       },
@@ -121,73 +243,11 @@
         "full_name": "Innovation Norway",
         "id": "grid.435304.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          722068
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "University of Córdoba (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Córdoba",
-        "id": "grid.411901.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "SINTEF (Norvège)",
-        "country": "Norvège",
-        "full_name": "SINTEF",
-        "id": "grid.4319.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
-      },
-      {
-        "name": "U. Sorbonne Paris Nord (France)",
-        "country": "France",
-        "full_name": "Université Sorbonne Paris Nord",
-        "acronym": "U. Sorbonne Paris Nord",
-        "id": "cqyN7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 81
-      },
-      {
-        "name": "University of Bern (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Bern",
-        "id": "grid.5734.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 36
       }
     ]
   }

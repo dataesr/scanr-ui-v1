@@ -2,29 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Cranfield University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cranfield University",
-        "id": "grid.12026.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 89
-      },
-      {
-        "name": "Technical University of Munich (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Munich",
-        "id": "grid.6936.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 280
-      },
-      {
         "name": "Tekever (Portugal)",
         "country": "Portugal",
         "full_name": "Tekever",
         "id": "grid.426288.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
         "y": 1,
         "z": 16
       },
@@ -34,21 +19,11 @@
         "full_name": "University of Lisbon",
         "id": "grid.9983.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
         "y": 1,
         "z": 186
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Smart, green and integrated transport (TPT)": [
-      {
-        "name": "Cranfield University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cranfield University",
-        "id": "grid.12026.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 41
       },
       {
         "name": "Technical University of Munich (Allemagne)",
@@ -56,15 +31,37 @@
         "full_name": "Technical University of Munich",
         "id": "grid.6936.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
         "y": 1,
-        "z": 29
+        "z": 280
       },
+      {
+        "name": "Cranfield University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cranfield University",
+        "id": "grid.12026.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
+        "y": 1,
+        "z": 89
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Smart, green and integrated transport (TPT)": [
       {
         "name": "Tekever (Portugal)",
         "country": "Portugal",
         "full_name": "Tekever",
         "id": "grid.426288.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
         "y": 1,
         "z": 6
       },
@@ -74,8 +71,35 @@
         "full_name": "University of Lisbon",
         "id": "grid.9983.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Cranfield University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cranfield University",
+        "id": "grid.12026.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723515
+        ],
+        "y": 1,
+        "z": 41
       }
     ]
   }

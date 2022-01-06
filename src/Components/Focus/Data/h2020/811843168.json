@@ -2,39 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Siemens (France)",
-        "country": "France",
-        "full_name": "Siemens",
-        "acronym": "Siemens",
-        "id": "gent156",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Ansaldo (Italie)",
-        "country": "Italie",
-        "full_name": "Ansaldo",
-        "id": "grid.12513.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Aristotle University of Thessaloniki (Grèce)",
-        "country": "Grèce",
-        "full_name": "Aristotle University of Thessaloniki",
-        "id": "grid.4793.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 197
-      },
-      {
         "name": "Orlen (Pologne)",
         "country": "Pologne",
         "full_name": "Orlen",
         "id": "grid.460552.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 2
       },
@@ -45,67 +20,12 @@
         "acronym": "Clauger",
         "id": "971506191",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 1
       },
-      {
-        "name": "Rina Services (Italie)",
-        "country": "Italie",
-        "full_name": "Rina Services",
-        "id": "grid.426062.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 159
-      },
-      {
-        "name": "Mitsubishi Heavy Industries (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Mitsubishi Heavy Industries",
-        "id": "grid.474359.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Royal Institute of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Royal Institute of Technology",
-        "id": "grid.5037.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 285
-      },
-      {
-        "name": "University of Genoa (Italie)",
-        "country": "Italie",
-        "full_name": "University of Genoa",
-        "id": "grid.5606.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 90
-      },
-      {
-        "name": "Alfa Laval (Suède)",
-        "country": "Suède",
-        "full_name": "Alfa Laval",
-        "id": "grid.431992.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Iren (Italie)",
-        "country": "Italie",
-        "full_name": "Iren",
-        "id": "grid.432235.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "Siemens (France)",
         "country": "France",
@@ -113,17 +33,11 @@
         "acronym": "Siemens",
         "id": "gent156",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Ansaldo (Italie)",
-        "country": "Italie",
-        "full_name": "Ansaldo",
-        "id": "grid.12513.34",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
+        "z": 27
       },
       {
         "name": "Aristotle University of Thessaloniki (Grèce)",
@@ -131,15 +45,109 @@
         "full_name": "Aristotle University of Thessaloniki",
         "id": "grid.4793.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 197
+      },
+      {
+        "name": "Ansaldo (Italie)",
+        "country": "Italie",
+        "full_name": "Ansaldo",
+        "id": "grid.12513.34",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Royal Institute of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Royal Institute of Technology",
+        "id": "grid.5037.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 285
+      },
+      {
+        "name": "Iren (Italie)",
+        "country": "Italie",
+        "full_name": "Iren",
+        "id": "grid.432235.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Mitsubishi Heavy Industries (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Mitsubishi Heavy Industries",
+        "id": "grid.474359.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 7
       },
+      {
+        "name": "Alfa Laval (Suède)",
+        "country": "Suède",
+        "full_name": "Alfa Laval",
+        "id": "grid.431992.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Genoa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Genoa",
+        "id": "grid.5606.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 90
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 159
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "Orlen (Pologne)",
         "country": "Pologne",
         "full_name": "Orlen",
         "id": "grid.460552.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 1
       },
@@ -150,26 +158,48 @@
         "acronym": "Clauger",
         "id": "971506191",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Rina Services (Italie)",
-        "country": "Italie",
-        "full_name": "Rina Services",
-        "id": "grid.426062.4",
+        "name": "Siemens (France)",
+        "country": "France",
+        "full_name": "Siemens",
+        "acronym": "Siemens",
+        "id": "gent156",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
-        "z": 48
+        "z": 3
       },
       {
-        "name": "Mitsubishi Heavy Industries (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Mitsubishi Heavy Industries",
-        "id": "grid.474359.8",
+        "name": "Aristotle University of Thessaloniki (Grèce)",
+        "country": "Grèce",
+        "full_name": "Aristotle University of Thessaloniki",
+        "id": "grid.4793.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
-        "z": 5
+        "z": 7
+      },
+      {
+        "name": "Ansaldo (Italie)",
+        "country": "Italie",
+        "full_name": "Ansaldo",
+        "id": "grid.12513.34",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -177,26 +207,11 @@
         "full_name": "Royal Institute of Technology",
         "id": "grid.5037.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 17
-      },
-      {
-        "name": "University of Genoa (Italie)",
-        "country": "Italie",
-        "full_name": "University of Genoa",
-        "id": "grid.5606.5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Alfa Laval (Suède)",
-        "country": "Suède",
-        "full_name": "Alfa Laval",
-        "id": "grid.431992.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Iren (Italie)",
@@ -204,8 +219,59 @@
         "full_name": "Iren",
         "id": "grid.432235.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
         "y": 1,
         "z": 7
+      },
+      {
+        "name": "Mitsubishi Heavy Industries (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Mitsubishi Heavy Industries",
+        "id": "grid.474359.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Alfa Laval (Suède)",
+        "country": "Suède",
+        "full_name": "Alfa Laval",
+        "id": "grid.431992.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Genoa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Genoa",
+        "id": "grid.5606.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Rina Services (Italie)",
+        "country": "Italie",
+        "full_name": "Rina Services",
+        "id": "grid.426062.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          764706
+        ],
+        "y": 1,
+        "z": 48
       }
     ]
   }

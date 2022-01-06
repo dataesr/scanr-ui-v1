@@ -2,39 +2,14 @@
   "all": {
     "all": [
       {
-        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
-        "id": "grid.420019.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 103
-      },
-      {
-        "name": "Vermilion Rep Sas (France)",
-        "country": "France",
-        "full_name": "Vermilion Rep Sas",
-        "acronym": "Vermilion Rep Sas",
-        "id": "410964837",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 361
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 1072
       },
@@ -44,28 +19,35 @@
         "full_name": "Central Mining Institute",
         "id": "grid.423527.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 8
       },
       {
-        "name": "Pôle Avenia (France)",
-        "country": "France",
-        "full_name": "Pôle Avenia",
-        "acronym": "Pôle Avenia",
-        "id": "LTg7B",
+        "name": "University of Évora (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Évora",
+        "id": "grid.8389.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 1
+        "z": 38
       },
       {
-        "name": "S3 (France)",
-        "country": "France",
-        "full_name": "Smart Seismic Solutions",
-        "acronym": "S3",
-        "id": "849313937",
+        "name": "University of Lisbon (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Lisbon",
+        "id": "grid.9983.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 1
+        "z": 186
       },
       {
         "name": "Vinci (France)",
@@ -74,18 +56,11 @@
         "acronym": "Vinci",
         "id": "gent189",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "Institut Symlog (France)",
-        "country": "France",
-        "full_name": "Institut Symlog",
-        "acronym": "Institut Symlog",
-        "id": "333120483",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "University of Edinburgh (Royaume-Uni)",
@@ -93,17 +68,36 @@
         "full_name": "University of Edinburgh",
         "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 257
       },
       {
-        "name": "University of Lisbon (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Lisbon",
-        "id": "grid.9983.b",
+        "name": "Instituto Geológico y Minero de España (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Geológico y Minero de España",
+        "id": "grid.421265.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 186
+        "z": 15
+      },
+      {
+        "name": "S3 (France)",
+        "country": "France",
+        "full_name": "Smart Seismic Solutions",
+        "acronym": "S3",
+        "id": "849313937",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "BRGM (France)",
@@ -112,49 +106,11 @@
         "acronym": "BRGM",
         "id": "MUQxd",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 68
-      },
-      {
-        "name": "IFPEN (France)",
-        "country": "France",
-        "full_name": "IFP Energies nouvelles",
-        "acronym": "IFPEN",
-        "id": "7053Q",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "University of Évora (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Évora",
-        "id": "grid.8389.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Instituto Geológico y Minero de España (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Geológico y Minero de España",
-        "id": "grid.421265.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
-        "id": "grid.420019.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
       },
       {
         "name": "Vermilion Rep Sas (France)",
@@ -163,8 +119,62 @@
         "acronym": "Vermilion Rep Sas",
         "id": "410964837",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Pôle Avenia (France)",
+        "country": "France",
+        "full_name": "Pôle Avenia",
+        "acronym": "Pôle Avenia",
+        "id": "LTg7B",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institut Symlog (France)",
+        "country": "France",
+        "full_name": "Institut Symlog",
+        "acronym": "Institut Symlog",
+        "id": "333120483",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
+        "id": "grid.420019.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 103
+      },
+      {
+        "name": "IFPEN (France)",
+        "country": "France",
+        "full_name": "IFP Energies nouvelles",
+        "acronym": "IFPEN",
+        "id": "7053Q",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 31
       },
       {
         "name": "Centre for Research and Technology Hellas (Grèce)",
@@ -172,15 +182,25 @@
         "full_name": "Centre for Research and Technology Hellas",
         "id": "grid.423747.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 58
-      },
+        "z": 361
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 108
       },
@@ -190,28 +210,35 @@
         "full_name": "Central Mining Institute",
         "id": "grid.423527.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 4
       },
       {
-        "name": "Pôle Avenia (France)",
-        "country": "France",
-        "full_name": "Pôle Avenia",
-        "acronym": "Pôle Avenia",
-        "id": "LTg7B",
+        "name": "University of Évora (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Évora",
+        "id": "grid.8389.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 1
+        "z": 6
       },
       {
-        "name": "S3 (France)",
-        "country": "France",
-        "full_name": "Smart Seismic Solutions",
-        "acronym": "S3",
-        "id": "849313937",
+        "name": "University of Lisbon (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Lisbon",
+        "id": "grid.9983.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 1
+        "z": 9
       },
       {
         "name": "Vinci (France)",
@@ -220,18 +247,11 @@
         "acronym": "Vinci",
         "id": "gent189",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Institut Symlog (France)",
-        "country": "France",
-        "full_name": "Institut Symlog",
-        "acronym": "Institut Symlog",
-        "id": "333120483",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "University of Edinburgh (Royaume-Uni)",
@@ -239,17 +259,36 @@
         "full_name": "University of Edinburgh",
         "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 18
       },
       {
-        "name": "University of Lisbon (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Lisbon",
-        "id": "grid.9983.b",
+        "name": "Instituto Geológico y Minero de España (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Geológico y Minero de España",
+        "id": "grid.421265.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 9
+        "z": 4
+      },
+      {
+        "name": "S3 (France)",
+        "country": "France",
+        "full_name": "Smart Seismic Solutions",
+        "acronym": "S3",
+        "id": "849313937",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "BRGM (France)",
@@ -258,8 +297,62 @@
         "acronym": "BRGM",
         "id": "MUQxd",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 13
+      },
+      {
+        "name": "Vermilion Rep Sas (France)",
+        "country": "France",
+        "full_name": "Vermilion Rep Sas",
+        "acronym": "Vermilion Rep Sas",
+        "id": "410964837",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Pôle Avenia (France)",
+        "country": "France",
+        "full_name": "Pôle Avenia",
+        "acronym": "Pôle Avenia",
+        "id": "LTg7B",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Institut Symlog (France)",
+        "country": "France",
+        "full_name": "Institut Symlog",
+        "acronym": "Institut Symlog",
+        "id": "333120483",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas",
+        "id": "grid.420019.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
+        "y": 1,
+        "z": 22
       },
       {
         "name": "IFPEN (France)",
@@ -268,26 +361,23 @@
         "acronym": "IFPEN",
         "id": "7053Q",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "University of Évora (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Évora",
-        "id": "grid.8389.a",
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101022664
+        ],
         "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Instituto Geológico y Minero de España (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Geológico y Minero de España",
-        "id": "grid.421265.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
+        "z": 58
       }
     ]
   }

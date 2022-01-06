@@ -2,41 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 114
-      },
-      {
-        "name": "CHRU Lille (France)",
-        "country": "France",
-        "full_name": "Centre hospitalier régional universitaire de Lille",
-        "acronym": "CHRU Lille",
-        "id": "aYPW2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
         "z": 2670
       },
@@ -47,31 +21,23 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
         "z": 216
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
+      },
       {
         "name": "Université Catholique de Louvain (Belgique)",
         "country": "Belgique",
         "full_name": "Université Catholique de Louvain",
         "id": "grid.7942.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
-        "z": 12
-      },
-      {
-        "name": "CHRU Lille (France)",
-        "country": "France",
-        "full_name": "Centre hospitalier régional universitaire de Lille",
-        "acronym": "CHRU Lille",
-        "id": "aYPW2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
+        "z": 114
       },
       {
         "name": "U. Lille (France)",
@@ -80,9 +46,29 @@
         "acronym": "U. Lille",
         "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
-        "z": 12
+        "z": 124
       },
+      {
+        "name": "CHRU Lille (France)",
+        "country": "France",
+        "full_name": "Centre hospitalier régional universitaire de Lille",
+        "acronym": "CHRU Lille",
+        "id": "aYPW2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
+        "y": 1,
+        "z": 32
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -90,6 +76,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
         "z": 108
       },
@@ -100,8 +89,49 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "CHRU Lille (France)",
+        "country": "France",
+        "full_name": "Centre hospitalier régional universitaire de Lille",
+        "acronym": "CHRU Lille",
+        "id": "aYPW2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016038
+        ],
+        "y": 1,
+        "z": 15
       }
     ]
   }

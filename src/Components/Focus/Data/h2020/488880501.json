@@ -2,51 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 258
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 286
       },
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 852
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 257
-      },
-      {
-        "name": "Barcelona Supercomputing Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Supercomputing Center",
-        "id": "grid.10097.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 174
+        "z": 176
       },
       {
         "name": "Ghent University (Belgique)",
@@ -54,6 +32,9 @@
         "full_name": "Ghent University",
         "id": "grid.5342.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 273
       },
@@ -63,17 +44,23 @@
         "full_name": "ARM",
         "id": "grid.28867.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 20
       },
       {
-        "name": "University of Pisa (Italie)",
-        "country": "Italie",
-        "full_name": "University of Pisa",
-        "id": "grid.5395.a",
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 176
+        "z": 258
       },
       {
         "name": "Inria (France)",
@@ -82,17 +69,35 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 295
       },
       {
-        "name": "Chalmers University of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Chalmers University of Technology",
-        "id": "grid.5371.0",
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 221
+        "z": 257
+      },
+      {
+        "name": "Barcelona Supercomputing Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Supercomputing Center",
+        "id": "grid.10097.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
+        "y": 1,
+        "z": 174
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -101,6 +106,9 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 575
       },
@@ -110,31 +118,23 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 251
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 54
       },
       {
-        "name": "Thales (France)",
-        "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
+        "name": "Chalmers University of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Chalmers University of Technology",
+        "id": "grid.5371.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 84
+        "z": 221
       },
       {
         "name": "CEA (France)",
@@ -143,26 +143,40 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 167
+        "z": 852
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
+        "y": 1,
+        "z": 84
       },
       {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
+        "name": "University of Pisa (Italie)",
+        "country": "Italie",
+        "full_name": "University of Pisa",
+        "id": "grid.5395.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Barcelona Supercomputing Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Supercomputing Center",
-        "id": "grid.10097.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 44
+        "z": 36
       },
       {
         "name": "Ghent University (Belgique)",
@@ -170,6 +184,9 @@
         "full_name": "Ghent University",
         "id": "grid.5342.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 15
       },
@@ -179,17 +196,23 @@
         "full_name": "ARM",
         "id": "grid.28867.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "University of Pisa (Italie)",
-        "country": "Italie",
-        "full_name": "University of Pisa",
-        "id": "grid.5395.a",
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 36
+        "z": 54
       },
       {
         "name": "Inria (France)",
@@ -198,17 +221,35 @@
         "acronym": "Inria",
         "id": "E1Wdn",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 71
       },
       {
-        "name": "Chalmers University of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Chalmers University of Technology",
-        "id": "grid.5371.0",
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
-        "z": 26
+        "z": 30
+      },
+      {
+        "name": "Barcelona Supercomputing Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Supercomputing Center",
+        "id": "grid.10097.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
+        "y": 1,
+        "z": 44
       },
       {
         "name": "U. Paris-Saclay (France)",
@@ -217,6 +258,9 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 52
       },
@@ -226,8 +270,36 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
         "y": 1,
         "z": 32
+      },
+      {
+        "name": "Chalmers University of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Chalmers University of Technology",
+        "id": "grid.5371.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687698
+        ],
+        "y": 1,
+        "z": 167
       }
     ]
   }

@@ -2,13 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
-        "z": 685
+        "z": 852
       },
       {
         "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
@@ -16,6 +20,9 @@
         "full_name": "Institut de Recerca de l'Energia de Catalunya",
         "id": "grid.424742.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 40
       },
@@ -25,6 +32,9 @@
         "full_name": "IDP Ingeniería y Arquitectura Iberia",
         "id": "grid.474073.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 10
       },
@@ -35,9 +45,28 @@
         "acronym": "Kemiwatt",
         "id": "803906361",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 1
       },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
+        "y": 1,
+        "z": 685
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "CEA (France)",
         "country": "France",
@@ -45,21 +74,11 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
-        "z": 852
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 39
+        "z": 78
       },
       {
         "name": "Institut de Recerca de l'Energia de Catalunya (Espagne)",
@@ -67,6 +86,9 @@
         "full_name": "Institut de Recerca de l'Energia de Catalunya",
         "id": "grid.424742.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 17
       },
@@ -76,6 +98,9 @@
         "full_name": "IDP Ingeniería y Arquitectura Iberia",
         "id": "grid.474073.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 3
       },
@@ -86,18 +111,23 @@
         "acronym": "Kemiwatt",
         "id": "803906361",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          963652
+        ],
         "y": 1,
-        "z": 78
+        "z": 39
       }
     ]
   }

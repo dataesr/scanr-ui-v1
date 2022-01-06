@@ -2,59 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "Eli Lilly (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Eli Lilly",
-        "id": "grid.418786.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "Luxembourg Institute of Health (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Health",
-        "id": "grid.451012.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
         "name": "Servier (France)",
         "country": "France",
         "full_name": "Servier",
         "acronym": "Servier",
         "id": "gent154",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 28
       },
       {
-        "name": "Bayer (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bayer",
-        "id": "grid.420044.6",
-        "country_level_part": "Pays membres",
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
         "y": 1,
-        "z": 64
-      },
-      {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 109
-      },
-      {
-        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Organisation for Research and Treatment of Cancer",
-        "id": "grid.418936.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "z": 32
       },
       {
         "name": "de Duve Institute (Belgique)",
@@ -62,8 +32,229 @@
         "full_name": "de Duve Institute",
         "id": "grid.16549.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Centre for Genomic Regulation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Genomic Regulation",
+        "id": "grid.11478.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 69
+      },
+      {
+        "name": "CLB (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
+        "acronym": "CLB",
+        "id": "rSj62",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Zurich",
+        "id": "grid.7400.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 134
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Merck (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Merck",
+        "id": "grid.39009.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Institut Curie (France)",
+        "country": "France",
+        "full_name": "Institut Curie",
+        "acronym": "Institut Curie",
+        "id": "etRot",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "Janssen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Janssen",
+        "id": "grid.419619.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Institut Jules Bordet (Belgique)",
+        "country": "Belgique",
+        "full_name": "Institut Jules Bordet",
+        "id": "grid.418119.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Luxembourg Institute of Health (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Health",
+        "id": "grid.451012.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "King's College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "King's College London",
+        "id": "grid.13097.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 158
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 109
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 489
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 179
+      },
+      {
+        "name": "AbbVie (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "AbbVie",
+        "id": "grid.431072.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 16
       },
       {
         "name": "Weizmann Institute of Science (Israël)",
@@ -71,6 +262,9 @@
         "full_name": "Weizmann Institute of Science",
         "id": "grid.13992.30",
         "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 68
       },
@@ -81,35 +275,11 @@
         "acronym": "Ligue nationale contre...",
         "id": "J7v4t",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Centre for Genomic Regulation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Genomic Regulation",
-        "id": "grid.11478.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 69
-      },
-      {
-        "name": "Swiss Institute of Bioinformatics (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Institute of Bioinformatics",
-        "id": "grid.419765.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "King's College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "King's College London",
-        "id": "grid.13097.3c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 158
       },
       {
         "name": "Owkin France (France)",
@@ -118,36 +288,11 @@
         "acronym": "Owkin France",
         "id": "822393591",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "AbbVie (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "AbbVie",
-        "id": "grid.431072.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "CLB (France)",
-        "country": "France",
-        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
-        "acronym": "CLB",
-        "id": "rSj62",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 32
       },
       {
         "name": "Sanofi (France)",
@@ -156,54 +301,11 @@
         "acronym": "Sanofi",
         "id": "gent147",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 42
-      },
-      {
-        "name": "University of Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Zurich",
-        "id": "grid.7400.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 134
-      },
-      {
-        "name": "Institut Jules Bordet (Belgique)",
-        "country": "Belgique",
-        "full_name": "Institut Jules Bordet",
-        "id": "grid.418119.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 489
-      },
-      {
-        "name": "Janssen (Belgique)",
-        "country": "Belgique",
-        "full_name": "Janssen",
-        "id": "grid.419619.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "Institut Curie (France)",
-        "country": "France",
-        "full_name": "Institut Curie",
-        "acronym": "Institut Curie",
-        "id": "etRot",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 76
       },
       {
         "name": "Inserm (France)",
@@ -212,81 +314,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 689
-      },
-      {
-        "name": "Merck (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Merck",
-        "id": "grid.39009.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "GlaxoSmithKline (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "GlaxoSmithKline",
-        "id": "grid.418236.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "University of Birmingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Birmingham",
-        "id": "grid.6572.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 179
-      },
-      {
-        "name": "Tampere University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Tampere University",
-        "id": "grid.502801.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 142
-      },
-      {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "Fluidhouse (Finlande)",
-        "country": "Finlande",
-        "full_name": "Fluidhouse",
-        "id": "grid.434168.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Linagora Grand Sud Ouest (France)",
@@ -295,36 +327,11 @@
         "acronym": "Linagora Grand Sud Ouest",
         "id": "414316125",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 182
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
       },
       {
         "name": "Mines Albi (France)",
@@ -333,17 +340,23 @@
         "acronym": "Mines Albi",
         "id": "M4CZX",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 9
       },
       {
-        "name": "University of Minho (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Minho",
-        "id": "grid.10328.38",
+        "name": "Tampere University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Tampere University",
+        "id": "grid.502801.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
-        "z": 81
+        "z": 142
       },
       {
         "name": "Caixa Mágica Software (Portugal)",
@@ -351,8 +364,72 @@
         "full_name": "Caixa Mágica Software",
         "id": "grid.424495.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 182
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "University of Minho (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Minho",
+        "id": "grid.10328.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 51
       },
       {
         "name": "International Virtual Laboratory for Enterprise Interoperability (Belgique)",
@@ -360,6 +437,9 @@
         "full_name": "International Virtual Laboratory for Enterprise Interoperability",
         "id": "grid.436017.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 5
       },
@@ -369,8 +449,48 @@
         "full_name": "Atos",
         "id": "grid.410313.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 202
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Fluidhouse (Finlande)",
+        "country": "Finlande",
+        "full_name": "Fluidhouse",
+        "id": "grid.434168.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 425
       },
       {
         "name": "Ikerlan (Espagne)",
@@ -378,6 +498,9 @@
         "full_name": "Ikerlan",
         "id": "grid.424891.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 59
       }
@@ -386,59 +509,29 @@
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Eli Lilly (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Eli Lilly",
-        "id": "grid.418786.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Luxembourg Institute of Health (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Health",
-        "id": "grid.451012.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
         "name": "Servier (France)",
         "country": "France",
         "full_name": "Servier",
         "acronym": "Servier",
         "id": "gent154",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 25
       },
       {
-        "name": "Bayer (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bayer",
-        "id": "grid.420044.6",
-        "country_level_part": "Pays membres",
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
         "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Organisation for Research and Treatment of Cancer",
-        "id": "grid.418936.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
+        "z": 18
       },
       {
         "name": "de Duve Institute (Belgique)",
@@ -446,8 +539,229 @@
         "full_name": "de Duve Institute",
         "id": "grid.16549.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "GlaxoSmithKline (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "GlaxoSmithKline",
+        "id": "grid.418236.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Centre for Genomic Regulation (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Genomic Regulation",
+        "id": "grid.11478.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "CLB (France)",
+        "country": "France",
+        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
+        "acronym": "CLB",
+        "id": "rSj62",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "University of Zurich",
+        "id": "grid.7400.3",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Swiss Institute of Bioinformatics (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Institute of Bioinformatics",
+        "id": "grid.419765.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Merck (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Merck",
+        "id": "grid.39009.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Institut Curie (France)",
+        "country": "France",
+        "full_name": "Institut Curie",
+        "acronym": "Institut Curie",
+        "id": "etRot",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Bayer (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bayer",
+        "id": "grid.420044.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "Janssen (Belgique)",
+        "country": "Belgique",
+        "full_name": "Janssen",
+        "id": "grid.419619.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Institut Jules Bordet (Belgique)",
+        "country": "Belgique",
+        "full_name": "Institut Jules Bordet",
+        "id": "grid.418119.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "European Organisation for Research and Treatment of Cancer (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Organisation for Research and Treatment of Cancer",
+        "id": "grid.418936.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Luxembourg Institute of Health (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Health",
+        "id": "grid.451012.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Eli Lilly (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Eli Lilly",
+        "id": "grid.418786.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "King's College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "King's College London",
+        "id": "grid.13097.3c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "AbbVie (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "AbbVie",
+        "id": "grid.431072.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          821558
+        ],
+        "y": 1,
+        "z": 15
       },
       {
         "name": "Weizmann Institute of Science (Israël)",
@@ -455,6 +769,9 @@
         "full_name": "Weizmann Institute of Science",
         "id": "grid.13992.30",
         "country_level_part": "Pays associés",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 6
       },
@@ -465,35 +782,11 @@
         "acronym": "Ligue nationale contre...",
         "id": "J7v4t",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Centre for Genomic Regulation (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre for Genomic Regulation",
-        "id": "grid.11478.3b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "Swiss Institute of Bioinformatics (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Institute of Bioinformatics",
-        "id": "grid.419765.8",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "King's College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "King's College London",
-        "id": "grid.13097.3c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
       },
       {
         "name": "Owkin France (France)",
@@ -502,36 +795,11 @@
         "acronym": "Owkin France",
         "id": "822393591",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "AbbVie (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "AbbVie",
-        "id": "grid.431072.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "CLB (France)",
-        "country": "France",
-        "full_name": "Centre de lutte contre le cancer Léon-Bérard",
-        "acronym": "CLB",
-        "id": "rSj62",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 18
       },
       {
         "name": "Sanofi (France)",
@@ -540,54 +808,11 @@
         "acronym": "Sanofi",
         "id": "gent147",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 39
-      },
-      {
-        "name": "University of Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "University of Zurich",
-        "id": "grid.7400.3",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "Institut Jules Bordet (Belgique)",
-        "country": "Belgique",
-        "full_name": "Institut Jules Bordet",
-        "id": "grid.418119.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 83
-      },
-      {
-        "name": "Janssen (Belgique)",
-        "country": "Belgique",
-        "full_name": "Janssen",
-        "id": "grid.419619.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 54
-      },
-      {
-        "name": "Institut Curie (France)",
-        "country": "France",
-        "full_name": "Institut Curie",
-        "acronym": "Institut Curie",
-        "id": "etRot",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "Inserm (France)",
@@ -596,86 +821,16 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          821558
+        ],
         "y": 1,
         "z": 174
-      },
-      {
-        "name": "Merck (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Merck",
-        "id": "grid.39009.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "GlaxoSmithKline (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "GlaxoSmithKline",
-        "id": "grid.418236.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "University of Birmingham (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Birmingham",
-        "id": "grid.6572.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Tampere University (Finlande)",
-        "country": "Finlande",
-        "full_name": "Tampere University",
-        "id": "grid.502801.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "Uninova (Portugal)",
-        "country": "Portugal",
-        "full_name": "Uninova",
-        "id": "grid.410366.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 99
-      },
-      {
-        "name": "IMT (France)",
-        "country": "France",
-        "full_name": "Institut Mines-Télécom",
-        "acronym": "IMT",
-        "id": "6Th4v",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Fluidhouse (Finlande)",
-        "country": "Finlande",
-        "full_name": "Fluidhouse",
-        "id": "grid.434168.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
       {
         "name": "Linagora Grand Sud Ouest (France)",
         "country": "France",
@@ -683,36 +838,11 @@
         "acronym": "Linagora Grand Sud Ouest",
         "id": "414316125",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Instituto Tecnológico de Informática (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Informática",
-        "id": "grid.425230.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Mines Albi (France)",
@@ -721,17 +851,23 @@
         "acronym": "Mines Albi",
         "id": "M4CZX",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Minho (Portugal)",
-        "country": "Portugal",
-        "full_name": "University of Minho",
-        "id": "grid.10328.38",
+        "name": "Tampere University (Finlande)",
+        "country": "Finlande",
+        "full_name": "Tampere University",
+        "id": "grid.502801.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
-        "z": 5
+        "z": 28
       },
       {
         "name": "Caixa Mágica Software (Portugal)",
@@ -739,8 +875,72 @@
         "full_name": "Caixa Mágica Software",
         "id": "grid.424495.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "IMT (France)",
+        "country": "France",
+        "full_name": "Institut Mines-Télécom",
+        "acronym": "IMT",
+        "id": "6Th4v",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Instituto Tecnológico de Informática (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Informática",
+        "id": "grid.425230.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "University of Minho (Portugal)",
+        "country": "Portugal",
+        "full_name": "University of Minho",
+        "id": "grid.10328.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Uninova (Portugal)",
+        "country": "Portugal",
+        "full_name": "Uninova",
+        "id": "grid.410366.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 16
       },
       {
         "name": "International Virtual Laboratory for Enterprise Interoperability (Belgique)",
@@ -748,6 +948,9 @@
         "full_name": "International Virtual Laboratory for Enterprise Interoperability",
         "id": "grid.436017.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 2
       },
@@ -757,8 +960,48 @@
         "full_name": "Atos",
         "id": "grid.410313.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 104
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Fluidhouse (Finlande)",
+        "country": "Finlande",
+        "full_name": "Fluidhouse",
+        "id": "grid.434168.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
+        "y": 1,
+        "z": 99
       },
       {
         "name": "Ikerlan (Espagne)",
@@ -766,6 +1009,9 @@
         "full_name": "Ikerlan",
         "id": "grid.424891.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          636909
+        ],
         "y": 1,
         "z": 28
       }

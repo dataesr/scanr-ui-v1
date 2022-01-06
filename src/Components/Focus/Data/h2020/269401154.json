@@ -2,22 +2,41 @@
   "all": {
     "all": [
       {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 489
-      },
-      {
         "name": "Fraunhofer Society (Allemagne)",
         "country": "Allemagne",
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 1072
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "Danish Cancer Society (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Cancer Society",
+        "id": "grid.417390.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
@@ -25,8 +44,61 @@
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 258
+      },
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 39
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 388
+      },
+      {
+        "name": "University of Tromsø - The Arctic University of Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Tromsø - The Arctic University of Norway",
+        "id": "grid.10919.30",
+        "country_level_part": "Pays associés",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 489
       },
       {
         "name": "Inserm Transfert (France)",
@@ -35,6 +107,9 @@
         "acronym": "Inserm Transfert",
         "id": "434033619",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 33
       },
@@ -45,17 +120,27 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 689
-      },
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
       {
-        "name": "Danish Cancer Society (Danemark)",
-        "country": "Danemark",
-        "full_name": "Danish Cancer Society",
-        "id": "grid.417390.8",
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
-        "z": 6
+        "z": 53
       },
       {
         "name": "CNRS (France)",
@@ -64,27 +149,35 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
-        "z": 2670
+        "z": 108
       },
       {
-        "name": "University of Tromsø - The Arctic University of Norway (Norvège)",
-        "country": "Norvège",
-        "full_name": "University of Tromsø - The Arctic University of Norway",
-        "id": "grid.10919.30",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 46
-      },
-      {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
+        "name": "Danish Cancer Society (Danemark)",
+        "country": "Danemark",
+        "full_name": "Danish Cancer Society",
+        "id": "grid.417390.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
-        "z": 388
+        "z": 3
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 23
       },
       {
         "name": "UPEC (France)",
@@ -93,39 +186,48 @@
         "acronym": "UPEC",
         "id": "vb71K",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
-        "z": 39
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
+        "z": 7
+      },
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "University of Tromsø - The Arctic University of Norway (Norvège)",
+        "country": "Norvège",
+        "full_name": "University of Tromsø - The Arctic University of Norway",
+        "id": "grid.10919.30",
+        "country_level_part": "Pays associés",
+        "projects": [
+          874753
+        ],
+        "y": 1,
+        "z": 8
+      },
       {
         "name": "KU Leuven (Belgique)",
         "country": "Belgique",
         "full_name": "KU Leuven",
         "id": "grid.5596.f",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 83
-      },
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 53
-      },
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
       },
       {
         "name": "Inserm Transfert (France)",
@@ -134,6 +236,9 @@
         "acronym": "Inserm Transfert",
         "id": "434033619",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 31
       },
@@ -144,56 +249,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          874753
+        ],
         "y": 1,
         "z": 174
-      },
-      {
-        "name": "Danish Cancer Society (Danemark)",
-        "country": "Danemark",
-        "full_name": "Danish Cancer Society",
-        "id": "grid.417390.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 108
-      },
-      {
-        "name": "University of Tromsø - The Arctic University of Norway (Norvège)",
-        "country": "Norvège",
-        "full_name": "University of Tromsø - The Arctic University of Norway",
-        "id": "grid.10919.30",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "UPEC (France)",
-        "country": "France",
-        "full_name": "Université Paris-Est Créteil",
-        "acronym": "UPEC",
-        "id": "vb71K",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
       }
     ]
   }

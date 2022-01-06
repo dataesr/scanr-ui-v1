@@ -2,22 +2,30 @@
   "all": {
     "all": [
       {
-        "name": "eBOS Technologies (Chypre)",
-        "country": "Chypre",
-        "full_name": "eBOS Technologies",
-        "id": "grid.434133.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 21
-      },
-      {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
         "country": "Grèce",
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
         "y": 2,
         "z": 258
+      },
+      {
+        "name": "eBOS Technologies (Chypre)",
+        "country": "Chypre",
+        "full_name": "eBOS Technologies",
+        "id": "grid.434133.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
+        "y": 2,
+        "z": 21
       },
       {
         "name": "Forthnet (Grèce)",
@@ -25,26 +33,12 @@
         "full_name": "Forthnet",
         "id": "grid.424654.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
         "y": 2,
         "z": 10
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Iquadrat (Espagne)",
-        "country": "Espagne",
-        "full_name": "Iquadrat",
-        "id": "grid.425280.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
       },
       {
         "name": "Waterford Institute of Technology (Irlande)",
@@ -52,26 +46,11 @@
         "full_name": "Waterford Institute of Technology",
         "id": "grid.24349.38",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 32
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 199
-      },
-      {
-        "name": "Rundfunk Berlin-Brandenburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rundfunk Berlin-Brandenburg",
-        "id": "grid.426124.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
       },
       {
         "name": "Brainstorm (Espagne)",
@@ -79,8 +58,23 @@
         "full_name": "Brainstorm",
         "id": "grid.432503.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 11
+      },
+      {
+        "name": "Iquadrat (Espagne)",
+        "country": "Espagne",
+        "full_name": "Iquadrat",
+        "id": "grid.425280.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 23
       },
       {
         "name": "Telenor (Norvège)",
@@ -88,8 +82,47 @@
         "full_name": "Telenor",
         "id": "grid.28526.3b",
         "country_level_part": "Pays associés",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 155
+      },
+      {
+        "name": "Rundfunk Berlin-Brandenburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rundfunk Berlin-Brandenburg",
+        "id": "grid.426124.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 199
       },
       {
         "name": "Fraunhofer Society (Allemagne)",
@@ -97,17 +130,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          957059
+        ],
         "y": 1,
         "z": 1072
-      },
-      {
-        "name": "IBM Research - Haifa (Israël)",
-        "country": "Israël",
-        "full_name": "IBM Research - Haifa",
-        "id": "grid.11447.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 60
       },
       {
         "name": "Vitec (Allemagne)",
@@ -115,30 +142,53 @@
         "full_name": "Vitec",
         "id": "grid.472823.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          957059
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "IBM Research - Haifa (Israël)",
+        "country": "Israël",
+        "full_name": "IBM Research - Haifa",
+        "id": "grid.11447.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          957059
+        ],
+        "y": 1,
+        "z": 60
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "eBOS Technologies (Chypre)",
-        "country": "Chypre",
-        "full_name": "eBOS Technologies",
-        "id": "grid.434133.2",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 13
-      },
-      {
         "name": "Foundation for Research and Technology Hellas (Grèce)",
         "country": "Grèce",
         "full_name": "Foundation for Research and Technology Hellas",
         "id": "grid.4834.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
         "y": 2,
         "z": 54
+      },
+      {
+        "name": "eBOS Technologies (Chypre)",
+        "country": "Chypre",
+        "full_name": "eBOS Technologies",
+        "id": "grid.434133.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
+        "y": 2,
+        "z": 13
       },
       {
         "name": "Forthnet (Grèce)",
@@ -146,26 +196,12 @@
         "full_name": "Forthnet",
         "id": "grid.424654.5",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714,
+          957059
+        ],
         "y": 2,
         "z": 7
-      },
-      {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "Iquadrat (Espagne)",
-        "country": "Espagne",
-        "full_name": "Iquadrat",
-        "id": "grid.425280.9",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "Waterford Institute of Technology (Irlande)",
@@ -173,26 +209,11 @@
         "full_name": "Waterford Institute of Technology",
         "id": "grid.24349.38",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "Norwegian University of Science and Technology (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian University of Science and Technology",
-        "id": "grid.5947.f",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Rundfunk Berlin-Brandenburg (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rundfunk Berlin-Brandenburg",
-        "id": "grid.426124.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
       },
       {
         "name": "Brainstorm (Espagne)",
@@ -200,8 +221,23 @@
         "full_name": "Brainstorm",
         "id": "grid.432503.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 9
+      },
+      {
+        "name": "Iquadrat (Espagne)",
+        "country": "Espagne",
+        "full_name": "Iquadrat",
+        "id": "grid.425280.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Telenor (Norvège)",
@@ -209,6 +245,45 @@
         "full_name": "Telenor",
         "id": "grid.28526.3b",
         "country_level_part": "Pays associés",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "Rundfunk Berlin-Brandenburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rundfunk Berlin-Brandenburg",
+        "id": "grid.426124.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016714
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Norwegian University of Science and Technology (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian University of Science and Technology",
+        "id": "grid.5947.f",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101016714
+        ],
         "y": 1,
         "z": 16
       },
@@ -218,17 +293,11 @@
         "full_name": "Fraunhofer Society",
         "id": "grid.4561.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          957059
+        ],
         "y": 1,
         "z": 283
-      },
-      {
-        "name": "IBM Research - Haifa (Israël)",
-        "country": "Israël",
-        "full_name": "IBM Research - Haifa",
-        "id": "grid.11447.37",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 33
       },
       {
         "name": "Vitec (Allemagne)",
@@ -236,8 +305,23 @@
         "full_name": "Vitec",
         "id": "grid.472823.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          957059
+        ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "IBM Research - Haifa (Israël)",
+        "country": "Israël",
+        "full_name": "IBM Research - Haifa",
+        "id": "grid.11447.37",
+        "country_level_part": "Pays associés",
+        "projects": [
+          957059
+        ],
+        "y": 1,
+        "z": 33
       }
     ]
   }

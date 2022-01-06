@@ -2,22 +2,52 @@
   "all": {
     "all": [
       {
-        "name": "Edge Hill University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Edge Hill University",
-        "id": "grid.255434.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "University of York (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of York",
         "id": "grid.5685.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 88
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Open Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Open Group",
+        "id": "grid.426714.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Edge Hill University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Edge Hill University",
+        "id": "grid.255434.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "OW2 (France)",
@@ -26,36 +56,11 @@
         "acronym": "OW2",
         "id": "499409712",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 7
-      },
-      {
-        "name": "Open Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Open Group",
-        "id": "grid.426714.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "5710 (France)",
-        "country": "France",
-        "full_name": "Softeam",
-        "acronym": "5710",
-        "id": "493241897",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Dutch Research Council (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Dutch Research Council",
-        "id": "grid.420488.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 136
       },
       {
         "name": "Unparallel Innovation (Portugal)",
@@ -63,6 +68,9 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 26
       },
@@ -72,58 +80,11 @@
         "full_name": "University of L'Aquila",
         "id": "grid.158820.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 35
-      },
-      {
-        "name": "Athens University of Economics and Business (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens University of Economics and Business",
-        "id": "grid.16299.35",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 34
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Edge Hill University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Edge Hill University",
-        "id": "grid.255434.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of York (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of York",
-        "id": "grid.5685.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "OW2 (France)",
-        "country": "France",
-        "full_name": "Ow",
-        "acronym": "OW2",
-        "id": "499409712",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Open Group (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Open Group",
-        "id": "grid.426714.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
       },
       {
         "name": "5710 (France)",
@@ -132,8 +93,11 @@
         "acronym": "5710",
         "id": "493241897",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
-        "z": 9
+        "z": 10
       },
       {
         "name": "Dutch Research Council (Pays-Bas)",
@@ -141,8 +105,76 @@
         "full_name": "Dutch Research Council",
         "id": "grid.420488.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
-        "z": 6
+        "z": 136
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "University of York (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of York",
+        "id": "grid.5685.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Athens University of Economics and Business (Grèce)",
+        "country": "Grèce",
+        "full_name": "Athens University of Economics and Business",
+        "id": "grid.16299.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Open Group (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Open Group",
+        "id": "grid.426714.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Edge Hill University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Edge Hill University",
+        "id": "grid.255434.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "OW2 (France)",
+        "country": "France",
+        "full_name": "Ow",
+        "acronym": "OW2",
+        "id": "499409712",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "Unparallel Innovation (Portugal)",
@@ -150,6 +182,9 @@
         "full_name": "Unparallel Innovation",
         "id": "grid.470656.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 20
       },
@@ -159,17 +194,36 @@
         "full_name": "University of L'Aquila",
         "id": "grid.158820.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
         "z": 13
       },
       {
-        "name": "Athens University of Economics and Business (Grèce)",
-        "country": "Grèce",
-        "full_name": "Athens University of Economics and Business",
-        "id": "grid.16299.35",
+        "name": "5710 (France)",
+        "country": "France",
+        "full_name": "Softeam",
+        "acronym": "5710",
+        "id": "493241897",
         "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
         "y": 1,
-        "z": 13
+        "z": 9
+      },
+      {
+        "name": "Dutch Research Council (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Dutch Research Council",
+        "id": "grid.420488.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732223
+        ],
+        "y": 1,
+        "z": 6
       }
     ]
   }

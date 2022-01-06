@@ -2,44 +2,44 @@
   "all": {
     "all": [
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 852
-      },
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729,
+          737483
+        ],
         "y": 2,
         "z": 2670
       },
       {
-        "name": "INSA de Lyon (France)",
+        "name": "CEA (France)",
         "country": "France",
-        "full_name": "Institut national des sciences appliquées de Lyon",
-        "acronym": "INSA de Lyon",
-        "id": "8k41p",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 75
+        "projects": [
+          786729,
+          737483
+        ],
+        "y": 2,
+        "z": 852
       },
       {
-        "name": "U. Lyon 1 (France)",
-        "country": "France",
-        "full_name": "Université Claude Bernard - Lyon 1",
-        "acronym": "U. Lyon 1",
-        "id": "etBz7",
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 191
+        "z": 53
       },
       {
         "name": "International Security and Emergency Management Institute (Slovaquie)",
@@ -47,6 +47,9 @@
         "full_name": "International Security and Emergency Management Institute",
         "id": "grid.493406.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 9
       },
@@ -57,57 +60,24 @@
         "acronym": "Tl Et Associes",
         "id": "450513114",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "U. Paris-Saclay (France)",
+        "name": "U. Lyon 1 (France)",
         "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 575
-      },
-      {
-        "name": "Aeraccess (France)",
-        "country": "France",
-        "full_name": "Aeraccess",
-        "acronym": "Aeraccess",
-        "id": "807453972",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Science and Technology",
-        "id": "grid.423669.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 53
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 70
+        "z": 191
       },
       {
         "name": "Arttic (France)",
@@ -116,15 +86,161 @@
         "acronym": "Arttic",
         "id": "344112396",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 73
       },
       {
-        "name": "Softeco Sismat (Italie)",
-        "country": "Italie",
-        "full_name": "Softeco Sismat",
-        "id": "grid.426366.3",
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "Aeraccess (France)",
+        "country": "France",
+        "full_name": "Aeraccess",
+        "acronym": "Aeraccess",
+        "id": "807453972",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "INSA Centre Val de Loire (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées Centre Val de Loire",
+        "acronym": "INSA Centre Val de Loire",
+        "id": "QYw7j",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Valeo (France)",
+        "country": "France",
+        "full_name": "Valeo",
+        "acronym": "Valeo",
+        "id": "gent184",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 206
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 685
+      },
+      {
+        "name": "U. Tours (France)",
+        "country": "France",
+        "full_name": "Université de Tours",
+        "acronym": "U. Tours",
+        "id": "cqkij",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Enel (Italie)",
+        "country": "Italie",
+        "full_name": "Enel",
+        "id": "grid.10506.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "University of Messina (Italie)",
+        "country": "Italie",
+        "full_name": "University of Messina",
+        "id": "grid.10438.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 12
       },
@@ -135,92 +251,11 @@
         "acronym": "Agile Power Switch 3d ...",
         "id": "792492746",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Valeo (France)",
-        "country": "France",
-        "full_name": "Valeo",
-        "acronym": "Valeo",
-        "id": "gent184",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 206
-      },
-      {
-        "name": "U. Tours (France)",
-        "country": "France",
-        "full_name": "Université de Tours",
-        "acronym": "U. Tours",
-        "id": "cqkij",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 685
-      },
-      {
-        "name": "University of Messina (Italie)",
-        "country": "Italie",
-        "full_name": "University of Messina",
-        "id": "grid.10438.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "University of Calabria (Italie)",
-        "country": "Italie",
-        "full_name": "University of Calabria",
-        "id": "grid.7778.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
-        "name": "INSA Centre Val de Loire (France)",
-        "country": "France",
-        "full_name": "Institut national des sciences appliquées Centre Val de Loire",
-        "acronym": "INSA Centre Val de Loire",
-        "id": "QYw7j",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "STMicroelectronics (Italie)",
-        "country": "Italie",
-        "full_name": "STMicroelectronics",
-        "id": "grid.5403.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 61
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
-        "id": "grid.35247.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 20
       },
       {
         "name": "Leibniz University Hannover (Allemagne)",
@@ -228,17 +263,35 @@
         "full_name": "Leibniz University Hannover",
         "id": "grid.9122.8",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 87
       },
       {
-        "name": "University of Palermo (Italie)",
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
         "country": "Italie",
-        "full_name": "University of Palermo",
-        "id": "grid.10776.37",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 40
+        "z": 20
+      },
+      {
+        "name": "STMicroelectronics (Italie)",
+        "country": "Italie",
+        "full_name": "STMicroelectronics",
+        "id": "grid.5403.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 61
       },
       {
         "name": "Würth Elektronik (Allemagne)",
@@ -246,36 +299,23 @@
         "full_name": "Würth Elektronik",
         "id": "grid.426450.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 6
       },
       {
-        "name": "University of Catania (Italie)",
+        "name": "Softeco Sismat (Italie)",
         "country": "Italie",
-        "full_name": "University of Catania",
-        "id": "grid.8158.4",
+        "full_name": "Softeco Sismat",
+        "id": "grid.426366.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 31
-      },
-      {
-        "name": "Enel (Italie)",
-        "country": "Italie",
-        "full_name": "Enel",
-        "id": "grid.10506.32",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Safran (France)",
-        "country": "France",
-        "full_name": "Safran",
-        "acronym": "Safran",
-        "id": "gent144",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 56
+        "z": 12
       },
       {
         "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
@@ -283,8 +323,59 @@
         "full_name": "Institut Mikroelektronických Aplikací",
         "id": "grid.424651.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "University of Bologna (Italie)",
+        "country": "Italie",
+        "full_name": "University of Bologna",
+        "id": "grid.6292.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 314
+      },
+      {
+        "name": "University of Catania (Italie)",
+        "country": "Italie",
+        "full_name": "University of Catania",
+        "id": "grid.8158.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "University of Calabria (Italie)",
+        "country": "Italie",
+        "full_name": "University of Calabria",
+        "id": "grid.7778.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "University of Palermo (Italie)",
+        "country": "Italie",
+        "full_name": "University of Palermo",
+        "id": "grid.10776.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 40
       },
       {
         "name": "Czech Technical University in Prague (Rép. Tchèque)",
@@ -292,6 +383,9 @@
         "full_name": "Czech Technical University in Prague",
         "id": "grid.6652.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 89
       },
@@ -302,41 +396,53 @@
         "acronym": "Punch Powertrain France",
         "id": "424963213",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Bologna (Italie)",
-        "country": "Italie",
-        "full_name": "University of Bologna",
-        "id": "grid.6292.f",
+        "name": "Safran (France)",
+        "country": "France",
+        "full_name": "Safran",
+        "acronym": "Safran",
+        "id": "gent144",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 314
+        "z": 56
       }
     ]
   },
   "Societal Challenges": {
     "Secure societies - Protecting freedom and security of Europe and its citizens (SECURITY)": [
       {
-        "name": "INSA de Lyon (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut national des sciences appliquées de Lyon",
-        "acronym": "INSA de Lyon",
-        "id": "8k41p",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 1
+        "z": 16
       },
       {
-        "name": "U. Lyon 1 (France)",
-        "country": "France",
-        "full_name": "Université Claude Bernard - Lyon 1",
-        "acronym": "U. Lyon 1",
-        "id": "etBz7",
+        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "Luxembourg Institute of Science and Technology",
+        "id": "grid.423669.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 3
+        "z": 5
       },
       {
         "name": "International Security and Emergency Management Institute (Slovaquie)",
@@ -344,6 +450,9 @@
         "full_name": "International Security and Emergency Management Institute",
         "id": "grid.493406.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 9
       },
@@ -354,6 +463,61 @@
         "acronym": "Tl Et Associes",
         "id": "450513114",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Lyon 1 (France)",
+        "country": "France",
+        "full_name": "Université Claude Bernard - Lyon 1",
+        "acronym": "U. Lyon 1",
+        "id": "etBz7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Arttic (France)",
+        "country": "France",
+        "full_name": "Arttic",
+        "acronym": "Arttic",
+        "id": "344112396",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 1
       },
@@ -364,57 +528,11 @@
         "acronym": "U. Paris-Saclay",
         "id": "G2qA7",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 13
-      },
-      {
-        "name": "Aeraccess (France)",
-        "country": "France",
-        "full_name": "Aeraccess",
-        "acronym": "Aeraccess",
-        "id": "807453972",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "Luxembourg Institute of Science and Technology (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "Luxembourg Institute of Science and Technology",
-        "id": "grid.423669.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "UJM (France)",
@@ -423,23 +541,25 @@
         "acronym": "UJM",
         "id": "tIJ02",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Arttic (France)",
+        "name": "Aeraccess (France)",
         "country": "France",
-        "full_name": "Arttic",
-        "acronym": "Arttic",
-        "id": "344112396",
+        "full_name": "Aeraccess",
+        "acronym": "Aeraccess",
+        "id": "807453972",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 14
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
+        "z": 1
+      },
       {
         "name": "CEA (France)",
         "country": "France",
@@ -447,9 +567,16 @@
         "acronym": "CEA",
         "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          786729
+        ],
         "y": 1,
-        "z": 167
-      },
+        "z": 24
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -457,25 +584,35 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 148
       },
       {
-        "name": "Softeco Sismat (Italie)",
-        "country": "Italie",
-        "full_name": "Softeco Sismat",
-        "id": "grid.426366.3",
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 5
+        "z": 167
       },
       {
-        "name": "Agile Power Switch 3d ... (France)",
+        "name": "INSA Centre Val de Loire (France)",
         "country": "France",
-        "full_name": "Agile Power Switch 3d - Integration Apsi3d",
-        "acronym": "Agile Power Switch 3d ...",
-        "id": "792492746",
+        "full_name": "Institut national des sciences appliquées Centre Val de Loire",
+        "acronym": "INSA Centre Val de Loire",
+        "id": "QYw7j",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 2
       },
@@ -486,6 +623,9 @@
         "acronym": "Valeo",
         "id": "gent184",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 11
       },
@@ -495,8 +635,23 @@
         "full_name": "University of Padua",
         "id": "grid.5608.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 20
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 76
       },
       {
         "name": "U. Tours (France)",
@@ -505,99 +660,11 @@
         "acronym": "U. Tours",
         "id": "cqkij",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 3
-      },
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "University of Messina (Italie)",
-        "country": "Italie",
-        "full_name": "University of Messina",
-        "id": "grid.10438.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "University of Calabria (Italie)",
-        "country": "Italie",
-        "full_name": "University of Calabria",
-        "id": "grid.7778.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "INSA Centre Val de Loire (France)",
-        "country": "France",
-        "full_name": "Institut national des sciences appliquées Centre Val de Loire",
-        "acronym": "INSA Centre Val de Loire",
-        "id": "QYw7j",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "STMicroelectronics (Italie)",
-        "country": "Italie",
-        "full_name": "STMicroelectronics",
-        "id": "grid.5403.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
-        "id": "grid.35247.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Leibniz University Hannover (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Leibniz University Hannover",
-        "id": "grid.9122.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "University of Palermo (Italie)",
-        "country": "Italie",
-        "full_name": "University of Palermo",
-        "id": "grid.10776.37",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Würth Elektronik (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Würth Elektronik",
-        "id": "grid.426450.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Catania (Italie)",
-        "country": "Italie",
-        "full_name": "University of Catania",
-        "id": "grid.8158.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
       },
       {
         "name": "Enel (Italie)",
@@ -605,18 +672,96 @@
         "full_name": "Enel",
         "id": "grid.10506.32",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 6
       },
       {
-        "name": "Safran (France)",
-        "country": "France",
-        "full_name": "Safran",
-        "acronym": "Safran",
-        "id": "gent144",
+        "name": "University of Messina (Italie)",
+        "country": "Italie",
+        "full_name": "University of Messina",
+        "id": "grid.10438.3e",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 1
+        "z": 3
+      },
+      {
+        "name": "Agile Power Switch 3d ... (France)",
+        "country": "France",
+        "full_name": "Agile Power Switch 3d - Integration Apsi3d",
+        "acronym": "Agile Power Switch 3d ...",
+        "id": "792492746",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Leibniz University Hannover (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz University Hannover",
+        "id": "grid.9122.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "STMicroelectronics (Italie)",
+        "country": "Italie",
+        "full_name": "STMicroelectronics",
+        "id": "grid.5403.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Würth Elektronik (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Würth Elektronik",
+        "id": "grid.426450.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Softeco Sismat (Italie)",
+        "country": "Italie",
+        "full_name": "Softeco Sismat",
+        "id": "grid.426366.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Institut Mikroelektronických Aplikací (Rép. Tchèque)",
@@ -624,8 +769,59 @@
         "full_name": "Institut Mikroelektronických Aplikací",
         "id": "grid.424651.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 19
+      },
+      {
+        "name": "University of Bologna (Italie)",
+        "country": "Italie",
+        "full_name": "University of Bologna",
+        "id": "grid.6292.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "University of Catania (Italie)",
+        "country": "Italie",
+        "full_name": "University of Catania",
+        "id": "grid.8158.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Calabria (Italie)",
+        "country": "Italie",
+        "full_name": "University of Calabria",
+        "id": "grid.7778.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Palermo (Italie)",
+        "country": "Italie",
+        "full_name": "University of Palermo",
+        "id": "grid.10776.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
+        "y": 1,
+        "z": 3
       },
       {
         "name": "Czech Technical University in Prague (Rép. Tchèque)",
@@ -633,6 +829,9 @@
         "full_name": "Czech Technical University in Prague",
         "id": "grid.6652.7",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 19
       },
@@ -643,17 +842,24 @@
         "acronym": "Punch Powertrain France",
         "id": "424963213",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "University of Bologna (Italie)",
-        "country": "Italie",
-        "full_name": "University of Bologna",
-        "id": "grid.6292.f",
+        "name": "Safran (France)",
+        "country": "France",
+        "full_name": "Safran",
+        "acronym": "Safran",
+        "id": "gent144",
         "country_level_part": "Pays membres",
+        "projects": [
+          737483
+        ],
         "y": 1,
-        "z": 31
+        "z": 1
       }
     ]
   }

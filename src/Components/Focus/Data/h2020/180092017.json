@@ -2,68 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "Envisa (France)",
-        "country": "France",
-        "full_name": "Envisa",
-        "acronym": "Envisa",
-        "id": "452089865",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Patras (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Patras",
-        "id": "grid.11047.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 138
-      },
-      {
-        "name": "National Institute for Aerospace Research Elie Carafoli (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "National Institute for Aerospace Research Elie Carafoli",
-        "id": "grid.425276.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
-        "country": "Belgique",
-        "full_name": "Von Karman Institute for Fluid Dynamics",
-        "id": "grid.7547.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 36
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 230
-      },
-      {
         "name": "Lund University (Suède)",
         "country": "Suède",
         "full_name": "Lund University",
         "id": "grid.4514.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 211
-      },
-      {
-        "name": "Italian Aerospace Research Centre (Italie)",
-        "country": "Italie",
-        "full_name": "Italian Aerospace Research Centre",
-        "id": "grid.17374.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 46
       },
       {
         "name": "CNRS (France)",
@@ -72,17 +20,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 2670
       },
       {
-        "name": "Hamburg University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hamburg University of Technology",
-        "id": "grid.6884.2",
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
-        "z": 33
+        "z": 138
       },
       {
         "name": "German Aerospace Center (Allemagne)",
@@ -90,8 +44,35 @@
         "full_name": "German Aerospace Center",
         "id": "grid.7551.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 450
+      },
+      {
+        "name": "Italian Aerospace Research Centre (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Aerospace Research Centre",
+        "id": "grid.17374.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "National Institute for Aerospace Research Elie Carafoli (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "National Institute for Aerospace Research Elie Carafoli",
+        "id": "grid.425276.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -99,76 +80,76 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 407
+      },
+      {
+        "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
+        "country": "Belgique",
+        "full_name": "Von Karman Institute for Fluid Dynamics",
+        "id": "grid.7547.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Hamburg University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hamburg University of Technology",
+        "id": "grid.6884.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Envisa (France)",
+        "country": "France",
+        "full_name": "Envisa",
+        "acronym": "Envisa",
+        "id": "452089865",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 230
       }
     ]
   },
   "Societal Challenges": {
     "Smart, green and integrated transport (TPT)": [
       {
-        "name": "Envisa (France)",
-        "country": "France",
-        "full_name": "Envisa",
-        "acronym": "Envisa",
-        "id": "452089865",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Patras (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Patras",
-        "id": "grid.11047.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "National Institute for Aerospace Research Elie Carafoli (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "National Institute for Aerospace Research Elie Carafoli",
-        "id": "grid.425276.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
-        "country": "Belgique",
-        "full_name": "Von Karman Institute for Fluid Dynamics",
-        "id": "grid.7547.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
-      },
-      {
         "name": "Lund University (Suède)",
         "country": "Suède",
         "full_name": "Lund University",
         "id": "grid.4514.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 11
-      },
-      {
-        "name": "Italian Aerospace Research Centre (Italie)",
-        "country": "Italie",
-        "full_name": "Italian Aerospace Research Centre",
-        "id": "grid.17374.36",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
       },
       {
         "name": "CNRS (France)",
@@ -177,17 +158,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 88
       },
       {
-        "name": "Hamburg University of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hamburg University of Technology",
-        "id": "grid.6884.2",
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
-        "z": 13
+        "z": 25
       },
       {
         "name": "German Aerospace Center (Allemagne)",
@@ -195,8 +182,35 @@
         "full_name": "German Aerospace Center",
         "id": "grid.7551.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 176
+      },
+      {
+        "name": "Italian Aerospace Research Centre (Italie)",
+        "country": "Italie",
+        "full_name": "Italian Aerospace Research Centre",
+        "id": "grid.17374.36",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "National Institute for Aerospace Research Elie Carafoli (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "National Institute for Aerospace Research Elie Carafoli",
+        "id": "grid.425276.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -204,8 +218,60 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
         "y": 1,
         "z": 83
+      },
+      {
+        "name": "Von Karman Institute for Fluid Dynamics (Belgique)",
+        "country": "Belgique",
+        "full_name": "Von Karman Institute for Fluid Dynamics",
+        "id": "grid.7547.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "Hamburg University of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hamburg University of Technology",
+        "id": "grid.6884.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Envisa (France)",
+        "country": "France",
+        "full_name": "Envisa",
+        "acronym": "Envisa",
+        "id": "452089865",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101006856
+        ],
+        "y": 1,
+        "z": 32
       }
     ]
   }

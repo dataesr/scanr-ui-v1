@@ -2,50 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "U. Paris 3 (France)",
-        "country": "France",
-        "full_name": "Université Sorbonne Nouvelle - Paris 3",
-        "acronym": "U. Paris 3",
-        "id": "8k883",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "AMU (France)",
-        "country": "France",
-        "full_name": "Aix-Marseille Université",
-        "acronym": "AMU",
-        "id": "xJdyB",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 216
-      },
-      {
-        "name": "Beijing Normal University (Chine)",
-        "country": "Chine",
-        "full_name": "Beijing Normal University",
-        "id": "grid.20513.35",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 137
-      },
-      {
         "name": "AU (France)",
         "country": "France",
         "full_name": "Avignon Université",
         "acronym": "AU",
         "id": "vxHYt",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 23
       },
@@ -56,8 +21,61 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 2670
+      },
+      {
+        "name": "MNHN (France)",
+        "country": "France",
+        "full_name": "Muséum national d'histoire naturelle",
+        "acronym": "MNHN",
+        "id": "VaJ52",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 68
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 137
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "National Autonomous University of Mexico (Mexique)",
+        "country": "Mexique",
+        "full_name": "National Autonomous University of Mexico",
+        "id": "grid.9486.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 16
       },
       {
         "name": "IRD (France)",
@@ -66,6 +84,9 @@
         "acronym": "IRD",
         "id": "Uan45",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 214
       },
@@ -76,18 +97,11 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 388
-      },
-      {
-        "name": "MNHN (France)",
-        "country": "France",
-        "full_name": "Muséum national d'histoire naturelle",
-        "acronym": "MNHN",
-        "id": "VaJ52",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 68
       },
       {
         "name": "Cadi Ayyad University (Maroc)",
@@ -95,41 +109,11 @@
         "full_name": "Cadi Ayyad University",
         "id": "grid.411840.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "National Autonomous University of Mexico (Mexique)",
-        "country": "Mexique",
-        "full_name": "National Autonomous University of Mexico",
-        "id": "grid.9486.3",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 16
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
-      {
-        "name": "U. Paris 3 (France)",
-        "country": "France",
-        "full_name": "Université Sorbonne Nouvelle - Paris 3",
-        "acronym": "U. Paris 3",
-        "id": "8k883",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "AMU (France)",
-        "country": "France",
-        "full_name": "Aix-Marseille Université",
-        "acronym": "AMU",
-        "id": "xJdyB",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 79
       },
       {
         "name": "Beijing Normal University (Chine)",
@@ -137,18 +121,29 @@
         "full_name": "Beijing Normal University",
         "id": "grid.20513.35",
         "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
         "y": 1,
-        "z": 3
+        "z": 5
       },
       {
-        "name": "Autonomous University of Barcelona (Espagne)",
-        "country": "Espagne",
-        "full_name": "Autonomous University of Barcelona",
-        "id": "grid.7080.f",
+        "name": "U. Paris 3 (France)",
+        "country": "France",
+        "full_name": "Université Sorbonne Nouvelle - Paris 3",
+        "acronym": "U. Paris 3",
+        "id": "8k883",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
-        "z": 41
-      },
+        "z": 5
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
       {
         "name": "AU (France)",
         "country": "France",
@@ -156,6 +151,9 @@
         "acronym": "AU",
         "id": "vxHYt",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 10
       },
@@ -166,8 +164,61 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 938
+      },
+      {
+        "name": "MNHN (France)",
+        "country": "France",
+        "full_name": "Muséum national d'histoire naturelle",
+        "acronym": "MNHN",
+        "id": "VaJ52",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Autonomous University of Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Autonomous University of Barcelona",
+        "id": "grid.7080.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "National Autonomous University of Mexico (Mexique)",
+        "country": "Mexique",
+        "full_name": "National Autonomous University of Mexico",
+        "id": "grid.9486.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 10
       },
       {
         "name": "IRD (France)",
@@ -176,6 +227,9 @@
         "acronym": "IRD",
         "id": "Uan45",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 79
       },
@@ -186,18 +240,11 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 128
-      },
-      {
-        "name": "MNHN (France)",
-        "country": "France",
-        "full_name": "Muséum national d'histoire naturelle",
-        "acronym": "MNHN",
-        "id": "VaJ52",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
       },
       {
         "name": "Cadi Ayyad University (Maroc)",
@@ -205,17 +252,36 @@
         "full_name": "Cadi Ayyad University",
         "id": "grid.411840.8",
         "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
         "y": 1,
         "z": 3
       },
       {
-        "name": "National Autonomous University of Mexico (Mexique)",
-        "country": "Mexique",
-        "full_name": "National Autonomous University of Mexico",
-        "id": "grid.9486.3",
+        "name": "Beijing Normal University (Chine)",
+        "country": "Chine",
+        "full_name": "Beijing Normal University",
+        "id": "grid.20513.35",
         "country_level_part": "Pays tiers",
+        "projects": [
+          644015
+        ],
         "y": 1,
-        "z": 10
+        "z": 3
+      },
+      {
+        "name": "U. Paris 3 (France)",
+        "country": "France",
+        "full_name": "Université Sorbonne Nouvelle - Paris 3",
+        "acronym": "U. Paris 3",
+        "id": "8k883",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644015
+        ],
+        "y": 1,
+        "z": 5
       }
     ]
   }

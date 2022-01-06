@@ -2,22 +2,43 @@
   "all": {
     "all": [
       {
-        "name": "Budapest University of Technology and Economics (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Budapest University of Technology and Economics",
-        "id": "grid.6759.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 58
-      },
-      {
         "name": "Eindhoven University of Technology (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "Eindhoven University of Technology",
         "id": "grid.6852.9",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
         "y": 2,
         "z": 269
+      },
+      {
+        "name": "Budapest University of Technology and Economics (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Budapest University of Technology and Economics",
+        "id": "grid.6759.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 58
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 106
       },
       {
         "name": "Ingelux (France)",
@@ -26,45 +47,24 @@
         "acronym": "Ingelux",
         "id": "434086864",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
         "y": 2,
         "z": 2
       },
       {
-        "name": "Philips (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Philips",
-        "id": "grid.417284.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 106
-      },
-      {
-        "name": "Hella (Allemagne)",
+        "name": "BMW (Allemagne)",
         "country": "Allemagne",
-        "full_name": "Hella",
-        "id": "grid.424624.2",
+        "full_name": "BMW",
+        "id": "grid.14039.3f",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Materials Center Leoben (Autriche)",
-        "country": "Autriche",
-        "full_name": "Materials Center Leoben",
-        "id": "grid.474102.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Arcom (France)",
-        "country": "France",
-        "full_name": "Arcom",
-        "acronym": "Arcom",
-        "id": "488795345",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
+        "z": 48
       },
       {
         "name": "TU Darmstadt (Allemagne)",
@@ -72,6 +72,9 @@
         "full_name": "TU Darmstadt",
         "id": "grid.6546.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 98
       },
@@ -82,17 +85,11 @@
         "acronym": "Vinci",
         "id": "gent189",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "BMW (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "BMW",
-        "id": "grid.14039.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 48
       },
       {
         "name": "University of Padua (Italie)",
@@ -100,6 +97,9 @@
         "full_name": "University of Padua",
         "id": "grid.5608.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 206
       },
@@ -109,88 +109,11 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 407
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "Signify France (France)",
-        "country": "France",
-        "full_name": "Signify France",
-        "acronym": "Signify France",
-        "id": "402805527",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Piseo (France)",
-        "country": "France",
-        "full_name": "Piseo",
-        "acronym": "Piseo",
-        "id": "538206509",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Magillem Design Services (France)",
-        "country": "France",
-        "full_name": "Magillem Design Services",
-        "acronym": "Magillem Design Services",
-        "id": "492681671",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Budapest University of Technology and Economics (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Budapest University of Technology and Economics",
-        "id": "grid.6759.d",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 20
-      },
-      {
-        "name": "Eindhoven University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Eindhoven University of Technology",
-        "id": "grid.6852.9",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 75
-      },
-      {
-        "name": "Ingelux (France)",
-        "country": "France",
-        "full_name": "Ingelux",
-        "acronym": "Ingelux",
-        "id": "434086864",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 2
-      },
-      {
-        "name": "Philips (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Philips",
-        "id": "grid.417284.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 51
       },
       {
         "name": "Hella (Allemagne)",
@@ -198,17 +121,11 @@
         "full_name": "Hella",
         "id": "grid.424624.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Materials Center Leoben (Autriche)",
-        "country": "Autriche",
-        "full_name": "Materials Center Leoben",
-        "id": "grid.474102.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
+        "z": 4
       },
       {
         "name": "Arcom (France)",
@@ -217,8 +134,143 @@
         "acronym": "Arcom",
         "id": "488795345",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Materials Center Leoben (Autriche)",
+        "country": "Autriche",
+        "full_name": "Materials Center Leoben",
+        "id": "grid.474102.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Piseo (France)",
+        "country": "France",
+        "full_name": "Piseo",
+        "acronym": "Piseo",
+        "id": "538206509",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Signify France (France)",
+        "country": "France",
+        "full_name": "Signify France",
+        "acronym": "Signify France",
+        "id": "402805527",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Magillem Design Services (France)",
+        "country": "France",
+        "full_name": "Magillem Design Services",
+        "acronym": "Magillem Design Services",
+        "id": "492681671",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 425
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Information and Communication Technologies (ICT)": [
+      {
+        "name": "Eindhoven University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eindhoven University of Technology",
+        "id": "grid.6852.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 75
+      },
+      {
+        "name": "Budapest University of Technology and Economics (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Budapest University of Technology and Economics",
+        "id": "grid.6759.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 20
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 51
+      },
+      {
+        "name": "Ingelux (France)",
+        "country": "France",
+        "full_name": "Ingelux",
+        "acronym": "Ingelux",
+        "id": "434086864",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319,
+          692465
+        ],
+        "y": 2,
+        "z": 2
+      },
+      {
+        "name": "BMW (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BMW",
+        "id": "grid.14039.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "TU Darmstadt (Allemagne)",
@@ -226,6 +278,9 @@
         "full_name": "TU Darmstadt",
         "id": "grid.6546.1",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 19
       },
@@ -236,17 +291,11 @@
         "acronym": "Vinci",
         "id": "gent189",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "BMW (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "BMW",
-        "id": "grid.14039.3f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "University of Padua (Italie)",
@@ -254,6 +303,9 @@
         "full_name": "University of Padua",
         "id": "grid.5608.b",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 20
       },
@@ -263,27 +315,48 @@
         "full_name": "Delft University of Technology",
         "id": "grid.5292.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 56
       },
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
+        "name": "Hella (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hella",
+        "id": "grid.424624.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
-        "z": 99
+        "z": 2
       },
       {
-        "name": "Signify France (France)",
+        "name": "Arcom (France)",
         "country": "France",
-        "full_name": "Signify France",
-        "acronym": "Signify France",
-        "id": "402805527",
+        "full_name": "Arcom",
+        "acronym": "Arcom",
+        "id": "488795345",
         "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Materials Center Leoben (Autriche)",
+        "country": "Autriche",
+        "full_name": "Materials Center Leoben",
+        "id": "grid.474102.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007319
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Piseo (France)",
@@ -292,6 +365,22 @@
         "acronym": "Piseo",
         "id": "538206509",
         "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Signify France (France)",
+        "country": "France",
+        "full_name": "Signify France",
+        "acronym": "Signify France",
+        "id": "402805527",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
         "y": 1,
         "z": 1
       },
@@ -302,8 +391,23 @@
         "acronym": "Magillem Design Services",
         "id": "492681671",
         "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          692465
+        ],
+        "y": 1,
+        "z": 99
       }
     ]
   }

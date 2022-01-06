@@ -2,41 +2,15 @@
   "all": {
     "all": [
       {
-        "name": "MINES ParisTech PSL (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure des mines de Paris",
-        "acronym": "MINES ParisTech PSL",
-        "id": "KltnW",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "ARMINES (France)",
-        "country": "France",
-        "full_name": "ARMINES",
-        "acronym": "ARMINES",
-        "id": "Bq2kp",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "Thales (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Thales",
-        "id": "grid.426125.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 29
-      },
-      {
         "name": "Thales (France)",
         "country": "France",
         "full_name": "Thales",
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 286
       },
@@ -47,6 +21,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 2670
       },
@@ -57,13 +34,24 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 407
-      }
-    ]
-  },
-  "Industrial Leadership": {
-    "Space (SPACE)": [
+      },
+      {
+        "name": "Thales (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Thales",
+        "id": "grid.426125.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
+        "y": 1,
+        "z": 29
+      },
       {
         "name": "MINES ParisTech PSL (France)",
         "country": "France",
@@ -71,8 +59,11 @@
         "acronym": "MINES ParisTech PSL",
         "id": "KltnW",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
-        "z": 2
+        "z": 40
       },
       {
         "name": "ARMINES (France)",
@@ -81,18 +72,16 @@
         "acronym": "ARMINES",
         "id": "Bq2kp",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Thales (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Thales",
-        "id": "grid.426125.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
+        "z": 57
+      }
+    ]
+  },
+  "Industrial Leadership": {
+    "Space (SPACE)": [
       {
         "name": "Thales (France)",
         "country": "France",
@@ -100,6 +89,9 @@
         "acronym": "Thales",
         "id": "gent175",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 52
       },
@@ -110,6 +102,9 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 60
       },
@@ -120,8 +115,49 @@
         "acronym": "Université PSL",
         "id": "PpsCQ",
         "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
         "y": 1,
         "z": 12
+      },
+      {
+        "name": "Thales (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Thales",
+        "id": "grid.426125.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "MINES ParisTech PSL (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure des mines de Paris",
+        "acronym": "MINES ParisTech PSL",
+        "id": "KltnW",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ARMINES (France)",
+        "country": "France",
+        "full_name": "ARMINES",
+        "acronym": "ARMINES",
+        "id": "Bq2kp",
+        "country_level_part": "Pays membres",
+        "projects": [
+          687316
+        ],
+        "y": 1,
+        "z": 2
       }
     ]
   }

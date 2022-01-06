@@ -2,32 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "Technical University of Munich (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Munich",
-        "id": "grid.6936.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 280
-      },
-      {
-        "name": "BASF (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "BASF",
-        "id": "grid.3319.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "ESPCI PARIS-PSL (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "École supérieure de physique et de chimie industrielles de la ville de Paris",
-        "acronym": "ESPCI PARIS-PSL",
-        "id": "JGOcj",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
-        "z": 45
+        "z": 2670
       },
       {
         "name": "UBx (France)",
@@ -36,17 +21,11 @@
         "acronym": "UBx",
         "id": "90I54",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 210
-      },
-      {
-        "name": "University of Glasgow (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Glasgow",
-        "id": "grid.8756.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 153
       },
       {
         "name": "U. Paris (France)",
@@ -55,72 +34,23 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 388
       },
       {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
-        "z": 114
-      },
-      {
-        "name": "Harvard University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Harvard University",
-        "id": "grid.38142.3c",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 83
-      },
-      {
-        "name": "University of Hong Kong (Chine)",
-        "country": "Chine",
-        "full_name": "University of Hong Kong",
-        "id": "grid.194645.b",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 356
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "Institute of Physical Chemistry (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Physical Chemistry",
-        "id": "grid.425290.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Vilnius University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University",
-        "id": "grid.6441.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 37
+        "z": 280
       },
       {
         "name": "University of Cambridge (Royaume-Uni)",
@@ -128,8 +58,156 @@
         "full_name": "University of Cambridge",
         "id": "grid.5335.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 345
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 37
+      },
+      {
+        "name": "Institute of Physical Chemistry (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Physical Chemistry",
+        "id": "grid.425290.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "BASF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BASF",
+        "id": "grid.3319.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 43
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 356
+      },
+      {
+        "name": "Harvard University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Harvard University",
+        "id": "grid.38142.3c",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
+        "name": "Microfluidic ChipShop (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Microfluidic ChipShop",
+        "id": "grid.425646.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Thermo Fisher Scientific (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.420349.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 114
+      },
+      {
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 153
+      },
+      {
+        "name": "University of Hong Kong (Chine)",
+        "country": "Chine",
+        "full_name": "University of Hong Kong",
+        "id": "grid.194645.b",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "ESPCI PARIS-PSL (France)",
+        "country": "France",
+        "full_name": "École supérieure de physique et de chimie industrielles de la ville de Paris",
+        "acronym": "ESPCI PARIS-PSL",
+        "id": "JGOcj",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "University of Göttingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Göttingen",
+        "id": "grid.7450.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 73
       },
       {
         "name": "Inserm (France)",
@@ -138,67 +216,28 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 689
-      },
-      {
-        "name": "University of Göttingen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Göttingen",
-        "id": "grid.7450.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 73
-      },
-      {
-        "name": "Thermo Fisher Scientific (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Thermo Fisher Scientific",
-        "id": "grid.420349.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Microfluidic ChipShop (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Microfluidic ChipShop",
-        "id": "grid.425646.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Technical University of Munich (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Technical University of Munich",
-        "id": "grid.6936.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 53
-      },
-      {
-        "name": "BASF (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "BASF",
-        "id": "grid.3319.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "ESPCI PARIS-PSL (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "École supérieure de physique et de chimie industrielles de la ville de Paris",
-        "acronym": "ESPCI PARIS-PSL",
-        "id": "JGOcj",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
-        "z": 22
+        "z": 938
       },
       {
         "name": "UBx (France)",
@@ -207,17 +246,11 @@
         "acronym": "UBx",
         "id": "90I54",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 98
-      },
-      {
-        "name": "University of Glasgow (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Glasgow",
-        "id": "grid.8756.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 45
       },
       {
         "name": "U. Paris (France)",
@@ -226,72 +259,23 @@
         "acronym": "U. Paris",
         "id": "5cZyU",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 128
       },
       {
-        "name": "Université Catholique de Louvain (Belgique)",
-        "country": "Belgique",
-        "full_name": "Université Catholique de Louvain",
-        "id": "grid.7942.8",
+        "name": "Technical University of Munich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Technical University of Munich",
+        "id": "grid.6936.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
-        "z": 31
-      },
-      {
-        "name": "Harvard University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Harvard University",
-        "id": "grid.38142.3c",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "University of Hong Kong (Chine)",
-        "country": "Chine",
-        "full_name": "University of Hong Kong",
-        "id": "grid.194645.b",
-        "country_level_part": "Pays tiers",
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 938
-      },
-      {
-        "name": "Institute of Physical Chemistry (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Physical Chemistry",
-        "id": "grid.425290.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Vilnius University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University",
-        "id": "grid.6441.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "z": 53
       },
       {
         "name": "University of Cambridge (Royaume-Uni)",
@@ -299,8 +283,156 @@
         "full_name": "University of Cambridge",
         "id": "grid.5335.0",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 116
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Institute of Physical Chemistry (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Physical Chemistry",
+        "id": "grid.425290.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "BASF (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BASF",
+        "id": "grid.3319.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Harvard University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Harvard University",
+        "id": "grid.38142.3c",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Microfluidic ChipShop (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Microfluidic ChipShop",
+        "id": "grid.425646.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Thermo Fisher Scientific (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Thermo Fisher Scientific",
+        "id": "grid.420349.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Université Catholique de Louvain (Belgique)",
+        "country": "Belgique",
+        "full_name": "Université Catholique de Louvain",
+        "id": "grid.7942.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 45
+      },
+      {
+        "name": "University of Hong Kong (Chine)",
+        "country": "Chine",
+        "full_name": "University of Hong Kong",
+        "id": "grid.194645.b",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "ESPCI PARIS-PSL (France)",
+        "country": "France",
+        "full_name": "École supérieure de physique et de chimie industrielles de la ville de Paris",
+        "acronym": "ESPCI PARIS-PSL",
+        "id": "JGOcj",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "University of Göttingen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Göttingen",
+        "id": "grid.7450.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
+        "y": 1,
+        "z": 19
       },
       {
         "name": "Inserm (France)",
@@ -309,35 +441,11 @@
         "acronym": "Inserm",
         "id": "bZiTA",
         "country_level_part": "Pays membres",
+        "projects": [
+          813786
+        ],
         "y": 1,
         "z": 258
-      },
-      {
-        "name": "University of Göttingen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Göttingen",
-        "id": "grid.7450.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Thermo Fisher Scientific (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Thermo Fisher Scientific",
-        "id": "grid.420349.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Microfluidic ChipShop (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Microfluidic ChipShop",
-        "id": "grid.425646.7",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
       }
     ]
   }

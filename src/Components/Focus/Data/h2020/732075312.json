@@ -2,23 +2,28 @@
   "all": {
     "all": [
       {
-        "name": "Fronius (Autriche)",
-        "country": "Autriche",
-        "full_name": "Fronius",
-        "id": "grid.434551.2",
+        "name": "Engie (Belgique)",
+        "country": "Belgique",
+        "full_name": "Engie",
+        "id": "grid.425752.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 7
+        "z": 23
       },
       {
-        "name": "Trialog (France)",
-        "country": "France",
-        "full_name": "Trialog",
-        "acronym": "Trialog",
-        "id": "341120749",
+        "name": "Siemens (Italie)",
+        "country": "Italie",
+        "full_name": "Siemens",
+        "id": "grid.426107.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 9
+        "z": 8
       },
       {
         "name": "Socomec (France)",
@@ -27,17 +32,36 @@
         "acronym": "Socomec",
         "id": "548500149",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
+        "name": "Austrian Institute of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 342
+        "z": 191
+      },
+      {
+        "name": "Trialog (France)",
+        "country": "France",
+        "full_name": "Trialog",
+        "acronym": "Trialog",
+        "id": "341120749",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Engie (France)",
@@ -46,54 +70,11 @@
         "acronym": "Engie",
         "id": "gent70",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 46
-      },
-      {
-        "name": "Austrian Institute of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 191
-      },
-      {
-        "name": "E.ON Sverige (Suède)",
-        "country": "Suède",
-        "full_name": "E.ON Sverige",
-        "id": "grid.426078.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Siemens (Italie)",
-        "country": "Italie",
-        "full_name": "Siemens",
-        "id": "grid.426107.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Ceské Energetické Závody (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Ceské Energetické Závody",
-        "id": "grid.432962.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 125
       },
       {
         "name": "GE (France)",
@@ -102,17 +83,11 @@
         "acronym": "GE",
         "id": "gent84",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "Engie (Belgique)",
-        "country": "Belgique",
-        "full_name": "Engie",
-        "id": "grid.425752.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 23
       },
       {
         "name": "RWTH Aachen University (Allemagne)",
@@ -120,31 +95,100 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 251
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 342
+      },
+      {
+        "name": "Fronius (Autriche)",
+        "country": "Autriche",
+        "full_name": "Fronius",
+        "id": "grid.434551.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Ceské Energetické Závody (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Ceské Energetické Závody",
+        "id": "grid.432962.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "E.ON Sverige (Suède)",
+        "country": "Suède",
+        "full_name": "E.ON Sverige",
+        "id": "grid.426078.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 125
       }
     ]
   },
   "Societal Challenges": {
     "Secure, clean and efficient energy (ENERGY)": [
       {
-        "name": "Fronius (Autriche)",
-        "country": "Autriche",
-        "full_name": "Fronius",
-        "id": "grid.434551.2",
+        "name": "Engie (Belgique)",
+        "country": "Belgique",
+        "full_name": "Engie",
+        "id": "grid.425752.3",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 4
+        "z": 10
       },
       {
-        "name": "Trialog (France)",
-        "country": "France",
-        "full_name": "Trialog",
-        "acronym": "Trialog",
-        "id": "341120749",
+        "name": "Siemens (Italie)",
+        "country": "Italie",
+        "full_name": "Siemens",
+        "id": "grid.426107.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 4
+        "z": 6
       },
       {
         "name": "Socomec (France)",
@@ -153,17 +197,36 @@
         "acronym": "Socomec",
         "id": "548500149",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
+        "name": "Austrian Institute of Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Austrian Institute of Technology",
+        "id": "grid.4332.6",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
-        "z": 61
+        "z": 27
+      },
+      {
+        "name": "Trialog (France)",
+        "country": "France",
+        "full_name": "Trialog",
+        "acronym": "Trialog",
+        "id": "341120749",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 4
       },
       {
         "name": "Engie (France)",
@@ -172,54 +235,11 @@
         "acronym": "Engie",
         "id": "gent70",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 25
-      },
-      {
-        "name": "Austrian Institute of Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Austrian Institute of Technology",
-        "id": "grid.4332.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "E.ON Sverige (Suède)",
-        "country": "Suède",
-        "full_name": "E.ON Sverige",
-        "id": "grid.426078.f",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Siemens (Italie)",
-        "country": "Italie",
-        "full_name": "Siemens",
-        "id": "grid.426107.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Ceské Energetické Závody (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Ceské Energetické Závody",
-        "id": "grid.432962.8",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 42
       },
       {
         "name": "GE (France)",
@@ -228,17 +248,11 @@
         "acronym": "GE",
         "id": "gent84",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "Engie (Belgique)",
-        "country": "Belgique",
-        "full_name": "Engie",
-        "id": "grid.425752.3",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 10
       },
       {
         "name": "RWTH Aachen University (Allemagne)",
@@ -246,8 +260,72 @@
         "full_name": "RWTH Aachen University",
         "id": "grid.1957.a",
         "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
         "y": 1,
         "z": 32
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "Fronius (Autriche)",
+        "country": "Autriche",
+        "full_name": "Fronius",
+        "id": "grid.434551.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Ceské Energetické Závody (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Ceské Energetické Závody",
+        "id": "grid.432962.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "E.ON Sverige (Suède)",
+        "country": "Suède",
+        "full_name": "E.ON Sverige",
+        "id": "grid.426078.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          731289
+        ],
+        "y": 1,
+        "z": 42
       }
     ]
   }

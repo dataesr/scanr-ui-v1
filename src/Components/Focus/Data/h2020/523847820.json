@@ -2,104 +2,16 @@
   "all": {
     "all": [
       {
-        "name": "University of Warsaw (Pologne)",
-        "country": "Pologne",
-        "full_name": "University of Warsaw",
-        "id": "grid.12847.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 98
-      },
-      {
-        "name": "European Institute of Oncology (Italie)",
-        "country": "Italie",
-        "full_name": "European Institute of Oncology",
-        "id": "grid.15667.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "Institute of Molecular Genetics (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institute of Molecular Genetics",
-        "id": "grid.418827.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Humanitas University (Italie)",
-        "country": "Italie",
-        "full_name": "Humanitas University",
-        "id": "grid.452490.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 277
-      },
-      {
-        "name": "Royal Netherlands Academy of Arts and Sciences (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Royal Netherlands Academy of Arts and Sciences",
-        "id": "grid.418101.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 82
-      },
-      {
         "name": "Centre for Genomic Regulation (Espagne)",
         "country": "Espagne",
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 69
-      },
-      {
-        "name": "University of Southern Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Southern Denmark",
-        "id": "grid.10825.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 78
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 689
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 321
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 130
       },
       {
         "name": "CNRS (France)",
@@ -108,36 +20,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 2670
       },
       {
-        "name": "Elvesys (France)",
-        "country": "France",
-        "full_name": "Elvesys",
-        "acronym": "Elvesys",
-        "id": "531301174",
+        "name": "Humanitas University (Italie)",
+        "country": "Italie",
+        "full_name": "Humanitas University",
+        "id": "grid.452490.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Royal Institute of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Royal Institute of Technology",
-        "id": "grid.5037.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 285
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 63
+        "z": 11
       },
       {
         "name": "AMU (France)",
@@ -146,112 +45,173 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 216
+      },
+      {
+        "name": "Royal Institute of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Royal Institute of Technology",
+        "id": "grid.5037.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 285
+      },
+      {
+        "name": "Elvesys (France)",
+        "country": "France",
+        "full_name": "Elvesys",
+        "acronym": "Elvesys",
+        "id": "531301174",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 26
+      },
+      {
+        "name": "European Institute of Oncology (Italie)",
+        "country": "Italie",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Royal Netherlands Academy of Arts and Sciences (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Royal Netherlands Academy of Arts and Sciences",
+        "id": "grid.418101.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 82
+      },
+      {
+        "name": "Institute of Molecular Genetics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Molecular Genetics",
+        "id": "grid.418827.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University of Southern Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Southern Denmark",
+        "id": "grid.10825.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 78
+      },
+      {
+        "name": "University of Cantabria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 277
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 321
+      },
+      {
+        "name": "University of Warsaw (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Warsaw",
+        "id": "grid.12847.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 98
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 130
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 689
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "University of Warsaw (Pologne)",
-        "country": "Pologne",
-        "full_name": "University of Warsaw",
-        "id": "grid.12847.38",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "European Institute of Oncology (Italie)",
-        "country": "Italie",
-        "full_name": "European Institute of Oncology",
-        "id": "grid.15667.33",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Institute of Molecular Genetics (Rép. Tchèque)",
-        "country": "Rép. Tchèque",
-        "full_name": "Institute of Molecular Genetics",
-        "id": "grid.418827.0",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Humanitas University (Italie)",
-        "country": "Italie",
-        "full_name": "Humanitas University",
-        "id": "grid.452490.e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "École Polytechnique Fédérale de Lausanne",
-        "id": "grid.5333.6",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 64
-      },
-      {
-        "name": "Royal Netherlands Academy of Arts and Sciences (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Royal Netherlands Academy of Arts and Sciences",
-        "id": "grid.418101.d",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
-      },
-      {
         "name": "Centre for Genomic Regulation (Espagne)",
         "country": "Espagne",
         "full_name": "Centre for Genomic Regulation",
         "id": "grid.11478.3b",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 14
-      },
-      {
-        "name": "University of Southern Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Southern Denmark",
-        "id": "grid.10825.3e",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Inserm (France)",
-        "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "University of Copenhagen (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Copenhagen",
-        "id": "grid.5254.6",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 105
-      },
-      {
-        "name": "European Molecular Biology Laboratory (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Molecular Biology Laboratory",
-        "id": "grid.4709.a",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 15
       },
       {
         "name": "CNRS (France)",
@@ -260,36 +220,23 @@
         "acronym": "CNRS",
         "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 938
       },
       {
-        "name": "Elvesys (France)",
-        "country": "France",
-        "full_name": "Elvesys",
-        "acronym": "Elvesys",
-        "id": "531301174",
+        "name": "Humanitas University (Italie)",
+        "country": "Italie",
+        "full_name": "Humanitas University",
+        "id": "grid.452490.e",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
-        "z": 19
-      },
-      {
-        "name": "Royal Institute of Technology (Suède)",
-        "country": "Suède",
-        "full_name": "Royal Institute of Technology",
-        "id": "grid.5037.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 55
-      },
-      {
-        "name": "University of Cantabria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Cantabria",
-        "id": "grid.7821.c",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 9
+        "z": 4
       },
       {
         "name": "AMU (France)",
@@ -298,8 +245,157 @@
         "acronym": "AMU",
         "id": "xJdyB",
         "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
         "y": 1,
         "z": 79
+      },
+      {
+        "name": "Royal Institute of Technology (Suède)",
+        "country": "Suède",
+        "full_name": "Royal Institute of Technology",
+        "id": "grid.5037.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Elvesys (France)",
+        "country": "France",
+        "full_name": "Elvesys",
+        "acronym": "Elvesys",
+        "id": "531301174",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "European Institute of Oncology (Italie)",
+        "country": "Italie",
+        "full_name": "European Institute of Oncology",
+        "id": "grid.15667.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Royal Netherlands Academy of Arts and Sciences (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Royal Netherlands Academy of Arts and Sciences",
+        "id": "grid.418101.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Institute of Molecular Genetics (Rép. Tchèque)",
+        "country": "Rép. Tchèque",
+        "full_name": "Institute of Molecular Genetics",
+        "id": "grid.418827.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Southern Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Southern Denmark",
+        "id": "grid.10825.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "University of Cantabria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Cantabria",
+        "id": "grid.7821.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "École Polytechnique Fédérale de Lausanne",
+        "id": "grid.5333.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "University of Copenhagen (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Copenhagen",
+        "id": "grid.5254.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 105
+      },
+      {
+        "name": "University of Warsaw (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Warsaw",
+        "id": "grid.12847.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "European Molecular Biology Laboratory (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Molecular Biology Laboratory",
+        "id": "grid.4709.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          860002
+        ],
+        "y": 1,
+        "z": 258
       }
     ]
   }

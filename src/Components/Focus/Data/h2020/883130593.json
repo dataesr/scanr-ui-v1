@@ -2,13 +2,18 @@
   "all": {
     "all": [
       {
-        "name": "University of Trento (Italie)",
-        "country": "Italie",
-        "full_name": "University of Trento",
-        "id": "grid.11696.39",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
         "y": 2,
-        "z": 96
+        "z": 2670
       },
       {
         "name": "Polytechnic University of Turin (Italie)",
@@ -16,18 +21,25 @@
         "full_name": "Polytechnic University of Turin",
         "id": "grid.4800.c",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
         "y": 2,
         "z": 230
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "University of Trento (Italie)",
+        "country": "Italie",
+        "full_name": "University of Trento",
+        "id": "grid.11696.39",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
         "y": 2,
-        "z": 2670
+        "z": 96
       },
       {
         "name": "Imperial College London (Royaume-Uni)",
@@ -35,28 +47,11 @@
         "full_name": "Imperial College London",
         "id": "grid.7445.2",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 305
-      },
-      {
-        "name": "CLI (France)",
-        "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Junia (France)",
-        "country": "France",
-        "full_name": "Junia",
-        "acronym": "Junia",
-        "id": "73Oaz",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 28
       },
       {
         "name": "University of Turin (Italie)",
@@ -64,18 +59,11 @@
         "full_name": "University of Turin",
         "id": "grid.7605.4",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 154
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 124
       },
       {
         "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
@@ -83,6 +71,9 @@
         "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
         "id": "grid.7354.5",
         "country_level_part": "Pays associés",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 76
       },
@@ -92,17 +83,11 @@
         "full_name": "ETH Zurich",
         "id": "grid.5801.c",
         "country_level_part": "Pays associés",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 356
-      },
-      {
-        "name": "Institute of Fluid Flow-Machinery (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Fluid Flow-Machinery",
-        "id": "grid.425301.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 12
       },
       {
         "name": "ICL (France)",
@@ -111,69 +96,37 @@
         "acronym": "ICL",
         "id": "pgd9B",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 22
       },
       {
-        "name": "UPHF (France)",
+        "name": "Junia (France)",
         "country": "France",
-        "full_name": "Université Polytechnique Hauts-de-France",
-        "acronym": "UPHF",
-        "id": "EW53M",
+        "full_name": "Junia",
+        "acronym": "Junia",
+        "id": "73Oaz",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
-        "z": 27
+        "z": 28
       },
       {
-        "name": "Multiwave Imaging (France)",
+        "name": "U. Lille (France)",
         "country": "France",
-        "full_name": "Multiwave Imaging",
-        "acronym": "Multiwave Imaging",
-        "id": "822611992",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
-        "z": 3
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Future and Emerging Technologies (FET)": [
-      {
-        "name": "University of Trento (Italie)",
-        "country": "Italie",
-        "full_name": "University of Trento",
-        "id": "grid.11696.39",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 14
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 18
-      },
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "y": 2,
-        "z": 177
-      },
-      {
-        "name": "Imperial College London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Imperial College London",
-        "id": "grid.7445.2",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 32
+        "z": 124
       },
       {
         "name": "CLI (France)",
@@ -182,6 +135,152 @@
         "acronym": "CLI",
         "id": "54VTe",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Institute of Fluid Flow-Machinery (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Fluid Flow-Machinery",
+        "id": "grid.425301.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Multiwave Imaging (France)",
+        "country": "France",
+        "full_name": "Multiwave Imaging",
+        "acronym": "Multiwave Imaging",
+        "id": "822611992",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101034788
+        ],
+        "y": 1,
+        "z": 3
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Future and Emerging Technologies (FET)": [
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
+        "y": 2,
+        "z": 177
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
+        "y": 2,
+        "z": 18
+      },
+      {
+        "name": "University of Trento (Italie)",
+        "country": "Italie",
+        "full_name": "University of Trento",
+        "id": "grid.11696.39",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179,
+          101034788
+        ],
+        "y": 2,
+        "z": 14
+      },
+      {
+        "name": "Imperial College London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Imperial College London",
+        "id": "grid.7445.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
+        "name": "University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 58
+      },
+      {
+        "name": "ICL (France)",
+        "country": "France",
+        "full_name": "Institut catholique de Lille",
+        "acronym": "ICL",
+        "id": "pgd9B",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 6
       },
@@ -192,17 +291,11 @@
         "acronym": "Junia",
         "id": "73Oaz",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "University of Turin",
-        "id": "grid.7605.4",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 5
       },
       {
         "name": "U. Lille (France)",
@@ -211,43 +304,22 @@
         "acronym": "U. Lille",
         "id": "Szqy5",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 10
       },
       {
-        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
-        "id": "grid.7354.5",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 11
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "y": 1,
-        "z": 58
-      },
-      {
-        "name": "Institute of Fluid Flow-Machinery (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Fluid Flow-Machinery",
-        "id": "grid.425301.1",
-        "country_level_part": "Pays membres",
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "ICL (France)",
+        "name": "CLI (France)",
         "country": "France",
-        "full_name": "Institut catholique de Lille",
-        "acronym": "ICL",
-        "id": "pgd9B",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 6
       },
@@ -258,8 +330,23 @@
         "acronym": "UPHF",
         "id": "EW53M",
         "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Institute of Fluid Flow-Machinery (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Fluid Flow-Machinery",
+        "id": "grid.425301.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863179
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Multiwave Imaging (France)",
@@ -268,6 +355,9 @@
         "acronym": "Multiwave Imaging",
         "id": "822611992",
         "country_level_part": "Pays membres",
+        "projects": [
+          101034788
+        ],
         "y": 1,
         "z": 3
       }
