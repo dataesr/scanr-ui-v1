@@ -2,6 +2,18 @@
   "all": {
     "all": [
       {
+        "name": "Helmholtz Centre for Environmental Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Centre for Environmental Research",
+        "id": "grid.7492.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          965406
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
         "name": "Centre for Genomic Regulation (Espagne)",
         "country": "Espagne",
         "full_name": "Centre for Genomic Regulation",
@@ -50,28 +62,16 @@
         "z": 10
       },
       {
-        "name": "Helmholtz Centre for Environmental Research (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Helmholtz Centre for Environmental Research",
-        "id": "grid.7492.8",
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
         "country_level_part": "Pays membres",
         "projects": [
           965406
         ],
         "y": 1,
-        "z": 50
-      },
-      {
-        "name": "Heidelberg University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Heidelberg University",
-        "id": "grid.7700.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          965406
-        ],
-        "y": 1,
-        "z": 81
+        "z": 99
       },
       {
         "name": "University of Birmingham (Royaume-Uni)",
@@ -86,29 +86,28 @@
         "z": 179
       },
       {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
         "country_level_part": "Pays membres",
         "projects": [
           965406
         ],
         "y": 1,
-        "z": 99
+        "z": 81
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "Brunel University London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Brunel University London",
+        "id": "grid.7728.a",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 2670
+        "z": 79
       },
       {
         "name": "MNHN (France)",
@@ -124,40 +123,16 @@
         "z": 68
       },
       {
-        "name": "Erasmus MC (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Erasmus MC",
-        "id": "grid.5645.2",
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 139
-      },
-      {
-        "name": "Örebro University (Suède)",
-        "country": "Suède",
-        "full_name": "Örebro University",
-        "id": "grid.15895.30",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "VU Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU Amsterdam",
-        "id": "grid.12380.38",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 173
+        "z": 109
       },
       {
         "name": "Karlstad University (Suède)",
@@ -184,28 +159,16 @@
         "z": 379
       },
       {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
+        "name": "Örebro University (Suède)",
+        "country": "Suède",
+        "full_name": "Örebro University",
+        "id": "grid.15895.30",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 109
-      },
-      {
-        "name": "Brunel University London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Brunel University London",
-        "id": "grid.7728.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 79
+        "z": 23
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -218,11 +181,60 @@
         ],
         "y": 1,
         "z": 199
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 139
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 2670
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 173
       }
     ]
   },
   "Societal Challenges": {
     "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Helmholtz Centre for Environmental Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Helmholtz Centre for Environmental Research",
+        "id": "grid.7492.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          965406
+        ],
+        "y": 1,
+        "z": 5
+      },
       {
         "name": "Centre for Genomic Regulation (Espagne)",
         "country": "Espagne",
@@ -272,28 +284,16 @@
         "z": 1
       },
       {
-        "name": "Helmholtz Centre for Environmental Research (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Helmholtz Centre for Environmental Research",
-        "id": "grid.7492.8",
+        "name": "Leitat Technological Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Leitat Technological Center",
+        "id": "grid.452632.4",
         "country_level_part": "Pays membres",
         "projects": [
           965406
         ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Heidelberg University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Heidelberg University",
-        "id": "grid.7700.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          965406
-        ],
-        "y": 1,
-        "z": 12
+        "z": 7
       },
       {
         "name": "University of Birmingham (Royaume-Uni)",
@@ -308,29 +308,28 @@
         "z": 18
       },
       {
-        "name": "Leitat Technological Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Leitat Technological Center",
-        "id": "grid.452632.4",
+        "name": "Heidelberg University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Heidelberg University",
+        "id": "grid.7700.0",
         "country_level_part": "Pays membres",
         "projects": [
           965406
         ],
         "y": 1,
-        "z": 7
+        "z": 12
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "Brunel University London (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Brunel University London",
+        "id": "grid.7728.a",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 108
+        "z": 6
       },
       {
         "name": "MNHN (France)",
@@ -346,40 +345,16 @@
         "z": 6
       },
       {
-        "name": "Erasmus MC (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Erasmus MC",
-        "id": "grid.5645.2",
+        "name": "Charité - University Medicine Berlin (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Charité - University Medicine Berlin",
+        "id": "grid.6363.0",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 79
-      },
-      {
-        "name": "Örebro University (Suède)",
-        "country": "Suède",
-        "full_name": "Örebro University",
-        "id": "grid.15895.30",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "VU Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU Amsterdam",
-        "id": "grid.12380.38",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 29
+        "z": 57
       },
       {
         "name": "Karlstad University (Suède)",
@@ -406,28 +381,16 @@
         "z": 18
       },
       {
-        "name": "Charité - University Medicine Berlin (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Charité - University Medicine Berlin",
-        "id": "grid.6363.0",
+        "name": "Örebro University (Suède)",
+        "country": "Suède",
+        "full_name": "Örebro University",
+        "id": "grid.15895.30",
         "country_level_part": "Pays membres",
         "projects": [
           825161
         ],
         "y": 1,
-        "z": 57
-      },
-      {
-        "name": "Brunel University London (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Brunel University London",
-        "id": "grid.7728.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          825161
-        ],
-        "y": 1,
-        "z": 6
+        "z": 9
       },
       {
         "name": "RISE Research Institutes of Sweden (Suède)",
@@ -440,6 +403,43 @@
         ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Erasmus MC (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Erasmus MC",
+        "id": "grid.5645.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          825161
+        ],
+        "y": 1,
+        "z": 29
       }
     ]
   }

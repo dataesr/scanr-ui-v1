@@ -2,19 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "Kongsberg Gruppen (Norvège)",
-        "country": "Norvège",
-        "full_name": "Kongsberg Gruppen",
-        "id": "grid.435825.d",
-        "country_level_part": "Pays associés",
-        "projects": [
-          826215,
-          101007205
-        ],
-        "y": 2,
-        "z": 16
-      },
-      {
         "name": "Persee (France)",
         "country": "France",
         "full_name": "Persee",
@@ -29,17 +16,17 @@
         "z": 6
       },
       {
-        "name": "CFT (France)",
-        "country": "France",
-        "full_name": "Compagnie fluviale de Transport",
-        "acronym": "CFT",
-        "id": "325625440",
-        "country_level_part": "Pays membres",
+        "name": "Kongsberg Gruppen (Norvège)",
+        "country": "Norvège",
+        "full_name": "Kongsberg Gruppen",
+        "id": "grid.435825.d",
+        "country_level_part": "Pays associés",
         "projects": [
-          826215
+          826215,
+          101007205
         ],
-        "y": 1,
-        "z": 2
+        "y": 2,
+        "z": 16
       },
       {
         "name": "Ballard power systems europe as (Danemark)",
@@ -52,6 +39,19 @@
         ],
         "y": 1,
         "z": 10
+      },
+      {
+        "name": "CFT (France)",
+        "country": "France",
+        "full_name": "Compagnie fluviale de Transport",
+        "acronym": "CFT",
+        "id": "325625440",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826215
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "ABB (Finlande)",
@@ -78,16 +78,40 @@
         "z": 425
       },
       {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007205
+        ],
+        "y": 1,
+        "z": 125
+      },
+      {
+        "name": "Equinor (Norvège)",
+        "country": "Norvège",
+        "full_name": "Equinor",
+        "id": "grid.422595.d",
         "country_level_part": "Pays associés",
         "projects": [
           101007205
         ],
         "y": 1,
-        "z": 356
+        "z": 15
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007205
+        ],
+        "y": 1,
+        "z": 111
       },
       {
         "name": "DNV GL (Allemagne)",
@@ -114,58 +138,21 @@
         "z": 17
       },
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101007205
-        ],
-        "y": 1,
-        "z": 111
-      },
-      {
-        "name": "University of Strathclyde (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Strathclyde",
-        "id": "grid.11984.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101007205
-        ],
-        "y": 1,
-        "z": 125
-      },
-      {
-        "name": "Equinor (Norvège)",
-        "country": "Norvège",
-        "full_name": "Equinor",
-        "id": "grid.422595.d",
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
         "country_level_part": "Pays associés",
         "projects": [
           101007205
         ],
         "y": 1,
-        "z": 15
+        "z": 356
       }
     ]
   },
   "Societal Challenges": {
     "Smart, green and integrated transport (TPT)": [
-      {
-        "name": "Kongsberg Gruppen (Norvège)",
-        "country": "Norvège",
-        "full_name": "Kongsberg Gruppen",
-        "id": "grid.435825.d",
-        "country_level_part": "Pays associés",
-        "projects": [
-          826215,
-          101007205
-        ],
-        "y": 2,
-        "z": 11
-      },
       {
         "name": "Persee (France)",
         "country": "France",
@@ -181,17 +168,17 @@
         "z": 4
       },
       {
-        "name": "CFT (France)",
-        "country": "France",
-        "full_name": "Compagnie fluviale de Transport",
-        "acronym": "CFT",
-        "id": "325625440",
-        "country_level_part": "Pays membres",
+        "name": "Kongsberg Gruppen (Norvège)",
+        "country": "Norvège",
+        "full_name": "Kongsberg Gruppen",
+        "id": "grid.435825.d",
+        "country_level_part": "Pays associés",
         "projects": [
-          826215
+          826215,
+          101007205
         ],
-        "y": 1,
-        "z": 2
+        "y": 2,
+        "z": 11
       },
       {
         "name": "Ballard power systems europe as (Danemark)",
@@ -204,6 +191,19 @@
         ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "CFT (France)",
+        "country": "France",
+        "full_name": "Compagnie fluviale de Transport",
+        "acronym": "CFT",
+        "id": "325625440",
+        "country_level_part": "Pays membres",
+        "projects": [
+          826215
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "ABB (Finlande)",
@@ -230,16 +230,40 @@
         "z": 34
       },
       {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
+        "name": "University of Strathclyde (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Strathclyde",
+        "id": "grid.11984.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007205
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Equinor (Norvège)",
+        "country": "Norvège",
+        "full_name": "Equinor",
+        "id": "grid.422595.d",
         "country_level_part": "Pays associés",
         "projects": [
           101007205
         ],
         "y": 1,
-        "z": 13
+        "z": 2
+      },
+      {
+        "name": "National Centre of Scientific Research Demokritos (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Centre of Scientific Research Demokritos",
+        "id": "grid.6083.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101007205
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "DNV GL (Allemagne)",
@@ -266,40 +290,16 @@
         "z": 4
       },
       {
-        "name": "National Centre of Scientific Research Demokritos (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Centre of Scientific Research Demokritos",
-        "id": "grid.6083.d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101007205
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Strathclyde (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Strathclyde",
-        "id": "grid.11984.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101007205
-        ],
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Equinor (Norvège)",
-        "country": "Norvège",
-        "full_name": "Equinor",
-        "id": "grid.422595.d",
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
         "country_level_part": "Pays associés",
         "projects": [
           101007205
         ],
         "y": 1,
-        "z": 2
+        "z": 13
       }
     ]
   }

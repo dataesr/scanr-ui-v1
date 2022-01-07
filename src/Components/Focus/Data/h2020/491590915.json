@@ -2,6 +2,19 @@
   "all": {
     "all": [
       {
+        "name": "Epex Spot (France)",
+        "country": "France",
+        "full_name": "Epex Spot",
+        "acronym": "Epex Spot",
+        "id": "508010501",
+        "country_level_part": "Pays membres",
+        "projects": [
+          863874
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "National Technical University of Athens (Grèce)",
         "country": "Grèce",
         "full_name": "National Technical University of Athens",
@@ -39,18 +52,6 @@
         "z": 2
       },
       {
-        "name": "Institut Mihajlo Pupin (Serbie)",
-        "country": "Serbie",
-        "full_name": "Institut Mihajlo Pupin",
-        "id": "grid.424650.1",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "projects": [
-          863874
-        ],
-        "y": 1,
-        "z": 21
-      },
-      {
         "name": "Etra (Espagne)",
         "country": "Espagne",
         "full_name": "Etra",
@@ -63,6 +64,22 @@
         "z": 30
       },
       {
+        "name": "Institut Mihajlo Pupin (Serbie)",
+        "country": "Serbie",
+        "full_name": "Institut Mihajlo Pupin",
+        "id": "grid.424650.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          863874
+        ],
+        "y": 1,
+        "z": 21
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
         "name": "Epex Spot (France)",
         "country": "France",
         "full_name": "Epex Spot",
@@ -74,11 +91,7 @@
         ],
         "y": 1,
         "z": 1
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
+      },
       {
         "name": "National Technical University of Athens (Grèce)",
         "country": "Grèce",
@@ -117,18 +130,6 @@
         "z": 1
       },
       {
-        "name": "Institut Mihajlo Pupin (Serbie)",
-        "country": "Serbie",
-        "full_name": "Institut Mihajlo Pupin",
-        "id": "grid.424650.1",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "projects": [
-          863874
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
         "name": "Etra (Espagne)",
         "country": "Espagne",
         "full_name": "Etra",
@@ -141,17 +142,16 @@
         "z": 17
       },
       {
-        "name": "Epex Spot (France)",
-        "country": "France",
-        "full_name": "Epex Spot",
-        "acronym": "Epex Spot",
-        "id": "508010501",
-        "country_level_part": "Pays membres",
+        "name": "Institut Mihajlo Pupin (Serbie)",
+        "country": "Serbie",
+        "full_name": "Institut Mihajlo Pupin",
+        "id": "grid.424650.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
         "projects": [
           863874
         ],
         "y": 1,
-        "z": 1
+        "z": 7
       }
     ]
   }

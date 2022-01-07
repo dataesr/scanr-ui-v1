@@ -2,32 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          950101
-        ],
-        "y": 1,
-        "z": 2670
-      },
-      {
-        "name": "ICANS (France)",
-        "country": "France",
-        "full_name": "Institut de Cancérologie de Strasbourg Europe",
-        "acronym": "ICANS",
-        "id": "794139246",
-        "country_level_part": "Pays membres",
-        "projects": [
-          950101
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "UHA (France)",
         "country": "France",
         "full_name": "Université de Haute-Alsace",
@@ -52,11 +26,7 @@
         ],
         "y": 1,
         "z": 148
-      }
-    ]
-  },
-  "Excellent Science": {
-    "European Research Council (ERC)": [
+      },
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -68,7 +38,7 @@
           950101
         ],
         "y": 1,
-        "z": 599
+        "z": 2670
       },
       {
         "name": "ICANS (France)",
@@ -82,7 +52,11 @@
         ],
         "y": 1,
         "z": 1
-      },
+      }
+    ]
+  },
+  "Excellent Science": {
+    "European Research Council (ERC)": [
       {
         "name": "UHA (France)",
         "country": "France",
@@ -108,6 +82,32 @@
         ],
         "y": 1,
         "z": 35
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          950101
+        ],
+        "y": 1,
+        "z": 599
+      },
+      {
+        "name": "ICANS (France)",
+        "country": "France",
+        "full_name": "Institut de Cancérologie de Strasbourg Europe",
+        "acronym": "ICANS",
+        "id": "794139246",
+        "country_level_part": "Pays membres",
+        "projects": [
+          950101
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }

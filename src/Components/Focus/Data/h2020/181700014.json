@@ -2,20 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470,
-          101000752,
-          773682
-        ],
-        "y": 3,
-        "z": 273
-      },
-      {
         "name": "3R Agrocarbon (Hongrie)",
         "country": "Hongrie",
         "full_name": "3R Agrocarbon",
@@ -44,17 +30,18 @@
         "z": 62
       },
       {
-        "name": "University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "University of Turin",
-        "id": "grid.7605.4",
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
         "country_level_part": "Pays membres",
         "projects": [
           818470,
-          101000752
+          101000752,
+          773682
         ],
-        "y": 2,
-        "z": 154
+        "y": 3,
+        "z": 273
       },
       {
         "name": "APCA (France)",
@@ -69,6 +56,19 @@
         ],
         "y": 2,
         "z": 13
+      },
+      {
+        "name": "University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470,
+          101000752
+        ],
+        "y": 2,
+        "z": 154
       },
       {
         "name": "Inagro (Belgique)",
@@ -97,29 +97,16 @@
         "z": 321
       },
       {
-        "name": "AREFLH (France)",
-        "country": "France",
-        "full_name": "Ass Reg Europ Fruit Legum Horti",
-        "acronym": "AREFLH",
-        "id": "439833252",
+        "name": "Institut für Baustoff-Forschung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Institut für Baustoff-Forschung",
+        "id": "grid.424506.1",
         "country_level_part": "Pays membres",
         "projects": [
           818470
         ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Institute of Soil Science and Plant Cultivation (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Soil Science and Plant Cultivation",
-        "id": "grid.418972.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470
-        ],
-        "y": 1,
-        "z": 11
+        "z": 3
       },
       {
         "name": "Instituut voor Landbouw en Visserijonderzoek (Belgique)",
@@ -132,18 +119,6 @@
         ],
         "y": 1,
         "z": 63
-      },
-      {
-        "name": "Institut für Baustoff-Forschung (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Institut für Baustoff-Forschung",
-        "id": "grid.424506.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470
-        ],
-        "y": 1,
-        "z": 3
       },
       {
         "name": "CRA Bretagne Rennes (France)",
@@ -159,6 +134,31 @@
         "z": 9
       },
       {
+        "name": "Institute of Soil Science and Plant Cultivation (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Soil Science and Plant Cultivation",
+        "id": "grid.418972.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "AREFLH (France)",
+        "country": "France",
+        "full_name": "Ass Reg Europ Fruit Legum Horti",
+        "acronym": "AREFLH",
+        "id": "439833252",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
         "name": "European Federation of Food Science and Technology (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "European Federation of Food Science and Technology",
@@ -166,6 +166,30 @@
         "country_level_part": "Pays membres",
         "projects": [
           818470
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Instituto Tecnológico Agrario de Castilla y León (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico Agrario de Castilla y León",
+        "id": "grid.425226.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Centro Tecnológico del Agua (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centro Tecnológico del Agua",
+        "id": "grid.423957.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
         ],
         "y": 1,
         "z": 10
@@ -183,18 +207,6 @@
         "z": 28
       },
       {
-        "name": "Instituto Tecnológico Agrario de Castilla y León (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico Agrario de Castilla y León",
-        "id": "grid.425226.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
         "name": "National Technical University of Athens (Grèce)",
         "country": "Grèce",
         "full_name": "National Technical University of Athens",
@@ -205,42 +217,6 @@
         ],
         "y": 1,
         "z": 423
-      },
-      {
-        "name": "Centro Tecnológico del Agua (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centro Tecnológico del Agua",
-        "id": "grid.423957.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Aquaplus (Belgique)",
-        "country": "Belgique",
-        "full_name": "Aquaplus",
-        "id": "grid.424280.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Southern Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Southern Denmark",
-        "id": "grid.10825.3e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 78
       },
       {
         "name": "CA l'Herault (France)",
@@ -256,6 +232,18 @@
         "z": 2
       },
       {
+        "name": "University of Southern Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Southern Denmark",
+        "id": "grid.10825.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
+        ],
+        "y": 1,
+        "z": 78
+      },
+      {
         "name": "University of Coimbra (Portugal)",
         "country": "Portugal",
         "full_name": "University of Coimbra",
@@ -268,16 +256,28 @@
         "z": 102
       },
       {
-        "name": "Czestochowa University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Czestochowa University of Technology",
-        "id": "grid.34197.38",
+        "name": "Aquaplus (Belgique)",
+        "country": "Belgique",
+        "full_name": "Aquaplus",
+        "id": "grid.424280.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Johann Heinrich von Thünen-Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Johann Heinrich von Thünen-Institut",
+        "id": "grid.11081.39",
         "country_level_part": "Pays membres",
         "projects": [
           773682
         ],
         "y": 1,
-        "z": 4
+        "z": 32
       },
       {
         "name": "European Biomass Association (Belgique)",
@@ -304,6 +304,18 @@
         "z": 212
       },
       {
+        "name": "University of Milan (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milan",
+        "id": "grid.4708.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773682
+        ],
+        "y": 1,
+        "z": 151
+      },
+      {
         "name": "University of Lisbon (Portugal)",
         "country": "Portugal",
         "full_name": "University of Lisbon",
@@ -328,30 +340,6 @@
         "z": 41
       },
       {
-        "name": "University of Milan (Italie)",
-        "country": "Italie",
-        "full_name": "University of Milan",
-        "id": "grid.4708.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773682
-        ],
-        "y": 1,
-        "z": 151
-      },
-      {
-        "name": "Johann Heinrich von Thünen-Institut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Johann Heinrich von Thünen-Institut",
-        "id": "grid.11081.39",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773682
-        ],
-        "y": 1,
-        "z": 32
-      },
-      {
         "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
         "country": "Irlande",
         "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
@@ -374,25 +362,23 @@
         ],
         "y": 1,
         "z": 367
+      },
+      {
+        "name": "Czestochowa University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Czestochowa University of Technology",
+        "id": "grid.34197.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773682
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
-      {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470,
-          101000752,
-          773682
-        ],
-        "y": 3,
-        "z": 54
-      },
       {
         "name": "3R Agrocarbon (Hongrie)",
         "country": "Hongrie",
@@ -422,17 +408,18 @@
         "z": 8
       },
       {
-        "name": "University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "University of Turin",
-        "id": "grid.7605.4",
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
         "country_level_part": "Pays membres",
         "projects": [
           818470,
-          101000752
+          101000752,
+          773682
         ],
-        "y": 2,
-        "z": 22
+        "y": 3,
+        "z": 54
       },
       {
         "name": "APCA (France)",
@@ -447,6 +434,19 @@
         ],
         "y": 2,
         "z": 13
+      },
+      {
+        "name": "University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "University of Turin",
+        "id": "grid.7605.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470,
+          101000752
+        ],
+        "y": 2,
+        "z": 22
       },
       {
         "name": "Inagro (Belgique)",
@@ -475,29 +475,16 @@
         "z": 44
       },
       {
-        "name": "AREFLH (France)",
-        "country": "France",
-        "full_name": "Ass Reg Europ Fruit Legum Horti",
-        "acronym": "AREFLH",
-        "id": "439833252",
+        "name": "Institut für Baustoff-Forschung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Institut für Baustoff-Forschung",
+        "id": "grid.424506.1",
         "country_level_part": "Pays membres",
         "projects": [
           818470
         ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Institute of Soil Science and Plant Cultivation (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Soil Science and Plant Cultivation",
-        "id": "grid.418972.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470
-        ],
-        "y": 1,
-        "z": 10
+        "z": 1
       },
       {
         "name": "Instituut voor Landbouw en Visserijonderzoek (Belgique)",
@@ -510,18 +497,6 @@
         ],
         "y": 1,
         "z": 50
-      },
-      {
-        "name": "Institut für Baustoff-Forschung (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Institut für Baustoff-Forschung",
-        "id": "grid.424506.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          818470
-        ],
-        "y": 1,
-        "z": 1
       },
       {
         "name": "CRA Bretagne Rennes (France)",
@@ -537,6 +512,31 @@
         "z": 9
       },
       {
+        "name": "Institute of Soil Science and Plant Cultivation (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Soil Science and Plant Cultivation",
+        "id": "grid.418972.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "AREFLH (France)",
+        "country": "France",
+        "full_name": "Ass Reg Europ Fruit Legum Horti",
+        "acronym": "AREFLH",
+        "id": "439833252",
+        "country_level_part": "Pays membres",
+        "projects": [
+          818470
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
         "name": "European Federation of Food Science and Technology (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "European Federation of Food Science and Technology",
@@ -547,18 +547,6 @@
         ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "iCons (Italie)",
-        "country": "Italie",
-        "full_name": "iCons",
-        "id": "grid.424830.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 7
       },
       {
         "name": "Instituto Tecnológico Agrario de Castilla y León (Espagne)",
@@ -573,18 +561,6 @@
         "z": 4
       },
       {
-        "name": "National Technical University of Athens (Grèce)",
-        "country": "Grèce",
-        "full_name": "National Technical University of Athens",
-        "id": "grid.4241.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000752
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
         "name": "Centro Tecnológico del Agua (Espagne)",
         "country": "Espagne",
         "full_name": "Centro Tecnológico del Agua",
@@ -597,22 +573,22 @@
         "z": 1
       },
       {
-        "name": "Aquaplus (Belgique)",
-        "country": "Belgique",
-        "full_name": "Aquaplus",
-        "id": "grid.424280.8",
+        "name": "iCons (Italie)",
+        "country": "Italie",
+        "full_name": "iCons",
+        "id": "grid.424830.9",
         "country_level_part": "Pays membres",
         "projects": [
           101000752
         ],
         "y": 1,
-        "z": 1
+        "z": 7
       },
       {
-        "name": "University of Southern Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "University of Southern Denmark",
-        "id": "grid.10825.3e",
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
         "country_level_part": "Pays membres",
         "projects": [
           101000752
@@ -634,6 +610,18 @@
         "z": 2
       },
       {
+        "name": "University of Southern Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "University of Southern Denmark",
+        "id": "grid.10825.3e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
         "name": "University of Coimbra (Portugal)",
         "country": "Portugal",
         "full_name": "University of Coimbra",
@@ -646,16 +634,28 @@
         "z": 12
       },
       {
-        "name": "Czestochowa University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Czestochowa University of Technology",
-        "id": "grid.34197.38",
+        "name": "Aquaplus (Belgique)",
+        "country": "Belgique",
+        "full_name": "Aquaplus",
+        "id": "grid.424280.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000752
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Johann Heinrich von Thünen-Institut (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Johann Heinrich von Thünen-Institut",
+        "id": "grid.11081.39",
         "country_level_part": "Pays membres",
         "projects": [
           773682
         ],
         "y": 1,
-        "z": 2
+        "z": 29
       },
       {
         "name": "European Biomass Association (Belgique)",
@@ -674,6 +674,18 @@
         "country": "Espagne",
         "full_name": "Universitat Politècnica de Catalunya",
         "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773682
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "University of Milan (Italie)",
+        "country": "Italie",
+        "full_name": "University of Milan",
+        "id": "grid.4708.b",
         "country_level_part": "Pays membres",
         "projects": [
           773682
@@ -706,30 +718,6 @@
         "z": 28
       },
       {
-        "name": "University of Milan (Italie)",
-        "country": "Italie",
-        "full_name": "University of Milan",
-        "id": "grid.4708.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773682
-        ],
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Johann Heinrich von Thünen-Institut (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Johann Heinrich von Thünen-Institut",
-        "id": "grid.11081.39",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773682
-        ],
-        "y": 1,
-        "z": 29
-      },
-      {
         "name": "Teagasc - The Irish Agriculture and Food Development Authority (Irlande)",
         "country": "Irlande",
         "full_name": "Teagasc - The Irish Agriculture and Food Development Authority",
@@ -752,6 +740,18 @@
         ],
         "y": 1,
         "z": 186
+      },
+      {
+        "name": "Czestochowa University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Czestochowa University of Technology",
+        "id": "grid.34197.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773682
+        ],
+        "y": 1,
+        "z": 2
       }
     ]
   }

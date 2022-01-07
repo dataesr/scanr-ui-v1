@@ -2,6 +2,20 @@
   "all": {
     "all": [
       {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559,
+          688329
+        ],
+        "y": 2,
+        "z": 277
+      },
+      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
@@ -14,20 +28,6 @@
         ],
         "y": 2,
         "z": 2670
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559,
-          688329
-        ],
-        "y": 2,
-        "z": 852
       },
       {
         "name": "Grenoble INP (France)",
@@ -44,20 +44,6 @@
         "z": 118
       },
       {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559,
-          688329
-        ],
-        "y": 2,
-        "z": 277
-      },
-      {
         "name": "Institut Sinano (France)",
         "country": "France",
         "full_name": "Institut Sinano",
@@ -70,6 +56,20 @@
         ],
         "y": 2,
         "z": 4
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559,
+          688329
+        ],
+        "y": 2,
+        "z": 852
       },
       {
         "name": "USMB (France)",
@@ -86,66 +86,6 @@
         "z": 36
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 1072
-      },
-      {
-        "name": "Edacentrum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Edacentrum",
-        "id": "grid.434295.d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 238
-      },
-      {
-        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Català de Nanociència i Nanotecnologia",
-        "id": "grid.424584.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 230
-      },
-      {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
         "country": "Suisse",
         "full_name": "École Polytechnique Fédérale de Lausanne",
@@ -156,18 +96,6 @@
         ],
         "y": 1,
         "z": 277
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
-        "id": "grid.35247.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 20
       },
       {
         "name": "University of Padua (Italie)",
@@ -195,16 +123,52 @@
         "z": 2
       },
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
         "country_level_part": "Pays membres",
         "projects": [
           685559
         ],
         "y": 1,
-        "z": 425
+        "z": 238
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 230
+      },
+      {
+        "name": "Edacentrum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Edacentrum",
+        "id": "grid.434295.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University College Cork (Irlande)",
@@ -217,6 +181,42 @@
         ],
         "y": 1,
         "z": 198
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català de Nanociència i Nanotecnologia",
+        "id": "grid.424584.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 425
       },
       {
         "name": "Royal Institute of Technology (Suède)",
@@ -259,6 +259,20 @@
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559,
+          688329
+        ],
+        "y": 2,
+        "z": 26
+      },
+      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
@@ -271,20 +285,6 @@
         ],
         "y": 2,
         "z": 148
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559,
-          688329
-        ],
-        "y": 2,
-        "z": 167
       },
       {
         "name": "Grenoble INP (France)",
@@ -301,20 +301,6 @@
         "z": 16
       },
       {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559,
-          688329
-        ],
-        "y": 2,
-        "z": 26
-      },
-      {
         "name": "Institut Sinano (France)",
         "country": "France",
         "full_name": "Institut Sinano",
@@ -327,6 +313,20 @@
         ],
         "y": 2,
         "z": 2
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559,
+          688329
+        ],
+        "y": 2,
+        "z": 167
       },
       {
         "name": "USMB (France)",
@@ -343,66 +343,6 @@
         "z": 7
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 283
-      },
-      {
-        "name": "Edacentrum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Edacentrum",
-        "id": "grid.434295.d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 135
-      },
-      {
-        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institut Català de Nanociència i Nanotecnologia",
-        "id": "grid.424584.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Polytechnic University of Turin (Italie)",
-        "country": "Italie",
-        "full_name": "Polytechnic University of Turin",
-        "id": "grid.4800.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 33
-      },
-      {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
         "country": "Suisse",
         "full_name": "École Polytechnique Fédérale de Lausanne",
@@ -413,18 +353,6 @@
         ],
         "y": 1,
         "z": 34
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
-        "id": "grid.35247.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          685559
-        ],
-        "y": 1,
-        "z": 18
       },
       {
         "name": "University of Padua (Italie)",
@@ -452,16 +380,52 @@
         "z": 2
       },
       {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
         "country_level_part": "Pays membres",
         "projects": [
           685559
         ],
         "y": 1,
-        "z": 99
+        "z": 135
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per la Nanoelettronica",
+        "id": "grid.35247.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Polytechnic University of Turin (Italie)",
+        "country": "Italie",
+        "full_name": "Polytechnic University of Turin",
+        "id": "grid.4800.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Edacentrum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Edacentrum",
+        "id": "grid.434295.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "University College Cork (Irlande)",
@@ -474,6 +438,42 @@
         ],
         "y": 1,
         "z": 55
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 283
+      },
+      {
+        "name": "Institut Català de Nanociència i Nanotecnologia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institut Català de Nanociència i Nanotecnologia",
+        "id": "grid.424584.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          685559
+        ],
+        "y": 1,
+        "z": 99
       },
       {
         "name": "Royal Institute of Technology (Suède)",

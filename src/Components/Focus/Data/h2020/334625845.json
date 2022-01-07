@@ -2,11 +2,11 @@
   "all": {
     "all": [
       {
-        "name": "SDED (France)",
+        "name": "SIGERLY (France)",
         "country": "France",
-        "full_name": "Syndicat dép. d'energies de la Drôme",
-        "acronym": "SDED",
-        "id": "252601026",
+        "full_name": "Syndicat de Gestion des Energies de da Région Lyonnaise",
+        "acronym": "SIGERLY",
+        "id": "200058493",
         "country_level_part": "Pays membres",
         "projects": [
           891839
@@ -15,17 +15,30 @@
         "z": 1
       },
       {
-        "name": "ALTE 69 (France)",
+        "name": "AGEDEN (France)",
         "country": "France",
-        "full_name": "Agence Locale De La Transition Energetique Du Rhone",
-        "acronym": "ALTE 69",
-        "id": "851756684",
+        "full_name": "Association Pour Une Gestion Durable De L Energie",
+        "acronym": "AGEDEN",
+        "id": "320268055",
         "country_level_part": "Pays membres",
         "projects": [
           891839
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "AURA EE (France)",
+        "country": "France",
+        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
+        "acronym": "AURA EE",
+        "id": "314538513",
+        "country_level_part": "Pays membres",
+        "projects": [
+          891839
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Ademe (France)",
@@ -41,19 +54,6 @@
         "z": 21
       },
       {
-        "name": "SARA AMENAGEMENT (France)",
-        "country": "France",
-        "full_name": "Société d'aménagement du Rhône aux Alpes",
-        "acronym": "SARA AMENAGEMENT",
-        "id": "533395976",
-        "country_level_part": "Pays membres",
-        "projects": [
-          891839
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Châtaigneraie Cantalienne (France)",
         "country": "France",
         "full_name": "Communauté com. de la Châtaigneraie Cantalienne",
@@ -67,24 +67,11 @@
         "z": 1
       },
       {
-        "name": "SIGERLY (France)",
+        "name": "SARA AMENAGEMENT (France)",
         "country": "France",
-        "full_name": "Syndicat de Gestion des Energies de da Région Lyonnaise",
-        "acronym": "SIGERLY",
-        "id": "200058493",
-        "country_level_part": "Pays membres",
-        "projects": [
-          891839
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "SDE 03 (France)",
-        "country": "France",
-        "full_name": "Syndicat dép. d'énergie de l'Allier",
-        "acronym": "SDE 03",
-        "id": "250300233",
+        "full_name": "Société d'aménagement du Rhône aux Alpes",
+        "acronym": "SARA AMENAGEMENT",
+        "id": "533395976",
         "country_level_part": "Pays membres",
         "projects": [
           891839
@@ -106,35 +93,18 @@
         "z": 1
       },
       {
-        "name": "AURA EE (France)",
+        "name": "SDE 03 (France)",
         "country": "France",
-        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
-        "acronym": "AURA EE",
-        "id": "314538513",
+        "full_name": "Syndicat dép. d'énergie de l'Allier",
+        "acronym": "SDE 03",
+        "id": "250300233",
         "country_level_part": "Pays membres",
         "projects": [
           891839
         ],
         "y": 1,
-        "z": 8
+        "z": 1
       },
-      {
-        "name": "AGEDEN (France)",
-        "country": "France",
-        "full_name": "Association Pour Une Gestion Durable De L Energie",
-        "acronym": "AGEDEN",
-        "id": "320268055",
-        "country_level_part": "Pays membres",
-        "projects": [
-          891839
-        ],
-        "y": 1,
-        "z": 2
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "SDED (France)",
         "country": "France",
@@ -160,6 +130,49 @@
         ],
         "y": 1,
         "z": 2
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "SIGERLY (France)",
+        "country": "France",
+        "full_name": "Syndicat de Gestion des Energies de da Région Lyonnaise",
+        "acronym": "SIGERLY",
+        "id": "200058493",
+        "country_level_part": "Pays membres",
+        "projects": [
+          891839
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "AGEDEN (France)",
+        "country": "France",
+        "full_name": "Association Pour Une Gestion Durable De L Energie",
+        "acronym": "AGEDEN",
+        "id": "320268055",
+        "country_level_part": "Pays membres",
+        "projects": [
+          891839
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AURA EE (France)",
+        "country": "France",
+        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
+        "acronym": "AURA EE",
+        "id": "314538513",
+        "country_level_part": "Pays membres",
+        "projects": [
+          891839
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Ademe (France)",
@@ -175,19 +188,6 @@
         "z": 17
       },
       {
-        "name": "SARA AMENAGEMENT (France)",
-        "country": "France",
-        "full_name": "Société d'aménagement du Rhône aux Alpes",
-        "acronym": "SARA AMENAGEMENT",
-        "id": "533395976",
-        "country_level_part": "Pays membres",
-        "projects": [
-          891839
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Châtaigneraie Cantalienne (France)",
         "country": "France",
         "full_name": "Communauté com. de la Châtaigneraie Cantalienne",
@@ -201,24 +201,11 @@
         "z": 1
       },
       {
-        "name": "SIGERLY (France)",
+        "name": "SARA AMENAGEMENT (France)",
         "country": "France",
-        "full_name": "Syndicat de Gestion des Energies de da Région Lyonnaise",
-        "acronym": "SIGERLY",
-        "id": "200058493",
-        "country_level_part": "Pays membres",
-        "projects": [
-          891839
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "SDE 03 (France)",
-        "country": "France",
-        "full_name": "Syndicat dép. d'énergie de l'Allier",
-        "acronym": "SDE 03",
-        "id": "250300233",
+        "full_name": "Société d'aménagement du Rhône aux Alpes",
+        "acronym": "SARA AMENAGEMENT",
+        "id": "533395976",
         "country_level_part": "Pays membres",
         "projects": [
           891839
@@ -240,24 +227,37 @@
         "z": 1
       },
       {
-        "name": "AURA EE (France)",
+        "name": "SDE 03 (France)",
         "country": "France",
-        "full_name": "Auvergne-Rhone-Alpes Energie Environnement",
-        "acronym": "AURA EE",
-        "id": "314538513",
+        "full_name": "Syndicat dép. d'énergie de l'Allier",
+        "acronym": "SDE 03",
+        "id": "250300233",
         "country_level_part": "Pays membres",
         "projects": [
           891839
         ],
         "y": 1,
-        "z": 8
+        "z": 1
       },
       {
-        "name": "AGEDEN (France)",
+        "name": "SDED (France)",
         "country": "France",
-        "full_name": "Association Pour Une Gestion Durable De L Energie",
-        "acronym": "AGEDEN",
-        "id": "320268055",
+        "full_name": "Syndicat dép. d'energies de la Drôme",
+        "acronym": "SDED",
+        "id": "252601026",
+        "country_level_part": "Pays membres",
+        "projects": [
+          891839
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "ALTE 69 (France)",
+        "country": "France",
+        "full_name": "Agence Locale De La Transition Energetique Du Rhone",
+        "acronym": "ALTE 69",
+        "id": "851756684",
         "country_level_part": "Pays membres",
         "projects": [
           891839

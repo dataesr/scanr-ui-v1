@@ -2,22 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112,
-          870092,
-          952972,
-          766871
-        ],
-        "y": 4,
-        "z": 852
-      },
-      {
         "name": "CTIPC (France)",
         "country": "France",
         "full_name": "Centre technique industriel de la plasturgie et des composites",
@@ -32,6 +16,22 @@
         ],
         "y": 4,
         "z": 23
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112,
+          870092,
+          952972,
+          766871
+        ],
+        "y": 4,
+        "z": 852
       },
       {
         "name": "VTT Technical Research Centre of Finland (Finlande)",
@@ -60,93 +60,6 @@
         "z": 141
       },
       {
-        "name": "Infineon Technologies (Autriche)",
-        "country": "Autriche",
-        "full_name": "Infineon Technologies",
-        "id": "grid.425032.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 49
-      },
-      {
-        "name": "Autoliv (Suède)",
-        "country": "Suède",
-        "full_name": "Autoliv",
-        "id": "grid.423780.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Advent Technologies (Grèce)",
-        "country": "Grèce",
-        "full_name": "Advent Technologies",
-        "id": "grid.432400.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "APACH'M (France)",
-        "country": "France",
-        "full_name": "Asso Hexagone Arts Et Sciences",
-        "acronym": "APACH'M",
-        "id": "307603407",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Arkema (France)",
-        "country": "France",
-        "full_name": "Arkema",
-        "acronym": "Arkema",
-        "id": "gent27",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Autoliv-Isodelta (France)",
-        "country": "France",
-        "full_name": "Autoliv-Isodelta",
-        "acronym": "Autoliv-Isodelta",
-        "id": "326780541",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Cardiff Metropolitan University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cardiff Metropolitan University",
-        "id": "grid.47170.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "University of Glasgow (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Glasgow",
@@ -159,30 +72,16 @@
         "z": 153
       },
       {
-        "name": "Symbiose (France)",
-        "country": "France",
-        "full_name": "Symbiose",
-        "acronym": "Symbiose",
-        "id": "804501369",
+        "name": "Advent Technologies (Grèce)",
+        "country": "Grèce",
+        "full_name": "Advent Technologies",
+        "id": "grid.432400.1",
         "country_level_part": "Pays membres",
         "projects": [
           761112
         ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Rbnano (France)",
-        "country": "France",
-        "full_name": "Rbnano",
-        "acronym": "Rbnano",
-        "id": "497929604",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 1
+        "z": 4
       },
       {
         "name": "Dynergie (France)",
@@ -198,6 +97,82 @@
         "z": 3
       },
       {
+        "name": "Autoliv-Isodelta (France)",
+        "country": "France",
+        "full_name": "Autoliv-Isodelta",
+        "acronym": "Autoliv-Isodelta",
+        "id": "326780541",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Autoliv (Suède)",
+        "country": "Suède",
+        "full_name": "Autoliv",
+        "id": "grid.423780.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Symbiose (France)",
+        "country": "France",
+        "full_name": "Symbiose",
+        "acronym": "Symbiose",
+        "id": "804501369",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Cardiff Metropolitan University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff Metropolitan University",
+        "id": "grid.47170.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Rbnano (France)",
+        "country": "France",
+        "full_name": "Rbnano",
+        "acronym": "Rbnano",
+        "id": "497929604",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "APACH'M (France)",
+        "country": "France",
+        "full_name": "Asso Hexagone Arts Et Sciences",
+        "acronym": "APACH'M",
+        "id": "307603407",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "Leitat Technological Center (Espagne)",
         "country": "Espagne",
         "full_name": "Leitat Technological Center",
@@ -210,114 +185,41 @@
         "z": 99
       },
       {
-        "name": "Topsolid (France)",
+        "name": "Arkema (France)",
         "country": "France",
-        "full_name": "Topsolid",
-        "acronym": "Topsolid",
-        "id": "329109227",
+        "full_name": "Arkema",
+        "acronym": "Arkema",
+        "id": "gent27",
         "country_level_part": "Pays membres",
         "projects": [
-          870092
+          761112
         ],
         "y": 1,
-        "z": 4
+        "z": 43
       },
       {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
+        "name": "Infineon Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Infineon Technologies",
+        "id": "grid.425032.2",
         "country_level_part": "Pays membres",
         "projects": [
-          870092
+          761112
         ],
         "y": 1,
-        "z": 50
+        "z": 49
       },
       {
-        "name": "New Infrared Technologies (Espagne)",
-        "country": "Espagne",
-        "full_name": "New Infrared Technologies",
-        "id": "grid.474115.2",
+        "name": "CECIMO (Belgique)",
+        "country": "Belgique",
+        "full_name": "CECIMO",
+        "id": "grid.424595.b",
         "country_level_part": "Pays membres",
         "projects": [
           870092
         ],
         "y": 1,
-        "z": 11
-      },
-      {
-        "name": "Technology Transfer System (Italie)",
-        "country": "Italie",
-        "full_name": "Technology Transfer System",
-        "id": "grid.426252.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "ÉireComposites (Irlande)",
-        "country": "Irlande",
-        "full_name": "ÉireComposites",
-        "id": "grid.496892.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Philips (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Philips",
-        "id": "grid.417284.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 106
-      },
-      {
-        "name": "University of Patras (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Patras",
-        "id": "grid.11047.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 138
-      },
-      {
-        "name": "Fiat Chrysler Automobiles (Italie)",
-        "country": "Italie",
-        "full_name": "Fiat Chrysler Automobiles",
-        "id": "grid.425176.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 41
-      },
-      {
-        "name": "Sculpteo Sas (France)",
-        "country": "France",
-        "full_name": "Sculpteo Sas",
-        "acronym": "Sculpteo Sas",
-        "id": "514971654",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 2
+        "z": 5
       },
       {
         "name": "Comau France (France)",
@@ -333,91 +235,6 @@
         "z": 4
       },
       {
-        "name": "ESI (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "ESI",
-        "id": "grid.424473.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 368
-      },
-      {
-        "name": "CECIMO (Belgique)",
-        "country": "Belgique",
-        "full_name": "CECIMO",
-        "id": "grid.424595.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 386
-      },
-      {
-        "name": "German Research Centre for Artificial Intelligence (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Research Centre for Artificial Intelligence",
-        "id": "grid.17272.31",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 80
-      },
-      {
-        "name": "Innovalia Association (Espagne)",
-        "country": "Espagne",
-        "full_name": "Innovalia Association",
-        "id": "grid.424272.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "ESI group (France)",
-        "country": "France",
-        "full_name": "ESI group",
-        "acronym": "ESI group",
-        "id": "gent75",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 29
-      },
-      {
         "name": "Datapixel (Espagne)",
         "country": "Espagne",
         "full_name": "Datapixel",
@@ -430,28 +247,17 @@
         "z": 6
       },
       {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
+        "name": "Sculpteo Sas (France)",
+        "country": "France",
+        "full_name": "Sculpteo Sas",
+        "acronym": "Sculpteo Sas",
+        "id": "514971654",
         "country_level_part": "Pays membres",
         "projects": [
           870092
         ],
         "y": 1,
-        "z": 342
-      },
-      {
-        "name": "INTRASOFT International (Luxembourg)",
-        "country": "Luxembourg",
-        "full_name": "INTRASOFT International",
-        "id": "grid.410461.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 84
+        "z": 2
       },
       {
         "name": "Siemens (France)",
@@ -467,52 +273,210 @@
         "z": 27
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 1072
-      },
-      {
-        "name": "Stam (Italie)",
-        "country": "Italie",
-        "full_name": "Stam",
-        "id": "grid.426494.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "European Science Communication Institute (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Science Communication Institute",
-        "id": "grid.493265.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
         "country": "Espagne",
-        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
-        "id": "grid.18228.31",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 138
+      },
+      {
+        "name": "ESI (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "ESI",
+        "id": "grid.424473.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Topsolid (France)",
+        "country": "France",
+        "full_name": "Topsolid",
+        "acronym": "Topsolid",
+        "id": "329109227",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Tecnalia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 368
+      },
+      {
+        "name": "ESI group (France)",
+        "country": "France",
+        "full_name": "ESI group",
+        "acronym": "ESI group",
+        "id": "gent75",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 342
+      },
+      {
+        "name": "New Infrared Technologies (Espagne)",
+        "country": "Espagne",
+        "full_name": "New Infrared Technologies",
+        "id": "grid.474115.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 11
+      },
+      {
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "German Research Centre for Artificial Intelligence (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Research Centre for Artificial Intelligence",
+        "id": "grid.17272.31",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 80
+      },
+      {
+        "name": "Technology Transfer System (Italie)",
+        "country": "Italie",
+        "full_name": "Technology Transfer System",
+        "id": "grid.426252.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Philips (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Philips",
+        "id": "grid.417284.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 106
+      },
+      {
+        "name": "ÉireComposites (Irlande)",
+        "country": "Irlande",
+        "full_name": "ÉireComposites",
+        "id": "grid.496892.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Innovalia Association (Espagne)",
+        "country": "Espagne",
+        "full_name": "Innovalia Association",
+        "id": "grid.424272.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "INTRASOFT International (Luxembourg)",
+        "country": "Luxembourg",
+        "full_name": "INTRASOFT International",
+        "id": "grid.410461.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 84
+      },
+      {
+        "name": "Institute of Natural Fibres and Medicinal Plants (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Natural Fibres and Medicinal Plants",
+        "id": "grid.425118.b",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 45
+        "z": 2
       },
       {
         "name": "Geonardo (Hongrie)",
@@ -527,28 +491,28 @@
         "z": 23
       },
       {
-        "name": "Asociación Española de Normalización y Certificación (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación Española de Normalización y Certificación",
-        "id": "grid.432416.6",
+        "name": "Granta Design (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Granta Design",
+        "id": "grid.424534.0",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 51
+        "z": 17
       },
       {
-        "name": "Institute of Natural Fibres and Medicinal Plants (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Natural Fibres and Medicinal Plants",
-        "id": "grid.425118.b",
+        "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas",
+        "id": "grid.18228.31",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 2
+        "z": 45
       },
       {
         "name": "Arjowiggins France (France)",
@@ -564,17 +528,16 @@
         "z": 3
       },
       {
-        "name": "Polymaris Biotechnology (France)",
-        "country": "France",
-        "full_name": "Polymaris Biotechnology",
-        "acronym": "Polymaris Biotechnology",
-        "id": "503584823",
+        "name": "European Science Communication Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Science Communication Institute",
+        "id": "grid.493265.f",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 1
+        "z": 25
       },
       {
         "name": "Centre for Electrochemical Technologies (Espagne)",
@@ -589,16 +552,16 @@
         "z": 58
       },
       {
-        "name": "Granta Design (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Granta Design",
-        "id": "grid.424534.0",
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 17
+        "z": 199
       },
       {
         "name": "Greenovate! Europe (Belgique)",
@@ -613,37 +576,131 @@
         "z": 21
       },
       {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
+        "name": "Asociación Española de Normalización y Certificación (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación Española de Normalización y Certificación",
+        "id": "grid.432416.6",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
-        "z": 199
+        "z": 51
+      },
+      {
+        "name": "Polymaris Biotechnology (France)",
+        "country": "France",
+        "full_name": "Polymaris Biotechnology",
+        "acronym": "Polymaris Biotechnology",
+        "id": "503584823",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Stam (Italie)",
+        "country": "Italie",
+        "full_name": "Stam",
+        "id": "grid.426494.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Euroortodoncia (Espagne)",
+        "country": "Espagne",
+        "full_name": "Euroortodoncia",
+        "id": "grid.434764.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Wavestone Advisors (France)",
+        "country": "France",
+        "full_name": "Wavestone Advisors",
+        "acronym": "Wavestone Advisors",
+        "id": "433224847",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "BSH Electrodomésticos (Espagne)",
+        "country": "Espagne",
+        "full_name": "BSH Electrodomésticos",
+        "id": "grid.432748.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "GF Machining Solutions (Suisse)",
+        "country": "Suisse",
+        "full_name": "GF Machining Solutions",
+        "id": "grid.432793.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Bradford (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bradford",
+        "id": "grid.6268.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 179
       }
     ]
   },
   "Industrial Leadership": {
     "Nanotechnologies, materials, biotechnologies and processes (NMBP)": [
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112,
-          870092,
-          952972,
-          766871
-        ],
-        "y": 4,
-        "z": 74
-      },
       {
         "name": "CTIPC (France)",
         "country": "France",
@@ -659,6 +716,22 @@
         ],
         "y": 4,
         "z": 15
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112,
+          870092,
+          952972,
+          766871
+        ],
+        "y": 4,
+        "z": 74
       },
       {
         "name": "VTT Technical Research Centre of Finland (Finlande)",
@@ -687,22 +760,10 @@
         "z": 30
       },
       {
-        "name": "Infineon Technologies (Autriche)",
-        "country": "Autriche",
-        "full_name": "Infineon Technologies",
-        "id": "grid.425032.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Autoliv (Suède)",
-        "country": "Suède",
-        "full_name": "Autoliv",
-        "id": "grid.423780.a",
+        "name": "University of Glasgow (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Glasgow",
+        "id": "grid.8756.c",
         "country_level_part": "Pays membres",
         "projects": [
           761112
@@ -723,30 +784,17 @@
         "z": 2
       },
       {
-        "name": "APACH'M (France)",
+        "name": "Dynergie (France)",
         "country": "France",
-        "full_name": "Asso Hexagone Arts Et Sciences",
-        "acronym": "APACH'M",
-        "id": "307603407",
+        "full_name": "Dynergie",
+        "acronym": "Dynergie",
+        "id": "490474343",
         "country_level_part": "Pays membres",
         "projects": [
           761112
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Arkema (France)",
-        "country": "France",
-        "full_name": "Arkema",
-        "acronym": "Arkema",
-        "id": "gent27",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 22
+        "z": 3
       },
       {
         "name": "Autoliv-Isodelta (France)",
@@ -762,22 +810,10 @@
         "z": 1
       },
       {
-        "name": "Cardiff Metropolitan University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cardiff Metropolitan University",
-        "id": "grid.47170.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          761112
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "University of Glasgow (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Glasgow",
-        "id": "grid.8756.c",
+        "name": "Autoliv (Suède)",
+        "country": "Suède",
+        "full_name": "Autoliv",
+        "id": "grid.423780.a",
         "country_level_part": "Pays membres",
         "projects": [
           761112
@@ -799,6 +835,18 @@
         "z": 1
       },
       {
+        "name": "Cardiff Metropolitan University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff Metropolitan University",
+        "id": "grid.47170.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "Rbnano (France)",
         "country": "France",
         "full_name": "Rbnano",
@@ -812,17 +860,17 @@
         "z": 1
       },
       {
-        "name": "Dynergie (France)",
+        "name": "APACH'M (France)",
         "country": "France",
-        "full_name": "Dynergie",
-        "acronym": "Dynergie",
-        "id": "490474343",
+        "full_name": "Asso Hexagone Arts Et Sciences",
+        "acronym": "APACH'M",
+        "id": "307603407",
         "country_level_part": "Pays membres",
         "projects": [
           761112
         ],
         "y": 1,
-        "z": 3
+        "z": 1
       },
       {
         "name": "Leitat Technological Center (Espagne)",
@@ -835,6 +883,130 @@
         ],
         "y": 1,
         "z": 35
+      },
+      {
+        "name": "Arkema (France)",
+        "country": "France",
+        "full_name": "Arkema",
+        "acronym": "Arkema",
+        "id": "gent27",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Infineon Technologies (Autriche)",
+        "country": "Autriche",
+        "full_name": "Infineon Technologies",
+        "id": "grid.425032.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          761112
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "CECIMO (Belgique)",
+        "country": "Belgique",
+        "full_name": "CECIMO",
+        "id": "grid.424595.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Comau France (France)",
+        "country": "France",
+        "full_name": "Comau France",
+        "acronym": "Comau France",
+        "id": "328705009",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Datapixel (Espagne)",
+        "country": "Espagne",
+        "full_name": "Datapixel",
+        "id": "grid.470561.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Sculpteo Sas (France)",
+        "country": "France",
+        "full_name": "Sculpteo Sas",
+        "acronym": "Sculpteo Sas",
+        "id": "514971654",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Siemens (France)",
+        "country": "France",
+        "full_name": "Siemens",
+        "acronym": "Siemens",
+        "id": "gent156",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 21
+      },
+      {
+        "name": "University of Patras (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Patras",
+        "id": "grid.11047.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "ESI (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "ESI",
+        "id": "grid.424473.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "Topsolid (France)",
@@ -850,22 +1022,71 @@
         "z": 2
       },
       {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "name": "Tecnalia (Espagne)",
         "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
+        "full_name": "Tecnalia",
+        "id": "grid.13753.33",
         "country_level_part": "Pays membres",
         "projects": [
           870092
         ],
         "y": 1,
-        "z": 21
+        "z": 73
+      },
+      {
+        "name": "ESI group (France)",
+        "country": "France",
+        "full_name": "ESI group",
+        "acronym": "ESI group",
+        "id": "gent75",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 46
       },
       {
         "name": "New Infrared Technologies (Espagne)",
         "country": "Espagne",
         "full_name": "New Infrared Technologies",
         "id": "grid.474115.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Fiat Chrysler Automobiles (Italie)",
+        "country": "Italie",
+        "full_name": "Fiat Chrysler Automobiles",
+        "id": "grid.425176.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870092
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "German Research Centre for Artificial Intelligence (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Research Centre for Artificial Intelligence",
+        "id": "grid.17272.31",
         "country_level_part": "Pays membres",
         "projects": [
           870092
@@ -886,18 +1107,6 @@
         "z": 9
       },
       {
-        "name": "ÉireComposites (Irlande)",
-        "country": "Irlande",
-        "full_name": "ÉireComposites",
-        "id": "grid.496892.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
         "name": "Philips (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "Philips",
@@ -910,114 +1119,16 @@
         "z": 8
       },
       {
-        "name": "University of Patras (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Patras",
-        "id": "grid.11047.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Fiat Chrysler Automobiles (Italie)",
-        "country": "Italie",
-        "full_name": "Fiat Chrysler Automobiles",
-        "id": "grid.425176.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Sculpteo Sas (France)",
-        "country": "France",
-        "full_name": "Sculpteo Sas",
-        "acronym": "Sculpteo Sas",
-        "id": "514971654",
+        "name": "ÉireComposites (Irlande)",
+        "country": "Irlande",
+        "full_name": "ÉireComposites",
+        "id": "grid.496892.8",
         "country_level_part": "Pays membres",
         "projects": [
           870092
         ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Comau France (France)",
-        "country": "France",
-        "full_name": "Comau France",
-        "acronym": "Comau France",
-        "id": "328705009",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "ESI (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "ESI",
-        "id": "grid.424473.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Tecnalia (Espagne)",
-        "country": "Espagne",
-        "full_name": "Tecnalia",
-        "id": "grid.13753.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 73
-      },
-      {
-        "name": "CECIMO (Belgique)",
-        "country": "Belgique",
-        "full_name": "CECIMO",
-        "id": "grid.424595.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "German Research Centre for Artificial Intelligence (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Research Centre for Artificial Intelligence",
-        "id": "grid.17272.31",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 6
       },
       {
         "name": "Innovalia Association (Espagne)",
@@ -1032,41 +1143,16 @@
         "z": 5
       },
       {
-        "name": "ESI group (France)",
-        "country": "France",
-        "full_name": "ESI group",
-        "acronym": "ESI group",
-        "id": "gent75",
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
         "country_level_part": "Pays membres",
         "projects": [
           870092
         ],
         "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Datapixel (Espagne)",
-        "country": "Espagne",
-        "full_name": "Datapixel",
-        "id": "grid.470561.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Organisation for Applied Scientific Research",
-        "id": "grid.4858.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870092
-        ],
-        "y": 1,
-        "z": 46
+        "z": 30
       },
       {
         "name": "INTRASOFT International (Luxembourg)",
@@ -1081,53 +1167,40 @@
         "z": 10
       },
       {
-        "name": "Siemens (France)",
-        "country": "France",
-        "full_name": "Siemens",
-        "acronym": "Siemens",
-        "id": "gent156",
+        "name": "Institute of Natural Fibres and Medicinal Plants (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Natural Fibres and Medicinal Plants",
+        "id": "grid.425118.b",
         "country_level_part": "Pays membres",
         "projects": [
-          870092
+          952972
         ],
         "y": 1,
         "z": 1
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 169
-      },
-      {
-        "name": "Stam (Italie)",
-        "country": "Italie",
-        "full_name": "Stam",
-        "id": "grid.426494.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "European Science Communication Institute (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Science Communication Institute",
-        "id": "grid.493265.f",
+        "name": "Geonardo (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Geonardo",
+        "id": "grid.425013.1",
         "country_level_part": "Pays membres",
         "projects": [
           952972
         ],
         "y": 1,
         "z": 4
+      },
+      {
+        "name": "Granta Design (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Granta Design",
+        "id": "grid.424534.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Asociacion De Investigacion De Materiales Plasticos Y Conexas (Espagne)",
@@ -1142,10 +1215,59 @@
         "z": 15
       },
       {
-        "name": "Geonardo (Hongrie)",
-        "country": "Hongrie",
-        "full_name": "Geonardo",
-        "id": "grid.425013.1",
+        "name": "Arjowiggins France (France)",
+        "country": "France",
+        "full_name": "Arjowiggins France",
+        "acronym": "Arjowiggins France",
+        "id": "853949071",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "European Science Communication Institute (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Science Communication Institute",
+        "id": "grid.493265.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Centre for Electrochemical Technologies (Espagne)",
+        "country": "Espagne",
+        "full_name": "Centre for Electrochemical Technologies",
+        "id": "grid.39768.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Greenovate! Europe (Belgique)",
+        "country": "Belgique",
+        "full_name": "Greenovate! Europe",
+        "id": "grid.424540.3",
         "country_level_part": "Pays membres",
         "projects": [
           952972
@@ -1166,31 +1288,6 @@
         "z": 24
       },
       {
-        "name": "Institute of Natural Fibres and Medicinal Plants (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Natural Fibres and Medicinal Plants",
-        "id": "grid.425118.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Arjowiggins France (France)",
-        "country": "France",
-        "full_name": "Arjowiggins France",
-        "acronym": "Arjowiggins France",
-        "id": "853949071",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "Polymaris Biotechnology (France)",
         "country": "France",
         "full_name": "Polymaris Biotechnology",
@@ -1204,52 +1301,101 @@
         "z": 1
       },
       {
-        "name": "Centre for Electrochemical Technologies (Espagne)",
+        "name": "Stam (Italie)",
+        "country": "Italie",
+        "full_name": "Stam",
+        "id": "grid.426494.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          952972
+        ],
+        "y": 1,
+        "z": 169
+      },
+      {
+        "name": "Euroortodoncia (Espagne)",
         "country": "Espagne",
-        "full_name": "Centre for Electrochemical Technologies",
-        "id": "grid.39768.33",
+        "full_name": "Euroortodoncia",
+        "id": "grid.434764.6",
         "country_level_part": "Pays membres",
         "projects": [
-          952972
+          766871
         ],
         "y": 1,
-        "z": 20
+        "z": 1
       },
       {
-        "name": "Granta Design (Royaume-Uni)",
+        "name": "Wavestone Advisors (France)",
+        "country": "France",
+        "full_name": "Wavestone Advisors",
+        "acronym": "Wavestone Advisors",
+        "id": "433224847",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "BSH Electrodomésticos (Espagne)",
+        "country": "Espagne",
+        "full_name": "BSH Electrodomésticos",
+        "id": "grid.432748.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "GF Machining Solutions (Suisse)",
+        "country": "Suisse",
+        "full_name": "GF Machining Solutions",
+        "id": "grid.432793.8",
+        "country_level_part": "Pays associés",
+        "projects": [
+          766871
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Bradford (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "Granta Design",
-        "id": "grid.424534.0",
+        "full_name": "University of Bradford",
+        "id": "grid.6268.a",
         "country_level_part": "Pays membres",
         "projects": [
-          952972
+          766871
         ],
         "y": 1,
-        "z": 13
+        "z": 1
       },
       {
-        "name": "Greenovate! Europe (Belgique)",
-        "country": "Belgique",
-        "full_name": "Greenovate! Europe",
-        "id": "grid.424540.3",
+        "name": "University of Birmingham (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Birmingham",
+        "id": "grid.6572.6",
         "country_level_part": "Pays membres",
         "projects": [
-          952972
+          766871
         ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          952972
-        ],
-        "y": 1,
-        "z": 30
+        "z": 23
       }
     ]
   }

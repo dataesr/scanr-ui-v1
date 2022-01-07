@@ -2,19 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          730989
-        ],
-        "y": 1,
-        "z": 2670
-      },
-      {
         "name": "GSI Helmholtz Centre for Heavy Ion Research (Allemagne)",
         "country": "Allemagne",
         "full_name": "GSI Helmholtz Centre for Heavy Ion Research",
@@ -63,11 +50,7 @@
         ],
         "y": 1,
         "z": 852
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Research infrastructures (INFRA)": [
+      },
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -79,8 +62,12 @@
           730989
         ],
         "y": 1,
-        "z": 169
-      },
+        "z": 2670
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Research infrastructures (INFRA)": [
       {
         "name": "GSI Helmholtz Centre for Heavy Ion Research (Allemagne)",
         "country": "Allemagne",
@@ -130,6 +117,19 @@
         ],
         "y": 1,
         "z": 80
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          730989
+        ],
+        "y": 1,
+        "z": 169
       }
     ]
   }

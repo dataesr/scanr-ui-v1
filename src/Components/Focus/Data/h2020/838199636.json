@@ -2,29 +2,53 @@
   "all": {
     "all": [
       {
-        "name": "University Hospital of Lausanne (Suisse)",
-        "country": "Suisse",
-        "full_name": "University Hospital of Lausanne",
-        "id": "grid.8515.9",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 32
-      },
-      {
-        "name": "CNRS (France)",
+        "name": "UPEC (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 2670
+        "z": 39
+      },
+      {
+        "name": "Eurovacc Foundation (Suisse)",
+        "country": "Suisse",
+        "full_name": "Eurovacc Foundation",
+        "id": "grid.475083.d",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 57
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 124
       },
       {
         "name": "Servier (France)",
@@ -53,65 +77,16 @@
         "z": 210
       },
       {
-        "name": "Boehringer Ingelheim (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Boehringer Ingelheim",
-        "id": "grid.420061.1",
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 30
-      },
-      {
-        "name": "Madrid Health Service (Espagne)",
-        "country": "Espagne",
-        "full_name": "Madrid Health Service",
-        "id": "grid.410361.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 64
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 257
-      },
-      {
-        "name": "Novartis (Suisse)",
-        "country": "Suisse",
-        "full_name": "Novartis",
-        "id": "grid.419481.1",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 57
-      },
-      {
-        "name": "Enyo Pharma (France)",
-        "country": "France",
-        "full_name": "Enyo Pharma",
-        "acronym": "Enyo Pharma",
-        "id": "799831011",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 2
+        "z": 216
       },
       {
         "name": "Helmholtz Centre for Infection Research (Allemagne)",
@@ -126,66 +101,126 @@
         "z": 26
       },
       {
-        "name": "Pfizer (Royaume-Uni)",
+        "name": "AbbVie (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "AbbVie",
+        "id": "grid.431072.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Astellas Pharma (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Astellas Pharma",
+        "id": "grid.476166.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 216
+      },
+      {
+        "name": "Boehringer Ingelheim (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Boehringer Ingelheim",
+        "id": "grid.420061.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
+        "name": "Hospital Universitario La Paz (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Universitario La Paz",
+        "id": "grid.81821.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 689
+      },
+      {
+        "name": "Bill & Melinda Gates Foundation (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Bill & Melinda Gates Foundation",
+        "id": "grid.418309.7",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AiCuris (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AiCuris",
+        "id": "grid.491702.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "Pfizer",
-        "id": "grid.418566.8",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 49
+        "z": 257
       },
       {
-        "name": "Jagiellonian University (Pologne)",
-        "country": "Pologne",
-        "full_name": "Jagiellonian University",
-        "id": "grid.5522.0",
+        "name": "University of Veterinary Medicine Hannover, Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Veterinary Medicine Hannover, Foundation",
+        "id": "grid.412970.9",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 59
-      },
-      {
-        "name": "Inserm Transfert (France)",
-        "country": "France",
-        "full_name": "Inserm Transfert",
-        "acronym": "Inserm Transfert",
-        "id": "434033619",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 852
-      },
-      {
-        "name": "Eurovacc Foundation (Suisse)",
-        "country": "Suisse",
-        "full_name": "Eurovacc Foundation",
-        "id": "grid.475083.d",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 3
+        "z": 13
       },
       {
         "name": "Merck (Allemagne)",
@@ -200,6 +235,18 @@
         "z": 33
       },
       {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 489
+      },
+      {
         "name": "Bayer (Allemagne)",
         "country": "Allemagne",
         "full_name": "Bayer",
@@ -212,16 +259,28 @@
         "z": 64
       },
       {
-        "name": "Bill & Melinda Gates Foundation (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Bill & Melinda Gates Foundation",
-        "id": "grid.418309.7",
-        "country_level_part": "Pays tiers",
+        "name": "Federal Department of Home Affairs (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Home Affairs",
+        "id": "grid.424284.c",
+        "country_level_part": "Pays associés",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 2
+        "z": 17
+      },
+      {
+        "name": "Goethe University Frankfurt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Goethe University Frankfurt",
+        "id": "grid.7839.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 85
       },
       {
         "name": "Janssen (Belgique)",
@@ -248,78 +307,16 @@
         "z": 22
       },
       {
-        "name": "UPEC (France)",
-        "country": "France",
-        "full_name": "Université Paris-Est Créteil",
-        "acronym": "UPEC",
-        "id": "vb71K",
-        "country_level_part": "Pays membres",
+        "name": "Takeda (Suisse)",
+        "country": "Suisse",
+        "full_name": "Takeda",
+        "id": "grid.476705.7",
+        "country_level_part": "Pays associés",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 39
-      },
-      {
-        "name": "University of Veterinary Medicine Hannover, Foundation (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Veterinary Medicine Hannover, Foundation",
-        "id": "grid.412970.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Hospital Universitario La Paz (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Universitario La Paz",
-        "id": "grid.81821.32",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Goethe University Frankfurt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 85
-      },
-      {
-        "name": "University of Dundee (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Dundee",
-        "id": "grid.8241.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "AMU (France)",
-        "country": "France",
-        "full_name": "Aix-Marseille Université",
-        "acronym": "AMU",
-        "id": "xJdyB",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 216
+        "z": 20
       },
       {
         "name": "Universität Hamburg (Allemagne)",
@@ -334,118 +331,79 @@
         "z": 81
       },
       {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "Astellas Pharma (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Astellas Pharma",
-        "id": "grid.476166.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 489
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 216
-      },
-      {
-        "name": "AiCuris (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "AiCuris",
-        "id": "grid.491702.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "AbbVie (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "AbbVie",
-        "id": "grid.431072.3",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "Takeda (Suisse)",
-        "country": "Suisse",
-        "full_name": "Takeda",
-        "id": "grid.476705.7",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Federal Department of Home Affairs (Suisse)",
-        "country": "Suisse",
-        "full_name": "Federal Department of Home Affairs",
-        "id": "grid.424284.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Inserm (France)",
+        "name": "Enyo Pharma (France)",
         "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
+        "full_name": "Enyo Pharma",
+        "acronym": "Enyo Pharma",
+        "id": "799831011",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 689
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
+        "z": 2
+      },
+      {
+        "name": "Inserm Transfert (France)",
+        "country": "France",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 49
+      },
+      {
+        "name": "Jagiellonian University (Pologne)",
+        "country": "Pologne",
+        "full_name": "Jagiellonian University",
+        "id": "grid.5522.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 64
+      },
+      {
+        "name": "University of Dundee (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Dundee",
+        "id": "grid.8241.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 51
+      },
       {
         "name": "University Hospital of Lausanne (Suisse)",
         "country": "Suisse",
@@ -456,7 +414,7 @@
           101005077
         ],
         "y": 1,
-        "z": 18
+        "z": 32
       },
       {
         "name": "CNRS (France)",
@@ -469,7 +427,73 @@
           101005077
         ],
         "y": 1,
-        "z": 108
+        "z": 2670
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 852
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "UPEC (France)",
+        "country": "France",
+        "full_name": "Université Paris-Est Créteil",
+        "acronym": "UPEC",
+        "id": "vb71K",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Eurovacc Foundation (Suisse)",
+        "country": "Suisse",
+        "full_name": "Eurovacc Foundation",
+        "id": "grid.475083.d",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Novartis (Suisse)",
+        "country": "Suisse",
+        "full_name": "Novartis",
+        "id": "grid.419481.1",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "Leiden University Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Leiden University Medical Center",
+        "id": "grid.10419.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 66
       },
       {
         "name": "Servier (France)",
@@ -498,65 +522,16 @@
         "z": 18
       },
       {
-        "name": "Boehringer Ingelheim (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Boehringer Ingelheim",
-        "id": "grid.420061.1",
+        "name": "Utrecht University (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Utrecht University",
+        "id": "grid.5477.1",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 23
-      },
-      {
-        "name": "Madrid Health Service (Espagne)",
-        "country": "Espagne",
-        "full_name": "Madrid Health Service",
-        "id": "grid.410361.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 42
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Novartis (Suisse)",
-        "country": "Suisse",
-        "full_name": "Novartis",
-        "id": "grid.419481.1",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 47
-      },
-      {
-        "name": "Enyo Pharma (France)",
-        "country": "France",
-        "full_name": "Enyo Pharma",
-        "acronym": "Enyo Pharma",
-        "id": "799831011",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 1
+        "z": 28
       },
       {
         "name": "Helmholtz Centre for Infection Research (Allemagne)",
@@ -571,66 +546,126 @@
         "z": 8
       },
       {
-        "name": "Pfizer (Royaume-Uni)",
+        "name": "AbbVie (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "AbbVie",
+        "id": "grid.431072.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "Astellas Pharma (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Astellas Pharma",
+        "id": "grid.476166.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "AMU (France)",
+        "country": "France",
+        "full_name": "Aix-Marseille Université",
+        "acronym": "AMU",
+        "id": "xJdyB",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Boehringer Ingelheim (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Boehringer Ingelheim",
+        "id": "grid.420061.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "Hospital Universitario La Paz (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Universitario La Paz",
+        "id": "grid.81821.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Inserm (France)",
+        "country": "France",
+        "full_name": "Institut national de la santé et de la recherche médicale",
+        "acronym": "Inserm",
+        "id": "bZiTA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Bill & Melinda Gates Foundation (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Bill & Melinda Gates Foundation",
+        "id": "grid.418309.7",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "AiCuris (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "AiCuris",
+        "id": "grid.491702.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "Pfizer",
-        "id": "grid.418566.8",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 48
+        "z": 35
       },
       {
-        "name": "Jagiellonian University (Pologne)",
-        "country": "Pologne",
-        "full_name": "Jagiellonian University",
-        "id": "grid.5522.0",
+        "name": "University of Veterinary Medicine Hannover, Foundation (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Veterinary Medicine Hannover, Foundation",
+        "id": "grid.412970.9",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 9
-      },
-      {
-        "name": "Inserm Transfert (France)",
-        "country": "France",
-        "full_name": "Inserm Transfert",
-        "acronym": "Inserm Transfert",
-        "id": "434033619",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "Eurovacc Foundation (Suisse)",
-        "country": "Suisse",
-        "full_name": "Eurovacc Foundation",
-        "id": "grid.475083.d",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 3
+        "z": 8
       },
       {
         "name": "Merck (Allemagne)",
@@ -645,6 +680,18 @@
         "z": 16
       },
       {
+        "name": "KU Leuven (Belgique)",
+        "country": "Belgique",
+        "full_name": "KU Leuven",
+        "id": "grid.5596.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 83
+      },
+      {
         "name": "Bayer (Allemagne)",
         "country": "Allemagne",
         "full_name": "Bayer",
@@ -657,16 +704,28 @@
         "z": 43
       },
       {
-        "name": "Bill & Melinda Gates Foundation (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Bill & Melinda Gates Foundation",
-        "id": "grid.418309.7",
-        "country_level_part": "Pays tiers",
+        "name": "Federal Department of Home Affairs (Suisse)",
+        "country": "Suisse",
+        "full_name": "Federal Department of Home Affairs",
+        "id": "grid.424284.c",
+        "country_level_part": "Pays associés",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 2
+        "z": 5
+      },
+      {
+        "name": "Goethe University Frankfurt (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Goethe University Frankfurt",
+        "id": "grid.7839.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 21
       },
       {
         "name": "Janssen (Belgique)",
@@ -693,78 +752,16 @@
         "z": 7
       },
       {
-        "name": "UPEC (France)",
-        "country": "France",
-        "full_name": "Université Paris-Est Créteil",
-        "acronym": "UPEC",
-        "id": "vb71K",
-        "country_level_part": "Pays membres",
+        "name": "Takeda (Suisse)",
+        "country": "Suisse",
+        "full_name": "Takeda",
+        "id": "grid.476705.7",
+        "country_level_part": "Pays associés",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Veterinary Medicine Hannover, Foundation (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "University of Veterinary Medicine Hannover, Foundation",
-        "id": "grid.412970.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Hospital Universitario La Paz (Espagne)",
-        "country": "Espagne",
-        "full_name": "Hospital Universitario La Paz",
-        "id": "grid.81821.32",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Goethe University Frankfurt (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Goethe University Frankfurt",
-        "id": "grid.7839.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 21
-      },
-      {
-        "name": "University of Dundee (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Dundee",
-        "id": "grid.8241.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "AMU (France)",
-        "country": "France",
-        "full_name": "Aix-Marseille Université",
-        "acronym": "AMU",
-        "id": "xJdyB",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 19
+        "z": 20
       },
       {
         "name": "Universität Hamburg (Allemagne)",
@@ -779,58 +776,11 @@
         "z": 5
       },
       {
-        "name": "Leiden University Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Leiden University Medical Center",
-        "id": "grid.10419.3d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 66
-      },
-      {
-        "name": "Astellas Pharma (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Astellas Pharma",
-        "id": "grid.476166.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "KU Leuven (Belgique)",
-        "country": "Belgique",
-        "full_name": "KU Leuven",
-        "id": "grid.5596.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 83
-      },
-      {
-        "name": "Utrecht University (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Utrecht University",
-        "id": "grid.5477.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "AiCuris (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "AiCuris",
-        "id": "grid.491702.9",
+        "name": "Enyo Pharma (France)",
+        "country": "France",
+        "full_name": "Enyo Pharma",
+        "acronym": "Enyo Pharma",
+        "id": "799831011",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
@@ -839,53 +789,103 @@
         "z": 1
       },
       {
-        "name": "AbbVie (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "AbbVie",
-        "id": "grid.431072.3",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Takeda (Suisse)",
-        "country": "Suisse",
-        "full_name": "Takeda",
-        "id": "grid.476705.7",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 20
-      },
-      {
-        "name": "Federal Department of Home Affairs (Suisse)",
-        "country": "Suisse",
-        "full_name": "Federal Department of Home Affairs",
-        "id": "grid.424284.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          101005077
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Inserm (France)",
+        "name": "Inserm Transfert (France)",
         "country": "France",
-        "full_name": "Institut national de la santé et de la recherche médicale",
-        "acronym": "Inserm",
-        "id": "bZiTA",
+        "full_name": "Inserm Transfert",
+        "acronym": "Inserm Transfert",
+        "id": "434033619",
         "country_level_part": "Pays membres",
         "projects": [
           101005077
         ],
         "y": 1,
-        "z": 174
+        "z": 31
+      },
+      {
+        "name": "Pfizer (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Pfizer",
+        "id": "grid.418566.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 48
+      },
+      {
+        "name": "Jagiellonian University (Pologne)",
+        "country": "Pologne",
+        "full_name": "Jagiellonian University",
+        "id": "grid.5522.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Madrid Health Service (Espagne)",
+        "country": "Espagne",
+        "full_name": "Madrid Health Service",
+        "id": "grid.410361.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "University of Dundee (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Dundee",
+        "id": "grid.8241.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "University Hospital of Lausanne (Suisse)",
+        "country": "Suisse",
+        "full_name": "University Hospital of Lausanne",
+        "id": "grid.8515.9",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 108
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101005077
+        ],
+        "y": 1,
+        "z": 34
       }
     ]
   }

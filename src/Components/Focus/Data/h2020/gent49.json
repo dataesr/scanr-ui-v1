@@ -2,19 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          785585
-        ],
-        "y": 1,
-        "z": 2670
-      },
-      {
         "name": "Inrae (France)",
         "country": "France",
         "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
@@ -26,6 +13,19 @@
         ],
         "y": 1,
         "z": 453
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785585
+        ],
+        "y": 1,
+        "z": 75
       },
       {
         "name": "U. Lyon 1 (France)",
@@ -54,23 +54,6 @@
         "z": 49
       },
       {
-        "name": "INSA de Lyon (France)",
-        "country": "France",
-        "full_name": "Institut national des sciences appliquées de Lyon",
-        "acronym": "INSA de Lyon",
-        "id": "8k41p",
-        "country_level_part": "Pays membres",
-        "projects": [
-          785585
-        ],
-        "y": 1,
-        "z": 75
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Smart, green and integrated transport (TPT)": [
-      {
         "name": "CNRS (France)",
         "country": "France",
         "full_name": "Centre national de la recherche scientifique",
@@ -81,8 +64,12 @@
           785585
         ],
         "y": 1,
-        "z": 88
-      },
+        "z": 2670
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Smart, green and integrated transport (TPT)": [
       {
         "name": "Inrae (France)",
         "country": "France",
@@ -95,6 +82,19 @@
         ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "projects": [
+          785585
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "U. Lyon 1 (France)",
@@ -123,17 +123,17 @@
         "z": 17
       },
       {
-        "name": "INSA de Lyon (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Institut national des sciences appliquées de Lyon",
-        "acronym": "INSA de Lyon",
-        "id": "8k41p",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           785585
         ],
         "y": 1,
-        "z": 17
+        "z": 88
       }
     ]
   }

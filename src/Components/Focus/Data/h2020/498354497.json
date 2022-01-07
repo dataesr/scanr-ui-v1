@@ -2,6 +2,19 @@
   "all": {
     "all": [
       {
+        "name": "Lallemand (France)",
+        "country": "France",
+        "full_name": "Lallemand",
+        "acronym": "Lallemand",
+        "id": "405720194",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101023593
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
         "name": "Chanel Parfums Beaute (France)",
         "country": "France",
         "full_name": "Chanel Parfums Beaute",
@@ -28,17 +41,17 @@
         "z": 8
       },
       {
-        "name": "CRI Paul Bocuse (France)",
+        "name": "Sunti (France)",
         "country": "France",
-        "full_name": "Centre de Recherche de l'institut Paul Bocuse",
-        "acronym": "CRI Paul Bocuse",
-        "id": "500693957",
+        "full_name": "Sunti",
+        "acronym": "Sunti",
+        "id": "805292091",
         "country_level_part": "Pays membres",
         "projects": [
           101023593
         ],
         "y": 1,
-        "z": 3
+        "z": 1
       },
       {
         "name": "Tecnalia (Espagne)",
@@ -51,19 +64,6 @@
         ],
         "y": 1,
         "z": 368
-      },
-      {
-        "name": "Lallemand (France)",
-        "country": "France",
-        "full_name": "Lallemand",
-        "acronym": "Lallemand",
-        "id": "405720194",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101023593
-        ],
-        "y": 1,
-        "z": 3
       },
       {
         "name": "Pno Consultants (France)",
@@ -79,91 +79,17 @@
         "z": 7
       },
       {
-        "name": "Sunti (France)",
+        "name": "CRI Paul Bocuse (France)",
         "country": "France",
-        "full_name": "Sunti",
-        "acronym": "Sunti",
-        "id": "805292091",
+        "full_name": "Centre de Recherche de l'institut Paul Bocuse",
+        "acronym": "CRI Paul Bocuse",
+        "id": "500693957",
         "country_level_part": "Pays membres",
         "projects": [
           101023593
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 268
-      },
-      {
-        "name": "A4F-Algafuel (Portugal)",
-        "country": "Portugal",
-        "full_name": "A4F-Algafuel",
-        "id": "grid.423492.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 554
-      },
-      {
-        "name": "Sensient Cosmetic Tech... (France)",
-        "country": "France",
-        "full_name": "Sensient Cosmetic Technologies",
-        "acronym": "Sensient Cosmetic Tech...",
-        "id": "562128132",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 852
+        "z": 3
       },
       {
         "name": "Proteus (France)",
@@ -179,16 +105,102 @@
         "z": 2
       },
       {
-        "name": "University of Oran (Algérie)",
-        "country": "Algérie",
-        "full_name": "University of Oran",
-        "id": "grid.440479.a",
+        "name": "Sensient Cosmetic Tech... (France)",
+        "country": "France",
+        "full_name": "Sensient Cosmetic Technologies",
+        "acronym": "Sensient Cosmetic Tech...",
+        "id": "562128132",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "A4F-Algafuel (Portugal)",
+        "country": "Portugal",
+        "full_name": "A4F-Algafuel",
+        "id": "grid.423492.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 554
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 268
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "University of Szczecin (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Szczecin",
+        "id": "grid.79757.3b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "State University of New York (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "State University of New York",
+        "id": "grid.189747.4",
         "country_level_part": "Pays tiers",
         "projects": [
           734708
         ],
         "y": 1,
-        "z": 1
+        "z": 16
       },
       {
         "name": "Padjadjaran University (Indonésie)",
@@ -203,6 +215,66 @@
         "z": 2
       },
       {
+        "name": "Mount Allison University (Canada)",
+        "country": "Canada",
+        "full_name": "Mount Allison University",
+        "id": "grid.260288.6",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Tanjungpura University (Indonésie)",
+        "country": "Indonésie",
+        "full_name": "Tanjungpura University",
+        "id": "grid.444182.f",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instituto Tecnológico de Canarias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Canarias",
+        "id": "grid.425227.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Zurich University of Applied Sciences (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zurich University of Applied Sciences",
+        "id": "grid.19739.35",
+        "country_level_part": "Pays associés",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 38
+      },
+      {
+        "name": "University of North Carolina at Chapel Hill (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of North Carolina at Chapel Hill",
+        "id": "grid.10698.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
         "name": "Hellenic Centre for Marine Research (Grèce)",
         "country": "Grèce",
         "full_name": "Hellenic Centre for Marine Research",
@@ -213,18 +285,6 @@
         ],
         "y": 1,
         "z": 60
-      },
-      {
-        "name": "Cardiff University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cardiff University",
-        "id": "grid.5600.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 94
       },
       {
         "name": "University of Las Palmas de Gran Canaria (Espagne)",
@@ -252,16 +312,17 @@
         "z": 22
       },
       {
-        "name": "University of Szczecin (Pologne)",
-        "country": "Pologne",
-        "full_name": "University of Szczecin",
-        "id": "grid.79757.3b",
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
         "country_level_part": "Pays membres",
         "projects": [
           734708
         ],
         "y": 1,
-        "z": 3
+        "z": 87
       },
       {
         "name": "Université du Québec à Rimouski (Canada)",
@@ -276,91 +337,6 @@
         "z": 3
       },
       {
-        "name": "Ifremer (France)",
-        "country": "France",
-        "full_name": "Institut français de recherche pour l'exploitation de la mer",
-        "acronym": "Ifremer",
-        "id": "F6Zt5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 87
-      },
-      {
-        "name": "Instituto Tecnológico de Canarias (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Canarias",
-        "id": "grid.425227.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Middle Tennessee State University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Middle Tennessee State University",
-        "id": "grid.260001.5",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Tanjungpura University (Indonésie)",
-        "country": "Indonésie",
-        "full_name": "Tanjungpura University",
-        "id": "grid.444182.f",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Mount Allison University (Canada)",
-        "country": "Canada",
-        "full_name": "Mount Allison University",
-        "id": "grid.260288.6",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Zurich University of Applied Sciences (Suisse)",
-        "country": "Suisse",
-        "full_name": "Zurich University of Applied Sciences",
-        "id": "grid.19739.35",
-        "country_level_part": "Pays associés",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 38
-      },
-      {
-        "name": "University of Arkansas at Fayetteville (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of Arkansas at Fayetteville",
-        "id": "grid.411017.2",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
         "name": "University of Copenhagen (Danemark)",
         "country": "Danemark",
         "full_name": "University of Copenhagen",
@@ -371,18 +347,6 @@
         ],
         "y": 1,
         "z": 321
-      },
-      {
-        "name": "University of North Carolina at Chapel Hill (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of North Carolina at Chapel Hill",
-        "id": "grid.10698.36",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 15
       },
       {
         "name": "Université Laval (Canada)",
@@ -397,66 +361,16 @@
         "z": 20
       },
       {
-        "name": "University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Crete",
-        "id": "grid.8127.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 34
-      },
-      {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 453
-      },
-      {
-        "name": "State University of New York (Etats-Unis)",
+        "name": "University of Arkansas at Fayetteville (Etats-Unis)",
         "country": "Etats-Unis",
-        "full_name": "State University of New York",
-        "id": "grid.189747.4",
+        "full_name": "University of Arkansas at Fayetteville",
+        "id": "grid.411017.2",
         "country_level_part": "Pays tiers",
         "projects": [
           734708
         ],
         "y": 1,
-        "z": 16
-      },
-      {
-        "name": "U. Nantes (France)",
-        "country": "France",
-        "full_name": "Université de Nantes",
-        "acronym": "U. Nantes",
-        "id": "7hB8r",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 71
-      },
-      {
-        "name": "University of Tasmania (Australie)",
-        "country": "Australie",
-        "full_name": "University of Tasmania",
-        "id": "grid.1009.8",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 7
+        "z": 4
       },
       {
         "name": "FLO (France)",
@@ -472,6 +386,56 @@
         "z": 3
       },
       {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 34
+      },
+      {
+        "name": "Middle Tennessee State University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Middle Tennessee State University",
+        "id": "grid.260001.5",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 453
+      },
+      {
         "name": "University of Brawijaya (Indonésie)",
         "country": "Indonésie",
         "full_name": "University of Brawijaya",
@@ -482,11 +446,60 @@
         ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "University of Tasmania (Australie)",
+        "country": "Australie",
+        "full_name": "University of Tasmania",
+        "id": "grid.1009.8",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Oran (Algérie)",
+        "country": "Algérie",
+        "full_name": "University of Oran",
+        "id": "grid.440479.a",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Cardiff University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff University",
+        "id": "grid.5600.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 94
       }
     ]
   },
   "Societal Challenges": {
     "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
+        "name": "Lallemand (France)",
+        "country": "France",
+        "full_name": "Lallemand",
+        "acronym": "Lallemand",
+        "id": "405720194",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101023593
+        ],
+        "y": 1,
+        "z": 1
+      },
       {
         "name": "Chanel Parfums Beaute (France)",
         "country": "France",
@@ -514,11 +527,11 @@
         "z": 5
       },
       {
-        "name": "CRI Paul Bocuse (France)",
+        "name": "Sunti (France)",
         "country": "France",
-        "full_name": "Centre de Recherche de l'institut Paul Bocuse",
-        "acronym": "CRI Paul Bocuse",
-        "id": "500693957",
+        "full_name": "Sunti",
+        "acronym": "Sunti",
+        "id": "805292091",
         "country_level_part": "Pays membres",
         "projects": [
           101023593
@@ -539,19 +552,6 @@
         "z": 31
       },
       {
-        "name": "Lallemand (France)",
-        "country": "France",
-        "full_name": "Lallemand",
-        "acronym": "Lallemand",
-        "id": "405720194",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101023593
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "Pno Consultants (France)",
         "country": "France",
         "full_name": "Pno Consultants",
@@ -565,11 +565,11 @@
         "z": 5
       },
       {
-        "name": "Sunti (France)",
+        "name": "CRI Paul Bocuse (France)",
         "country": "France",
-        "full_name": "Sunti",
-        "acronym": "Sunti",
-        "id": "805292091",
+        "full_name": "Centre de Recherche de l'institut Paul Bocuse",
+        "acronym": "CRI Paul Bocuse",
+        "id": "500693957",
         "country_level_part": "Pays membres",
         "projects": [
           101023593
@@ -578,52 +578,17 @@
         "z": 1
       },
       {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
+        "name": "Proteus (France)",
+        "country": "France",
+        "full_name": "Proteus",
+        "acronym": "Proteus",
+        "id": "418623138",
         "country_level_part": "Pays membres",
         "projects": [
           745668
         ],
         "y": 1,
-        "z": 6
-      },
-      {
-        "name": "A4F-Algafuel (Portugal)",
-        "country": "Portugal",
-        "full_name": "A4F-Algafuel",
-        "id": "grid.423492.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Scottish Association For Marine Science (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Scottish Association For Marine Science",
-        "id": "grid.410415.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Spanish National Research Council (Espagne)",
-        "country": "Espagne",
-        "full_name": "Spanish National Research Council",
-        "id": "grid.4711.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 71
+        "z": 1
       },
       {
         "name": "Sensient Cosmetic Tech... (France)",
@@ -639,6 +604,54 @@
         "z": 1
       },
       {
+        "name": "Scottish Association For Marine Science (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Scottish Association For Marine Science",
+        "id": "grid.410415.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "A4F-Algafuel (Portugal)",
+        "country": "Portugal",
+        "full_name": "A4F-Algafuel",
+        "id": "grid.423492.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Spanish National Research Council (Espagne)",
+        "country": "Espagne",
+        "full_name": "Spanish National Research Council",
+        "id": "grid.4711.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 71
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          745668
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
         "name": "CEA (France)",
         "country": "France",
         "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
@@ -650,35 +663,34 @@
         ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "Proteus (France)",
-        "country": "France",
-        "full_name": "Proteus",
-        "acronym": "Proteus",
-        "id": "418623138",
-        "country_level_part": "Pays membres",
-        "projects": [
-          745668
-        ],
-        "y": 1,
-        "z": 1
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "University of Oran (Algérie)",
-        "country": "Algérie",
-        "full_name": "University of Oran",
-        "id": "grid.440479.a",
-        "country_level_part": "Pays tiers",
+        "name": "University of Szczecin (Pologne)",
+        "country": "Pologne",
+        "full_name": "University of Szczecin",
+        "id": "grid.79757.3b",
+        "country_level_part": "Pays membres",
         "projects": [
           734708
         ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "State University of New York (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "State University of New York",
+        "id": "grid.189747.4",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "Padjadjaran University (Indonésie)",
@@ -693,6 +705,66 @@
         "z": 1
       },
       {
+        "name": "Mount Allison University (Canada)",
+        "country": "Canada",
+        "full_name": "Mount Allison University",
+        "id": "grid.260288.6",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Tanjungpura University (Indonésie)",
+        "country": "Indonésie",
+        "full_name": "Tanjungpura University",
+        "id": "grid.444182.f",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Instituto Tecnológico de Canarias (Espagne)",
+        "country": "Espagne",
+        "full_name": "Instituto Tecnológico de Canarias",
+        "id": "grid.425227.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Zurich University of Applied Sciences (Suisse)",
+        "country": "Suisse",
+        "full_name": "Zurich University of Applied Sciences",
+        "id": "grid.19739.35",
+        "country_level_part": "Pays associés",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of North Carolina at Chapel Hill (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of North Carolina at Chapel Hill",
+        "id": "grid.10698.36",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
         "name": "Hellenic Centre for Marine Research (Grèce)",
         "country": "Grèce",
         "full_name": "Hellenic Centre for Marine Research",
@@ -703,18 +775,6 @@
         ],
         "y": 1,
         "z": 6
-      },
-      {
-        "name": "Cardiff University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Cardiff University",
-        "id": "grid.5600.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 33
       },
       {
         "name": "University of Las Palmas de Gran Canaria (Espagne)",
@@ -742,16 +802,17 @@
         "z": 13
       },
       {
-        "name": "University of Szczecin (Pologne)",
-        "country": "Pologne",
-        "full_name": "University of Szczecin",
-        "id": "grid.79757.3b",
+        "name": "Ifremer (France)",
+        "country": "France",
+        "full_name": "Institut français de recherche pour l'exploitation de la mer",
+        "acronym": "Ifremer",
+        "id": "F6Zt5",
         "country_level_part": "Pays membres",
         "projects": [
           734708
         ],
         "y": 1,
-        "z": 1
+        "z": 14
       },
       {
         "name": "Université du Québec à Rimouski (Canada)",
@@ -766,91 +827,6 @@
         "z": 2
       },
       {
-        "name": "Ifremer (France)",
-        "country": "France",
-        "full_name": "Institut français de recherche pour l'exploitation de la mer",
-        "acronym": "Ifremer",
-        "id": "F6Zt5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Instituto Tecnológico de Canarias (Espagne)",
-        "country": "Espagne",
-        "full_name": "Instituto Tecnológico de Canarias",
-        "id": "grid.425227.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Middle Tennessee State University (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Middle Tennessee State University",
-        "id": "grid.260001.5",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Tanjungpura University (Indonésie)",
-        "country": "Indonésie",
-        "full_name": "Tanjungpura University",
-        "id": "grid.444182.f",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Mount Allison University (Canada)",
-        "country": "Canada",
-        "full_name": "Mount Allison University",
-        "id": "grid.260288.6",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Zurich University of Applied Sciences (Suisse)",
-        "country": "Suisse",
-        "full_name": "Zurich University of Applied Sciences",
-        "id": "grid.19739.35",
-        "country_level_part": "Pays associés",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Arkansas at Fayetteville (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of Arkansas at Fayetteville",
-        "id": "grid.411017.2",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "University of Copenhagen (Danemark)",
         "country": "Danemark",
         "full_name": "University of Copenhagen",
@@ -861,18 +837,6 @@
         ],
         "y": 1,
         "z": 105
-      },
-      {
-        "name": "University of North Carolina at Chapel Hill (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of North Carolina at Chapel Hill",
-        "id": "grid.10698.36",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 10
       },
       {
         "name": "Université Laval (Canada)",
@@ -887,66 +851,16 @@
         "z": 9
       },
       {
-        "name": "University of Crete (Grèce)",
-        "country": "Grèce",
-        "full_name": "University of Crete",
-        "id": "grid.8127.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Inrae (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
-        "acronym": "Inrae",
-        "id": "t4SA4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 132
-      },
-      {
-        "name": "State University of New York (Etats-Unis)",
+        "name": "University of Arkansas at Fayetteville (Etats-Unis)",
         "country": "Etats-Unis",
-        "full_name": "State University of New York",
-        "id": "grid.189747.4",
+        "full_name": "University of Arkansas at Fayetteville",
+        "id": "grid.411017.2",
         "country_level_part": "Pays tiers",
         "projects": [
           734708
         ],
         "y": 1,
-        "z": 11
-      },
-      {
-        "name": "U. Nantes (France)",
-        "country": "France",
-        "full_name": "Université de Nantes",
-        "acronym": "U. Nantes",
-        "id": "7hB8r",
-        "country_level_part": "Pays membres",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 27
-      },
-      {
-        "name": "University of Tasmania (Australie)",
-        "country": "Australie",
-        "full_name": "University of Tasmania",
-        "id": "grid.1009.8",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          734708
-        ],
-        "y": 1,
-        "z": 5
+        "z": 3
       },
       {
         "name": "FLO (France)",
@@ -962,6 +876,56 @@
         "z": 1
       },
       {
+        "name": "University of Crete (Grèce)",
+        "country": "Grèce",
+        "full_name": "University of Crete",
+        "id": "grid.8127.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Middle Tennessee State University (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Middle Tennessee State University",
+        "id": "grid.260001.5",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "U. Nantes (France)",
+        "country": "France",
+        "full_name": "Université de Nantes",
+        "acronym": "U. Nantes",
+        "id": "7hB8r",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "Inrae (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
+        "acronym": "Inrae",
+        "id": "t4SA4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 132
+      },
+      {
         "name": "University of Brawijaya (Indonésie)",
         "country": "Indonésie",
         "full_name": "University of Brawijaya",
@@ -972,6 +936,42 @@
         ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "University of Tasmania (Australie)",
+        "country": "Australie",
+        "full_name": "University of Tasmania",
+        "id": "grid.1009.8",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "University of Oran (Algérie)",
+        "country": "Algérie",
+        "full_name": "University of Oran",
+        "id": "grid.440479.a",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Cardiff University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Cardiff University",
+        "id": "grid.5600.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          734708
+        ],
+        "y": 1,
+        "z": 33
       }
     ]
   }

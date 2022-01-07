@@ -2,16 +2,29 @@
   "all": {
     "all": [
       {
-        "name": "Netherlands Maritime Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Maritime Technology",
-        "id": "grid.470649.8",
+        "name": "CFT (France)",
+        "country": "France",
+        "full_name": "Compagnie fluviale de Transport",
+        "acronym": "CFT",
+        "id": "325625440",
         "country_level_part": "Pays membres",
         "projects": [
           723009
         ],
         "y": 1,
-        "z": 5
+        "z": 2
+      },
+      {
+        "name": "Deltares (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Deltares",
+        "id": "grid.6385.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 45
       },
       {
         "name": "Maritime Research Institute Netherlands (Pays-Bas)",
@@ -26,56 +39,6 @@
         "z": 14
       },
       {
-        "name": "University of Antwerp (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Antwerp",
-        "id": "grid.5284.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 120
-      },
-      {
-        "name": "Entwicklungszentrum für Schiffstechnik und Transportsysteme (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Entwicklungszentrum für Schiffstechnik und Transportsysteme",
-        "id": "grid.424554.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "CFT (France)",
-        "country": "France",
-        "full_name": "Compagnie fluviale de Transport",
-        "acronym": "CFT",
-        "id": "325625440",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Bureau Veritas (France)",
-        "country": "France",
-        "full_name": "Bureau Veritas",
-        "acronym": "Bureau Veritas",
-        "id": "gent187",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 21
-      },
-      {
         "name": "Marlo (Norvège)",
         "country": "Norvège",
         "full_name": "Marlo",
@@ -86,6 +49,18 @@
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Netherlands Maritime Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Maritime Technology",
+        "id": "grid.470649.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -112,56 +87,17 @@
         "z": 67
       },
       {
-        "name": "Federal Ministry for Transport, Innovation and Technology (Autriche)",
-        "country": "Autriche",
-        "full_name": "Federal Ministry for Transport, Innovation and Technology",
-        "id": "grid.454185.9",
+        "name": "Bureau Veritas (France)",
+        "country": "France",
+        "full_name": "Bureau Veritas",
+        "acronym": "Bureau Veritas",
+        "id": "gent187",
         "country_level_part": "Pays membres",
         "projects": [
           723009
         ],
         "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Deltares (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Deltares",
-        "id": "grid.6385.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 45
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Smart, green and integrated transport (TPT)": [
-      {
-        "name": "Netherlands Maritime Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Netherlands Maritime Technology",
-        "id": "grid.470649.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Maritime Research Institute Netherlands (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Maritime Research Institute Netherlands",
-        "id": "grid.22609.3f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 8
+        "z": 21
       },
       {
         "name": "University of Antwerp (Belgique)",
@@ -173,7 +109,7 @@
           723009
         ],
         "y": 1,
-        "z": 5
+        "z": 120
       },
       {
         "name": "Entwicklungszentrum für Schiffstechnik und Transportsysteme (Allemagne)",
@@ -185,8 +121,24 @@
           723009
         ],
         "y": 1,
-        "z": 3
+        "z": 4
       },
+      {
+        "name": "Federal Ministry for Transport, Innovation and Technology (Autriche)",
+        "country": "Autriche",
+        "full_name": "Federal Ministry for Transport, Innovation and Technology",
+        "id": "grid.454185.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 17
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Smart, green and integrated transport (TPT)": [
       {
         "name": "CFT (France)",
         "country": "France",
@@ -201,17 +153,28 @@
         "z": 2
       },
       {
-        "name": "Bureau Veritas (France)",
-        "country": "France",
-        "full_name": "Bureau Veritas",
-        "acronym": "Bureau Veritas",
-        "id": "gent187",
+        "name": "Deltares (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Deltares",
+        "id": "grid.6385.8",
         "country_level_part": "Pays membres",
         "projects": [
           723009
         ],
         "y": 1,
-        "z": 13
+        "z": 3
+      },
+      {
+        "name": "Maritime Research Institute Netherlands (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Maritime Research Institute Netherlands",
+        "id": "grid.22609.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 8
       },
       {
         "name": "Marlo (Norvège)",
@@ -224,6 +187,18 @@
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Netherlands Maritime Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Maritime Technology",
+        "id": "grid.470649.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Delft University of Technology (Pays-Bas)",
@@ -250,6 +225,43 @@
         "z": 14
       },
       {
+        "name": "Bureau Veritas (France)",
+        "country": "France",
+        "full_name": "Bureau Veritas",
+        "acronym": "Bureau Veritas",
+        "id": "gent187",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University of Antwerp (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Antwerp",
+        "id": "grid.5284.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Entwicklungszentrum für Schiffstechnik und Transportsysteme (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Entwicklungszentrum für Schiffstechnik und Transportsysteme",
+        "id": "grid.424554.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723009
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
         "name": "Federal Ministry for Transport, Innovation and Technology (Autriche)",
         "country": "Autriche",
         "full_name": "Federal Ministry for Transport, Innovation and Technology",
@@ -260,18 +272,6 @@
         ],
         "y": 1,
         "z": 8
-      },
-      {
-        "name": "Deltares (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Deltares",
-        "id": "grid.6385.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723009
-        ],
-        "y": 1,
-        "z": 3
       }
     ]
   }

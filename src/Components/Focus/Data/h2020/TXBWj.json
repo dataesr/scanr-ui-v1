@@ -2,10 +2,71 @@
   "all": {
     "all": [
       {
-        "name": "Ricerca sul Sistema Energetico (Italie)",
-        "country": "Italie",
-        "full_name": "Ricerca sul Sistema Energetico",
-        "id": "grid.79546.39",
+        "name": "Toshiba (Autriche)",
+        "country": "Autriche",
+        "full_name": "Toshiba",
+        "id": "grid.473864.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Mälardalen University (Suède)",
+        "country": "Suède",
+        "full_name": "Mälardalen University",
+        "id": "grid.411579.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 142
+      },
+      {
+        "name": "EDF (France)",
+        "country": "France",
+        "full_name": "Electricité de France",
+        "acronym": "EDF",
+        "id": "gent66",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 125
+      },
+      {
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 379
+      },
+      {
+        "name": "European Institute for Energy Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Institute for Energy Research",
+        "id": "grid.33623.37",
         "country_level_part": "Pays membres",
         "projects": [
           774309
@@ -39,46 +100,10 @@
         "z": 94
       },
       {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 379
-      },
-      {
-        "name": "Toshiba (Autriche)",
-        "country": "Autriche",
-        "full_name": "Toshiba",
-        "id": "grid.473864.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 142
-      },
-      {
-        "name": "European Institute for Energy Research (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Institute for Energy Research",
-        "id": "grid.33623.37",
+        "name": "Ricerca sul Sistema Energetico (Italie)",
+        "country": "Italie",
+        "full_name": "Ricerca sul Sistema Energetico",
+        "id": "grid.79546.39",
         "country_level_part": "Pays membres",
         "projects": [
           774309
@@ -97,6 +122,22 @@
         ],
         "y": 1,
         "z": 134
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Secure, clean and efficient energy (ENERGY)": [
+      {
+        "name": "Toshiba (Autriche)",
+        "country": "Autriche",
+        "full_name": "Toshiba",
+        "id": "grid.473864.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "Mälardalen University (Suède)",
@@ -108,7 +149,19 @@
           774309
         ],
         "y": 1,
-        "z": 22
+        "z": 1
+      },
+      {
+        "name": "Flemish Institute for Technological Research (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flemish Institute for Technological Research",
+        "id": "grid.6717.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 39
       },
       {
         "name": "EDF (France)",
@@ -121,23 +174,31 @@
           774309
         ],
         "y": 1,
-        "z": 125
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Secure, clean and efficient energy (ENERGY)": [
+        "z": 42
+      },
       {
-        "name": "Ricerca sul Sistema Energetico (Italie)",
-        "country": "Italie",
-        "full_name": "Ricerca sul Sistema Energetico",
-        "id": "grid.79546.39",
+        "name": "Technical University of Denmark (Danemark)",
+        "country": "Danemark",
+        "full_name": "Technical University of Denmark",
+        "id": "grid.5170.3",
         "country_level_part": "Pays membres",
         "projects": [
           774309
         ],
         "y": 1,
-        "z": 15
+        "z": 65
+      },
+      {
+        "name": "European Institute for Energy Research (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Institute for Energy Research",
+        "id": "grid.33623.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          774309
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "Arttic (France)",
@@ -165,52 +226,16 @@
         "z": 15
       },
       {
-        "name": "Technical University of Denmark (Danemark)",
-        "country": "Danemark",
-        "full_name": "Technical University of Denmark",
-        "id": "grid.5170.3",
+        "name": "Ricerca sul Sistema Energetico (Italie)",
+        "country": "Italie",
+        "full_name": "Ricerca sul Sistema Energetico",
+        "id": "grid.79546.39",
         "country_level_part": "Pays membres",
         "projects": [
           774309
         ],
         "y": 1,
-        "z": 65
-      },
-      {
-        "name": "Toshiba (Autriche)",
-        "country": "Autriche",
-        "full_name": "Toshiba",
-        "id": "grid.473864.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Flemish Institute for Technological Research (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flemish Institute for Technological Research",
-        "id": "grid.6717.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 39
-      },
-      {
-        "name": "European Institute for Energy Research (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Institute for Energy Research",
-        "id": "grid.33623.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 13
+        "z": 15
       },
       {
         "name": "Engineering (Italie)",
@@ -223,31 +248,6 @@
         ],
         "y": 1,
         "z": 17
-      },
-      {
-        "name": "Mälardalen University (Suède)",
-        "country": "Suède",
-        "full_name": "Mälardalen University",
-        "id": "grid.411579.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "EDF (France)",
-        "country": "France",
-        "full_name": "Electricité de France",
-        "acronym": "EDF",
-        "id": "gent66",
-        "country_level_part": "Pays membres",
-        "projects": [
-          774309
-        ],
-        "y": 1,
-        "z": 42
       }
     ]
   }

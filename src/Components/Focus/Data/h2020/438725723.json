@@ -2,18 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723021
-        ],
-        "y": 1,
-        "z": 1072
-      },
-      {
         "name": "University of Alcalá (Espagne)",
         "country": "Espagne",
         "full_name": "University of Alcalá",
@@ -24,18 +12,6 @@
         ],
         "y": 1,
         "z": 20
-      },
-      {
-        "name": "University of Sydney (Australie)",
-        "country": "Australie",
-        "full_name": "University of Sydney",
-        "id": "grid.1013.3",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          723021
-        ],
-        "y": 1,
-        "z": 27
       },
       {
         "name": "NextMove (France)",
@@ -51,16 +27,16 @@
         "z": 6
       },
       {
-        "name": "Swedish National Road and Transport Research Institute (Suède)",
-        "country": "Suède",
-        "full_name": "Swedish National Road and Transport Research Institute",
-        "id": "grid.20055.32",
-        "country_level_part": "Pays membres",
+        "name": "University of Sydney (Australie)",
+        "country": "Australie",
+        "full_name": "University of Sydney",
+        "id": "grid.1013.3",
+        "country_level_part": "Pays tiers",
         "projects": [
           723021
         ],
         "y": 1,
-        "z": 26
+        "z": 27
       },
       {
         "name": "Treelogic (Espagne)",
@@ -75,16 +51,28 @@
         "z": 13
       },
       {
-        "name": "University of California System (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of California System",
-        "id": "grid.30389.31",
-        "country_level_part": "Pays tiers",
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
         "projects": [
           723021
         ],
         "y": 1,
-        "z": 197
+        "z": 1072
+      },
+      {
+        "name": "Swedish National Road and Transport Research Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish National Road and Transport Research Institute",
+        "id": "grid.20055.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723021
+        ],
+        "y": 1,
+        "z": 26
       },
       {
         "name": "University of Stuttgart (Allemagne)",
@@ -99,54 +87,16 @@
         "z": 155
       },
       {
-        "name": "Allgemeiner Deutscher Automobil Club (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Allgemeiner Deutscher Automobil Club",
-        "id": "grid.432059.9",
-        "country_level_part": "Pays membres",
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
         "projects": [
-          814794
+          723021
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Fédération Internation... (France)",
-        "country": "France",
-        "full_name": "Fédération International Automobile",
-        "acronym": "Fédération Internation...",
-        "id": "784354128",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "UFC (France)",
-        "country": "France",
-        "full_name": "Union Fédérale Consommateurs",
-        "acronym": "UFC",
-        "id": "784672495",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
-        "id": "grid.7354.5",
-        "country_level_part": "Pays associés",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 76
+        "z": 197
       },
       {
         "name": "TU Wien (Autriche)",
@@ -159,18 +109,6 @@
         ],
         "y": 1,
         "z": 197
-      },
-      {
-        "name": "Applus+ IDIADA (Espagne)",
-        "country": "Espagne",
-        "full_name": "Applus+ IDIADA",
-        "id": "grid.21798.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 42
       },
       {
         "name": "MIRA (Royaume-Uni)",
@@ -197,6 +135,19 @@
         "z": 342
       },
       {
+        "name": "UFC (France)",
+        "country": "France",
+        "full_name": "Union Fédérale Consommateurs",
+        "acronym": "UFC",
+        "id": "784672495",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
         "name": "Federal Highway Research Institute (Allemagne)",
         "country": "Allemagne",
         "full_name": "Federal Highway Research Institute",
@@ -207,23 +158,60 @@
         ],
         "y": 1,
         "z": 17
+      },
+      {
+        "name": "Fédération Internation... (France)",
+        "country": "France",
+        "full_name": "Fédération International Automobile",
+        "acronym": "Fédération Internation...",
+        "id": "784354128",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Allgemeiner Deutscher Automobil Club (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Allgemeiner Deutscher Automobil Club",
+        "id": "grid.432059.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Applus+ IDIADA (Espagne)",
+        "country": "Espagne",
+        "full_name": "Applus+ IDIADA",
+        "id": "grid.21798.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 42
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 76
       }
     ]
   },
   "Societal Challenges": {
     "Smart, green and integrated transport (TPT)": [
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723021
-        ],
-        "y": 1,
-        "z": 90
-      },
       {
         "name": "University of Alcalá (Espagne)",
         "country": "Espagne",
@@ -235,18 +223,6 @@
         ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "University of Sydney (Australie)",
-        "country": "Australie",
-        "full_name": "University of Sydney",
-        "id": "grid.1013.3",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          723021
-        ],
-        "y": 1,
-        "z": 1
       },
       {
         "name": "NextMove (France)",
@@ -262,16 +238,16 @@
         "z": 3
       },
       {
-        "name": "Swedish National Road and Transport Research Institute (Suède)",
-        "country": "Suède",
-        "full_name": "Swedish National Road and Transport Research Institute",
-        "id": "grid.20055.32",
-        "country_level_part": "Pays membres",
+        "name": "University of Sydney (Australie)",
+        "country": "Australie",
+        "full_name": "University of Sydney",
+        "id": "grid.1013.3",
+        "country_level_part": "Pays tiers",
         "projects": [
           723021
         ],
         "y": 1,
-        "z": 25
+        "z": 1
       },
       {
         "name": "Treelogic (Espagne)",
@@ -286,16 +262,28 @@
         "z": 1
       },
       {
-        "name": "University of California System (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of California System",
-        "id": "grid.30389.31",
-        "country_level_part": "Pays tiers",
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
         "projects": [
           723021
         ],
         "y": 1,
-        "z": 1
+        "z": 90
+      },
+      {
+        "name": "Swedish National Road and Transport Research Institute (Suède)",
+        "country": "Suède",
+        "full_name": "Swedish National Road and Transport Research Institute",
+        "id": "grid.20055.32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723021
+        ],
+        "y": 1,
+        "z": 25
       },
       {
         "name": "University of Stuttgart (Allemagne)",
@@ -310,54 +298,16 @@
         "z": 17
       },
       {
-        "name": "Allgemeiner Deutscher Automobil Club (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Allgemeiner Deutscher Automobil Club",
-        "id": "grid.432059.9",
-        "country_level_part": "Pays membres",
+        "name": "University of California System (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of California System",
+        "id": "grid.30389.31",
+        "country_level_part": "Pays tiers",
         "projects": [
-          814794
+          723021
         ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Fédération Internation... (France)",
-        "country": "France",
-        "full_name": "Fédération International Automobile",
-        "acronym": "Fédération Internation...",
-        "id": "784354128",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "UFC (France)",
-        "country": "France",
-        "full_name": "Union Fédérale Consommateurs",
-        "acronym": "UFC",
-        "id": "784672495",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
-        "country": "Suisse",
-        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
-        "id": "grid.7354.5",
-        "country_level_part": "Pays associés",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 12
       },
       {
         "name": "TU Wien (Autriche)",
@@ -370,18 +320,6 @@
         ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "Applus+ IDIADA (Espagne)",
-        "country": "Espagne",
-        "full_name": "Applus+ IDIADA",
-        "id": "grid.21798.35",
-        "country_level_part": "Pays membres",
-        "projects": [
-          814794
-        ],
-        "y": 1,
-        "z": 36
       },
       {
         "name": "MIRA (Royaume-Uni)",
@@ -408,6 +346,19 @@
         "z": 49
       },
       {
+        "name": "UFC (France)",
+        "country": "France",
+        "full_name": "Union Fédérale Consommateurs",
+        "acronym": "UFC",
+        "id": "784672495",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "Federal Highway Research Institute (Allemagne)",
         "country": "Allemagne",
         "full_name": "Federal Highway Research Institute",
@@ -418,6 +369,55 @@
         ],
         "y": 1,
         "z": 16
+      },
+      {
+        "name": "Fédération Internation... (France)",
+        "country": "France",
+        "full_name": "Fédération International Automobile",
+        "acronym": "Fédération Internation...",
+        "id": "784354128",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Allgemeiner Deutscher Automobil Club (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Allgemeiner Deutscher Automobil Club",
+        "id": "grid.432059.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Applus+ IDIADA (Espagne)",
+        "country": "Espagne",
+        "full_name": "Applus+ IDIADA",
+        "id": "grid.21798.35",
+        "country_level_part": "Pays membres",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Swiss Federal Laboratories for Materials Science and Technology (Suisse)",
+        "country": "Suisse",
+        "full_name": "Swiss Federal Laboratories for Materials Science and Technology",
+        "id": "grid.7354.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          814794
+        ],
+        "y": 1,
+        "z": 12
       }
     ]
   }

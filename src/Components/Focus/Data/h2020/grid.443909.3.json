@@ -2,42 +2,42 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
+        "name": "U. Paris (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
         "country_level_part": "Pays membres",
         "projects": [
           695099
         ],
         "y": 1,
-        "z": 2670
+        "z": 388
       },
       {
-        "name": "University of Concepción (Chili)",
-        "country": "Chili",
-        "full_name": "University of Concepción",
-        "id": "grid.5380.e",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Sorbonne U (France)",
-        "country": "France",
-        "full_name": "Sorbonne Université",
-        "acronym": "Sorbonne U",
-        "id": "bxPQe",
+        "name": "Nicolaus Copernicus Astronomical Center (Pologne)",
+        "country": "Pologne",
+        "full_name": "Nicolaus Copernicus Astronomical Center",
+        "id": "grid.436383.9",
         "country_level_part": "Pays membres",
         "projects": [
           695099
         ],
         "y": 1,
-        "z": 505
+        "z": 6
+      },
+      {
+        "name": "Obs. Paris (France)",
+        "country": "France",
+        "full_name": "Observatoire de Paris",
+        "acronym": "Obs. Paris",
+        "id": "tr5VV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 43
       },
       {
         "name": "Pontificia Universidad Católica de Chile (Chili)",
@@ -65,19 +65,6 @@
         "z": 407
       },
       {
-        "name": "UVSQ (France)",
-        "country": "France",
-        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-        "acronym": "UVSQ",
-        "id": "V13Pk",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 94
-      },
-      {
         "name": "CNES (France)",
         "country": "France",
         "full_name": "Centre national d'études spatiales",
@@ -91,61 +78,6 @@
         "z": 107
       },
       {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 388
-      },
-      {
-        "name": "Obs. Paris (France)",
-        "country": "France",
-        "full_name": "Observatoire de Paris",
-        "acronym": "Obs. Paris",
-        "id": "tr5VV",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 43
-      },
-      {
-        "name": "Nicolaus Copernicus Astronomical Center (Pologne)",
-        "country": "Pologne",
-        "full_name": "Nicolaus Copernicus Astronomical Center",
-        "id": "grid.436383.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 6
-      }
-    ]
-  },
-  "Excellent Science": {
-    "European Research Council (ERC)": [
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 599
-      },
-      {
         "name": "University of Concepción (Chili)",
         "country": "Chili",
         "full_name": "University of Concepción",
@@ -155,7 +87,7 @@
           695099
         ],
         "y": 1,
-        "z": 2
+        "z": 8
       },
       {
         "name": "Sorbonne U (France)",
@@ -168,7 +100,75 @@
           695099
         ],
         "y": 1,
-        "z": 123
+        "z": 505
+      },
+      {
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 94
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 2670
+      }
+    ]
+  },
+  "Excellent Science": {
+    "European Research Council (ERC)": [
+      {
+        "name": "U. Paris (France)",
+        "country": "France",
+        "full_name": "Université de Paris",
+        "acronym": "U. Paris",
+        "id": "5cZyU",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 100
+      },
+      {
+        "name": "Nicolaus Copernicus Astronomical Center (Pologne)",
+        "country": "Pologne",
+        "full_name": "Nicolaus Copernicus Astronomical Center",
+        "id": "grid.436383.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Obs. Paris (France)",
+        "country": "France",
+        "full_name": "Observatoire de Paris",
+        "acronym": "Obs. Paris",
+        "id": "tr5VV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 7
       },
       {
         "name": "Pontificia Universidad Católica de Chile (Chili)",
@@ -196,19 +196,6 @@
         "z": 106
       },
       {
-        "name": "UVSQ (France)",
-        "country": "France",
-        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
-        "acronym": "UVSQ",
-        "id": "V13Pk",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
         "name": "CNES (France)",
         "country": "France",
         "full_name": "Centre national d'études spatiales",
@@ -222,42 +209,55 @@
         "z": 20
       },
       {
-        "name": "U. Paris (France)",
-        "country": "France",
-        "full_name": "Université de Paris",
-        "acronym": "U. Paris",
-        "id": "5cZyU",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 100
-      },
-      {
-        "name": "Obs. Paris (France)",
-        "country": "France",
-        "full_name": "Observatoire de Paris",
-        "acronym": "Obs. Paris",
-        "id": "tr5VV",
-        "country_level_part": "Pays membres",
-        "projects": [
-          695099
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Nicolaus Copernicus Astronomical Center (Pologne)",
-        "country": "Pologne",
-        "full_name": "Nicolaus Copernicus Astronomical Center",
-        "id": "grid.436383.9",
-        "country_level_part": "Pays membres",
+        "name": "University of Concepción (Chili)",
+        "country": "Chili",
+        "full_name": "University of Concepción",
+        "id": "grid.5380.e",
+        "country_level_part": "Pays tiers",
         "projects": [
           695099
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "Sorbonne U (France)",
+        "country": "France",
+        "full_name": "Sorbonne Université",
+        "acronym": "Sorbonne U",
+        "id": "bxPQe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 123
+      },
+      {
+        "name": "UVSQ (France)",
+        "country": "France",
+        "full_name": "Université de Versailles Saint-Quentin-en-Yvelines",
+        "acronym": "UVSQ",
+        "id": "V13Pk",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          695099
+        ],
+        "y": 1,
+        "z": 599
       }
     ]
   }

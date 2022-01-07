@@ -2,20 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750,
-          101016665
-        ],
-        "y": 2,
-        "z": 2670
-      },
-      {
         "name": "AMU (France)",
         "country": "France",
         "full_name": "Aix-Marseille Université",
@@ -30,30 +16,18 @@
         "z": 216
       },
       {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          101016665,
-          732695
+          713750,
+          101016665
         ],
         "y": 2,
-        "z": 685
-      },
-      {
-        "name": "Centre for Process Innovation (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Centre for Process Innovation",
-        "id": "grid.420713.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665,
-          732695
-        ],
-        "y": 2,
-        "z": 17
+        "z": 2670
       },
       {
         "name": "Photonics Bretagne (France)",
@@ -70,11 +44,63 @@
         "z": 4
       },
       {
-        "name": "Fondation IMéRa (France)",
+        "name": "Centre for Process Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Centre for Process Innovation",
+        "id": "grid.420713.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665,
+          732695
+        ],
+        "y": 2,
+        "z": 17
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665,
+          732695
+        ],
+        "y": 2,
+        "z": 685
+      },
+      {
+        "name": "Rég. Provence-Alpes-Côte d'Azur (France)",
         "country": "France",
-        "full_name": "Fondation universitaire Institut méditerranéen des recherches avancées",
-        "acronym": "Fondation IMéRa",
-        "id": "dxBdz",
+        "full_name": "Conseil régional de Provence-Alpes-Côte d'Azur",
+        "acronym": "Rég. Provence-Alpes-Côte d'Azur",
+        "id": "8FC4R",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Eurobiomed - CBS (France)",
+        "country": "France",
+        "full_name": "Eurobiomed - CBS",
+        "acronym": "Eurobiomed - CBS",
+        "id": "JBAGV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CROUS Aix-Marseille Avignon (France)",
+        "country": "France",
+        "full_name": "CROUS de l'Académie d'Aix-Marseille",
+        "acronym": "CROUS Aix-Marseille Avignon",
+        "id": "jkNQ3",
         "country_level_part": "Pays membres",
         "projects": [
           713750
@@ -122,56 +148,17 @@
         "z": 7
       },
       {
-        "name": "Eurobiomed - CBS (France)",
+        "name": "Asso Pole Trimatec (France)",
         "country": "France",
-        "full_name": "Eurobiomed - CBS",
-        "acronym": "Eurobiomed - CBS",
-        "id": "JBAGV",
+        "full_name": "Asso Pole Trimatec",
+        "acronym": "Asso Pole Trimatec",
+        "id": "488222472",
         "country_level_part": "Pays membres",
         "projects": [
           713750
         ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Pôle mer - Méditerranée (France)",
-        "country": "France",
-        "full_name": "Pôle mer - Méditerranée",
-        "acronym": "Pôle mer - Méditerranée",
-        "id": "T37ba",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Rég. Provence-Alpes-Côte d'Azur (France)",
-        "country": "France",
-        "full_name": "Conseil régional de Provence-Alpes-Côte d'Azur",
-        "acronym": "Rég. Provence-Alpes-Côte d'Azur",
-        "id": "8FC4R",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Capenergies (France)",
-        "country": "France",
-        "full_name": "Capenergies",
-        "acronym": "Capenergies",
-        "id": "LNfjN",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Aqua Valley (France)",
@@ -187,11 +174,11 @@
         "z": 1
       },
       {
-        "name": "CROUS Aix-Marseille Avignon (France)",
+        "name": "Fondation IMéRa (France)",
         "country": "France",
-        "full_name": "CROUS de l'Académie d'Aix-Marseille",
-        "acronym": "CROUS Aix-Marseille Avignon",
-        "id": "jkNQ3",
+        "full_name": "Fondation universitaire Institut méditerranéen des recherches avancées",
+        "acronym": "Fondation IMéRa",
+        "id": "dxBdz",
         "country_level_part": "Pays membres",
         "projects": [
           713750
@@ -200,265 +187,30 @@
         "z": 1
       },
       {
-        "name": "Asso Pole Trimatec (France)",
+        "name": "Capenergies (France)",
         "country": "France",
-        "full_name": "Asso Pole Trimatec",
-        "acronym": "Asso Pole Trimatec",
-        "id": "488222472",
+        "full_name": "Capenergies",
+        "acronym": "Capenergies",
+        "id": "LNfjN",
         "country_level_part": "Pays membres",
         "projects": [
           713750
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-        "id": "grid.28326.3d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "ENSMM Besançon (France)",
-        "country": "France",
-        "full_name": "École nationale supérieure de mécanique et des microtechniques",
-        "acronym": "ENSMM Besançon",
-        "id": "cWx2t",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 212
-      },
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 258
-      },
-      {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 50
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 124
-      },
-      {
-        "name": "EPIC (France)",
-        "country": "France",
-        "full_name": "European Photonics Industry Consortium",
-        "acronym": "EPIC",
-        "id": "480890714",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Flanders Make (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flanders Make",
-        "id": "grid.434127.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "ALPHA-RLH (France)",
-        "country": "France",
-        "full_name": "ALPHA - Route des Lasers & des Hyperfréquences",
-        "acronym": "ALPHA-RLH",
-        "id": "D1K7j",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
         ],
         "y": 1,
         "z": 2
       },
       {
-        "name": "LioniX (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "LioniX",
-        "id": "grid.425270.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 19
-      },
-      {
-        "name": "CEA (France)",
+        "name": "Pôle mer - Méditerranée (France)",
         "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
+        "full_name": "Pôle mer - Méditerranée",
+        "acronym": "Pôle mer - Méditerranée",
+        "id": "T37ba",
         "country_level_part": "Pays membres",
         "projects": [
-          101016665
+          713750
         ],
         "y": 1,
-        "z": 852
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 425
-      },
-      {
-        "name": "University College Cork (Irlande)",
-        "country": "Irlande",
-        "full_name": "University College Cork",
-        "id": "grid.7872.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 198
-      },
-      {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 199
-      },
-      {
-        "name": "IOTA (France)",
-        "country": "France",
-        "full_name": "Institut d'optique Graduate School",
-        "acronym": "IOTA",
-        "id": "QtZkX",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 23
-      },
-      {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 171
-      },
-      {
-        "name": "Institute of Electronic Materials Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Electronic Materials Technology",
-        "id": "grid.425113.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Finmeccanica (Italie)",
-        "country": "Italie",
-        "full_name": "Finmeccanica",
-        "id": "grid.423952.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 76
-      },
-      {
-        "name": "Photonics France (France)",
-        "country": "France",
-        "full_name": "Photonics France",
-        "acronym": "Photonics France",
-        "id": "838198000",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Minalogic (France)",
-        "country": "France",
-        "full_name": "Minalogic",
-        "acronym": "Minalogic",
-        "id": "GH472",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 8
+        "z": 10
       },
       {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
@@ -473,103 +225,29 @@
         "z": 277
       },
       {
-        "name": "U. Paris-Saclay (France)",
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 67
+      },
+      {
+        "name": "Systematic Paris-Region (France)",
         "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
+        "full_name": "Systematic Paris-Region",
+        "acronym": "Systematic Paris-Region",
+        "id": "XVEM0",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 575
-      },
-      {
-        "name": "ALPHANOV (France)",
-        "country": "France",
-        "full_name": "Alphanov",
-        "acronym": "ALPHANOV",
-        "id": "493635817",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 70
-      },
-      {
-        "name": "Joanneum Research (Autriche)",
-        "country": "Autriche",
-        "full_name": "Joanneum Research",
-        "id": "grid.8684.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 68
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 268
-      },
-      {
-        "name": "Warsaw University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Warsaw University of Technology",
-        "id": "grid.1035.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 53
-      },
-      {
-        "name": "Sant'Anna School of Advanced Studies (Italie)",
-        "country": "Italie",
-        "full_name": "Sant'Anna School of Advanced Studies",
-        "id": "grid.263145.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 95
-      },
-      {
-        "name": "Laser Zentrum Hannover (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Laser Zentrum Hannover",
-        "id": "grid.425376.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 6
+        "z": 12
       },
       {
         "name": "Sonnenberg Harrison Pa... (France)",
@@ -585,6 +263,156 @@
         "z": 2
       },
       {
+        "name": "ENSMM Besançon (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure de mécanique et des microtechniques",
+        "acronym": "ENSMM Besançon",
+        "id": "cWx2t",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "ENSICAEN (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure d'ingénieurs de Caen",
+        "acronym": "ENSICAEN",
+        "id": "I4SPK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 423
+      },
+      {
+        "name": "Photonics France (France)",
+        "country": "France",
+        "full_name": "Photonics France",
+        "acronym": "Photonics France",
+        "id": "838198000",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 238
+      },
+      {
+        "name": "EPIC (France)",
+        "country": "France",
+        "full_name": "European Photonics Industry Consortium",
+        "acronym": "EPIC",
+        "id": "480890714",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 70
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 50
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 425
+      },
+      {
+        "name": "Joanneum Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Joanneum Research",
+        "id": "grid.8684.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 68
+      },
+      {
         "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
         "country": "Suisse",
         "full_name": "Swiss Center for Electronics and Microtechnology",
@@ -595,6 +423,264 @@
         ],
         "y": 1,
         "z": 86
+      },
+      {
+        "name": "IOTA (France)",
+        "country": "France",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 23
+      },
+      {
+        "name": "ALPHA-RLH (France)",
+        "country": "France",
+        "full_name": "ALPHA - Route des Lasers & des Hyperfréquences",
+        "acronym": "ALPHA-RLH",
+        "id": "D1K7j",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ECM (France)",
+        "country": "France",
+        "full_name": "Centrale Marseille",
+        "acronym": "ECM",
+        "id": "1tI7C",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 31
+      },
+      {
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 76
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 212
+      },
+      {
+        "name": "University College Cork (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Cork",
+        "id": "grid.7872.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 198
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 182
+      },
+      {
+        "name": "Eindhoven University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Eindhoven University of Technology",
+        "id": "grid.6852.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 269
+      },
+      {
+        "name": "UFC (France)",
+        "country": "France",
+        "full_name": "Université de Franche-Comté",
+        "acronym": "UFC",
+        "id": "7Mpgt",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 36
+      },
+      {
+        "name": "Minalogic (France)",
+        "country": "France",
+        "full_name": "Minalogic",
+        "acronym": "Minalogic",
+        "id": "GH472",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 342
+      },
+      {
+        "name": "LioniX (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "LioniX",
+        "id": "grid.425270.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Cartif (Espagne)",
+        "country": "Espagne",
+        "full_name": "Cartif",
+        "id": "grid.424774.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 62
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 268
+      },
+      {
+        "name": "Laser Zentrum Hannover (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Laser Zentrum Hannover",
+        "id": "grid.425376.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "Warsaw University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Warsaw University of Technology",
+        "id": "grid.1035.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 53
+      },
+      {
+        "name": "Institute of Electronic Materials Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Electronic Materials Technology",
+        "id": "grid.425113.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Leibniz Institute of Photonic Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute of Photonic Technology",
+        "id": "grid.418907.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 16
       },
       {
         "name": "University of Southampton (Royaume-Uni)",
@@ -609,52 +695,188 @@
         "z": 155
       },
       {
-        "name": "Institute of Photonic Sciences (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute of Photonic Sciences",
-        "id": "grid.5853.b",
+        "name": "Europe Unlimited (Belgique)",
+        "country": "Belgique",
+        "full_name": "Europe Unlimited",
+        "id": "grid.424750.0",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 67
+        "z": 18
       },
       {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
+        "name": "El.En. Group (Italie)",
+        "country": "Italie",
+        "full_name": "El.En. Group",
+        "id": "grid.424313.3",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 182
+        "z": 1
+      },
+      {
+        "name": "Flanders Make (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Make",
+        "id": "grid.434127.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 199
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 171
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 273
+      },
+      {
+        "name": "European Business and Innovation Centre Network (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Business and Innovation Centre Network",
+        "id": "grid.424776.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 29
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 852
+      },
+      {
+        "name": "UTT (France)",
+        "country": "France",
+        "full_name": "Université de technologie de Troyes",
+        "acronym": "UTT",
+        "id": "8tVLr",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Joensuu Science Park (Finlande)",
+        "country": "Finlande",
+        "full_name": "Joensuu Science Park",
+        "id": "grid.436116.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732695
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "CNRS (France)",
+        "name": "Rég. Provence-Alpes-Côte d'Azur (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Conseil régional de Provence-Alpes-Côte d'Azur",
+        "acronym": "Rég. Provence-Alpes-Côte d'Azur",
+        "id": "8FC4R",
         "country_level_part": "Pays membres",
         "projects": [
           713750
         ],
         "y": 1,
-        "z": 938
+        "z": 1
       },
       {
-        "name": "Fondation IMéRa (France)",
+        "name": "Eurobiomed - CBS (France)",
         "country": "France",
-        "full_name": "Fondation universitaire Institut méditerranéen des recherches avancées",
-        "acronym": "Fondation IMéRa",
-        "id": "dxBdz",
+        "full_name": "Eurobiomed - CBS",
+        "acronym": "Eurobiomed - CBS",
+        "id": "JBAGV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "CROUS Aix-Marseille Avignon (France)",
+        "country": "France",
+        "full_name": "CROUS de l'Académie d'Aix-Marseille",
+        "acronym": "CROUS Aix-Marseille Avignon",
+        "id": "jkNQ3",
         "country_level_part": "Pays membres",
         "projects": [
           713750
@@ -681,6 +903,58 @@
         "full_name": "SATT Sud-EST",
         "acronym": "SATT Sud-EST",
         "id": "DE44a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "SAFE Cluster (France)",
+        "country": "France",
+        "full_name": "SAFE Cluster",
+        "acronym": "SAFE Cluster",
+        "id": "KmrJ5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Asso Pole Trimatec (France)",
+        "country": "France",
+        "full_name": "Asso Pole Trimatec",
+        "acronym": "Asso Pole Trimatec",
+        "id": "488222472",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Aqua Valley (France)",
+        "country": "France",
+        "full_name": "Pôle de la filière de l'eau - Aqua Valley",
+        "acronym": "Aqua Valley",
+        "id": "6xf56",
+        "country_level_part": "Pays membres",
+        "projects": [
+          713750
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Fondation IMéRa (France)",
+        "country": "France",
+        "full_name": "Fondation universitaire Institut méditerranéen des recherches avancées",
+        "acronym": "Fondation IMéRa",
+        "id": "dxBdz",
         "country_level_part": "Pays membres",
         "projects": [
           713750
@@ -702,24 +976,11 @@
         "z": 79
       },
       {
-        "name": "SAFE Cluster (France)",
+        "name": "Capenergies (France)",
         "country": "France",
-        "full_name": "SAFE Cluster",
-        "acronym": "SAFE Cluster",
-        "id": "KmrJ5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Eurobiomed - CBS (France)",
-        "country": "France",
-        "full_name": "Eurobiomed - CBS",
-        "acronym": "Eurobiomed - CBS",
-        "id": "JBAGV",
+        "full_name": "Capenergies",
+        "acronym": "Capenergies",
+        "id": "LNfjN",
         "country_level_part": "Pays membres",
         "projects": [
           713750
@@ -741,100 +1002,22 @@
         "z": 1
       },
       {
-        "name": "Rég. Provence-Alpes-Côte d'Azur (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Conseil régional de Provence-Alpes-Côte d'Azur",
-        "acronym": "Rég. Provence-Alpes-Côte d'Azur",
-        "id": "8FC4R",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           713750
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Capenergies (France)",
-        "country": "France",
-        "full_name": "Capenergies",
-        "acronym": "Capenergies",
-        "id": "LNfjN",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Aqua Valley (France)",
-        "country": "France",
-        "full_name": "Pôle de la filière de l'eau - Aqua Valley",
-        "acronym": "Aqua Valley",
-        "id": "6xf56",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "CROUS Aix-Marseille Avignon (France)",
-        "country": "France",
-        "full_name": "CROUS de l'Académie d'Aix-Marseille",
-        "acronym": "CROUS Aix-Marseille Avignon",
-        "id": "jkNQ3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Asso Pole Trimatec (France)",
-        "country": "France",
-        "full_name": "Asso Pole Trimatec",
-        "acronym": "Asso Pole Trimatec",
-        "id": "488222472",
-        "country_level_part": "Pays membres",
-        "projects": [
-          713750
-        ],
-        "y": 1,
-        "z": 1
+        "z": 938
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "National Research Council (Italie)",
-        "country": "Italie",
-        "full_name": "National Research Council",
-        "id": "grid.5326.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665,
-          732695
-        ],
-        "y": 2,
-        "z": 76
-      },
-      {
-        "name": "Centre for Process Innovation (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Centre for Process Innovation",
-        "id": "grid.420713.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665,
-          732695
-        ],
-        "y": 2,
-        "z": 6
-      },
       {
         "name": "Photonics Bretagne (France)",
         "country": "France",
@@ -850,17 +1033,30 @@
         "z": 3
       },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "Centre for Process Innovation (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Centre for Process Innovation",
+        "id": "grid.420713.3",
         "country_level_part": "Pays membres",
         "projects": [
-          101016665
+          101016665,
+          732695
         ],
-        "y": 1,
-        "z": 148
+        "y": 2,
+        "z": 6
+      },
+      {
+        "name": "National Research Council (Italie)",
+        "country": "Italie",
+        "full_name": "National Research Council",
+        "id": "grid.5326.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665,
+          732695
+        ],
+        "y": 2,
+        "z": 76
       },
       {
         "name": "AMU (France)",
@@ -876,252 +1072,17 @@
         "z": 9
       },
       {
-        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
-        "country": "Italie",
-        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
-        "id": "grid.28326.3d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 28
-      },
-      {
-        "name": "ENSMM Besançon (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "École nationale supérieure de mécanique et des microtechniques",
-        "acronym": "ENSMM Besançon",
-        "id": "cWx2t",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Universitat Politècnica de Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de Catalunya",
-        "id": "grid.6835.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 40
-      },
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 54
-      },
-      {
-        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
-        "country": "Espagne",
-        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
-        "id": "grid.424291.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "U. Lille (France)",
-        "country": "France",
-        "full_name": "Université de Lille",
-        "acronym": "U. Lille",
-        "id": "Szqy5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "EPIC (France)",
-        "country": "France",
-        "full_name": "European Photonics Industry Consortium",
-        "acronym": "EPIC",
-        "id": "480890714",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Flanders Make (Belgique)",
-        "country": "Belgique",
-        "full_name": "Flanders Make",
-        "id": "grid.434127.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "ALPHA-RLH (France)",
-        "country": "France",
-        "full_name": "ALPHA - Route des Lasers & des Hyperfréquences",
-        "acronym": "ALPHA-RLH",
-        "id": "D1K7j",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "LioniX (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "LioniX",
-        "id": "grid.425270.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 16
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 167
-      },
-      {
-        "name": "VTT Technical Research Centre of Finland (Finlande)",
-        "country": "Finlande",
-        "full_name": "VTT Technical Research Centre of Finland",
-        "id": "grid.6324.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 99
-      },
-      {
-        "name": "University College Cork (Irlande)",
-        "country": "Irlande",
-        "full_name": "University College Cork",
-        "id": "grid.7872.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 55
-      },
-      {
-        "name": "RISE Research Institutes of Sweden (Suède)",
-        "country": "Suède",
-        "full_name": "RISE Research Institutes of Sweden",
-        "id": "grid.450998.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 41
-      },
-      {
-        "name": "IOTA (France)",
-        "country": "France",
-        "full_name": "Institut d'optique Graduate School",
-        "acronym": "IOTA",
-        "id": "QtZkX",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 25
-      },
-      {
-        "name": "Institute of Electronic Materials Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Institute of Electronic Materials Technology",
-        "id": "grid.425113.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Finmeccanica (Italie)",
-        "country": "Italie",
-        "full_name": "Finmeccanica",
-        "id": "grid.423952.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Photonics France (France)",
-        "country": "France",
-        "full_name": "Photonics France",
-        "acronym": "Photonics France",
-        "id": "838198000",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Minalogic (France)",
-        "country": "France",
-        "full_name": "Minalogic",
-        "acronym": "Minalogic",
-        "id": "GH472",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 6
+        "z": 148
       },
       {
         "name": "École Polytechnique Fédérale de Lausanne (Suisse)",
@@ -1136,103 +1097,29 @@
         "z": 34
       },
       {
-        "name": "U. Paris-Saclay (France)",
+        "name": "Institute of Photonic Sciences (Espagne)",
+        "country": "Espagne",
+        "full_name": "Institute of Photonic Sciences",
+        "id": "grid.5853.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Systematic Paris-Region (France)",
         "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
+        "full_name": "Systematic Paris-Region",
+        "acronym": "Systematic Paris-Region",
+        "id": "XVEM0",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 52
-      },
-      {
-        "name": "ALPHANOV (France)",
-        "country": "France",
-        "full_name": "Alphanov",
-        "acronym": "ALPHANOV",
-        "id": "493635817",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "UJM (France)",
-        "country": "France",
-        "full_name": "Université Jean Monnet",
-        "acronym": "UJM",
-        "id": "tIJ02",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Joanneum Research (Autriche)",
-        "country": "Autriche",
-        "full_name": "Joanneum Research",
-        "id": "grid.8684.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 13
-      },
-      {
-        "name": "Karlsruhe Institute of Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Karlsruhe Institute of Technology",
-        "id": "grid.7892.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 22
-      },
-      {
-        "name": "Warsaw University of Technology (Pologne)",
-        "country": "Pologne",
-        "full_name": "Warsaw University of Technology",
-        "id": "grid.1035.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "Sant'Anna School of Advanced Studies (Italie)",
-        "country": "Italie",
-        "full_name": "Sant'Anna School of Advanced Studies",
-        "id": "grid.263145.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 24
-      },
-      {
-        "name": "Laser Zentrum Hannover (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Laser Zentrum Hannover",
-        "id": "grid.425376.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 2
+        "z": 9
       },
       {
         "name": "Sonnenberg Harrison Pa... (France)",
@@ -1248,6 +1135,156 @@
         "z": 1
       },
       {
+        "name": "ENSMM Besançon (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure de mécanique et des microtechniques",
+        "acronym": "ENSMM Besançon",
+        "id": "cWx2t",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ENSICAEN (France)",
+        "country": "France",
+        "full_name": "École nationale supérieure d'ingénieurs de Caen",
+        "acronym": "ENSICAEN",
+        "id": "I4SPK",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "National Technical University of Athens (Grèce)",
+        "country": "Grèce",
+        "full_name": "National Technical University of Athens",
+        "id": "grid.4241.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "Photonics France (France)",
+        "country": "France",
+        "full_name": "Photonics France",
+        "acronym": "Photonics France",
+        "id": "838198000",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Imec (Belgique)",
+        "country": "Belgique",
+        "full_name": "Imec",
+        "id": "grid.15762.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 135
+      },
+      {
+        "name": "EPIC (France)",
+        "country": "France",
+        "full_name": "European Photonics Industry Consortium",
+        "acronym": "EPIC",
+        "id": "480890714",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 12
+      },
+      {
+        "name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni (Italie)",
+        "country": "Italie",
+        "full_name": "Consorzio Nazionale Interuniversitario per le Telecomunicazioni",
+        "id": "grid.28326.3d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "UJM (France)",
+        "country": "France",
+        "full_name": "Université Jean Monnet",
+        "acronym": "UJM",
+        "id": "tIJ02",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Asociación de Investigación Metalúrgica del Noroeste (Espagne)",
+        "country": "Espagne",
+        "full_name": "Asociación de Investigación Metalúrgica del Noroeste",
+        "id": "grid.424291.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "VTT Technical Research Centre of Finland (Finlande)",
+        "country": "Finlande",
+        "full_name": "VTT Technical Research Centre of Finland",
+        "id": "grid.6324.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 99
+      },
+      {
+        "name": "Joanneum Research (Autriche)",
+        "country": "Autriche",
+        "full_name": "Joanneum Research",
+        "id": "grid.8684.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
         "name": "Swiss Center for Electronics and Microtechnology (Suisse)",
         "country": "Suisse",
         "full_name": "Swiss Center for Electronics and Microtechnology",
@@ -1260,77 +1297,30 @@
         "z": 27
       },
       {
-        "name": "University of Southampton (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Southampton",
-        "id": "grid.5491.9",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Institute of Photonic Sciences (Espagne)",
-        "country": "Espagne",
-        "full_name": "Institute of Photonic Sciences",
-        "id": "grid.5853.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 14
-      },
-      {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 51
-      },
-      {
-        "name": "European Business and Innovation Centre Network (Belgique)",
-        "country": "Belgique",
-        "full_name": "European Business and Innovation Centre Network",
-        "id": "grid.424776.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "UTT (France)",
+        "name": "IOTA (France)",
         "country": "France",
-        "full_name": "Université de technologie de Troyes",
-        "acronym": "UTT",
-        "id": "8tVLr",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Cartif (Espagne)",
-        "country": "Espagne",
-        "full_name": "Cartif",
-        "id": "grid.424774.6",
+        "full_name": "Institut d'optique Graduate School",
+        "acronym": "IOTA",
+        "id": "QtZkX",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "ALPHA-RLH (France)",
+        "country": "France",
+        "full_name": "ALPHA - Route des Lasers & des Hyperfréquences",
+        "acronym": "ALPHA-RLH",
+        "id": "D1K7j",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "ECM (France)",
@@ -1346,52 +1336,64 @@
         "z": 7
       },
       {
-        "name": "Leibniz Institute of Photonic Technology (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Leibniz Institute of Photonic Technology",
-        "id": "grid.418907.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101016665
-        ],
-        "y": 1,
-        "z": 283
-      },
-      {
-        "name": "El.En. Group (Italie)",
+        "name": "Sant'Anna School of Advanced Studies (Italie)",
         "country": "Italie",
-        "full_name": "El.En. Group",
-        "id": "grid.424313.3",
+        "full_name": "Sant'Anna School of Advanced Studies",
+        "id": "grid.263145.7",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 1
+        "z": 24
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "Finmeccanica (Italie)",
+        "country": "Italie",
+        "full_name": "Finmeccanica",
+        "id": "grid.423952.b",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 15
+        "z": 7
+      },
+      {
+        "name": "Universitat Politècnica de Catalunya (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de Catalunya",
+        "id": "grid.6835.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 40
+      },
+      {
+        "name": "University College Cork (Irlande)",
+        "country": "Irlande",
+        "full_name": "University College Cork",
+        "id": "grid.7872.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 55
+      },
+      {
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 51
       },
       {
         "name": "Eindhoven University of Technology (Pays-Bas)",
@@ -1406,29 +1408,310 @@
         "z": 75
       },
       {
-        "name": "Imec (Belgique)",
-        "country": "Belgique",
-        "full_name": "Imec",
-        "id": "grid.15762.37",
+        "name": "UFC (France)",
+        "country": "France",
+        "full_name": "Université de Franche-Comté",
+        "acronym": "UFC",
+        "id": "7Mpgt",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 135
+        "z": 6
       },
       {
-        "name": "Systematic Paris-Region (France)",
+        "name": "Minalogic (France)",
         "country": "France",
-        "full_name": "Systematic Paris-Region",
-        "acronym": "Systematic Paris-Region",
-        "id": "XVEM0",
+        "full_name": "Minalogic",
+        "acronym": "Minalogic",
+        "id": "GH472",
         "country_level_part": "Pays membres",
         "projects": [
           101016665
         ],
         "y": 1,
-        "z": 9
+        "z": 6
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 54
+      },
+      {
+        "name": "Netherlands Organisation for Applied Scientific Research (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Netherlands Organisation for Applied Scientific Research",
+        "id": "grid.4858.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 78
+      },
+      {
+        "name": "LioniX (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "LioniX",
+        "id": "grid.425270.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 16
+      },
+      {
+        "name": "Cartif (Espagne)",
+        "country": "Espagne",
+        "full_name": "Cartif",
+        "id": "grid.424774.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "ALPHANOV (France)",
+        "country": "France",
+        "full_name": "Alphanov",
+        "acronym": "ALPHANOV",
+        "id": "493635817",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Karlsruhe Institute of Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Karlsruhe Institute of Technology",
+        "id": "grid.7892.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "Laser Zentrum Hannover (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Laser Zentrum Hannover",
+        "id": "grid.425376.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Warsaw University of Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Warsaw University of Technology",
+        "id": "grid.1035.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "Institute of Electronic Materials Technology (Pologne)",
+        "country": "Pologne",
+        "full_name": "Institute of Electronic Materials Technology",
+        "id": "grid.425113.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Leibniz Institute of Photonic Technology (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Leibniz Institute of Photonic Technology",
+        "id": "grid.418907.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Southampton (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Southampton",
+        "id": "grid.5491.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 35
+      },
+      {
+        "name": "Europe Unlimited (Belgique)",
+        "country": "Belgique",
+        "full_name": "Europe Unlimited",
+        "id": "grid.424750.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "El.En. Group (Italie)",
+        "country": "Italie",
+        "full_name": "El.En. Group",
+        "id": "grid.424313.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Flanders Make (Belgique)",
+        "country": "Belgique",
+        "full_name": "Flanders Make",
+        "id": "grid.434127.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "RISE Research Institutes of Sweden (Suède)",
+        "country": "Suède",
+        "full_name": "RISE Research Institutes of Sweden",
+        "id": "grid.450998.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 41
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 25
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "European Business and Innovation Centre Network (Belgique)",
+        "country": "Belgique",
+        "full_name": "European Business and Innovation Centre Network",
+        "id": "grid.424776.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 283
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 167
+      },
+      {
+        "name": "UTT (France)",
+        "country": "France",
+        "full_name": "Université de technologie de Troyes",
+        "acronym": "UTT",
+        "id": "8tVLr",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101016665
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Joensuu Science Park (Finlande)",
+        "country": "Finlande",
+        "full_name": "Joensuu Science Park",
+        "id": "grid.436116.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732695
+        ],
+        "y": 1,
+        "z": 3
       }
     ]
   }

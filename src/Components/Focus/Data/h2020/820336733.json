@@ -2,23 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CCIR Nouvelle-Aquitaine (France)",
-        "country": "France",
-        "full_name": "CCI de région de la Nouvelle-Aquitaine",
-        "acronym": "CCIR Nouvelle-Aquitaine",
-        "id": "130022494",
-        "country_level_part": "Pays membres",
-        "projects": [
-          672664,
-          879780,
-          739631,
-          831287,
-          643311
-        ],
-        "y": 5,
-        "z": 5
-      },
-      {
         "name": "CCIR Occitanie (France)",
         "country": "France",
         "full_name": "CCI de région d'Occitanie",
@@ -34,6 +17,23 @@
         ],
         "y": 5,
         "z": 9
+      },
+      {
+        "name": "CCIR Nouvelle-Aquitaine (France)",
+        "country": "France",
+        "full_name": "CCI de région de la Nouvelle-Aquitaine",
+        "acronym": "CCIR Nouvelle-Aquitaine",
+        "id": "130022494",
+        "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
+        "y": 5,
+        "z": 5
       },
       {
         "name": "ADE Occitanie (France)",
@@ -92,16 +92,16 @@
         "z": 12
       },
       {
-        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
         "country": "Espagne",
-        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
-        "id": "grid.432344.6",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
         "country_level_part": "Pays membres",
         "projects": [
           691554
         ],
         "y": 1,
-        "z": 6
+        "z": 155
       },
       {
         "name": "ESTIA (France)",
@@ -117,17 +117,29 @@
         "z": 9
       },
       {
-        "name": "Aerospace Valley (France)",
+        "name": "Inno Tsd (France)",
         "country": "France",
-        "full_name": "Aerospace Valley",
-        "acronym": "Aerospace Valley",
-        "id": "S2STm",
+        "full_name": "Inno Tsd",
+        "acronym": "Inno Tsd",
+        "id": "339309320",
         "country_level_part": "Pays membres",
         "projects": [
           691554
         ],
         "y": 1,
-        "z": 17
+        "z": 23
+      },
+      {
+        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
+        "id": "grid.432344.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
@@ -140,6 +152,18 @@
         ],
         "y": 1,
         "z": 79
+      },
+      {
+        "name": "Parco Tecnologico Padano (Italie)",
+        "country": "Italie",
+        "full_name": "Parco Tecnologico Padano",
+        "id": "grid.425375.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Pôle mer - Méditerranée (France)",
@@ -155,63 +179,22 @@
         "z": 10
       },
       {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          691554
-        ],
-        "y": 1,
-        "z": 155
-      },
-      {
-        "name": "Inno Tsd (France)",
+        "name": "Aerospace Valley (France)",
         "country": "France",
-        "full_name": "Inno Tsd",
-        "acronym": "Inno Tsd",
-        "id": "339309320",
+        "full_name": "Aerospace Valley",
+        "acronym": "Aerospace Valley",
+        "id": "S2STm",
         "country_level_part": "Pays membres",
         "projects": [
           691554
         ],
         "y": 1,
-        "z": 23
-      },
-      {
-        "name": "Parco Tecnologico Padano (Italie)",
-        "country": "Italie",
-        "full_name": "Parco Tecnologico Padano",
-        "id": "grid.425375.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          691554
-        ],
-        "y": 1,
-        "z": 5
+        "z": 17
       }
     ]
   },
   "Industrial Leadership": {
     "Innovation in SMEs (SME)": [
-      {
-        "name": "CCIR Nouvelle-Aquitaine (France)",
-        "country": "France",
-        "full_name": "CCI de région de la Nouvelle-Aquitaine",
-        "acronym": "CCIR Nouvelle-Aquitaine",
-        "id": "130022494",
-        "country_level_part": "Pays membres",
-        "projects": [
-          672664,
-          879780,
-          739631,
-          831287,
-          643311
-        ],
-        "y": 5,
-        "z": 5
-      },
       {
         "name": "CCIR Occitanie (France)",
         "country": "France",
@@ -228,6 +211,23 @@
         ],
         "y": 5,
         "z": 9
+      },
+      {
+        "name": "CCIR Nouvelle-Aquitaine (France)",
+        "country": "France",
+        "full_name": "CCI de région de la Nouvelle-Aquitaine",
+        "acronym": "CCIR Nouvelle-Aquitaine",
+        "id": "130022494",
+        "country_level_part": "Pays membres",
+        "projects": [
+          672664,
+          879780,
+          739631,
+          831287,
+          643311
+        ],
+        "y": 5,
+        "z": 5
       },
       {
         "name": "ADE Occitanie (France)",
@@ -286,10 +286,10 @@
         "z": 5
       },
       {
-        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
         "country": "Espagne",
-        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
-        "id": "grid.432344.6",
+        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
+        "id": "grid.28409.37",
         "country_level_part": "Pays membres",
         "projects": [
           691554
@@ -311,17 +311,29 @@
         "z": 1
       },
       {
-        "name": "Aerospace Valley (France)",
+        "name": "Inno Tsd (France)",
         "country": "France",
-        "full_name": "Aerospace Valley",
-        "acronym": "Aerospace Valley",
-        "id": "S2STm",
+        "full_name": "Inno Tsd",
+        "acronym": "Inno Tsd",
+        "id": "339309320",
         "country_level_part": "Pays membres",
         "projects": [
           691554
         ],
         "y": 1,
-        "z": 5
+        "z": 2
+      },
+      {
+        "name": "Mobility and Logistics Cluster MLC ITS Euskadi (Espagne)",
+        "country": "Espagne",
+        "full_name": "Mobility and Logistics Cluster MLC ITS Euskadi",
+        "id": "grid.432344.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 2
       },
       {
         "name": "Athena Research and Innovation Center In Information Communication & Knowledge Technologies (Grèce)",
@@ -334,6 +346,18 @@
         ],
         "y": 1,
         "z": 6
+      },
+      {
+        "name": "Parco Tecnologico Padano (Italie)",
+        "country": "Italie",
+        "full_name": "Parco Tecnologico Padano",
+        "id": "grid.425375.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          691554
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Pôle mer - Méditerranée (France)",
@@ -349,41 +373,17 @@
         "z": 2
       },
       {
-        "name": "Centre Tecnologic De Telecomunicacions De Catalunya (Espagne)",
-        "country": "Espagne",
-        "full_name": "Centre Tecnologic De Telecomunicacions De Catalunya",
-        "id": "grid.28409.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          691554
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Inno Tsd (France)",
+        "name": "Aerospace Valley (France)",
         "country": "France",
-        "full_name": "Inno Tsd",
-        "acronym": "Inno Tsd",
-        "id": "339309320",
+        "full_name": "Aerospace Valley",
+        "acronym": "Aerospace Valley",
+        "id": "S2STm",
         "country_level_part": "Pays membres",
         "projects": [
           691554
         ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Parco Tecnologico Padano (Italie)",
-        "country": "Italie",
-        "full_name": "Parco Tecnologico Padano",
-        "id": "grid.425375.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          691554
-        ],
-        "y": 1,
-        "z": 1
+        "z": 5
       }
     ]
   }

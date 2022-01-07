@@ -2,17 +2,76 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "Monash University (Australie)",
+        "country": "Australie",
+        "full_name": "Monash University",
+        "id": "grid.1002.3",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          778120
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Norwegian Geotechnical Institute (Norvège)",
+        "country": "Norvège",
+        "full_name": "Norwegian Geotechnical Institute",
+        "id": "grid.425894.6",
+        "country_level_part": "Pays associés",
+        "projects": [
+          778120
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Polytechnique Montréal (Canada)",
+        "country": "Canada",
+        "full_name": "Polytechnique Montréal",
+        "id": "grid.183158.6",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          778120
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Ecoloop (Suède)",
+        "country": "Suède",
+        "full_name": "Ecoloop",
+        "id": "grid.451627.3",
         "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 2670
+        "z": 1
+      },
+      {
+        "name": "Universidad de Los Andes (Colombie)",
+        "country": "Colombie",
+        "full_name": "Universidad de Los Andes",
+        "id": "grid.7247.6",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          778120
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Gronlands naturinstitut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Gronlands naturinstitut",
+        "id": "grid.424543.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          778120
+        ],
+        "y": 1,
+        "z": 11
       },
       {
         "name": "University of Cassino and Southern Lazio (Italie)",
@@ -39,16 +98,16 @@
         "z": 5
       },
       {
-        "name": "Universidad de Los Andes (Colombie)",
-        "country": "Colombie",
-        "full_name": "Universidad de Los Andes",
-        "id": "grid.7247.6",
-        "country_level_part": "Pays tiers",
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 3
+        "z": 127
       },
       {
         "name": "U. Lorraine (France)",
@@ -76,17 +135,22 @@
         "z": 80
       },
       {
-        "name": "Gronlands naturinstitut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Gronlands naturinstitut",
-        "id": "grid.424543.0",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 11
-      },
+        "z": 2670
+      }
+    ]
+  },
+  "Excellent Science": {
+    "Marie Sklodowska-Curie actions (MSCA)": [
       {
         "name": "Monash University (Australie)",
         "country": "Australie",
@@ -97,7 +161,7 @@
           778120
         ],
         "y": 1,
-        "z": 19
+        "z": 12
       },
       {
         "name": "Norwegian Geotechnical Institute (Norvège)",
@@ -109,19 +173,19 @@
           778120
         ],
         "y": 1,
-        "z": 13
+        "z": 4
       },
       {
-        "name": "University of Exeter (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Exeter",
-        "id": "grid.8391.3",
-        "country_level_part": "Pays membres",
+        "name": "Polytechnique Montréal (Canada)",
+        "country": "Canada",
+        "full_name": "Polytechnique Montréal",
+        "id": "grid.183158.6",
+        "country_level_part": "Pays tiers",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 127
+        "z": 1
       },
       {
         "name": "Ecoloop (Suède)",
@@ -136,33 +200,28 @@
         "z": 1
       },
       {
-        "name": "Polytechnique Montréal (Canada)",
-        "country": "Canada",
-        "full_name": "Polytechnique Montréal",
-        "id": "grid.183158.6",
+        "name": "Universidad de Los Andes (Colombie)",
+        "country": "Colombie",
+        "full_name": "Universidad de Los Andes",
+        "id": "grid.7247.6",
         "country_level_part": "Pays tiers",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 5
-      }
-    ]
-  },
-  "Excellent Science": {
-    "Marie Sklodowska-Curie actions (MSCA)": [
+        "z": 2
+      },
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "name": "Gronlands naturinstitut (Danemark)",
+        "country": "Danemark",
+        "full_name": "Gronlands naturinstitut",
+        "id": "grid.424543.0",
         "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 938
+        "z": 2
       },
       {
         "name": "University of Cassino and Southern Lazio (Italie)",
@@ -189,16 +248,16 @@
         "z": 3
       },
       {
-        "name": "Universidad de Los Andes (Colombie)",
-        "country": "Colombie",
-        "full_name": "Universidad de Los Andes",
-        "id": "grid.7247.6",
-        "country_level_part": "Pays tiers",
+        "name": "University of Exeter (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Exeter",
+        "id": "grid.8391.3",
+        "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 2
+        "z": 26
       },
       {
         "name": "U. Lorraine (France)",
@@ -226,76 +285,17 @@
         "z": 13
       },
       {
-        "name": "Gronlands naturinstitut (Danemark)",
-        "country": "Danemark",
-        "full_name": "Gronlands naturinstitut",
-        "id": "grid.424543.0",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           778120
         ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Monash University (Australie)",
-        "country": "Australie",
-        "full_name": "Monash University",
-        "id": "grid.1002.3",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          778120
-        ],
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Norwegian Geotechnical Institute (Norvège)",
-        "country": "Norvège",
-        "full_name": "Norwegian Geotechnical Institute",
-        "id": "grid.425894.6",
-        "country_level_part": "Pays associés",
-        "projects": [
-          778120
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "University of Exeter (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Exeter",
-        "id": "grid.8391.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          778120
-        ],
-        "y": 1,
-        "z": 26
-      },
-      {
-        "name": "Ecoloop (Suède)",
-        "country": "Suède",
-        "full_name": "Ecoloop",
-        "id": "grid.451627.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          778120
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Polytechnique Montréal (Canada)",
-        "country": "Canada",
-        "full_name": "Polytechnique Montréal",
-        "id": "grid.183158.6",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          778120
-        ],
-        "y": 1,
-        "z": 1
+        "z": 938
       }
     ]
   }

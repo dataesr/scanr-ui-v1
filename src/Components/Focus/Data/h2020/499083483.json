@@ -2,31 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "Adler Ortho France (France)",
-        "country": "France",
-        "full_name": "Adler Ortho France",
-        "acronym": "Adler Ortho France",
-        "id": "493419303",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723699
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Transylvania University of Bra<U+0219>ov (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Transylvania University of Bra<U+0219>ov",
-        "id": "grid.5120.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723699
-        ],
-        "y": 1,
-        "z": 9
-      },
-      {
         "name": "Electro Optical Systems (Allemagne)",
         "country": "Allemagne",
         "full_name": "Electro Optical Systems",
@@ -37,6 +12,18 @@
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "National Interuniversity Consortium of Materials Science and Technology (Italie)",
+        "country": "Italie",
+        "full_name": "National Interuniversity Consortium of Materials Science and Technology",
+        "id": "grid.182470.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723699
+        ],
+        "y": 1,
+        "z": 17
       },
       {
         "name": "Warrant Hub (Italie)",
@@ -51,16 +38,29 @@
         "z": 24
       },
       {
-        "name": "National Interuniversity Consortium of Materials Science and Technology (Italie)",
-        "country": "Italie",
-        "full_name": "National Interuniversity Consortium of Materials Science and Technology",
-        "id": "grid.182470.8",
+        "name": "Transylvania University of Bra<U+0219>ov (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Transylvania University of Bra<U+0219>ov",
+        "id": "grid.5120.6",
         "country_level_part": "Pays membres",
         "projects": [
           723699
         ],
         "y": 1,
-        "z": 17
+        "z": 9
+      },
+      {
+        "name": "Adler Ortho France (France)",
+        "country": "France",
+        "full_name": "Adler Ortho France",
+        "acronym": "Adler Ortho France",
+        "id": "493419303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723699
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Ateca (France)",
@@ -89,30 +89,6 @@
         "z": 103
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723538
-        ],
-        "y": 1,
-        "z": 1072
-      },
-      {
-        "name": "IK4-Lortek (Espagne)",
-        "country": "Espagne",
-        "full_name": "IK4-Lortek",
-        "id": "grid.425462.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723538
-        ],
-        "y": 1,
-        "z": 18
-      },
-      {
         "name": "Ramem (Espagne)",
         "country": "Espagne",
         "full_name": "Ramem",
@@ -125,40 +101,16 @@
         "z": 4
       },
       {
-        "name": "ABB (Suisse)",
-        "country": "Suisse",
-        "full_name": "ABB",
-        "id": "grid.420309.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          723538
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "ADIRA (Portugal)",
-        "country": "Portugal",
-        "full_name": "ADIRA",
-        "id": "grid.431929.4",
+        "name": "IK4-Lortek (Espagne)",
+        "country": "Espagne",
+        "full_name": "IK4-Lortek",
+        "id": "grid.425462.3",
         "country_level_part": "Pays membres",
         "projects": [
           723538
         ],
         "y": 1,
-        "z": 2
-      },
-      {
-        "name": "BCT (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "BCT",
-        "id": "grid.423996.3",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723538
-        ],
-        "y": 1,
-        "z": 2
+        "z": 18
       },
       {
         "name": "Delcam (Royaume-Uni)",
@@ -185,6 +137,54 @@
         "z": 18
       },
       {
+        "name": "ADIRA (Portugal)",
+        "country": "Portugal",
+        "full_name": "ADIRA",
+        "id": "grid.431929.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "BCT (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "BCT",
+        "id": "grid.423996.3",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "ABB (Suisse)",
+        "country": "Suisse",
+        "full_name": "ABB",
+        "id": "grid.420309.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
         "name": "University of Manchester (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Manchester",
@@ -207,6 +207,18 @@
         ],
         "y": 1,
         "z": 141
+      },
+      {
+        "name": "University of Las Palmas de Gran Canaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Las Palmas de Gran Canaria",
+        "id": "grid.4521.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870485
+        ],
+        "y": 1,
+        "z": 39
       },
       {
         "name": "Thales (France)",
@@ -245,48 +257,11 @@
         ],
         "y": 1,
         "z": 19
-      },
-      {
-        "name": "University of Las Palmas de Gran Canaria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Las Palmas de Gran Canaria",
-        "id": "grid.4521.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870485
-        ],
-        "y": 1,
-        "z": 39
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "Adler Ortho France (France)",
-        "country": "France",
-        "full_name": "Adler Ortho France",
-        "acronym": "Adler Ortho France",
-        "id": "493419303",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723699
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Transylvania University of Bra<U+0219>ov (Roumanie)",
-        "country": "Roumanie",
-        "full_name": "Transylvania University of Bra<U+0219>ov",
-        "id": "grid.5120.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723699
-        ],
-        "y": 1,
-        "z": 3
-      },
       {
         "name": "Electro Optical Systems (Allemagne)",
         "country": "Allemagne",
@@ -298,18 +273,6 @@
         ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "Warrant Hub (Italie)",
-        "country": "Italie",
-        "full_name": "Warrant Hub",
-        "id": "grid.426327.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          723699
-        ],
-        "y": 1,
-        "z": 6
       },
       {
         "name": "National Interuniversity Consortium of Materials Science and Technology (Italie)",
@@ -324,28 +287,41 @@
         "z": 1
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
+        "name": "Warrant Hub (Italie)",
+        "country": "Italie",
+        "full_name": "Warrant Hub",
+        "id": "grid.426327.6",
         "country_level_part": "Pays membres",
         "projects": [
-          723538
+          723699
         ],
         "y": 1,
-        "z": 283
+        "z": 6
       },
       {
-        "name": "IK4-Lortek (Espagne)",
-        "country": "Espagne",
-        "full_name": "IK4-Lortek",
-        "id": "grid.425462.3",
+        "name": "Transylvania University of Bra<U+0219>ov (Roumanie)",
+        "country": "Roumanie",
+        "full_name": "Transylvania University of Bra<U+0219>ov",
+        "id": "grid.5120.6",
         "country_level_part": "Pays membres",
         "projects": [
-          723538
+          723699
         ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Adler Ortho France (France)",
+        "country": "France",
+        "full_name": "Adler Ortho France",
+        "acronym": "Adler Ortho France",
+        "id": "493419303",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723699
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Ramem (Espagne)",
@@ -360,16 +336,40 @@
         "z": 1
       },
       {
-        "name": "ABB (Suisse)",
-        "country": "Suisse",
-        "full_name": "ABB",
-        "id": "grid.420309.c",
-        "country_level_part": "Pays associés",
+        "name": "IK4-Lortek (Espagne)",
+        "country": "Espagne",
+        "full_name": "IK4-Lortek",
+        "id": "grid.425462.3",
+        "country_level_part": "Pays membres",
         "projects": [
           723538
         ],
         "y": 1,
-        "z": 2
+        "z": 3
+      },
+      {
+        "name": "Delcam (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Delcam",
+        "id": "grid.421846.d",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Technology Transfer System (Italie)",
+        "country": "Italie",
+        "full_name": "Technology Transfer System",
+        "id": "grid.426252.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          723538
+        ],
+        "y": 1,
+        "z": 9
       },
       {
         "name": "ADIRA (Portugal)",
@@ -396,31 +396,43 @@
         "z": 1
       },
       {
-        "name": "Delcam (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Delcam",
-        "id": "grid.421846.d",
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
         "country_level_part": "Pays membres",
         "projects": [
           723538
         ],
         "y": 1,
-        "z": 1
+        "z": 283
       },
       {
-        "name": "Technology Transfer System (Italie)",
-        "country": "Italie",
-        "full_name": "Technology Transfer System",
-        "id": "grid.426252.5",
-        "country_level_part": "Pays membres",
+        "name": "ABB (Suisse)",
+        "country": "Suisse",
+        "full_name": "ABB",
+        "id": "grid.420309.c",
+        "country_level_part": "Pays associés",
         "projects": [
           723538
         ],
         "y": 1,
-        "z": 9
+        "z": 2
       }
     ],
     "Space (SPACE)": [
+      {
+        "name": "University of Las Palmas de Gran Canaria (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Las Palmas de Gran Canaria",
+        "id": "grid.4521.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          870485
+        ],
+        "y": 1,
+        "z": 2
+      },
       {
         "name": "Thales (France)",
         "country": "France",
@@ -458,18 +470,6 @@
         ],
         "y": 1,
         "z": 9
-      },
-      {
-        "name": "University of Las Palmas de Gran Canaria (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Las Palmas de Gran Canaria",
-        "id": "grid.4521.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          870485
-        ],
-        "y": 1,
-        "z": 2
       }
     ]
   },

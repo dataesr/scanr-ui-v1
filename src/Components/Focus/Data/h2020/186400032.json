@@ -2,6 +2,18 @@
   "all": {
     "all": [
       {
+        "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
+        "country": "Suisse",
+        "full_name": "Forschungsinstitut für Biologischen Landbau",
+        "id": "grid.424520.5",
+        "country_level_part": "Pays associés",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
         "name": "Inrae (France)",
         "country": "France",
         "full_name": "Institut national de recherche pour l'agriculture, l'alimentation et l'environnement",
@@ -15,16 +27,29 @@
         "z": 453
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "Toulouse INP (France)",
+        "country": "France",
+        "full_name": "Toulouse INP",
+        "acronym": "Toulouse INP",
+        "id": "mMex4",
         "country_level_part": "Pays membres",
         "projects": [
           101000402
         ],
         "y": 1,
-        "z": 273
+        "z": 90
+      },
+      {
+        "name": "Instituto de Soldadura e Qualidade (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Soldadura e Qualidade",
+        "id": "grid.12370.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 21
       },
       {
         "name": "AquaBioTech Group (Malte)",
@@ -51,6 +76,18 @@
         "z": 151
       },
       {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 273
+      },
+      {
         "name": "Tecnalia (Espagne)",
         "country": "Espagne",
         "full_name": "Tecnalia",
@@ -63,28 +100,28 @@
         "z": 368
       },
       {
-        "name": "Instituto de Investigaciones Agropecuarias (Chili)",
-        "country": "Chili",
-        "full_name": "Instituto de Investigaciones Agropecuarias",
-        "id": "grid.482469.5",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Instituto de Soldadura e Qualidade (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Soldadura e Qualidade",
-        "id": "grid.12370.37",
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
         "country_level_part": "Pays membres",
         "projects": [
           101000402
         ],
         "y": 1,
-        "z": 21
+        "z": 104
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 58
       },
       {
         "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
@@ -112,18 +149,6 @@
         "z": 1
       },
       {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 104
-      },
-      {
         "name": "University of Vic (Espagne)",
         "country": "Espagne",
         "full_name": "University of Vic",
@@ -136,6 +161,22 @@
         "z": 15
       },
       {
+        "name": "Instituto de Investigaciones Agropecuarias (Chili)",
+        "country": "Chili",
+        "full_name": "Instituto de Investigaciones Agropecuarias",
+        "id": "grid.482469.5",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 1
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
+      {
         "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
         "country": "Suisse",
         "full_name": "Forschungsinstitut für Biologischen Landbau",
@@ -147,35 +188,6 @@
         "y": 1,
         "z": 32
       },
-      {
-        "name": "Marche Polytechnic University (Italie)",
-        "country": "Italie",
-        "full_name": "Marche Polytechnic University",
-        "id": "grid.7010.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 58
-      },
-      {
-        "name": "Toulouse INP (France)",
-        "country": "France",
-        "full_name": "Toulouse INP",
-        "acronym": "Toulouse INP",
-        "id": "mMex4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 90
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Food security, sustainable agriculture and forestry, marine and maritime and inland water research (FOOD)": [
       {
         "name": "Inrae (France)",
         "country": "France",
@@ -190,16 +202,29 @@
         "z": 142
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "Toulouse INP (France)",
+        "country": "France",
+        "full_name": "Toulouse INP",
+        "acronym": "Toulouse INP",
+        "id": "mMex4",
         "country_level_part": "Pays membres",
         "projects": [
           101000402
         ],
         "y": 1,
-        "z": 54
+        "z": 12
+      },
+      {
+        "name": "Instituto de Soldadura e Qualidade (Portugal)",
+        "country": "Portugal",
+        "full_name": "Instituto de Soldadura e Qualidade",
+        "id": "grid.12370.37",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "AquaBioTech Group (Malte)",
@@ -226,6 +251,18 @@
         "z": 15
       },
       {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 54
+      },
+      {
         "name": "Tecnalia (Espagne)",
         "country": "Espagne",
         "full_name": "Tecnalia",
@@ -238,28 +275,28 @@
         "z": 31
       },
       {
-        "name": "Instituto de Investigaciones Agropecuarias (Chili)",
-        "country": "Chili",
-        "full_name": "Instituto de Investigaciones Agropecuarias",
-        "id": "grid.482469.5",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Instituto de Soldadura e Qualidade (Portugal)",
-        "country": "Portugal",
-        "full_name": "Instituto de Soldadura e Qualidade",
-        "id": "grid.12370.37",
+        "name": "University of Liège (Belgique)",
+        "country": "Belgique",
+        "full_name": "University of Liège",
+        "id": "grid.4861.b",
         "country_level_part": "Pays membres",
         "projects": [
           101000402
         ],
         "y": 1,
-        "z": 1
+        "z": 7
+      },
+      {
+        "name": "Marche Polytechnic University (Italie)",
+        "country": "Italie",
+        "full_name": "Marche Polytechnic University",
+        "id": "grid.7010.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101000402
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "Norwegian Institute of Bioeconomy Research (Norvège)",
@@ -287,18 +324,6 @@
         "z": 1
       },
       {
-        "name": "University of Liège (Belgique)",
-        "country": "Belgique",
-        "full_name": "University of Liège",
-        "id": "grid.4861.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
         "name": "University of Vic (Espagne)",
         "country": "Espagne",
         "full_name": "University of Vic",
@@ -311,41 +336,16 @@
         "z": 5
       },
       {
-        "name": "Forschungsinstitut für Biologischen Landbau (Suisse)",
-        "country": "Suisse",
-        "full_name": "Forschungsinstitut für Biologischen Landbau",
-        "id": "grid.424520.5",
-        "country_level_part": "Pays associés",
+        "name": "Instituto de Investigaciones Agropecuarias (Chili)",
+        "country": "Chili",
+        "full_name": "Instituto de Investigaciones Agropecuarias",
+        "id": "grid.482469.5",
+        "country_level_part": "Pays tiers",
         "projects": [
           101000402
         ],
         "y": 1,
-        "z": 32
-      },
-      {
-        "name": "Marche Polytechnic University (Italie)",
-        "country": "Italie",
-        "full_name": "Marche Polytechnic University",
-        "id": "grid.7010.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 12
-      },
-      {
-        "name": "Toulouse INP (France)",
-        "country": "France",
-        "full_name": "Toulouse INP",
-        "acronym": "Toulouse INP",
-        "id": "mMex4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101000402
-        ],
-        "y": 1,
-        "z": 12
+        "z": 1
       }
     ]
   }

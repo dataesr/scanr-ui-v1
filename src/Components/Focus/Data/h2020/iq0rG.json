@@ -2,21 +2,6 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228,
-          688564,
-          671578
-        ],
-        "y": 3,
-        "z": 2670
-      },
-      {
         "name": "CPE Lyon (France)",
         "country": "France",
         "full_name": "École supérieure de chimie physique électronique de Lyon",
@@ -30,21 +15,6 @@
         ],
         "y": 3,
         "z": 23
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228,
-          688564,
-          671578
-        ],
-        "y": 3,
-        "z": 49
       },
       {
         "name": "INSA de Lyon (France)",
@@ -62,6 +32,21 @@
         "z": 75
       },
       {
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228,
+          688564,
+          671578
+        ],
+        "y": 3,
+        "z": 49
+      },
+      {
         "name": "UGA (France)",
         "country": "France",
         "full_name": "Université Grenoble Alpes",
@@ -77,32 +62,47 @@
         "z": 277
       },
       {
-        "name": "Cap Sciences (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Cap Sciences",
-        "acronym": "Cap Sciences",
-        "id": "399884253",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          722266,
-          633263
+          773228,
+          688564,
+          671578
         ],
-        "y": 2,
-        "z": 5
+        "y": 3,
+        "z": 2670
       },
       {
-        "name": "U. Le Mans (France)",
+        "name": "UFC (France)",
         "country": "France",
-        "full_name": "Le Mans Université",
-        "acronym": "U. Le Mans",
-        "id": "9xlel",
+        "full_name": "Université de Franche-Comté",
+        "acronym": "UFC",
+        "id": "7Mpgt",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 22
+        "z": 36
+      },
+      {
+        "name": "Traces (France)",
+        "country": "France",
+        "full_name": "Traces Théorie Reflexe Apprend Comm Educat Scientif",
+        "acronym": "Traces",
+        "id": "494577851",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722266,
+          633263
+        ],
+        "y": 2,
+        "z": 9
       },
       {
         "name": "Brest'aim (France)",
@@ -119,32 +119,18 @@
         "z": 4
       },
       {
-        "name": "CCST (France)",
+        "name": "FPU Limoges (France)",
         "country": "France",
-        "full_name": "Terre des Sciences",
-        "acronym": "CCST",
-        "id": "390493104",
+        "full_name": "Fondation Partenariale de l'Université de Limoges",
+        "acronym": "FPU Limoges",
+        "id": "538480377",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Traces (France)",
-        "country": "France",
-        "full_name": "Traces Théorie Reflexe Apprend Comm Educat Scientif",
-        "acronym": "Traces",
-        "id": "494577851",
-        "country_level_part": "Pays membres",
-        "projects": [
-          722266,
-          633263
-        ],
-        "y": 2,
-        "z": 9
+        "z": 3
       },
       {
         "name": "uB (France)",
@@ -175,32 +161,46 @@
         "z": 7
       },
       {
-        "name": "FPU Limoges (France)",
+        "name": "U. Le Mans (France)",
         "country": "France",
-        "full_name": "Fondation Partenariale de l'Université de Limoges",
-        "acronym": "FPU Limoges",
-        "id": "538480377",
+        "full_name": "Le Mans Université",
+        "acronym": "U. Le Mans",
+        "id": "9xlel",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 3
+        "z": 22
       },
       {
-        "name": "UFC (France)",
+        "name": "Cap Sciences (France)",
         "country": "France",
-        "full_name": "Université de Franche-Comté",
-        "acronym": "UFC",
-        "id": "7Mpgt",
+        "full_name": "Cap Sciences",
+        "acronym": "Cap Sciences",
+        "id": "399884253",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 36
+        "z": 5
+      },
+      {
+        "name": "CCST (France)",
+        "country": "France",
+        "full_name": "Terre des Sciences",
+        "acronym": "CCST",
+        "id": "390493104",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722266,
+          633263
+        ],
+        "y": 2,
+        "z": 4
       },
       {
         "name": "IrsiCaixa (Espagne)",
@@ -256,28 +256,28 @@
         "z": 69
       },
       {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
+        "name": "Technological University Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Technological University Dublin",
+        "id": "grid.497880.a",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 171
+        "z": 25
       },
       {
-        "name": "University of Sassari (Italie)",
-        "country": "Italie",
-        "full_name": "University of Sassari",
-        "id": "grid.11450.31",
+        "name": "Wissenschaftsladen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Wissenschaftsladen",
+        "id": "grid.439295.0",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 22
+        "z": 6
       },
       {
         "name": "University of Vechta (Allemagne)",
@@ -304,18 +304,6 @@
         "z": 87
       },
       {
-        "name": "Technological University Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Technological University Dublin",
-        "id": "grid.497880.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          665759
-        ],
-        "y": 1,
-        "z": 25
-      },
-      {
         "name": "University of Cambridge (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Cambridge",
@@ -326,6 +314,18 @@
         ],
         "y": 1,
         "z": 345
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          665759
+        ],
+        "y": 1,
+        "z": 171
       },
       {
         "name": "Wageningen University & Research (Pays-Bas)",
@@ -352,16 +352,16 @@
         "z": 11
       },
       {
-        "name": "Wissenschaftsladen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Wissenschaftsladen",
-        "id": "grid.439295.0",
+        "name": "University of Sassari (Italie)",
+        "country": "Italie",
+        "full_name": "University of Sassari",
+        "id": "grid.11450.31",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 6
+        "z": 22
       },
       {
         "name": "University College Cork (Irlande)",
@@ -376,28 +376,16 @@
         "z": 198
       },
       {
-        "name": "Serbian Academy of Sciences and Arts (Serbie)",
-        "country": "Serbie",
-        "full_name": "Serbian Academy of Sciences and Arts",
-        "id": "grid.419269.1",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
+        "name": "Ruhr University Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ruhr University Bochum",
+        "id": "grid.5570.7",
         "country_level_part": "Pays membres",
         "projects": [
           664932
         ],
         "y": 1,
-        "z": 257
+        "z": 65
       },
       {
         "name": "Dublin City University (Irlande)",
@@ -412,12 +400,11 @@
         "z": 73
       },
       {
-        "name": "UEAJS (France)",
-        "country": "France",
-        "full_name": "Union européenne des associations de journalistes scientifiques",
-        "acronym": "UEAJS",
-        "id": "808334478",
-        "country_level_part": "Pays membres",
+        "name": "Ilia State University (Géorgie)",
+        "country": "Géorgie",
+        "full_name": "Ilia State University",
+        "id": "grid.428923.6",
+        "country_level_part": "Pays associés",
         "projects": [
           664932
         ],
@@ -437,28 +424,16 @@
         "z": 1
       },
       {
-        "name": "National Research Foundation (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "National Research Foundation",
-        "id": "grid.425534.1",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 17
-      },
-      {
-        "name": "Rhine-Waal University of Applied Sciences (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rhine-Waal University of Applied Sciences",
-        "id": "grid.449481.4",
+        "name": "Nottingham Trent University (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Nottingham Trent University",
+        "id": "grid.12361.37",
         "country_level_part": "Pays membres",
         "projects": [
           664932
         ],
         "y": 1,
-        "z": 9
+        "z": 18
       },
       {
         "name": "University of Aberdeen (Royaume-Uni)",
@@ -473,100 +448,16 @@
         "z": 61
       },
       {
-        "name": "Stadtwerke Bochum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Stadtwerke Bochum",
-        "id": "grid.437861.f",
+        "name": "University of Malta (Malte)",
+        "country": "Malte",
+        "full_name": "University of Malta",
+        "id": "grid.4462.4",
         "country_level_part": "Pays membres",
         "projects": [
           664932
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Nottingham City Council (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Nottingham City Council",
-        "id": "grid.422848.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 407
-      },
-      {
-        "name": "University of Twente (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Twente",
-        "id": "grid.6214.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 154
-      },
-      {
-        "name": "Nottingham Trent University (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Nottingham Trent University",
-        "id": "grid.12361.37",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Ilia State University (Géorgie)",
-        "country": "Géorgie",
-        "full_name": "Ilia State University",
-        "id": "grid.428923.6",
-        "country_level_part": "Pays associés",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Ruhr University Bochum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ruhr University Bochum",
-        "id": "grid.5570.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 65
-      },
-      {
-        "name": "Bielefeld University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bielefeld University",
-        "id": "grid.7491.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 59
+        "z": 62
       },
       {
         "name": "Wellcome Sanger Institute (Royaume-Uni)",
@@ -581,16 +472,149 @@
         "z": 24
       },
       {
-        "name": "University of Malta (Malte)",
-        "country": "Malte",
-        "full_name": "University of Malta",
-        "id": "grid.4462.4",
+        "name": "University of Twente (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Twente",
+        "id": "grid.6214.1",
         "country_level_part": "Pays membres",
         "projects": [
           664932
         ],
         "y": 1,
-        "z": 62
+        "z": 154
+      },
+      {
+        "name": "Serbian Academy of Sciences and Arts (Serbie)",
+        "country": "Serbie",
+        "full_name": "Serbian Academy of Sciences and Arts",
+        "id": "grid.419269.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Stadtwerke Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Stadtwerke Bochum",
+        "id": "grid.437861.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 407
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 257
+      },
+      {
+        "name": "Nottingham City Council (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Nottingham City Council",
+        "id": "grid.422848.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 4
+      },
+      {
+        "name": "Rhine-Waal University of Applied Sciences (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rhine-Waal University of Applied Sciences",
+        "id": "grid.449481.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
+        "name": "Bielefeld University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bielefeld University",
+        "id": "grid.7491.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 59
+      },
+      {
+        "name": "UEAJS (France)",
+        "country": "France",
+        "full_name": "Union européenne des associations de journalistes scientifiques",
+        "acronym": "UEAJS",
+        "id": "808334478",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "National Research Foundation (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "National Research Foundation",
+        "id": "grid.425534.1",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 17
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 206
+      },
+      {
+        "name": "University of Graz (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Graz",
+        "id": "grid.5110.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 43
       },
       {
         "name": "University of Granada (Espagne)",
@@ -603,6 +627,18 @@
         ],
         "y": 1,
         "z": 88
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 37
       },
       {
         "name": "Leipzig University (Allemagne)",
@@ -629,27 +665,338 @@
         "z": 127
       },
       {
-        "name": "University of Graz (Autriche)",
-        "country": "Autriche",
-        "full_name": "University of Graz",
-        "id": "grid.5110.5",
+        "name": "Junia (France)",
+        "country": "France",
+        "full_name": "Junia",
+        "acronym": "Junia",
+        "id": "73Oaz",
         "country_level_part": "Pays membres",
         "projects": [
-          101017448
+          773228
+        ],
+        "y": 1,
+        "z": 28
+      },
+      {
+        "name": "U. Lille (France)",
+        "country": "France",
+        "full_name": "Université de Lille",
+        "acronym": "U. Lille",
+        "id": "Szqy5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 124
+      },
+      {
+        "name": "UPHF (France)",
+        "country": "France",
+        "full_name": "Université Polytechnique Hauts-de-France",
+        "acronym": "UPHF",
+        "id": "EW53M",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 27
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 47
+      },
+      {
+        "name": "ICL (France)",
+        "country": "France",
+        "full_name": "Institut catholique de Lille",
+        "acronym": "ICL",
+        "id": "pgd9B",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 22
+      },
+      {
+        "name": "University of Lleida (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Lleida",
+        "id": "grid.15043.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 19
+      },
+      {
+        "name": "Hahn-Schickard-Gesellschaft für angewandte Forschung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hahn-Schickard-Gesellschaft für angewandte Forschung",
+        "id": "grid.424588.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "University of Freiburg (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "University of Freiburg",
+        "id": "grid.5963.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 95
+      },
+      {
+        "name": "STMicroelectronics (France)",
+        "country": "France",
+        "full_name": "STMicroelectronics",
+        "acronym": "STMicroelectronics",
+        "id": "gent166",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 51
+      },
+      {
+        "name": "University of Manchester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Manchester",
+        "id": "grid.5379.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 241
+      },
+      {
+        "name": "Kalray (France)",
+        "country": "France",
+        "full_name": "Kalray",
+        "acronym": "Kalray",
+        "id": "507620557",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Barcelona Supercomputing Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Supercomputing Center",
+        "id": "grid.10097.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 174
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 258
+      },
+      {
+        "name": "Forschungszentrum Jülich (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Forschungszentrum Jülich",
+        "id": "grid.8385.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 228
+      },
+      {
+        "name": "VOSYS (France)",
+        "country": "France",
+        "full_name": "Virtual Open Systems",
+        "acronym": "VOSYS",
+        "id": "529212987",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "ARM (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "ARM",
+        "id": "grid.28867.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 1072
+      },
+      {
+        "name": "Atos (France)",
+        "country": "France",
+        "full_name": "Atos",
+        "acronym": "Atos",
+        "id": "gent32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 356
+      },
+      {
+        "name": "Barcelona Institute for Global Health (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
         ],
         "y": 1,
         "z": 43
+      },
+      {
+        "name": "Essrg (Hongrie)",
+        "country": "Hongrie",
+        "full_name": "Essrg",
+        "id": "grid.434262.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 13
+      },
+      {
+        "name": "Hospital Clínic de Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Clínic de Barcelona",
+        "id": "grid.410458.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 63
+      },
+      {
+        "name": "Institut Pasteur de Tunis (Tunisie)",
+        "country": "Tunisie",
+        "full_name": "Institut Pasteur de Tunis",
+        "id": "grid.418517.e",
+        "country_level_part": "Pays associés",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 143
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 173
       }
     ]
   },
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "Cap Sciences (France)",
+        "name": "UFC (France)",
         "country": "France",
-        "full_name": "Cap Sciences",
-        "acronym": "Cap Sciences",
-        "id": "399884253",
+        "full_name": "Université de Franche-Comté",
+        "acronym": "UFC",
+        "id": "7Mpgt",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722266,
+          633263
+        ],
+        "y": 2,
+        "z": 15
+      },
+      {
+        "name": "Traces (France)",
+        "country": "France",
+        "full_name": "Traces Théorie Reflexe Apprend Comm Educat Scientif",
+        "acronym": "Traces",
+        "id": "494577851",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
@@ -657,20 +1004,6 @@
         ],
         "y": 2,
         "z": 4
-      },
-      {
-        "name": "U. Le Mans (France)",
-        "country": "France",
-        "full_name": "Le Mans Université",
-        "acronym": "U. Le Mans",
-        "id": "9xlel",
-        "country_level_part": "Pays membres",
-        "projects": [
-          722266,
-          633263
-        ],
-        "y": 2,
-        "z": 13
       },
       {
         "name": "Brest'aim (France)",
@@ -687,32 +1020,18 @@
         "z": 4
       },
       {
-        "name": "CCST (France)",
+        "name": "FPU Limoges (France)",
         "country": "France",
-        "full_name": "Terre des Sciences",
-        "acronym": "CCST",
-        "id": "390493104",
+        "full_name": "Fondation Partenariale de l'Université de Limoges",
+        "acronym": "FPU Limoges",
+        "id": "538480377",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 4
-      },
-      {
-        "name": "Traces (France)",
-        "country": "France",
-        "full_name": "Traces Théorie Reflexe Apprend Comm Educat Scientif",
-        "acronym": "Traces",
-        "id": "494577851",
-        "country_level_part": "Pays membres",
-        "projects": [
-          722266,
-          633263
-        ],
-        "y": 2,
-        "z": 4
+        "z": 3
       },
       {
         "name": "uB (France)",
@@ -743,32 +1062,46 @@
         "z": 4
       },
       {
-        "name": "FPU Limoges (France)",
+        "name": "U. Le Mans (France)",
         "country": "France",
-        "full_name": "Fondation Partenariale de l'Université de Limoges",
-        "acronym": "FPU Limoges",
-        "id": "538480377",
+        "full_name": "Le Mans Université",
+        "acronym": "U. Le Mans",
+        "id": "9xlel",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 3
+        "z": 13
       },
       {
-        "name": "UFC (France)",
+        "name": "Cap Sciences (France)",
         "country": "France",
-        "full_name": "Université de Franche-Comté",
-        "acronym": "UFC",
-        "id": "7Mpgt",
+        "full_name": "Cap Sciences",
+        "acronym": "Cap Sciences",
+        "id": "399884253",
         "country_level_part": "Pays membres",
         "projects": [
           722266,
           633263
         ],
         "y": 2,
-        "z": 15
+        "z": 4
+      },
+      {
+        "name": "CCST (France)",
+        "country": "France",
+        "full_name": "Terre des Sciences",
+        "acronym": "CCST",
+        "id": "390493104",
+        "country_level_part": "Pays membres",
+        "projects": [
+          722266,
+          633263
+        ],
+        "y": 2,
+        "z": 4
       },
       {
         "name": "AMU (France)",
@@ -799,71 +1132,6 @@
     ],
     "European Research Council (ERC)": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 599
-      },
-      {
-        "name": "CPE Lyon (France)",
-        "country": "France",
-        "full_name": "École supérieure de chimie physique électronique de Lyon",
-        "acronym": "CPE Lyon",
-        "id": "CdULA",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "ICL (France)",
-        "country": "France",
-        "full_name": "Institut catholique de Lille",
-        "acronym": "ICL",
-        "id": "pgd9B",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "INSA de Lyon (France)",
-        "country": "France",
-        "full_name": "Institut national des sciences appliquées de Lyon",
-        "acronym": "INSA de Lyon",
-        "id": "8k41p",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
         "name": "Junia (France)",
         "country": "France",
         "full_name": "Junia",
@@ -877,30 +1145,17 @@
         "z": 2
       },
       {
-        "name": "CLI (France)",
+        "name": "CPE Lyon (France)",
         "country": "France",
-        "full_name": "Centrale Lille Institut",
-        "acronym": "CLI",
-        "id": "54VTe",
+        "full_name": "École supérieure de chimie physique électronique de Lyon",
+        "acronym": "CPE Lyon",
+        "id": "CdULA",
         "country_level_part": "Pays membres",
         "projects": [
           773228
         ],
         "y": 1,
-        "z": 5
-      },
-      {
-        "name": "UGA (France)",
-        "country": "France",
-        "full_name": "Université Grenoble Alpes",
-        "acronym": "UGA",
-        "id": "Y7ch7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          773228
-        ],
-        "y": 1,
-        "z": 61
+        "z": 2
       },
       {
         "name": "U. Lille (France)",
@@ -916,6 +1171,32 @@
         "z": 12
       },
       {
+        "name": "INSA de Lyon (France)",
+        "country": "France",
+        "full_name": "Institut national des sciences appliquées de Lyon",
+        "acronym": "INSA de Lyon",
+        "id": "8k41p",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
         "name": "UPHF (France)",
         "country": "France",
         "full_name": "Université Polytechnique Hauts-de-France",
@@ -927,9 +1208,46 @@
         ],
         "y": 1,
         "z": 2
-      }
-    ],
-    "Future and Emerging Technologies (FET)": [
+      },
+      {
+        "name": "UGA (France)",
+        "country": "France",
+        "full_name": "Université Grenoble Alpes",
+        "acronym": "UGA",
+        "id": "Y7ch7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 61
+      },
+      {
+        "name": "CLI (France)",
+        "country": "France",
+        "full_name": "Centrale Lille Institut",
+        "acronym": "CLI",
+        "id": "54VTe",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "ICL (France)",
+        "country": "France",
+        "full_name": "Institut catholique de Lille",
+        "acronym": "ICL",
+        "id": "pgd9B",
+        "country_level_part": "Pays membres",
+        "projects": [
+          773228
+        ],
+        "y": 1,
+        "z": 2
+      },
       {
         "name": "CNRS (France)",
         "country": "France",
@@ -938,30 +1256,19 @@
         "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          671578
+          773228
         ],
         "y": 1,
-        "z": 177
-      },
+        "z": 599
+      }
+    ],
+    "Future and Emerging Technologies (FET)": [
       {
         "name": "CPE Lyon (France)",
         "country": "France",
         "full_name": "École supérieure de chimie physique électronique de Lyon",
         "acronym": "CPE Lyon",
         "id": "CdULA",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
         "country_level_part": "Pays membres",
         "projects": [
           671578
@@ -983,6 +1290,19 @@
         "z": 7
       },
       {
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
         "name": "UGA (France)",
         "country": "France",
         "full_name": "Université Grenoble Alpes",
@@ -994,6 +1314,19 @@
         ],
         "y": 1,
         "z": 30
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 177
       },
       {
         "name": "CEA (France)",
@@ -1009,79 +1342,6 @@
         "z": 61
       },
       {
-        "name": "Fraunhofer Society (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Fraunhofer Society",
-        "id": "grid.4561.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 60
-      },
-      {
-        "name": "ARM (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "ARM",
-        "id": "grid.28867.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "Foundation for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Foundation for Research and Technology Hellas",
-        "id": "grid.4834.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 30
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 58
-      },
-      {
-        "name": "Atos (France)",
-        "country": "France",
-        "full_name": "Atos",
-        "acronym": "Atos",
-        "id": "gent32",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 15
-      },
-      {
-        "name": "Barcelona Supercomputing Center (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Supercomputing Center",
-        "id": "grid.10097.3f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 20
-      },
-      {
         "name": "University of Manchester (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Manchester",
@@ -1092,19 +1352,6 @@
         ],
         "y": 1,
         "z": 25
-      },
-      {
-        "name": "VOSYS (France)",
-        "country": "France",
-        "full_name": "Virtual Open Systems",
-        "acronym": "VOSYS",
-        "id": "529212987",
-        "country_level_part": "Pays membres",
-        "projects": [
-          671578
-        ],
-        "y": 1,
-        "z": 2
       },
       {
         "name": "Kalray (France)",
@@ -1120,6 +1367,30 @@
         "z": 1
       },
       {
+        "name": "Barcelona Supercomputing Center (Espagne)",
+        "country": "Espagne",
+        "full_name": "Barcelona Supercomputing Center",
+        "id": "grid.10097.3f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 20
+      },
+      {
+        "name": "Foundation for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Foundation for Research and Technology Hellas",
+        "id": "grid.4834.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 30
+      },
+      {
         "name": "Forschungszentrum Jülich (Allemagne)",
         "country": "Allemagne",
         "full_name": "Forschungszentrum Jülich",
@@ -1130,6 +1401,68 @@
         ],
         "y": 1,
         "z": 30
+      },
+      {
+        "name": "VOSYS (France)",
+        "country": "France",
+        "full_name": "Virtual Open Systems",
+        "acronym": "VOSYS",
+        "id": "529212987",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "ARM (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "ARM",
+        "id": "grid.28867.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Fraunhofer Society (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Fraunhofer Society",
+        "id": "grid.4561.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 60
+      },
+      {
+        "name": "Atos (France)",
+        "country": "France",
+        "full_name": "Atos",
+        "acronym": "Atos",
+        "id": "gent32",
+        "country_level_part": "Pays membres",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 15
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          671578
+        ],
+        "y": 1,
+        "z": 58
       }
     ]
   },
@@ -1149,28 +1482,28 @@
         "z": 3
       },
       {
-        "name": "Vrije Universiteit Brussel (Belgique)",
-        "country": "Belgique",
-        "full_name": "Vrije Universiteit Brussel",
-        "id": "grid.8767.e",
+        "name": "Technological University Dublin (Irlande)",
+        "country": "Irlande",
+        "full_name": "Technological University Dublin",
+        "id": "grid.497880.a",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 5
+        "z": 3
       },
       {
-        "name": "University of Sassari (Italie)",
-        "country": "Italie",
-        "full_name": "University of Sassari",
-        "id": "grid.11450.31",
+        "name": "Wissenschaftsladen (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Wissenschaftsladen",
+        "id": "grid.439295.0",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 1
+        "z": 4
       },
       {
         "name": "University of Vechta (Allemagne)",
@@ -1197,18 +1530,6 @@
         "z": 2
       },
       {
-        "name": "Technological University Dublin (Irlande)",
-        "country": "Irlande",
-        "full_name": "Technological University Dublin",
-        "id": "grid.497880.a",
-        "country_level_part": "Pays membres",
-        "projects": [
-          665759
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
         "name": "University of Cambridge (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Cambridge",
@@ -1219,6 +1540,18 @@
         ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Vrije Universiteit Brussel (Belgique)",
+        "country": "Belgique",
+        "full_name": "Vrije Universiteit Brussel",
+        "id": "grid.8767.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          665759
+        ],
+        "y": 1,
+        "z": 5
       },
       {
         "name": "Wageningen University & Research (Pays-Bas)",
@@ -1245,16 +1578,16 @@
         "z": 2
       },
       {
-        "name": "Wissenschaftsladen (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Wissenschaftsladen",
-        "id": "grid.439295.0",
+        "name": "University of Sassari (Italie)",
+        "country": "Italie",
+        "full_name": "University of Sassari",
+        "id": "grid.11450.31",
         "country_level_part": "Pays membres",
         "projects": [
           665759
         ],
         "y": 1,
-        "z": 4
+        "z": 1
       },
       {
         "name": "University College Cork (Irlande)",
@@ -1269,28 +1602,16 @@
         "z": 6
       },
       {
-        "name": "Serbian Academy of Sciences and Arts (Serbie)",
-        "country": "Serbie",
-        "full_name": "Serbian Academy of Sciences and Arts",
-        "id": "grid.419269.1",
-        "country_level_part": "Pays associés (potentiellement candidats)",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Edinburgh (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Edinburgh",
-        "id": "grid.4305.2",
+        "name": "Ruhr University Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Ruhr University Bochum",
+        "id": "grid.5570.7",
         "country_level_part": "Pays membres",
         "projects": [
           664932
         ],
         "y": 1,
-        "z": 5
+        "z": 3
       },
       {
         "name": "Dublin City University (Irlande)",
@@ -1305,12 +1626,11 @@
         "z": 7
       },
       {
-        "name": "UEAJS (France)",
-        "country": "France",
-        "full_name": "Union européenne des associations de journalistes scientifiques",
-        "acronym": "UEAJS",
-        "id": "808334478",
-        "country_level_part": "Pays membres",
+        "name": "Ilia State University (Géorgie)",
+        "country": "Géorgie",
+        "full_name": "Ilia State University",
+        "id": "grid.428923.6",
+        "country_level_part": "Pays associés",
         "projects": [
           664932
         ],
@@ -1330,90 +1650,6 @@
         "z": 1
       },
       {
-        "name": "National Research Foundation (Afrique du Sud)",
-        "country": "Afrique du Sud",
-        "full_name": "National Research Foundation",
-        "id": "grid.425534.1",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Rhine-Waal University of Applied Sciences (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Rhine-Waal University of Applied Sciences",
-        "id": "grid.449481.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "University of Aberdeen (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Aberdeen",
-        "id": "grid.7107.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Stadtwerke Bochum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Stadtwerke Bochum",
-        "id": "grid.437861.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Nottingham City Council (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Nottingham City Council",
-        "id": "grid.422848.0",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Delft University of Technology (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Delft University of Technology",
-        "id": "grid.5292.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "University of Twente (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Twente",
-        "id": "grid.6214.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
         "name": "Nottingham Trent University (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Nottingham Trent University",
@@ -1426,46 +1662,10 @@
         "z": 1
       },
       {
-        "name": "Ilia State University (Géorgie)",
-        "country": "Géorgie",
-        "full_name": "Ilia State University",
-        "id": "grid.428923.6",
-        "country_level_part": "Pays associés",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Ruhr University Bochum (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Ruhr University Bochum",
-        "id": "grid.5570.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Bielefeld University (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Bielefeld University",
-        "id": "grid.7491.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          664932
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Wellcome Sanger Institute (Royaume-Uni)",
+        "name": "University of Aberdeen (Royaume-Uni)",
         "country": "Royaume-Uni",
-        "full_name": "Wellcome Sanger Institute",
-        "id": "grid.10306.34",
+        "full_name": "University of Aberdeen",
+        "id": "grid.7107.1",
         "country_level_part": "Pays membres",
         "projects": [
           664932
@@ -1486,6 +1686,163 @@
         "z": 7
       },
       {
+        "name": "Wellcome Sanger Institute (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Wellcome Sanger Institute",
+        "id": "grid.10306.34",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "University of Twente (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Twente",
+        "id": "grid.6214.1",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "Serbian Academy of Sciences and Arts (Serbie)",
+        "country": "Serbie",
+        "full_name": "Serbian Academy of Sciences and Arts",
+        "id": "grid.419269.1",
+        "country_level_part": "Pays associés (potentiellement candidats)",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "Stadtwerke Bochum (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Stadtwerke Bochum",
+        "id": "grid.437861.f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Delft University of Technology (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Delft University of Technology",
+        "id": "grid.5292.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of Edinburgh (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Edinburgh",
+        "id": "grid.4305.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Nottingham City Council (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Nottingham City Council",
+        "id": "grid.422848.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "Rhine-Waal University of Applied Sciences (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Rhine-Waal University of Applied Sciences",
+        "id": "grid.449481.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Bielefeld University (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Bielefeld University",
+        "id": "grid.7491.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "UEAJS (France)",
+        "country": "France",
+        "full_name": "Union européenne des associations de journalistes scientifiques",
+        "acronym": "UEAJS",
+        "id": "808334478",
+        "country_level_part": "Pays membres",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
+        "name": "National Research Foundation (Afrique du Sud)",
+        "country": "Afrique du Sud",
+        "full_name": "National Research Foundation",
+        "id": "grid.425534.1",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          664932
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
+        "name": "University of Padua (Italie)",
+        "country": "Italie",
+        "full_name": "University of Padua",
+        "id": "grid.5608.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "University of Graz (Autriche)",
+        "country": "Autriche",
+        "full_name": "University of Graz",
+        "id": "grid.5110.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
         "name": "University of Granada (Espagne)",
         "country": "Espagne",
         "full_name": "University of Granada",
@@ -1496,6 +1853,18 @@
         ],
         "y": 1,
         "z": 3
+      },
+      {
+        "name": "Vilnius University (Lituanie)",
+        "country": "Lituanie",
+        "full_name": "Vilnius University",
+        "id": "grid.6441.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          101017448
+        ],
+        "y": 1,
+        "z": 6
       },
       {
         "name": "Leipzig University (Allemagne)",
@@ -1522,64 +1891,16 @@
         "z": 6
       },
       {
-        "name": "University of Graz (Autriche)",
-        "country": "Autriche",
-        "full_name": "University of Graz",
-        "id": "grid.5110.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101017448
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "University of Padua (Italie)",
-        "country": "Italie",
-        "full_name": "University of Padua",
-        "id": "grid.5608.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101017448
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Vilnius University (Lituanie)",
-        "country": "Lituanie",
-        "full_name": "Vilnius University",
-        "id": "grid.6441.7",
-        "country_level_part": "Pays membres",
-        "projects": [
-          101017448
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "University of Florence (Italie)",
-        "country": "Italie",
-        "full_name": "University of Florence",
-        "id": "grid.8404.8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          741677
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Hospital Clínic de Barcelona (Espagne)",
+        "name": "Barcelona Institute for Global Health (Espagne)",
         "country": "Espagne",
-        "full_name": "Hospital Clínic de Barcelona",
-        "id": "grid.410458.c",
+        "full_name": "Barcelona Institute for Global Health",
+        "id": "grid.434607.2",
         "country_level_part": "Pays membres",
         "projects": [
           741677
         ],
         "y": 1,
-        "z": 1
+        "z": 2
       },
       {
         "name": "Essrg (Hongrie)",
@@ -1594,16 +1915,16 @@
         "z": 6
       },
       {
-        "name": "VU Amsterdam (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "VU Amsterdam",
-        "id": "grid.12380.38",
+        "name": "Hospital Clínic de Barcelona (Espagne)",
+        "country": "Espagne",
+        "full_name": "Hospital Clínic de Barcelona",
+        "id": "grid.410458.c",
         "country_level_part": "Pays membres",
         "projects": [
           741677
         ],
         "y": 1,
-        "z": 4
+        "z": 1
       },
       {
         "name": "Institut Pasteur de Tunis (Tunisie)",
@@ -1618,34 +1939,33 @@
         "z": 1
       },
       {
-        "name": "Barcelona Institute for Global Health (Espagne)",
-        "country": "Espagne",
-        "full_name": "Barcelona Institute for Global Health",
-        "id": "grid.434607.2",
+        "name": "University of Florence (Italie)",
+        "country": "Italie",
+        "full_name": "University of Florence",
+        "id": "grid.8404.8",
         "country_level_part": "Pays membres",
         "projects": [
           741677
         ],
         "y": 1,
         "z": 2
+      },
+      {
+        "name": "VU Amsterdam (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "VU Amsterdam",
+        "id": "grid.12380.38",
+        "country_level_part": "Pays membres",
+        "projects": [
+          741677
+        ],
+        "y": 1,
+        "z": 4
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
-      {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          688564
-        ],
-        "y": 1,
-        "z": 148
-      },
       {
         "name": "CPE Lyon (France)",
         "country": "France",
@@ -1658,19 +1978,6 @@
         ],
         "y": 1,
         "z": 5
-      },
-      {
-        "name": "EC Lyon (France)",
-        "country": "France",
-        "full_name": "Centrale Lyon",
-        "acronym": "EC Lyon",
-        "id": "fWJJA",
-        "country_level_part": "Pays membres",
-        "projects": [
-          688564
-        ],
-        "y": 1,
-        "z": 3
       },
       {
         "name": "INSA de Lyon (France)",
@@ -1686,6 +1993,19 @@
         "z": 6
       },
       {
+        "name": "EC Lyon (France)",
+        "country": "France",
+        "full_name": "Centrale Lyon",
+        "acronym": "EC Lyon",
+        "id": "fWJJA",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
         "name": "UGA (France)",
         "country": "France",
         "full_name": "Université Grenoble Alpes",
@@ -1699,16 +2019,17 @@
         "z": 26
       },
       {
-        "name": "Hahn-Schickard-Gesellschaft für angewandte Forschung (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hahn-Schickard-Gesellschaft für angewandte Forschung",
-        "id": "grid.424588.7",
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           688564
         ],
         "y": 1,
-        "z": 9
+        "z": 148
       },
       {
         "name": "University of Lleida (Espagne)",
@@ -1723,6 +2044,18 @@
         "z": 2
       },
       {
+        "name": "Hahn-Schickard-Gesellschaft für angewandte Forschung (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hahn-Schickard-Gesellschaft für angewandte Forschung",
+        "id": "grid.424588.7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 9
+      },
+      {
         "name": "University of Freiburg (Allemagne)",
         "country": "Allemagne",
         "full_name": "University of Freiburg",
@@ -1733,19 +2066,6 @@
         ],
         "y": 1,
         "z": 11
-      },
-      {
-        "name": "CEA (France)",
-        "country": "France",
-        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
-        "acronym": "CEA",
-        "id": "zYXK8",
-        "country_level_part": "Pays membres",
-        "projects": [
-          688564
-        ],
-        "y": 1,
-        "z": 167
       },
       {
         "name": "STMicroelectronics (France)",
@@ -1759,6 +2079,19 @@
         ],
         "y": 1,
         "z": 40
+      },
+      {
+        "name": "CEA (France)",
+        "country": "France",
+        "full_name": "Commissariat à l’énergie atomique et aux énergies alternatives",
+        "acronym": "CEA",
+        "id": "zYXK8",
+        "country_level_part": "Pays membres",
+        "projects": [
+          688564
+        ],
+        "y": 1,
+        "z": 167
       }
     ]
   }

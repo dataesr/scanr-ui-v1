@@ -2,18 +2,18 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
+        "name": "UBx (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
         "country_level_part": "Pays membres",
         "projects": [
           636053,
           872442
         ],
         "y": 2,
-        "z": 2670
+        "z": 210
       },
       {
         "name": "IPB (France)",
@@ -30,20 +30,6 @@
         "z": 75
       },
       {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053,
-          872442
-        ],
-        "y": 2,
-        "z": 210
-      },
-      {
         "name": "Inria (France)",
         "country": "France",
         "full_name": "Institut national de recherche en informatique et en automatique",
@@ -58,41 +44,18 @@
         "z": 295
       },
       {
-        "name": "German Aerospace Center (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Aerospace Center",
-        "id": "grid.7551.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 450
-      },
-      {
-        "name": "Airbus (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Airbus",
-        "id": "grid.410308.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 91
-      },
-      {
-        "name": "Valeol (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Valeol",
-        "acronym": "Valeol",
-        "id": "503934754",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          636053
+          636053,
+          872442
         ],
-        "y": 1,
-        "z": 1
+        "y": 2,
+        "z": 2670
       },
       {
         "name": "University of Cape Town (Afrique du Sud)",
@@ -105,30 +68,6 @@
         ],
         "y": 1,
         "z": 47
-      },
-      {
-        "name": "University of Bristol (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Bristol",
-        "id": "grid.5337.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 166
-      },
-      {
-        "name": "Piaggio Aerospace (Italie)",
-        "country": "Italie",
-        "full_name": "Piaggio Aerospace",
-        "id": "grid.425474.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 12
       },
       {
         "name": "Dassault groupe (France)",
@@ -144,18 +83,6 @@
         "z": 43
       },
       {
-        "name": "Numerical Mechanics Applications International (Belgique)",
-        "country": "Belgique",
-        "full_name": "Numerical Mechanics Applications International",
-        "id": "grid.27372.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 13
-      },
-      {
         "name": "University of Liverpool (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Liverpool",
@@ -166,6 +93,18 @@
         ],
         "y": 1,
         "z": 109
+      },
+      {
+        "name": "Numerical Mechanics Applications International (Belgique)",
+        "country": "Belgique",
+        "full_name": "Numerical Mechanics Applications International",
+        "id": "grid.27372.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 13
       },
       {
         "name": "National Aerospace Laboratory (Pays-Bas)",
@@ -180,17 +119,65 @@
         "z": 108
       },
       {
-        "name": "Société Générale (France)",
-        "country": "France",
-        "full_name": "Société Générale",
-        "acronym": "Société Générale",
-        "id": "gent161",
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
         "country_level_part": "Pays membres",
         "projects": [
-          646435
+          636053
+        ],
+        "y": 1,
+        "z": 450
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 166
+      },
+      {
+        "name": "Valeol (France)",
+        "country": "France",
+        "full_name": "Valeol",
+        "acronym": "Valeol",
+        "id": "503934754",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
         ],
         "y": 1,
         "z": 1
+      },
+      {
+        "name": "Airbus (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Airbus",
+        "id": "grid.410308.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 91
+      },
+      {
+        "name": "Piaggio Aerospace (Italie)",
+        "country": "Italie",
+        "full_name": "Piaggio Aerospace",
+        "id": "grid.425474.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 12
       },
       {
         "name": "University of Dundee (Royaume-Uni)",
@@ -229,6 +216,19 @@
         "z": 15
       },
       {
+        "name": "Société Générale (France)",
+        "country": "France",
+        "full_name": "Société Générale",
+        "acronym": "Société Générale",
+        "id": "gent161",
+        "country_level_part": "Pays membres",
+        "projects": [
+          646435
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "European Crowdfunding Network (Belgique)",
         "country": "Belgique",
         "full_name": "European Crowdfunding Network",
@@ -253,28 +253,16 @@
         "z": 37
       },
       {
-        "name": "University of South Carolina (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of South Carolina",
-        "id": "grid.254567.7",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 3
-      },
-      {
-        "name": "Volkswagen Group (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Volkswagen Group",
-        "id": "grid.6569.c",
+        "name": "University of Seville (Espagne)",
+        "country": "Espagne",
+        "full_name": "University of Seville",
+        "id": "grid.9224.d",
         "country_level_part": "Pays membres",
         "projects": [
           872442
         ],
         "y": 1,
-        "z": 32
+        "z": 85
       },
       {
         "name": "Virginia Tech (Etats-Unis)",
@@ -289,6 +277,42 @@
         "z": 8
       },
       {
+        "name": "University of South Carolina (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of South Carolina",
+        "id": "grid.254567.7",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 3
+      },
+      {
+        "name": "Politecnico di Milano (Italie)",
+        "country": "Italie",
+        "full_name": "Politecnico di Milano",
+        "id": "grid.4643.5",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 386
+      },
+      {
+        "name": "Volkswagen Group (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Volkswagen Group",
+        "id": "grid.6569.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 32
+      },
+      {
         "name": "Archaeological centre stanford university, stanford, uk (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "Archaeological centre stanford university, stanford, uk",
@@ -299,19 +323,6 @@
         ],
         "y": 1,
         "z": 82
-      },
-      {
-        "name": "Nurea (France)",
-        "country": "France",
-        "full_name": "Nurea",
-        "acronym": "Nurea",
-        "id": "841437411",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 1
       },
       {
         "name": "International School for Advanced Studies (Italie)",
@@ -326,28 +337,17 @@
         "z": 32
       },
       {
-        "name": "University of Seville (Espagne)",
-        "country": "Espagne",
-        "full_name": "University of Seville",
-        "id": "grid.9224.d",
+        "name": "Nurea (France)",
+        "country": "France",
+        "full_name": "Nurea",
+        "acronym": "Nurea",
+        "id": "841437411",
         "country_level_part": "Pays membres",
         "projects": [
           872442
         ],
         "y": 1,
-        "z": 85
-      },
-      {
-        "name": "Politecnico di Milano (Italie)",
-        "country": "Italie",
-        "full_name": "Politecnico di Milano",
-        "id": "grid.4643.5",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 386
+        "z": 1
       },
       {
         "name": "Polytechnic University of Turin (Italie)",
@@ -366,69 +366,6 @@
   "Societal Challenges": {
     "Smart, green and integrated transport (TPT)": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 88
-      },
-      {
-        "name": "IPB (France)",
-        "country": "France",
-        "full_name": "Bordeaux INP",
-        "acronym": "IPB",
-        "id": "S88MV",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
-        "name": "German Aerospace Center (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "German Aerospace Center",
-        "id": "grid.7551.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 176
-      },
-      {
-        "name": "Airbus (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Airbus",
-        "id": "grid.410308.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 33
-      },
-      {
-        "name": "Valeol (France)",
-        "country": "France",
-        "full_name": "Valeol",
-        "acronym": "Valeol",
-        "id": "503934754",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
         "name": "University of Cape Town (Afrique du Sud)",
         "country": "Afrique du Sud",
         "full_name": "University of Cape Town",
@@ -439,56 +376,6 @@
         ],
         "y": 1,
         "z": 2
-      },
-      {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Inria (France)",
-        "country": "France",
-        "full_name": "Institut national de recherche en informatique et en automatique",
-        "acronym": "Inria",
-        "id": "E1Wdn",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 8
-      },
-      {
-        "name": "University of Bristol (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Bristol",
-        "id": "grid.5337.2",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 18
-      },
-      {
-        "name": "Piaggio Aerospace (Italie)",
-        "country": "Italie",
-        "full_name": "Piaggio Aerospace",
-        "id": "grid.425474.4",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 10
       },
       {
         "name": "Dassault groupe (France)",
@@ -504,18 +391,6 @@
         "z": 40
       },
       {
-        "name": "Numerical Mechanics Applications International (Belgique)",
-        "country": "Belgique",
-        "full_name": "Numerical Mechanics Applications International",
-        "id": "grid.27372.33",
-        "country_level_part": "Pays membres",
-        "projects": [
-          636053
-        ],
-        "y": 1,
-        "z": 6
-      },
-      {
         "name": "University of Liverpool (Royaume-Uni)",
         "country": "Royaume-Uni",
         "full_name": "University of Liverpool",
@@ -528,6 +403,18 @@
         "z": 5
       },
       {
+        "name": "Numerical Mechanics Applications International (Belgique)",
+        "country": "Belgique",
+        "full_name": "Numerical Mechanics Applications International",
+        "id": "grid.27372.33",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
         "name": "National Aerospace Laboratory (Pays-Bas)",
         "country": "Pays-Bas",
         "full_name": "National Aerospace Laboratory",
@@ -538,22 +425,122 @@
         ],
         "y": 1,
         "z": 101
-      }
-    ],
-    "Secure, clean and efficient energy (ENERGY)": [
+      },
       {
-        "name": "Société Générale (France)",
-        "country": "France",
-        "full_name": "Société Générale",
-        "acronym": "Société Générale",
-        "id": "gent161",
+        "name": "German Aerospace Center (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "German Aerospace Center",
+        "id": "grid.7551.6",
         "country_level_part": "Pays membres",
         "projects": [
-          646435
+          636053
+        ],
+        "y": 1,
+        "z": 176
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "IPB (France)",
+        "country": "France",
+        "full_name": "Bordeaux INP",
+        "acronym": "IPB",
+        "id": "S88MV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 6
+      },
+      {
+        "name": "University of Bristol (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Bristol",
+        "id": "grid.5337.2",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 18
+      },
+      {
+        "name": "Valeol (France)",
+        "country": "France",
+        "full_name": "Valeol",
+        "acronym": "Valeol",
+        "id": "503934754",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
         ],
         "y": 1,
         "z": 1
       },
+      {
+        "name": "Inria (France)",
+        "country": "France",
+        "full_name": "Institut national de recherche en informatique et en automatique",
+        "acronym": "Inria",
+        "id": "E1Wdn",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 8
+      },
+      {
+        "name": "Airbus (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Airbus",
+        "id": "grid.410308.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 33
+      },
+      {
+        "name": "CNRS (France)",
+        "country": "France",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 88
+      },
+      {
+        "name": "Piaggio Aerospace (Italie)",
+        "country": "Italie",
+        "full_name": "Piaggio Aerospace",
+        "id": "grid.425474.4",
+        "country_level_part": "Pays membres",
+        "projects": [
+          636053
+        ],
+        "y": 1,
+        "z": 10
+      }
+    ],
+    "Secure, clean and efficient energy (ENERGY)": [
       {
         "name": "University of Dundee (Royaume-Uni)",
         "country": "Royaume-Uni",
@@ -591,6 +578,19 @@
         "z": 3
       },
       {
+        "name": "Société Générale (France)",
+        "country": "France",
+        "full_name": "Société Générale",
+        "acronym": "Société Générale",
+        "id": "gent161",
+        "country_level_part": "Pays membres",
+        "projects": [
+          646435
+        ],
+        "y": 1,
+        "z": 1
+      },
+      {
         "name": "European Crowdfunding Network (Belgique)",
         "country": "Belgique",
         "full_name": "European Crowdfunding Network",
@@ -619,17 +619,17 @@
   "Excellent Science": {
     "Marie Sklodowska-Curie actions (MSCA)": [
       {
-        "name": "CNRS (France)",
+        "name": "UBx (France)",
         "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
         "country_level_part": "Pays membres",
         "projects": [
           872442
         ],
         "y": 1,
-        "z": 938
+        "z": 98
       },
       {
         "name": "IPB (France)",
@@ -645,19 +645,6 @@
         "z": 33
       },
       {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 98
-      },
-      {
         "name": "Inria (France)",
         "country": "France",
         "full_name": "Institut national de recherche en informatique et en automatique",
@@ -671,77 +658,17 @@
         "z": 63
       },
       {
-        "name": "University of South Carolina (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "University of South Carolina",
-        "id": "grid.254567.7",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 2
-      },
-      {
-        "name": "Volkswagen Group (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Volkswagen Group",
-        "id": "grid.6569.c",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 5
-      },
-      {
-        "name": "Virginia Tech (Etats-Unis)",
-        "country": "Etats-Unis",
-        "full_name": "Virginia Tech",
-        "id": "grid.438526.e",
-        "country_level_part": "Pays tiers",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 7
-      },
-      {
-        "name": "Archaeological centre stanford university, stanford, uk (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "Archaeological centre stanford university, stanford, uk",
-        "id": "grid.168010.e",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 79
-      },
-      {
-        "name": "Nurea (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Nurea",
-        "acronym": "Nurea",
-        "id": "841437411",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
           872442
         ],
         "y": 1,
-        "z": 1
-      },
-      {
-        "name": "International School for Advanced Studies (Italie)",
-        "country": "Italie",
-        "full_name": "International School for Advanced Studies",
-        "id": "grid.5970.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          872442
-        ],
-        "y": 1,
-        "z": 14
+        "z": 938
       },
       {
         "name": "University of Seville (Espagne)",
@@ -756,6 +683,30 @@
         "z": 36
       },
       {
+        "name": "Virginia Tech (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "Virginia Tech",
+        "id": "grid.438526.e",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "University of South Carolina (Etats-Unis)",
+        "country": "Etats-Unis",
+        "full_name": "University of South Carolina",
+        "id": "grid.254567.7",
+        "country_level_part": "Pays tiers",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 2
+      },
+      {
         "name": "Politecnico di Milano (Italie)",
         "country": "Italie",
         "full_name": "Politecnico di Milano",
@@ -766,6 +717,55 @@
         ],
         "y": 1,
         "z": 68
+      },
+      {
+        "name": "Volkswagen Group (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Volkswagen Group",
+        "id": "grid.6569.c",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 5
+      },
+      {
+        "name": "Archaeological centre stanford university, stanford, uk (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "Archaeological centre stanford university, stanford, uk",
+        "id": "grid.168010.e",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 79
+      },
+      {
+        "name": "International School for Advanced Studies (Italie)",
+        "country": "Italie",
+        "full_name": "International School for Advanced Studies",
+        "id": "grid.5970.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 14
+      },
+      {
+        "name": "Nurea (France)",
+        "country": "France",
+        "full_name": "Nurea",
+        "acronym": "Nurea",
+        "id": "841437411",
+        "country_level_part": "Pays membres",
+        "projects": [
+          872442
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Polytechnic University of Turin (Italie)",

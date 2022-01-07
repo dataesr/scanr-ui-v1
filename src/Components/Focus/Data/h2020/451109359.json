@@ -2,6 +2,30 @@
   "all": {
     "all": [
       {
+        "name": "Academic Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Academic Medical Center",
+        "id": "grid.5650.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 81
+      },
+      {
+        "name": "University of Naples Federico II (Italie)",
+        "country": "Italie",
+        "full_name": "University of Naples Federico II",
+        "id": "grid.4691.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 118
+      },
+      {
         "name": "H. Antoine Beclere (AP-HP) (France)",
         "country": "France",
         "full_name": "Hôpital Antoine Beclere",
@@ -13,42 +37,6 @@
         ],
         "y": 1,
         "z": 1
-      },
-      {
-        "name": "Hannover Medical School (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hannover Medical School",
-        "id": "grid.10423.34",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 35
-      },
-      {
-        "name": "Ospedale Papa Giovanni XXIII (Italie)",
-        "country": "Italie",
-        "full_name": "Ospedale Papa Giovanni XXIII",
-        "id": "grid.460094.f",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 4
-      },
-      {
-        "name": "European Research and Project Office (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "European Research and Project Office",
-        "id": "grid.424876.b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 49
       },
       {
         "name": "Genosafe Sas (France)",
@@ -64,28 +52,29 @@
         "z": 3
       },
       {
-        "name": "University of Leicester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leicester",
-        "id": "grid.9918.9",
+        "name": "Hannover Medical School (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hannover Medical School",
+        "id": "grid.10423.34",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 58
+        "z": 35
       },
       {
-        "name": "University of Naples Federico II (Italie)",
-        "country": "Italie",
-        "full_name": "University of Naples Federico II",
-        "id": "grid.4691.a",
+        "name": "Généthon (France)",
+        "country": "France",
+        "full_name": "Généthon",
+        "acronym": "Généthon",
+        "id": "zEW3d",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 118
+        "z": 7
       },
       {
         "name": "AP-HP (France)",
@@ -101,60 +90,6 @@
         "z": 122
       },
       {
-        "name": "Academic Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Academic Medical Center",
-        "id": "grid.5650.6",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 81
-      },
-      {
-        "name": "Généthon (France)",
-        "country": "France",
-        "full_name": "Généthon",
-        "acronym": "Généthon",
-        "id": "zEW3d",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 7
-      }
-    ]
-  },
-  "Societal Challenges": {
-    "Health, demographic change and wellbeing (HEALTH)": [
-      {
-        "name": "H. Antoine Beclere (AP-HP) (France)",
-        "country": "France",
-        "full_name": "Hôpital Antoine Beclere",
-        "acronym": "H. Antoine Beclere (AP-HP)",
-        "id": "26750045200391",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 1
-      },
-      {
-        "name": "Hannover Medical School (Allemagne)",
-        "country": "Allemagne",
-        "full_name": "Hannover Medical School",
-        "id": "grid.10423.34",
-        "country_level_part": "Pays membres",
-        "projects": [
-          755225
-        ],
-        "y": 1,
-        "z": 17
-      },
-      {
         "name": "Ospedale Papa Giovanni XXIII (Italie)",
         "country": "Italie",
         "full_name": "Ospedale Papa Giovanni XXIII",
@@ -167,6 +102,18 @@
         "z": 4
       },
       {
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 58
+      },
+      {
         "name": "European Research and Project Office (Allemagne)",
         "country": "Allemagne",
         "full_name": "European Research and Project Office",
@@ -176,7 +123,48 @@
           755225
         ],
         "y": 1,
-        "z": 21
+        "z": 49
+      }
+    ]
+  },
+  "Societal Challenges": {
+    "Health, demographic change and wellbeing (HEALTH)": [
+      {
+        "name": "Academic Medical Center (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "Academic Medical Center",
+        "id": "grid.5650.6",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 46
+      },
+      {
+        "name": "University of Naples Federico II (Italie)",
+        "country": "Italie",
+        "full_name": "University of Naples Federico II",
+        "id": "grid.4691.a",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 7
+      },
+      {
+        "name": "H. Antoine Beclere (AP-HP) (France)",
+        "country": "France",
+        "full_name": "Hôpital Antoine Beclere",
+        "acronym": "H. Antoine Beclere (AP-HP)",
+        "id": "26750045200391",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 1
       },
       {
         "name": "Genosafe Sas (France)",
@@ -192,28 +180,29 @@
         "z": 3
       },
       {
-        "name": "University of Leicester (Royaume-Uni)",
-        "country": "Royaume-Uni",
-        "full_name": "University of Leicester",
-        "id": "grid.9918.9",
+        "name": "Hannover Medical School (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "Hannover Medical School",
+        "id": "grid.10423.34",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 11
+        "z": 17
       },
       {
-        "name": "University of Naples Federico II (Italie)",
-        "country": "Italie",
-        "full_name": "University of Naples Federico II",
-        "id": "grid.4691.a",
+        "name": "Généthon (France)",
+        "country": "France",
+        "full_name": "Généthon",
+        "acronym": "Généthon",
+        "id": "zEW3d",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 7
+        "z": 6
       },
       {
         "name": "AP-HP (France)",
@@ -229,29 +218,40 @@
         "z": 70
       },
       {
-        "name": "Academic Medical Center (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "Academic Medical Center",
-        "id": "grid.5650.6",
+        "name": "Ospedale Papa Giovanni XXIII (Italie)",
+        "country": "Italie",
+        "full_name": "Ospedale Papa Giovanni XXIII",
+        "id": "grid.460094.f",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 46
+        "z": 4
       },
       {
-        "name": "Généthon (France)",
-        "country": "France",
-        "full_name": "Généthon",
-        "acronym": "Généthon",
-        "id": "zEW3d",
+        "name": "University of Leicester (Royaume-Uni)",
+        "country": "Royaume-Uni",
+        "full_name": "University of Leicester",
+        "id": "grid.9918.9",
         "country_level_part": "Pays membres",
         "projects": [
           755225
         ],
         "y": 1,
-        "z": 6
+        "z": 11
+      },
+      {
+        "name": "European Research and Project Office (Allemagne)",
+        "country": "Allemagne",
+        "full_name": "European Research and Project Office",
+        "id": "grid.424876.b",
+        "country_level_part": "Pays membres",
+        "projects": [
+          755225
+        ],
+        "y": 1,
+        "z": 21
       }
     ]
   }

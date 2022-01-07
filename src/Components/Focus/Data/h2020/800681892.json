@@ -2,18 +2,17 @@
   "all": {
     "all": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
+        "name": "IBM Research - Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "IBM Research - Zurich",
+        "id": "grid.410387.9",
+        "country_level_part": "Pays associés",
         "projects": [
           732642,
-          644096
+          871330
         ],
         "y": 2,
-        "z": 2670
+        "z": 103
       },
       {
         "name": "Sorbonne U (France)",
@@ -30,19 +29,6 @@
         "z": 505
       },
       {
-        "name": "IBM Research - Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "IBM Research - Zurich",
-        "id": "grid.410387.9",
-        "country_level_part": "Pays associés",
-        "projects": [
-          732642,
-          871330
-        ],
-        "y": 2,
-        "z": 103
-      },
-      {
         "name": "Inserm (France)",
         "country": "France",
         "full_name": "Institut national de la santé et de la recherche médicale",
@@ -57,67 +43,18 @@
         "z": 689
       },
       {
-        "name": "Thales (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          732642
+          732642,
+          644096
         ],
-        "y": 1,
-        "z": 286
-      },
-      {
-        "name": "IPB (France)",
-        "country": "France",
-        "full_name": "Bordeaux INP",
-        "acronym": "IPB",
-        "id": "S88MV",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 75
-      },
-      {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 210
-      },
-      {
-        "name": "University of Twente (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Twente",
-        "id": "grid.6214.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 154
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 356
+        "y": 2,
+        "z": 2670
       },
       {
         "name": "Robert Bosch (Allemagne)",
@@ -132,17 +69,16 @@
         "z": 115
       },
       {
-        "name": "U. Paris-Saclay (France)",
-        "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
+        "name": "University of Twente (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Twente",
+        "id": "grid.6214.1",
         "country_level_part": "Pays membres",
         "projects": [
           732642
         ],
         "y": 1,
-        "z": 575
+        "z": 154
       },
       {
         "name": "Bordeaux Sciences Agro (France)",
@@ -158,16 +94,68 @@
         "z": 22
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
         "country_level_part": "Pays membres",
         "projects": [
-          871330
+          732642
         ],
         "y": 1,
-        "z": 273
+        "z": 286
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 210
+      },
+      {
+        "name": "IPB (France)",
+        "country": "France",
+        "full_name": "Bordeaux INP",
+        "acronym": "IPB",
+        "id": "S88MV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 75
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 575
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 356
       },
       {
         "name": "University of the Aegean (Grèce)",
@@ -182,16 +170,28 @@
         "z": 23
       },
       {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
         "country_level_part": "Pays membres",
         "projects": [
           871330
         ],
         "y": 1,
-        "z": 182
+        "z": 361
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871330
+        ],
+        "y": 1,
+        "z": 273
       },
       {
         "name": "CEA (France)",
@@ -207,28 +207,16 @@
         "z": 852
       },
       {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
         "country_level_part": "Pays membres",
         "projects": [
           871330
         ],
         "y": 1,
-        "z": 361
-      },
-      {
-        "name": "Fondazione Bruno Kessler (Italie)",
-        "country": "Italie",
-        "full_name": "Fondazione Bruno Kessler",
-        "id": "grid.11469.3b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          644096
-        ],
-        "y": 1,
-        "z": 92
+        "z": 182
       },
       {
         "name": "Streetlab (France)",
@@ -256,17 +244,16 @@
         "z": 133
       },
       {
-        "name": "FVE (France)",
-        "country": "France",
-        "full_name": "Fondation Voir & Entendre",
-        "acronym": "FVE",
-        "id": "4jkAb",
+        "name": "Fondazione Bruno Kessler (Italie)",
+        "country": "Italie",
+        "full_name": "Fondazione Bruno Kessler",
+        "id": "grid.11469.3b",
         "country_level_part": "Pays membres",
         "projects": [
           644096
         ],
         "y": 1,
-        "z": 3
+        "z": 92
       },
       {
         "name": "Spanish National Research Council (Espagne)",
@@ -279,24 +266,36 @@
         ],
         "y": 1,
         "z": 554
+      },
+      {
+        "name": "FVE (France)",
+        "country": "France",
+        "full_name": "Fondation Voir & Entendre",
+        "acronym": "FVE",
+        "id": "4jkAb",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644096
+        ],
+        "y": 1,
+        "z": 3
       }
     ]
   },
   "Industrial Leadership": {
     "Information and Communication Technologies (ICT)": [
       {
-        "name": "CNRS (France)",
-        "country": "France",
-        "full_name": "Centre national de la recherche scientifique",
-        "acronym": "CNRS",
-        "id": "n2X5f",
-        "country_level_part": "Pays membres",
+        "name": "IBM Research - Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "IBM Research - Zurich",
+        "id": "grid.410387.9",
+        "country_level_part": "Pays associés",
         "projects": [
           732642,
-          644096
+          871330
         ],
         "y": 2,
-        "z": 148
+        "z": 33
       },
       {
         "name": "Sorbonne U (France)",
@@ -313,19 +312,6 @@
         "z": 25
       },
       {
-        "name": "IBM Research - Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "IBM Research - Zurich",
-        "id": "grid.410387.9",
-        "country_level_part": "Pays associés",
-        "projects": [
-          732642,
-          871330
-        ],
-        "y": 2,
-        "z": 33
-      },
-      {
         "name": "Inserm (France)",
         "country": "France",
         "full_name": "Institut national de la santé et de la recherche médicale",
@@ -340,67 +326,18 @@
         "z": 14
       },
       {
-        "name": "Thales (France)",
+        "name": "CNRS (France)",
         "country": "France",
-        "full_name": "Thales",
-        "acronym": "Thales",
-        "id": "gent175",
+        "full_name": "Centre national de la recherche scientifique",
+        "acronym": "CNRS",
+        "id": "n2X5f",
         "country_level_part": "Pays membres",
         "projects": [
-          732642
+          732642,
+          644096
         ],
-        "y": 1,
-        "z": 84
-      },
-      {
-        "name": "IPB (France)",
-        "country": "France",
-        "full_name": "Bordeaux INP",
-        "acronym": "IPB",
-        "id": "S88MV",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "UBx (France)",
-        "country": "France",
-        "full_name": "Université de Bordeaux",
-        "acronym": "UBx",
-        "id": "90I54",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 10
-      },
-      {
-        "name": "University of Twente (Pays-Bas)",
-        "country": "Pays-Bas",
-        "full_name": "University of Twente",
-        "id": "grid.6214.1",
-        "country_level_part": "Pays membres",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 31
-      },
-      {
-        "name": "ETH Zurich (Suisse)",
-        "country": "Suisse",
-        "full_name": "ETH Zurich",
-        "id": "grid.5801.c",
-        "country_level_part": "Pays associés",
-        "projects": [
-          732642
-        ],
-        "y": 1,
-        "z": 47
+        "y": 2,
+        "z": 148
       },
       {
         "name": "Robert Bosch (Allemagne)",
@@ -415,17 +352,16 @@
         "z": 48
       },
       {
-        "name": "U. Paris-Saclay (France)",
-        "country": "France",
-        "full_name": "Université Paris-Saclay",
-        "acronym": "U. Paris-Saclay",
-        "id": "G2qA7",
+        "name": "University of Twente (Pays-Bas)",
+        "country": "Pays-Bas",
+        "full_name": "University of Twente",
+        "id": "grid.6214.1",
         "country_level_part": "Pays membres",
         "projects": [
           732642
         ],
         "y": 1,
-        "z": 52
+        "z": 31
       },
       {
         "name": "Bordeaux Sciences Agro (France)",
@@ -441,16 +377,68 @@
         "z": 5
       },
       {
-        "name": "Ghent University (Belgique)",
-        "country": "Belgique",
-        "full_name": "Ghent University",
-        "id": "grid.5342.0",
+        "name": "Thales (France)",
+        "country": "France",
+        "full_name": "Thales",
+        "acronym": "Thales",
+        "id": "gent175",
         "country_level_part": "Pays membres",
         "projects": [
-          871330
+          732642
         ],
         "y": 1,
-        "z": 15
+        "z": 84
+      },
+      {
+        "name": "UBx (France)",
+        "country": "France",
+        "full_name": "Université de Bordeaux",
+        "acronym": "UBx",
+        "id": "90I54",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "IPB (France)",
+        "country": "France",
+        "full_name": "Bordeaux INP",
+        "acronym": "IPB",
+        "id": "S88MV",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 10
+      },
+      {
+        "name": "U. Paris-Saclay (France)",
+        "country": "France",
+        "full_name": "Université Paris-Saclay",
+        "acronym": "U. Paris-Saclay",
+        "id": "G2qA7",
+        "country_level_part": "Pays membres",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 52
+      },
+      {
+        "name": "ETH Zurich (Suisse)",
+        "country": "Suisse",
+        "full_name": "ETH Zurich",
+        "id": "grid.5801.c",
+        "country_level_part": "Pays associés",
+        "projects": [
+          732642
+        ],
+        "y": 1,
+        "z": 47
       },
       {
         "name": "University of the Aegean (Grèce)",
@@ -465,16 +453,28 @@
         "z": 2
       },
       {
-        "name": "Universitat Politècnica de València (Espagne)",
-        "country": "Espagne",
-        "full_name": "Universitat Politècnica de València",
-        "id": "grid.157927.f",
+        "name": "Centre for Research and Technology Hellas (Grèce)",
+        "country": "Grèce",
+        "full_name": "Centre for Research and Technology Hellas",
+        "id": "grid.423747.1",
         "country_level_part": "Pays membres",
         "projects": [
           871330
         ],
         "y": 1,
-        "z": 51
+        "z": 72
+      },
+      {
+        "name": "Ghent University (Belgique)",
+        "country": "Belgique",
+        "full_name": "Ghent University",
+        "id": "grid.5342.0",
+        "country_level_part": "Pays membres",
+        "projects": [
+          871330
+        ],
+        "y": 1,
+        "z": 15
       },
       {
         "name": "CEA (France)",
@@ -490,28 +490,16 @@
         "z": 167
       },
       {
-        "name": "Centre for Research and Technology Hellas (Grèce)",
-        "country": "Grèce",
-        "full_name": "Centre for Research and Technology Hellas",
-        "id": "grid.423747.1",
+        "name": "Universitat Politècnica de València (Espagne)",
+        "country": "Espagne",
+        "full_name": "Universitat Politècnica de València",
+        "id": "grid.157927.f",
         "country_level_part": "Pays membres",
         "projects": [
           871330
         ],
         "y": 1,
-        "z": 72
-      },
-      {
-        "name": "Fondazione Bruno Kessler (Italie)",
-        "country": "Italie",
-        "full_name": "Fondazione Bruno Kessler",
-        "id": "grid.11469.3b",
-        "country_level_part": "Pays membres",
-        "projects": [
-          644096
-        ],
-        "y": 1,
-        "z": 40
+        "z": 51
       },
       {
         "name": "Streetlab (France)",
@@ -539,17 +527,16 @@
         "z": 19
       },
       {
-        "name": "FVE (France)",
-        "country": "France",
-        "full_name": "Fondation Voir & Entendre",
-        "acronym": "FVE",
-        "id": "4jkAb",
+        "name": "Fondazione Bruno Kessler (Italie)",
+        "country": "Italie",
+        "full_name": "Fondazione Bruno Kessler",
+        "id": "grid.11469.3b",
         "country_level_part": "Pays membres",
         "projects": [
           644096
         ],
         "y": 1,
-        "z": 1
+        "z": 40
       },
       {
         "name": "Spanish National Research Council (Espagne)",
@@ -562,6 +549,19 @@
         ],
         "y": 1,
         "z": 32
+      },
+      {
+        "name": "FVE (France)",
+        "country": "France",
+        "full_name": "Fondation Voir & Entendre",
+        "acronym": "FVE",
+        "id": "4jkAb",
+        "country_level_part": "Pays membres",
+        "projects": [
+          644096
+        ],
+        "y": 1,
+        "z": 1
       }
     ]
   }
