@@ -61,9 +61,7 @@ const AapPage = (props) => {
 
   const getDataFromCE = async () => {
     try {
-      // const responseCallFromCE = await Axios.get(`https://ec.europa.eu/info/funding-tenders/opportunities/data/topicDetails/${props.match.params.id.toLowerCase()}.json`);
-      const responseCallFromCE = await Axios.get(`https://curie.staging.dataesr.ovh/api/ec-topics/${props.match.params.id.toLowerCase()}`);
-      // const { TopicDetails } = responseCallFromCE.data;
+      const responseCallFromCE = await Axios.get(`https://api.curiexplore.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
       setCallObject(responseCallFromCE.data);
       setKeywords(responseCallFromCE.data.keywords);
       setStep('2_0');
