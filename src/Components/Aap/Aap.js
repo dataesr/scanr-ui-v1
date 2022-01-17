@@ -63,7 +63,7 @@ const AapPage = (props) => {
   };
 
   const getDataFromCeAPI = async () => {
-    const responseCallFromCE = await Axios.get(`https://api.curiexplore.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
+    const responseCallFromCE = await Axios.get(`https://curiexplore-api.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
     return responseCallFromCE.data;
   };
 
