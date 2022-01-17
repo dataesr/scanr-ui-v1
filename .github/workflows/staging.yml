@@ -8,7 +8,7 @@ on:
 env:
   # Must match k8s deployment name
   DEPLOYMENT: scanr
-  DEPLOYMENT_NAMESPACE: staging
+  DEPLOYMENT_NAMESPACE: scanr
   DEPLOYMENT_URL: https://scanr.staging.dataesr.ovh
   SLACK_NOTIFICATION_CHANNEL: '#scanr-bots'
 
