@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
 import CookieConsent from 'react-cookie-consent';
 import { GlobalContext } from '../../../GlobalContext';
+import useLatestRelease from '../../../Hooks/useLatestRelease';
 
 import classes from './Footer.scss';
 
@@ -16,10 +17,13 @@ const messages = {
 
 const Footer = () => {
   /* eslint-disable-next-line */
-  var _paq = window._paq || [];
+  const _paq = window._paq || [];
   if (localStorage.consent !== 'ko') {
     _paq.push(['rememberConsentGiven']);
   }
+  const {
+    latestRelease, refreshPage,
+  } = useLatestRelease();
   const context = useContext(GlobalContext);
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
@@ -113,6 +117,7 @@ const Footer = () => {
                     <FormattedHTMLMessage
                       id="Footer.link.changelog"
                       defaultMessage="Footer.link.changelog"
+                      values={{ current: `v${process.env.REACT_APP_VERSION}` }}
                     />
                   </a>
                 </li>
@@ -211,6 +216,15 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {
+          (latestRelease && (latestRelease === `v${process.env.REACT_APP_VERSION}`))
+            && (
+              <div className={classes.ReloadPageToast}>
+                <span className={classes.TextSpan}>Une nouvelle version de l&apos;application est disponible</span>
+                <button type="button" className={classes.Button} onClick={refreshPage}>Rafraîchir</button>
+              </div>
+            )
+        }
       </section>
     </IntlProvider>
   );
