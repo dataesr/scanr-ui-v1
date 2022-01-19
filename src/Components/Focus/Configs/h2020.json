@@ -1,0 +1,31 @@
+{
+  "title": {
+    "fr": "Coopérations internationales de la recherche française via H2020",
+    "en": "International cooperation of French research via H2020"
+  },
+  "text":  {
+    "fr": "Coopérations internationales de la recherche française via H2020",
+    "en": "International cooperation of French research via H2020"
+  },
+  "tags": {
+    "fr": ["h2020", "Coopérations internationales"],
+    "en": ["h2020", "International cooperation"]
+  },
+  "type": "donut",
+  "api": "projects",
+  "hrefX": "/recherche/projects",
+  "hrefOpendata": "https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-h2020_participations-dans-les-contrats-signes/information/",
+  "components": [
+    {
+      "componentType": "VariablePie",
+      "lexicon": "FocusH2020",
+      "title": {
+        "fr": "Principaux partenaires via des projets H2020",
+        "en": "Main partners via H2020 projects"
+      },
+      "subtitle": {"fr": "", "en": ""},
+      "tooltipFr": "<br/>Nombre de projets en commun : {point.y}<br/>Nombre de projets total : {point.z}",
+      "tooltipEn": "<br/>Number of projects in common : {point.y}<br/>Total projects number : {point.z}"
+    }
+  ]
+}

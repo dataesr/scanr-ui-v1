@@ -15,6 +15,7 @@ import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import PublicationsKeywords from '../Shared/StandaloneGraphs/PublicationsKeywords';
 import PublicationsPacketBubble from '../Shared/StandaloneGraphs/PublicationsPacketBubble';
 import OpendataPackedBubble from './Components/OpendataPackedBubble';
+import VariablePie from './Components/VariablePie';
 import EntityNetwork from '../Shared/StandaloneGraphs/EntityNetwork';
 import OpendataEntityMap from './Components/OpendataEntityMap';
 import GenderTreemap from './Components/GenderTreemap';
@@ -51,6 +52,7 @@ const GraphTypes = {
   PublicationsKeywords,
   PublicationsPacketBubble,
   OpendataPackedBubble,
+  VariablePie,
   GenderTreemap,
   SimpleAggregationGraph,
   OpendataEntityMap,
