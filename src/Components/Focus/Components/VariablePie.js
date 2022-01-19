@@ -2,11 +2,17 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-// import GraphSpinner from '../../Shared/LoadingSpinners/GraphSpinner';
+import { FormattedHTMLMessage } from 'react-intl';
 import classes from './GraphCard.scss';
 import variablePieCss from './variablePie.scss';
 import HighChartsVariablepie from '../../Shared/GraphComponents/Graphs/HighChartsVariablepie';
 import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
+
+// Traductions
+import messagesFr from '../translations/fr.json';
+import messagesEn from '../translations/en.json';
+
+const msg = { fr: messagesFr, en: messagesEn };
 
 export default class VariablePie extends Component {
   state = {
@@ -87,10 +93,28 @@ export default class VariablePie extends Component {
 
   renderFilters = () => {
     const pilersSelectorOptions = this.getPiliers()
-      .map(el => <option key={el} value={el}>{el}</option>);
+      .map((el) => {
+        if (el === 'all') {
+          return (
+            <option key={el} value={el}>
+              {msg[this.props.language]['Focus.piliers.all']}
+            </option>
+          );
+        }
+        return <option key={el} value={el}>{el}</option>;
+      });
 
     const programsSelectorOptions = this.getPrograms(this.state.pilier)
-      .map(el => <option key={el} value={el}>{el}</option>);
+      .map((el) => {
+        if (el === 'all') {
+          return (
+            <option key={el} value={el}>
+              {msg[this.props.language]['Focus.programs.all']}
+            </option>
+          );
+        }
+        return <option key={el} value={el}>{el}</option>;
+      });
 
     const firstProgram = Object.keys(this.state.data[this.state.pilier])[0];
 
@@ -111,8 +135,8 @@ export default class VariablePie extends Component {
 
     return (
       <>
-        <p>
-          Piliers
+        <p className="pt-3">
+          <FormattedHTMLMessage id="Focus.piliers.title" />
         </p>
         <select
           className="form-control"
@@ -122,7 +146,7 @@ export default class VariablePie extends Component {
         </select>
 
         <p className="mt-3">
-          Programmes
+          <FormattedHTMLMessage id="Focus.programs.title" />
         </p>
         <select
           className="form-control"
@@ -145,7 +169,9 @@ export default class VariablePie extends Component {
       filteredData = this.state.data[this.state.pilier][program];
 
       // filtre sur country_level_part
-      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part)).slice(0, 20);
+      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part))
+        .slice(0, 20)
+        .sort((a, b) => a.y > b.y);
     }
 
     return (
@@ -176,29 +202,29 @@ export default class VariablePie extends Component {
         </Row>
         {
 
-// this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects
-        (filteredData.length > 0) ? (
-          <Row className={classes.graphCard}>
-            <Col md={3} className={variablePieCss.filters}>
-              {this.renderFilters()}
-            </Col>
-            <Col>
-              <GraphTitles
-                lexicon={this.props.lexicon}
-                language={this.props.language}
-                title={this.props.subtitle.concat('', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name)}
-                subtitle={this.props.title}
-              />
-              <HighChartsVariablepie
-                filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
-                data={filteredData}
-                exporting={this.state.exporting}
-                language={this.props.language}
-                tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
-              />
-            </Col>
-          </Row>
-        ) : null
+          // this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects
+          (filteredData.length > 0) ? (
+            <Row className={classes.graphCard}>
+              <Col md={3} className={variablePieCss.filters}>
+                {this.renderFilters()}
+              </Col>
+              <Col>
+                <GraphTitles
+                  lexicon={this.props.lexicon}
+                  language={this.props.language}
+                  title={this.props.subtitle.concat('', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name)}
+                  subtitle={this.props.title}
+                />
+                <HighChartsVariablepie
+                  filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
+                  data={filteredData}
+                  exporting={this.state.exporting}
+                  language={this.props.language}
+                  tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
+                />
+              </Col>
+            </Row>
+          ) : null
         }
       </div>
     );
