@@ -96,7 +96,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
+    "build": "node --max_old_space_size=8048 scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "lint": "./node_modules/.bin/eslint src/",
     "build:staging": "env-cmd -f .env.staging npm run build",
