@@ -164,14 +164,21 @@ export default class VariablePie extends Component {
 
   render = () => {
     let filteredData = [];
+    const uniqueProjects = [];
     if (this.state.data && this.state.currentId && !this.state.isLoading) {
       const program = (this.state.program) ? this.state.program : Object.keys(this.state.data[this.state.pilier])[0];
       filteredData = this.state.data[this.state.pilier][program];
 
       // filtre sur country_level_part
-      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part))
-        .slice(0, 20)
-        .sort((a, b) => a.y > b.y);
+      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part));
+
+      filteredData.forEach((el) => {
+        el.projects.forEach((idProject) => {
+          if (uniqueProjects.indexOf(idProject) === -1) {
+            uniqueProjects.push(idProject);
+          }
+        });
+      });
     }
 
     return (
@@ -180,7 +187,7 @@ export default class VariablePie extends Component {
           <Col>
             <select
               className="form-control mb-2"
-              onChange={e => this.setState({ currentId: e.target.value })}
+              onChange={e => this.setState({ currentId: e.target.value, data: null })}
             >
               {
                 (this.state.currentId === 'nothing')
@@ -212,12 +219,12 @@ export default class VariablePie extends Component {
                 <GraphTitles
                   lexicon={this.props.lexicon}
                   language={this.props.language}
-                  title={this.props.subtitle.concat('', this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name)}
+                  title={`${this.props.subtitle}${this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name} - ${uniqueProjects.length} projets`}
                   subtitle={this.props.title}
                 />
                 <HighChartsVariablepie
                   filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
-                  data={filteredData}
+                  data={filteredData.slice(0, 20).sort((a, b) => a.y > b.y)}
                   exporting={this.state.exporting}
                   language={this.props.language}
                   tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
