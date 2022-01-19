@@ -145,7 +145,7 @@ export default class VariablePie extends Component {
       filteredData = this.state.data[this.state.pilier][program];
 
       // filtre sur country_level_part
-      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part));
+      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part)).slice(0, 20);
     }
 
     return (
