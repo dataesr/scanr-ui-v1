@@ -1,0 +1,15 @@
+@import '../../../style.scss';
+
+.filters {
+  background-color: $scanrfooterBgColor;
+  color: $scanrdeepblueColor;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  color: $scanrlightgreyColor;
+
+  .title {
+    margin-top: 8px;
+    font-weight: bold;
+    color: $scanrlightgreyColor;
+  }
+}

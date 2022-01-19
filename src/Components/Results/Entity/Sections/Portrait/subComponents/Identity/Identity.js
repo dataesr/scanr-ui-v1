@@ -67,7 +67,7 @@ const Identity = (props) => {
           <div className={`col-lg-6 ${classes.CardContainer}`}>
             <LogoCard
               src={`${OS_LOGOS_URL}${props.id}_128.png`}
-              url={`https://scanr-preprod.sword-group.com/api/v2/structures/screenshot/${props.id}`}
+              url={`https://scanr-preprod.coexya.eu/api/v2/structures/screenshot/${props.id}`}
               cssClass="Height150"
               targetUrl={getWebSiteByType(props.links, 'main')}
             />

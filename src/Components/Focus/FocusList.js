@@ -95,6 +95,19 @@ FocusList.defaultProps = {
   focusList: [
     {
       tags: {
+        fr: ['#CoopérationsInternationales', '#H2020'],
+        en: ['#InternationalCooperation', '#H2020'],
+      },
+      title: {
+        fr: 'Coopérations internationales de la recherche française via H2020',
+        en: 'International cooperation of French research via H2020',
+      },
+      type: 'donut',
+      url: '/focus/h2020',
+      api: 'projects',
+    },
+    {
+      tags: {
         fr: ['#satt', '#transfert', '#technologies'],
         en: ['#satt', '#transfert', '#technologies'],
       },

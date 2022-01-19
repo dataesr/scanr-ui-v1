@@ -3,8 +3,32 @@
 $linkColor: rgb(255, 255, 255);
 $linkColorHover: rgb(255, 255, 255);
 
-
-
+.TextSpan {
+  padding-right: 16px
+}
+.Button {
+  display: inline-block;
+  padding: 2px 8px;
+  background-color: $scanrdeepblueColor;
+  color: white !important;
+  margin-left: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.Button:hover {
+  background-color: $scanrgreyColor;
+  color: white !important;
+}
+.ReloadPageToast {
+  background-color: $scanrelectricblueColor;
+  color: $scanrlightgreyColor;
+  padding: 10px 30px;
+  position: fixed;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+}
 .FeedbackModal {
   .Header {
     background-color: $scanrlightgreyColor;
