@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React, { Component } from 'react';
+import Axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
@@ -37,17 +38,17 @@ export default class VariablePie extends Component {
     }
   }
 
-  getNodes = () => {
+  getNodes = async () => {
     /* eslint-disable-next-line */
-    const nodes = require('../../Focus/Data/h2020/nodes_fr.json');
-    this.setState({ nodes });
+    const nodes = await Axios.get('https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/nodes_fr.json');
+    this.setState({ nodes: nodes.data });
   }
 
-  getData = () => {
+  getData = async () => {
     if (this.state.currentId !== 'nothing') {
       /* eslint-disable-next-line */
-      const data = require(`../../Focus/Data/h2020/${this.state.currentId}.json`);
-      this.setState({ data, isLoading: false });
+      const data = await Axios.get(`https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/${this.state.currentId}.json`);
+      this.setState({ data: data.data, isLoading: false });
     }
   }
 
@@ -208,8 +209,6 @@ export default class VariablePie extends Component {
           </Col>
         </Row>
         {
-
-          // this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects
           (filteredData.length > 0) ? (
             <Row className={classes.graphCard}>
               <Col md={3} className={variablePieCss.filters}>
