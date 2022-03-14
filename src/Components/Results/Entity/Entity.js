@@ -13,7 +13,7 @@ import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 import Portrait from './Sections/Portrait/Portrait';
 import Network from './Sections/Network/Network';
-import Evaluations from './Sections/Evaluations/Evaluations';
+// import Evaluations from './Sections/Evaluations/Evaluations';
 import Team from './Sections/Team/Team';
 import Projects from '../Shared/Projects/Projects';
 import Productions from '../Shared/Productions/Productions';
@@ -26,7 +26,7 @@ import styles from '../../../style.scss';
 
 import {
   SectionEntity,
-  SectionGrey,
+  // SectionGrey,
   SectionPersonsBlue,
   // SectionBlue,
   SectionWhite,
@@ -205,7 +205,7 @@ const Entity = (props) => {
             />
           </div>
       </SectionBlue> */}
-        <SectionGrey id="Evaluations">
+        {/* <SectionGrey id="Evaluations">
           <div className="container">
             <SectionTitle
               icon="fa-id-card"
@@ -222,7 +222,7 @@ const Entity = (props) => {
               id={id}
             />
           </div>
-        </SectionGrey>
+        </SectionGrey> */}
         <div id="Ecosystem">
           <Ecosystem
             language={props.language}

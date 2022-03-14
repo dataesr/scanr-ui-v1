@@ -198,6 +198,15 @@ const Web = (props) => {
                           return null;
                         })
                       }
+                      {
+                        (props.evaluations && props.evaluations.length > 0) && (
+                        <WebSiteButton
+                          url={`https://www.hceres.fr/fr/recherche?key=${props.label.default}`}
+                          type="Hceres"
+                          label="Voir les évaluations HCERES"
+                        />
+                        )
+                      }
                     </div>
                   </div>
                 </div>
@@ -260,4 +269,6 @@ Web.propTypes = {
   websites: PropTypes.array,
   links: PropTypes.array,
   externalIds: PropTypes.array,
+  evaluations: PropTypes.array,
+  label: PropTypes.object,
 };
