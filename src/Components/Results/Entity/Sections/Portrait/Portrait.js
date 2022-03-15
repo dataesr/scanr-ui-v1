@@ -63,6 +63,7 @@ const Portrait = props => (
       externalIds={props.data.externalIds || []}
       label={props.data.label}
       evaluations={props.data.evaluations}
+      kind={props.data.kind}
     />
     {
       /*

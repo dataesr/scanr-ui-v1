@@ -183,6 +183,17 @@ const Web = (props) => {
                   <div className="col-md-8">
                     <div className="row">
                       {
+                        ((props.kind && props.kind.includes('Structure de recherche')) || (props.evaluations && props.evaluations.length > 0)) && (
+                          <div className={`col-md-6 ${classes.CardContainer}`}>
+                            <WebSiteButton
+                              url={`https://www.hceres.fr/fr/recherche?key=${props.label.default}`}
+                              type="Hceres"
+                              label="Voir les évaluations HCERES"
+                            />
+                          </div>
+                        )
+                      }
+                      {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
@@ -197,15 +208,6 @@ const Web = (props) => {
                           }
                           return null;
                         })
-                      }
-                      {
-                        (props.evaluations && props.evaluations.length > 0) && (
-                        <WebSiteButton
-                          url={`https://www.hceres.fr/fr/recherche?key=${props.label.default}`}
-                          type="Hceres"
-                          label="Voir les évaluations HCERES"
-                        />
-                        )
                       }
                     </div>
                   </div>
@@ -271,4 +273,5 @@ Web.propTypes = {
   externalIds: PropTypes.array,
   evaluations: PropTypes.array,
   label: PropTypes.object,
+  kind: PropTypes.array,
 };
