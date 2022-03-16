@@ -28,10 +28,10 @@ const Roles = ({ language }) => {
   const roles = data.results.map(s => ({
     id: s.value.id,
     label: s.value.label.default,
-    role: s.value.leaders.reduce((p, n) => {
-      if (n.person && n.person.id === id && n.fromDate > p.fromDate) { return n; }
+    role: s.value.leaders.filter(l => (l.person && l.person.id === id)).reduce((p, n) => {
+      if (!p.fromDate || n.fromDate > p.fromDate) { return n; }
       return p;
-    }, s.value.leaders[0]),
+    }, {}),
   }));
   if (data.total) {
     return (
