@@ -89,6 +89,14 @@
   border-bottom-right-radius: 8px;
   padding: 16px 8px 8px 8px;
 }
+
+.messageError{
+  background-color: $warningColor;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px 8px 8px 8px;
+}
+
 .separator {
   border-top: solid 3px $structureColor;
 }

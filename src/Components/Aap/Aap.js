@@ -15,6 +15,8 @@ import Header from './Header';
 import EntityCard from './EntityCard';
 import LeafletMap from '../Shared/GraphComponents/Graphs/LeafletMap';
 import { API_ES, API_KEY_ES } from '../../config/config';
+import Autocomplete from '../Search/Filters/ObjectsFilters/Filters/Autocomplete';
+import Loader from '../Shared/LoadingSpinners/RouterSpinner';
 
 import getSelectedKey from '../../Utils/getSelectKey';
 
@@ -29,17 +31,17 @@ import messagesEn from './translations/en.json';
 // exemple .../dt-tds-01-2019
 
 const msg = { fr: messagesFr, en: messagesEn };
-// const pageSize = 50;
-const entitiesPerPage = 20;
 
 const AapPage = (props) => {
   const [callObject, setCallObject] = useState({});
   const [keywords, setKeywords] = useState([]);
   const [dataFromScanR, setResponsesFromScanR] = useState([]);
-  const [isFrenchOnly, setIsFrenchFilter] = useState(true);
+  const [radioFrench, setRadioFrench] = useState('isFrench');
   const [filters, setFilters] = useState([]);
-
-  const [selectedLocalisations, setSelectedLocalisations] = useState([]);
+  const [warning, setWarning] = useState(false);
+  const [idNotFound, setIdNotFound] = useState(false);
+  const [selectedLocalisations, setSelectedLocalisations] = useState('');
+  const [loading, setLoading] = useState(true);
 
   const getMatchPhrases = (kwords) => {
     const ret = [];
@@ -53,26 +55,36 @@ const AapPage = (props) => {
     return ret;
   };
 
-  const getDynamicFilters = () => {
+  const getDynamicFilters = (localisationFilter = null) => {
     const ret = [];
-    ret.push({ match: { status: 'active' } });
+    ret.push({ match_phrase: { status: 'active' } });
     filters.forEach((filter) => {
-      ret.push({ match: { [filter.key]: filter.value } });
+      ret.push({ match_phrase: { [filter.key]: filter.value } });
     });
+    if (localisationFilter) {
+      ret.push({ match_phrase: { 'address.localisationSuggestions': localisationFilter } });
+    } else if (filters.find(el => el.key === 'address.localisationSuggestions')) {
+      return ret.filter(el => !('address.localisationSuggestions' in el.match_phrase));
+    }
+
     return ret;
   };
 
   const getDataFromCeAPI = async () => {
-    const responseCallFromCE = await Axios.get(`https://curiexplore-api.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
-    return responseCallFromCE.data;
+    // const responseCallFromCE = await Axios.get(`https://curiexplore-api.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
+    const url = `https://scanr.staging.dataesr.ovh/topics/${props.match.params.id.toLowerCase()}`;
+    const responseCallFromCE = await Axios.get(url);
+    return responseCallFromCE.data.TopicDetails;
   };
 
-  const getScanRData = async (kwords) => {
+  const getScanRData = async (kwords, localisationFilter) => {
+    setLoading(true);
     const query = {
       query: {
         bool: {
           should: getMatchPhrases(kwords),
-          filter: getDynamicFilters(),
+          minimum_should_match: 1,
+          filter: getDynamicFilters(localisationFilter),
         },
       },
       aggs: {
@@ -99,6 +111,7 @@ const AapPage = (props) => {
         },
       },
       _source: false,
+      size: 50,
       fields: [
         'id',
         'label.default',
@@ -119,14 +132,20 @@ const AapPage = (props) => {
         // 'address.*',
       ],
     };
-    if (isFrenchOnly) {
-      query.query.bool.filter.push({ term: { isFrench: isFrenchOnly } });
+
+    if (radioFrench === 'isFrench') {
+      query.query.bool.filter.push({ term: { isFrench: true } });
     }
+    if (radioFrench === 'notIsFrench') {
+      query.query.bool.filter.push({ term: { isFrench: false } });
+    }
+
     const responseFromScanR = await Axios.post(API_ES, query, {
       headers: {
         Authorization: API_KEY_ES,
       },
     });
+    setLoading(false);
     return responseFromScanR;
   };
 
@@ -138,6 +157,9 @@ const AapPage = (props) => {
       setKeywords(dataFromCeAPI.keywords);
       setResponsesFromScanR(dataScanRAPI);
     } catch (err) {
+      if (err?.response?.status === 404) {
+        setIdNotFound(true);
+      }
       throw (err);
     }
   };
@@ -146,10 +168,11 @@ const AapPage = (props) => {
     getInitialData();
   }, []);
 
-  const updateData = async () => {
+  const updateData = async (localisationFilter = null) => {
     try {
-      const dataScanRAPI = await getScanRData(keywords);
+      const dataScanRAPI = await getScanRData(keywords, localisationFilter);
       setResponsesFromScanR(dataScanRAPI);
+      setWarning(false);
     } catch (err) {
       throw (err);
     }
@@ -178,10 +201,6 @@ const AapPage = (props) => {
     return checker || flagReload;
   };
 
-  const onIsFrenchChange = (e) => {
-    setIsFrenchFilter(e.target.checked);
-  };
-
   const updateFilters = (key, value) => {
     if (!filters.find(s => (s.key === key && s.value === value))) {
       const newArr = [...filters];
@@ -191,16 +210,14 @@ const AapPage = (props) => {
       });
       setFilters(newArr);
     } else {
-      const newArr = filters.filter(s => (s.value !== value));
-      setFilters(newArr);
+      setFilters(filters.filter(s => (s.value !== value)));
     }
+    setWarning(true);
   };
 
   const getAPIFilters = () => {
     const aggregations = (dataFromScanR && dataFromScanR.data && dataFromScanR.data.aggregations)
       ? dataFromScanR.data.aggregations : null;
-
-    // const localisations = aggregations?.byAdress?.buckets?.map(el => (el.key));
 
     const localisationSet = new Set();
     if (aggregations?.byAdress?.buckets) {
@@ -209,6 +226,25 @@ const AapPage = (props) => {
       });
     }
 
+    const geoFacet = {};
+    geoFacet.entries = dataFromScanR?.data?.aggregations?.byAddress?.buckets.map(el => ({ count: el.doc_count, value: el.key })) || [];
+    geoFacet.id = 'localisations';
+
+    const localisationHandler = (facetID, value) => {
+      setSelectedLocalisations(value);
+      updateFilters(facetID, value);
+      updateData(value);
+    };
+
+    const deleteLocalisation = () => {
+      setSelectedLocalisations('');
+      updateData();
+    };
+
+    const onChangeRadioFrench = (e) => {
+      setRadioFrench(e.target.value);
+      setWarning(true);
+    };
 
     return (
       <Col md={4} className={classes.AsideContainer}>
@@ -254,16 +290,70 @@ const AapPage = (props) => {
             ))
           }
         </ul>
+        <hr />
+
+        <Autocomplete
+          title="Filtre géographique"
+          placeholder="Lyon, Vendée, ..."
+          language={props.language}
+          onSubmit={localisationHandler}
+          facets={geoFacet.entries}
+          facetID="address.localisationSuggestions"
+        />
+
+        {
+          (selectedLocalisations) ? (
+            <div className={classes.Keywords}>
+              <span
+                onClick={() => {}}
+                onKeyPress={() => {}}
+                tabIndex={0}
+                role="button"
+              >
+                {selectedLocalisations}
+              </span>
+              <span
+                onClick={() => deleteLocalisation(selectedLocalisations)}
+                onKeyPress={() => deleteLocalisation(selectedLocalisations)}
+                tabIndex={0}
+                role="button"
+              >
+                <i className="fas fa-times" />
+              </span>
+            </div>
+          ) : null
+        }
+
 
         <hr />
         {/* isFrench */}
         <Form.Group>
           <Form.Check
-            type="checkbox"
-            id="isFrenchOnly"
+            type="radio"
+            id="radio-isFrench"
             label="Entités françaises uniquement"
-            checked={isFrenchOnly}
-            onChange={e => onIsFrenchChange(e)}
+            checked={(radioFrench === 'isFrench')}
+            name="radioFrench"
+            value="isFrench"
+            onChange={onChangeRadioFrench}
+          />
+          <Form.Check
+            type="radio"
+            id="radio-notIsFrench"
+            label="Entités étrangères uniquement"
+            checked={(radioFrench === 'notIsFrench')}
+            name="radioFrench"
+            value="notIsFrench"
+            onChange={onChangeRadioFrench}
+          />
+          <Form.Check
+            type="radio"
+            id="radio-all"
+            label="Toutes les entités"
+            checked={(radioFrench === 'all')}
+            name="radioFrench"
+            value="all"
+            onChange={onChangeRadioFrench}
           />
         </Form.Group>
 
@@ -303,17 +393,6 @@ const AapPage = (props) => {
             : null
         }
 
-        {/* Par localisation - géo
-        <p className={`mt-3 ${classes.subTitle}`}>
-          Localisations
-        </p>
-        <Typeahead
-          multiple
-          onChange={e => setSelectedLocalisations(e)}
-          options={localisationSet}
-          selected={selectedLocalisations}
-        /> */}
-
         <hr className={classes.separator} />
         <div className="text-center">
           <Button
@@ -340,15 +419,15 @@ const AapPage = (props) => {
       const kind = (structure.fields['address.kind']) || '';
       const addressScore = (structure.fields['address._score']) || '';
 
-      return {
+      const obj = {
         address: [{
           address: address[addressMainIndex] || '',
           city: city[addressMainIndex] || '',
           postcode: postcode[addressMainIndex] || '',
           country: country[addressMainIndex] || '',
           gps: {
-            lat: structure.fields['address.gps'][addressMainIndex]?.coordinates[1],
-            lon: structure.fields['address.gps'][addressMainIndex]?.coordinates[0],
+            lat: structure.fields['address.gps']?.[addressMainIndex]?.coordinates?.[1] || 0,
+            lon: structure.fields['address.gps']?.[addressMainIndex]?.coordinates?.[0] || 0,
           },
           main: true,
           provider: 'adresse.data.gouv.fr',
@@ -362,7 +441,11 @@ const AapPage = (props) => {
         label: { default: structure.fields['label.default'][0] },
         highlights: structure.highlight,
       };
+
+      return obj;
     });
+
+    if (!data) return null;
 
     const dataMap = [];
     data.forEach((s) => {
@@ -397,17 +480,11 @@ const AapPage = (props) => {
             }
           </div>
           {
-            (!checkWarning())
+            (!checkWarning() || warning)
               ? (
                 <div className={`my-2 p-2 ${classes.MessagesBox}`}>
-                  {
-                    (!checkWarning()) ? (
-                      <>
-                        <i className="fas fa-exclamation-triangle mr-2" />
-                        <FormattedHTMLMessage id="warning" />
-                      </>
-                    ) : null
-                  }
+                  <i className="fas fa-exclamation-triangle mr-2" />
+                  <FormattedHTMLMessage id="warning" />
                 </div>
               ) : null
           }
@@ -435,6 +512,29 @@ const AapPage = (props) => {
     );
   };
 
+  if (idNotFound) {
+    return (
+      <IntlProvider locale={props.language} messages={msg[props.language]}>
+        <div className={classes.aap}>
+          <Header title={<FormattedHTMLMessage id="title" />} />
+          <Container as="main">
+            <Row>
+              {getAPIFilters()}
+              <Col>
+                <div className={classes.callBlock}>
+                  Identifiant non trouvé sur le site de la commission
+                  <div>
+                    <a href="https://ec.europa.eu/info/index_en" target="_blank" rel="noreferrer">https://ec.europa.eu/info/index_en</a>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </IntlProvider>
+    );
+  }
+
   return (
     <IntlProvider locale={props.language} messages={msg[props.language]}>
       <div className={classes.aap}>
@@ -442,7 +542,15 @@ const AapPage = (props) => {
         <Container as="main">
           <Row>
             {getAPIFilters()}
-            {(dataFromScanR?.data?.hits?.hits?.length > 0) ? getContent() : 'en cours ...'}
+            {
+              (dataFromScanR?.data?.hits?.hits?.length > 0 && !loading)
+                ? getContent()
+                : (
+                  <Col>
+                    <Loader style={{ height: '50vh', width: '50vw' }} />
+                  </Col>
+                )
+            }
           </Row>
         </Container>
       </div>

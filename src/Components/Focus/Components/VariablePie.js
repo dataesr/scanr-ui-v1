@@ -41,7 +41,10 @@ export default class VariablePie extends Component {
   getNodes = async () => {
     /* eslint-disable-next-line */
     const nodes = await Axios.get('https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/nodes_fr.json');
-    this.setState({ nodes: nodes.data });
+    this.setState({
+      nodes: nodes.data,
+      currentId: nodes.data[Math.floor(Math.random() * 19)].id,
+    });
   }
 
   getData = async () => {
@@ -186,6 +189,16 @@ export default class VariablePie extends Component {
       <div>
         <Row className={classes.arrowRight}>
           <Col>
+            <p>
+              Au premier chargement scanR vous propose de visualier aléatoirement le réseau de coopération via
+              {' '}
+              <span title="Horizon 2020">H2020</span>
+              {' '}
+              des 20 plus importants acteurs, public ou privé français de ce programme.
+            </p>
+            <p>
+              Utilisez le menu déroulant ci-dessous pour visualiser le réseau de collaboration au sein d&lsquo;H2020 de l&lsquo;ensemble des acteurs français actifs dans ce programme.
+            </p>
             <select
               className="form-control mb-2"
               onChange={e => this.setState({ currentId: e.target.value, data: null })}
