@@ -18,6 +18,8 @@ import messagesEn from '../translations/en.json';
 
 const msg = { fr: messagesFr, en: messagesEn };
 
+const SLICE_NUMBER = 2;
+
 const VariablePie = ({
   language,
   title,
@@ -28,11 +30,11 @@ const VariablePie = ({
 }) => {
   const [data, setData] = useState(null);
   const [nodes, setNodes] = useState([]);
-  const [currentId, setCurrentId] = useState('nothing');
+  const [currentId, setCurrentId] = useState(null);
   const [exporting] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [pilier, setPilier] = useState('all');
-  const [program, setProgram] = useState(null);
+  const [program, setProgram] = useState('all');
   const [graphData, setGraphData] = useState([]);
 
 
@@ -43,16 +45,17 @@ const VariablePie = ({
     }
     setIsLoading(true);
     getNodes();
-    // SET DEFAULT CURRENTID HERE
+    // SET INITIAL CURRENTID
+    // setCurrentId('m7K6T');
     setIsLoading(false);
   }, []);
 
   useEffect(() => {
     async function getData() {
       const { data: dataFetched } = await Axios.get(`https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/${currentId}.json`);
-      setData(dataFetched);
+      setData({ ...dataFetched });
     }
-    if (currentId !== 'nothing') {
+    if (currentId) {
       setIsLoading(true);
       getData();
       setIsLoading(false);
@@ -63,8 +66,8 @@ const VariablePie = ({
     if (data) {
       const currentPilier = data[pilier] ?? {};
       const currentProgram = currentPilier[program] ?? Object.values(currentPilier)[0];
-      const newGraphData = currentProgram.sort((a, b) => a.y < b.y).slice(0, 2);
-      setGraphData(newGraphData);
+      const currentProgramCopy = JSON.parse(JSON.stringify(currentProgram));
+      setGraphData(currentProgramCopy.sort((a, b) => a.y < b.y).slice(0, SLICE_NUMBER));
     } else {
       setGraphData([]);
     }
@@ -73,28 +76,17 @@ const VariablePie = ({
   const renderFilters = () => {
     const pilersOptions = data ? Object.keys(data) : [];
     const programOptions = data ? Object.keys(data[pilier]) : [];
-    const pilersSelectorOptions = pilersOptions.map((el) => {
-      if (el === 'all') {
-        return (
-          <option key={el} value={el}>
-            {msg[language]['Focus.piliers.all']}
-          </option>
-        );
-      }
-      return <option key={el} value={el}>{el}</option>;
-    });
+    const pilersSelectorOptions = pilersOptions.map(el => (
+      <option key={el} value={el}>
+        {(el === 'all') ? msg[language]['Focus.piliers.all'] : el}
+      </option>
+    ));
 
-    const programsSelectorOptions = programOptions
-      .map((el) => {
-        if (el === 'all') {
-          return (
-            <option key={el} value={el}>
-              {msg[language]['Focus.programs.all']}
-            </option>
-          );
-        }
-        return <option key={el} value={el}>{el}</option>;
-      });
+    const programsSelectorOptions = programOptions.map(el => (
+      <option key={el} value={el}>
+        {(el === 'all') ? msg[language]['Focus.piliers.all'] : el}
+      </option>
+    ));
 
     return (
       <>
@@ -138,14 +130,11 @@ const VariablePie = ({
           <select
             className="form-control mb-2"
             onChange={e => setCurrentId(e.target.value)}
+            defaultValue={null}
           >
+            { !currentId && <option value={null}>Sélectionner une entité française pour voir ses principaux partenaires</option> }
             {
-              (currentId === 'nothing')
-                ? <option value="nothing" selected>Sélectionner une entité française pour voir ses principaux partenaires</option>
-                : <option value="nothing">Sélectionner une entité française pour voir ses principaux partenaires</option>
-            }
-            {
-              nodes.map((el) => {
+              nodes && nodes.map((el) => {
                 let ret = <option key={el.id} value={el.id}>{el.full_name}</option>;
                 if (el.id === currentId) {
                   ret = <option key={el.id} value={el.id} selected>{el.full_name}</option>;
@@ -168,7 +157,7 @@ const VariablePie = ({
                 <GraphTitles
                   lexicon={lexicon}
                   language={language}
-                  title={`${subtitle}${nodes.filter(el => el.id === currentId)[0].full_name} - 0 projets collaboratifs`}
+                  title={`${subtitle} ${nodes.filter(el => el.id === currentId)[0].full_name}`}
                   subtitle={title}
                 />
                 <HighChartsVariablepie
