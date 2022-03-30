@@ -5,9 +5,9 @@
     "label": {
       "fr": "scanR",
       "en": "scanR"
-      },
+    },
     "definition": {
-     "fr": "scanR est centré autour de 4 types d'objets : <li>les entités (structures de recherche, institutions et entreprises) toutes en lien avec la recherche et l'innovation en France</li><li> les projets</li><li>les personnes (en tant qu'auteurs de productions)</li><li>les productions (publications, thèses et brevets)</li><br/> Questions liées dans la FAQ : <li><a href='/faq/q4' target='_blank'>Que trouve-t-on dans scanR ?</a> </li><li><a href='/faq/q3' target='_blank'>scanR est-il exhaustif ?</a> </li>",
+      "fr": "scanR est centré autour de 4 types d'objets : <li>les entités (structures de recherche, institutions et entreprises) toutes en lien avec la recherche et l'innovation en France</li><li> les projets</li><li>les personnes (en tant qu'auteurs de productions)</li><li>les productions (publications, thèses et brevets)</li><br/> Questions liées dans la FAQ : <li><a href='/faq/q4' target='_blank'>Que trouve-t-on dans scanR ?</a> </li><li><a href='/faq/q3' target='_blank'>scanR est-il exhaustif ?</a> </li>",
       "en": "scanR is centered around 4 types of objects: <li>entities (research structure, institutions and companies) all related to research and innovation in France</li><li> projects</li><li>people (as authors of productions)</li><li>productions (publications, theses and patents)</li><br/> Related questions in the FAQ: <li><a href='/faq/q4' target='_blank'>What do we find in scanR?</a> </li><li><a href='/faq/q3' target='_blank'>scanR is it exhaustive? </a> </li>"
     }
   },
@@ -17,7 +17,7 @@
     "label": {
       "fr": "Moteur de recherche",
       "en": "Search engine"
-      },
+    },
     "definition": {
       "fr": "La recherche des mot-clés s'effectue sur tous les types d'objets (entités, projets, auteurs et productions), et les résultats sont classés pour chaque type d'objet en fonction de leur pertinence. Une cartouche indique où les mot-clés recherchés ont été trouvés.<br/> Questions liées dans la FAQ : <li><a href='/faq/q13' target='_blank'>Sur la base de quelles informations le moteur de recherche de scanR fonctionne-t-il ?</a></li> <li><a href='/faq/q12' target='_blank'>Comment sont ordonnés les résultats d'une recherche dans scanR ?</a></li><li><a href='/faq/q11' target='_blank'>Comment affiner une recherche dans scanR avec des opérateurs ?</a></li>",
       "en": "Keyword searches are performed on all types of objects (entities, projects, authors and productions), and the results are classified for each type of object according to their relevance. A cartridge indicates where the keywords were found. <br/> Related questions in the FAQ: <li><a href='/faq/q13' target='_blank'>Based on what information does the scanR search engine work?</a></li> <li> <a href='/faq/q12' target='_blank'>How are the results of a scanR search ordered? </a></li><li><a href='/faq/q11' target='_blank'>How to refine a scanR search with operators ?</a></li>"
@@ -29,9 +29,21 @@
     "label": {
       "fr": "Focus",
       "en": "Focus"
-      },
+    },
     "definition": {
       "fr": "Les focus sont des zooms thématiques permettant d'explorer un sujet précis. De nouveaux focus sont ajoutés au fil de l'eau. Une contextualisation et des data-visualisations spécifiques sont réalisées. Pour chacun des focus, les données sous-jacentes sont disponibles soit directement dans scanR soit dans un jeu de données en open data. ",
+      "en": "A Focus is a thematic zoom to explore a specific subject. New focuses are added over time. A contextualisation and specific data-visualisations are carried out. For each focus, the underlying data is available, either directly in scanR, or in an open data set."
+    }
+  },
+  {
+    "key": "FocusH2020",
+    "icon": "fas fa-flask",
+    "label": {
+      "fr": "Coopérations internationales de la recherche française via H2020",
+      "en": "International cooperation of French research via H2020"
+    },
+    "definition": {
+      "fr": "scanR affiche ici les partenaires dans les projets collaboratifs de l'entité sélectionnée.<br />- Un partenaire peut appartenir à plusieurs projets.<br />- Un projet peut compter plusieurs partenaires.<br />- Les tutelles des unités de recherche françaises impliquées dans un projet sont considérées commme partenaires du projet.<br /><br />Sur le graphique :<br />- L'angle correspond au nombre de projets communs entre l'entité sélectionnée et le partenaire.<br />- La hauteur correspond au nombre total de projets collaboratifs du partenaire. <br /><br />Les projets individuels des programmes ERC et Marie Curie sont exclus de l'analyse.",
       "en": "A Focus is a thematic zoom to explore a specific subject. New focuses are added over time. A contextualisation and specific data-visualisations are carried out. For each focus, the underlying data is available, either directly in scanR, or in an open data set."
     }
   },
@@ -41,7 +53,7 @@
     "label": {
       "fr": "Cartographie des résultats de recherche",
       "en": "Mapping of research results"
-      },
+    },
     "definition": {
       "fr": "Les entités trouvées par le moteur de recherche sont géolocalisées sur la carte. Si les résultats de recherche sont trop nombreux, seuls les 5 000 premiers sont affichés. ",
       "en": "The entities found by the search engine are geolocated on the map. If there are too many search results, only the first 5,000 are displayed on the map."
@@ -53,7 +65,7 @@
     "label": {
       "fr": "Répartition des résultats de recherche par type",
       "en": "Breakdown of search results by type"
-      },
+    },
     "definition": {
       "fr": "Les entités trouvées par le moteur de recherche sont réparties en fonction de leur type (unité mixte, PME ...). Cette information provient des sources utilisées pour les entités. <br/>Ces pages peuvent vous intéresser :<li><a href='/faq/q14' target='_blank'>Quelles sont les entités référencées dans scanR ?</a></li><li><a href='/ressources' target='_blank'>Quelles sont les sources de données utilisées ?</a></li>",
       "en": "The entities found by the search engine are divided according to their type (mixed unit, SME...). This information comes from the sources used for the entities. <br/>These pages may be of interest to you: <li><a href='/faq/q14' target='_blank' >Which entities are referenced in scanR ?</a></li><li><a href='/resources' target='_blank' >Which data sources are used ?</a></li>"
@@ -65,7 +77,7 @@
     "label": {
       "fr": "Répartition des résultats de recherche par unité urbaine",
       "en": "Breakdown of search results by urban unit"
-      },
+    },
     "definition": {
       "fr": "Les entités trouvées par le moteur de recherche sont réparties en fonction de leur unité urbaine. Cette information provient des sources utilisées pour les entités. <br/>Ces pages peuvent vous intéresser :<li><a href='/faq/q14' target='_blank'>Quelles sont les entités référencées dans scanR ?</a></li><li><a href='/ressources' target='_blank'>Quelles sont les sources de données utilisées ?</a></li>",
       "en": "The entities found by the search engine are divided according to their urban unit. This information comes from the sources used for the entities. <br/>These pages may be of interest to you: <li><a href='/faq/q14' target='_blank' >Which entities are referenced in scanR ?</a></li><li><a href='/resources' target='_blank' >Which data sources are used ?</a></li>"
@@ -77,7 +89,7 @@
     "label": {
       "fr": "Type de financement pour les entités trouvées par le moteur de recherche",
       "en": "Type of funding for entities found by the search engine"
-      },
+    },
     "definition": {
       "fr": "Ce graphique montre, pour les entités trouvées, de quels types de financement elles ont pu bénéficier (à partir des données disponibles dans scanR, sans filtre temporel).<br/>Questions liées dans la FAQ : <li><a href='/faq/q18' target='_blank'>Quels sont les financements recensés dans scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?</a></li>",
       "en": "This graph shows, for the entities found, what types of funding they were able to receive (from the data available in scanR, without a time filter).<br/>Related questions in the FAQ: <li><a href='/faq/q18' target='_blank'>What are the financing identified in scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Why are not all public financing on call for projects referenced?</a></li>"
@@ -89,7 +101,7 @@
     "label": {
       "fr": "Cartographie des participants identifiés dans les projets trouvés",
       "en": "Mapping of participants identified in the projects found"
-      },
+    },
     "definition": {
       "fr": "Les participants identifiés dans chaque projet trouvé par le moteur de recherche sont géolocalisés sur la carte. <br/>Questions liées dans la FAQ : <li><a href='/faq/q18' target='_blank'>Quels sont les financements recensés dans scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?</a></li>",
       "en": "The participants identified in each project found by the search engine are geolocated on the map.<br/>Related questions in the FAQ: <li><a href='/faq/q18' target='_blank'>What are the financing identified in scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Why are not all public financing on call for projects referenced?</a></li>"
@@ -101,7 +113,7 @@
     "label": {
       "fr": "Répartition des résultats par type de projet",
       "en": "Breakdown of results by project type"
-      },
+    },
     "definition": {
       "fr": "Les projets trouvés par le moteur de recherche sont répartis par type.  <br/>Questions liées dans la FAQ : <li><a href='/faq/q18' target='_blank'>Quels sont les financements recensés dans scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Pourquoi tous les financements publics sur appel à projet ne sont ils pas référencés ?</a></li>",
       "en": "The projects found by the search engine are divided by type.<br/>Related questions in the FAQ: <li><a href='/faq/q18' target='_blank'>What are the financing identified in scanR ?</a></li><li><a href='/faq/q19' target='_blank'>Why are not all public financing on call for projects referenced?</a></li>"
@@ -113,7 +125,7 @@
     "label": {
       "fr": "Cartographie des affiliations des personnes trouvées",
       "en": "Mapping of people's affiliations found"
-      },
+    },
     "definition": {
       "fr": "Pour chaque personne trouvée par le moteur de recherche, *toutes* ses affiliations, présentes ou passées sont géolocalisées sur la carte. Plusieurs points peuvent donc être placés pour une même personne.<br/>Questions liées dans la FAQ : <li><a href='/faq/q41' target='_blank'>Comment est construite la chronologie des affiliations d'un auteur ?</a></li><li><a href='/faq/q42' target='_blank'>scanR est-il exhaustif dans ses repérages ?</a></li>",
       "en": "For each person found by the search engine, *all* these affiliations, present or past, are geolocated on the map. Several points can therefore be placed for the same person. <br/>Related questions in the FAQ: <li><a href='/faq/q41' target='_blank' >How is the chronology of an author's affiliations constructed? </a></li><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li>"
@@ -125,7 +137,7 @@
     "label": {
       "fr": "Pourcentage des résultats en accès ouvert",
       "en": "Percentage of results in open access"
-      },
+    },
     "definition": {
       "fr": "Proportion des productions trouvées par le moteur de recherche en accès ouvert.<br/>Questions liées dans la FAQ : <li><a href='/faq/q35' target='_blank'> Comment est déterminé le statut d'ouverture d'une publication de recherche référencée dans scanR ?</a></li><li><a href='/faq/q32' target='_blank'>Que recouvre le terme 'Productions' dans scanR ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li> ",
       "en": "Proportion of productions found by the open access search engine. <br/>Frequently asked questions: <li><a href='/faq/q35' target='_blank'> How is the opening status of a search publication referenced in scanR determined?</a></li><li><a href='/faq/q32' target='_blank' >What covers the term 'Productions' in scanR ?</a></li><li><a href='/faq/q33' target='_blank' >Why some works are not presented in scanR ?</a></li>"
@@ -137,7 +149,7 @@
     "label": {
       "fr": "Principaux mot-clés liés aux publications trouvées",
       "en": "Main keywords related to the publications found"
-      },
+    },
     "definition": {
       "fr": "Ce nuage de mots présente les mot-clés liés aux publications trouvées par le moteur de recherche. Seuls les mots-clés les plus employés sont affichés.<br/>Questions liées dans la FAQ : <li><a href='/faq/q32' target='_blank'>Que recouvre le terme 'Productions' dans scanR ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li> ",
       "en": "This word cloud presents the keywords related to the publications found by the search engine. Only the most used keywords are displayed. <br/>Frequently asked questions: <li><a href='/faq/q32' target='_blank' >What covers the term 'Productions' in scanR ?</a></li><li><a href='/faq/q33' target='_blank' >Why are some works not presented in scanR ?</a></li>"
@@ -149,7 +161,7 @@
     "label": {
       "fr": "Principaux journaux des publications trouvées",
       "en": "Main publication journals found"
-      },
+    },
     "definition": {
       "fr": "Top 10 des revues dans lesquelles sont parues les publications trouvées.<br/>Questions liées dans la FAQ : <li><a href='/faq/q32' target='_blank'>Que recouvre le terme 'Productions' dans scanR ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li>",
       "en": "Top 10 journals in which have been published the publications found.<br/>Frequently asked questions: <li><a href='/faq/q32' target='_blank' >What covers the term 'Productions' in scanR ?</a></li><li><a href='/faq/q33' target='_blank' >Why are some works not presented in scanR ?</a></li>"
@@ -161,7 +173,7 @@
     "label": {
       "fr": "Evolution par année de publication du nombre de productions trouvées",
       "en": "Evolution by year of publication of the number of productions found"
-      },
+    },
     "definition": {
       "fr": "Ce graphique montre le nombre de résultats trouvés dans scanR par année de publication. Il n'est pas représentatif de tendances liées à la recherche, mais simplement une visualisation de ce qui est disponible dans scanR.<br/>Questions liées dans la FAQ : <li><a href='/faq/q32' target='_blank'>Que recouvre le terme 'Productions' dans scanR ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li>",
       "en": "This graph shows the number of results found in scanR by year of publication. This graph is not representative of research trends, but simply a visualization of what is available in scanR.<br/>Frequently asked questions: <li><a href='/faq/q32' target='_blank' >What covers the term 'Productions' in scanR ?</a></li><li><a href='/faq/q33' target='_blank' >Why are some works not presented in scanR ?</a></li>"
@@ -173,7 +185,7 @@
     "label": {
       "fr": "Evolution par année de priorité du nombre d'inventions",
       "en": "Evolution by year of priority of the number of inventions"
-      },
+    },
     "definition": {
       "fr": "Ce graphique présente l'évolution du nombre d'inventions par année de priorité, c'est à dire l'année du premier dépôt. Les inventions correspondent ici aux familles de brevets simples au sens de l’OEB, c’est à dire une collection de dépôts de brevets déposés dans différentes juridictions mais couvrant la même invention. Leur contenu technique est réputé identique et ils ont tous exactement les mêmes priorités.<br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'entend-on par invention ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une invention ?</a></li>",
       "en": "This graph shows the evolution of the number of inventions per priority year, i.e. the year of first filing. The inventions here correspond to simple patent families in the sense of the EPO, i.e. a collection of patent filings filed in different jurisdictions but covering the same invention. Their technical content is deemed to be identical and they all have exactly the same priorities.<br/>Related questions in the FAQ: <li><a href='/faq/q45' target='_blank' >What do we mean by invention?</a></li><li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the date of the first filing of an invention?</a></li>"
@@ -185,7 +197,7 @@
     "label": {
       "fr": "Type de publications",
       "en": "Publications type"
-      },
+    },
     "definition": {
       "fr": "Répartition des publications trouvées par type. <br/>Questions liées dans la FAQ : <li><a href='/faq/q32' target='_blank'>Que recouvre le terme 'Productions' dans scanR ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li>",
       "en": "Breakdown of the publications found by type.<br/>Frequently asked questions: <li><a href='/faq/q32' target='_blank' >What covers the term 'Productions' in scanR ?</a></li><li><a href='/faq/q33' target='_blank' >Why are some works not presented in scanR ?</a></li>"
@@ -197,7 +209,7 @@
     "label": {
       "fr": "Cartographie des SATT",
       "en": "Mapping of the French technology transfer offices (SATT)"
-      },
+    },
     "definition": {
       "fr": "Chaque SATT est géolocalisée sur la carte.",
       "en": "Each French technology transfer offices is geolocalized on the map."
@@ -209,7 +221,7 @@
     "label": {
       "fr": "Actionnaires des SATT",
       "en": "Shareholders of the French technology transfer offices"
-      },
+    },
     "definition": {
       "fr": "Chaque SATT (en vert) est reliée aux établissements de recherche actionnaires que scanR a pu identifier. Inversement, les actionnaires (en orange) sont reliés à toutes les SATT qu'ils soutiennent. La taille des bulles des actionnaires dépend du nombre de SATT auxquelles ils sont reliés.",
       "en": "Each SATT (in green) is linked to the shareholders that scanR has been able to identify. Conversely, shareholders (in orange) are connected to all SATTs of which they are shareholders. The size of shareholder bubbles depends on the number of SATTs to which they are linked."
@@ -221,7 +233,7 @@
     "label": {
       "fr": "Principaux mot-clés des thèses soutenues en 2018",
       "en": "Main keywords of the thesis defended in 2018"
-      },
+    },
     "definition": {
       "fr": "Ce nuage de mots présente les principaux mot-clés des thèses soutenues en 2018. Les informations concernant les thèses sont issues du site <a href='http://www.theses.fr' target='_blank'>theses.fr</a>",
       "en": "This word cloud presents the main keywords of the theses defended in 2018. Information about the theses is available from the website <a href='http//www.theses.fr' target='_blank'>theses.fr</a>"
@@ -233,7 +245,7 @@
     "label": {
       "fr": "Principaux domaines des thèses soutenues en 2018",
       "en": "Main domains of the thesis defended in 2018"
-      },
+    },
     "definition": {
       "fr": "Ce graphique présente les principaux domaines et sous-domaines (dans la classification Dewey) des thèses soutenues en 2018. Les informations concernant les thèses sont issues du site <a href='http://www.theses.fr' target='_blank'>theses.fr</a>",
       "en": "This graphs presents the main domains and sub-domains (dewey classification) of the theses defended in 2018. Information about the theses is available from the website <a href='http://www.theses.fr' target='_blank'>theses.fr</a>"
@@ -245,7 +257,7 @@
     "label": {
       "fr": "Nombre de thèses soutenues en 2018 par unité urbaine (top 10)",
       "en": "Number of thesis defended in 2018 splitted by urban units (top 10)"
-      },
+    },
     "definition": {
       "fr": "Ce graphique détaille par unité urbaine le nombre de thèses soutenues en 2018. Les informations concernant les thèses sont issues du site <a href='http://www.theses.fr' target='_blank'>theses.fr</a>",
       "en": "This graphs shows the Number of thesis defended in 2018 splitted by urban units. Information about the theses is available from the website <a href='http://www.theses.fr' target='_blank'>theses.fr</a>"
@@ -257,7 +269,7 @@
     "label": {
       "fr": "Cartographie des affiliations des lauréat.e.s",
       "en": "Mapping of the affiliations of the laureates"
-      },
+    },
     "definition": {
       "fr": "Chaque enseignant-chercheur lauréat est géolocalisé par rapport à sa structure de recherche de rattachement lors de sa nomination. Les infobulles renseignent également sur le type de nomination du lauréat, en prenant en considération la catégorie et l'antériorité de nomination à l'IUF.",
       "en": "Each laureate is geolocated in relation to his team or laboratory at the time of his election. The tooltips also provide information on the type of election of the laureate, taking into consideration the category and the previous election at the IUF."
@@ -269,7 +281,7 @@
     "label": {
       "fr": "Domaine de recherche des lauréat.e.s",
       "en": "Research area of the laureates"
-      },
+    },
     "definition": {
       "fr": "Les domaines de recherche des lauréat.e.s sont présentés sous forme de bulle. Ils correspondent à la section disciplinaire (du Conseil National des Universités) de l'enseignant-chercheur nommé. La taille des bulles est liée aux nombre de lauréats travaillant dans ce domaine.",
       "en": "The research areas of the laureate are presented in the form of a bubble. They correspond to the disciplinary section (of the National Council of Universities) of the teacher-researcher. The size of the bubbles is related to the number of laureates working in this field."
@@ -281,7 +293,7 @@
     "label": {
       "fr": "Répartition des lauréat.e.s par genre et type de nomination",
       "en": "Breakdown of laureates by gender and type of nomination"
-      },
+    },
     "definition": {
       "fr": "Ce graphique présente la répartition des lauréat.e.s par genre et par type de nomination, en prenant en considération la catégorie et l'antériorité de nomination à l'IUF.",
       "en": "This graph shows the breakdown of laureates by gender and type of election, taking into consideration the category and seniority of election to the IUF."
@@ -293,7 +305,7 @@
     "label": {
       "fr": "Principaux partenaires via les projets H2020",
       "en": "Main partners through H2020 projects"
-      },
+    },
     "definition": {
       "fr": "",
       "en": ""
@@ -305,7 +317,7 @@
     "label": {
       "fr": "Youtubeurs présents dans scanR",
       "en": "Youtubers in scanR"
-      },
+    },
     "definition": {
       "fr": "Les personnes présentes dans scanR et dont scanR a identifié une chaîne Youtube sont présentés dans ce focus. Aucune exhaustivité n'est garantie, seulement les chaînes que scanR a pu identifier sont présentées.",
       "en": "The people in scanR whose scanR has identified a Youtube channel are presented in this focus. No exhaustiveness is guaranteed, only the channels that scanR has been able to identify are presented."
@@ -317,7 +329,7 @@
     "label": {
       "fr": "Mot-clés des productions avec un lien Software Heritage dans scanR",
       "en": "Keywords of the productions with a link to Software Heritage in scanR"
-      },
+    },
     "definition": {
       "fr": "scanR a identifié des liens entre les productions présentes dans scanR et Software Heritage. Software Heritage est un projet d'archive logicielle qui a pour but de collecter et préserver le code source des logiciels. Deux méthodes ont été employées pour repérer les liens : le repérage de DOI dans les répertoires de code source et le repérage de répertoires de code source dans les résumés des publications. Aucune exhaustivité n'est garantie, seuls les liens que scanR a pu établir sont présentés.",
       "en": "scanR has identified links between the productions in scanR and Software Heritage. Software Heritage is a software archive project that aims to collect and preserve software source code. Two methods were used to identify the links: DOI tracking in source code repositories and tracking source code repositories in abstracts. No completeness is guaranteed, only those links that scanR was able to establish are presented."
@@ -329,7 +341,7 @@
     "label": {
       "fr": "Liste des productions avec un lien Software Heritage dans scanR",
       "en": "List of the productions with a link to Software Heritage in scanR"
-      },
+    },
     "definition": {
       "fr": "scanR a identifié des liens entre les productions présentes dans scanR et Software Heritage. Software Heritage est un projet d'archive logicielle qui a pour but de collecter et préserver le code source des logiciels. Deux méthodes ont été employées pour repérer les liens : le repérage de DOI dans les répertoires de code source et le repérage de répertoires de code source dans les résumés des publications. Aucune exhaustivité n'est garantie, seuls les liens que scanR a pu établir sont présentés.",
       "en": "scanR has identified links between the productions in scanR and Software Heritage. Software Heritage is a software archive project that aims to collect and preserve software source code. Two methods were used to identify the links: DOI tracking in source code repositories and tracking source code repositories in abstracts. No completeness is guaranteed, only those links that scanR was able to establish are presented."
@@ -341,7 +353,7 @@
     "label": {
       "fr": "Finalistes et lauréats du concours 'Ma Thèse en 180s' dans scanR",
       "en": "Finalists and winners of the competition 'Ma Thèse en 180s' in scanR"
-      },
+    },
     "definition": {
       "fr": "Ce focus ne présente que les vidéos que scanR a retrouvées et réussi à lier à leurs auteurs, sans garantie d'exhaustivité.",
       "en": "This focus only presents the videos that scanR has found and succeeded in linking to their authors, without any guarantee of exhaustiveness."
@@ -353,7 +365,7 @@
     "label": {
       "fr": "Direction de l'entité",
       "en": "Entity direction"
-      },
+    },
     "definition": {
       "fr": "Liste des responsables de l'entité. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur leur site web. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
       "en": "List of the entity's managers. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on their websites. FAQ related questions: <br/><li><a href='/faq/q40' target='_blank'>How the 'Team' section of an entity record is fed into scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Can there be errors in scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use research organizations' directories?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
@@ -365,7 +377,7 @@
     "label": {
       "fr": "Auteurs identifiés dans la structure",
       "en": "Authors identified in the structure"
-      },
+    },
     "definition": {
       "fr": "Liste des auteurs que scanR a retrouvés comme étant affiliés à cette structure sur les deux dernières années (via les publications). Cette liste n'est pas exhaustive. Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li> ",
       "en": "List of authors that scanR has found as being affiliated to this structure over the last two years. This list is not exhaustive. FAQ related questions: <br/><li><a href='/faq/q40' target='_blank'>How the 'Team' section of an entity record is fed into scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Can there be errors in scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use research organizations' directories?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li> "
@@ -377,7 +389,7 @@
     "label": {
       "fr": "Projets liés",
       "en": "Linked projects"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les projets qui ont pu être liés à une entité. Questions liées dans la FAQ : <br/><li><a href='/faq/q18' target='_blank'>Quels sont les financements recensés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "This sections lists the projects that have been linked to an entity. Related questions in FAQ: <br/><li><a href='/faq/q18' target='_blank'>What funding is identified in scanR ?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
@@ -389,7 +401,7 @@
     "label": {
       "fr": "Productions liées",
       "en": "Linked productions"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les productions qui ont pu être liées à une entité ou une personne. Questions liées dans la FAQ : <br/><li><a href='/faq/q34' target='_blank'>Pourquoi toutes mes productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "This section lists the productions that may have been linked to an entity or person. Related questions in the FAQ: <br/><li><a href='/faq/q34' target='_blank'>Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
@@ -401,7 +413,7 @@
     "label": {
       "fr": "Evaluations",
       "en": "Evaluations"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les rapports d'évaluation du Hcéres qui ont été moissonnés à partir du <a href='https://hal-hceres.archives-ouvertes.fr/' target = '_blank'>portail HAL du Hcéres</a>.",
       "en": "This section lists the evaluation reports that were harvested from the <a href='https://hal-hceres.archives-ouvertes.fr/' target = '_blank'>Hcéres HAL portal</a>"
@@ -413,7 +425,7 @@
     "label": {
       "fr": "Ecosystème de l'entité",
       "en": "Entity ecosystem"
-      },
+    },
     "definition": {
       "fr": "Cette section présente les relations de l'entité en la rapprochant avec celles ayant des travaux en commun : publications, projets ou brevets. Le mode 'liste' affiche toutes les entités liées par ordre décroissant du nombre de travaux en commun. Le mode 'visualisation' permet de distinguer les relations par type d'entité, en distinguant les entités françaises des entités étrangères. Le type d'entité 'structures de recherche' correspond aux entités du RNSR et les autres entités sont classées dans les 'secteur public' et 'secteur privé' en fonction de la catégorie juridique du répertoire SIRENE. La taille des bulles est liée au nombre de travaux en commun, indiquant ainsi un degré de collaboration élevé. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "This section presents the entity's relationships by comparing it with those with common work: publications, projects or patents. The 'list' mode displays all related entities in descending order of the number of works in common. The 'view' mode allows to distinguish the relationships by type of entity, by distinguishing French entities from foreign entities. The 'research structures' entity type corresponds to the RNSR entities and the other entities are classified in the 'public sector' and 'private sector' according to the legal category of the SIRENE register. The size of the bubbles is linked to the number of joint works, thus indicating a high degree of collaboration. <br/>FAQ related questions: <br/><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
@@ -425,7 +437,7 @@
     "label": {
       "fr": "Prix et certifications",
       "en": "Certifications and awards"
-      },
+    },
     "definition": {
       "fr": "Cette section regroupe les prix et certifications reçues directement par l'entité. Ne sont pas référencés ici les prix reçus par les personnes affiliées à l'entité. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q25' target='_blank'>Pourquoi la page de ma structure n'indique pas qu'une des personnes de la structure a obtenu un prix scientifique ?</a></li><li><a href='/faq/q23' target='_blank'>Quelles sources sont utilisées pour les prix et distinctions?</a></li><li><a href='/faq/q24' target='_blank'>Il manque certains prix et distinctions. Que faire ?</a></li>",
       "en": "This section contains the awards and certifications received directly by the entity. Prices received by persons affiliated with the entity are not referenced here. <br/>Related questions in the FAQ: <br/><li><a href='/faq/q25' target='_blank'>Why doesn't the page of my structure indicate that one of the people in the structure has received a scientific award?</a></li><li><a href='/faq/q23' target='_blank'>Which sources are used for awards and distinctions?</a></li><li><a href='/faq/q24' target='_blank'>Some awards and distinctions are missing. What to do ?</a></li>"
@@ -437,7 +449,7 @@
     "label": {
       "fr": "Portrait de l'entité",
       "en": "Entity portrait"
-      },
+    },
     "definition": {
       "fr": "Cette section trace le portrait de l'entité : sont présentés son nom, son type, sa localisation, ses différents identifiants externes et le cas échéant sa date de création et les liens vers les sites web et réseaux sociaux de l'entité. Il existe quatre secteurs pour les entités (visibles dans les fiches des résultats de recherche et dans les filtres associés): 'secteur public', 'secteur privé', 'organisation internationale' et 'structure de recherche'. Les entités peuvent être rattachées à plusieurs secteurs, sauf pour les 'structures de recherches'. Ces dernières correspondent aux entités répertoriées dans le 'Répertoire National des Structures de Recherche (RNSR)', qui leur attribue un numéro unique national. Chaque entité peut également être rattachée à l'un des 'types d'organisme'.<br/> Questions liées dans la FAQ : <br/><li><a href='/faq/q14' target='_blank'>Quelles sont les entités référencées dans scanR ?</a></li><li><a href='/faq/q30' target='_blank'>Entreprises issues ou liées aux laboratoires de recherche, que signifie la présence d'entreprises dans certains profils de laboratoire ?</a></li><li><a href='/faq/q37' target='_blank'>Quels sont les référentiels d'entités utilisés dans scanR ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
       "en": "This section provides a portrait of the entity: its name, type, location, various external identifiers and, if applicable, its creation date and links to the entity's websites and social networks are presented. There are four sectors for the entities (visible in the search results sheets and in the associated filters): 'public sector', 'private sector', 'international organisation' and 'search structure'. Entities can be attached to more than one sector, except for 'search structures'. The latter correspond to the entities listed in the 'French National Directory of Research Structures (RNSR)', which assigns them a unique national number. Each entity can also be attached to one of the 'types of organisation'.<br/> Related questions in the FAQ : <br/><li><a href='/faq/q14' target='_blank'>Which entities are referenced in scanR ?</a></li><li><a href='/faq/q30' target='_blank'>Companies from or related to research laboratories, what does the presence of companies in certain laboratory profiles mean ?</a></li><li><a href='/faq/q37' target='_blank'>What are the entity repositories used in scanR?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
@@ -449,7 +461,7 @@
     "label": {
       "fr": "Appartenance et réseau",
       "en": "Membership and network"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les relations de l'entité : ses tutelles, les entités qui dépendent d'elles, les relations d'actionnariat, réseaux Carnot, incubation, spin-off ... Cette liste n'est pas exhaustive et ne représente que le liens que scanR a réussi à établir.",
       "en": "This section lists the entity's relationships: its supervisors, the entities under its supervision, shareholder relationships, Carnot networks, incubation, spin-offs... This list is not exhaustive and represents only the links that scanR has been able to establish."
@@ -461,7 +473,7 @@
     "label": {
       "fr": "Entités travaillant sur des thématiques similaires",
       "en": "Entities working on similar thematics"
-      },
+    },
     "definition": {
       "fr": "Cette section liste des entités travaillant sur des thématiques similaires. Ces rapprochements sont faits via les projets et productions liés aux entités, ainsi qu'au contenu de leur site web.",
       "en": "This section lists entities working on similar themes. These links are made via projects and productions related to the entities, as well as to the content of their website."
@@ -473,7 +485,7 @@
     "label": {
       "fr": "Affiliations retrouvées dans les publications",
       "en": "Affiliations found in the publications"
-      },
+    },
     "definition": {
       "fr": "Liste des affiliations de l'auteur retrouvées dans ces publications. Cette liste n'est pas exhaustive. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q41' target='_blank'>Comment est construite la chronologie des affiliations d'un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
       "en": "List of the author's affiliations found in these publications. This list is not exhaustive. <br/>Related questions in the FAQ: <br/><li><a href='/faq/q41' target='_blank'>How is the chronology of an author's affiliations constructed? ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
@@ -485,7 +497,7 @@
     "label": {
       "fr": "Rôles occupés par l'auteur",
       "en": "Roles occupied by the author"
-      },
+    },
     "definition": {
       "fr": "Liste des rôles occupés par l'auteur. Pour les structures de recherche, cette information provient directement du RNSR. Pour les autres types de structures, l'information a été recueillie sur le web. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q40' target='_blank'>Comment la section 'Equipe' d'une fiche entité est alimentée dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li><li><a href='/faq/q16' target='_blank'>Pourquoi n'utilisez-vous pas les annuaires des organismes de recherche ?</a></li><li><a href='/faq/q17' target='_blank'>Comment contribuer, proposer des modifications et contacter l'équipe scanR ?</a></li>",
       "en": "List of roles held by the author. For research structures, this information comes directly from the RNSR. For the other types of structures, the information was collected on the web. <br/>Related questions in the FAQ: <br/><li><a href='/faq/q40' target='_blank' >How the'Team' section of an entity record is populated in scanR ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors occur in scanR?</a></li><li><a href='/faq/q16' target='_blank'>Why don't you use the directories of research organizations ?</a></li><li><a href='/faq/q17' target='_blank'>How to contribute, propose changes and contact the scanR team ?</a></li>"
@@ -497,7 +509,7 @@
     "label": {
       "fr": "Thématiques de recherche",
       "en": "Research areas"
-      },
+    },
     "definition": {
       "fr": "Liste des thématiques de recherche retrouvées dans les publications de l'auteur. Seule une partie est affichée directement, il faut cliquer sur le bouton 'Tous les domaines' pour voir la liste entière. Cette liste est donc directement liée aux productions retrouvées pour l'auteur. Questions liées dans la FAQ : <br/><li><a href='/faq/q34' target='_blank'>Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q33' target='_blank'>Pourquoi certains travaux ne sont-ils pas présentés dans scanR ?</a></li><li><a href='/faq/q5' target='_blank'>Puis-je utiliser scanR pour évaluer une entité ou un auteur ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "List of research themes found in the author's publications. Only one part is displayed directly, you have to click on the button 'All domains' to see the whole list. This list is therefore directly linked to the productions found for the author. Related questions in the FAQ: <br/><li><a href='/faq/q34' target='_blank'>Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q33' target='_blank'>Why are some works not presented in scanR?</a></li><li><a href='/faq/q5' target='_blank' >Can I use scanR to evaluate an entity or author ?</a></li><li><a href='/faq/q7' target='_blank' >Can errors may occur in scanR ?</a></li>"
@@ -509,7 +521,7 @@
     "label": {
       "fr": "Thèses",
       "en": "Thesis"
-      },
+    },
     "definition": {
       "fr": "Cette section liste la thèse de l'auteur, ainsi que les thèses que l'auteur a encadrées ou dont il a été rapporteur. Seules les thèses soutenues après 1990 et disponibles sur le portail theses.fr sont affichées. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q34' target='_blank' >Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li><li><a href='/faq/q35' target='_blank' >Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?</a></li>",
       "en": "This section lists the author's thesis, as well as the theses that the author supervised or for which he was rapporteur.  Only theses defended after 1990 and available on the theses.fr portal are displayed. <br/>Related questions in the FAQ: <br/><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li><li><a href='/faq/q35' target='_blank' >How is the opening status of a research publication referenced in scanR ?</a></li>"
@@ -521,7 +533,7 @@
     "label": {
       "fr": "Collaborations",
       "en": "Collaborations"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les auteurs avec qui l'auteur de la page regardée a co-écrit une production ou participé à une même thèse (par exemple l'un étant membre du jury, l'autre étant auteur de la thèse). Une collaboration est affichée dès lors que scanR a pu repérer (via leur idref) les auteurs dans une production commune ou une thèse. Ainsi, cette liste de collaboration n'est pas exhaustive. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Pourquoi toutes mes Productions ne sont-elles pas associées à mon profil-auteur ?</a></li>",
       "en": "This section lists the authors with whom the author of the page being examined has co-written a production or participated in the same thesis (for example, one being a member of the jury, the other being the author of the thesis). A collaboration is displayed as soon as scanR has been able to identify (via their idref) the authors in a joint production or thesis. Thus, this list of collaborations is not exhaustive. <br/>Related questions in the FAQ: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q34' target='_blank' >Why are not all my Productions associated with my author profile? </a></li>"
@@ -533,7 +545,7 @@
     "label": {
       "fr": "Auteurs ayant travaillé sur des sujets de recherche liés",
       "en": "Persons who have worked on related research topics"
-      },
+    },
     "definition": {
       "fr": "Cette section liste des auteurs ayant travaillé sur des sujets de recherche liés, c'est-à-dire ayant des productions ou projets partageant les mêmes thématiques de recherche. Le calcul de proximité est basé uniquement sur les mots du contenu des métadonnées, mais pas sur le full-text ni sur des liens de co-écriture ou de citations. Tous les auteurs figurant déjà dans la section 'Collaborations' sont exclus de cette section.",
       "en": "This section lists authors who have worked on related research topics, i.e. who have productions or projects that share the same research themes. Proximity calculation is based only on the words of the metadata content, but not on the full-text or on co-writing or citation links. All authors already listed in the 'Collaborations' section are excluded from this section."
@@ -545,7 +557,7 @@
     "label": {
       "fr": "Participants du projet",
       "en": "Project participants"
-      },
+    },
     "definition": {
       "fr": "Liste des participants du projet : organisations publiques ou privées de plusieurs pays qui composent un consortium afin de soutenir et de participer aux activités de recherche proposées dans le projet. Lorsqu'un participant est identifié, c'est-à-dire que scanR a pu l'identifier dans ses référentiels, le participant est géolocalisé et un lien vers la page de l'entité est proposé. Seuls les participants identifiés sont géolocalisés. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q37' target='_blank' >Quels sont les référentiels d'entités utilisés dans scanR ?</a></li>",
       "en": "List of project participants : public or private organisations from several countries that form a consortium to support and participate in the research activities proposed in the project. When a participant is identified, i.e. scanR has been able to identify it in its repositories, the participant is geolocated and a link to the entity's page is provided. Only identified participants are geolocated. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q37' target='_blank' >What are the entity repositories used in scanR ? </a></li>"
@@ -557,7 +569,7 @@
     "label": {
       "fr": "Programme du projet",
       "en": "Project program"
-      },
+    },
     "definition": {
       "fr": "<li>Année : L’année correspond à la date de clôture de l’appel à projets ou à la date de soumission des propositions de projets pour les appels continus dits « adhoc »</li><li>Topic : Un appel à projets est divisé en un ou plusieurs topics ou sujets. Un sujet détaille les informations nécessaires pour le dépôt d’une proposition de projet : la description détaillée de la portée du sujet, de l'impact attendu des projets et de son type d'action y compris ses critères d'éligibilité et d'évaluation.</li><li>L’outil de financement ou type d’action correspond au type de fond alloué par la commission européenne à un projet. Il varie en fonction de l’envergure du projet, de ses objectifs et d'un éventuel critère d’éligibilité spécifique. <a href='https://bit.ly/2E4jTjW' target='_blank'>En savoir plus sur les types d’actions</a></li><li>Priorités : Architecture du programme de financement qui se décline en trois priorités et le programme Euratom :<ul><li>l’Excellence scientifique qui inclut le Conseil européen de la recherche (ERC), les infrastructures de recherche, les technologies futures et émergentes et les Actions Marie Skłodowska-Curie (MSCA)</li><li>la primauté industrielle qui recouvre les technologies de l’information et de la communication (TIC), les technologies clés génériques, l'espace et l’innovation dans les PME</li><li>les défis sociétaux pour répondre aux principaux problèmes de société qui préoccupent les populations comme l’environnement, la santé, la bioéconomie, les énergies sûres, les transports, et le développement de sociétés inclusives et sûres.</li><li>Le programme Euratom qui est géré par la Communauté européenne de l'énergie atomique pour des activités de recherche et de formation en matière nucléaire (PCRD Euratom). Elle coordonne les programmes de recherche des États membres pour l'utilisation civile pacifique de l'énergie nucléaire de fission et de fusion.</li></ul> <a href='https://bit.ly/36uVeRX' target='_blank'>En savoir plus</a></li>",
       "en": "<li>Year : The year corresponds to the closing date of the call for projects or the date of submission of project proposals for continuous calls called 'adhoc'</li><li>Topic : A call for projects is divided into one or more topics or subjects. A subject details the information necessary for submitting a project proposal: a detailed description of the scope of the subject, the expected impact of the projects and its type of action including its eligibility and evaluation criteria. </li><li>The funding tool or type of action corresponds to the type of fund allocated by the European Commission to a project. It varies according to the scope of the project, its objectives and any specific eligibility criteria. <a href='https://bit.ly/2E4jTjW' target='_blank'>Learn more about the types of actions</a></li><li>Priorities: Architecture of the funding programme which is divided into three priorities and the Euratom programme :<ul><li>Scientific excellence, which includes the European Research Council (ERC), research infrastructures, future and emerging technologies and Marie Skłodowska-Curie Actions (MSCA)</li><li> industrial primacy, which includes information and communication technologies (ICT), key generic technologies, space and innovation in SMEs</li><li>societal challenges to address key societal issues of concern to populations such as the environment, health, the bio-economy, safe energy, transport, and the development of inclusive and safe societies.</li><li>The Euratom programme which is managed by the European Atomic Energy Community for nuclear research and training activities (Euratom RDFP). It coordinates the Member States' research programmes for the peaceful civil use of nuclear fission and fusion energy. </li></ul> <a href='https://bit.ly/36uVeRX' target='_blank'>Further information</a></li>"
@@ -569,7 +581,7 @@
     "label": {
       "fr": "Productions issues du projet",
       "en": "Productions from the project"
-      },
+    },
     "definition": {
       "fr": "Liste des productions issues du projet. Cette liste n'est pas exhaustive, et seules les productions que scanR a pu lier au projet sont affichées. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li>",
       "en": "List of productions resulting from the project. This list is not exhaustive, and only the productions that scanR may have linked to the project are displayed. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking? </a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases? </a></li>"
@@ -581,7 +593,7 @@
     "label": {
       "fr": "Projets similaires",
       "en": "Similar projects"
-      },
+    },
     "definition": {
       "fr": "Cette section liste des projets partageant des thématiques de recherche communes. Le calcul de proximité est basé uniquement sur les mots du contenu des métadonnées (titre, résumé ...) mais pas sur des liens de participants ou de financement.",
       "en": "This section lists projects that share common research themes. The proximity calculation is based only on the words of the metadata content (title, abstract...) but not on participant or funding links."
@@ -593,7 +605,7 @@
     "label": {
       "fr": "Accès à la production",
       "en": "Access to the production"
-      },
+    },
     "definition": {
       "fr": "Cette section indique si la production est en accès ouvert ou fermé. Si l'accès est ouvert, le type d'hébergement principal est indiqué (chez l'éditeur ou archive ouverte), avec une priorité pour l'hébergement chez l'éditeur en cas d'hébergement multiple. Le lien de téléchargement est aussi disponible. <br/>Questions liées dans la FAQ : <br/> <li><a href='/faq/q35' target='_blank'> Comment est déterminé le statut d'ouverture d'une publication de recherche référencées dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "This section indicates whether the production is in open or closed access. If access is open, the main type of hosting is indicated (with the publisher or open archive), with priority for hosting with the publisher in case of multiple hosting. The download link is also available. <br/>FAQ related questions: <br/> <li><a href='/faq/q35' target='_blank'> How is the opening status of a research publication referenced in scanR determined? </a></li><li><a href='/faq/q7' target='_blank'>May be errors in scanR ?</a></li>"
@@ -605,7 +617,7 @@
     "label": {
       "fr": "Auteurs de la publication",
       "en": "Publication authors"
-      },
+    },
     "definition": {
       "fr": "Liste des auteurs de la publication. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. scanR étant multi-sources, des doublons peuvent apparaître, ainsi que des erreurs en cas d'erreur dans la source. Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "List of authors of the publication. When scanR has identified an author, a link to his author page is indicated. As scanR is multi-source, duplicates can appear, as well as errors in case of errors in the source. FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
@@ -617,7 +629,7 @@
     "label": {
       "fr": "Affiliations de la publication",
       "en": "Publication affiliations"
-      },
+    },
     "definition": {
       "fr": "Liste des affiliations de la publication. Seules les affiliations identifiées (c'est-à-dire que scanR a pu retrouver parmi ses référentiels) sont affichées. Les pages web des publications, les métadonnées ouvertes et les portails HAL des organismes et laboratoires sont utilisés pour reconstituer cette information. Cette liste n'est pas exhaustive et peut contenir des erreurs, notamment en cas d'erreur dans les données source. Questions liées dans la FAQ : <br/><li><a href='/faq/q42' target='_blank' >scanR est-il exhaustif dans ses repérages ?</a></li><li><a href='/faq/q43' target='_blank' >scanR utilise-t-il des informations issues de bases de données commerciales ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "List of affiliations of the publication. Only identified affiliations (i.e. scanR was able to find among its repositories) are displayed. Publication web pages, open metadata and HAL portals of organizations and laboratories are used to reconstruct this information. This list is not exhaustive and may contain errors, particularly in the event of errors in the source data. FAQ related questions: <br/><li><a href='/faq/q42' target='_blank' >scanR is it exhaustive in its tracking?</a></li><li><a href='/faq/q43' target='_blank' >Does scanR use information from commercial databases ?</a></li><li><a href='/faq/q7' target='_blank' >May there be errors in scanR ?</a></li>"
@@ -629,7 +641,7 @@
     "label": {
       "fr": "Personnes liées à la thèse",
       "en": "Persons related to the thesis"
-      },
+    },
     "definition": {
       "fr": "Cette section liste les personnes en lien avec la thèse. Son auteur évidemment mais aussi ses encadrants ainsi que les rapporteurs et membres du jury de thèse. Lorsque scanR a identifié un auteur, un lien vers sa page auteur est indiqué. <br/>Questions liées dans la FAQ : <br/><li><a href='/faq/q27' target='_blank' >Quels auteurs disposent d'un profil-auteur dans scanR ?</a></li><li><a href='/faq/q7' target='_blank'>Peut-il y avoir des erreurs dans scanR ?</a></li>",
       "en": "This section lists the people related to the thesis. Its author of course but also its supervisors as well as the rapporteurs and members of the thesis jury. When scanR has identified an author, a link to his author page is indicated.this section lists the people related to the thesis. Its author of course but also its supervisors as well as the rapporteurs and members of the thesis jury. When scanR has identified an author, a link to his author page is indicated. <br/>FAQ related questions: <br/><li><a href='/faq/q27' target='_blank' >Which authors have an author profile in scanR ?</a></li><li><a href='/faq/q7' target='_blank'>May there be errors in scanR ?</a></li>"
@@ -641,10 +653,10 @@
     "label": {
       "fr": "Portrait de l’invention",
       "en": "Portrait of the invention"
-      },
+    },
     "definition": {
-	    "fr": "Cette partie offre une vue d’ensemble de l’invention par son descriptif, les étapes clé des procédures de dépôt de brevet et de délivrance ainsi que sa classification technologique.<br/> Les inventions correspondent ici aux familles de brevets simples au sens de l’OEB, c’est à dire une collection de dépôts de brevets déposés dans différentes juridictions mais couvrant la même invention. Leur contenu technique est réputé identique et ils ont tous exactement les mêmes priorités.<br/> La classification affichée correspond à la Cooperative Patent Classification (CPC). Dans les cas où celle-ci ne serait pas disponible, la Classification internationale des Brevets (CIB) est affichée. Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'entend-on par invention ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une invention ?</a></li><li><a href='/faq/q49' target='_blank' >A quoi correspond la date de première publication d'une invention ?</a></li><li><a href='/faq/q54' target='_blank' >Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale ?</a></li><li><a href='/faq/q52' target='_blank' >Quelles sont les sources utilisées pour les brevets ?</a></li>",
-    "en": "This part provides an overview of the invention through its description, the key stages of the application and grant procedures and its technological classification.</br>Inventions here correspond to simple patent families in the sense of the EPO. It is a collection of patent applications filed in different jurisdictions but covering the same invention. Their technical content is deemed to be identical and they all have exactly the same priorities. <br/>The displayed classification corresponds to the Cooperative Patent Classification (CPC). In cases where the CPC is not available, the International Patent Classification (IPC) is displayed. Related questions in the FAQ: <li><a href='/faq/q45' target='_blank' >What do we mean by invention?</a></li><li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the date of the first filing of an invention?</a></li><li><a href='/faq/q49' target='_blank' >What is the date of the first publication of an invention?</a></li><li><a href='/faq/q54' target='_blank' >What are the differences between national or regional patent applications and international application?</a></li><li><a href='/faq/q52' target='_blank' >What sources are used for patents?</a></li>"
+      "fr": "Cette partie offre une vue d’ensemble de l’invention par son descriptif, les étapes clé des procédures de dépôt de brevet et de délivrance ainsi que sa classification technologique.<br/> Les inventions correspondent ici aux familles de brevets simples au sens de l’OEB, c’est à dire une collection de dépôts de brevets déposés dans différentes juridictions mais couvrant la même invention. Leur contenu technique est réputé identique et ils ont tous exactement les mêmes priorités.<br/> La classification affichée correspond à la Cooperative Patent Classification (CPC). Dans les cas où celle-ci ne serait pas disponible, la Classification internationale des Brevets (CIB) est affichée. Questions liées dans la FAQ : <br/><li><a href='/faq/q45' target='_blank' >Qu'entend-on par invention ?</a></li><li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q48' target='_blank' >A quoi correspond la date de premier dépôt d'une invention ?</a></li><li><a href='/faq/q49' target='_blank' >A quoi correspond la date de première publication d'une invention ?</a></li><li><a href='/faq/q54' target='_blank' >Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale ?</a></li><li><a href='/faq/q52' target='_blank' >Quelles sont les sources utilisées pour les brevets ?</a></li>",
+      "en": "This part provides an overview of the invention through its description, the key stages of the application and grant procedures and its technological classification.</br>Inventions here correspond to simple patent families in the sense of the EPO. It is a collection of patent applications filed in different jurisdictions but covering the same invention. Their technical content is deemed to be identical and they all have exactly the same priorities. <br/>The displayed classification corresponds to the Cooperative Patent Classification (CPC). In cases where the CPC is not available, the International Patent Classification (IPC) is displayed. Related questions in the FAQ: <li><a href='/faq/q45' target='_blank' >What do we mean by invention?</a></li><li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q48' target='_blank' >What is the date of the first filing of an invention?</a></li><li><a href='/faq/q49' target='_blank' >What is the date of the first publication of an invention?</a></li><li><a href='/faq/q54' target='_blank' >What are the differences between national or regional patent applications and international application?</a></li><li><a href='/faq/q52' target='_blank' >What sources are used for patents?</a></li>"
     }
   },
   {
@@ -653,9 +665,9 @@
     "label": {
       "fr": "Déposants et inventeurs",
       "en": "Applicants and inventors"
-      },
+    },
     "definition": {
-	    "fr": "Cette partie présente la liste de tous les déposants et inventeurs ayant participé à l’invention et ayant été enregistrés dans au moins un des dépôts de brevets de la famille. Les déposants peuvent être des personnes physiques ou bien des personnes morales. Lorsque ces dernières sont identifiées, il est possible de se reporter à leur page entité. <br> Questions liées dans la FAQ : <li><a href='/faq/q46' target='_blank' >Pourquoi des participants apparaissent en doublon pour une même invention ?</a></li>",
+      "fr": "Cette partie présente la liste de tous les déposants et inventeurs ayant participé à l’invention et ayant été enregistrés dans au moins un des dépôts de brevets de la famille. Les déposants peuvent être des personnes physiques ou bien des personnes morales. Lorsque ces dernières sont identifiées, il est possible de se reporter à leur page entité. <br> Questions liées dans la FAQ : <li><a href='/faq/q46' target='_blank' >Pourquoi des participants apparaissent en doublon pour une même invention ?</a></li>",
       "en": "This part lists all applicants and inventors who have participated in the invention and who have been registered in at least one of the family's patent filings. The applicants may be natural persons or legal entities. When the latter are identified, it is possible to refer to their entity page. </br>FAQ related questions: <br/><li><a href='/faq/q46' target='_blank' >Why there is sometimes duplication between participants?</a></li>"
     }
   },
@@ -665,10 +677,10 @@
     "label": {
       "fr": "Dépôts de brevets",
       "en": "Patents applications"
-      },
+    },
     "definition": {
-	    "fr": "La liste des dépôts de brevets représente toutes les demandes de protection déposées concernant l'invention et appartenant à la même famille de brevet. Sont listés les dépôts nationaux, régionaux et internationaux. Une présentation cartographique permet d’avoir une vue d’ensemble de toutes les zones ou les déposants ont souhaité protéger leur invention. Pour avoir une information plus précise et à jour sur une demande de brevet en particulier ou connaître la protection d’une invention dans un pays, il convient de se reporter aux sites officiels des offices concernés, comme l’OEB ou l’INPI par exemple. En effet, même une fois le brevet délivré, la protection de l’invention peut être stoppée avant la fin de la période de 20 ans. Un lien vers le site espacenet de l’OEB est proposé pour basculer vers les fiches de publication de demandes de brevet de l’OEB. <br/>Questions liées dans la FAQ :<li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q51' target='_blank' >A quoi correspond la liste des dépôts ?</a></li><li><a href='/faq/q54' target='_blank' >Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale ?</a></li><li><a href='/faq/q53' target='_blank' >Qu'est-ce qu'une priorité ?</a></li>",
-	    "en":"The list of patent applications represents all applications for protection filed for the invention and belonging to the same patent family. National, regional and international applications are listed. A cartographic presentation provides an overview of all the areas where applicants have wished to protect their invention. To have more and up-to-date information on a particular patent application or to find out about the protection of an invention in a country, please refer to the official websites of the offices concerned, such as the EPO or the INPI for example. Indeed, even once the patent has been granted, the protection of the invention can be terminated before the end of the 20-year period. A link to the EPO's espacenet site is proposed to switch to the EPO's patent application publication sheets.<br>FAQ related questions :<li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q51' target='_blank' >What is the list of patent applications?</a></li><li><a href='/faq/q54' target='_blank' >What are the differences between national or regional patent applications and international application?</a></li><li><a href='/faq/q53' target='_blank' >What is a priority?</a></li>"
+      "fr": "La liste des dépôts de brevets représente toutes les demandes de protection déposées concernant l'invention et appartenant à la même famille de brevet. Sont listés les dépôts nationaux, régionaux et internationaux. Une présentation cartographique permet d’avoir une vue d’ensemble de toutes les zones ou les déposants ont souhaité protéger leur invention. Pour avoir une information plus précise et à jour sur une demande de brevet en particulier ou connaître la protection d’une invention dans un pays, il convient de se reporter aux sites officiels des offices concernés, comme l’OEB ou l’INPI par exemple. En effet, même une fois le brevet délivré, la protection de l’invention peut être stoppée avant la fin de la période de 20 ans. Un lien vers le site espacenet de l’OEB est proposé pour basculer vers les fiches de publication de demandes de brevet de l’OEB. <br/>Questions liées dans la FAQ :<li><a href='/faq/q47' target='_blank' >Quelle est la différence entre un brevet et un dépôt de brevet ?</a></li><li><a href='/faq/q51' target='_blank' >A quoi correspond la liste des dépôts ?</a></li><li><a href='/faq/q54' target='_blank' >Quelles sont les différences entre demandes de brevets nationaux ou régionaux et demande internationale ?</a></li><li><a href='/faq/q53' target='_blank' >Qu'est-ce qu'une priorité ?</a></li>",
+      "en": "The list of patent applications represents all applications for protection filed for the invention and belonging to the same patent family. National, regional and international applications are listed. A cartographic presentation provides an overview of all the areas where applicants have wished to protect their invention. To have more and up-to-date information on a particular patent application or to find out about the protection of an invention in a country, please refer to the official websites of the offices concerned, such as the EPO or the INPI for example. Indeed, even once the patent has been granted, the protection of the invention can be terminated before the end of the 20-year period. A link to the EPO's espacenet site is proposed to switch to the EPO's patent application publication sheets.<br>FAQ related questions :<li><a href='/faq/q47' target='_blank' >What is the difference between patent and patent application?</a></li><li><a href='/faq/q51' target='_blank' >What is the list of patent applications?</a></li><li><a href='/faq/q54' target='_blank' >What are the differences between national or regional patent applications and international application?</a></li><li><a href='/faq/q53' target='_blank' >What is a priority?</a></li>"
     }
   },
   {
@@ -677,10 +689,10 @@
     "label": {
       "fr": "Inventions similaires",
       "en": "Similar inventions"
-      },
+    },
     "definition": {
-	    "fr": "Cette section propose des liens vers d’autres inventions au champ lexical proche. La similarité des inventions est calculée à partir de mots communs retrouvés dans les différentes méta-données disponibles : titre, résumé ou classification technologique. ",
-	    "en": "This section provides links to other inventions in the nearby lexical field. The similarity of the inventions is calculated from common words found in the different metadata available: title, summary or technological classification."
+      "fr": "Cette section propose des liens vers d’autres inventions au champ lexical proche. La similarité des inventions est calculée à partir de mots communs retrouvés dans les différentes méta-données disponibles : titre, résumé ou classification technologique. ",
+      "en": "This section provides links to other inventions in the nearby lexical field. The similarity of the inventions is calculated from common words found in the different metadata available: title, summary or technological classification."
     }
   },
   {
@@ -689,7 +701,7 @@
     "label": {
       "fr": "Productions similaires",
       "en": "Similar productions"
-      },
+    },
     "definition": {
       "fr": "Cette section propose des productions qui utilisent des mots en commun, dans les différentes méta-données disponibles (titre, résumé, mot-clé ...). La similarité est calculée uniquement sur le contenu et pas sur des liens de co-écriture ou de citations ni sur le full-text.",
       "en": "This section proposes productions that use common words in the various available metadata (title, abstract, keyword, etc.). Similarity is calculated only on content and not on co-written links or citations or full-text."
@@ -701,7 +713,7 @@
     "label": {
       "fr": "Références et citations OpenCitation",
       "en": "OpenCitation references and citations"
-      },
+    },
     "definition": {
       "fr": "Les sections références et citations répertorient les publications, disponibles en open data, citées par la présente publication (références) ou qui l'ont citée (citations). Les données sont collectées par <a href='http://opencitations.net/'>OpenCitation</a>.",
       "en": "References and citations sections propose a list of publications, available in open data, that are cited by the present article (references) or that are citing the present article (citations). Data are collected by <a href='http://opencitations.net/'>OpenCitation</a>"
@@ -713,7 +725,7 @@
     "label": {
       "fr": "Export",
       "en": "Export"
-      },
+    },
     "definition": {
       "fr": "Les résultats de recherche sont exportables au format csv. Pour des raisons de performances, seuls les 1 000 premiers résultats sont exportés, 500 pour les entités",
       "en": "Search results can be exported in csv format. For performance reasons, only the first 1,000 results are exported, 500 for entities"

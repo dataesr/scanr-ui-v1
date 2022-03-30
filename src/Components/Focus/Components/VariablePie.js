@@ -23,7 +23,7 @@ export default class VariablePie extends Component {
     exporting: true,
     isLoading: true,
     pilier: 'all',
-    program: null,
+    program: 'all',
     countryLevelPartBlackList: [],
   }
 
@@ -41,29 +41,37 @@ export default class VariablePie extends Component {
   getNodes = async () => {
     /* eslint-disable-next-line */
     const nodes = await Axios.get('https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/nodes_fr.json');
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       nodes: nodes.data,
       currentId: nodes.data[Math.floor(Math.random() * 19)].id,
-    });
+    }));
   }
 
   getData = async () => {
     if (this.state.currentId !== 'nothing') {
       /* eslint-disable-next-line */
       const data = await Axios.get(`https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/${this.state.currentId}.json`);
-      this.setState({ data: data.data, isLoading: false });
+      console.log('MAJ getData!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
+      this.setState(prevState => ({ ...prevState, data: data.data, isLoading: false }));
     }
   }
 
-  getPiliers = () => (
-    Object.keys(this.state.data)
-  );
+  getPiliers = () => {
+    if (!this.state.data) return [];
 
-  getPrograms = pilier => (
-    Object.keys(this.state.data[pilier])
-  );
+    return (Object.keys(this.state.data));
+  }
+
+  getPrograms = (pilier) => {
+    if (!this.state.data || !this.state.data[pilier]) return [];
+
+    return (Object.keys(this.state.data[pilier]));
+  }
 
   getCountryLevelParts = (pilier, program) => {
+    if (!this.state.data || !this.state.data[pilier] || !this.state.data[pilier][program]) return [];
+
     const newSet = new Set(this.state.data[pilier][program].map(el => (el.country_level_part)));
     return [...newSet];
   }
@@ -71,16 +79,18 @@ export default class VariablePie extends Component {
   onPilierChangeHandler = (pilier) => {
     // eslint-disable-next-line react/no-access-state-in-setstate
     const allPrograms = Object.keys(this.state.data[pilier]);
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       pilier,
       program: allPrograms[0],
-    });
+    }));
   };
 
   onProgramChangeHandler = (program) => {
-    this.setState({
+    this.setState(prevState => ({
+      ...prevState,
       program,
-    });
+    }));
   }
 
   updateCountryLevelPartBlackList = (el) => {
@@ -88,10 +98,10 @@ export default class VariablePie extends Component {
     const index = oldCountryLevelPart.indexOf(el);
     if (index !== -1) {
       oldCountryLevelPart.splice(index, 1);
-      this.setState({ countryLevelPartBlackList: oldCountryLevelPart });
+      this.setState(prevState => ({ ...prevState, countryLevelPartBlackList: oldCountryLevelPart }));
     } else {
       oldCountryLevelPart.push(el);
-      this.setState({ countryLevelPartBlackList: oldCountryLevelPart });
+      this.setState(prevState => ({ ...prevState, countryLevelPartBlackList: oldCountryLevelPart }));
     }
   };
 
@@ -120,7 +130,7 @@ export default class VariablePie extends Component {
         return <option key={el} value={el}>{el}</option>;
       });
 
-    const firstProgram = Object.keys(this.state.data[this.state.pilier])[0];
+    const firstProgram = (this.state.data) ? Object.keys(this.state.data[this.state.pilier])[0] : [];
 
     const countryLevelPartCheckbox = this.getCountryLevelParts(this.state.pilier, (!this.state.program) ? firstProgram : this.state.program)
       .map(el => (
@@ -170,45 +180,48 @@ export default class VariablePie extends Component {
     let filteredData = [];
     const uniqueProjects = [];
     if (this.state.data && this.state.currentId && !this.state.isLoading) {
-      const program = (this.state.program) ? this.state.program : Object.keys(this.state.data[this.state.pilier])[0];
-      filteredData = this.state.data[this.state.pilier][program];
+      // const program = (this.state.program) ? this.state.program : Object.keys(this.state.data[this.state.pilier])[0];
+      // const program = (this.state.program) ? this.state.program : 'all';
+
+      console.log(this.state.data);
+
+      filteredData = this.state.data[this.state.pilier][this.state.program].sort((a, b) => a.y > b.y).slice(0, 2);
 
       // filtre sur country_level_part
-      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part));
+      // filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part));
 
-      filteredData.forEach((el) => {
-        el.projects.forEach((idProject) => {
-          if (uniqueProjects.indexOf(idProject) === -1) {
-            uniqueProjects.push(idProject);
-          }
-        });
-      });
+      // filteredData.forEach((el) => {
+      //   el.projects.forEach((idProject) => {
+      //     if (uniqueProjects.indexOf(idProject) === -1) {
+      //       uniqueProjects.push(idProject);
+      //     }
+      //   });
+      // });
     }
 
     return (
       <div>
-        <Row className={classes.arrowRight}>
-          <Col>
+        <Row>
+          <Col className={variablePieCss.info}>
             <p>
               Au premier chargement scanR vous propose de visualier aléatoirement le réseau de coopération via
               {' '}
               <span title="Horizon 2020">H2020</span>
               {' '}
-              des 20 plus importants acteurs, public ou privé français de ce programme.
+              des 20 plus importants acteurs, publics ou privés français de ce programme.
             </p>
             <p>
               Utilisez le menu déroulant ci-dessous pour visualiser le réseau de collaboration au sein d&lsquo;H2020 de l&lsquo;ensemble des acteurs français actifs dans ce programme.
             </p>
             <select
               className="form-control mb-2"
-              onChange={e => this.setState({ currentId: e.target.value, data: null })}
+              onChange={e => this.setState(prevState => ({ ...prevState, currentId: e.target.value, data: null }))}
             >
               {
                 (this.state.currentId === 'nothing')
                   ? <option value="nothing" selected>Sélectionner une entité française pour voir ses principaux partenaires</option>
                   : <option value="nothing">Sélectionner une entité française pour voir ses principaux partenaires</option>
               }
-
               {
                 this.state.nodes.map((el) => {
                   let ret = <option key={el.id} value={el.id}>{el.full_name}</option>;
@@ -221,30 +234,34 @@ export default class VariablePie extends Component {
             </select>
           </Col>
         </Row>
-        {
-          (filteredData.length > 0) ? (
-            <Row className={classes.graphCard}>
-              <Col md={3} className={variablePieCss.filters}>
-                {this.renderFilters()}
-              </Col>
-              <Col>
-                <GraphTitles
-                  lexicon={this.props.lexicon}
-                  language={this.props.language}
-                  title={`${this.props.subtitle}${this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name} - ${uniqueProjects.length} projets`}
-                  subtitle={this.props.title}
-                />
-                <HighChartsVariablepie
-                  filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
-                  data={filteredData.slice(0, 20).sort((a, b) => a.y > b.y)}
-                  exporting={this.state.exporting}
-                  language={this.props.language}
-                  tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
-                />
-              </Col>
-            </Row>
-          ) : null
-        }
+
+        <Row className={classes.graphCard}>
+          <Col md={3} className={variablePieCss.filters}>
+            {this.renderFilters()}
+          </Col>
+          <Col>
+            {
+              (filteredData.length > 0) ? (
+                <>
+                  <GraphTitles
+                    lexicon={this.props.lexicon}
+                    language={this.props.language}
+                    title={`${this.props.subtitle}${this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name} - ${uniqueProjects.length} projets collaboratifs`}
+                    subtitle={this.props.title}
+                  />
+                  <HighChartsVariablepie
+                    data={filteredData}
+                    exporting={this.state.exporting}
+                    filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
+                    language={this.props.language}
+                    tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
+                  />
+                </>
+              ) : <div>no data</div>
+            }
+          </Col>
+        </Row>
+
       </div>
     );
   }

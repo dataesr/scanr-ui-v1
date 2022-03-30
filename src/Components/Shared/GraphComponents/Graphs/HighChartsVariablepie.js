@@ -46,12 +46,17 @@ export default class HighChartsVariablepie extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.text !== this.props.text || prevProps.tooltipText !== this.props.tooltipText || prevProps.data !== this.props.data) {
+    console.log('update', prevProps.text !== this.props.text, prevProps.tooltipText !== this.props.tooltipText, prevProps.data !== this.props.data);
+    if (prevProps.text !== this.props.text
+      || prevProps.tooltipText !== this.props.tooltipText
+      || prevProps.data !== this.props.data) {
+      console.log('reload data');
       this.loadData();
     }
   }
 
   loadData = () => {
+    console.log('data =>', this.props.data);
     const options = {
       credits: {
         enabled: false,

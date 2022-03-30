@@ -1,8 +1,13 @@
 @import '../../../style.scss';
-
+.info {
+  margin-bottom: 18px;
+  padding: 8px;
+  background-color: $scanrfooterBgColor;
+  border-radius: 8px;
+  color: $scanrlightgreyColor;
+}
 .filters {
   background-color: $scanrfooterBgColor;
-  color: $scanrdeepblueColor;
   border-bottom-left-radius: 8px;
   border-top-left-radius: 8px;
   color: $scanrlightgreyColor;
