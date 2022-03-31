@@ -54,7 +54,11 @@ const Tutorial = ({ language }) => (
       <TutorialVideo
         labelKey="bienvenue"
         language={language}
-        url="https://www.youtube.com/embed/1VyhLRQhZ-M"
+        url={
+          (language !== 'en')
+            ? 'https://www.youtube.com/embed/1VyhLRQhZ-M'
+            : 'https://www.youtube.com/embed/aIN46IQQpBw'
+          }
       />
       <TutorialVideo
         labelKey="auteurs"
