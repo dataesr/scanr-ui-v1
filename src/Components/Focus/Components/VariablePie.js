@@ -18,8 +18,8 @@ import messagesEn from '../translations/en.json';
 
 const msg = { fr: messagesFr, en: messagesEn };
 
-const GRAPH_SLICES = 2;
-const SELECT_RANDOM_ID_AMONG_TOP = 10;
+const GRAPH_SLICES = 20;
+const SELECT_RANDOM_ID_AMONG_TOP = 20;
 
 const VariablePie = ({
   language,
@@ -37,6 +37,7 @@ const VariablePie = ({
   const [pilier, setPilier] = useState('all');
   const [program, setProgram] = useState('all');
   const [graphData, setGraphData] = useState([]);
+  const [countryLevelPartBlackList, setCountryLevelPartBlackList] = useState([]);
 
 
   useEffect(() => {
@@ -76,12 +77,35 @@ const VariablePie = ({
     if (data) {
       const currentPilier = data[pilier] ?? {};
       const currentProgram = currentPilier[program] ?? Object.values(currentPilier)[0];
-      const currentProgramCopy = JSON.parse(JSON.stringify(currentProgram));
-      setGraphData(currentProgramCopy.sort((a, b) => a.y < b.y).slice(0, GRAPH_SLICES));
+      const currentProgramCopy = JSON.parse(JSON.stringify(currentProgram)); // deep copy
+
+      const filteredData = currentProgramCopy.filter(el => !countryLevelPartBlackList.includes(el.country_level_part));
+
+      setGraphData(filteredData.sort((a, b) => a.y < b.y).slice(0, GRAPH_SLICES));
     } else {
       setGraphData([]);
     }
-  }, [data, pilier, program]);
+  }, [data, pilier, program, countryLevelPartBlackList]);
+
+
+  const getCountryLevelParts = (pil, prog) => {
+    if (!data || !data[pil] || !data[pil][prog]) return [];
+
+    const newSet = new Set(data[pil][prog].map(el => (el.country_level_part)));
+    return [...newSet];
+  };
+
+  const updateCountryLevelPartBlackList = (el) => {
+    const oldCountryLevelPart = [...countryLevelPartBlackList];
+    const index = oldCountryLevelPart.indexOf(el);
+    if (index !== -1) {
+      oldCountryLevelPart.splice(index, 1);
+      setCountryLevelPartBlackList(oldCountryLevelPart);
+    } else {
+      oldCountryLevelPart.push(el);
+      setCountryLevelPartBlackList(oldCountryLevelPart);
+    }
+  };
 
   const VariablePieFilters = () => {
     const pilersOptions = data ? Object.keys(data) : [];
@@ -98,6 +122,28 @@ const VariablePie = ({
       </option>
     ));
 
+    const firstProgram = (data) ? Object.keys(data[pilier])[0] : [];
+
+    const countryLevelPartCheckbox = getCountryLevelParts(pilier, (!program) ? firstProgram : program)
+      .map(el => (
+        <div key={el}>
+          <input
+            type="checkbox"
+            value={el}
+            id={el}
+            name={el}
+            checked={!countryLevelPartBlackList.includes(el)}
+            onChange={e => updateCountryLevelPartBlackList(e.target.value)}
+          />
+          <label htmlFor={el} className="ml-2">{el}</label>
+        </div>
+      ));
+
+    const onPilierChangeHandler = (e) => {
+      setPilier(e.target.value);
+      setProgram(Object.keys(data[e.target.value])[0]);
+    };
+
     return (
       <>
         <p className="pt-3">
@@ -105,7 +151,7 @@ const VariablePie = ({
         </p>
         <select
           className="form-control"
-          onChange={e => setPilier(e.target.value)}
+          onChange={onPilierChangeHandler}
           value={pilier}
         >
           {pilersSelectorOptions}
@@ -121,23 +167,33 @@ const VariablePie = ({
         >
           {programsSelectorOptions}
         </select>
-
+        <p className="mt-3">
+          {countryLevelPartCheckbox}
+        </p>
       </>
     );
   };
+
+  const uniqueProjects = [];
+  if (data && data[pilier] && data[pilier][program]) {
+    data[pilier][program].forEach((el) => {
+      el.projects.forEach((idProject) => {
+        if (uniqueProjects.indexOf(idProject) === -1) {
+          uniqueProjects.push(idProject);
+        }
+      });
+    });
+  }
+
   return (
     <div>
       <Row>
         <Col className={variablePieCss.info}>
           <p>
-            Au premier chargement scanR vous propose de visualier aléatoirement le réseau de coopération via
-            {' '}
-            <span title="Horizon 2020">H2020</span>
-            {' '}
-            des 20 plus importants acteurs, publics ou privés français de ce programme.
+            <FormattedHTMLMessage id="Focus.intro.1" />
           </p>
           <p>
-            Utilisez le menu déroulant ci-dessous pour visualiser le réseau de collaboration au sein d&lsquo;H2020 de l&lsquo;ensemble des acteurs français actifs dans ce programme.
+            <FormattedHTMLMessage id="Focus.intro.2" />
           </p>
           <select
             className="form-control mb-2"
@@ -169,7 +225,8 @@ const VariablePie = ({
                 <GraphTitles
                   lexicon={lexicon}
                   language={language}
-                  title={`${subtitle} ${nodes.filter(el => el.id === currentId)[0].full_name}`}
+                  // title={`${subtitle} ${nodes.filter(el => el.id === currentId)[0].full_name}`}
+                  title={`${subtitle}${nodes.filter(el => el.id === currentId)[0].full_name} - ${uniqueProjects.length} projets collaboratifs`}
                   subtitle={title}
                 />
                 <HighChartsVariablepie
