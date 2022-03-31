@@ -61,6 +61,9 @@ const Portrait = props => (
       websites={props.data.websites}
       links={props.data.links}
       externalIds={props.data.externalIds || []}
+      label={props.data.label}
+      evaluations={props.data.evaluations}
+      kind={props.data.kind}
     />
     {
       /*

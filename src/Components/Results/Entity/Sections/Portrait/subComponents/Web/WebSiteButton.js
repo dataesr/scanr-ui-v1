@@ -33,6 +33,10 @@ const WebSiteButton = (props) => {
       logo = <img src="./img/logos/logo-hypotheses.png" alt="logo Hypothese" />;
       UsedClasse = classes.HypotheseLogo;
       break;
+    case 'Hceres':
+      logo = <img src="./img/logos/logo-hceres.png" alt="logo HCERES" />;
+      UsedClasse = classes.HceresLogo;
+      break;
     default:
       logo = null;
   }

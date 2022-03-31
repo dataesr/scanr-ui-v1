@@ -67,13 +67,22 @@ class LeafletMap extends Component<{}, State> {
     this.exportChartPng = this.exportChartPng.bind(this);
   }
 
-  print() {
-    this.printControl.printMap('A4Portrait', 'MyFileName');
+  getBounds() {
+    const bounds = [];
+    this.props.data.forEach((el) => {
+      bounds.push([el.position[0], el.position[1]]);
+    });
+
+    return bounds;
   }
 
   exportChartPng() {
     ReactPiwik.push(['trackEvent', 'Download', 'PNG_'.concat(this.props.filename)]);
     this.printControl.printMap('A4Portrait', this.props.filename);
+  }
+
+  print() {
+    this.printControl.printMap('A4Portrait', 'MyFileName');
   }
 
   render() {
@@ -131,7 +140,7 @@ class LeafletMap extends Component<{}, State> {
           style={mapStyle}
           minZoom={2}
           maxZoom={19}
-          maxBounds={[[85, -180], [-85, 180]]}
+          bounds={this.getBounds()}
         >
           <TileLayer
             attribution="<a href='https://www.jawg.io' target='_blank'>&copy; Jawg</a> | <a href='https://www.openstreetmap.org' target='_blank'>&copy; OpenStreetMap</a>&nbsp;contributors"

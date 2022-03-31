@@ -54,7 +54,7 @@ const ProjectCard = (props) => {
     )
     : null;
 
-  const status = (props.data.endDate && new Date(props.data.endDate).toLocaleDateString('fr-FR', options) > '2020')
+  const status = (props.data.endDate && new Date(props.data.endDate).toLocaleDateString('fr-FR', options) > '2022')
     ? (
       <li className="d-flex">
         <div className={classes.Icons}>

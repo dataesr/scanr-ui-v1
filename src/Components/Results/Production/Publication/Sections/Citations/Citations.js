@@ -178,7 +178,7 @@ export default function Citations({ id: inputID, language: lang, direction }) {
           <div className="container">
             <SectionTitle
               icon="fa-folder-open"
-              lexicon="PublicationSimilar"
+              lexicon="PublicationOpenCitations"
               language={lang}
               title={<FormattedHTMLMessage id={`Publication.${direction}`} values={{ count: data.length }} />}
             />

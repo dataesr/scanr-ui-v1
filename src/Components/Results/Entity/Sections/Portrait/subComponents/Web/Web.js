@@ -183,6 +183,17 @@ const Web = (props) => {
                   <div className="col-md-8">
                     <div className="row">
                       {
+                        ((props.kind && props.kind.includes('Structure de recherche')) || (props.evaluations && props.evaluations.length > 0)) && (
+                          <div className={`col-md-6 ${classes.CardContainer}`}>
+                            <WebSiteButton
+                              url={`https://www.hceres.fr/fr/recherche?key=${props.label.default}`}
+                              type="Hceres"
+                              label="Voir les évaluations HCERES"
+                            />
+                          </div>
+                        )
+                      }
+                      {
                         othWebSites.map((webSite) => {
                           if (webSite.url) {
                             return (
@@ -260,4 +271,7 @@ Web.propTypes = {
   websites: PropTypes.array,
   links: PropTypes.array,
   externalIds: PropTypes.array,
+  evaluations: PropTypes.array,
+  label: PropTypes.object,
+  kind: PropTypes.array,
 };

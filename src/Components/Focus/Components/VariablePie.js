@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-for */
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 import { Col, Row } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import { FormattedHTMLMessage } from 'react-intl';
@@ -7,6 +8,9 @@ import classes from './GraphCard.scss';
 import variablePieCss from './variablePie.scss';
 import HighChartsVariablepie from '../../Shared/GraphComponents/Graphs/HighChartsVariablepie';
 import GraphTitles from '../../Shared/GraphComponents/Graphs/GraphTitles';
+import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
+
+import styles from '../../../style.scss';
 
 // Traductions
 import messagesFr from '../translations/fr.json';
@@ -14,111 +18,113 @@ import messagesEn from '../translations/en.json';
 
 const msg = { fr: messagesFr, en: messagesEn };
 
-export default class VariablePie extends Component {
-  state = {
-    data: null,
-    nodes: [],
-    currentId: 'nothing',
-    exporting: true,
-    isLoading: true,
-    pilier: 'all',
-    program: null,
-    countryLevelPartBlackList: [],
-  }
+const GRAPH_SLICES = 20;
+const SELECT_RANDOM_ID_AMONG_TOP = 20;
 
-  componentDidMount() {
-    this.getNodes();
-    this.getData();
-  }
+const VariablePie = ({
+  language,
+  title,
+  subtitle,
+  tooltipEn,
+  tooltipFr,
+  lexicon,
+}) => {
+  const [data, setData] = useState(null);
+  const [nodes, setNodes] = useState([]);
+  const [currentId, setCurrentId] = useState(null);
+  const [exporting] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [pilier, setPilier] = useState('all');
+  const [program, setProgram] = useState('all');
+  const [graphData, setGraphData] = useState([]);
+  const [countryLevelPartBlackList, setCountryLevelPartBlackList] = useState([]);
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.currentId !== prevState.currentId) {
-      this.getData();
+
+  useEffect(() => {
+    async function getNodes() {
+      const { data: nodesFetched } = await Axios.get('https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/nodes_fr.json');
+      setNodes(nodesFetched);
     }
-  }
+    setIsLoading(true);
+    getNodes();
+    setIsLoading(false);
+  }, []);
 
-  getNodes = () => {
-    /* eslint-disable-next-line */
-    const nodes = require('../../Focus/Data/h2020/nodes_fr.json');
-    this.setState({ nodes });
-  }
-
-  getData = () => {
-    if (this.state.currentId !== 'nothing') {
-      /* eslint-disable-next-line */
-      const data = require(`../../Focus/Data/h2020/${this.state.currentId}.json`);
-      this.setState({ data, isLoading: false });
+  useEffect(() => {
+    if (nodes.length) {
+      setIsLoading(true);
+      // SET INITIAL CURRENTID
+      setCurrentId(nodes.slice(0, SELECT_RANDOM_ID_AMONG_TOP)[Math.floor(Math.random() * SELECT_RANDOM_ID_AMONG_TOP)].id);
+      setIsLoading(false);
     }
-  }
+  }, [nodes]);
 
-  getPiliers = () => (
-    Object.keys(this.state.data)
-  );
+  useEffect(() => {
+    async function getData() {
+      const { data: dataFetched } = await Axios.get(`https://storage.gra.cloud.ovh.net/v1/AUTH_32c5d10cb0fe4519b957064a111717e3/scanR/static/data/h2020/${currentId}.json`);
+      setData({ ...dataFetched });
+    }
+    if (currentId) {
+      setIsLoading(true);
+      getData();
+      setPilier('all');
+      setProgram('all');
+      setIsLoading(false);
+    }
+  }, [currentId]);
 
-  getPrograms = pilier => (
-    Object.keys(this.state.data[pilier])
-  );
+  useEffect(() => {
+    if (data) {
+      const currentPilier = data[pilier] ?? {};
+      const currentProgram = currentPilier[program] ?? Object.values(currentPilier)[0];
+      const currentProgramCopy = JSON.parse(JSON.stringify(currentProgram)); // deep copy
 
-  getCountryLevelParts = (pilier, program) => {
-    const newSet = new Set(this.state.data[pilier][program].map(el => (el.country_level_part)));
+      const filteredData = currentProgramCopy.filter(el => !countryLevelPartBlackList.includes(el.country_level_part));
+
+      setGraphData(filteredData.sort((a, b) => a.y < b.y).slice(0, GRAPH_SLICES));
+    } else {
+      setGraphData([]);
+    }
+  }, [data, pilier, program, countryLevelPartBlackList]);
+
+
+  const getCountryLevelParts = (pil, prog) => {
+    if (!data || !data[pil] || !data[pil][prog]) return [];
+
+    const newSet = new Set(data[pil][prog].map(el => (el.country_level_part)));
     return [...newSet];
-  }
-
-  onPilierChangeHandler = (pilier) => {
-    // eslint-disable-next-line react/no-access-state-in-setstate
-    const allPrograms = Object.keys(this.state.data[pilier]);
-    this.setState({
-      pilier,
-      program: allPrograms[0],
-    });
   };
 
-  onProgramChangeHandler = (program) => {
-    this.setState({
-      program,
-    });
-  }
-
-  updateCountryLevelPartBlackList = (el) => {
-    const oldCountryLevelPart = [...this.state.countryLevelPartBlackList];
+  const updateCountryLevelPartBlackList = (el) => {
+    const oldCountryLevelPart = [...countryLevelPartBlackList];
     const index = oldCountryLevelPart.indexOf(el);
     if (index !== -1) {
       oldCountryLevelPart.splice(index, 1);
-      this.setState({ countryLevelPartBlackList: oldCountryLevelPart });
+      setCountryLevelPartBlackList(oldCountryLevelPart);
     } else {
       oldCountryLevelPart.push(el);
-      this.setState({ countryLevelPartBlackList: oldCountryLevelPart });
+      setCountryLevelPartBlackList(oldCountryLevelPart);
     }
   };
 
-  renderFilters = () => {
-    const pilersSelectorOptions = this.getPiliers()
-      .map((el) => {
-        if (el === 'all') {
-          return (
-            <option key={el} value={el}>
-              {msg[this.props.language]['Focus.piliers.all']}
-            </option>
-          );
-        }
-        return <option key={el} value={el}>{el}</option>;
-      });
+  const VariablePieFilters = () => {
+    const pilersOptions = data ? Object.keys(data) : [];
+    const programOptions = data ? Object.keys(data[pilier]) : [];
+    const pilersSelectorOptions = pilersOptions.map(el => (
+      <option key={el} value={el}>
+        {(el === 'all') ? msg[language]['Focus.piliers.all'] : el}
+      </option>
+    ));
 
-    const programsSelectorOptions = this.getPrograms(this.state.pilier)
-      .map((el) => {
-        if (el === 'all') {
-          return (
-            <option key={el} value={el}>
-              {msg[this.props.language]['Focus.programs.all']}
-            </option>
-          );
-        }
-        return <option key={el} value={el}>{el}</option>;
-      });
+    const programsSelectorOptions = programOptions.map(el => (
+      <option key={el} value={el}>
+        {(el === 'all') ? msg[language]['Focus.programs.all'] : el}
+      </option>
+    ));
 
-    const firstProgram = Object.keys(this.state.data[this.state.pilier])[0];
+    const firstProgram = (data) ? Object.keys(data[pilier])[0] : [];
 
-    const countryLevelPartCheckbox = this.getCountryLevelParts(this.state.pilier, (!this.state.program) ? firstProgram : this.state.program)
+    const countryLevelPartCheckbox = getCountryLevelParts(pilier, (!program) ? firstProgram : program)
       .map(el => (
         <div key={el}>
           <input
@@ -126,12 +132,17 @@ export default class VariablePie extends Component {
             value={el}
             id={el}
             name={el}
-            checked={!this.state.countryLevelPartBlackList.includes(el)}
-            onChange={e => this.updateCountryLevelPartBlackList(e.target.value)}
+            checked={!countryLevelPartBlackList.includes(el)}
+            onChange={e => updateCountryLevelPartBlackList(e.target.value)}
           />
           <label htmlFor={el} className="ml-2">{el}</label>
         </div>
       ));
+
+    const onPilierChangeHandler = (e) => {
+      setPilier(e.target.value);
+      setProgram(Object.keys(data[e.target.value])[0]);
+    };
 
     return (
       <>
@@ -140,7 +151,8 @@ export default class VariablePie extends Component {
         </p>
         <select
           className="form-control"
-          onChange={e => this.onPilierChangeHandler(e.target.value)}
+          onChange={onPilierChangeHandler}
+          value={pilier}
         >
           {pilersSelectorOptions}
         </select>
@@ -150,93 +162,89 @@ export default class VariablePie extends Component {
         </p>
         <select
           className="form-control"
-          onChange={e => this.onProgramChangeHandler(e.target.value)}
+          onChange={e => setProgram(e.target.value)}
+          value={program}
         >
           {programsSelectorOptions}
         </select>
-
         <p className="mt-3">
           {countryLevelPartCheckbox}
         </p>
       </>
     );
+  };
+
+  const uniqueProjects = [];
+  if (data && data[pilier] && data[pilier][program]) {
+    data[pilier][program].forEach((el) => {
+      el.projects.forEach((idProject) => {
+        if (uniqueProjects.indexOf(idProject) === -1) {
+          uniqueProjects.push(idProject);
+        }
+      });
+    });
   }
 
-  render = () => {
-    let filteredData = [];
-    const uniqueProjects = [];
-    if (this.state.data && this.state.currentId && !this.state.isLoading) {
-      const program = (this.state.program) ? this.state.program : Object.keys(this.state.data[this.state.pilier])[0];
-      filteredData = this.state.data[this.state.pilier][program];
+  return (
+    <div>
+      <Row>
+        <Col className={variablePieCss.info}>
+          <p>
+            <FormattedHTMLMessage id="Focus.intro.1" />
+          </p>
+          <p>
+            <FormattedHTMLMessage id="Focus.intro.2" />
+          </p>
+          <select
+            className="form-control mb-2"
+            onChange={e => setCurrentId(e.target.value)}
+            defaultValue={null}
+          >
+            { !currentId && <option value={null}>Sélectionner une entité française pour voir ses principaux partenaires</option> }
+            {
+              nodes && nodes.map((el) => {
+                let ret = <option key={el.id} value={el.id}>{el.full_name}</option>;
+                if (el.id === currentId) {
+                  ret = <option key={el.id} value={el.id} selected>{el.full_name}</option>;
+                }
+                return ret;
+              })
+            }
+          </select>
+        </Col>
+      </Row>
 
-      // filtre sur country_level_part
-      filteredData = filteredData.filter(el => !this.state.countryLevelPartBlackList.includes(el.country_level_part));
-
-      filteredData.forEach((el) => {
-        el.projects.forEach((idProject) => {
-          if (uniqueProjects.indexOf(idProject) === -1) {
-            uniqueProjects.push(idProject);
-          }
-        });
-      });
-    }
-
-    return (
-      <div>
-        <Row className={classes.arrowRight}>
-          <Col>
-            <select
-              className="form-control mb-2"
-              onChange={e => this.setState({ currentId: e.target.value, data: null })}
-            >
-              {
-                (this.state.currentId === 'nothing')
-                  ? <option value="nothing" selected>Sélectionner une entité française pour voir ses principaux partenaires</option>
-                  : <option value="nothing">Sélectionner une entité française pour voir ses principaux partenaires</option>
-              }
-
-              {
-                this.state.nodes.map((el) => {
-                  let ret = <option key={el.id} value={el.id}>{el.full_name}</option>;
-                  if (el.id === this.state.currentId) {
-                    ret = <option key={el.id} value={el.id} selected>{el.full_name}</option>;
-                  }
-                  return ret;
-                })
-              }
-            </select>
-          </Col>
-        </Row>
-        {
-
-          // this.state.nodes.filter(el => el.id === this.state.currentId)[0].nb_projects
-          (filteredData.length > 0) ? (
-            <Row className={classes.graphCard}>
-              <Col md={3} className={variablePieCss.filters}>
-                {this.renderFilters()}
-              </Col>
-              <Col>
+      <Row className={classes.graphCard}>
+        <Col md={3} className={variablePieCss.filters}>
+          <VariablePieFilters />
+        </Col>
+        <Col>
+          {
+            (!isLoading && graphData.length > 0) ? (
+              <>
                 <GraphTitles
-                  lexicon={this.props.lexicon}
-                  language={this.props.language}
-                  title={`${this.props.subtitle}${this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name} - ${uniqueProjects.length} projets`}
-                  subtitle={this.props.title}
+                  lexicon={lexicon}
+                  language={language}
+                  // title={`${subtitle} ${nodes.filter(el => el.id === currentId)[0].full_name}`}
+                  title={`${subtitle}${nodes.filter(el => el.id === currentId)[0].full_name} - ${uniqueProjects.length} projets collaboratifs`}
+                  subtitle={title}
                 />
                 <HighChartsVariablepie
-                  filename={this.state.nodes.filter(el => el.id === this.state.currentId)[0].full_name || ''}
-                  data={filteredData.slice(0, 20).sort((a, b) => a.y > b.y)}
-                  exporting={this.state.exporting}
-                  language={this.props.language}
-                  tooltipText={this.props.language === 'fr' ? this.props.tooltipFr : this.props.tooltipEn}
+                  data={graphData}
+                  exporting={exporting}
+                  filename={nodes.filter(el => el.id === currentId)[0].full_name || ''}
+                  language={language}
+                  tooltipText={language === 'fr' ? tooltipFr : tooltipEn}
                 />
-              </Col>
-            </Row>
-          ) : null
-        }
-      </div>
-    );
-  }
-}
+              </>
+            ) : <Loader style={{ height: '500px', width: 'auto' }} color={styles.projectColor} />
+          }
+        </Col>
+      </Row>
+
+    </div>
+  );
+};
 
 VariablePie.propTypes = {
   language: PropTypes.string.isRequired,
@@ -246,3 +254,5 @@ VariablePie.propTypes = {
   tooltipFr: PropTypes.string.isRequired,
   lexicon: PropTypes.string,
 };
+
+export default VariablePie;

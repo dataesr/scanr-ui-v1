@@ -496,7 +496,7 @@ class Productions extends Component {
       <>
         {this.state.total === 0 || this.state.error || this.state.isLoading ? HTMLContent.noData : HTMLContent.data}
         <UIModal
-          titleID="suggested_production_title"
+          titleID={this.state.suggestion.productionsSuccessTextID ? 'suggested_production_success_title' : 'suggested_production_title'}
           modalHandler={this.modalHandler}
           isOpened={this.state.suggestion.isModalOpened}
         >
