@@ -18,7 +18,8 @@ import messagesEn from '../translations/en.json';
 
 const msg = { fr: messagesFr, en: messagesEn };
 
-const SLICE_NUMBER = 2;
+const GRAPH_SLICES = 2;
+const SELECT_RANDOM_ID_AMONG_TOP = 10;
 
 const VariablePie = ({
   language,
@@ -45,10 +46,17 @@ const VariablePie = ({
     }
     setIsLoading(true);
     getNodes();
-    // SET INITIAL CURRENTID
-    // setCurrentId('m7K6T');
     setIsLoading(false);
   }, []);
+
+  useEffect(() => {
+    if (nodes.length) {
+      setIsLoading(true);
+      // SET INITIAL CURRENTID
+      setCurrentId(nodes.slice(0, SELECT_RANDOM_ID_AMONG_TOP)[Math.floor(Math.random() * SELECT_RANDOM_ID_AMONG_TOP)].id);
+      setIsLoading(false);
+    }
+  }, [nodes]);
 
   useEffect(() => {
     async function getData() {
@@ -58,6 +66,8 @@ const VariablePie = ({
     if (currentId) {
       setIsLoading(true);
       getData();
+      setPilier('all');
+      setProgram('all');
       setIsLoading(false);
     }
   }, [currentId]);
@@ -67,13 +77,13 @@ const VariablePie = ({
       const currentPilier = data[pilier] ?? {};
       const currentProgram = currentPilier[program] ?? Object.values(currentPilier)[0];
       const currentProgramCopy = JSON.parse(JSON.stringify(currentProgram));
-      setGraphData(currentProgramCopy.sort((a, b) => a.y < b.y).slice(0, SLICE_NUMBER));
+      setGraphData(currentProgramCopy.sort((a, b) => a.y < b.y).slice(0, GRAPH_SLICES));
     } else {
       setGraphData([]);
     }
   }, [data, pilier, program]);
 
-  const renderFilters = () => {
+  const VariablePieFilters = () => {
     const pilersOptions = data ? Object.keys(data) : [];
     const programOptions = data ? Object.keys(data[pilier]) : [];
     const pilersSelectorOptions = pilersOptions.map(el => (
@@ -84,7 +94,7 @@ const VariablePie = ({
 
     const programsSelectorOptions = programOptions.map(el => (
       <option key={el} value={el}>
-        {(el === 'all') ? msg[language]['Focus.piliers.all'] : el}
+        {(el === 'all') ? msg[language]['Focus.programs.all'] : el}
       </option>
     ));
 
@@ -96,6 +106,7 @@ const VariablePie = ({
         <select
           className="form-control"
           onChange={e => setPilier(e.target.value)}
+          value={pilier}
         >
           {pilersSelectorOptions}
         </select>
@@ -106,6 +117,7 @@ const VariablePie = ({
         <select
           className="form-control"
           onChange={e => setProgram(e.target.value)}
+          value={program}
         >
           {programsSelectorOptions}
         </select>
@@ -148,7 +160,7 @@ const VariablePie = ({
 
       <Row className={classes.graphCard}>
         <Col md={3} className={variablePieCss.filters}>
-          {renderFilters()}
+          <VariablePieFilters />
         </Col>
         <Col>
           {
