@@ -22,7 +22,7 @@ const messages = {
  * Tests unitaires : .
 */
 const SourceCard = (props) => {
-  const publisher = (props.data.publisher) ? (
+  const publisher = (props.data?.publisher) ? (
     <Fragment>
       <div className={classes.Title}>
         <FormattedHTMLMessage id="Publication.source.publisher" defaultMessage="Publication.source.publisher" />
@@ -33,7 +33,7 @@ const SourceCard = (props) => {
     </Fragment>
   ) : null;
 
-  const title = (props.data.title) ? (
+  const title = (props.data?.title) ? (
     <Fragment>
       <div className={classes.Title}>
         <FormattedHTMLMessage id="Publication.source.title" defaultMessage="Publication.source.title" />
@@ -45,7 +45,7 @@ const SourceCard = (props) => {
   ) : null;
 
   let issns = null;
-  if (props.data.journalIssns) {
+  if (props.data?.journalIssns) {
     issns = (
       <div>
         <div className={classes.Title}>
@@ -60,7 +60,7 @@ const SourceCard = (props) => {
     );
   }
 
-  const pagination = (props.data.pagination) ? (
+  const pagination = (props.data?.pagination) ? (
     <div>
       <div className={classes.Title}>
         <FormattedHTMLMessage id="Publication.source.pagination" defaultMessage="Publication.source.pagination" />
