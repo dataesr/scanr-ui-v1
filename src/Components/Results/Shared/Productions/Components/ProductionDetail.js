@@ -95,7 +95,7 @@ const ProductionDetail = (props) => {
                 </span>
                 <ButtonToPage
                   className={`${classes.btn_scanrBlue} ${classes.RectangleButton}`}
-                  url={props.data.oaEvidence.url}
+                  url={props.data.oaEvidence?.url}
                   target="_blank"
                 >
                   {(props.language === 'fr') ? 'Accéder à la publication' : 'Access the publication'}
