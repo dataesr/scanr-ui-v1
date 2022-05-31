@@ -30,8 +30,9 @@ const HomePage = (props) => {
         <WelcomeModal />
         <div className={`col-md ${classes.LogoHome}`}>
           <img
-            src="./img/scanr/MESRI_2020.png"
-            alt="Logo MESRI"
+            src="./img/scanr/MESR_2022.png"
+            alt="Logo MESR"
+            height="180px"
             className={classes.Logo}
           />
         </div>
