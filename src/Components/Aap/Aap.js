@@ -271,8 +271,8 @@ const AapPage = (props) => {
             keywords.map(kw => (
               <li key={kw}>
                 <span
-                  onClick={() => {}}
-                  onKeyPress={() => {}}
+                  onClick={() => { }}
+                  onKeyPress={() => { }}
                   tabIndex={0}
                   role="button"
                 >
