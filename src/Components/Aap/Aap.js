@@ -72,8 +72,7 @@ const AapPage = (props) => {
   };
 
   const getDataFromCeAPI = async () => {
-    // const responseCallFromCE = await Axios.get(`https://curiexplore-api.staging.dataesr.ovh/ec-topics/${props.match.params.id.toLowerCase()}`);
-    const url = `https://scanr.staging.dataesr.ovh/topics/${props.match.params.id.toLowerCase()}`;
+    const url = `/topics/${props.match.params.id.toLowerCase()}`;
     const responseCallFromCE = await Axios.get(url);
     return responseCallFromCE.data.TopicDetails;
   };
@@ -273,8 +272,8 @@ const AapPage = (props) => {
             keywords.map(kw => (
               <li key={kw}>
                 <span
-                  onClick={() => {}}
-                  onKeyPress={() => {}}
+                  onClick={() => { }}
+                  onKeyPress={() => { }}
                   tabIndex={0}
                   role="button"
                 >

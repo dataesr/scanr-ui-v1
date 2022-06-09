@@ -120,7 +120,7 @@ const ScanrIs = () => {
                 <FormattedHTMLMessage id="Home.ScanrIs.main.ministry" />
               </DescriptiveText>
               <div className={classes.LogoContainer}>
-                <img src="./img/scanr/MESRI_2020.png" height="60px" alt="" aria-hidden />
+                <img src="./img/scanr/MESR_2022.png" height="100px" alt="Logo MESR" aria-hidden />
               </div>
             </div>
           </div>

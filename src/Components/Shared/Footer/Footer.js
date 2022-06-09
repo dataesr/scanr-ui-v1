@@ -66,8 +66,8 @@ const Footer = () => {
             <div className={`col-md ${classes.Col}`}>
               <div className={classes.LogoContainer}>
                 <img
-                  src="./img/scanr/MESRI_2020.png"
-                  alt="Logo MESRI"
+                  src="./img/scanr/MESR_2022.png"
+                  alt="Logo MESR"
                   className={classes.Logo}
                 />
               </div>
