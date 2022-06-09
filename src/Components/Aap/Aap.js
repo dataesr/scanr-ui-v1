@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable dot-notation */
 /* eslint-disable arrow-body-style */
 /* eslint-disable no-unused-vars */
@@ -140,11 +141,12 @@ const AapPage = (props) => {
       query.query.bool.filter.push({ term: { isFrench: false } });
     }
 
-    const responseFromScanR = await Axios.post(API_ES, query, {
+    // const responseFromScanR = await Axios.post(API_ES, query, {
+    const responseFromScanR = await Axios.post('https://scanr.coexya.eu/elasticsearch/structures/_search', query, {
       headers: {
         Authorization: API_KEY_ES,
       },
-    });
+    }).catch((e) => { console.log('erreur API scanR: ', e); });
     setLoading(false);
     return responseFromScanR;
   };

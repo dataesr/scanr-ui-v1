@@ -135,7 +135,9 @@ const VariablePie = ({
             checked={!countryLevelPartBlackList.includes(el)}
             onChange={e => updateCountryLevelPartBlackList(e.target.value)}
           />
-          <label htmlFor={el} className="ml-2">{el}</label>
+          <label htmlFor={el} className="ml-2">
+            {msg[language][`Focus.${el}`]}
+          </label>
         </div>
       ));
 
@@ -215,7 +217,7 @@ const VariablePie = ({
       </Row>
 
       <Row className={classes.graphCard}>
-        <Col md={3} className={variablePieCss.filters}>
+        <Col md={4} className={variablePieCss.filters}>
           <VariablePieFilters />
         </Col>
         <Col>
@@ -225,8 +227,7 @@ const VariablePie = ({
                 <GraphTitles
                   lexicon={lexicon}
                   language={language}
-                  // title={`${subtitle} ${nodes.filter(el => el.id === currentId)[0].full_name}`}
-                  title={`${subtitle}${nodes.filter(el => el.id === currentId)[0].full_name} - ${uniqueProjects.length} projets collaboratifs`}
+                  title={`${subtitle}${nodes.filter(el => el.id === currentId)[0].full_name} - ${uniqueProjects.length} ${msg[language]['Focus.projets collaboratifs']}`}
                   subtitle={title}
                 />
                 <HighChartsVariablepie
