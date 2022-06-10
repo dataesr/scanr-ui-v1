@@ -16,4 +16,5 @@ ReactDOM.render(
   </GlobalContextProvider>,
   document.getElementById('root'),
 );
+
 registerServiceWorker();
