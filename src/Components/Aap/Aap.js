@@ -140,8 +140,7 @@ const AapPage = (props) => {
       query.query.bool.filter.push({ term: { isFrench: false } });
     }
 
-    // const responseFromScanR = await Axios.post(API_ES, query, {
-    const responseFromScanR = await Axios.post('https://scanr.coexya.eu/elasticsearch/structures/_search', query, {
+    const responseFromScanR = await Axios.post(API_ES, query, {
       headers: {
         Authorization: API_KEY_ES,
       },
