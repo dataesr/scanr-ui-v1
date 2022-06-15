@@ -10,7 +10,7 @@ module.exports = {
     { types: ['test', 'tests'], label: '🔍 Tests' },
     { types: ['style'], label: '💅 Style de code' },
     { types: ['chore'], label: '🧹 Nettoyage' },
-    { types: ['other'], label: 'Autres changement' },
+    { types: ['other'], label: 'Autres changements' },
   ],
 
   excludeTypes: ['other', 'perf', 'test', 'tests', 'style', 'chore', 'doc', 'docs'],
