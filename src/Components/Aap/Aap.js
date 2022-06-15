@@ -155,7 +155,7 @@ const AapPage = (props) => {
   const getInitialData = async () => {
     try {
       const dataFromCeAPI = await getDataFromCeAPI();
-      if (dataFromCeAPI.keywords || dataFromCeAPI.keywords.length === 0) {
+      if (!dataFromCeAPI.keywords || dataFromCeAPI.keywords.length === 0) {
         setNoKeywords(true);
       }
 
