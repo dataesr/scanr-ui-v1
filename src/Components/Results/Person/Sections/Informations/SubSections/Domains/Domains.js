@@ -86,7 +86,7 @@ const Domains = (props) => {
     productions.forEach((prod) => {
       if (prod.domains && prod.domains !== undefined) {
         prod.domains.forEach((dom) => {
-          if (dom.type !== 'macro_level_barometre') {
+          if (!['macro_level_barometre', 'dewey'].includes(dom.type)) {
             if (props.language in dom.label) {
               allTags.push(dom.label[props.language]);
             } else if ('default' in dom.label) {
