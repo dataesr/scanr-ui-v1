@@ -43,6 +43,7 @@ const AapPage = (props) => {
   const [idNotFound, setIdNotFound] = useState(false);
   const [selectedLocalisations, setSelectedLocalisations] = useState('');
   const [loading, setLoading] = useState(true);
+  const [noKeywords, setNoKeywords] = useState(false);
 
   const getMatchPhrases = (kwords) => {
     const ret = [];
@@ -145,13 +146,19 @@ const AapPage = (props) => {
         Authorization: API_KEY_ES,
       },
     }).catch((e) => { console.log('erreur API scanR: ', e); });
+
     setLoading(false);
+
     return responseFromScanR;
   };
 
   const getInitialData = async () => {
     try {
       const dataFromCeAPI = await getDataFromCeAPI();
+      if (dataFromCeAPI.keywords || dataFromCeAPI.keywords.length === 0) {
+        setNoKeywords(true);
+      }
+
       const dataScanRAPI = await getScanRData(dataFromCeAPI.keywords);
       setCallObject(dataFromCeAPI);
       setKeywords(dataFromCeAPI.keywords);
@@ -522,7 +529,30 @@ const AapPage = (props) => {
               {getAPIFilters()}
               <Col>
                 <div className={classes.callBlock}>
-                  Identifiant non trouvé sur le site de la commission
+                  <FormattedHTMLMessage id="noId" />
+                  <div>
+                    <a href="https://ec.europa.eu/info/index_en" target="_blank" rel="noreferrer">https://ec.europa.eu/info/index_en</a>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      </IntlProvider>
+    );
+  }
+
+  if (noKeywords) {
+    return (
+      <IntlProvider locale={props.language} messages={msg[props.language]}>
+        <div className={classes.aap}>
+          <Header title={<FormattedHTMLMessage id="title" />} />
+          <Container as="main">
+            <Row>
+              {getAPIFilters()}
+              <Col>
+                <div className={classes.callBlock}>
+                  <FormattedHTMLMessage id="noKW" />
                   <div>
                     <a href="https://ec.europa.eu/info/index_en" target="_blank" rel="noreferrer">https://ec.europa.eu/info/index_en</a>
                   </div>
@@ -547,7 +577,7 @@ const AapPage = (props) => {
                 ? getContent()
                 : (
                   <Col>
-                    <Loader style={{ height: '50vh', width: '50vw' }} />
+                    <Loader style={{ height: '15vh', width: '10vw' }} />
                   </Col>
                 )
             }
