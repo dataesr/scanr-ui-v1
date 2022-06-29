@@ -125,11 +125,11 @@ FocusList.defaultProps = {
         en: ['PhD', '#DoctoralSchools'],
       },
       title: {
-        fr: 'Les thèses soutenues en 2019. Sur quels thèmes ?',
-        en: '2019 thesis in france. Which thematics?',
+        fr: 'Les thèses soutenues en 2020. Sur quels thèmes ?',
+        en: '2020 thesis in france. Which thematics?',
       },
       type: 'bubble',
-      url: '/focus/themes-theses-2019',
+      url: '/focus/themes-theses',
       api: 'publications',
     },
     {

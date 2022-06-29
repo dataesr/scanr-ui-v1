@@ -107,7 +107,7 @@ export default class PublicationsPacketBubble extends Component {
               exporting={this.state.exporting}
               data={this.transformData()}
               language={this.props.language}
-              tooltipText={this.props.language === 'fr' ? 'thèses soutenues en 2018' : 'thesis defended in 2018'}
+              tooltipText={this.props.language === 'fr' ? 'thèses soutenues' : 'thesis defended'}
             />
           )
           : (<GraphSpinner />)
