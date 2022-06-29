@@ -75,8 +75,8 @@ const focusList = [
       en: [],
     },
     title: {
-      fr: 'Nominations IUF 2020',
-      en: 'IUF new members in 2020',
+      fr: 'Nominations IUF 2022',
+      en: 'IUF new members in 2022',
     },
     type: 'treemap',
     url: '/focus/iuf',
