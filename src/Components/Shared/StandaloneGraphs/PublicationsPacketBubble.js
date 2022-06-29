@@ -18,13 +18,12 @@ export default class PublicationsPacketBubble extends Component {
     aggregations: {
       domains: {
         field: 'domains.code',
-        filters: {},
         min_doc_count: 1,
         order: {
           direction: 'DESC',
           type: 'COUNT',
         },
-        size: 1000,
+        size: 10000,
       },
     },
   }
@@ -54,12 +53,12 @@ export default class PublicationsPacketBubble extends Component {
       let subDiscipline = 'exclude';
       let subDisciplineCount = 0;
       const code = e.value;
-      const label = deweydata[code] ? deweydata[code].fr : 'exclude';
+      const label = deweydata[code]?.fr ? deweydata[code].fr : 'exclude';
       if (code.indexOf('00') !== -1) {
         discipline = label.split('(')[0];
       } else {
         subDiscipline = label.split('(')[0];
-        discipline = deweydata[code.substring(0, 1).concat('00')].fr.split('(')[0];
+        discipline = deweydata[code.substring(0, 1).concat('00')] ? deweydata[code.substring(0, 1).concat('00')].fr.split('(')[0] : 'exclude';
         subDisciplineCount = e.count;
       }
 
@@ -107,7 +106,7 @@ export default class PublicationsPacketBubble extends Component {
               exporting={this.state.exporting}
               data={this.transformData()}
               language={this.props.language}
-              tooltipText={this.props.language === 'fr' ? 'thèses soutenues en 2018' : 'thesis defended in 2018'}
+              tooltipText={this.props.language === 'fr' ? 'thèses soutenues' : 'thesis defended'}
             />
           )
           : (<GraphSpinner />)

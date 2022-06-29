@@ -119,11 +119,11 @@ LastFocus.defaultProps = {
         en: ['PhD', '#DoctoralSchools'],
       },
       title: {
-        fr: 'Les thèses soutenues en 2019. Sur quels thèmes ?',
-        en: '2019 thesis in france. Which thematics?',
+        fr: 'Les thèses soutenues en 2020. Sur quels thèmes ?',
+        en: '2020 thesis in france. Which thematics?',
       },
       type: 'bubble',
-      url: '/focus/themes-theses-2019',
+      url: '/focus/themes-theses',
       api: 'publications',
     },
     {
@@ -132,8 +132,8 @@ LastFocus.defaultProps = {
         en: ['#InstitutUniversitaireDeFrance', '#IUF'],
       },
       title: {
-        fr: "Les nominations 2020 à l'Institut Universitaire de France",
-        en: 'Persons distinguished by the Institut Universitaire de France in 2020',
+        fr: "Les nominations 2022 à l'Institut Universitaire de France",
+        en: 'Persons distinguished by the Institut Universitaire de France in 2022',
       },
       type: 'treemap',
       url: '/focus/iuf',

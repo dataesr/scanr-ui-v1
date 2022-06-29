@@ -13,6 +13,16 @@ export default class ProductionKeywords extends Component {
     data: { entries: [] },
     isLoading: true,
     aggregations: {
+      facet_default: {
+        field: 'keywords.default',
+        filters: {},
+        min_doc_count: 1,
+        order: {
+          direction: 'DESC',
+          type: 'COUNT',
+        },
+        size: 50,
+      },
       facet_en: {
         field: 'keywords.en',
         filters: {},
@@ -47,7 +57,8 @@ export default class ProductionKeywords extends Component {
       .then((response) => {
         const newStateDataEn = response.data.facets.find(item => item.id === 'facet_en') || { entries: [] };
         const newStateDataFr = response.data.facets.find(item => item.id === 'facet_fr') || { entries: [] };
-        const newStateData = { entries: newStateDataEn.entries.concat(newStateDataFr.entries) };
+        const newStateDataDefault = response.data.facets.find(item => item.id === 'facet_default') || { entries: [] };
+        const newStateData = { entries: newStateDataEn.entries.concat(newStateDataFr.entries.concat(newStateDataDefault.entries)) };
         this.setState({ data: newStateData, isLoading: false });
       })
       .catch((error) => {

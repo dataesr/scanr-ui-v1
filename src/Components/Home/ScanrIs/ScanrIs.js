@@ -75,8 +75,8 @@ const focusList = [
       en: [],
     },
     title: {
-      fr: 'Nominations IUF 2020',
-      en: 'IUF new members in 2020',
+      fr: 'Nominations IUF 2022',
+      en: 'IUF new members in 2022',
     },
     type: 'treemap',
     url: '/focus/iuf',
@@ -88,11 +88,11 @@ const focusList = [
       en: [],
     },
     title: {
-      fr: 'Thèmes des thèses soutenues en 2019',
-      en: 'Thematics of the thesis defended in 2019',
+      fr: 'Thèmes des thèses soutenues en 2020',
+      en: 'Thematics of the thesis defended in 2020',
     },
     type: 'bubble',
-    url: '/focus/themes-theses-2019',
+    url: '/focus/themes-theses',
     api: 'publications',
   },
 ];
