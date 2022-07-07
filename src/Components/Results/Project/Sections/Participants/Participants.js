@@ -22,11 +22,13 @@ const Participants = (props) => {
   const mapdata = [];
 
   for (let i = 0, len = props.data.length; i < len; i += 1) {
-    if (props.data[i].structure) {
+    const currentData = props.data[i];
+
+    if (currentData.structure) {
       const dataElement = {
-        id: props.data[i].structure.id,
-        position: [props.data[i].structure.address[0].gps.lat, props.data[i].structure.address[0].gps.lon],
-        infos: [getSelectKey(props.data[i].structure, 'label', props.language, 'default')],
+        id: currentData.structure.id,
+        position: [currentData.structure.address[0].gps.lat, currentData.structure.address[0].gps.lon],
+        infos: [getSelectKey(currentData.structure, 'label', props.language, 'default')],
       };
 
       mapdata.push(dataElement);
