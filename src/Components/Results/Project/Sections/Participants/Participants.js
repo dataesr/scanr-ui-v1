@@ -82,17 +82,19 @@ const Participants = (props) => {
           }
         </div>
       </div>
-      <div className="col-hidden col-lg-7 p-0">
-        <div className={`w-100 ${classes.MapContainer}`}>
-          <LeafletMap
-            zoom={2}
-            filename="carto"
-            data={mapdata}
-            language={props.language}
-            style={mapStyle}
-          />
+      {mapdata && mapdata.length > 0 && (
+        <div className="col-hidden col-lg-7 p-0">
+          <div className={`w-100 ${classes.MapContainer}`}>
+            <LeafletMap
+              zoom={2}
+              filename="carto"
+              data={mapdata}
+              language={props.language}
+              style={mapStyle}
+            />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
