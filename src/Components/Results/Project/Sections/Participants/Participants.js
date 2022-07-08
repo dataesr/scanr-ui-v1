@@ -95,7 +95,7 @@ const Participants = (props) => {
           />
           )}
         </div>
-      </div>
+      )}
     </div>
   );
 };
