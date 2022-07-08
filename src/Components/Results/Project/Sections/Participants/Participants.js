@@ -8,6 +8,7 @@ import getSelectKey from '../../../../../Utils/getSelectKey';
 
 import classes from './Participants.scss';
 import styles from '../../../../../style.scss';
+
 /**
  * Participants
  * Url : .
@@ -15,22 +16,25 @@ import styles from '../../../../../style.scss';
  * Responsive : .
  * Accessible : .
  * Tests unitaires : .
-*/
+ */
 const Participants = (props) => {
   if (!props.data) return <EmptySection />;
   const mapdata = [];
-  props.data.forEach((part) => {
-    try {
+
+  for (let i = 0, len = props.data.length; i < len; i += 1) {
+    const currentData = props.data[i];
+
+    if (currentData.structure) {
       const dataElement = {
-        id: part.structure.id,
-        position: [part.structure.address[0].gps.lat, part.structure.address[0].gps.lon],
-        infos: [getSelectKey(part.structure, 'label', props.language, 'default')],
+        id: currentData.structure.id,
+        position: [currentData.structure.address[0].gps.lat, currentData.structure.address[0].gps.lon],
+        infos: [getSelectKey(currentData.structure, 'label', props.language, 'default')],
       };
+
       mapdata.push(dataElement);
-    } catch (error) {
-      // eslint-disable-no-empty
     }
-  });
+  }
+
   const mapStyle = {
     height: '60vh',
     borderTopLeftRadius: '10px',
@@ -52,8 +56,7 @@ const Participants = (props) => {
           return (idPartSub === idPart && partSub.label.default.slice(-1) !== '0');
         });
         const obj = {
-          ...part,
-          subParticipants: subs || null,
+          ...part, subParticipants: subs || null,
         };
         dataForRows.push(obj);
       }
@@ -65,34 +68,32 @@ const Participants = (props) => {
     <div className="row">
       <div className="px-3 col-12 col-lg-5">
         <div className={`${classes.participantList}`}>
-          {
-            dataForRows.map(part => (
-              <div
-                key={getSelectKey(part, 'label', props.language, 'default')}
-                className={`col-12 py-3 px-3 ${classes.participantItem}`}
-                role="button"
-              >
-                <ParticipantRow
-                  language={props.language}
-                  data={part}
-                  size="small"
-                />
-              </div>
-            ))
-          }
+          {dataForRows.map(part => (
+            <div
+              key={getSelectKey(part, 'label', props.language, 'default')}
+              className={`col-12 py-3 px-3 ${classes.participantItem}`}
+              role="button"
+            >
+              <ParticipantRow
+                language={props.language}
+                data={part}
+                size="small"
+              />
+            </div>
+          ))}
         </div>
       </div>
-      {mapdata && mapdata.length > 0 && (
-        <div className="col-hidden col-lg-7 p-0">
-          <div className={`w-100 ${classes.MapContainer}`}>
-            <LeafletMap
-              zoom={2}
-              filename="carto"
-              data={mapdata}
-              language={props.language}
-              style={mapStyle}
-            />
-          </div>
+      <div className="col-hidden col-lg-7 p-0">
+        <div className={`w-100 ${classes.MapContainer}`}>
+          {!!mapdata.length && (
+          <LeafletMap
+            zoom={2}
+            filename="carto"
+            data={mapdata}
+            language={props.language}
+            style={mapStyle}
+          />
+          )}
         </div>
       )}
     </div>
@@ -102,7 +103,5 @@ const Participants = (props) => {
 export default Participants;
 
 Participants.propTypes = {
-  language: PropTypes.string.isRequired,
-  data: PropTypes.array,
-  type: PropTypes.string.isRequired,
+  language: PropTypes.string.isRequired, data: PropTypes.array, type: PropTypes.string.isRequired,
 };
