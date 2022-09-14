@@ -59,7 +59,7 @@ const PublicationCard = (props) => {
         if (author.person && author.person.fullName) {
           return (
             <React.Fragment>
-              <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>
+              <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.person.fullName}</a>
               {others}
             </React.Fragment>
           );
@@ -71,7 +71,7 @@ const PublicationCard = (props) => {
         .filter(author => author.role === 'author')
         .map((author) => {
           if (author.person && author.person.fullName) {
-            return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.fullName}</a>;
+            return <a key={JSON.stringify(author)} href={`person/${author.person.id}`}>{author.person.fullName}</a>;
           }
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
@@ -80,7 +80,7 @@ const PublicationCard = (props) => {
         .filter(author => author.role === 'author')
         .map((author) => {
           if (author.person && author.person.fullName) {
-            return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
+            return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.person.fullName}</a>;
           }
           return <span key={JSON.stringify(author)}>{author.fullName}</span>;
         });
