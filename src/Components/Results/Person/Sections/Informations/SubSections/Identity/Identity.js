@@ -66,7 +66,7 @@ const Identity = (props) => {
               <div className={classes.CardContainer}>
                 <LogoCard
                   url="/img/logos/logo-hal.svg"
-                  targetUrl={'https://hal.archives-ouvertes.fr/search/index/q/*/authIdPerson_i/'.concat(extIdhal[0].id)}
+                  targetUrl={'https://hal.archives-ouvertes.fr/search/index/?qa%5BauthIdHal_s%5D%5B%5D='.concat(extIdhal[0].id)}
                   label="IdHAL"
                   cssClass="Height75"
                   link={'HAL '.concat(extIdhal[0].id)}
