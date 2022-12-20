@@ -35,7 +35,7 @@ const SimilarPersons = (props) => {
     return [];
   };
   const request = {
-    fields: ['publications.publication.title', 'keywords.fr', 'keywords.en', 'domains.label.en', 'domains.label.fr'],
+    fields: ['domains.label.default'],
     likeIds: [props.id],
     likeTexts: [],
     pageSize: 100,

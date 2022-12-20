@@ -18,7 +18,7 @@ import classes from './SimilarEntities.scss';
 */
 const SimilarProjects = (props) => {
   const request = {
-    fields: ['publications.publication.title', 'websites.description', 'activities.label', 'description'],
+    fields: ['domains.label.default', 'websites.description', 'activities.label', 'description'],
     likeIds: [props.id],
     pageSize: 100,
     likeTexts: [],

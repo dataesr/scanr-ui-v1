@@ -100,7 +100,6 @@ const SearchResults = (props) => {
                       <CardsToShow
                         data={res.value}
                         highlights={res.highlights}
-                        small
                         language={props.language}
                         cardColor={cardColor}
                       />

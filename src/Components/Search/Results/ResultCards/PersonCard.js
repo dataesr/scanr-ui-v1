@@ -45,12 +45,20 @@ const PersonCard = (props) => {
       .map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
       .filter(txt => (txt.length > 1))
-      .map(txt => txt.split('(')[0])
-      .filter(txt => (txt.length < 18))
-      .sort((a, b) => a.length - b.length)
-      .slice(-4);
+      .filter(txt => (txt.length < 18));
+    const domainDict = {};
+    domains.forEach((d) => {
+      domainDict[d] = { domain: d, count: 0 };
+    });
+    domains.forEach((d) => {
+      domainDict[d].count += 1;
+    });
+    domains = Object.keys(domainDict).map(key => domainDict[key])
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 4)
+      .map(e => e.domain);
   }
-  domains = [...new Set(domains)];
+  // domains = [...new Set(domains)];
 
   let affiliations;
   if (affiliation) {
