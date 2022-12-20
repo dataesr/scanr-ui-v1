@@ -42,7 +42,7 @@ export default {
       size: 100,
     },
     keywordsEn: {
-      field: 'keywords.en',
+      field: 'keywords.default',
       filters: {},
       min_doc_count: 1,
       order: {
@@ -52,7 +52,7 @@ export default {
       size: 100,
     },
     keywordsFr: {
-      field: 'keywords.fr',
+      field: 'keywords.default',
       filters: {},
       min_doc_count: 1,
       order: {
@@ -62,7 +62,7 @@ export default {
       size: 100,
     },
     disciplinesFr: {
-      field: 'domains.label.fr',
+      field: 'domains.label.default',
       filters: {},
       min_doc_count: 1,
       order: {
@@ -72,7 +72,7 @@ export default {
       size: 50,
     },
     disciplinesEn: {
-      field: 'domains.label.en',
+      field: 'domains.label.default',
       filters: {},
       min_doc_count: 1,
       order: {
