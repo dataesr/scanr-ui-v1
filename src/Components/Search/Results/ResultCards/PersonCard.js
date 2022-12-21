@@ -41,11 +41,11 @@ const PersonCard = (props) => {
   let domains = [];
   if (props.data.domains && props.data.domains.length > 0) {
     domains = props.data.domains
-      .filter(dom => dom.type !== 'macro_level_barometre')
+      // .filter(dom => dom.type !== 'macro_level_barometre')
       .map(dom => getSelectedKey(dom, 'label', props.language, 'default'))
       .filter(txt => (txt))
-      .filter(txt => (txt.length > 1))
-      .filter(txt => (txt.length < 18));
+      .filter(txt => (txt.length > 1));
+    // .filter(txt => (txt.length < 25));
     const domainDict = {};
     domains.forEach((d) => {
       domainDict[d] = { domain: d, count: 0 };
@@ -54,8 +54,8 @@ const PersonCard = (props) => {
       domainDict[d].count += 1;
     });
     domains = Object.keys(domainDict).map(key => domainDict[key])
-      .sort((a, b) => b.count - a.count)
-      .slice(0, 4)
+      .sort((a, b) => b.count - a.count);
+    domains = domains.slice(0, 4)
       .map(e => e.domain);
   }
   // domains = [...new Set(domains)];
