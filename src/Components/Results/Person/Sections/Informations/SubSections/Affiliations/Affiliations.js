@@ -44,12 +44,21 @@ const Affiliations = (props) => {
     const testAffs = {};
     props.data.forEach((aff) => {
       const affiliation = { ...aff };
-      affiliation.endDate = moment(aff.endDate).format('YYYY');
-      affiliation.startDate = moment(aff.startDate).format('YYYY');
-      if (affiliation.sources.length === 1) {
-        affiliation.subLabel = affiliation.sources.length.toString().concat(' ', 'production');
+      if (aff.endDate) {
+        affiliation.endDate = moment(aff.endDate).format('YYYY');
       } else {
-        affiliation.subLabel = affiliation.sources.length.toString().concat(' ', 'productions');
+        affiliation.endDate = 'XXXX';
+      }
+      if (aff.startDate) {
+        affiliation.startDate = moment(aff.startDate).format('YYYY');
+      } else {
+        affiliation.startDate = 'XXXX';
+      }
+      const sources = [...new Set(affiliation.sources)];
+      if (sources.length === 1) {
+        affiliation.subLabel = sources.length.toString().concat(' ', 'production');
+      } else {
+        affiliation.subLabel = sources.length.toString().concat(' ', 'productions');
       }
       const key = affiliation.startDate.concat('-', affiliation.endDate);
       if (affiliation.structure.label) {
@@ -86,6 +95,9 @@ const Affiliations = (props) => {
     const orderedYears = Object.keys(testAffs).sort((a, b) => b.slice(-4) - a.slice(-4));
 
     const mapProps = { maxZoom: 17, bounds, zoom: 14 };
+    if (Object.keys(testAffs).length === 0) {
+      return null;
+    }
 
     return (
       <section className={`container-fluid ${classes.Affiliations}`}>
@@ -100,20 +112,25 @@ const Affiliations = (props) => {
         </div>
         <div className="row">
           <div className={`col-12 ${classes.CardContainer}`}>
-            <div className="w-100">
-              <Map
-                className={classes.Map}
-                {...mapProps}
-              >
-                <TileLayer
-                  attribution="<a href='https://www.jawg.io' target='_blank'>&copy; Jawg</a> | <a href='https://www.openstreetmap.org' target='_blank'>&copy; OpenStreetMap</a>&nbsp;contributors"
-                  url="https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=5V4ER9yrsLxoHQrAGQuYNu4yWqXNqKAM6iaX5D1LGpRNTBxvQL3enWXpxMQqTrY8"
-                />
-                <MarkerClusterGroup maxClusterRadius={20}>
-                  {markers}
-                </MarkerClusterGroup>
-              </Map>
-            </div>
+            {
+            (bounds)
+              ? (
+                <div className="w-100">
+                  <Map
+                    className={classes.Map}
+                    {...mapProps}
+                  >
+                    <TileLayer
+                      attribution="<a href='https://www.jawg.io' target='_blank'>&copy; Jawg</a> | <a href='https://www.openstreetmap.org' target='_blank'>&copy; OpenStreetMap</a>&nbsp;contributors"
+                      url="https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=5V4ER9yrsLxoHQrAGQuYNu4yWqXNqKAM6iaX5D1LGpRNTBxvQL3enWXpxMQqTrY8"
+                    />
+                    <MarkerClusterGroup maxClusterRadius={20}>
+                      {markers}
+                    </MarkerClusterGroup>
+                  </Map>
+                </div>
+              ) : null
+            }
             <div className={`w-100 ${classes.AffiliationsAlert}`}>
               <FormattedHTMLMessage id="Person.Informations.Affiliations.warning" />
             </div>
