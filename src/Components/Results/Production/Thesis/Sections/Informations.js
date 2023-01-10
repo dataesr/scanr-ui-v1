@@ -26,9 +26,9 @@ import classes from '../Thesis.scss';
 */
 const Informations = (props) => {
   const getAuthor = role => (
-    props.data.authors.find(person => person.role === role)
+    props.data.authors?.find(person => person.role === role)
   );
-  const id = (props.data.id.substring(0, 5) === 'these') ? props.data.id.substring(5) : props.data.id;
+  const id = (props.data.id.substring(0, 3) === 'nnt') ? props.data.id.substring(3) : props.data.id;
 
   const theseLink = 'http://www.theses.fr/'.concat({ id }.id);
 
@@ -111,12 +111,16 @@ const Informations = (props) => {
           </div>
           <div className={`col-md-6 ${classes.CardContainer}`}>
             { /* eslint-disable */ }
-            <PersonCard
-              data={getAuthor('author')}
-              showTitle={false}
-              language={props.language}
-              role="author"
-            />
+            {
+            (getAuthor('author')) ? (
+              <PersonCard
+                data={getAuthor('author')}
+                showTitle={false}
+                language={props.language}
+                role="author"
+              />
+            ) : null
+            }
           { /* eslint-enable */ }
           </div>
           {

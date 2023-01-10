@@ -17,7 +17,7 @@ import classes from '../../../../../style.scss';
  * Tests unitaires : .
 */
 const AuthorsSection = (props) => {
-  const getAuthors = role => (props.data.authors.filter(person => person.role === role));
+  const getAuthors = role => (props.data.authors?.filter(person => person.role === role)) || [];
 
   const getSortedAuthors = () => {
     const orderAuthors = ['author', 'directeurthese', 'rapporteur', 'presidentjury', 'membrejury'];
@@ -30,11 +30,13 @@ const AuthorsSection = (props) => {
     });
 
     // Ajout des auteurs sans role
-    props.data.authors.forEach((author) => {
-      if (!sortedAuthors.find(authorIn => author === authorIn)) {
-        sortedAuthors.push(author);
-      }
-    });
+    if (props.data.authors) {
+      props.data.authors.forEach((author) => {
+        if (!sortedAuthors.find(authorIn => author === authorIn)) {
+          sortedAuthors.push(author);
+        }
+      });
+    }
 
     return sortedAuthors;
   };

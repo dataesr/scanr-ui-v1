@@ -28,7 +28,7 @@ function renderProductionTypePage(language, data, id) {
   if (data.productionType === 'patent') {
     return <Patent language={language} data={data} id={id} />;
   }
-  if (data.id.indexOf('these') !== -1) {
+  if (data.id.indexOf('nnt') !== -1) {
     return <Thesis language={language} data={data} id={id} />;
   }
   return <Publication language={language} data={data} id={id} />;
