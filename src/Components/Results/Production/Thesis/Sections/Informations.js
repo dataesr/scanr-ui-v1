@@ -30,10 +30,18 @@ const Informations = (props) => {
   );
   const id = (props.data.id.substring(0, 3) === 'nnt') ? props.data.id.substring(3) : props.data.id;
 
-  const theseLink = 'http://www.theses.fr/'.concat({ id }.id);
-
-  let publicationDate = moment(props.data.publicationDate).format('L');
-  if (publicationDate.slice(0, 5) === '01/01') {
+  let theseLink = 'http://www.theses.fr/'.concat({ id }.id.toUpperCase());
+  // pas de majuscule si thèse en cours (id provisoire s...)
+  if (id.startsWith('s')) {
+    theseLink = 'http://www.theses.fr/'.concat({ id }.id);
+  }
+  let publicationDate;
+  if (props.data.publicationDate) {
+    publicationDate = moment(props.data.publicationDate).format('L');
+  } else if (props.data.year) {
+    publicationDate = moment(props.data.year.toString().concat('/01/01')).format('L');
+  }
+  if (publicationDate && publicationDate.slice(0, 5) === '01/01') {
     publicationDate = publicationDate.slice(6, 10);
   }
 
@@ -69,7 +77,7 @@ const Informations = (props) => {
   }
 
   const summary = (props.language === 'fr') ? getSelectKey(props.data, 'summary', props.language, 'default') : getSelectKey(props.data, 'alternativeSummary', props.language, 'default');
-  const keywords = props.data.keywords;
+  const keywords = props.data.keywords || { default: [] };
   const keywordsFromDomains = props.data.domains.filter(domain => domain.code && domain.code.slice(-2) !== '00').map(domain => domain.label);
   keywords.default = keywords.default.concat(keywordsFromDomains.map(label => label.default).filter(label => label));
   keywords.default = [...new Set(keywords.default)];

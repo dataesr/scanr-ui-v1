@@ -163,19 +163,20 @@ const PublicationCard = (props) => {
   } else {
     coAuthors = getLi('fa-users', getInventors(props.data));
   }
-
   let publicationDateStr = '';
   if (props.data.publicationDate) {
     publicationDateStr = moment(props.data.publicationDate).format('LL');
     if (moment(props.data.publicationDate).format('L').slice(0, 5) === '01/01') {
       publicationDateStr = moment(props.data.publicationDate).format('L').slice(6, 10);
     }
+  } else if (props.data.productionType === 'thesis') {
+    publicationDateStr = moment(props.data.id.substring(3, 7).concat('/01/01')).format('YYYY');
   }
 
   let publicationDate = null;
   if (props.data.productionType === 'patent') {
     publicationDate = getLi('fa-calendar', moment(props.data.submissionDate).format('LL'));
-  } else if (props.data.publicationDate) {
+  } else if (publicationDateStr) {
     publicationDate = getLi('fa-calendar', publicationDateStr);
   } else {
     publicationDate = getLi('fa-calendar', messages[props.language]['resultCard.production.noDate']);
