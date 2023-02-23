@@ -78,10 +78,6 @@ const additionalListFunction = (allProps) => {
         url = `https://www.idref.fr/${id.replace('idref', '')}`;
         break;
 
-      case 'grid':
-        url = `https://www.grid.ac/institutes/${id}`;
-        break;
-
       case 'rnsr':
         url = `https://appliweb.dgri.education.fr/rnsr/PresenteStruct.jsp?numNatStruct=${id}&PUBLIC=OK`;
         break;
