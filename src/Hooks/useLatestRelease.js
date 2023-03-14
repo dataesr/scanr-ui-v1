@@ -21,7 +21,7 @@ export default function useLatestRelease() {
     getLatestRelease();
   }, []);
   useEffect(() => {
-    if (latestRelease && (latestRelease !== `v${process.env.REACT_APP_VERSION}`)) {
+    if ((process.env.NODE_ENV === 'production') && latestRelease && (latestRelease !== `v${process.env.REACT_APP_VERSION}`)) {
       window.location.reload(true);
     }
   }, [latestRelease]);
