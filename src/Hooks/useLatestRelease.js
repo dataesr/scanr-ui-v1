@@ -19,10 +19,12 @@ export default function useLatestRelease() {
   }
   useEffect(() => {
     getLatestRelease();
+  }, []);
+  useEffect(() => {
     if (latestRelease && (latestRelease !== `v${process.env.REACT_APP_VERSION}`)) {
       window.location.reload(true);
     }
-  }, []);
+  }, [latestRelease]);
   return {
     latestRelease, isLoading, isError,
   };
