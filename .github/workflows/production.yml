@@ -10,7 +10,7 @@ env:
   DEPLOYMENT: scanr
   DEPLOYMENT_NAMESPACE: scanr
   DEPLOYMENT_URL: https://scanr.dataesr.ovh
-  SLACK_NOTIFICATION_CHANNEL: '#scanr-bots'
+  MM_NOTIFICATION_CHANNEL: 'scanr-bot'
 
 jobs:
   publish-ghcr:
@@ -89,10 +89,9 @@ jobs:
     if: always()
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: dataesr/slack-notifier-action@v1
+      - uses: dataesr/mm-notifier-action@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
-          slack_token: ${{ secrets.SLACK_TOKEN }}
-          slack_channel: ${{ env.SLACK_NOTIFICATION_CHANNEL}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          mattermost_webhook_url: ${{ secrets.MATTERMOST_WEBHOOK_URL }}
+          mattermost_channel: ${{ env.MM_NOTIFICATION_CHANNEL}}
           deployment_url: ${{ env.DEPLOYMENT_URL }}

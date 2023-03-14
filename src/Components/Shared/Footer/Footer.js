@@ -21,9 +21,7 @@ const Footer = () => {
   if (localStorage.consent !== 'ko') {
     _paq.push(['rememberConsentGiven']);
   }
-  const {
-    latestRelease, refreshPage,
-  } = useLatestRelease();
+  useLatestRelease();
   const context = useContext(GlobalContext);
   return (
     <IntlProvider locale={context.language} messages={messages[context.language]}>
@@ -216,15 +214,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {
-          (latestRelease && (latestRelease === `v${process.env.REACT_APP_VERSION}`))
-            && (
-              <div className={classes.ReloadPageToast}>
-                <span className={classes.TextSpan}>Une nouvelle version de l&apos;application est disponible</span>
-                <button type="button" className={classes.Button} onClick={refreshPage}>Rafraîchir</button>
-              </div>
-            )
-        }
       </section>
     </IntlProvider>
   );
