@@ -1,19 +1,19 @@
-import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import useGetData from '../../../Hooks/useGetData';
 import useScrollY from '../../../Hooks/useScrollY';
-import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
-import Errors from '../../Shared/Errors/Errors';
 import { API_PUBLICATIONS_END_POINT } from '../../../config/config';
+import Errors from '../../Shared/Errors/Errors';
+import Loader from '../../Shared/LoadingSpinners/RouterSpinner';
 
-import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import getSelectKey from '../../../Utils/getSelectKey';
+import ScanRMeta from '../../Shared/MetaTags/ScanRMeta';
 import HeaderTitle from '../Shared/HeaderTitle/HeaderTitle';
 
-import Publication from './Publication/Publication';
-import Patent from './Patent/Patent';
-import Thesis from './Thesis/Thesis';
 import { GlobalContext } from '../../../GlobalContext';
+import Patent from './Patent/Patent';
+import Publication from './Publication/Publication';
+import Thesis from './Thesis/Thesis';
 
 import styles from '../../../style.scss';
 /**

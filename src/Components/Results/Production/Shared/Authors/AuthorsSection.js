@@ -1,11 +1,12 @@
-import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
 import { FormattedHTMLMessage } from 'react-intl';
 
-import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 import CounterCard from '../../../../Shared/Ui/CounterCard/CounterCard';
 import CounterListCard from '../../../../Shared/Ui/CounterListCard/CounterListCard';
+import PersonCard from '../../../../Shared/Ui/PersonCard/PersonCard';
 
+import transformAuthors from '../../../../../config/transformAuthors';
 import classes from '../../../../../style.scss';
 
 /**
@@ -38,7 +39,7 @@ const AuthorsSection = (props) => {
       });
     }
 
-    return sortedAuthors;
+    return sortedAuthors.map(el => transformAuthors(el));
   };
 
 
