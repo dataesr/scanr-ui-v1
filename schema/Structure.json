@@ -1,0 +1,266 @@
+{
+	// champs présents en Light :
+	"id": "string",
+	"kind": ["string"],
+	"logo": "string",
+	"label":
+	{
+		"default" : "string",
+        "fr" : "string"
+	},
+	"acronym": [
+		{
+			"default" : "string", 
+            "fr" : "string"
+		}
+	],
+	"nature": "string",
+	"status" : "string",
+	"isFrench": "boolean", 
+	"address": [{
+		"isMain": "boolean",
+		"address": "string",
+		"postcode": "string",
+		"city": "string",
+		"citycode": "string",
+		"country": "string",
+		"provider": "string",
+		"score": "string",
+		"urbanUnitCode": "string",
+        "urbanUnitLabel": "string",
+		"gps": {
+			"lat": "double",
+			"lon": "double"
+		},
+        "localisationSuggestions": [ "string" ]
+	}],
+
+    // champs NON présents en Light :
+	"commercialBrands" : [
+		"string"
+	],
+	"alias": [
+		"string"
+	],
+	"description": {
+		"default" : "string",
+        "fr" : "string"
+	},
+	"isPublic": "boolean",
+	"parents": [
+		{
+			"structure" : "LightStructure",
+			"fromDate": "Date",
+			"relationType": "string",
+            "label" : "string"
+		}
+	],
+	"predecessors": [
+		{
+			"structure" : "LightStructure",
+			"eventYear": "integer",
+			"eventType": "string",
+            "label" : "string"
+		}
+	],
+	"legalCategory": {
+		"code": "string",
+		"label": "string"
+	},
+	"level": "string",
+	"creationYear": "integer",
+	"links": [
+		{
+			"id": "string",
+			"type": "string",
+			"url": "string",
+			"label": "string",
+            "mode" // CrawlMode
+		}
+	],
+    "institutions" : [
+		{
+			"structure" : "LightStructure",
+			"code": {
+				"type": "string",
+				"number": "string",
+			},
+			"relationType": "string",
+			"fromDate": "Date",
+			"label": "string",
+			"url": "string"
+		}
+	],
+	"leaders": [
+		{
+			"person" : "UltraLightPerson",
+			"role": "string",
+			"fromDate": "string", // A passer en Date ?
+			"firstName": "string",
+			"lastName": "string",
+			"title": "string"
+		}
+	],
+    "relations": [
+		{
+			"structure" : "LightStructure",
+			"fromDate": "Date",
+			"type": "string"
+		}
+	],
+	"activities": [
+		{
+			"code": "string",
+			"type": "string",
+			"label": {
+				"default" : "string",
+		        "fr" : "string"
+			},
+			"secondary": "boolean"
+		}
+	],
+	"domains": [
+          {
+              "code": "string",
+              "type": "string",
+              "label": [
+                  {
+                      "default" : "string",
+                      "fr" : "string"
+                  }
+              ],
+              "score" : "string",
+              "url" : "string",
+              "level": "string"
+          }
+	],
+	"employeesInfo": {
+		"employeesNb": "integer",
+		"employeeNbSlice": "string",
+		"ecNb": "string",
+        "hdrNb": "string",
+		"date" : "Date"
+	},
+	"finance": {
+		"revenue": "string",
+		"operatingIncome": "string",
+		"date": "Date"
+	},
+	"badges": [
+		{
+			"code": "string",
+			"label": {
+				"default" : "string",
+                "fr" : "string"
+			}
+		}
+	],
+	"spinoffs": [
+		{
+			"project" : "LightProject",
+			"structure" : "LightStructure",
+			"label": "string",
+			"type": "string",
+			"yearClosing": "integer"
+		}
+	],
+	"startDate": "Date",
+	"endDate": "Date",
+	"email": "string",
+	"phone": "string",
+	"socialMedias": [
+		{
+			"account": "string",
+			"type": "string",
+			"url": "string",
+			"language": "string"
+		}
+	],
+	"externalIds": [
+	  {
+		"id": "string",
+		"type": "string"
+	  }
+	],
+	"evaluations": [
+		{
+			"evaluator": "string",
+			"url": "string",
+			"year": "integer"
+		}
+	],
+	"offers": [
+		{
+			"kind": "string",
+			"name": "string",
+			"description": "string",
+			"sourceUrl": "string",
+			"details": "string",
+			"domains": [
+                  {
+                      // voir structure
+                  }
+			],
+			"address": "Address"
+		}
+	],
+	"focus": [
+		"string"
+	],
+  	"keywords": {
+        "fr" : [ "string" ]
+  	},
+	"createdDate": "Date",
+	"lastUpdated": "Date",
+	"createdAt": "Date",
+	"removedAt": "Date",
+
+    // Que dans Full :
+    "spinoffFrom": [
+		{
+			"structure": ["LightStructure"],
+			"type": "string"
+		}
+	],
+	"children": [
+		{ 
+			"structure" : "LightStructure", 
+			"relationType" : "string", 
+			"fromDate" : "Date" 
+		}
+	],
+	"projects": [
+		{ 
+			"project" : "UltraLightProject", 
+			"founding" : "string", 
+			"role" : "string" 
+		}
+	],
+	"publications": [
+		{
+			"publication" : "LightPublication", 
+			"role" : "string", 
+			"startDate" : "Date", 
+			"endDate" : "Date", 
+			"source" : [ "string" ]
+		}
+	],
+	"persons": [
+		{ 
+			"person" : "UltraLightPerson", 
+			"role" : "string", 
+			"startDate" : "Date", 
+			"endDate" : "Date", 
+			"source" : [ "string" ]
+		}
+	],
+	"graph": [
+		{
+			"structure" : "LightStructure",
+			"details" : [
+				"string" : "integer"
+			]
+		}
+	],
+    "websites" : [ "Website" ]
+}
