@@ -1,15 +1,16 @@
-import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment/locale/fr';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FormattedHTMLMessage, IntlProvider } from 'react-intl';
 /* Gestion des langues */
 import getSelectedKey from '../../../../Utils/getSelectKey';
-import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
-import highlightsFr from './translations/highlights_fr.json';
+import messagesFr from './translations/fr.json';
 import highlightsEn from './translations/highlights_en.json';
+import highlightsFr from './translations/highlights_fr.json';
 
+import transformAuthors from '../../../../config/transformAuthors';
 import classes from './Cards.scss';
 
 const PublicationCard = (props) => {
@@ -55,7 +56,7 @@ const PublicationCard = (props) => {
       others = `${(props.language === 'fr') ? ' et ' : ' and '} ${diff} ${(props.language === 'fr') ? `${personsFr}` : `${personsEn}`}`;
     }
     if (data.productionType === 'publication') {
-      authors = data.authors.map((author) => {
+      authors = data.authors.map(el => transformAuthors(el)).map((author) => {
         if (author.person && author.person.fullName) {
           return (
             <React.Fragment>

@@ -1,14 +1,14 @@
-import React from 'react';
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import PropTypes from 'prop-types';
 import moment from 'moment';
 import 'moment/locale/fr';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { FormattedHTMLMessage, IntlProvider } from 'react-intl';
 import getSelectedKey from '../../../../Utils/getSelectKey';
-import highlightsFr from './translations/highlights_fr.json';
 import highlightsEn from './translations/highlights_en.json';
+import highlightsFr from './translations/highlights_fr.json';
 /* Gestion des langues */
-import messagesFr from './translations/fr.json';
 import messagesEn from './translations/en.json';
+import messagesFr from './translations/fr.json';
 
 import classes from './Cards.scss';
 
@@ -37,7 +37,6 @@ const PersonCard = (props) => {
       : null;
   }
 
-  console.log('ttt', props.data.domains);
   let domains = [];
   if (props.data.domains && props.data.domains.length > 0) {
     domains = props.data.domains

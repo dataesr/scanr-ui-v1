@@ -1,10 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 /* Intl */
-import { IntlProvider, FormattedHTMLMessage } from 'react-intl';
-import messagesFr from './translations/fr.json';
+import { FormattedHTMLMessage, IntlProvider } from 'react-intl';
+import transformAuthors from '../../../../../config/transformAuthors';
 import messagesEn from './translations/en.json';
+import messagesFr from './translations/fr.json';
 
 const messages = {
   fr: messagesFr,
@@ -60,7 +61,7 @@ const ProductionAuthors = (props) => {
   const getAuthors = (production) => {
     let authors = [];
     if (production.productionType === 'publication') {
-      authors = production.authors.map((author) => {
+      authors = production.authors.map(el => transformAuthors(el)).map((author) => {
         if (author.person) {
           return <a href={`person/${author.person.id}`} key={JSON.stringify(author)}>{author.fullName}</a>;
         }

@@ -6,7 +6,7 @@ import { GlobalContextProvider } from './GlobalContext';
 import App from './App';
 import ErrorBoundary from './Components/Shared/ErrorBoundary/ErrorBoundary';
 
-import registerServiceWorker from './registerServiceWorker';
+import { unregister } from './registerServiceWorker';
 
 ReactDOM.render(
   <GlobalContextProvider>
@@ -17,4 +17,4 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
-registerServiceWorker();
+unregister();
