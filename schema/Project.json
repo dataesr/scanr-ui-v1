@@ -1,0 +1,104 @@
+{
+	// champs présents en UltraLight :
+	"id": "string",
+	"label":
+	{
+		"default" : "string",
+        "fr" : "string"
+	},
+	"acronym":
+	{
+		"default" : "string",
+        "fr" : "string"
+	},
+	"type": "string",
+	
+    // champs présents en Light :
+	"year": "integer",
+	"startDate": "Date",
+	"endDate": "Date",
+	"budgetTotal": "Float",
+	"budgetFinanced": "Float",
+	"duration": "integer",
+	"url": "string",
+	"projectUrl": "string",
+	"participantCount": "integer",
+	"lastUpdated": "Date",
+
+    // champs NON présents en Light :
+	"description":
+	{
+		"default" : "string",
+        "fr" : "string"
+	},
+	"participants": [
+		{
+			"structure" : "LightStructure",
+			"role": "string",
+			"label": {
+				"default" : "string",
+		        "fr" : "string"
+			},
+            "url": "string", 
+			"funding": "string"
+		}
+	],
+	"signatureDate": "Date",
+	"domains": [
+		{
+			// voir Structure
+		}
+	],
+	"call": {
+		"id": "string",
+		"label": "string"
+	},
+	"action": {
+		"id": "string",
+		"label": {
+			"default" : "string",
+	        "fr" : "string"
+		},
+		"level": "string"
+	},
+	"persons": [
+	  {
+		"person" : "LightPerson",
+        "role": "string",
+        "fromDate": "string",
+      	"firstName": "string",
+      	"lastName": "string",
+      	"fullName": "string",
+      	"title": "string",
+      	"email": "string"
+	  }
+	],
+    "similarProjects": [
+      {
+        "target" : "LightProject",
+        "score": "string"
+      }
+    ],
+    "associatedProjects": [
+        "LightProject"
+    ],
+	"createdDate": "Date",
+	"createdAt": "Date",
+	"removedAt": "Date",
+	"focus": [
+	    "string"
+	],
+	"badges": [
+		{
+			"code": "string",
+			"label": {
+				"default" : "string",
+                "fr" : "string"
+			}
+		}
+	],
+	"keywords": {
+	    "fr" : [ "string" ]
+	},
+    "publications" : [ "Publication" ]
+}

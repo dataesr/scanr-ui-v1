@@ -1,0 +1,171 @@
+{
+  // champs présents en UltraLight :
+  "id": "string",
+  "title": {
+    "default" : "string",
+    "fr" : "string"
+  },
+  "keywords": { 
+        "fr" : [ "string" ]
+  },
+  
+  // champs présents en Light :
+  "type": "string",
+  "productionType": "string",
+  "authors": [
+    {
+      "person" : "LightPerson",
+	  "role" : "string",
+      "firstName": "string",
+      "lastName": "string",
+      "fullName": "string",
+      "affiliations": [
+        {
+		  "structure" : "string",
+          "institutionLabel": "string",
+          "label": "string",
+          "address": {
+            "isMain": "boolean",
+            "postcode": "string",
+            "country": "string",
+            "city": "string",
+            "address": "string",
+            "provider": "string",
+            "score": "string",
+            "gps": {
+              "lat": "double",
+              "lon": "double"
+            },
+            "urbanUnitCode": "string",
+            "urbanUnitLabel": "string",
+            "localisationSuggestions": [ "string" ]
+          }
+        }
+      ]
+    }
+  ],
+  "authorsCount": "integer",
+  "externalIds": [
+    {
+      "id": "string",
+	  "type": "string"
+    }
+  ],
+  "isOa": "boolean",
+  "publicationDate": "Date",
+  "year": "integer",
+  "citedBy": [
+    "UltraLightPublication"
+  ],
+  "citedByCount" : "integer",
+
+  // champs NON présents en Light :
+  "apc": "Float",
+  "doiUrl": "string",
+  "subtitle":
+  {
+      "default" : "string",
+      "fr" : "string"
+  },
+  "summary": {
+      "default" : "string",
+      "fr" : "string"
+  },
+  "alternativeSummary": {
+      "default" : "string",
+      "fr" : "string"
+  },
+  "isFrench": "boolean",
+  "language": "string",
+  "projects": [
+    "LightProject"
+  ],
+  "source": {
+    "title": "string",
+    "subtitle": "string",
+    "type": "string",
+    "isInDoaj": "boolean",
+    "isOa": "boolean",
+    "pagination": "string",
+    "articleNumber": "string",
+    "issue": "string", 
+    "publisher": "string",
+    "journalIssns": [
+      "string"
+    ]
+  },
+  "oaEvidence": {
+    "hostType": "string",
+    "version": "string",
+    "updated": "Date",
+    "url": "string",
+    "pdfUrl": "string",
+    "landingPageUrl": "string",
+    "license": "string"
+  },
+  "domains": [
+      {
+          // voir Structure
+      }
+  ],
+  "submissionDate": "Date",
+  "grantedDate": "Date",
+  "citations": [
+    "UltraLightPublication"
+  ],
+  "references": [
+    "string"
+  ],
+  "referencesCount": "integer",
+  "links": [
+    {
+      "id": "string",
+      "type": "string",
+      "url": "string",
+      "label": "string",
+      "mode" // CrawlMode
+    }
+  ],
+  "certifications": [
+    {
+      "label": "string",
+      "date": "Date"
+    }
+  ],
+  "awards": [
+    {
+      "label": "string",
+      "date": "Date",
+      "url": "string",
+      "description": "string",
+      "amount": "string",
+      "structureName": "string",
+      "structure": "LightPublication"
+    }
+  ],
+  "similarPublications": [
+    {
+      "target" : "LightPublication",
+      "score": "string"
+    }
+  ],
+  "affiliations": [
+    "LightStructure"
+  ],
+  "focus": [
+      "string"
+  ],
+  "badges": [
+    {
+      "code": "string",
+      "label": {
+        "default" : "string", 
+        "fr" : "string"
+      }
+    }
+  ]
+  "createdDate": "Date",
+  "lastUpdated": "Date",
+  "createdAt": "Date",
+  "removedAt": "Date",
+}

@@ -1,0 +1,121 @@
+{
+  // champs présents en UltraLight :
+  "id": "string",
+  "fullName": "string",
+  
+  // champs présents en Light :
+  "firstName": "string",
+  "lastName": "string",
+  "maidenName": "string",
+  "gender": "string",
+  "roles": [
+    {
+      "role": "string",
+      "description": "string",
+      "startDate": "Date",
+      "endDate": "Date"
+    }
+  ],
+  "affiliations": [
+    {
+      "structure" : "LightStructure",
+      "role": "string",
+      "startDate": "Date",
+      "endDate": "Date",
+      "sources": [
+          "string"
+      ],
+      "label": "string"
+    }
+  ],
+  "externalIds": [
+    {
+      "id": "string",
+	  "type": "string"
+    }
+  ],
+  "awards": [
+    {
+      "label": "string",
+      "date": "Date",
+      "url": "string",
+      "description": "string",
+      "amount": "string",
+      "structureName": "string",
+      "structure" : "LightStructure"
+    }
+  ],
+  "lastUpdated": "Date",
+  
+  // champs NON présents en Light :
+  "dataSources": ["string"],
+  "coContributors": [
+    "UltraLightPerson"
+  ],
+  "orcidCreationDate": "Date",
+  "description": {
+    "default" : "string",
+    "fr" : "string"
+  },
+  "domains": [
+      {
+          // voir Structure
+      }
+  ],
+  "deathDate": "Date",
+  "birthDate": "Date",
+  "keywords": {
+        "fr" : [ "string" ]
+  },
+  "email": "string",
+  "website": "string",
+  "links": [
+    {
+      "id": "string",
+      "type": "string",
+      "url": "string",
+      "label": "string",
+      "mode" // CrawlMode
+    }
+  ],
+  "certifications": [
+    {
+      "label": "string",
+      "date": "Date"
+    }
+  ],
+  "similarPersons": [
+    {
+      "target" : "LightPerson",
+      "score": "string"
+    }
+  ],
+	"createdDate": "Date",
+	"createdAt": "Date",
+	"removedAt": "Date",
+	"focus": [
+		"string"
+	],
+	"badges": [
+		{
+			"code": "string",
+			"label": {
+				"default" : "string",
+        "fr" : "string"
+			}
+		}
+	],
+  // Que dans Full :
+  "projects" : [
+      {
+          "project" : "LightProject",
+          "role" : "string"
+      }
+  ],
+  "publications" : [
+    {
+        "publication" : "LightPublication",
+        "role" : "string"
+    }
+  ]
+}
