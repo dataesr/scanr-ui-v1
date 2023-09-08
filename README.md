@@ -1,5 +1,5 @@
 # scanR source code
-[![Discord Follow](https://dcbadge.vercel.app/api/server/dkcww8vs?style=flat)](https://discord.gg/dkcww8vs)
+[![Discord Follow](https://dcbadge.vercel.app/api/server/wzNzMtnK?style=flat)](https://discord.gg/wzNzMtnK)
 ![https://img.shields.io/github/v/release/dataesr/scanr](https://img.shields.io/github/v/release/dataesr/scanr)
 ![Build](https://github.com/dataesr/scanr/actions/workflows/staging.yml/badge.svg)
 
