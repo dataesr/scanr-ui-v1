@@ -10,7 +10,7 @@ env:
   DEPLOYMENT: scanr
   DEPLOYMENT_NAMESPACE: scanr
   DEPLOYMENT_URL: https://scanr.staging.dataesr.ovh
-  MM_NOTIFICATION_CHANNEL: 'scanr-bot'
+  MM_NOTIFICATION_CHANNEL: 'bots'
 
 jobs:
   publish-ghcr:
