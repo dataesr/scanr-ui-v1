@@ -1,9 +1,13 @@
 # scanR source code
+
 [![Discord Follow](https://dcbadge.vercel.app/api/server/dkcww8vs?style=flat)](https://discord.gg/dkcww8vs)
 ![https://img.shields.io/github/v/release/dataesr/scanr](https://img.shields.io/github/v/release/dataesr/scanr)
 ![Build](https://github.com/dataesr/scanr/actions/workflows/staging.yml/badge.svg)
 
+⚠️ This project has been archived. The new project is now here : https://github.com/dataesr/scanr-ui.
+
 Run the app :
+
 - cd scanR
 - npm install && npm run build
 
@@ -14,30 +18,33 @@ Some example of search request (POST) using python:
 ```python
 import requests
 ```
+
 scanR offers two types of endpoints:
- - a **search endpoint** (POST), that takes as inputs
-   1. a query
-   2. filters to limit the scope
-   3. fields to be returned
- - a **direct object access endpoint** (GET), that takes as input an identifier
+
+- a **search endpoint** (POST), that takes as inputs
+  1.  a query
+  2.  filters to limit the scope
+  3.  fields to be returned
+- a **direct object access endpoint** (GET), that takes as input an identifier
 
 There is a search endpoints (POST) for each of the 4 types of objects:
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/structures/search
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/persons/search
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/projects/search
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/publications/search
+
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/structures/search
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/persons/search
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/projects/search
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/publications/search
 
 There is a direct access object endpoint (GET) also for the 4 types of objects:
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/structures/structure/{identifier}
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/persons/{identifier}
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/projects/{identifier}
- - https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/publications/{identifier}
+
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/structures/structure/{identifier}
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/persons/{identifier}
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/projects/{identifier}
+- https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/publications/{identifier}
 
 The filters in the SEARCH endpoints are deeply lined with the objects schemas.
 The schemas can be seen in the swagger https://scanr-api.enseignementsup-recherche.gouv.fr/api/swagger-ui.htm (GET endpoints)
 
 ## 1. Search for entities
-
 
 ```python
 url_structures = "https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/structures/search"
@@ -97,10 +104,7 @@ scanr_outputs.get('results')
       'value': {'id': '439067612',
        'label': {'default': "CHANTIERS DE L'ATLANTIQUE"}}}]
 
-
-
 ## 2. Search for authors
-
 
 ```python
 url_persons = "https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/persons/search"
@@ -113,7 +117,7 @@ my_filters = {
             "op":"any",
             "values":["Médaille d'argent du CNRS","Médaille d'or du CNRS","Médaille de cristal du CNRS",
                       "Médaille de bronze du CNRS", "Lauréat de l'Institut universitaire de France"]
-        }       
+        }
 }
 
 params = {
@@ -201,10 +205,7 @@ scanr_outputs.get('results')
         'value': 'TumGrowth: An <strong>open-access</strong> web tool for the statistical analysis of tumor'}],
       'value': {'id': 'idref071283250', 'fullName': 'Guido Kroemer'}}]
 
-
-
 ## 3. Search for productions
-
 
 ```python
 url_publications = "https://scanr-api.enseignementsup-recherche.gouv.fr/api/v2/publications/search"
@@ -656,6 +657,7 @@ scanr_outputs.get('results')
 # Source code
 
 ## changelogs acceptations
+
 ```
   types: [
     { types: ['feat', 'feature'], label: '🎉 Nouvelle fonctionalités' },
@@ -672,14 +674,17 @@ scanr_outputs.get('results')
   ],
 
   excludeTypes: ['other', 'perf', 'test', 'tests', 'style', 'chore', 'doc', 'docs'],
-  ```
-  
-  ## Push a new version on MASTER
-  ```
-  git pull origin master
-  ```
-  Update code with commit ...
-  ```
-  npm version [patch, minor, major]
-  git push origin master --tags
-  ```
+```
+
+## Push a new version on MASTER
+
+```
+git pull origin master
+```
+
+Update code with commit ...
+
+```
+npm version [patch, minor, major]
+git push origin master --tags
+```
